@@ -1,3 +1,4 @@
+
 # Theme documentation
 
 ## Table of content
@@ -5,15 +6,14 @@
 1. Prologue
   1. Migrating from 1.6
   1. coding standard and guidelines
-1. Starter Theme
-  1. Why
-  1. how to use it
-  1. setup env
-1. Theme organization
-  1. directory structure
-  1. required templates and libs
-  1. theme.yml
-  1.
+1. Getting started
+  1. Starter Theme
+  1. setup your env
+  1. Theme organization
+    1. directory structure
+    1. required templates and libs
+    1. theme.yml
+    1.
 1. Assets
   1. Using webpack
   1. Adding assets
