@@ -1,0 +1,17 @@
+{
+  "admin_notifications": [
+  ],
+  "body_classes": {
+    "lang-fr": true,
+    "rtl": true,
+    "country-FR": true,
+    "currency-EUR": true,
+    "layout-full-width": true,
+    "page-index": true
+  },
+  "canonical": null,
+  "description": "Boutique propulsée par PrestaShop",
+  "keywords": "",
+  "page_name": "index",
+  "title": "PrestaDev"
+}

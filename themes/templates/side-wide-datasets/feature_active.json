@@ -1,0 +1,9 @@
+{
+  "is_b2b": false,
+  "is_catalog": false,
+  "opt_in": {
+    "newsletter": true,
+    "partner": true
+  },
+  "show_prices": false
+}

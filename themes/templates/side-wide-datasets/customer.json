@@ -1,0 +1,41 @@
+{
+  "addresses": [
+  ],
+  "ape": null,
+  "birthday": null,
+  "company": null,
+  "date_add": null,
+  "date_upd": null,
+  "email": null,
+  "firstname": null,
+  "gender": {
+    "id": null,
+    "name": null,
+    "type": null
+  },
+  "id": null,
+  "id_default_group": 1,
+  "id_shop": null,
+  "id_shop_group": null,
+  "ip_registration_newsletter": null,
+  "is_guest": 0,
+  "is_logged": false,
+  "last_passwd_gen": null,
+  "lastname": null,
+  "max_payment_days": 0,
+  "newsletter": null,
+  "newsletter_date_add": null,
+  "note": null,
+  "optin": null,
+  "outstanding_allow_amount": 0,
+  "reset_password_token": null,
+  "reset_password_validity": null,
+  "risk": {
+    "color": null,
+    "id": null,
+    "name": null,
+    "percent": null
+  },
+  "siret": null,
+  "website": null
+}

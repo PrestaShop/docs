@@ -93,7 +93,41 @@ With ps_linklist example, instead of using `ps_linklist/ps_linklist/views/templa
     {/foreach}
   {/widget_block}
 
-  
+
+{render}
+--------------
+
+ui as to come form controller. so far only used for forms (customer info and checkout).
+needs to implement `FormInterface`
+
+.. code-block:: smarty
+
+  {render file='customer/_partials/login-form.tpl' ui=$login_form}
+
+
+{form_field}
+^^^^^^^^^^^^^^
+
+
+
+.. code-block:: Smarty
+
+  {form_field field=$field}
+
+$field is an array like:
+
+.. code-block:: Smarty
+
+  $field = [
+    'name' => 'user_email',
+    'type' => 'email',
+    'required' => 1,
+    'label' => 'Email',
+    'value' => null,
+    'availableValues' => [],
+    'errors' => [],
+  ];
+
 
 Class name modifiers
 ------------------------

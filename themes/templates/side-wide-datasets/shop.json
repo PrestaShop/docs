@@ -1,0 +1,22 @@
+{
+  "address": {
+    "address1": false,
+    "address2": false,
+    "city": false,
+    "country": "France",
+    "formatted": "PrestaDev<br />France",
+    "postcode": false,
+    "state": null
+  },
+  "email": "julien.bourdeau@prestashop.com",
+  "favicon": "/img/favicon.ico",
+  "favicon_update_time": "1324977642",
+  "fax": false,
+  "lat": "25.948969",
+  "logo": "/img/logo.png",
+  "long": "-80.226439",
+  "name": "PrestaDev",
+  "phone": false,
+  "registration_number": false,
+  "stores_icon": "/img/logo_stores.png"
+}

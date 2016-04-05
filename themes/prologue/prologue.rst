@@ -67,7 +67,7 @@ JS
 make sure your linter follows our .eslint
 ES6 -> babel
 split files and compile
-nothing specific about js but we recommend https://github.com/airbnb/javascrip
+ES2015 standard https://babeljs.io/docs/learn-es2015/
 
 
 requirements
