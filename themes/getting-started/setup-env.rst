@@ -2,7 +2,22 @@
 Setup Env
 ****************
 
-This is an easy step by step tutorial to get started with PrestaShop theme development.
+isntall prsetashop
+====================
+
+1. git clnoe
+1. composer install
+1. npm install
+
+
+gitignore
+============
+
+To redo from: http://build.prestashop.com/howtos/misc/prestashop-perfect-gitignore/
+
+
+Create your theme from starter themes
+=======================================
 
 1. download Starter theme or clone the repo
 1. remove all style if any (if you clone)

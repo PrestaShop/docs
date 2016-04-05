@@ -6,6 +6,7 @@
 1. Prologue
   1. Migrating from 1.6
   1. coding standard and guidelines
+  1. requirements
 1. Getting started
   1. Starter Theme
   1. setup your env
@@ -20,6 +21,16 @@
   1. Adding assets from modules
 1. templates
   1. layouts extension
+  1. site-wide data sets
+    1. breadcrumb
+    1. cart ????
+    1. currency
+    1. customer
+    1. feature active
+    1. language
+    1. page
+    1. shop
+    1. urls
   1. pages (page description, specifics, dataset)
     1. home
     1. product listing (pagination)
@@ -30,21 +41,11 @@
   1. partials
     1. notifications
     1. ?
-  1. site-wide data sets
-    1. breadcrumb
-    1. cart
-    1. currency
-    1. customer
-    1. language
-    1. page
-    1. shop
-    1. urls
 1. Smarty
   1. Helpers and modifier
     1. `{url}` Helper
     1. Class name modifiers
     1. escaping html
-  1. translating html
   1. custom plugins
 1. Hooks
   1. Dynamics and natives
@@ -59,6 +60,9 @@
   1. template
   1. assets (css/js)
 1. internationalizing
+  1. in php (core + module)
+  1. in smarty
+  1. in twig (bo only)
 1. JavaScript
   1. core.js
   1. ajax endpoints

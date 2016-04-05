@@ -68,3 +68,11 @@ make sure your linter follows our .eslint
 ES6 -> babel
 split files and compile
 nothing specific about js but we recommend https://github.com/airbnb/javascrip
+
+
+requirements
+-----------------
+
+php 5.4
+
+Broswer supported for Bo and default theme classic

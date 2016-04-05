@@ -7,6 +7,16 @@ ships with some configuration files taht we will help you setup your talk runner
 
 Modules can add css and js files the same was as PrestaShop 1.6.
 
+Load:
+
+1. theme.css
+1. custom.css
+1. rtl.css (if rtl language detected)
+
+1. core.js
+1. theme.js
+1. custom.js
+
 Webpack
 =========================
 
@@ -170,12 +180,14 @@ If you develop a front controller, simply extend the `setMedia()` method like
 Without a front controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you only have your module class, register on hookHeader and add ur asset on the go inside the hook
+If you only have your module class, register on actionFrontControllerSetMedia and add ur asset on the go inside the hook
 
 .. code-block:: php
 
-	public function hookHeader($params)
+	public function hookActionFrontControllerSetMedia($params)
 	{
 		$this->context->controller->addCSS($this->_path.'css/custom-style-in-module.css', 'all');
 		$this->context->controller->addJS($this->_path.'js/custom-style-in-module.js');
 	}
+
+[NOTE] A tester lol
