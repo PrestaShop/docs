@@ -1,0 +1,1703 @@
+{
+    "1.6": {
+        "DisplayOverrideTemplate": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "PDFInvoice": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "action": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php",
+            "\/controllers\/admin\/AdminPerformanceController.php": "\/controllers\/admin\/AdminPerformanceController.php"
+        },
+        "actionAdmin": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "actionAdminControllerSetMedia": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "actionAdminLoginControllerSetMedia": {
+            "\/controllers\/admin\/AdminLoginController.php": "\/controllers\/admin\/AdminLoginController.php"
+        },
+        "actionAdminMetaAfterWriteRobotsFile": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminMetaBeforeWriteRobotsFile": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminMetaSave": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminOrdersTrackingNumberUpdate": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionAdminThemesControllerUpdate_optionsAfter": {
+            "\/controllers\/admin\/AdminThemesController.php": "\/controllers\/admin\/AdminThemesController.php"
+        },
+        "actionAfterDeleteProductInCart": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php"
+        },
+        "actionAttributeDelete": {
+            "\/classes\/Attribute.php": "\/classes\/Attribute.php"
+        },
+        "actionAttributeGroupDelete": {
+            "\/classes\/AttributeGroup.php": "\/classes\/AttributeGroup.php"
+        },
+        "actionAttributeGroupSave": {
+            "\/classes\/AttributeGroup.php": "\/classes\/AttributeGroup.php"
+        },
+        "actionAttributeSave": {
+            "\/classes\/Attribute.php": "\/classes\/Attribute.php"
+        },
+        "actionAuthentication": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionBeforeAjaxDie": {
+            "\/classes\/controller\/Controller.php": "\/classes\/controller\/Controller.php"
+        },
+        "actionBeforeAuthentication": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionBeforeCartUpdateQty": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionBeforeSubmitAccount": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionCarrierProcess": {
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "actionCarrierUpdate": {
+            "\/controllers\/admin\/AdminCarrierWizardController.php": "\/controllers\/admin\/AdminCarrierWizardController.php",
+            "\/controllers\/admin\/AdminCarriersController.php": "\/controllers\/admin\/AdminCarriersController.php"
+        },
+        "actionCartListOverride": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php"
+        },
+        "actionCartSave": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCartSummary": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCategoryAdd": {
+            "\/classes\/Category.php": "\/classes\/Category.php"
+        },
+        "actionCategoryDelete": {
+            "\/classes\/Category.php": "\/classes\/Category.php"
+        },
+        "actionCategoryUpdate": {
+            "\/classes\/Category.php": "\/classes\/Category.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionCustomerAccountAdd": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionCustomerLogoutAfter": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionCustomerLogoutBefore": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionDeliveryPriceByPrice": {
+            "\/classes\/Carrier.php": "\/classes\/Carrier.php"
+        },
+        "actionDeliveryPriceByWeight": {
+            "\/classes\/Carrier.php": "\/classes\/Carrier.php"
+        },
+        "actionDispatcher": {
+            "\/classes\/Dispatcher.php": "\/classes\/Dispatcher.php"
+        },
+        "actionDownloadAttachment": {
+            "\/controllers\/front\/AttachmentController.php": "\/controllers\/front\/AttachmentController.php"
+        },
+        "actionEmailAddAfterContent": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionEmailAddBeforeContent": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionFeatureDelete": {
+            "\/classes\/Feature.php": "\/classes\/Feature.php"
+        },
+        "actionFeatureSave": {
+            "\/classes\/Feature.php": "\/classes\/Feature.php"
+        },
+        "actionFeatureValueDelete": {
+            "\/classes\/FeatureValue.php": "\/classes\/FeatureValue.php"
+        },
+        "actionFeatureValueSave": {
+            "\/classes\/FeatureValue.php": "\/classes\/FeatureValue.php"
+        },
+        "actionFrontControllerSetMedia": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "actionGetExtraMailTemplateVars": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionGetIDZoneByAddressID": {
+            "\/classes\/Address.php": "\/classes\/Address.php"
+        },
+        "actionHtaccessCreate": {
+            "\/classes\/Tools.php": "\/classes\/Tools.php"
+        },
+        "actionInvoiceNumberFormatted": {
+            "\/classes\/order\/OrderInvoice.php": "\/classes\/order\/OrderInvoice.php"
+        },
+        "actionModuleInstallAfter": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleInstallBefore": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleRegisterHookAfter": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleRegisterHookBefore": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleUnRegisterHookAfter": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleUnRegisterHookBefore": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionObject": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAddAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAddBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAttributeAddBefore": {
+            "\/controllers\/admin\/AdminAttributesGroupsController.php": "\/controllers\/admin\/AdminAttributesGroupsController.php"
+        },
+        "actionObjectAttributeGroupAddBefore": {
+            "\/controllers\/admin\/AdminAttributesGroupsController.php": "\/controllers\/admin\/AdminAttributesGroupsController.php"
+        },
+        "actionObjectDeleteAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectDeleteBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectUpdateAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectUpdateBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionOrderDetail": {
+            "\/controllers\/front\/GuestTrackingController.php": "\/controllers\/front\/GuestTrackingController.php",
+            "\/controllers\/front\/OrderDetailController.php": "\/controllers\/front\/OrderDetailController.php"
+        },
+        "actionOrderEdited": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionOrderHistoryAddAfter": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionOrderReturn": {
+            "\/controllers\/front\/OrderFollowController.php": "\/controllers\/front\/OrderFollowController.php"
+        },
+        "actionOrderSlipAdd": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionOrderStatusPostUpdate": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionOrderStatusUpdate": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionPDFInvoiceRender": {
+            "\/classes\/PaymentModule.php": "\/classes\/PaymentModule.php",
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php",
+            "\/controllers\/admin\/AdminPdfController.php": "\/controllers\/admin\/AdminPdfController.php",
+            "\/controllers\/front\/PdfInvoiceController.php": "\/controllers\/front\/PdfInvoiceController.php"
+        },
+        "actionPasswordRenew": {
+            "\/controllers\/front\/PasswordController.php": "\/controllers\/front\/PasswordController.php"
+        },
+        "actionPaymentCCAdd": {
+            "\/classes\/order\/OrderPayment.php": "\/classes\/order\/OrderPayment.php"
+        },
+        "actionPaymentConfirmation": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionProductAdd": {
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionProductAttributeDelete": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductAttributeUpdate": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductCancel": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionProductCoverage": {
+            "\/classes\/stock\/StockManager.php": "\/classes\/stock\/StockManager.php"
+        },
+        "actionProductDelete": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductListModifier": {
+            "\/controllers\/front\/CategoryController.php": "\/controllers\/front\/CategoryController.php"
+        },
+        "actionProductListOverride": {
+            "\/controllers\/front\/CategoryController.php": "\/controllers\/front\/CategoryController.php"
+        },
+        "actionProductOutOfStock": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "actionProductSave": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductUpdate": {
+            "\/classes\/Product.php": "\/classes\/Product.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionSearch": {
+            "\/controllers\/front\/SearchController.php": "\/controllers\/front\/SearchController.php"
+        },
+        "actionSetInvoice": {
+            "\/classes\/order\/Order.php": "\/classes\/order\/Order.php"
+        },
+        "actionShopDataDuplication": {
+            "\/classes\/shop\/Shop.php": "\/classes\/shop\/Shop.php"
+        },
+        "actionUpdateQuantity": {
+            "\/classes\/stock\/StockAvailable.php": "\/classes\/stock\/StockAvailable.php"
+        },
+        "actionValidateOrder": {
+            "\/classes\/PaymentModule.php": "\/classes\/PaymentModule.php"
+        },
+        "actionWatermark": {
+            "\/classes\/FileUploader.php": "\/classes\/FileUploader.php",
+            "\/classes\/webservice\/WebserviceSpecificManagementImages.php": "\/classes\/webservice\/WebserviceSpecificManagementImages.php",
+            "\/controllers\/admin\/AdminImportController.php": "\/controllers\/admin\/AdminImportController.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "addProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "advancedPaymentOptions": {
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "backBeforePayment": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "dashboardData": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "dashboardZoneOne": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "dashboardZoneTwo": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "deleteProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "displayAdminOrderContentOrder": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderContentShip": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderTabOrder": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderTabShip": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminProductsExtra": {
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "displayAdminStatsModules": {
+            "\/controllers\/admin\/AdminStatsTabController.php": "\/controllers\/admin\/AdminStatsTabController.php"
+        },
+        "displayAfterShoppingCartBlock": {
+            "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl": "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl"
+        },
+        "displayBackOfficeCategory": {
+            "\/controllers\/admin\/AdminCategoriesController.php": "\/controllers\/admin\/AdminCategoriesController.php"
+        },
+        "displayBackOfficeHeader": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "displayBackOfficeTop": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "displayBanner": {
+            "\/themes\/default-bootstrap\/header.tpl": "\/themes\/default-bootstrap\/header.tpl"
+        },
+        "displayBeforeCarrier": {
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayBeforePayment": {
+            "\/controllers\/front\/OrderController.php": "\/controllers\/front\/OrderController.php"
+        },
+        "displayBeforeShoppingCartBlock": {
+            "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl": "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl",
+            "\/themes\/default-bootstrap\/shopping-cart.tpl": "\/themes\/default-bootstrap\/shopping-cart.tpl"
+        },
+        "displayCarrierList": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "displayCartTotalPriceLabel": {
+            "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl": "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl",
+            "\/themes\/default-bootstrap\/shopping-cart.tpl": "\/themes\/default-bootstrap\/shopping-cart.tpl"
+        },
+        "displayCompareExtraInformation": {
+            "\/controllers\/front\/CompareController.php": "\/controllers\/front\/CompareController.php"
+        },
+        "displayCustomerAccount": {
+            "\/controllers\/front\/MyAccountController.php": "\/controllers\/front\/MyAccountController.php"
+        },
+        "displayCustomerAccountForm": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php",
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php"
+        },
+        "displayCustomerAccountFormTop": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php",
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php"
+        },
+        "displayCustomerIdentityForm": {
+            "\/controllers\/front\/IdentityController.php": "\/controllers\/front\/IdentityController.php"
+        },
+        "displayFeaturePostProcess": {
+            "\/controllers\/admin\/AdminFeaturesController.php": "\/controllers\/admin\/AdminFeaturesController.php"
+        },
+        "displayFeatureValuePostProcess": {
+            "\/controllers\/admin\/AdminFeaturesController.php": "\/controllers\/admin\/AdminFeaturesController.php"
+        },
+        "displayFooter": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayFooterProduct": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayHeader": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayHome": {
+            "\/controllers\/front\/IndexController.php": "\/controllers\/front\/IndexController.php"
+        },
+        "displayHomeTab": {
+            "\/controllers\/front\/IndexController.php": "\/controllers\/front\/IndexController.php"
+        },
+        "displayHomeTabContent": {
+            "\/controllers\/front\/IndexController.php": "\/controllers\/front\/IndexController.php"
+        },
+        "displayInvoiceLegalFreeText": {
+            "\/classes\/pdf\/HTMLTemplateInvoice.php": "\/classes\/pdf\/HTMLTemplateInvoice.php"
+        },
+        "displayLeftColumn": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayLeftColumnProduct": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayMaintenance": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayMobileHeader": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayNav": {
+            "\/themes\/default-bootstrap\/header.tpl": "\/themes\/default-bootstrap\/header.tpl"
+        },
+        "displayOrderConfirmation": {
+            "\/controllers\/front\/OrderConfirmationController.php": "\/controllers\/front\/OrderConfirmationController.php"
+        },
+        "displayOrderDetail": {
+            "\/controllers\/front\/GuestTrackingController.php": "\/controllers\/front\/GuestTrackingController.php",
+            "\/controllers\/front\/OrderDetailController.php": "\/controllers\/front\/OrderDetailController.php"
+        },
+        "displayPayment": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php",
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayPaymentReturn": {
+            "\/controllers\/front\/OrderConfirmationController.php": "\/controllers\/front\/OrderConfirmationController.php"
+        },
+        "displayPaymentTop": {
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayProductButtons": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayProductComparison": {
+            "\/controllers\/front\/CompareController.php": "\/controllers\/front\/CompareController.php"
+        },
+        "displayProductContent": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayProductDeliveryTime": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl",
+            "\/themes\/default-bootstrap\/product.tpl": "\/themes\/default-bootstrap\/product.tpl",
+            "\/themes\/default-bootstrap\/products-comparison.tpl": "\/themes\/default-bootstrap\/products-comparison.tpl",
+            "\/themes\/default-bootstrap\/shopping-cart-product-line.tpl": "\/themes\/default-bootstrap\/shopping-cart-product-line.tpl"
+        },
+        "displayProductListFunctionalButtons": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl"
+        },
+        "displayProductListReviews": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl"
+        },
+        "displayProductPriceBlock": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl",
+            "\/themes\/default-bootstrap\/product.tpl": "\/themes\/default-bootstrap\/product.tpl",
+            "\/themes\/default-bootstrap\/products-comparison.tpl": "\/themes\/default-bootstrap\/products-comparison.tpl"
+        },
+        "displayProductTab": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayProductTabContent": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayRightColumn": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayRightColumnProduct": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayShoppingCart": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayShoppingCartFooter": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayTop": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayTopColumn": {
+            "\/themes\/default-bootstrap\/header.tpl": "\/themes\/default-bootstrap\/header.tpl"
+        },
+        "moduleRoutes": {
+            "\/classes\/Dispatcher.php": "\/classes\/Dispatcher.php"
+        },
+        "newOrder": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "orderConfirmation": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "overrideTOSDisplay": {
+            "\/controllers\/front\/OrderController.php": "\/controllers\/front\/OrderController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "paymentConfirm": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "paymentReturn": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "postUpdateOrderStatus": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "productFooter": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "productOutOfStock": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateCarrier": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateOrderStatus": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php",
+            "\/classes\/Product.php": "\/classes\/Product.php",
+            "\/classes\/webservice\/WebserviceSpecificManagementImages.php": "\/classes\/webservice\/WebserviceSpecificManagementImages.php"
+        },
+        "updateProductAttribute": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateQuantity": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        }
+    },
+    "1.7": {
+        "DisplayOverrideTemplate": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "PDFInvoice": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "action": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php",
+            "\/controllers\/admin\/AdminPerformanceController.php": "\/controllers\/admin\/AdminPerformanceController.php"
+        },
+        "actionAdmin": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "actionAdminControllerSetMedia": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "actionAdminLoginControllerSetMedia": {
+            "\/controllers\/admin\/AdminLoginController.php": "\/controllers\/admin\/AdminLoginController.php"
+        },
+        "actionAdminMetaAfterWriteRobotsFile": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminMetaBeforeWriteRobotsFile": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminMetaSave": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminOrdersTrackingNumberUpdate": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionAdminThemesControllerUpdate_optionsAfter": {
+            "\/controllers\/admin\/AdminThemesController.php": "\/controllers\/admin\/AdminThemesController.php"
+        },
+        "actionAjaxDie": {
+            "\/classes\/controller\/Controller.php": "\/classes\/controller\/Controller.php"
+        },
+        "actionAjaxDieBefore": {
+            "\/classes\/controller\/Controller.php": "\/classes\/controller\/Controller.php"
+        },
+        "actionAttributeDelete": {
+            "\/classes\/Attribute.php": "\/classes\/Attribute.php"
+        },
+        "actionAttributeGroupDelete": {
+            "\/classes\/AttributeGroup.php": "\/classes\/AttributeGroup.php"
+        },
+        "actionAttributeGroupSave": {
+            "\/classes\/AttributeGroup.php": "\/classes\/AttributeGroup.php"
+        },
+        "actionAttributeSave": {
+            "\/classes\/Attribute.php": "\/classes\/Attribute.php"
+        },
+        "actionAuthentication": {
+            "\/classes\/form\/CustomerLoginForm.php": "\/classes\/form\/CustomerLoginForm.php"
+        },
+        "actionAuthenticationBefore": {
+            "\/classes\/form\/CustomerLoginForm.php": "\/classes\/form\/CustomerLoginForm.php"
+        },
+        "actionBeforeAjaxDie": {
+            "\/classes\/controller\/Controller.php": "\/classes\/controller\/Controller.php"
+        },
+        "actionBeforeCartUpdateQty": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCarrierProcess": {
+            "\/classes\/checkout\/CheckoutDeliveryStep.php": "\/classes\/checkout\/CheckoutDeliveryStep.php"
+        },
+        "actionCarrierUpdate": {
+            "\/controllers\/admin\/AdminCarrierWizardController.php": "\/controllers\/admin\/AdminCarrierWizardController.php",
+            "\/controllers\/admin\/AdminCarriersController.php": "\/controllers\/admin\/AdminCarriersController.php"
+        },
+        "actionCartSave": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCartSummary": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCartUpdateQuantityBefore": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCategoryAdd": {
+            "\/classes\/Category.php": "\/classes\/Category.php"
+        },
+        "actionCategoryDelete": {
+            "\/classes\/Category.php": "\/classes\/Category.php"
+        },
+        "actionCategoryUpdate": {
+            "\/classes\/Category.php": "\/classes\/Category.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionCustomerAccountAdd": {
+            "\/classes\/form\/CustomerPersister.php": "\/classes\/form\/CustomerPersister.php"
+        },
+        "actionCustomerAccountUpdate": {
+            "\/classes\/form\/CustomerPersister.php": "\/classes\/form\/CustomerPersister.php"
+        },
+        "actionCustomerAddGroups": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionCustomerBeforeUpdateGroup": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionCustomerLogoutAfter": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionCustomerLogoutBefore": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionDeleteProductInCartAfter": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php"
+        },
+        "actionDeliveryPriceByPrice": {
+            "\/classes\/Carrier.php": "\/classes\/Carrier.php"
+        },
+        "actionDeliveryPriceByWeight": {
+            "\/classes\/Carrier.php": "\/classes\/Carrier.php"
+        },
+        "actionDispatcher": {
+            "\/classes\/Dispatcher.php": "\/classes\/Dispatcher.php"
+        },
+        "actionDownloadAttachment": {
+            "\/controllers\/front\/AttachmentController.php": "\/controllers\/front\/AttachmentController.php"
+        },
+        "actionEmailAddAfterContent": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionEmailAddBeforeContent": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionFeatureDelete": {
+            "\/classes\/Feature.php": "\/classes\/Feature.php"
+        },
+        "actionFeatureSave": {
+            "\/classes\/Feature.php": "\/classes\/Feature.php"
+        },
+        "actionFeatureValueDelete": {
+            "\/classes\/FeatureValue.php": "\/classes\/FeatureValue.php"
+        },
+        "actionFeatureValueSave": {
+            "\/classes\/FeatureValue.php": "\/classes\/FeatureValue.php"
+        },
+        "actionFrontControllerSetMedia": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "actionGetExtraMailTemplateVars": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionGetIDZoneByAddressID": {
+            "\/classes\/Address.php": "\/classes\/Address.php"
+        },
+        "actionGetProductPropertiesAfter": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionGetProductPropertiesBefore": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionHtaccessCreate": {
+            "\/classes\/Tools.php": "\/classes\/Tools.php"
+        },
+        "actionInvoiceNumberFormatted": {
+            "\/classes\/order\/OrderInvoice.php": "\/classes\/order\/OrderInvoice.php"
+        },
+        "actionModuleInstallAfter": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleInstallBefore": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleRegisterHookAfter": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "actionModuleRegisterHookBefore": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "actionModuleUnRegisterHookAfter": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "actionModuleUnRegisterHookBefore": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "actionObject": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAddAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAddBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAttributeAddBefore": {
+            "\/controllers\/admin\/AdminAttributesGroupsController.php": "\/controllers\/admin\/AdminAttributesGroupsController.php"
+        },
+        "actionObjectAttributeGroupAddBefore": {
+            "\/controllers\/admin\/AdminAttributesGroupsController.php": "\/controllers\/admin\/AdminAttributesGroupsController.php"
+        },
+        "actionObjectDeleteAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectDeleteBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectUpdateAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectUpdateBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionOnImageCutAfter": {
+            "\/classes\/ImageManager.php": "\/classes\/ImageManager.php"
+        },
+        "actionOnImageResizeAfter": {
+            "\/classes\/ImageManager.php": "\/classes\/ImageManager.php"
+        },
+        "actionOrderEdited": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionOrderHistoryAddAfter": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionOrderReturn": {
+            "\/controllers\/front\/OrderFollowController.php": "\/controllers\/front\/OrderFollowController.php"
+        },
+        "actionOrderSlipAdd": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionOrderStatusPostUpdate": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionOrderStatusUpdate": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionPDFInvoiceRender": {
+            "\/classes\/PaymentModule.php": "\/classes\/PaymentModule.php",
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php",
+            "\/controllers\/admin\/AdminPdfController.php": "\/controllers\/admin\/AdminPdfController.php",
+            "\/controllers\/front\/PdfInvoiceController.php": "\/controllers\/front\/PdfInvoiceController.php"
+        },
+        "actionPasswordRenew": {
+            "\/controllers\/front\/PasswordController.php": "\/controllers\/front\/PasswordController.php"
+        },
+        "actionPaymentCCAdd": {
+            "\/classes\/order\/OrderPayment.php": "\/classes\/order\/OrderPayment.php"
+        },
+        "actionPaymentConfirmation": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionProductAdd": {
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionProductAttributeDelete": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductAttributeUpdate": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductCancel": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionProductCoverage": {
+            "\/classes\/stock\/StockManager.php": "\/classes\/stock\/StockManager.php"
+        },
+        "actionProductDelete": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductOutOfStock": {
+            "\/themes\/StarterTheme\/templates\/catalog\/_partials\/product-details.tpl": "\/themes\/StarterTheme\/templates\/catalog\/_partials\/product-details.tpl",
+            "\/themes\/StarterTheme\/templates\/catalog\/product.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product.tpl",
+            "\/themes\/classic\/templates\/catalog\/_partials\/product-details.tpl": "\/themes\/classic\/templates\/catalog\/_partials\/product-details.tpl"
+        },
+        "actionProductSave": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductSearchComplete": {
+            "\/classes\/controller\/ProductListingFrontController.php": "\/classes\/controller\/ProductListingFrontController.php"
+        },
+        "actionProductUpdate": {
+            "\/classes\/Product.php": "\/classes\/Product.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionSetInvoice": {
+            "\/classes\/order\/Order.php": "\/classes\/order\/Order.php"
+        },
+        "actionShopDataDuplication": {
+            "\/classes\/shop\/Shop.php": "\/classes\/shop\/Shop.php"
+        },
+        "actionUpdateQuantity": {
+            "\/classes\/stock\/StockAvailable.php": "\/classes\/stock\/StockAvailable.php"
+        },
+        "actionValidateOrder": {
+            "\/classes\/PaymentModule.php": "\/classes\/PaymentModule.php"
+        },
+        "actionWatermark": {
+            "\/classes\/FileUploader.php": "\/classes\/FileUploader.php",
+            "\/classes\/webservice\/WebserviceSpecificManagementImages.php": "\/classes\/webservice\/WebserviceSpecificManagementImages.php",
+            "\/controllers\/admin\/AdminImportController.php": "\/controllers\/admin\/AdminImportController.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "addProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "advancedPaymentOptions": {
+            "\/classes\/checkout\/PaymentOptionsFinder.php": "\/classes\/checkout\/PaymentOptionsFinder.php"
+        },
+        "backBeforePayment": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "dashboardData": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "dashboardZoneOne": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "dashboardZoneTwo": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "deleteProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "displayAdminOrderContentOrder": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderContentShip": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderTabOrder": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderTabShip": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminProductsExtra": {
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "displayAdminStatsModules": {
+            "\/controllers\/admin\/AdminStatsTabController.php": "\/controllers\/admin\/AdminStatsTabController.php"
+        },
+        "displayAfterBodyOpeningTag": {
+            "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl": "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl"
+        },
+        "displayBackOfficeCategory": {
+            "\/controllers\/admin\/AdminCategoriesController.php": "\/controllers\/admin\/AdminCategoriesController.php"
+        },
+        "displayBackOfficeHeader": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "displayBackOfficeTop": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "displayBanner": {
+            "\/themes\/StarterTheme\/templates\/_partials\/header.tpl": "\/themes\/StarterTheme\/templates\/_partials\/header.tpl"
+        },
+        "displayBeforeCarrier": {
+            "\/classes\/checkout\/CheckoutDeliveryStep.php": "\/classes\/checkout\/CheckoutDeliveryStep.php"
+        },
+        "displayCarrierList": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "displayCrossSellingShoppingCart": {
+            "\/themes\/StarterTheme\/templates\/checkout\/cart-empty.tpl": "\/themes\/StarterTheme\/templates\/checkout\/cart-empty.tpl",
+            "\/themes\/classic\/templates\/checkout\/cart-empty.tpl": "\/themes\/classic\/templates\/checkout\/cart-empty.tpl"
+        },
+        "displayCustomerAccount": {
+            "\/themes\/StarterTheme\/templates\/customer\/my-account.tpl": "\/themes\/StarterTheme\/templates\/customer\/my-account.tpl",
+            "\/themes\/classic\/templates\/customer\/my-account.tpl": "\/themes\/classic\/templates\/customer\/my-account.tpl"
+        },
+        "displayCustomerAccountForm": {
+            "\/classes\/form\/CustomerForm.php": "\/classes\/form\/CustomerForm.php"
+        },
+        "displayCustomerAccountFormTop": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "displayExpressCheckout": {
+            "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl": "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl",
+            "\/themes\/classic\/templates\/checkout\/cart.tpl": "\/themes\/classic\/templates\/checkout\/cart.tpl"
+        },
+        "displayFeaturePostProcess": {
+            "\/controllers\/admin\/AdminFeaturesController.php": "\/controllers\/admin\/AdminFeaturesController.php"
+        },
+        "displayFeatureValuePostProcess": {
+            "\/controllers\/admin\/AdminFeaturesController.php": "\/controllers\/admin\/AdminFeaturesController.php"
+        },
+        "displayFooter": {
+            "\/themes\/StarterTheme\/templates\/_partials\/footer.tpl": "\/themes\/StarterTheme\/templates\/_partials\/footer.tpl",
+            "\/themes\/classic\/templates\/_partials\/footer.tpl": "\/themes\/classic\/templates\/_partials\/footer.tpl"
+        },
+        "displayFooterBefore": {
+            "\/themes\/classic\/templates\/_partials\/footer.tpl": "\/themes\/classic\/templates\/_partials\/footer.tpl"
+        },
+        "displayFooterProduct": {
+            "\/themes\/StarterTheme\/templates\/catalog\/product.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product.tpl",
+            "\/themes\/classic\/templates\/catalog\/product.tpl": "\/themes\/classic\/templates\/catalog\/product.tpl"
+        },
+        "displayHeader": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayHome": {
+            "\/controllers\/front\/IndexController.php": "\/controllers\/front\/IndexController.php"
+        },
+        "displayInvoiceLegalFreeText": {
+            "\/classes\/pdf\/HTMLTemplateInvoice.php": "\/classes\/pdf\/HTMLTemplateInvoice.php"
+        },
+        "displayLeftColumn": {
+            "\/themes\/StarterTheme\/templates\/layouts\/layout-both-columns.tpl": "\/themes\/StarterTheme\/templates\/layouts\/layout-both-columns.tpl",
+            "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl": "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl"
+        },
+        "displayLeftColumnProduct": {
+            "\/themes\/StarterTheme\/templates\/catalog\/product.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product.tpl",
+            "\/themes\/classic\/templates\/catalog\/product.tpl": "\/themes\/classic\/templates\/catalog\/product.tpl"
+        },
+        "displayMaintenance": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayNav": {
+            "\/themes\/StarterTheme\/templates\/_partials\/header.tpl": "\/themes\/StarterTheme\/templates\/_partials\/header.tpl"
+        },
+        "displayNav1": {
+            "\/themes\/classic\/templates\/_partials\/header.tpl": "\/themes\/classic\/templates\/_partials\/header.tpl",
+            "\/themes\/classic\/templates\/checkout\/_partials\/header.tpl": "\/themes\/classic\/templates\/checkout\/_partials\/header.tpl"
+        },
+        "displayNav2": {
+            "\/themes\/classic\/templates\/_partials\/header.tpl": "\/themes\/classic\/templates\/_partials\/header.tpl"
+        },
+        "displayNotFound": {
+            "\/themes\/StarterTheme\/templates\/errors\/404.tpl": "\/themes\/StarterTheme\/templates\/errors\/404.tpl",
+            "\/themes\/classic\/templates\/errors\/404.tpl": "\/themes\/classic\/templates\/errors\/404.tpl"
+        },
+        "displayOrderConfirmation": {
+            "\/controllers\/front\/OrderConfirmationController.php": "\/controllers\/front\/OrderConfirmationController.php"
+        },
+        "displayOrderConfirmation1": {
+            "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl": "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl",
+            "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl": "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl"
+        },
+        "displayOrderConfirmation2": {
+            "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl": "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl",
+            "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl": "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl"
+        },
+        "displayOrderDetail": {
+            "\/controllers\/front\/GuestTrackingController.php": "\/controllers\/front\/GuestTrackingController.php",
+            "\/controllers\/front\/OrderDetailController.php": "\/controllers\/front\/OrderDetailController.php"
+        },
+        "displayPaymentEU": {
+            "\/classes\/checkout\/PaymentOptionsFinder.php": "\/classes\/checkout\/PaymentOptionsFinder.php"
+        },
+        "displayPaymentReturn": {
+            "\/controllers\/front\/OrderConfirmationController.php": "\/controllers\/front\/OrderConfirmationController.php"
+        },
+        "displayProductButtons": {
+            "\/themes\/StarterTheme\/templates\/catalog\/product.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product.tpl",
+            "\/themes\/classic\/templates\/catalog\/_partials\/quickview.tpl": "\/themes\/classic\/templates\/catalog\/_partials\/quickview.tpl",
+            "\/themes\/classic\/templates\/catalog\/product.tpl": "\/themes\/classic\/templates\/catalog\/product.tpl"
+        },
+        "displayProductDeliveryTime": {
+            "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl",
+            "\/themes\/classic\/templates\/catalog\/_partials\/miniatures\/product.tpl": "\/themes\/classic\/templates\/catalog\/_partials\/miniatures\/product.tpl"
+        },
+        "displayProductListFunctionalButtons": {
+            "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl",
+            "\/themes\/classic\/templates\/catalog\/_partials\/miniatures\/product.tpl": "\/themes\/classic\/templates\/catalog\/_partials\/miniatures\/product.tpl"
+        },
+        "displayProductListReviews": {
+            "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl"
+        },
+        "displayProductPriceBlock": {
+            "\/themes\/StarterTheme\/templates\/catalog\/_partials\/product-prices.tpl": "\/themes\/StarterTheme\/templates\/catalog\/_partials\/product-prices.tpl",
+            "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product-miniature.tpl",
+            "\/themes\/classic\/templates\/catalog\/_partials\/miniatures\/product.tpl": "\/themes\/classic\/templates\/catalog\/_partials\/miniatures\/product.tpl",
+            "\/themes\/classic\/templates\/catalog\/_partials\/product-prices.tpl": "\/themes\/classic\/templates\/catalog\/_partials\/product-prices.tpl"
+        },
+        "displayReassurance": {
+            "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl": "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl",
+            "\/themes\/classic\/templates\/catalog\/product.tpl": "\/themes\/classic\/templates\/catalog\/product.tpl",
+            "\/themes\/classic\/templates\/checkout\/cart.tpl": "\/themes\/classic\/templates\/checkout\/cart.tpl",
+            "\/themes\/classic\/templates\/checkout\/checkout.tpl": "\/themes\/classic\/templates\/checkout\/checkout.tpl"
+        },
+        "displayRightColumn": {
+            "\/themes\/StarterTheme\/templates\/layouts\/layout-both-columns.tpl": "\/themes\/StarterTheme\/templates\/layouts\/layout-both-columns.tpl",
+            "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl": "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl"
+        },
+        "displayRightColumnProduct": {
+            "\/themes\/StarterTheme\/templates\/catalog\/product.tpl": "\/themes\/StarterTheme\/templates\/catalog\/product.tpl",
+            "\/themes\/classic\/templates\/catalog\/product.tpl": "\/themes\/classic\/templates\/catalog\/product.tpl"
+        },
+        "displaySearch": {
+            "\/themes\/StarterTheme\/templates\/errors\/404.tpl": "\/themes\/StarterTheme\/templates\/errors\/404.tpl",
+            "\/themes\/classic\/templates\/errors\/404.tpl": "\/themes\/classic\/templates\/errors\/404.tpl"
+        },
+        "displayShoppingCart": {
+            "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl": "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl",
+            "\/themes\/classic\/templates\/checkout\/cart.tpl": "\/themes\/classic\/templates\/checkout\/cart.tpl"
+        },
+        "displayTop": {
+            "\/themes\/StarterTheme\/templates\/_partials\/header.tpl": "\/themes\/StarterTheme\/templates\/_partials\/header.tpl",
+            "\/themes\/classic\/templates\/_partials\/header.tpl": "\/themes\/classic\/templates\/_partials\/header.tpl"
+        },
+        "moduleRoutes": {
+            "\/classes\/Dispatcher.php": "\/classes\/Dispatcher.php"
+        },
+        "newOrder": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "orderConfirmation": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "paymentConfirm": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "paymentOptions": {
+            "\/classes\/checkout\/PaymentOptionsFinder.php": "\/classes\/checkout\/PaymentOptionsFinder.php"
+        },
+        "paymentReturn": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "postUpdateOrderStatus": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "productFooter": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "productOutOfStock": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "termsAndConditions": {
+            "\/classes\/checkout\/ConditionsToApproveFinder.php": "\/classes\/checkout\/ConditionsToApproveFinder.php"
+        },
+        "updateCarrier": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateOrderStatus": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php",
+            "\/classes\/Product.php": "\/classes\/Product.php",
+            "\/classes\/webservice\/WebserviceSpecificManagementImages.php": "\/classes\/webservice\/WebserviceSpecificManagementImages.php"
+        },
+        "updateProductAttribute": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateQuantity": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        }
+    },
+    "common": {
+        "DisplayOverrideTemplate": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "PDFInvoice": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "action": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php",
+            "\/controllers\/admin\/AdminPerformanceController.php": "\/controllers\/admin\/AdminPerformanceController.php"
+        },
+        "actionAdmin": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "actionAdminControllerSetMedia": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "actionAdminLoginControllerSetMedia": {
+            "\/controllers\/admin\/AdminLoginController.php": "\/controllers\/admin\/AdminLoginController.php"
+        },
+        "actionAdminMetaAfterWriteRobotsFile": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminMetaBeforeWriteRobotsFile": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminMetaSave": {
+            "\/controllers\/admin\/AdminMetaController.php": "\/controllers\/admin\/AdminMetaController.php"
+        },
+        "actionAdminOrdersTrackingNumberUpdate": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionAdminThemesControllerUpdate_optionsAfter": {
+            "\/controllers\/admin\/AdminThemesController.php": "\/controllers\/admin\/AdminThemesController.php"
+        },
+        "actionAttributeDelete": {
+            "\/classes\/Attribute.php": "\/classes\/Attribute.php"
+        },
+        "actionAttributeGroupDelete": {
+            "\/classes\/AttributeGroup.php": "\/classes\/AttributeGroup.php"
+        },
+        "actionAttributeGroupSave": {
+            "\/classes\/AttributeGroup.php": "\/classes\/AttributeGroup.php"
+        },
+        "actionAttributeSave": {
+            "\/classes\/Attribute.php": "\/classes\/Attribute.php"
+        },
+        "actionAuthentication": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionBeforeAjaxDie": {
+            "\/classes\/controller\/Controller.php": "\/classes\/controller\/Controller.php"
+        },
+        "actionBeforeCartUpdateQty": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCarrierProcess": {
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "actionCarrierUpdate": {
+            "\/controllers\/admin\/AdminCarrierWizardController.php": "\/controllers\/admin\/AdminCarrierWizardController.php",
+            "\/controllers\/admin\/AdminCarriersController.php": "\/controllers\/admin\/AdminCarriersController.php"
+        },
+        "actionCartSave": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCartSummary": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCategoryAdd": {
+            "\/classes\/Category.php": "\/classes\/Category.php"
+        },
+        "actionCategoryDelete": {
+            "\/classes\/Category.php": "\/classes\/Category.php"
+        },
+        "actionCategoryUpdate": {
+            "\/classes\/Category.php": "\/classes\/Category.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionCustomerAccountAdd": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionCustomerLogoutAfter": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionCustomerLogoutBefore": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionDeliveryPriceByPrice": {
+            "\/classes\/Carrier.php": "\/classes\/Carrier.php"
+        },
+        "actionDeliveryPriceByWeight": {
+            "\/classes\/Carrier.php": "\/classes\/Carrier.php"
+        },
+        "actionDispatcher": {
+            "\/classes\/Dispatcher.php": "\/classes\/Dispatcher.php"
+        },
+        "actionDownloadAttachment": {
+            "\/controllers\/front\/AttachmentController.php": "\/controllers\/front\/AttachmentController.php"
+        },
+        "actionEmailAddAfterContent": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionEmailAddBeforeContent": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionFeatureDelete": {
+            "\/classes\/Feature.php": "\/classes\/Feature.php"
+        },
+        "actionFeatureSave": {
+            "\/classes\/Feature.php": "\/classes\/Feature.php"
+        },
+        "actionFeatureValueDelete": {
+            "\/classes\/FeatureValue.php": "\/classes\/FeatureValue.php"
+        },
+        "actionFeatureValueSave": {
+            "\/classes\/FeatureValue.php": "\/classes\/FeatureValue.php"
+        },
+        "actionFrontControllerSetMedia": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "actionGetExtraMailTemplateVars": {
+            "\/classes\/Mail.php": "\/classes\/Mail.php"
+        },
+        "actionGetIDZoneByAddressID": {
+            "\/classes\/Address.php": "\/classes\/Address.php"
+        },
+        "actionHtaccessCreate": {
+            "\/classes\/Tools.php": "\/classes\/Tools.php"
+        },
+        "actionInvoiceNumberFormatted": {
+            "\/classes\/order\/OrderInvoice.php": "\/classes\/order\/OrderInvoice.php"
+        },
+        "actionModuleInstallAfter": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleInstallBefore": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleRegisterHookAfter": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleRegisterHookBefore": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleUnRegisterHookAfter": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionModuleUnRegisterHookBefore": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php"
+        },
+        "actionObject": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAddAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAddBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectAttributeAddBefore": {
+            "\/controllers\/admin\/AdminAttributesGroupsController.php": "\/controllers\/admin\/AdminAttributesGroupsController.php"
+        },
+        "actionObjectAttributeGroupAddBefore": {
+            "\/controllers\/admin\/AdminAttributesGroupsController.php": "\/controllers\/admin\/AdminAttributesGroupsController.php"
+        },
+        "actionObjectDeleteAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectDeleteBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectUpdateAfter": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionObjectUpdateBefore": {
+            "\/classes\/ObjectModel.php": "\/classes\/ObjectModel.php"
+        },
+        "actionOrderEdited": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionOrderHistoryAddAfter": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionOrderReturn": {
+            "\/controllers\/front\/OrderFollowController.php": "\/controllers\/front\/OrderFollowController.php"
+        },
+        "actionOrderSlipAdd": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionOrderStatusPostUpdate": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionOrderStatusUpdate": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionPDFInvoiceRender": {
+            "\/classes\/PaymentModule.php": "\/classes\/PaymentModule.php",
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php",
+            "\/controllers\/admin\/AdminPdfController.php": "\/controllers\/admin\/AdminPdfController.php",
+            "\/controllers\/front\/PdfInvoiceController.php": "\/controllers\/front\/PdfInvoiceController.php"
+        },
+        "actionPasswordRenew": {
+            "\/controllers\/front\/PasswordController.php": "\/controllers\/front\/PasswordController.php"
+        },
+        "actionPaymentCCAdd": {
+            "\/classes\/order\/OrderPayment.php": "\/classes\/order\/OrderPayment.php"
+        },
+        "actionPaymentConfirmation": {
+            "\/classes\/order\/OrderHistory.php": "\/classes\/order\/OrderHistory.php"
+        },
+        "actionProductAdd": {
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionProductAttributeDelete": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductAttributeUpdate": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductCancel": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "actionProductCoverage": {
+            "\/classes\/stock\/StockManager.php": "\/classes\/stock\/StockManager.php"
+        },
+        "actionProductDelete": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductOutOfStock": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "actionProductSave": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionProductUpdate": {
+            "\/classes\/Product.php": "\/classes\/Product.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "actionSetInvoice": {
+            "\/classes\/order\/Order.php": "\/classes\/order\/Order.php"
+        },
+        "actionShopDataDuplication": {
+            "\/classes\/shop\/Shop.php": "\/classes\/shop\/Shop.php"
+        },
+        "actionUpdateQuantity": {
+            "\/classes\/stock\/StockAvailable.php": "\/classes\/stock\/StockAvailable.php"
+        },
+        "actionValidateOrder": {
+            "\/classes\/PaymentModule.php": "\/classes\/PaymentModule.php"
+        },
+        "actionWatermark": {
+            "\/classes\/FileUploader.php": "\/classes\/FileUploader.php",
+            "\/classes\/webservice\/WebserviceSpecificManagementImages.php": "\/classes\/webservice\/WebserviceSpecificManagementImages.php",
+            "\/controllers\/admin\/AdminImportController.php": "\/controllers\/admin\/AdminImportController.php",
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "addProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "advancedPaymentOptions": {
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "backBeforePayment": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "dashboardData": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "dashboardZoneOne": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "dashboardZoneTwo": {
+            "\/controllers\/admin\/AdminDashboardController.php": "\/controllers\/admin\/AdminDashboardController.php"
+        },
+        "deleteProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "displayAdminOrderContentOrder": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderContentShip": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderTabOrder": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminOrderTabShip": {
+            "\/controllers\/admin\/AdminOrdersController.php": "\/controllers\/admin\/AdminOrdersController.php"
+        },
+        "displayAdminProductsExtra": {
+            "\/controllers\/admin\/AdminProductsController.php": "\/controllers\/admin\/AdminProductsController.php"
+        },
+        "displayAdminStatsModules": {
+            "\/controllers\/admin\/AdminStatsTabController.php": "\/controllers\/admin\/AdminStatsTabController.php"
+        },
+        "displayBackOfficeCategory": {
+            "\/controllers\/admin\/AdminCategoriesController.php": "\/controllers\/admin\/AdminCategoriesController.php"
+        },
+        "displayBackOfficeHeader": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "displayBackOfficeTop": {
+            "\/classes\/controller\/AdminController.php": "\/classes\/controller\/AdminController.php"
+        },
+        "displayBanner": {
+            "\/themes\/default-bootstrap\/header.tpl": "\/themes\/default-bootstrap\/header.tpl"
+        },
+        "displayBeforeCarrier": {
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayCarrierList": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "displayCustomerAccount": {
+            "\/controllers\/front\/MyAccountController.php": "\/controllers\/front\/MyAccountController.php"
+        },
+        "displayCustomerAccountForm": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php",
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php"
+        },
+        "displayCustomerAccountFormTop": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php",
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php"
+        },
+        "displayFeaturePostProcess": {
+            "\/controllers\/admin\/AdminFeaturesController.php": "\/controllers\/admin\/AdminFeaturesController.php"
+        },
+        "displayFeatureValuePostProcess": {
+            "\/controllers\/admin\/AdminFeaturesController.php": "\/controllers\/admin\/AdminFeaturesController.php"
+        },
+        "displayFooter": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayFooterProduct": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayHeader": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayHome": {
+            "\/controllers\/front\/IndexController.php": "\/controllers\/front\/IndexController.php"
+        },
+        "displayInvoiceLegalFreeText": {
+            "\/classes\/pdf\/HTMLTemplateInvoice.php": "\/classes\/pdf\/HTMLTemplateInvoice.php"
+        },
+        "displayLeftColumn": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayLeftColumnProduct": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayMaintenance": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayNav": {
+            "\/themes\/default-bootstrap\/header.tpl": "\/themes\/default-bootstrap\/header.tpl"
+        },
+        "displayOrderConfirmation": {
+            "\/controllers\/front\/OrderConfirmationController.php": "\/controllers\/front\/OrderConfirmationController.php"
+        },
+        "displayOrderDetail": {
+            "\/controllers\/front\/GuestTrackingController.php": "\/controllers\/front\/GuestTrackingController.php",
+            "\/controllers\/front\/OrderDetailController.php": "\/controllers\/front\/OrderDetailController.php"
+        },
+        "displayPaymentReturn": {
+            "\/controllers\/front\/OrderConfirmationController.php": "\/controllers\/front\/OrderConfirmationController.php"
+        },
+        "displayProductButtons": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayProductDeliveryTime": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl",
+            "\/themes\/default-bootstrap\/product.tpl": "\/themes\/default-bootstrap\/product.tpl",
+            "\/themes\/default-bootstrap\/products-comparison.tpl": "\/themes\/default-bootstrap\/products-comparison.tpl",
+            "\/themes\/default-bootstrap\/shopping-cart-product-line.tpl": "\/themes\/default-bootstrap\/shopping-cart-product-line.tpl"
+        },
+        "displayProductListFunctionalButtons": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl"
+        },
+        "displayProductListReviews": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl"
+        },
+        "displayProductPriceBlock": {
+            "\/themes\/default-bootstrap\/product-list.tpl": "\/themes\/default-bootstrap\/product-list.tpl",
+            "\/themes\/default-bootstrap\/product.tpl": "\/themes\/default-bootstrap\/product.tpl",
+            "\/themes\/default-bootstrap\/products-comparison.tpl": "\/themes\/default-bootstrap\/products-comparison.tpl"
+        },
+        "displayRightColumn": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayRightColumnProduct": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayShoppingCart": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayTop": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "moduleRoutes": {
+            "\/classes\/Dispatcher.php": "\/classes\/Dispatcher.php"
+        },
+        "newOrder": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "orderConfirmation": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "paymentConfirm": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "paymentReturn": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "postUpdateOrderStatus": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "productFooter": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "productOutOfStock": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateCarrier": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateOrderStatus": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateProduct": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php",
+            "\/classes\/Product.php": "\/classes\/Product.php",
+            "\/classes\/webservice\/WebserviceSpecificManagementImages.php": "\/classes\/webservice\/WebserviceSpecificManagementImages.php"
+        },
+        "updateProductAttribute": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        },
+        "updateQuantity": {
+            "\/classes\/Hook.php": "\/classes\/Hook.php"
+        }
+    },
+    "1.6-only": {
+        "actionAfterDeleteProductInCart": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php"
+        },
+        "actionBeforeAuthentication": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionBeforeSubmitAccount": {
+            "\/controllers\/front\/AuthController.php": "\/controllers\/front\/AuthController.php"
+        },
+        "actionCartListOverride": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php"
+        },
+        "actionOrderDetail": {
+            "\/controllers\/front\/GuestTrackingController.php": "\/controllers\/front\/GuestTrackingController.php",
+            "\/controllers\/front\/OrderDetailController.php": "\/controllers\/front\/OrderDetailController.php"
+        },
+        "actionProductListModifier": {
+            "\/controllers\/front\/CategoryController.php": "\/controllers\/front\/CategoryController.php"
+        },
+        "actionProductListOverride": {
+            "\/controllers\/front\/CategoryController.php": "\/controllers\/front\/CategoryController.php"
+        },
+        "actionSearch": {
+            "\/controllers\/front\/SearchController.php": "\/controllers\/front\/SearchController.php"
+        },
+        "displayAfterShoppingCartBlock": {
+            "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl": "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl"
+        },
+        "displayBeforePayment": {
+            "\/controllers\/front\/OrderController.php": "\/controllers\/front\/OrderController.php"
+        },
+        "displayBeforeShoppingCartBlock": {
+            "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl": "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl",
+            "\/themes\/default-bootstrap\/shopping-cart.tpl": "\/themes\/default-bootstrap\/shopping-cart.tpl"
+        },
+        "displayCartTotalPriceLabel": {
+            "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl": "\/themes\/default-bootstrap\/shopping-cart-advanced.tpl",
+            "\/themes\/default-bootstrap\/shopping-cart.tpl": "\/themes\/default-bootstrap\/shopping-cart.tpl"
+        },
+        "displayCompareExtraInformation": {
+            "\/controllers\/front\/CompareController.php": "\/controllers\/front\/CompareController.php"
+        },
+        "displayCustomerIdentityForm": {
+            "\/controllers\/front\/IdentityController.php": "\/controllers\/front\/IdentityController.php"
+        },
+        "displayHomeTab": {
+            "\/controllers\/front\/IndexController.php": "\/controllers\/front\/IndexController.php"
+        },
+        "displayHomeTabContent": {
+            "\/controllers\/front\/IndexController.php": "\/controllers\/front\/IndexController.php"
+        },
+        "displayMobileHeader": {
+            "\/classes\/controller\/FrontController.php": "\/classes\/controller\/FrontController.php"
+        },
+        "displayPayment": {
+            "\/classes\/module\/Module.php": "\/classes\/module\/Module.php",
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayPaymentTop": {
+            "\/controllers\/front\/OrderOpcController.php": "\/controllers\/front\/OrderOpcController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayProductComparison": {
+            "\/controllers\/front\/CompareController.php": "\/controllers\/front\/CompareController.php"
+        },
+        "displayProductContent": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayProductTab": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayProductTabContent": {
+            "\/controllers\/front\/ProductController.php": "\/controllers\/front\/ProductController.php"
+        },
+        "displayShoppingCartFooter": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        },
+        "displayTopColumn": {
+            "\/themes\/default-bootstrap\/header.tpl": "\/themes\/default-bootstrap\/header.tpl"
+        },
+        "overrideTOSDisplay": {
+            "\/controllers\/front\/OrderController.php": "\/controllers\/front\/OrderController.php",
+            "\/controllers\/front\/ParentOrderController.php": "\/controllers\/front\/ParentOrderController.php"
+        }
+    },
+    "1.7-only": {
+        "actionAjaxDie": {
+            "\/classes\/controller\/Controller.php": "\/classes\/controller\/Controller.php"
+        },
+        "actionAjaxDieBefore": {
+            "\/classes\/controller\/Controller.php": "\/classes\/controller\/Controller.php"
+        },
+        "actionAuthenticationBefore": {
+            "\/classes\/form\/CustomerLoginForm.php": "\/classes\/form\/CustomerLoginForm.php"
+        },
+        "actionCartUpdateQuantityBefore": {
+            "\/classes\/Cart.php": "\/classes\/Cart.php"
+        },
+        "actionCustomerAccountUpdate": {
+            "\/classes\/form\/CustomerPersister.php": "\/classes\/form\/CustomerPersister.php"
+        },
+        "actionCustomerAddGroups": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionCustomerBeforeUpdateGroup": {
+            "\/classes\/Customer.php": "\/classes\/Customer.php"
+        },
+        "actionDeleteProductInCartAfter": {
+            "\/controllers\/front\/CartController.php": "\/controllers\/front\/CartController.php"
+        },
+        "actionGetProductPropertiesAfter": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionGetProductPropertiesBefore": {
+            "\/classes\/Product.php": "\/classes\/Product.php"
+        },
+        "actionOnImageCutAfter": {
+            "\/classes\/ImageManager.php": "\/classes\/ImageManager.php"
+        },
+        "actionOnImageResizeAfter": {
+            "\/classes\/ImageManager.php": "\/classes\/ImageManager.php"
+        },
+        "actionProductSearchComplete": {
+            "\/classes\/controller\/ProductListingFrontController.php": "\/classes\/controller\/ProductListingFrontController.php"
+        },
+        "displayAfterBodyOpeningTag": {
+            "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl": "\/themes\/classic\/templates\/layouts\/layout-both-columns.tpl"
+        },
+        "displayCrossSellingShoppingCart": {
+            "\/themes\/StarterTheme\/templates\/checkout\/cart-empty.tpl": "\/themes\/StarterTheme\/templates\/checkout\/cart-empty.tpl",
+            "\/themes\/classic\/templates\/checkout\/cart-empty.tpl": "\/themes\/classic\/templates\/checkout\/cart-empty.tpl"
+        },
+        "displayExpressCheckout": {
+            "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl": "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl",
+            "\/themes\/classic\/templates\/checkout\/cart.tpl": "\/themes\/classic\/templates\/checkout\/cart.tpl"
+        },
+        "displayFooterBefore": {
+            "\/themes\/classic\/templates\/_partials\/footer.tpl": "\/themes\/classic\/templates\/_partials\/footer.tpl"
+        },
+        "displayNav1": {
+            "\/themes\/classic\/templates\/_partials\/header.tpl": "\/themes\/classic\/templates\/_partials\/header.tpl",
+            "\/themes\/classic\/templates\/checkout\/_partials\/header.tpl": "\/themes\/classic\/templates\/checkout\/_partials\/header.tpl"
+        },
+        "displayNav2": {
+            "\/themes\/classic\/templates\/_partials\/header.tpl": "\/themes\/classic\/templates\/_partials\/header.tpl"
+        },
+        "displayNotFound": {
+            "\/themes\/StarterTheme\/templates\/errors\/404.tpl": "\/themes\/StarterTheme\/templates\/errors\/404.tpl",
+            "\/themes\/classic\/templates\/errors\/404.tpl": "\/themes\/classic\/templates\/errors\/404.tpl"
+        },
+        "displayOrderConfirmation1": {
+            "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl": "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl",
+            "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl": "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl"
+        },
+        "displayOrderConfirmation2": {
+            "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl": "\/themes\/StarterTheme\/templates\/checkout\/order-confirmation.tpl",
+            "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl": "\/themes\/classic\/templates\/checkout\/order-confirmation.tpl"
+        },
+        "displayPaymentEU": {
+            "\/classes\/checkout\/PaymentOptionsFinder.php": "\/classes\/checkout\/PaymentOptionsFinder.php"
+        },
+        "displayReassurance": {
+            "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl": "\/themes\/StarterTheme\/templates\/checkout\/cart.tpl",
+            "\/themes\/classic\/templates\/catalog\/product.tpl": "\/themes\/classic\/templates\/catalog\/product.tpl",
+            "\/themes\/classic\/templates\/checkout\/cart.tpl": "\/themes\/classic\/templates\/checkout\/cart.tpl",
+            "\/themes\/classic\/templates\/checkout\/checkout.tpl": "\/themes\/classic\/templates\/checkout\/checkout.tpl"
+        },
+        "displaySearch": {
+            "\/themes\/StarterTheme\/templates\/errors\/404.tpl": "\/themes\/StarterTheme\/templates\/errors\/404.tpl",
+            "\/themes\/classic\/templates\/errors\/404.tpl": "\/themes\/classic\/templates\/errors\/404.tpl"
+        },
+        "paymentOptions": {
+            "\/classes\/checkout\/PaymentOptionsFinder.php": "\/classes\/checkout\/PaymentOptionsFinder.php"
+        },
+        "termsAndConditions": {
+            "\/classes\/checkout\/ConditionsToApproveFinder.php": "\/classes\/checkout\/ConditionsToApproveFinder.php"
+        }
+    }
+}
