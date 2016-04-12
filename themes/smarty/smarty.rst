@@ -3,6 +3,13 @@ Smarty
 ***********************
 
 
+[Note]
+Secyre by default. all html is escaped, use:
+
+..  code-block:: smarty
+
+  {$variableWithHtml noscript}
+
 Helpers and modifier
 ======================
 
