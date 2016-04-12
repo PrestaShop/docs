@@ -43,6 +43,9 @@
     1. ?
 1. Smarty
   1. Helpers and modifier
+    1. {form_field}
+    1. {render}
+    1. {widget}
     1. `{url}` Helper
     1. Class name modifiers
     1. escaping html
