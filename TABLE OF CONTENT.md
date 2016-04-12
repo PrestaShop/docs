@@ -1,9 +1,12 @@
 
-# Theme documentation
+Theme documentation
+=========================
 
-## Table of content
 
-1. Prologue
+Table of content
+-----------------------
+
+1. Prologuemv
   1. Migrating from 1.6
   1. coding standard and guidelines
   1. requirements
@@ -14,7 +17,6 @@
     1. directory structure
     1. required templates and libs
     1. theme.yml
-    1.
 1. Assets
   1. Using webpack
   1. Adding assets
@@ -40,7 +42,6 @@
     1. customer account (+ customeraddressforms)
   1. partials
     1. notifications
-    1. ?
 1. Smarty
   1. Helpers and modifier
     1. {form_field}
@@ -52,13 +53,11 @@
   1. custom plugins
 1. Hooks
   1. Dynamics and natives
-  1.
   1. Setting up config on install
 1. Main Modules
   1. Nav
   1. blockcontact
   1. contact form
-  1.
 1. Overriding Modules
   1. template
   1. assets (css/js)
@@ -69,7 +68,6 @@
 1. JavaScript
   1. core.js
   1. ajax endpoints
-  1.
 1. Test and compatibility
   1. Launch automated test to ensure compatibility
 
@@ -78,9 +76,9 @@
   1. Developing modules for 1.7
   1. Creating TOS module
   1. payment modules
-  1.
 
 
-# Braindump
+Braindump
+------------------
 
-here
+If you think about anything, please write it here.
