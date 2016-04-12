@@ -1,0 +1,6 @@
+{
+  "error" : ["Error message 1", "Error message 2"],
+  "warning" : ["Warning message 1", "Warning message 2"],
+  "success" : ["Success message 1", "Success message 2"],
+  "info" : ["Info message 1", "Info message 2"],
+}
