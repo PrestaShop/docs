@@ -2,65 +2,65 @@
 Asset Management
 ****************
 
-PrestaShop 1.7 has significantly improved the way assets are managed. Especially because PrestaShop
-ships with some configuration files taht we will help you setup your talk runner (webpack).
+PrestaShop 1.7 has significantly improved the way assets (CSS, JavaScript and image file) are managed. This is due to the fact that PrestaShop
+ships with some configuration files that we will help you set up your Webpack task runner.
 
-Modules can add css and js files the same was as PrestaShop 1.6.
+Modules can add CSS and JavaScript files the same way they did in PrestaShop 1.6.
 
-Load:
+Every module loads the following files:
 
 1. theme.css
-1. custom.css
-1. rtl.css (if rtl language detected)
+2. custom.css
+3. rtl.css (if a right-to-left language is detected)
+4. core.js
+5. theme.js
+6. custom.js
 
-1. core.js
-1. theme.js
-1. custom.js
 
-Webpack
+About Webpack
 =========================
 
-	webpack is a module bundler.
-	webpack takes modules with dependencies and generates static assets representing those modules.
+	Webpack is a module bundler.
+	Webpack takes modules with dependencies and generates static assets representing those modules.
 
-The point is that you will compile all your styles - probably written in Sass - into one single CSS file.
-Then your theme style will make only on HTTP request and because your browser will cache it,
-you will even donwload this file only once.
+The main interest in using Webpack is that it will compile all your styles - which you probably have written in Sass - into one single CSS file.
+This way, your theme will make only one HTTP request for this single file, and since your browser will cache it for later re-use,
+it will even donwload this file only once.
 
-The same goes with your JavaScript. Instead of loading jQuery + community plugins + custom plugin + extra code,
-you will compile (and minify) all JavaScript code into a single file.
+The same goes with your JavaScript. Instead of loading jQuery along with its community plugins, you own custom plugins and any extra code you might need,
+Webpack will compile and minify all this JavaScript code into a single file, which will be loaded once.
 
-IMG
+// TODO IMG
 
 
 [NOTE]
-CCC as you know in PrestaShop hasnt changed yet, it should be redone tho.
+PrestaShop's Combine, Compress and Cache feature (CCC) hasn't yet been update to take this into account. Don't worry, it should be redone soon.
 
 
 Installing webpack
 -----------------------
 
-If you want to use it (and you should), follow these steps:Copyright (c) 2015 Copyright Holder All Rights Reserved.
+If you want to use Webpack (and we advise you to), follow these steps:
 
-* install nodejs
-* go in the `_dev` folder
-* run `npm install`
-* then use `npm run watch` or `npm run build` to build your assets once or on change.
+* Install Node.js
+* Go in the `_dev` folder
+* Run `npm install`
+* Use `npm run watch` to build your assets once, `npm run build` to build them automatically with each change
 
 
-webpack configuration
+Webpack configuration
 ---------------------------------
 
-1. All styles goes to `assets/css/theme.css`
-1. All js goes to `assets/js/theme.js`
+1. All CSS rules go to the `assets/css/theme.css` file.
+2. All JavaScript code go to the `assets/js/theme.js` file.
 
-We provide configuration for sass compilation for styles, Javascript is written in ES6 and compile to ES5 with babel.
+We provide configuration for Sass compilation for styles. JavaScript code is written in ES6, and compiled to ES5 with Babel.
 
-PNG ? svg ?
+// TODO PNG ? svg ?
 
-There are 2 custom commands you can run `npm run build` and `npm run watch`, to build your assets once or on change.
+There are 2 custom commands you can run to build your assets once or everytime something changes: `npm run build` and `npm run watch`.
 
-If you want to use stylus or less, simple edit the command line under the "scripts" section.
+If you want to use Stylus or Less, simply edit the command line under the "scripts" section.
 
 .. code-block:: json
 
@@ -90,7 +90,7 @@ If you want to use stylus or less, simple edit the command line under the "scrip
 	    },
 	    module: {
 	        loaders: [
-	            {test: /\.js$/     , loaders: ['babel-loader']},
+	            {test: /\.js$/, loaders: ['babel-loader']},
 	        ]
 	    },
 	    externals: {
@@ -107,37 +107,36 @@ Adding Assets
 =================
 
 
-With webpack (theme-wide)
+With Webpack (theme-wide)
 ----------------------------
 
-todo
+// TODO
 
 
-Without webpack (theme-wide)
+Without Webpack (theme-wide)
 -----------------------------
 
-All PrestaShop 1.7 themes have an empty by default `assets/css/custom.css` file.
+[NOTE]
+This is not recommended, please use webpack
 
-If you need to make small modifications, like change the color of the text and such, you
-can add your style in this file. It's loaded after `theme.css`. Also if you don't want to
-use webpack you can import other css files in this one like
+All of PrestaShop 1.7's themes have a `assets/css/custom.css` file, which is empty by default.
+We advise you to add your custome CSSrules in this file if you need to make small modifications, like changing the color of the text and such. It's loaded after the `theme.css` file. 
+
+Also if you don't want to use Webpack, you can import other CSS files in `custom.css`, for instance:
 
 .. code-block:: CSS
 
 	@import './other-css-file.css';
 
-[NOTE]
-This is not recommended, please use webpack
-
-The same way goes wit JavaScript, see `assets/js/custom.js`
+The same way goes with custom JavaScript code, with the `assets/js/custom.js` file.
 
 
 With HTML (page-specific)
 ---------------------------
 
-Maybe you need to load a very custom css file on some pages. If you have a 1Mo of CSS dedicated to a widget/infography/map/section for example, you may not want to add it to webpack.
+There might situation when you need to load a very custom CSS file on some specific pages (but on all of the site's pages). If you have 1 Mb of CSS dedicated to a widget/infographic/map/advanced section for example, you may not want to add it to Webpack.
 
-Then open `templates/_partials/head.tpl` and add something similar to the following code. (example given for home page)
+In such cases, open the `templates/_partials/head.tpl` template file, and add something similar to the following code:
 
 .. code-block:: Smarty
 
@@ -145,25 +144,27 @@ Then open `templates/_partials/head.tpl` and add something similar to the follow
 		<link rel="stylesheet" href="themes/YOUR_THEME_NAME/assets/css/very-custom.css" type="text/css" media="all" />
 	{/if}
 
-or for JavaScript
+or for if you need to add a huge custom JavaScript file:
 
 .. code-block:: Smarty
 
 	{if $page.page_name == 'index'}
 		<script type="text/javascript" src="themes/YOUR_THEME_NAME/assets/js/very-custom.js"></script>
 	{/if}
+    
+Note: these examples target the homepage. Adapt them to your needs.
 
 
 
 With Modules
 --------------
 
-When developing a module, you may want to add specific styles for your templates. The way of adding assets for modules didnt change
+When developing a PrestaShop module, you may want to add specific styles for your templates. The way of adding assets for modules didn't change.
 
 With a front controller
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you develop a front controller, simply extend the `setMedia()` method like
+If you develop a front controller, simply extend the `setMedia()` method. For instance:
 
 .. code-block:: php
 
@@ -180,7 +181,7 @@ If you develop a front controller, simply extend the `setMedia()` method like
 Without a front controller
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you only have your module class, register on actionFrontControllerSetMedia and add ur asset on the go inside the hook
+If you only have your module's class, register your code on the `actionFrontControllerSetMedia` hook and add your asset on the go inside the hook:
 
 .. code-block:: php
 
@@ -190,4 +191,4 @@ If you only have your module class, register on actionFrontControllerSetMedia an
 		$this->context->controller->addJS($this->_path.'js/custom-style-in-module.js');
 	}
 
-[NOTE] A tester lol
+// TODO This needs proper testing
