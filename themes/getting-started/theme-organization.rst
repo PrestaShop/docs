@@ -1,11 +1,11 @@
 ****************
-THEME organization
+Theme organization
 ****************
 
-directory structure
+Directory structure
 ========================
 
-A detailler !
+// TODO Needs more details!
 
 .. code-block::
 
@@ -70,15 +70,15 @@ A detailler !
       └── wrapper.tpl
 
 
-required templates and libs
+Required templates and libraries
 ============================
 
 Required templates
 --------------------
 
-When you install/enable a theme, PRsetaShop will check if the theme is valid. It's looking looking for theme.yml file (and check its content), declared compatibility and some template files.
+When you install/enable a theme, PrestaShop will check if the theme is valid: it looks for theme.yml file (and checks its content), its declared compatibility, and some template files.
 
-Here is the exhaustive and up-to-date (lol) file list:
+Here is the complete list of files that are checked:
 
 * preview.png
 * config/theme.yml
@@ -96,13 +96,9 @@ Here is the exhaustive and up-to-date (lol) file list:
 
 
 [NOTE]
-All these files need to exists, even if they're empty.
-maybe you've built some sort of ground breaking theme and it doesnt exactly work like the starter theme does. Like you don t have any product page, then you don't want the product.tpl file. You just have to create an empty one. be nice and add a comment to were the code related to products can be found ;)
+All these files need to exist, even if they're empty.
+It could be that you've built some sort of groundbreaking theme and it doesn't exactly work like the Starter Theme does. For instance, you don't have need a product page, then you don't want the product.tpl file. In that case, you just have to create an empty product.tpl file. Be nice to the next develop and add a comment indicating where the code related to products can be found ;)
 
+jQuery is already loaded with the core.js file, but no other libraries, since the idea is that the Starter Theme should not opinionated.
 
-
-
-jQuery is already loaded with core.js
-but no other lib since not opinionated
-
-[note] block sur addons
+// TODO add info about Addons block
