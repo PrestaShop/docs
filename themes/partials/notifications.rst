@@ -1,31 +1,33 @@
-notifications
+Notifications
 ================
 
-Throughout the whole site user get flash notifications messages from PRestaShop to inform him about success or error
+Throughout the whole front office, the customer can receive notification messages from PrestaShop, to inform her about successes or errors, for instance.
+Your theme can too send notifications.
 
-No message is hardcoded to the template. All message from controller so we have consistency in case you updage/change template
-Plus there is a good chance all messages are already translated in your language
+The notification messages are not hardcoded in the template, but are send from the controller, so that you have consistency in case you updage/change your template.
+Also, there is a good chance that all messages are already translated into your language!
 
-4 types of notifications
------------------------------
 
-An array of notification is passed to the templates, containing:
+Types of notifications
+----------------------
 
-* success: performed action and everything went well
-* error: didnt work
-* warning: important notice
+An array of notification is passed to the templates, containing at least one of these:
+
+* success: an action was performed and everything went well.
+* error: something went wrong
+* warning: important notice the merchant should know about.
 * info: "just so you know"
+
 
 Display them
 ------------------------------
 
-Data are like:
+Data are built this way:
 
-INCLUDE JSON
+// TODO INCLUDE JSON
 
 
-In starter theme it looks like:
-
+In the Starter Theme, it looks like this:
 
 .. code-block:: smarty
 
@@ -74,18 +76,19 @@ In starter theme it looks like:
   </aside>
 
 
-Add message in your front controller
+Add your own message in your front controller
 --------------------------------------
 
-Your front controller holds the 4 following variables, they are arrays and they hold messages as string.
+Your front controller holds the 4 following variables.
 
 * $this->error
 * $this->success
 * $this->warning
 * $this->danger
 
+They are PHP arrays, and they hold messages as string.
 
-Since PrestaShop 1.7 you can redirect AND display a message after.
+Since PrestaShop 1.7, you can redirect AND display a message after an action.
 
 .. code-block:: php
 
