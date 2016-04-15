@@ -4,27 +4,29 @@ Smarty
 
 
 [Note]
-Secyre by default. all html is escaped, use:
+With PrestaShop 1.7, we choose to be secure by default: all html is escaped, you do not have to explicitely escape variables anymore. See for instance:
 
 ..  code-block:: smarty
 
   {$variableWithHtml noscript}
 
+  
 Helpers and modifier
 ======================
 
 {url}
 ---------------
 
-PrestaShop 1.7 introduce a new smarty helper to generate urls here are some examples.
-This will take care of SSL, domain, virtual and physical base uri,  params concat and of course url rewritting.
-{url} use the Link class internatly
+PrestaShop 1.7 introduces a new Smarty helper to generate ULRs.
+This will take care of SSL, domain name, virtual and physical base URI, parameters concatenation, and of course URL rewritting.
 
-[NOTE] for link to any controller without params, please see `$urls` dataset.
+{url} uses the Link class internally.
 
+[NOTE] To link to any controller without params, please see the `$urls` dataset.
 
-[warning] an instance of link is still passed to the templates for retrocompat' purpose since it was heavily used.
-it is not recommended to use
+[WARNING] An instance of link is still passed to the templates for retrocompatibility purposes, since it was heavily used. It is not recommended to use it.
+
+Here is an example:
 
 .. code-block:: smarty
 
@@ -36,7 +38,7 @@ it is not recommended to use
 
   {url entity=address id=$id_address params=['delete' => 1]}
 
-will render (this is an example with my config, but you get the idea)
+...will render as:
 
 .. code-block:: html
 
@@ -53,12 +55,12 @@ Widgets
 {widget}
 ^^^^^^^^^
 
-PrestaShop 1.7  has introduce a new way to display modules. Instead of using a hook and hooking your module on it
-the widget function let you display any content from module in your template
+PrestaShop 1.7 introduces a new way to display modules. Instead of using a hook and hooking your module to it,
+the widget's function lets you display any content from the module in your template.
 
-[NOTE] link to full widget system doc
+// TODO link to full widget system doc
 
-If you want to displau the shop contact info using ps_contactinfo, you can write this
+For instance, if you want to display the shop's contact info from the  ps_contactinfo module, you can write this:
 
 .. code-block:: smarty
 
@@ -66,8 +68,7 @@ If you want to displau the shop contact info using ps_contactinfo, you can write
     {widget name="ps_contactinfo"}
   </div>
 
-since some module have different template depending on which hook they are hooked on, you
-can pass the hook name as well
+Since some module have different templates depending on which hook they are hooked on, you can pass the hook name as well:
 
 
 .. code-block:: smarty
@@ -80,10 +81,10 @@ can pass the hook name as well
 {widget_block}
 ^^^^^^^^^^^^^^^
 
-Even better you can rewrite the template on the go. the module will use your smarty code instead of loading
+Even better, you can rewrite the template on the go. The module will use your Smarty code instead of loading
 the template file.
 
-With ps_linklist example, instead of using `ps_linklist/ps_linklist/views/templates/hook/linkblock.tpl`, you can override it this way:
+Taking the ps_linklist module as an example, instead of using `ps_linklist/ps_linklist/views/templates/hook/linkblock.tpl`, you can override it this way:
 
 .. code-block:: smarty
 
@@ -104,7 +105,7 @@ With ps_linklist example, instead of using `ps_linklist/ps_linklist/views/templa
 {render}
 --------------
 
-ui as to come form controller. so far only used for forms (customer info and checkout).
+The interface elements (UI) have to come from the controller. So far, it is only used for forms (customer info and checkout).
 needs to implement `FormInterface`
 
 .. code-block:: smarty
@@ -115,7 +116,7 @@ needs to implement `FormInterface`
 {form_field}
 ^^^^^^^^^^^^^^
 
-
+Form fields are called this way:
 
 .. code-block:: Smarty
 
@@ -139,26 +140,28 @@ $field is an array like:
 Class name modifiers
 ------------------------
 
-in order to use data from controller to generate classnames we added these 2 modifiers
+In order to use the data from controller to generate classnames, we added 2 modifiers: 'classname' and 'classnames'.
 
 
 classname
 ^^^^^^^^^^
 
-classname will ensure your string is a valid class name. it will:
+The classname data modifier will ensure that your string is a valid class name. 
 
-1. lowercase
-1. replace funny characters with latin non accented ones (see https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Touls.php#L1297-L1393)
-1. replace all alphnumerical char by one dash
-1. ensure only one consecutive dash
+It will:
+
+1. Put it in lowercase.
+2. Replace any funny characters with latin non accented ones.
+3. Replace all alphanumerical char by one dash.
+4. Ensure only one consecutive dash is used.
 
 
 classnames
 ^^^^^^^^^^
 
-takes an array, key is the classname and the value is a boolean indicating if it should be displayed or not.
+This data modifier takes an array, where the key is the classname and the value is a boolean indicating if it should be displayed or not.
 
-note that each class names are passed the classname filter
+Note that each classname is passed through the classname filter.
 
 .. code-block:: php
 
