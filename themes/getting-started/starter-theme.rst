@@ -2,42 +2,45 @@
 Starter Theme
 ****************
 
+PrestaShop 1.7 introduces a new way for designers to create their theme from scratch: the Starter Theme.
+The default theme for PS 1.7 is based on the Starter Theme.
 
-For pretty much every CMS, the default theme is used as a framework to build theme.
+For pretty much every CMS, the default theme is used as a framework to build custom theme: designers have to rework the default theme and reshape it into what they want to display. Sometimes that means having to spend a lot of time removing all the CSS rules and JavaScript code from the default theme, and rewriting everything. This means a LOT of work before even starting to actually create something original.
 
-This means all theme are tied to most of our technical choices. if we use bootstrap it's hard to
-use foundation for instance.
+This means that a lot of themes are tied to the default theme's technical choices, because this way of working makes it hard to make your own choices. For instance, since the default theme uses Bootstrap, it's hard to use Foundation.
 
-We decided to build a theme that will let you start your theme with all the minimum code: template files, markup ad JavaScript.
+With the Starter Theme, the PrestaShop team decided to build a skeleton theme that will give you a kickstart for your custom theme, with all the minimum code (essential template files, markup ad JavaScript code) and enough freedom to make your own choices. You can choose to use Bootstrap, Foundation or Blueprint. The Starter Theme is not opinionated: there is no decision made to use either one library or another.
 
-The Starter Theme is not opinionated, there is no decision made to use either this lib or another one.
+By using the Starter Theme as the foundation for your custom theme, everything is ready for you, you just have to create upon it.
 
-If you download the release of StarterTheme, everything is ready for you.
 
-If you clone the StarterTheme repo you will see he startertheme as some minimalistic (ugly ?) style. This is only for deelopement purpose. You shouldnt use them or inlcude them in your theme, please delete all files inside `_dev/css` (see screenshot)
+Downloading the Starter Theme
+================
+
+The Starter Theme is available on GitHub: https://github.com/PrestaShop/StarterTheme
+
+If you clone the StarterTheme repository and select it as the theme for your store, you will see minimalistic theme with an overly simplistic (ugly?) style. This is only for devlopement purpose. You should NOT use the Starter Theme as is, and you should NOT use its default CSS rules nor include them in your theme: please delete all files inside `_dev/css` (see screenshot)
 
 [WARNING]
-Unless your remove it, jQuery is loaded inside core.js
-
+Unless your remove it, the jQuery library is loaded by the core.js file.
 
 [NOTE]
-Please note that if you want to sell your theme on addons, there are some specific requirements, like you must use bootstrap.
-See more: link
+Please note that if you want to sell your theme on the PrestaShop Addons marketplace, there are some specific requirements. For instance, Addons-distributed themes MUST use Bootstrap.
+
+See more: 
+// TODO add addons link
 
 
-Modify. don't override.
+Modify. Don't override.
 ============================
 
-When you want to create a new theme, copy and paste all files from the starter theme inside your empty theme directory.
-then start modifying it.
+When you want to create a new theme, copy and paste all files from the Starter Theme inside your empty theme directory.
+Then you start modifying it, and building your own theme.
 
 Do not use it as a parent theme, you will only run into trouble and waste your time.
 
-
-[BUTTON DOWLOAD STARTERTHEEM]
+[BUTTON DOWNLOAD STARTERTHEME]
 
 [SCREENSHOT NO STYLE vs DEV STYLE]
 
-
-Read also
-http://build.prestashop.com/tag/starter-theme/
+Read also: http://build.prestashop.com/tag/starter-theme/

@@ -2,14 +2,14 @@
 Theme.yml
 ****************
 
-The theme. yml defines all the theme configuration like version number, layouts, compatibility range, hook configuration...
+The theme's theme.yml file defines all of the theme's configuration and meta information, such as its version number, layouts, compatibility range, hook configuration, etc.
 
-theme description
+Theme description
 =========================
 
-Name must match directory name
+The theme's name MUST match its directory name. For instance, if the theme is named "My Awesome Theme" and its 'name' value is set to "my-awesome-theme", then the folder MUST be /my-awesome-theme .
 
-Users will be able to choose each page's layout from the theme's settings page. Layouts are automatically parsed from the templates/layouts folder so this configuration key is optional, but it allows designers to provide some more user friendly info than just a filename.
+Users will be able to choose the layout for each page from the theme's settings page. Layouts are automatically parsed from the theme's /templates/layouts folder, so this configuration key is optional, but it allows designers to provide some more user-friendly info than just a filename.
 
 .. code-block:: yaml
 
@@ -36,10 +36,10 @@ Users will be able to choose each page's layout from the theme's settings page. 
 Global settings
 ====================
 
-configuration
+Configuration
 ------------------
 
-change PrestaShop configuration when the theme is enabled
+You can have the theme change the configuration of PrestaShop when the theme is enabled.
 
 .. code-block:: yaml
 
@@ -54,6 +54,8 @@ change PrestaShop configuration when the theme is enabled
 
 Modules
 ----------------------
+
+You can have the theme enable or disabled modules when the theme is enabled.
 
 .. code-block:: yaml
 
@@ -71,6 +73,7 @@ Modules
         - homeslider
         - blockwishlist
 
+You can also have the theme create hooks and attach modules to custom and existing hooks when the theme is enabled.
 
 global_settings:
   hooks:
@@ -115,7 +118,8 @@ global_settings:
 Image settings
 --------------------
 
-When theme will be enabled, all image types will be removed Template must declare their image type.
+Enabling the theme will remove all the existing image types.
+Themes MUST declare their image types, and what they apply to.
 
 .. code-block:: yaml
 
@@ -158,9 +162,11 @@ When theme will be enabled, all image types will be removed Template must declar
 Theme settings
 ---------------------
 
-All the settings below can be changed through an interface in the theme's administration panel, and only depend on the theme / shop combination.
-When this file is parsed by PrestaShop, this configuration key (theme_settings) is copied to a file name settings_n.yml where n is the id of the shop where the theme is installed.
-When configuration is changed through the interface, only the settings_n.yml file is updated and theme.yml remains unchanged.
+All the settings below can be changed through an interface in the theme's back office interface, and only depend on the theme / shop combination.
+
+When this file is parsed by PrestaShop, the 'theme_settings' configuration key is copied to a file named settings_n.yml, where n is the id of the shop where the theme is installed (settings_my-awesome-theme.yml, for instance).
+
+When the configuration is changed through the back office interface, only the settings_n.yml file is updated - the theme.yml file remains unchanged.
 
 .. code-block:: yaml
 

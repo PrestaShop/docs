@@ -2,40 +2,42 @@
 Hooks
 ***********
 
-Im only talking about front Hooks: displya and action
+This section of the documentation is only about front office hooks: display and action.
 
 All Hooks
 ------------
 
-INCLUDE JSON
+// TODO include the content of the hooks.json 
 
 
-Create custom hook
+Creating a custom hook
 --------------------
 
-Dynamic Hooks
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Creating a dynamic hook
+^^^^^^^^^^^^^^^^^^^^^^^
 
-When you call a hook, prestashop will execute it
+When your module or theme calls a hook, PrestaShop executes it.
 
-Smarty:
-
-.. code-block:: Smarty
-
-  {hook h='MyCustomHookThatNobodyUses'}
-
+From a regular PHP file:
 
 .. code-block
 
-  Hook::exec('MyCustomHookThatNobodyUses');
+  Hook::exec('MyCustomHook');
 
 
-Declared, visible and reusable
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+From a Smarty template:
 
-If you want the user to be able to see it in Position page, it has to be registered
+.. code-block:: Smarty
 
-register in in your theme
+  {hook h='MyCustomHook'}
+
+
+Making your hook visible and reusable
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+If you want the user to be able to see your hook in PrestaShop's Position page (in the back office), it has to be registered.
+
+You can register your hook from your theme.
 
 [SEE] theme-yml
 
@@ -49,10 +51,17 @@ register in in your theme
           description: Add a widget area above the footer
 
 
-register it in your module
+You can also register your hook from your module.
 
 .. code-block:: php
+  // Create the function for the MyCustomHook hook
+  public function MyCustomHook($params) 
+  {
+      // method body
+  }
 
-  Hook::register(xx);
-  // call it
-  Hook::exec('MyHook');
+  // Register the MyCustomHook hook
+  Hook::register('MyCustomHook');
+
+  // Call it from PHP
+  Hook::exec('MyCustomHook');

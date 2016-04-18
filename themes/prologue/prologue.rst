@@ -2,77 +2,82 @@
 Prologue
 ********
 
-
-With PrestaShop 1.7 we have rebuild the theme system from the ground up. We had 2 goals
+With PrestaShop 1.7, we have rebuilt the theme system from the ground up. We had 2 goals
 in mind when doing this:
 
-* Make PrestaShop upgrade easier
-* Make it easy to integrate a new theme
+* Make PrestaShop upgrades easier,
+* Make it easy to create a new theme.
 
 
 
 Migrating from PrestaShop 1.6
 =============================
 
-This means that there is no easy way to migrate your front office form PrestaShop 1.6.
-When upgrading your store, your theme will be switch to the new default theme called "classic".
+The huge change to the theme system means that there is no easy way to migrate your current theme for PrestaShop 1.6 to PrestaShop 1.7.
+When upgrading your store, your theme will be switched to the new default theme, called "classic". We therefore advise you to work on your 1.7 theme before you make the switch to PS 1.7.
 
 
-Feature drop
+Dropped features
 --------------
 
-Some feature have been dropped with PrestaShop, here is a  list of the main ones (non-exhaustive)
+Some features have been dropped with PrestaShop 1.7. They were either already deprecated in 1.6, or proved too problematic to maintain.
 
 +---------+---------------------+
-| Feature | Reason              |
+| Feature | Reasons             |
 +---------+---------------------+
-| Live Edit | Live Edit will be replaced by a brand new theme editor in the next PrestaShop version|
+| Live Edit | Live Edit will be replaced by a brand new theme editor in the next PrestaShop version |
 +---------+---------------------+
-| Scenes | Scenes have been hidden and unsupported in PrestaShop 1.6, is is fully removed in PrestaShop 1.7 |
+| Scenes | Scenes have were alreadt hidden for new installes of PS 1.6, and were unsupported. There are now removed in PrestaShop 1.7. |
 +---------+---------------------+
-| Mobile theme | Within the last few year theme have gone responsive, there were no need for a mobile-specific theme anymore. Modules can still be disabled on a device basis. |
+| Mobile theme | In the last few years, webdesign have gone responsive. There is no need for a mobile-specific theme anymore: the way to go is responsive design. Note that modules can still be disabled on a device-type basis. |
 +---------+---------------------+
-| Map for store page | the default theme doesnt come with a map on the store page |
+| Map for store page | The default theme doesn't come with a map on the store page. |
 +---------+---------------------+
-| 5 steps checkout | There is no more choice between 5 step checkout or one page checkout. There is only one checkout, fully compatible with European laws. |
+| 5-step checkout | There is no more choice between 5-step checkout or one-page checkout (OPC). There is only one checkout, fully compatible with European laws. |
 +---------+---------------------+
 
 
 Coding standard and guidelines
 ------------------------------
 
-Intend with spaces for every language.
+General code guideline
+
+Intend with spaces for every language (PHP, HTML, CSS, etc.).
 
 See our .editorconfig for details
 http://editorconfig.org/
 
-PHP
-of course you follow PSR-1 et PSR-2
 
-HTML
+PHP files
 
-use html 5: <br /> --> <br>, <section>,...
-all open tag must be closed in the same file (no div openned in header.tpl and closed in footer.tpl)
-subtemplates meant to be included must live inside a _partials folder
+You should follow the PSR-2 standard, just like PrestaShop does.
 
 
-css
+HTML file
 
-CSS3
-RSCSS http://rscss.io/
+Use html 5: <br /> --> <br>, <section>, etc.
+
+All open tags must be closed in the same file (no div should be opened in header.tpl and closed in footer.tpl)
+Subtemplates (templates meant to be included in another template) must reside inside a /_partials/ folder.
 
 
-JS
+CSS
 
-make sure your linter follows our .eslint
+Use CSS3.
+We recommand that you follow the RSCSS structure: http://rscss.io/
+
+
+JavaScript
+
+Make sure your linter tool follows our .eslint file.
 ES6 -> babel
-split files and compile
+Split files and compile them.
 ES2015 standard https://babeljs.io/docs/learn-es2015/
 
 
-requirements
+Requirements
 -----------------
 
-php 5.4
+Your code should work on PHP 5.4+.
 
-Broswer supported for Bo and default theme classic
+// TODO Browser supported for BO and default theme

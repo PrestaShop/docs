@@ -1,21 +1,21 @@
 ***************
-Templates
+Templates and layouts
 ***************
 
-All templates files lives in `templates/`.
-there is a functionnal split: checkout-related templates, customer-related templates,...
+PrestaShop themes are based on the Smarty template engine: http://www.smarty.net/v3_overview
 
-All files generate a whole page unless they are inside a `_partials` directry or subdir (see coding standard)
+All templates files live in the `templates/` folder.
+There is a functionnal split: there are checkout-related templates, customer-related templates, etc.
 
-PrestaShop themes are based on Smarty teplate engine http://www.smarty.net/v3_overview
+All files generate a whole HTML page, unless they are inside a `_partials` directry or subdirectory (see our coding standard).
 
 
 Templates inheritance
 ===========================
 
-Smarty 3.0 has a new inheritance feature
+Smarty 3.0 has a inheritance feature.
 
-example from smarty documentation
+Here is an example from the Smarty documentation:
 
 **parent.tpl**
 
@@ -40,15 +40,16 @@ example from smarty documentation
 
   {block name=body}My Child Body{/block}
 
-The output of child.tpl will be
+
+  The output of child.tpl will be:
 
 .. code-block:: html
 
   <html>
     <head>
-      <title>My Child Title<title>
+      <title>My Child.tpl Title<title>
     </head>
     <body>
-      My Child Body
+      My Child.tpl Body
     </body>
   </html>
