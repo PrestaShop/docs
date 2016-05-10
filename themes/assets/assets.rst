@@ -62,7 +62,7 @@ There are 2 custom commands you can run to build your assets once or everytime s
 
 If you want to use Stylus or Less, simply edit the command line under the "scripts" section.
 
-.. code-block:: json
+.. code-block:: javascript
 
 	var webpack = require('webpack');
 
