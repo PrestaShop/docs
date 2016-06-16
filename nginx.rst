@@ -19,7 +19,7 @@ Copied and paste configuration from Mickeal Dekker (see forum link)
   
       location = /favicon.ico {
           log_not_found off;
-          access_log offin;
+          access_log off;
       }
   
       location = /robots.txt {
