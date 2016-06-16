@@ -19,7 +19,7 @@ Copied and paste configuration from Mickeal Dekker (see forum link)
   
       location = /favicon.ico {
           log_not_found off;
-          access_log off;
+          access_log offin;
       }
   
       location = /robots.txt {
@@ -30,7 +30,7 @@ Copied and paste configuration from Mickeal Dekker (see forum link)
       }   
   
       # Deny all attempts to access hidden files such as .htaccess, .htpasswd, .DS_Store (Mac).
-      location ~ /. {
+      location ~ /\. {
           deny all;
           access_log off;
           log_not_found off;
