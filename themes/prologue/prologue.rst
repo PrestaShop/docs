@@ -2,19 +2,22 @@
 Prologue
 ********
 
-With PrestaShop 1.7, we have rebuilt the theme system from the ground up. We had 2 goals
-in mind when doing this:
+The default PrestaShop install offers a neutral theme in black and white, enabling sellers to quickly and freely start their activity, whatever their business line.
 
-* Make PrestaShop upgrades easier,
-* Make it easy to create a new theme.
+Nearly 2000 themes are available through the PrestaShop Addons marketplace (http://addons.prestashop.com/en/). They were created either by members of the PrestaShop community or the PrestaTeam, and are sold at reasonable prices – some are even free.
+
+As a graphic designer/web developer, you too can put your themes up for sale on the PrestaShop Addons site, and earn 70% of the selling price.
 
 
 
 Migrating from PrestaShop 1.6
 =============================
 
-The huge change to the theme system means that there is no easy way to migrate your current theme for PrestaShop 1.6 to PrestaShop 1.7.
-When upgrading your store, your theme will be switched to the new default theme, called "classic". We therefore advise you to work on your 1.7 theme before you make the switch to PS 1.7.
+PrestaShop 1.7 introduces a totally reworked theme system from version 1.6, with the goal of making PrestaShop upgrades easier, and of making it easier/faster to create a brand new theme.
+
+The huge change to the theme system means that there is no easy way to migrate your PrestaShop 1.6 theme to PrestaShop 1.7.
+
+When using the automatic upgrade from PrestaShop 1.6 to 1.7, your theme will be switched to the new default theme, called "Classic". We therefore advise you to work on your 1.7 theme before you make the switch to PrestaShop 1.7.
 
 
 Dropped features
