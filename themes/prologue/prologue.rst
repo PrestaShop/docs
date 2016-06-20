@@ -44,43 +44,58 @@ Coding standard and guidelines
 ------------------------------
 
 General code guideline
+~~~~~~~~~~~~~~~~~~~~~~
 
-Intend with spaces for every language (PHP, HTML, CSS, etc.).
+Intend with spaces for every language (PHP, HTML, CSS, etc.): 4 spaces for PHP files, 2 spaces for all other filetypes.
 
-See our .editorconfig for details
-http://editorconfig.org/
+Use our `.editorconfig file <http://editorconfig.org/>`_  in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/develop/.editorconfig
 
 
 PHP files
+~~~~~~~~~
 
-You should follow the PSR-2 standard, just like PrestaShop does.
+You should follow the `PSR-2 standard <http://www.php-fig.org/psr/psr-2/>`_, just like PrestaShop does.
+
+In general, we tend to follow `Symfony's coding standards <http://symfony.com/doc/current/contributing/code/standards.html>`_.
 
 
 HTML file
+~~~~~~~~~
 
-Use html 5: <br /> --> <br>, <section>, etc.
+Use HTML 5 tags: 
 
-All open tags must be closed in the same file (no div should be opened in header.tpl and closed in footer.tpl)
-Subtemplates (templates meant to be included in another template) must reside inside a /_partials/ folder.
+* <br /> --> <br>, 
+* <nav>,
+* <section>, 
+* etc.
+
+All open tags must be closed in the same file (a <div> should **not** be opened in ``header.tpl`` then closed in ``footer.tpl``).
+Subtemplates (templates meant to be included in another template) must reside inside a ``/_partials/`` folder.
 
 
 CSS
+~~~
 
 Use CSS3.
-We recommand that you follow the RSCSS structure: http://rscss.io/
+
+We recommend that you follow the RSCSS structure: http://rscss.io/
 
 
 JavaScript
+~~~~~~~~~~
 
-Make sure your linter tool follows our .eslint file.
-ES6 -> babel
-Split files and compile them.
-ES2015 standard https://babeljs.io/docs/learn-es2015/
+Make sure your linter tool follows our .eslint file: https://github.com/PrestaShop/PrestaShop/blob/develop/.eslintrc
+
+If you wish to write ECMAScript 2015 (ES6) code, we advise you to use the Babel compiler: https://babeljs.io/
+
+A good JS practice consists in splitting files per use, and then compiling them into one.
+
+Learn more about the ES2015 standard: https://babeljs.io/docs/learn-es2015/
 
 
 Requirements
 -----------------
 
-Your code should work on PHP 5.4+.
+Your PHP code should work on PHP 5.4+.
 
-// TODO Browser supported for BO and default theme
+Your HTML/CSS/JS code shoud work with at least IE9+, Edge, Firefox 45, and Chrome 29. Mobile-wise: iOS 8.4 and Android Browser 4.4
