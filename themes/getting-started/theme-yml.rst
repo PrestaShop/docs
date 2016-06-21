@@ -75,51 +75,54 @@ You can have the theme enable or disabled modules when the theme is enabled.
 
 You can also have the theme create hooks and attach modules to custom and existing hooks when the theme is enabled.
 
-global_settings:
-  hooks:
-    custom_hooks:
-      - name: displayFooterBefore
-        title: displayFooterBefore
-        description: Add a widget area above the footer
-    modules_to_hook:
-      displayHeaderTop:
-        # displayHeaderTop will have exactly the following
-        # modules hooked to it, in the specified order.
-        # Each module in this list will be unhooked
-        # from all other display hooks it is hooked to.
-        - blocklanguages
-        - blockcurrencies
-        - blockuserinfo
-      displayHeaderMiddle:
-        # displayHeaderMiddle will have whatever is currently hooked to it
-        # kept hooked to it, and blocksearch will be appended
-        # to the list (or moved to the end if already hooked there).
-        - ~
-        - blocksearch
-      displayHeaderBottom:
-        # displayHeaderBottom will have blocktopmenu and blockcart
-        # prepended to it.
-        - blocktopmenu
-        - blockcart
-        - ~
-      displayFooter:
-        - blocknewsletter
-      displayLeftColumn:
-        # blockcategories is hooked on all pages on displayLeftColumn
-        - blockcategories
-        # blocktags is hooked on displayLeftColumn on all pages
-        # except "category" and "index"
-        - blocktags:
-            except_pages:
-              - category
-              - index
+.. code-block:: yaml
+
+  global_settings:
+    hooks:
+      custom_hooks:
+        - name: displayFooterBefore
+          title: displayFooterBefore
+          description: Add a widget area above the footer
+      modules_to_hook:
+        displayHeaderTop:
+          # displayHeaderTop will have exactly the following
+          # modules hooked to it, in the specified order.
+          # Each module in this list will be unhooked
+          # from all other display hooks it is hooked to.
+          - blocklanguages
+          - blockcurrencies
+          - blockuserinfo
+        displayHeaderMiddle:
+          # displayHeaderMiddle will have whatever is currently hooked to it
+          # kept hooked to it, and blocksearch will be appended
+          # to the list (or moved to the end if already hooked there).
+          - ~
+          - blocksearch
+        displayHeaderBottom:
+          # displayHeaderBottom will have blocktopmenu and blockcart
+          # prepended to it.
+          - blocktopmenu
+          - blockcart
+          - ~
+        displayFooter:
+          - blocknewsletter
+        displayLeftColumn:
+          # blockcategories is hooked on all pages on displayLeftColumn
+          - blockcategories
+          # blocktags is hooked on displayLeftColumn on all pages
+          # except "category" and "index"
+          - blocktags:
+              except_pages:
+                - category
+                - index
 
 
 Image settings
 --------------------
 
 Enabling the theme will remove all the existing image types.
-Themes MUST declare their image types, and what they apply to.
+
+Therefore, themes MUST declare their image types, and what they apply to.
 
 .. code-block:: yaml
 
@@ -162,9 +165,9 @@ Themes MUST declare their image types, and what they apply to.
 Theme settings
 ---------------------
 
-All the settings below can be changed through an interface in the theme's back office interface, and only depend on the theme / shop combination.
+All the settings below can be changed through an interface in the theme's back office interface, and only depend on the theme/shop combination.
 
-When this file is parsed by PrestaShop, the 'theme_settings' configuration key is copied to a file named settings_n.yml, where n is the id of the shop where the theme is installed (settings_my-awesome-theme.yml, for instance).
+When the theme.yml file is parsed by PrestaShop, the 'theme_settings' configuration key is copied to a file named settings_n.yml, where 'n' is the id of the shop where the theme is installed (settings_123456.yml, for instance).
 
 When the configuration is changed through the back office interface, only the settings_n.yml file is updated - the theme.yml file remains unchanged.
 
