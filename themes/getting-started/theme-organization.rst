@@ -116,7 +116,7 @@ Here is the complete list of files that are checked:
 
 [NOTE]
 All these files need to exist, even if they're empty.
-It could be that you've built some sort of groundbreaking theme and it doesn't exactly work like the Starter Theme does. For instance, you don't have need a product page, then you don't want the product.tpl file. In that case, you just have to create an empty product.tpl file. Be nice to the next developper and add a comment indicating where the code related to products can be found ;)
+It could be that you've built some sort of groundbreaking theme and it doesn't exactly work like the Starter Theme does. For instance, you don't have need a product page, then you don't want the product.tpl file. In that case, you just have to create an empty product.tpl file. Be nice to the next developer and add a comment indicating where the code related to products can be found ;)
 
 jQuery is already loaded with the core.js file, but no other libraries, since the idea is that the Starter Theme should not opinionated.
 
