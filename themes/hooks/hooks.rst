@@ -1,5 +1,5 @@
 ***********
-Hooks
+FO Hooks
 ***********
 
 This section of the documentation is only about front office hooks: display and action.
@@ -7,7 +7,7 @@ This section of the documentation is only about front office hooks: display and 
 All Hooks
 ------------
 
-// TODO include the content of the hooks.json 
+// TODO create page with table listing the content of the `hooks.json` file.
 
 
 Creating a custom hook
@@ -37,7 +37,7 @@ Making your hook visible and reusable
 
 If you want the user to be able to see your hook in PrestaShop's Position page (in the back office), it has to be registered.
 
-You can register your hook from your theme.
+You can register your hook from your theme's `theme.yml` file:
 
 [SEE] theme-yml
 
@@ -51,7 +51,7 @@ You can register your hook from your theme.
           description: Add a widget area above the footer
 
 
-You can also register your hook from your module.
+You can also register your hook from a module:
 
 .. code-block:: php
   // Create the function for the MyCustomHook hook

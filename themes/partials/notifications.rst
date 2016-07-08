@@ -1,11 +1,10 @@
-Notifications
-================
+Front Office Notifications
+=============================
 
-Throughout the whole front office, the customer can receive notification messages from PrestaShop, to inform her about successes or errors, for instance.
-Your theme can too send notifications.
+Throughout the whole front office, the customer can receive notification messages from PrestaShop, to inform her about successes or errors for instance.
+Your theme can too send notifications when certain events occur.
 
-The notification messages are not hardcoded in the template, but are send from the controller, so that you have consistency in case you updage/change your template.
-Also, there is a good chance that all messages are already translated into your language!
+The notification messages are not hardcoded in the template files, but are sent from the controller, so that you have consistency in case you update/change your theme. Also, this way there is a better chance that all notification messages are already translated into your language!
 
 
 Types of notifications
@@ -14,9 +13,9 @@ Types of notifications
 An array of notification is passed to the templates, containing at least one of these:
 
 * success: an action was performed and everything went well.
-* error: something went wrong
+* error: something went wrong.
 * warning: important notice the merchant should know about.
-* info: "just so you know"
+* info: "just so you know".
 
 
 Display them
@@ -27,7 +26,7 @@ Data are built this way:
 // TODO INCLUDE JSON
 
 
-In the Starter Theme, it looks like this:
+In the Starter Theme, `notifications are implemented as a partial template file <https://github.com/PrestaShop/StarterTheme/blob/master/templates/_partials/notifications.tpl>`_:
 
 .. code-block:: smarty
 
@@ -74,21 +73,29 @@ In the Starter Theme, it looks like this:
       {/if}
     </div>
   </aside>
+  
+...and are then `included in the template file <https://github.com/PrestaShop/StarterTheme/blob/master/templates/checkout/checkout.tpl#L18-L20>`_:
+
+.. code-block:: smarty
+
+    {block name='notifications'}
+      {include file='_partials/notifications.tpl'}
+    {/block}
 
 
 Add your own message in your front controller
 --------------------------------------
 
-Your front controller holds the 4 following variables.
+Your front controller holds `the 4 following variables <https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L618-L640>`_:
 
 * $this->error
 * $this->success
 * $this->warning
 * $this->danger
 
-They are PHP arrays, and they hold messages as string.
+They are PHP arrays, and they hold messages as a string.
 
-Since PrestaShop 1.7, you can redirect AND display a message after an action.
+Since PrestaShop 1.7, you can `redirect the customer AND display a message after an action <https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L553-L572>`_.
 
 .. code-block:: php
 
