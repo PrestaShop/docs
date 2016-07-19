@@ -45,8 +45,8 @@ If you want to compile your assets using Webpack (and we advise you to), follow 
 3. Install npm: `npm install`.
 4. You then have a choice:
 
- - To build your assets once, type `npm run watch`.
- - To rebuild your assets every time you change a file in the _dev folder, type `npm run build`.
+ - To build your assets once, type `npm run build`.
+ - To rebuild your assets every time you change a file in the _dev folder, type `npm run watch`.
 
 
 Webpack configuration
