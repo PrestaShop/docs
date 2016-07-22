@@ -10,7 +10,7 @@ Widgets introduce 2 majors features for theme developer.
 
 1. Use module directly into your theme
 
-If you want to use a module, like a social sharing bytton module for example,
+If you want to use a module, like a social sharing button module for example,
 and if this module is a widget for PrestaShop 1.7, you can use something like:
 
 .. code-block:: smarty
