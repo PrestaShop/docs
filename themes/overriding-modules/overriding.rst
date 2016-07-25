@@ -3,7 +3,7 @@ Overriding modules
 ***************************************
 
 
-When you write a theme, you often need to override the templates and assets fcoming rom a module so that they match your theme's specific markup needs.
+When you write a theme, you often need to override the templates and assets coming from a module so that they match your theme's specific markup needs.
 Themes can override modules' assets (CSS and JavaScript only) by placing the corresponding file at a specific location.
 
 With PrestaShop 1.7, all module overriding code goes to the `modules` directory (in your module's own directory).
