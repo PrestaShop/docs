@@ -40,7 +40,7 @@ With this we reduced the size of the code in `blocklayered` by a factor of about
 
 ### Terminology
 
-We did not make the words up, see for instance this article about [Facts vs Filters](http://www.nngroup.com/articles/filters-vs-facets/).
+We did not make the words up, see for instance this article about [Facets vs Filters](http://www.nngroup.com/articles/filters-vs-facets/).
 
 #### Facets and Filters
 
