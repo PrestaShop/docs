@@ -22,7 +22,7 @@ The Starter Theme is available on GitHub: https://github.com/PrestaShop/StarterT
 If you clone the StarterTheme repository and select it as the theme for your store, you will see minimalistic theme with an overly simplistic (ugly?) style. This is only for devlopement purpose. You should NOT use the Starter Theme as is, and you should NOT use its default CSS rules nor include them in your theme: please delete all files inside `_dev/css` (see screenshot)
 
 [WARNING]
-Unless your remove it, the jQuery library is loaded by the core.js file.
+Unless you remove it, the jQuery library is loaded by the core.js file.
 
 [NOTE]
 Please note that if you want to sell your theme on the PrestaShop Addons marketplace, there are some specific requirements. For instance, Addons-distributed themes MUST use Bootstrap.
