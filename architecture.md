@@ -236,7 +236,7 @@ The handling of a typical HTTP request might look something like this:
     - delegates its work to services (services that it gets from the container or `new`s)...
     - sends the response!
 
-As a general rule, in she schema above, the `Controller` is the last application layer which has access to the dependency injection container.
+As a general rule, in the schema above, the `Controller` is the last application layer which has access to the dependency injection container.
 
 Inside the `Core` directory, `Business` is for business logic (e.g. how do I compute the tax for a product?), while `Foundation` is reserved for general purpose logic (e.g. dependency injection, database interaction). In theory it should be possible to extract any components in `Foundation` to their own composer packages so that other projects could use them.
 
