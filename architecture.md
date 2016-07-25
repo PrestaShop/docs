@@ -105,7 +105,7 @@ The goal is to make the previously hidden dependency very visible and to have fu
 
 Ideally, when we discover a hidden dependency in the code under test, we should find a way to make the dependency trickle down from the top layers of the application right into the code under test.
 
-This is not always possible (when no predictable execution path leads to the code under test for instance), so a temporary solution is is to use a ServiceLocator.
+This is not always possible (when no predictable execution path leads to the code under test for instance), so a temporary solution is to use a ServiceLocator.
 
 It looks like this:
 
