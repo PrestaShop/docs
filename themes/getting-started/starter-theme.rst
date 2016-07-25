@@ -9,7 +9,7 @@ For pretty much every CMS, the default theme is used as a framework to build cus
 
 This means that a lot of themes are tied to the default theme's technical choices, because this way of working makes it hard to make your own choices. For instance, since the default theme uses Bootstrap, it's hard to use Foundation.
 
-With the Starter Theme, the PrestaShop team decided to build a skeleton theme that will give you a kickstart for your custom theme, with all the minimum code (essential template files, markup ad JavaScript code) and enough freedom to make your own choices. You can choose to use Bootstrap, Foundation or Blueprint. The Starter Theme is not opinionated: there is no decision made to use either one library or another.
+With the Starter Theme, the PrestaShop team decided to build a skeleton theme that will give you a kickstart for your custom theme, with all the minimum code (essential template files, markup and JavaScript code) and enough freedom to make your own choices. You can choose to use Bootstrap, Foundation or Blueprint. The Starter Theme is not opinionated: there is no decision made to use either one library or another.
 
 By using the Starter Theme as the foundation for your custom theme, everything is ready for you, you just have to create upon it.
 
