@@ -2,22 +2,20 @@
 Prologue
 ********
 
-The default PrestaShop install offers a neutral theme in black and white, enabling sellers to quickly and freely start their activity, whatever their business line.
+The default PrestaShop installation comes with one simple theme styled in black and white. This neutral style allows any seller to begin selling right away.
 
-Nearly 2000 themes are available through the PrestaShop Addons marketplace (http://addons.prestashop.com/en/). They were created either by members of the PrestaShop community or the PrestaTeam, and are sold at reasonable prices – some are even free.
+There are over 2,000 themes available through the [**PrestaShop Addons Marketplace**] (http://addons.prestashop.com/en/). Created by members of the PrestaShop community or the PrestaTeam. And, sold at reasonable prices – some are even free.
 
-As a graphic designer/web developer, you too can put your themes up for sale on the PrestaShop Addons site, and earn 70% of the selling price.
+As a graphic designer or web developer, you too can put your themes up for sale on the PrestaShop Add-on's site.  And, earn 70% of the retail price.
 
 
 
 Migrating from PrestaShop 1.6
 =============================
 
-PrestaShop 1.7 introduces a totally reworked theme system from version 1.6, with the goal of making PrestaShop upgrades easier, and of making it easier/faster to create a brand new theme.
+PrestaShop 1.7 introduces a new theme system. Quite different from its predecessor in 1.6. There are no simple methods to migrate your 1.6 theme to 1.7
 
-The huge change to the theme system means that there is no easy way to migrate your PrestaShop 1.6 theme to PrestaShop 1.7.
-
-When using the automatic upgrade from PrestaShop 1.6 to 1.7, your theme will be switched to the new default theme, called "Classic". We therefore advise you to work on your 1.7 theme before you make the switch to PrestaShop 1.7.
+During this automatic upgrade, your theme will be converted to the new default theme, called "Classic". So, we recommend you begin work on your 1.7 theme changes before you make the switch to PrestaShop 1.7.
 
 
 Dropped features
@@ -46,7 +44,7 @@ Coding standard and guidelines
 General code guideline
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Intend with spaces for every language (PHP, HTML, CSS, etc.): 4 spaces for PHP files, 2 spaces for all other filetypes.
+Indented with spaces for every language (PHP, HTML, CSS, etc.): 4 spaces for PHP files, 2 spaces for all other filetypes.
 
 Use our `.editorconfig file <http://editorconfig.org/>`_  in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/develop/.editorconfig
 
@@ -54,9 +52,7 @@ Use our `.editorconfig file <http://editorconfig.org/>`_  in order to easily con
 PHP files
 ~~~~~~~~~
 
-You should follow the `PSR-2 standard <http://www.php-fig.org/psr/psr-2/>`_, just like PrestaShop does.
-
-In general, we tend to follow `Symfony's coding standards <http://symfony.com/doc/current/contributing/code/standards.html>`_.
+You should follow the [PSR-2 standard](http://www.php-fig.org/psr/psr-2/) just like PrestaShop is now doing. In general, we tend to follow [Symfony's coding standards](http://symfony.com/doc/current/contributing/code/standards.html).
 
 
 HTML file
@@ -70,7 +66,7 @@ Use HTML 5 tags:
 * etc.
 
 All open tags must be closed in the same file (a <div> should **not** be opened in ``header.tpl`` then closed in ``footer.tpl``).
-Subtemplates (templates meant to be included in another template) must reside inside a ``/_partials/`` folder.
+Sub-templates (templates meant to be included in another template) must reside inside a ``/_partials/`` folder.
 
 
 CSS
