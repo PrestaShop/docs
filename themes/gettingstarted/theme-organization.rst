@@ -1,9 +1,8 @@
-****************
 Theme organization
-****************
+========================
 
 Directory structure
-========================
+-----------------------
 
 A PrestaShop theme is a set of files which you can edit in order to change the look of your online shop.
 
@@ -18,7 +17,7 @@ The best way to learn how to create a theme for PrestaShop 1.7 is to dive into t
 
 Here is its organization, which is explained further below.
 
-.. code-block::
+.. code-block:: bash
 
   .
   ├── CONTRIBUTING.md
@@ -86,15 +85,15 @@ The folders are used this way:
 - assets: Contains the production assets, compiled by Webpack from the _dev files.
 - config: Contains configuration file. By default, it only has the theme.yml file.
 - module: Contains either theme-specific modules, or the theme's version of native modules' template files. For instance, the themes/classic/modules/ps_categorytree/views/templates/hook/ps_categorytree.tpl file replaces the Category module's own modules/ps_categorytree/views/templates/hook/ps_categorytree.tpl
-- plugins: 
+- plugins:
 - templates: Contains the template files themeselves (.tpl), mostly in contextual subfolders (catalog, checkout, cms, etc.). The _partials folder contains "partials", or "partial templates", which means parts that can used by / included into several templates: header.tpl, breadcrumb.tpl, footer.tpl, etc. This prevents redundant codeblocks, and makes themes easier to maintain.
 
 
 Required templates and libraries
-============================
+----------------------------------
 
 Required templates
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you install/enable a theme, PrestaShop checks if the theme is valid: it looks for the theme.yml file (and checks its content), its declared compatibility, and the existence of some template files.
 

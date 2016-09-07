@@ -11,10 +11,8 @@ Contents:
 
 .. toctree::
     :maxdepth: 2
-    :glob:
 
-    themes/gettingstarted/*
-    themes/smarty/*
+    themes/index
 
 
 Indices and tables

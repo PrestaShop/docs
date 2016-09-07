@@ -1,11 +1,10 @@
-****************
 Setting up your local environment
-****************
+==========================================
 
 Now that you intend to building a theme for PrestaShop, you are better off keeping all your development work on your machine. The main advantage is that it makes it possible for you to entirely bypass the process of uploading your files on your online server in order to test your changes. Another advantage is that a local test environment enables you to test code without the risk of breaking your production store. Having a local environment is the essential first step in the path of web development.
 
 Installing PrestaShop
-=====================
+------------------------
 
 We advise you to install PrestaShop using the `Composer <https://getcomposer.org/>`_ and `npm <https://www.npmjs.com/>`_ tools.
 For this, you must `download Composer <https://getcomposer.org/download/>`_ and `download Node.js <https://nodejs.org/en/download/>`_ (`which contains npm <https://docs.npmjs.com/getting-started/installing-node>`_), and install them.
@@ -17,7 +16,7 @@ Then, open a command line on your (empty) working directory, then:
 3. npm install
 
 Building your .gitignore file
-=============================
+------------------------------------
 
 A gitignore file is a must-have for any Git-versioned project, as it specifies intentionally untracked files that Git should ignore.
 
@@ -34,10 +33,10 @@ In addition, we recommend to keep Core files in your versioning system.
 
 Our own .gitignore file is here: https://github.com/PrestaShop/PrestaShop/blob/develop/.gitignore
 
-We suggest that you build your own using http://gitignore.io/ 
+We suggest that you build your own using http://gitignore.io/
 
 Create your theme from the Starter Theme
-========================================
+------------------------------------------------
 
 Download the Starter Theme, or clone its repo (https://github.com/PrestaShop/StarterTheme.git)
 
@@ -46,6 +45,9 @@ Create your theme.yml file
 
 First of all, you need to rename ``config/theme.dist.yml`` to ``config/theme.yml`` and edit it according to your theme's name.
 
+
+.. code-block:: yaml
+
   name: YOUR_THEME_DIRECTORY_NAME
   display_name: YOUR THEME NAME
   version: 1.0.0
@@ -53,11 +55,12 @@ First of all, you need to rename ``config/theme.dist.yml`` to ``config/theme.yml
     name: "PrestaShop Team"
     email: "pub@prestashop.com"
     url: "http://www.prestashop.com"
-  
+
   meta:
     compatibility:
         from: 1.7.0.0
         to: ~
+
 
 Manage your assets
 ~~~~~~~~~~~~~~~~~~
