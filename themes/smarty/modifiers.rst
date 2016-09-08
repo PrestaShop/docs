@@ -1,29 +1,30 @@
 
 Class name modifiers
-------------------------
+======================
 
 In order to use the data from controller to generate classnames, we added 2 modifiers: 'classname' and 'classnames'.
 
 
-'classname' modifier
-^^^^^^^^^^^^^^^^^^^^
+``classname`` modifier
+-----------------------------
 
 The classname data modifier will ensure that your string is a valid class name.
 
 It will:
 
-1. Put it in lowercase.
-2. Replace any non-ASCII characters (such as accented characters) with their ASCII equivalent. `See the code here <https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Tools.php#L1252-L1354>`_.
-3. Replace all alphanumerical characters with a single dash.
-4. Ensure only one consecutive dash is used.
+#. Put it in lowercase.
+#. Replace any non-ASCII characters (such as accented characters) with their ASCII equivalent. `See the code here <https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Tools.php#L1252-L1354>`_.
+#. Replace all alphanumerical characters with a single dash.
+#. Ensure only one consecutive dash is used.
 
 
 'classnames' modifier
-^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
-This data modifier takes an array, where the key is the classname and the value is a boolean indicating if it should be displayed or not.
+This data modifier takes an array, where the key is the classname and the value is a boolean indicating
+ if it should be displayed or not.
 
-Note that each classname is passed through the 'classname' modifier.
+Note that each class name is passed through the 'classname' modifier.
 
 .. code-block:: php
 
@@ -39,13 +40,13 @@ Note that each classname is passed through the 'classname' modifier.
 
 This way, this Smarty code:
 
-.. code-block:: html
+.. code-block:: html+smarty
 
   <body class="{$page.body_classes|classnames}">
 
 
 ...will generate:
 
-.. code-block:: html
+.. code-block:: html+smarty
 
   <body class="lang-fr country-fr currency-eur layout-full-width page-index">
