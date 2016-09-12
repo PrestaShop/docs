@@ -1,11 +1,11 @@
-****************
 Theme.yml
-****************
+=========================
 
 The theme's theme.yml file defines all of the theme's configuration and meta information, such as its version number, layouts, compatibility range, hook configuration, etc.
 
 Theme description
-=========================
+-----------------------
+
 
 The theme's name MUST match its directory name. For instance, if the theme is named "My Awesome Theme" and its 'name' value is set to "my-awesome-theme", then the folder MUST be /my-awesome-theme .
 
@@ -34,10 +34,11 @@ Users will be able to choose the layout for each page from the theme's settings 
 
 
 Global settings
-====================
+-----------------------
+
 
 Configuration
-------------------
+-----------------------
 
 You can have the theme change the configuration of PrestaShop when the theme is enabled.
 
@@ -53,7 +54,8 @@ You can have the theme change the configuration of PrestaShop when the theme is 
 
 
 Modules
-----------------------
+-----------------------
+
 
 You can have the theme enable or disabled modules when the theme is enabled.
 
@@ -118,7 +120,8 @@ You can also have the theme create hooks and attach modules to custom and existi
 
 
 Image settings
---------------------
+-----------------------
+
 
 Enabling the theme will remove all the existing image types.
 
@@ -163,7 +166,8 @@ Therefore, themes MUST declare their image types, and what they apply to.
 
 
 Theme settings
----------------------
+-----------------------
+
 
 All the settings below can be changed through an interface in the theme's back office interface, and only depend on the theme/shop combination.
 
