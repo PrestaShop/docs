@@ -10,7 +10,7 @@ modifying the main theme so you can update it!
 
 .. note::
 
-  This feature is only useful if you want to slighly modify a theme (to add a block for example).
+  This feature is only useful if you want to slightly modify a theme (to add a block for example).
   If you need to modify the markup more deeply, modify the theme, don't create a child theme.
 
 .. warning::
