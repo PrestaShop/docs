@@ -2,7 +2,7 @@
 Theme options module
 ***************************************
 
-PrestaShop 1.7 removed many options from the coore because they were actually theme related.
+PrestaShop 1.7 removed many options from the core because they were actually theme related.
 
 We encourage every theme developer to provide theme option in a module. For example, you may want to
 let your user choose the actions after a product was added to the cart: show a modal? redirect to the cart?
