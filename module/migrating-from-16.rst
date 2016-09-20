@@ -17,3 +17,8 @@ ENSURE:
 * Smarty is automatically escaped, so: 1. Remove all `|escape:'html':'UTF-8'` (FOR FRONT TEMPLATES ONLY) 2. Add `nofilter` if you print html
 * Only rely documented variables ! Any other variable my come from a module or just be a left over and might be removed at any time.
 * If you use the `backward_compatiblity` package, check that PrestaShop version is 1.4 before importing it. With PrestaShop 1.7 you'll get a fatal error
+
+
+Note: many external libraries have been updated. Here is a list of some external extra doc about it:
+
+ * https://github.com/yellowtree/wp-geoip-detect/wiki/How-to-migrate-from-v1-to-v2
