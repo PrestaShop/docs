@@ -25,7 +25,7 @@ from another theme.
 
 .. tip::
 
-  As a theme develop, you want to create as many block as possible so your user can
+  As a theme developer, you want to create as many block as possible so your user can
   override the minimum amount of code.
 
 How to create a child theme
