@@ -55,6 +55,8 @@ The value must be the theme technical name (ie: the theme folder name).
   name: childtheme
   display_name: My first child Theme
   version: 1.0.0
+  assets:
+    use_parent_assets: true
 
 Go ahead, select this theme in your backoffice and you're all set.
 
