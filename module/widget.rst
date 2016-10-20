@@ -79,10 +79,8 @@ Example
 				} else {
 						$template_file = 'ps_contactinfo.tpl';
 				}
-				if (!$this->isCached($template_file, $this->getCacheId())) {
-						$this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
-				}
-				return $this->display(__FILE__, $template_file, $this->getCacheId());
+        $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
+        return $this->fetch('module:'.$this->name.'/'.$template_file);
 		}
 		public function getWidgetVariables($hookName = null, array $configuration = [])
 		{
