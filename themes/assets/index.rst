@@ -4,7 +4,7 @@ Asset Management
 
 PrestaShop 1.7 has significantly improved the way assets (CSS, JavaScript and image files) are managed.
 
-We advise theme developers to compile most of theer style and JavaScript code into a single concatenatedminified file
+We advise theme developers to compile most of their style and JavaScript code into a single concatenated/minified file
 (see the Webpack section below).
 
 If you need to add special assets, for example an extra JavaScript library on the home page or the product page, there are a few
@@ -44,7 +44,7 @@ is an array of all other optional parameters, as described below.
 
 **ID**
 
-This unique identitier needed for each asset. This is useful to either override or unregister something
+This unique identifier needed for each asset. This is useful to either override or unregister something
 already loaded by the Core or a native module.
 
 **Relative path**
@@ -74,7 +74,7 @@ For example:
 +-----------+-------------------------------------+---------------------------------------------------------------+
 
 
-**Extra parameters for javascript**
+**Extra parameters for JavaScript**
 
 +-----------+-------------------------------------+---------------------------------------------------------------+
 | Name      | Values                              | Comment                                                       |
@@ -134,7 +134,7 @@ Registering in themes
 
 By now you probably understood that this ``theme.yml`` file became the heart of PrestaShop themes.
 
-To register assets, ceate a new ``assets`` key at the top level of your ``theme.yml``, and register
+To register assets, create a new ``assets`` key at the top level of your ``theme.yml``, and register
 your files according to your needs. Page identifiers are based on the ``php_self`` property of
 each controller (`example`_)
 
@@ -272,7 +272,7 @@ Let's say you want to be fully compatible with a popular navigation module. You 
 override of course, but you could also remove the style that comes with it and
 bundle your specific style in your ``theme.css`` (since it's loaded on every page).
 
-To unregister an assets, you need ot know it's ID.
+To unregister an assets, you need to know its ID.
 
 
 In themes
