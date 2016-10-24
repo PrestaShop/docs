@@ -4,7 +4,7 @@ About Webpack
 	`Webpack <https://webpack.github.io/>`_ is a module bundler.
 	Webpack takes modules with dependencies and generates static assets representing those modules.
 
-The main interest in using Webpack is that it will compile all your styles - which we advise you to write using `Sass <http://sass-lang.com/>`_ - into a single CSS file.
+The main interest of using Webpack is that it will compile all your styles - which we advise you to write using `Sass <http://sass-lang.com/>`_ - into a single CSS file.
 This way, your theme will make only one HTTP request for this single file, and since your browser will cache it for later re-use, it will even donwload this file only once.
 
 The same goes with your JavaScript code. Instead of loading jQuery along with its community plugins, your own custom plugins and any extra code you might need,
@@ -14,8 +14,8 @@ Webpack compiles and minifies all this JavaScript code into a single file, which
 .. note::
 
   Webpack is not at all required by PrestaShop, you are free to use your favorite tool!
-  The documentation explains webpack since it's the tool we chose for Classic, and StarterTheme
-  ships with a ready to use configuration file.
+  The documentation explains Webpack since it's the tool we chose for the Classic theme, and StarterTheme
+  ships with a ready-to-use configuration file.
 
 
 
