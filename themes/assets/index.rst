@@ -2,210 +2,326 @@
 Asset Management
 ****************
 
-PrestaShop 1.7 has significantly improved the way assets (CSS, JavaScript and image files) are managed. This is due to the fact that PrestaShop ships with some configuration files that will help you set up your Webpack task runner.
+PrestaShop 1.7 has significantly improved the way assets (CSS, JavaScript and image files) are managed.
 
-Modules can add CSS and JavaScript files the same way they did in PrestaShop 1.6.
 
-Every module loads the following files:
-
-1. theme.css
-2. custom.css
-3. rtl.css (if a right-to-left language is detected)
-4. core.js
-5. theme.js
-6. custom.js
+We advise theme developer to compile most of there style and javascript into a single concatenated minified file
+(see below the webpack section).
+If you need to add special assets, for example an extra javacript library on the home or product page, there are a few
+ways to do so.
 
 
 
-The Starter Theme contains the development files in the _dev folder. Install the dependencies using npm: ``cd _dev + npm install``.
+Registering assets
+=======================
 
-Now the dependencies are installed and correctly set up, you can customise theses files.
+In PrestaShop 1.7+, it's easy to register custom assets on each pages. The major improvement
+is that you can easily manage it from your theme, without any modules.
 
-If you need to add image files, you can create and /img folder in the /_dev folder.
+We introduced new method to register assets and especially new cool options.
 
-Since stylesheets and JavaScript files are compiled and minified, you should use npm to build new version of theses files after your modifications: it will check for any file change, and will update the production version used by PrestaShop (localized in your assets folder).
+For instance you can register specifically your in the head or bottom, you can load it
+with attributes like ``async`` or ``defer`` and you can even inline it easily.
 
-To watch your file changes with npm, type this: ``npm run watch``.
+My favorite option is the priority one, which makes it very easy to ensure everything is loaded in
+the order you need.
 
-Note: You should probably start by removing all existing styles.
+.. note::
 
-
-
-About Webpack
-=========================
-
-	`Webpack <https://webpack.github.io/>`_ is a module bundler.
-	Webpack takes modules with dependencies and generates static assets representing those modules.
-
-The main interest in using Webpack is that it will compile all your styles - which we advise you to write using `Sass <http://sass-lang.com/>`_ - into a single CSS file.
-This way, your theme will make only one HTTP request for this single file, and since your browser will cache it for later re-use, it will even donwload this file only once.
-
-The same goes with your JavaScript code. Instead of loading jQuery along with its community plugins, your own custom plugins and any extra code you might need,
-Webpack compiles and minifies all this JavaScript code into a single file, which will be loaded once - and cached.
-
-// TODO IMG
+  Backward compatibility is kept for ``addJS``, ``addCSS``, ``addJqueryUI`` and ``addJqueryPlugin`` also
+  now is the best time to update your libraries and use the new method.
 
 
-[NOTE]
-PrestaShop's Combine, Compress and Cache feature (CCC) hasn't yet been updated to take this into account. Don't worry, it should be redone soon.
+Here is a list of option and what they do.
 
 
-Installing webpack
------------------------
+Options
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you want to compile your assets using Webpack (and we advise you to), follow these steps:
+PrestaShop FrontController class provide 2 new methods ``registerStylesheet`` and ``registerJavascript``
+to easily register new assets.
 
-1. Download and install `Node.js <https://nodejs.org/>`_, which contains the npm tool.
-2. In your command line tool, open the `_dev` folder.
-3. Install npm: `npm install`.
-4. You then have a choice:
+In order to have the most extensible signature, these 2 methods take 3 arguments. The
+first one is the unique ID of the asset, the second one is the relative path and the third one
+is an array of all other optonal parameters, described below.
 
- - To build your assets once, type `npm run build`.
- - To rebuild your assets every time you change a file in the _dev folder, type `npm run watch`.
+**ID**
 
+This unique identitier needed for each asset. This is useful to either override or unregister something
+already loaded by the core or a native module.
 
-Webpack configuration
----------------------------------
+**Relative path**
 
-The `Webpack configuration file for PrestaShop <https://github.com/PrestaShop/PrestaShop/blob/develop/themes/webpack.config.js>`_ is thus:
+This is the path of your asset. In order to make your assets fully overridable and compatible
+with parent/child feature you need to provide the path from the theme root directory
+or the prestashop root directory if it's a module.
 
-1. All CSS rules go to the `assets/css/theme.css` file.
-2. All JavaScript code go to the `assets/js/theme.js` file.
+For example:
 
-It provides proper configuration for compile your Sass files into a single CSS file. JavaScript code is written in ES6, and compiled to ES5 with Babel.
+* 'assets/css/example.css' for something in your theme
+* 'modules/modulename/css/example.cs' for something in your module
 
-// TODO PNG ? svg ?
+**Extra parameters for stylesheet**
 
-
-If you want to use Stylus or Less, simply edit the command line under the "scripts" section.
-
-.. code-block:: javascript
-
-	var webpack = require('webpack');
-
-	var plugins = [];
-
-	var production = false;
-
-	if (production) {
-	    plugins.push(
-	        new webpack.optimize.UglifyJsPlugin({
-	            compress: {
-	                warnings: false
-	            }
-	        })
-	    );
-	}
-
-	module.exports = {
-	    entry: [
-	      './js/theme.js'
-	    ],
-	    output: {
-	        path: '../assets/js',
-	        filename: 'theme.js'
-	    },
-	    module: {
-	        loaders: [
-	            {test: /\.js$/, loaders: ['babel-loader']},
-	        ]
-	    },
-	    externals: {
-	        prestashop: 'prestashop'
-	    },
-	    devtool: 'source-map',
-	    plugins: plugins
-	};
++-----------+-------------------------------------+---------------------------------------------------------------+
+| Name      | Values                              | Comment                                                       |
++-----------+-------------------------------------+---------------------------------------------------------------+
+| media     | all|braille|embossed|handheld|      | no comment.                                                   |
+|           |   print|projection|screen|speech|   |                                                               |
+|           |   tty|tv (default: all)             |                                                               |
++-----------+-------------------------------------+---------------------------------------------------------------+
+| priority  | 0-999 (default: 50)                 | 0 is the highest priority                                     |
++-----------+-------------------------------------+---------------------------------------------------------------+
+| inline    | true|false (default: false)         | If true, your style will be printed inside ``<style>``        |
+|           |                                     | inside your html ``<head>``. Use with caution.                |
++-----------+-------------------------------------+---------------------------------------------------------------+
 
 
+**Extra parameters for javascript**
+
++-----------+-------------------------------------+---------------------------------------------------------------+
+| Name      | Values                              | Comment                                                       |
++-----------+-------------------------------------+---------------------------------------------------------------+
+| position  | head|bottom (default: bottom)       | JavaScript files should be loaded in the bottom as much as    |
+|           |                                     | possible. Remember core.js is loaded first thing in the       |
+|           |                                     | bottom so jQuery won't be loaded in the <head> part.          |
++-----------+-------------------------------------+---------------------------------------------------------------+
+| priority  | 0-999 (default: 50)                 | 0 is the highest priority                                     |
++-----------+-------------------------------------+---------------------------------------------------------------+
+| inline    | true|false (default: false)         | If true, your style will be printed inside                    |
+|           |                                     | ``<script type="text/javascript">`` tags inside your html.    |
+|           |                                     | Use with caution.                                             |
++-----------+-------------------------------------+---------------------------------------------------------------+
+| attribute | async|defer|none (default: none)    | Load javascript file with the corresponding attribute         |
+|           |                                     | (Read more: `Async vs Defer attributes`_)                     |
++-----------+-------------------------------------+---------------------------------------------------------------+
 
 
-Adding Assets
-=================
+Registered by the core
+-------------------------------
+
+Every page of every theme load the following files:
+
+* theme.css
+* custom.css
+* rtl.css (if a right-to-left language is detected)
+
+* core.js
+* theme.js
+* custom.js
+
++---------------+-----------------+-----------+-------------------------------------------------------------------+
+| Filename      | ID              | Priority  | Comment                                                           |
++---------------+-----------------+-----------+-------------------------------------------------------------------+
+| theme.css     | theme-main      | 0         | Most (all?) of your theme style. Should be minified.              |
++---------------+-----------------+-----------+-------------------------------------------------------------------+
+| rtl.css       | theme-rtl       | 900       | Loaded only for Right-To-Left language                            |
++---------------+-----------------+-----------+-------------------------------------------------------------------+
+| custom.css    | theme-custom    | 1000      | Empty file loaded at the very end to allow user to override       |
+|               |                 |           | some simple style.                                                |
++---------------+-----------------+-----------+-------------------------------------------------------------------+
+| core.js       | corejs          | 0         | Provided by PrestaShop. Contains Jquery2, dispatches prestashop   |
+|               |                 |           | events and holds PrestaShop logic.                                |
++---------------+-----------------+-----------+-------------------------------------------------------------------+
+| theme.js      | theme-main      | 50        | Most of your theme javascript. Should embed lib required on       |
+|               |                 |           | all pages and be minified.                                        |
++---------------+-----------------+-----------+-------------------------------------------------------------------+
+| custom.js     | theme-custom    | 1000      | Empty file loaded at the very end to allow user to                |
+|               |                 |           | override behavior or add simple script.                           |
++---------------+-----------------+-----------+-------------------------------------------------------------------+
 
 
-With Webpack (theme-wide)
+
+
+Registering in themes
+------------------------------
+
+By now you probably understood that this theme.yml file became the heart of PrestaShop themes.
+
+To register assets, ceate a new key ``assets`` at the top level of your theme.yml, the register
+your files according to your needs. Page identifier are based on the ``php_self`` property of
+each controller (`example (https://github.com/PrestaShop/PrestaShop/blob/b2ba1c2ecd627e23993c9356165e0d1e842a2faa/controllers/front/ProductController.php#L35)`_)
+
+
+For example, if you want to add an external library on each page and a custom lib on the
+product page:
+
+.. code-block:: yaml
+
+  assets:
+    css:
+      product:
+        - id: product-extra-style
+          path: assets/css/product.css
+          media: all
+          priority: 100
+    js:
+      all:
+        - id: this-cool-lib
+          path: assets/js/external-lib.js
+          priority: 30
+          position: bottom
+      product:
+        - id: product-custom-lib
+          path: assets/js/product.js
+          priority: 200
+          attribute: async
+
+
+
+Registering in modules
 ----------------------------
 
-// TODO
+When developing a PrestaShop module, you may want to add specific styles for your templates.
+The best way is to use the 2 method ``registerStylesheet`` and ``registerJavascript`` provided
+by the parent FrontController class.
 
 
-Without Webpack (theme-wide)
------------------------------
+.. note::
 
-[NOTE]
-This is not recommended, please use Webpack.
-
-All of PrestaShop 1.7's themes have a `assets/css/custom.css` file, which is empty by default.
-We advise you to add your custome CSS rules in this file if you need to make small modifications to the default theme, like changing the color of the text and such. It's loaded after the `theme.css` file.
-
-Also if you don't want to use Webpack, you can import other CSS files in `custom.css`, for instance:
-
-.. code-block:: CSS
-
-	@import './other-css-file.css';
-
-The same way goes with custom JavaScript code, with the `assets/js/custom.js` file.
-
-
-With HTML (page-specific)
----------------------------
-
-There might situation when you need to load a very custom CSS file on some specific pages (but on all of the site's pages). If you have 1 MB of CSS dedicated to a widget/infographic/map/advanced section for example, you may not want to add it to Webpack.
-
-In such cases, open the `templates/_partials/head.tpl` template file, and add something similar to the following code:
-
-.. code-block:: Smarty
-
-	{if $page.page_name == 'index'}
-		<link rel="stylesheet" href="themes/YOUR_THEME_NAME/assets/css/very-custom.css" type="text/css" media="all" />
-	{/if}
-
-or for if you need to add a huge custom JavaScript file:
-
-.. code-block:: Smarty
-
-	{if $page.page_name == 'index'}
-		<script type="text/javascript" src="themes/YOUR_THEME_NAME/assets/js/very-custom.js"></script>
-	{/if}
-
-Note: these examples target the homepage. You should adapt them to your needs.
+  If you're developing a custom module that only works your themes, don't put any style or JS
+  inside the module and put them in the theme files instead (theme.js and theme.css).
 
 
 
-With Modules
---------------
-
-When developing a PrestaShop module, you may want to add specific styles for your templates. The way of adding assets for modules didn't change.
-
-With a front controller
-^^^^^^^^^^^^^^^^^^^^^^^^
+With a module front controller
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you develop a front controller, simply extend the `setMedia()` method. For instance:
 
 .. code-block:: php
 
+    public function setMedia()
+    {
+        parent::setMedia();
 
-	public function setMedia()
-	{
-			$this->addCSS(_MODULE_DIR_.$this->module->name.'/views/css/bubble-popup.css');
-			$this->addJS(_MODULE_DIR_.$this->module->name.'/js/bubble-popup.js');
+        if ('product' === $this->php_self) {
+            $this->registerStylesheet(
+                'module-modulename-style',
+                'modules/'.$this->module->name.'/css/modulename.css',
+                [
+                  'media' => 'all',
+                  'priority' => 200,
+                ]
+            );
 
-			return parent::setMedia();
-	}
+            $this->registerJavascript(
+                'module-modulename-simple-lib',
+                'modules/'.$this->module->name.'/js/lib/simple-lib.js',
+                [
+                  'priority' => 200,
+                  'attribute' => 'async',
+                ]
+            );
+        }
+    }
 
 
 Without a front controller
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you only have your module's class, register your code on the `actionFrontControllerSetMedia` hook and add your asset on the go inside the hook:
+If you only have your module's class, register your code on the `actionFrontControllerSetMedia` hook and
+add your asset on the go inside the hook:
+
 
 .. code-block:: php
 
-	public function hookActionFrontControllerSetMedia($params)
-	{
-		$this->context->controller->addCSS($this->_path.'css/custom-style-in-module.css', 'all');
-		$this->context->controller->addJS($this->_path.'js/custom-style-in-module.js');
-	}
+    public function hookActionFrontControllerSetMedia($params)
+    {
+        // Only on product page
+        if ('product' === $this->context->controller->php_self) {
+            $this->context->controller->registerStylesheet(
+                'module-modulename-style',
+                'modules/'.$this->name.'/css/modulename.css',
+                [
+                  'media' => 'all',
+                  'priority' => 200,
+                ]
+            );
 
-// TODO This needs proper testing
+            $this->context->controller->registerJavascript(
+                'module-modulename-simple-lib',
+                'modules/'.$this->name.'/js/lib/simple-lib.js',
+                [
+                  'priority' => 200,
+                  'attribute' => 'async',
+                ]
+            );
+        }
+
+        // On every pages
+        $this->context->controller->registerJavascript(
+            'google-analytics',
+            'modules/'.$this->name.'/ga.js',
+            [
+              'position' => 'head',
+              'inline' => true,
+              'priority' => 10,
+            ]
+        );
+    }
+
+
+
+
+
+Unregistering
+------------------
+
+That's the whole point of an id, you can unregister assets. For exemple if you want to improve
+your theme/module compatibility with a module, you can unregister it's assets and handle it
+your self.
+
+Let's say you want to be fully compatible with a popular navigation module. You will create template
+override of course but you could also remove the style that come with it and
+bundle your specific style in your ``theme.css`` (since it's loaded on everypage).
+
+To unregister an assets you need ot know it's ID.
+
+
+In themes
+^^^^^^^^^^^^^^^^^^^^
+
+As of today the only to unregister an assets without any module is to place an
+empty file where the module override would be.
+
+If the module registers a javascript file placed in ``views/js/file.js`` you simply need
+to create an empty file in ``modules/modulename/views/js/file.js``.
+
+It works for both JS and CSS.
+
+
+In modules
+^^^^^^^^^^^^^^^^^^^^
+
+Both methods ``unregisterJavascript`` and ``unregisterStylesheet`` take only one argument:
+the unique ID of the resource you want to remove.
+
+
+.. code-block:: php
+
+    // In a front controller
+    public function setMedia()
+    {
+        parent::setMedia();
+
+        $this->unregisterJavascript('the-identifier');
+    }
+
+    // In a module class
+    public function hookActionFrontControllerSetMedia($params)
+    {
+      $this->context->controller->unregisterJavascript('the-identifier');
+    }
+
+
+
+
+
+.. include:: webpack
+
+
+
+
+
+.. _Async vs Defer attributes: http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
