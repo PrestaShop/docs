@@ -16,6 +16,21 @@ Every module loads the following files:
 6. custom.js
 
 
+
+The Starter Theme contains the development files in the _dev folder. Install the dependencies using npm: ``cd _dev + npm install``.
+
+Now the dependencies are installed and correctly set up, you can customise theses files.
+
+If you need to add image files, you can create and /img folder in the /_dev folder.
+
+Since stylesheets and JavaScript files are compiled and minified, you should use npm to build new version of theses files after your modifications: it will check for any file change, and will update the production version used by PrestaShop (localized in your assets folder).
+
+To watch your file changes with npm, type this: ``npm run watch``.
+
+Note: You should probably start by removing all existing styles.
+
+
+
 About Webpack
 =========================
 
@@ -122,7 +137,7 @@ Without Webpack (theme-wide)
 This is not recommended, please use Webpack.
 
 All of PrestaShop 1.7's themes have a `assets/css/custom.css` file, which is empty by default.
-We advise you to add your custome CSS rules in this file if you need to make small modifications to the default theme, like changing the color of the text and such. It's loaded after the `theme.css` file. 
+We advise you to add your custome CSS rules in this file if you need to make small modifications to the default theme, like changing the color of the text and such. It's loaded after the `theme.css` file.
 
 Also if you don't want to use Webpack, you can import other CSS files in `custom.css`, for instance:
 
@@ -153,7 +168,7 @@ or for if you need to add a huge custom JavaScript file:
 	{if $page.page_name == 'index'}
 		<script type="text/javascript" src="themes/YOUR_THEME_NAME/assets/js/very-custom.js"></script>
 	{/if}
-    
+
 Note: these examples target the homepage. You should adapt them to your needs.
 
 

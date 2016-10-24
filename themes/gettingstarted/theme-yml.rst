@@ -184,3 +184,20 @@ When the configuration is changed through the back office interface, only the se
         # Specific layout for some pages
         identity: layout-left-side-column
         order-confirmation: layout-left-side-column
+
+
+Dependencies
+-------------------
+
+When making a theme you may want to add features with custom modules. It's important that these modules
+are installed with your theme. These modules should be declared as dependencies so you're sure prestashop
+will export them when creating your theme zipball.
+
+So far themes only have modules dependencies.
+
+.. code-block:: yaml
+
+  dependencies:
+    modules:
+      - xx_customslider
+      - xx_customproductpage
