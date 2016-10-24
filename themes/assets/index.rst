@@ -4,62 +4,59 @@ Asset Management
 
 PrestaShop 1.7 has significantly improved the way assets (CSS, JavaScript and image files) are managed.
 
+We advise theme developers to compile most of theer style and JavaScript code into a single concatenatedminified file
+(see the Webpack section below).
 
-We advise theme developer to compile most of there style and javascript into a single concatenated minified file
-(see below the webpack section).
-If you need to add special assets, for example an extra javacript library on the home or product page, there are a few
+If you need to add special assets, for example an extra JavaScript library on the home page or the product page, there are a few
 ways to do so.
-
 
 
 Registering assets
 =======================
 
 In PrestaShop 1.7+, it's easy to register custom assets on each pages. The major improvement
-is that you can easily manage it from your theme, without any modules.
+is that you can easily manage them from your theme, without any modules.
 
-We introduced new method to register assets and especially new cool options.
+We introduced new methods to register assets, and especially new cool options.
 
-For instance you can register specifically your in the head or bottom, you can load it
-with attributes like ``async`` or ``defer`` and you can even inline it easily.
+For instance, you can register your asset specifically in the head or bottom of your HTML code; you can load it
+with attributes like ``async`` or ``defer``; and you can even inline it easily.
 
-My favorite option is the priority one, which makes it very easy to ensure everything is loaded in
+One favorite option is the `priority` one, which makes it very easy to ensure everything is loaded in
 the order you need.
 
 .. note::
 
-  Backward compatibility is kept for ``addJS``, ``addCSS``, ``addJqueryUI`` and ``addJqueryPlugin`` also
-  now is the best time to update your libraries and use the new method.
+  Backward compatibility is kept for the ``addJS()``, ``addCSS()``, ``addJqueryUI()`` and ``addJqueryPlugin()`` methods. Incidentally, now is the best time to update your libraries and use the new method.
 
 
-Here is a list of option and what they do.
+Here is a list of options, and what they do.
 
 
 Options
 -------------------------------
 
-PrestaShop FrontController class provide 2 new methods ``registerStylesheet`` and ``registerJavascript``
-to easily register new assets.
+PrestaShop's `FrontController` class provides 2 new methods to easily register new assets: ``registerStylesheet()`` and ``registerJavascript()``.
 
-In order to have the most extensible signature, these 2 methods take 3 arguments. The
-first one is the unique ID of the asset, the second one is the relative path and the third one
-is an array of all other optonal parameters, described below.
+In order to have the most extensible signatures, these 2 methods take 3 arguments. The
+first one is the unique ID of the asset, the second one is the relative path, and the third one
+is an array of all other optional parameters, as described below.
 
 **ID**
 
 This unique identitier needed for each asset. This is useful to either override or unregister something
-already loaded by the core or a native module.
+already loaded by the Core or a native module.
 
 **Relative path**
 
 This is the path of your asset. In order to make your assets fully overridable and compatible
-with parent/child feature you need to provide the path from the theme root directory
-or the prestashop root directory if it's a module.
+with the parent/child feature, you need to provide the path from the theme's root directory,
+or PrestaShop's root directory if it's a module.
 
 For example:
 
-* 'assets/css/example.css' for something in your theme
-* 'modules/modulename/css/example.cs' for something in your module
+* 'assets/css/example.css' for something in your theme.
+* 'modules/modulename/css/example.cs' for something in your module.
 
 **Extra parameters for stylesheet**
 
@@ -72,8 +69,8 @@ For example:
 +-----------+-------------------------------------+---------------------------------------------------------------+
 | priority  | 0-999 (default: 50)                 | 0 is the highest priority                                     |
 +-----------+-------------------------------------+---------------------------------------------------------------+
-| inline    | true|false (default: false)         | If true, your style will be printed inside ``<style>``        |
-|           |                                     | inside your html ``<head>``. Use with caution.                |
+| inline    | true|false (default: false)         | If true, your style will be printed inside the ``<style>``    |
+|           |                                     | tag in your HTML ``<head>``. Use with caution.                |
 +-----------+-------------------------------------+---------------------------------------------------------------+
 
 
@@ -83,29 +80,28 @@ For example:
 | Name      | Values                              | Comment                                                       |
 +-----------+-------------------------------------+---------------------------------------------------------------+
 | position  | head|bottom (default: bottom)       | JavaScript files should be loaded in the bottom as much as    |
-|           |                                     | possible. Remember core.js is loaded first thing in the       |
+|           |                                     | possible. Remember: core.js is loaded first thing in the      |
 |           |                                     | bottom so jQuery won't be loaded in the <head> part.          |
 +-----------+-------------------------------------+---------------------------------------------------------------+
 | priority  | 0-999 (default: 50)                 | 0 is the highest priority                                     |
 +-----------+-------------------------------------+---------------------------------------------------------------+
 | inline    | true|false (default: false)         | If true, your style will be printed inside                    |
-|           |                                     | ``<script type="text/javascript">`` tags inside your html.    |
+|           |                                     | ``<script type="text/javascript">`` tags inside your HTML.    |
 |           |                                     | Use with caution.                                             |
 +-----------+-------------------------------------+---------------------------------------------------------------+
-| attribute | async|defer|none (default: none)    | Load javascript file with the corresponding attribute         |
+| attribute | async|defer|none (default: none)    | Load JavaScript file with the corresponding attribute         |
 |           |                                     | (Read more: `Async vs Defer attributes`_)                     |
 +-----------+-------------------------------------+---------------------------------------------------------------+
 
 
-Registered by the core
+Registered by the Core
 -------------------------------
 
-Every page of every theme load the following files:
+Every page of every theme loads the following files:
 
 * theme.css
 * custom.css
 * rtl.css (if a right-to-left language is detected)
-
 * core.js
 * theme.js
 * custom.js
@@ -113,20 +109,20 @@ Every page of every theme load the following files:
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
 | Filename      | ID              | Priority  | Comment                                                           |
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
-| theme.css     | theme-main      | 0         | Most (all?) of your theme style. Should be minified.              |
+| theme.css     | theme-main      | 0         | Most (all?) of your theme's styles. Should be minified.           |
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
 | rtl.css       | theme-rtl       | 900       | Loaded only for Right-To-Left language                            |
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
 | custom.css    | theme-custom    | 1000      | Empty file loaded at the very end to allow user to override       |
 |               |                 |           | some simple style.                                                |
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
-| core.js       | corejs          | 0         | Provided by PrestaShop. Contains Jquery2, dispatches prestashop   |
+| core.js       | corejs          | 0         | Provided by PrestaShop. Contains Jquery2, dispatches PrestaShop   |
 |               |                 |           | events and holds PrestaShop logic.                                |
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
-| theme.js      | theme-main      | 50        | Most of your theme javascript. Should embed lib required on       |
-|               |                 |           | all pages and be minified.                                        |
+| theme.js      | theme-main      | 50        | Most of your theme's JavaScript. Should embed libraries           |
+|               |                 |           |  required on all pages, and be minified.                          |
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
-| custom.js     | theme-custom    | 1000      | Empty file loaded at the very end to allow user to                |
+| custom.js     | theme-custom    | 1000      | Empty file loaded at the very end, to allow user to               |
 |               |                 |           | override behavior or add simple script.                           |
 +---------------+-----------------+-----------+-------------------------------------------------------------------+
 
@@ -136,15 +132,15 @@ Every page of every theme load the following files:
 Registering in themes
 ------------------------------
 
-By now you probably understood that this theme.yml file became the heart of PrestaShop themes.
+By now you probably understood that this ``theme.yml`` file became the heart of PrestaShop themes.
 
-To register assets, ceate a new key ``assets`` at the top level of your theme.yml, the register
-your files according to your needs. Page identifier are based on the ``php_self`` property of
+To register assets, ceate a new ``assets`` key at the top level of your ``theme.yml``, and register
+your files according to your needs. Page identifiers are based on the ``php_self`` property of
 each controller (`example`_)
 
 
-For example, if you want to add an external library on each page and a custom lib on the
-product page:
+For example, if you want to add an external library on each page and a custom library on the
+Product page:
 
 .. code-block:: yaml
 
@@ -173,21 +169,21 @@ Registering in modules
 ----------------------------
 
 When developing a PrestaShop module, you may want to add specific styles for your templates.
-The best way is to use the 2 method ``registerStylesheet`` and ``registerJavascript`` provided
-by the parent FrontController class.
+The best way is to use the ``registerStylesheet`` and ``registerJavascript`` methods provided
+by the parent ``FrontController`` class.
 
 
 .. note::
 
-  If you're developing a custom module that only works your themes, don't put any style or JS
-  inside the module and put them in the theme files instead (theme.js and theme.css).
+  If you're developing a custom module that only works on your themes, don't put any style or JavaScript code
+  inside the module: put it in the theme's files instead (``theme.js`` and ``theme.css``).
 
 
 
-With a module front controller
+With a front controller module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you develop a front controller, simply extend the `setMedia()` method. For instance:
+If you develop a front controller, simply extend the ``setMedia()`` method. For instance:
 
 .. code-block:: php
 
@@ -217,10 +213,10 @@ If you develop a front controller, simply extend the `setMedia()` method. For in
     }
 
 
-Without a front controller
+Without a front controller module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you only have your module's class, register your code on the `actionFrontControllerSetMedia` hook and
+If you only have your module's class, register your code on the `actionFrontControllerSetMedia` hook, and
 add your asset on the go inside the hook:
 
 
@@ -268,33 +264,33 @@ add your asset on the go inside the hook:
 Unregistering
 ------------------
 
-That's the whole point of an id, you can unregister assets. For exemple if you want to improve
-your theme/module compatibility with a module, you can unregister it's assets and handle it
-your self.
+You can unregister assets! That's the whole point of an ``id``. For example if you want to improve
+your theme/module's compatibility with a module, you can unregister its assets and handle them
+yourself.
 
-Let's say you want to be fully compatible with a popular navigation module. You will create template
-override of course but you could also remove the style that come with it and
-bundle your specific style in your ``theme.css`` (since it's loaded on everypage).
+Let's say you want to be fully compatible with a popular navigation module. You could create a template
+override of course, but you could also remove the style that comes with it and
+bundle your specific style in your ``theme.css`` (since it's loaded on every page).
 
-To unregister an assets you need ot know it's ID.
+To unregister an assets, you need ot know it's ID.
 
 
 In themes
 ^^^^^^^^^^^^^^^^^^^^
 
-As of today the only to unregister an assets without any module is to place an
+As of today, the only way to unregister an asset without any module is to place an
 empty file where the module override would be.
 
-If the module registers a javascript file placed in ``views/js/file.js`` you simply need
+If the module registers a JavaScript file placed in ``views/js/file.js``, you simply need
 to create an empty file in ``modules/modulename/views/js/file.js``.
 
-It works for both JS and CSS.
+It works for both JavaScript and CSS assets.
 
 
 In modules
 ^^^^^^^^^^^^^^^^^^^^
 
-Both methods ``unregisterJavascript`` and ``unregisterStylesheet`` take only one argument:
+Both ``unregisterJavascript`` and ``unregisterStylesheet`` methods take only one argument:
 the unique ID of the resource you want to remove.
 
 
