@@ -36,7 +36,7 @@ Here is a list of option and what they do.
 
 
 Options
-^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------
 
 PrestaShop FrontController class provide 2 new methods ``registerStylesheet`` and ``registerJavascript``
 to easily register new assets.
@@ -140,7 +140,7 @@ By now you probably understood that this theme.yml file became the heart of Pres
 
 To register assets, ceate a new key ``assets`` at the top level of your theme.yml, the register
 your files according to your needs. Page identifier are based on the ``php_self`` property of
-each controller (`example (https://github.com/PrestaShop/PrestaShop/blob/b2ba1c2ecd627e23993c9356165e0d1e842a2faa/controllers/front/ProductController.php#L35)`_)
+each controller (`example`_)
 
 
 For example, if you want to add an external library on each page and a custom lib on the
@@ -318,10 +318,10 @@ the unique ID of the resource you want to remove.
 
 
 
-.. include:: webpack
+.. include:: webpack.rst
 
 
 
 
-
+.. _example: https://github.com/PrestaShop/PrestaShop/blob/b2ba1c2ecd627e23993c9356165e0d1e842a2faa/controllers/front/ProductController.php#L35
 .. _Async vs Defer attributes: http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
