@@ -9,7 +9,7 @@ Themes can override modules' assets (CSS and JavaScript only) by placing the cor
 With PrestaShop 1.7, all module overriding code goes to the `modules` directory (in your module's own directory).
 Every PS 1.7 module developer should be aware of this change (introduced with PR 5020: https://github.com/PrestaShop/PrestaShop/pull/5020).
 
-.. tips::
+.. note::
   If your asset override is empty, PrestaShop will load nothing (neither the module one nor your override). This is useful
   if you want to fully remove this module style and add your own to your compiled ``theme.css``.
 
