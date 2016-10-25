@@ -1,29 +1,34 @@
-Front Office Notifications
+Notifications
 =============================
 
-Throughout the whole front office, the customer can receive notification messages from PrestaShop, to inform her about successes or errors for instance.
+Throughout the whole front office, the customer can receive notification messages
+from PrestaShop, to inform her about successes or errors for instance.
 Your theme can too send notifications when certain events occur.
 
-The notification messages are not hardcoded in the template files, but are sent from the controller, so that you have consistency in case you update/change your theme. Also, this way there is a better chance that all notification messages are already translated into your language!
+The notification messages are not hardcoded in the template files, but are sent
+from the controller, so that you have consistency in case you update/change your theme.
+Also, this way there is a better chance that all notification messages are already
+translated into your language!
 
 
 Types of notifications
-----------------------
+------------------------------
 
 An array of notification is passed to the templates, containing at least one of these:
 
-* success: an action was performed and everything went well.
-* error: something went wrong.
-* warning: important notice the merchant should know about.
-* info: "just so you know".
++-------------+-----------------------------------------------------------------+
+| success     | An action was performed and everything went well.               |
++-------------+-----------------------------------------------------------------+
+| error       | Something went wrong.                                           |
++-------------+-----------------------------------------------------------------+
+| warning     | Important notice the merchant should know about.                |
++-------------+-----------------------------------------------------------------+
+| info        | "just so you know".                                             |
++-------------+-----------------------------------------------------------------+
 
 
-Display them
+How to display notifications
 ------------------------------
-
-Data are built this way:
-
-// TODO INCLUDE JSON
 
 
 In the Starter Theme, `notifications are implemented as a partial template file <https://github.com/PrestaShop/StarterTheme/blob/master/templates/_partials/notifications.tpl>`_:
@@ -73,7 +78,7 @@ In the Starter Theme, `notifications are implemented as a partial template file 
       {/if}
     </div>
   </aside>
-  
+
 ...and are then `included in the template file <https://github.com/PrestaShop/StarterTheme/blob/master/templates/checkout/checkout.tpl#L18-L20>`_:
 
 .. code-block:: smarty
@@ -84,14 +89,14 @@ In the Starter Theme, `notifications are implemented as a partial template file 
 
 
 Add your own message in your front controller
---------------------------------------
+------------------------------------------------
 
 Your front controller holds `the 4 following variables <https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L618-L640>`_:
 
-* $this->error
-* $this->success
-* $this->warning
-* $this->danger
+* ``$this->error``
+* ``$this->success``
+* ``$this->warning``
+* ``$this->danger``
 
 They are PHP arrays, and they hold messages as a string.
 
