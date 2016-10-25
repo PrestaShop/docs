@@ -10,6 +10,9 @@ We advise theme developers to compile most of their style and JavaScript code in
 If you need to add special assets, for example an extra JavaScript library on the home page or the product page, there are a few
 ways to do so.
 
+Your theme have to print assets correctly in the smarty template, and it's :doc:`explained
+in the template section <../templates/05-head.rst>`.
+
 
 Registering assets
 =======================
