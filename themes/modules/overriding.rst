@@ -1,6 +1,6 @@
 **************************************
 Overriding modules
-***************************************
+**************************************
 
 
 When you write a theme, you often need to override the templates and assets coming from a module so that they match your theme's specific markup needs.
@@ -34,7 +34,7 @@ Examples in this page are based on this sample module directory structure:
 
 
 Overriding templates and assets
-============================
+=========================================
 
 With PrestaShop 1.7, here are the folder paths to create in order to override templates and assets:
 
@@ -81,7 +81,7 @@ Compared to what was needed in PrestaShop 1.6, it is much simpler:
 
 
 Overriding with the 'include' method
-==============================
+===========================================
 
 There is one very important issue that you should be aware of.
 When loading a template file (for instance 'moduledemo.tpl'), PrestaShop will look for overriding first, in the following order:
@@ -97,7 +97,7 @@ The issue goes both ways: if you want to modify the `included-template.tpl` file
 
   {include file='./included-template.tpl'}
 
-  
+
 PrestaShop 1.7 introduces a new cool way to include files in module templates. By using this method, all the expected rules will be followed:
 
 .. code-block:: Smarty
@@ -106,7 +106,7 @@ PrestaShop 1.7 introduces a new cool way to include files in module templates. B
 
 
 SmartyDev helps you debug!
-==========================
+=======================================
 
 PrestaShop 1.7 also introduces our own SmartyDev tool, an Smarty extension which allows you to see the template's name within your gnerated HTML markup. This will help debuging a lot, especially because of template override.
 

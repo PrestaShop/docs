@@ -2,9 +2,8 @@
 Modules
 ***********************
 
-.. toctree::
-    :maxdepth: 2
-    :glob:
+.. include:: overriding.rst
 
-    *
+.. include:: theme-option.rst
 
+.. include:: widget.rst

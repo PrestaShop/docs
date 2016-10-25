@@ -71,7 +71,7 @@ Here is the list of keys PrestaShop will look for. The dot represent the nesting
 
 
 How to use PrestaShop Automated Test Suite
------------------------------------------
+-------------------------------------------------
 
 PrestaShop 1.7 comes with an automated test suite used to develop Classic. You should use them
 to ensure your theme is fully compatible with PrestaShop's feature.
