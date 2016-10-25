@@ -1,6 +1,7 @@
-******************************
-PrestaShop 1.7 Developer Guide
-******************************
+*************************************
+PrestaShopModule Developer Guide
+*************************************
+
 
 PrestaShop is a very powerful e-commerce platform, and part of its power lies in the fact that it is very easy to build upon and expand through modules and overriding code.
 
@@ -9,4 +10,13 @@ PrestaShop is written mostly in PHP. Other languages used throughout are JavaScr
 In this guide, you will find all the necessary information to customize PrestaShop with code.
 
 
-// TODO: Add TOC with links
+.. toctree::
+    :maxdepth: 2
+
+    02-Fundamentals/index
+    03-DevelopmentEnvironment/index
+    04-DivingIntoPSCoreDevelopment/index
+    05-CreatingAPrestaShop17Module/index
+    40-Widgets/index
+    50-PaymentModules/index
+    80-Updating/index

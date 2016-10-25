@@ -3,10 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PrestaShop Developer Documentation's documentation!
+Welcome to PrestaShop Developer Documentation!
 ==============================================================
 
 Contents:
+
+
+.. toctree::
+    :maxdepth: 1
+
+    foreword/index
 
 
 .. toctree::
@@ -15,9 +21,17 @@ Contents:
     themes/index
 
 
+.. toctree::
+    :maxdepth: 2
+
+    module/index
+
+
+
+
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

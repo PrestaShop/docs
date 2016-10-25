@@ -1,6 +1,5 @@
-************************
 Enabling the Auto-Update
-************************
+===================================================
 
 Since PrestaShop 1.5, it is possible to have your module auto-update:
 once a new version is available on Addons, PrestaShop suggests an
@@ -70,7 +69,7 @@ The homeslider module's ``install-1.2.1.php`` file does even more:
     <?php
     if (!defined('_PS_VERSION_'))
         exit;
-        
+
     function upgrade_module_1_2_1($object)
     {
         return Db::getInstance()->execute('
@@ -96,7 +95,7 @@ versions sequentially, and to only use numbers – because the upgrade
 code uses PHP's ``version_compare()`` method.
 
 Adding/updating modules or hooks between versions
-==================================================
+----------------------------------------------------------------
 
 If the new version of your module adds or update its hooks, you should
 make sure to update them too.
@@ -113,7 +112,7 @@ blockbestseller module:
     <?php
     if (!defined('_PS_VERSION_'))
         exit;
-     
+
     function upgrade_module_1_2($object)
     {
         return ($object->registerHook('addproduct')

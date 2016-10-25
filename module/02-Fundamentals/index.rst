@@ -16,15 +16,15 @@ Modules and the override system are explored in this Developer Guide, starting w
 * TODO: Link to "Creating a PrestaShop module" page
 * TODO: Link to "Overriding default behaviors" page
 
-.. note::  
+.. note::
 
   By default, PrestaShop is provided with more than 100 modules, enabling you to launch your online business quickly and for free.
 
   More than 2300 modules are also available at the official add-ons site.
   These additional modules were built by the PrestaShop company or members of the PrestaShop community, and are sold at affordable prices.
   As a developer, you can also share your modules on this site, and receive 70% of the amounts associated with the sale of your creations. Sign up now!
-  
-  
+
+
 Concepts
 ########
 
@@ -60,7 +60,7 @@ PrestaShop is based on a 3-tier architecture:
 * Data control. User-provided content is controlled by files in the root folder.
 * Design. All of the theme's files are in the "themes" folder.
 
-This is the same principle as the Model–View–Controller (MVC) architecture, only in a simpler and more accessible way.
+This is the same principle as the Modelï¿½Viewï¿½Controller (MVC) architecture, only in a simpler and more accessible way.
 
 While all versions of PrestaShop up to 1.6 took pride in only using a custom architecture, it was decided to incorporate the Symfony PHP framework starting with PrestaShop 1.7.
 

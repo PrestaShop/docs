@@ -1,6 +1,5 @@
-***************************
 Adding a configuration page
-***************************
+==============================================
 
 Your module can get a "Configure" link in the back office module list,
 and therefore let the user change some settings. This "Configure" link
@@ -16,7 +15,7 @@ one, where we will be able to edit the content of the ``MYMODULE_NAME``
 variable that we stored in the ``ps_configuration`` data table.
 
 The getContent() method
-=======================
+----------------------------------------------------------------
 
 First, here is the complete code for the getContent() method:
 
@@ -25,7 +24,7 @@ First, here is the complete code for the getContent() method:
     public function getContent()
     {
         $output = null;
-     
+
         if (Tools::isSubmit('submit'.$this->name))
         {
             $my_module_name = strval(Tools::getValue('MYMODULE_NAME'));
@@ -97,7 +96,7 @@ This form-validation code is nothing new for PHP developers, but uses
 some of the PrestaShop methods that you will very regularly use.
 
 Displaying the form
-===================
+----------------------------------------------------------------
 
 The configuration form itself is displayed with the ``displayForm()``
 method. Here is its code, which we are going to explain after the jump:
@@ -108,7 +107,7 @@ method. Here is its code, which we are going to explain after the jump:
     {
         // Get default language
         $default_lang = (int)Configuration::get('PS_LANG_DEFAULT');
-         
+
         // Init Fields form array
         $fields_form[0]['form'] = array(
             'legend' => array(
@@ -128,19 +127,19 @@ method. Here is its code, which we are going to explain after the jump:
                 'class' => 'btn btn-default pull-right'
             )
         );
-         
+
         $helper = new HelperForm();
-         
+
         // Module, token and currentIndex
         $helper->module = $this;
         $helper->name_controller = $this->name;
         $helper->token = Tools::getAdminTokenLite('AdminModules');
         $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
-         
+
         // Language
         $helper->default_form_language = $default_lang;
         $helper->allow_employee_form_lang = $default_lang;
-         
+
         // Title and toolbar
         $helper->title = $this->displayName;
         $helper->show_toolbar = true;        // false -> remove toolbar
@@ -158,10 +157,10 @@ method. Here is its code, which we are going to explain after the jump:
                 'desc' => $this->l('Back to list')
             )
         );
-         
+
         // Load current value
         $helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
-         
+
         return $helper->generateForm($fields_form);
     }
 
@@ -170,7 +169,7 @@ change, this block actually uses some of PrestaShop's method to make it
 easier to build forms, most notably the ``HelperForm`` object.
 
 Diving in displayForm()
-=======================
+----------------------------------------------------------------
 
 Let's run down that method:
 
@@ -225,7 +224,7 @@ Let's run down that method:
    form based on the content of the ``$fields_form`` variable.
 
 Using HelperForm
-================
+----------------------------------------------------------------
 
 ``HelperForm`` is one of the helper methods that were added with
 PrestaShop 1.5, along with ``HelperOptions``, ``HelperList``,
@@ -240,17 +239,17 @@ Here is our sample code, as a reminder:
 ::
 
     $helper = new HelperForm();
-     
+
     // Module, Token and currentIndex
     $helper->module = $this;
     $helper->name_controller = $this->name;
     $helper->token = Tools::getAdminTokenLite('AdminModules');
     $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
-     
+
     // Language
     $helper->default_form_language = $default_lang;
     $helper->allow_employee_form_lang = $default_lang;
-     
+
     // title and Toolbar
     $helper->title = $this->displayName;
     $helper->show_toolbar = true;        // false -> remove toolbar
@@ -268,10 +267,10 @@ Here is our sample code, as a reminder:
             'desc' => $this->l('Back to list')
        )
     );
-     
+
     // Load current value
     $helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
-     
+
     return $helper->generateForm($fields_form);
 
 Our example uses several of ``HelperForm``'s attributes: they need to be

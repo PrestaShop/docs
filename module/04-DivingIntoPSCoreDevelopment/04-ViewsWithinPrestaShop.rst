@@ -1,12 +1,11 @@
-***********************
 Views within PrestaShop
-***********************
+=================================
 
 PrestaShop uses the Smarty template engine to generate its views:
 http://www.smarty.net/.
 
 Theme views
-===========
+--------------------------------
 
 The views are stored in ``.tpl`` files, and are used throughout
 PrestaShop:
@@ -21,7 +20,7 @@ PrestaShop:
    ``/admin-dev/themes/default/template/controllers/products/information.tpl``
 
 Module views
-============
+--------------------------------
 
 Modules can add their own templates to adapt parts of the interface:
 
@@ -34,16 +33,16 @@ There's a third template folder, called ``/hook/``, which can be used
 for view files that are tied to a specific hook. For instance,
 
 Best practices
-==============
+--------------------------------
 
 A view name is generally the same as the name for the code using it. For
 instance, ``404.php`` uses ``404.tpl``.
 
 Overriding a view file
-======================
+--------------------------------
 
 Keep overrides for your own shop
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Overrides in PrestaShop are exclusive. This means that if your module
 overrides one of PrestaShop's behaviors, another module will not be able
@@ -57,7 +56,7 @@ distribute (for instance through the PrestaShop Addons marketplace), and
 they are forbidden in partner modules.
 
 How to
-------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 As there is no inheritance, there is no way to override a view. In order
 to change a view, you must rewrite the template file, and place it in

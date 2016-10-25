@@ -1,6 +1,6 @@
-*****************************
 Controllers within PrestaShop
-*****************************
+================================================
+
 
 In an MVC architecture, a Controller manages the synchronization
 events between the View and the Model, and keeps them up to date. It
@@ -21,7 +21,7 @@ through another inheriting class:
 They can be found in the /classes/controller folder.
 
 The FrontController class
-=========================
+---------------------------------
 
 Here are some of the class' properties:
 
@@ -83,7 +83,7 @@ Here are some of the class' properties:
 +-------------+-----------------+
 
 Execution order of the controller's functions
----------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 #. ``__contruct()``: Sets all the controller's member variables.
 #. ``init()``: Initializes the controller.
@@ -95,7 +95,7 @@ Execution order of the controller's functions
 #. ``display()`` or ``displayAjax()``: Displays the content.
 
 Existing front office controllers
----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Here are the default controllers, and the theme files that use them.
 
@@ -310,13 +310,13 @@ Here are the default controllers, and the theme files that use them.
 +-------------------------+----------------+
 
 Overriding a controller
-=======================
+-------------------------------
 
 Thanks to object inheritance, you can change a controller's behaviors,
 or add new ones.
 
 Keep overrides for your own shop
---------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Overrides in PrestaShop are exclusive. This means that if your module
 overrides one of PrestaShop's behaviors, another module will not be able
@@ -330,7 +330,7 @@ distribute (for instance through the PrestaShop Addons marketplace), and
 they are forbidden in partner modules.
 
 How to
-------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 PrestaShop's controllers are all stored in the ``/controllers`` folder,
 and use the "Core" suffix.

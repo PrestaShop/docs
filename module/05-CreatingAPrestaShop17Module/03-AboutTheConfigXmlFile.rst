@@ -1,6 +1,5 @@
-*************************
 About the config.xml file
-*************************
+========================================
 
 The ``config.xml`` file makes it possible to optimize the loading of the
 module list in the back office.

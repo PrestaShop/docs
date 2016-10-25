@@ -1,9 +1,9 @@
-**********************
 Accessing the database
-**********************
+================================================
+
 
 The database structure
-======================
+-----------------------------
 
 By default, PrestaShop's database tables start with the ps\_ prefix.
 This can be customized during installation
@@ -38,7 +38,7 @@ table:
 -  Use the id\_shop field to store the store associated with a record.
 
 The DBQuery class
-=================
+-----------------------------
 
 The DBQuery class is a query builder which helps you create SQL queries.
 For instance:
@@ -131,7 +131,8 @@ Here are some of the methods from this class:
 +--------------------------------+----------------+
 
 The ObjectModel class
-=====================
+-----------------------------
+
 
 When needing to dive deep, you have to use the ObjectModel class. This
 is the main object of PrestaShop's object model. It can be overridden...
@@ -147,7 +148,7 @@ updated, the record to which it is tied is updated as well. The class
 implements accessors for each attribute.
 
 Defining the model
-------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You must use the $definition static variable in order to define the
 model.
@@ -167,7 +168,7 @@ For instance:
         'id_cms_category'  => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt'),
         'position'         => array('type' => self::TYPE_INT),
         'active'           => array('type' => self::TYPE_BOOL),
-     
+
         // Language fields
         'meta_description' =>
             array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'size' => 255),
@@ -183,7 +184,7 @@ For instance:
     );
 
 A model for many stores and/or languages
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to retrieve an object in many languages:
 
@@ -204,8 +205,9 @@ in many languages:
 
     'multilang_shop' => true
 
+
 The main methods
-----------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Any overriding of the ObjectModel methods is bound to influence how all
 the other classes and methods act. Use with care.
