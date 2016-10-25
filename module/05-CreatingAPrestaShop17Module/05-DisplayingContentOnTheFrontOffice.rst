@@ -1,6 +1,5 @@
-**************************************
 Displaying content on the front office
-**************************************
+============================================================
 
 As it is, the module does not do much. In order to display something on
 the front office, we have to add support for a few hooks. This is done
@@ -14,7 +13,7 @@ method:
     {
       if (Shop::isFeatureActive())
         Shop::setContext(Shop::CONTEXT_ALL);
-     
+
       return parent::install() &&
         $this->registerHook('leftColumn') &&
         $this->registerHook('header') &&
@@ -48,16 +47,16 @@ Attaching code to a hook requires a specific method for each:
       );
       return $this->display(__FILE__, 'mymodule.tpl');
     }
-       
+
     public function hookDisplayRightColumn($params)
     {
       return $this->hookDisplayLeftColumn($params);
     }
-       
+
     public function hookDisplayHeader()
     {
       $this->context->controller->addCSS($this->_path.'css/mymodule.css', 'all');
-    }  
+    }
 
 We are using the Context (``$this->context``) to change a Smarty
 variable: Smarty's ``assign()`` method makes it possible for us to set
@@ -99,7 +98,7 @@ reload the homepage, the left column simply displays a message where the
 module should be, saying "No template found for module mymodule".
 
 Displaying content
-==================
+----------------------------------------------------------------
 
 Now that we have access to the left column, we should display something
 there for the customer to see.
@@ -158,8 +157,8 @@ Here is our template file, located at
            {else}
                World
            {/if}
-           !       
-        </p>   
+           !
+        </p>
         <ul>
           <li><a href="{$my_module_link}" title="Click this link">Click me!</a></li>
         </ul>
@@ -212,7 +211,7 @@ As you can see, the theme applies its own CSS to the template we added:
 It is not pretty, but it works the way we want it to.
 
 Disabling the cache
--------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you've followed this tutorial to the letter and still do not see
 anything appearing in the theme's left column, it might be because
@@ -241,7 +240,7 @@ all your tests in a test site, ideally on your own computer rather than
 online.
 
 Embedding a template in the theme
-=================================
+----------------------------------------------------------------
 
 The link that the module displays does not lead anywhere for now. Let's
 create the ``display.php`` file that it targets, with a minimal content,
@@ -312,9 +311,9 @@ portion of the page. Here is the equivalent code for display.php:
     global $smarty;
     include('../../config/config.inc.php');
     include('../../header.php');
-     
+
     $smarty->display(dirname(__FILE__).'/display.tpl');
-     
+
     include('../../footer.php');
     ?>
 
@@ -357,7 +356,7 @@ by our template file:
                 'my_module_message' => $this->l('This is a simple text message') // Do not forget to enclose your strings in the l() translation method
             )
         );
-         
+
         return $this->display(__FILE__, 'mymodule.tpl');
     }
 
@@ -459,7 +458,7 @@ Comments are based on asterisk:
 ::
 
     {* This string is commented out *}
-     
+
     {*
     This string is too!
     *}

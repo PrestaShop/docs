@@ -1,6 +1,5 @@
-******************
 Module translation
-******************
+=======================================
 
 The module's text strings are written in English, but you might want
 French, Spanish or Polish shop owners to use your module too. You
@@ -20,11 +19,11 @@ internationalization, or i18n.
 
 
 Internationalizing strings in PHP files
-=======================================
+----------------------------------------------------------------
 
 Strings in PHP files will need to be displayed through the
-``$this->getTranslator()->trans()`` method call, which comes from 
-Symfony's Translator call through the Module abstract class, and 
+``$this->getTranslator()->trans()`` method call, which comes from
+Symfony's Translator call through the Module abstract class, and
 thus is available in all modules.
 
 mymodule.php (partial)
@@ -42,18 +41,18 @@ The ``trans()`` method has three mandatory parameters:
 * An array: This allows to indicate parameter for variables. Whether there are variables in the string or not, It should be here. You can use ``array()`` or or the simpler ``[]``.
 * A string for the domain: Domains make it possible to have a better context for strings. Since this is a module, always use "``Modules.``" as the prefix, and contextualize your module with a specific name (something less generic than "``Modules.MyOwnModule``").
 
-Note that parameters can still be added using ``sprintf()``. For instance: 
+Note that parameters can still be added using ``sprintf()``. For instance:
 
 ``'desc' => sprintf($this->getTranslator()->trans('Maximum image size: %s.', array(), 'Admin.Global'), ini_get('upload_max_filesize'))``
 
 
 
 Internationalizing strings in Smarty (.tpl) files
-=================================================
+----------------------------------------------------------------
 
 Strings in TPL files will need to be turned into dynamic content using
 the ``{l}`` function call, which Smarty
-will replace by the translation for the chosen language. 
+will replace by the translation for the chosen language.
 
 PrestaShop 1.6 used to require the ``mod`` parameter for context.
 PrestaShop 1.7 now requires that parameter to be "``d``", and to use the same domain as all the other strings in the module.
@@ -77,14 +76,14 @@ In our sample module, the ``mymodule.tpl`` file...
            {else}
                World
            {/if}
-           !       
-        </p>   
+           !
+        </p>
         <ul>
           <li><a href="{$my_module_link}" title="Click this link">Click me!</a></li>
         </ul>
       </div>
     </div>
-    <!-- /Block mymodule -->   
+    <!-- /Block mymodule -->
 
 ...becomes:
 
@@ -103,8 +102,8 @@ In our sample module, the ``mymodule.tpl`` file...
             {capture name='my_module_tempvar'}{l s='World' d='Modules.MyModule'}{/capture}
             {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
           {/if}
-          {l s='Hello %1$s!' sprintf=$my_module_name d='Modules.MyModule'}   
-        </p>   
+          {l s='Hello %1$s!' sprintf=$my_module_name d='Modules.MyModule'}
+        </p>
         <ul>
           <li><a href="{$my_module_link}"  title="{l s='Click this link' d='Modules.MyModule'}">{l s='Click me!' d='Modules.MyModule'}</a></li>
         </ul>
@@ -133,17 +132,17 @@ parameter is mandatory for module translation.
 
 
 Internationalizing strings in Twig (.twig) files
-================================================
+----------------------------------------------------------------
 
 To be written.
 
 Generating your translation files
-=================================
+----------------------------------------------------------------
 
 To be written.
 
 Translating your module's strings
-=================================
+----------------------------------------------------------------
 
 Strings are delimited with single quotes. If a string contains single
 quotes, they should be escaped using a backslash (``\``).
@@ -208,7 +207,7 @@ are now in French.
 They are also translated in French when the back office is in French.
 
 Translating complex code
-========================
+----------------------------------------------------------------
 
 As we can see, the basis of template file translation is to enclose them
 in the ``{l s='The string' mod='name_of_the_module'}``. The changes in

@@ -1,6 +1,5 @@
-****************
 Managing Cookies
-****************
+========================================
 
 PrestaShop uses encrypted cookies to store all the session information,
 for visitors/clients as well as for employees/administrators.
@@ -30,7 +29,7 @@ All the information stored within a cookie is available using this code:
     $cookie = new Cookie('ps'); // Use "psAdmin" to read an employee's cookie.
 
 Data stored in a visitor/client's cookie
-========================================
+---------------------------------------------------
 
 +---------+----------------+
 | Token   | Description    |
@@ -155,7 +154,7 @@ Data stored in a visitor/client's cookie
 +---------+----------------+
 
 Data stored in an employee/administrator's cookie
-=================================================
+------------------------------------------------------------
 
 +---------+----------------+
 | Token   | Description    |

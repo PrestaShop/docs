@@ -22,3 +22,14 @@ ENSURE:
 Note: many external libraries have been updated. Here is a list of some external extra doc about it:
 
  * https://github.com/yellowtree/wp-geoip-detect/wiki/How-to-migrate-from-v1-to-v2
+
+
+
+----------
+
+How to make a module compatible with 1.6 AND 1.7
+
+* Use legacy translation system ($this->l)
+* Use 2 templates different depending on the version
+* Implements getWidgetVariables and renderWidget but dont explicitly implements the php interface.
+* Create all specific hook method like hookDisplayHeader and call renderWidget with the correct parameters

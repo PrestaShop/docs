@@ -1,9 +1,8 @@
-***********************
 Creating a first module
-***********************
+======================================
 
 File structure for a PrestaShop module
-======================================
+------------------------------------------------------------
 
 A module is made of a lot of files, all stored in a folder that bears
 the same name as the module, that folder being in turn stored in the
@@ -288,7 +287,7 @@ The module can also as many other files and folders as necessary:
 ``/css``, ``/img``, ``/js``, etc.
 
 External libraries
-------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If wish to use an external library, it should be put in a dedicated
 folder.
@@ -301,7 +300,7 @@ doesn't not have the same meaning as 'sdk'). You can have more than one
 such folder, for instance ``/lib`` and ``/sdk``.
 
 The PrestaShop coding convention
-================================
+------------------------------------------------------------
 
 Before you start writing code for your PrestaShop module, you should be
 aware that the PrestaShop team uses a specific set of coding convention
@@ -323,7 +322,7 @@ the overall code of the PrestaShop project. The PHPCodeSniffer can help
 you make sure you follow the standard properly.
 
 Creating a first module
-=======================
+------------------------------------------------------------
 
 Let's create a simple first module; this will enable us to better
 describe its structure. We will name it "My module".
@@ -340,13 +339,13 @@ That is enough for a very basic module, but obviously more files and
 folders can be added later.
 
 The constant test
------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The main mymodule.php file must start with the following test:
 
 ::
 
-    <?php   
+    <?php
     if (!defined('_PS_VERSION_'))
     {
       exit;
@@ -361,7 +360,7 @@ Note that, as required by the PrestaShop Coding Standards (see above),
 we do not use a PHP closing tag.
 
 The main class
---------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The main file must contain the module's main class (along with other
 classes if needed). PrestaShop uses Object-Oriented programming, and so
@@ -379,7 +378,7 @@ in order to inherit all its methods and attributes.
     {
       exit;
     }
-     
+
     class MyModule extends Module
     {
     }
@@ -392,7 +391,7 @@ the module can already be seen in the "Modules" page in the back office,
 in the "Other modules" section – albeit with no real name nor thumbnail.
 
 The constructor method
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now, let's fill the class' code block with the essential constructor
 lines. A constructor is a function in a class that is automatically
@@ -408,7 +407,7 @@ place to set most of its details.
     {
       exit;
     }
-     
+
     class MyModule extends Module
     {
       public function __construct()
@@ -418,17 +417,17 @@ place to set most of its details.
         $this->version = '1.0.0';
         $this->author = 'Firstname Lastname';
         $this->need_instance = 0;
-        $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_); 
+        $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
         $this->bootstrap = true;
-     
+
         parent::__construct();
-     
+
         $this->displayName = $this->l('My module');
         $this->description = $this->l('Description of my module.');
-     
+
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
-     
-        if (!Configuration::get('MYMODULE_NAME'))      
+
+        if (!Configuration::get('MYMODULE_NAME'))
           $this->warning = $this->l('No name provided');
       }
     }
@@ -569,11 +568,11 @@ PrestaShop's translation method, ``l()``:
 
     $this->displayName = $this->l('My module');
     $this->description = $this->l('Description of my module.');
-     
+
     $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
-     
-    if (!Configuration::get('MYMODULE_NAME'))  
-        $this->warning = $this->l('No name provided.'); 
+
+    if (!Configuration::get('MYMODULE_NAME'))
+        $this->warning = $this->l('No name provided.');
 
 These lines respectively assign:
 
@@ -607,7 +606,7 @@ To install the module, click the "Proceed with installation" on this
 screen.
 
 Building the install() and uninstall() methods
-==============================================
+--------------------------------------------------------
 
 Some modules have more needs than just using PrestaShop's features in
 special ways. Your module might need to perform actions on installation,
@@ -623,7 +622,7 @@ our example, the ``MyModule`` class) – at the same level as the
 constructor method.
 
 The install() method
---------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Here is the bare minimum for the ``install()`` method:
 
@@ -664,14 +663,14 @@ tasks during installation:
     {
       if (Shop::isFeatureActive())
         Shop::setContext(Shop::CONTEXT_ALL);
-     
+
       if (!parent::install() ||
         !$this->registerHook('leftColumn') ||
         !$this->registerHook('header') ||
         !Configuration::updateValue('MYMODULE_NAME', 'my friend')
       )
         return false;
-     
+
       return true;
     }
 
@@ -679,7 +678,7 @@ If any of the lines in the testing block fails, the method returns
 ``false`` and the installation does not happen.
 
 The uninstall() method
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Here is the bare minimum for the uninstall() method:
 
@@ -705,12 +704,12 @@ this:
         !Configuration::deleteByName('MYMODULE_NAME')
       )
         return false;
-     
+
       return true;
     }
 
 The Configuration object
-========================
+------------------------------------------------
 
 As you can see, our three blocks of code (``__construct()``,
 ``install()`` and ``uninstall()``) all make use of a new object,
@@ -722,7 +721,7 @@ without require to use SQL queries. Specifically, this object handles
 data from the ``ps_configuration`` database table.
 
 The main methods
-----------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 So far, we've used three methods, to which we'll add a fourth one in the
 list below:
@@ -750,7 +749,7 @@ anything goes. For instance, here is how to handle a PHP array using the
 
     // Storing a serialized array.
     Configuration::updateValue('MYMODULE_SETTINGS', serialize(array(true, true, false)));
-     
+
     // Retrieving the array.
     $configuration_array = unserialize(Configuration::get('MYMODULE_SETTINGS'));
 
@@ -759,7 +758,7 @@ will certainly use it in many situations. Most native modules use it too
 for their own settings.
 
 Handling the Multistore feature
--------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default, all these methods work within the confines of the current
 store context, whether PrestaShop is using the multistore feature or
@@ -785,7 +784,7 @@ for your own store, and you know the id and shop group of all of your
 shops.
 
 Retrieving external values from the ps\_configuration data table
-----------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You are not limited to your own variables: PrestaShop stores all its own
 configuration settings in the ps\_configuration table. There are
@@ -809,13 +808,13 @@ Dive into the ``ps_configuration`` table in order to discover many other
 settings!
 
 The Shop object
-===============
+----------------------------------------------------------------
 
 Another of install()'s lines is thus:
 
 ::
 
-    if (Shop::isFeatureActive()) 
+    if (Shop::isFeatureActive())
     {
       Shop::setContext(Shop::CONTEXT_ALL);
     }
@@ -839,7 +838,7 @@ The Context is explained in more details in the "Using the Context
 Object" chapter of this Developer Guide.
 
 The icon file
-=============
+----------------------------------------------------------------
 
 To put the finishing touch to this basic module, you should add an icon,
 which will be displayed next to the module's name in the back office
@@ -860,7 +859,7 @@ The icon file must respect these requirements:
    (Danish Royalty Free)
 
 Installing the module
-=====================
+----------------------------------------------------------------
 
 Now that all basics are in place, reload the back office's "Modules"
 pages, in the "Front office features" section, you should find your

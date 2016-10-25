@@ -1,6 +1,5 @@
-**************
 Managing Hooks
-**************
+=================================
 
 Hooks are a way to associate your code to some specific PrestaShop
 events.
@@ -33,10 +32,10 @@ You can get a full list of the hooks available in PrestaShop 1.6 in the
 "Hooks in PrestaShop 1.6" chapter of the Developer Guide.
 
 Using hooks
-===========
+------------------
 
 ...in a controller
-------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is easy to call a hook from within a controller: you simply have to
 use its name with the ``hookExec()`` method: ``Module::hookExec('NameOfHook');``
@@ -48,7 +47,7 @@ For instance:
     $this->context->smarty->assign('HOOK_LEFT_COLUMN', Module::hookExec('displayLeftColumn'));
 
 ...in a module
---------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to attach your code to a hook, you must create a non-static
 public method, starting with the "hook" keyword followed by either
@@ -77,7 +76,7 @@ installation.
     }
 
 ...in a theme
--------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 It is easy to call a hook from within a template file (``.tpl``): you simply
 have to use its name with the hook function. You can add the name of a
@@ -90,7 +89,7 @@ For instance:
     {hook h='displayLeftColumn' mod='blockcart'}
 
 Creating your own hook
-======================
+------------------------------------
 
 You can create new PrestaShop hooks by adding a new record in the
 ``ps_hook`` table in your MySQL database. You could do it the hard way:

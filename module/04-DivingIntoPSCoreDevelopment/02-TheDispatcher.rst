@@ -1,6 +1,6 @@
-**************
 The Dispatcher
-**************
+================================================
+
 
 The Dispatcher handles URL redirections.
 
