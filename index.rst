@@ -10,6 +10,12 @@ Contents:
 
 
 .. toctree::
+    :maxdepth: 1
+
+    foreword/index
+
+
+.. toctree::
     :maxdepth: 2
 
     themes/index

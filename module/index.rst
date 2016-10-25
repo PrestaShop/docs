@@ -13,7 +13,6 @@ In this guide, you will find all the necessary information to customize PrestaSh
 .. toctree::
     :maxdepth: 2
 
-    01-CodingStandards/index
     02-Fundamentals/index
     03-DevelopmentEnvironment/index
     04-DivingIntoPSCoreDevelopment/index
