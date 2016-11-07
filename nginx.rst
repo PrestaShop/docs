@@ -3,7 +3,7 @@ https://gitter.im/PrestaShop/General?at=57079f8cc65c9a6f7f27df90
 also
 https://www.prestashop.com/forums/topic/519123-config-prestashop-17-and-nginx/
 
-Copied and paste configuration from Mickeal Dekker (see forum link)
+Copied and paste configuration from Michael Dekker (see forum link)
 
 .. code-block:: nginx
 
@@ -49,6 +49,7 @@ Copied and paste configuration from Mickeal Dekker (see forum link)
       gzip_http_version 1.0;
       gzip_types application/json text/css application/javascript;
   
+      rewrite ^/[a-zA-Z][a-zA-Z]/(index\.php.*)$ /$1 last;  #Remove language code when index.php is called directly
       rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
       rewrite ^/([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$1$2$3.jpg last;
       rewrite ^/([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$1$2$3$4.jpg last;
@@ -60,8 +61,6 @@ Copied and paste configuration from Mickeal Dekker (see forum link)
       rewrite ^/([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg last;
       rewrite ^/c/([0-9]+)(-[.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+.jpg$ /img/c/$1$2$3.jpg last;
       rewrite ^/c/([a-zA-Z_-]+)(-[0-9]+)?/.+.jpg$ /img/c/$1$2.jpg last;
-      rewrite ^/images_ie/?([^/]+).(jpe?g|png|gif)$ /js/jquery/plugins/fancybox/images/$1.$2 last;
-      rewrite ^/order$ /index.php?controller=order last;
       location /admin-dev/ {                           #Change this to your admin folder
           if (!-e $request_filename) {
               rewrite ^/.*$ /admin-dev/index.php last; #Change this to your admin folder
