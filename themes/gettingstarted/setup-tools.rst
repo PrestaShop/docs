@@ -2,7 +2,7 @@
 Tooling prerequisites for theme designers
 *****************************************
 
-By take the freedom to rewrite the way themes work according to the latest best-practices, we chose to also work with modern tools. These tools are widely accepted as best-of-breed in the current web development; hence, learning to use them will not only make you more productive in PrestaShop development, but more importantly in web development in general.
+The way 1.7 themes are created is significantly different from the way they were with PrestaShop 1.7. By taking the freedom to rewrite the way themes work according to the latest best-practices, we chose to also work with modern tools. These tools are widely accepted as best-of-breed in the current web development; hence, learning to use them will not only make you more productive in PrestaShop development, but more importantly in web development in general.
 
 While those tools will help all designers and developers in the long run, there is a first stop of knowing how to use them, particularly if you have never used such a chain of tools through the command line.
 
