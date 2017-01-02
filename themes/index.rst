@@ -13,5 +13,6 @@ PrestaShop Theme Developer Guide
     templates/index
     datasets/index
     modules/index
+    javascript/index
     hooks/index
     distribution/index
