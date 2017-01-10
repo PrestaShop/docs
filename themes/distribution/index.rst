@@ -48,4 +48,4 @@ Please note that if you want to sell your theme on the PrestaShop Addons, there 
 
 ** LIST OF REQUIREMENTS **
 
-* Use BootStrap 4 alpha 4 -- `follow the appropriate doc <https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.4/docs>`.
+* Use BootStrap 4 alpha 4 -- `follow the appropriate doc <https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.4/docs>`_.
