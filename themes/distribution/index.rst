@@ -3,7 +3,7 @@ Distribution
 *************************************
 
 Now that you created an amazing theme, you probably want to release it. The following documentation
-will walkthrough creating a zip and passing addons validation.
+will walk you through creating a zip and passing Addons validation.
 
 But first, you need to test your theme!
 
@@ -44,8 +44,8 @@ Exporting your theme using the button or the command line will export the follow
 Distributing on Addons
 ========================
 
-Please note that if you want to sell your theme on addons there are a few rules to follow:
+Please note that if you want to sell your theme on the PrestaShop Addons, there are a few rules to follow:
 
-** LIST TO REQUIREMENTS **
+** LIST OF REQUIREMENTS **
 
-* Use bootstrap 4
+* Use BootStrap 4 alpha 4 -- `follow the appropriate doc <https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.4/docs>`.
