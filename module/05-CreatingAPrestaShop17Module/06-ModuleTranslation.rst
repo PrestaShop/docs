@@ -9,42 +9,18 @@ your module in all the languages that are installed on your shop. This
 could be a tedious task, but a whole system has been put in place in
 order to help you out.
 
-In short, PrestaShop implements Symfony's translation mechanism, through
+In short, PrestaShop 1.7 implements Symfony's translation mechanism, through
 the use of the ``trans()`` method, used to encapsulate the
 strings to be translated. This method is applied in a different way
 depending of the file type.
 
+.. warning:: This mechanism does not work with 3rd-party modules.
+  You should keep using the `legacy translation system <http://doc.prestashop.com/display/PS16/Module+translation>`_ and it will work just like in v1.6. Otherwise you won’t be able to translate your modules, which we want to avoid.
+  
+  These comments do not apply to theme development, for the whole theme structure has been redesigned in 1.7. 1.7-specific themes should use the new translation system. Just not modules :(
+
 The process of preparing text strings for translation is called
 internationalization, or i18n.
-
-
-Internationalizing strings in PHP files
-----------------------------------------------------------------
-
-Strings in PHP files will need to be displayed through the
-``$this->getTranslator()->trans()`` method call, which comes from
-Symfony's Translator call through the Module abstract class, and
-thus is available in all modules.
-
-mymodule.php (partial)
-
-::
-
-    ...
-    $this->displayName = $this->getTranslator()->trans('My Module', array(), 'Modules.MyModule');
-    $this->description = $this->getTranslator()->trans('Does this and that', array(), 'Modules.MyModule');
-    ...
-
-The ``trans()`` method has three mandatory parameters:
-
-* A string for the text: This is the text that want local user to translate.
-* An array: This allows to indicate parameter for variables. Whether there are variables in the string or not, It should be here. You can use ``array()`` or or the simpler ``[]``.
-* A string for the domain: Domains make it possible to have a better context for strings. Since this is a module, always use "``Modules.``" as the prefix, and contextualize your module with a specific name (something less generic than "``Modules.MyOwnModule``").
-
-Note that parameters can still be added using ``sprintf()``. For instance:
-
-``'desc' => sprintf($this->getTranslator()->trans('Maximum image size: %s.', array(), 'Admin.Global'), ini_get('upload_max_filesize'))``
-
 
 
 Internationalizing strings in Smarty (.tpl) files
