@@ -16,6 +16,7 @@ Users will be able to choose the layout for each page from the theme's settings 
   name: StarterTheme # The name must match the directory name
   display_name: Starter Theme
   version: 1.0.0
+  theme_key: 3c6e0b8a9c15224a8228b9a98ca1531d # Needed by PrestaShop Addons
   author:
     name: "John Doe"
     email: "pub@prestashop.com"
