@@ -118,7 +118,7 @@ You can also have the theme create hooks and attach modules to custom and existi
               except_pages:
                 - category
                 - index
-
+          # Syntax for hook exceptions do NOT work! there is a bug report on the forge about it. Fix it or remove it from the documantation as it does not work.
 
 Image settings
 -----------------------
