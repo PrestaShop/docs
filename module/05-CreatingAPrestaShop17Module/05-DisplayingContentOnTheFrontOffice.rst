@@ -276,7 +276,7 @@ Here are our two files:
       public function initContent()
       {
         parent::initContent();
-        $this->setTemplate('display.tpl');
+        $this->setTemplate('module:mymodule/views/templates/front/display.tpl');
       }
     }
 
