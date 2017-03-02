@@ -141,4 +141,4 @@ If you want to use Stylus or Less, simply edit the command line under the "scrip
 
 
 
-.. _Webpack configuration file for StarterTheme: https://github.com/PrestaShop/StarterTheme/blob/master/_dev/webpack.config.js
+.. _Webpack configuration file for StarterTheme: https://github.com/PrestaShop/StarterTheme/blob/develop/_dev/webpack.config.js
