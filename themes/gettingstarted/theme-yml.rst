@@ -58,7 +58,7 @@ Modules
 -----------------------
 
 
-You can have the theme enable or disabled modules when the theme is enabled.
+You can have the theme enable, disable or reset modules when the theme is enabled.
 
 .. code-block:: yaml
 
@@ -74,6 +74,10 @@ You can have the theme enable or disabled modules when the theme is enabled.
         # All modules below are disabled when the theme is enabled.
         # They are re-enabled when the theme is disabled.
         - homeslider
+        - blockwishlist
+      to_reset:
+        # All modules below are reset when the theme is enabled.
+        - blockreassurance
         - blockwishlist
 
 You can also have the theme create hooks and attach modules to custom and existing hooks when the theme is enabled.
