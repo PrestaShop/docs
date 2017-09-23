@@ -57,13 +57,13 @@ Here are the possible files and folders for a PrestaShop 1.6 module:
 +---------------------+-----------------+------------+
 | logo.gif or         | Icon files      | PrestaShop |
 | logo.jpg (up to     | representing    | 1.4:       |
-| v1.4) logo.png      | this module in  | 16\ *16    |
+| v1.4) logo.png      | this module in  | 16\*16     |
 | (v1.5+)             | the back        | pixels Gif |
 |                     | office.         | or Jpeg    |
 |                     |                 | file.      |
 |                     |                 | PrestaShop |
 |                     |                 | 1.5:       |
-|                     |                 | 32*\ 32    |
+|                     |                 | 32\*32     |
 |                     |                 | pixels PNG |
 |                     |                 | file. If   |
 |                     |                 | your       |
