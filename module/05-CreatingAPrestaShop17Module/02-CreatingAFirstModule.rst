@@ -14,8 +14,8 @@ Here are the possible files and folders for a PrestaShop 1.6 module:
 +---------------------+-----------------+------------+
 | File/folder name    | Description     | Details    |
 +=====================+=================+============+
-| name\_of\_the\_modu | Main file.      | The main   |
-| le.php              |                 | PHP file   |
+| name\_of\_the\_mod\ | Main file.      | The main   |
+| ule.php             |                 | PHP file   |
 |                     |                 | should     |
 |                     |                 | have the   |
 |                     |                 | same name  |
@@ -31,15 +31,15 @@ Here are the possible files and folders for a PrestaShop 1.6 module:
 |                     |                 |            |
 |                     |                 | Folder     |
 |                     |                 | name:      |
-|                     |                 | /modules/b |
-|                     |                 | lockcms    |
+|                     |                 | /modules/\ |
+|                     |                 | blockcms   |
 |                     |                 |            |
 |                     |                 | Main       |
 |                     |                 | file name: |
-|                     |                 | /modules/b |
-|                     |                 | lockcms/bl |
-|                     |                 | ockcms.php |
-|                     |                 |            |
+|                     |                 | /modules/\ |
+|                     |                 | blockcms/\ |
+|                     |                 | blockcms.\ |
+|                     |                 | php        |
 +---------------------+-----------------+------------+
 | config.xml          | Cache           | If it does |
 |                     | configuration   | not exist  |
@@ -110,22 +110,22 @@ Here are the possible files and folders for a PrestaShop 1.6 module:
 |                     |                 | module's   |
 |                     |                 | folder.    |
 +---------------------+-----------------+------------+
-| /views/templates/ad | Sub-folder for  |            |
-| min                 | template files  |            |
+| /views/templates/a\ | Sub-folder for  |            |
+| dmin                | template files  |            |
 |                     | used by the     |            |
 |                     | module's        |            |
 |                     | administration  |            |
 |                     | controllers.    |            |
 +---------------------+-----------------+------------+
-| /views/templates/fr | Sub-folder for  |            |
-| ont                 | template files  |            |
+| /views/templates/f\ | Sub-folder for  |            |
+| ront                | template files  |            |
 |                     | used by the     |            |
 |                     | module's front  |            |
 |                     | office          |            |
 |                     | controllers.    |            |
 +---------------------+-----------------+------------+
-| /views/templates/ho | Sub-folder for  |            |
-| ok                  | template files  |            |
+| /views/templates/h\ | Sub-folder for  |            |
+| ook                 | template files  |            |
 |                     | used by the     |            |
 |                     | module's hooks. |            |
 +---------------------+-----------------+------------+
@@ -188,16 +188,16 @@ Here are the possible files and folders for a PrestaShop 1.6 module:
 |                     | paths as for    |            |
 |                     | the View files. |            |
 |                     | For instance,   |            |
-|                     | /modules/bankwi |            |
-|                     | re/controllers/ |            |
-|                     | front/payment.p |            |
-|                     | hp              |            |
+|                     | /modules/bankw\ |            |
+|                     | ire/controller\ |            |
+|                     | s/front/paymen\ |            |
+|                     | t.php           |            |
 |                     | .               |            |
 +---------------------+-----------------+------------+
 | /override           | Sub-folder for  | This is    |
 |                     | the             | very       |
-|                     | class-overridin | useful     |
-|                     | g               | when you   |
+|                     | class-overridi\ | useful     |
+|                     | ng              | when you   |
 |                     | code.           | need to    |
 |                     |                 | change     |
 |                     |                 | some of    |
@@ -214,11 +214,11 @@ Here are the possible files and folders for a PrestaShop 1.6 module:
 |                     |                 | default    |
 |                     |                 | code. For  |
 |                     |                 | instance,  |
-|                     |                 | /modules/g |
-|                     |                 | sitemap/ov |
-|                     |                 | erride/cla |
-|                     |                 | sses/Shop. |
-|                     |                 | php        |
+|                     |                 | /modules/\ |
+|                     |                 | gsitemap/\ |
+|                     |                 | override/\ |
+|                     |                 | classes/S\ |
+|                     |                 | hop.php    |
 |                     |                 | extends    |
 |                     |                 | the        |
 |                     |                 | default    |
@@ -230,8 +230,8 @@ Here are the possible files and folders for a PrestaShop 1.6 module:
 |                     | files.          | es.php,    |
 |                     |                 | etc.       |
 +---------------------+-----------------+------------+
-| /themes/[theme\_nam | Sub-folder for  | This       |
-| e]/modules          | overriding .tpl | folder is  |
+| /themes/[theme\_na\ | Sub-folder for  | This       |
+| me]/modules         | overriding .tpl | folder is  |
 |                     | files and       | essential  |
 |                     | languages       | during     |
 |                     | files, if       | modificati |
