@@ -99,215 +99,214 @@ Existing front office controllers
 
 Here are the default controllers, and the theme files that use them.
 
-+-------------------------+----------------+
-| Controller's filename   | Description    |
-+=========================+================+
-| AddressController.php   | Used by        |
-|                         | address.php to |
-|                         | edit a         |
-|                         | customer's     |
-|                         | address.       |
-+-------------------------+----------------+
-| AddressesController.php | Used by        |
-|                         | addresses.php  |
-|                         | to get         |
-|                         | customer's     |
-|                         | addresses.     |
-+-------------------------+----------------+
-| AttachmentController.ph |                |
-| p                       |                |
-+-------------------------+----------------+
-| AuthController.php      | Used by        |
-|                         | authentication |
-|                         | .php           |
-|                         | for customer   |
-|                         | login.         |
-+-------------------------+----------------+
-| BestSalesController.php | Used by        |
-|                         | best-sales.php |
-|                         | to get         |
-|                         | best-sellers.  |
-+-------------------------+----------------+
-| CartController.php      | Used by        |
-|                         | cart.php to    |
-|                         | manage the     |
-|                         | customer's     |
-|                         | cart.          |
-+-------------------------+----------------+
-| CategoryController      | Used by        |
-|                         | category.php   |
-|                         | to get product |
-|                         | categories.    |
-+-------------------------+----------------+
-| ChangeCurrencyControlle |                |
-| r.php                   |                |
-+-------------------------+----------------+
-| CmsController.php       | Used by        |
-|                         | cms.php to get |
-|                         | a CMS page.    |
-+-------------------------+----------------+
-| CompareController.php   | Used by        |
-|                         | products-compa |
-|                         | rison.php      |
-|                         | to compare     |
-|                         | products.      |
-+-------------------------+----------------+
-| ContactController.php   | Used by        |
-|                         | contact-form.p |
-|                         | hp             |
-|                         | to send        |
-|                         | messages.      |
-+-------------------------+----------------+
-| DiscountController.php  | Used by        |
-|                         | discount.php   |
-|                         | to get a       |
-|                         | customer's     |
-|                         | vouchers.      |
-+-------------------------+----------------+
-| GetFileController.php   |                |
-+-------------------------+----------------+
-| GuestTrackingController | Used by        |
-| .php                    | guest-tracking |
-|                         | .php           |
-|                         | to manage      |
-|                         | guest orders.  |
-+-------------------------+----------------+
-| HistoryController.php   | Used by        |
-|                         | history.php to |
-|                         | get a          |
-|                         | customer's     |
-|                         | orders.        |
-+-------------------------+----------------+
-| IdentityController.php  | Used by        |
-|                         | identity.php   |
-|                         | for customer's |
-|                         | personal info. |
-+-------------------------+----------------+
-| IndexController.php     | Used by        |
-|                         | index.php to   |
-|                         | display the    |
-|                         | homepage.      |
-+-------------------------+----------------+
-| ManufacturerController. | Used by        |
-| php                     | manufacturer.p |
-|                         | hp             |
-|                         | to get         |
-|                         | manufacturers. |
-+-------------------------+----------------+
-| MyAccountController.php | Used by        |
-|                         | my-account.php |
-|                         | to manage      |
-|                         | customer       |
-|                         | account.       |
-+-------------------------+----------------+
-| NewProductsController.p | Used by        |
-| hp                      | new-products.p |
-|                         | hp             |
-|                         | to get new     |
-|                         | products.      |
-+-------------------------+----------------+
-| OrderConfirmationContro | Used by        |
-| ller.php                | order-confirma |
-|                         | tion.php       |
-|                         | for order      |
-|                         | confirmation.  |
-+-------------------------+----------------+
-| OrderController.php     | Used by        |
-|                         | order.php to   |
-|                         | manage the     |
-|                         | five-step      |
-|                         | checkout.      |
-+-------------------------+----------------+
-| OrderDetailController.p | Used by        |
-| hp                      | order-detail.p |
-|                         | hp             |
-|                         | to get a       |
-|                         | customer       |
-|                         | order.         |
-+-------------------------+----------------+
-| OrderFollowController.p | Used by        |
-| hp                      | order-follow.p |
-|                         | hp             |
-|                         | to get a       |
-|                         | customer's     |
-|                         | returns.       |
-+-------------------------+----------------+
-| OrderOpcController.php  | Used by        |
-|                         | order-opc.php  |
-|                         | to manage      |
-|                         | one-page       |
-|                         | checkout.      |
-+-------------------------+----------------+
-| OrderReturnController.p | Used by        |
-| hp                      | order-return.p |
-|                         | hp             |
-|                         | to get a       |
-|                         | merchandise    |
-|                         | return.        |
-+-------------------------+----------------+
-| OrderSlipController.php | Used by        |
-|                         | order-slip.php |
-|                         | to get a       |
-|                         | customer's     |
-|                         | credit slips.  |
-+-------------------------+----------------+
-| PageNotFoundController. | Used by        |
-| php                     | 404.php to     |
-|                         | manage the     |
-|                         | "Page not      |
-|                         | found" page.   |
-+-------------------------+----------------+
-| ParentOrderController.p | Manages shared |
-| hp                      | order code.    |
-+-------------------------+----------------+
-| PasswordController.php  | Used by        |
-|                         | password.php   |
-|                         | to reset a     |
-|                         | lost password. |
-+-------------------------+----------------+
-| PdfInvoiceController.ph |                |
-| p                       |                |
-+-------------------------+----------------+
-| PdfOrderReturnControlle |                |
-| r.php                   |                |
-+-------------------------+----------------+
-| PdfOrderSlipController. |                |
-| php                     |                |
-+-------------------------+----------------+
-| PricesDropController.ph | Used by        |
-| p                       | prices-drop.ph |
-|                         | p              |
-|                         | to get         |
-|                         | discounted     |
-|                         | products.      |
-+-------------------------+----------------+
-| ProductController.php   | Used by        |
-|                         | product.php to |
-|                         | get a product. |
-+-------------------------+----------------+
-| SearchController.php    | Used by        |
-|                         | search.php to  |
-|                         | get search     |
-|                         | results.       |
-+-------------------------+----------------+
-| SitemapController.php   | Used by        |
-|                         | sitemap.php to |
-|                         | get the        |
-|                         | sitemap.       |
-+-------------------------+----------------+
-| StatisticsController.ph |                |
-| p                       |                |
-+-------------------------+----------------+
-| StoresController.php    | Used by        |
-|                         | stores.php to  |
-|                         | get store      |
-|                         | information.   |
-+-------------------------+----------------+
-| SupplierController.php  | Used by        |
-|                         | supplier.php   |
-|                         | to get         |
-|                         | suppliers.     |
-+-------------------------+----------------+
++-------------------------+-----------------+
+| Controller's filename   | Description     |
++=========================+=================+
+| AddressController.php   | Used by         |
+|                         | address.php to  |
+|                         | edit a          |
+|                         | customer's      |
+|                         | address.        |
++-------------------------+-----------------+
+| AddressesController.php | Used by         |
+|                         | addresses.php   |
+|                         | to get          |
+|                         | customer's      |
+|                         | addresses.      |
++-------------------------+-----------------+
+| AttachmentController.ph |                 |
+| p                       |                 |
++-------------------------+-----------------+
+| AuthController.php      | Used by         |
+|                         | authentication  |
+|                         | .php            |
+|                         | for customer    |
+|                         | login.          |
++-------------------------+-----------------+
+| BestSalesController.php | Used by         |
+|                         | best-sales.php  |
+|                         | to get          |
+|                         | best-sellers.   |
++-------------------------+-----------------+
+| CartController.php      | Used by         |
+|                         | cart.php to     |
+|                         | manage the      |
+|                         | customer's      |
+|                         | cart.           |
++-------------------------+-----------------+
+| CategoryController      | Used by         |
+|                         | category.php    |
+|                         | to get product  |
+|                         | categories.     |
++-------------------------+-----------------+
+| ChangeCurrencyControlle |                 |
+| r.php                   |                 |
++-------------------------+-----------------+
+| CmsController.php       | Used by         |
+|                         | cms.php to get  |
+|                         | a CMS page.     |
++-------------------------+-----------------+
+| CompareController.php   | Used by         |
+|                         | products-compa  |
+|                         | rison.php       |
+|                         | to compare      |
+|                         | products.       |
++-------------------------+-----------------+
+| ContactController.php   | Used by         |
+|                         | contact-form.php|
+|                         | to send         |
+|                         | messages.       |
++-------------------------+-----------------+
+| DiscountController.php  | Used by         |
+|                         | discount.php    |
+|                         | to get a        |
+|                         | customer's      |
+|                         | vouchers.       |
++-------------------------+-----------------+
+| GetFileController.php   |                 |
++-------------------------+-----------------+
+| GuestTrackingController | Used by         |
+| .php                    | guest-tracking  |
+|                         | .php            |
+|                         | to manage       |
+|                         | guest orders.   |
++-------------------------+-----------------+
+| HistoryController.php   | Used by         |
+|                         | history.php to  |
+|                         | get a           |
+|                         | customer's      |
+|                         | orders.         |
++-------------------------+-----------------+
+| IdentityController.php  | Used by         |
+|                         | identity.php    |
+|                         | for customer's  |
+|                         | personal info.  |
++-------------------------+-----------------+
+| IndexController.php     | Used by         |
+|                         | index.php to    |
+|                         | display the     |
+|                         | homepage.       |
++-------------------------+-----------------+
+| ManufacturerController. | Used by         |
+| php                     | manufacturer.p  |
+|                         | hp              |
+|                         | to get          |
+|                         | manufacturers.  |
++-------------------------+-----------------+
+| MyAccountController.php | Used by         |
+|                         | my-account.php  |
+|                         | to manage       |
+|                         | customer        |
+|                         | account.        |
++-------------------------+-----------------+
+| NewProductsController.p | Used by         |
+| hp                      | new-products.p  |
+|                         | hp              |
+|                         | to get new      |
+|                         | products.       |
++-------------------------+-----------------+
+| OrderConfirmationContro | Used by         |
+| ller.php                | order-confirma  |
+|                         | tion.php        |
+|                         | for order       |
+|                         | confirmation.   |
++-------------------------+-----------------+
+| OrderController.php     | Used by         |
+|                         | order.php to    |
+|                         | manage the      |
+|                         | five-step       |
+|                         | checkout.       |
++-------------------------+-----------------+
+| OrderDetailController.p | Used by         |
+| hp                      | order-detail.p  |
+|                         | hp              |
+|                         | to get a        |
+|                         | customer        |
+|                         | order.          |
++-------------------------+-----------------+
+| OrderFollowController.p | Used by         |
+| hp                      | order-follow.p  |
+|                         | hp              |
+|                         | to get a        |
+|                         | customer's      |
+|                         | returns.        |
++-------------------------+-----------------+
+| OrderOpcController.php  | Used by         |
+|                         | order-opc.php   |
+|                         | to manage       |
+|                         | one-page        |
+|                         | checkout.       |
++-------------------------+-----------------+
+| OrderReturnController.p | Used by         |
+| hp                      | order-return.p  |
+|                         | hp              |
+|                         | to get a        |
+|                         | merchandise     |
+|                         | return.         |
++-------------------------+-----------------+
+| OrderSlipController.php | Used by         |
+|                         | order-slip.php  |
+|                         | to get a        |
+|                         | customer's      |
+|                         | credit slips.   |
++-------------------------+-----------------+
+| PageNotFoundController. | Used by         |
+| php                     | 404.php to      |
+|                         | manage the      |
+|                         | "Page not       |
+|                         | found" page.    |
++-------------------------+-----------------+
+| ParentOrderController.p | Manages shared  |
+| hp                      | order code.     |
++-------------------------+-----------------+
+| PasswordController.php  | Used by         |
+|                         | password.php    |
+|                         | to reset a      |
+|                         | lost password.  |
++-------------------------+-----------------+
+| PdfInvoiceController.ph |                 |
+| p                       |                 |
++-------------------------+-----------------+
+| PdfOrderReturnControlle |                 |
+| r.php                   |                 |
++-------------------------+-----------------+
+| PdfOrderSlipController. |                 |
+| php                     |                 |
++-------------------------+-----------------+
+| PricesDropController.ph | Used by         |
+| p                       | prices-drop.ph  |
+|                         | p               |
+|                         | to get          |
+|                         | discounted      |
+|                         | products.       |
++-------------------------+-----------------+
+| ProductController.php   | Used by         |
+|                         | product.php to  |
+|                         | get a product.  |
++-------------------------+-----------------+
+| SearchController.php    | Used by         |
+|                         | search.php to   |
+|                         | get search      |
+|                         | results.        |
++-------------------------+-----------------+
+| SitemapController.php   | Used by         |
+|                         | sitemap.php to  |
+|                         | get the         |
+|                         | sitemap.        |
++-------------------------+-----------------+
+| StatisticsController.ph |                 |
+| p                       |                 |
++-------------------------+-----------------+
+| StoresController.php    | Used by         |
+|                         | stores.php to   |
+|                         | get store       |
+|                         | information.    |
++-------------------------+-----------------+
+| SupplierController.php  | Used by         |
+|                         | supplier.php    |
+|                         | to get          |
+|                         | suppliers.      |
++-------------------------+-----------------+
 
 Overriding a controller
 -------------------------------
