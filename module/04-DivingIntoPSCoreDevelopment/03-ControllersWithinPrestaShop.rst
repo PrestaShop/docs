@@ -25,62 +25,62 @@ The FrontController class
 
 Here are some of the class' properties:
 
-+-------------+-----------------+
-| Property    | Description     |
-+=============+=================+
-| $template   | Template name   |
-|             | for page        |
-|             | content.        |
-+-------------+-----------------+
-| $css\_files | Array list of   |
-|             | CSS files.      |
-+-------------+-----------------+
-| $js\_files  | Array list of   |
-|             | JavaScript      |
-|             | files.          |
-+-------------+-----------------+
-| $errors     | Array of errors |
-|             | that have       |
-|             | occurred.       |
-+-------------+-----------------+
-| $guestAllow | Whether a       |
-| ed          | customer who    |
-|             | has signed out  |
-|             | can access the  |
-|             | page.           |
-+-------------+-----------------+
-| $initialize | Whether the     |
-| d           | ``init()``      |
-|             | function has    |
-|             | been called.    |
-+-------------+-----------------+
-| $iso        | The ISO code of |
-|             | the currently   |
-|             | selected        |
-|             | language.       |
-+-------------+-----------------+
-| $n          | The number of   |
-|             | items per page. |
-+-------------+-----------------+
-| $orderBy    | The field used  |
-|             | to sort.        |
-+-------------+-----------------+
-| $orderWay   | Whether to sort |
-|             | is ascending or |
-|             | descending      |
-|             | ("ASC" or       |
-|             | "DESC").        |
-+-------------+-----------------+
-| $p          | The current     |
-|             | page number.    |
-+-------------+-----------------+
-| $ajax       | If the ajax     |
-|             | parameter is    |
-|             | detected in     |
-|             | request, set    |
-|             | this flag to    |
-|             | true.           |
-+-------------+-----------------+
++--------------+-----------------+
+| Property     | Description     |
++==============+=================+
+| $template    | Template name   |
+|              | for page        |
+|              | content.        |
++--------------+-----------------+
+| $css\_files  | Array list of   |
+|              | CSS files.      |
++--------------+-----------------+
+| $js\_files   | Array list of   |
+|              | JavaScript      |
+|              | files.          |
++--------------+-----------------+
+| $errors      | Array of errors |
+|              | that have       |
+|              | occurred.       |
++--------------+-----------------+
+| $guestAllowed| Whether a       |
+|              | customer who    |
+|              | has signed out  |
+|              | can access the  |
+|              | page.           |
++--------------+-----------------+
+| $initialized | Whether the     |
+|              | ``init()``      |
+|              | function has    |
+|              | been called.    |
++--------------+-----------------+
+| $iso         | The ISO code of |
+|              | the currently   |
+|              | selected        |
+|              | language.       |
++--------------+-----------------+
+| $n           | The number of   |
+|              | items per page. |
++--------------+-----------------+
+| $orderBy     | The field used  |
+|              | to sort.        |
++--------------+-----------------+
+| $orderWay    | Whether to sort |
+|              | is ascending or |
+|              | descending      |
+|              | ("ASC" or       |
+|              | "DESC").        |
++--------------+-----------------+
+| $p           | The current     |
+|              | page number.    |
++--------------+-----------------+
+| $ajax        | If the ajax     |
+|              | parameter is    |
+|              | detected in     |
+|              | request, set    |
+|              | this flag to    |
+|              | true.           |
++--------------+-----------------+
 
 Execution order of the controller's functions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
