@@ -1,0 +1,17 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "Prestashop DevDocs"
+
+theme = "hugo-theme-learn"
+
+[params]
+  editURL = "https://github.com/PrestaShop/docs/edit/hugo/content/"
+  description = "Prestashop Technical Documentation"
+  author = "PrestaShop"
+  showVisitedLinks = false
+
+
+# For search functionality
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]
