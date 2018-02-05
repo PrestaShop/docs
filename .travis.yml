@@ -11,7 +11,7 @@ install:
 # Build the website
 script:
   - cd src
-  - ../bin/hugo
+  - ../bin/hugo-0.35/hugo
 
 # Deploy to GitHub pages
 deploy:
