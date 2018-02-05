@@ -12,6 +12,7 @@ install:
 script:
   - cd src
   - ../bin/hugo-0.35/hugo
+  - pwd
   - ls -l
 
 # Deploy to GitHub pages
