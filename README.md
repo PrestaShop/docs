@@ -8,7 +8,7 @@ Install guide: https://gohugo.io/getting-started/installing
 
 TL;DR:
 
-* **Linux**: Grab the binary in the `/bin` directory
+* **Linux**: Use the binary in the `/bin` directory
 * **Mac**: `brew install hugo`
 * **Windows**: Grab the [release binary](https://github.com/gohugoio/hugo/releases)
 
