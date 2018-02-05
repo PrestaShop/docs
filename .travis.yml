@@ -12,6 +12,7 @@ install:
 script:
   - cd src
   - ../bin/hugo-0.35/hugo
+  - ls -l
 
 # Deploy to GitHub pages
 deploy:
@@ -19,5 +20,6 @@ deploy:
   skip_cleanup: true
   local_dir: public
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  verbose: true
   on:
     branch: hugo
