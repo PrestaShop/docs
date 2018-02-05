@@ -12,14 +12,12 @@ install:
 script:
   - cd src
   - ../bin/hugo-0.35/hugo
-  - pwd
-  - ls -l
 
 # Deploy to GitHub pages
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: public
+  local_dir: src/public
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   verbose: true
   on:
