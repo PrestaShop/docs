@@ -12,6 +12,8 @@ install:
 script:
   - cd src
   - ../bin/hugo-0.35/hugo
+  # Create a CNAME file which mapping to our custom domain
+  - echo 'devdocs.prestashop.com' > public/CNAME
 
 # Deploy to GitHub pages
 deploy:
