@@ -6,7 +6,7 @@ title = "Prestashop DevDocs"
 theme = "hugo-theme-learn"
 
 [params]
-  editURL = "https://github.com/PrestaShop/docs/edit/hugo/content/"
+  editURL = "https://github.com/PrestaShop/docs/edit/hugo/src/content/"
   description = "Prestashop Technical Documentation"
   author = "PrestaShop"
   showVisitedLinks = false
