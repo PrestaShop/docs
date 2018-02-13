@@ -10,6 +10,7 @@ theme = "hugo-theme-learn"
   description = "Prestashop Technical Documentation"
   author = "PrestaShop"
   showVisitedLinks = false
+  disableInlineCopyToClipBoard = true
   themeVariant = "prestashop"
 
 
