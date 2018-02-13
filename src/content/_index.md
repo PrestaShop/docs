@@ -1,5 +1,5 @@
 ---
-title: PrestaShop Developer Documentation
+title: Welcome
 ---
 
 # PrestaShop Dev Documentation
