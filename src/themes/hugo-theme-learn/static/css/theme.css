@@ -343,7 +343,7 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border: 1px solid #ccc;
 }
 #body .padding {
-    padding: 3rem 6rem;
+    padding: 2rem 2rem;
 }
 @media only all and (max-width: 59.938em) {
     #body .padding {
@@ -360,61 +360,39 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     margin-top: -1.7rem;
     margin-bottom: 3rem;
 }
-@media only all and (max-width: 59.938em) {
-    #body #navigation {
-        position: static;
-        margin-right: 0 !important;
-        width: 100%;
-        display: table;
-    }
-}
-#body .nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 4rem;
-    font-size: 50px;
+
+/** Page navigation **/
+
+#navigation .nav {
     height: 100%;
     cursor: pointer;
-    display: table;
     text-align: center;
+    display: inline-block;
 }
-#body .nav > i {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-@media only all and (max-width: 59.938em) {
-    #body .nav {
-        display: table-cell;
-        position: static;
-        top: auto;
-        width: 50%;
-        text-align: center;
-        height: 100px;
-        line-height: 100px;
-        padding-top: 0;
-    }
-    #body .nav > i {
-        display: inline-block;
-    }
-}
-#body .nav:hover {
-    background: #F6F6F6;
-}
-#body .nav.nav-pref {
+
+#navigation .nav.nav-pref {
     left: 0;
 }
-#body .nav.nav-next {
+#navigation .nav.nav-next {
     right: 0;
 }
+#navigation .nav-next i {
+    float: right;
+    margin-left: 5px;
+    margin-top: 3px;
+}
+
 #body-inner {
     margin-bottom: 5rem;
 }
+@media only all and (min-width: 1100px) {
+    #body-inner {
+        margin-right: 340px;
+    }
+}
+
 #chapter {
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
     padding: 2rem 0;
 }
@@ -425,14 +403,12 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #chapter h3 {
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 300;
-    text-align: center;
 }
 #chapter h1 {
     font-size: 5rem;
     border-bottom: 4px solid #F0F2F4;
 }
 #chapter p {
-    text-align: center;
     font-size: 1.2rem;
 }
 #footer {
@@ -458,7 +434,6 @@ h2, h3, h4, h5, h6 {
 }
 h1 {
     font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    text-align: center;
     text-transform: uppercase;
     color: #222;
     font-weight: 200;

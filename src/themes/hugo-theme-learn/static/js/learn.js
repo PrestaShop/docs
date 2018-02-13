@@ -235,10 +235,14 @@ jQuery(document).ready(function() {
       }
     });
 
-    $('#top-bar a:not(:has(img)):not(.btn)').addClass('highlight');
-    $('#body-inner a:not(:has(img)):not(.btn):not(a[rel="footnote"])').addClass('highlight');
+    var highlightables = [
+      '#top-bar a:not(:has(img)):not(.btn)',
+      '#body-inner a:not(:has(img)):not(.btn):not(a[rel="footnote"])',
+      '#toc a'
+    ];
+    $(highlightables.join(', ')).addClass('highlight');
 
-    var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
+    /*var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
     if (!touchsupport){ // browser doesn't support touch
         $('#toc-menu').hover(function() {
             $('.progress').stop(true, false, true).fadeToggle(100);
@@ -255,9 +259,9 @@ jQuery(document).ready(function() {
         $('.progress').click(function() {
             $('.progress').stop(true, false, true).fadeToggle(100);
         });
-    }
+    }*/
 
-    /** 
+    /**
     * Fix anchor scrolling that hides behind top nav bar
     * Courtesy of https://stackoverflow.com/a/13067009/28106
     *
@@ -339,25 +343,10 @@ jQuery(document).ready(function() {
 
         $(document).ready($.proxy(anchorScrolls, 'init'));
     })(window.document, window.history, window.location);
-    
+
 });
 
 jQuery(window).on('load', function() {
-
-    function adjustForScrollbar() {
-        if ((parseInt(jQuery('#body-inner').height()) + 83) >= jQuery('#body').height()) {
-            jQuery('.nav.nav-next').css({ 'margin-right': getScrollBarWidth() });
-        } else {
-            jQuery('.nav.nav-next').css({ 'margin-right': 0 });
-        }
-    }
-
-    // adjust sidebar for scrollbar
-    adjustForScrollbar();
-
-    jQuery(window).smartresize(function() {
-        adjustForScrollbar();
-    });
 
     // store this page in session
     sessionStorage.setItem(jQuery('body').data('url'), 1);
@@ -366,7 +355,6 @@ jQuery(window).on('load', function() {
     for (var url in sessionStorage) {
         if (sessionStorage.getItem(url) == 1) jQuery('[data-nav-id="' + url + '"]').addClass('visited');
     }
-
 
     $(".highlightable").highlight(sessionStorage.getItem('search-value'), { element: 'mark' });
 });
