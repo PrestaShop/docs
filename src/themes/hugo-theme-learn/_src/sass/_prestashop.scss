@@ -1,0 +1,138 @@
+$mainTextColor: #323232; /* Color of text by default */
+$mainTitlesTextColor: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
+$mainLinkColor: #df0067; /* Color of links */
+$mainLinkHoverColor: #d01616; /* Color of hovered links */
+$mainAnchorColor: #df0067; /* color of anchors on titles */
+
+$menuHeaderBgColor: #840e5f; /* Background color of menu header */
+$menuHeaderBgColor: #df0067; /*Color of menu header border */
+
+$menuSearchBgColor: #840e5f; /* Search field background color (by default borders + icons) */
+$menuSearchBoxColor: #df0067; /* Override search field border color */
+$menuSearchBoxIconsColor: #fda1a1; /* Override search field icons color */
+
+$menuSectionsActiveBgColor: #2b2020; /* Background color of the active section and its childs */
+$menuSectionsBgColor: #312525; /* Background color of other sections */
+$menuSectionsLinkColor: #ccc; /* Color of links in menu */
+$menuSectionsLinkHoverColor: #e6e6e6; /* Color of links in menu, when hovered */
+$menuSectionActiveCategoryColor: #777; /* Color of active category text */
+$menuSectionActiveCategoryBgColor: #fff; /* Color of background for the active category (only) */
+
+$menuVisitedColor: #ff3333; /* Color of 'page visited' icons in menu */
+$menuSectionHrColor: #2b2020; /* Color of <hr> separator in menu */
+
+body {
+  color: $mainTextColor !important;
+}
+
+textarea:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+select[multiple=multiple]:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+h2, h3, h4, h5 {
+  color: $mainTitlesTextColor !important;
+}
+
+a {
+  color: $mainLinkColor;
+}
+
+.anchor {
+  color: $mainAnchorColor;
+}
+
+a:hover {
+  color: $mainLinkHoverColor;
+}
+
+#sidebar ul li.visited > a .read-icon {
+  color: $menuVisitedColor;
+}
+
+#body a.highlight:after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 0;
+  -webkit-transition: width 0.5s ease;
+  -moz-transition: width 0.5s ease;
+  -ms-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+  background-color: $mainLinkHoverColor;
+}
+#sidebar {
+  background-color: $menuSectionsBgColor;
+  #header-wrapper {
+    background: $menuHeaderBgColor;
+    color: $menuSearchBoxColor;
+    border-color: $menuHeaderBgColor;
+    background: linear-gradient(#411452,#840e5f);
+  }
+  .searchbox {
+    border-color: $menuSearchBoxColor;
+    background: $menuSearchBgColor;
+  }
+  ul.topics > li.parent,
+  ul.topics > li.active {
+    background: $menuSectionsActiveBgColor;
+  }
+  .searchbox * {
+    color: $menuSearchBoxIconsColor;
+  }
+  a {
+    color: $menuSectionsLinkColor;
+    &:hover {
+      color: $menuSectionsLinkHoverColor;
+    }
+  }
+  ul li.active > a {
+    background: $menuSectionActiveCategoryBgColor;
+    color: $menuSectionActiveCategoryColor !important;
+  }
+  hr {
+    border-color: $menuSectionHrColor;
+  }
+}
+
+#header a {
+  color: #fff;
+  font-size: 18px;
+}
+
+#logo::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url(/images/preston-logo@2x.png) center / 40px no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+dl.function-definition dt {
+  font-family: "Consolas", "Menlo", monospace;
+  background: #f0f0f0;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+dl.function-definition dd {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}

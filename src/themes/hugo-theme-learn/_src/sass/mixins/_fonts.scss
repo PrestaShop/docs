@@ -1,0 +1,35 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Novacento Sans Wide';
+  src: url($fontPath + "Novecentosanswide-UltraLight-webfont.eot");
+  src: url($fontPath + "Novecentosanswide-UltraLight-webfont.eot?#iefix") format("embedded-opentype"),
+  url($fontPath + "Novecentosanswide-UltraLight-webfont.woff2") format("woff2"),
+  url($fontPath + "Novecentosanswide-UltraLight-webfont.woff") format("woff"),
+  url($fontPath + "Novecentosanswide-UltraLight-webfont.ttf") format("truetype"),
+  url($fontPath + "Novecentosanswide-UltraLight-webfont.svg#novecento_sans_wideultralight") format("svg");
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url($fontPath + "Work_Sans_300.eot?#iefix") format("embedded-opentype"),
+  url($fontPath + "Work_Sans_300.woff") format("woff"),
+  url($fontPath + "Work_Sans_300.woff2") format("woff2"),
+  url($fontPath + "Work_Sans_300.svg#WorkSans") format("svg"),
+  url($fontPath + "Work_Sans_300.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url($fontPath + "Work_Sans_500.eot?#iefix") format("embedded-opentype"),
+  url($fontPath + "Work_Sans_500.woff") format("woff"),
+  url($fontPath + "Work_Sans_500.woff2") format("woff2"),
+  url($fontPath + "Work_Sans_500.svg#WorkSans") format("svg"),
+  url($fontPath + "Work_Sans_500.ttf") format("truetype");
+}

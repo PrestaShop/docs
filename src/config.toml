@@ -11,8 +11,6 @@ theme = "hugo-theme-learn"
   author = "PrestaShop"
   showVisitedLinks = false
   disableInlineCopyToClipBoard = true
-  themeVariant = "prestashop"
-
 
 # For search functionality
 [outputs]
