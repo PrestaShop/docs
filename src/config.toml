@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://devdocs.prestashop.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Prestashop Developer Documentation"
