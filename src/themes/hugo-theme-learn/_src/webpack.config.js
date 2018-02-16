@@ -17,6 +17,7 @@ module.exports = () => {
       path: path.join(PATHS.static, 'js'),
         filename: "[name].js"
     },
+    devtool: "source-map",
     module: {
       loaders: [
         {
@@ -27,10 +28,17 @@ module.exports = () => {
               {
                 loader: "css-loader",
                 options: {
+                  sourceMap: true,
+                  // avoid verifying url() sources
                   url: false
                 }
               },
-              'sass-loader'
+              {
+                loader: 'sass-loader',
+                options: {
+                  sourceMap: true
+                }
+              }
             ]
           })
         }
