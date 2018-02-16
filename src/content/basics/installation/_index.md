@@ -3,7 +3,7 @@ title: Installation
 weight: 15
 ---
 
-## Setting Up Your Local Development Environment
+# Setting Up Your Local Development Environment
 
 Now that you intend to develop for PrestaShop, you are better off keeping all your development work on your machine. The main advantage is that it makes it possible for you to entirely bypass the process of uploading your file on your online server in order to test it. Another advantage is that a local test environment enables you to test code without the risk of breaking your production store. Have a local environment is the essential first step in the path of web development.
 
@@ -53,7 +53,7 @@ magic_quotes_gpc = Off
 allow_url_include = Off
 ```
 
-###Downloading and extracting the PrestaShop files
+### Downloading and extracting the PrestaShop files
 
 You can download the latest version of PrestaShop at http://www.prestashop.com/en/downloads.
 

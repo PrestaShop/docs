@@ -3,9 +3,9 @@ title: Database
 weight: 15
 ---
 
-## Accessing the database
+# Accessing the database
 
-### The database structure
+## The database structure
 
 By default, PrestaShop’s database tables start with the `ps_` prefix. This can be customized during installation
 
@@ -29,7 +29,7 @@ There is also a couple of standard practices for data rows within a table:
 * Use the `id_lang` field to store the language associated with a record.
 * Use the `id_shop` field to store the store associated with a record.
 
-### The DBQuery class
+## The DBQuery class
 
 The DBQuery class is a query builder which helps you create SQL queries. For instance:
 

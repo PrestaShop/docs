@@ -3,7 +3,7 @@ title: Introduction
 weight: 5
 ---
 
-## Fundamentals of PrestaShop Development
+# Fundamentals of PrestaShop Development
 
 PrestaShop was conceived so that third-party modules could easily build upon its foundations, making it an extremely customizable e-commerce software.
 

@@ -3,13 +3,13 @@ title: Configuration
 weight: 15
 ---
 
-## Configuring PrestaShop
+# Configuring PrestaShop
 
 By default, PrestaShop is configured to provide a secure and stable environment to both the shop administrator and the customers.
 
 As a developer, there are several changes that you could and should bring to the default installation in order to help you code better, spot bugs faster, and generally make a great PrestaShop product.
 
-### Disabling the cache and forcing Smarty compilation
+## Disabling the cache and forcing Smarty compilation
 
 When your development has an impact on the front office, whether you are building a theme or simply a module which displays information to the customer, you should force the template file compilation and disable the cache, so as to always see the result of your changes directly.
 
@@ -20,7 +20,7 @@ Go to the “Performances” page under the “Advanced parameters” menu to ch
 
 Forcing the compilation of Smarty will always slow down the loading time of the page. Make sure that your production store is set to only recompile templates if there are updated files, and that its cache is enabled.
 
-### Displaying error messages
+## Displaying error messages
 
 PrestaShop’s default settings prevent the customer to see any server error message or any debugging code.
 
@@ -31,7 +31,7 @@ You, on the other hand, need this information in order to correct any potential 
 define('_PS_MODE_DEV_', true);
 ```
 
-### Using the dump() method
+## Using the dump() method
 
 These two methods enable you to check for the state of a given variable at a specific place within your code.
 
@@ -41,7 +41,7 @@ All of this has changed with PrestaShop 1.7: we now rely solely on Symonfy’s `
 
 The `dump()` method is not activated by default. To activate it, you must enable the Debug mode, by setting `_PS_MODE_DEV_` to `true` (see above).
 
-### Enabling the multistore mode
+## Enabling the multistore mode
 
 Since version 1.5, PrestaShop is able to host more than one store within a single installation of the software. Many shop administrators choose to enable this feature, and it can have a significant impact on the way PrestaShop works. You should therefore make sure that anything you code for PrestaShop works in both single and multistore mode.
 
@@ -51,7 +51,7 @@ You can switch back and forth between single store and multistore mode ? in sing
 
 You can read more about the multistore mode in the PrestaShop 1.6 User Guide: http://doc.prestashop.com/display/PS16/Managing+Multiple+Shops.
 
-### About the configuration files
+## About the configuration files
 
 There are three main configuration files, all located in the `/config` folder:
 
@@ -59,11 +59,11 @@ There are three main configuration files, all located in the `/config` folder:
 * `defines.inc.php`
 * `smarty.config.inc.php`
 
-#### config.inc.php
+### config.inc.php
 
 It is the main configuration file for PrestaShop. You should not have to touch anything in there.
 
-#### defines.inc.php
+### defines.inc.php
 
 This file contains PrestaShop constant values.
 
@@ -77,7 +77,7 @@ On the contrary, when in production mode, you must hide error messages as much a
 
 * Make sure that `define('_PS_MODE_DEV_', false);` is set to `false`.
 
-#### smarty.config.inc.php
+### smarty.config.inc.php
 
 This file contains all the Smarty-related settings.
 
