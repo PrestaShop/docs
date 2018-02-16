@@ -32,13 +32,6 @@
       border: 0; } }
   #toc > .wrapper {
     padding: 15px 25px; }
-  #toc ul {
-    list-style: none;
-    margin: 0;
-    padding: 0 5px; }
-  #toc li {
-    margin: 7px 0;
-    line-height: 1; }
   #toc a {
     line-height: 1.1;
     display: inline-block; }
@@ -55,16 +48,50 @@
   max-height: 85vh;
   overflow: auto;
   padding: 15px 0; }
+  #TableOfContents ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  #TableOfContents li {
+    margin: 7px 0;
+    line-height: 1; }
   #TableOfContents > ul > li > a {
-    font-weight: bold;
-    padding: 0 18px;
-    margin: 0 2px; }
+    display: none !important; }
   #TableOfContents > ul > li > ul > li > a {
     font-weight: bold; }
-  #TableOfContents > ul > li > ul > li > ul li {
-    margin-right: 8px; }
-    #TableOfContents > ul > li > ul > li > ul li > ul > li > ul > li {
-      display: none; }
+  #TableOfContents > ul > li > ul > li ul {
+    padding-left: 10px; }
+  #TableOfContents > ul > li > ul > li > ul li > ul > li ul {
+    display: none; }
+
+#chapter {
+  display: flex;
+  height: 100%;
+  padding: 2rem 0; }
+  #chapter #body-inner {
+    padding-bottom: 3rem;
+    max-width: 80%; }
+  #chapter h3 {
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300; }
+  #chapter h1 {
+    font-size: 3.5rem;
+    padding-top: .3em; }
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
+      #chapter h1 {
+        font-size: 3rem; } }
+    @media only all and (max-width: 47.938em) {
+      #chapter h1 {
+        font-size: 2rem; } }
+  #chapter p {
+    font-size: 1.2rem; }
+
+#footer {
+  padding: 3rem 1rem;
+  color: #b3b3b3;
+  font-size: 13px; }
+  #footer p {
+    margin: 0; }
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -692,6 +719,8 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap;
   border: inherit; }
+
+/*# sourceMappingURL=nucleus.css.map */
 #top-github-link,
 #body #breadcrumbs {
   position: relative;
@@ -712,15 +741,11 @@ input[type="submit"] {
 
 body {
   background: #fff;
-  color: #777; }
-  body #chapter h1 {
-    font-size: 3.5rem; }
-    @media only all and (min-width: 48em) and (max-width: 59.938em) {
-      body #chapter h1 {
-        font-size: 3rem; } }
-    @media only all and (max-width: 47.938em) {
-      body #chapter h1 {
-        font-size: 2rem; } }
+  color: #323232;
+  font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 16px; }
 
 a {
   color: #00bdf3; }
@@ -1116,35 +1141,7 @@ select[multiple=multiple] {
   #body-inner pre {
     white-space: pre-wrap; }
 
-#chapter {
-  display: flex;
-  height: 100%;
-  padding: 2rem 0; }
-  #chapter #body-inner {
-    padding-bottom: 3rem;
-    max-width: 80%; }
-  #chapter h3 {
-    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    font-weight: 300; }
-  #chapter h1 {
-    font-size: 5rem;
-    border-bottom: 4px solid #f0f2f4; }
-  #chapter p {
-    font-size: 1.2rem; }
-
-#footer {
-  padding: 3rem 1rem;
-  color: #b3b3b3;
-  font-size: 13px; }
-  #footer p {
-    margin: 0; }
-
-body {
-  font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-  font-weight: 300;
-  line-height: 1.6;
-  font-size: 18px !important; }
-
+h1,
 h2,
 h3,
 h4,
@@ -1157,10 +1154,12 @@ h6 {
   letter-spacing: -1px; }
 
 h1 {
-  font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-  text-transform: uppercase;
   color: #222;
-  font-weight: 200; }
+  line-height: 1;
+  border-bottom: 4px solid #f0f2f4;
+  padding: .8em 0 .3em;
+  font-size: 3rem;
+  font-weight: 600; }
 
 blockquote {
   border-left: 10px solid #f0f2f4; }
@@ -1181,8 +1180,8 @@ div.notices {
     padding: 15px;
     display: block;
     font-size: 1rem;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
+    margin-top: 0;
+    margin-bottom: 0;
     color: #666; }
   div.notices:before {
     position: absolute;
@@ -1279,16 +1278,16 @@ section.attachments {
 .children-h2 p,
 .children-h3 p {
   font-size: small;
-  margin-top: 0px;
-  padding-top: 0px;
-  margin-bottom: 0px;
-  padding-bottom: 0px; }
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0; }
 
 code,
 kbd,
 pre,
 samp {
-  font-family: "Consolas", menlo, monospace;
+  font-family: "Consolas", "Menlo", monospace;
   font-size: 92%; }
 
 code {
@@ -1297,7 +1296,7 @@ code {
   color: #5e5e5e;
   background: #fff7dd;
   border: 1px solid #fbf0cb;
-  padding: 0px 2px; }
+  padding: 0 2px; }
   code + .copy-to-clipboard {
     margin-left: -1px;
     border-left: 0 !important;
@@ -1687,10 +1686,6 @@ pre .copy-to-clipboard {
 #searchResults {
   text-align: left; }
 
-body {
-  font-size: 16px !important;
-  color: #323232 !important; }
-
 #body a.highlight,
 #body a.highlight:hover,
 #body a.highlight:focus {
@@ -1770,20 +1765,26 @@ body {
   position: absolute;
   margin-top: 0.1em; }
 
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
-  visibility: visible; }
-
 /* Redfines headers style */
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   line-height: 1.1; }
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  font-weight: inherit; }
+  h2:hover .anchor,
+  h3:hover .anchor,
+  h4:hover .anchor,
+  h5:hover .anchor,
+  h6:hover .anchor {
+    visibility: visible; }
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    font-weight: inherit; }
 
 h2 {
   font-size: 2.5rem;
@@ -1971,3 +1972,5 @@ dl.function-definition dt {
 dl.function-definition dd {
   margin-top: 5px;
   margin-bottom: 10px; }
+
+/*# sourceMappingURL=style.css.map*/
