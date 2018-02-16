@@ -4,9 +4,12 @@ defaultContentLanguage = "en"
 title = "Prestashop Developer Documentation"
 
 theme = "hugo-theme-learn"
+enableGitInfo = true
 
 [params]
   editURL = "https://github.com/PrestaShop/docs/edit/hugo/src/content/"
+  ghRepoURL = "https://github.com/PrestaShop/docs/"
+  ghCommitURL = "https://github.com/PrestaShop/docs/commit/"
   description = "Prestashop Technical Documentation"
   author = "PrestaShop"
   showVisitedLinks = false

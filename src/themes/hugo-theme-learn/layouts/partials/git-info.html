@@ -1,0 +1,8 @@
+{{ if .GitInfo }}
+<div>
+  Last updated on {{ .Lastmod.Format "January 2, 2006" }}
+  {{ with .GitInfo }}:
+  <a href="{{ $.Site.Params.ghCommitURL }}{{ .Hash }}">"{{ .Subject }}" ({{ .AbbreviatedHash }})</a>
+  {{ end }}
+</div>
+{{ end }}

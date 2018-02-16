@@ -93,6 +93,11 @@
   #footer p {
     margin: 0; }
 
+footer.last-updated {
+  margin-top: 5rem;
+  font-size: .75rem;
+  font-style: italic; }
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

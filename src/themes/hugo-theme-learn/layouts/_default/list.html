@@ -1,12 +1,11 @@
 {{ partial "header.html" . }}
 
+<!-- chapter -->
+
 {{ .Content }}
 
-<footer class=" footline" >
-	{{with .Params.LastModifierDisplayName}}
-	    <i class='fa fa-user'></i> <a href="mailto:{{ $.Params.LastModifierEmail }}">{{ . }}</a> {{with $.Date}} <i class='fa fa-calendar'></i> {{ .Format "02/01/2006" }}{{end}}
-	    </div>
-	{{end}}
-</footer>
+<!--<footer class="last-updated">
+	{{ partial "git-info.html" . }}
+</footer>-->
 
 {{ partial "footer.html" . }}
