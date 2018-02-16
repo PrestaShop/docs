@@ -6,9 +6,9 @@
       {{ $Site := .Site }}
       {{ with $File.Path }}
       <div id="top-github-link">
-        <a class="github-link" title='{{T "Edit-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
+        <a class="github-link" title='{{T "Improve-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
           <i class="fa fa-code-fork"></i>
-          <span id="top-github-link-text">{{T "Edit-this-page"}}</span>
+          <span id="top-github-link-text">{{T "Improve-this-page"}}</span>
         </a>
       </div>
       {{ end }}
