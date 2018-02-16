@@ -6,6 +6,7 @@
   right: 2rem;
   width: 300px;
   border-left: thin solid #ececec;
+
   @media only all and (max-width: 1100px) {
     position: static;
     border: 0
@@ -13,17 +14,6 @@
 
   > .wrapper {
     padding: 15px 25px;
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0 5px;
-  }
-
-  li {
-    margin: 7px 0;
-    line-height: 1;
   }
 
   /* the following styles are needed to avoid "style jumps" when elements get .highlight added */
@@ -50,25 +40,41 @@
   overflow: auto;
   padding: 15px 0;
 
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 7px 0;
+    line-height: 1;
+  }
+
+  // H1
   > ul > li {
 
     > a {
-      font-weight: bold;
-      padding: 0 18px;
-      margin: 0 2px;
+      display: none !important;
     }
 
+    // H2
     > ul > li {
 
       > a {
         font-weight: bold;
       }
 
-      > ul li {
-        margin-right: 8px;
+      ul {
+        padding-left: 10px;
+      }
 
+      // H3
+      > ul li {
+        // H4
         > ul > li {
-          > ul > li {
+          // H5...
+          ul {
             display: none;
           }
         }

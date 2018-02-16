@@ -2,3 +2,6 @@
 $staticPath: '../';
 $fontPath: $staticPath + 'fonts/';
 $imgPath: $staticPath + 'images/';
+$baseFont: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+$headerFont: $baseFont;
+$monospaceFont: "Consolas", "Menlo", monospace;
