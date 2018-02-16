@@ -18,8 +18,8 @@
     "webpack-merge": "^4.1.1"
   },
   "scripts": {
-    "dev": "webpack --progress --colors --debug --display-chunks --env dev",
-    "build": "webpack --progress --colors --debug --display-chunks --env prod"
+    "dev": "webpack --progress --colors --debug --display-chunks --watch --env dev",
+    "build": "webpack --progress --colors --env prod"
   },
   "author": "PrestaShop SA",
   "license": "MIT"

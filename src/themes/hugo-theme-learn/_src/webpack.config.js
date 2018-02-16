@@ -17,10 +17,6 @@ module.exports = () => {
       path: path.join(PATHS.static, 'js'),
         filename: "[name].js"
     },
-    watch: true,
-      devServer: {
-      inline: true
-    },
     module: {
       loaders: [
         {
