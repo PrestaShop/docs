@@ -8,8 +8,9 @@ enableGitInfo = true
 
 [params]
   editURL = "https://github.com/PrestaShop/docs/edit/hugo/src/content/"
-  ghRepoURL = "https://github.com/PrestaShop/docs/"
+  ghRepoURL = "https://github.com/PrestaShop/docs/tree/hugo"
   ghCommitURL = "https://github.com/PrestaShop/docs/commit/"
+  howToContributeURL = "/1.7/documentation/how/"
   description = "Prestashop Technical Documentation"
   author = "PrestaShop"
   showVisitedLinks = false
