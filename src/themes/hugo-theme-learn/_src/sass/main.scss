@@ -1,10 +1,11 @@
 @import "mixins/variables";
 @import "mixins/fonts";
 
-@import "components/toc";
 @import "components/chapter";
-@import "components/footer";
 @import "components/last-updated";
+@import "components/footer";
+@import "components/toc";
+@import "components/top-bar";
 
 @import "nucleus";
 @import "theme";

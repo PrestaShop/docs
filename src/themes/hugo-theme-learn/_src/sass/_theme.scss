@@ -1,16 +1,7 @@
 @charset "UTF-8";
 @import "mixins/variables";
 
-#top-github-link,
-#body #breadcrumbs {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
+
 
 .button,
 .button-secondary {
@@ -507,23 +498,6 @@ select[multiple=multiple] {
       color: #9c6fb6;
     }
   }
-
-  #breadcrumbs {
-    height: auto;
-    margin-bottom: 0;
-    padding-left: 0;
-    line-height: 1.4;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 70%;
-    display: inline-block;
-    float: left;
-
-    span {
-      padding: 0 0.1rem;
-    }
-  }
 }
 
 /** Page navigation **/
@@ -546,13 +520,13 @@ select[multiple=multiple] {
   .nav-next i {
     float: right;
     margin-left: 5px;
-    margin-top: 3px;
+    margin-top: 2px;
   }
 }
 
 #body-inner {
   margin-bottom: 5rem;
-  @media only all and (min-width: 1100px) {
+  @media only all and (min-width: $tocBreakpoint) {
       margin-right: 340px;
   }
 
@@ -1233,14 +1207,6 @@ td {
   }
 }
 
-#top-bar {
-  background: #f6f6f6;
-  border-radius: 2px;
-  padding: 0 1rem;
-  height: 0;
-  min-height: 3rem;
-}
-
 #top-github-link {
   position: relative;
   z-index: 1;
@@ -1387,8 +1353,8 @@ pre .copy-to-clipboard {
 
   &:hover,
   &:focus {
-    color: #2b2b2b !important;
-    text-decoration: none !important;
+    color: #2b2b2b;
+    text-decoration: none;
   }
 }
 
@@ -1521,15 +1487,4 @@ figcaption h4 {
   :hover {
     cursor:  pointer;
   }
-}
-
-@media only all and (max-width: 47.938em) {
-  #breadcrumbs .links,
-  #top-github-link-text {
-    display: none;
-  }
-}
-
-.is-sticky #top-bar {
-  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
 }

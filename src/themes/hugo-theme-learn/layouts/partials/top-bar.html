@@ -7,13 +7,17 @@
       {{ with $File.Path }}
       <div id="top-github-link">
         <a class="github-link" title='{{T "Improve-this-page"}}' href="{{ $Site.Params.editURL }}{{ replace $File.Dir "\\" "/" }}{{ $File.LogicalName }}" target="blank">
-          <i class="fa fa-code-fork"></i>
+          <i class="fa fa-pencil"></i>
           <span id="top-github-link-text">{{T "Improve-this-page"}}</span>
+        </a>
+        <a class="how-to-improve" href="{{ $Site.Params.howToContributeURL }}">
+          <i class="fa fa-question-circle"></i>
+          <span>How</span>
         </a>
       </div>
       {{ end }}
     {{ end }}
-    <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+    <div id="breadcrumbs" itemscope="" itemtype="http://schema.org/breadcrumb">
       <span id="sidebar-toggle-span">
         <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
           <i class="fa fa-bars"></i>

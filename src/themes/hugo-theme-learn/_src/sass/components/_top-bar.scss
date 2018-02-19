@@ -1,0 +1,48 @@
+#top-github-link {
+  order: 2;
+  white-space: nowrap;
+
+  .github-link {
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding: 1rem
+  }
+}
+
+#breadcrumbs {
+  order: 1;
+  flex-grow: 1;
+  //line-height: 1.4;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  span {
+    padding: 0 0.1rem;
+  }
+}
+
+#top-bar {
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 2px;
+  padding: 0 1rem;
+  height: 0;
+  min-height: 3rem;
+
+  .how-to-improve {
+    font-size: .7em;
+  }
+}
+
+@media only all and (max-width: 1024px) {
+  #breadcrumbs .links {
+    display: none;
+  }
+}
+
+.is-sticky #top-bar {
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+

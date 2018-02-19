@@ -7,13 +7,18 @@
   width: 300px;
   border-left: thin solid #ececec;
 
-  @media only all and (max-width: 1100px) {
-    position: static;
-    border: 0
-  }
-
   > .wrapper {
     padding: 15px 25px;
+  }
+
+  @media only all and (max-width: $tocBreakpoint) {
+    position: static;
+    border: 0;
+    margin-top: 3rem;
+
+    > .wrapper {
+      padding-left: 5px;
+    }
   }
 
   /* the following styles are needed to avoid "style jumps" when elements get .highlight added */
@@ -55,6 +60,7 @@
   > ul > li {
 
     > a {
+      // hide the link to this page
       display: none !important;
     }
 
