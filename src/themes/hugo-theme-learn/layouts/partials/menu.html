@@ -15,7 +15,7 @@
     <ul class="topics">
 
       {{ range .Site.Home.Sections }}
-        {{ if eq .Title "1.7s" }}
+        {{ if eq .Title "1.7" }}
           {{if eq .Site.Params.ordersectionsby "title"}}
             {{range .Sections.ByTitle}}
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
