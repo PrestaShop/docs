@@ -1,4 +1,40 @@
 @charset "UTF-8";
+/* Color of text by default */
+/* Color of titles h2-h3-h4-h5 */
+/* Color of links */
+/* Color of hovered links */
+/* color of anchors on titles */
+/* Background color of menu header */
+/*Color of menu header border */
+/* Search field background color (by default borders + icons) */
+/* Override search field border color */
+/* Override search field icons color */
+/* Background color of the active section and its childs */
+/* Background color of other sections */
+/* Color of links in menu */
+/* Color of links in menu, when hovered */
+/* Color of active category text */
+/* Color of background for the active category (only) */
+/* Color of 'page visited' icons in menu */
+/* Color of <hr> separator in menu */
+/* Color of text by default */
+/* Color of titles h2-h3-h4-h5 */
+/* Color of links */
+/* Color of hovered links */
+/* color of anchors on titles */
+/* Background color of menu header */
+/*Color of menu header border */
+/* Search field background color (by default borders + icons) */
+/* Override search field border color */
+/* Override search field icons color */
+/* Background color of the active section and its childs */
+/* Background color of other sections */
+/* Color of links in menu */
+/* Color of links in menu, when hovered */
+/* Color of active category text */
+/* Color of background for the active category (only) */
+/* Color of 'page visited' icons in menu */
+/* Color of <hr> separator in menu */
 @font-face {
   font-family: 'Novacento Sans Wide';
   src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot");
@@ -18,6 +54,42 @@
   font-weight: 500;
   src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype"); }
 
+#chapter {
+  display: flex;
+  height: 100%;
+  padding: 2rem 0; }
+  #chapter #body-inner {
+    padding-bottom: 3rem;
+    max-width: 80%; }
+  #chapter h3 {
+    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight: 300; }
+  #chapter h1 {
+    font-size: 3.5rem;
+    padding-top: .3em; }
+    @media only all and (min-width: 48em) and (max-width: 59.938em) {
+      #chapter h1 {
+        font-size: 3rem; } }
+    @media only all and (max-width: 47.938em) {
+      #chapter h1 {
+        font-size: 2rem; } }
+  #chapter p {
+    font-size: 1.2rem; }
+
+footer.last-updated {
+  margin-top: 5rem;
+  font-size: .75rem;
+  font-style: italic; }
+
+#footer {
+  padding: 3rem 1rem;
+  color: #b3b3b3;
+  font-size: 13px; }
+  #footer p {
+    margin: 0 0 5px; }
+    #footer p i.fa {
+      margin-right: 5px; }
+
 /* Table of contents */
 #toc {
   position: fixed;
@@ -26,12 +98,15 @@
   width: 300px;
   border-left: thin solid #ececec;
   /* the following styles are needed to avoid "style jumps" when elements get .highlight added */ }
-  @media only all and (max-width: 1100px) {
-    #toc {
-      position: static;
-      border: 0; } }
   #toc > .wrapper {
     padding: 15px 25px; }
+  @media only all and (max-width: 1200px) {
+    #toc {
+      position: static;
+      border: 0;
+      margin-top: 3rem; }
+      #toc > .wrapper {
+        padding-left: 5px; } }
   #toc a {
     line-height: 1.1;
     display: inline-block; }
@@ -64,41 +139,40 @@
   #TableOfContents > ul > li > ul > li > ul li > ul > li ul {
     display: none; }
 
-#chapter {
+#top-github-link {
+  order: 2;
+  white-space: nowrap; }
+  #top-github-link .github-link {
+    font-weight: 400;
+    font-size: 0.875rem;
+    padding: 1rem; }
+
+#breadcrumbs {
+  order: 1;
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+  #breadcrumbs span {
+    padding: 0 0.1rem; }
+
+#top-bar {
   display: flex;
-  height: 100%;
-  padding: 2rem 0; }
-  #chapter #body-inner {
-    padding-bottom: 3rem;
-    max-width: 80%; }
-  #chapter h3 {
-    font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-    font-weight: 300; }
-  #chapter h1 {
-    font-size: 3.5rem;
-    padding-top: .3em; }
-    @media only all and (min-width: 48em) and (max-width: 59.938em) {
-      #chapter h1 {
-        font-size: 3rem; } }
-    @media only all and (max-width: 47.938em) {
-      #chapter h1 {
-        font-size: 2rem; } }
-  #chapter p {
-    font-size: 1.2rem; }
+  align-items: center;
+  background: #f6f6f6;
+  border-radius: 2px;
+  padding: 0 1rem;
+  height: 0;
+  min-height: 3rem; }
+  #top-bar .how-to-improve {
+    font-size: .7em; }
 
-#footer {
-  padding: 3rem 1rem;
-  color: #b3b3b3;
-  font-size: 13px; }
-  #footer p {
-    margin: 0 0 5px; }
-    #footer p i.fa {
-      margin-right: 5px; }
+@media only all and (max-width: 1024px) {
+  #breadcrumbs .links {
+    display: none; } }
 
-footer.last-updated {
-  margin-top: 5rem;
-  font-size: .75rem;
-  font-style: italic; }
+.is-sticky #top-bar {
+  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1); }
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -728,16 +802,24 @@ input[type="submit"] {
   border: inherit; }
 
 /*# sourceMappingURL=nucleus.css.map */
-#top-github-link,
-#body #breadcrumbs {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
+/* Color of text by default */
+/* Color of titles h2-h3-h4-h5 */
+/* Color of links */
+/* Color of hovered links */
+/* color of anchors on titles */
+/* Background color of menu header */
+/*Color of menu header border */
+/* Search field background color (by default borders + icons) */
+/* Override search field border color */
+/* Override search field icons color */
+/* Background color of the active section and its childs */
+/* Background color of other sections */
+/* Color of links in menu */
+/* Color of links in menu, when hovered */
+/* Color of active category text */
+/* Color of background for the active category (only) */
+/* Color of 'page visited' icons in menu */
+/* Color of <hr> separator in menu */
 .button,
 .button-secondary {
   display: inline-block;
@@ -1101,19 +1183,6 @@ select[multiple=multiple] {
     color: #ccc; }
     #body a.anchor-link:hover {
       color: #9c6fb6; }
-  #body #breadcrumbs {
-    height: auto;
-    margin-bottom: 0;
-    padding-left: 0;
-    line-height: 1.4;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 70%;
-    display: inline-block;
-    float: left; }
-    #body #breadcrumbs span {
-      padding: 0 0.1rem; }
 
 /** Page navigation **/
 #navigation .nav {
@@ -1129,11 +1198,11 @@ select[multiple=multiple] {
 #navigation .nav-next i {
   float: right;
   margin-left: 5px;
-  margin-top: 3px; }
+  margin-top: 2px; }
 
 #body-inner {
   margin-bottom: 5rem; }
-  @media only all and (min-width: 1100px) {
+  @media only all and (min-width: 1200px) {
     #body-inner {
       margin-right: 340px; } }
   #body-inner .tabs-wrapper.ui-theme-badges {
@@ -1623,13 +1692,6 @@ td {
   .lifecycle #body-inner .level-4 + ol h3 {
     background: #34495e; }
 
-#top-bar {
-  background: #f6f6f6;
-  border-radius: 2px;
-  padding: 0 1rem;
-  height: 0;
-  min-height: 3rem; }
-
 #top-github-link {
   position: relative;
   z-index: 1;
@@ -1748,8 +1810,8 @@ pre .copy-to-clipboard {
   .btn:focus {
     outline: none !important; }
   .btn:hover, .btn:focus {
-    color: #2b2b2b !important;
-    text-decoration: none !important; }
+    color: #2b2b2b;
+    text-decoration: none; }
 
 .btn-default {
   color: #333 !important;
@@ -1858,32 +1920,6 @@ figcaption h4 {
   .select-style :hover {
     cursor: pointer; }
 
-@media only all and (max-width: 47.938em) {
-  #breadcrumbs .links,
-  #top-github-link-text {
-    display: none; } }
-
-.is-sticky #top-bar {
-  box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1); }
-
-/* Color of text by default */
-/* Color of titles h2-h3-h4-h5 */
-/* Color of links */
-/* Color of hovered links */
-/* color of anchors on titles */
-/* Background color of menu header */
-/*Color of menu header border */
-/* Search field background color (by default borders + icons) */
-/* Override search field border color */
-/* Override search field icons color */
-/* Background color of the active section and its childs */
-/* Background color of other sections */
-/* Color of links in menu */
-/* Color of links in menu, when hovered */
-/* Color of active category text */
-/* Color of background for the active category (only) */
-/* Color of 'page visited' icons in menu */
-/* Color of <hr> separator in menu */
 body {
   color: #323232 !important; }
 
