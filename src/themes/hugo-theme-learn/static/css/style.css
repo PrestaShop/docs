@@ -2006,13 +2006,13 @@ a:hover {
   vertical-align: middle;
   margin-right: 10px; }
 
-dl.function-definition dt {
+.function-definition dt {
   font-family: "Consolas", "Menlo", monospace;
   background: #f0f0f0;
   display: inline-block;
   padding: 0 5px; }
 
-dl.function-definition dd {
+.function-definition dd {
   margin-top: 5px;
   margin-bottom: 10px; }
 
