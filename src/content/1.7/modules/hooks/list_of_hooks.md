@@ -17,114 +17,103 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 ## Full list
 
 {{% funcdef %}}
-Hook name
-: 
-    Since Since
-
-    Description
-
-    Located in: File(s)
-
-    Parameters:
-    ```php
-    What to expect in $params
-    ```
     
-action<AdminControllerName><Action>After
+action&lt;AdminControllerName>&lt;Action>After
 : 
-    Called after performing <Action> in any <AdminController>
+    Called after performing &lt;Action> in any &lt;AdminController>
 
     Located in: /classes/controller/AdminController.php
 
     Parameters:
     ```php
     array(
-'controller' => (AdminController),
-'return' => (mixed)
-);
+      'controller' => (AdminController),
+      'return' => (mixed)
+    );
     ```
     
-action<AdminControllerName><Action>Before
+action&lt;AdminControllerName>&lt;Action>Before
 : 
-    Called before performing <Action> in any <AdminController>
+    Called before performing &lt;Action> in any &lt;AdminController>
 
     Located in: /classes/controller/AdminController.php
 
     Parameters:
     ```php
     array(
-'controller' => (AdminController)
-);
+      'controller' => (AdminController)
+    );
     ```
     
-action<AdminControllerName>FormModifier
+action&lt;AdminControllerName>FormModifier
 : 
-    Called when rendering a form in any <AdminController>
+    Called when rendering a form in any &lt;AdminController>
 
     Located in: /classes/controller/AdminController.php
 
     Parameters:
     ```php
     array(
-'object' => &(ObjectModel),
-'fields' => &(array),
-'fields_value' => &(array),
-'form_vars' => &(array),
-);
+      'object' => &(ObjectModel),
+      'fields' => &(array),
+      'fields_value' => &(array),
+      'form_vars' => &(array),
+    );
     ```
     
-action<AdminControllerName>ListingFieldsModifier
-: 
-    Located in: /classes/controller/AdminController.php
-
-    Parameters:
-    ```php
-    array( 'select' => &(string), 'join' => &(string),
-'where' => &(string),
-'group_by' => &(string),
-'order_by' => &(string),
-'order_way' => &(string),
-'fields' => &(array)
-);
-    ```
-    
-action<AdminControllerName>OptionsModifier
+action&lt;AdminControllerName>ListingFieldsModifier
 : 
     Located in: /classes/controller/AdminController.php
 
     Parameters:
     ```php
     array(
-'options' => &(array),
-'option_vars' => &(array),
-);
+      'select' => &(string), 'join' => &(string),
+      'where' => &(string),
+      'group_by' => &(string),
+      'order_by' => &(string),
+      'order_way' => &(string),
+      'fields' => &(array)
+    );
     ```
     
-actionAdmin<Action>After
+action&lt;AdminControllerName>OptionsModifier
 : 
-    Called after performing <Action> in any admin controller
+    Located in: /classes/controller/AdminController.php
+
+    Parameters:
+    ```php
+    array(
+      'options' => &(array),
+      'option_vars' => &(array),
+    );
+    ```
+    
+actionAdmin&lt;Action>After
+: 
+    Called after performing &lt;Action> in any admin controller
 
     Located in: /classes/controller/AdminController.php
 
     Parameters:
     ```php
     array(
-'controller' => (AdminController),
-'return' => (mixed)
-);
+      'controller' => (AdminController),
+      'return' => (mixed)
+    );
     ```
     
-actionAdmin<Action>Before
+actionAdmin&lt;Action>Before
 : 
-    Called before performing <Action> in any admin controller
+    Called before performing &lt;Action> in any admin controller
 
     Located in: /classes/controller/AdminController.php
 
     Parameters:
     ```php
     array(
-'controller' => (AdminController)
-);
+      'controller' => (AdminController)
+    );
     ```
     
 actionAdminControllerSetMedia
@@ -156,9 +145,9 @@ actionAdminMetaAfterWriteRobotsFile
     Parameters:
     ```php
     array(
-'rb_data' => (array) File data,
-'write_fd' => &(resource) File handle
-);
+      'rb_data' => (array) File data,
+      'write_fd' => &(resource) File handle
+    );
     ```
     
 actionAdminMetaBeforeWriteRobotsFile
@@ -170,8 +159,8 @@ actionAdminMetaBeforeWriteRobotsFile
     Parameters:
     ```php
     array(
-'rb_data' => &(array) File data
-);
+      'rb_data' => &(array) File data
+    );
     ```
     
 actionAdminMetaSave
@@ -192,10 +181,10 @@ actionAdminOrdersTrackingNumberUpdate
     Parameters:
     ```php
     array(
-'order' => (Order),
-'customer' => (Customer),
-'carrier' => (Carrier)
-);
+      'order' => (Order),
+      'customer' => (Customer),
+      'carrier' => (Carrier)
+    );
     ```
     
 actionAdminProductsListingFieldsModifier
@@ -205,13 +194,13 @@ actionAdminProductsListingFieldsModifier
     Parameters:
     ```php
     array(
-'_ps_version' => (string) PrestaShop version,
-'sql_select' => &(array),
-'sql_table' => &(array),
-'sql_where' => &(array),
-'sql_order' => &(array),
-'sql_limit' => &(string),
-);
+      '_ps_version' => (string) PrestaShop version,
+      'sql_select' => &(array),
+      'sql_table' => &(array),
+      'sql_where' => &(array),
+      'sql_order' => &(array),
+      'sql_limit' => &(string),
+    );
     ```
     
 actionAdminProductsListingResultsModifier
@@ -221,10 +210,10 @@ actionAdminProductsListingResultsModifier
     Parameters:
     ```php
     array(
-'_ps_version' => (string) PrestaShop version,
-'products' => &(PDOStatement),
-'total' => (int),
-);
+      '_ps_version' => (string) PrestaShop version,
+      'products' => &(PDOStatement),
+      'total' => (int),
+    );
     ```
     
 actionAdminThemesControllerUpdate_optionsAfter
@@ -236,19 +225,21 @@ actionAdminThemesControllerUpdate_optionsAfter
     N/A
     ```
     
-actionAjaxDie<ControllerName><Method>Before
+actionAjaxDie&lt;ControllerName>&lt;Method>Before
 : 
     Located in: /classes/controller/Controller.php
 
     Parameters:
     ```php
     array(
-'value' => (string)
-);
+      'value' => (string)
+    );
     ```
     
-actionAjaxDieBefore (deprecated since 1.6.1.1)
+actionAjaxDieBefore
 : 
+    **(deprecated since 1.6.1.1)**
+    
     Located in: /classes/controller/Controller.php
 
     
@@ -304,9 +295,11 @@ actionAuthenticationBefore
     Located in: /classes/form/CustomerLoginForm.php
 
     
-actionBeforeAjaxDie<ControllerName><Method>(deprecated since 1.6.1.1)
-→ actionAjaxDie<ControllerName><Method>Before
+actionBeforeAjaxDie&lt;ControllerName>&lt;Method>
 : 
+    **(deprecated since 1.6.1.1)**
+    → `actionAjaxDie<ControllerName><Method>Before`
+
     Located in: /classes/controller/Controller.php
 
     
@@ -351,21 +344,21 @@ actionCartUpdateQuantityBefore
     
 actionCategoryAdd
 : 
-    When a category is created
+    Invoked when a category is created
 
     Located in: /classes/Category.php
 
     
 actionCategoryDelete
 : 
-    When a category is deleted
+    Invoked when a category is deleted
 
     Located in: /classes/Category.php
 
     
 actionCategoryUpdate
 : 
-    When a category is modified
+    Invoked when a category is modified
 
     Located in: 
 
@@ -375,48 +368,48 @@ actionCategoryUpdate
     
 actionClearCache
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
-    When smarty's cache is cleared
+    Invoked when the smarty cache is cleared
 
     Located in: /classes/Tools.php
 
     
 actionClearCompileCache
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
-    When smarty's compile cache is cleared
+    Invoked when the smarty compile cache is cleared
 
     Located in: /classes/Tools.php
 
     
 actionClearSf2Cache
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
-    Wwhen the Symfony cache is cleared
+    Invoked when the Symfony cache is cleared
 
     Located in: /classes/Tools.php
 
     
 actionCustomerAccountAdd
 : 
-    When a new customer creates an account successfully
+    Invoked when a new customer creates an account successfully
 
     Located in: /classes/form/CustomerPersister.php
 
     Parameters:
     ```php
     array(
-    '_POST' => (array) $_POST,
-    'newCustomer' => (object) Customer object
-);
+      '_POST' => (array) $_POST,
+      'newCustomer' => (object) Customer object
+    );
     ```
     
 actionCustomerAccountUpdate
 : 
-    When a customer updates its account successfully
+    Invoked when a customer updates its account successfully
 
     Located in: /classes/form/CustomerPersister.php
 
@@ -458,7 +451,7 @@ actionDispatcher
     
 actionDispatcherAfter
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     This hook is called at the end of the dispatch method of the Dispatcher
 
@@ -467,7 +460,7 @@ actionDispatcherAfter
     
 actionDispatcherBefore
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     This hook is called at the beginning of the dispatch method of the Dispatcher
 
@@ -635,7 +628,7 @@ actionObjectDeleteBefore
     
 actionObjectProductInCartDeleteAfter
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     This hook is called after a product is removed from a cart
 
@@ -644,7 +637,7 @@ actionObjectProductInCartDeleteAfter
     
 actionObjectProductInCartDeleteBefore
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     This hook is called before a product is removed from a cart
 
@@ -699,8 +692,8 @@ actionOrderReturn
     Parameters:
     ```php
     array(
-    'orderReturn' => (object) OrderReturn
-);
+      'orderReturn' => (object) OrderReturn
+    );
     ```
     
 actionOrderSlipAdd
@@ -713,13 +706,19 @@ WARNING: only invoked when a product is actually removed from an order.
     Parameters:
     ```php
     array(
-    'order' => Order,
-    'productList' => array(
-        (int) product ID 1,         (int) product ID 2,         ...,         (int) product ID n
-    ),
-    'qtyList' => array(
-        (int) quantity 1,         (int) quantity 2,         ...,        (int) quantity n 
-)
+      'order' => Order,
+      'productList' => array(
+        (int) product ID 1,
+        (int) product ID 2, 
+        ...,
+        (int) product ID n
+      ),
+      'qtyList' => array(
+        (int) quantity 1,
+        (int) quantity 2,
+        ...,
+        (int) quantity n 
+    )
 );
 The order of IDs and quantities is important!
     ```
@@ -733,9 +732,9 @@ actionOrderStatusPostUpdate
     Parameters:
     ```php
     array(
-    'newOrderStatus' =>(object) OrderState,
-    'id_order' => (int) Order ID
-);
+      'newOrderStatus' => (object) OrderState,
+      'id_order' => (int) Order ID
+    );
     ```
     
 actionOrderStatusUpdate
@@ -747,14 +746,14 @@ actionOrderStatusUpdate
     Parameters:
     ```php
     array(
-    'newOrderStatus' => (object) OrderState,
-    'id_order' => (int) Order ID
-);
+      'newOrderStatus' => (object) OrderState,
+      'id_order' => (int) Order ID
+    );
     ```
     
 actionOutputHTMLBefore
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Before HTML output
 This hook is used to filter the whole HTML page before it is rendered (only front)
@@ -776,8 +775,8 @@ actionPaymentCCAdd
     Parameters:
     ```php
     array(
-    'paymentCC' => (object) OrderPayment object
-);
+      'paymentCC' => (object) OrderPayment object
+    );
     ```
     
 actionPaymentConfirmation
@@ -789,8 +788,8 @@ actionPaymentConfirmation
     Parameters:
     ```php
     array(
-    'id_order' => (int) Order ID
-);
+      'id_order' => (int) Order ID
+    );
     ```
     
 actionPDFInvoiceRender
@@ -862,7 +861,7 @@ actionProductSave
     
 actionProductSearchAfter
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     This hook is called after the product search. Parameters are already filter
 
@@ -881,7 +880,7 @@ actionProductUpdate
     
 actionSearch
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     After the search in the store. Includes both instant and normal search.
 
@@ -890,9 +889,9 @@ actionSearch
     Parameters:
     ```php
     array(
-    'expr' => (string) Search query,
-    'total' => (int) Amount of search results
-);
+      'expr' => (string) Search query,
+      'total' => (int) Amount of search results
+    );
     ```
     
 actionSetInvoice
@@ -909,21 +908,21 @@ actionShopDataDuplication
     Parameters:
     ```php
     array(
-    'old_id_shop' => (int) Old shop ID,
-    'new_id_shop' => (int) New shop ID
-);
+      'old_id_shop' => (int) Old shop ID,
+      'new_id_shop' => (int) New shop ID
+    );
     ```
     
 actionSubmitAccountBefore
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Located in: /controllers/front/AuthController.php
 
     
 actionUpdateLangAfter
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Update "lang" tables after adding or updating a language
 
@@ -940,10 +939,10 @@ Quantity is updated only when a customer effectively places their order
     Parameters:
     ```php
     array(
-    'id_product' => (int) Product ID,
-    'id_product_attribute' => (int) Product attribute ID,
-    'quantity' => (int) New product quantity
-);
+      'id_product' => (int) Product ID,
+      'id_product_attribute' => (int) Product attribute ID,
+      'quantity' => (int) New product quantity
+    );
     ```
     
 actionValidateCustomerAddressForm
@@ -955,12 +954,12 @@ actionValidateCustomerAddressForm
     Parameters:
     ```php
     array(
-    'cart' => (object) Cart,
-    'order' => (object) Order,
-    'customer' => (object) Customer,
-    'currency' => (object) Currency,
-    'orderStatus' => (object) OrderState
-);
+      'cart' => (object) Cart,
+      'order' => (object) Order,
+      'customer' => (object) Customer,
+      'currency' => (object) Currency,
+      'orderStatus' => (object) OrderState
+    );
     ```
     
 actionValidateOrder
@@ -985,9 +984,9 @@ actionWatermark
     Parameters:
     ```php
     array(
-    'id_image' => (int) Image ID,
-    'id_product' => (int) Product ID
-);
+      'id_image' => (int) Image ID,
+      'id_product' => (int) Product ID
+    );
     ```
     
 additionalCustomerFormFields
@@ -1038,8 +1037,8 @@ This hook launches modules when the AdminCustomers tab is displayed in the Back 
     Parameters:
     ```php
     array(
-    'id_customer' = (int) Customer ID
-);
+      'id_customer' = (int) Customer ID
+    );
     ```
     
 displayAdminForm
@@ -1096,7 +1095,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     ```php
     array(
      'id_order' = (int) Order ID
-);
+    );
     ```
     
 displayAdminOrderContentOrder
@@ -1252,7 +1251,7 @@ This hook is displayed after the carrier list in Front Office
     
 displayAfterProductThumbs
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Display extra content below product thumbs
 This hook displays new elements below product images ex. additional media
@@ -1301,7 +1300,7 @@ displayBackOfficeFooter
     
 displayBackOfficeHeader
 : 
-    Displayed between the <head></head> tags on every Back Office page (when logged in).
+    Displayed between the &lt;head>&lt;/head> tags on every Back Office page (when logged in).
 
     Located in: /classes/controller/AdminController.php
 
@@ -1320,7 +1319,7 @@ displayBackOfficeTop
     
 displayBanner
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Located in: /themes/classic/templates/_partials/header.tpl
 
@@ -1344,9 +1343,49 @@ displayBeforeCarrier
 
     Parameters:
     ```php
-    Expand source
-NOTE: intified means an array of integers 'intified' by Cart::intifier
+    array(
+        'carriers' => array(
+            array(
+                'name' => (string) Name,
+                'img' => (string) Image URL,
+                'delay' => (string) Delay text,
+                'price' =>  (float) Total price with tax,
+                'price_tax_exc' => (float) Total price without tax,
+                'id_carrier' => (int) intified option delivery identifier,
+                'id_module' => (int) Module ID
+        )),
+        'checked' => (int) intified selected carriers,
+        'delivery_option_list' => array(array(
+            0 => array( // First address
+                '12,' => array( // First delivery option available for this address
+                     carrier_list => array(
+                         12 => array( // First carrier for this option
+                             'instance' => Carrier Object,
+                             'logo' => <url to the carrier's logo>,
+                             'price_with_tax' => 12.4, // Example
+                             'price_without_tax' => 12.4, // Example
+                             'package_list' => array(
+                                 1, // Example
+                                 3, // Example
+                              ),
+                         ),
+                     ),
+                     is_best_grade => true, // Does this option have the biggest grade (quick shipping) for this shipping address
+                     is_best_price => true, // Does this option have the lower price for this shipping address
+                     unique_carrier => true, // Does this option use a unique carrier
+                     total_price_with_tax => 12.5,
+                     total_price_without_tax => 12.5,
+                     position => 5, // Average of the carrier position
+                 ),
+             ),
+         )),
+         'delivery_option' => array(
+             '<id_address>' => Delivery option,
+             ...
+         )
+    );
     ```
+    NOTE: intified means an array of integers 'intified' by Cart::intifier
     
 displayCarrierExtraContent
 : 
@@ -1365,8 +1404,8 @@ displayCarrierList
     Parameters:
     ```php
     array(
-    'address' => (object) Address object
-);
+      'address' => (object) Address object
+    );
     ```
     
 displayCartExtraProductActions
@@ -1637,11 +1676,11 @@ displayOrderConfirmation
     Parameters:
     ```php
     array(
-    'total_to_pay' => (float) Total amount with tax,
-    'currency' => (string) Currency sign,
-    'objOrder' => (object) Order,
-    'currencyObj' => (object) Currency
-);
+      'total_to_pay' => (float) Total amount with tax,
+      'currency' => (string) Currency sign,
+      'objOrder' => (object) Order,
+      'currencyObj' => (object) Currency
+    );
     ```
     
 displayOrderConfirmation1
@@ -1666,8 +1705,8 @@ displayOrderDetail
     Parameters:
     ```php
     array(
-    'order' => (object) Order object
-);
+      'order' => (object) Order object
+    );
     ```
     
 displayPaymentByBinaries
@@ -1700,7 +1739,7 @@ This hook is displayed at the top of the payment page
     
 displayProductAdditionalInfo
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Product page additional info
 This hook adds additional information on the product page
@@ -1713,7 +1752,7 @@ This hook adds additional information on the product page
     
 displayProductListReviews
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Located in: /themes/classic/templates/catalog/_partials/miniatures/product.tpl
 
@@ -1746,8 +1785,8 @@ displayRightColumn
     Parameters:
     ```php
     array(
-    'cart' => (object) Cart object
-);
+      'cart' => (object) Cart object
+    );
 Note that the Cart object can also be retrieved from the current Context.
     ```
     
@@ -1853,7 +1892,7 @@ This hook is called just before fetching content page product
     
 filterProductSearch
 : 
-    Since 1.7.1
+    Available since: 1.7.1
 
     Located in: /classes/controller/ProductListingFrontController.php
 
