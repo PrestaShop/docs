@@ -81,8 +81,22 @@ var addAnchors = function addAnchors() {
   });
 };
 
+var addTitlePills = function addTitlePills() {
+  $('.magic-version-pill').each(function(index) {
+    var $this = $(this);
+    $this.prev().append(
+      '<span class="version-pill in-title" title="'
+        + $this.data("title")
+        + '">'
+        + $this.data("version")
+        + "</span>"
+    );
+  });
+};
+
 // done here to prevent redraws
 processImages();
+addTitlePills();
 
 $(document).ready(function(){
   // Stick the top to the top of the screen when  scrolling

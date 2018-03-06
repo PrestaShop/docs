@@ -1,0 +1,17 @@
+.version-pill {
+  font-family: $headerFont;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 1rem;
+  background-color: #1abc9c;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  line-height: 1rem;
+  vertical-align: middle;
+  user-select: none;
+
+  &.in-title {
+    margin-left: 5px;
+  }
+}

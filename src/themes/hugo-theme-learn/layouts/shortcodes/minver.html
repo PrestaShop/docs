@@ -1,0 +1,7 @@
+{{ if .Params.title }}
+<div class="magic-version-pill" data-version="{{ .Params.v }}" data-title="New in PrestaShop {{ .Params.v }}"></div>
+{{ else }}
+<span class="version-pill" title="New in PrestaShop {{ .Params.v }}">
+  {{ .Params.v }}
+</span>
+{{ end }}
