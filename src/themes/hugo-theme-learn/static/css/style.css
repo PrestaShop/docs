@@ -1933,9 +1933,6 @@ figcaption h4 {
   .select-style :hover {
     cursor: pointer; }
 
-body {
-  color: #323232 !important; }
-
 textarea:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
