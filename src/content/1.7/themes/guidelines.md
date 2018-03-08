@@ -1,6 +1,7 @@
 ---
 title: Guidelines and coding standards
 menuTitle: Guidelines
+weight: 1
 ---
 
 # Guidelines and coding standards
