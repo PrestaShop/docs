@@ -1,6 +1,5 @@
 ---
-title: ObjectModel
-weight: 15
+title: ObjectModel class
 ---
 
 # The ObjectModel class
