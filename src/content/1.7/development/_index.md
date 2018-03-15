@@ -8,5 +8,3 @@ chapter: true
 ### Chapter 2
 
 # Development
-
-

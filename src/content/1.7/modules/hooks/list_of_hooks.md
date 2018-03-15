@@ -1,5 +1,6 @@
 ---
 title: List of hooks
+weight: 2
 ---
 
 # List of hooks in PrestaShop 1.7
