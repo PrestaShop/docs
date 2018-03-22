@@ -127,4 +127,4 @@ $total_to_pay = $params['order']->getOrdersTotalPaid();
 
 ### Real life example
 
-See the bankwire module for an example of how we updated a simple 1.6 module to 1.7: <https://github.com/PrestaShop/bankwire/pull/18>.
+See the [bankwire module](https://github.com/PrestaShop/bankwire/pull/18) for an example of how we migrated a simple 1.6 module to 1.7.
