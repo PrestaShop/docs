@@ -11,7 +11,7 @@ The goal
 
 Widgets introduce 2 majors features for theme developer.
 
-1.  Use module directly into your theme
+### Use module directly into your theme
 
 If you want to use a module, like a social sharing button module for example, and if this module is a widget for PrestaShop 1.7, you can use something like:
 
@@ -30,7 +30,7 @@ As long as this module is installed, it will work.
 With PrestaShop 1.6, you would have add to declare and hook and make sure the module was hooked on it.
 This allow you to fully control the layout of your page and display module the way you want.
 
-2.  They can be hooks on any display hook
+### They can be hooks on any display hook
 
 When you hook a widget on any display hook the module will execute the default method.
 
