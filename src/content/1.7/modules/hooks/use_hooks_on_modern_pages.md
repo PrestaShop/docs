@@ -1,9 +1,9 @@
 ---
-title: Do more with PrestaShop hooks on modern pages
+title: Use hooks on modern pages
 weight: 3
 ---
 
-# Do more with PrestaShop hooks on modern pages
+# Use hooks on modern pages
 
 You know you can already customize your PrestaShop store thanks to many hooks: the good news is that you can still use hooks like you did in the earlier versions of PrestaShop in modern pages.
 
