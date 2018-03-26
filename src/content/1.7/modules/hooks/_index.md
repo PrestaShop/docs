@@ -1,6 +1,7 @@
 ---
 title: Hooks
-weight: 1
+weight: 2
+chapter: true
 ---
 
 # Hooks

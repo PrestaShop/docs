@@ -1,6 +1,7 @@
 ---
 title: Payment modules
-weight: 1
+weight: 3
+chapter: true
 ---
 
 Payment modules
