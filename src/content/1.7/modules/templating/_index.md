@@ -1,6 +1,7 @@
 ---
-title: How to override templates in modern Back Office modern pages?
-weight: 1
+title: Templates in modules
+weight: 4
+chapter: true
 ---
 
 # How to override templates in modern Back Office modern pages?

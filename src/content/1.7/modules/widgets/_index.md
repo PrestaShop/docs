@@ -1,6 +1,7 @@
 ---
 title: Widgets
-weight: 1
+weight: 5
+chapter: true
 ---
 
 Widgets

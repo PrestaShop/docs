@@ -1,6 +1,7 @@
 ---
 title: Creating a first module
 weight: 1
+chapter: true
 ---
 
 Creating a first module
