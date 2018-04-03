@@ -8,20 +8,9 @@ chapter: true
 
 Hooks are a way to associate your code to some specific PrestaShop events.
 
-Most of the time, they are used to insert content in a page.
+Most of the time, they are used to insert content in a page. The place it will be added (header, footer, left or right column ...) will depend on the hook you choose.
 
-For instance, the PrestaShop default theme's home page has the following hooks:
-
-| Hook name | Description
-|-----------|------------
-| displayHeader | Displays content in the page's header area.
-| displayTop	| Displays content in the page's top area.
-| displayLeftColumn	| Displays content in the page's left column.
-| displayHome | Displays content in the page's central area.
-| displayRightColumn | Displays content in the page's right column.
-| displayFooter | Displays content in the page's footer area.
-
-Hooks can also be used to perform specific actions under certain circumstances (i.e. sending an e-mail to the client).
+Hooks can also be used to perform specific actions under certain circumstances (i.e. sending an e-mail to the client on an order creation).
 
 ## Naming scheme
 
@@ -35,55 +24,96 @@ Hook names are prefixed with "action" or "display". This prefix indicates if a h
 
 ## Using hooks
 
-### In a controller
-It is easy to call a hook from within a controller: you simply have to use its name with the `hookExec()` method: `Module::hookExec('NameOfHook')`;
+### Registration
 
-For instance:
+Every hook you want to use must be registered first. This is usually done during the installation of your module, by calling the method `Module::registerHook($hookName)`.
+
 ```php
-$this->context->smarty->assign(
-    'HOOK_LEFT_COLUMN',
-    Module::hookExec('displayLeftColumn')
-);
+public function install()
+{
+  // [...]
+
+  $this->registerHook('displayHeader');
+  $this->registerHook('displayFooter');
+
+  // [...]
+}
 ```
 
-### In a module
+If you do not know where you can register, [a list of available hooks]({{< ref "1.7/modules/hooks/list_of_hooks.md" >}}) is available.
 
-In order to attach your code to a hook, you must create a non-static public method, starting with the "hook" keyword followed by either "display" or "action", and the name of the hook you want to use.
+### Execution
+
+For each registered hook, you must create a non-static public method, starting with the "hook" keyword followed by the name of the hook you want to use (starting with either "display" or "action").
 
 This method receives one (and only one) argument: an array of the contextual information sent to the hook.
 
 ```php
-public function hookDisplayNameOfHook($params)
+public function hookDisplayHeader(array $params)
+{
+    // Your code.
+}
+
+public function hookDisplayFooter(array $params)
+{
+    // Your code.
+}
+
+public function hookActionOtherHook(array $params)
 {
     // Your code.
 }
 ```
 
-In order for a module to respond to a hook call, the hook must be registered within PrestaShop. Hook registration is done using the `registerHook()` method. Registration is usually done during the module's installation.
+Remember, in order for a module to respond to a hook call, it must be registered within PrestaShop.
 
-### In a theme
+## Triggering a hook
+
+#### In a controller
+
+It is easy to call a hook from within a controller: you simply have to use its name with the `Hook::exec($hook_name, $hook_args = array())` method. Some parameters can be sent as well.
+
+For instance:
+```php
+$this->context->smarty->assign(
+    'HOOK_LEFT_COLUMN',
+    Hook::exec('displayLeftColumn')
+);
+```
+
+
+#### In a theme
 
 It is easy to call a hook from within a template file (`.tpl`): you simply have to use its name with the hook function. You can add the name of a module that you want the hook execute.
 
-For instance:
+Basic call of a hook:
+
+```
+{hook h='displayLeftColumn'}
+```
+
+Call of a hook for a specific module:
 
 ```
 {hook h='displayLeftColumn' mod='blockcart'}
 ```
 
-## Creating your own hook
+## Going further: Creating your own hook
 
-You can create new PrestaShop hooks by adding a new record in the ps_hook table in your MySQL database. You could do it the hard way:
+You can create new PrestaShop hooks by adding a new record in the Hook table. This can be done with the Hook class, which inherit ObjectModel features:
 
-```sql
-INSERT INTO `ps_hook` (`name`, `title`, `description`)
-VALUES ('nameOfHook', 'The name of your hook', 'This is a custom hook!');
+```php
+$hook = new Hook();
+$hook->name = 'displayAtSpecificPlace';
+$hook->title = 'The name of your hook',
+$hook->description = 'This is a custom hook!';
+$hook->add(); // return true on success
 ```
 
 ...but PrestaShop enables you to do it the easy way:
 
 ```php
-$this->registerHook('NameOfHook');
+$this->registerHook('displayAtSpecificPlace');
 ```
 
-If the hook "NameOfHook" doesn't exist, PrestaShop will create it for you. No need to do the SQL query anymore.
+If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you.
