@@ -1,7 +1,6 @@
 ---
 title: Hooks
 weight: 2
-chapter: true
 ---
 
 # Hooks
