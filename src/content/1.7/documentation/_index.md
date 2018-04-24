@@ -1,11 +1,10 @@
 ---
 title: Documentation
-weight: 4
-pre: "<b>4. </b>"
+weight: 6
+pre: "<b>6. </b>"
 chapter: true
 ---
 
-### Chapter 4
+### Chapter 6
 
 # Documentation
-

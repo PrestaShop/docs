@@ -1,11 +1,11 @@
 ---
 title: Modules
-weight: 5
-pre: "<b>5. </b>"
+weight: 4
+pre: "<b>4. </b>"
 chapter: true
 ---
 
-### Chapter 5
+### Chapter 4
 
 What is a PrestaShop module?
 ============================
@@ -98,5 +98,3 @@ the following folders:
 
     /cache/smarty/cache
     /cache/smarty/compile
-
-

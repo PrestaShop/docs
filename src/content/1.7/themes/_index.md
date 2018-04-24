@@ -1,11 +1,11 @@
 ---
 title: Themes
-weight: 6
-pre: "<b>6. </b>"
+weight: 5
+pre: "<b>5. </b>"
 chapter: true
 ---
 
-### Chapter 6
+### Chapter 5
 
 # Themes
 
