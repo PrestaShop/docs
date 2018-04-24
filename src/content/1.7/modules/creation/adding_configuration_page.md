@@ -24,25 +24,30 @@ The getContent() method
 
 First, here is the complete code for the getContent() method:
 
-    public function getContent()
-    {
-        $output = null;
+```php
+public function getContent()
+{
+    $output = null;
 
-        if (Tools::isSubmit('submit'.$this->name))
-        {
-            $my_module_name = strval(Tools::getValue('MYMODULE_NAME'));
-            if (!$my_module_name
-              || empty($my_module_name)
-              || !Validate::isGenericName($my_module_name))
-                $output .= $this->displayError($this->l('Invalid Configuration value'));
-            else
-            {
-                Configuration::updateValue('MYMODULE_NAME', $my_module_name);
-                $output .= $this->displayConfirmation($this->l('Settings updated'));
-            }
+    if (Tools::isSubmit('submit'.$this->name)) {
+        $myModuleName = strval(Tools::getValue('MYMODULE_NAME'));
+
+        if (
+            !$myModuleName ||
+            empty($myModuleName) ||
+            !Validate::isGenericName($myModuleName)
+        ) {
+            $output .= $this->displayError($this->l('Invalid Configuration value'));
+        } else {
+            Configuration::updateValue('MYMODULE_NAME', $myModuleName);
+            $output .= $this->displayConfirmation($this->l('Settings updated'));
         }
+
         return $output.$this->displayForm();
     }
+}
+```
+
 
 The `getContent()` method is the first one to be called when the
 configuration page is loaded. Therefore, we use it to first update any
@@ -61,10 +66,10 @@ Here is a line by line explanation:
     the content of the POST or GET array in order to get the value of
     the specified variable. In this case, we retrieve the value of the
     `MYMODULE_NAME` form variable, turn its value into a text string
-    using the `strval()` method, and stores it in the `$my_module_name`
+    using the `strval()` method, and stores it in the `$myModuleName`
     PHP variable.
 -   We then check for the existence of actual content in
-    `$my_module_name`, including the use of `Validate::isGenericName()`.
+    `$myModuleName`, including the use of `Validate::isGenericName()`.
     The Validate object contains many data validation methods, among
     which is `isGenericName()`, a method that helps you keep only
     strings that are valid PrestaShop names – meaning, a string that
@@ -101,66 +106,67 @@ Displaying the form
 The configuration form itself is displayed with the `displayForm()`
 method. Here is its code, which we are going to explain after the jump:
 
-    public function displayForm()
-    {
-        // Get default language
-        $default_lang = (int)Configuration::get('PS_LANG_DEFAULT');
+```php
+public function displayForm()
+{
+    // Get default language
+    $defaultLang = (int)Configuration::get('PS_LANG_DEFAULT');
 
-        // Init Fields form array
-        $fields_form[0]['form'] = array(
-            'legend' => array(
-                'title' => $this->l('Settings'),
-            ),
-            'input' => array(
-                array(
-                    'type' => 'text',
-                    'label' => $this->l('Configuration value'),
-                    'name' => 'MYMODULE_NAME',
-                    'size' => 20,
-                    'required' => true
-                )
-            ),
-            'submit' => array(
-                'title' => $this->l('Save'),
-                'class' => 'btn btn-default pull-right'
-            )
-        );
+    // Init Fields form array
+    $fieldsForm[0]['form'] = [
+        'legend' => [
+            'title' => $this->l('Settings'),
+        ],
+        'input' => [
+            [
+                'type' => 'text',
+                'label' => $this->l('Configuration value'),
+                'name' => 'MYMODULE_NAME',
+                'size' => 20,
+                'required' => true
+            ]
+        ],
+        'submit' => [
+            'title' => $this->l('Save'),
+            'class' => 'btn btn-default pull-right'
+        ]
+    ];
 
-        $helper = new HelperForm();
+    $helper = new HelperForm();
 
-        // Module, token and currentIndex
-        $helper->module = $this;
-        $helper->name_controller = $this->name;
-        $helper->token = Tools::getAdminTokenLite('AdminModules');
-        $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
+    // Module, token and currentIndex
+    $helper->module = $this;
+    $helper->name_controller = $this->name;
+    $helper->token = Tools::getAdminTokenLite('AdminModules');
+    $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
 
-        // Language
-        $helper->default_form_language = $default_lang;
-        $helper->allow_employee_form_lang = $default_lang;
+    // Language
+    $helper->default_form_language = $defaultLang;
+    $helper->allow_employee_form_lang = $defaultLang;
 
-        // Title and toolbar
-        $helper->title = $this->displayName;
-        $helper->show_toolbar = true;        // false -> remove toolbar
-        $helper->toolbar_scroll = true;      // yes - > Toolbar is always visible on the top of the screen.
-        $helper->submit_action = 'submit'.$this->name;
-        $helper->toolbar_btn = array(
-            'save' =>
-            array(
-                'desc' => $this->l('Save'),
-                'href' => AdminController::$currentIndex.'&configure='.$this->name.'&save'.$this->name.
-                '&token='.Tools::getAdminTokenLite('AdminModules'),
-            ),
-            'back' => array(
-                'href' => AdminController::$currentIndex.'&token='.Tools::getAdminTokenLite('AdminModules'),
-                'desc' => $this->l('Back to list')
-            )
-        );
+    // Title and toolbar
+    $helper->title = $this->displayName;
+    $helper->show_toolbar = true;        // false -> remove toolbar
+    $helper->toolbar_scroll = true;      // yes - > Toolbar is always visible on the top of the screen.
+    $helper->submit_action = 'submit'.$this->name;
+    $helper->toolbar_btn = [
+        'save' => [
+            'desc' => $this->l('Save'),
+            'href' => AdminController::$currentIndex.'&configure='.$this->name.'&save'.$this->name.
+            '&token='.Tools::getAdminTokenLite('AdminModules'),
+        ],
+        'back' => [
+            'href' => AdminController::$currentIndex.'&token='.Tools::getAdminTokenLite('AdminModules'),
+            'desc' => $this->l('Back to list')
+        ]
+    ];
 
-        // Load current value
-        $helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
+    // Load current value
+    $helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
 
-        return $helper->generateForm($fields_form);
-    }
+    $helper->generateForm($fieldsForm);
+}
+```
 
 While this might look like a huge block of code for a single value to
 change, this block actually uses some of PrestaShop's method to make it
@@ -176,7 +182,7 @@ Let's run down that method:
     reasons, we cast the variable into an integer using (`int`).
 2.  In preparation for the generation of the form, we must build an
     array of the various titles, textfields and other form specifics.\
-    To that end, we create the `$fields_form` variable, which will
+    To that end, we create the `$fieldsForm` variable, which will
     contain a multidimensional array. Each of the arrays it features
     contains the detailed description of the tags the form must contain.
     From this variable, PrestaShop will render the HTML form as it is
@@ -188,24 +194,28 @@ Let's run down that method:
     needed, each being in turn an array which contains the
     necessary attributes. For instance:
 
-<!-- -->
 
-    'input' => array(
-        array(
-            'type' => 'text',
-            'label' => $this->l('Configuration value'),
-            'name' => 'MYMODULE_NAME',
-            'size' => 20,
-            'required' => true
-        ))
+```php
+'input' => [
+    [
+        'type' => 'text',
+        'label' => $this->l('Configuration value'),
+        'name' => 'MYMODULE_NAME',
+        'size' => 20,
+        'required' => true
+    ]
+]
+```
 
 ...generates the following HTML tags:
 
-    <label>Configuration value </label>
-    <div class="margin-form">
-      <input id="MYMODULE_NAME" class="" type="text" size="20" value="my friend" name="MYMODULE_NAME">
-      <sup>*</sup>
-    <div class="clear"></div>
+```html
+<label>Configuration value </label>
+<div class="margin-form">
+  <input id="MYMODULE_NAME" class="" type="text" size="20" value="my friend" name="MYMODULE_NAME">
+  <sup>*</sup>
+<div class="clear"></div>
+```
 
 As you can see, PrestaShop is quite clever, and generates all the code
 that is needed to obtain a useful form.\
@@ -215,7 +225,7 @@ form generation code.
 3.  We then create an instance of the `HelperForm` class. This section
     of the code is explained in the next section of this chapter.
 4.  Once the `HelperForm` settings are all in place, we generate the
-    form based on the content of the `$fields_form` variable.
+    form based on the content of the `$fieldsForm` variable.
 
 Using HelperForm
 ----------------
@@ -229,43 +239,44 @@ chapter of this developer guide, with a page dedicated to `HelperForm`.
 
 Here is our sample code, as a reminder:
 
-    $helper = new HelperForm();
+```php
+$helper = new HelperForm();
 
-    // Module, Token and currentIndex
-    $helper->module = $this;
-    $helper->name_controller = $this->name;
-    $helper->token = Tools::getAdminTokenLite('AdminModules');
-    $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
+// Module, Token and currentIndex
+$helper->module = $this;
+$helper->name_controller = $this->name;
+$helper->token = Tools::getAdminTokenLite('AdminModules');
+$helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
 
-    // Language
-    $helper->default_form_language = $default_lang;
-    $helper->allow_employee_form_lang = $default_lang;
+// Language
+$helper->default_form_language = $defaultLang;
+$helper->allow_employee_form_lang = $defaultLang;
 
-    // title and Toolbar
-    $helper->title = $this->displayName;
-    $helper->show_toolbar = true;        // false -> remove toolbar
-    $helper->toolbar_scroll = true;      // yes - > Toolbar is always visible on the top of the screen.
-    $helper->submit_action = 'submit'.$this->name;
-    $helper->toolbar_btn = array(
-        'save' =>
-        array(
-            'desc' => $this->l('Save'),
-            'href' => AdminController::$currentIndex.'&configure='.$this->name.'&save'.$this->name.
-            '&token='.Tools::getAdminTokenLite('AdminModules'),
-        ),
-        'back' => array(
-            'href' => AdminController::$currentIndex.'&token='.Tools::getAdminTokenLite('AdminModules'),
-            'desc' => $this->l('Back to list')
-       )
-    );
+// title and Toolbar
+$helper->title = $this->displayName;
+$helper->show_toolbar = true;        // false -> remove toolbar
+$helper->toolbar_scroll = true;      // yes - > Toolbar is always visible on the top of the screen.
+$helper->submit_action = 'submit'.$this->name;
+$helper->toolbar_btn = [
+    'save' => [
+        'desc' => $this->l('Save'),
+        'href' => AdminController::$currentIndex.'&configure='.$this->name.'&save'.$this->name.
+        '&token='.Tools::getAdminTokenLite('AdminModules'),
+    ],
+    'back' => [
+        'href' => AdminController::$currentIndex.'&token='.Tools::getAdminTokenLite('AdminModules'),
+        'desc' => $this->l('Back to list')
+    ]
+];
 
-    // Load current value
-    $helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
+// Load current value
+$helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
 
-    return $helper->generateForm($fields_form);
+return $helper->generateForm($fieldsForm);
+```
 
 Our example uses several of `HelperForm`'s attributes: they need to be
-set before we generate the form itself from the `$fields_form` variable:
+set before we generate the form itself from the `$fieldsForm` variable:
 
 -   `$helper->module`: requires the instance of the module that will use
     the form.

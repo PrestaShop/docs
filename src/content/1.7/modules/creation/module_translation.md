@@ -40,62 +40,66 @@ same domain as all the other strings in the module.
 
 In our sample module, the `mymodule.tpl` file...
 
-    mymodule.tpl (partial)
-    <li>
-      <a href="{$base_dir}modules/mymodule/mymodule_page.php" title="Click this link">Click me!</a>
-    </li>
-    <!-- Block mymodule -->
-    <div id="mymodule_block_left" class="block">
-      <h4>{l s='Welcome!' d='Modules.MyModule'}</h4>
-      <div class="block_content">
-        <p>Hello,
-           {if isset($my_module_name) && $my_module_name}
-               {$my_module_name}
-           {else}
-               World
-           {/if}
-           !
-        </p>
-        <ul>
-          <li><a href="{$my_module_link}" title="Click this link">Click me!</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- /Block mymodule -->
+```html
+<li>
+  <a href="{$base_dir}modules/mymodule/mymodule_page.php" title="Click this link">Click me!</a>
+</li>
+<!-- Block mymodule -->
+<div id="mymodule_block_left" class="block">
+  <h4>{l s='Welcome!' d='Modules.MyModule'}</h4>
+  <div class="block_content">
+    <p>Hello,
+       {if isset($my_module_name) && $my_module_name}
+           {$my_module_name}
+       {else}
+           World
+       {/if}
+       !
+    </p>
+    <ul>
+      <li><a href="{$my_module_link}" title="Click this link">Click me!</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /Block mymodule -->
+```
 
 ...becomes:
 
-    mymodule.tpl (partial)
-    <li>
-      <a href="{$base_dir}modules/mymodule/mymodule_page.php" title="{l s='Click this link' mod='mymodule'}">{l s='Click me!' mod='mymodule'}</a>
-    </li>
-    <!-- Block mymodule -->
-    <div id="mymodule_block_left" class="block">
-      <h4>{l s='Welcome!' d='Modules.MyModule'}</h4>
-      <div class="block_content">
-        <p>
-          {if !isset($my_module_name) || !$my_module_name}
-            {capture name='my_module_tempvar'}{l s='World' d='Modules.MyModule'}{/capture}
-            {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
-          {/if}
-          {l s='Hello %1$s!' sprintf=$my_module_name d='Modules.MyModule'}
-        </p>
-        <ul>
-          <li><a href="{$my_module_link}"  title="{l s='Click this link' d='Modules.MyModule'}">{l s='Click me!' d='Modules.MyModule'}</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- /Block mymodule -->
+```html
+<li>
+  <a href="{$base_dir}modules/mymodule/mymodule_page.php" title="{l s='Click this link' mod='mymodule'}">{l s='Click me!' mod='mymodule'}</a>
+</li>
+<!-- Block mymodule -->
+<div id="mymodule_block_left" class="block">
+  <h4>{l s='Welcome!' d='Modules.MyModule'}</h4>
+  <div class="block_content">
+    <p>
+      {if !isset($my_module_name) || !$my_module_name}
+        {capture name='my_module_tempvar'}{l s='World' d='Modules.MyModule'}{/capture}
+        {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
+      {/if}
+      {l s='Hello %1$s!' sprintf=$my_module_name d='Modules.MyModule'}
+    </p>
+    <ul>
+      <li><a href="{$my_module_link}"  title="{l s='Click this link' d='Modules.MyModule'}">{l s='Click me!' d='Modules.MyModule'}</a></li>
+    </ul>
+  </div>
+ </div>
+ <!-- /Block mymodule -->
+```
 
 ...and the `display.tpl` file:
 
-    display.tpl
-    Welcome to this page!
+```
+Welcome to this page!
+```
 
 ...becomes:
 
-    display.tpl
-    {l s='Welcome to this page!' d='Modules.MyModule'}
+```
+{l s='Welcome to this page!' d='Modules.MyModule'}
+```
 
 Notice that we always use the `d` parameter. This is used by PrestaShop
 to assert which module the string belongs to. The translation tool needs
@@ -137,25 +141,26 @@ translation file looks like so:
 
 fr.php
 
-    <?php
-    global $_MODULE;
-    $_MODULE = array();
-    $_MODULE['<{mymodule}prestashop>mymodule_2ddddc2a736e4128ce1cdfd22b041e7f'] = 'Mon module';
-    $_MODULE['<{mymodule}prestashop>mymodule_d6968577f69f08c93c209bd8b6b3d4d5'] = 'Description du module.';
-    $_MODULE['<{mymodule}prestashop>mymodule_533937acf0e84c92e787614bbb16a7a0'] = 'Êtes-vous certain de vouloir désinstaller ce module ? Vous perdrez tous vos réglages !';
-    $_MODULE['<{mymodule}prestashop>mymodule_0f40e8817b005044250943f57a21c5e7'] = 'Aucun nom fourni';
-    $_MODULE['<{mymodule}prestashop>mymodule_fe5d926454b6a8144efce13a44d019ba'] = 'Valeur de configuration non valide.';
-    $_MODULE['<{mymodule}prestashop>mymodule_c888438d14855d7d96a2724ee9c306bd'] = 'Réglages mis à jour';
-    $_MODULE['<{mymodule}prestashop>mymodule_f4f70727dc34561dfde1a3c529b6205c'] = 'Réglages';
-    $_MODULE['<{mymodule}prestashop>mymodule_2f6e771db304264c8104cb7534bb80cd'] = 'Valeur de configuration';
-    $_MODULE['<{mymodule}prestashop>mymodule_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
-    $_MODULE['<{mymodule}prestashop>mymodule_630f6dc397fe74e52d5189e2c80f282b'] = 'Retour à la liste';
-    $_MODULE['<{mymodule}prestashop>display_86e88cbccafa83831b4c6685501c6e58'] = 'Bienvenue sur cette page !';
-    $_MODULE['<{mymodule}prestashop>mymodule_9a843f20677a52ca79af903123147af0'] = 'Bienvenue !';
-    $_MODULE['<{mymodule}prestashop>mymodule_f5a7924e621e84c9280a9a27e1bcb7f6'] = 'Monde';
-    $_MODULE['<{mymodule}prestashop>mymodule_3af204e311ba60e6556822eac1437208'] = 'Bonjour %s !';
-    $_MODULE['<{mymodule}prestashop>mymodule_c66b10fbf9cb6526d0f7d7a602a09b75'] = 'Cliquez sur ce lien';
-    $_MODULE['<{mymodule}prestashop>mymodule_f42c5e677c97b2167e7e6b1e0028ec6d'] = 'Cliquez-moi !';
+```php
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{mymodule}prestashop>mymodule_2ddddc2a736e4128ce1cdfd22b041e7f'] = 'Mon module';
+$_MODULE['<{mymodule}prestashop>mymodule_d6968577f69f08c93c209bd8b6b3d4d5'] = 'Description du module.';
+$_MODULE['<{mymodule}prestashop>mymodule_533937acf0e84c92e787614bbb16a7a0'] = 'Êtes-vous certain de vouloir désinstaller ce module ? Vous perdrez tous vos réglages !';
+$_MODULE['<{mymodule}prestashop>mymodule_0f40e8817b005044250943f57a21c5e7'] = 'Aucun nom fourni';
+$_MODULE['<{mymodule}prestashop>mymodule_fe5d926454b6a8144efce13a44d019ba'] = 'Valeur de configuration non valide.';
+$_MODULE['<{mymodule}prestashop>mymodule_c888438d14855d7d96a2724ee9c306bd'] = 'Réglages mis à jour';
+$_MODULE['<{mymodule}prestashop>mymodule_f4f70727dc34561dfde1a3c529b6205c'] = 'Réglages';
+$_MODULE['<{mymodule}prestashop>mymodule_2f6e771db304264c8104cb7534bb80cd'] = 'Valeur de configuration';
+$_MODULE['<{mymodule}prestashop>mymodule_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
+$_MODULE['<{mymodule}prestashop>mymodule_630f6dc397fe74e52d5189e2c80f282b'] = 'Retour à la liste';
+$_MODULE['<{mymodule}prestashop>display_86e88cbccafa83831b4c6685501c6e58'] = 'Bienvenue sur cette page !';
+$_MODULE['<{mymodule}prestashop>mymodule_9a843f20677a52ca79af903123147af0'] = 'Bienvenue !';
+$_MODULE['<{mymodule}prestashop>mymodule_f5a7924e621e84c9280a9a27e1bcb7f6'] = 'Monde';
+$_MODULE['<{mymodule}prestashop>mymodule_3af204e311ba60e6556822eac1437208'] = 'Bonjour %s !';
+$_MODULE['<{mymodule}prestashop>mymodule_c66b10fbf9cb6526d0f7d7a602a09b75'] = 'Cliquez sur ce lien';
+$_MODULE['<{mymodule}prestashop>mymodule_f42c5e677c97b2167e7e6b1e0028ec6d'] = 'Cliquez-moi !';
+```
 
 This file must not be edited manually! It can only be edited through the
 PrestaShop translation tool.
@@ -178,14 +183,15 @@ code:
 
 Here is the original code:
 
-    Hello,
-      {if isset($my_module_name) && $my_module_name}
-        {$my_module_name}
-      {else}
-        World
-      {/if}
-    !
-
+```
+Hello,
+  {if isset($my_module_name) && $my_module_name}
+    {$my_module_name}
+  {else}
+    World
+  {/if}
+!
+```
 As you can see, we need to get the "Hello World" string translatable,
 but also to cater for the fact that there is a variable. As explained in
 the "Translations in PrestaShop 1.5" chapter, variables are to be marked
@@ -194,7 +200,9 @@ using `sprintf()` markers, such as `%s` or `%1$s`.
 Making "Hello %s!" translatable words in easy: we just need to use this
 code:
 
-    {l s='Hello %s!' sprintf=$my_module_name d='Modules.MyModule'}
+```
+{l s='Hello %s!' sprintf=$my_module_name d='Modules.MyModule'}
+```
 
 But in our case, we also need to make sure that the %s is replaced by
 "World" in case the "my\_module\_name" value does not exist... and we
@@ -205,8 +213,10 @@ later on. We are going to use it in order to replace the variable with
 the translated "World" if the variable is empty or absent, using a
 temporary variable. Here is the final code:
 
-    {if !isset($my_module_name) || !$my_module_name}
-      {capture name='my_module_tempvar'}{l s='World' d='Modules.MyModule'}{/capture}
-      {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
-    {/if}
-    {l s='Hello %s!' sprintf=$my_module_name d='Modules.MyModule'}
+```
+{if !isset($my_module_name) || !$my_module_name}
+  {capture name='my_module_tempvar'}{l s='World' d='Modules.MyModule'}{/capture}
+  {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
+{/if}
+{l s='Hello %s!' sprintf=$my_module_name d='Modules.MyModule'}
+```

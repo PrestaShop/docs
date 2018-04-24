@@ -50,7 +50,6 @@ As we need to act on Dashboard but after the header, in the icons toolbar (with 
 Create a [new module](http://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
 
 ```php
-<?php
 // foo.php
 
 /* ... */
@@ -89,7 +88,6 @@ At this point, this is basic PHP code we need to produce. We need to retrieve th
 Even if using old way to retrieve data is still valid (``Product::getProducts`` or through the webservice), we'd like to introduce a best practice here: using a repository and get ride of the Object model. This has a lot of advantages, you rely on database instead of model and you'll have better performances and control on your data.
 
 ```php
-<?php
 // src/Repository/ProductRepository.php
 namespace Foo\Repository;
 
@@ -138,7 +136,7 @@ And declare your repository as a service:
 ```yaml
 # modules/foo/config/services.yml
 
-services:    
+services:
     product_repository:
         class: Foo\Repository\ProductRepository
         arguments: ['@doctrine.dbal.default_connection', '%database_prefix%']
@@ -147,7 +145,6 @@ services:
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
 
 ```php
-<?php
 // foo.php
 
 /* ... */
@@ -156,10 +153,10 @@ You can now use it in your module (and everywhere in PrestaShop modern pages!):
  */
 public function hookDisplayDashboardToolbarIcons($hookParams)
 {
-  if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
-      $products = $this->get('product_repository')->findAllByLangId(1);
-      dump($products);
-  }
+    if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
+        $products = $this->get('product_repository')->findAllByLangId(1);
+        dump($products);
+    }
 }
 ```
 
@@ -173,7 +170,6 @@ Now we retrieve the product list from our module and that we are able to display
 we could already create our XML file with raw PHP. Let's see how we can do it using the components provided by Symfony "out of box".
 
 ```php
-<?php
 // foo.php
 
 /* ... */
@@ -184,15 +180,19 @@ we could already create our XML file with raw PHP. Let's see how we can do it us
  */
 public function hookDisplayDashboardToolbarIcons($hookParams)
 {
-  if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
-    $products = $this->get('product_repository')->findAllByLangId(1);
+    if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
+        $products = $this->get('product_repository')->findAllByLangId(1);
 
-    $productsXml = $this->get('serializer')->serialize($products, 'xml', [
-        'xml_root_node_name' => 'products',
-        'xml_format_output' => true,
-    ]);
-    $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_.'products.xml', $productsXml);
-  }
+        $productsXml = $this->get('serializer')->serialize(
+            $products,
+            'xml',
+            [
+                'xml_root_node_name' => 'products',
+                'xml_format_output' => true,
+            ]
+        );
+        $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_.'products.xml', $productsXml);
+    }
 }
 ```
 

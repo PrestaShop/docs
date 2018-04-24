@@ -18,52 +18,73 @@ For instance:
 /**
  * Example from the CMS model (CMSCore)
  */
- public static $definition = array(
-   'table' => 'cms',
-   'primary' => 'id_cms',
-   'multilang' => true,
-   'fields' => array(
-     'id_cms_category'  => array('type' => self::TYPE_INT, 'validate' => 'isUnsignedInt'),
-     'position'         => array('type' => self::TYPE_INT),
-     'active'           => array('type' => self::TYPE_BOOL),
+public static $definition = [
+    'table' => 'cms',
+    'primary' => 'id_cms',
+    'multilang' => true,
+    'fields' => array(
+        'id_cms_category'  => ['type' => self::TYPE_INT, 'validate' => 'isUnsignedInt'],
+        'position'         => ['type' => self::TYPE_INT],
+        'active'           => ['type' => self::TYPE_BOOL],
  
-     // Language fields
-     'meta_description' =>
-         array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'size' => 255),
-     'meta_keywords'    =>
-         array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'size' => 255),
-     'meta_title'       =>
-         array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isGenericName', 'required' => true, 'size' => 128),
-     'link_rewrite'     =>
-         array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isLinkRewrite', 'required' => true, 'size' => 128),
-     'content'          =>
-         array('type' => self::TYPE_HTML,   'lang' => true, 'validate' => 'isString', 'size' => 3999999999999),
-   ),
- );
+        // Language fields
+        'meta_description' => [
+            'type' => self::TYPE_STRING,
+            'lang' => true,
+            'validate' => 'isGenericName',
+            'size' => 255
+        ],
+        'meta_keywords'    => [
+            'type' => self::TYPE_STRING,
+            'lang' => true,
+            'validate' => 'isGenericName',
+            'size' => 255
+        ],
+        'meta_title'       => [
+            'type' => self::TYPE_STRING,
+            'lang' => true,
+            'validate' => 'isGenericName',
+            'required' => true,
+            'size' => 128
+        ],
+        'link_rewrite'     => [
+            'type' => self::TYPE_STRING,
+            'lang' => true,
+            'validate' => 'isLinkRewrite',
+            'required' => true,
+            'size' => 128
+        ],
+        'content'          => [
+            'type' => self::TYPE_HTML,
+            'lang' => true,
+            'validate' => 'isString',
+            'size' => 3999999999999
+        ],
+    ],
+];
 ```
 
 ## Multiple stores and/or languages
 
 In order to retrieve an object in many languages:
 
-```
+```php
 'multilang' => true
 ```
 
 In order to retrieve an object depending on the current store:
 
-```
+```php
 'multishop' => true
 ```
 
 In order to retrieve an object which depends on the current store, and in many languages:
 
-```
+```php
 'multilang_shop' => true
 ```
 
 ## Main methods
-
 
 
 {{% funcdef %}}
