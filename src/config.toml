@@ -5,6 +5,7 @@ title = "Prestashop Developer Documentation"
 
 theme = "hugo-theme-learn"
 enableGitInfo = true
+googleAnalytics = "UA-2753771-44"
 
 [params]
   editURL = "https://github.com/PrestaShop/docs/edit/hugo/src/content/"
