@@ -16,27 +16,30 @@ Let's see an example on how to add, populate, validate and persist a new form fi
 #### Create the module and register the hooks
 
 ```php
-<?php
 # /modules/module_name/module_name.php
 
-    public function hookDisplayAdministrationPageForm(&$hookParams)
-    {
-        $formBuilder = $hookParams['form_builder'];
-        $uploadQuotaForm = $formBuilder->get('upload_quota');
-        $uploadQuotaForm->add('description', TextType::class, [
+public function hookDisplayAdministrationPageForm(&$hookParams)
+{
+    $formBuilder = $hookParams['form_builder'];
+    $uploadQuotaForm = $formBuilder->get('upload_quota');
+    $uploadQuotaForm->add(
+        'description', 
+        TextType::class, 
+        [
             'data' => 'A description',
             'label' => 'Description'
-        ]);
-    }
+        ]
+    );
+}
 
-    public function hookActionAdministrationPageFormSave(&$hookParams)
-    {
-        // retrieve and validate the data
-        dump($hookParams['form_data']['upload_quota']['description']);
+public function hookActionAdministrationPageFormSave(&$hookParams)
+{
+    // retrieve and validate the data
+    dump($hookParams['form_data']['upload_quota']['description']);
 
-        // if the data is invalid, populate `errors` array
-        dump($hookParams['errors']);
-    }
+    // if the data is invalid, populate `errors` array
+    dump($hookParams['errors']);
+}
 ```
 
 The form field should be available in the selected form, can be validated and persisted in the database if valid using the provided hooks. If you access the Administration page in Back Office, you should see the new form field:

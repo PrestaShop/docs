@@ -47,11 +47,11 @@ folders can be added later.
 
 The main mymodule.php file must start with the following test:
 
-    <?php
-    if (!defined('_PS_VERSION_'))
-    {
-      exit;
-    }
+```php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+```
 
 This checks for the existence of an always-existing PrestaShop constant
 (its version number), and if it does not exist, it stops the module from
@@ -72,15 +72,15 @@ CamelCase (see <http://en.wikipedia.org/wiki/CamelCase>). In our
 example: `MyModule`. Furthermore, that class must extend the `Module`
 class, in order to inherit all its methods and attributes.
 
-    <?php
-    if (!defined('_PS_VERSION_'))
-    {
-      exit;
-    }
+```php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 
-    class MyModule extends Module
-    {
-    }
+class MyModule extends Module
+{
+}
+```
 
 It can just as well extend any class derived from Module, for specific
 needs: `PaymentModule`, `ModuleGridEngine`, `ModuleGraph`, etc.
@@ -98,22 +98,24 @@ of a PrestaShop, the constructor class is the first method to be called
 when the module is loaded by PrestaShop. This is therefore the best
 place to set most of its details.
 
-    <?php
-    if (!defined('_PS_VERSION_'))
-    {
-      exit;
-    }
+```php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 
-    class MyModule extends Module
+class MyModule extends Module
+{
+    public function __construct()
     {
-      public function __construct()
-      {
         $this->name = 'mymodule';
         $this->tab = 'front_office_features';
         $this->version = '1.0.0';
         $this->author = 'Firstname Lastname';
         $this->need_instance = 0;
-        $this->ps_versions_compliancy = array('min' => '1.6', 'max' => _PS_VERSION_);
+        $this->ps_versions_compliancy = [
+            'min' => '1.6',
+            'max' => _PS_VERSION_
+        ];
         $this->bootstrap = true;
 
         parent::__construct();
@@ -123,21 +125,23 @@ place to set most of its details.
 
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
 
-        if (!Configuration::get('MYMODULE_NAME'))
-          $this->warning = $this->l('No name provided');
-      }
+        if (!Configuration::get('MYMODULE_NAME')) {
+            $this->warning = $this->l('No name provided');
+        }
     }
+}
+```
 
 Let's examine each line from this first version of the `MyModule`
 class...
 
-    public function __construct()
-
-    This line defines the class' constructor function.
-    $this->name = 'mymodule';
-    $this->tab = 'front_office_features';
-    $this->version = '1.0';
-    $this->author = 'Firstname Lastname';
+```php
+// This line defines the class constructor function.
+$this->name = 'mymodule';
+$this->tab = 'front_office_features';
+$this->version = '1.0';
+$this->author = 'Firstname Lastname';
+```
 
 This section assigns a handful of attributes to the class instance
 (`this`):
@@ -192,9 +196,14 @@ section in the "Modules" page:
 
 Let's continue with the next line in this block of code:
 
-    $this->need_instance = 0;
-    $this->ps_versions_compliancy = array('min' => '1.5', 'max' => '1.6');
-    $this->bootstrap = true;
+```php
+$this->need_instance = 0;
+$this->ps_versions_compliancy = [
+    'min' => '1.5',
+    'max' => '1.6'
+];
+$this->bootstrap = true;
+```
 
 This section handles the relationship with the module and its
 environment (namely, PrestaShop):
@@ -216,7 +225,9 @@ environment (namely, PrestaShop):
 
 Next, we call the constructor method from the parent PHP class:
 
-    parent::__construct();
+```php
+parent::__construct();
+```
 
 This will trigger a lot of actions from PrestaShop that you do not need
 to know about at this point. Calling the parent constuctor method must
@@ -226,13 +237,16 @@ use of the `this->l()` translation method.
 The next section deals with text strings, which are encapsulated in
 PrestaShop's translation method, `l()`:
 
-    $this->displayName = $this->l('My module');
-    $this->description = $this->l('Description of my module.');
+```php
+$this->displayName = $this->l('My module');
+$this->description = $this->l('Description of my module.');
 
-    $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
+$this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
 
-    if (!Configuration::get('MYMODULE_NAME'))
-        $this->warning = $this->l('No name provided.');
+if (!Configuration::get('MYMODULE_NAME')) {
+    $this->warning = $this->l('No name provided.');
+}
+```
 
 These lines respectively assign:
 
@@ -285,12 +299,12 @@ method.
 
 Here is the bare minimum for the `install()` method:
 
-    public function install()
-    {
-      if (!parent::install())
-        return false;
-      return true;
-    }
+```php
+public function install()
+{
+    return parent::install();
+}
+```
 
 In this first and extremely simplistic incarnation, this method does the
 minimum needed: return true returned by the Module class' `install()`
@@ -314,22 +328,25 @@ tasks during installation:
 -   Create the `MYMODULE_NAME` configuration setting, setting its value
     to "my friend".
 
-<!-- -->
 
-    public function install()
-    {
-      if (Shop::isFeatureActive())
+```php
+public function install()
+{
+    if (Shop::isFeatureActive()) {
         Shop::setContext(Shop::CONTEXT_ALL);
+    }
 
-      if (!parent::install() ||
+    if (!parent::install() ||
         !$this->registerHook('leftColumn') ||
         !$this->registerHook('header') ||
         !Configuration::updateValue('MYMODULE_NAME', 'my friend')
-      )
+    ) {
         return false;
-
-      return true;
     }
+
+    return true;
+}
+```
 
 If any of the lines in the testing block fails, the method returns
 `false` and the installation does not happen.
@@ -338,27 +355,30 @@ If any of the lines in the testing block fails, the method returns
 
 Here is the bare minimum for the uninstall() method:
 
-    public function uninstall()
-    {
-      if (!parent::uninstall())
-        return false;
-      return true;
-    }
+```php
+public function uninstall()
+{
+    return parent::uninstall());
+}
+```
 
 Building on this foundation, we want an uninstall() method that would
 delete the data added to the database during the installation (
 `MYMODULE_NAME` configuration setting). This method would look like
 this:
 
-    public function uninstall()
-    {
-      if (!parent::uninstall() ||
+```php
+public function uninstall()
+{
+    if (!parent::uninstall() ||
         !Configuration::deleteByName('MYMODULE_NAME')
-      )
+    ) {
         return false;
-
-      return true;
     }
+
+    return true;
+}
+```
 
 The Configuration object
 ------------------------
@@ -395,11 +415,13 @@ object. As long as you properly code the data handling function,
 anything goes. For instance, here is how to handle a PHP array using the
 `Configuration` object:
 
-    // Storing a serialized array.
-    Configuration::updateValue('MYMODULE_SETTINGS', serialize(array(true, true, false)));
+```php
+// Storing a serialized array.
+Configuration::updateValue('MYMODULE_SETTINGS', serialize(array(true, true, false)));
 
-    // Retrieving the array.
-    $configuration_array = unserialize(Configuration::get('MYMODULE_SETTINGS'));
+// Retrieving the array.
+$configuration_array = unserialize(Configuration::get('MYMODULE_SETTINGS'));
+```
 
 As you can see, this in a very useful and easy-to-use object, and you
 will certainly use it in many situations. Most native modules use it too
@@ -458,10 +480,11 @@ The Shop object
 
 Another of install()'s lines is thus:
 
-    if (Shop::isFeatureActive())
-    {
-      Shop::setContext(Shop::CONTEXT_ALL);
-    }
+```php
+if (Shop::isFeatureActive()) {
+    Shop::setContext(Shop::CONTEXT_ALL);
+}
+```
 
 As said earlier, here we check that the Multistore feature is enabled,
 and if so, set the current context to all shops on this installation of

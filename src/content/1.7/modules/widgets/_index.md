@@ -58,17 +58,18 @@ Example
 public function renderWidget($hookName = null, array $configuration = [])
 {
     if ($hookName == null && isset($configuration['hook'])) {
-            $hookName = $configuration['hook'];
+        $hookName = $configuration['hook'];
     }
     if (preg_match('/^displayNav\d*$/', $hookName)) {
-            $template_file = 'nav.tpl';
+        $template_file = 'nav.tpl';
     } elseif ($hookName == 'displayLeftColumn') {
-            $template_file = 'ps_contactinfo-rich.tpl';
+        $template_file = 'ps_contactinfo-rich.tpl';
     } else {
-            $template_file = 'ps_contactinfo.tpl';
+        $template_file = 'ps_contactinfo.tpl';
     }
+
     $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
-    
+
     return $this->fetch('module:'.$this->name.'/'.$template_file);
 }
 
@@ -78,18 +79,19 @@ public function getWidgetVariables($hookName = null, array $configuration = [])
     $contact_infos = [
         'company' => Configuration::get('PS_SHOP_NAME'),
         'address' => [
-                'formatted' => AddressFormat::generateAddress($address, array(), '<br />'),
-                'address1' => $address->address1,
-                'address2' => $address->address2,
-                'postcode' => $address->postcode,
-                'city' => $address->city,
-                'state' => (new State($address->id_state))->name[$this->context->language->id],
-                'country' => (new Country($address->id_country))->name[$this->context->language->id],
+            'formatted' => AddressFormat::generateAddress($address, array(), '<br />'),
+            'address1' => $address->address1,
+            'address2' => $address->address2,
+            'postcode' => $address->postcode,
+            'city' => $address->city,
+            'state' => (new State($address->id_state))->name[$this->context->language->id],
+            'country' => (new Country($address->id_country))->name[$this->context->language->id],
         ],
         'phone' => Configuration::get('PS_SHOP_PHONE'),
         'fax' => Configuration::get('PS_SHOP_FAX'),
         'email' => Configuration::get('PS_SHOP_EMAIL'),
     ];
+
     return [
         'contact_infos' => $contact_infos,
     ];

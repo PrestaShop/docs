@@ -41,7 +41,7 @@ Source files for the main css are in this directory:
 src/themes/hugo-theme-learn/_src/sass
 ```
 
-###How to build the theme
+### How to build the theme
 
 1. Switch to the theme's `_src` folder
     ```

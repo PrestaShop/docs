@@ -91,12 +91,9 @@ Here is how the files are organized:
 -   `/upload`: contains the files that would be uploaded by clients for
     customizable products (for instance, a picture that a client wants
     printed on a mug).
--   `vendor`: NEW IN 1.7. Contains various 3rd-party tools and
+-   `/vendor`: NEW IN 1.7. Contains various 3rd-party tools and
     frameworks that are used by PrestaShop, such as Composer, cURL,
     Doctrine, etc.
--   `web`: NEW IN 1.7. Contains various web-server-specific files, such
-    as favicon.ico or robots.txt. This folder is not part of the
-    public archive.
 -   `/webservice`: contains files that enable third-party applications
     to access PrestaShop through its API.
 

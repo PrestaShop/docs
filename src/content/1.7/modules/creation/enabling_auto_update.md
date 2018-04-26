@@ -22,25 +22,29 @@ main things:
 
 For instance:
 
-    /*
-    * File: /upgrade/Upgrade-1.1.php
-    */
-    function upgrade_module_1_1($module) {
-      // Process Module upgrade to 1.1
-      // ....
-      return true; // Return true if success.
-    }
+```php
+/**
+ * File: /upgrade/Upgrade-1.1.php
+ */
+function upgrade_module_1_1($module) {
+    // Process Module upgrade to 1.1
+    // ....
+    return true; // Return true if success.
+}
+```
 
 ...and then:
 
-    /*
-    * File: /upgrade/Upgrade-1.2.php
-    */
-    function upgrade_module_1_2($module) {
-      // Process Module upgrade to 1.2
-      // ....
-      return true; // Return true if succes.
-    }
+```php
+/**
+ * File: /upgrade/Upgrade-1.2.php
+ */
+function upgrade_module_1_2($module) {
+    // Process Module upgrade to 1.2
+    // ....
+    return true; // Return true if succes.
+ }
+ ```
 
 Each method should bring the necessary changes to the module's files and
 database data in order to reach the latest version.
@@ -48,43 +52,50 @@ database data in order to reach the latest version.
 For instance, here is the `/upgrade/install-1.4.9.php` file from the
 `gamification` module:
 
-    <?php
-    if (!defined('_PS_VERSION_'))
-        exit;
-    function upgrade_module_1_4_9($object)
-    {
-        return Db::getInstance()->execute(
-                'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'tab_advice` (
-                  `id_tab` int(11) NOT NULL,
-                  `id_advice` int(11) NOT NULL,
-                  PRIMARY KEY (`id_tab`, `id_advice`)
-                ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;');
-    }
+```php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+    
+function upgrade_module_1_4_9($object)
+{
+    return Db::getInstance()->execute(
+        'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'tab_advice` (
+        `id_tab` int(11) NOT NULL,
+        `id_advice` int(11) NOT NULL,
+        PRIMARY KEY (`id_tab`, `id_advice`)
+        ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;'
+    );
+}
+```
 
 The homeslider module's `install-1.2.1.php` file does even more:
 
-    <?php
-    if (!defined('_PS_VERSION_'))
-        exit;
+```php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 
-    function upgrade_module_1_2_1($object)
-    {
-        return Db::getInstance()->execute('
-        UPDATE '._DB_PREFIX_.'homeslider_slides_lang SET
+function upgrade_module_1_2_1($object)
+{
+    return Db::getInstance()->execute(
+        'UPDATE '._DB_PREFIX_.'homeslider_slides_lang SET
             '.homeslider_stripslashes_field('title').',
             '.homeslider_stripslashes_field('description').',
             '.homeslider_stripslashes_field('legend').',
             '.homeslider_stripslashes_field('url')
-        );
-    }
+    );
+}
 
-    function homeslider_stripslashes_field($field)
-    {
-        $quotes = array('"\\\'"', '"\'"');
-        $dquotes = array('\'\\\\"\'', '\'"\'');
-        $backslashes = array('"\\\\\\\\"', '"\\\\"');
-        return '`'.bqSQL($field).'` = replace(replace(replace(`'.bqSQL($field).'`, '.$quotes[0].', '.$quotes[1].'), '.$dquotes[0].', '.$dquotes[1].'), '.$backslashes[0].', '.$backslashes[1].')';
-    }
+function homeslider_stripslashes_field($field)
+{
+    $quotes = array('"\\\'"', '"\'"');
+    $dquotes = array('\'\\\\"\'', '\'"\'');
+    $backslashes = array('"\\\\\\\\"', '"\\\\"');
+    return '`'.bqSQL($field).'` = replace(replace(replace(`'.bqSQL($field).'`, '.$quotes[0].', '.$quotes[1].'), '.$dquotes[0].', '.$dquotes[1].'), '.$backslashes[0].', '.$backslashes[1].')';
+}
+```
+
 
 PrestaShop will then parse all of these scripts one after the other,
 sequentially. It is therefore highly advised to number your module's
@@ -104,14 +115,16 @@ include the new hooks' code, so you have to use the upgrade methods:
 For instance, here's the `install-1.2.php` file from the blockbestseller
 module:
 
-    <?php
-    if (!defined('_PS_VERSION_'))
-        exit;
+```php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
 
-    function upgrade_module_1_2($object)
-    {
-        return ($object->registerHook('addproduct')
-          && $object->registerHook('updateproduct')
-          && $object->registerHook('deleteproduct')
-          && $object->registerHook('actionOrderStatusPostUpdate'));
-    }
+function upgrade_module_1_2($object)
+{
+    return ($object->registerHook('addproduct') &&
+        $object->registerHook('updateproduct') &&
+        object->registerHook('deleteproduct') &&
+        $object->registerHook('actionOrderStatusPostUpdate'));
+}
+```

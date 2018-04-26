@@ -30,12 +30,12 @@ Every hook you want to use must be registered first. This is usually done during
 ```php
 public function install()
 {
-  // [...]
+    // [...]
 
-  $this->registerHook('displayHeader');
-  $this->registerHook('displayFooter');
+    $this->registerHook('displayHeader');
+    $this->registerHook('displayFooter');
 
-  // [...]
+    // [...]
 }
 ```
 

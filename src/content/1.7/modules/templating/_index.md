@@ -20,7 +20,7 @@ Our Customer want a better Listing vieew: the "Price" column should be at positi
 
 ### Identify the template to override
 
-First we need to identify which Twig template(s) is (are) rendered. Using the *Debug mode*, select the "Twig metrics" block in the Symfony Debug toolbar. You'll see the list of Twig templates used to render the page. In our case, we are interested by the template "**@PrestaShop/Admin/Product/catalog.html.twig**".
+First we need to identify which Twig template(s) is (are) rendered. Using the *Debug mode*, select the "Twig metrics" block in the Symfony Debug toolbar. You'll see the list of Twig templates used to render the page. In our case, we are interested by the template **`@PrestaShop/Admin/Product/catalog.html.twig`**.
 
 ### Override the template in the module: a simple "Hello world!"
 

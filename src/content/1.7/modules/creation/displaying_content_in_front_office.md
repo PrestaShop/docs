@@ -11,16 +11,19 @@ the front office, we have to add support for a few hooks. This is done
 by implementing the hooks' methods, and that was actually done in the
 `install()` method we wrote earlier, using the `registerHook()` method:
 
-    public function install()
-    {
-      if (Shop::isFeatureActive())
+```php
+public function install()
+{
+    if (Shop::isFeatureActive()) {
         Shop::setContext(Shop::CONTEXT_ALL);
+    }
 
-      return parent::install() &&
+    return parent::install() &&
         $this->registerHook('leftColumn') &&
         $this->registerHook('header') &&
         Configuration::updateValue('MYMODULE_NAME', 'my friend');
-    }
+}
+```
 
 As you can see, we make it so that the module is hooked to the
 "`leftColumn`" and "`header`" hooks. In addition to this, we will add
@@ -37,28 +40,27 @@ Attaching code to a hook requires a specific method for each:
 -   `hookDisplayHeader()`: will add a link to the module's CSS file,
     `/css/mymodule.css`.
 
-<!-- -->
+```php
+public function hookDisplayLeftColumn($params)
+{
+    $this->context->smarty->assign([
+        'my_module_name' => Configuration::get('MYMODULE_NAME'),
+        'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display')
+      ]);
 
-    public function hookDisplayLeftColumn($params)
-    {
-      $this->context->smarty->assign(
-          array(
-              'my_module_name' => Configuration::get('MYMODULE_NAME'),
-              'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display')
-          )
-      );
       return $this->display(__FILE__, 'mymodule.tpl');
-    }
+}
 
-    public function hookDisplayRightColumn($params)
-    {
-      return $this->hookDisplayLeftColumn($params);
-    }
+public function hookDisplayRightColumn($params)
+{
+    return $this->hookDisplayLeftColumn($params);
+}
 
-    public function hookDisplayHeader()
-    {
-      $this->context->controller->addCSS($this->_path.'css/mymodule.css', 'all');
-    }
+public function hookDisplayHeader()
+{
+    $this->context->controller->addCSS($this->_path.'css/mymodule.css', 'all');
+}
+```
 
 We are using the Context (`$this->context`) to change a Smarty variable:
 Smarty's `assign()` method makes it possible for us to set the
@@ -145,24 +147,26 @@ at the root.
 Here is our template file, located at
 `/views/templates/hook/mymodule.tpl`:
 
-    <!-- Block mymodule -->
-    <div id="mymodule_block_home" class="block">
-      <h4>Welcome!</h4>
-      <div class="block_content">
-        <p>Hello,
+```html
+<!-- Block mymodule -->
+<div id="mymodule_block_home" class="block">
+  <h4>Welcome!</h4>
+  <div class="block_content">
+    <p>Hello,
            {if isset($my_module_name) && $my_module_name}
                {$my_module_name}
            {else}
                World
            {/if}
            !
-        </p>
-        <ul>
-          <li><a href="{$my_module_link}" title="Click this link">Click me!</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- /Block mymodule -->
+    </p>
+    <ul>
+      <li><a href="{$my_module_link}" title="Click this link">Click me!</a></li>
+    </ul>
+  </div>
+</div>
+<!-- /Block mymodule -->
+```
 
 This is just regular HTML code... except for a few Smarty calls:
 
@@ -186,10 +190,12 @@ In addition to that, we are going to create a CSS file, and save it as
 /css/mymodule.css in the module's folder (or any sub-folder you like to
 keep you CSS in):
 
-    div#mymodule_block_home p {
-      font-size: 150%;
-      font-style:italic;
-    }
+```css
+div#mymodule_block_home p {
+    font-size: 150%;
+    font-style:italic;
+}
+```
 
 Save the template file in the module's `/views/templates/hook/` folder
 and the CSS file in the module's `/css/` folder, reload your shop's
@@ -241,7 +247,9 @@ The link that the module displays does not lead anywhere for now. Let's
 create the `display.php` file that it targets, with a minimal content,
 and put it in the module's root folder.
 
+```
     Welcome to this page!
+```
 
 Click the "Click me!" link: the resulting page is just that raw text,
 without anything from the theme. We would like to have this text
@@ -260,26 +268,33 @@ which is a must when using the translation tool.
 
 Here are our two files:
 
-    display.php
-    <?php
-    class mymoduledisplayModuleFrontController extends ModuleFrontController
+- *display.php*
+
+```php
+class mymoduledisplayModuleFrontController extends ModuleFrontController
+{
+    public function initContent()
     {
-      public function initContent()
-      {
         parent::initContent();
         $this->setTemplate('module:mymodule/views/templates/front/display.tpl');
-      }
     }
+}
+```
 
-    display.tpl
-    Welcome to my shop!
+- *display.tpl*
+
+```
+Welcome to my shop!
+```
 
 Let's explore `display.php`, our first PrestaShop front-end controller,
-stored in the /controllers/front folder of the module's main folder:
+stored in the /controllers/front folder of the module's main folder.
 
-    A front-end controller must be a class that extends the ModuleFrontController class.
-    That controller must have one method: `initContent()`, which calls the parent class' `initContent()` method...
-    ...which then calls the `setTemplate()` method with our `display.tpl` file.
+
+A front-end controller must be a class that extends the ModuleFrontController class.
+That controller must have one method: `initContent()`, which calls the parent class' `initContent()` method...
+...which then calls the `setTemplate()` method with our `display.tpl` file.
+
 
 `setTemplate()` is the method that will take care of embedding our
 one-line template into a full-blown page, with proper header, footer and
@@ -289,17 +304,16 @@ Until PrestaShop 1.4, developers who wanted to embed a template file
 into the site's theme had to use PHP's include() calls to include each
 portion of the page. Here is the equivalent code for display.php:
 
-    display.php
-    <?php
-    // This file must be placed at the root of the module's folder.
-    global $smarty;
-    include('../../config/config.inc.php');
-    include('../../header.php');
+```
+// This file must be placed at the root of the module's folder.
+global $smarty;
+include('../../config/config.inc.php');
+include('../../header.php');
 
-    $smarty->display(dirname(__FILE__).'/display.tpl');
+$smarty->display(dirname(__FILE__).'/display.tpl');
 
-    include('../../footer.php');
-    ?>
+include('../../footer.php');
+```
 
 As you can see, this is not necessary anymore since PrestaShop 1.5: you
 can and should use a front-end controller, and both the controller
@@ -328,25 +342,31 @@ For instance, we can create the \$my\_module\_message variable in PHP
 right in the `hookDisplayLeftColumn()` method, and have it displayed by
 our template file:
 
-    mymodule.php
-    public function hookDisplayLeftColumn($params)
-    {
-        $this->context->smarty->assign(
-            array(
-                'my_module_name' => Configuration::get('MYMODULE_NAME'),
-                'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display'),
-                'my_module_message' => $this->l('This is a simple text message') // Do not forget to enclose your strings in the l() translation method
-            )
-        );
+- *mymodule.php*
 
-        return $this->display(__FILE__, 'mymodule.tpl');
-    }
+```php
+public function hookDisplayLeftColumn($params)
+{
+    $this->context->smarty->assign(
+        [
+            'my_module_name' => Configuration::get('MYMODULE_NAME'),
+            'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display'),
+            'my_module_message' => $this->l('This is a simple text message') // Do not forget to enclose your strings in the l() translation method
+        ]
+    ];
+
+    return $this->display(__FILE__, 'mymodule.tpl');
+}
+```
 
 From there on, we can ask Smarty to display the content of this variable
 in our TPL file.
 
-    mymodule.tpl
-    {$my_module_message}
+- *mymodule.tpl*
+
+```
+{$my_module_message}
+```
 
 PrestaShop adds its own set of variables. For instance,
 `{$hook_left_column}` will be replaced with the content for the left
@@ -362,84 +382,56 @@ name, or even your own name or initials, such as:
 
 Here is a list of Smarty variables that are common to all pages:
 
-  ------------------------------------------------------------------------
-  File / folder       Description
-  ------------------- ----------------------------------------------------
-  img\_ps\_dir        URL for PrestaShop's image folder.
 
-  img\_cat\_dir       URL for the categories images folder.
-
-  img\_lang\_dir      URL for the languages images folder.
-
-  img\_prod\_dir      URL for the products images folder.
-
-  img\_manu\_dir      URL for the manufacturers images folder.
-
-  img\_sup\_dir       URL for the suppliers images folder.
-
-  img\_ship\_dir      URL for the carriers (shipping) images folder.
-
-  img\_dir            URL for the theme's images folder.
-
-  css\_dir            URL for the theme's CSS folder.
-
-  js\_dir             URL for the theme's JavaScript folder.
-
-  tpl\_dir            URL for the current theme's folder.
-
-  modules\_dir        URL the modules folder.
-
-  mail\_dir           URL for the mail templates folder.
-
-  pic\_dir            URL for the pictures upload folder.
-
-  lang\_iso           ISO code for the current language.
-
-  come\_from          URL for the visitor's origin.
-
-  shop\_name          Shop name.
-
-  cart\_qties         Number of products in the cart.
-
-  cart                The cart.
-
-  currencies          The various available currencies.
-
-  id\_currency\_cooki ID of the current currency.
-  e                   
-
-  currency            Currency object (currently used currency).
-
-  cookie              User cookie.
-
-  languages           The various available languages.
-
-  logged              Indicates whether the visitor is logged to a
-                      customer account.
-
-  page\_name          Page name.
-
-  customerName        Client name (if logged in).
-
-  priceDisplay        Price display method (with or without taxes...).
-
-  roundMode           Rounding method in use.
-
-  use\_taxes          Indicates whether taxes are enabled or not.
-  ------------------------------------------------------------------------
+| File / folder       | Description                                                   |
+| ------------------- | ------------------------------------------------------------- |
+| img\_ps\_dir        | URL for PrestaShop's image folder.                            |
+| img\_cat\_dir       | URL for the categories images folder.                         |
+| img\_lang\_dir      | URL for the languages images folder.                          |
+| img\_prod\_dir      | URL for the products images folder.                           |
+| img\_manu\_dir      | URL for the manufacturers images folder.                      |
+| img\_sup\_dir       | URL for the suppliers images folder.                          |
+| img\_ship\_dir      | URL for the carriers (shipping) images folder.                |
+| img\_dir            | URL for the theme's images folder.                            |
+| css\_dir            | URL for the theme's CSS folder.                               |
+| js\_dir             | URL for the theme's JavaScript folder.                        |
+| tpl\_dir            | URL for the current theme's folder.                           |
+| modules\_dir        | URL the modules folder.                                       |
+| mail\_dir           | URL for the mail templates folder.                            |
+| pic\_dir            | URL for the pictures upload folder.                           |
+| lang\_iso           | ISO code for the current language.                            |
+| come\_from          | URL for the visitor's origin.                                 |
+| shop\_name          | Shop name.                                                    |
+| cart\_qties         | Number of products in the cart.                               |
+| cart                | The cart.                                                     |
+| currencies          | The various available currencies.                             |
+| id\_currency\_cooki | ID of the current currency.                                   |
+| currency            | Currency object (currently used currency).                    |
+| cookie              | User cookie.                                                  |
+| languages           | The various available languages.                              |
+| logged              | Indicates whether the visitor is logged to a customer account.|
+| page\_name          | Page name.                                                    |
+| customerName        | Client name (if logged in).                                   |
+| priceDisplay        | Price display method (with or without taxes...).              |
+| roundMode           | Rounding method in use.                                       |
+| use\_taxes          | Indicates whether taxes are enabled or not.                   |
 
 There are many other contextual hooks. If you need to display all of the
 current page's Smarty variables, add the following call:
 
-    {debug}
+```
+{debug}
+```
 
 Comments are based on asterisk:
 
-    {* This string is commented out *}
+```
+{* This string is commented out *}
 
-    {*
-    This string is too!
-    *}
+{*
+This string is too!
+*}
+```
 
 Unlike with HTML comments, commented-out Smarty code is not present in
 the final output file.
