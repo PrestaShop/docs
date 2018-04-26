@@ -281,20 +281,20 @@ class mymoduledisplayModuleFrontController extends ModuleFrontController
 }
 ```
 
-- **display.tpl*
+- *display.tpl*
+
 ```
 Welcome to my shop!
 ```
 
 Let's explore `display.php`, our first PrestaShop front-end controller,
-stored in the /controllers/front folder of the module's main folder:
+stored in the /controllers/front folder of the module's main folder.
 
 
-```
 A front-end controller must be a class that extends the ModuleFrontController class.
 That controller must have one method: `initContent()`, which calls the parent class' `initContent()` method...
 ...which then calls the `setTemplate()` method with our `display.tpl` file.
-```
+
 
 `setTemplate()` is the method that will take care of embedding our
 one-line template into a full-blown page, with proper header, footer and
@@ -363,6 +363,7 @@ From there on, we can ask Smarty to display the content of this variable
 in our TPL file.
 
 - *mymodule.tpl*
+
 ```
 {$my_module_message}
 ```
