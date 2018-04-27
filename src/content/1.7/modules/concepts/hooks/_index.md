@@ -1,6 +1,7 @@
 ---
 title: Hooks
 weight: 2
+chapter: true
 ---
 
 # Hooks
@@ -39,7 +40,7 @@ public function install()
 }
 ```
 
-If you do not know where you can register, [a list of available hooks]({{< ref "1.7/modules/hooks/list_of_hooks.md" >}}) is available.
+If you do not know where you can register, [a list of available hooks]({{< ref "1.7/modules/concepts/hooks/list_of_hooks.md" >}}) is available.
 
 ### Execution
 

@@ -1,12 +1,24 @@
 ---
-title: Creating a first module
+title: Getting started
 weight: 1
 chapter: true
 ---
 
-Creating a first module
-=======================
+# Getting started
 
+## Quick start
+
+Modules must follow some guidelines to work on PrestaShop.
+
+If you want to get started quickly, with a ready-to-use module template, you can use the module
+generator available on the [PrestaShop Validator](https://validator.prestashop.com/generator).
+
+It provides an easy way to generate a payment or shipping module, with the basic
+structure, the default properties customized and the most common use cases covered (hook, upgrade...).
+
+**[> Generate a module](https://validator.prestashop.com/generator)**
+
+## Tutorial: Understanding your first module
 
 {{% notice note %}}
 Before you start writing code for your PrestaShop module, you should be
@@ -28,6 +40,7 @@ read it in order to make sure that the code you produce fits correctly
 with the overall code of the PrestaShop project. The PHPCodeSniffer can
 help you make sure you follow the standard properly.
 {{% /notice %}}
+
 
 Let's create a simple first module; this will enable us to better
 describe its structure. We will name it "My module".

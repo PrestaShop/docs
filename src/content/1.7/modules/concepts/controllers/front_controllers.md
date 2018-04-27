@@ -1,0 +1,176 @@
+---
+title: Front controllers
+weight: 2
+---
+
+# Front controllers
+
+These class are accessible from the front-office and add features to the
+customers.
+
+## Creating a front controller
+
+In order to have a front controller read by PrestaShop, these 3 rules have
+to be followed:
+
+* it is stored in the subfolder `controllers/front/` of the module.
+* in CamelCase, the class name follows this format: `<ModuleName><FileName>ModuleFrontController`.
+* it extends the class `ModuleFrontController`.
+
+### Minimum controller example
+
+Let's say we want a controller responsible of payments validation in our
+module `cheque`.
+
+We create a file `/modules/cheque/controllers/front/validation.php` and its class:
+
+```php
+/**
+ * <ModuleName> => cheque
+ * <FileName> => validation.php
+ * Format expected: <ModuleName><FileName>ModuleFrontController
+ */
+class ChequeValidationModuleFrontController extends ModuleFrontController
+{
+}
+```
+
+That's all, methods added to the class will be taken in account by PrestaShop
+automatically.
+
+## Adding methods to the controller
+
+There are basically to kinds of HTTP calls possible for a controller:
+
+* Calls with GET, used to only retrieve data,
+* Calls with POST, used as soon as some data is modified on the shop.
+
+Depending of the request made to the controller, a different method will be
+called by the core.
+
+### Display content (GET)
+
+Handling GET requests can be done by implementing the method `initContent()` in
+the front controller. Note the parent class also implements it, do not forget
+to call it as well.
+
+Its purpose should be assigning the variables to smarty, and setting the
+template to be displayed.
+
+#### Assign variables to smarty
+
+The smarty engine is available in the `context` property of the controller.
+Assigning variables can be done with its method `assign(array $vars)`.
+
+```php
+public function initContent()
+{
+  // In the template, we need the vars paymentId & paymentStatus to be defined
+  $this->context->smarty->assign(
+    array(
+      'paymentId' => Tools::getValue('id'), // Retrieved from GET vars
+      'paymentStatus' => [...],
+    ));
+}
+```
+
+#### Display HTML content
+
+This is the second part we expect in the method `initContent()`.
+
+HTML content should be stored in a smarty template, available in
+the module subfolder `views/templates/front/`.
+
+The method `setTemplate(...)` expect the template file name as parameter. There is no
+need to write its complete path, as PrestaShop expects to find it in the folder
+`views/templates/front/` of the same module.
+
+```php
+public function initContent()
+{
+  // In the template, we need the vars paymentId & paymentStatus to be defined
+  $this->context->smarty->assign(
+    array(
+      'paymentId' => Tools::getValue('id'), // Retrieved from GET vars
+      'paymentStatus' => [...],
+    ));
+
+  // Will use the file modules/cheque/views/templates/front/validation.tpl
+  $this->setTemplate('validation.tpl');
+}
+```
+
+### Handle actions (POST)
+
+POST requests will be managed from the method `postProcess()`.
+
+It does not receive parameters and does not expect any value to be returned,
+but user input can be checked with `Tools::getIsset(...)` and retrieved with
+`Tools::getValue(...)`.
+
+When done, controllers generally redirects to another route, by using
+`Tools::redirect(<url>)`.
+
+
+## Accessing a module front controller
+
+Addresses to your controller can be generated easily with the class `Link`:
+
+```php
+public function Link::getModuleLink($module, $controller, array $params = array());
+```
+
+`$module` is the technical name of the module, `$controller` is the controller
+file name (without '.php'), and `$params` is an array of variables to add in a
+customized route or simply as GET params.
+
+The generated address handles automatically HTTP or HTTPS environments, with or
+without URL rewriting.
+
+### Example of method calls
+
+```php
+Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337);
+```
+* Without URL rewriting: `http://<shop_domain>/index.php?idPayment=1337&fc=module&module=cheque&controller=validation&id_lang=1`
+* With URL rewriting: `http://<shop_domain>/en/module/cheque/validation?idPayment=1337`
+
+## Restricting access
+
+### Logged customers only
+
+Set the property `$auth` to `true` if you want guests to be redirected to the
+login page automatically.
+
+```php
+public $auth = true;
+public $guestAllowed = false;
+```
+
+### To everybody, temporarily
+
+You can force the maintenance page to be displayed when a customer reaches a controller.
+
+```php
+protected $maintenance = true;
+```
+
+### Non-SSL calls
+
+When SSL is enabled to a shop, you can force a call to a controller to be
+secured by redirecting it to HTTPS.
+
+```php
+public $ssl = true;
+```
+
+## Addendum: Execution order of the controller’s functions
+
+  * **__contruct()**: Sets all the controller’s member variables.
+  * **init()**: Initializes the controller.
+  * **setMedia()** or **setMobileMedia()**: Adds all JavaScript and CSS specifics to the page so that they can be combined, compressed and cached (see PrestaShop’s CCC tool, in the back office “Performance” page, under # the “Advanced preferences” menu).
+  * **postProcess()**: Handles ajaxProcess.
+  * **initHeader()**: Called before initContent().
+  * **initContent()**: Initializes the content.
+  * **initFooter()**: Called after initContent().
+  * **display()** or **displayAjax()**: Displays the content.
