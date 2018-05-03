@@ -4,7 +4,7 @@ Coding standard and guidelines
 General code guideline
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Intend with spaces for every language (PHP, HTML, CSS, etc.): 4 spaces for PHP files, 2 spaces for all other filetypes.
+Indent with spaces for every language (PHP, HTML, CSS, etc.): 4 spaces for PHP files, 2 spaces for all other filetypes.
 
 Use our `.editorconfig file <http://editorconfig.org/>`_  in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/develop/.editorconfig
 
