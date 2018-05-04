@@ -111,7 +111,23 @@ The file should be placed in this module location:
 
 It will be copied in `/override/controllers/front/ProductController.php` during the module installation, and removed automatically on uninstall.
 
+### Example
 
+Let's consider the file `/modules/<module_name>/override/classes/controllers/FrontController.php`, overriding only one method of the core file.
+
+```php
+/*
+ * With this override, you have a new Smarty variable called "currentController" available in header.tpl
+ * This allows you to use a different header if you are on a product page, category page or home.
+ */
+class FrontController extends FrontControllerCore {
+    public function initHeader()
+    {
+        self::$smarty->assign('currentController', get_class($this));
+        return parent::initHeader();
+    }
+}
+```
 
 ## Theme template override
 
