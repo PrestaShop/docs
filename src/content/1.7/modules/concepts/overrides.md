@@ -39,13 +39,13 @@ For instance you could have a single Tools class for core and module helper meth
 ```php
 class MyModuleTools extends Tools
 {
-  /**
-   * Adding a new method for the example
-   */
-  pulic static function array_pluck(array $data, 'property')
-  {
-    // [...]
-  }
+    /**
+     * Adding a new method for the example
+     */
+    pulic static function array_pluck(array $data, 'property')
+    {
+        // [...]
+    }
 }
 ```
 
