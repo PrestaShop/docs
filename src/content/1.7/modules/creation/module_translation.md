@@ -28,11 +28,11 @@ In consequence, the method is available in the main class of the module.
 ```php
 class MyModule extends Module
 {
-  public function __construct()
-  {
-    // [...]
-    $this->displayName = $this->l('My module');
-    $this->description = $this->l('Description of my module.');
+    public function __construct()
+    {
+        // [...]
+        $this->displayName = $this->l('My module');
+        $this->description = $this->l('Description of my module.');
 ```
 
 #### Module controllers
@@ -43,10 +43,10 @@ No instanciation is required.
 ```php
 class ChequeValidationModuleFrontController extends ModuleFrontController
 {
-  public function initContent()
-  {
-    // [...]
-    $this->title = $this->module->l('My module title');
+    public function initContent()
+    {
+        // [...]
+        $this->title = $this->module->l('My module title');
 ```
 
 #### Other classes
