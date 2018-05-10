@@ -1,5 +1,5 @@
 ---
-title: Module translation
+title: Native module translation
 weight: 7
 ---
 
@@ -14,64 +14,29 @@ your module in all the languages that are installed on your shop. This
 could be a tedious task, but a whole system has been put in place in
 order to help you out.
 
+In short, PrestaShop 1.7 implements Symfony's translation mechanism,
+through the use of the `trans()` method, used to encapsulate the strings
+to be translated. This method is applied in a different way depending of
+the file type.
+
+{{% notice warning %}}
+**This mechanism does only work with native modules.**
+
+See [here]({{< ref "1.7/modules/creation/module_translation.md" >}}) for 3rd party modules.
+{{% /notice %}}
 
 The process of preparing text strings for translation is called internationalization, or i18n.
 
-## Translation-ready strings
-
-### PHP classes
-
-#### Module main class
-The translation of a string can be obtained with the `Module::l(...)` method.
-In consequence, the method is available in the main class of the module.
-
-```php
-class MyModule extends Module
-{
-    public function __construct()
-    {
-        // [...]
-        $this->displayName = $this->l('My module');
-        $this->description = $this->l('Description of my module.');
-```
-
-#### Module controllers
-
-`ModuleAdminController` & `ModuleFrontControllers` can access the module instance via the property `module`.
-No instanciation is required.
-
-```php
-class ChequeValidationModuleFrontController extends ModuleFrontController
-{
-    public function initContent()
-    {
-        // [...]
-        $this->title = $this->module->l('My module title');
-```
-
-#### Other classes
-
-Other classes may need to get the module instance as a parameter and store it for translations.
-
-Another solution is retrieving the module object with `Module::getInstanceByName(<Module_name>)`.
-
-### Templates
+Internationalizing strings in Smarty (.tpl) files
+-------------------------------------------------
 
 Strings in TPL files will need to be turned into dynamic content using
 the `{l}` function call, which Smarty will replace by the translation
 for the chosen language.
 
-These parameters are also mandatory:
-
-* `s` storing the string to be translated,
-* `mod` giving translation context.
-
-For instance, translating the string "Welcome to this page!" can be done like this:
-
-```php
-{l s='Welcome to this page!' d='Modules.MyModule'}
-```
-
+PrestaShop 1.6 used to require the `mod` parameter for context.
+PrestaShop 1.7 now requires that parameter to be "`d`", and to use the
+same domain as all the other strings in the module.
 
 In our sample module, the `mymodule.tpl` file...
 
@@ -107,30 +72,43 @@ In our sample module, the `mymodule.tpl` file...
 </li>
 <!-- Block mymodule -->
 <div id="mymodule_block_left" class="block">
-  <h4>{l s='Welcome!' mod='mymodule'}</h4>
+  <h4>{l s='Welcome!' d='Modules.MyModule'}</h4>
   <div class="block_content">
     <p>
       {if !isset($my_module_name) || !$my_module_name}
-        {capture name='my_module_tempvar'}{l s='World' mod='mymodule'}{/capture}
+        {capture name='my_module_tempvar'}{l s='World' d='Modules.MyModule'}{/capture}
         {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
       {/if}
-      {l s='Hello %1$s!' sprintf=$my_module_name mod='mymodule'}   
-    </p>   
+      {l s='Hello %1$s!' sprintf=$my_module_name d='Modules.MyModule'}
+    </p>
     <ul>
-      <li><a href="{$my_module_link}"  title="{l s='Click this link' mod='mymodule'}">{l s='Click me!' mod='mymodule'}</a></li>
+      <li><a href="{$my_module_link}"  title="{l s='Click this link' d='Modules.MyModule'}">{l s='Click me!' d='Modules.MyModule'}</a></li>
     </ul>
   </div>
-</div>
-<!-- /Block mymodule -->
+ </div>
+ <!-- /Block mymodule -->
 ```
 
-Notice that we always use the `mod` parameter. This is used by PrestaShop
+...and the `display.tpl` file:
+
+```
+Welcome to this page!
+```
+
+...becomes:
+
+```
+{l s='Welcome to this page!' d='Modules.MyModule'}
+```
+
+Notice that we always use the `d` parameter. This is used by PrestaShop
 to assert which module the string belongs to. The translation tool needs
 it in order to match the string to translate with its translation. This
-parameter is mandatory for module translation in templates.
+parameter is mandatory for module translation.
 
 
-## Translations management
+Translating your module's strings
+---------------------------------
 
 Strings are delimited with single quotes. If a string contains single
 quotes, they should be escaped using a backslash (`\`).
@@ -170,6 +148,18 @@ $_MODULE['<{mymodule}prestashop>mymodule_2ddddc2a736e4128ce1cdfd22b041e7f'] = 'M
 $_MODULE['<{mymodule}prestashop>mymodule_d6968577f69f08c93c209bd8b6b3d4d5'] = 'Description du module.';
 $_MODULE['<{mymodule}prestashop>mymodule_533937acf0e84c92e787614bbb16a7a0'] = 'Êtes-vous certain de vouloir désinstaller ce module ? Vous perdrez tous vos réglages !';
 $_MODULE['<{mymodule}prestashop>mymodule_0f40e8817b005044250943f57a21c5e7'] = 'Aucun nom fourni';
+$_MODULE['<{mymodule}prestashop>mymodule_fe5d926454b6a8144efce13a44d019ba'] = 'Valeur de configuration non valide.';
+$_MODULE['<{mymodule}prestashop>mymodule_c888438d14855d7d96a2724ee9c306bd'] = 'Réglages mis à jour';
+$_MODULE['<{mymodule}prestashop>mymodule_f4f70727dc34561dfde1a3c529b6205c'] = 'Réglages';
+$_MODULE['<{mymodule}prestashop>mymodule_2f6e771db304264c8104cb7534bb80cd'] = 'Valeur de configuration';
+$_MODULE['<{mymodule}prestashop>mymodule_c9cc8cce247e49bae79f15173ce97354'] = 'Enregistrer';
+$_MODULE['<{mymodule}prestashop>mymodule_630f6dc397fe74e52d5189e2c80f282b'] = 'Retour à la liste';
+$_MODULE['<{mymodule}prestashop>display_86e88cbccafa83831b4c6685501c6e58'] = 'Bienvenue sur cette page !';
+$_MODULE['<{mymodule}prestashop>mymodule_9a843f20677a52ca79af903123147af0'] = 'Bienvenue !';
+$_MODULE['<{mymodule}prestashop>mymodule_f5a7924e621e84c9280a9a27e1bcb7f6'] = 'Monde';
+$_MODULE['<{mymodule}prestashop>mymodule_3af204e311ba60e6556822eac1437208'] = 'Bonjour %s !';
+$_MODULE['<{mymodule}prestashop>mymodule_c66b10fbf9cb6526d0f7d7a602a09b75'] = 'Cliquez sur ce lien';
+$_MODULE['<{mymodule}prestashop>mymodule_f42c5e677c97b2167e7e6b1e0028ec6d'] = 'Cliquez-moi !';
 ```
 
 This file must not be edited manually! It can only be edited through the
@@ -181,9 +171,8 @@ are now in French.
 
 They are also translated in French when the back office is in French.
 
-## Complex translations
-
-### Variables
+Translating complex code
+------------------------
 
 As we can see, the basis of template file translation is to enclose them
 in the `{l s='The string' mod='name_of_the_module'}`. The changes in
@@ -212,7 +201,7 @@ Making "Hello %s!" translatable words in easy: we just need to use this
 code:
 
 ```
-{l s='Hello %s!' sprintf=$my_module_name mod='mymodule'}
+{l s='Hello %s!' sprintf=$my_module_name d='Modules.MyModule'}
 ```
 
 But in our case, we also need to make sure that the %s is replaced by
@@ -226,42 +215,8 @@ temporary variable. Here is the final code:
 
 ```
 {if !isset($my_module_name) || !$my_module_name}
-  {capture name='my_module_tempvar'}{l s='World' mod='mymodule'}{/capture}
+  {capture name='my_module_tempvar'}{l s='World' d='Modules.MyModule'}{/capture}
   {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
 {/if}
-{l s='Hello %s!' sprintf=$my_module_name mod='mymodule'}
+{l s='Hello %s!' sprintf=$my_module_name d='Modules.MyModule'}
 ```
-
-### HTML content
-
-You may need to add HTML content in your translated string.
-Writing it directly in the string (original or translated) won't work, as the
-special characters would be escaped to avoid XSS security issues.
-
-Instead, you must replace some placeholders with the HTML code.
-
-
-Let's take an example with a link in a string, which can be tricky to do.
-The first solution coming in mind would be the concatenation of translated
-strings with raw HTML code.
-But this solution is not recommanded, because the words order could be
-different depending on the language used.
-
-```php
-{l
-  s='If you want a category to appear in the menu of your shop, go to [1]Modules > Modules & Services > Installed modules.[/1] Then, configure your menu module.'
-  sprintf=[
-  '[1]' => "<a href=\"{$link->getAdminLink('AdminModules')}\" class=\"_blank\">",
-  '[/1]' => '</a>'
-  ]
-  mod='mymodule'
-}
-```
-
-The string "**If you want a category to appear in the menu of your shop, go to [1]Modules > Modules & Services > Installed modules.[/1] Then, configure your menu module.**" remains quite simple, and you must make sure the parts **[1]** and **[/1]** exist in the other languages.
-
-## Native modules
-
-On PrestaShop 1.7, the translation system has changed for native modules (= provided by PrestaShop core team).
-
-Details on its implementation can be found [here]({{< ref "1.7/development/native_module_translation.md" >}}).
