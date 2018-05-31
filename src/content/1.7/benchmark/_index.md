@@ -189,21 +189,20 @@ php bin/console cache:clear --env=prod --no-debug
 Create a txt file ```url.txt``` with various urls from your shop: (prepend with the domain of your shop)
 
 ```text
-http://yourdomain/fr/
-http://yourdomain/fr/panier
-http://yourdomain/fr/meilleures-ventes
-http://yourdomain/fr/nouveaux-produits
-http://yourdomain/fr/promotions
-http://yourdomain/fr/hommes/1-1-hummingbird-printed-t-shirt.html#/1-taille-s/8-couleur-blanc
-http://yourdomain/fr/art/3-13-affiche-encadree-the-best-is-yet-to-come.html#/19-dimension-40x60cm
-http://yourdomain/fr/3-vetements
-http://yourdomain/fr/6-accessoires
-http://yourdomain/fr/9-art
-http://yourdomain/fr/9-art?q=Prix-€-9-11
-http://yourdomain/fr/magasins
-http://yourdomain/fr/fournisseur
-http://yourdomain/fr/recherche?controller=search&s=pull
-http://yourdomain/fr/2-accueil
+http://localhost:8080/
+http://localhost:8080/panier
+http://localhost:8080/meilleures-ventes
+http://localhost:8080/nouveaux-produits
+http://localhost:8080/promotions
+http://localhost:8080/men/1-1-hummingbird-printed-t-shirt.html#/1-taille-s/8-couleur-blanc
+http://localhost:8080/accessories/3-mug-the-best-is-yet-to-come.html
+http://localhost:8080/3-clothes
+http://localhost:8080/6-accessories
+http://localhost:8080/3-clothes?q=Prix-€-28-34
+http://localhost:8080/magasins
+http://localhost:8080/fournisseur
+http://localhost:8080/recherche?controller=search&s=sweater
+http://localhost:8080/2-accueil
 ```
 
 Then run a siege benchmark using this file:
