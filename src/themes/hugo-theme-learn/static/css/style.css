@@ -60,7 +60,7 @@
   padding: 2rem 0; }
   #chapter #body-inner {
     padding-bottom: 3rem;
-    max-width: 80%; }
+    width: 100%; }
   #chapter h3 {
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
     font-weight: 300; }
@@ -2025,5 +2025,13 @@ a:hover {
 .function-definition dd {
   margin-top: 5px;
   margin-bottom: 10px; }
+
+.chapter-start {
+  background-color: #df0067;
+  color: #fff;
+  font-size: 20px !important;
+  padding: 10px 20px !important; }
+  .chapter-start:hover {
+    color: #fff !important; }
 
 /*# sourceMappingURL=style.css.map*/
