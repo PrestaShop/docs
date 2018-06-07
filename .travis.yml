@@ -11,7 +11,7 @@ install:
 # Build the website
 script:
   - cd src
-  - ../bin/hugo-0.35/hugo
+  - ../bin/hugo-0.41/hugo
   # Create a CNAME file which mapping to our custom domain
   - echo 'devdocs.prestashop.com' > public/CNAME
 
