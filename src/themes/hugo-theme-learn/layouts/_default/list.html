@@ -4,8 +4,25 @@
 
 {{ .Content }}
 
-<!--<footer class="last-updated">
+{{ if .Params.chapter }}
+
+  {{ $subPagesInSection := (.CurrentSection.Pages | union .CurrentSection.Sections).ByWeight }}
+  {{ $nextPage := index $subPagesInSection 0 }}
+
+  {{ if $nextPage }}
+    {{ with $nextPage }}
+      <div style="text-align: right">
+        <a class="btn chapter-start" href="{{.URL}}" title="{{.Title}}">
+          Next: {{ $nextPage.Title }} &rsaquo;
+        </a>
+      </div>
+    {{ end }}
+  {{ end }}
+
+{{ end }}
+
+<footer class="last-updated">
 	{{ partial "git-info.html" . }}
-</footer>-->
+</footer>
 
 {{ partial "footer.html" . }}

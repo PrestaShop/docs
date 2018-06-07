@@ -111,3 +111,15 @@ a:hover {
     margin-bottom: 10px;
   }
 }
+
+// "Start reading" button at the bottom of a chapter page
+.chapter-start {
+  background-color: $primaryColor;
+  color: #fff;
+  font-size: 20px !important;
+  padding: 10px 20px !important;
+
+  &:hover {
+    color: #fff !important;
+  }
+}
