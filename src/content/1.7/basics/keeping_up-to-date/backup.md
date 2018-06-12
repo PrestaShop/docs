@@ -1,9 +1,10 @@
 ---
-title: Preliminary task
+title: "How to backup PrestaShop"
+menuTitle: "Shop backup"
 weight: 10
 ---
 
-# Preliminary task: Backup
+# How to backup PrestaShop
 
 Before starting anything, you must think first about safety.
 Any modification made on a shop could break it, so you must make sure all your data has been backed up before going further. This basically implies saving two things: your files and your database.

@@ -1,5 +1,6 @@
 ---
-title: Staying up-to-date
+menuTitle: Staying up-to-date
+title: Keep PrestaShop up-to-date
 weight: 20
 ---
 
@@ -22,7 +23,6 @@ Keeping PrestaShop up-to-date can be done via different methods. Choose the best
 
 {{< figure src="/images/1.7/upgrade-migration/upgrade-schema.png" alt="Upgrade schema" >}}
 
-#### Target
 Upgrading a shop is the recommended method when you want to get your shop up-to-date without switching to the next major version.
 
 It does not require any additional tools to run if you follow the manual process, the most recent release package will be enough.
@@ -48,7 +48,6 @@ Run the database upgrade.This could be enough for completing an upgrade, but add
 
 {{< figure src="/images/1.7/upgrade-migration/migration-schema.png" alt="Upgrade schema" >}}
 
-#### Target
 Upgrading is not the only way to update your shop to the latest version of PrestaShop. In some cases, migrating your data is a better option.
 
 This option is recommended when you switch on a new major version. As it brings a lot of changes in the core with many potential incompatibilities with the current theme and modules, starting fresh is less risky for stability.

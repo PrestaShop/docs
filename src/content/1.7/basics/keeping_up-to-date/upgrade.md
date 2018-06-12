@@ -1,9 +1,10 @@
 ---
-title: Upgrade
+menuTitle: Upgrade
+title: How to upgrade PrestaShop
 weight: 30
 ---
 
-# How-to: Upgrade
+# How to upgrade PrestaShop
 
 
 {{% notice warning %}}
@@ -13,6 +14,8 @@ Do not go further if you haven’t made a backup of your shop.
 
 Rollback will be the only way to go back if something does not go well,
 and this requires a backup.
+
+Learn [how to backup your shop]({{< ref "/1.7/basics/keeping_up-to-date/backup.md" >}})
 {{% /notice %}}
 
 This chapter describes several ways to complete an upgrade of
@@ -29,8 +32,7 @@ applied on very old shops.
 The first step is to download the latest version on http://www.prestashop.com/.
 
 If you upgrade to another version of PrestaShop 1.6, the release files
-can be found in a dedicated archives list
-(https://www.prestashop.com/en/previous-versions?version=1.6).
+can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).
 
 Download can also be done in command line, as done here with the version
 1.7.3.2:
@@ -216,8 +218,8 @@ versions of PrestaShop.
 
 This module has been reworked internally for PrestaShop 1.6 & 1.7.
 
-Technical details about this major version can be found here:
-https://docs.google.com/document/d/1DQMP6bg5_fgbJQScdidCQCEmAi4MzRgYNhdGVcYOqm4/edit#heading=h.sn6tqvhtvo8p
+Technical details about this major version can be found on a
+[specific document (Google docs)](https://docs.google.com/document/d/1DQMP6bg5_fgbJQScdidCQCEmAi4MzRgYNhdGVcYOqm4/edit#heading=h.sn6tqvhtvo8p)
 
 ### Download / Installation
 

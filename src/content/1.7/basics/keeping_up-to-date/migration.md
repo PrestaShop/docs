@@ -1,9 +1,10 @@
 ---
-title: Migration
+menuTitle: Migration
+title: How to migrate to PrestaShop 1.7
 weight: 20
 ---
 
-# How to: Migrate
+# How to migrate to PrestaShop 1.7
 
 ## Manual migration - Process details
 
@@ -40,6 +41,7 @@ For instance for your products on PrestaShop 1.7:
 Clicking on the “Export” button will make your browser download a CSV file, which contains the complete product list with the columns displayed on the page.
 
 With the same process, you can export the following data:
+
 * (Brand) Addresses
 * (Customer) Addresses
 * (Product) Attributes
@@ -65,7 +67,7 @@ Choosing an extraction in CSV will allow you to bring changes easily with a spre
 
 On phpMyAdmin, exporting in CSV can be done on the same page as the classic SQL dump.
 
-* Quick and complete export (recommended)
+###### Quick and complete export (recommended)
 
 This step can be completed straightforwardly by exporting all tables in a single call. Click on your database, then the “Export” button to start:
 
@@ -98,7 +100,7 @@ You will get a Zip file instead, containing one CSV file for each table.
 
 Finally, we advise to check the option “Put columns names in the first row”. This will be useful in the next step when your data will need to be modified.
 
-* Personalized export from custom SQL requests
+###### Personalized export from custom SQL requests
 
 We explained how to export all your tables to make sure you keep as much data as possible.
 
@@ -114,7 +116,7 @@ If the result fits your needs, you can export it with the “export” button av
 {{< figure src="/images/1.7/upgrade-migration/migration-phpmyadmin-export-custom-sql.png" >}}
 
 ##### mysqldump
-If you used `mysqldump` for your backups, there is also an option for exctracting your data in CSV files, as described in the official documentation: https://dev.mysql.com/doc/refman/8.0/en/mysqldump-delimited-text.html. However, our tests have shown that method is far from being easy.
+If you used `mysqldump` for your backups, there is also an option for exctracting your data in CSV files, as described in the [documentation](https://dev.mysql.com/doc/refman/8.0/en/mysqldump-delimited-text.html). However, our tests have shown that method is far from being easy.
 
 Example for exporting the table ps_product:
 ```bash
@@ -168,8 +170,8 @@ apt install mysql-utilities
 
 This tool can be run anywhere, as long as you can access both servers & databases. The basic use of this command requires the following parameters:
 
-```txt
-Usage: mysqldiff --server1=user:pass@host:port:socket --server2=user:pass@host:port:socket db3:db4
+```bash
+mysqldiff --server1=user:pass@host:port:socket --server2=user:pass@host:port:socket db3:db4
 ```
 
 You need to provide the credentials to your MySQL servers. Ifthe source and the destination databases are on the same server, the `--server2` parameter can be omitted. `db3` and `db4` are respectively the source and the destination databases of your data.
@@ -192,6 +194,7 @@ It appears the structure from PrestaShop has not drastically changed from 1.6 ve
 This step has to be reproduced as many times as you have tables waiting to be migrated. The import step will be easier if you make sure the data you transfer fits the destination structure. This chapter will help to identify the changes to apply depending on the diff created during the previous step.
 
 A few notes:
+
 * Not all differences require a change in your data,
 * Basic changes can be done using spreadsheet editor,
 * Complex modifications will require manual work.
@@ -611,8 +614,7 @@ developers to request the database.
 This can be used while developing a module responsible of the export
 and/or import of the objects from/to the database.
 
-For more details:
-http://devdocs.prestashop.com/1.7/development/database/objectmodel/
+For more details, see the page dedicated to [ObjectModels]({{< ref "1.7/development/database/objectmodel.md" >}})
 
 ### Web service (API)
 
@@ -642,8 +644,10 @@ automatic, because
 
 Useful links:
 
--   Learning how-to use the webservice API: http://doc.prestashop.com/display/PS16/Using+the+PrestaShop+Web+Service
--   Getting a list of all available ressources, ready for import/export: http://doc.prestashop.com/display/PS16/Web+service+one-page+documentation#Webserviceone-pagedocumentation-Availableresources
+-   [Learning how-to use the webservice API](http://doc.prestashop.com/display/PS16/Using+the+PrestaShop+Web+Service)
+-   [Getting a list of all available ressources, ready for import/export](http://doc.prestashop.com/display/PS16/Web+service+one-page+documentation#Webserviceone-pagedocumentation-Availableresources)
+
+## Migration modules and services
 
 ### Community module
 
