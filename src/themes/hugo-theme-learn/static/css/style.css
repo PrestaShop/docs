@@ -57,9 +57,8 @@
 #chapter {
   display: flex;
   height: 100%;
-  padding: 2rem 0; }
+  padding: 2rem 0 0; }
   #chapter #body-inner {
-    padding-bottom: 3rem;
     width: 100%; }
   #chapter h3 {
     font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
@@ -73,13 +72,11 @@
     @media only all and (max-width: 47.938em) {
       #chapter h1 {
         font-size: 2rem; } }
-  #chapter p {
+  #chapter p:first-of-type {
     font-size: 1.2rem; }
 
-footer.last-updated {
-  margin-top: 5rem;
-  font-size: .75rem;
-  font-style: italic; }
+.last-updated {
+  margin-top: 5rem; }
 
 #footer {
   padding: 3rem 1rem;
@@ -175,7 +172,7 @@ footer.last-updated {
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.1); }
 
 .version-pill {
-  font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-family: "Work Sans", "Helvetica", "Arial", sans-serif;
   font-weight: 400;
   display: inline-block;
   font-size: 1rem;
@@ -703,10 +700,11 @@ body {
   line-height: 1.7; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0.85rem 0 1.7rem 0;
+  margin: 1.5em 0 1.7rem 0;
   text-rendering: optimizeLegibility; }
 
 h1 {
+  margin-top: 0;
   font-size: 3.25rem; }
 
 h2 {
@@ -751,7 +749,7 @@ pre {
   padding: 0.938rem; }
 
 code {
-  vertical-align: bottom; }
+  vertical-align: baseline; }
 
 small {
   font-size: 0.925rem; }
@@ -845,9 +843,8 @@ input[type="submit"] {
 
 body {
   background: #fff;
-  color: #323232;
-  font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-  font-weight: 300;
+  color: #444;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   line-height: 1.6;
   font-size: 16px; }
 
@@ -1215,20 +1212,19 @@ select[multiple=multiple] {
   margin-left: 5px;
   margin-top: 2px; }
 
-#body-inner {
-  margin-bottom: 5rem; }
-  @media only all and (min-width: 1200px) {
-    #body-inner {
-      margin-right: 340px; } }
-  #body-inner .tabs-wrapper.ui-theme-badges {
-    background: #1d1f21; }
-    #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li {
-      font-size: 0.9rem;
-      text-transform: uppercase; }
-      #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li a {
-        background: #35393c; }
-      #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li.current a {
-        background: #4d5257; }
+@media only all and (min-width: 1200px) {
+  #body-inner {
+    margin-right: 340px; } }
+
+#body-inner .tabs-wrapper.ui-theme-badges {
+  background: #1d1f21; }
+  #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li {
+    font-size: 0.9rem;
+    text-transform: uppercase; }
+    #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li a {
+      background: #35393c; }
+    #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li.current a {
+      background: #4d5257; }
 
 h1,
 h2,
@@ -1236,7 +1232,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-family: "Work Sans", "Helvetica", "Arial", sans-serif;
   text-rendering: optimizeLegibility;
   color: #5e5e5e;
   font-weight: 400;
@@ -1271,7 +1267,7 @@ div.notices {
     font-size: 1rem;
     margin-top: 0;
     margin-bottom: 0;
-    color: #666; }
+    color: #555; }
   div.notices:before {
     position: absolute;
     top: 2px;
@@ -1377,7 +1373,7 @@ kbd,
 pre,
 samp {
   font-family: "Consolas", "Menlo", monospace;
-  font-size: 92%; }
+  font-size: 93%; }
 
 code {
   border-radius: 2px;
@@ -1869,12 +1865,12 @@ h6 {
     font-weight: inherit; }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 110% !important;
   margin: 2.5rem 0 1.5rem 0; }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 110% !important;
   margin: 2rem 0 1rem 0; }
 
@@ -1953,7 +1949,7 @@ select[multiple=multiple]:focus {
   box-shadow: none; }
 
 h2, h3, h4, h5 {
-  color: #5e5e5e !important; }
+  color: #444 !important; }
 
 a {
   color: #df0067; }
@@ -2033,5 +2029,9 @@ a:hover {
   padding: 10px 20px !important; }
   .chapter-start:hover {
     color: #fff !important; }
+
+.article-footer {
+  margin-top: 5rem;
+  font-size: .75rem; }
 
 /*# sourceMappingURL=style.css.map*/
