@@ -1,10 +1,9 @@
 #chapter {
   display: flex;
   height: 100%;
-  padding: 2rem 0;
+  padding: 2rem 0 0;
 
   #body-inner {
-    padding-bottom: 3rem;
     width: 100%;
   }
 
@@ -25,7 +24,7 @@
     }
   }
 
-  p {
+  p:first-of-type {
     font-size: 1.2rem;
   }
 }

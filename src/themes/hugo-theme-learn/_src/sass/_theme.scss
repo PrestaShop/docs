@@ -17,7 +17,6 @@ body {
   background: #fff;
   color: $mainTextColor;
   font-family: $baseFont;
-  font-weight: 300;
   line-height: 1.6;
   font-size: 16px;
 }
@@ -525,7 +524,6 @@ select[multiple=multiple] {
 }
 
 #body-inner {
-  margin-bottom: 5rem;
   @media only all and (min-width: $tocBreakpoint) {
       margin-right: 340px;
   }
@@ -598,7 +596,7 @@ div.notices {
     font-size: 1rem;
     margin-top: 0;
     margin-bottom: 0;
-    color: #666;
+    color: #555;
   }
 
   &:before {
@@ -781,7 +779,7 @@ kbd,
 pre,
 samp {
   font-family: $monospaceFont;
-  font-size: 92%;
+  font-size: 93%;
 }
 
 code {
@@ -1403,13 +1401,13 @@ h6 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 110% !important;
   margin: 2.5rem 0 1.5rem 0;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 110% !important;
   margin: 2rem 0 1rem 0;
 }

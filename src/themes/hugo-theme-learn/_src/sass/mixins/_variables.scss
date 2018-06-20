@@ -2,14 +2,14 @@
 $staticPath: '../';
 $fontPath: $staticPath + 'fonts/';
 $imgPath: $staticPath + 'images/';
-$baseFont: "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-$headerFont: $baseFont;
+$baseFont: "Open Sans", "Helvetica", "Arial", sans-serif;
+$headerFont: "Work Sans", "Helvetica", "Arial", sans-serif;
 $monospaceFont: "Consolas", "Menlo", monospace;
 
 $primaryColor: #df0067;
 
-$mainTextColor: #323232; /* Color of text by default */
-$mainTitlesTextColor: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
+$mainTextColor: #444; /* Color of text by default */
+$mainTitlesTextColor: #444; /* Color of titles h2-h3-h4-h5 */
 $mainLinkColor: $primaryColor; /* Color of links */
 $mainLinkHoverColor: #d01616; /* Color of hovered links */
 $mainAnchorColor: $primaryColor; /* color of anchors on titles */
