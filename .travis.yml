@@ -23,4 +23,4 @@ deploy:
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   verbose: true
   on:
-    branch: hugo
+    branch: master
