@@ -27,8 +27,6 @@ Fork the project on GitHub, work on a separate branch, push to your fork and sub
 
 [{{% siteparam ghRepoURL %}}]({{% siteparam ghRepoURL %}})
 
-> Note that we are currently using the `hugo` branch instead of `master`. This will change after the legacy documentation is fully migrated, and the old site phased out.
-
 ## Writing Markdown
 
 This site was created using the wonderful [Hugo static site generator](https://gohugo.io/), but the content itself is written using **Markdown**.
