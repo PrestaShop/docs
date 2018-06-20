@@ -1,8 +1,16 @@
 # PrestaShop Technical Documentation
 
-## Prerequisites
+This documentation is available at http://devdocs.prestashop.com/
 
-### [Hugo](https://gohugo.io/)
+## Contributing
+
+Contributions are more than welcome! [Find out how](http://devdocs.prestashop.com/1.7/documentation/how/).
+
+## Rendering the site locally
+
+### Prerequisites
+
+#### [Hugo](https://gohugo.io/)
 
 Install guide: https://gohugo.io/getting-started/installing
 
@@ -12,25 +20,30 @@ TL;DR:
 * **Mac**: `brew install hugo`
 * **Windows**: Grab the [release binary](https://github.com/gohugoio/hugo/releases)
 
-### Node.js and NPM
+#### Node.js and NPM
 
-This is only needed if you want to customize the style.
+> This is only needed if you want to customize the style.
 
 [Download Node here](https://nodejs.org/en/)
 
-## Running the site locally
+### Launching the site
 
-1. Switch to the `src` directory
+1. Switch to the `src` directory:
     ```
     cd src
     ```
 
-2. Launch Hugo
+2. Launch Hugo:
     ```
-    hugo serve
+    hugo server
     ```
+    > You may need to change the path to the `hugo` binary depending on where it is on your system
 
-3. Done! You can open up the site on your browser
+3. Done! You can open up the site on your browser.
+
+    > It's usually available at http://localhost:1313
+    
+    Any change you perform on your data will be updated almost instantly.
 
 ## Customizing the style
 
@@ -57,3 +70,7 @@ src/themes/hugo-theme-learn/_src/sass
     ```
     npm run build
     ```
+
+## License
+
+Content from this documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
