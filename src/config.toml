@@ -9,7 +9,7 @@ googleAnalytics = "UA-2753771-44"
 
 [params]
   editURL = "https://github.com/PrestaShop/docs/edit/hugo/src/content/"
-  ghRepoURL = "https://github.com/PrestaShop/docs/tree/hugo"
+  ghRepoURL = "https://github.com/PrestaShop/docs/tree/master"
   ghCommitURL = "https://github.com/PrestaShop/docs/commit/"
   howToContributeURL = "/1.7/documentation/how/"
   description = "Learn how to extend, modify and test PrestaShop, create modules, themes, and more."
