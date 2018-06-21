@@ -1,4 +1,4 @@
-baseURL = "http://devdocs.prestashop.com/"
+baseURL = "https://devdocs.prestashop.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "Prestashop Developer Documentation"
