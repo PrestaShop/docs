@@ -5,6 +5,7 @@ title = "Prestashop Developer Documentation"
 
 theme = "hugo-theme-learn"
 enableGitInfo = true
+enableRobotsTXT = true
 googleAnalytics = "UA-2753771-44"
 
 [params]
