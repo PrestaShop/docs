@@ -1,6 +1,7 @@
 ---
 menuTitle: Upgrade
 title: How to upgrade PrestaShop
+description: Everything you need to know to upgrade your PrestaShop to the latest version
 weight: 30
 ---
 
