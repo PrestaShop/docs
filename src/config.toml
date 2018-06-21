@@ -9,7 +9,7 @@ enableRobotsTXT = true
 googleAnalytics = "UA-2753771-44"
 
 [params]
-  editURL = "https://github.com/PrestaShop/docs/edit/hugo/src/content/"
+  editURL = "https://github.com/PrestaShop/docs/edit/master/src/content/"
   ghRepoURL = "https://github.com/PrestaShop/docs/tree/master"
   ghCommitURL = "https://github.com/PrestaShop/docs/commit/"
   howToContributeURL = "/1.7/documentation/how/"
