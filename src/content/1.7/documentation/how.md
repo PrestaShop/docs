@@ -20,7 +20,7 @@ You can pretty much everything directly on GitHub! Click on the "Improve this pa
 Fork the project on GitHub, work on a separate branch, push to your fork and submit a Pull Request.
 
 {{% notice tip %}}
-**Git workflow is recommended** if you already know your way around the git workflow, or if you want to work on the site itself. It will also allow you to build the site locally and check out exactly how your changes will look.
+**[Github workflow](https://guides.github.com/introduction/flow/) is recommended** if you already know your way around the git workflow, or if you want to work on the site itself. It will also allow you to build the site locally and check out exactly how your changes will look.
 {{% /notice %}}
 
 **The documentation source code is located in the following GitHub URL:**
