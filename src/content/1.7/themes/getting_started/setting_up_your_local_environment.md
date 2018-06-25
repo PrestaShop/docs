@@ -1,6 +1,7 @@
 ---
 title: Setting up your local environment
 menuTitle: Set up your local environment
+weight: 10
 ---
 
 # Setting up your local environment

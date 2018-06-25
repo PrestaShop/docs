@@ -1,11 +1,9 @@
 ---
 title: Starter Theme
-weight: 2
-chapter: true
+weight: 30
 ---
 
-Starter Theme
-=============
+# Starter Theme
 
 PrestaShop 1.7 introduces a new way for designers to create their theme from scratch: the Starter Theme. The default theme for PS 1.7 is based on the Starter Theme.
 
@@ -17,8 +15,7 @@ With the Starter Theme, the PrestaShop team decided to build a skeleton theme th
 
 By using the Starter Theme as the foundation for your custom theme, everything is ready for you, you *just* have to create upon it.
 
-Downloading the Starter Theme
------------------------------
+## Downloading the Starter Theme
 
 The Starter Theme is available on [GitHub](https://github.com/PrestaShop/StarterTheme).
 
@@ -34,8 +31,7 @@ The jQuery v2 library is loaded by the core.js file.
 Please note that if you want to sell your theme on the PrestaShop Addons marketplace, there are some specific requirements. For instance, **Addons-distributed themes MUST use Bootstrap 4**.
 {{% /notice %}}
 
-Modify. Don't override.
------------------------
+## Modify. Don't override.
 
 When you want to create a new theme, copy and paste all files from the
 Starter Theme inside your empty theme directory. Then you start

@@ -1,6 +1,8 @@
 ---
 title: Guidelines and coding standards
 menuTitle: Guidelines
+aliases:
+  - /1.7/themes/guidelines/
 weight: 1
 ---
 

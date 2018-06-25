@@ -1,7 +1,8 @@
 ---
 title: Javascript events
+alias:
+  - /1.7/themes/javascript_events/
 weight: 4
-chapter: true
 ---
 
 # JavaScript events
@@ -11,17 +12,19 @@ chapter: true
 PrestaShop 1.7 has reworked a lot of javascript code, almost rewriting everything.
 
 {{% notice info %}}
-It's recommended to read more about PrestaShop assets management before continuing.
+It's recommended to read more about [PrestaShop asset management]({{< ref "1.7/themes/getting_started/asset_management/_index.md" >}}) before continuing.
 {{% /notice %}}
 
 A default store loads a lot less files in 1.7 compared to 1.6, there are no specific files per page for instance. The 2 new important files you have to master are:
 
   File      | Content
   ----------| ------------------------------------------------------------------------------
-  `core.js` | Load Jquery2, make ajax calls, define core method that all frontend should use
+  `core.js` | Loads jQuery2, makes ajax calls, defines core methods that all frontend should use
   `theme.js`| Bundles all theme specific code and libraries
 
-> Jquery is loaded by the core, so each theme will have jQuery v2 available. Do not redefine it.
+{{% notice tip %}}
+  jQuery is loaded by the core, so each theme will have jQuery v2 available. Do not redefine it.
+{{% /notice %}}
 
 ## Events
 
@@ -55,7 +58,6 @@ Event Name            | Description
  `handleError`        | This event is fired after a fail of POST request. Have the `eventType` as first parameter.
  `updateFaces`        | On every product list page (category, search results, pricedrop and so on), the list is updated via ajax calls if you change filters or sorting options. Each time the facets is reloaded, this event is triggered.
  `responsiveUpdate`   | While broswer is resized, this event is fired with a `mobile` parameter.
- More events?         | Contribute to the doc to describe more events!
 
 ### Triggering delegated events
 

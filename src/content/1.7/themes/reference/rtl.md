@@ -1,5 +1,7 @@
 ---
 title: RTL support
+alias:
+  - /1.7/themes/rtl/
 ---
 
 # RTL support
