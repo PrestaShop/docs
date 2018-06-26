@@ -68,7 +68,7 @@ In our sample module, the `mymodule.tpl` file...
 
 ```html
 <li>
-  <a href="{$base_dir}modules/mymodule/mymodule_page.php" title="{l s='Click this link' mod='mymodule'}">{l s='Click me!' mod='mymodule'}</a>
+  <a href="{$base_dir}modules/mymodule/mymodule_page.php" title="{l s='Click this link' d='Modules.MyModule'}">{l s='Click me!' d='Modules.MyModule'}</a>
 </li>
 <!-- Block mymodule -->
 <div id="mymodule_block_left" class="block">
