@@ -42,9 +42,9 @@ public function getContent()
             Configuration::updateValue('MYMODULE_NAME', $myModuleName);
             $output .= $this->displayConfirmation($this->l('Settings updated'));
         }
-
-        return $output.$this->displayForm();
     }
+
+    return $output.$this->displayForm();
 }
 ```
 
@@ -164,7 +164,7 @@ public function displayForm()
     // Load current value
     $helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
 
-    $helper->generateForm($fieldsForm);
+    return $helper->generateForm($fieldsForm);
 }
 ```
 
