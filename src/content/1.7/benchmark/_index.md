@@ -1,11 +1,11 @@
 ---
 title: Benchmark
-weight: 7
-pre: "<b>7. </b>"
+weight: 8
+pre: "<b>8. </b>"
 chapter: true
 ---
 
-### Chapter 7
+### Chapter 8
 
 # How to benchmark your PrestaShop shop
 
@@ -14,9 +14,14 @@ chapter: true
 - git
 - php-7+
 - <a href="https://getcomposer.org/download/composer">composer</a>
-- siege or a load testing tool like <a href="https://locust.io">Locust</a>
 
-## Generate your dataset
+## Benchmark methodology
+In order to benchmark the performances of your shop, use a testing tool like <a href="https://locust.io">Locust</a>
+or siege.
+
+## Prepare your benchmark
+
+### Prepare your dataset
 
 Before launching a benchmark of PrestaShop, you need to put a few entries in your database.
 
@@ -84,7 +89,7 @@ directory
 php app/console.php
 ```
 
-## How to use this dataset during Prestashop install?
+#### How to use this dataset during Prestashop install?
 
 Actually it's quite simple. Just copy the content of the ```generated_data``` folders (three foldesr should be 
 there: data, img and langs) in the prestashop ```install/fixtures/fashion``` folders (overwrite the folders already 
@@ -92,79 +97,7 @@ there).
 
 Then launch a standard prestashop install.
 
-## Optimize your LAMP stack
-
-In order to properly benchmark your shop, you need to check the settings of PHP, Apache and MySQL.
-
-### 1) PHP Settings
-
-If you're using PHP-FPM (which should be the case in most of "modern" installations), you have to check the pool
-configuration.
-It's usually stored in the file ```/etc/php/7.x/fpm/pool.d/www.conf```.
-Inside this file, the most important setting is the ```pm.max_children``` setting. It must be greater than the max number
-of concurrent users you want to simulate during the bench.
-
-Make sure Zend Opcache is enabled.
-
-Use the following settings to optimize the performances:
-```text
-opcache.interned_strings_buffer=64
-opcache.fast_shutdown=1
-opcache.memory_consumption=256
-opcache.max_accelerated_files=10000
-```
-
-### 2) Apache Settings
-
-If you're using PHP-FPM, you should be enable to use apache mpm_event. Using the following configuration 
-(to set in the mpm_event.conf file) should allow you to test up to 400 concurrent users:
-
-```
-   ServerLimit             16
-   MaxClients              400
-   StartServers            3
-   ThreadLimit             64
-   ThreadsPerChild         25
-   MaxRequestWorkers       400
-   MaxConnectionsPerChild  0
-```
-
-### 3) MySQL/MariaDB Settings
-
-If you using MySQL < 8 or MariaDB, enable the query cache by putting this setting in the ```/etc/mysql/my.cnf``` file:
-
-```
-query_cache_limit               = 128K
-query_cache_size                = 32M
-query_cache_type                = ON
-```
-
-Other important settings are:
-
-```
-table_open_cache                      = 1000
-read_buffer_size                      = 2M
-read_rnd_buffer_size                  = 1M
-thread_cache_size                     = 80
-join_buffer_size                      = 2M
-sort_buffer_size                      = 2M
-max_connections                       = 400
-tmp_table_size                        = 32M
-max_heap_table_size                   = 32M
-table_definition_cache                = 1000
-performance_schema                    = OFF
-```
-
-Try to set the value of ```innodb_buffer_pool_size``` to something greater than the size of your database on disk.
-
-Before launching the benchmark, and after importing the data, it's always great to launch an ANALYZE TABLE on all your
-database by running on your server:
-
-```
-mysqlcheck -a -A -uroot -pyour_password
-```
-
-## Prepare your shop
+### Prepare your shop
 
 Make sure your not in debug mode! In ```config/defines.inc.php``` you should have:
 ```text
@@ -186,6 +119,16 @@ php bin/console cache:clear --env=prod --no-debug
 
 ## Bench your shop performances
 
+### Write down your settings
+
+Write down all the relevant informations which have an impact on your benchmark results:
+
+- Server configuration (CPU / Memory / Disks...)
+- PHP / Apache / MySQL settings
+- PrestaShop configuration and version
+
+
+### Run the frontoffice benchmark
 Create a txt file ```url.txt``` with various urls from your shop: (prepend with the domain of your shop)
 
 ```text
@@ -210,10 +153,11 @@ Then run a siege benchmark using this file:
 siege -b -i -c 1 -t 20S --no-parser -f url.txt
 ```
 
-Raise the concurrent parameter (-c 1) to the number of concurrent users you want to test.
-
-The best methodology is to first warmup your cache by testing 1 time with 1 concurrent user, and then progressively 
+We will first warmup the cache by testing 1 time with 1 concurrent user, and then progressively 
 raise the number of concurrent users until the performances actually decreases.
+
+
+Raise the concurrent parameter (-c 1) to the number of concurrent users you want to test.
 
 Ex for 10 concurrent users without MySQL query cache:
 
@@ -252,3 +196,34 @@ Failed transactions:	           0
 Longest transaction:	        0.57
 Shortest transaction:	        0.02
 ```
+
+### Interpret the results
+
+In the siege result output, here is the useful results:
+
+##### Transactions
+
+The total number of pages loaded during the benchmark. The higher the better.
+
+##### Availability
+
+It tells you the amount of pages which have failed to load.
+
+##### Response time
+
+The average response time of your pages. The lower the better.
+
+##### Transaction rate
+
+The number of pages loaded by second. The higher the better.
+
+##### Concurrency
+
+The number of concurrent transaction the software has been able to run. Should be close to the requested 
+concurrent user setting.
+
+##### Failed transactions
+
+Closely related to Availability, the number of pages which have failed to load (404, 503, ...)
+
+
