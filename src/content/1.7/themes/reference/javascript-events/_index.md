@@ -1,6 +1,6 @@
 ---
 title: Javascript events
-alias:
+aliases:
   - /1.7/themes/javascript_events/
 weight: 4
 ---

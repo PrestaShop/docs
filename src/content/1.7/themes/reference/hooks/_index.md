@@ -1,7 +1,7 @@
 ---
 title: Theme Hooks
 weight: 3
-alias:
+aliases:
   - /1.7/themes/hooks/
 ---
 
