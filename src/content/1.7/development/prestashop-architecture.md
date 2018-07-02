@@ -2,6 +2,7 @@
 title: The PrestaShop architecture
 aliases:
   - /1.7/dvelopment/prestashop_architecture
+  - /module/02-Fundamentals/index.html
 ---
 
 The PrestaShop architecture
