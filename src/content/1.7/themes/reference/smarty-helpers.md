@@ -1,6 +1,8 @@
 ---
 title: Smarty helper functions
 menuTitle: Smarty helpers
+aliases:
+  - /themes/smarty/index.html
 ---
 
 # Helpers: functions and modifiers

@@ -1,6 +1,8 @@
 ---
 title: Templates
 chapter: true
+aliases:
+  - /themes/templates/index.html
 ---
 
 # Templates

@@ -1,5 +1,7 @@
 ---
 title: Template inheritance
+aliases:
+  - /themes/smarty/template-inheritance.html
 ---
 
 # Template inheritance
