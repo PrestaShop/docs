@@ -51,7 +51,7 @@ Here is the complete list of required files:
 
 ### Required configuration keys
 
-Your configuration file `config/theme.yml` ([read more about this file]({{< ref "1.7/themes/getting_started/theme_yml.md" >}}))
+Your configuration file `config/theme.yml` ([read more about this file]({{< ref "1.7/themes/getting-started/theme-yml.md" >}}))
 must details some configuration keys.
 
 Here is the list of keys PrestaShop will look for. The dot represent the nesting.

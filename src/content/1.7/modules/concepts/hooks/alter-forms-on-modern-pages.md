@@ -1,6 +1,8 @@
 ---
 title: Alter forms on modern pages
 weight: 4
+aliases:
+  - /1.7/modules/concepts/hooks/alter_forms_on_modern_pages
 ---
 
 # Alter forms on modern pages

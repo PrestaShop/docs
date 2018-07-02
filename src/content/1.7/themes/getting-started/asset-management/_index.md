@@ -1,5 +1,8 @@
 ---
 title: Asset management
+aliases:
+  - /1.7/themes/getting_started/asset_management
+  - /themes/assets/index.html
 ---
 
 # Asset Management

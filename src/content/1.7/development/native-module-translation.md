@@ -1,6 +1,8 @@
 ---
 title: Native module translation
 weight: 7
+aliases:
+  - /1.7/dvelopment/native_module_translation
 ---
 
 Module translation
@@ -22,7 +24,7 @@ the file type.
 {{% notice warning %}}
 **This mechanism does only work with native modules.**
 
-See [here]({{< ref "1.7/modules/creation/module_translation.md" >}}) for 3rd party modules.
+See [here]({{< ref "1.7/modules/creation/module-translation.md" >}}) for 3rd party modules.
 {{% /notice %}}
 
 The process of preparing text strings for translation is called internationalization, or i18n.

@@ -1,6 +1,8 @@
 ---
 title: How to benchmark your PrestaShop
 weight: 1
+aliases:
+  - /1.7/benchmark/how_to
 ---
 
 How to setup the benchmark of your PrestaShop shop

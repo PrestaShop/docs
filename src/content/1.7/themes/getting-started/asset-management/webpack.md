@@ -1,5 +1,7 @@
 ---
 title: Webpack
+aliases:
+  - /1.7/themes/getting_started/asset_management/webpack
 ---
 
 # About Webpack

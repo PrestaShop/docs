@@ -2,6 +2,8 @@
 title: "How to backup PrestaShop"
 menuTitle: "Shop backup"
 weight: 10
+aliases:
+  - /1.7/basics/keeping_up-to-date/backup
 ---
 
 # How to backup PrestaShop

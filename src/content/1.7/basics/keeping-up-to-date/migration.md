@@ -3,6 +3,8 @@ menuTitle: Migration
 title: How to migrate to PrestaShop 1.7
 description: Learn how to migrate your current shop (1.6 or previous version) to PrestaShop 1.7
 weight: 20
+aliases:
+  - /1.7/basics/keeping_up-to-date/migration
 ---
 
 # How to migrate to PrestaShop 1.7

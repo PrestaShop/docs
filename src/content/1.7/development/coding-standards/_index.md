@@ -1,6 +1,8 @@
 ---
 title: Coding standards
 weight: 2
+aliases:
+  - /1.7/development/coding_standards
 ---
 
 # Coding standards

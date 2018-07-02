@@ -130,4 +130,4 @@ add a comment indicating where the code related to products can be found ;)
 jQuery v2.1 is loaded by the core (bundled in `core.js`) file, but no other libraries, since the idea is that the
 Starter Theme should not be opinionated.
 
-Read more about [assets management]({{< ref "1.7/themes/getting_started/asset_management/_index.md" >}}).
+Read more about [assets management]({{< ref "1.7/themes/getting-started/asset-management/_index.md" >}}).

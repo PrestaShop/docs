@@ -2,6 +2,8 @@
 title: Tooling prerequisites for theme designers
 menuTitle: Required tools
 weight: 20
+aliases:
+  - /1.7/themes/getting_started/tools_for_theme_designers
 ---
 
 # Tooling prerequisites for theme designers

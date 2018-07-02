@@ -1,5 +1,7 @@
 ---
 title: The PrestaShop architecture
+aliases:
+  - /1.7/dvelopment/prestashop_architecture
 ---
 
 The PrestaShop architecture

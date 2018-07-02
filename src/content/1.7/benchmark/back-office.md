@@ -1,6 +1,8 @@
 ---
 title: Back-Office Benchmark
 weight: 3
+aliases:
+  - /1.7/benchmark/back_office
 ---
 
 How to benchmark your PrestaShop Shop (Back-office)

@@ -2,6 +2,8 @@
 title: Setting up your local environment
 menuTitle: Set up your local environment
 weight: 10
+aliases:
+  - "/themes/gettingstarted/index.html#setting-up-your-local-environment"
 ---
 
 # Setting up your local environment

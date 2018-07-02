@@ -1,5 +1,7 @@
 ---
 title: Commits & Pull Requests
+aliases:
+  - /1.7/development/coding_standards/commits_and_pull_requests
 ---
 
 # Commits & Pull Requests conventions

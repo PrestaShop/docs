@@ -1,6 +1,9 @@
 ---
 title: Enabling the Auto-Update
 weight: 6
+aliases:
+  - /1.7/modules/creation/enabling_auto_update
+  - /module/05-CreatingAPrestaShop17Module/07-EnablingTheAutoUpdate.html
 ---
 
 Enabling the Auto-Update

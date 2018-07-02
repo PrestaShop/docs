@@ -1,6 +1,8 @@
 ---
 title: Front controllers
 weight: 2
+aliases:
+  - /1.7/modules/concepts/controllers/front_controllers
 ---
 
 # Front controllers

@@ -1,6 +1,8 @@
 ---
 title: Folder structure
 weight: 2
+aliases:
+  - /1.7/modules/creation/module-file-structure
 ---
 
 # Module file structure

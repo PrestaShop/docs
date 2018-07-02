@@ -2,6 +2,8 @@
 menuTitle: Staying up-to-date
 title: Keep PrestaShop up-to-date
 weight: 20
+aliases:
+  - /1.7/basics/keeping_up-to-date
 ---
 
 # Keep PrestaShop up-to-date

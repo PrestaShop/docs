@@ -1,6 +1,9 @@
 ---
 title: Module translation
 weight: 7
+aliases:
+  - /1.7/modules/creation/module_translation
+  - /module/05-CreatingAPrestaShop17Module/06-ModuleTranslation.html
 ---
 
 Module translation
@@ -264,4 +267,4 @@ The string "**If you want a category to appear in the menu of your shop, go to [
 
 On PrestaShop 1.7, the translation system has changed for native modules (= provided by PrestaShop core team).
 
-Details on its implementation can be found [here]({{< ref "1.7/development/native_module_translation.md" >}}).
+Details on its implementation can be found [here]({{< ref "1.7/development/native-module-translation.md" >}}).
