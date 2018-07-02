@@ -5,6 +5,7 @@ description: Learn how to migrate your current shop (1.6 or previous version) to
 weight: 20
 aliases:
   - /1.7/basics/keeping_up-to-date/migration
+  - /module/80-Updating/index.html
 ---
 
 # How to migrate to PrestaShop 1.7
