@@ -1,6 +1,8 @@
 ---
 title: Getting started
 weight: 1
+aliases:
+  - /module/05-CreatingAPrestaShop17Module/02-CreatingAFirstModule.html
 ---
 
 # Getting started

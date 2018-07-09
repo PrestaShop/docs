@@ -1,8 +1,9 @@
 ---
 title: Theme Hooks
 weight: 3
-alias:
+aliases:
   - /1.7/themes/hooks/
+  - /themes/hooks/index.html
 ---
 
 # Create hooks available in Front Office
@@ -31,7 +32,7 @@ From a Smarty template:
 If you want the user to be able to see your hook in PrestaShop's
 Position page (in the back office), it has to be registered.
 
-You can register your hook from your theme's [theme.yml file]({{< ref "1.7/themes/getting_started/theme_yml.md" >}}):
+You can register your hook from your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-yml.md" >}}):
 
 ```yaml
 global_settings:

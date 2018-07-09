@@ -1,6 +1,8 @@
 ---
 title: Notifications
 weight: 30
+aliases:
+  - /themes/templates/050-notifications.html
 ---
 
 # Notifications
@@ -28,7 +30,7 @@ An array of notification is passed to the templates, containing at least one of 
 **warning**
 : Important notice the merchant should know about.
 
-**info**   
+**info**
 : "just so you know".
 
 ## How to display notifications
