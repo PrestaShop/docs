@@ -81,7 +81,7 @@ What this means for any shop upgrade is that in order for a PS 1.6 to migrate to
 - Details on every changes concerning modules on [this article of the Build devblog](http://build.prestashop.com/news/module-development-changes-in-17/);
 - The [Theme Developer documentation]({{< ref "1.7/themes" >}}) is being written in the open. Don't hesitate to contribute or ask questions!
 - Payment modules:
-	- Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](http://developers.prestashop.com/module/50-PaymentModules/index.html)!
+  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](http://developers.prestashop.com/module/50-PaymentModules/index.html)!
 
 And of course [our 1.7 Project FAQ](http://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
 
@@ -95,8 +95,8 @@ At this stage, you can find the module_key for your module. This is to be entere
 
 ```php
 public function __construct() {
-	// etc.
-	$this->module_key = 'c1614c239af92968e5fae97f366e9961';
+  // etc.
+  $this->module_key = 'c1614c239af92968e5fae97f366e9961';
 }
 ```
 
