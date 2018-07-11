@@ -1,9 +1,9 @@
 ---
-title: Become a Core Contributor
+title: Become a Core Contributor using Docker
 weight: 2
 ---
 
-# How to become a Core Contributor to PrestaShop
+# How to become a Core Contributor using Docker
 
 If you're reading this, thank you! This means you're interested on contributing to PrestaShop.
 You probably are a PrestaShop developer, and your use of the project is slighty different from
