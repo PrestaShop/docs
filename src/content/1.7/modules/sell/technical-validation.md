@@ -47,7 +47,7 @@ define('_PS_MODE_DEV_', true);
 
 ### 2. Follow our good practices
 
-Read our article: [Good practices for developing modules]({{<ref "1.7/modules/creation/good_practices" >}}).
+Read our article: [Good practices for developing modules]({{<ref "1.7/modules/creation/good-practices" >}}).
 
 ### 3. Use the Validator to optimize your module
 
