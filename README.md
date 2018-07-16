@@ -12,13 +12,13 @@ Contributions are more than welcome! [Find out how](http://devdocs.prestashop.co
 
 #### [Hugo](https://gohugo.io/)
 
-Install guide: https://gohugo.io/getting-started/installing
-
 TL;DR:
 
 * **Linux**: Use the binary in the `/bin` directory
 * **Mac**: `brew install hugo`
 * **Windows**: Grab the [release binary](https://github.com/gohugoio/hugo/releases)
+
+Or read the [Official install guide](https://gohugo.io/getting-started/installing).
 
 #### Node.js and NPM
 
@@ -26,11 +26,17 @@ TL;DR:
 
 [Download Node here](https://nodejs.org/en/)
 
+### Clone the repository somewhere on your system
+
+```
+git clone https://github.com/PrestaShop/docs.git
+```
+
 ### Launching the site
 
 1. Switch to the `src` directory:
     ```
-    cd src
+    cd /path/to/docs/src
     ```
 
 2. Launch Hugo:
