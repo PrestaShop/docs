@@ -1,0 +1,39 @@
+---
+title: Function definition
+---
+
+# Function definition
+
+To render a list of function definitions, use `funcdef` in combination with Markdown definition list:
+
+```go
+{{%/* funcdef */%}}
+
+__construct($id = NULL, $id_lang = NULL)
+: 
+    Build object.
+
+add($autodate = true, $nullValues = false)
+: 
+    Save current object to database (add or update).
+
+{{%/* /funcdef */%}}
+```
+
+Rendered result:
+
+{{% funcdef %}}
+
+__construct($id = NULL, $id_lang = NULL)
+: 
+    Build object.
+
+add($autodate = true, $nullValues = false)
+: 
+    Save current object to database (add or update).
+
+{{% /funcdef %}}
+
+{{% notice info %}}
+Be aware that you need to leave at lease one trailing space after each `:` for the markup to be correctly interpreted as a definition list. 
+{{% /notice %}}
