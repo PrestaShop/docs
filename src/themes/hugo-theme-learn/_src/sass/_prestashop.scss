@@ -128,3 +128,17 @@ a:hover {
   margin-top: 5rem;
   font-size: .75rem
 }
+
+// article images
+a[data-featherlight] {
+  display: block;
+
+  margin: {
+    left: 3rem;
+    right: 3rem;
+  }
+
+  > img {
+    max-height: 350px;
+  }
+}
