@@ -2034,4 +2034,11 @@ a:hover {
   margin-top: 5rem;
   font-size: .75rem; }
 
+a[data-featherlight] {
+  display: block;
+  margin-left: 3rem;
+  margin-right: 3rem; }
+  a[data-featherlight] > img {
+    max-height: 350px; }
+
 /*# sourceMappingURL=style.css.map*/
