@@ -168,7 +168,7 @@ public $ssl = true;
 
 ## Addendum: Execution order of the controller’s functions
 
-  * **__contruct()**: Sets all the controller’s member variables.
+  * **__construct()**: Sets all the controller’s member variables.
   * **init()**: Initializes the controller.
   * **setMedia()** or **setMobileMedia()**: Adds all JavaScript and CSS specifics to the page so that they can be combined, compressed and cached (see PrestaShop’s CCC tool, in the back office “Performance” page, under # the “Advanced preferences” menu).
   * **postProcess()**: Handles ajaxProcess.
