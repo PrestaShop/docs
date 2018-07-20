@@ -91,51 +91,51 @@ In order to retrieve an object which depends on the current store, and in many l
 {{% funcdef %}}
 
 __construct($id = NULL, $id_lang = NULL)
-:
+: 
     Build object.
 
 add($autodate = true, $nullValues = false)
-:
+: 
     Save current object to database (add or update).
 
 associateTo(integer|array $id_shops)
-:
+: 
     Associate an item to its context.
 
 delete()
-:
+: 
     Delete current object from database.
 
 deleteImage(mixed $force_delete = false)
-:
+: 
     Delete images associated with the object.
 
 deleteSelection($selection)
-:
+: 
     Delete several objects from database.
 
 getFields()
-:
+: 
     Prepare fields for ObjectModel class (add, update).
 
 getValidationRules($className = \_CLASS\_)
-:
+: 
     Return object validation rules (field validity).
 
 save($nullValues = false, $autodate = true)
-:
+: 
     Save current object to database (add or update).
 
 toggleStatus()
-:
+: 
     Toggle object's status in database.
 
 update($nullValues = false)
-:
+: 
     Update current object to database.
 
 validateFields($die = true, $errorReturn = false)
-:
+: 
     Check for field validity before database interaction.
 
 {{% /funcdef %}}
