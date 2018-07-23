@@ -29,10 +29,13 @@ When your environment is ready, it's time to configure it before running tests.
 
 Managing your modules was only possible from the administration inferface. Continuous integration of modules may require preliminary steps like their installation, that's why we added a simple way to manage them in command line.
 
+```bash
+php bin/console prestashop:module --help
+```
 
 ```term
 Usage:
-  app/console prestashop:module <action> <module name> [<YML file path>]
+  prestashop:module <action> <module name> [<file path>]
 
 Arguments:
   action                Action to execute (Allowed actions: install / uninstall / enable / disable / enable_mobile / disable_mobile / reset / upgrade / configure).
@@ -40,6 +43,10 @@ Arguments:
   file path             YML file path for configuration
 
 ```
+
+{{% notice note %}}
+Use `php app/console` instead of `php bin/console` for versions prior to {{< minver v="1.7.4" >}}
+{{% /notice %}}
 
 ### Basic actions
 
@@ -56,8 +63,12 @@ The basic actions are the same as you can see on the module list and only requir
 
 Example:
 ```term
-app/console prestashop:module install paypal
+php bin/console prestashop:module install paypal
 ```
+
+{{% notice note %}}
+Use `php app/console` instead of `php bin/console` for versions prior {{< minver v="1.7.4" >}}
+{{% /notice %}}
 
 #### Multishop
 In case you want to run your action for a specific shop or shop group, you have two optionnal parameters ``--id_shop=<id>`` and ``--id_shop_group=<id>`` which modify the current shop context before calling the actual command.
@@ -71,8 +82,13 @@ With only one command, we expect a module to be totally functional for tests or 
 
 If we reuse the previous command, we could expect something like this:
 ```term
-app/console prestashop:module configure <module name> [<YML file path>]
+php bin/console prestashop:module configure <module name> [<YML file path>]
 ```
+
+{{% notice note %}}
+Use `php app/console` instead of `php bin/console` for versions prior {{< minver v="1.7.4" >}}
+{{% /notice %}}
+
 
 #### Source of data configuration
 When not provided, we use by default a file `self_config.yml` stored in the module root folder. You can use another file by setting the the `<YML file path>`.
