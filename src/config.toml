@@ -1,7 +1,7 @@
 baseURL = "https://devdocs.prestashop.com/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Prestashop Developer Documentation"
+title = "PrestaShop Developer Documentation"
 
 theme = "hugo-theme-learn"
 enableGitInfo = true
