@@ -97,5 +97,9 @@ In the first part of this article, we talked about entities being managed only b
 Doctrine. Applying the changes on the databse is done with the following command:
 
 ```
-php app/console prestashop:schema:update-without-foreign
+php bin/console prestashop:schema:update-without-foreign
 ```
+
+{{% notice note %}}
+Use `php app/console` instead of `php bin/console` for versions prior to {{< minver v="1.7.4" >}}
+{{% /notice %}}

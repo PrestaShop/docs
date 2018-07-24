@@ -20,8 +20,12 @@ Once it's active you can export your theme using the _"Export current theme"_ bu
 from your terminal.
 
 ```bash
-php app/console prestashop:theme:export THEME_DIRECTORY_NAME
+php bin/console prestashop:theme:export THEME_DIRECTORY_NAME
 ```
+
+{{% notice note %}}
+Use `php app/console` instead of `php bin/console` for versions prior to {{< minver v="1.7.4" >}}
+{{% /notice %}}
 
 ### What is exported
 
