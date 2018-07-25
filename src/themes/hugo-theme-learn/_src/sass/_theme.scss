@@ -584,94 +584,6 @@ blockquote {
   }
 }
 
-/* notices */
-
-div.notices {
-  margin: 2rem 0;
-  position: relative;
-
-  p {
-    padding: 15px;
-    display: block;
-    font-size: 1rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #555;
-  }
-
-  &:before {
-    position: absolute;
-    top: 2px;
-    color: #fff;
-    font-family: FontAwesome;
-    content: '';
-    left: 10px;
-  }
-
-  &:after {
-    position: absolute;
-    top: 2px;
-    color: #fff;
-    left: 2rem;
-  }
-
-  &.info {
-    p {
-      background: #fff2db;
-
-      &:first-child {
-        border-top: 30px solid #f0b37e;
-      }
-    }
-
-    &:after {
-      content: 'Info';
-    }
-  }
-
-  &.warning {
-    p {
-      background: #fae2e2;
-
-      &:first-child {
-        border-top: 30px solid rgba(217, 83, 79, 0.8);
-      }
-    }
-
-    &:after {
-      content: 'Warning';
-    }
-  }
-
-  &.note {
-    p {
-      background: #e7f2fa;
-
-      &:first-child {
-        border-top: 30px solid #6ab0de;
-      }
-    }
-
-    &:after {
-      content: 'Note';
-    }
-  }
-
-  &.tip {
-    p {
-      background: #e6f9e6;
-
-      &:first-child {
-        border-top: 30px solid rgba(92, 184, 92, 0.8);
-      }
-    }
-
-    &:after {
-      content: 'Tip';
-    }
-  }
-}
-
 /* attachments shortcode */
 
 section {
@@ -785,10 +697,10 @@ samp {
 code {
   border-radius: 2px;
   white-space: nowrap;
-  color: #5e5e5e;
+  color: #555;
   background: #fff7dd;
   border: 1px solid #fbf0cb;
-  padding: 0 2px;
+  padding: 2px 2px 0;
 
   & + .copy-to-clipboard {
     margin-left: -1px;
