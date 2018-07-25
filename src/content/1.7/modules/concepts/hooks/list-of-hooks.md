@@ -1044,6 +1044,36 @@ This hook launches modules when the AdminCustomers tab is displayed in the Back 
     );
     ```
     
+
+displayAdminCustomersAddressesItemAction
+: 
+    Available since: 1.7.3
+
+    Display new elements in the Back Office, tab AdminCustomers, Addresses actions.
+This hook launches modules when the Addresses list into the AdminCustomers tab is displayed in the Back Office
+
+    Located in: /admin-dev/themes/default/template/controllers/customers/helpers/view/view.tpl
+
+    Parameters:
+    ```php
+	array(
+	  'id_address' => (int) Address ID
+	)
+    ```
+
+
+displayAdminEndContent
+: 
+    Available since: 1.7.4
+
+    Administration end of content.
+This hook is displayed at the end of the main content, before the footer
+
+    Located in: 
+	- /admin-dev/themes/default/template/footer.tpl
+	- /admin-dev/themes/new-theme/template/layout.tpl
+
+	
 displayAdminForm
 : 
     Located in: admin-dev/themes/default/template/helpers/form/form.tpl
@@ -1508,6 +1538,30 @@ displayCustomerLoginFormAfter
 displayCustomization
 : 
     Located in: /classes/Product.php
+
+
+displayDashboardToolbarIcons
+: 
+    Available since: 1.7.3
+
+    Display new elements in back office page with dashboard, on icons list.
+This hook launches modules when the back office with dashboard is displayed
+
+    Located in: 
+	- /src/PrestaShopBundle/Resources/views/Admin/Configure/AdvancedParameters/LogsPage/Blocks/actions.html.twig
+	- /src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
+
+
+displayDashboardToolbarTopMenu
+: 
+    Available since: 1.7.3
+
+    Display new elements in back office page with a dashboard, on top Menu.
+This hook launches modules when a page with a dashboard is displayed
+
+    Located in: 
+	- /admin-dev/themes/default/template/page_header_toolbar.tpl
+	- /admin-dev/themes/new-theme/template/page_header_toolbar.tpl
 
     
 displayDashboardTop
