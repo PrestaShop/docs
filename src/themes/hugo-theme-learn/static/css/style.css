@@ -92,12 +92,15 @@ div.notices {
   margin: 2rem 0;
   position: relative;
   padding: 15px;
+  padding-left: 40px;
   color: #555; }
   div.notices p {
     font-size: 1rem;
     margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 1.5rem; }
+    margin-bottom: 0; }
+  div.notices ul, div.notices ol {
+    margin-top: .5rem;
+    margin-bottom: .5rem; }
   div.notices:before {
     position: absolute;
     top: 15px;
