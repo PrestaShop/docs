@@ -371,7 +371,7 @@ actionCategoryUpdate
     
 actionClearCache
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Invoked when the smarty cache is cleared
 
@@ -380,7 +380,7 @@ actionClearCache
     
 actionClearCompileCache
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Invoked when the smarty compile cache is cleared
 
@@ -389,7 +389,7 @@ actionClearCompileCache
     
 actionClearSf2Cache
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Invoked when the Symfony cache is cleared
 
@@ -454,7 +454,7 @@ actionDispatcher
     
 actionDispatcherAfter
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     This hook is called at the end of the dispatch method of the Dispatcher
 
@@ -463,7 +463,7 @@ actionDispatcherAfter
     
 actionDispatcherBefore
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     This hook is called at the beginning of the dispatch method of the Dispatcher
 
@@ -631,7 +631,7 @@ actionObjectDeleteBefore
     
 actionObjectProductInCartDeleteAfter
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     This hook is called after a product is removed from a cart
 
@@ -640,7 +640,7 @@ actionObjectProductInCartDeleteAfter
     
 actionObjectProductInCartDeleteBefore
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     This hook is called before a product is removed from a cart
 
@@ -756,7 +756,7 @@ actionOrderStatusUpdate
     
 actionOutputHTMLBefore
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Before HTML output
 This hook is used to filter the whole HTML page before it is rendered (only front)
@@ -864,7 +864,7 @@ actionProductSave
     
 actionProductSearchAfter
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     This hook is called after the product search. Parameters are already filter
 
@@ -883,7 +883,7 @@ actionProductUpdate
     
 actionSearch
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     After the search in the store. Includes both instant and normal search.
 
@@ -918,14 +918,14 @@ actionShopDataDuplication
     
 actionSubmitAccountBefore
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Located in: /controllers/front/AuthController.php
 
     
 actionUpdateLangAfter
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Update "lang" tables after adding or updating a language
 
@@ -1047,7 +1047,7 @@ This hook launches modules when the AdminCustomers tab is displayed in the Back 
 
 displayAdminCustomersAddressesItemAction
 : 
-    Available since: 1.7.3
+    Available since: {{< minver v="1.7.3" >}}
 
     Display new elements in the Back Office, tab AdminCustomers, Addresses actions.
 This hook launches modules when the Addresses list into the AdminCustomers tab is displayed in the Back Office
@@ -1064,7 +1064,7 @@ This hook launches modules when the Addresses list into the AdminCustomers tab i
 
 displayAdminEndContent
 : 
-    Available since: 1.7.4
+    Available since: {{< minver v="1.7.4" >}}
 
     Administration end of content.
 This hook is displayed at the end of the main content, before the footer
@@ -1284,7 +1284,7 @@ This hook is displayed after the carrier list in Front Office
     
 displayAfterProductThumbs
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Display extra content below product thumbs
 This hook displays new elements below product images ex. additional media
@@ -1352,7 +1352,7 @@ displayBackOfficeTop
     
 displayBanner
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Located in: /themes/classic/templates/_partials/header.tpl
 
@@ -1542,7 +1542,7 @@ displayCustomization
 
 displayDashboardToolbarIcons
 : 
-    Available since: 1.7.3
+    Available since: {{< minver v="1.7.3" >}}
 
     Display new elements in back office page with dashboard, on icons list.
 This hook launches modules when the back office with dashboard is displayed
@@ -1554,7 +1554,7 @@ This hook launches modules when the back office with dashboard is displayed
 
 displayDashboardToolbarTopMenu
 : 
-    Available since: 1.7.3
+    Available since: {{< minver v="1.7.3" >}}
 
     Display new elements in back office page with a dashboard, on top Menu.
 This hook launches modules when a page with a dashboard is displayed
@@ -1796,7 +1796,7 @@ This hook is displayed at the top of the payment page
     
 displayProductAdditionalInfo
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Product page additional info
 This hook adds additional information on the product page
@@ -1809,7 +1809,7 @@ This hook adds additional information on the product page
     
 displayProductExtraContent
 : 
-    Available since: 1.7.0
+    Available since: {{< minver v="1.7.0" >}}
 
     Display extra content on the product page.
 This hook expects ProductExtraContent instances, which will be properly displayed by the template on the product page
@@ -1826,14 +1826,14 @@ This hook expects ProductExtraContent instances, which will be properly displaye
 
 displayProductListReviews
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Located in: /themes/classic/templates/catalog/_partials/miniatures/product.tpl
 
 
 displayProductPageDrawer
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Product Page Drawer.
 This hook displays content in the right sidebar of the product page
@@ -1943,7 +1943,7 @@ This hook displays new elements in the top of the main wrapper
 
 filterCategoryContent
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Filter the content page category.
 This hook is called just before fetching content page category
@@ -2000,7 +2000,7 @@ This hook is called just before fetching content page product
     
 filterProductSearch
 : 
-    Available since: 1.7.1
+    Available since: {{< minver v="1.7.1" >}}
 
     Located in: /classes/controller/ProductListingFrontController.php
 
