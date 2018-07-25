@@ -1753,11 +1753,45 @@ This hook adds additional information on the product page
     - /themes/classic/templates/catalog/_partials/quickview.tpl
 
     
+displayProductExtraContent
+: 
+    Available since: 1.7.0
+
+    Display extra content on the product page.
+This hook expects ProductExtraContent instances, which will be properly displayed by the template on the product page
+
+    Located in: /controllers/front/ProductController.php
+	
+	Parameters:
+    ```php
+    array(
+        'product' => (object) Product object
+    ),
+    ```
+
+
 displayProductListReviews
 : 
     Available since: 1.7.1
 
     Located in: /themes/classic/templates/catalog/_partials/miniatures/product.tpl
+
+
+displayProductPageDrawer
+: 
+    Available since: 1.7.1
+
+    Product Page Drawer.
+This hook displays content in the right sidebar of the product page
+
+    Located in: /src/PrestaShopBundle/Controller/Admin/ProductController.php
+
+    Parameters:
+    ```php
+    array(
+        'product' => (object) Product object
+    ),
+    ```
 
     
 displayProductPriceBlock
@@ -1851,6 +1885,23 @@ This hook displays new elements in the top of the main wrapper
 
     - themes/classic/templates/checkout/checkout.tpl
     - themes/classic/templates/layouts/layout-both-columns.tpl
+
+
+filterCategoryContent
+: 
+    Available since: 1.7.1
+
+    Filter the content page category.
+This hook is called just before fetching content page category
+
+    Located in: /controllers/front/listing/CategoryController.php
+
+    Parameters:
+    ```php
+    array(
+        'object' => (object) Category object
+    ),
+    ```
 
     
 filterCmsCategoryContent
