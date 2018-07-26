@@ -3,6 +3,7 @@ title: Front-Office Benchmark
 weight: 2
 aliases:
   - /1.7/benchmark/front_office
+  - /1.7/benchmark/front-office
 ---
 
 How to benchmark your PrestaShop Shop (Front-office)

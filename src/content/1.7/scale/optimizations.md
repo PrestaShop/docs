@@ -1,11 +1,8 @@
 ---
-title: Optimizations
-weight: 7
-pre: "<b>7. </b>"
-chapter: true
+title: Optimize your PrestaShop
+alias:
+- 1.7/optimizations/
 ---
-
-### Chapter 7
 
 # How to Optimize the performance of your PrestaShop
 
