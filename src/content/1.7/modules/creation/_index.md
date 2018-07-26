@@ -550,3 +550,19 @@ During the module's installation, PrestaShop automatically creates a
 small `config.xml` file in the module's folder, which stores the
 configuration information. You should be very careful when editing by
 hand.
+
+## Keeping things secure
+
+Once your module is online, its files could be accessed by anyone from the Internet. Even if they cannot trigger anything but PHP errors, you might want to prevent this from happening.
+
+You can achieve this by adding an `index.php` file at the root of any module folder you create. Here is a suggestion for what to put in the file.
+
+```php
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
+header("Cache-Control: no-store, no-cache, must-revalidate");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+header("Location: ../");
+exit;
+```
