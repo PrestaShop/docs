@@ -54,6 +54,10 @@
   font-weight: 500;
   src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype"); }
 
+.callout {
+  padding: 0 1.3rem;
+  border: 3px solid #f0f0f0; }
+
 #chapter {
   display: flex;
   height: 100%;
@@ -129,7 +133,7 @@ div.notices {
     background: #e6f9e6;
     border-left: 5px solid rgba(92, 184, 92, 0.8); }
     div.notices.tip:before {
-      content: '\F00C';
+      content: '\F0EB';
       color: #5cb85c; }
 
 /* Table of contents */
@@ -1925,6 +1929,11 @@ figcaption h4 {
       outline: none; }
   .select-style :hover {
     cursor: pointer; }
+
+ol ol {
+  list-style-type: lower-alpha; }
+  ol ol ol {
+    list-style-type: lower-roman; }
 
 textarea:focus,
 input[type="email"]:focus,
