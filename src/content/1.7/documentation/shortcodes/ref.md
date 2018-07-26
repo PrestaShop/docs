@@ -11,9 +11,12 @@ To link to another page in the documentation, use `ref`:
 
     [This is a link to Configuration]({{</* ref "1.7/basics/configuration.md" */>}})
 
-Rendered code:
 
+Rendered result:
+
+{{% callout %}}
 [This is a link to Configuration]({{< ref "1.7/basics/installation/configuration.md" >}})
+{{% /callout %}}
 
 {{% notice tip %}}
 Don't forget to put the link between double quotes.
@@ -25,9 +28,11 @@ To a link that points to a specific point in the current page, use `relref`:
 
     [This is a link to the first title]({{</* relref "#cross-links" */>}})
     
-Rendered code:
+Rendered result:
 
+{{% callout %}}
 [This is a link to the first title]({{< relref "#cross-links" >}})
+{{% /callout %}}
 
 {{% notice info %}}
 **Internal links need to be "slugified" to work.**<br>

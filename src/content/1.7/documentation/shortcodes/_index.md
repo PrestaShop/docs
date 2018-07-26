@@ -42,12 +42,14 @@ Some default shortcodes are provided by Hugo (read [shortcodes documentation](ht
 
 Here are the most useful shortcodes, both native and custom:
 
-- [funcdef][3] – Displays a styled function definition list.
-- [minver][4] – Displays a version pill.
-- [notice][2] – Displays a "note", "tip" or "warning" box to highlight important information.
-- [ref][1] – Links to another DevDocs page or a section of the page.
+- [callout][callout] – Displays a styled function definition list.
+- [funcdef][funcdef] – Displays a styled function definition list.
+- [minver][minver] – Displays a version pill.
+- [notice][notice] – Displays a "note", "tip" or "warning" box to highlight important information.
+- [ref][ref] – Links to another DevDocs page or a section of the page.
 
-[1]: {{< ref "1.7/documentation/shortcodes/ref.md" >}}
-[2]: {{< ref "1.7/documentation/shortcodes/notice.md" >}}
-[3]: {{< ref "1.7/documentation/shortcodes/funcdef.md" >}}
-[4]: {{< ref "1.7/documentation/shortcodes/minver.md" >}}
+[ref]: {{< ref "1.7/documentation/shortcodes/ref.md" >}}
+[notice]: {{< ref "1.7/documentation/shortcodes/notice.md" >}}
+[funcdef]: {{< ref "1.7/documentation/shortcodes/funcdef.md" >}}
+[minver]: {{< ref "1.7/documentation/shortcodes/minver.md" >}}
+[callout]: {{< ref "1.7/documentation/shortcodes/callout.md" >}}
