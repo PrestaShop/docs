@@ -1394,3 +1394,12 @@ figcaption h4 {
     cursor:  pointer;
   }
 }
+
+// ordered list types
+
+ol ol {
+  list-style-type: lower-alpha;
+  ol {
+    list-style-type: lower-roman;
+  }
+}
