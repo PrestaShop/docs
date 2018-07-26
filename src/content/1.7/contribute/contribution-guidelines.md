@@ -1,12 +1,15 @@
 ---
-title: Commits & Pull Requests
+title: Contribution guidelines
 aliases:
   - /1.7/development/coding_standards/commits_and_pull_requests
+  - /1.7/development/coding-standards/commits-and-pull-requests
 ---
 
-# Commits & Pull Requests conventions
+# Contribution guidelines
 
-## Commits
+## Commits & Pull Requests conventions
+
+### Commits
 
 In the past, we used to have only one commit by pull request. This was a bad habit. We now require contributors to make **atomic commits**, so you will surely have more than one commit in a single pull request. This will be helpful to review, cherry-pick or revert (we hope to never have to do that 😉) the changes.
 
@@ -21,7 +24,7 @@ In the past, we used to ask to prepend commit names with *FO, BO, CO...* <br>
 **This is no longer needed.**
 {{% /notice %}}
 
-## Pull Requests
+### Pull Requests
 
 Now that you have made atomic commits, you surely have a lot of commits for one pull request. A pull request answers to a given issue. Do not ever make a single pull request for many purposes. Do not hesitate to split your big commit into several subprojects. It will be easier and quicker to review.
 
