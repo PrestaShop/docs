@@ -7,27 +7,107 @@ aliases:
 
 # Contribution guidelines
 
-## Commits & Pull Requests conventions
+Ready to contribute code? Here's what you need to know to get your Pull Request accepted.
 
-### Commits
+## Commits
 
-In the past, we used to have only one commit by pull request. This was a bad habit. We now require contributors to make **atomic commits**, so you will surely have more than one commit in a single pull request. This will be helpful to review, cherry-pick or revert (we hope to never have to do that 😉) the changes.
+### Atomic commits
+
+In the past, we used to have only one commit by pull request. This was a bad habit. We now require contributors to make **atomic commits**, so you will surely have more than one commit in a single pull request. This will be helpful to review, cherry-pick or revert changes (we hope to never have to do that 😉).
 
 **What's an atomic commit?** It means that the commit's purpose is **one, and only one, complete fix or change**. Typically, ask yourself if what you are doing is one or several tasks. Do not hesitate to use `git add -p ...` ([details here](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging)) if you have made several changes in the same file but not all those changes are meant to be in the current commit.
 
-When you are modifying CSS and/or JavaScript files, we invite you to make a separate commit for the compiled files. If you want to know more about compiling assets, you can look at our documentation.
-
-The commit name should also give an idea of the context or of the file that is being changed. The more details, the better! The commit name should be as unique and recognizable as your commit itself.
+### Writing a good commit message
 
 {{% notice note %}}
 In the past, we used to ask to prepend commit names with *FO, BO, CO...* <br>
 **This is no longer needed.**
 {{% /notice %}}
 
-### Pull Requests
+The commit name should give an idea of the nature and context of the change that has been done. The more details, the better! The commit name should be as unique and recognizable as your commit itself. There are multitude of articles on the web regarding commit messages, here are two that you can find useful:
 
-Now that you have made atomic commits, you surely have a lot of commits for one pull request. A pull request answers to a given issue. Do not ever make a single pull request for many purposes. Do not hesitate to split your big commit into several subprojects. It will be easier and quicker to review.
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
+- [What makes a good commit message?](https://hackernoon.com/what-makes-a-good-commit-message-995d23687ad)
 
-As all your commits messages are well-formated, just make a summary of your pull request’s purpose in its GitHub title. A summary does not mean it can not be explicit. Please describe what your pull request does in details (avoid "Fix product page" or "Category page improvement"). Then, just fill the PR template table to answer some questions which will help the team make a decision faster.
+#### Bad examples
+
+Bad commit messages give pretty much no context:
+
+- `add cli new`
+- `fix useless code`
+- `fix code review comments`
+
+#### Good example
+
+A good commit message explains _what_ is done, and _why_: 
+```text
+Make Source.indexOf(ByteString) significantly faster
+
+Previously the algorithm that did this was extremely inefficient, and
+had worst case runtime of O(N * S * S) for N is size of the bytestring
+and S is the number of segments.
+
+The new code runs in O(N * S). It accomplishes this by not starting
+each search at the first segment, which could occur many times when
+called by RealBufferedSource.
+```
+
+{{% notice tip %}}
+Some tips:
+
+- Separate subject from body with a blank line
+- Limit the subject line to 50 characters
+- Capitalize the subject line
+- Use the body to explain _what_ and _why_ vs. _how_
+{{% /notice %}}
+
+### Compiled assets
+
+Some source files like SCSS and JavaScript need to be compiled to work on a PrestaShop shop. To ease up the life of contributors who don't want to fuzz around installing node and NPM, we require those files to be compiled and committed in the same Pull Request as the source changes.
+
+Make sure to follow these guidelines:
+
+- **Compile assets for production.** Check that that the assets you are compiled were built using the "prod" setting instead of the "dev" one.
+- **Commit assets assets and sources separately.** Submit your compiled assets in a separate commit from your source changes. This will be especially helpful when rebasing, because you can just drop the commit and avoid merge conflicts.
+- **One asset commit per PR**. Try to avoid recompiling and committing the assets more than once. If you need to make changes and you have already committed a previous build, use interactive rebase to remove the previous commit, _then_ compile the assets. 
+
+
+## Pull Requests
+
+Now that you have made atomic commits, you surely have a lot of commits for one pull request.
+ 
+**A pull request should answer to a single given issue**. Do not ever make a single pull request for many purposes. Do not hesitate to split your big commit into several subprojects. It will be easier and quicker to review.
+
+As all your commits messages are well-formatted, just make a summary of your pull request’s purpose in its GitHub title. A summary does not mean it can not be explicit. Please describe what your pull request does in detail (avoid "Fix product page" or "Category page improvement"). Then, just fill the PR template table to answer some questions which will help the team make a decision faster.
 
 Please note that all the pull requests must follow those guidelines. If the commit messages are not well-formatted, the pull request's title is not correct, or the table is not properly filled, we will not be able to accept your pull request.
+
+### Target branch
+
+Pull requests must be made in the appropriate branch, depending on the nature of your Pull Request.
+
+* **Develop**. New features, bug fixes, improvements. PRs merged here will be released in the next minor or major version.
+* **Patch version branch** (eg. 1.7.4.x). For critical bug fixes and regressions only. PRs merged here will be released in a patch version. 
+* **1.6.1.x branch**. For PrestaShop 1.6 bug fixes only. 
+
+{{% callout %}}
+
+#### About supported branches
+
+PrestaShop only accepts PRs on branches which are subject to new releases.
+
+Once PrestaShop releases a new minor ("dot-zero") version, it won't release new patch versions for previous minor versions – with the exception of rare cases, for example if a security bug is found just before or after a minor release is published.
+
+This means that except for `1.6.1.x` (on extended support), only the latest minor version patch branch is supported.
+
+For example, the `1.7.4.x` branch is supported until the release of version 1.7.5.0. After that, the only supported version branch will be `1.7.5.x`, and so on.
+
+If you find a bug on an unsupported version, make sure that bug is still present in the latest version. If the bug is still present, please submit a PR on `develop`.
+
+**PRs on unsupported versions will be closed.**
+
+{{% notice tip %}}
+When in doubt, use the develop branch. We will ask you to rebase on the correct branch if necessary.
+{{% /notice %}}
+{{% /callout %}}
+
