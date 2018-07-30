@@ -1,5 +1,6 @@
 ---
 title: Contribution guidelines
+weight: 10
 aliases:
   - /1.7/development/coding_standards/commits_and_pull_requests
   - /1.7/development/coding-standards/commits-and-pull-requests
@@ -82,9 +83,24 @@ As all your commits messages are well-formatted, just make a summary of your pul
 
 Please note that all the pull requests must follow those guidelines. If the commit messages are not well-formatted, the pull request's title is not correct, or the table is not properly filled, we will not be able to accept your pull request.
 
-### Target branch
+### The Pull Request form
 
-Pull requests must be made in the appropriate branch, depending on the nature of your Pull Request.
+When you create a new Pull Request, you will be presented with a form to complete that looks like this:
+
+![Screenshot of the New Pull Request Form](../img/new-pull-request.png)
+
+It is very important that you complete this table correctly, as it is vital for:
+
+- Making sure the branch is correct
+- Understanding your change
+- Making sure that it works as expected
+- Tracking when a PR fixes a known issue
+- Tracking if a release breaks retro-compatibility
+- Building the change log
+
+#### Target branch
+
+Pull requests must be made in the appropriate branch, depending on the nature of your change.
 
 * **Develop**. New features, bug fixes, improvements. PRs merged here will be released in the next minor or major version.
 * **Patch version branch** (eg. 1.7.4.x). For critical bug fixes and regressions only. PRs merged here will be released in a patch version. 
@@ -92,7 +108,7 @@ Pull requests must be made in the appropriate branch, depending on the nature of
 
 {{% callout %}}
 
-#### About supported branches
+##### About supported branches
 
 PrestaShop only accepts PRs on branches which are subject to new releases.
 
@@ -111,3 +127,20 @@ When in doubt, use the develop branch. We will ask you to rebase on the correct 
 {{% /notice %}}
 {{% /callout %}}
 
+#### Category
+
+The category is the portion of the project to which your changes apply to. We use this code to construct the [change log](https://github.com/PrestaShop/PrestaShop/blob/develop/docs/CHANGELOG.txt) by grouping changes in different sections. Choose the code that most closely describes your change:
+
+Code | Scope
+-----|------
+FO | if the changes impact the Front Office
+BO | if the changes impact the Back Office
+IN | if the changes impact the Installer
+WS | if the changes impact the Web Services
+CO | if the changes impact the Core (non-visible functionality)
+LO | if the changes impact localization functionality
+TE | if the changes impact automated tests
+
+{{% notice note %}}
+Remember, this is only needed for the Pull Request form, not for your commit messages.
+{{% /notice %}} 
