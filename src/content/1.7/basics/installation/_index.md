@@ -76,6 +76,19 @@ Clone the repository using Git or extract the zip package in a `prestashop` fold
 * EasyPHP: `C:\easyphp\www`
 * MAMP: `/Applications/MAMP/htdocs/`
 
+## Download dependencies using composer
+
+{{% notice note %}}
+This step is only needed if you downloaded the development version.
+{{% /notice %}}
+
+Use [composer](https://getcomposer.org/download/) to download the project's dependencies:
+
+```bash
+cd /path/to/prestashop
+composer install
+```
+
 ## Installing PrestaShop
 
 Open the PrestaShop installer and follow its instructions.
