@@ -1,5 +1,6 @@
 ---
 title: How to use the Forge to contribute to PrestaShop
+weight: 2
 menuTitle: Contribute by reporting issues
 ---
 

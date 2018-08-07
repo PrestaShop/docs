@@ -1,5 +1,5 @@
 ---
-title: Become a Core Contributor using Docker
+title: Contribute using Docker
 weight: 2
 ---
 

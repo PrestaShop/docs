@@ -5,7 +5,7 @@ pre: "<b>7. </b>"
 chapter: true
 ---
 
-### Chapter 6
+### Chapter 7
 
 # Contribute
 
