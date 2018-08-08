@@ -14,7 +14,7 @@ Contributions are more than welcome! [Find out how](http://devdocs.prestashop.co
 
 TL;DR:
 
-* **Linux**: Use the binary in the `/bin` directory
+* **Linux**: `./bin/installHugo.sh`
 * **Mac**: `brew install hugo`
 * **Windows**: Grab the [release binary](https://github.com/gohugoio/hugo/releases)
 
