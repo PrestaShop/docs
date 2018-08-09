@@ -35,55 +35,63 @@ An array of notification is passed to the templates, containing at least one of 
 
 ## How to display notifications
 
-In the Starter Theme, [notifications are implemented as a partial template file](https://github.com/PrestaShop/StarterTheme/blob/master/templates/_partials/notifications.tpl):
+In the Starter Theme, [notifications are implemented as a partial template file](https://github.com/PrestaShop/StarterTheme/blob/develop/templates/_partials/notifications.tpl):
 
 ```html+smarty
 <aside id="notifications">
-  <div class="container">
-    {if $notifications.error}
-      <article class="alert alert-danger" role="alert">
+
+  {if $notifications.error}
+    {block name='notifications_error'}
+      <article class="notification notification-danger" role="alert" data-alert="danger">
         <ul>
           {foreach $notifications.error as $notif}
-            <li>{$notif}</li>
+            <li>{$notif nofilter}</li>
           {/foreach}
         </ul>
       </article>
-    {/if}
+    {/block}
+  {/if}
 
-    {if $notifications.warning}
-      <article class="alert alert-warning" role="alert">
+  {if $notifications.warning}
+    {block name='notifications_warning'}
+      <article class="notification notification-warning" role="alert" data-alert="warning">
         <ul>
           {foreach $notifications.warning as $notif}
-            <li>{$notif}</li>
+            <li>{$notif nofilter}</li>
           {/foreach}
         </ul>
       </article>
-    {/if}
+    {/block}
+  {/if}
 
-    {if $notifications.success}
-      <article class="alert alert-success" role="alert">
+  {if $notifications.success}
+    {block name='notifications_success'}
+      <article class="notification notification-success" role="alert" data-alert="success">
         <ul>
           {foreach $notifications.success as $notif}
-            <li>{$notif}</li>
+            <li>{$notif nofilter}</li>
           {/foreach}
         </ul>
       </article>
-    {/if}
+    {/block}
+  {/if}
 
-    {if $notifications.info}
-      <article class="alert alert-info" role="alert">
+  {if $notifications.info}
+    {block name='notifications_info'}
+      <article class="notification notification-info" role="alert" data-alert="info">
         <ul>
           {foreach $notifications.info as $notif}
-            <li>{$notif}</li>
+            <li>{$notif nofilter}</li>
           {/foreach}
         </ul>
       </article>
-    {/if}
-  </div>
+    {/block}
+  {/if}
+
 </aside>
 ```
 
-...and are then [included in the template file](https://github.com/PrestaShop/StarterTheme/blob/master/templates/checkout/checkout.tpl#L18-L20):
+...and are then [included in the template file](https://github.com/PrestaShop/StarterTheme/blob/develop/templates/checkout/checkout.tpl#L42-L44):
 
 ```smarty
 {block name='notifications'}
@@ -93,7 +101,7 @@ In the Starter Theme, [notifications are implemented as a partial template file]
 
 ## Add your own message in your front controller
 
-Your front controller holds [the 4 following variables](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L618-L640):
+Your front controller holds [the 4 following variables](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L616-L621):
 
 * ``$this->errors``
 * ``$this->success``
@@ -102,7 +110,7 @@ Your front controller holds [the 4 following variables](https://github.com/Prest
 
 They are PHP arrays, and they hold messages as a string.
 
-Since PrestaShop 1.7, you can [redirect the customer AND display a message after an action](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L553-L572).
+Since PrestaShop 1.7, you can [redirect the customer AND display a message after an action](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L614-L633).
 
 ```php
 $this->success[] = $this->l('Information successfully updated.');
