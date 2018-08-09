@@ -95,10 +95,10 @@ In the Starter Theme, [notifications are implemented as a partial template file]
 
 Your front controller holds [the 4 following variables](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L618-L640):
 
-* ``$this->error``
+* ``$this->errors``
 * ``$this->success``
 * ``$this->warning``
-* ``$this->danger``
+* ``$this->info``
 
 They are PHP arrays, and they hold messages as a string.
 
