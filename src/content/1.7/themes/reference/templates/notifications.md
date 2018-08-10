@@ -8,7 +8,7 @@ aliases:
 # Notifications
 
 Throughout the whole front office, the customer can receive notification messages
-from PrestaShop, to inform him about successes or errors for instance.
+from PrestaShop, to inform about successes or errors for instance.
 Your theme can also send notifications when certain events occur.
 
 The notification messages are not hard-coded in the template files, but are sent
