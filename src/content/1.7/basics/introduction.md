@@ -84,3 +84,9 @@ The view does not do any processing; it only displays the result of the processi
 The Controller manages synchronization events between the Model and the View, and updates both as needed. It receives all the user events and triggers the actions to perform.
 
 If an action needs data to be changed, the Controller will “ask” the Model to change the data, and in turn the Model will notify the View that the data has been changed, so that the View can update itself.
+
+#### Database schema
+
+{{< figure src="/images/1.7/prestashop-1.7.5.png" title="Grid schema" >}}
+
+You can download the PrestaShop 1.7 SQL schema in [PDF form](/files/1.7/prestashop-1.7.5.pdf) (140 Kb), or in the original MySQL Workbench [file format](/files/1.7/prestashop-1.7.5.mwb) (you will need MySQL Workbench to view it).
