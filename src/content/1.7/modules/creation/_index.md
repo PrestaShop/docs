@@ -167,7 +167,7 @@ This section assigns a handful of attributes to the class instance
     module in PrestaShop's back office modules list. You may use an
     existing name, such as seo, `front_office_features` or
     `analytics_stats`, or a custom one. In this last case, a new section
-    will be created with your identifier. We chose
+    will be created with your identifier. We choose
     "`front_office_features`" because this first module will mostly have
     an impact on the front-end.
 -   'version' attribute. The version number for the module, displayed in
