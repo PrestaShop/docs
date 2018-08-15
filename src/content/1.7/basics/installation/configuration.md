@@ -37,7 +37,7 @@ These two methods enable you to check for the state of a given variable at a spe
 
 PrestaShop used to have custom debug methods available for developers: `p($variable)` and `d($variable)`. They were used to display the content of a variable, and were really a wrapper around the well-known `print_r()` method. On top of that, PrestaShop had the `ppp()` and `ddd()` methods, which were respectively the aliases of `p()` and `d()`; and the various `fd()`, `epr()` and `dieObject()` methods.
 
-All of this has changed with PrestaShop 1.7: we now rely solely on Symonfy’s `VarDumper::dump()` function. You can now rely on a single method instead of having multiple debug functions. The dump() function is very powerful, and is always available on output (even without `die()`). Moreover, you can use it in your console scripts because this function also has a formatter in CLI mode.
+All of this has changed with PrestaShop 1.7: we now rely solely on Symfony’s `VarDumper::dump()` function. You can now rely on a single method instead of having multiple debug functions. The dump() function is very powerful, and is always available on output (even without `die()`). Moreover, you can use it in your console scripts because this function also has a formatter in CLI mode.
 
 The `dump()` method is not activated by default. To activate it, you must enable the Debug mode, by setting `_PS_MODE_DEV_` to `true` (see above).
 
