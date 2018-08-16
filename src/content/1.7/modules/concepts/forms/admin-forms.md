@@ -1,6 +1,9 @@
 ---
-title: Alter forms
+title: Alter Back Office forms
 weight: 4
+aliases:
+- /1.7/modules/concepts/hooks/alter_forms_on_modern_pages
+- /1.7/modules/concepts/hooks/alter-forms-on-modern-pages
 ---
 
 # Alter forms on modern pages

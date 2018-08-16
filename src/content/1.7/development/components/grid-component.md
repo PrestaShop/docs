@@ -28,16 +28,16 @@ Let's see what we need to do to migrate a CRUD-based page, in step-by-step tutor
 The Grid Definition stores the structural information about your Grid:
 
 * The *Grid name* is the human readable and translatable name
-* The *Grid identifier* is a unique key that you can use to select the right grid in case or you have multiple ones in a page with the same name
+* The *Grid identifier* is a unique key that you can use to select the right grid in case you have multiple ones in a page with the same name
 * The *Grid Columns* needs to be a ColumnCollection instance, you can see them as public properties of your grid (for now)
-* The *Grid actions* are the related actions available for this grid: in PrestaShop it's common to have "export" or "access to sql manager" actions.
+* The *Grid actions* are the related actions available for this grid: in PrestaShop it's common to have "export" or "access to sql manager" actions
 * The *Row actions* are the related actions available for an entry of this list of data: in PrestaShop it's common to be able to edit/access or delete the entry
 * The *Bulk actions* are the actions available for a bunch of selectable entries: a bulk delete or a bulk edition for instance.
 
 You don't have to create the Grid Definition by yourself byt rely instead on a Grid Definition Factory.
 
-This factory must implements the `GridDefinitionFactoryInterface` interface which have only one method: `create()`.
-You'd better use the abstract class provided by the component, which give you access to the translator and already implement re-usable functions for you:
+This factory must implement the `GridDefinitionFactoryInterface` interface which has only one method: `create()`.
+It's better to use the abstract class provided by the component, which provides access to the translator and already implements re-usable functions for you:
 
 ```php
 use PrestaShop\PrestaShop\Core\Grid\Definition\Factory\AbstractGridDefinitionFactory;
@@ -98,7 +98,7 @@ As you can imagine, the responsibility of Grid Data Provider is to provide the G
 The only method available of `GridDataProviderInterface` is `getData` which returns an instance of `GridData`.
 A GridData is an immutable object used to store and retrieve the GridData, so if you want to alter this data, you must do it in Grid Data Provider *before* the GridData creation.
 
-There is a good news here: you don't need to create your own as we provide one: the `GridDataProvider`. 
+There is a good news here: you don't need to create your own as we provide one, the `GridDataProvider`. 
 
 ## Grid Query Builder
 
@@ -172,6 +172,7 @@ class FooController extends FrameworkBundleAdminController
 {
     /**
      * Note: the Search Criteria management is part of another PR.
+     * @return Response
      */
     public function indexAction(SearchCriteria $searchCriteria)
     {
