@@ -1,7 +1,10 @@
 ---
 title: The PrestaShop architecture
+menuTitle: Architecture
+weight: 20
 aliases:
-  - /1.7/dvelopment/prestashop_architecture
+  - /1.7/development/prestashop_architecture
+  - /1.7/development/prestashop-architecture
   - /module/02-Fundamentals/index.html
 ---
 

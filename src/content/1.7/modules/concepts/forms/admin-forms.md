@@ -1,19 +1,18 @@
 ---
-title: Alter forms on modern pages
+title: Alter Back Office forms
 weight: 4
 aliases:
-  - /1.7/modules/concepts/hooks/alter_forms_on_modern_pages
+- /1.7/modules/concepts/hooks/alter_forms_on_modern_pages
+- /1.7/modules/concepts/hooks/alter-forms-on-modern-pages
 ---
 
 # Alter forms on modern pages
+{{< minver v="1.7.4" title="true" >}}
 
 One of the most common tasks for the PrestaShop developers is to alter the data and make it manageable for customers.
 In PrestaShop 1.6, a specific Form framework was created to help developers. In PrestaShop 1.7, the system has changed as we now rely on the Symfony Form component.
 
 Let's see an example on how to add, populate, validate and persist a new form field in PrestaShop 1.7.
-
-> Available since **PrestaShop** {{< minver v="1.7.4" >}}
-
 
 #### Create the module and register the hooks
 
@@ -46,7 +45,7 @@ public function hookActionAdministrationPageFormSave(&$hookParams)
 
 The form field should be available in the selected form, can be validated and persisted in the database if valid using the provided hooks. If you access the Administration page in Back Office, you should see the new form field:
 
-![form](https://user-images.githubusercontent.com/1247388/37625102-e29343d4-2bca-11e8-8e7f-60988dc808c0.png)
+![form](../img/form-field.png)
 
 #### Templating
 

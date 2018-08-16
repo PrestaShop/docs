@@ -1,6 +1,6 @@
 ---
 title: Native module translation
-weight: 7
+weight: 40
 aliases:
   - /1.7/dvelopment/native_module_translation
 ---
