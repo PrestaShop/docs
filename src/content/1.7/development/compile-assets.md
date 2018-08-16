@@ -67,4 +67,10 @@ npm run watch
 **Rebuild your changes before committing.**
 
 The "watch" build will optimize your assets for development. Please remember to rebuild for production when you are done using `npm run build`.
+{{% /notice %}}
 
+## Troubleshooting
+
+If `npm install` fails with error: `Failed at the ... postinstall script.`:
+
+You maybe using node version 9 or 10, you should use node version 8.
