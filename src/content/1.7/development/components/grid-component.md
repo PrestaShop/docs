@@ -5,6 +5,7 @@ weight: 2
 ---
 
 # The Grid component
+{{< minver v="1.7.5" title="true" >}}
 
 The Grid component specifies for a Grid (Table + action + bulk actions) the definition of columns, the query builder used to retrieve data and how the search filters must be used to retrieve the data displayed.
 
@@ -22,7 +23,7 @@ Let's see what we need to do to migrate a CRUD-based page, in step-by-step tutor
 * The **Grid Data Provider**
 * The **Grid Query Builder**
 
-### The Grid Definition
+## Grid Definition
 
 The Grid Definition stores the structural information about your Grid:
 
@@ -90,7 +91,7 @@ final class FooGridDefinitionFactory extends AbstractGridDefinitionFactory
 }
 ```
 
-### The Grid Data Provider
+## Grid Data Provider
 
 As you can imagine, the responsibility of Grid Data Provider is to provide the Grid data, from the Grid Definition and using the Grid Query Builder.
 
@@ -99,7 +100,7 @@ A GridData is an immutable object used to store and retrieve the GridData, so if
 
 There is a good news here: you don't need to create your own as we provide one: the `GridDataProvider`. 
 
-### The Grid Query Builder
+## Grid Query Builder
 
 Probably the most difficult and important piece of this component.
 The Grid Query Builder is responsible of retrieving the data according to the Grid Definition and Search filters that come from the request for instance.
@@ -196,7 +197,7 @@ And in the related template:
 Yes, we don't render directly the Grid Data but a typed View to be used in Twig for now, and to ease the work
 if we need to retrieve the grid directly from Vuejs/React app.
 
-So basically we can imagine later to implement "GridDataFactory->createJsView()" which could return a well formated JSON object.
+So basically we can imagine later to implement `GridDataFactory->createJsView()` which could return a well formated JSON object.
 
 ## Summary as a schema
 

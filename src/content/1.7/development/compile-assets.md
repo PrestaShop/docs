@@ -1,5 +1,6 @@
 ---
 title: How to compile assets
+weight: 70
 ---
 
 # How to compile assets

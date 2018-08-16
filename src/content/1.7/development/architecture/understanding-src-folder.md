@@ -3,11 +3,11 @@ title: Understanding the "src" folder
 weight: 10
 ---
 
-# Understanding the new "src" folder
+# Understanding the "src" folder
 
-The main idea when doing the 1.7 release is to use Symfony as a replacement for our own PrestaShop framework.
+The main idea when doing the 1.7 release was to use Symfony as a replacement for our own PrestaShop framework.
 
-In "src" folder you'll find 3 main folders with differents purposes:
+In "src" folder you'll find 3 main folders with different purposes:
 
 * **Core**: the refactored classes or business logic extraction for PrestaShop 1.7;
 * **Adapter**: the classes that still depends on legacy framework (Context, Dispatcher or constants for instance);
@@ -47,7 +47,7 @@ You should add/create a file in "Core" namespace if:
 
 ## Adapter
 
-This folder contains all adapters we use for the migration of Back Office, using the [Adapter pattern strategy](https://en.wikipedia.org/wiki/Adapter_pattern). The idea is to avoid to have hard bound between the PrestaShopBundle and the legacy back office.
+This folder contains all adapters we use for the migration of Back Office, using the [Adapter pattern strategy](https://en.wikipedia.org/wiki/Adapter_pattern). The idea is to avoid to have hard bound between the PrestaShopBundle and the legacy back office, so that the legacy classes can eventually be deleted.
 
 ```
 .
@@ -115,7 +115,7 @@ This folder contains all adapters we use for the migration of Back Office, using
 
 You should create file here only if you have an hard bound with legacy framework when migrating to Symfony, and
 you can't refactor it easily. For instance, take a look at `PhpParameters` class in "Configuration": this class doesn't rely on
-Context or specific constants but on the configuration files of PrestaShop legacy framework. As theses files are shared by both front and back, we couldn't manage to refactor it and remove it now.
+Context or specific constants but on the configuration files of PrestaShop legacy framework. As these files are shared by both front and back, we couldn't manage to refactor it and remove it now.
 
 ## PrestaShopBundle
 
@@ -162,14 +162,14 @@ An ideal structure for this namespace could be the following:
 
 ```
 .
-├── CacheWarmer // add new actions on Symfony cache clear
+├── CacheWarmer // Actions on Symfony cache clear
 ├── Command // Commands available using "bin/console"
 ├── Controller // The HTTP layer
 ├── DataCollector // Specific collectors for PrestaShop in debug toolbar (like hooks)
 ├── DependencyInjection // Specific compiler passes for PrestaShop
 ├── Entity // Classes mapped to Doctrine ORM (Lang for instance)
 ├── EventListener (may contain "Event")
-├── Form // Every Symfony forms and extensions
+├── Form // Symfony forms and extensions
 ├── Kernel // Very specific tasks to manage at PrestaShop Application boot
 ├── PrestaShopBundle.php
 ├── Resources // Contains services definition and Twig templates
@@ -177,4 +177,4 @@ An ideal structure for this namespace could be the following:
 └── Twig // Every filter and functions available in PrestaShop back office
 ```
 
-> So if you think your new file doesn't belongs to one of this folders, you should probably consider adding it to *Core* or *Adapter* folders.
+If you think your new file doesn't belong to one of those folders, you should probably consider adding it to *Core* or *Adapter* folders.

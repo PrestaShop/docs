@@ -3,19 +3,19 @@ title: KPI block in Admin pages
 weight: 4
 ---
 
-# How to add a KPI block in admin pages?
+# How to add a KPI block in admin pages
+{{< minver v="1.7.5" title="true" >}}
 
 A KPI block (also called KPI row) is shown here:
 
-{{< figure src="/images/1.7/kpi-block.png" title="KPI Block" >}}
+{{< figure src="../img/kpi-block.png" title="KPI Block" >}}
 
-> Available since **PrestaShop** {{< minver v="1.7.5" >}}
+You can follow these steps to easily add a KPI row to a modern page:
 
-You can follow these steps to easily add a KPI row to a modern page :
-* define your KPI classes:
-  * you can use one of existing KPI classes, from `PrestaShop\PrestaShop\Adapter\Kpi` namespace,
-  * you can create new classes - they must implement the `PrestaShop\PrestaShop\Core\Kpi\KpiInterface`
-* define a KPI row factory service in `src/PrestaShopBundle/Resources/config/services/core/kpi.yml`
+* Define your KPI classes:
+  * You can use one of existing KPI classes, from `PrestaShop\PrestaShop\Adapter\Kpi` namespace,
+  * You can create new classes - they must implement the `PrestaShop\PrestaShop\Core\Kpi\KpiInterface`
+* Define a KPI row factory service in `src/PrestaShopBundle/Resources/config/services/core/kpi.yml`
 
     Example from translations page:
     ```yaml
@@ -26,7 +26,9 @@ You can follow these steps to easily add a KPI row to a modern page :
             - '@prestashop.adapter.kpi.main_country'
             - '@prestashop.adapter.kpi.translations'
     ```
-    Note: the KPI row factory accepts unlimited number of arguments and each argument is a KPI, that will be built into a KPI row.
+    
+    {{% notice note %}}The KPI row factory accepts an unlimited number of arguments, each argument being a KPI that will be built into a KPI row.
+    {{% /notice %}}
 
 * Build the KPI row in your controller's action and assign it to twig by returning it:
     ```php
@@ -45,7 +47,7 @@ You can follow these steps to easily add a KPI row to a modern page :
 
 * The final step is to render the KPI row with Twig, using `renderKpiRow` method from `CommonController` and passing it to the previously assigned `kpiRow` variable:
     ```twig
-    {# It works also in Admin module controllers #}
+    {# This also works in Admin module controllers #}
     {% block translations_kpis_row %}
         <div class="row">
             {{ render(controller(
