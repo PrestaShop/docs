@@ -1,11 +1,12 @@
 ---
 title: The Grid component
+menuTitle: Grid
 weight: 2
 ---
 
-## The Grid component
+# The Grid component
 
-The Grid component define for a Grid (Table + action + bulk actions) the definition of columns, the query builder used to retrieve data and how the search filters must be used to retrieve the data displayed.
+The Grid component specifies for a Grid (Table + action + bulk actions) the definition of columns, the query builder used to retrieve data and how the search filters must be used to retrieve the data displayed.
 
 Not only this give a consistent representation of the data from a "PHP/Back" point of view, but the component also provide a minimalist Twig/Javascript layer for the rendering based on a typed View model.
 
@@ -199,6 +200,6 @@ So basically we can imagine later to implement "GridDataFactory->createJsView()"
 
 ## Summary as a schema
 
-{{< figure src="/images/1.7/grid-build-schema.png" title="Grid schema" >}}
+{{< figure src="../img/grid-build-schema.png" title="Grid schema" >}}
 
 > Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/form-schema.xml).

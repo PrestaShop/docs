@@ -1,6 +1,6 @@
 ---
-title: Understanding the new "src" folder
-weight: 8
+title: Understanding the "src" folder
+weight: 10
 ---
 
 # Understanding the new "src" folder
