@@ -21,7 +21,7 @@ The Starter Theme is available on [GitHub](https://github.com/PrestaShop/Starter
 
 If you download the StarterTheme and select it as the theme for your store, you will see minimalistic theme with an overly simplistic style. This is only for development purpose. You should NOT use the Starter Theme as is, and you should NOT use its default CSS rules nor include them in your theme: please delete all files inside `_dev/css`.
 
-![Screenshot of the StarterTheme with dev style](img/starter-theme-dev-style.png)
+![Screenshot of the StarterTheme with dev style](../img/starter-theme-dev-style.png)
 
 {{% notice info %}}
 The jQuery v2 library is loaded by the core.js file.
@@ -42,6 +42,6 @@ waste your time.
 
 Once you removed all style in `_dev/css`, your theme should like this:
 
-![Screenshot of the StarterTheme once you removed the dev style](img/starter-theme-no-style.png)
+![Screenshot of the StarterTheme once you removed the dev style](../img/starter-theme-no-style.png)
 
 Read also our articles on [build.prestashop.com](http://build.prestashop.com/tag/starter-theme/).
