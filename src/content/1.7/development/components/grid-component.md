@@ -202,6 +202,14 @@ So basically we can imagine later to implement `GridDataFactory->createJsView()`
 
 ## Summary as a schema
 
-{{< figure src="../img/grid-build-schema.png" title="Grid schema" >}}
+### Component organization
 
-> Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/form-schema.xml).
+{{< figure src="../img/grid_workflow.png" title="Grid Workflow" >}}
+
+> Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow.xml).
+
+### Grid hooks lifecycle
+
+{{< figure src="../img/grid_workflow_hooks.png" title="Grid Workflow" >}}
+
+> Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow_hooks.xml).
