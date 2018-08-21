@@ -27,17 +27,17 @@ Let's see what we need to do to migrate a CRUD-based page, in step-by-step tutor
 
 The Grid Definition stores the structural information about your Grid:
 
-* The *Grid name* is the human readable and translatable name
-* The *Grid identifier* is a unique key that you can use to select the right grid in case you have multiple ones in a page with the same name
-* The *Grid Columns* needs to be a ColumnCollection instance, you can see them as public properties of your grid (for now)
-* The *Grid actions* are the related actions available for this grid: in PrestaShop it's common to have "export" or "access to sql manager" actions
-* The *Row actions* are the related actions available for an entry of this list of data: in PrestaShop it's common to be able to edit/access or delete the entry
-* The *Bulk actions* are the actions available for a bunch of selectable entries: a bulk delete or a bulk edition for instance.
+* The *Grid name* is the human readable and translatable name;
+* The *Grid id* is a unique identifier that you can use to select the right grid in case you have multiple ones in a page with the same name;
+* The *Grid Columns* (`ColumnCollection`) describes the backbone of the grid;
+* The *Grid actions* (`ActionCollection`) describes the actions at the *grid* level, for exemple the "export" or "access to sql manager" actions;
+* The *Row actions* (`RowActionCollection`) describes the actions at the *row* level, like a selector button to edit/access/delete an entry;
+* The *Bulk actions* (`BulkActionCollection`) describes the actions at the *grid* level, a for a bunch of selectable entries: a bulk delete/bulk edition for instance.
 
-You don't have to create the Grid Definition by yourself byt rely instead on a Grid Definition Factory.
+To create a Definition, you can rely on a Grid Definition Factory.
 
-This factory must implement the `GridDefinitionFactoryInterface` interface which has only one method: `create()`.
-It's better to use the abstract class provided by the component, which provides access to the translator and already implements re-usable functions for you:
+This factory must implement the `DefinitionFactoryInterface` interface which has only one method: `getDefinition()`.
+The component provides an abstract class (`AbstractGridDefinitionFactory`), with access to the translator and already implements re-usable functions for you:
 
 ```php
 use PrestaShop\PrestaShop\Core\Grid\Definition\Factory\AbstractGridDefinitionFactory;
@@ -48,7 +48,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 final class FooGridDefinitionFactory extends AbstractGridDefinitionFactory
 {
     // required
-    protected function getIdentifier()
+    protected function getId()
     {
         return 'foo';
     }
@@ -58,52 +58,58 @@ final class FooGridDefinitionFactory extends AbstractGridDefinitionFactory
         return $this->trans('Foo', [], 'Admin.Advparameters.Feature');
     }
 
-    // required
+    // required, empty collection by default
     protected function getColumns()
     {
-        return ColumnCollection::fromArray([
-            [
-                'identifier' => 'id',
-                'name' => $this->trans('ID', [], 'Admin.Global'),
-                'filter_form_type' => TextType::class
-            ],
+        return (new ColumnCollection())
+            ->add((new DataColumn('id_log'))
+                ->setName($this->trans('Foo', [], 'Global.Actions'))
+                ->setOptions([
+                    'field' => 'foo',
+                ])
+            )
             ...
-        ]);
+        ;
     }
 
-    // null by default
+    // required, empty collection by default
+    protected function getFilters()
+    {
+        return (new FilterCollection())
+            ->add((new Filter('foo', TextType::class))
+                ->setTypeOptions([
+                    'required' => false,
+                ])
+                ->setAssociatedColumn('foo')
+            )
+        ;
+    }
+
+    // empty collection by default
     protected function getGridActions()
     {
-        return GridActionCollection::fromArray([
-            [
-                'identifier' => 'delete',
-                'name' => $this->trans('Erase all', [], 'Admin.Advparameters.Feature'),
-                'icon' => 'delete_forever',
-                'renderer' => '<a href="foo/delete">Delete</a>',
-            ],
-            [
-                'identifier' => 'ps_refresh_list',
-                'name' => $this->trans('Refresh list', [], 'Admin.Advparameters.Feature'),
-                'icon' => 'refresh',
-            ],
-        ]);
+        return (new GridActionCollection())
+            ->add((new SimpleGridAction('bazAction'))
+                ->setName($this->trans('Baz action', [], 'Admin.Advparameters.Feature'))
+                ->setIcon('bar')
+            )
+        ;
     }
 }
 ```
 
-## Grid Data Provider
+## Grid Data Factory
 
-As you can imagine, the responsibility of Grid Data Provider is to provide the Grid data, from the Grid Definition and using the Grid Query Builder.
+As you can imagine, the responsibility of the Grid Data Factory is to build the Grid data, from the Grid Definition and using the Grid Query Builder.
 
-The only method available of `GridDataProviderInterface` is `getData` which returns an instance of `GridData`.
-A GridData is an immutable object used to store and retrieve the GridData, so if you want to alter this data, you must do it in Grid Data Provider *before* the GridData creation.
+The only method available of `GridDataFactoryInterface` is `getData` which returns an instance of `GridData`.
+A GridData is an **immutable object** used to store and retrieve the grid data, so if you want to alter this data, you must do it in Grid Data Factory *before* the GridData creation.
 
-There is a good news here: you don't need to create your own as we provide one, the `GridDataProvider`. 
+You can rely on the implementation provided in the component `GridDataFactory` or create your owns if you have specific needs. 
 
 ## Grid Query Builder
 
-Probably the most difficult and important piece of this component.
-The Grid Query Builder is responsible of retrieving the data according to the Grid Definition and Search filters that come from the request for instance.
+The Grid Query Builder is responsible of building the right query to retrieve the data according to the Grid definition and Search filters that come from the user request.
 
 This is the related interface:
 
@@ -118,7 +124,6 @@ interface DoctrineQueryBuilderInterface
      * @return QueryBuilder
      */
     public function getSearchQueryBuilder(SearchCriteriaInterface $searchCriteria = null);
-
     /**
      * Get query that counts grid rows
      *
@@ -127,40 +132,41 @@ interface DoctrineQueryBuilderInterface
      * @return QueryBuilder
      */
     public function getCountQueryBuilder(SearchCriteriaInterface $searchCriteria = null);
-}
+
 ```
 
-Once you have defined the right Query Builder for your data, le's configure the grid and use it in a controller.
+Once the Query Builder is defined, we have all we need to create the grid.
 
 ## Grid services declaration
 
-Only 3 services must be declared: the *Grid Factory*, the *Grid Definition Factory*, and the *Grid Data Provider*.
+Only 3 services must be declared: the *Grid Factory*, the *Grid Definition Factory*, and the *Grid Data Factory*.
+
 ```yaml
 # In src/PrestaShopBundle/Resources/config/services/core/grid.yml
 
 # Grid Factory
-prestashop.core.grid.foo_factory:
-    class: 'PrestaShop\PrestaShop\Core\Grid\GridFactory'
+prestashop.core.grid.factory.foo:
+    class: 'PrestaShop\PrestaShop\Core\Grid\Factory\GridFactory'
     arguments:
-        - '@prestashop.core.grid.definition.factory.foo_definition'
-        - '@prestashop.core.grid.data_provider.foo'
+        - '@prestashop.core.grid.definition.factory.foo'
+        - '@prestashop.core.grid.data_factory.foo'
         - '@form.factory'
-        - '@prestashop.hook.dispatcher'
+        - '@prestashop.core.hook.dispatcher'
 
 # Grid Definition Factory
-prestashop.core.grid.definition.factory.foo_definition:
+prestashop.core.grid.definition.factory.foo:
     class: 'PrestaShop\PrestaShop\Core\Grid\Definition\Factory\FooGridDefinitionFactory'
     parent: 'prestashop.core.grid.definition.factory.abstract_grid_definition'
 
-## Grid Data Provider
-prestashop.core.grid.data_provider.foo:
-    class: 'PrestaShop\PrestaShop\Core\Grid\DataProvider\DoctrineGridDataProvider'
+## Grid Data Factory
+prestashop.core.grid.data_factory.foo:
+    class: 'PrestaShop\PrestaShop\Core\Grid\Data\DoctrineGridDataFactory'
     arguments:
         - '@prestashop.core.admin.foo.query_builder'
-        - '@prestashop.hook.dispatcher'
+        - '@prestashop.core.hook.dispatcher'
 ```
 
-## Use in the Controller and template rendering
+## Use in the Controller
 
 In Back Office controllers, you can use the Grid Factory to create a Grid and return it:
 
@@ -176,12 +182,12 @@ class FooController extends FrameworkBundleAdminController
      */
     public function indexAction(SearchCriteria $searchCriteria)
     {
-        $gridFooFactory = $this->get('prestashop.core.grid.foo_factory');
-
-        $fooGrid = $gridLogFactory->createUsingSearchCriteria($searchCriteria);
+        $gridFooFactory = $this->get('prestashop.core.grid.factory.foo');
+        $grid = $gridFooFactory->createUsingSearchCriteria($filters);
+        $gridPresenter = $this->get('prestashop.core.grid.presenter.grid_presenter');
         
         return $this->render('@Foo/Bar/pageWithGrid.html.twig', [
-            'gridView' => $fooGrid->createView(),
+            'grid' => $gridPresenter->present($grid),
         ]);
     }
 }
@@ -190,25 +196,36 @@ class FooController extends FrameworkBundleAdminController
 And in the related template:
 
 ```twig
-    {{ include('@PrestaShop/Admin/Common/Grid/grid_panel.html.twig', {'gridView': gridView }) }}
+    {{ include('@PrestaShop/Admin/Common/Grid/grid_panel.html.twig', {'grid': grid }) }}
 ```
 
-#### (optional) A Grid View? WTF!
+## Grid component rendering using Twig templating engine 
 
-Yes, we don't render directly the Grid Data but a typed View to be used in Twig for now, and to ease the work
-if we need to retrieve the grid directly from Vuejs/React app.
+This component is built with 2 main principles in mind:
+* the data is never aware of his representation, this means we rely on Presenters to present the data to the view;
+* we can alter every part of the Grid component, but everything is frozen once it's build;
 
-So basically we can imagine later to implement `GridDataFactory->createJsView()` which could return a well formated JSON object.
+### Managing the data and the UI
 
-## Summary as a schema
+This means the Grid Data doesn't contains anything like *width* or *class* or *color* because we give the responibility of Twig
+to allow such customization of this kind. Even if the component is powerful and flexible enough, you shouldn't try to configure Grid to pass this kind of data related to the view.
 
-### Component organization
+In the other hand, the view if totaly customizable: you can override every available template for a column, a column header or a column filter. You can also override a template for a specific grid or all grids, you can change the view if it fits special conditions, too.
+
+The right and only way to change the data is using hooks and module overrides won't works here while the UI can be changed using templating and Javascript.
+
+To sum up this strict separation between the Data management and his UI representation, this is how you could imagine the creation of a Grid:
 
 {{< figure src="../img/grid_workflow.png" title="Grid Workflow" >}}
 
 > Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow.xml).
 
-### Grid hooks lifecycle
+
+### Once built, everything is frozen
+
+You will notice that every object build is *final* and have no setters: this is to remove every possibilities to break the Grid component once the build of the Grid have been done and validated.
+But you can alter almost everything *before* the Grid is presented to the view thanks to the available hooks:
+
 
 {{< figure src="../img/grid_workflow_hooks.png" title="Grid Workflow" >}}
 
