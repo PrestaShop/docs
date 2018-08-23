@@ -32,7 +32,7 @@ The Grid Definition stores the structural information about your Grid:
 * The *Grid Columns* (`ColumnCollection`) describes the backbone of the grid;
 * The *Grid actions* (`ActionCollection`) describes the actions at the *grid* level, for exemple the "export" or "access to sql manager" actions;
 * The *Row actions* (`RowActionCollection`) describes the actions at the *row* level, like a selector button to edit/access/delete an entry;
-* The *Bulk actions* (`BulkActionCollection`) describes the actions at the *grid* level, a for a bunch of selectable entries: a bulk delete/bulk edition for instance.
+* The *Bulk actions* (`BulkActionCollection`) describes the actions at the *grid* level, for a bunch of selectable entries: a bulk delete/bulk edition for instance.
 
 To create a Definition, you can rely on a Grid Definition Factory.
 
@@ -100,7 +100,7 @@ final class FooGridDefinitionFactory extends AbstractGridDefinitionFactory
 
 ## Grid Data Factory
 
-As you can imagine, the responsibility of the Grid Data Factory is to build the Grid data, from the Grid Definition and using the Grid Query Builder.
+As you can imagine, the responsibility of the Grid Data Factory is to retrieve the Grid data, based on the Grid Definition and the Grid Query Builder.
 
 The only method available of `GridDataFactoryInterface` is `getData` which returns an instance of `GridData`.
 A GridData is an **immutable object** used to store and retrieve the grid data, so if you want to alter this data, you must do it in Grid Data Factory *before* the GridData creation.
@@ -109,7 +109,7 @@ You can rely on the implementation provided in the component `GridDataFactory` o
 
 ## Grid Query Builder
 
-The Grid Query Builder is responsible of building the right query to retrieve the data according to the Grid definition and Search filters that come from the user request.
+The Grid Query Builder is responsible of building the right query to retrieve the data according to the Grid definition and Search filters that come from the User request.
 
 This is the related interface:
 
@@ -202,15 +202,17 @@ And in the related template:
 ## Grid component rendering using Twig templating engine 
 
 This component is built with 2 main principles in mind:
+
 * the data is never aware of his representation, this means we rely on Presenters to present the data to the view;
 * we can alter every part of the Grid component, but everything is frozen once it's build;
 
 ### Managing the data and the UI
 
-This means the Grid Data doesn't contains anything like *width* or *class* or *color* because we give the responibility of Twig
-to allow such customization of this kind. Even if the component is powerful and flexible enough, you shouldn't try to configure Grid to pass this kind of data related to the view.
+This means the Grid Data doesn't contains anything like *width* or *class* or *color* because we give the responibility of Twig to allow such customization of this kind.
 
-In the other hand, the view if totaly customizable: you can override every available template for a column, a column header or a column filter. You can also override a template for a specific grid or all grids, you can change the view if it fits special conditions, too.
+> Even if the component is powerful and flexible enough, you shouldn't try to configure Grid to pass this kind of data related to the view.
+
+In the other hand, the view if totaly customizable: you can override every available template for a column, a column header or a column filter. You can also override a template for a specific grid or globally, you can change the view only according to special business conditions too.
 
 The right and only way to change the data is using hooks and module overrides won't works here while the UI can be changed using templating and Javascript.
 
@@ -218,15 +220,16 @@ To sum up this strict separation between the Data management and his UI represen
 
 {{< figure src="../img/grid_workflow.png" title="Grid Workflow" >}}
 
-> Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow.xml).
+> Note a XML file for this schema is importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow.xml).
 
 
 ### Once built, everything is frozen
 
-You will notice that every object build is *final* and have no setters: this is to remove every possibilities to break the Grid component once the build of the Grid have been done and validated.
-But you can alter almost everything *before* the Grid is presented to the view thanks to the available hooks:
+You will notice that almost every object build is *final* and have no setters: we avoid every chance to break the Grid component once the build of the Grid have been done and validated.
+
+But we got you covered, you can alter almost everything *before* the Grid is presented to the view thanks to the available hooks:
 
 
 {{< figure src="../img/grid_workflow_hooks.png" title="Grid Workflow" >}}
 
-> Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow_hooks.xml).
+> Note a XML file for this schema is importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow_hooks.xml).
