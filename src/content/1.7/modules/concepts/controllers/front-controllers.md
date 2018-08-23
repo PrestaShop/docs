@@ -98,7 +98,7 @@ public function initContent()
     ));
 
   // Will use the file modules/cheque/views/templates/front/validation.tpl
-  $this->setTemplate('validation.tpl');
+  $this->setTemplate('module:cheque/views/templates/front/validation.tpl');
 }
 ```
 
