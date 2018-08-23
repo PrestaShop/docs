@@ -1,7 +1,8 @@
 ---
-title: The Grid component
+title: Grid component
 menuTitle: Grid
-weight: 2
+chapter: true
+weight: 20
 ---
 
 # The Grid component
@@ -320,3 +321,9 @@ But we got you covered, you can alter almost everything *before* the Grid is pre
 {{< figure src="../img/grid_workflow_hooks.png" title="Grid Workflow" >}}
 
 > Note a XML file for this schema is importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/grid_workflow_hooks.xml).
+
+## Learn more
+
+* [Column Types reference][columns-reference]
+
+[columns-reference]: {{< ref "/1.7/development/components/grid/columns-reference/_index.md" >}}
