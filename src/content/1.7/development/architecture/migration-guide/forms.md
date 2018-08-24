@@ -109,7 +109,7 @@ As an example, here's how the Administration page's Form Handler service is decl
         class: 'PrestaShop\PrestaShop\Core\Form\FormHandler'
         arguments:
             - '@=service("form.factory").createBuilder()'
-            - '@prestashop.hook.dispatcher'
+            - '@prestashop.core.hook.dispatcher'
             - '@prestashop.adapter.administration.form_provider'
             -
               'general': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\GeneralType'
@@ -124,7 +124,7 @@ Let's look at the arguments one by one:
     
     This is used to render the form. You can keep the default value.
     
-- `'@prestashop.hook.dispatcher'`
+- `'@prestashop.core.hook.dispatcher'`
 
     This is used to dispatch hooks related to the form. You can also keep this value by default.
      
