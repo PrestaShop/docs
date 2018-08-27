@@ -1,3 +1,4 @@
 /src/public/
 node_modules/
 hugo
+.idea/
