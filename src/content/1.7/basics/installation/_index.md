@@ -89,6 +89,33 @@ cd /path/to/prestashop
 composer install
 ```
 
+## Setting up file rights
+
+PrestaShop needs recursive write permissions on several directories:
+
+- /admin-dev/autoupgrade/
+- /app/logs
+- /app/Resources/translations
+- /cache
+- /config/themes
+- /download
+- /img
+- /log
+- /mails
+- /modules
+- /themes
+- /translations
+- /var
+
+To ease up your life on a development environment, we suggest to either:
+
+- Make Apache run with your own user.
+- Add your own user and Apache's to a common user group (eg. "_www"), then `chown` all PrestaShop files to "youruser:_www". 
+
+{{% notice warning %}}
+<b>Never do that in production!</b> Carefully change permissions folder by folder instead.
+{{% /notice %}}
+
 ## Installing PrestaShop
 
 Open the PrestaShop installer and follow its instructions.
