@@ -21,7 +21,7 @@ We will now use a property called $tabs, storing an array of link details. Each 
 
 Depending on the options you provide, your links won’t be displayed the same way:
 
-* **class_name**: **Mandatory**, this is the file called when the merchant will click on your link.
+* **class_name**: **Mandatory**, this is the file called when the merchant will click on your link. This is the class name without the `Controller` part.
 * **name**: Optional, this is the name displayed in the menu. If not provided, the class name is shown instead.
 * **parent_class_name**: Optional if you want to display it in a subcategory. Go farther in this document to see available values.
 * **icon**: Optional, will display an icon when the menu is reduced.
