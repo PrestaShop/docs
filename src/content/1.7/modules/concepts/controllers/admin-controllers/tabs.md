@@ -25,6 +25,7 @@ Depending on the options you provide, your links won’t be displayed the same w
 * **name**: Optional, this is the name displayed in the menu. If not provided, the class name is shown instead.
 * **parent_class_name**: Optional if you want to display it in a subcategory. Go farther in this document to see available values.
 * **icon**: Optional, will display an icon when the menu is reduced.
+* **visible**: Optional, is of boolean type to determine whether you want to display the tab or not.
 
 
 ## How to add names and their translations to a tab
