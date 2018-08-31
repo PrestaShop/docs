@@ -40,7 +40,7 @@ If you want to add the same name to all available and active languages available
 public $tabs = array(
     array(
         'name' => 'Merchant Expertise', // One name for all langs
-        'class_name' => 'AdminGamification,
+        'class_name' => 'AdminGamification',
         'visible' => true,
         'parent_class_name' => 'ShopParameters',
 ));
