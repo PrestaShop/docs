@@ -1,49 +1,49 @@
 ---
-title: How to use the Forge to contribute to PrestaShop
+title: How to use GitHub to report an issue
 weight: 2
 menuTitle: Contribute by reporting issues
 ---
 
-# How to use the Forge to contribute to PrestaShop
+# ow to use GitHub to report an issue
 
-The Forge is the name of PrestaShop's bug and issue tracker, which uses Atlassian's JIRA tool. This is the best place to describe bugs you are witnessing on your PrestaShop installation, and have the developers try to fix it.
+PrestaShop is using GitHub to track bugs and issues. This is the best place to describe bugs you are witnessing on your PrestaShop installation, and have the developers try to fix it.
 
 ## Creating your account
 
 In order to participate, you need to create an account to use the bug tracker.
 
-[Create your account here](http://forge.prestashop.com/secure/Signup!default.jspa).
+[Create your account here](https://github.com/join).
 
-![Sign up form](../img/forge-createAccount.jpg)
+![Sign up form](../img/github-create-account.png)
 
-Fill all fields and validate your account request.
+Fill all fields and validate your account request, then follow the different step. Of course, you can create a free account.
 
-![Account created message](../img/forge-accountCreated.jpg)
-
-Once your account is validated, [click here to log in](http://forge.prestashop.com/secure).
+Once your account is validated, [click here to log in](https://github.com/login).
 
 ## Creating an issue
 
-You can now create your first issue: click on the "Create issue" button in the top bar.
+You can now create your first issue:
 
-![Capture of the Forge page](../img/forge-createIssue.jpg)
+ * Go to the [list of issues](https://github.com/PrestaShop/PrestaShop/issues)
+ * Click on the "New issue" button on the right.
+ * Choose between an "Bug report", or a "Feature request", and click on "Get started"
 
-A form appears:
+![Issue or Feature request](../img/github-select-issue-type.png)
 
-1. **Project**: Choose the Forge project depending on the context of your report:
-    1. "PrestaShop 1.7": when your report is tied to version 1.7.
-    1. "PrestaShop 1.6": when your report is tied to version 1.6.
-    1. "Partners & Native Modules": when your issue is tied to a default module.
-1. **Issue type**: Choose "Bug" or "Improvement" depending on what you your issue is about.
-1. **Affects version**: Always indicate the exact version where your issue happens. 
-    1. If possible, check on the latest version to make sure that the issue is not already solved.
-1. **Summary**: Give a short description of the issue.
-1. **Description**: Give a complete and precise description of the bug and the best way to reproduce it.
-1. **How to reproduce the issue**: Being able to reproduce every time is the best way to get your issue fixed. Please give details!
-1. **Attachment**: If necessary, add image files or sample code.
-1. Click the "Create" button when you are done.
+A text editors appears
 
-![Capture of the Forge page](../img/forge-createIssue2.jpg)
+![Issue or Feature request](../img/github-issue-editor.png)
+
+In order to fill the required information, just use the text editor. You can use the "preview" tab to see how your issue will be published.
+
+1. **Describe the bug**, a clear and concise description of what the bug is.
+2. **To Reproduce**, describe the different steps and information to reproduce the issue.
+3. **Screenshots**, add screenshots in this section.
+4. **Additionnal information**, like your version of PHP and Mysql and your server configuration
+5. Click the "Submit new issue" button when you are done.
+
+![Select issue type](../img/github-select-issue-type.png
+
 
 ## Best practices for writing an issue
 
@@ -59,4 +59,4 @@ When writing a bug report, please use these guidelines:
 
 These are inspired from [Mozilla's own guidelines](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines).
 
-To learn more about how to best use the Forge, read the [JIRA documentation](https://confluence.atlassian.com/display/JIRA/JIRA+Documentation). 
+GitHub provides a very good documentation about how to write [issues](https://guides.github.com/features/issues/) with it's [flavoured Markdown](https://github.github.com/gfm/). It is possible to [highlight code syntax](https://help.github.com/articles/creating-and-highlighting-code-blocks/), [add pictures](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/), or even to [link issues and pull requests](https://help.github.com/articles/autolinked-references-and-urls/).
