@@ -16,7 +16,7 @@ In order to participate, you need to create an account to use the bug tracker.
 
 ![Sign up form](../img/github-create-account.png)
 
-Fill all fields and validate your account request, then follow the different step. Of course, you can create a free account.
+Fill all fields and validate your account request, then follow the different steps.
 
 Once your account is validated, [click here to log in](https://github.com/login).
 
@@ -30,19 +30,19 @@ You can now create your first issue:
 
 ![Issue or Feature request](../img/github-select-issue-type.png)
 
-A text editors appears
+A text editors appears:
 
 ![Issue or Feature request](../img/github-issue-editor.png)
 
 In order to fill the required information, just use the text editor. You can use the "preview" tab to see how your issue will be published.
+
+There are four main sections:
 
 1. **Describe the bug**, a clear and concise description of what the bug is.
 2. **To Reproduce**, describe the different steps and information to reproduce the issue.
 3. **Screenshots**, add screenshots in this section.
 4. **Additionnal information**, like your version of PHP and Mysql and your server configuration
 5. Click the "Submit new issue" button when you are done.
-
-![Select issue type](../img/github-select-issue-type.png
 
 
 ## Best practices for writing an issue
