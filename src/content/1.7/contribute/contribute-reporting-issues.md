@@ -4,7 +4,7 @@ weight: 2
 menuTitle: Contribute by reporting issues
 ---
 
-# ow to use GitHub to report an issue
+# How to use GitHub to report an issue
 
 PrestaShop is using GitHub to track bugs and issues. This is the best place to describe bugs you are witnessing on your PrestaShop installation, and have the developers try to fix it.
 
@@ -26,7 +26,7 @@ You can now create your first issue:
 
  * Go to the [list of issues](https://github.com/PrestaShop/PrestaShop/issues)
  * Click on the "New issue" button on the right.
- * Choose between an "Bug report", or a "Feature request", and click on "Get started"
+ * Choose between a "Bug report", or a "Feature request", and click on "Get started"
 
 ![Issue or Feature request](../img/github-select-issue-type.png)
 
@@ -41,7 +41,7 @@ There are four main sections:
 1. **Describe the bug**, a clear and concise description of what the bug is.
 2. **To Reproduce**, describe the different steps and information to reproduce the issue.
 3. **Screenshots**, add screenshots in this section.
-4. **Additionnal information**, like your version of PHP and Mysql and your server configuration
+4. **Additionnal information**, like your version of PHP and Mysql and your server configuration.
 5. Click the "Submit new issue" button when you are done.
 
 
