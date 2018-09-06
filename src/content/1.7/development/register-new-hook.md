@@ -27,7 +27,7 @@ final class FormHandler extends AbstractFormHandler
             ->add('notifications', NotificationsType::class)
             ->setData($this->formDataProvider->getData())
         ;
-        $this->hookDispatcher->dispatchForParameters(
+        $this->hookDispatcher->dispatchWithParameters(
             'displayAdministrationPageForm',
             ['form_builder' => &$formBuilder]
         );

@@ -87,6 +87,10 @@ Some helpers are specific to PrestaShop to help you manage the security and the 
 * `authorizationLevel(controllerName)`: check if you are allowed - as connected user - to do the related actions
 * `langToLocale($lang)`: get the locale from a PrestaShop lang
 * `trans(key, domain, [params])`: translate a string
+* `redirectToDefaultPage()`: redirect the user to the configurated default page
+* `presentGrid(GridInterface $grid)`: returns an instance of Grid view
+* `getCommandBus`: returns the Command bus
+* `getQueryBus`: returns the Query bus
 
 ## Security
 
@@ -183,7 +187,46 @@ In this case, you can use the [Controllers helper functions](#controller-helpers
 
 In order to map an Action to an url, you need to register a route and update a legacy class called `Link`.
 
-Routes are declared in `src/PrestaShopBundle/Resources/config/admin` folder, using a `routing_{domain}.yml` file and imported in the `routing_admin.yml` file.
+Routes are declared in `src/PrestaShopBundle/Resources/config/admin` folder, following the menu organization.
+
+This is the current organization of routing, you **must** follow the same organization:
+
+```
+.
+├── admin
+│   ├── _common.yml
+│   ├── configure
+│   │   ├── advanced_parameters
+│   │   ├── _configure.yml
+│   │   └── shop_parameters
+│   ├── improve
+│   │   ├── design
+│   │   ├── _improve.yml
+│   │   ├── international
+│   │   ├── modules
+│   │   ├── payment
+│   │   └── shipping
+│   ├── _security.yml
+│   └── sell
+│       ├── catalog
+│       ├── orders
+│       ├── _sell.yml
+│       └── stocks.yml
+├── admin.yml
+├── api
+│   ├── attributes.yml
+│   ├── categories.yml
+│   ├── features.yml
+│   ├── i18n.yml
+│   ├── improve
+│   │   └── design
+│   ├── manufacturers.yml
+│   ├── stock_movements.yml
+│   ├── stocks.yml
+│   ├── suppliers.yml
+│   └── translations.yml
+└── api.yml
+```
 
 Nothing special here except that you *must* declare a property called `_legacy_controller` containing the old name of controller you are migrating. This will make the class `Link` aware of it: this class is responsible of generating urls in the legacy parts of PrestaShop.
 

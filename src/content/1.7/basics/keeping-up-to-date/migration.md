@@ -58,7 +58,9 @@ With the same process, you can export the following data:
 * Stocks
 * Suppliers
 
-*Note:** The extraction will contain values for the current language. If your shop is multilang, you must switch your lang in your employee configuration (accessible from the top right corner of the page) and repeat the extraction.
+{{% notice note %}}
+ The extraction will contain values for the current language. If your shop is multilang, you must switch your lang in your employee configuration (accessible from the top right corner of the page) and repeat the extraction.
+{{% /notice %}}
 
 This method is limited to the displayed details (= what you see on the table), thus can be far from being exhaustive. In the case you want more or all columns, you may prefer to proceed manually with your own SQL client.
 
@@ -120,7 +122,7 @@ If the result fits your needs, you can export it with the “export” button av
 {{< figure src="/images/1.7/upgrade-migration/migration-phpmyadmin-export-custom-sql.png" >}}
 
 ##### mysqldump
-If you used `mysqldump` for your backups, there is also an option for exctracting your data in CSV files, as described in the [documentation](https://dev.mysql.com/doc/refman/8.0/en/mysqldump-delimited-text.html). However, our tests have shown that method is far from being easy.
+If you used `mysqldump` for your backups, there is also an option for extracting your data in CSV files, as described in the [documentation](https://dev.mysql.com/doc/refman/8.0/en/mysqldump-delimited-text.html). However, our tests have shown that method is far from being easy.
 
 Example for exporting the table ps_product:
 ```bash
