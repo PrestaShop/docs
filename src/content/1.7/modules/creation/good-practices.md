@@ -13,7 +13,7 @@ menuTitle: Good practices
 - Follow the PSR-2 standard for modules destined for PS 1.6.1.0 +: http://doc.prestashop.com/display/PS16/Coding+Standards
 - Create your own tables!
 - Develop your module in English, then use PrestaShop translation system to translate your module.
-- Go through directories using using PrestaShop variables like: `_PS_CONFIG_DIR_ . '/config.inc.php'`
+- Go through directories using PrestaShop variables like: `_PS_CONFIG_DIR_ . '/config.inc.php'`
 
 ### Don't
 
