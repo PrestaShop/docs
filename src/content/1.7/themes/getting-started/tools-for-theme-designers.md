@@ -189,7 +189,7 @@ To update your npm:
 
 ## Using Webpack to compile and minify your asset files
 
-Modern website are getting more and more complex, and JavaScript becomes more prominent than even in the web-development world. As a result there is a lot of code on the client side!
+Modern website are getting more and more complex, and JavaScript becomes more prominent than ever in the web-development world. As a result there is a lot of code on the client side!
 
 Webpack was built in order to make your life easier, most notably by organizing your code into JavaScript modules. It takes a whole lot of work off your shoulders: you have better things to do than to edit configuration files in order to adjust media files, fonts or URLs.
 
