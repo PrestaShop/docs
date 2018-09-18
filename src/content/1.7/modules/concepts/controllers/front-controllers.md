@@ -42,7 +42,7 @@ automatically.
 
 ## Adding methods to the controller
 
-There are basically to kinds of HTTP calls possible for a controller:
+There are basically two kinds of HTTP calls possible for a controller:
 
 * Calls with GET, used to only retrieve data,
 * Calls with POST, used as soon as some data is modified on the shop.
