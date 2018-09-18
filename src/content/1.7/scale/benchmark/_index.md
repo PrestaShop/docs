@@ -89,7 +89,7 @@ php app/console.php
 
 #### How to use this dataset during Prestashop install?
 
-Actually it's quite simple. Just copy the content of the ```generated_data``` folders (three foldesr should be 
+Actually it's quite simple. Just copy the content of the ```generated_data``` folders (three folders should be 
 there: data, img and langs) in the prestashop ```install/fixtures/fashion``` folders (overwrite the folders already 
 there).
 
