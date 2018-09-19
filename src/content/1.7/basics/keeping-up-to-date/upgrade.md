@@ -182,7 +182,7 @@ described here:
 Before going further, a few things should now be cleaned.
 
 -   The \`install\` folder, used to run the database upgrades, is not needed anymore and can be safely deleted.
--   When opening your shop (in the front or back office) on your browser, you may see some visual issues. This can be due to your old assets being still served by a cache. Reload the them by force-refreshing the page(press ctrl+R on Windows / Linux or cmd+R on Mac OS) or clearing your browser’s cache.
+-   When opening your shop (in the front or back office) on your browser, you may see some visual issues. This can be due to your old assets being still served by a cache. Reload them by force-refreshing the page (press ctrl+R on Windows / Linux or cmd+R on Mac OS) or clearing your browser’s cache.
 
 ### Modules upgrade
 
@@ -222,7 +222,7 @@ versions of PrestaShop.
 This module has been reworked internally for PrestaShop 1.6 & 1.7.
 
 Technical details about this major version can be found on a
-[specific document (Google docs)](https://docs.google.com/document/d/1DQMP6bg5_fgbJQScdidCQCEmAi4MzRgYNhdGVcYOqm4/edit#heading=h.sn6tqvhtvo8p)
+[specific document (Google docs)](https://docs.google.com/document/d/1DQMP6bg5_fgbJQScdidCQCEmAi4MzRgYNhdGVcYOqm4/edit#heading=h.sn6tqvhtvo8p).
 
 ### Download / Installation
 
