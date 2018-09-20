@@ -98,7 +98,7 @@ The idea is to uncouple data management from Controllers, so populating the form
 
 Once you are able to manage data loaded to or sent by your forms, you need a way to build those forms (which can be themselves composed of multiple forms).
  
-For this, you need a Form Handler. You can either implement it yourself as a class (based on the interface `PrestaShop\PrestaShop\Core\Form\FormHandlerInterface`), or use PrestaShop's core `FormHandler` to create a service in a declarative way – no need for a new class!.
+For this, you need a Form Handler. You can either implement it yourself as a class (based on the interface `PrestaShop\PrestaShop\Core\Form\FormHandlerInterface`), or use PrestaShop's core `FormHandler` to create a service in a declarative way – no need for a new class!
 
 As an example, here's how the Administration page's Form Handler service is declared:
 

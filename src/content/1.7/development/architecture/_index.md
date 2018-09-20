@@ -38,7 +38,7 @@ Here is how the files are organized:
 -   `/docs`: contains some documentation, the licenses, and the sample
     import files. *Note*: it should be deleted in a
     production environment.
--   \`/download: contains your virtual products, which can be downloaded
+-   `\/download`: contains your virtual products, which can be downloaded
     by the user who paid for it. Files are stored with a md5 filename.
 -   `/img`: contains all of PrestaShop's default images, icons and
     picture files – that is, those that do not belong to the theme. This
