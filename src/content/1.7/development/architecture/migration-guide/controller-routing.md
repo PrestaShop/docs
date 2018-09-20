@@ -81,7 +81,7 @@ Some helpers are specific to PrestaShop to help you manage the security and the 
 
 * `isDemoModeEnabled()`: some actions should not be allowed in Demonstration Mode
 * `getDemoErrorMessage()`: returns a specific error message
-* `addFlash(type, msg)`: accepts "success|error" and a message that will be display after redirection of the page
+* `addFlash(type, msg)`: accepts "success|error" and a message that will be displayed after redirection of the page
 * `flashErrors([msgs])`: if you need to "flash" a collection of errors
 * `dispatchHook(hookName, [params])`: some legacy hooks need to be dispatched to preserve backward compatibility
 * `authorizationLevel(controllerName)`: check if you are allowed - as connected user - to do the related actions
