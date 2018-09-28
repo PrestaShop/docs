@@ -73,7 +73,7 @@ In the following example we'll modify the category template.
 
 ### Re-defining the whole template
 
-Create the category template in your child theme `templates/catalog/listing/category.tpl`. At this point
+Create the category template in your child theme `templates/catalog/listing/category.tpl`. At this point you
 can do anything you want in this template but most likely you still want to extend product-list template. If so,
 you don't have to copy product-list template to your child theme, PrestaShop will use the parent file.
 
