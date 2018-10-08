@@ -72,7 +72,7 @@ These parameters are also mandatory:
 For instance, translating the string "Welcome to this page!" can be done like this:
 
 ```php
-{l s='Welcome to this page!' d='Modules.MyModule'}
+{l s='Welcome to this page!' mod='Modules.MyModule'}
 ```
 
 
@@ -84,7 +84,7 @@ In our sample module, the `mymodule.tpl` file...
 </li>
 <!-- Block mymodule -->
 <div id="mymodule_block_left" class="block">
-  <h4>{l s='Welcome!' d='Modules.MyModule'}</h4>
+  <h4>{l s='Welcome!' mod='Modules.MyModule'}</h4>
   <div class="block_content">
     <p>Hello,
        {if isset($my_module_name) && $my_module_name}
