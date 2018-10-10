@@ -17,7 +17,7 @@ Here are two good reasons to try and convince you to start writing documentation
 
 ### 1. You won't remember that 6 months from now
 
-Just fixed a bug? Written a new feature? Cool! You may think you know your code _now_, but if you come bak to it 6 months later, you will have forgotten most about. It will be as if someone else had written it.
+Just fixed a bug? Written a new feature? Cool! You may think you know your code _now_, but if you come back to it 6 months later, you will have forgotten most about. It will be as if someone else had written it.
 
 **Write it down now that it's fresh on your mind**. You will be happy you did it when you come back later looking for help finding out how "this" was done and how does "that" work.
 
