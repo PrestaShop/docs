@@ -492,7 +492,7 @@ settings!
 The Shop object
 ---------------
 
-Another of install()'s lines is thus:
+Another of install()'s lines is this:
 
 ```php
 if (Shop::isFeatureActive()) {
