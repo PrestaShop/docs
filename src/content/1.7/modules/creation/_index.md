@@ -372,7 +372,7 @@ Here is the bare minimum for the uninstall() method:
 ```php
 public function uninstall()
 {
-    return parent::uninstall());
+    return parent::uninstall();
 }
 ```
 
