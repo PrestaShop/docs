@@ -1,5 +1,5 @@
 ---
-title: Register a new hook
+title: How to send e-mails
 weight: 70
 ---
 
@@ -7,9 +7,11 @@ weight: 70
 
 ## Using the `Mail::send()` method
 
+
 {{% notice note %}}
-The `Mail` core class extends [`ObjectModel`][objectmodel]
+The `Mail` core class extends [ObjectModel](/1.7/development/database/objectmodel)
 {{% /notice %}}
+
 
 {{% notice note %}}
 This example is assuming you are using in a controller named `mycontroller` of a module named `mymodule`
