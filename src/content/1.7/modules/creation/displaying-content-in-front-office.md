@@ -248,7 +248,7 @@ Embedding a template in the theme
 
 The link that the module displays does not lead anywhere for now. Let's
 create the `display.php` file that it targets, with a minimal content,
-and put it in the module's root folder.
+and put it in: modules/yourmodule/controllers/front/.
 
 ```
     Welcome to this page!
