@@ -1,5 +1,5 @@
 ---
-title: Register a new hook
+title: How to send e-mails
 weight: 70
 ---
 
