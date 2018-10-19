@@ -268,7 +268,6 @@ use Symfony\Component\HttpFoundation\Response;
 class FooController extends FrameworkBundleAdminController
 {
     /**
-     * Note: the Search Criteria management is part of another PR.
      * @return Response
      */
     public function indexAction(FooFilters $filters)
@@ -276,10 +275,8 @@ class FooController extends FrameworkBundleAdminController
         $gridFooFactory = $this->get('prestashop.core.grid.factory.foo');
         $grid = $gridFooFactory->getGrid($filters);
         
-        $gridPresenter = $this->get('prestashop.core.grid.presenter.grid_presenter');
-        
         return $this->render('@Foo/Bar/pageWithGrid.html.twig', [
-            'grid' => $gridPresenter->present($grid),
+            'grid' => $this->presentGrid($grid),
         ]);
     }
 }
