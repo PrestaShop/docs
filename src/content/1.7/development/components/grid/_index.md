@@ -195,11 +195,11 @@ In Back Office controllers, you can use the Grid Factory to create a Grid and re
 ```php
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteriaInterface;
 
 class FooController extends FrameworkBundleAdminController
 {
     /**
-     * Note: the Search Criteria management is part of another PR.
      * @return Response
      */
     public function indexAction(Request $request)
@@ -208,17 +208,15 @@ class FooController extends FrameworkBundleAdminController
         $searchCriteria = $this->buildSearchCriteriaFromRequest($request);
         $grid = $gridFooFactory->getGrid($filters);
         
-        $gridPresenter = $this->get('prestashop.core.grid.presenter.grid_presenter');
-        
         return $this->render('@Foo/Bar/pageWithGrid.html.twig', [
-            'grid' => $gridPresenter->present($grid),
+            'grid' => $this->presentGrid($grid),
         ]);
     }
     
     /**
      * @param Request $request
      *
-     * @return SearchCriteria
+     * @return SearchCriteriaInterface
      */
     private function buildSearchCriteriaFromRequest(Request $request)
     {
@@ -296,11 +294,11 @@ This component is built with 2 main principles in mind:
 
 ### Managing the data and the UI
 
-This means the Grid Data doesn't contains anything like *width* or *class* or *color* because we give the responibility of Twig to allow such customization of this kind.
+This means the Grid Data doesn't contains anything like *width* or *class* or *color* because we give the responsibility of Twig to allow such customization of this kind.
 
-> Even if the component is powerful and flexible enough, you shouldn't try to configure Grid to pass this kind of data related to the view.
+> Even if the component is powerful and flexible enough to accept it, you shouldn't try to configure Grid to pass this kind of data related to the view.
 
-In the other hand, the view if totaly customizable: you can override every available template for a column, a column header or a column filter. You can also override a template for a specific grid or globally, you can change the view only according to special business conditions too.
+In the other hand, the view is totaly customizable: you can override every available template for a column, a column header or a column filter. You can also override a template for a specific grid or globally, you can change the view only according to special business conditions too.
 
 The right and only way to change the data is using hooks and module overrides won't work here while the UI can be changed using templating and Javascript.
 

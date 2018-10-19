@@ -44,17 +44,16 @@ $this->dispatchHook('actionAdminPerformanceControllerPostProcessBefore', array('
 
 ## Dispatching hooks using the Hook dispatcher
 
-If you need to dispatch a hook from a non-controller class, you'll need to inject the [HookDispatcher](https://github.com/PrestaShop/PrestaShop/blob/71ce2abf883c3d47e24e0aa07d461afb913d0511/src/PrestaShopBundle/Service/Hook/HookDispatcher.php) class.
+If you need to dispatch a hook from a non-controller class, you'll need to inject the [HookDispatcher](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Core/Hook/HookDispatcher.php) class.
  
 If your class is defined as a Symfony service, the HookDispatcher is available as a service called `prestashop.core.hook.dispatcher`.
 
 ```php
 use PrestaShopBundle\Service\Hook\HookEvent;
-use PrestaShopBundle\Service\Hook\HookDispatcher;
+use PrestaShop\PrestaShop\Core\Hook\HookDispatcher;
 
 $hookEvent = new HookEvent();
-$hookEvent->setHookParameters($parameters);
-$this->hookDispacher->dispatch($eventName, $hookEvent);
+$this->hookDispacher->dispatchWithParameters($eventName, $parameters);
 ```
 
 {{% notice tip %}}
