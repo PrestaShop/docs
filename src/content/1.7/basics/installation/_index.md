@@ -39,7 +39,7 @@ The source code of PrestaShop is hosted on the [Official PrestaShop GitHub Repos
 
 You can find all the released versions of PrestaShop here: [PrestaShop releases](https://github.com/PrestaShop/PrestaShop/releases).
 
-Nightly releases of PrestaShop are also generated daily. Their details can be found on a [dedicated storage](https://storage.googleapis.com/prestashop-core-nightly/). To download a file from this place, append the file name to the url.
+Nightly releases of PrestaShop are also generated daily. Their details can be found on a [public Google Cloud storage](https://console.cloud.google.com/storage/browser/prestashop-core-nightly).
 
 ### Choosing the right version for you
 
