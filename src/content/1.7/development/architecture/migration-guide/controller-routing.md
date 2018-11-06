@@ -185,7 +185,7 @@ In this case, you can use the [Controllers helper functions](#controller-helpers
 
 ## Routing in PrestaShop
 
-In order to map an Action to an url, you need to register a route and update a legacy class called `Link`.
+In order to map an Action to an url, you need to register a route and define the appropriate `_legacy_controller` and `_legacy_link` parameter.
 
 Routes are declared in `src/PrestaShopBundle/Resources/config/admin` folder, following the menu organization.
 
@@ -228,10 +228,11 @@ This is the current organization of routing, you **must** follow the same organi
 └── api.yml
 ```
 
-Nothing special here except that you *must* declare a property called `_legacy_controller` containing the old name of controller you are migrating. This will make the class `Link` aware of it: this class is responsible of generating urls in the legacy parts of PrestaShop.
+Nothing special here except that you *must* declare a property called `_legacy_controller` containing the old name of controller you are migrating,
+and specify the `_legacy_link` if you want to keep the link between legacy urls and new ones.
 
 {{% notice tip %}}
-This same property is used to handle [Security Restrictions](#security). 
+This property `_legacy_controller` is used to handle [Security Restrictions](#security). 
 {{% /notice %}}
 
 For example, let's see what was done when migrating the "System Information" page inside the "Configure > Advanced Parameters" section:
@@ -243,28 +244,151 @@ admin_system_information:
     defaults:
         _controller: 'PrestaShopBundle\Controller\Admin\AdvancedParameters\SystemInformationController::indexAction'
         _legacy_controller: AdminInformation
+        _legacy_link: AdminInformation
 ```
 
 {{% notice info %}}
 PrestaShop uses YAML files for service declaration and routing, please don't use annotations for that!
 {{% /notice %}}
 
-And now the update of `Link` class, adding a new entry in `$routes` list:
+### More about the _legacy_link property
+
+When migrating a new page to Symfony, you *must* get rid of all the former link references to the legacy controller.
+In legacy pages link are generally manage by the `Link` class, all these calls need to be replaced using the *Router*
+component.
+
+However although you can find all the references of a controller in the core code, you can't know every references that
+could exist in modules or tabs (or you might simply miss some legacy calls). That's where we got you covered with `_legacy_link`,
+this parameter is associated to any migrated route and is formatted as such:
+
+```yaml
+route_name:
+    path: some/url
+    methods: [GET]
+    defaults:
+        _controller: 'PrestaShopBundle\Controller\Path\To\ControllerClass::{actionName}Action'
+        _legacy_controller: LegacyController
+        _legacy_link: {LegacyController}:{actionName}
+        
+# In some cases several controllers/actions are managed by the same migrated controller
+# You have the possibility to set an array as _legacy_link thus preventing you to define alias routes
+other_route_name:
+    path: some/other/url
+    methods: [GET]
+    defaults:
+        _controller: 'PrestaShopBundle\Controller\Path\To\Other\ControllerClass::{actionName}Action'
+        _legacy_controller: LegacyController
+        _legacy_link:
+            - {LegacyController}:{actionName}
+            - {LegacyController}:{aliasActionName}        
+```
+
+The `actionName` part is optional for the **index** action (equivalent to **list**), therefore these three notations are equivalent:
+
+```yaml
+admin_emails:
+    path: /emails
+    methods: [GET]
+    defaults:
+        _controller: 'PrestaShopBundle:Admin\Configure\AdvancedParameters\Email:index'
+        _legacy_controller: AdminEmails
+        _legacy_link:
+            - AdminEmails
+            - AdminEmails:index
+            - AdminEmails:list
+```
+
+### The Link->getAdminLink conversion
+
+Not every developer use the `getAdminLink` method the same way, therefore the `_legacy_link` is able to recognize different
+use of this method, either via an `action` parameter.
+
+But sometimes urls simply insert the action name as a parameter (e.g: `?controller=AdminPaymentPreferences&update`). As
+long as the actions have been migrated and correctly setup they will be successfully converted. 
+
+Given this configuration:
+
+```yaml
+admin_payment_preferences:
+    path: /preferences
+    methods: [GET]
+    defaults:
+        _controller: PrestaShopBundle:Admin\Improve\Payment\PaymentPreferences:index
+        _legacy_controller: AdminPaymentPreferences
+        _legacy_link: AdminPaymentPreferences
+
+admin_payment_preferences_process:
+    path: /preferences/update
+    methods: [POST]
+    defaults:
+        _controller: PrestaShopBundle:Admin\Improve\Payment\PaymentPreferences:processForm
+        _legacy_controller: AdminPaymentPreferences
+        _legacy_link: AdminPaymentPreferences:update
+```
+
 
 ```php
-// classes/Link.php, in getAdminLink()
- $routes = array(
+    $link = New Link();
+
+    //These calls will return /preferences
+    $link->getAdminLink('AdminEmails'); 
+    $link->getAdminLink('AdminEmails', true, ['action' => 'list']);
+    $link->getAdminLink('AdminEmails', true, [], ['action' => 'index']);
+
+    //These calls will return /preferences/update
+    $link->getAdminLink('AdminEmails', true, [], ['action' => 'update']);
+    $link->getAdminLink('AdminEmails', true, [], ['update' => true]); =>
+    $link->getAdminLink('AdminEmails', true, [], ['update' => '']); =>
+    
+    //These calls will return ?controller=AdminEmails&action=export
+    //because the export action has not been migrated yet
+    $link->getAdminLink('AdminEmails', true, [], ['action' => 'export']);
+```
+
+### The _legacy_link auto redirection
+
+Finally some urls might have been generated manually or hard coded. To avoid losing these legacy urls a Symfony listener
+checks each call to the back office and tries to match it to a migrated url if it is found then the response is *automatically*
+redirected to the new migrated url.
+
+```
+    admin/index.php?controller=AdminEmails => Redirected to /admin/preferences
+    admin/index.php?controller=AdminEmails&action=update => Redirected to /admin/preferences/update
+    admin/index.php?controller=AdminEmails&action=export => No redirection, the legacy controller is called
+```
+
+{{% notice warning %}}
+**Be careful, Link is sometimes misused**
+
+Some examples have been found where urls are generated by a mix of `getAdminLink` and concatenating parameters:
+
+```php
+    $link = new Link();
+    $link->getAdminLink('AdminEmails') . '?action=update';
+```
+
+This **won't work** because the parameters will be appended to the index url.
+You should be **extra careful** about these misused code and replace them, depending on what version of PrestaShop you are targeting, by:
+
+- *1.7.x* use the `Router` service directly with the appropriate route
+- *1.6.x* if you need your link to work both on `1.6` AND `1.7` use `getAdminLink` method with the parameters **fully injected** in the function
+
+{{% /notice %}}
+
+{{% notice note %}}
+Remember that `_legacy_link` is only available since **1.7.5** version of PrestaShop, for older versions you need to update the `Link`
+class to manage routing conversion.
+
+```php
+    // classes/Link.php, in getAdminLink()
+    $routes = array(
     'AdminModulesSf' => 'admin_module_manage',
     'AdminStockManagement' => 'admin_stock_overview',
     //...
-    'AdminInformation' => 'admin_system_information',
+    'LegacyController' => 'migrated_route',
 );
 ```
 
-And now, every link to "System Information" page in legacy parts will point to the new url.
+This will only work for **one route/one controller** the association by action does not work before **1.7.5**.
 
-{{% notice note %}}
-**Be aware, some urls may be hardcoded in legacy!**
-
-Use your IDE search to find occurrences and replace them using the `Link` class in Controllers, `{$url->link->getAdminLink()}` in smarty or `{{ getAdminLink() }}` in Twig.
 {{% /notice %}}
