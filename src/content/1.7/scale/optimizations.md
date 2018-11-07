@@ -20,7 +20,7 @@ of concurrent users you want to simulate during the bench.
 
 Make sure Zend Opcache is enabled.
 
-> Note this configuration of for Production environments only.
+> Note this configuration of PHP should be used in Production environments only.
 
 Use the following settings to optimize the performances:
 ```text
