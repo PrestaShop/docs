@@ -34,7 +34,6 @@ session.auto_start = Off
 short_open_tag = Off
 realpath_cache_size = 4096K
 realpath_cache_ttl = 600
-apc.enable_cli = 1
 display_errors = Off
 
 magic_quotes_gpc = off
