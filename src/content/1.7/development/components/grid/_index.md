@@ -1,7 +1,6 @@
 ---
 title: Grid component
 menuTitle: Grid
-chapter: true
 weight: 20
 ---
 
