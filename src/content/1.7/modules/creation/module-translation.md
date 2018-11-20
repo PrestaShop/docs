@@ -58,6 +58,20 @@ Other classes may need to get the module instance as a parameter and store it fo
 
 Another solution is retrieving the module object with `Module::getInstanceByName(<Module_name>)`.
 
+Add a parameter to the `{l}` method to specify the class asking for translation.
+
+```php
+class CustomModuleClass 
+{
+    public $module;
+    
+    public function foo()
+    {
+        // [...]
+        $this->module = Module::getInstanceByName(<Module_name>);
+        $this->text = $this->module->l('My text to translate', 'CustomModuleClass');
+```
+
 ### Templates
 
 Strings in TPL files will need to be turned into dynamic content using
