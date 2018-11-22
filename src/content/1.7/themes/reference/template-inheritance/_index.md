@@ -37,7 +37,7 @@ The [official Smarty documentation](http://www.smarty.net/inheritance) has a nic
 ## PrestaShop real life example
 
 In a PrestaShop theme, many pages are very similar, for example template listing products: categories,
-new products, search results, and so on. All of them display a list of product so in PS 1.7 they all
+new products, search results, and so on. All of them display a list of products so in PS 1.7 they all
 extend `catalog/listing/product-list.tpl` (which extends the main layout).
 
 ```html+smarty
@@ -58,7 +58,7 @@ extend `catalog/listing/product-list.tpl` (which extends the main layout).
   {/block}
 ```
 
-The template will show a title and a list of product underneath. For category page, we want a nice
+The template will show a title and a list of products underneath. For category page, we want a nice
 description with an cover image. So we can simply override the *product_list_header*
 
 ```html+smarty
