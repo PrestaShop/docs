@@ -7,7 +7,7 @@ aliases:
 
 # Listing pages
 
-Your catalog is mostly 2 things: a list of product and a detailed product page.
+Your catalog is mostly 2 things: a list of products and a detailed product page.
 
 This section covers the listing pages, which includes: category, search result,
 products per brand, best seller list, new product list and so on.
