@@ -147,6 +147,14 @@ You can now use it in your module (and everywhere in PrestaShop modern pages!):
 ```php
 // foo.php
 
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+// Add this 
+require_once _PS_MODULE_DIR_.'foo/src/Repository/ProductRepository.php';
+
+
 /* ... */
 /**
  * Get the list of products for a specific lang.
