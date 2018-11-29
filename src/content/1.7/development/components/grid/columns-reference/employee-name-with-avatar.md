@@ -9,7 +9,7 @@ weight: 70
 It is special type of column that allows you to add employee name with avatar column to your Grid.
 You can see how it looks be default:
 
-{{< figure src="../../../img/employee-name.png" title="Employee name with avatar column" >}}
+{{< figure src="../img/employee-name.png" title="Employee name with avatar column" >}}
 
 ## Available options
 
