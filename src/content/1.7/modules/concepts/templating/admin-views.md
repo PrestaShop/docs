@@ -2,6 +2,8 @@
 title: How to override Back Office views
 menuTitle: Overriding Back office views
 weight: 4
+aliases:
+- 1.7/modules/templating/
 ---
 
 # How to override Back Office views
@@ -21,7 +23,7 @@ Our Customer want a better Listing view: the "Price" column should be at positio
 
 ### Identify the template to override
 
-First we need to identify which Twig template(s) is (are) rendered. Using the *Debug mode*, select the "Twig metrics" block in the Symfony Debug toolbar. You'll see the list of Twig templates used to render the page. In our case, we are interested by the template "**@PrestaShop/Admin/Product/catalog.html.twig**".
+First we need to identify which Twig template(s) is (are) rendered. Using the *Debug mode*, select the "Twig metrics" block in the Symfony Debug toolbar. You'll see the list of Twig templates used to render the page. In our case, we are interested in the template "**@PrestaShop/Admin/Product/catalog.html.twig**".
 
 ### Override the template in the module: a simple "Hello world!"
 
