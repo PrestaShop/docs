@@ -16,7 +16,7 @@ This is the list of items that usually need to be done in order to complete the 
 - Creations
   - Create `PrestaShopBundle/Controller/<path>/<Your>Controller`
   - Create related actions (functions matched to URIs)
-  - Declare routing in `config/routing/admin/routing_*.yml` file
+  - Declare routing in `PrestaShopBundle/Resources/config/routing/admin/routing_*.yml` file
   - Create Symfony form types for each form available in pages
   - Create and configure Javascript (using Webpack/ES6) file
   - Create every twig blocks in `views/<path>/*.html.twig`
