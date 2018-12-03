@@ -149,11 +149,11 @@ Thanks to the hooks, you can alter the Object Model or execute functions during 
 As an exemple, this is how you can retrieve information about a product when we delete it from the database:
 
 ```php
+use Product;
 // In a module
 
-public function hookActionObjectProductDeleteAfter($product)
+public function hookActionObjectProductDeleteAfter(Product $product)
 {
-    // $product is an instance of Product class.
     PrestaShopLogger::addLog(
         sprintf('Product with id %s was deleted with success', $product->id_product)
     );    
