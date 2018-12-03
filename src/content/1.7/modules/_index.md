@@ -106,7 +106,7 @@ A few native modules have been split between 1.6 & 1.7 versions of PrestaShop, a
 | [ganalytics](https://github.com/PrestaShop/ganalytics) | [ps_googleanalytics](https://github.com/PrestaShop/ps_googleanalytics) |
 | [homefeatured](https://github.com/PrestaShop/homefeatured) | [ps_featuredproducts](https://github.com/PrestaShop/ps_featuredproducts) |
 | [homeslider](https://github.com/PrestaShop/homeslider) | [ps_imageslider](https://github.com/PrestaShop/ps_imageslider) |
-| [mailalerts](https://github.com/PrestaShop/mailalerts) | [ps_emailalests](https://github.com/PrestaShop/ps_emailalests) |
+| [mailalerts](https://github.com/PrestaShop/mailalerts) | [ps_emailalerts](https://github.com/PrestaShop/ps_emailalerts) |
 | [onboarding](https://github.com/PrestaShop/onboarding) | [welcome](https://github.com/PrestaShop/welcome) |
 | [productscategory](https://github.com/PrestaShop/productscategory) | [ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts) |
 | [producttooltip](https://github.com/PrestaShop/producttooltip) | [ps_productinfo](https://github.com/PrestaShop/ps_productinfo) |
