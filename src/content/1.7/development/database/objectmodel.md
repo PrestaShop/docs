@@ -146,7 +146,7 @@ Thanks to the hooks, you can alter the Object Model or execute functions during 
 
 {{< figure src="../../img/object-model-lifecycle.png" title="ObjectModel lifecycle" width="100%" height="100%" >}}
 
-As an exemple, this is how you can retrieve information about a product when we delete itq from the database:
+As an exemple, this is how you can retrieve information about a product when we delete it from the database:
 
 ```php
 // In a module
