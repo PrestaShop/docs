@@ -42,7 +42,7 @@ memory_limit = 512M
 max_execution_time = 300
 max_input_time = 300
 upload_max_filesize = 20M
-post_max_size = 20M
+post_max_size = 22M
 ; Increase this value if you work with products with a lot of combinations
 max_input_vars = 20000
 allow_url_fopen = on
