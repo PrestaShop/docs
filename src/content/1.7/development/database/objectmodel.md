@@ -139,3 +139,23 @@ validateFields($die = true, $errorReturn = false)
     Check for field validity before database interaction.
 
 {{% /funcdef %}}
+
+## ObjectModel lifecycle
+
+Thanks to the hooks, you can alter the Object Model or execute functions during the lifecycle of your models. Every hook receive an instance of the manipulated object model:
+
+{{< figure src="../../img/object-model-lifecycle.png" title="ObjectModel lifecycle" width="100%" height="100%" >}}
+
+As an exemple, this is how you can retrieve information about a product when we delete itq from the database:
+
+```php
+// In a module
+
+public function hookActionObjectProductDeleteAfter($product)
+{
+    // $product is an instance of Product class.
+    PrestaShopLogger::addLog(
+        sprintf('Product with id %s was deleted with success', $product->id_product)
+    );    
+}
+```
