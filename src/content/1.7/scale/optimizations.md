@@ -37,6 +37,7 @@ realpath_cache_ttl = 600
 display_errors = Off
 
 magic_quotes_gpc = off
+; Increase this value if you are able to do it
 memory_limit = 512M
 max_execution_time = 300
 max_input_time = 300
