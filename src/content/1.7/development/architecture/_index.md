@@ -8,8 +8,7 @@ aliases:
   - /module/02-Fundamentals/index.html
 ---
 
-The PrestaShop architecture
----------------------------
+# The PrestaShop architecture
 
 The PrestaShop developers have done their best to clearly and
 intuitively separate the various parts of the software.
