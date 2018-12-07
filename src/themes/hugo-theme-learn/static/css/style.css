@@ -55,7 +55,7 @@
   src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype"); }
 
 .callout {
-  padding: 0 1.3rem;
+  padding: .2rem 1.3rem;
   border: 3px solid #f0f0f0; }
 
 #chapter {
@@ -142,6 +142,7 @@ div.notices {
   top: 110px;
   right: 2rem;
   width: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
   border-left: thin solid #ececec;
   /* the following styles are needed to avoid "style jumps" when elements get .highlight added */ }
   #toc > .wrapper {
