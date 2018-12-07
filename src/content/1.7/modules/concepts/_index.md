@@ -1,6 +1,6 @@
 ---
 title: Extension concepts
-weight: 2
+weight: 20
 chapter: true
 ---
 

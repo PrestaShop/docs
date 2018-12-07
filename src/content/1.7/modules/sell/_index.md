@@ -1,7 +1,7 @@
 ---
 title: Selling your modules on the Addons Marketplace
 menuTitle: Selling your modules
-chapter: true
+weight: 70
 ---
 
 # Selling your modules on the Addons Marketplace

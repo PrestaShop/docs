@@ -1,6 +1,6 @@
 ---
 title: Payment modules
-weight: 3
+weight: 30
 aliases:
   - /1.7/modules/paiement/
 ---
