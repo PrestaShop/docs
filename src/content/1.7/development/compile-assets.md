@@ -56,6 +56,15 @@ We use [Webpack](https://webpack.js.org/) to compile assets. You only need NodeJ
     npm run build
     ```
 
+### Build all assets at once
+{{< minver v="1.7.6" title="true" >}}
+
+You can rebuild all the assets at once by executing this command from the project root: 
+
+```bash
+sh tools/assets/build.sh
+```
+
 ### Watching for changes
 
 You can also make webpack listen for changes and compile only what's needed as you work on your files:
@@ -74,4 +83,4 @@ The "watch" build will optimize your assets for development. Please remember to 
 
 If `npm install` fails with error: `Failed at the ... postinstall script.`:
 
-You maybe using node version 9 or 10, you should use node version 8.
+You may be using node version 9 or 10, you should use node version 8.
