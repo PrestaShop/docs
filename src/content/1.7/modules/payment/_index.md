@@ -1,7 +1,8 @@
 ---
 title: Payment modules
 weight: 3
-chapter: true
+aliases:
+  - /1.7/modules/paiement/
 ---
 
 Payment modules
