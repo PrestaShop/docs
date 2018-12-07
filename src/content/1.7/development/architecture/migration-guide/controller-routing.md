@@ -251,14 +251,17 @@ admin_system_information:
 PrestaShop uses YAML files for service declaration and routing, please don't use annotations for that!
 {{% /notice %}}
 
-### More about the _legacy_link property
+### Link generation
+
+#### The _legacy_link property
+{{< minver v="1.7.5" title="true" >}}
 
 When migrating a new page to Symfony, you *must* get rid of all the former link references to the legacy controller.
 In legacy pages, link are generally managed by the `Link` class, all these calls need to be replaced using the *Router*
 component.
 
 However although you can find all the references of a controller in the core code, you can't know every references that
-could exist in modules or tabs (or you might simply miss some legacy calls). That's where we got you covered with `_legacy_link`,
+could exist in modules or tabs (or you might simply miss some legacy calls). That's where we got you covered (starting in PrestaShop 1.7.5) with `_legacy_link`,
 this parameter is associated to any migrated route and is formatted as such:
 
 ```yaml
@@ -298,7 +301,7 @@ admin_emails:
             - AdminEmails:list
 ```
 
-### The Link->getAdminLink conversion
+#### The Link->getAdminLink conversion
 
 Not every developer use the `getAdminLink` method the same way, therefore the `_legacy_link` is able to recognize different
 uses of this method, for example via an `action` parameter (e.g: `?controller=AdminEmails&action=export`).
@@ -345,7 +348,7 @@ admin_payment_preferences_process:
     $link->getAdminLink('AdminPaymentPreferences', true, [], ['action' => 'export']);
 ```
 
-### The _legacy_link auto redirection
+#### The _legacy_link auto redirection
 
 Finally some urls might have been generated manually or hard coded. To avoid losing these legacy urls a Symfony listener
 checks each call to the back office and tries to match it to a migrated url if it is found then the response is *automatically*
