@@ -1138,8 +1138,8 @@ select[multiple=multiple] {
         margin-right: -1rem;
         padding-left: 1rem;
         padding-right: 1rem; }
-      #sidebar ul.topics li.parent ul,
-      #sidebar ul.topics > li.active ul {
+      #sidebar ul.topics li.parent > ul,
+      #sidebar ul.topics > li.active > ul {
         display: block; }
       #sidebar ul.topics.searched ul {
         display: block; }
