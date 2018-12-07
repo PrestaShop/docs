@@ -24,7 +24,7 @@
         </a>
       </span>
       <span class="links">
-        {{ template "breadcrumb" dict "page" . "value" .Title }}
+        {{ template "breadcrumb" dict "page" . "value" (or .Params.menutitle .Title) }}
       </span>
     </div>
   </div>
