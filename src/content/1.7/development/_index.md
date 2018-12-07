@@ -10,3 +10,5 @@ chapter: true
 # Core Development
 
 This section describes technical aspects of the PrestaShop Core.
+
+{{% children %}}
