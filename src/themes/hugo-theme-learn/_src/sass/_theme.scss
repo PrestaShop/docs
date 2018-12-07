@@ -324,8 +324,8 @@ select[multiple=multiple] {
         padding-right: 1rem;
       }
 
-      li.parent ul,
-      & > li.active ul {
+      li.parent > ul,
+      & > li.active > ul {
         display: block;
       }
 
