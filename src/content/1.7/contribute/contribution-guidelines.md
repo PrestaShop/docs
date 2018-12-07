@@ -68,9 +68,9 @@ Some source files like SCSS and JavaScript need to be compiled to work on a Pres
 
 Make sure to follow these guidelines:
 
-- **Compile assets for production.** Check that that the assets you are compiled were built using the "prod" setting instead of the "dev" one.
+- **Compile assets for production.** Check that that the assets you are compiled were built using the "prod" setting instead of the "dev" one. To find out more, read [How to compile assets][how-to-compile-assets].
 - **Commit assets assets and sources separately.** Submit your compiled assets in a separate commit from your source changes. This will be especially helpful when rebasing, because you can just drop the commit and avoid merge conflicts.
-- **One asset commit per PR**. Try to avoid recompiling and committing the assets more than once. If you need to make changes and you have already committed a previous build, use interactive rebase to remove the previous commit, _then_ compile the assets. 
+- **One asset commit per Pull Request**. Try to avoid recompiling and committing the assets more than once. If you need to make changes and you have already committed a previous build, use interactive rebase to remove the previous commit, _then_ compile the assets. 
 
 
 ## Pull Requests
@@ -144,3 +144,5 @@ TE | if the changes impact automated tests
 {{% notice note %}}
 Remember, this is only needed for the Pull Request form, not for your commit messages.
 {{% /notice %}} 
+
+[how-to-compile-assets]: {{% ref "1.7/development/compile-assets.md" %}}
