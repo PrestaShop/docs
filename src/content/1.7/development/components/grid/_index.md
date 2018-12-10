@@ -304,6 +304,7 @@ prestashop.core.grid.data.factory.product_data_factory:
     arguments:
         - '@prestashop.core.grid.query.product_query_builder' # service id of our query builder
         - '@prestashop.core.hook.dispatcher' # every doctrine query builder needs hook dispatcher
+        - '@prestashop.core.grid.query.doctrine_query_parser' # parser to get raw SQL query
         - 'products' # this should match your grid id, in our case it's "products"
 ```
 
