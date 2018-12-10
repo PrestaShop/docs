@@ -158,6 +158,10 @@ $searchCriteria->getOffset();   // 0
 $searchCriteria->getLimit();    // 10
 ```
 
+{{% notice note %}}
+Class `PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria` is only available since {{< minver v="1.7.6" >}}
+{{% /notice %}}
+
 When creating Search Criteria you can skip some or all it's data. You can leave default `null` values for order way
 and order by to disable sorting or offset and limit to disable pagination.
 
@@ -192,7 +196,7 @@ you can implement your own Grid Data factory.
 We will be using `DoctrineGridDataFactory` to create data for our Grid. When using `DoctrineGridDataFactory` you have
 to implement `DoctrineQueryBuilderInterface` which will be used by data factory to build Doctrine queries.
 
-{{% notice note %}}
+{{% notice info %}}
 When implementing `DoctrineQueryBuilderInterface` it is recommended to use `PrestaShop\PrestaShop\Core\Grid\Query\AbstractDoctrineQueryBuilder`
 as it provides access to Doctrine `Connection` and database tables prefix.
 {{% /notice %}}
