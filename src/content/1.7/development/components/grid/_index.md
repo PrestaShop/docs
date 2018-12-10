@@ -2,6 +2,7 @@
 title: The Grid component
 menuTitle: Grid
 weight: 2
+---
 
 # The Grid component
 {{< minver v="1.7.5" title="true" >}}
