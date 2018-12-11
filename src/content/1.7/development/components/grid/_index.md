@@ -162,8 +162,8 @@ $searchCriteria->getLimit();    // 10
 Class `PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria` is only available since {{< minver v="1.7.6" >}}
 {{% /notice %}}
 
-When creating Search Criteria you can skip some or all it's data. You can leave default `null` values for order way
-and order by to disable sorting or offset and limit to disable pagination.
+When creating Search Criteria you can skip some or all it's data. If you set both `orderWay` and `orderBy` to `null`
+it will disable sorting. If you set both `offset` and `limit` to `null` it will disable pagination.
 
 ```php
 use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria;
