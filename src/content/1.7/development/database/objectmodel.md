@@ -61,7 +61,7 @@ public static $definition = [
             'validate' => 'isString',
             'size' => 3999999999999
         ],
-    ],
+    )
 ];
 ```
 
