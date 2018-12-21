@@ -277,8 +277,8 @@ These lines respectively assign:
 The constructor method is now complete. You are free to add more to it
 later if necessary, but this the bare minimum for a working module.
 
-Now go to your back office, in the Modules page found at Modules > 
-Modules & Services chose the Selection tab. The module is visible in
+Now go to your back office, then in the Modules page (found at "Modules" > 
+"Modules & Services") choose the Selection tab. The module is visible in
 the modules list, with its information displayed – and no icon for now.
 
 You can install the module, but it does not do anything yet.
