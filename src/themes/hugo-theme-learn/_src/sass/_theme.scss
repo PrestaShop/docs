@@ -461,6 +461,7 @@ select[multiple=multiple] {
   }
 
   img {
+
     &.inline {
       display: inline !important;
       margin: 0 !important;
@@ -1354,15 +1355,15 @@ p {
   margin: 0 0 $paragraphSpacing 0;
 }
 
+figure img {
+  box-shadow: 0 11px 56px 0 rgba(0,0,0,0.40);
+}
+
 figcaption h4 {
   opacity: .85;
   font-size: 0.9em;
   text-align: center;
-  margin: {
-    top: -2rem;
-    bottom: 2.1rem;
-  }
-
+  margin-bottom: 2.5rem;
   font-family: $baseFont;
   letter-spacing: normal;
   font-style: italic;
