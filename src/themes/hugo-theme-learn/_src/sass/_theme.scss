@@ -1,8 +1,6 @@
 @charset "UTF-8";
 @import "mixins/variables";
 
-
-
 .button,
 .button-secondary {
   display: inline-block;
@@ -197,7 +195,7 @@ select[multiple=multiple] {
   background-color: #322a38;
   position: fixed;
   top: 0;
-  width: 300px;
+  width: $sidebarFullWidth;
   bottom: 0;
   left: 0;
   font-weight: 400;
@@ -475,7 +473,7 @@ select[multiple=multiple] {
   }
 
   .padding {
-    padding: 2rem 2rem;
+    padding: $contentPadding;
     @media only all and (max-width: 59.938em) {
       position: static;
       padding: 15px 3rem;
@@ -524,8 +522,14 @@ select[multiple=multiple] {
 }
 
 #body-inner {
+  max-width: $contentMaxWidth;
+
+  @media (min-width: $sidebarFullWidth + $contentMaxWidth + $tocWidth + ($contentPadding * 2)) {
+    margin-left: calc((100% - #{$contentMaxWidth} - #{$tocWidth}) / 2);
+  }
+
   @media only all and (min-width: $tocBreakpoint) {
-      margin-right: 340px;
+      margin-right: $tocWidth;
   }
 
   .tabs-wrapper.ui-theme-badges {
@@ -543,6 +547,18 @@ select[multiple=multiple] {
         background: #4d5257;
       }
     }
+  }
+
+  ul, ol {
+    margin: 0 0 $paragraphMarginBottom;
+  }
+
+  li {
+    margin-bottom: $paragraphMarginBottom * 0.6;
+  }
+
+  h1 + * {
+    margin-top: 0 !important; // prevent margin top from the first element in the page
   }
 }
 
@@ -1315,35 +1331,36 @@ h6 {
 h2 {
   font-size: 2rem;
   line-height: 110% !important;
-  margin: 2.5rem 0 1.5rem 0;
+  margin: 2em 0 1rem 0;
 }
 
 h3 {
-  font-size: 1.8rem;
-  line-height: 110% !important;
-  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+  line-height: 130% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 1.5rem;
   line-height: 110% !important;
-  margin: 1.5rem 0 0.75rem 0;
+  margin: 1.5em 0 1rem 0;
 }
 
 h5 {
   font-size: 1.2rem;
   line-height: 110% !important;
-  margin: 1rem 0 0.2rem 0;
+  margin: 1.5em 0 1rem 0;
 }
 
 h6 {
   font-size: 1rem;
   line-height: 110% !important;
-  margin: 0.5rem 0 0.2rem 0;
+  margin: 1.5em 0 1rem 0;
 }
 
 p {
-  margin: 1rem 0;
+  margin: 0 0 $paragraphMarginBottom 0;
 }
 
 figcaption h4 {
