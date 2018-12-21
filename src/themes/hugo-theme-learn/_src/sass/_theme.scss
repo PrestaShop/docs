@@ -707,43 +707,35 @@ kbd,
 pre,
 samp {
   font-family: $monospaceFont;
-  font-size: 93%;
 }
 
 code {
-  border-radius: 2px;
   white-space: nowrap;
-  color: #555;
-  background: #fff7dd;
-  border: 1px solid #fbf0cb;
-  padding: 2px 2px 0;
-
-  & + .copy-to-clipboard {
-    margin-left: -1px;
-    border-left: 0 !important;
-    font-size: inherit !important;
-    vertical-align: middle;
-    height: 21px;
-    top: 0;
-  }
+  color: #444;
+  background: #1b1f230d;
+  padding: .2em .4em;
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
 }
 
 pre {
   padding: 1rem;
-  margin: 2rem 0;
-  background: #1d1f21;
+  margin: $paragraphMarginBottom * 1.5 0;
+  background: #f7f7f8;
   border: 0;
   border-radius: 2px;
   line-height: 1.15;
 
   code {
-    color: whitesmoke;
+    display: block;
+    color: #333;
     background: inherit;
     white-space: inherit;
     border: 0;
-    padding: 0;
-    margin: 0;
-    font-size: 15px;
+    padding: 0.5em; // same as in highlighter
+    font-size: 14px;
+    line-height: 1.45;
   }
 }
 
@@ -1175,28 +1167,24 @@ td {
   vertical-align: middle;
   position: relative;
   color: #5e5e5e;
-  background-color: #fff7dd;
   margin-left: -.2rem;
   cursor: pointer;
   border-radius: 0 2px 2px 0;
   margin-bottom: 1px;
-
-  &:hover {
-    background-color: #e8e2cd;
-  }
 }
 
-pre .copy-to-clipboard {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  background-color: #4d5257;
-  color: #ccc;
-  border-radius: 2px;
-
-  &:hover {
-    background-color: #656c72;
-    color: #fff;
+pre {
+  .copy-to-clipboard {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity ease-in .2s;
+  }
+  &:hover .copy-to-clipboard {
+    opacity: 1;
+    transition: opacity ease-in .5s;
   }
 }
 
