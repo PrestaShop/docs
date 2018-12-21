@@ -1,4 +1,13 @@
 .callout {
-  padding: .2rem 1.3rem;
+  padding: 1rem 1.3rem;
   border: 3px solid #f0f0f0;
+  margin-bottom: $paragraphSpacing;
+
+  > *:first-child {
+    margin-top: 0;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
 }

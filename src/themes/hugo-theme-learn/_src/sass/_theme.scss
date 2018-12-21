@@ -550,11 +550,11 @@ select[multiple=multiple] {
   }
 
   ul, ol {
-    margin: 0 0 $paragraphMarginBottom;
+    margin: 0 0 $paragraphSpacing;
   }
 
   li {
-    margin-bottom: $paragraphMarginBottom * 0.6;
+    margin-bottom: $paragraphSpacing * 0.6;
   }
 
   h1 + * {
@@ -721,7 +721,7 @@ code {
 
 pre {
   padding: 1rem;
-  margin: $paragraphMarginBottom * 1.5 0;
+  margin: $paragraphSpacing * 1.5 0;
   background: #f7f7f8;
   border: 0;
   border-radius: 2px;
@@ -1351,7 +1351,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 $paragraphMarginBottom 0;
+  margin: 0 0 $paragraphSpacing 0;
 }
 
 figcaption h4 {
