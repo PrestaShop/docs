@@ -768,18 +768,21 @@ hr {
 }
 
 table {
-  border: 1px solid #eaeaea;
+  border: none;
   table-layout: auto;
+  margin-bottom: 1rem;
+  font-size: .9em;
 }
 
 th {
   background: #f7f7f7;
-  padding: 0.5rem;
+  padding: 0.5rem .8rem;
+  font-size: 1.1em;
 }
 
 td {
-  padding: 0.5rem;
-  border: 1px solid #eaeaea;
+  padding: 0.5rem .8rem;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .button {
