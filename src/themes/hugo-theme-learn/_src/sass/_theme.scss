@@ -1355,11 +1355,21 @@ p {
 }
 
 figcaption h4 {
-  font-weight: 300 !important;
   opacity: .85;
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: center;
-  margin-top: -1.5em;
+  margin: {
+    top: -2rem;
+    bottom: 2.1rem;
+  }
+
+  font-family: $baseFont;
+  letter-spacing: normal;
+  font-style: italic;
+
+  &:before {
+    content: 'Figure: ';
+  }
 }
 
 .select-style {
