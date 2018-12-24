@@ -1,8 +1,6 @@
 @charset "UTF-8";
 @import "mixins/variables";
 
-
-
 .button,
 .button-secondary {
   display: inline-block;
@@ -197,7 +195,7 @@ select[multiple=multiple] {
   background-color: #322a38;
   position: fixed;
   top: 0;
-  width: 300px;
+  width: $sidebarFullWidth;
   bottom: 0;
   left: 0;
   font-weight: 400;
@@ -463,6 +461,7 @@ select[multiple=multiple] {
   }
 
   img {
+
     &.inline {
       display: inline !important;
       margin: 0 !important;
@@ -475,7 +474,7 @@ select[multiple=multiple] {
   }
 
   .padding {
-    padding: 2rem 2rem;
+    padding: $contentPadding;
     @media only all and (max-width: 59.938em) {
       position: static;
       padding: 15px 3rem;
@@ -524,8 +523,14 @@ select[multiple=multiple] {
 }
 
 #body-inner {
+  max-width: $contentMaxWidth;
+
+  @media (min-width: $sidebarFullWidth + $contentMaxWidth + $tocWidth + ($contentPadding * 2)) {
+    margin-left: calc((100% - #{$contentMaxWidth} - #{$tocWidth}) / 2);
+  }
+
   @media only all and (min-width: $tocBreakpoint) {
-      margin-right: 340px;
+      margin-right: $tocWidth;
   }
 
   .tabs-wrapper.ui-theme-badges {
@@ -543,6 +548,18 @@ select[multiple=multiple] {
         background: #4d5257;
       }
     }
+  }
+
+  ul, ol {
+    margin: 0 0 $paragraphSpacing;
+  }
+
+  li {
+    margin-bottom: $paragraphSpacing * 0.6;
+  }
+
+  h1 + * {
+    margin-top: 0 !important; // prevent margin top from the first element in the page
   }
 }
 
@@ -691,43 +708,35 @@ kbd,
 pre,
 samp {
   font-family: $monospaceFont;
-  font-size: 93%;
 }
 
 code {
-  border-radius: 2px;
   white-space: nowrap;
-  color: #555;
-  background: #fff7dd;
-  border: 1px solid #fbf0cb;
-  padding: 2px 2px 0;
-
-  & + .copy-to-clipboard {
-    margin-left: -1px;
-    border-left: 0 !important;
-    font-size: inherit !important;
-    vertical-align: middle;
-    height: 21px;
-    top: 0;
-  }
+  color: #444;
+  background: #1b1f230d;
+  padding: .2em .4em;
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
 }
 
 pre {
   padding: 1rem;
-  margin: 2rem 0;
-  background: #1d1f21;
+  margin: $paragraphSpacing * 1.5 0;
+  background: #f7f7f8;
   border: 0;
   border-radius: 2px;
   line-height: 1.15;
 
   code {
-    color: whitesmoke;
+    display: block;
+    color: #333;
     background: inherit;
     white-space: inherit;
     border: 0;
-    padding: 0;
-    margin: 0;
-    font-size: 15px;
+    padding: 0.5em; // same as in highlighter
+    font-size: 14px;
+    line-height: 1.45;
   }
 }
 
@@ -752,18 +761,21 @@ hr {
 }
 
 table {
-  border: 1px solid #eaeaea;
+  border: none;
   table-layout: auto;
+  margin-bottom: 1rem;
+  font-size: .9em;
 }
 
 th {
   background: #f7f7f7;
-  padding: 0.5rem;
+  padding: 0.5rem .8rem;
+  font-size: 1.1em;
 }
 
 td {
-  padding: 0.5rem;
-  border: 1px solid #eaeaea;
+  padding: 0.5rem .8rem;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .button {
@@ -1156,28 +1168,24 @@ td {
   vertical-align: middle;
   position: relative;
   color: #5e5e5e;
-  background-color: #fff7dd;
   margin-left: -.2rem;
   cursor: pointer;
   border-radius: 0 2px 2px 0;
   margin-bottom: 1px;
-
-  &:hover {
-    background-color: #e8e2cd;
-  }
 }
 
-pre .copy-to-clipboard {
-  position: absolute;
-  right: 4px;
-  top: 4px;
-  background-color: #4d5257;
-  color: #ccc;
-  border-radius: 2px;
-
-  &:hover {
-    background-color: #656c72;
-    color: #fff;
+pre {
+  .copy-to-clipboard {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity ease-in .2s;
+  }
+  &:hover .copy-to-clipboard {
+    opacity: 1;
+    transition: opacity ease-in .5s;
   }
 }
 
@@ -1315,43 +1323,54 @@ h6 {
 h2 {
   font-size: 2rem;
   line-height: 110% !important;
-  margin: 2.5rem 0 1.5rem 0;
+  margin: 2em 0 1rem 0;
 }
 
 h3 {
-  font-size: 1.8rem;
-  line-height: 110% !important;
-  margin: 2rem 0 1rem 0;
+  font-size: 1.5rem;
+  line-height: 130% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold;
 }
 
 h4 {
   font-size: 1.5rem;
   line-height: 110% !important;
-  margin: 1.5rem 0 0.75rem 0;
+  margin: 1.5em 0 1rem 0;
 }
 
 h5 {
   font-size: 1.2rem;
   line-height: 110% !important;
-  margin: 1rem 0 0.2rem 0;
+  margin: 1.5em 0 1rem 0;
 }
 
 h6 {
   font-size: 1rem;
   line-height: 110% !important;
-  margin: 0.5rem 0 0.2rem 0;
+  margin: 1.5em 0 1rem 0;
 }
 
 p {
-  margin: 1rem 0;
+  margin: 0 0 $paragraphSpacing 0;
+}
+
+figure img {
+  box-shadow: 0 11px 56px 0 rgba(0,0,0,0.40);
 }
 
 figcaption h4 {
-  font-weight: 300 !important;
   opacity: .85;
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: center;
-  margin-top: -1.5em;
+  margin-bottom: 2.5rem;
+  font-family: $baseFont;
+  letter-spacing: normal;
+  font-style: italic;
+
+  &:before {
+    content: 'Figure: ';
+  }
 }
 
 .select-style {
