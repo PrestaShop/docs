@@ -65,7 +65,7 @@ menuTitle: Good practices
 
 ## A few recommendations for your themes
 
-- PrestaShop does not yet feature a "theme validator". However, each of the modules present in your theme must be tested via our [Validator](http://validator.prestashop.com).
+- PrestaShop does not yet feature a "theme validator". However, each of the modules present in your theme must be tested via our [Validator](https://validator.prestashop.com).
 - Don't remove the default hooks in PrestaShop, whether via PHP or in the theme! You will risk preventing a third party module from working properly.
 - Prefix what belongs to you:
   - modules
