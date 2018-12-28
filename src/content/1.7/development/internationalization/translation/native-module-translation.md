@@ -1,12 +1,11 @@
 ---
 title: Native module translation
-weight: 40
 aliases:
-  - /1.7/dvelopment/native_module_translation
+  - /1.7/development/native_module_translation
+  - /1.7/development/native-module-translation
 ---
 
-Module translation
-==================
+# Native module translation
 
 The module's text strings are written in English, but you might want
 French, Spanish or Polish shop owners to use your module too. You
@@ -16,21 +15,20 @@ your module in all the languages that are installed on your shop. This
 could be a tedious task, but a whole system has been put in place in
 order to help you out.
 
-In short, PrestaShop 1.7 implements Symfony's translation mechanism,
+In short, PrestaShop 1.7 implements Symfony's translation system,
 through the use of the `trans()` method, used to encapsulate the strings
 to be translated. This method is applied in a different way depending of
 the file type.
 
 {{% notice warning %}}
-**This mechanism does only work with native modules.**
+**This system only works with native modules.**
 
 See [here]({{< ref "1.7/modules/creation/module-translation.md" >}}) for 3rd party modules.
 {{% /notice %}}
 
 The process of preparing text strings for translation is called internationalization, or i18n.
 
-Internationalizing strings in Smarty (.tpl) files
--------------------------------------------------
+## Internationalizing strings in Smarty (.tpl) files
 
 Strings in TPL files will need to be turned into dynamic content using
 the `{l}` function call, which Smarty will replace by the translation

@@ -1,5 +1,7 @@
 ---
 title: Right-To-Left languages
+aliases:
+  - /1.7/development/rtl
 ---
 
 # Right-to-Left languages
