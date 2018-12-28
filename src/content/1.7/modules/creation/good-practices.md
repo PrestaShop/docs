@@ -11,7 +11,7 @@ menuTitle: Good practices
 
 - Add a link to your documentation included in your ZIP File and to your support page on Addons in the module interface.
 - Follow our [Coding Standards][coding-standards]
-- Create your own tables!
+- Create your own database tables, do not alter PrestaShop's.
 - Develop your module in English, then use PrestaShop translation system to translate your module.
 - Go through directories using PrestaShop variables like: `_PS_CONFIG_DIR_ . '/config.inc.php'`
 
@@ -35,8 +35,8 @@ menuTitle: Good practices
 - Consider deleting your configurations, tables, and other entities unique to your product during the de-installation of your modules.
 
 - You shouldn't use HTML code in your PHP code. Here are alternatives to separate the view into your code:
-  - display content with [Smarty](http://doc.prestashop.com/display/PS16/Displaying+content+on+the+front+office)
-  - use [helpers](http://doc.prestashop.com/display/PS16/Adding+a+configuration+page) for your configuration pages
+  - display content with [Smarty][display-content-front-office]
+  - use [helpers][adding-configuration-page] for your configuration pages
   - include [PrestUI](https://github.com/Scritik/prestui), a graphic library created by the community for your configuration pages.
 
 - Your module interface has to match the back office interface. Customized interfaces aren’t validated/accepted. Please use the alternatives explained before to help you create an interface that matches merchants' BO.
@@ -51,7 +51,7 @@ menuTitle: Good practices
   - show a confirmation message if everything is fine or an error message if not.
   - make sure information entered by customers are correct. If you ask a sum, it has to be only numbers. More information about the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Validate.php).
 
-- Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read http://doc.prestashop.com/display/PS16/Best+Practices+of+the+Db+Class). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result,you are required to use a token!
+- Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read [Best Practices of the Db Class](http://doc.prestashop.com/display/PS16/Best+Practices+of+the+Db+Class)). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result, you are required to use a token!
 
 - The use of overrides is permitted, however if we decide that too many (2 / 3 max) have been used and/or the modifications are too dangerous, we will refuse your module. If you're unsure, don't hesitate to get in touch.
 
@@ -65,7 +65,7 @@ menuTitle: Good practices
 
 ## A few recommendations for your themes
 
-- PrestaShop does not yet feature a "theme validator". However, each of the modules present in your theme must be tested via our Validator: http://validator.prestashop.com
+- PrestaShop does not yet feature a "theme validator". However, each of the modules present in your theme must be tested via our [Validator](http://validator.prestashop.com).
 - Don't remove the default hooks in PrestaShop, whether via PHP or in the theme! You will risk preventing a third party module from working properly.
 - Prefix what belongs to you:
   - modules
@@ -76,8 +76,10 @@ menuTitle: Good practices
 
 **A few recommendations for your email templates**
 
-- Use our official SDK to develop your emails: https://github.com/PrestaShop/email-templates-sdk
+- Use our [official SDK](https://github.com/PrestaShop/email-templates-sdk) to develop your emails: 
 - Make sure to submit on Addons a valid zip, built with the SDK.
-- Test your emails with the official module: https://github.com/PrestaShop/email-templates-sdk
+- Test your emails with the [official module](https://github.com/PrestaShop/email-templates-sdk).
 
 [coding-standards]: {{< ref "1.7/development/coding-standards" >}}
+[display-content-front-office]: {{< ref "1.7/modules/creation/displaying-content-in-front-office" >}}
+[adding-configuration-page]: {{< ref "1.7/modules/creation/adding-configuration-page" >}}
