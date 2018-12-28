@@ -10,7 +10,7 @@ menuTitle: Good practices
 ### Do
 
 - Add a link to your documentation included in your ZIP File and to your support page on Addons in the module interface.
-- Follow the PSR-2 standard for modules destined for PS 1.6.1.0 +: http://doc.prestashop.com/display/PS16/Coding+Standards
+- Follow our [Coding Standards][coding-standards]
 - Create your own tables!
 - Develop your module in English, then use PrestaShop translation system to translate your module.
 - Go through directories using PrestaShop variables like: `_PS_CONFIG_DIR_ . '/config.inc.php'`
@@ -79,3 +79,5 @@ menuTitle: Good practices
 - Use our official SDK to develop your emails: https://github.com/PrestaShop/email-templates-sdk
 - Make sure to submit on Addons a valid zip, built with the SDK.
 - Test your emails with the official module: https://github.com/PrestaShop/email-templates-sdk
+
+[coding-standards]: {{< ref "1.7/development/coding-standards" >}}
