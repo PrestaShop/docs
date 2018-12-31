@@ -23,23 +23,18 @@ structure, the default properties customized and the most common use cases cover
 
 {{% notice note %}}
 Before you start writing code for your PrestaShop module, you should be
-aware that the PrestaShop team uses a specific set of coding convention
+aware that the PrestaShop team uses a specific set of coding conventions
 (or coding standards, coding norm, etc.).
 
-As Wikipedia puts it, "Coding conventions are a set of guidelines for a
+As Wikipedia puts it, "[Coding conventions](http://en.wikipedia.org/wiki/Coding_conventions) are a set of guidelines for a
 specific programming language that recommend programming style,
 practices and methods for each aspect of a piece program written in this
 language", and "Good procedures, good methodology and good coding
 standards can be used to drive a project such that the quality is
 maximized and the overall development time and development and
-maintenance cost is minimized." (See
-[http://en.wikipedia.org/wiki/Coding_conventions](http://en.wikipedia.org/wiki/Coding_conventions)).
+maintenance cost is minimized.".
 
-PrestaShop's own standards is available at this page:
-<http://doc.prestashop.com/display/PS16/Coding+Standards>. You should
-read it in order to make sure that the code you produce fits correctly
-with the overall code of the PrestaShop project. The PHPCodeSniffer can
-help you make sure you follow the standard properly.
+PrestaShop's own standards are available at this page: [Coding standards]({{< ref "/1.7/development/coding-standards" >}}). You should read it in order to make sure that the code you produce fits correctly with the overall code of the PrestaShop project. Configuring your IDE hints or using automated tools like PHPCodeSniffer can help you make sure you follow the standards properly.
 {{% /notice %}}
 
 
