@@ -232,8 +232,8 @@ code:
 {l s='Hello %s!' sprintf=$my_module_name mod='mymodule'}
 ```
 
-But in our case, we also need to make sure that the %s is replaced by
-"World" in case the "my\_module\_name" value does not exist... and we
+But in our case, we also need to make sure that the `%s` is replaced by
+"World" in case the `my_module_name` value does not exist... and we
 must make "World" translatable too. This can be achieved by using Smarty
 `{capture}` function, which collects the output of the template between
 the tags into a variable instead of displaying, so that we can use it
@@ -261,7 +261,7 @@ Instead, you must replace some placeholders with the HTML code.
 Let's take an example with a link in a string, which can be tricky to do.
 The first solution coming in mind would be the concatenation of translated
 strings with raw HTML code.
-But this solution is not recommanded, because the words order could be
+But this solution is not recommended, because the words order could be
 different depending on the language used.
 
 ```php
@@ -275,7 +275,13 @@ different depending on the language used.
 }
 ```
 
-The string "**If you want a category to appear in the menu of your shop, go to [1]Modules > Modules & Services > Installed modules.[/1] Then, configure your menu module.**" remains quite simple, and you must make sure the parts **[1]** and **[/1]** exist in the other languages.
+Let's look at the resulting string:
+
+```text
+If you want a category to appear in the menu of your shop, go to [1]Modules > Modules & Services > Installed modules.[/1] Then, configure your menu module.
+```
+
+It remains quite simple, but you must make sure the parts `[1]` and `[/1]` still exist after translating it to other languages.
 
 ## Native modules
 
