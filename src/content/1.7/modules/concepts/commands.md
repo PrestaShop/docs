@@ -25,7 +25,7 @@ You need to create the file and register it as a "command".
 ### Setup composer
 
 You need setup composer in your module before create the command.
-Create the file `your-module/composner.json` and paste:  
+Create the file `your-module/composer.json` and paste:  
 ```json
 {
     "name": "<your name>/<nmodule name>",
@@ -37,7 +37,7 @@ Create the file `your-module/composner.json` and paste:
         }
     ],
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=5.6.0"
     },
     "autoload": {
         "psr-4": {
@@ -53,7 +53,7 @@ Create the file `your-module/composner.json` and paste:
     "license": "<???>"
 }
 ```
-In __YourModule__ add your name space. Then in console in your module root run command `composer dump-autoload`.
+In __YourModule__ add your namespace. Then in console in your module root run command `composer dump-autoload`.
 
 ### Creation of the command
 
