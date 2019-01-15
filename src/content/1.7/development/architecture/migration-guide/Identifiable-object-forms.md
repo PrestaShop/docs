@@ -14,6 +14,7 @@ identifiable object is here for rescue. It allows to retrieve data for form disp
 * _Form data provider_ - responsible for data retrieval either by identifiable object id or by providing default values.
 * _Form builder_ - used for rendering form content.
 * _Form data handler_ - used to handle form data after it is submitted.
+* _Form handler_ - a wrapper for form data handler.
 
 ## Form data provider
 
@@ -64,10 +65,15 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 }
 ```
 
-todo: show how to register it as a service
 We have just created a basic Form data provider usage which will pre fill our title with `Customer service` text but by default it will return `service` string.
+Don't forget to register it as a service because it is a part of [Form builder](#form-builder).
 
-## Form Builder
+```yaml
+  prestashop.core.form.identifiable_object.data_provider.contact_form_data_provider:
+    class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\ContactFormDataProvider'
+```
+
+## Form builder
 
 When using form builder oyu only need to worry about passing the `Form type` and `Form data provider`.
 By using these methods:
@@ -155,9 +161,66 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
 
 After initialising `create` method there you must handle identifiable objects creation logic. You can return any data you like or no data at all - it depends on the use case where the data will be used next.
 After initialising `update` method you must update your identifiable object and it must return an `int` type id.
-Don't forget to register it as a service because it is a part of `Form handler`.
+Don't forget to register it as a service because it is a part of [Form Handler](#form-handler).
 
 ```yaml
   prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
     class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
 ```
+
+## Form handler
+
+Form handler is used to encapsulate the `Form data handler`. It has methods:
+
+* **handle(FormInterface $form)** - handles form by creating new indentifiable object.
+* **handleFor($id, FormInterface $form)** - handles form for given object.
+
+### Using form handler
+
+In most cases you only need to define form handler as a service:
+
+```yaml
+  prestashop.core.form.identifiable_object.handler.contact_form_handler:
+    class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\Handler\FormHandler'
+    factory: 'prestashop.core.form.identifiable_object.handler.form_handler_factory:create'
+    arguments:
+      - '@prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler'
+```
+
+and to use it in your controller like this:
+
+```php
+    public function editAction($contactId, Request $request)
+    {
+        $contactFormBuilder = $this->get('prestashop.core.form.identifiable_object.builder.contact_form_builder');
+        $contactForm = $contactFormBuilder->getFormFor($contactId);
+
+        $contactForm->handleRequest($request);
+
+        if ($contactForm->isSubmitted()) {
+            $contactFormHandler = $this->get('prestashop.core.form.identifiable_object.handler.contact_form_handler');
+            $result = $contactFormHandler->handleFor($contactId, $contactForm);
+
+            if (null !== $result->getIdentifiableObjectId()) {
+                $this->addFlash('success', $this->trans('Successful update.', 'Admin.Notifications.Success'));
+
+                return $this->redirectToRoute('admin_contacts_index');
+            }
+        }
+
+        return $this->render('@PrestaShop/Admin/Configure/ShopParameters/Contact/Contacts/edit.html.twig', [
+            'contactForm' => $contactForm->createView(),
+        ]);
+    }
+```
+
+First, the builder creates the form which handles current `Request`. If the form is being submitted, form handler is called and it handles our form by given `$contactId` and `$contactForm`.
+
+## Summary as a schema
+
+{{< figure src="../../../img/indentifiable-object-schema-with-sqrs-domain-tier.png" title="Indentifiable object schema" >}}
+
+{{% notice note %}}
+<!-- @todo: link to component of SQRS and its usage in identifiable object -->
+ Note that the `Domain tier` uses [SQRS design patern](todo link) which usage withing identifiable object is defined [here](todo link).
+{{% /notice %}}
