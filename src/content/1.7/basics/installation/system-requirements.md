@@ -41,9 +41,5 @@ Here is a section of the `php.ini` file (the configuration file for PHP):
 extension = php_mysql.dll
 extension = php_gd2.dll
 allow_url_fopen = On
-
-# also recommended
-register_globals = Off
-magic_quotes_gpc = Off
 allow_url_include = Off
 ```
