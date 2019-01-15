@@ -13,6 +13,7 @@ identifiable object is here for rescue. It allows to retrieve data for form disp
 
 * _Form data provider_ - responsible for data retrieval either by identifiable object id or by providing default values.
 * _Form builder_ - used for rendering form content.
+* _Form data handler_ - used to handle form data after it is submitted.
 
 ## Form data provider
 
@@ -63,7 +64,8 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 }
 ```
 
-We have just created a basic Form data provider usage which will prefill our title with `Customer service` text but by default it will return `service` string.
+todo: show how to register it as a service
+We have just created a basic Form data provider usage which will pre fill our title with `Customer service` text but by default it will return `service` string.
 
 ## Form Builder
 
@@ -91,7 +93,7 @@ In most cases you only need to define form builder as a service:
  Make sure you pass your form type as a string.
 {{% /notice %}}
 
-Finally, use it in your controller like this:
+Finally, use it in your controller:
 
 ```php
     public function editAction($contactId)
@@ -107,4 +109,55 @@ Finally, use it in your controller like this:
 
 and the result with some common twig structure applied for identifiable object form pages looks like this:
 
-{{< figure src="../../../img/contact-form-rendered.png" title="Result of form builder" >}}  
+{{< figure src="../../../img/contact-form-rendered.png" title="Result of form builder" >}}
+
+## Form data handler
+
+Form data handler is responsible for your form data submitting and it is used by these methods:
+
+* **create($data)** - used for creating new indentifiable object.
+
+* **update($id, $data)** - used for updating indentifiable object.
+
+### Creating form data handler
+
+You don’t have to create the Form data handler by yourself but instead rely on `\PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\FormDataHandlerInterface`
+
+```php
+final class ContactFormDataHandler implements FormDataHandlerInterface
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function create(array $data)
+    {
+        // handle creation logic here
+        return 'my required data to use after identifiable object is created';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function update($id, array $data)
+    {
+        /** @var ContactId $contactId */
+        $contactId = $this->updateContact($id, $data);
+
+        return $contactId->getValue();
+    }
+
+    public function updateContact($id, $data)
+    {
+        // Identifiable object update logic goes here.
+    }
+}
+```
+
+After initialising `create` method there you must handle identifiable objects creation logic. You can return any data you like or no data at all - it depends on the use case where the data will be used next.
+After initialising `update` method you must update your identifiable object and it must return an `int` type id.
+Don't forget to register it as a service because it is a part of `Form handler`.
+
+```yaml
+  prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
+    class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
+```
