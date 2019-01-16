@@ -8,7 +8,7 @@ weight: 30
 ## Introduction
 
 In PrestaShop, many forms represent an identifiable object data such as Cart, Product, Order, Customer and many others.
-Each indentifiable object share common scenarios such as its creation, update or it's display. To wrap the common behavior is a must and
+Each identifiable object share common scenarios such as its creation, update or it's display. To wrap the common behavior is a must and
 identifiable object is here for rescue. It allows to retrieve data for form display and to submit it by using following parts:
 
 * _Form data provider_ - responsible for data retrieval either by identifiable object id or by providing default values.
@@ -121,9 +121,9 @@ and the result with some common twig structure applied for identifiable object f
 
 Form data handler is responsible for your form data submitting and it is used by these methods:
 
-* **create($data)** - used for creating new indentifiable object.
+* **create($data)** - used for creating new identifiable object.
 
-* **update($id, $data)** - used for updating indentifiable object.
+* **update($id, $data)** - used for updating identifiable object.
 
 ### Creating form data handler
 
@@ -159,8 +159,8 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
 }
 ```
 
-After initialising `create` method there you must handle identifiable objects creation logic. You can return any data you like or no data at all - it depends on the use case where the data will be used next.
-After initialising `update` method you must update your identifiable object and it must return an `int` type id.
+After initializing `create` method there you must handle identifiable objects creation logic. You can return any data you like or no data at all - it depends on the use case where the data will be used next.
+After initializing `update` method you must update your identifiable object and it must return an `int` type id.
 Don't forget to register it as a service because it is a part of [Form Handler](#form-handler).
 
 ```yaml
@@ -172,7 +172,7 @@ Don't forget to register it as a service because it is a part of [Form Handler](
 
 Form handler is used to encapsulate the `Form data handler`. It has methods:
 
-* **handle(FormInterface $form)** - handles form by creating new indentifiable object.
+* **handle(FormInterface $form)** - handles form by creating new identifiable object.
 * **handleFor($id, FormInterface $form)** - handles form for given object.
 
 ### Using form handler
@@ -218,9 +218,9 @@ First, the builder creates the form which handles current `Request`. If the form
 
 ## Summary as a schema
 
-{{< figure src="../../../img/indentifiable-object-schema-with-sqrs-domain-tier.png" title="Indentifiable object schema" >}}
+{{< figure src="../../../img/identifiable-object-schema-with-sqrs-domain-tier.png" title="Identifiable object schema" >}}
 
 {{% notice note %}}
 <!-- @todo: link to component of SQRS and its usage in identifiable object -->
- Note that the `Domain tier` uses [SQRS design patern](todo link) which usage withing identifiable object is defined [here](todo link).
+ Note that the `Domain tier` uses [SQRS](todo link) which usage withing identifiable object is defined [here](todo link).
 {{% /notice %}}
