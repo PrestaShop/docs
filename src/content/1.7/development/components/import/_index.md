@@ -50,7 +50,10 @@ There are a couple of classes implemented in PrestaShop, that ease up the entity
 
 #### Import entity
 This class holds all import types, that are available by default in PrestaShop and allows to retrieve them easily:
-```
+
+```php
+// src/Core/Import/Entity.php
+
 final class Entity
 {
     const TYPE_CATEGORIES = 0;
@@ -77,7 +80,10 @@ Entity field collections are provided by providers, which implement `PrestaShop\
 Every entity, which is available for import in PrestaShop, has it's own fields provider in the `PrestaShop\PrestaShop\Core\Import\EntityField\Provider` namespace.
 
 For example, the entity fields provider for `Customer` entity builds the entity fields collection in the following way:
-```
+
+```php
+// src/Core/Import/EntityField/Provider/CustomerFieldsProvider.php
+
 final class CustomerFieldsProvider implements EntityFieldsProviderInterface
 {
     public function getCollection()
@@ -106,28 +112,123 @@ final class CustomerFieldsProvider implements EntityFieldsProviderInterface
         return EntityFieldCollection::createFromArray($fields);
     }
     
-    <...>
+    // ...
 }
 ```
 
 #### Data row
-Data row is an object representation of a data row from import source file.
+`DataRow` is an object representation of a data row from import source file.
+
+`DataRow` is described by an interface `PrestaShop\PrestaShop\Core\Import\File\DataRow\DataRowInterface` and can be used in collections to represent multiple rows of data.
+
+`DataRow` collections can be built using `DataRowCollectionFactory`, which should implement the `PrestaShop\PrestaShop\Core\Import\File\DataRow\Factory\DataRowCollectionFactoryInterface`.
+
+Currently there is one `DataRowCollectionFactory` implementation available in PrestaShop, which builds the `DataRowCollection` by reading a data file:
+
+```php
+// src/Core/Import/File/DataRow/Factory/DataRowCollectionFactory.php
+
+final class DataRowCollectionFactory implements DataRowCollectionFactoryInterface
+{
+    // ...
+
+    public function buildFromFile(SplFileInfo $file, $maxRowsInCollection = null)
+    {
+        $dataRowCollection = new DataRowCollection();
+        $rowIndex = 0;
+
+        foreach ($this->fileReader->read($file) as $dataRow) {
+            if (null !== $maxRowsInCollection && $rowIndex >= $maxRowsInCollection) {
+                break;
+            }
+
+            $dataRowCollection->addDataRow($dataRow);
+            ++$rowIndex;
+        }
+
+        return $dataRowCollection;
+    }
+}
+```
+
 
 ## Import operation
 The import operation can be imaged as multiple smaller import processes running one after another, until the data is fully imported or critical errors occur. 
 
 Import operation can be described by three essential parts:
 
-* Import configuration.
+* Import configuration preparation.
 * The import handler.
 * The importer.
 
+### Import configuration preparation
+To run the import process we have to prepare the configuration for it.
+As mentioned in previous topics, there are two configuration objects (`ImportConfig` and `ImportRuntimeConfig`), that have to be prepared for the import process. Both of them can be built using factories, which are described by interfaces `PrestaShop\PrestaShop\Core\Import\Configuration\ImportConfigFactoryInterface` and `PrestaShop\PrestaShop\Core\Import\Configuration\ImportRuntimeConfigFactoryInterface`.
+
+There is one implementation of each of the two configuration interfaces in PrestaShop. Both of them are available to build the relevant import config object out of Symfony `Request`:
+
+```php
+// src/Core/Import/Configuration/ImportConfigFactory.php
+
+final class ImportConfigFactory implements ImportConfigFactoryInterface
+{
+    public function buildFromRequest(Request $request)
+    {
+        $separator = $request->request->get(
+            'separator',
+            $request->getSession()->get('separator', ImportSettings::DEFAULT_SEPARATOR)
+        );
+
+        $multivalueSeparator = $request->request->get(
+            'multiple_value_separator',
+            $request->getSession()->get('multiple_value_separator', ImportSettings::DEFAULT_MULTIVALUE_SEPARATOR)
+        );
+
+        return new ImportConfig(
+            $request->request->get('csv', $request->getSession()->get('csv')),
+            $request->request->getInt('entity', $request->getSession()->get('entity', 0)),
+            $request->request->get('iso_lang', $request->getSession()->get('iso_lang')),
+            $separator,
+            $multivalueSeparator,
+            $request->request->getBoolean('truncate', $request->getSession()->get('truncate', false)),
+            $request->request->getBoolean('regenerate', $request->getSession()->get('regenerate', false)),
+            $request->request->getBoolean('match_ref', $request->getSession()->get('match_ref', false)),
+            $request->request->getBoolean('forceIDs', $request->getSession()->get('forceIDs', false)),
+            $request->request->getBoolean('sendemail', $request->getSession()->get('sendemail', true)),
+            $request->request->getInt('skip', 0)
+        );
+    }
+}
+```
+
+```php
+// src/Core/Import/Configuration/ImportRuntimeConfigFactory.php
+
+final class ImportRuntimeConfigFactory implements ImportRuntimeConfigFactoryInterface
+{
+    public function buildFromRequest(Request $request)
+    {
+        $sharedData = $request->request->get('crossStepsVars', []);
+
+        return new ImportRuntimeConfig(
+            $request->request->getBoolean('validateOnly'),
+            $request->request->getInt('offset'),
+            $request->request->getInt('limit'),
+            json_decode($sharedData, true),
+            $request->request->get('type_value', [])
+        );
+    }
+}
+```
+
 ## Import handler
-To handle the import process we must prepare an `ImportHandler`, which will have access to our specific logic for import operation. The `ImportHandler` should implement the interface `PrestaShop/PrestaShop/Core/Import/Handler/ImportHandlerInterface`.
+To handle the import process we must prepare an `ImportHandler`, which will have access to our specific logic for import operation. The `ImportHandler` should implement `PrestaShop/PrestaShop/Core/Import/Handler/ImportHandlerInterface`.
 
 There are three main methods exposed by the interface, which are essential for import logic execution:
 
-```
+```php
+// src/Core/Import/Handler/ImportHandlerInterface.php
+
 interface ImportHandlerInterface
 {
     /**
@@ -149,7 +250,7 @@ interface ImportHandlerInterface
      */
     public function tearDown(ImportConfigInterface $importConfig, ImportRuntimeConfigInterface $runtimeConfig);
     
-    <...>
+    // ...
 }
 ```
 
@@ -162,7 +263,10 @@ The `Importer` is responsible for running the import logic from `ImportHandler`,
 `Importer` is an object that implements the `PrestaShop\PrestaShop\Core\Import\ImporterInterface`. PrestaShop comes with one `Importer` implementation (`PrestaShop\PrestaShop\Core\Import\Importer`), which can be easily used for your needs.
 
 The `PrestaShop\PrestaShop\Core\Import\ImporterInterface` exposes only one method:
-```
+
+```php
+// src/Core/Import/ImporterInterface.php
+
 interface ImporterInterface
 {
     /**
@@ -178,9 +282,13 @@ interface ImporterInterface
 
 `import()` method accepts the import configurations and the import handler implementation as arguments and will execute the import logic automatically.
 
-### Import execution example in a controller:
+### Import execution example in a controller
+The `processImportAction()` controller action (from the example below) imports one batch of the import data at a time.
+It can be run multiple times, until all data is fully imported.
 
-```
+```php
+// src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/ImportController.php
+
 public function processImportAction(Request $request)
 {
     $importer = $this->get('prestashop.core.import.importer');
@@ -188,13 +296,15 @@ public function processImportAction(Request $request)
     $runtimeConfigFactory = $this->get('prestashop.core.import.runtime_config_factory');
     $importHandlerFinder = $this->get('prestashop.adapter.import.handler_finder');
     
+    // Building the configuration objects
     $importConfig = $importConfigFactory->buildFromRequest($request);
     $runtimeConfig = $runtimeConfigFactory->buildFromRequest($request);
     
+    // Running the import process
     $importer->import(
         $importConfig,
         $runtimeConfig,
-        $importHandlerFinder->find($importConfig->getEntityType())
+        $importHandlerFinder->find($importConfig->getEntityType()) // Finding import handler
     );
     
     return $this->json($runtimeConfig->toArray());
