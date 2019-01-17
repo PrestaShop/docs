@@ -408,8 +408,16 @@ Grid.
 * [Bulk Actions reference](#)
 * [Grid Actions reference](#)
 
-## Summary as a schema
+## Workflows
 
-{{< figure src="../img/grid-build-schema.png" title="Grid schema" >}}
+### Main workflow
 
-> Note a XML file importable in services like [draw.io](https://draw.io) is [available](/schemas/1.7/form-schema.xml).
+{{< figure src="../img/grid_workflow.png" title="Main workflow of Grid Component" >}}
+
+> You can update this schema using the [source XML file](/schemas/1.7/grid_workflow.xml) importable in services like [draw.io](https://draw.io).
+
+### Hooks
+
+{{< figure src="../img/grid_workflow_hooks.png" title="Available hooks when creating a Grid" >}}
+
+> You can update this schema using the [source XML file](/schemas/1.7/grid_workflow_hooks.xml) importable in services like [draw.io](https://draw.io).
