@@ -411,8 +411,8 @@ Grid.
 ### Reference
 
 * [Columns reference](./columns-reference/)
-* [Bulk Actions reference](#)
-* [Grid Actions reference](#)
+* [Bulk Actions reference](./bulk-actions-reference/)
+* [Grid Actions reference](./grid-actions-reference/)
 
 ### Tutorials
 
