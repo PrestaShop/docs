@@ -392,27 +392,11 @@ To see Grid in your page you have to include it's template which is provided by 
 It is possible to include provided template and modify some parts of it or you can create your own template to render
 Grid. 
 
-## Learn more
-
-* [How to work with Bulk actions](#)
-* [How to work with Grid actions](#)
-* [How to add Filters](#)
-* [How to use Filters component in Grid](#)
-* [How to extend Grid with Javascript extensions](#)
-* [How to modify Grid from modules](#)
-* [Customize Grid templating](#)
-* [How to create custom Bulk Action](#)
-* [How to create custom Grid Action](#)
-* [How to create custom Column](#)
-* [Columns reference](#)
-* [Bulk Actions reference](#)
-* [Grid Actions reference](#)
-
 ## Workflows
 
 ### Main workflow
 
-{{< figure src="../img/grid_workflow.png" title="Main workflow of Grid Component" >}}
+{{< figure src="../img/grid_workflow.png" title="Main workflow of the Grid Component" >}}
 
 > You can update this schema using the [source XML file](/schemas/1.7/grid_workflow.xml) importable in services like [draw.io](https://draw.io).
 
@@ -421,3 +405,23 @@ Grid.
 {{< figure src="../img/grid_workflow_hooks.png" title="Available hooks when creating a Grid" >}}
 
 > You can update this schema using the [source XML file](/schemas/1.7/grid_workflow_hooks.xml) importable in services like [draw.io](https://draw.io).
+
+## Learn more
+
+### Reference
+
+* [Columns reference](./columns-reference/)
+* [Bulk Actions reference](#)
+* [Grid Actions reference](#)
+
+### Tutorials
+
+* [How to work with the Bulk actions?](#)
+* [How to work with the Grid actions?](#)
+* [How to work with the Search Form?](#)
+* [How to extend a Grid with Javascript extensions?](#)
+* [How to modify an existing Grid in a module?](./tutorials/modify-grid-in-module)
+* [How to customize the Grid templates?](#)
+* [How to create a custom Bulk Action?](#)
+* [How to create a custom Grid Action?](#)
+* [How to create a custom Column Type?](#)
