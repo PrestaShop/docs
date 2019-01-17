@@ -287,4 +287,4 @@ It remains quite simple, but you must make sure the parts `[1]` and `[/1]` still
 
 On PrestaShop 1.7, the translation system has changed for native modules (= provided by PrestaShop core team).
 
-Details on its implementation can be found [here]({{< ref "1.7/development/native-module-translation.md" >}}).
+Details on its implementation can be found [here]({{< ref "1.7/development/internationalization/translation/native-module-translation.md" >}}).
