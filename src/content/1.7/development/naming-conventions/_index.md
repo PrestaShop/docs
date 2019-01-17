@@ -1,17 +1,19 @@
 ---
 title: Naming conventions
-weight: 10
+weight: 12
 ---
 
-# Naming conventions
+# Conventions
 
-As with [Coding standards][coding-standards] naming consistency is very important in PrestaShop.
+As with [Coding standards][coding-standards] naming consistency is very important in PrestaShop, thus there are conventions that every PrestaShop contributor should follow.
+
+## Naming conventions
 
 {{% notice note %}}
 At the moment naming convetions strictly applies for Back Office migration only. 
 {{% /notice %}}
 
-## Controllers & actions naming
+### Controllers & actions
 
 PrestaShop controllers follow these naming conventions:
 
@@ -58,7 +60,7 @@ class CustomerController
 }
 ```
 
-## Templates naming
+### Templates
 
 PrestaShop templates follow these naming convetions:
 
@@ -82,7 +84,7 @@ class CustomerController extends AbstractAdminController
 }
 ```
 
-## Routes naming
+### Routes and paths
 
 PrestaShop routes follow `admin_{resources}_{action}` naming structure and rules for it are:
 
@@ -136,5 +138,33 @@ admin_customers_transform_guest_to_customer:
   requirements:
     customerId: \d+
 ```
+
+### Service ids
+
+When registering service in YAML, it's id should follow Fully-qualified class name. See example below.
+
+```php
+// src/Core/Payment/PaymentOptionFormDecorator.php
+
+namespace PrestaShop\PrestaShop\Core\Payment;
+
+class PaymentOptionFormDecorator
+{
+  // ...
+}
+```
+
+```yaml
+services:
+  # service id follows fully-qualified class name
+  prestashop.core.payment.payment_option_form_decorator:
+    class: 'PrestaShop\PrestaShop\Core\Payment\PaymentOptionFormDecorator'
+```
+
+### Grid
+
+PrestaShop comes with a lot of Grids (Products, Customers, Orders & etc) and keeping consistency between them is very important, thats why it follows these naming conventions:
+
+- Grid id should be in lowercase and written in `snake_case`
 
 [coding-standards]: {{< ref "/1.7/development/coding-standards/_index.md" >}}
