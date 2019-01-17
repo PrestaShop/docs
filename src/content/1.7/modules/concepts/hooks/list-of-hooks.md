@@ -927,6 +927,14 @@ actionSearch
 actionSetInvoice
 : 
     Located in: /classes/order/Order.php
+    Parameters:
+    ```php
+    array(
+      'Order' => order object,
+      'OrderInvoice' => order invoice object,
+      'use_existing_payment' => (bool)
+    );
+    ```
 
     
 actionShopDataDuplication
