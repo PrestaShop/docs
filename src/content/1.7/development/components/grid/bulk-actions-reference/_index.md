@@ -1,7 +1,7 @@
 ---
 title: Bulk Actions reference
 menuTitle: Bulk Actions reference
-weight: 11
+weight: 12
 ---
 
 ## Bulk Actions reference

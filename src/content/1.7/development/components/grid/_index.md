@@ -412,7 +412,7 @@ Grid.
 
 * [Columns reference](./columns-reference/)
 * [Bulk Actions reference](./bulk-actions-reference/)
-* [Grid Actions reference](./grid-actions-reference/)
+* [Grid Actions reference](./actions-reference/)
 
 ### Tutorials
 
