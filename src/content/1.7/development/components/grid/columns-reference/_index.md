@@ -34,3 +34,7 @@ Most important Grid definition part is defining columns. PrestaShop already come
 [datetime-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/datetime.md" >}}
 [employee-name-wit-avatar-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/employee-name-with-avatar.md" >}}
 [severity-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/severity-level.md" >}}
+
+{{% notice note %}}
+You need to create a custom Column Type? We got you [covered](../tutorials/create-custom-bulk-action)!
+{{% /notice %}}

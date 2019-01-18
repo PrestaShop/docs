@@ -124,6 +124,36 @@ Very similar to the *SubmitGridAction*, but capable to manage User accesses on t
 
 This row action will delete the Customer in Sell > Customers page.
 
-
+| Properties         | Expected value(s)                   |
+|--------------------| ------------------------------------|
+| **Id**             | A string                            |
+| **Type**           | `delete_customer`                   |
+| **Name**           | A string                            |
+| **Icon**           | A string                            |
+| **Options**        | `customer_id_field`                 |
+|                    | `customer_delete_route`             |
+| **Requirements**   | `customer_id_field`                 |
+|                    | `customer_delete_route`             |
+| **Defaults**       | `customer_id_field` (string)        |
+|                    | `customer_delete_route` => (string) |
 
 ### DeleteCategoryRowAction
+
+This row action will delete the Category in Catalog > Categories page.
+
+| Properties         | Expected value(s)                   |
+|--------------------| ------------------------------------|
+| **Id**             | A string                            |
+| **Type**           | `delete_category`                   |
+| **Name**           | A string                            |
+| **Icon**           | A string                            |
+| **Options**        | `category_id_field`                 |
+|                    | `category_delete_route`             |
+| **Requirements**   | `category_id_field`                 |
+|                    | `category_delete_route`             |
+| **Defaults**       | `category_id_field` (string)        |
+|                    | `category_delete_route` => (string) |
+
+{{% notice note %}}
+You need to create a custom Bulk Action? We got you [covered](../tutorials/create-custom-column-type)!
+{{% /notice %}}
