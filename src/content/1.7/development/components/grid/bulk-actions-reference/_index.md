@@ -42,6 +42,42 @@ This bulk action will delete the selected Customers in Sell > Customers page.
 | **Requirements**   | `customers_bulk_delete_route`          |
 | **Allowed Types**  | `customers_bulk_delete_route` (string) |
 
+## Use case exemple
+
+```php
+<?php
+// /modules/my-module/src/Grid/MyGridDefinitionFactory.php
+namespace MyModule\Grid;
+
+use PrestaShop\PrestaShop\Core\Grid\Definition\Factory\AbstractGridDefinitionFactory;
+use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\Type\SubmitBulkAction;
+use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\BulkActionCollection;
+
+/**
+ * How to define the Grid bulk actions?
+ * You can adapt this exemple or look at the existing ones
+ * in PrestaShop Core.
+ */
+class MyGridDefinitionFactory extends AbstractGridDefinition
+{
+    /**
+     * {@inheritdoc}
+     */
+    protected function getBulkActions()
+    {
+        return (new BulkActionCollection())
+            ->add(
+                (new SubmitBulkAction('enable_selection'))
+                ->setName('Enable selection')
+                ->setOptions([
+                    'submit_route' => 'submit_stuff',
+                ])
+            )
+        ;
+    }
+}
+```
+
 {{% notice note %}}
 You need to create a custom Bulk Action? We got you [covered](../tutorials/create-custom-bulk-action)!
 {{% /notice %}}

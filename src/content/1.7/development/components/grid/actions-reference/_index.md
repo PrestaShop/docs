@@ -191,38 +191,46 @@ class MyGridDefinitionFactory extends AbstractGridDefinition
                     'confirm_message' => 'Are you sure?',
                 ])
             )
+        ;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getColumns()
+    {
+        return (new ColumnCollection())
             ->add(
                 (new ActionColumn('actions'))
                 ->setName($this->trans('Actions', [], 'Admin.Global'))
                 ->setOptions([
                     'actions' => (new RowActionCollection())
-                        ->add(
-                            (new LinkRowAction('edit'))
-                            ->setName('Edit')
-                            ->setIcon('edit')
-                            ->setOptions([
-                                'route' => 'edit_stuff',
-                                'route_param_name' => 'stuffId',
-                                'route_param_field' => 'stuffId',
-                            ])
-                        )
-                        ->add(
-                            (new SubmitRowAction('delete'))
-                            ->setName('Delete')
-                            ->setIcon('delete')
-                            ->setOptions([
-                                'confirm_message' => 'Delete selected item?',
-                                'route' => 'delete_stuff',
-                                'route_param_name' => 'stuffId',
-                                'route_param_field' => 'stuffId',
-                            ])
-                        )
+                    ->add(
+                        (new LinkRowAction('edit'))
+                        ->setName('Edit')
+                        ->setIcon('edit')
+                        ->setOptions([
+                            'route' => 'edit_stuff',
+                            'route_param_name' => 'stuffId',
+                            'route_param_field' => 'stuffId',
+                        ])
+                    )
+                    ->add(
+                        (new SubmitRowAction('delete'))
+                        ->setName('Delete')
+                        ->setIcon('delete')
+                        ->setOptions([
+                            'confirm_message' => 'Delete selected item?',
+                            'route' => 'delete_stuff',
+                            'route_param_name' => 'stuffId',
+                            'route_param_field' => 'stuffId',
+                        ])
+                    )
                 ])
             )
         ;
     }
 }
-
 ```
 
 {{% notice note %}}
