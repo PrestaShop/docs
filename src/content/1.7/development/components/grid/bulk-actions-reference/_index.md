@@ -12,15 +12,15 @@ You can define actions for every selected rows of your grid. PrestaShop already 
 
 This action will submit the data of your rows into a specific route.
 
-| Properties         | Expected value(s)                 |
-|--------------------| ----------------------------------|
-| **Type**           | `submit`                          |
-| **Requirements**   | `submit_route`                    |
-| **Defaults**       | `confirm_message` => null         |
-|                    | `submit_method` => "POST"         |
-| **Allowed Types**  | `submit_route` (string)           |
-|                    | `confirm_message` (string|null)   |
-| **Allowed Values** | `submit_method` ("POST" or "GET") |
+| Properties         | Expected value(s)                  |
+|--------------------| -----------------------------------|
+| **Type**           | `submit`                           |
+| **Requirements**   | `submit_route`                     |
+| **Defaults**       | `confirm_message` => null          |
+|                    | `submit_method` => "POST"          |
+| **Allowed Types**  | `submit_route` (string)            |
+|                    | `confirm_message` (string or null) |
+| **Allowed Values** | `submit_method` ("POST" or "GET")  |
 
 ### DeleteCategoriesBulkAction
 
@@ -34,7 +34,7 @@ This action will delete the selected Categories in Catalog > Categories page.
 
 ### DeleteCustomersBulkAction
 
-This action will delete the selected Customers in Sell > Customers page.
+This bulk action will delete the selected Customers in Sell > Customers page.
 
 | Properties         | Expected value(s)                      |
 |--------------------| ---------------------------------------|
