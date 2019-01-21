@@ -1,0 +1,206 @@
+---
+title: The Webservice component
+menuTitle: Webservice
+weight: 2
+---
+
+# The Webservice component
+
+PrestaShop enables merchants to give third-party tools access to their shop's database through a CRUD API, otherwise called a web service.
+
+## About CRUD & REST
+
+The PrestaShop web service uses the REST architecture in order to be available on as many platforms as possible, since the HTTP protocol and XML files are understood by most platforms, if not all.
+
+{{% notice note %}}
+[CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+ is an acronym that stands for "Create, Read, Update, and Delete". These are the four basic operations for managing data in an application.
+
+[REST](http://en.wikipedia.org/wiki/REST) defines roughly a style of software architecture, which promotes the use of HTTP methods when building web application, instead of custom methods or protocols such as SOAP or WSDL. It defines several rules, including one that is similar to CRUD, which is described below.
+{{% /notice %}}
+
+HTTP has several methods that can perform processing on data as defined in the REST architecture, among which are [4 main methods](http://en.wikipedia.org/wiki/HTTP#Request_methods):
+
+| HTTP/REST | CRUD   | SQL    |
+|-----------|--------|--------|
+| POST      | Create | INSERT |
+| GET       | Read   | SELECT |
+| PUT       | Update | UPDATE |
+| DELETE    | Delete | DELETE |
+
+## Creating an access to the webservice
+
+Before you can do anything, there are few steps you need to do to create an access to the web service.
+
+### Enabling the web service
+
+Go in the PrestaShop back office, open the "Web service" page under the "Advanced Parameters" menu, and then choose "Yes" for the "Enable PrestaShop Webservice" option.
+
+{{< figure src="./img/enable_webservice.png" title="Enabling Webservice" >}}
+
+### Creating an access key
+
+In order to have access to the API you need to create an access key, this will allow you to finely tune the permissions you give to the different data of your shop.
+You will use this key later in each call to the API. Open the "Webservice" page under the "Advanced Parameters" menu, and then click the "Add New" button to access the account configuration section.
+
+{{< figure src="./img/create_access_key.png" title="Creating an access key" >}}
+
+Each access key is defined by this information:
+
+* **Key** - The API key serves as the main identifier for the webservice account you are creating. Click the "Generate" button to get an unique authentication key. You can also create your own (which must be 32 characters long), but using a generated key prevents wrong-doers from guessing your key too easily.
+            Using this key, you and other selected users will be able to access the webservice.
+* **Key description** - Helps you remember who you created that key for, what are the access rights assigned to it, etc. The description is not public, but make sure to put all the keywords pertaining to the user, so that you can find their key more quickly.
+* **Status** - You can disable any key at any time.
+* **Permissions** - This section is very important, as it enables you to assign rights for each resource you want to make available to this key. Indeed, you might want a user to have read and write access on some resources, but only read access on others – and no access to the more important ones.
+                    In the list of permissions, the top left checkbox enables you to define all the rights for a given resource. Likewise, the checkbox at the top of each column enables you to give the select right (View, Modify, etc.) to all the resources. 
+                    Make sure to only select the rights needed for the usage of that key. **Do not give all the rights for all resources to any key**, keep that to yours and yours only.
+* **Shop association** - This only appears in multistore mode. It enables you to choose which of your stores the key owner should have access to.
+
+## Accessing the webservice
+
+Now that your access key is generated you can test your store's webservice, its endpoint is located in the `/api/` folder at the root of your installation of Prestashop.
+The quickest way to test your API is to use your browser:
+
+* If PrestaShop is installed at the root of your server, you can access the API here: http://example.com/api/
+* If PrestaShop is installed in a subfolder of your server, you can access the API here: http://example.com/prestashop/api/
+
+The shop should prompt you for a username and a password to enter. The username is the authentication key you created and **there is no password to enter**.
+
+The second and more appropriate way to access the API is to include your access key in the url, this will prevent you from entering any user name.
+This is also the recommended way to call the API from a javascript client, or any application. Here is an example, assuming your access API key is `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`:
+
+* At the root of the server: http://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/
+* In a subfolder of the server: http://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestasshop/api/
+
+{{% notice note %}}
+To test/call your APIs we recommend you use an API client such as [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, especially for write actions.
+{{% /notice %}}
+
+{{% notice warning %}}
+As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with you access key rights and how (and whose) you distribute them.
+{{% /notice %}}
+
+## Using your webservice API
+
+### Describe a resource
+
+When you call the root `/api` url you will get a summary of the available APIs you can call with your access token. In this example we see that we have all rights on the `/api/addresses` API:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <api shopName="Prestashop">
+        <addresses xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" delete="true" head="true">
+            <description xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" delete="true" head="true">
+            The Customer, Brand and Customer addresses</description>
+            <schema xlink:href="http://example.com/api/addresses?schema=blank" type="blank"/>
+            <schema xlink:href="http://example.com/api/addresses?schema=synopsis" type="synopsis"/>
+        </addresses>
+    </api>
+</prestashop>
+```
+
+Each API comes with two schema APIs:
+
+* `/api/RESOURCE?schema=synopsis` returns basic info on the API format, the name of fields and their type
+* `/api/RESOURCE?schema=blank` will return a default blank data which you could use as a base for your write actions
+
+Both calls are very much alike, only synopsis contains more information about the data format and types:
+
+```xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <address>
+        <id_customer format="isNullOrUnsignedId"></id_customer>
+        <id_manufacturer format="isNullOrUnsignedId"></id_manufacturer>
+        <id_supplier format="isNullOrUnsignedId"></id_supplier>
+        <id_warehouse format="isNullOrUnsignedId"></id_warehouse>
+        <id_country required="true" format="isUnsignedId"></id_country>
+        <id_state format="isNullOrUnsignedId"></id_state>
+        <alias required="true" maxSize="32" format="isGenericName"></alias>
+        <company maxSize="255" format="isGenericName"></company>
+        <lastname required="true" maxSize="255" format="isName"></lastname>
+        <firstname required="true" maxSize="255" format="isName"></firstname>
+        <vat_number format="isGenericName"></vat_number>
+        <address1 required="true" maxSize="128" format="isAddress"></address1>
+        <address2 maxSize="128" format="isAddress"></address2>
+        <postcode maxSize="12" format="isPostCode"></postcode>
+        <city required="true" maxSize="64" format="isCityName"></city>
+        <other maxSize="300" format="isMessage"></other>
+        <phone maxSize="32" format="isPhoneNumber"></phone>
+        <phone_mobile maxSize="32" format="isPhoneNumber"></phone_mobile>
+        <dni maxSize="16" format="isDniLite"></dni>
+        <deleted format="isBool"></deleted>
+        <date_add format="isDate"></date_add>
+        <date_upd format="isDate"></date_upd>
+    </address>
+</prestashop>
+```
+
+### Read a resource
+
+Each resource comes with an XLink argument. Using XLink, you will be able to access your various resources. XLink associates an XML file to another XML file via a link.
+From our root API example we can see that we have access to `http://example.com/api/addresses` which will return the list of Addresses:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <addresses>
+        <address id="2" xlink:href="http://example.com/api/addresses/2"/>
+        <address id="3" xlink:href="http://example.com/api/addresses/3"/>
+        <address id="1" xlink:href="http://example.com/api/addresses/1"/>
+        <address id="4" xlink:href="http://example.com/api/addresses/4"/>
+    </addresses>
+</prestashop>
+```
+
+{{% notice note %}}
+You can notice that a resource API url always follow the same pattern:
+
+* `http://example.com/api/RESOURCE_NAME` list a type of resource
+* `http://example.com/api/RESOURCE_NAME/ID_RESOURCE` will return the information of the specified resource
+{{% /notice %}}
+
+Here is what a resource API call could look like (in this case `http://example.com/api/addresses/1`):
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <address>
+        <id><![CDATA[1]]></id>
+        <id_customer xlink:href="http://example.com/api/customers/1"><![CDATA[1]]></id_customer>
+        <id_manufacturer><![CDATA[0]]></id_manufacturer>
+        <id_supplier><![CDATA[0]]></id_supplier>
+        <id_warehouse><![CDATA[0]]></id_warehouse>
+        <id_country xlink:href="http://example.com/api/countries/8"><![CDATA[8]]></id_country>
+        <id_state><![CDATA[0]]></id_state>
+        <alias><![CDATA[Mon adresse]]></alias>
+        <company><![CDATA[My Company]]></company>
+        <lastname><![CDATA[DOE]]></lastname>
+        <firstname><![CDATA[John]]></firstname>
+        <vat_number></vat_number>
+        <address1><![CDATA[16, Main street]]></address1>
+        <address2><![CDATA[2nd floor]]></address2>
+        <postcode><![CDATA[75002]]></postcode>
+        <city><![CDATA[Paris ]]></city>
+        <other></other>
+        <phone><![CDATA[0102030405]]></phone>
+        <phone_mobile></phone_mobile>
+        <dni></dni>
+        <deleted><![CDATA[0]]></deleted>
+        <date_add><![CDATA[2019-01-15 22:46:55]]></date_add>
+        <date_upd><![CDATA[2019-01-15 22:46:55]]></date_upd>
+    </address>
+</prestashop>
+```
+
+### Create a resource
+
+To create a resource, you simply need to **GET** the XML blank data for the resource (example `/api/addresses?schema=blank`), fill it with your changes, and send **POST HTTP request** with the whole XML as body content to the `/api/addresses/` URL.
+
+PrestaShop will take care of adding everything in the database, and will return an XML file indicating that the operation has been successful, along with the **ID** of the newly created customer.
+
+### Update a resource
+
+To edit an existing resource: **GET** the full XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PUT HTTP request** with the whole XML file as a body content to the same URL again.
