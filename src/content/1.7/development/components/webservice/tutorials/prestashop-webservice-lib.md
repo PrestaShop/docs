@@ -111,8 +111,8 @@ This is the same principle as the creation, except you request an existing resou
 <?php
     require_once 'vendor/autoload.php';
     
-    $url = 'http://local.prestashop-develop';
-    $key  = 'C3D7T6MB88PJUZHKPK36EU6YSEFYSZV7';
+    $url = 'http://example.com';
+    $key  = 'YOUR_GENERATED_API_ACCESS_KEY';
     $debug = false;
     
     $webService = new PrestaShopWebservice($url, $key, $debug);
@@ -142,8 +142,8 @@ Deleting a resource is actually the simplest of the actions.
 <?php
     require_once 'vendor/autoload.php';
     
-    $url = 'http://local.prestashop-develop';
-    $key  = 'C3D7T6MB88PJUZHKPK36EU6YSEFYSZV7';
+    $url = 'http://example.com';
+    $key  = 'YOUR_GENERATED_API_ACCESS_KEY';
     $debug = false;
     
     $webService = new PrestaShopWebservice($url, $key, $debug);
