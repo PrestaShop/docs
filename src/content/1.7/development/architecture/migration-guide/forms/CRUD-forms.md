@@ -1,9 +1,9 @@
 ---
-title: Identifiable object Forms
+title: CRUD Form
 weight: 30
 ---
 
-# Identifiable object Forms
+# CRUD Form
 
 ## Introduction
 
