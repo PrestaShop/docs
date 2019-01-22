@@ -27,6 +27,7 @@ This is the list of items that usually need to be done in order to complete the 
   - Checks permissions and demo mode constraints
   - Re-introduce hooks (and document the missing one if you can't for a good reason)
   - Complete `Link` class to map PrestaShop menu to the new page
+  - Create the smoke/survival tests for the migrated page
 - Deletions
   - Remove the old controller in `controllers/admin/Admin*.php`
   - Remove related old templates (in `admin-dev/themes/default/template/controllers/*`)

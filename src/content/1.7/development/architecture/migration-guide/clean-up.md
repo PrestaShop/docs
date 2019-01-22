@@ -10,4 +10,3 @@ Once everything is migrated, refactored, extracted to specific classes and worki
 * Delete the old controller.
 * Delete the old templates (delete the `admin-dev/themes/default/template/controller/{name}` folder.
 * Delete the related "legacy tests".
-
