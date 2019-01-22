@@ -7,7 +7,7 @@ weight: 20
 
 ## Introduction
 
-These forms handle PrestaShop option forms. The following parts are being used:
+In PrestaShop, there are a lot of settings which requires some unified handling of them. To move the settings creation and update out of controllers the following parts are being used:
 
 * _Form data provider_ - responsible for options data retrieval and saving the data.
 * _Form handler_ - responsible for building the form.

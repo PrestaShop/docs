@@ -7,7 +7,7 @@ weight: 30
 
 ## Introduction
 
-These forms handle PrestaShop form to create and edit identifiable objects. In PrestaShop, many forms represent an identifiable object data such as Cart, Product, Order, Customer and many others.
+In PrestaShop, many forms represent an identifiable object data such as Cart, Product, Order, Customer and many others.
 Each identifiable object share common scenarios such as its creation, update or it's display. To wrap the common behavior is a must and
 identifiable object is here for rescue. It allows to retrieve data for form display and to submit it by using following parts:
 
