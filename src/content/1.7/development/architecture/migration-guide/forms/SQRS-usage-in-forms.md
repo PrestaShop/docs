@@ -94,7 +94,7 @@ In `update` function command `EditContactCommand` is used to set all required da
 
 ## Example using query bus
 
-Its very similar to the example above just that query bus is meant to be used in _Form data provider_. First, lets inject `QueryBus` instance.
+First, lets inject `QueryBus` instance.
 
 ```yml
 #src/PrestaShopBundle/Resources/config/services/core/form/form_data_provider.yml

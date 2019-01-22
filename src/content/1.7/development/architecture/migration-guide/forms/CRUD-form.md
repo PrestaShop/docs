@@ -67,8 +67,7 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 }
 ```
 
-We have just created a basic Form data provider usage which will pre fill our title with `Customer service` text but by default it will return `service` string.
-Don't forget to register it as a service because it is a part of [Form builder](#form-builder).
+We have just created a basic Form data provider usage which will pre fill our title with `Customer service` text but by default it will return `service` string. Don't forget to register it as a service because it is a part of [Form builder](#form-builder).
 
 ```yaml
 #src/PrestaShopBundle/Resources/config/services/core/form/form_data_provider.yml
@@ -76,6 +75,10 @@ Don't forget to register it as a service because it is a part of [Form builder](
   prestashop.core.form.identifiable_object.data_provider.contact_form_data_provider:
     class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\ContactFormDataProvider'
 ```
+
+{{% notice note %}}
+On real use case scenario the data can be returned from database. Have a look at our [recommended approach]({{< relref "SQRS-usage-in-forms.md" >}}) of how to do that withing the _Form data provider_.
+{{% /notice %}}
 
 ## Form builder
 
@@ -178,6 +181,10 @@ Don't forget to register it as a service because it is a part of [Form Handler](
     class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
 ```
 
+{{% notice note %}}
+On real use case scenario the data is used to create or modify certain table in your database. Have a look at our [recommended approach]({{< relref "SQRS-usage-in-forms.md" >}}) of how to do that withing the _Form data handler_.
+{{% /notice %}}
+
 ## Form handler
 
 Form handler is used to encapsulate the `Form data handler`. It has methods:
@@ -234,5 +241,5 @@ First, the builder creates the form which handles current `Request`. If the form
 
 {{% notice note %}}
 <!-- @todo: link to component of SQRS and its usage in identifiable object -->
- Note that the `Domain tier` uses [SQRS](#) which usage withing identifiable object is defined [here](todo link).
+ Note that the `Domain tier` uses [SQRS](#) which usage withing identifiable object is defined [here]({{< relref "SQRS-usage-in-forms.md" >}}).
 {{% /notice %}}
