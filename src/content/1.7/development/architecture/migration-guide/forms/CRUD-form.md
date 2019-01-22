@@ -82,7 +82,7 @@ On real use case scenario the data can be returned from database. Have a look at
 
 ## Form builder
 
-When using form builder oyu only need to worry about passing the `Form type` and `Form data provider`.
+When using form builder you only need to worry about passing the `Form type` and `Form data provider`.
 By using these methods:
 
 * **getForm(array $data = [], array $options = [])** - method used to retrieve form. Optional parameter `$data` and `$options` can be passed to `Symfony  Form Builder`.
