@@ -1,13 +1,13 @@
 ---
-title: SQRS usage in forms
-weight: 30
+title: CQRS usage in forms
+weight: 40
 ---
 
-# SQRS usage in forms
+# CQRS usage in forms
 
 ## Introduction
 
-Assuming that you are already familiar with [SQRS](#) and [CRUD forms]({{< relref "CRUD-form.md" >}}) as this topic only demonstrates the usage of the SQRS approach. To apply it in your forms you need to:
+Assuming that you are already familiar with [CQRS](#) and [CRUD forms]({{< relref "CRUD-form.md" >}}) as this topic only demonstrates the usage of the CQRS approach. To apply it in your forms you need to:
 
 1. Inject a `CommandBus` or `QueryBus` instance using your class constructor.
 2. Call your command using the `CommandBus` or `QueryBus`.
@@ -48,6 +48,8 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
 ```
 
 Right now the first step is completed - command bus is injected in the form data handler. Lets use it!
+
+Instead of creating new object directly in `update()` method, you can delegate it to Command. All that you have to do is create command using form `$data` and dispatch it.
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
@@ -129,8 +131,15 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 
 The first step is completed - lets use it!
 
+Instead of creating new object directly in `getData()` method, you can delegate it to Command. All that you have to do is create command using form `$data` and dispatch it.
+
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
+
+use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
+use PrestaShop\PrestaShop\Core\Domain\Contact\DTO\EditableContact;
+use PrestaShop\PrestaShop\Core\Domain\Contact\Exception\ContactException;
+use PrestaShop\PrestaShop\Core\Domain\Contact\Query\GetContactForEditing;
 
 final class ContactFormDataProvider implements FormDataProviderInterface
 {
@@ -167,5 +176,3 @@ final class ContactFormDataProvider implements FormDataProviderInterface
     }
 }
 ```
-
-In `getData` function we use `GetContactForEditing` command to get all the required data for the contact page form. This command is passed to the query handler which in success case, returns `EditableContact` Data transfer object (DTO). DTO's data is assigned to the form fields and is returned as array for further processing with the main goal of displaying all of the data returned in the contact form.
