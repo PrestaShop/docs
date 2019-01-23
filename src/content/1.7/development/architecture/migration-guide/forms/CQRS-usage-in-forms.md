@@ -30,6 +30,8 @@ and in `ContactFormDataHandler`
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
 
+use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
+
 final class ContactFormDataHandler implements FormDataHandlerInterface
 {
     /**
@@ -53,6 +55,11 @@ Instead of creating new object directly in `update()` method, you can delegate i
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
+
+use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
+use PrestaShop\PrestaShop\Core\Domain\Contact\Command\EditContactCommand;
+use PrestaShop\PrestaShop\Core\Domain\Contact\Exception\ContactException;
+use PrestaShop\PrestaShop\Core\Domain\Contact\ValueObject\ContactId;
 
 final class ContactFormDataHandler implements FormDataHandlerInterface
 {
@@ -111,6 +118,8 @@ and in `ContactFormDataProvider`
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
+
+use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
 
 final class ContactFormDataProvider implements FormDataProviderInterface
 {
