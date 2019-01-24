@@ -83,6 +83,18 @@ As all your commits messages are well-formatted, just make a summary of your pul
 
 Please note that all the pull requests must follow those guidelines. If the commit messages are not well-formatted, the pull request's title is not correct, or the table is not properly filled, we will not be able to accept your pull request.
 
+### Pull requests requirements
+
+The code submitted through your Pull Request will be reviewed by prestashop developers. The code review process is a great practice used by hundred of software projects and provides lot of benefits:
+- it helps to spot errors in the code, because we all make mistakes and it's very hard to find one's own mistake
+- it helps to improve the code quality, which is its readability, its ability to run quick, the lack of security issues
+- it helps to spread the codebase knowledge because the reviewer will learn how your code works too
+- and don't forget that the review is a discussion, not a todo-list: it allows to share different opinions and find together the best solution
+
+However reviewing code is hard and can be exhausting. So we need you to make your pull request as easy as possible to review. To do so, you can use the pull request form (see below) to explain parts of the code that could be tricky to understand or explain the reasons behind some of your technical choices.
+
+Also please do not submit large PRs when it can be avoided: first if your PR is large, it is unlikely that it is adressing only one issue: please make one PR for each issue you solve. Second, a PR too large will be long to review, and consequently the reviewer might miss some key elements of the PR. Either the reviewer will be able to complete the review but might miss some issues in it or he will better reject it because he cannot ensure the quality of the code being submitted.
+
 ### The Pull Request form
 
 When you create a new Pull Request, you will be presented with a form to complete that looks like this:
