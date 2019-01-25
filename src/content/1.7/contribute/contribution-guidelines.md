@@ -85,15 +85,21 @@ Please note that all the pull requests must follow those guidelines. If the comm
 
 ### Pull requests requirements
 
-The code submitted through your Pull Request will be reviewed by prestashop developers. The code review process is a great practice used by hundred of software projects and provides lot of benefits:
-- it helps to spot errors in the code, because we all make mistakes and it's very hard to find one's own mistake
-- it helps to improve the code quality, which is its readability, its ability to run quick, the lack of security issues
-- it helps to spread the codebase knowledge because the reviewer will learn how your code works too
-- and don't forget that the review is a discussion, not a todo-list: it allows to share different opinions and find together the best solution
+Code submitted through your Pull Request will be reviewed by PrestaShop maintainers. The code review process is generally regarded as a good practice and adopted by hundreds of software projects around the world. It provides lot of benefits:
+- it helps spotting errors in the code, because we all make mistakes and it's very hard to find one's own mistakes
+- it helps improving code quality not only by ensuring it's readable and understandable, but also by pinpointing design, performance or security issues that may have been unintentionally introduced by the author
+- it helps spread knowledge of the code base, because the reviewer will learn how your code works too
+- and don't forget that reviewing is a discussion, not a to-do list: the goal is to find the best solution by sharing different opinions
 
-However reviewing code is hard and can be exhausting. So we need you to make your pull request as easy as possible to review. To do so, you can use the pull request form (see below) to explain parts of the code that could be tricky to understand or explain the reasons behind some of your technical choices.
+However, reviewing code is hard and can be exhausting. Making your pull request as easy as possible to review will help in getting it accepted swiftly. Completing the pull request form (explained below), properly explaining the reasons behind some of your technical choices, as well as any part of the code that could be tricky to understand... those are some examples of things that you can do to help ease up the process.
 
-Also please do not submit large PRs when it can be avoided: first if your PR is large, it is unlikely that it is adressing only one issue: please make one PR for each issue you solve. Second, a PR too large will be long to review, and consequently the reviewer might miss some key elements of the PR. Either the reviewer will be able to complete the review but might miss some issues in it or he will better reject it because he cannot ensure the quality of the code being submitted.
+Also, please avoid submitting very large PRs when it can be avoided.
+
+- If you modified a lot of files or a very big number of lines, it is unlikely that you're addressing a single issue: please try and submit one PR for each issue you solve. This way, a problem in one change won't block other valid changes from being merged.
+- A PR with a lot of changed lines will take a long time to review, and consequently the reviewer might miss possible issues. If your PR is too big, it may be rejected due to risk of regressions.
+- The longer it takes to merge a PR, the more it is likely that it will be blocked by merge conflicts. Whenever a Pull Request is rebased, it has to be reviewed again, thus increasing the time to merge, thus increasing the risk of conflicts...
+
+Remember: smaller changes are easier to review, easier to test and easier to merge.
 
 ### The Pull Request form
 
