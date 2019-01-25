@@ -83,6 +83,24 @@ As all your commits messages are well-formatted, just make a summary of your pul
 
 Please note that all the pull requests must follow those guidelines. If the commit messages are not well-formatted, the pull request's title is not correct, or the table is not properly filled, we will not be able to accept your pull request.
 
+### Pull requests requirements
+
+Code submitted through your Pull Request will be reviewed by PrestaShop maintainers. The code review process is generally regarded as a good practice and adopted by hundreds of software projects around the world. It provides lot of benefits:
+- it helps spotting errors in the code, because we all make mistakes and it's very hard to find one's own mistakes
+- it helps improving code quality not only by ensuring it's readable and understandable, but also by pinpointing design, performance or security issues that may have been unintentionally introduced by the author
+- it helps spread knowledge of the code base, because the reviewer will learn how your code works too
+- and don't forget that reviewing is a discussion, not a to-do list: the goal is to find the best solution by sharing different opinions
+
+However, reviewing code is hard and can be exhausting. Making your pull request as easy as possible to review will help in getting it accepted swiftly. Completing the pull request form (explained below), properly explaining the reasons behind some of your technical choices, as well as any part of the code that could be tricky to understand... those are some examples of things that you can do to help ease up the process.
+
+Also, please avoid submitting very large PRs when it can be avoided.
+
+- If you modified a lot of files or a very big number of lines, it is unlikely that you're addressing a single issue: please try and submit one PR for each issue you solve. This way, a problem in one change won't block other valid changes from being merged.
+- A PR with a lot of changed lines will take a long time to review, and consequently the reviewer might miss possible issues. If your PR is too big, it may be rejected due to risk of regressions.
+- The longer it takes to merge a PR, the more it is likely that it will be blocked by merge conflicts. Whenever a Pull Request is rebased, it has to be reviewed again, thus increasing the time to merge, thus increasing the risk of conflicts...
+
+Remember: smaller changes are easier to review, easier to test and easier to merge.
+
 ### The Pull Request form
 
 When you create a new Pull Request, you will be presented with a form to complete that looks like this:
