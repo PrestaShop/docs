@@ -42,7 +42,7 @@ class MyModuleTools extends Tools
     /**
      * Adding a new method for the example
      */
-    pulic static function array_pluck(array $data, 'property')
+    public static function array_pluck(array $data, 'property')
     {
         // [...]
     }
