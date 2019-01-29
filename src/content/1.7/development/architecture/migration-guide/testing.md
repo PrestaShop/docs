@@ -8,7 +8,7 @@ weight: 70
 You are encouraged to add both unit and functional tests for every new class
 you have created.
 
-You are required to add a smoke test (also called "survival") for every new page
+You **must** add a smoke test (also called "survival") for every new page
 you migrate.
 
 ## Smoke testing
@@ -22,10 +22,7 @@ To add a new test, you need to add a new entry in the Data Provider of SurvivalT
 <?php
 
 namespace LegacyTests\Integration\PrestaShopBundle\Controller\Admin;
-use LegacyTests\Integration\PrestaShopBundle\Test\WebTestCase;
-use PrestaShopBundle\Security\Admin\Employee as LoggedEmployee;
-use Symfony\Component\Security\Core\Authentication\Token\AbstractToken;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorage;
+// ...
 /**
  * @group demo
  *
