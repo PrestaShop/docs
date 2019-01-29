@@ -248,5 +248,5 @@ First, the builder creates the form which handles current `Request`. If the form
 
 {{% notice note %}}
 <!-- @todo: link to component of CQRS and its usage in identifiable object -->
- Note that the `Domain tier` uses [CQRS](#) which usage withing identifiable object is defined [here]({{< relref "CQRS-usage-in-forms.md" >}}).
+ Note that the `Domain tier` uses CQRS which usage withing identifiable object is defined [here]({{< relref "CQRS-usage-in-forms.md" >}}).
 {{% /notice %}}
