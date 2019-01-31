@@ -22,6 +22,8 @@ The import workflow consists of the following steps:
 This page consists of import configuration, where you select the import data source and choose wanted options, such as field separators, import language, whether old data should be truncated or not, etc. 
 All configuration which is selected in this page, is represented by the `PrestaShop\PrestaShop\Core\Import\Configuration\ImportConfigInterface`.
 
+{{< figure src="./img/import_step_1.png" title="Import step 1" >}}
+
 ### Import configuration
 The default implementation of the mentioned configuration interface (`PrestaShop\PrestaShop\Core\Import\Configuration\ImportConfigInterface`) in PrestaShop can be seen in `PrestaShop\PrestaShop\Core\Import\Configuration\ImportConfig` class.
 This class is a value object, which values are not supposed to change during one import operation.
@@ -33,6 +35,8 @@ In the second import step we can configure only two things that are directly rel
 
 * Number of rows to skip from the top of import file.
 * Entity fields matching to data source columns.
+
+{{< figure src="./img/import_step_2.png" title="Import step 2" >}}
 
 ### Number of rows to skip
 The number of rows to skip from the top of import file value is also held in the default `ImportConfig` implementation and is exposed by the `PrestaShop\PrestaShop\Core\Import\Configuration\ImportConfigInterface`. 
