@@ -14,9 +14,13 @@ The legacy import page is not fully migrated to new architecture yet.
 The import workflow consists of the following steps:
 
 * Configuration in import step 1 (such as data source, separators, other settings).
-* Entity fields matching to data source columns in import step 2.
+* _Entity_ fields matching to data source columns in import step 2.
 * Data validation process.
 * Import process.
+
+{{% notice tip %}}
+When using word ___entity___, we are referring to a business entity from PrestaShop, such as _Product_, _Category_, _Address_, etc. 
+{{% /notice %}}
 
 ## Import step 1
 This page consists of import configuration, where you select the import data source and choose wanted options, such as field separators, import language, whether old data should be truncated or not, etc. 
