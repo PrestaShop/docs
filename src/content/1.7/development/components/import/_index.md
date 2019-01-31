@@ -294,6 +294,9 @@ interface ImporterInterface
 The `processImportAction()` controller action (from the example below) imports one batch of the import data at a time.
 It can be run multiple times, until all data is fully imported.
 
+The controller action below is being called multiple times (via _AJAX_) by the _JavaScript_ part of the import component,
+until all data is imported from the source file:
+
 ```php
 // src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/ImportController.php
 
