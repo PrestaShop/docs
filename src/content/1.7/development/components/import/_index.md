@@ -322,3 +322,51 @@ public function processImportAction(Request $request)
 }
 ```
 
+### Related JavaScript
+Since the import operation can be heavy and take many resources to complete (depending on the amount of data to be imported),
+in PrestaShop it is being executed in smaller processes.
+To achieve that, some _JavaScript_ code is being used, which continuously fires _AJAX_ requests that trigger the import processing on the server, until the import finishes.
+
+All _JavaScript_ code, which is used by the import component, can be found under `admin-dev/themes/new-theme/js/pages/import-data/` directory.
+We can find different _JavaScript_ components there, which are explained below.
+
+#### `EntityFieldsValidator`
+Responsible for validating selected entity fields in import page 2 data table. 
+It makes sure that you don't miss any required fields, prevents you from selecting same field twice and shows error messages if you do.
+
+{{< figure src="./img/import_step_2_validation.png" title="Validation in import step 2 - duplicate fields" >}}
+
+#### `ImportBatchSizeCalculator`
+Calculates the most reasonable batch size for each import process, depending on server's response time.
+It adapts the batch size of the next import iteration by measuring how long it took for the server to process the data in previous import iteration.
+
+#### `ImportDataTable`
+Responsible for pagination functionality in the import data preview table. 
+The pagination arrows appear below the data table and can be used to peek the source file preview forward or backwards.
+
+{{< figure src="./img/import_step_2_pagination.png" title="Import step 2 data preview table - pagination arrows" >}}
+
+#### `ImportMatchConfiguration`
+Responsible for saving, loading or deleting import matches configurations.
+Import match configuration allows saving the matched entity fields for later reusability.
+
+{{< figure src="./img/import_match_configuration.png" title="Import match configuration interface" >}}
+
+#### `PostSizeChecker`
+Responsible for checking if _POST_ size limit is being reached. 
+It's used in each import process, to make sure it won't reach the limits.
+
+#### `ImportProgressModal`
+Responsible for displaying the import progress for the end user in a modal window. 
+It updates the progress bar of the modal, displays messages, shows/hides the buttons in modal when asked for.
+
+{{< figure src="./img/import_modal.png" title="Import modal" >}}
+
+#### `Importer`
+Executes import process and fires _AJAX_ import requests continuously. 
+It uses the `PostSizeChecker`, `ImportBatchCalculator` and `ImportProgressModal` components internally and connects them to execute the import process.
+
+#### `ImportDataPage`
+Responsible for running the `Importer` component when the end user clicks _Import_ button.
+Collects data from the import match configuration form and passes it to the `Importer`.
+
