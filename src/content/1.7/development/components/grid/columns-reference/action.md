@@ -1,20 +1,20 @@
 ---
 title: ActionColumn reference
 menuTitle: ActionColumn
-weight: 60
+weight: 20
 ---
 
 # ActionColumn Type
+{{< minver v="1.7.5" title="true" >}}
 
-This type of column allows to add actions to your Grid rows.
+This type of column allows to add actions to your Grid rows. The action target the corresponding row.
+For more info about possible actions see [Actions reference][actions-reference].
 
 ## Available options
 
-### field
-
-**actions:** `array|null` **default:** `null`
-
-Record field name which will be used as bulk action checkbox value.
+| Properties  | Type  | Expected value                                            |
+| ----------- | ----- | --------------------------------------------------------- |
+| **actions** | array | **default:** `null` List of actions assigned to each row. |
 
 ## Example usage
 
@@ -22,9 +22,9 @@ Record field name which will be used as bulk action checkbox value.
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ActionColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 
-$productColumn = new ActionColumn('actions');
-$productColumn->setName('Actions');
-$productColumn->setOptions([
+$actionColumn = new ActionColumn('actions');
+$actionColumn->setName('Actions');
+$actionColumn->setOptions([
      'actions' => [
         ->add((new LinkRowAction('delete'))
             ->setIcon('delete')
@@ -39,5 +39,7 @@ $productColumn->setOptions([
 ]);
 
 $columns = new ColumnCollection();
-$columns->add($productColumn);
+$columns->add($actionColumn);
 ```
+
+[actions-reference]: {{< ref "/1.7/development/components/grid/actions-reference/_index.md" >}}

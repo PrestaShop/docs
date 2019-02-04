@@ -1,20 +1,19 @@
 ---
 title: DataColumn reference
 menuTitle: DataColumn
-weight: 60
+weight: 10
 ---
 
 # DataColumn Type
+{{< minver v="1.7.5" title="true" >}}
 
 The most basic column is DataColumn. It is used to display raw field data in Grid.
 
 ## Available options
 
-### field
-
-**type:** `string` **required**
-
-Record field name which column displays.
+| Properties | Type   | Expected value                                        |
+| ---------- | ------ | ----------------------------------------------------- |
+| **field**  | string | **required** Record field name which column displays. |
 
 ## Example usage
 
