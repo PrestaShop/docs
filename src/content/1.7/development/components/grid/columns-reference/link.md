@@ -24,8 +24,8 @@ This LinkColumn displays a raw field data encapsulated in a link (very useful to
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\LinkColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 
-$linkColumn = new LinkColumn('total_spent');
-$linkColumn->setName('Sales');
+$linkColumn = new LinkColumn('name_link');
+$linkColumn->setName('Name');
 $linkColumn->setOptions([
      'field' => 'name',
      'route' => 'admin_category_edit',
