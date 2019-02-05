@@ -63,7 +63,7 @@ services:
 
 ## Building your PositionUpdate
 
-The good news is that you now made the hardest part, all other computing and request will now be managed by our component.
+The good news is that you now made the hardest part, all other computing and database queries will be managed by our component.
 The only thing you have to do now is provide the updates you want to apply to your list positions. We provide a default `PositionUpdateFactory`
 to help you build your update, it is defined as a Symfony service accessible via `prestashop.core.grid.position.position_update_factory`.
 
