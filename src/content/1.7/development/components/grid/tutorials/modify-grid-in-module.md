@@ -3,6 +3,8 @@ title: How to modify an existing Grid in a module?
 weight: 5
 ---
 
+{{< minver v="1.7.5.1" title="true" >}}
+
 # How to modify an existing Grid in a module?
 
 If you need to modify an existing Grid, like inverting two columns for instance, this is really easy to do it in a module thanks to the available hooks.
@@ -40,7 +42,7 @@ The Customers Grid id is "customer", you can find this information in the the as
 
 ```php
 /**
- * Hooks allows to modify Logs grid definition.
+ * Hooks allows to modify Customer grid definition.
  * This hook is a right place to add/remove columns or actions (bulk, grid).
  *
  * @param array $params
