@@ -102,7 +102,7 @@ class CustomerController extends AbstractAdminController
 }
 ```
 
-Following our standard action names, for a standard page you should use
+For a default page, you should be following our standard action names. Applying this rule, this means you should have matching template names:
 - `index.html.twig`
 - `create.html.twig`
 - `edit.html.twig`
