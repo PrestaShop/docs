@@ -161,6 +161,25 @@ services:
     class: 'PrestaShop\PrestaShop\Core\Payment\PaymentOptionFormDecorator'
 ```
 
+#### Named arguments
+
+Using the "named argument" syntax when declaring or updating services is forbidden.
+
+
+```yaml
+services:
+  # Good
+  foo_bar:
+      class: 'Foo\Bar'
+      arguments:
+        - 'baz'
+  # Wrong
+  wrong_foo_bar:
+      class: 'Foo\Bar'
+      arguments:
+        - $baz: 'baz'
+```
+
 ### Grid
 
 PrestaShop comes with a lot of Grids (Products, Customers, Orders & etc) and keeping consistency between them is very important, thats why it follows these naming conventions:
