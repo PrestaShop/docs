@@ -19,7 +19,7 @@ Let's see an example on how to add, populate, validate and persist a new form fi
 ```php
 # /modules/module_name/module_name.php
 
-public function hookDisplayAdministrationPageForm(&$hookParams)
+public function hookActionAdministrationPageForm(&$hookParams)
 {
     $formBuilder = $hookParams['form_builder'];
     $uploadQuotaForm = $formBuilder->get('upload_quota');
