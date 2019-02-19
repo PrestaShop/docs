@@ -116,7 +116,7 @@ The operation is **more difficult** with an existing column. We need to remove a
 $columns->remove('the_column_we_need_to_move');
 
 $columnWeNeedToMove = new ... // we create the column
-$columns->addBefore('sales', $ccolumnWeNeedToMove);
+$columns->addBefore('sales', $columnWeNeedToMove);
 ```
 
 ### Re-ordering filters?
@@ -133,12 +133,13 @@ Also, you may wondering at this moment how PrestaShop is able to fill the column
 
 ## Fill the column data and configure the filter
 
-Each grid is defined by a Definition and a Query Builder.
+Each grid is defined by a Definition and a Grid Query Builder.
 
-The Query Builder(s) have two responsibilities:
+The Grid Query Builder have the responsibility of providing two query builders: the `Search query builder` and the `Count query builder`.
 
-* retrieve data from the database to fill the columns;
-* search the date from the database using the filters criterion;
+With these query builders, the Grid Query Builder is able to retrieve and filter data from the database to fill the columns of the Grid using the filters criterion.
+
+Thanks to the Count query builder, the pagination system works out of the box so you don't need to implement your own.
 
 Using a hook, we can alter both of them to - for exemple - retrieve new information and fill a new column.
 
