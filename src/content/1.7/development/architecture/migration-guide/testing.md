@@ -8,8 +8,7 @@ weight: 70
 You are encouraged to add both unit and functional tests for every new class
 you have created.
 
-You **must** add a smoke test (also called "survival") for every new page
-you migrate.
+You **must** add a smoke test (also called "survival") for every new page you migrate.
 
 ## Smoke testing
 
