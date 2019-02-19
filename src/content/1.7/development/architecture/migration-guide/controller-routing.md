@@ -121,6 +121,18 @@ class SomeController extends FrameworkBundleAdminController
 }
 ```
 
+### Access rules convention
+
+The following access rules must be enforced:
+
+- indexAction requires READ permission and only this one
+- createAction which allows to create an item, requires CREATE permission
+- editAction which allows to update an item, requires UPDATE permission
+- deleteAction which allows to delete an item, requires DELETE permission
+
+Moreover, if one page allows to modify some prestashop settings, this action can be used by users who are granted either CREATE, UPDATE, DELETE permissions.
+
+
 {{% callout %}}
 ##### How does this work?
 

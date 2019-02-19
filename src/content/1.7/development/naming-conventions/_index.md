@@ -10,7 +10,7 @@ As with [Coding standards][coding-standards] naming consistency is very importan
 ## Naming conventions
 
 {{% notice note %}}
-At the moment naming convetions strictly applies for Back Office migration only. 
+At the moment naming conventions strictly applies for Back Office migration only. 
 {{% /notice %}}
 
 ### Controllers & actions
@@ -20,6 +20,12 @@ PrestaShop controllers follow these naming conventions:
 - Suffix controller with resource name in singular form (e.g. `CustomerController`, `ProductController`);
 - Suffix index action with `index`. For `Object` controllers (e.g. `CustomerController`) it's normally page with list of objects (e.g. Customers, Products) and for `Configuration` controllers (e.g. `PerformanceController`) it's page with configuration form (e.g. Caching configuration, CCC configuration).
 - Action name should be clear and concise (e.g. `editAction()`, `savePrivateNoteAction()` are good examples, but `formAction()` or `processAction()` is not and thus should be avoided).
+
+We have some standard action names:
+- `indexAction` : display the listing
+- `createAction` : show language creation form page and handle its submit
+- `editAction` : show language edit form page and handle its submit
+- `deleteAction` : delete an item
 
 For a complete example see code below.
 
@@ -45,6 +51,12 @@ class CustomerController
     {
     }
 
+    // Deletes given customer.
+    // Does not show page, but returns flash message with redirect instead.
+    public function deleteAction($customerId, Request $request)
+    {
+    }
+
     // Transforms guest customer (customer without password)
     // to customer with password.
     // Does not show page, but returns flash message with redirect instead.
@@ -57,12 +69,18 @@ class CustomerController
     public function savePrivateNoteAction($customerId, Request $request)
     {
     }
+
+    // Toggle the status of given customer.
+    // Does not show page, but returns flash message with redirect instead.
+    public function toggleStatusAction($customerId)
+    {
+    }
 }
 ```
 
 ### Templates
 
-PrestaShop templates follow these naming convetions:
+PrestaShop templates follow these naming conventions:
 
 - Template name should match controller's action name without `action` prefix. For example, if you have `CustomerController:viewAction()` action, then your template name should be `view.html.twig`.
 
@@ -83,6 +101,12 @@ class CustomerController extends AbstractAdminController
     }
 }
 ```
+
+For a default page, you should be following our standard action names. Applying this rule, this means you should have matching template names:
+- `index.html.twig`
+- `create.html.twig`
+- `edit.html.twig`
+- `delete.html.twig`
 
 ### Routes and paths
 
