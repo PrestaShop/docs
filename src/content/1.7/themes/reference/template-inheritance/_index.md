@@ -15,11 +15,11 @@ theme possible while heavily reducing the amount of duplicated code.
 Template inheritance allow you to extend a parent template and only redefine the block you need.
 
 The picture below illustrates the example of a specific product page extending a generic one. Say
-you have three files: `layout-pack.tpl` extending `product.tpl`, himself extending `page.tpl`.
+you have three files: `product-pack.tpl` extending `product.tpl`, itself extending `page.tpl`.
 
 {{< figure src="img/template-inheritance.png" title="Schema for template inheritance" >}}
 
-The `product-page.tpl` file will **only** contain the product description part. Everything else
+The `product-pack.tpl` file will **only** contain the product description part. Everything else
 will be exactly the same as product page. Even better, the product page will only define the main
 content of the page, everything else will be taken from its own parent template (ie page.tpl).
 
