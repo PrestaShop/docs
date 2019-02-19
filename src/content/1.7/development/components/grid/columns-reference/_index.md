@@ -4,38 +4,51 @@ menuTitle: Column Types reference
 weight: 10
 ---
 
-## Column Types reference
+# Column Types reference
+{{< minver v="1.7.5" title="true" >}}
 
 Most important Grid definition part is defining columns. PrestaShop already comes with a list of predefined columns that you can use in your own Grids.
 
-### Supported Types
+## Supported Types
 
-#### Basic columns
+### Basic columns
 
 * [DataColumn][data-column-reference]
+* [DateTimeColumn][datetime-column-reference]
+* [ImageColumn][image-column-reference]
+* [ToggleColumn][toggle-column-reference]
+* [BadgeColumn][badge-column-reference] {{< minver v="1.7.6" >}}
+* [LinkColumn][link-column-reference] {{< minver v="1.7.6" >}}
 
-#### Common columns
+### Action columns
 
 * [ActionColumn][action-column-reference]
 * [BulkActionColumn][bulk-action-column-reference]
-* [DateTimeColumn][datetime-column-reference]
+* [PositionColumn][position-column-reference]
 
-#### Employee columns
+### Employee columns
 
 * [EmployeeNameWithAvatarColumn][employee-name-wit-avatar-column-reference]
 
-#### Status columns
+### Status columns
 
 * [SeverityLevelColumn][severity-column-reference]
 
 [data-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/data.md" >}}
+[datetime-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/datetime.md" >}}
+[image-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/image.md" >}}
+[toggle-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/toggle.md" >}}
+[badge-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/badge.md" >}}
+[link-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/link.md" >}}
+
 [action-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/action.md" >}}
 [bulk-action-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/bulk-action.md" >}}
-[datetime-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/datetime.md" >}}
+[position-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/position.md" >}}
+
 [employee-name-wit-avatar-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/employee-name-with-avatar.md" >}}
 [severity-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/severity-level.md" >}}
 
-## Use case exemple
+## Use case example
 
 ```php
 <?php

@@ -1,26 +1,20 @@
 ---
 title: SeverityLevelColumn reference
 menuTitle: SeverityLevelColumn
-weight: 60
+weight: 70
 ---
 
 # SeverityLevelColumn Type
+{{< minver v="1.7.5" title="true" >}}
 
 Use this column to display severity level in your Grid.
 
 ## Available options
 
-### field
-
-**type:** `string` **required**
-
-Record field name which is used as severity level.
-
-### with_message
-
-**type:** `bool` **default:** `false`
-
-Whether to show severity level message in addition with numeric severity level value.
+| Properties       | Type   | Expected value                                                                                             |
+| ---------------- | ------ | ---------------------------------------------------------------------------------------------------------- |
+| **field**        | string | **required** Record field name which is used as severity level.                                            |
+| **with_message** | bool   | **default:** `false` Whether to show severity level message in addition with numeric severity level value. |
 
 ## Example usage
 
@@ -28,13 +22,13 @@ Whether to show severity level message in addition with numeric severity level v
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Status\SeverityLevelColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 
-$column = new SeverityLevelColumn('severity');
-$column->setName('Severity (1-4)');
-$column->setOptions([
+$severityColumn = new SeverityLevelColumn('severity');
+$severityColumn->setName('Severity (1-4)');
+$severityColumn->setOptions([
      'field' => 'severity',
      'with_message' => true,    // enable severity messages
 ]);
 
 $columns = new ColumnCollection();
-$columns->add($column);
+$columns->add($severityColumn);
 ```
