@@ -35,14 +35,14 @@ This means that your current theme and all your modules should continue to work 
 
 This can be explained by the semantic versioning we follow, that forbids any compatibility-breaking change in the core, such as removing a feature or modifying our APIs.
 
-Note that once a upgrade has started, there is no way to rollback the changes. The only solution you have is restoring the backup you made before.
+Note that once an upgrade has started, there is no way to rollback the changes. The only solution you have is restoring the backup you made before.
 
 #### Process summary
 
 Prepare your upgrade by getting the latest release zip file, unpacking it and removing its demo content.
-Apply the new files by copy-pasting them in the production folder
+Apply the new files by copy-pasting them in the production folder.
 
-Run the database upgrade.This could be enough for completing an upgrade, but additional tasks like cleanup and modules upgrade will bring you stability and security.
+Run the database upgrade. This could be enough for completing an upgrade, but additional tasks like cleanup and modules upgrade will bring you stability and security.
 
 
 
