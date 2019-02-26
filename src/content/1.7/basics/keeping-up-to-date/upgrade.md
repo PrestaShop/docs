@@ -266,7 +266,7 @@ PrestaShop (md5 checksum, core files to delete...).
 {{< figure src="/images/1.7/upgrade-migration/image30.png" >}}
 
 It is always recommended to let the module make its own backup, because
-it will allow it to immediately run a rollback is something goes wrong
+it will allow it to immediately run a rollback if something goes wrong
 during the upgrade.
 
 However, if you are confident in the backup you have made and are ready
