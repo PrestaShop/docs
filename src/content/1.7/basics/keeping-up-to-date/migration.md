@@ -206,7 +206,7 @@ A few notes:
 * Complex modifications will require manual work.
 
 ##### New column
-Any new column added to the database requires the same work on you CSV file. Check on the new shop what default value applies to the new column, by checking in the following order:
+Any new column added to the database requires the same work on your CSV file. Check on the new shop what default value applies to the new column, by checking in the following order:
 
 * The database schema,
 * The ObjectModel (folder classes of PrestaShop),
@@ -640,7 +640,7 @@ first shop, and re-inserting them in the other shop without many
 changes.
 
 This option is interesting for people looking for making the process
-automatic, because
+automatic, because:
 
 -   the webservice has barely changed since PrestaShop 1.5,
 -   you get all the properties of a given object,
