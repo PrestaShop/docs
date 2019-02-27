@@ -68,7 +68,14 @@ If you want to test it you need to setup environment variable (SetEnv _TOKEN_ di
 For example if you site is setup in
 /etc/apache2/sites-enabled/000-default.conf
 
-add the value  **«SetEnv _TOKEN_ disabled»** before **< /VirtualHost >**
+add the value  
+```bash
+SetEnv _TOKEN_ disabled
+```
+before
+```
+< /VirtualHost >
+```
 
 >Note:
 >don't forget to restart your apache service!
