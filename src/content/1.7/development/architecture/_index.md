@@ -84,14 +84,14 @@ Here is how the files are organized:
 -   `/themes`: contains all the currently-installed themes, each in its
     own folder.
 -   `/tools`: contains external tools that were integrated
-    into PrestaShop. For instance, this were you'll find Smarty
+    into PrestaShop. For instance, this is were you'll find Smarty
     (template engine), TCPDF (PDF file generator), Swift (mail sender),
     PEAR XML Parser (PHP tool), etc.
 -   `/translations`: contains a sub-folder for each available language.
     However, if you wish to change the translation, you must do so using
     the PrestaShop internal tool, and not edit them directly in
     this folder.
--   `/travis-scripts`: contains Travis-speficic scripts.
+-   `/travis-scripts`: contains Travis-specific scripts.
     This folder is not part of the public archive.
 -   `/upload`: contains the files that would be uploaded by clients for
     customizable products (for instance, a picture that a client wants
