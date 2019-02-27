@@ -98,7 +98,7 @@ In modern pages, the permissions system that checks if a user is allowed to do C
 
 PrestaShop allows merchants to choose which actions (like CREATE, READ, UPDATE, DELETE) can be done by each user profile on each resource (like "Product", "User"). In PrestaShop Back Office, most of these resources are managed by only one Controller, so rights are handled on a page-per-page basis instead of by resource.
 
-So if a logged user wants to manipulate a resource, he or she needs to have the correct rights on the appropriate controller. For instance, to be able access the "Product Catalog" page the user need READ access, because showing the page requires "reading" the Product information. If the user wants to delete a product, (s)he needs DELETE rights.
+So if a logged user wants to manipulate a resource, he or she needs to have the correct rights on the appropriate controller. For instance, to be able to access the "Product Catalog" page the user need READ access, because showing the page requires "reading" the Product information. If the user wants to delete a product, (s)he needs DELETE rights.
 
 To enforce this security policy, you have to set up the adequate checks for each one of the actions of your controller. Policies are declared as _annotations_ on top of every controller Action method:
 
@@ -240,7 +240,7 @@ This is the current organization of routing, you **must** follow the same organi
 └── api.yml
 ```
 
-Nothing special here except that you *must* declare a property called `_legacy_controller` containing the old name of controller you are migrating,
+Nothing special here except that you **must** declare a property called `_legacy_controller` containing the old name of the controller you are migrating,
 and specify the `_legacy_link` if you want to keep the link between legacy urls and new ones.
 
 {{% notice tip %}}
@@ -268,7 +268,7 @@ PrestaShop uses YAML files for service declaration and routing, please don't use
 #### The _legacy_link property
 {{< minver v="1.7.5" title="true" >}}
 
-When migrating a new page to Symfony, you *must* get rid of all the former link references to the legacy controller.
+When migrating a new page to Symfony, you **must** get rid of all the former link references to the legacy controller.
 In legacy pages, link are generally managed by the `Link` class, all these calls need to be replaced using the *Router*
 component.
 
@@ -319,7 +319,7 @@ Not every developer use the `getAdminLink` method the same way, therefore the `_
 uses of this method, for example via an `action` parameter (e.g: `?controller=AdminEmails&action=export`).
 
 But sometimes urls simply insert the action name as a parameter (e.g: `?controller=AdminPaymentPreferences&update`). As
-long as the actions have been migrated and correctly setup they will be successfully converted. 
+long as the actions have been migrated and correctly set up they will be successfully converted. 
 
 Given this configuration:
 
