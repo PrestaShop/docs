@@ -112,21 +112,21 @@ For a default page, you should be following our standard action names. Applying 
 
 PrestaShop routes follow `admin_{resources}_{action}` naming structure and rules for it are:
 
-- `{resources}` (object) name should be in prular form (e.g. `customers`, `products`, `orders`);
-- `{action}` name should match controller's action name;
-- Route should define methods that it responds to (e.g. `GET`, `POST`);
-- Suffix route's URL path with `{resources}` (e.g. `customers`, `products`, `orders`) name;
+- `{resources}` (object) name should be in plural form (e.g. `customers`, `products`, `orders`).
+- `{action}` name should match controller's action name.
+- Route should define methods that it responds to (e.g. `GET`, `POST`).
+- Suffix route's URL path with `{resources}` (e.g. `customers`, `products`, `orders`) name.
 - When route is defined for single resource (e.g. Customer, Product) then URL path should follow `/{resources}/{id}/{action}` naming (e.g. `/customers/23/edit`).
 - When resource identifier (ID) is used in URL path then it should be prefixed with object name (e.g. `/{customerId}/edit` instead of `/{id}/edit`).
 
 If we were to create CRUD routes for Customer, this is how it would look like:
 
-- Index route `admin_customers_index` with URL `/customers` and responds to `GET` method
-- Create route `admin_customers_create` with URL `/customers/new` and responds to `GET` and `POST` methods
-- Edit route `admin_customers_edit` with URL `/customers/{customerId}/edit ` and responds to `GET` and `POST` methods
-- Delete route `admin_customers_delete` with URL `/customers/{customerId}/delete` and responds to `POST` method
+- Index route `admin_customers_index` with URL `/customers` and responds to `GET` method.
+- Create route `admin_customers_create` with URL `/customers/new` and responds to `GET` and `POST` methods.
+- Edit route `admin_customers_edit` with URL `/customers/{customerId}/edit ` and responds to `GET` and `POST` methods.
+- Delete route `admin_customers_delete` with URL `/customers/{customerId}/delete` and responds to `POST` method.
 
-Example implemnetation for Customer routes:
+Example of implementation for Customer routes:
 
 ```yaml
 # src/PrestaShopBundle/Resources/config/routing/admin/sell/customer/_customer.yml
@@ -165,7 +165,7 @@ admin_customers_transform_guest_to_customer:
 
 ### Service ids
 
-When registering service in YAML, it's id should follow Fully-qualified class name. See example below.
+When registering service in YAML, its id should follow Fully-qualified class name. See example below.
 
 ```php
 // src/Core/Payment/PaymentOptionFormDecorator.php
