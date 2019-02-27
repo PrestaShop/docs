@@ -59,7 +59,7 @@ ALTER TABLE `PREFIX_product` ADD `low_stock_threshold` INT(10) NULL DEFAULT NULL
 [...]
 ```
 
-I there we can read the SQL queries to execute when upgrading to 1.7.3.0.
+In there we can read the SQL queries to execute when upgrading to 1.7.3.0.
 Each of them alters the structure and/or modify the existing data.
 In case you have complex algorithms to run, you can call PHP code with the
 `PHP:` keyword.
@@ -94,7 +94,7 @@ fitting between the configuration property `PS_VERSION_DB` and the constant
 `_PS_INSTALL_VERSION_` defined in `install/install_version.php`.
 
 In the first part of this article, we talked about entities being managed only by
-Doctrine. Applying the changes on the databse is done with the following command:
+Doctrine. Applying the changes on the database is done with the following command:
 
 ```
 php bin/console prestashop:schema:update-without-foreign
