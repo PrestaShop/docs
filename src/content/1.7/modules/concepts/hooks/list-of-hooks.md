@@ -1358,6 +1358,8 @@ This hook launches modules when the AdminCategories tab is displayed in the Back
     
 displayBackOfficeFooter
 : 
+    **(deprecated since 1.7.0.0)**
+
     Displayed within the admin panel's footer
 
     Located in: 
@@ -1465,6 +1467,8 @@ This hook calls only the module related to the carrier, in order to add options 
     
 displayCarrierList
 : 
+    **(deprecated since 1.7.0.0)**
+    
     Display extra carriers in the carrier list.
 
     Located in: /classes/Cart.php
