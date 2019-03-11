@@ -94,5 +94,22 @@ Of course, you can override every template to improve again the rendering of the
         </div>
     </div>
 {% endblock %}
-```
 
+
+#### Handle form error in product page
+If you want to add errors in backoffice product page, adding text in controller->errors array is not working.
+You have to add your error in a specific syntax et return a json array of errors :
+In the hook (actionProductUpdate, actionAdminProductsControllerSaveAfter, ...) : 
+```html
+// add error
+Context::getContext()->controller->errors['step6_myfield'] = array($this->l('Syntax error in field'));
+// return error 
+if (Context::getContext()->controller->errors) {
+    http_response_code(400);
+    die(json_encode(Context::getContext()->controller->errors));
+}
+```
+In the form, the input must have the id form_step6_myfield. step6 has to match the right tab (tab 6 : options here) :
+```html
+<input type="text" id="form_step6_myfield" name="whatever
+```
