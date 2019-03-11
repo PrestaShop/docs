@@ -17,8 +17,8 @@ At the moment naming conventions strictly applies for Back Office migration only
 
 PrestaShop controllers follow these naming conventions:
 
-- Suffix controller with resource name in singular form (e.g. `CustomerController`, `ProductController`);
-- Suffix index action with `index`. For `Object` controllers (e.g. `CustomerController`) it's normally page with list of objects (e.g. Customers, Products) and for `Configuration` controllers (e.g. `PerformanceController`) it's page with configuration form (e.g. Caching configuration, CCC configuration).
+- Prefix controller with resource name in singular form (e.g. `CustomerController`, `ProductController`);
+- Prefix index action with `index`. For `Object` controllers (e.g. `CustomerController`) it's normally page with list of objects (e.g. Customers, Products) and for `Configuration` controllers (e.g. `PerformanceController`) it's page with configuration form (e.g. Caching configuration, CCC configuration).
 - Action name should be clear and concise (e.g. `editAction()`, `savePrivateNoteAction()` are good examples, but `formAction()` or `processAction()` is not and thus should be avoided).
 
 We have some standard action names:
@@ -34,7 +34,7 @@ For a complete example see code below.
 
 namespace PrestaShopBundle\Controller\Admin\Sell\Customer;
 
-// Controller name is suffixed with Customer in singular form
+// Controller name is prefixed with Customer in singular form
 class CustomerController 
 {
     // Index page which is opened when 
@@ -82,7 +82,7 @@ class CustomerController
 
 PrestaShop templates follow these naming conventions:
 
-- Template name should match controller's action name without `action` prefix. For example, if you have `CustomerController:viewAction()` action, then your template name should be `view.html.twig`.
+- Template name should match controller's action name without `action` suffix. For example, if you have `CustomerController:viewAction()` action, then your template name should be `view.html.twig`.
 
 ```php
 // CustomerController.php
