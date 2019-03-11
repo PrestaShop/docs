@@ -111,5 +111,5 @@ if (Context::getContext()->controller->errors) {
 ```
 In the form, the input must have the id form_step6_myfield. step6 has to match the right tab (tab 6 : options here) :
 ```html
-<input type="text" id="form_step6_myfield" name="whatever
+<input type="text" id="form_step6_myfield" name="whatever" />
 ```
