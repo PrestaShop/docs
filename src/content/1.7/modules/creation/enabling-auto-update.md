@@ -9,25 +9,34 @@ aliases:
 Enabling the Auto-Update
 ========================
 
-Since PrestaShop 1.5, it is possible to have your module auto-update:
-once a new version is available on Addons, PrestaShop suggests an
-"Update it!" button to the user. Clicking this button will trigger a
-series of methods, each leading closer to the latest version of your
-module.
+Since PrestaShop 1.5, it is possible to have your module auto-update: once a new version is available, PrestaShop suggests an "Update" button to the user. Clicking this button will trigger a series of methods, each leading closer to the latest version of your module.
 
-In order to bring auto-update support to your module, you need three
-main things:
+In order to bring auto-update support to your module, you need three main things:
 
--   Clearly indicate the module's version number in its constructor
-    method: `$this->version = '1.1'`;
--   Create an `/upgrade` sub-folder in the module's folder.
--   Add an auto-update PHP script for each new version.
+1. Clearly indicate the module's version number in its constructor method: `$this->version = '1.1'`;
+2. Create an `/upgrade` sub-folder in the module's folder.
+3. Add an auto-update PHP script for each new version.  
 
-For instance:
+Each script should containing a main method named `upgrade_module_x_y_z()`, where `x_y_z` corresponds to the version the module is being upgraded to. It receives a single parameter, an instance of your Module.
+
+{{% callout %}}
+##### Script name
+
+You can name your scripts however you like, as long as it ends up with a dash (`-`) followed by the version number.
+
+Although we suggest using `upgrade-x.y.z.php`, the following formats are also correct:
+
+- `Upgrade-1.2.php`
+- `Install-4.5.6.php`
+- `Upgrade-MyModule-7.8.9.php`
+
+{{% /callout %}}
+
+For example:
 
 ```php
 /**
- * File: /upgrade/Upgrade-1.1.php
+ * File: /upgrade/upgrade-1.1.php
  */
 function upgrade_module_1_1($module) {
     // Process Module upgrade to 1.1
@@ -40,7 +49,7 @@ function upgrade_module_1_1($module) {
 
 ```php
 /**
- * File: /upgrade/Upgrade-1.2.php
+ * File: /upgrade/upgrade-1.2.php
  */
 function upgrade_module_1_2($module) {
     // Process Module upgrade to 1.2
@@ -49,11 +58,22 @@ function upgrade_module_1_2($module) {
  }
  ```
 
-Each method should bring the necessary changes to the module's files and
-database data in order to reach the latest version.
+Each method should bring the necessary changes to the module's files and database data in order to reach the latest version.
 
-For instance, here is the `/upgrade/install-1.4.9.php` file from the
-`gamification` module:
+When upgrading a module, PrestaShop will crawl the module's `upgrade` folder, and execute each upgrade script sequentially, starting from the first one whose version number is greater than the currently installed one. It is therefore highly advised to number your module's
+versions sequentially, following the [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver).
+
+Example using the scripts above:
+
+When upgrading from... | Target version | Executed scripts
+--- | --- | ---
+1.0.0 | 1.1.0 | - `upgrade-1.1.php`
+1.0.0 | 1.2.0 | - `upgrade-1.1.php`<br>- `upgrade-1.2.php`
+1.1.0 | 1.2.0 | - `upgrade-1.2.php`
+
+## Script examples
+
+Here is the `/upgrade/upgrade-1.4.9.php` file from the `gamification` module:
 
 ```php
 if (!defined('_PS_VERSION_')) {
@@ -99,14 +119,7 @@ function homeslider_stripslashes_field($field)
 }
 ```
 
-
-PrestaShop will then parse all of these scripts one after the other,
-sequentially. It is therefore highly advised to number your module's
-versions sequentially, and to only use numbers – because the upgrade
-code uses PHP's `version_compare()` method.
-
-Adding/updating modules or hooks between versions
--------------------------------------------------
+## Adding/updating modules or hooks between versions
 
 If the new version of your module adds or update its hooks, you should
 make sure to update them too.
@@ -131,3 +144,40 @@ function upgrade_module_1_2($object)
         $object->registerHook('actionOrderStatusPostUpdate'));
 }
 ```
+
+## How to test-run an upgrade
+
+Here's how to test that your upgrade scripts work correctly.
+
+Let's assume that you are working on a module that you already have it installed in your development shop, and you're on version 1.0.0. On the upcoming version 1.1.0 that you are currently developing, you need to update your database schema.
+
+Since the version that you are planning to update to is 1.1.0, the first thing would be to create an upgrade script for that version:
+
+```php
+// File: /upgrade/upgrade-1.1.0
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+function upgrade_module_1_1_0($module)
+{
+    // do your thing here
+    return true;
+}
+```
+
+Now, update your module version to 1.1.0:
+
+```php
+class my_module extends Module
+{
+    public function __construct()
+    {
+        $this->name = 'my_module';
+        $this->version = '1.1.0';   // <--- previously 1.0.0
+    }
+}
+```
+
+Then, in your PrestaShop backoffice, go to _Modules > Module Manager_ and find your module. Since you have updated its version, PrestaShop will notice that there's an update available for it and prompt you to upgrade it. Press the "Upgrade" button, and PrestaShop will invoke your upgrade script.
