@@ -98,8 +98,7 @@ Of course, you can override every template to improve again the rendering of the
 
 #### Handle form error in the product page form
 
-If you want to manage errors of the product page, adding text in controller->errors (like in legacy controllers) is not working.
-You have to add your error in a specific syntax et return a json array of errors.
+If we want to manage errors of the product page, adding text in controller->errors (like in the legacy controllers) is not working, we have to add your error in a specific syntax et return a json array of errors.
 
 Assuming we want to notify an error when validating the Product form on the field with the id `form_step6_myfield`, this is the correct method to display an error message to the user.
 
