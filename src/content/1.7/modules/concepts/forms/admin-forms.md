@@ -94,7 +94,7 @@ Of course, you can override every template to improve again the rendering of the
         </div>
     </div>
 {% endblock %}
-
+```
 
 #### Handle form error in the product page form
 
