@@ -17,7 +17,7 @@ In order to bring auto-update support to your module, you need three main things
 2. Create an `/upgrade` sub-folder in the module's folder.
 3. Add an auto-update PHP script for each new version.  
 
-Each script should containing a main method named `upgrade_module_x_y_z()`, where `x_y_z` corresponds to the version the module is being upgraded to. It receives a single parameter, an instance of your Module.
+Each script should contain a main method named `upgrade_module_x_y_z`, where `x_y_z` corresponds to the version the module is being upgraded to. It receives a single parameter, an instance of your Module.
 
 {{% callout %}}
 ##### Script name
