@@ -1,6 +1,6 @@
 ---
 title: CQRS usage in forms
-weight: 40
+weight: 30
 ---
 
 # CQRS usage in forms
