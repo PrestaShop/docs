@@ -1,12 +1,12 @@
 ---
-title: Settings forms
+title: Settings Forms
 weight: 20
 aliases:
   - /1.7/development/architecture/migration-guide/forms/settings-form.md
 
 ---
 
-# Settings forms
+# Settings Forms
 
 ## Introduction
 
