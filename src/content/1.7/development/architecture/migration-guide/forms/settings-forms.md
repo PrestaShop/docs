@@ -10,10 +10,10 @@ aliases:
 
 ## Introduction
 
-In PrestaShop, there are a lot of settings which requires some unified handling of them. To move the settings creation and update out of controllers the following parts are being used:
+In PrestaShop, there are a lots of settings forms that require a unified way to handle of them. To move the settings creation and update out of controllers the following components are being used:
 
-* _Form data provider_ - responsible for options data retrieval and saving the data.
-* _Form handler_ - responsible for building the form.
+* **Form Data Provider** - responsible for options data retrieval and saving the data.
+* **Form Handler** - responsible for building the form.
 
 ## Form Data Providers
 
@@ -55,17 +55,17 @@ As an example, here's how the Administration page's Form Handler service is decl
 ```yaml
 # /src/PrestaShopBundle/Resources/config/services/form/form_handler.yml
 
-    prestashop.adapter.administration.form_handler:
-        class: 'PrestaShop\PrestaShop\Core\Form\FormHandler'
-        arguments:
-            - '@=service("form.factory").createBuilder()'
-            - '@prestashop.core.hook.dispatcher'
-            - '@prestashop.adapter.administration.form_provider'
-            -
-              'general': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\GeneralType'
-              'upload_quota': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\UploadQuotaType'
-              'notifications': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\NotificationsType'
-            - 'AdministrationPage'
+prestashop.adapter.administration.form_handler:
+  class: 'PrestaShop\PrestaShop\Core\Form\FormHandler'
+  arguments:
+    - '@=service("form.factory").createBuilder()'
+    - '@prestashop.core.hook.dispatcher'
+    - '@prestashop.adapter.administration.form_provider'
+    -
+      'general': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\GeneralType'
+      'upload_quota': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\UploadQuotaType'
+      'notifications': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\NotificationsType'
+    - 'AdministrationPage'
 ```
 
 Let's look at the arguments one by one:
@@ -142,31 +142,31 @@ The rendering of forms in Twig is already described by the [Symfony documentatio
 To sum up how it works, the controller sends an instance of `FormView` to Twig and Twig uses form helpers to render the right markup for every field type (the Form theme defines a specific markup for each Form Type).
 
 ```twig
-    {{ form_start(logsByEmailForm) }}
-    <div class="col-md-12">
-      <div class="col">
-        <div class="card">
-          <h3 class="card-header">
-            <i class="material-icons">business_center</i> {{ 'Logs by email'|trans }}
-          </h3>
-          <div class="card-block">
-            <div class="card-text">
-              <div class="form-group row">
-              {{ ps.label_with_help(('Minimum severity level'|trans), ('Enter "5" if you do not want to receive any emails.'|trans({}, 'Admin.Advparameters.Feature')), 'col-sm-2') }}
-                <div class="col-sm-8">
-                  {{ form_errors(logsByEmailForm.severity_level) }}
-                  {{ form_widget(logsByEmailForm.severity_level) }}
-                </div>
-              </div>
+{{ form_start(logsByEmailForm) }}
+<div class="col-md-12">
+  <div class="col">
+    <div class="card">
+      <h3 class="card-header">
+        <i class="material-icons">business_center</i> {{ 'Logs by email'|trans }}
+      </h3>
+      <div class="card-block">
+        <div class="card-text">
+          <div class="form-group row">
+          {{ ps.label_with_help(('Minimum severity level'|trans), ('Enter "5" if you do not want to receive any emails.'|trans({}, 'Admin.Advparameters.Feature')), 'col-sm-2') }}
+            <div class="col-sm-8">
+              {{ form_errors(logsByEmailForm.severity_level) }}
+              {{ form_widget(logsByEmailForm.severity_level) }}
             </div>
-          </div>
-          <div class="card-footer">
-            <button class="btn btn-primary">{{ 'Save'|trans({}, 'Admin.Actions') }}</button>
           </div>
         </div>
       </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">{{ 'Save'|trans({}, 'Admin.Actions') }}</button>
+      </div>
     </div>
-    {{ form_end(logsByEmailForm) }}
+  </div>
+</div>
+{{ form_end(logsByEmailForm) }}
 ```
 All these helpers are documented and help you generate an HTML form from your `FormView` object, using the right markup to be rendered by the PrestaShop UI Kit. Currently, several forms have already been migrated, so you can use them as base for your own work.
 
