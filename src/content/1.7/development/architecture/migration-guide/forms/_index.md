@@ -64,10 +64,10 @@ Most of the components from the PrestaShop UI Kit are implemented as Form Types.
 Before creating a new form type, check this folder first to see if the type already exists.
 {{% /notice %}}
 
-Forms are created and declared [as services](http://symfony.com/doc/3.4/form/form_dependencies.html#define-your-form-as-a-service) that you can use inside your Controllers – this is covered in the [Controllers/Routing section]({{< relref "#controller-routing" >}}) of this guide.
+Forms are created and declared [as services](http://symfony.com/doc/3.4/form/form_dependencies.html#define-your-form-as-a-service) that you can use inside your Controllers – this is covered in the [Controllers/Routing section][controllers-and-routing] of this guide.
 
 ## Learn more
 
-* [Settings form]({{< relref "settings-forms.md" >}})
-* [CRUD form]({{< relref "CRUD-forms.md" >}})
-* [CQRS usage in forms]({{< relref "CQRS-usage-in-forms.md" >}})
+{{% children %}}
+
+[controllers-and-routing]: {{< relref "../controller-routing.md" >}}
