@@ -1,9 +1,9 @@
 ---
-title: CRUD Form
+title: CRUD Forms
 weight: 20
 ---
 
-# CRUD Form
+# CRUD Forms
 
 ## Introduction
 

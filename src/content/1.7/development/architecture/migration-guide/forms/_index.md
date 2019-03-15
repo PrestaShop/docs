@@ -69,5 +69,5 @@ Forms are created and declared [as services](http://symfony.com/doc/3.4/form/for
 ## Learn more
 
 * [Settings form]({{< relref "settings-form.md" >}})
-* [CRUD form]({{< relref "CRUD-form.md" >}})
+* [CRUD form]({{< relref "CRUD-forms.md" >}})
 * [CQRS usage in forms]({{< relref "CQRS-usage-in-forms.md" >}})

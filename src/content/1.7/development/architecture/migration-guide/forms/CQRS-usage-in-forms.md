@@ -7,7 +7,7 @@ weight: 30
 
 ## Introduction
 <!-- @todo: link to component of CQRS and its usage in identifiable object -->
-Assuming that you are already familiar with CQRS and [CRUD forms]({{< relref "CRUD-form.md" >}}) as this topic only demonstrates the usage of the CQRS approach. To apply it in your forms you need to:
+This article assumes that you are already familiar with CQRS and [CRUD forms]([crud-forms]), as this topic only demonstrates the usage of the CQRS approach. To apply it in your forms you need to:
 
 1. Inject a `CommandBus` or `QueryBus` instance using your class constructor.
 2. Call your command using the `CommandBus` or `QueryBus`.
@@ -185,3 +185,5 @@ final class ContactFormDataProvider implements FormDataProviderInterface
     }
 }
 ```
+
+[crud-froms]: {{< relref "CRUD-forms.md" >}}
