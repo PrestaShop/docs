@@ -5,27 +5,36 @@ weight: 30
 
 # CQRS usage in forms
 
-## Introduction
-<!-- @todo: link to component of CQRS and its usage in identifiable object -->
-This article assumes that you are already familiar with CQRS and [CRUD forms]([crud-forms]), as this topic only demonstrates the usage of the CQRS approach. To apply it in your forms you need to:
+{{% notice note %}}
+This article assumes that you are already familiar with CQRS and [CRUD forms]({{< relref "CRUD-forms.md" >}}), as this topic only demonstrates the usage of the CQRS approach.
+{{% /notice %}}
+ 
+## The basics
+
+To use CQRS you need to:
 
 1. Inject a `CommandBus` or `QueryBus` instance using your class constructor.
-2. Call your command using the `CommandBus` or `QueryBus`.
+2. Create an instance of the desired `Command` or `Query`.
+3. Call your command using the `CommandBus` or `QueryBus`.
 
-## Example using command bus
+## Usage examples
 
-To start with, lets inject a `CommandBus` to our _Form data handler_
+### Using Commands
+
+In this example, we will be working with edition in a _Contact_ CRUD Form.
+
+To get started, let's inject the `CommandBus` into our [Form Data Handler][form-data-handler].
 
 ```yml
 #src/PrestaShopBundle/Resources/config/services/core/form/form_data_handler.yml
 
 prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
-    class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
-    arguments:
-      - '@prestashop.core.command_bus'
+  class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
+  arguments:
+    - '@prestashop.core.command_bus'
 ```
 
-and in `ContactFormDataHandler`
+and in `ContactFormDataHandler`:
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
@@ -49,9 +58,9 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
 }
 ```
 
-Right now the first step is completed - command bus is injected in the form data handler. Lets use it!
+Right now the first step is completed – the Command Bus is injected in the Form Data Handler. Let's use it!
 
-Instead of creating new object directly in `update()` method, you can delegate it to Command. All that you have to do is create command using form `$data` and dispatch it.
+Instead of modifying the entity object directly in the _Form Data Handler's_ `update()` method, we can delegate that task to a `Command`. All we have to do is create an instance of that command using the form's `$data` and then dispatch it using the `CommandBus`.
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
@@ -91,30 +100,51 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
             ->setShopAssociation(is_array($data['shop_association']) ? $data['shop_association'] : [])
         ;
 
-        /** @var ContactId $result */
-        $result = $this->commandBus->handle($editContactCommand);
-
-        return $result->getValue();
+        $this->commandBus->handle($editContactCommand);
     }
 }
 ```
 
-In `update` function command `EditContactCommand` is used to set all required data for further processing. After that, command bus handles given command and in the success case, it returns `ContactId` value object which is used to return contact id.
+In the `update()` method, `EditContactCommand` is used to encapsulate the actual action of saving the form. After that, the Command Bus handles the given command (persisting the information).
 
-## Example using query bus
+#### Retrieving the created object ID
 
-First, lets inject `QueryBus` instance.
+As a general rule, Commands Handlers return nothing. However, when creating a new object, the created object ID is usually determined by the database engine. How do we handle that?
+
+In this specific case, we allow Command Handlers to return the id of the newly created object after it's inserted into the database:
+
+```php
+public function create(array $data)
+{
+    $addContactCommand = new AddContactCommand(
+        $data['title'],
+        $data['is_messages_saving_enabled']
+    );
+    
+    $contactId = $this->commandBus->handle($addContactCommand);
+    
+    return $contactId->getValue();
+}
+```
+ 
+In this example, the Command Handler for `AddContactCommand` returns a `ContactId` value object that contains the contact ID.
+
+### Using Queries
+
+In this example, we will be working with edition in a _Contact_ CRUD Form.
+
+First, let's inject `QueryBus` instance into the [Form Data Provider][form-data-provider].
 
 ```yml
 #src/PrestaShopBundle/Resources/config/services/core/form/form_data_provider.yml
 
-  prestashop.core.form.identifiable_object.data_provider.contact_form_data_provider:
-    class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\ContactFormDataProvider'
-    arguments:
-      - '@prestashop.core.query_bus'
+prestashop.core.form.identifiable_object.data_provider.contact_form_data_provider:
+  class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\ContactFormDataProvider'
+  arguments:
+    - '@prestashop.core.query_bus'
 ```
 
-and in `ContactFormDataProvider`
+and in `ContactFormDataProvider`:
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
@@ -138,9 +168,9 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 }
 ```
 
-The first step is completed - lets use it!
+The first step is completed – the Query Bus is injected in the Form Data Provider. Let's use it!
 
-Instead of creating new object directly in `getData()` method, you can delegate it to Command. All that you have to do is create command using form `$data` and dispatch it.
+Instead of retrieving the data using an SQL query or retrieving the entity data using `ObjectModel` directly in the _Form Data Provider_'s `getData()` method, we can delegate that task to a `Query`. All that we have to do is create an instance of the Query using provided `$id` and dispatch it using the `QueryBus`. The appropriate Handler will take care of retrieving the information we need and returning it in a structured form.
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
@@ -186,4 +216,7 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 }
 ```
 
-[crud-froms]: {{< relref "CRUD-forms.md" >}}
+In the example above, the Handle to the `GetContactForEditing` query returns an instance of `EditableContact`, which is an immutable Data Transfer Object (DTO) containing all the information we need.
+
+[form-data-handler]: {{< relref "CRUD-forms.md#form-data-handler" >}}
+[form-data-provider]: {{< relref "CRUD-forms.md#form-data-provider" >}}
