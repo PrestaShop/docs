@@ -20,7 +20,7 @@ In this tutorial, we will learn how to customize the rendering of every part of 
 
 The templating of the component Grid is using Twig in PrestaShop 1.7. As the component enforces a strict separation between the data and the rendering you never define template names or UI elements when defining a new Grid.
 
-We have created a Twig layer able to render a Grid using the information from a Grid using the Twig Grid presenter.
+We have created a Twig layer that is able to render Grid using the information from Grid that is formatted in Grid presenter.
 
 > This means that, by implementing your own presenter you can control the data sent to the user.
 
@@ -59,7 +59,7 @@ Grid actions templates are responsible of the rendering of all the Grid actions:
 * The **Grid** actions;
 * The **Row** actions;
 
-This is the content of this folder (in 1.7.6.x branch):
+Structure of grid blocks in PrestaShop 1.7.6 version:
 
 ```
 Actions
@@ -94,7 +94,7 @@ your-module/
 
 In this folder, you will retrieve most of the reusable blocks of the Grid component.
 
-This is the content of this folder (in 1.7.6.x branch):
+Structure of grid actions in PrestaShop 1.7.6 version:
 
 ```
 Blocks
@@ -125,12 +125,11 @@ of most of them:
 
 ## The Columns Contents and Headers
 
-Most of the time, you want to customize the rendering of the columns. While we can re-order add or delete columns using hooks, the Twig layer allows
-you to alter the rendering of a column at Shop, Grid or even Column level.
+Most of the time, you want to customize the rendering of the columns. While we can re-order add or delete columns using hooks, the Twig layer allows you to alter the rendering of a column at Shop, Grid or even Column level.
 
 It's not a surprise that you will retrieve a template named after the available Column Types provided by the Core of PrestaShop! The Twig layer relies on the information sent by the Grid presenter to select the right Twig template to be rendered and to push the right information.
 
-This is the content of this folder (in 1.7.6.x branch):
+This is the content of this folder:
 
 ```
 Columns
@@ -157,8 +156,8 @@ Columns
 
 The templates of this folder are splitted into two subfolders:
 
-* **Content**: contains the template for each type of Column, by default `data.html.twig` is used;
-* **Header/Content**: contains the template for each type of Column Header (in the current context, the column table header). By default, `default.html.twig` is used;
+* **Content**: contains the template for each type of Column;
+* **Header/Content**: contains the template for each type of Column Header (in the current context, the column table header);
 
 For each template, you can customize the rendering at different levels.
 There is a simple rule to guess which template will be rendered: `{grid_id}_{column_id}_type_id` where `grid_id` and `column_id` are not required.
