@@ -28,9 +28,9 @@ First we need to identify which Twig template(s) is (are) rendered. Using the *D
 ### Override the template in the module: a simple "Hello world!"
 
 Now we have found the right template, let's override it inside a module.
-In a module called `foo` let's create the related template. As the template is located inside the `PrestaShop/Admin/Product` folder, we need to create the same path.
+In a module called `foo` let's create the related template. As the template is located inside the `PrestaShop/Admin/Product/CatalogPage` folder, we need to create the same path.
 
-So Let's create a file named `catalog.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product` folder: we could re-use the one in the `src/PrestaShopBundle/Resources/views/Admin/Product` folder, but let's start with a very simple override.
+So Let's create a file named `catalog.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product/CatalogPage/catalog.html.twig` folder: we could re-use the one in the `src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage` folder, but let's start with a very simple override.
 
 ```twig
 {% extends '@PrestaShop/Admin/layout.html.twig' %}
@@ -47,7 +47,7 @@ Access the product Listing page and "voila", we have overridden the complete pag
 
 Well, it's not that good... it's because the columns are also rendered by the template `list.html.twig`. We must override it to remove the "Reference" column.
 
-Let's create the file named `list.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product` folder with the content of original template located in the `src/PrestaShopBundle/Resources/views/Admin/Product` folder.
+Let's create the file named `list.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product/CatalogPage` folder with the content of original template located in the `src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage` folder.
 
 We only have to remove the "Reference" row in this template and we are good.
 
