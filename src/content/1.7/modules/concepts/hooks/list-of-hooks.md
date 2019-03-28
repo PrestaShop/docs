@@ -2035,6 +2035,21 @@ filterProductContent
 This hook is called just before fetching content page product
 
     Located in: /controllers/front/ProductController.php
+    
+productFlagsModifier
+:
+    Available since: {{< minver v="1.7.6" >}}	
+    Add and remove product labels available on product list
+
+    Located in: src/Adapter/Presenter/Product/ProductLazyArray.php
+    
+    Parameters:
+    ```php
+    array(
+        'flags' => (array) &$flags,
+        'product' => (object) Product $product,
+    ),
+    ```
 
     
 filterProductSearch
