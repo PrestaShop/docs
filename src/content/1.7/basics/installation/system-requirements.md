@@ -10,10 +10,15 @@ PrestaShop needs the following server configuration in order to run:
 
 * **System:** Unix, Linux or Windows.
 * **Web server:** Apache Web Server 2.2 or any later version.
-* **PHP:**
-    - {{% minver v="1.7.0~1.7.3" %}} PHP 5.4 minimum, PHP 7.0 recommended
-    - {{% minver v="1.7.4" %}} PHP 5.6 minimum, PHP 7.1 recommended
-    - {{% minver v="1.7.5+" %}} PHP 5.6 minimum, PHP 7.2 recommended
+* **PHP:** 
+
+    | PrestaShop Version | Minimum | Recommended | Not compatible
+    | --- | --- | --- | ---
+    | 1.6.1.x | PHP 5.2 | PHP 7.1 | PHP 7.2+
+    | 1.7.0 ~ 1.7.3 | PHP 5.4 | PHP 7.1 | PHP 7.2+
+    | 1.7.4 | PHP 5.6 | PHP 7.1 | PHP 7.2+
+    | 1.7.5 | PHP 5.6 | PHP 7.2 | PHP 7.3+
+
 * **MySQL:** 5.0 minimum, 5.6 or later recommended.
 * **Server RAM:** The more the better. We recommend setting the memory allocation per script (`memory_limit`) to a minimum of `256M`.
 
