@@ -919,7 +919,7 @@ actionProductFlagsModifier
     ```php
     array(
         'flags' => (array) &$flags,
-        'product' => (object) Product $product,
+        'product' => (Product) $product,
     ),
     ```
     
