@@ -366,7 +366,7 @@ public function editAction($contactId, Request $request)
     // we use handleFor() instead of handle() since we now have an id
     $result = $contactFormHandler->handleFor($contactId, $contactForm);
 
-    if (null !== $result->getIdentifiableObjectId()) {
+    if ($result->isSubmitted() && $result->isValid()) {
         $this->addFlash('success', $this->trans('Successful update.', 'Admin.Notifications.Success'));
 
         return $this->redirectToRoute('admin_contacts_index');
