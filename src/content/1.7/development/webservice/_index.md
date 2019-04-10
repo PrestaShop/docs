@@ -73,7 +73,7 @@ This is also the recommended way to call the API from a javascript client, or an
 * In a subfolder of the server: http://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestasshop/api/
 
 {{% notice note %}}
-To test/call your APIs we recommend you use an API client such as [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, especially for write actions.
+To test/call your APIs we recommend you use an API client such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, especially for write actions.
 {{% /notice %}}
 
 {{% notice warning %}}
