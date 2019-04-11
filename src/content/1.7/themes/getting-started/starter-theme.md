@@ -5,6 +5,10 @@ weight: 30
 
 # Starter Theme
 
+{{% notice warning %}}
+This project is not maintained anymore by the core team.
+{{% /notice %}}
+
 PrestaShop 1.7 introduces a new way for designers to create their theme from scratch: the Starter Theme. The default theme for PS 1.7 is based on the Starter Theme.
 
 For pretty much every CMS, the default theme is used as a framework to build custom theme: designers have to rework the default theme and reshape it into what they want to display. Sometimes that means having to spend a lot of time removing all the CSS rules and JavaScript code from the default theme, and rewriting everything. This means a LOT of work before even starting to actually create something original.
