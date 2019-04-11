@@ -16,8 +16,8 @@ This is a standard PrestaShop method: its sole existence sends a message
 to the back office, saying "there's a configuration page in this module,
 display the configuration link".
 
-But having a `getContent()` public method in the `MyModule` object does
-only make the "Configure" link appear; it does not create the
+But having a `getContent()` public method in the `MyModule` object only
+makes the "Configure" link appear; it does not create the
 configuration page out of nowhere. We are going to explain how to create
 one, where we will be able to edit the content of the `MYMODULE_NAME`
 variable that we stored in the `ps_configuration` data table.
@@ -79,11 +79,11 @@ Here is a line by line explanation:
     does not contain special characters, for short.
 -   If any of these checks fail, the configuration will open with an
     error message, indicating that the form validation failed. The
-    `$output variable`, which contains the final rendition of the HTML
+    `$output` variable, which contains the final rendition of the HTML
     code that makes the configuration page, thus begins with an error
     message, created using PrestaShop's `displayError()` method. This
     method returns the correct HTML code for our need, and since that
-    code is first in \$output, this means the configuration will open
+    code is first in `$output`, this means the configuration will open
     with that message.
 -   If all these checks are successful, this means we can store the
     value in our database. As we saw earlier in this tutorial, the
@@ -92,7 +92,7 @@ Here is a line by line explanation:
     data table. To that end, we add a friendly message to the user,
     indicating that the value has indeed been saved: we use PrestaShop's
     `displayConfirmation()` method to add that message as the first data
-    in the \$output variable – and therefore, at the top of the page.
+    in the `$output` variable – and therefore, at the top of the page.
 -   Finally, we use the custom `displayForm()` method (which we are
     going to create and explain in the next section) in order to add
     content to `$output` (whether the form was submitted or not), and
