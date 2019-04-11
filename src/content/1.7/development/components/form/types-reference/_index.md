@@ -1,15 +1,12 @@
 ---
-title: Form Types Reference
-menuTitle: Form Types Reference
+title: Types Reference
+menuTitle: Types Reference
 weight: 20
 ---
 
-## Form types reference
+# Types reference
 
-While developing on PrestaShop you can use any form field type that is provided by Symfony framework.
-More about Symfony field types: https://symfony.com/doc/current/reference/forms/types.html.
-In addition, PrestaShop has some custom reusable field types located in 
-`src/PrestaShopBundle/Form/Admin/Type` that should save your time:
+Developers can already use large list of field types (see [Symfony types](https://symfony.com/doc/3.4/reference/forms/types.html)) that comes from Symfony framework. In addition to that, PrestaShop adds more reusable field types that developers can use to this list
 
 #### Text fields
 
