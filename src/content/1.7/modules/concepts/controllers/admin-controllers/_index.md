@@ -67,7 +67,8 @@ You must enable the autoloading for this Controller. For example using a `compos
       "type": "prestashop-module"
     }
     ```
-
+You should run `composer dumpautoload` console commant from where your modules composer.json file is located.
+If you do not have "composer" you can search for it. It is easily installable on any system.
 
 Now we have created and loaded your controller, you need to declare a route. A route map an action of your controller to an URI.
 
