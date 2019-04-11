@@ -4,20 +4,20 @@ menuTitle: DatePickerType
 weight: 2
 ---
 
-### DatePickerType
+# DatePickerType
 
 DatePickerType creates a field with a date picker. It uses Javascript,
 but doesn't require any specific components, as it's already enabled globally.
 
-#### Custom options
+## Custom options
 
 none
 
-#### Javascript components
+## Required Javascript components
 
-none
+None.
 
-#### Code example
+## Code example
 
 ```php
 <?php
@@ -38,7 +38,7 @@ class CustomType extends AbstractType
 }
 ```
 
-#### Preview example
+## Preview example
 
 {{< figure src="../img/date-picker.png" title="DatePickerType rendered in form example" >}}
 

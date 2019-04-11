@@ -4,20 +4,20 @@ menuTitle: DateRangeType
 weight: 2
 ---
 
-### DateRangeType
+# DateRangeType
 
 DateRangeType combines two [DatePickers](../date-picker) to create date range picker. It uses Javascript,
 but doesn't require any specific components, as it's already enabled globally.
 
-#### Custom options
+## Custom options
 
 none
 
-#### Javascript components
+## Required Javascript components
 
-none
+None.
 
-#### Code example
+## Code example
 
 ```php
 <?php
@@ -38,6 +38,6 @@ class CustomType extends AbstractType
 }
 ```
 
-#### Preview example
+## Preview example
 
 {{< figure src="../img/date-range.png" title="DateRangeType rendered in form example" >}}

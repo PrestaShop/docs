@@ -4,13 +4,13 @@ menuTitle: CategoryChoiceTreeType
 weight: 2
 ---
 
-### CategoryChoiceTreeType
+# CategoryChoiceTreeType
 
 CategoryChoiceTreeType is a child of [MeterialChoiceTreeType](meterial-choice-tree), it extends parent options
 with options listed bellow. It is used to display category tree selection box and requires 
 Javascript components.
 
-#### Custom options
+## Type options
 
 | Option       | Type   | Default value                     | Description                                                                               |
 |:-------------|:-------|:----------------------------------|:------------------------------------------------------------------------------------------|
@@ -19,12 +19,12 @@ Javascript components.
 | choice_value | string | 'id_category'                     | An array key which should be targeted in provided choices list to get the value for input |
 
 
-#### Required Javascript components
+## Required Javascript components
 | Component                                                       | Description                                                        |
 |:----------------------------------------------------------------|:-------------------------------------------------------------------|
 | ../admin-dev/themes/new-theme/js/components/form/choice-tree.js | Responsible for choice tree expanding and collapsing interactivity |
 
-#### Code example
+## Code example
 
 ```php
 <?php
@@ -50,6 +50,6 @@ class CustomType extends AbstractType
 }
 ```
 
-#### Preview example
+## Preview example
 
 {{< figure src="../img/category_choice_tree.png" title="CategoryChoiceTree rendered in form example" >}}

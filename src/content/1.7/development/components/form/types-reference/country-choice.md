@@ -4,20 +4,24 @@ menuTitle: CountryChoiceType
 weight: 2
 ---
 
-### CountryChoiceType
+# CountryChoiceType
 
 CountryChoiceType is a child of
 [ChoiceType](https://symfony.com/doc/current/reference/forms/types/choice.html).
 It is used to display countries selection box and by default comes with
 a list of countries from PrestaShop database.
 
-#### Custom options
+## Type options
 
 | Option  | Type  | Default value                    | Description                                                                                         |    |
 |:--------|:------|:---------------------------------|:----------------------------------------------------------------------------------------------------|:---|
 | choices | array | Array of all available countries | Choice list that is passed to parent 'choices'. Array should be formatted in `name => value` pairs. |    |
 
-#### Code example
+## Required Javascript components
+
+None.
+
+## Code example
 
 ```php
 <?php
@@ -35,6 +39,6 @@ class CustomType extends AbstractType
 }
 ```
 
-#### Preview example
+## Preview example
 
 {{< figure src="../img/country_choice.png" title="CountryChoiceType rendered in form example" >}}
