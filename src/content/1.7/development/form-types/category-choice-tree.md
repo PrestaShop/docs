@@ -14,16 +14,15 @@ Javascript components.
 
 | Field                       | Type                                                                                    |
 | --------------------------- | ----------------------------------------------------------------------------------------|
-| Extends parent fields       | Parent type [MeterialChoiceTreeType](meterial-choice-tree)                              | 
+| Parent fields               | Parent type [MeterialChoiceTreeType](meterial-choice-tree)                              | 
 
 #### Custom options
 
 | Option                      | Type (default value)                      | Description                                     |
 | ----------------------------| ------------------------------------------|-------------------------------------------------|
-| **choices_tree**                | **array**(choices list provided by CategoryTreeChoiceProvider)| Values to choose from in choices tree |
+| **choices_tree**                | **array**(choices list provided by CategoryTreeChoiceProvider.php)| Values to choose from in choices tree |
 | **choice_label**                | **string**('name')| An array key which should be targeted in provided choices list to get the label for input|
 | **choice_value**                | **string**('id_category')| An array key which should be targeted in provided choices list to get the value for input |
-| Parent options                  | **mixed** | See the reference for parent options [MeterialChoiceTreeType](meterial-choice-tree) |
 
 
 #### Required Javascript components
