@@ -6,8 +6,8 @@ weight: 2
 
 ### ChangePasswordType
 
-ChangePasswordType is a field type consisting of multiple other types listed bellow. It is used to create form for changing password
-and has a built-in new password generator which requires Javascript component.
+ChangePasswordType consists of multiple fields listed bellow. It is used to create form for changing password
+and has a built-in new password generator which requires Javascript components.
 
 #### Type fields
 
@@ -29,7 +29,8 @@ and has a built-in new password generator which requires Javascript component.
 
 #### Required Javascript components
     
-    * change-password-control.js
+    * ../admin-dev/themes/new-theme/js/components/form/change-password-control.js
+    * ../admin-dev/themes/new-theme/js/components/change-password-handler.js
 
 #### Example
 
