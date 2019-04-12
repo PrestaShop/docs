@@ -36,7 +36,6 @@ class SomeType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('meta_title', TextWithLengthCounterType::class, [
-            // we'll have text area that is translatable
             'max_length' => 255,
         ]);
     }
