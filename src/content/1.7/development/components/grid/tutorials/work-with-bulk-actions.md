@@ -50,7 +50,7 @@ final class CustomerGridDefinitionFactory extends AbstractGridDefinitionFactory
 }
 ```
 
-As you see, Grid stores Bulk actions in `BulkActionCollection` object. This mean that every Bulk action needed for Grid must be added to `BulkActionCollection` using `add()` method.
+As you see, Grid stores Bulk actions in `BulkActionCollection` object. This means that every Bulk action needed for Grid must be added to `BulkActionCollection` using `add()` method.
 
 ## How to add Bulk actions from module?
 
