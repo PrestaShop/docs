@@ -7,7 +7,7 @@ weight: 10
 
 ## What is CQRS?
 
-CQRS stands for _Command Query Responsibility Segregation_. In brief, the CQRS pattern suggests to separate "write" and "read" models, which it refers to as Commands and Queries.
+CQRS stands for _Command Query Responsibility Segregation_. In brief, the CQRS pattern suggests to separate "write" and "read" models, which it refers to as Commands and Queries. In a web application like a CMS, we perform either "read" operations which return information to the user or "write" operations which modify the data managed by the application.
 
 ## Why using CQRS in PrestaShop?
 
