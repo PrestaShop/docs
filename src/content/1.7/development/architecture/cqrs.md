@@ -17,6 +17,16 @@ Commands and Queries allow us to isolate the controllers from the data source, w
 
 This implementation proposes a "top-down" design, which inverses the classic data-driven design. It starts on a page and the actions performed in it, and then trickles down layer by layer, finishing on the data layer.
 
+## Difference between legacy & new architectures
+
+In legacy architecture, controller is calling `ObjectModel` directly, without providing clear API or separation between read and write model, thus highly coupling data layer with controller. See legacy architecture's schema below.
+
+{{< figure src="../img/legacy_architecture.png" title="Legacy architecture" >}}
+
+Fortunately, by implementing CQRS it allows PrestaShop to quickly build new API, but still use legacy `ObjectModel` by implementing `Adapter` handlers. This approach enables us to drop `ObjectModel` and replace it with something else later without breaking new API (Commands & Queries). See new architecture's schema below:
+
+{{< figure src="../img/new_architecture.png" title="New architecture using CQRS" >}}
+
 ## CQRS Principles in PrestaShop
 
 1. All input validation SHOULD be done during the object construction.
