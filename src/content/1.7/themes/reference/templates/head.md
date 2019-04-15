@@ -7,7 +7,7 @@ aliases:
 
 # Head
 
-The head part is very important in term of SEO and performences.
+The head part is very important in term of SEO and performances.
 
 Have look at StarterTheme and Classic head part to see real life examples.
 
