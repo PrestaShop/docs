@@ -6,7 +6,7 @@ weight: 2
 
 # MaterialChoiceTableType
 
-MaterialChoiceTableType renders checkbox choices using table layout. It requires Javascript component to fully  work.
+MaterialChoiceTableType renders checkbox choices using table layout. It requires Javascript component to work as expected.
 
 ## Type options
 

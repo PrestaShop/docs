@@ -11,7 +11,7 @@ but doesn't require any specific components, as it's already enabled globally.
 
 ## Custom options
 
-none
+None.
 
 ## Required Javascript components
 

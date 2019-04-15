@@ -6,7 +6,7 @@ weight: 2
 
 # MaterialChoiceTreeType
 
-MaterialChoiceTreeType renders checkbox choices using choices tree layout. It requires Javascript component to fully  work.
+MaterialChoiceTreeType renders checkbox choices using choices tree layout. Requires Javascript component to work as expected.
 
 ## Type options
 
