@@ -65,5 +65,5 @@ Command bus is a pattern used to map `Commands` and `Queries` to `CommandHandler
 
 PrestaShop uses 2 commands buses:
 
-1. `CommandBus` - for dispatching `Commnads` only
+1. `CommandBus` - for dispatching `Commands` only
 2. `QueryBus` - for dispatching `Queries` only
