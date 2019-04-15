@@ -6,7 +6,7 @@ weight: 2
 
 # CategoryChoiceTreeType
 
-CategoryChoiceTreeType is a child of [MeterialChoiceTreeType](meterial-choice-tree), it extends parent options
+CategoryChoiceTreeType is a child of [MaterialChoiceTreeType](material-choice-tree), it extends parent options
 with options listed bellow. It is used to display category tree selection box and requires 
 Javascript components.
 
@@ -24,11 +24,13 @@ Javascript components.
 |:----------------------------------------------------------------|:-------------------------------------------------------------------|
 | ../admin-dev/themes/new-theme/js/components/form/choice-tree.js | Responsible for choice tree expanding and collapsing interactivity |
 
+
 ## Code example
 
 ```php
 <?php
 // path/to/your/CustomType.php
+//@todo: Double check CategoryChoiceTreeType vs ChoiceCategoriesTreeType and add proper javascript example
 
 use PrestaShopBundle\Form\Admin\Type\CategoryChoiceTreeType;
 use Symfony\Component\Form\AbstractType;

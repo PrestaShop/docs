@@ -40,5 +40,5 @@ class CustomType extends AbstractType
 
 ## Preview example
 
-{{< figure src="../img/date-picker.png" title="DatePickerType rendered in form example" >}}
+{{< figure src="../img/date_picker.png" title="DatePickerType rendered in form example" >}}
 
