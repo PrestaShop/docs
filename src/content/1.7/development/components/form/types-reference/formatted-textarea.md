@@ -29,9 +29,6 @@ use PrestaShopBundle\Form\Admin\Type\FormattedTextareaType;
 
 class CustomType
 {
-    /**
-     * {@inheritdoc}
-     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
