@@ -19,7 +19,7 @@ Unfortunately, it's not very engaging, so let's create Empty state for it! There
 1. You have to create a template for it and put it in `src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/EmptyState` directory, so Grid component can locate it.
 2. Your Empty state template must be named after Grid id (e.g. if your Grid's ID is `supplier` then template name must be `supplier.html.twig`).
 
-In Empty state template you can put whatever you want to, but it's a good practice to describe what data grid displays. See Suppliers grid empty state as an example below.
+In Empty state template you can put whatever you want to: an image, some helpful text, a form ... but it's a good practice to describe what data grid displays. See Suppliers grid empty state as an example below.
 
 {{< figure src="../../img/empty_state.png" title="Empty state in Suppliers grid" >}}
 
