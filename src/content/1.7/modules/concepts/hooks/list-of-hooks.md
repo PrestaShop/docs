@@ -1848,6 +1848,24 @@ This hook is displayed at the top of the payment page
 
     Located in: /themes/classic/templates/checkout/_partials/steps/payment.tpl
 
+
+displayPersonalInformationTop
+:
+    Available since: {{< minver v="1.7.6" >}}
+
+    Display actions or additional content in the personal details tab of the checkout funnel.
+
+    Located in: /themes/classic/templates/checkout/_partials/steps/personal-information.tpl
+
+
+displayProductActions
+: 
+    Available since: {{< minver v="1.7.6" >}}
+
+    This hook allow additional actions to be displayed & triggered, close to the add to cart button.
+
+    Located in: /themes/classic/templates/catalog/_partials/product-add-to-cart.tpl
+
     
 displayProductAdditionalInfo
 : 
