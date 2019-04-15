@@ -92,7 +92,7 @@ Now you should be able to see new Bulk action available in Customers grid!
 
 ## How to create custom Bulk action?
 
-PrestaShop already comes with a bunch of Bulk actions that are available for use in your Grids or for extending PrestaShop grids. However, in some use cases you may find that exisitng Bulk actions does not fit your needs. Luckly, there's a solution, you can create custom Bulk actions.
+PrestaShop already comes with a bunch of Bulk actions that are available for use in your Grids or for extending PrestaShop grids. However, in some use cases you may find that existing Bulk actions do not fit your needs. Luckily, there is a solution, you can create custom Bulk actions.
 
 First, you need to create Bulk action itself:
 
