@@ -78,7 +78,7 @@ Then in Javascript you have to enable `MultipleChoiceTable` component.
 ```javascript
 import MultipleChoiceTable from 'admin-dev/themes/new-theme/js/components/multiple-choice-table';
 
-// initiate the component by providing your tree selector
+// enable the component
 new MultipleChoiceTable();
 ```
 
