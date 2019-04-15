@@ -9,7 +9,7 @@ In addition to displaying data tables, Grid component also comes with a lot of a
 
 ## What is Bulk action?
 
-Bulk action is action (e.g. Delete, Change status & etc) that can be performed on multiple entries in table. This is a common task when using Grid (e.g. Change status for multiple Orders in single action).
+Bulk action is action (e.g. Delete, Change status & etc) that can be performed on multiple entries in table. This is a common task when using Grid (e.g. Delete multiple selected Suppliers with a single click).
 
 ## How to add Bulk actions to Grid?
 
