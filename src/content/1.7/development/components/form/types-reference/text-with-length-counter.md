@@ -51,6 +51,6 @@ Then in Javascript you have to enable `TextWithLengthCounter` component.
     new TextWithLengthCounter();
 ```
 
-## Example
+## Preview example
 
 {{< figure src="../img/text_with_length_counter.png" title="TextWithLengthCounterType rendered in form" >}}

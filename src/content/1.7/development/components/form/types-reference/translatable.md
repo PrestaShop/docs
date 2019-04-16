@@ -53,6 +53,6 @@ Then in Javascript you have to enable `TranslatableInput` component.
     new TranslatableInput();
 ```
 
-## Example
+## Preview example
 
 {{< figure src="../img/translatable.png" title="TranslatableType rendered in form using textarea" >}}

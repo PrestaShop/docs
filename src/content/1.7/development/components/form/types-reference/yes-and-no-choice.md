@@ -19,6 +19,6 @@ The `YesAndNoChoiceType` represents `select` input with options `Yes` and `No`.
     
 None.
 
-## Example
+## Preview example
 
 {{< figure src="../img/yes_and_no_choice.png" title="YesAndNoChoiceType rendered in form" >}}
