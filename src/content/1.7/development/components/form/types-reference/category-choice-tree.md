@@ -6,7 +6,7 @@ weight: 2
 
 # CategoryChoiceTreeType
 
-CategoryChoiceTreeType is a child of [MaterialChoiceTreeType](material-choice-tree), it extends parent options
+CategoryChoiceTreeType is a child of [MaterialChoiceTreeType](../material-choice-tree), it extends parent options
 with options listed bellow. It is used to display category tree selection box and requires 
 Javascript components.
 
@@ -19,6 +19,7 @@ Javascript components.
 | choice_value | string | `id_category`                     | An array key which should be targeted in provided choices list to get the value for input |
 
 ## Required Javascript components
+
 | Component                                                       | Description                                                        |
 | :-------------------------------------------------------------- | :----------------------------------------------------------------- |
 | ../admin-dev/themes/new-theme/js/components/form/choice-tree.js | Responsible for choice tree expanding and collapsing interactivity |
