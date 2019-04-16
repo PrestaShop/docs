@@ -1,56 +1,46 @@
 ---
-title: TextWithLengthCounterType
-menuTitle: TextWithLengthCounterType
+title: TextWithUnitType
+menuTitle: TextWithUnitType
 weight: 2
 ---
 
-# TextWithLengthCounterType
+# TextWithUnitType
 
-The `TextWithLengthCounterType` represents text input with value length counter.
+The `TextWithUnitType` represents text input with unit value (e.g. Kg, Cm & etc.).
 
 ## Type options
 
-| Option     | Type   | Default                  | Description                                                                  |
-| ---------- | ------ | ------------------------ | ---------------------------------------------------------------------------- |
-| max_length | int    | None, must be configured | Max length of input value                                                    |
-| position   | string | `before`                 | Configures position for counter. Available options are: `before` and `after` |
-| input      | string | `text`                   | Configured input type `text` or `textarea`                                   |
+| Option | Type   | Default | Description                      |
+| ------ | ------ | ------- | -------------------------------- |
+| unit   | string | `unit`  | Type of unit (e.g. Kg, Cm & etc) |
 
 ## Required Javascript components
     
-| Component                                                                 | Description                           |
-| ------------------------------------------------------------------------- | ------------------------------------- |
-| admin-dev/themes/new-theme/js/components/form/text-with-length-counter.js | Calculates remaining length for input |
+None.
 
 ## Code example
 
-First, you have to add `TextWithLengthCounterType` to your form.
+Add `TextWithUnitType` to your form and optionally you can configure `unit` for it.
 
 ```php
 
 use Symfony\Component\Form\AbstractType;
-use PrestaShopBundle\Form\Admin\Type\TextWithLengthCounterType;
+use PrestaShopBundle\Form\Admin\Type\TextWithUnitType;
 
 class SomeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('meta_title', TextWithLengthCounterType::class, [
-            'max_length' => 255,
-        ]);
+        $builder->add('weight', TextWithUnitType::class, [
+                'unit' => 'kg',
+                'required' => false,
+                'empty_data' => '0',
+            ])
+        ;
     }
 }
 ```
 
-Then in Javascript you have to enable `TextWithLengthCounter` component.
+## Preview example
 
-```javascript
-    import TextWithLengthCounter from "admin-dev/themes/new-theme/js/components/form/text-with-length-counter";
-
-    // enables length counter for all TextWithLengthCounterType inputs on the page
-    new TextWithLengthCounter();
-```
-
-## Example
-
-{{< figure src="../img/text_with_length_counter.png" title="TextWithLengthCounterType rendered in form" >}}
+{{< figure src="../img/text_with_unit.png" title="TextWithUnitType rendered in form" >}}
