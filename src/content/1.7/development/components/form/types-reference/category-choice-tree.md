@@ -13,24 +13,21 @@ Javascript components.
 ## Type options
 
 | Option       | Type   | Default value                     | Description                                                                               |
-|:-------------|:-------|:----------------------------------|:------------------------------------------------------------------------------------------|
+| :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
 | choices_tree | array  | Array of all available categories | Values to choose from in choices tree                                                     |
-| choice_label | string | 'name'                            | An array key which should be targeted in provided choices list to get the label for input |
-| choice_value | string | 'id_category'                     | An array key which should be targeted in provided choices list to get the value for input |
-
+| choice_label | string | `name`                            | An array key which should be targeted in provided choices list to get the label for input |
+| choice_value | string | `id_category`                     | An array key which should be targeted in provided choices list to get the value for input |
 
 ## Required Javascript components
 | Component                                                       | Description                                                        |
-|:----------------------------------------------------------------|:-------------------------------------------------------------------|
+| :-------------------------------------------------------------- | :----------------------------------------------------------------- |
 | ../admin-dev/themes/new-theme/js/components/form/choice-tree.js | Responsible for choice tree expanding and collapsing interactivity |
-
 
 ## Code example
 
 ```php
 <?php
 // path/to/your/CustomType.php
-//@todo: Double check CategoryChoiceTreeType vs ChoiceCategoriesTreeType and add proper javascript example
 
 use PrestaShopBundle\Form\Admin\Type\CategoryChoiceTreeType;
 use Symfony\Component\Form\AbstractType;
