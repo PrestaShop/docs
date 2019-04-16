@@ -13,7 +13,7 @@ menuTitle: Good practices
 - Follow our [Coding Standards][coding-standards]
 - Create your own database tables, do not alter PrestaShop's.
 - Develop your module in English, then use PrestaShop translation system to translate your module.
-- Go through directories using PrestaShop variables like: `_PS_CONFIG_DIR_ . '/config.inc.php'`
+- Go through directories using PrestaShop constants like: `_PS_CONFIG_DIR_ . '/config.inc.php'`
 
 ### Don't
 
@@ -29,33 +29,32 @@ menuTitle: Good practices
 - Prefix what belongs to you:
   - modules
   - configuration parameters (ps_configuration)
+  - Smarty variables
   - tables
   - CSS classes
   
-- Consider deleting your configurations, tables, and other entities unique to your product during the de-installation of your modules.
+- Consider deleting your configurations, tables, admin tabs, and all other entities unique to your product during the uninstallation of your modules.
 
 - You shouldn't use HTML code in your PHP code. Here are alternatives to separate the view into your code:
   - display content with [Smarty][display-content-front-office]
   - use [helpers][adding-configuration-page] for your configuration pages
   - include [PrestUI](https://github.com/Scritik/prestui), a graphic library created by the community for your configuration pages.
 
-- Your module interface has to match the back office interface. Customized interfaces aren’t validated/accepted. Please use the alternatives explained before to help you create an interface that matches merchants' BO.
+- We recommend to create your module's interface so it matches [PrestaShop's UI kit](http://build.prestashop.com/prestashop-ui-kit/).
 
 - For modules compatible before the 1.7 PrestaShop version, the minimal compatibility has to be PHP 5.3. You will be then able to use, for example, namespaces.
 
-- If you add function to add a file, check the type of the file to make sure you avoid security issues. Here are more information for the function [mime_content_type()](http://php.net/manual/en/function.mime-content-type.php).
-
-- When uninstalling the module, delete all tabs you might have added during the installation.
+- If your module has the possibility to upload a file, check the type of the file to make sure you avoid security issues. Here are more information for the function [mime_content_type()](http://php.net/manual/en/function.mime-content-type.php).
 
 - When your module has forms, you should:
-  - show a confirmation message if everything is fine or an error message if not.
+  - show a confirmation message if everything went fine or an error message if not.
   - make sure information entered by customers are correct. If you ask a sum, it has to be only numbers. More information about the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Validate.php).
 
 - Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read [Best Practices of the Db Class](http://doc.prestashop.com/display/PS16/Best+Practices+of+the+Db+Class)). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result, you are required to use a token!
 
 - The use of overrides is permitted, however if we decide that too many (2 / 3 max) have been used and/or the modifications are too dangerous, we will refuse your module. If you're unsure, don't hesitate to get in touch.
 
-- If you need to upload a .js or .tpl (containing JavaScript) to the back-office, put restrictions in place on your back-office hooks (hookbackofficeheader/top/footer)! Specific examples: If your JS only applies to your module's configuration page, use:  
+- If you need to load a .js or .tpl (containing JavaScript) to the back-office, put restrictions in place on your hooks (hookbackofficeheader/top/footer)! Specific examples: If your JS only applies to your module's configuration page, use:  
   
   ```php
   if (Tools::getValue('configure') === $this->name) {
