@@ -333,7 +333,7 @@ if you follow the templating rules. Using Smarty
 
 Smarty is a PHP template engine, and is used by PrestaShop's theming
 system. It is a free and open-source projet, hosted at
-<http://www.smarty.net/>.
+<https://www.smarty.net/>.
 
 It parses template `.tpl` files, looking for dynamic elements to replace
 with their contextual equivalents, then send the generated result to the

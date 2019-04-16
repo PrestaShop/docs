@@ -45,7 +45,7 @@ Javascript files MUST follow the [Airbnb Javascript style guide](https://github.
 ## HTML, CSS (Sass), Twig & Smarty code conventions
 
 HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](http://codeguide.co/).
-Mark is the creator of the [Bootstrap framework](http://getbootstrap.com/).
+Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
 
 ## License information
 
@@ -71,7 +71,7 @@ All PrestaShop files MUST start with the PrestaShop license block:
  *
  * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
  * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
+ * needs please refer to https://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
  * @copyright 2007-2019 PrestaShop SA and Contributors
@@ -100,7 +100,7 @@ All PrestaShop files MUST start with the PrestaShop license block:
  *
  * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
  * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
+ * needs please refer to https://www.prestashop.com for more information.
  *
  * @author    PrestaShop SA <contact@prestashop.com>
  * @copyright 2007-2019 PrestaShop SA and Contributors

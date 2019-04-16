@@ -30,12 +30,12 @@ PrestaShop needs a few additions to PHP and MySQL in order to fully work. Make s
 
 ### Extensions
 
-* **CURL**. The [Client URL extension](http://php.net/manual/en/book.curl.php) is used to download remote resources like modules and localization packages.
-* **DOM**. The [DOM extension](http://php.net/manual/en/book.dom.php) is needed to parse XML documents. PrestaShop uses it for various functionalities, like the Store Locator. It is also used by some modules, as well as the pear_xml_parse library.
-* **Fileinfo**. The [File information extension](http://php.net/manual/en/book.fileinfo.php) is used to find out the file type of uploaded files.
-* **GD**. The [GD extension](http://php.net/manual/en/book.image.php) is used to create thumbnails for the images that you upload.
-* **Intl**. The [Internationalization extension](http://php.net/manual/en/book.intl.php) is used to display localized data, such as amounts in different currencies.
-* **Zip**. The [Zip extension](http://php.net/manual/en/book.zip.php) is used to expand compressed files such as modules and localization packages.
+* **CURL**. The [Client URL extension](https://php.net/manual/en/book.curl.php) is used to download remote resources like modules and localization packages.
+* **DOM**. The [DOM extension](https://php.net/manual/en/book.dom.php) is needed to parse XML documents. PrestaShop uses it for various functionalities, like the Store Locator. It is also used by some modules, as well as the pear_xml_parse library.
+* **Fileinfo**. The [File information extension](https://php.net/manual/en/book.fileinfo.php) is used to find out the file type of uploaded files.
+* **GD**. The [GD extension](https://php.net/manual/en/book.image.php) is used to create thumbnails for the images that you upload.
+* **Intl**. The [Internationalization extension](https://php.net/manual/en/book.intl.php) is used to display localized data, such as amounts in different currencies.
+* **Zip**. The [Zip extension](https://php.net/manual/en/book.zip.php) is used to expand compressed files such as modules and localization packages.
 
 ### Settings
 

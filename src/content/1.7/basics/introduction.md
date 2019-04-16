@@ -29,13 +29,13 @@ You should be familiar with PHP and Object-Oriented Programming before attemptin
 
 You can learn PHP here:
 
-* http://www.php.net/manual/en/getting-started.php
-* http://www.codecademy.com/tracks/php
+* https://www.php.net/manual/en/getting-started.php
+* https://www.codecademy.com/tracks/php
 
 You can learn Object-Oriented programming here:
 
-* http://en.wikipedia.org/wiki/Object-oriented_programming
-* http://net.tutsplus.com/tutorials/php/object-oriented-php-for-beginners/
+* https://en.wikipedia.org/wiki/Object-oriented_programming
+* https://net.tutsplus.com/tutorials/php/object-oriented-php-for-beginners/
 
 A module is an extension to PrestaShop that enables any developer to add the following:
 

@@ -51,7 +51,7 @@ the template files being in need of adapting to the 1.7 default theme.
 
 The major module development changes in PrestaShop 1.7 are explained in
 details [in this Build
-article](http://build.prestashop.com/news/module-development-changes-in-17/),
+article](https://build.prestashop.com/news/module-development-changes-in-17/),
 and are integrated into this updated documentation. If you already know
 how to create a module that works with PS 1.6, we strongly advise you to
 read that article from top to bottom in order to get up to speed with

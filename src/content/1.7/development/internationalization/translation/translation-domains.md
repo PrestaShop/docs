@@ -12,7 +12,7 @@ Depending on the language, it will be more or less easy to translate it just vag
 Translation Domains bring an answer to this problem. By allowing to separate wordings in contextual groups, if the same wording appears in more than one domain, then it can be have a different translation in each one of them. This way, translators are better able to adapt the meaning of each wording to the specific context in which they appear.
 
 {{% notice note %}}
-This feature was originally described in this [blog post](http://build.prestashop.com/news/new-translation-system-prestashop-17/) and has been updated here.
+This feature was originally described in this [blog post](https://build.prestashop.com/news/new-translation-system-prestashop-17/) and has been updated here.
 {{% /notice %}}
 
 ## Understanding the Domains' structure

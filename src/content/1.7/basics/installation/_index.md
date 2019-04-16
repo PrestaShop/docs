@@ -17,10 +17,10 @@ Installing any web-application locally requires that you first install the adequ
 
 Here is a selection of free AMP installers:
 
-* [XAMPP](http://www.apachefriends.org/en/xampp.html) (Windows, Mac OS X, Linux, Solaris)
-* [WampServer](http://www.wampserver.com/en/) (Windows)
-* [EasyPHP](http://www.easyphp.org/) (Windows)
-* [MAMP](http://www.mamp.info/) (Mac OS X)
+* [XAMPP](https://www.apachefriends.org/en/xampp.html) (Windows, Mac OS X, Linux, Solaris)
+* [WampServer](http://www.wampserver.com/) (Windows)
+* [EasyPHP](https://www.easyphp.org/) (Windows)
+* [MAMP](https://www.mamp.info/) (Mac OS X)
 
 
 

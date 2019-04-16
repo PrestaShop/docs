@@ -26,7 +26,7 @@ Before you start writing code for your PrestaShop module, you should be
 aware that the PrestaShop team uses a specific set of coding conventions
 (or coding standards, coding norm, etc.).
 
-As Wikipedia puts it, "[Coding conventions](http://en.wikipedia.org/wiki/Coding_conventions) are a set of guidelines for a
+As Wikipedia puts it, "[Coding conventions](https://en.wikipedia.org/wiki/Coding_conventions) are a set of guidelines for a
 specific programming language that recommend programming style,
 practices and methods for each aspect of a piece program written in this
 language", and "Good procedures, good methodology and good coding
@@ -77,7 +77,7 @@ classes if needed). PrestaShop uses Object-Oriented programming, and so
 do its modules.
 
 That class must bear the same name as the module and its folder, in
-CamelCase (see <http://en.wikipedia.org/wiki/CamelCase>). In our
+CamelCase (see <https://en.wikipedia.org/wiki/CamelCase>). In our
 example: `MyModule`. Furthermore, that class must extend the `Module`
 class, in order to inherit all its methods and attributes.
 
@@ -472,7 +472,7 @@ as you would access your own. For instance:
     default language.
 -   `Configuration::get('PS_TIMEZONE')`: retrieves the name of the
     current timezone, in standard TZ format (see:
-    [http://en.wikipedia.org/wiki/List_of_tz_database_time_zones](http://en.wikipedia.org/wiki/List_of_tz_database_time_zones)).
+    [https://en.wikipedia.org/wiki/List_of_tz_database_time_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)).
 -   `Configuration::get('PS_DISTANCE_UNIT')`: retrieves the default
     distance unit ("km" for kilometers, etc.).
 -   `Configuration::get('PS_SHOP_EMAIL')`: retrieves the main contact
@@ -529,7 +529,7 @@ The icon file must respect these requirements:
 -   32\*32 PNG image.
 -   Named `logo.png`.
 -   Tip: There are many free 32\*32 icon libraries available. Here are a
-    few: <http://www.fatcow.com/free-icons> (very close to the
+    few: <https://www.fatcow.com/free-icons> (very close to the
     FamFamFam one) or
     <http://www.iconarchive.com/show/danish-royalty-free-icons-by-jonas-rask.html>
     (Danish Royalty Free)

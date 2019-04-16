@@ -44,4 +44,4 @@ Once you removed all style in `_dev/css`, your theme should like this:
 
 ![Screenshot of the StarterTheme once you removed the dev style](../img/starter-theme-no-style.png)
 
-Read also our articles on [build.prestashop.com](http://build.prestashop.com/tag/starter-theme/).
+Read also our articles on [build.prestashop.com](https://build.prestashop.com/tag/starter-theme/).

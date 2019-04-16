@@ -38,13 +38,13 @@ Mobile-wise:
 
 Use spaces for indentation in every language (PHP, HTML, CSS, etc.):<br>4 spaces for PHP files, 2 spaces for all other file types.
 
-Use our [.editorconfig](http://editorconfig.org/) file in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/develop/.editorconfig
+Use our [.editorconfig](https://editorconfig.org/) file in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/develop/.editorconfig
 
 ##### PHP files
 
-You should follow the [PSR-2 standard](http://www.php-fig.org/psr/psr-2/), just like PrestaShop does.
+You should follow the [PSR-2 standard](https://www.php-fig.org/psr/psr-2/), just like PrestaShop does.
 
-In general, we tend to follow the [Symfony coding standards](http://symfony.com/doc/current/contributing/code/standards.html).
+In general, we tend to follow the [Symfony coding standards](https://symfony.com/doc/current/contributing/code/standards.html).
 
 ##### HTML files
 
@@ -61,7 +61,7 @@ All open tags must be closed in the same file (a `<div>` should not be opened in
 
 Use CSS3.
 
-We recommend that you follow the [RSCSS structure](http://rscss.io/)
+We recommend that you follow the [RSCSS structure](https://rscss.io/)
 
 ##### Javascript
 

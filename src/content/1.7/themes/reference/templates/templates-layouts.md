@@ -8,7 +8,7 @@ aliases:
 
 # Templates & layouts
 
-PrestaShop template file are based on the [Smarty 3 template engine](http://www.smarty.net/v3_overview).
+PrestaShop template file are based on the [Smarty 3 template engine](https://www.smarty.net/v3_overview).
 
 All template files must be stored in the theme's `templates/` subfolder. For instance, the default theme
 has its template files in the following folder: `/themes/classic/templates`.
