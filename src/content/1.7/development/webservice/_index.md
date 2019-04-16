@@ -13,13 +13,13 @@ PrestaShop enables merchants to give third-party tools access to their shop's da
 The PrestaShop web service uses the REST architecture in order to be available on as many platforms as possible, since the HTTP protocol and XML files are understood by most platforms, if not all.
 
 {{% notice note %}}
-[CRUD](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
+[CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
  is an acronym that stands for "Create, Read, Update, and Delete". These are the four basic operations for managing data in an application.
 
-[REST](http://en.wikipedia.org/wiki/REST) defines roughly a style of software architecture, which promotes the use of HTTP methods when building web application, instead of custom methods or protocols such as SOAP or WSDL. It defines several rules, including one that is similar to CRUD, which is described below.
+[REST](https://en.wikipedia.org/wiki/REST) defines roughly a style of software architecture, which promotes the use of HTTP methods when building web application, instead of custom methods or protocols such as SOAP or WSDL. It defines several rules, including one that is similar to CRUD, which is described below.
 {{% /notice %}}
 
-HTTP has several methods that can perform processing on data as defined in the REST architecture, among which are [4 main methods](http://en.wikipedia.org/wiki/HTTP#Request_methods):
+HTTP has several methods that can perform processing on data as defined in the REST architecture, among which are [4 main methods](https://en.wikipedia.org/wiki/HTTP#Request_methods):
 
 | HTTP/REST | CRUD   | SQL    |
 |-----------|--------|--------|
@@ -69,8 +69,8 @@ The shop should prompt you for a username and a password to enter. The username 
 The second and more appropriate way to access the API is to include your access key in the url, this will prevent you from entering any user name.
 This is also the recommended way to call the API from a javascript client, or any application. Here is an example, assuming your access API key is `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`:
 
-* At the root of the server: http://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/
-* In a subfolder of the server: http://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestasshop/api/
+* At the root of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/
+* In a subfolder of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestasshop/api/
 
 {{% notice note %}}
 To test/call your APIs we recommend you use an API client such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, especially for write actions.

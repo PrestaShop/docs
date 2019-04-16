@@ -32,7 +32,7 @@ applied on very old shops.
 
 ### Release download
 
-The first step is to download the latest version on http://www.prestashop.com/.
+The first step is to download the latest version on https://www.prestashop.com/.
 
 If you upgrade to another version of PrestaShop 1.6, the release files
 can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).

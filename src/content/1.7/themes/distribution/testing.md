@@ -102,7 +102,7 @@ If you want to create a custom test, there are a few things you should know. Tes
 the `specs` subfolder.
 
 Until we can do more documentation, please have a look at the existing tests and at the
-[WebDriver.io API](http://webdriver.io/api.html).
+[WebDriver.io API](https://webdriver.io/api.html).
 
 If you need to add general purpose helper functions for your tests, they should go in `commands/init.js`.
 

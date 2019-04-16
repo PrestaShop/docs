@@ -11,14 +11,14 @@ Starting from PrestaShop 1.7.3, you can access the modern Services Container int
 
 * [Twig](https://twig.symfony.com/), the most popular templating engine;
 * [Swiftmailer](https://swiftmailer.symfony.com/), a feature-rich mailer;
-* [Doctrine ORM](http://www.doctrine-project.org/projects/orm.html) and [Doctrine DBAL](http://www.doctrine-project.org/projects/dbal.html) to manage your database;
+* [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html) and [Doctrine DBAL](https://www.doctrine-project.org/projects/dbal.html) to manage your database;
 * [Filesystem](https://symfony.com/doc/3.3/components/filesystem.html) and [Finder](https://symfony.com/doc/3.3/components/finder.html) libraries to manage all filesystem operations;
 * [Monolog](https://seldaek.github.io/monolog/) for every logging operations;
 * [Serializer](https://symfony.com/doc/3.3/components/serializer.html) library for whom who need to manipulate Json and Xml formats...
 
 Of course, you also have access to every service used by the Core of PrestaShop. This means that you can rely on all services defined in `PrestaShopBundle/config/` folder, except from the ones declared in `adapter` folder: they will be removed at some point.
 
-> If you don't know what is a service, take a look at the Symfony documentation about the [services container](http://symfony.com/doc/3.3/service_container.html).
+> If you don't know what is a service, take a look at the Symfony documentation about the [services container](https://symfony.com/doc/3.3/service_container.html).
 
 ## Better modules on modern pages
 

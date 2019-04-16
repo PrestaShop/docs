@@ -43,7 +43,7 @@ menuTitle: Good practices
 
 - For modules compatible before the 1.7 PrestaShop version, the minimal compatibility has to be PHP 5.3. You will be then able to use, for example, namespaces.
 
-- If you add function to add a file, check the type of the file to make sure you avoid security issues. Here are more information for the function [mime_content_type()](http://php.net/manual/en/function.mime-content-type.php).
+- If you add function to add a file, check the type of the file to make sure you avoid security issues. Here are more information for the function [mime_content_type()](https://php.net/manual/en/function.mime-content-type.php).
 
 - When uninstalling the module, delete all tabs you might have added during the installation.
 

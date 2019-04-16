@@ -115,7 +115,7 @@ For example:
 <tr class="odd">
 <td align="left">attribute</td>
 <td align="left">async|defer|none (default: none)</td>
-<td align="left">Load JavaScript file with the corresponding attribute (Read more: <a href="http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html">Async vs Defer attributes</a>)</td>
+<td align="left">Load JavaScript file with the corresponding attribute (Read more: <a href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html">Async vs Defer attributes</a>)</td>
 </tr>
 </tbody>
 </table>

@@ -26,7 +26,7 @@ content of the page, everything else will be taken from its own parent template 
 The wrong way of doing this would be to extract header, footer and reusable part of the template
 and _include_ them in each file.
 
-The [official Smarty documentation](http://www.smarty.net/inheritance) has a nice and simple example. In their own words:
+The [official Smarty documentation](https://www.smarty.net/inheritance) has a nice and simple example. In their own words:
 
 > "Template inheritance is an approach to managing templates that resembles object-oriented programming techniques.
   Instead of the traditional use of {include ...} tags to manage parts of templates, you can inherit the
