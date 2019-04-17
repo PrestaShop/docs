@@ -14,7 +14,7 @@ The `TranslatableType` allows you to configure multilanguage input. This multila
 | ------- | ------ | ----------------------------------------------------- | ---------------------------------------- |
 | type    | string | `Symfony\Component\Form\Extension\Core\Type\TextType` | Type that you want to be translatable    |
 | options | array  | Empty array                                           | Options for configured `type`            |
-| locales | array  | Enabled shop locales (lagnuages)                      | Locales in which field can be translated |
+| locales | array  | Enabled shop locales (languages)                      | Locales in which field can be translated |
 
 ## Required Javascript components
     
