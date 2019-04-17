@@ -6,7 +6,7 @@ weight: 2
 
 # TranslatableType
 
-The `TranslatableType` allows you to configure multilanguage input.
+The `TranslatableType` allows you to configure multilanguage input. This multilanguage behavior is provided on top of an existing input Type.
 
 ## Type options
 
