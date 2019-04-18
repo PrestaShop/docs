@@ -18,7 +18,7 @@ The Validator then automatically creates a detailed report explaining what needs
 
  {{% notice info %}}
 **Important!**  
-Since version 1.6.1.0, PrestaShop uses the PSR-2 norm. Even if we recommend to use this norm, it's not mandatory and it won’t be a reason to decline your module. Here are more details in [this blog article](http://build.prestashop.com/news/prestashop-moves-to-psr-2/).
+Since version 1.6.1.0, PrestaShop uses the PSR-2 norm. Even if we recommend to use this norm, it's not mandatory and it won’t be a reason to decline your module. Here are more details in [this blog article](https://build.prestashop.com/news/prestashop-moves-to-psr-2/).
 {{% /notice %}}
 
 ### 2. Method search engine
@@ -44,7 +44,7 @@ define('_PS_MODE_DEV_', true);
 ```
 
 **Important:** stores which are up and running must not be used in Dev Mode!
-
+https://build.prestashop.com/news/module-development-changes-in-17/
 ### 2. Follow our good practices
 
 Read our article: [Good practices for developing modules]({{<ref "1.7/modules/creation/good-practices" >}}).
@@ -78,12 +78,12 @@ What this means for any shop upgrade is that in order for a PS 1.6 to migrate to
 
 **Everything you should know is gathered in the following pages:**
 
-- Details on every changes concerning modules on [this article of the Build devblog](http://build.prestashop.com/news/module-development-changes-in-17/);
+- Details on every changes concerning modules on [this article of the Build devblog](https://build.prestashop.com/news/module-development-changes-in-17/);
 - The [Theme Developer documentation]({{< ref "1.7/themes" >}}) is being written in the open. Don't hesitate to contribute or ask questions!
 - Payment modules:
-  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](http://developers.prestashop.com/module/50-PaymentModules/index.html)!
+  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](https://devdocs.prestashop.com/1.7/modules/payment/)!
 
-And of course [our 1.7 Project FAQ](http://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
+And of course [our 1.7 Project FAQ](https://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
 
 ## How to submit a product to the Addons marketplace
 
@@ -107,7 +107,7 @@ Don't forget to indicate which versions of PrestaShop your module is compatible 
 ### Your file and the permanent name of your module
 
 The zip archive submitted to our team must contain all the necessary files for your module, and have the same name as your module: if the main file of your module is called "module_name.php", then it should be in the folder "module_name", and the zip file must have the same name - without a version number.
-
+https://build.prestashop.com/news/module-development-changes-in-17/
 Make sure that the name used for your file and zip is the same that you have given to your product page (so that the online seller can quickly identify your module in the back office of their store). So think carefully about the name you choose for your product (without using either "PrestaShop" or "module"). Feel free to personalize the name, for example with the name of your company or your initials
 
 ## What happens next?
