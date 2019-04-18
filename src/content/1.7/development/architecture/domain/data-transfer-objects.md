@@ -40,7 +40,6 @@ interface GetCustomerForEditingHandlerInterface
 Now image you are using implementation of `GetCustomerForEditingHandlerInterface` handler in your code.
 
 ```php
-
 use use PrestaShop\PrestaShop\Core\Domain\Customer\QueryResult\EditableCustomer;
 
 /** EditableCustomer $editableCustomer */
@@ -49,6 +48,5 @@ $editableCustomer = $handler->handle($query);
 // You don't need to add additional assertions to see if customer's first name exists
 // as DTO explicity provides you it via getter method.
 $editableCustomer->getFirstName();
-
 ```
 
