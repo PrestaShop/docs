@@ -11,7 +11,7 @@ PrestaShop is using Data Transfer Objects (DTO in short) in its codebase, in thi
 
 Data Transfer Object is object (e.g. `UserData`) that contains data in a structured format. This means that DTO usually comes with getter methods or public properties for accessing it's data. The main benefit of using DTOs is that you know what data it has.
 
-For example, if DTO has method `getName()` you can be sure that name is there, unlike using arrays, when you never know if key `name` exists inside array or not. By making effective use of DTOs you are also making your code more readable and maintainable.
+For example, if DTO has method `getName()` you can be sure that name is there, unlike using arrays, when you never know if key `name` exists inside an array or not. By making effective use of DTOs you are also making your code more readable and maintainable.
 
 ## Examples of Data Transfer Objects in PrestaShop
 
