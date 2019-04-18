@@ -9,7 +9,6 @@ weight: 1
 
 ### 1. The Validator
 
-
 The Validator ( https://validator.prestashop.com ) is a tool created to check if your module is technically compatible with the PrestaShop standards. You can:
 
 - upload a zip.
@@ -79,12 +78,12 @@ What this means for any shop upgrade is that in order for a PS 1.6 to migrate to
 
 **Everything you should know is gathered in the following pages:**
 
-- Details on every changes concerning modules on [this article of the Build devblog](https://build.prestashop.com/news/module-development-changes-in-17/);
+- Details on every changes concerning modules on [this article of the Build devblog](http://build.prestashop.com/news/module-development-changes-in-17/);
 - The [Theme Developer documentation]({{< ref "1.7/themes" >}}) is being written in the open. Don't hesitate to contribute or ask questions!
 - Payment modules:
-  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](https://developers.prestashop.com/module/50-PaymentModules/index.html)!
+  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](http://developers.prestashop.com/module/50-PaymentModules/index.html)!
 
-And of course [our 1.7 Project FAQ](https://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
+And of course [our 1.7 Project FAQ](http://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
 
 ## How to submit a product to the Addons marketplace
 
