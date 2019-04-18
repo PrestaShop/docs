@@ -108,7 +108,7 @@ public function editAction($categoryId, Request $request)
 So now, if we are editing a category and it fails for some reason (e.g. the database is not responding),
 the controller will catch the `CannotEditCategoryException` (which is a child of `CategoryException`) and display a specific error message to the user.
 
-## But there are so many new exception classes. I'm scared!
+## Why are there so many new exception classes.
 
 **Don't be!** 
 
