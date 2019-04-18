@@ -62,7 +62,7 @@ class CannotEditCategoryException extends CategoryException
 ```
 
 As we can guess from the comment in the code, this exception is supposed to be thrown when editing a category fails.
-Let's see it's real usage in a command handler:
+Let's see a real usage in a command handler:
 
 ```php
 // src/Adapter/Category/CommandHandler/EditCategoryHandler.php
@@ -108,17 +108,15 @@ public function editAction($categoryId, Request $request)
 So now, if we are editing a category and it fails for some reason (e.g. the database is not responding),
 the controller will catch the `CannotEditCategoryException` (which is a child of `CategoryException`) and display a specific error message to the user.
 
-## Why are there so many new exception classes.
-
-**Don't be!** 
+## Why are there so many new exception classes ?
 
 Having many different exception classes means that developers can easily recognize specific failures in the system.
 Just as we recognized category editing failure in our example, we can catch any particular exception and it will tell us what exactly failed in the runtime.
 
 For example, catching a `CategoryNotFoundException` lets us know when category is not found,
-or catching `CannotAddCategoryException` means that a category cannot be added and we can react to that.
+or catching `CannotAddCategoryException` means that a category cannot be added. These exceptions carry an accurate information that makes it easier to debug the issue or to handle the usecase gracefully by displaying the right error message for example.
 
-Let's expand our previous example to see a better overview with different exception types:
+If we expand our previous example with a better overview with different exception types:
 
 ```php
 public function editAction($categoryId, Request $request)
@@ -126,10 +124,10 @@ public function editAction($categoryId, Request $request)
     try {
         $editableCategory = $this->getQueryBus()->handle(new GetCategoryForEditing((int) $categoryId));
     } catch (CannotEditCategoryException $e) {
-        // Here we handle the case when category cannot be edited and flash a specific error message.
+        // Here we handle the case when category cannot be edited, like display a specific error message and suggestions to fix it.
         $this->addFlash('error', 'Something went wrong when editing category.');
     } catch (CategoryNotFoundException $e) {
-        // Here we can do specific actions if the user is trying to edit a category that cannot be found.
+        // Here we can do specific actions if the user is trying to edit a category that cannot be found, like redirect to category listing.
         $this->addFlash('error', 'Category cannot be found!');
     }
 
