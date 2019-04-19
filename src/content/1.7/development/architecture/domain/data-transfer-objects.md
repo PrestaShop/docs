@@ -37,7 +37,7 @@ interface GetCustomerForEditingHandlerInterface
 }
 ```
 
-Now image you are using implementation of `GetCustomerForEditingHandlerInterface` handler in your code.
+Now imagine you are using implementation of `GetCustomerForEditingHandlerInterface` handler in your code.
 
 ```php
 use use PrestaShop\PrestaShop\Core\Domain\Customer\QueryResult\EditableCustomer;
