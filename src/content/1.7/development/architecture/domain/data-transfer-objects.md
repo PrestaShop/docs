@@ -13,6 +13,12 @@ Data Transfer Object is object (e.g. `UserData`) that contains data in a structu
 
 For example, if DTO has method `getName()` you can be sure that name is there, unlike using arrays, when you never know if key `name` exists inside an array or not. By making effective use of DTOs you are also making your code more readable and maintainable.
 
+Benefits of using DTOs:
+
+* Enables typehints.
+* DTOs are valid because built (you cannot "skip" one of the keys).
+* Helps isolate different parts of system.
+
 ## Examples of Data Transfer Objects in PrestaShop
 
 PrestaShop extensively uses DTOs in it's `QueryHandlers` (you can learn more about it in [CQRS section]({{< ref "1.7/development/architecture/cqrs.md" >}})). As an example, you can take a look at `GetCustomerForEditingHandlerInterface` below.
