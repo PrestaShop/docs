@@ -20,6 +20,11 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 ## Full list
 
 {{% funcdef %}}
+
+<div id="hookFilter" class="quickfilter">
+<input type="text" placeholder="Type to filter"> <button>Filter list</button>
+</div>
+<script src="/js/hookFilter.js"></script>
     
 action&lt;AdminControllerName>&lt;Action>After
 : 
