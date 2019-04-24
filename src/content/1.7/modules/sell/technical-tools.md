@@ -34,10 +34,12 @@ Have you thought about saving time with our [Module Generator](https://validator
 
 ### 1. A development environment
 
-Create and test your module in a local development environment, with the help of WampServer (Windows) for example. This will allow you to display errors, warnings and other PHP alerts without having to depend on your online server.
-To make this easier, PrestaShop features a Dev Mode, which allows you to configure your use of PHP to display error messages. 2 methods to activate Dev Mode: 
-- In the backoffice, "Advanced Parameters" > "Performances". Here, activate the Debug mode.
-- in the directory config/ of your PrestaShop installation, open the file defines.inc.php. The Dev Mode is activated at the very start of the file: you must modify the following line to change the defined value to true (it's set to false by default):
+You can create and test your module on the environnement you like. Could be Windows using WampServer, Linux on local, docker, etc... .
+The important thing to remember is to **always** activate the display of error messages.
+
+To make this easier, PrestaShop features a Dev Mode, which allows you to configure your use of PHP to display error messages. There are 2 methods to activate Dev Mode:  
+- In the backoffice, "Advanced Parameters" > "Performances". Here, activate the Debug mode. <br />
+- In the directory config/ of your PrestaShop, open the file defines.inc.php. The Dev Mode is to be activated at the very start of the file: you must modify the following line to change the defined value to true (it's set to false by default):
 
 ```php
 define('_PS_MODE_DEV_', true);
@@ -107,7 +109,7 @@ Don't forget to indicate which versions of PrestaShop your module is compatible 
 ### Your file and the permanent name of your module
 
 The zip archive submitted to our team must contain all the necessary files for your module, and have the same name as your module: if the main file of your module is called "module_name.php", then it should be in the folder "module_name", and the zip file must have the same name - without a version number.
-https://build.prestashop.com/news/module-development-changes-in-17/
+
 Make sure that the name used for your file and zip is the same that you have given to your product page (so that the online seller can quickly identify your module in the back office of their store). So think carefully about the name you choose for your product (without using either "PrestaShop" or "module"). Feel free to personalize the name, for example with the name of your company or your initials
 
 ## What happens next?

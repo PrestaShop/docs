@@ -1,5 +1,5 @@
 ---
-title: Tech validation - Key steps
+title: Technical validation - Key steps
 ---
 
 # Technical Validation : Key steps
@@ -7,7 +7,7 @@ title: Tech validation - Key steps
 Have you ever wondered how the PrestaShop Addons Team treats the validation ?
 
 We are going to show you how to win time so you can pretty much "validate" your own module before submitting it on the Marketplace Addons.
-First you might want to read the [Validation Tools]({{<ref "1.7/modules/sell/technical-tools" >}}) and the [Good Practices]({{<ref "1.7/modules/creation/good-practices" >}}). 
+First you might want to read the [Technical Tools]({{<ref "1.7/modules/sell/technical-tools" >}}) and the [Good Practices]({{<ref "1.7/modules/creation/good-practices" >}}). 
 
 ### 1. The Basics
 
@@ -16,107 +16,55 @@ We do not handle them with the same standards:
 
 - We are very strict and meticulous when it comes to New modules.
 - For major updates, we have the exact same verifications than the New modules.
-- For minor updates, we verify the validator and we also have a big Diff Tool to only see the modifications.
+- For minor updates, we verify the validator and we also have a Diff Tool to only see the modifications.
 
 Let's now give you more details about how we handle shit.
 
 ### 2. Treatment of New and Major updates
 
-What's a "New" Module ? Simple: The first time you ever submit a module to the marketplace.
+What's a "New" Module ? 
+Actually, it's a Zip. Your module is the product and since you can submit several zips per Product, let's use the right words.
+
+Simple: The very first time you submit a zip for your module to the marketplace. It's a "New" zip.
 Please, don't even try to submit your module if you didn't ever use the [Validator](https://validator.prestashop.com/).
 That tool is very powerful and useful and it will make everbody win a lot of time.
 
 After fixing every feedback from the Validator, here's a list of extra points we verify: 
--- TO CONTINUE --
 
+* The presence of DROP/ALTER of PrestaShop tables.
+    * It's highly forbidden to apply any changes on PrestaShop Core tables. It's very very dangerous and we don't allow any risk.
 
+* Except for [Payment Modules](https://github.com/PrestaShop/paymentexample/blob/master/paymentexample.php#L150), the use of iframes is STRICTLY FORBIDDEN.
 
+* Every hook. If any on them is empty, we decline the zip.
+    * There a other things we decline like loading a JS file in the whole backoffice when it's not necessary. Make sure to only load what you need, when you need it.
 
+* Missing index.php files in your directories ? We decline.
+    * Note that we have [a tool](https://github.com/jmcollin/autoindex) to help you fix that easily.
 
+* Modules have to have a certain structure when it comes to files. 
+    * For example JS and CSS files must be inside views/. The Validator gives us all that. Make sure to respect that as much as possible !
 
+* We verify every SQL request to make sure you did cast your variables. Use (int) or pSQL() accordingly. 
 
+* If you have php files to handle ajax or external calls, make sure to secure that file.
+    * In order to do that, we invite you to create a unique token during the module's install and use it during the call verification.
 
+* The use of serialize() is forbidden.
+    * But you can use base64_encode. However we only allow it when it comes to communicate with an external service. 
 
-## 3 steps to passing the technical validation
+* Do not load any external content.
+    * Either javascript, css, image, zip, whatever, it's not allowed. We even saw some modules downloading another module. The zip you send on PrestaShop Addons must be totally self-sufficient. 
 
-### 1. A development environment
+**Attention** :
+We do have extra rules for Payment Modules which require tons of security.
+Note that there are some modules which create the Order with a pending order status before the payment processing (1). While other wait for the payment system's approval to create it (2).
 
-Create and test your module in a local development environment, with the help of WampServer (Windows) for example. This will allow you to display errors, warnings and other PHP alerts without having to depend on your online server.
-To make this easier, PrestaShop features a Dev Mode, which allows you to configure your use of PHP to display error messages. To activate Dev Mode: in the directory/config of your PrestaShop installation, open the file defines.inc.php. The Dev Mode is activated at the very start of the file: you must modify the following line to change the defined value to true (it's set to false by default):
+* Make sure you double check the id_cart before creating the order.
+    * The purpose is to make sure another customer cannot validate a cart which isn't his.
 
-```php
-define('_PS_MODE_DEV_', true);
-```
+* if (2), make sure the amount you use to validateOrder() comes from the external payment system. Do not use Cart->getOrderTotal();
+    * For security reasons, always proceed as explained.
 
-**Important:** stores which are up and running must not be used in Dev Mode!
+* For (2), when receiving a call to process the payment, make sure you double check the source of the call using a signature or a token. Those values must not be known of all. 
 
-### 2. Follow our good practices
-
-Read our article: [Good practices for developing modules]({{<ref "1.7/modules/creation/good-practices" >}}).
-
-### 3. Use the Validator to optimize your module
-
-The Validator explains exactly what you need to modify for your module to be compliant with our technical requirements (technical errors, forbidden features or structural problems, etc.).
-By following the Validator's recommendations, your module will be on sale sooner!
-
-{{% notice tip %}}
-Are the recommendations provided preventing your module from working properly?  
-Contact us, we will be happy to help you develop your module!
-{{% /notice %}}
-
-If you encounter any problems, you can contact the technical team when submitting your module. Take advantage of their experience to perfect your module!
-
-## Update your modules and create themes for PrestaShop 1.7
-
-All well-written 1.6 modules should work with little to no changes in version 1.7, **except those which target:**
-
-- **The theme/front office** – because we rewrote the way themes are written.
-- **Payment modules** – should be especially taken care of, since the payment API has seen a slight update.
-- **The BO Product page** – because the DOM of this page has changed.
-- **The BO Modules page** – again, because the DOM of this page has changed.
-
-What this means for any shop upgrade is that in order for a PS 1.6 to migrate to PS 1.7, you will have to:
-
-- Rewrite the theme. You can use the Starter Theme or the default theme as a foundation.
-- Adapt the Product page modules (CSS and JavaScript).
-- Adapt the Modules page modules (CSS and JavaScript).
-
-**Everything you should know is gathered in the following pages:**
-
-- Details on every changes concerning modules on [this article of the Build devblog](http://build.prestashop.com/news/module-development-changes-in-17/);
-- The [Theme Developer documentation]({{< ref "1.7/themes" >}}) is being written in the open. Don't hesitate to contribute or ask questions!
-- Payment modules:
-  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](http://developers.prestashop.com/module/50-PaymentModules/index.html)!
-
-And of course [our 1.7 Project FAQ](http://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
-
-## How to submit a product to the Addons marketplace
-
-After creating the perfect product page using the Contributor Kit, submit your module for technical validation.
-
-### Information
-
-At this stage, you can find the module_key for your module. This is to be entered into the constructor in this format:
-
-```php
-public function __construct() {
-  // etc.
-  $this->module_key = 'c1614c239af92968e5fae97f366e9961';
-}
-```
-
-This will signal to the seller when an update of your module is available in the back-office.
-You should describe the modifications made one by one when an update is made.
-Don't forget to indicate which versions of PrestaShop your module is compatible with!
-
-### Your file and the permanent name of your module
-
-The zip archive submitted to our team must contain all the necessary files for your module, and have the same name as your module: if the main file of your module is called "module_name.php", then it should be in the folder "module_name", and the zip file must have the same name - without a version number.
-
-Make sure that the name used for your file and zip is the same that you have given to your product page (so that the online seller can quickly identify your module in the back office of their store). So think carefully about the name you choose for your product (without using either "PrestaShop" or "module"). Feel free to personalize the name, for example with the name of your company or your initials
-
-## What happens next?
-
-Once your module has been verified by the technical team, you will receive an email from us informing you of its status (validated or refused).
-
-If refused, you will be told the points to improve. You can respond directly to the team via a link in the email informing you of the refusal in order to receive further information. Then it's up to you to follow these recommendations and resubmit your module to us!
