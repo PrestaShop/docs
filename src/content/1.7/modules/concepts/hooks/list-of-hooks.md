@@ -405,7 +405,6 @@ actionCustomerAccountAdd
     Parameters:
     ```php
     array(
-      '_POST' => (array) $_POST,
       'newCustomer' => (object) Customer object
     );
     ```
