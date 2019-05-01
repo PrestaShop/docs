@@ -55,6 +55,8 @@ prestashop-git | \n* Almost ! Starting web server now\n
 
 At this point, your PrestaShop installation is ready and the website is available at http://localhost:8001.
 
+The default credentials for the back-office are `demo@prestashop.com` / `prestashop_demo`.
+
 > You can now close the terminal if you want.
 
 ## Make your first contribution
