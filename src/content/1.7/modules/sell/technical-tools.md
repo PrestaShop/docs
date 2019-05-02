@@ -39,7 +39,7 @@ The important thing to remember is to **always** activate the display of error m
 
 To make this easier, PrestaShop features a Dev Mode, which allows you to configure your use of PHP to display error messages. There are 2 methods to activate Dev Mode:  
 - Go to the Advanced Parameters > Performances section of your back office and activate the debug mode. <br />
-- In the directory config/ of your PrestaShop, open the file defines.inc.php. The Dev Mode is to be activated at the very start of the file: you must modify the following line to change the defined value to true (it's set to false by default):
+- In the directory config/ of your PrestaShop, open the file defines.inc.php. The Dev Mode is to be activated at the very start of the file: you must modify the following line to change the defined value to true (it is set to false by default):
 
 ```php
 define('_PS_MODE_DEV_', true);
@@ -116,4 +116,4 @@ Make sure that the name used for your file and zip is the same that you have giv
 
 Once your module has been verified by the technical team, you will receive an email from us informing you of its status (validated or refused).
 
-If refused, you will be told the points to improve. You can respond directly to the team via a link in the email informing you of the refusal in order to receive further information. Then it's up to you to follow these recommendations and resubmit your module to us!
+If refused, you will be told the points to improve. You can respond directly to the team via a link in the email informing you of the refusal in order to receive further information. Then it is up to you to follow these recommendations and resubmit your module to us!

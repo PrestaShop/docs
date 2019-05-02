@@ -40,7 +40,7 @@ menuTitle: Good practices
   - use [helpers][adding-configuration-page] for your configuration pages
   - include [PrestUI](https://github.com/Scritik/prestui), a graphic library created by the community for your configuration pages.
 
-- We recommend to create your module's interface so it matches [PrestaShop's UI kit](http://build.prestashop.com/prestashop-ui-kit/).
+- We recommend you to make your module interface matches the [PrestaShop's UI kit](https://cdn.rawgit.com/PrestaShop/prestashop-ui-kit/master/index.html).
 
 - For modules compatible before the 1.7 PrestaShop version, the minimal compatibility has to be PHP 5.3. You will be then able to use, for example, namespaces.
 

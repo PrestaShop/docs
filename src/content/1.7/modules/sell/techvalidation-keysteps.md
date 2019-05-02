@@ -16,7 +16,7 @@ We do not handle them with the same standards:
 
 - We are very strict and meticulous when it comes to New modules.
 - For major updates, we have the exact same verifications that the New modules.
-- For minor updates, we verify the validator and we also have a Diff Tool to only see the modifications.
+- For minor updates, we rely on the validator and we also have a Diff Tool to only see the modifications.
 
 Let's now give you more details on how we handle them all.
 

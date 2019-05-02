@@ -20,7 +20,7 @@ In the past, we used to have only one commit by pull request. This was a bad hab
 
 ### Writing a good commit message
 
- {{% notice note %}}
+{{% notice note %}}
 In the past, we used to ask to prepend commit names with *FO, BO, CO...* <br>
 **This is no longer needed.**
 {{% /notice %}}
