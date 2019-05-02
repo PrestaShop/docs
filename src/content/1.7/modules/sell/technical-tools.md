@@ -3,7 +3,7 @@ title: Technical tools
 weight: 1
 ---
 
-# Technical Tools & Informations
+# Technical Tools & Information
 
 ##  Technical Tools: 3 tools to help you get off to a good start
 
@@ -12,33 +12,33 @@ weight: 1
 The Validator ( https://validator.prestashop.com ) is a tool created to check if your module is technically compatible with the PrestaShop standards. You can:
 
 - upload a zip.
-- or specify the URL of your [Github](https://help.github.com/articles/create-a-repo/) repository (has to be public).
+- or specify the URL of your [GitHub](https://help.github.com/articles/create-a-repo/) repository (that has to be public).
 
 The Validator then automatically creates a detailed report explaining what needs to be improved/changed in your module. By following this report, you can submit your module error-free!
 
- {{% notice info %}}
+{{% notice info %}}
 **Important!**  
-Since version 1.6.1.0, PrestaShop uses the PSR-2 norm. Even if we recommend to use this norm, it's not mandatory and it won’t be a reason to decline your module. Here are more details in [this blog article](https://build.prestashop.com/news/prestashop-moves-to-psr-2/).
+Since version 1.6.1.0, PrestaShop uses the PSR-2 norm. We recommend using this norm but note that it is not mandatory and that it won’t be a reason to decline your module. Here are more details in [this blog article](https://build.prestashop.com/news/prestashop-moves-to-psr-2/).
 {{% /notice %}}
 
 ### 2. Method search engine
 
-**A search engine is available within the Validator** to help you work out which methods are available for the various versions of PrestaShop. Make the most of this and use it to save time! It's not entierly up-to-date but we intend to work on it. You can find the [search engine here](https://validator.prestashop.com/guide/search).
+**A search engine is available within the Validator** to help you work out which methods are available for the various versions of PrestaShop. Make the most of this and use it to save time! It is not entirely up-to-date but we intend to work on it. You can find the search engine [here](https://validator.prestashop.com/guide/search).
 
 
 ### 3. The Module Generator
 
 Have you thought about saving time with our [Module Generator](https://validator.prestashop.com/generator) yet? All you have to do is choose your module type and follow the instructions. A skeleton module is then automatically generated to facilitate the creation of your module.
 
-## Informations: 3 steps to passing the technical validation
+## Information: 3 steps to pass technical validation
 
 ### 1. A development environment
 
-You can create and test your module on the environnement you like. Could be Windows using WampServer, Linux on local, docker, etc... .
+You can create and test your module on whatever environment you like. Could be Windows using WampServer, Linux on local, docker, etc.
 The important thing to remember is to **always** activate the display of error messages.
 
 To make this easier, PrestaShop features a Dev Mode, which allows you to configure your use of PHP to display error messages. There are 2 methods to activate Dev Mode:  
-- In the backoffice, "Advanced Parameters" > "Performances". Here, activate the Debug mode. <br />
+- Go to the Advanced Parameters > Performances section of your back office and activate the debug mode. <br />
 - In the directory config/ of your PrestaShop, open the file defines.inc.php. The Dev Mode is to be activated at the very start of the file: you must modify the following line to change the defined value to true (it's set to false by default):
 
 ```php
