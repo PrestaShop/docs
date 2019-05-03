@@ -2135,4 +2135,152 @@ action<KpiIdentifier>KpiRowModifier
     ),
     ```
 
+action&lt;HookName>Form
+:
+<!--     todo: options form available since ?-->
+    Located in: /src/Core/Form/FormHandler.php
+
+    Parameters:
+    ```php
+    [
+        'form_builder' => (FormBuilderInterface) $this->formBuilder,
+    ]
+    ```
+
+action&lt;HookName>Save
+: 
+    Located in: /src/Core/Form/FormHandler.php
+
+    Parameters:
+    ```php
+    [
+        'errors' => (array) &$errors,
+        'form_data' => (array) &$data,
+    ]
+    ```
+    
+action&lt;GridDefinitionId>GridDefinitionModifier
+: 
+    Available since: {{< minver v="1.7.5" >}}
+    Located in: /src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php
+
+    Parameters:
+    ```php
+    [
+        'definition' => (GridDefinition) $definition,
+    ]
+    ```
+    
+action&lt;GridDefinitionId>GridQueryBuilderModifier
+: 
+    Available since: {{< minver v="1.7.5" >}}
+    Located in: /src/Core/Grid/Data/Factory/DoctrineGridDataFactory.php
+
+    Parameters:
+    ```php
+    [
+        'search_query_builder' => (QueryBuilder) $searchQueryBuilder,
+        'count_query_builder' => (QueryBuilder) $countQueryBuilder,
+        'search_criteria' => (SearchCriteriaInterface) $searchCriteria,
+    ]
+    ```
+    
+action&lt;GridDefinitionId>GridDataModifier
+: 
+    Available since: {{< minver v="1.7.5" >}}
+    Located in: /src/Core/Grid/GridFactory.php
+
+    Parameters:
+    ```php
+    [
+        'data' => (GridData) $data,
+    ]
+    ```
+    
+action&lt;GridDefinitionId>GridFilterFormModifier
+: 
+    Located in: /src/Core/Grid/Filter/GridFilterFormFactory.php
+
+    Parameters:
+    ```php
+    [
+        'filter_form_builder' => (FormBuilderInterface) $formBuilder,
+    ]
+    ```
+    
+action&lt;GridDefinitionId>GridPresenterModifier
+: 
+    Available since: {{< minver v="1.7.5" >}}
+    Located in: /src/Core/Grid/Presenter/GridPresenter.php
+
+    Parameters:
+    ```php
+    [
+        'presented_grid' => (array) &$presentedGrid,
+    ]
+    ```
+
+action&lt;FormName>FormBuilderModifier
+: 
+    Available since: {{< minver v="1.7.6" >}}
+    Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
+
+    Parameters:
+    ```php
+    [
+        'form_builder' => (FormBuilderInterface) $formBuilder,
+        'data' => (array) &$data,
+        'id' => (int|null) $id,
+    ]
+    ```
+
+actionBeforeUpdate&lt;FormName>FormHandler
+: 
+    Available since: {{< minver v="1.7.6" >}}
+    Located in: /src/Core/Form/IdentifiableObject/Handler/FormHandler.php
+
+    Parameters:
+    ```php
+    [
+        'form_data' => &$data,
+        'id' => (int) $id,
+    ]
+    ```
+    
+actionAfterUpdate&lt;FormName>FormHandler
+: 
+    Available since: {{< minver v="1.7.6" >}}
+    Located in: /src/Core/Form/IdentifiableObject/Handler/FormHandler.php
+
+    Parameters:
+    ```php
+    [
+        'id' => (int) $id,
+    ]
+    ```
+    
+actionBeforeCreate&lt;FormName>FormHandler
+: 
+    Available since: {{< minver v="1.7.6" >}}
+    Located in: /src/Core/Form/IdentifiableObject/Handler/FormHandler.php
+
+    Parameters:
+    ```php
+    [
+        'form_data' => &$data,
+    ]
+    ```
+
+actionAfterCreate&lt;FormName>FormHandler
+: 
+    Available since: {{< minver v="1.7.6" >}}
+    Located in: /src/Core/Form/IdentifiableObject/Handler/FormHandler.php
+
+    Parameters:
+    ```php
+    [
+        'id' => $id,
+    ]
+    ```
+
 {{% /funcdef %}}
