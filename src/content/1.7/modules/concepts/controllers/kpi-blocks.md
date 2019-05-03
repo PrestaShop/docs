@@ -57,3 +57,24 @@ You can follow these steps to easily add a KPI row to a modern page:
         </div>
     {% endblock %}
     ```
+
+## Alter an existing Kpi row
+{{< minver v="1.7.6" title="true" >}}
+
+A hook allows you to alter the list of an existing Kpi row of the Back Office.
+
+This hook is dynamic and is dispatched after the *Kpi row identifier*.
+
+For instance, with a Kpi row identified by "foo":
+
+```php
+// we are in a module
+public function hookActionFooKpiRowModifier(array $params)
+{
+    var_dump($params['kpis']); // access the complete list
+
+    unset($params['kpis'][0]); // remove the first item
+
+    $params['kpis'][] = new YourOwnKpi(...);
+}
+```
