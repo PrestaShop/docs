@@ -146,7 +146,7 @@ Every page of every theme loads the following files:
 <tr class="even">
 <td align="left">theme.css</td>
 <td align="left">theme-main</td>
-<td align="left">0</td>
+<td align="left">50</td>
 <td align="left">Most (all?) of your theme's styles. Should be minified.</td>
 </tr>
 <tr class="odd">
