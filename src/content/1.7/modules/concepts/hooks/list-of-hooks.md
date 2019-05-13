@@ -2134,9 +2134,22 @@ action<KpiIdentifier>KpiRowModifier
         'kpis' => KpiInterface[] $kpis
     ),
     ```
-    
+            
+action&lt;HookName>Form
+: 
+    Available since: {{< minver v="1.7.4" >}}
+    Located in: /src/Core/Form/FormHandler.php
+
+    Parameters:
+    ```php
+    [
+        'form_builder' => (FormBuilderInterface) $this->formBuilder,
+    ]
+    ```  
+
 action&lt;HookName>Save
 : 
+    Available since: {{< minver v="1.7.4" >}}
     Located in: /src/Core/Form/FormHandler.php
 
     Parameters:
@@ -2146,17 +2159,7 @@ action&lt;HookName>Save
         'form_data' => (array) &$data,
     ]
     ```
-    
-action&lt;HookName>Form
-: 
-    Located in: /src/Core/Form/FormHandler.php
 
-    Parameters:
-    ```php
-    [
-        'form_builder' => (FormBuilderInterface) $this->formBuilder,
-    ]
-    ```   
     
 action&lt;GridDefinitionId>GridDefinitionModifier
 : 
