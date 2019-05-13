@@ -2138,6 +2138,9 @@ action<KpiIdentifier>KpiRowModifier
 action&lt;HookName>Form
 : 
     Available since: {{< minver v="1.7.4" >}}
+    
+    This hook allows to modify options form content
+    
     Located in: /src/Core/Form/FormHandler.php
 
     Parameters:
@@ -2150,6 +2153,9 @@ action&lt;HookName>Form
 action&lt;HookName>Save
 : 
     Available since: {{< minver v="1.7.4" >}}
+    
+    This hook allows to modify data of options form after it was saved
+    
     Located in: /src/Core/Form/FormHandler.php
 
     Parameters:
