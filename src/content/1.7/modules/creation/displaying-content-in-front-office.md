@@ -383,41 +383,42 @@ simple names, such as `{products}`, and to prefix it with your module's
 name, or even your own name or initials, such as:
 `{$henryb_mymodule_products}`.
 
-Here is a list of Smarty variables that are common to all pages:
+Here is a list of Smarty variables that are common to all template pages:
 
 
 | File / folder       | Description                                                   |
 | ------------------- | ------------------------------------------------------------- |
-| img\_ps\_dir        | URL for PrestaShop's image folder.                            |
-| img\_cat\_dir       | URL for the categories images folder.                         |
-| img\_lang\_dir      | URL for the languages images folder.                          |
-| img\_prod\_dir      | URL for the products images folder.                           |
-| img\_manu\_dir      | URL for the manufacturers images folder.                      |
-| img\_sup\_dir       | URL for the suppliers images folder.                          |
-| img\_ship\_dir      | URL for the carriers (shipping) images folder.                |
-| img\_dir            | URL for the theme's images folder.                            |
-| css\_dir            | URL for the theme's CSS folder.                               |
-| js\_dir             | URL for the theme's JavaScript folder.                        |
-| tpl\_dir            | URL for the current theme's folder.                           |
-| modules\_dir        | URL the modules folder.                                       |
-| mail\_dir           | URL for the mail templates folder.                            |
-| pic\_dir            | URL for the pictures upload folder.                           |
-| lang\_iso           | ISO code for the current language.                            |
-| come\_from          | URL for the visitor's origin.                                 |
-| shop\_name          | Shop name.                                                    |
-| cart\_qties         | Number of products in the cart.                               |
-| cart                | The cart.                                                     |
-| currencies          | The various available currencies.                             |
-| id\_currency\_cooki | ID of the current currency.                                   |
-| currency            | Currency object (currently used currency).                    |
-| cookie              | User cookie.                                                  |
-| languages           | The various available languages.                              |
-| logged              | Indicates whether the visitor is logged to a customer account.|
-| page\_name          | Page name.                                                    |
-| customerName        | Client name (if logged in).                                   |
-| priceDisplay        | Price display method (with or without taxes...).              |
-| roundMode           | Rounding method in use.                                       |
-| use\_taxes          | Indicates whether taxes are enabled or not.                   |
+| $urls.img\_ps\_url        | URL for PrestaShop's image folder.                            |
+| $urls.img\_cat\_url       | URL for the categories images folder.                         |
+| $urls.img\_lang\_url      | URL for the languages images folder.                          |
+| $urls.img\_prod\_url      | URL for the products images folder.                           |
+| $urls.img\_manu\_url      | URL for the manufacturers images folder.                      |
+| $urls.img\_sup\_url       | URL for the suppliers images folder.                          |
+| $urls.img\_ship\_url      | URL for the carriers (shipping) images folder.                |
+| $urls.img\_url            | URL for the theme's images folder.                            |
+| $urls.css\_url            | URL for the theme's CSS folder.                               |
+| $urls.js\_url             | URL for the theme's JavaScript folder.                        |
+| $module\_template\_dir    | URL for the current theme's folder.                           |
+| $module\_dir        | URL the modules folder.                                       |
+| mail\_dir ***(deprecated)***            | URL for the mail templates folder.                            |
+| $urls.pic\_url            | URL for the pictures upload folder.                           |
+| $language.iso_code        | ISO code for the current language.                            |
+| come\_from ***(deprecated)***           | URL for the visitor's origin.                                 |
+| $shop.name          | Shop name.                                                    |
+| cart\_qties ***(deprecated)***          | Number of products in the cart.                               |
+| $cart               | The cart.                                                     |
+| currencies ***(deprecated)***           | The various available currencies.                             |
+| id\_currency\_cookie ***(deprecated)*** | ID of the current currency.                                   |
+| $currency           | Currency object (currently used currency).                    |
+| cookie ***(deprecated)***               | User cookie.                                                  |
+| $language           | The various available languages.                              |
+| $customer.is_logged       | Indicates whether the visitor is logged to a customer account.|
+| $page.page_name           | Page name.                                                    |
+| $customer.firstname       | Client firstname (if logged in).                              |
+| $customer.lastname        | Client lastname (if logged in).                              |
+| priceDisplay ***(deprecated)***        | Price display method (with or without taxes...).              |
+| roundMode ***(deprecated)***           | Rounding method in use.                                       |
+| use\_taxes ***(deprecated)***          | Indicates whether taxes are enabled or not.                   |
 
 There are many other contextual hooks. If you need to display all of the
 current page's Smarty variables, add the following call:
