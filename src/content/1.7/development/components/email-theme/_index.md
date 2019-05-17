@@ -93,7 +93,7 @@ The workflow to generate is a bit complex, it has been divided into multiple cla
 * **MailTemplateTwigRenderer** is the component which actually renders the layout, based on the Twig renderer, it also applies some `TransformationInterface` afterwards
 * **LayoutVariablesBuilder** is in charge of building the variables that will be used by the twig layouts
 
-{{< figure src="../img/email_generation_workflow.png" title="Email Generation Workflow (it is advised to open it in another tab as the image is quite big)" >}}
+{{< figure src="./img/email_generation_workflow.png" title="Email Generation Workflow (it is advised to open it in another tab as the image is quite big)" >}}
 
 > You can update this schema using the [source XML file](/schemas/1.7/email_generation_workflow.xml) importable in services like [draw.io](https://draw.io).
 
@@ -106,8 +106,78 @@ As you can see in the workflow a few hooks are available in the email generation
 * **actionBuildMailLayoutVariables** allows you to modify the variables of a specific layout
 * **actionGetMailLayoutTransformations** allows you to modify the transformations applied to a specific layout
 
+## Translation
+
+One of the main advantages of the email generation is the possibility to use translations in the layouts, here is an example:
+
+```twig
+  <table width="100%">
+    <tr>
+      <td align="center" class="titleblock">
+        <font size="2" face="Open-sans, sans-serif" color="#555454">
+          <span class="title">{{ 'This is a translated string'|trans({}, 'EmailsBody', locale)|raw }}</span>
+        </font>
+      </td>
+    </tr>
+  </table>
+```
+
+## Automatic generation
+
+So now that you know how the generation process works, you might wonder **when** exactly does it happen? There are a few cases when generation is **automatic**:
+
+* In `Language` class and more particularly during the calls to `Language::downloadAndInstallLanguagePack`, `Language::installLanguagePack` and of course `Language::installEmailsLanguagePack` which is now **deprecated**
+* In `PrestaShopBundle\Install\Upgrade::run` when languages are updated
+
+## Manual generation
+
+Of course sometimes you still want to manually generate your emails (new theme installed, changes in some layouts, ...), then you can use:
+
+* In the Symfony command `prestashop:mail:generate` if you want to launch a CLI generation
+* In the "Design > Email Theme" page when you use the form to launch the generation manually (once per language)
+
+## Choosing my default theme
+
+Your shop can only use one theme at a time, so if you go to the "Design > Email Theme" page you will be able to choose your default email theme.
+This default theme will be used each time the generation process is launched automatically (language installation, upgrade, ...).
+
+The default theme starting from `1.7.6` will be the **modern** theme, the *classic* theme was provided for backward compatibility and as an example.
+
+{{% notice note %}}
+**I changed my default theme but my emails didn't change.**
+Indeed when you select your default theme you simply update your configuration, so any **future** generation will use the theme you selected.
+
+However no generation process is launched when you select a theme, so if you want to generate your emails with your newly selected theme you need to do it manually thanks to the "Generate emails" form.
+/!\ The form only generates **one** language so you will have to repeat the action for each Language installed on your shop.
+{{% /notice %}}
+
+{{% notice note %}}
+**I tried to generate emails of a new theme but my templates are still in the former one.**
+
+Two possibilities for this issue:
+
+* As you may have noticed the `GenerateThemeMailTemplatesCommand` and the "Generate emails" form have an **overwrite** option. We need this option because some shops
+may have installed email themes, or customized their templates manually. For that reason by default the generation process **does not** export a template when it **already exists**.
+If you want to erase the former templates you need to enable the `overwrite` option, be careful this will replace **all** existing templates you can't choose which ones.
+
+![Overwrite templates option](./img/overwrite_templates.png)
+
+* As you may know email templates can be integrated in your PrestaShop theme (and I mean here the **shop theme** not the email theme). In which case they are no longer contained in
+the default `mails` folder but instead in `themes/{my_theme}/mails/...` folders, and they override the default ones. So even if you generate your new theme (both automatically and manually)
+the templates contained in the theme will have the priority. So you need to generate your theme manually and to select the shop theme you want to overwrite, then the templates will be
+generated in its folder and will be used from now (don't forget to enable the `overwrite` option if you want to replace them).
+
+![Select the theme you want to overwrite](./img/select_shop_theme.png)
+{{% /notice %}}
+
 ## Learn more
+
+### Reference
+
+* Here is an [example module](https://github.com/jolelievre/example_module_mailtheme) showing how to integrate with the email generation workflow
 
 ### Tutorials
 
-* [How to add a layout from my module?](./tutorials/add-a-layout-from-module)
+* [How to add a layout in a theme from my module?](./tutorials/add-a-layout-from-module)
+* [How to add layout variables from my module?](./tutorials/add-layout-variables-from-module)
+* [How to add a transformation from my module?](./tutorials/add-transformation-from-module)
