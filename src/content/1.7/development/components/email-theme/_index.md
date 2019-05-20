@@ -106,6 +106,32 @@ As you can see in the workflow a few hooks are available in the email generation
 * **actionBuildMailLayoutVariables** allows you to modify the variables of a specific layout
 * **actionGetMailLayoutTransformations** allows you to modify the transformations applied to a specific layout
 
+### Template variables
+
+{{% notice warning %}}
+**Layout variables are NOT template variables**
+
+Always keep in mind that the variables used by the `LayoutVariablesBuilder` will be used during template generation, meaning they will only be used
+when static templates are exported and won't be able to change when you send your emails. Do not mix them up with template variables (like firstname,
+lastname, ...) which are replaced at the last moment when the email is sent by the `Mail::send` function.
+{{% /notice %}}
+
+Here is a quick resume of the differences:
+
+|               | Layout                    | Template                         |
+| ------------- |:------------------------- |:-------------------------------- |
+| Renderer      | Twig                      | Swift_Plugins_DecoratorPlugin    |
+| Syntax        | `{{ variable }}`          | `{ variable }`                   |
+| Interpreted   | On generation             | On sending                       |
+| Target        | All users/customers       | Specific user/action             |
+| Use cases     | Design, translations, ... | Customization (user, order, ...) |
+
+{{% notice note %}}
+On the same principle, you can add twig logic in your templates (like conditions on email types, or why not your own
+layout variables to deal with customization) but it will only be useful during email generation. So don't use any twig
+logic to adapt the templates for your user or an order.
+{{% /notice %}}
+
 ## Translation
 
 One of the main advantages of the email generation is the possibility to use translations in the layouts, here is an example:
