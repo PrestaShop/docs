@@ -60,7 +60,7 @@ Depending on your needs, your files are located in differents subfolders:
 * `/views/templates/hook`: For template files used by the module’s hooks.
 
 If you want to override a Twig template file from Back Office, declare your own following the same path in
-`/views/PrestaShop` subfolder. For instance, if you want to override `product.html.twig` template located in `Admin/Product/ProductPage`, create your own file in `/views/PrestaShop/Admin/ProductPage/product.html.twig`.
+`/views/PrestaShop` subfolder. For instance, if you want to override `product.html.twig` template located in `Admin/Product/ProductPage`, create your own file in `/views/PrestaShop/Admin/Product/ProductPage/product.html.twig`.
 
 Every asset you need to use in the module (css, js or image files) must be located in their folders: `/views/{js, css, img, fonts}`.
 
