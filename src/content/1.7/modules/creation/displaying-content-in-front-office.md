@@ -153,7 +153,7 @@ Here is our template file, located at
 ```html
 <!-- Block mymodule -->
 <div id="mymodule_block_home" class="block">
-  <h4>{l s='Welcome!' mod='Modules.MyModule'}</h4>
+  <h4>{l s='Welcome!' mod='mymodule'}</h4>
   <div class="block_content">
     <p>Hello,
            {if isset($my_module_name) && $my_module_name}
