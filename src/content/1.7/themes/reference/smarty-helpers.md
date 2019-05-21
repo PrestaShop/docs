@@ -30,6 +30,7 @@ Here is a few examples:
   {url entity=address id=$id_address}
   {url entity=address params=['id_address' => $id_address]}
   {url entity=address id=$id_address params=['delete' => 1]}
+  {url entity='sf' route='admin_module_manage'}
 ```
 
 ...will respectively output:
@@ -38,6 +39,7 @@ Here is a few examples:
   http://prestashop.ps/it/address?id_address=3
   http://prestashop.ps/it/address?id_address=3
   http://prestashop.ps/it/address?id_address=3&delete=1
+  http://prestashop.ps/it/admin/module/manage
 ```
 
 ## Widgets
