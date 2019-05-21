@@ -6,3 +6,5 @@ chapter: true
 ---
 
 # Getting started
+
+{{% children %}}
