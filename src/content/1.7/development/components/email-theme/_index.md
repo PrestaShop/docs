@@ -207,3 +207,6 @@ generated in its folder and will be used from now (don't forget to enable the `o
 * [How to add a layout in a theme from my module?](./tutorials/add-a-layout-from-module)
 * [How to add layout variables from my module?](./tutorials/add-layout-variables-from-module)
 * [How to add a transformation from my module?](./tutorials/add-transformation-from-module)
+* [How to extend a layout in a theme from my module?](./tutorials/extend-a-layout-from-module)
+* [How to add an email theme from my module?](./tutorials/add-a-theme-from-module)
+* [How to generate an email theme on module installation?](./tutorials/generate-theme-on-module-install)

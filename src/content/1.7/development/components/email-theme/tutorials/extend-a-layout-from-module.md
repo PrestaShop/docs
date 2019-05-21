@@ -75,7 +75,6 @@ class my_email_theme_module {
             return;
         }
 
-        //Add the module theme called example_module_theme
         /** @var ThemeCollectionInterface $themes */
         $themes = $hookParams['mailThemes'];
 
