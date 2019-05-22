@@ -164,3 +164,7 @@ Remember, this is only needed for the Pull Request form, not for your commit mes
 {{% /notice %}} 
 
 [how-to-compile-assets]: {{% ref "1.7/development/compile-assets.md" %}}
+
+## Read more
+
+{{% children %}}
