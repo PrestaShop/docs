@@ -15,10 +15,15 @@ Contributors wishing to edit a module's files should follow the following proces
 2. Fork the project to your GitHub account.
 3. Clone your fork to your local machine in the ```/modules``` directory of your PrestaShop installation.
 4. Create a branch in your local clone of the module for your changes.
-5. Change the files in your branch. Be sure to follow the [coding standards][1]!
+5. Change the files in your branch.
+
+  - Be sure to follow the [coding standards][1].
+  - Do not update the module's version number.
+
 6. Push your changed branch to your fork in your GitHub account.
-7. Create a pull request for your changes **on the _'dev'_ branch** of the module's project. Be sure to follow the [contribution guidelines][2] in your pull request. If you need help to make a pull request, read the [GitHub help page about creating pull requests][3].
-8. Wait for one of the core developers either to include your change in the codebase, or to comment on possible improvements you should make to your code.
+7. Create a pull request for your changes on the `dev` branch of the module's project. Make sure to describe your change as best as you can: a good description can help a lot on making your contribution accepted.  
+  If you need help to make a pull request, read the [GitHub help page about creating pull requests][3].
+8. Wait for one of the module maintainers either to include your change in the codebase, or to comment on possible improvements you should make to your code.
 
 ## License
 
