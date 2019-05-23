@@ -32,10 +32,13 @@ In a module called `foo` let's create the related template. As the template is l
 
 So Let's create a file named `catalog.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product/CatalogPage/catalog.html.twig` folder: we could re-use the one in the `src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage` folder, but let's start with a very simple override.
 
+Note that we use `PrestaShopBundle` instead of `@PrestaShop` to be sure we extend the original file.
+
 ```twig
-{% extends '@PrestaShop/Admin/layout.html.twig' %}
-{% block content %}
-    Hello world!
+{% extends 'PrestaShopBundle:Admin/Product/CatalogPage:catalog.html.twig' %}
+
+{% block product_catalog_filters %}
+  Hello world!
 {% endblock %}
 ```
 
