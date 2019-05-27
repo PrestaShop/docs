@@ -32,22 +32,25 @@ In a module called `foo` let's create the related template. As the template is l
 
 So Let's create a file named `catalog.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product/CatalogPage/catalog.html.twig` folder: we could re-use the one in the `src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage` folder, but let's start with a very simple override.
 
+Note that we use `PrestaShopBundle` instead of `@PrestaShop` to be sure we extend the original file.
+
 ```twig
-{% extends '@PrestaShop/Admin/layout.html.twig' %}
-{% block content %}
-    Hello world!
+{% extends 'PrestaShopBundle:Admin/Product/CatalogPage:catalog.html.twig' %}
+
+{% block product_catalog_filters %}
+  Hello world!
 {% endblock %}
 ```
 
 ![Override all the things](../img/bo-override-1.png)
 
-Access the product Listing page and "voila", we have overridden the complete page. Now we can re-use the real `catalog.html.twig` template as a base and adapt it to remove "Reference" column. For instance, remove "Reference" and "Search Ref." table headers, and we should have this view:
+Access the product Listing page and "voila", we have overridden the filter block. Now we can adapt it to remove "Reference" column. For instance, remove "Reference" and "Search Ref." table headers, and we should have this view:
 
 ![Almost there](../img/bo-override-2.png)
 
 Well, it's not that good... it's because the columns are also rendered by the template `list.html.twig`. We must override it to remove the "Reference" column.
 
-Let's create the file named `list.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product/CatalogPage` folder with the content of original template located in the `src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage` folder.
+Let's create the file named `list.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product/CatalogPage/Lists` folder with the content of original block `product_catalog_form_table_row` located in the `src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Lists` folder.
 
 We only have to remove the "Reference" row in this template and we are good.
 
