@@ -97,7 +97,7 @@ Then launch a standard prestashop install.
 
 ### Prepare your shop
 
-Make sure your not in debug mode! In ```config/defines.inc.php``` you should have:
+Make sure you're not in debug mode! In ```config/defines.inc.php``` you should have:
 ```text
 define('_PS_MODE_DEV_', false);
 ```
