@@ -33,7 +33,7 @@ public function hookActionAdministrationPageForm(&$hookParams)
     );
 }
 
-public function hookActionAdministrationPageFormSave(&$hookParams)
+public function hookActionAdministrationPageSave(&$hookParams)
 {
     // retrieve and validate the data
     dump($hookParams['form_data']['upload_quota']['description']);
