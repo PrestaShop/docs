@@ -70,7 +70,7 @@ The second and more appropriate way to access the API is to include your access 
 This is also the recommended way to call the API from a javascript client, or any application. Here is an example, assuming your access API key is `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`:
 
 * At the root of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/
-* In a subfolder of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestasshop/api/
+* In a subfolder of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestashop/api/
 
 {{% notice note %}}
 To test/call your APIs we recommend you use an API client such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, especially for write actions.
@@ -204,3 +204,36 @@ PrestaShop will take care of adding everything in the database, and will return 
 ### Update a resource
 
 To edit an existing resource: **GET** the full XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PUT HTTP request** with the whole XML file as a body content to the same URL again.
+
+### Using JSON instead of XML
+
+The Web services can also output JSON instead of XML. To enable JSON output you have two choices:
+
+##### Query parameter
+
+Add one of the following parameters to your query string:
+
+- `output_format=JSON`
+- `io_format=JSON`
+
+Example:
+
+```text
+https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/?output_format=JSON
+``` 
+
+##### HTTP header
+
+Add the one of the following headers to your HTTP request:
+
+- `Io-Format: JSON`
+- `Output-Format: JSON`
+
+Example:
+
+```http
+GET /api/ HTTP/1.1
+Host: example.com
+Output-Format: JSON
+Authorization: Basic UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX
+```
