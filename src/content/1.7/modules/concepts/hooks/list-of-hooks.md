@@ -1850,7 +1850,7 @@ This hook is displayed at the top of the payment page
 
 
 displayPersonalInformationTop
-:
+: 
     Available since: {{< minver v="1.7.6" >}}
 
     Display actions or additional content in the personal details tab of the checkout funnel.
