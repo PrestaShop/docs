@@ -61,7 +61,7 @@ You can add additional Bulk actions to any Grid using hook. You have to follow t
 
 ```php
 <?php
-// modules/my-module/my-module.php
+// modules/mymodule/mymodule.php
 
 class MyModule extends Module
 {
@@ -97,7 +97,7 @@ PrestaShop already comes with a bunch of Bulk actions that are available for use
 First, you need to create Bulk action itself:
 
 ```php
-// modules/my-module/src/Grid/Action/Bulk
+// modules/mymodule/src/Grid/Action/Bulk
 
 use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\AbstractBulkAction;
 
@@ -126,7 +126,7 @@ final class ExportBulkAction extends AbstractBulkAction
 Then you need to create template so it can render nicely in your grid.
 
 ```twig
-{# my-module/views/PrestaShop/Admin/Common/Grid/Actions/Bulk/export.html.twig #}
+{# mymodule/views/PrestaShop/Admin/Common/Grid/Actions/Bulk/export.html.twig #}
 
 {# This button should be used with SubmitBulkActionExtension grid extension in Javascript #}
 
