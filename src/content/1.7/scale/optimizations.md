@@ -4,13 +4,13 @@ alias:
 - 1.7/optimizations/
 ---
 
-# Optimize your PrestaShop performances
+# Optimize your PrestaShop performance
 
 Before making any change on your PrestaShop instance, it is highly recommended to perform some benchmarks.
 
-The idea behind this is to _know_ where you're coming from and make sure that your changes increase your performances, not the other way around.
+The idea behind this is to _know_ what your baseline performance is, so that you can make sure that your changes are increasing your shop's performance and not the other way around.
 
-And if you've done no benchmark there is no way to ensure you did not decrease your performances in the end.
+If you've done no benchmark beforehand, there is no way to ensure you did not decrease your performances in the end.
 
 {{% notice tip %}}
 Keep in mind that the surest way to tune your shop is:
@@ -22,7 +22,7 @@ Keep in mind that the surest way to tune your shop is:
 
 ## Finding your bottleneck(s)
 
-Performance tuning can be a tricky thing, there are plenty of reason an application can be slowed down.
+Performance tuning can be a tricky thing, there are plenty of factors that can slow down an application.
 
 It can come from your disks, lack of memory, network capacity, CPU: wherever you can think of.
 
@@ -32,7 +32,7 @@ There's no way to enumerate all the performance issues we've encountered, but le
 
 ### 1) PHP
 
-First, try to use PHP >=7 when possible. Hard work has been done on performance and it will provide a nice boost to your shop!
+First, try to use PHP >=7 when possible. Hard work has been done on performance starting on this version and it will provide a nice speed boost to your shop!
 
 If you're using PHP-FPM (which should be the case for most "modern" installations), you have to check the `pool`
 configuration.
@@ -41,7 +41,7 @@ Inside this file, the most important setting is the ```pm.max_children``` settin
 of concurrent users you want to simulate during the bench.
 
 {{% notice note %}}
-Note this configuration of PHP should be used on Production environments only.
+Note this PHP configuration should be used on Production environments only.
 {{% /notice %}}
 
 Use the following settings to optimize the performances:
@@ -71,13 +71,13 @@ allow_url_fopen = on
 
 It is well known that PHP does not manage file systems very well.
 
-That's why there are plenty of useful tuning options to avoid constent file system's accesses.
+That's why there are plenty of useful tuning options to avoid accessing the file system constantly.
 
 #### realpath_cache
 
 At each file access, by default, PHP will first check that the file is still there, causing plenty of `lstat` system calls. Potentially thousands.
 
-To avoid this, PHP allows to cache the files in a cache, then avoiding those system calls:
+PHP provides an option to store this information in cache, so that it can avoid repeating those system calls constantly:
 
 ```
 [PHP]
@@ -87,13 +87,13 @@ realpath_cache_ttl = 600
 
 Keep in mind that this configuration is NOT compatible with other parameters, such as `open_basedir` and `safe_mode` directives.
 
-Finally, if you're using a NAS or any other network storage solution to store your files (in case of horizontal scaling, for example), it is more than recommeneded to enable this parameter.
+Finally, if you're using a NAS or any other network storage solution to store your files (in case of horizontal scaling, for example), it is **highly recommended** to enable this setting.
 
 #### opcache
 
-Because file system tuning is a never ending story, you can not only cache the files' path, but also its contents.
+Because file system tuning is a never ending story, not only you can cache the files' path, but also its contents.
 
-Good news is, OPCache will not only store your files in memory, but it will store their bytecode, meaning the application already compiled, in a shared memory, available to all applications calls:
+Good news is, OPCache will not only store your PHP files in memory, but it will store their bytecode, meaning the application already compiled, in a shared memory, available to all applications calls:
 
 ```
 [opcache]
@@ -105,7 +105,7 @@ opcache.max_accelerated_files=20000
 
 Also, your favorite ecommerce project made sure it's fully compatible with OPCache.
 
-Ain't it nice?
+Isn't it nice?
 
 ### 3) Composer (Autoloading optimizations)
 
@@ -180,11 +180,11 @@ A CDN (Content Delivery Network) is a kind of proxy that will cache your static 
 
 Hence, a CDN will reduce drastically the amount of hits made to your server.
 
-There are plenty of CDN providers,  <a href="https://www.cloudflare.com">Cloudflare</a> is a good and free one. You can use as well to minify your page or to easily enable SSL on your site.
+There are plenty of CDN providers, [Cloudflare](https://www.cloudflare.com) is a good and free one. You can use as well to minify your page or to easily enable SSL on your site.
 
-Just one slight consideration about CDNs though: any modification done to your shop, such as images, css and the like, may not be immediate once behind a CDN. Caching your assets, if you modify them on your server, you will need to wait for the cache expiration (often configurable) before seeing the modification live - or invalidate part or all your cache, most provider offer such features.
+Just one slight consideration about CDNs though: any modification done to your shop's static assets, such as images, css and the like, may not be immediate available once behind a CDN. When those files are cached, if you modify them on your server, you will need to wait for the cache expiration (often configurable) before seeing the modification live - or invalidate part or all your cache. Most providers offer such features.
 
-### 6) Optimize your prestashop
+### 6) Optimize your PrestaShop
 
 In the performances tab of your prestashop:
 
