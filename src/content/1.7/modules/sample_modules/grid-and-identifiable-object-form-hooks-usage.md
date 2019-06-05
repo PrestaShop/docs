@@ -13,10 +13,8 @@ which can be toggled. It can have two states - turned on or off. In customer cre
 form we will add switch which will also manage the same state. By following this tutorial you will learn
 how to:
 
-<!-- todo: add links to original doc source -->
-- extend modern grids. 
-- extend identifiable object form.
-- use best practices to read, write and update data.
+- extend modern grids. [Grid component]({{< relref "/1.7/development/components/grid/_index.md" >}}) 
+- extend identifiable object form. [identifiable object form]({{< relref "CRUD-forms.md" >}}) 
 
 The module created within this tutorial can be found [here](https://github.com/friends-of-prestashop/demo-cqrs-hooks-usage-module)
 
@@ -65,6 +63,10 @@ function `getBlockPrefix` to retrieve the unique id
 #### Extending grid definition and filters
 
 ```php
+use PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinitionInterface;
+use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ToggleColumn;
+use PrestaShopBundle\Form\Admin\Type\YesAndNoChoiceType;
+
 /**
      * Hook allows to modify Customers grid definition.
      * This hook is a right place to add/remove columns or actions (bulk, grid).
@@ -108,7 +110,7 @@ As in this sample module we are creating `ToggleColumn` we need to configure the
 
 {{% notice note %}}
 
- If you only want to display something then this step can be skipped. E.g you are creating `DataColumn`
+ If you only want to display data then this step can be skipped. E.g you are creating `DataColumn`
 
 {{% /notice %}}
 
@@ -169,6 +171,8 @@ By just extending grid definition we won't be able to display any data since we 
 
 
 ```php
+use Doctrine\DBAL\Query\QueryBuilder;
+use PrestaShop\PrestaShop\Core\Search\Filters\CustomerFilters;
 
 /**
      * Hook allows to modify Customers query builder and add custom sql statements.
