@@ -102,6 +102,67 @@ function `getBlockPrefix` to retrieve the unique id
 
 In this sample a new toggable column which determines if the customer is eligable to review products is added just after another column which has id `optin`. The sample code also demonstrates how add new filter.
 
+#### Creating route for toggle column
+
+As in this sample module we are creating `ToggleColumn` we need to configure the route in which the toggling action will be performed.
+
+{{% notice note %}}
+
+ If you only want to display something then this step can be skipped. E.g you are creating `DataColumn`
+
+{{% /notice %}}
+
+- Create controller `DemoCQRSHooksUsage\Controller\Admin\CustomerReviewController`:
+
+```php
+namespace DemoCQRSHooksUsage\Controller\Admin;
+
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
+
+class CustomerReviewController extends FrameworkBundleAdminController
+{
+}
+```
+
+- Create controller `action`:
+
+{{% notice note %}}
+**This example has been simplified for practical reasons.** 
+
+You can find full implementation [here](https://github.com/friends-of-prestashop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to toggle the reviewer state. [More about it here]({{< relref "cqrs.md" >}}).
+{{% /notice %}}
+
+```php
+namespace DemoCQRSHooksUsage\Controller\Admin;
+
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
+
+class CustomerReviewController extends FrameworkBundleAdminController
+{
+    public function toggleIsAllowedForReviewAction($customerId)
+    {
+        //  updating reviewer state can be handled here
+        return $this->redirectToRoute('admin_customers_index');
+    }
+}
+```
+
+- Create a route in `ps_democqrshooksusage/config/routes.yml` file:
+
+```yml
+
+ps_democqrshooksusage_toggle_is_allowed_for_review:
+  path: demo-cqrs-hook-usage/{customerId}/toggle-is-allowed-for-review
+  methods: [POST]
+  defaults:
+    _controller: 'DemoCQRSHooksUsage\Controller\Admin\CustomerReviewController::toggleIsAllowedForReviewAction'
+  requirements:
+    customerId: \d+
+```
+
+Route name `ps_democqrshooksusage_toggle_is_allowed_for_review` matches the one that was passed as mandatory option when creating the
+`ToggleColumn`. 
+
 #### Extending grid query builder
 
 By just extending grid definition we won't be able to display any data since we need to fetch it first. Luckily, we can extend grid query builder
@@ -159,3 +220,4 @@ for filters to work `where` conditions are added if the filter exists in `$searc
 After completing the steps above by going to customers list you should see new column "allowed for review" added.
 
 {{< figure src="../img/extended_customers_grid.png" title="Allowed for review column added to customers list" >}}
+
