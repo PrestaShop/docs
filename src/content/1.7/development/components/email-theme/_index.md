@@ -101,7 +101,6 @@ The workflow to generate is a bit complex, it has been divided into multiple cla
 
 As you can see in the workflow a few hooks are available in the email generation for you include your own themes, layouts, variables, transformations, ...
 
-* **actionGetMailThemeFolder** allows you to override a mail theme folder (`mails/theme/{themeName}`)
 * **actionListMailThemes** allows you to modify the `ThemeCollection` (add, remove, modify a theme or its layouts)
 * **actionBuildMailLayoutVariables** allows you to modify the variables of a specific layout
 * **actionGetMailLayoutTransformations** allows you to modify the transformations applied to a specific layout
@@ -111,7 +110,7 @@ As you can see in the workflow a few hooks are available in the email generation
 {{% notice warning %}}
 **Layout variables are NOT template variables**
 
-Always keep in mind that the variables used by the `LayoutVariablesBuilder` will be used during template generation, meaning they will only be used
+Always keep in mind that the variables used by the `LayoutVariablesBuilder` will be used during template **generation**, meaning they will only be used
 when static templates are exported and won't be able to change when you send your emails. Do not mix them up with template variables (like firstname,
 lastname, ...) which are replaced at the last moment when the email is sent by the `Mail::send` function.
 {{% /notice %}}
