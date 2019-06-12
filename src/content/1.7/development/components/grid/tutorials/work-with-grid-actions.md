@@ -86,7 +86,7 @@ You can add additional actions to any Grid by hooking to the Grid workflow. You 
 
 ```php
 <?php
-// modules/my-module/my-module.php
+// modules/mymodule/mymodule.php
 
 class Mymodule extends Module
 {
