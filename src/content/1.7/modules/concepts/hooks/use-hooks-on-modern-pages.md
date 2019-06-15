@@ -142,6 +142,12 @@ services:
         arguments: ['@doctrine.dbal.default_connection', '%database_prefix%']
 ```
 
+Prestashop automatically checks if modules have a `config/services.yml` file and will autoload it for you. In order to force Prestashop to parse the file, you need to clear the cache:
+
+```
+./bin/console cache:clear --no-warmup
+```
+
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
 
 ```php
