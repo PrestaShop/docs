@@ -106,7 +106,7 @@ In this sample a new toggable column which determines if the customer is eligabl
 
 #### Creating route for toggle column
 
-As in this sample module we are creating `ToggleColumn` we need to configure the route in which the toggling action will be performed.
+As in this sample module we are creating `ToggleColumn` we need to configure the route in which the toggling action will be performed. Indeed when the end-user clicks on this column, an ajax request is performed and must reach one new controller to handle the action (here: toggle a value on and off).
 
 {{% notice note %}}
 
