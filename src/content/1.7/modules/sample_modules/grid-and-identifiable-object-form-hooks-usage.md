@@ -149,7 +149,7 @@ class CustomerReviewController extends FrameworkBundleAdminController
 }
 ```
 
-- Create a route in `ps_democqrshooksusage/config/routes.yml` file:
+- As this is a Symfony controller, we must configure the related routing, which means create a route in `ps_democqrshooksusage/config/routes.yml` file:
 
 ```yml
 
