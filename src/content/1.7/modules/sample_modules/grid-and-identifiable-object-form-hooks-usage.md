@@ -145,7 +145,7 @@ class CustomerReviewController extends FrameworkBundleAdminController
 }
 ```
 
-- As this is a Symfony controller, we must configure the related routing, which means create a route in `ps_democqrshooksusage/config/routes.yml` file:
+- As this is a Symfony controller, we must configure the related routing (read more about [symfony routing](https://symfony.com/doc/current/routing.html)), which means create a route in `ps_democqrshooksusage/config/routes.yml` file:
 
 ```yml
 
@@ -163,8 +163,8 @@ Route name `ps_democqrshooksusage_toggle_is_allowed_for_review` matches the one 
 
 #### Extending grid query builder
 
-By just extending grid definition we won't be able to display any data since we need to fetch it first. Luckily, we can extend grid query builder
-
+By just extending grid definition we won't be able to display any data since we need to fetch it first. Luckily, we can add additional sql
+conditions by extending [doctrine's query builder](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/query-builder.html).
 
 ```php
 use Doctrine\DBAL\Query\QueryBuilder;
@@ -221,3 +221,56 @@ After completing the steps above by going to customers list you should see new c
 
 {{< figure src="../img/extended_customers_grid.png" title="Allowed for review column added to customers list" >}}
 
+
+### Adding new form field to customer form create and edit form
+
+#### Modifying customers form builder
+
+In this step we are appending to the customers form new `SwitchType` form field - its one of many form types which already exist in PrestaShop. More information
+about it can be find [here]({{< relref "/1.7/development/components/form/types-reference/_index.md" >}}).
+
+{{% notice note %}}
+**This example has been simplified for practical reasons.** 
+
+You can find full implementation [here](https://github.com/friends-of-prestashop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to get reviewer state. [More about it here]({{< relref "cqrs.md" >}}).
+{{% /notice %}}
+
+```php
+// modules/ps_democqrshooksusage/ps_democqrshooksusage.php
+
+use Symfony\Component\Form\FormBuilderInterface;
+
+public function hookActionCustomerFormBuilderModifier(array $params)
+{
+    /** @var FormBuilderInterface $formBuilder */
+    $formBuilder = $params['form_builder'];
+    $formBuilder->add('is_allowed_for_review', SwitchType::class, [
+        'label' => $this->getTranslator()->trans('Allow reviews', [], 'Modules.Ps_DemoCQRSHooksUsage'),
+        'required' => false,
+    ]);
+    
+    $customerId = $params['id'];
+    
+    $params['data']['is_allowed_for_review'] = $this->getIsAllowedForReview($customerId);
+
+    $formBuilder->setData($params['data']);
+}
+    
+private function getIsAllowedForReview($customerId)
+{
+    // implement your data retrieval logic here
+    
+    return true;
+}
+```
+
+In this sample by using [Symfony form builder](https://symfony.com/doc/current/forms.html) we just added another Form type. To determine if its
+on or off we also need to reset its form data by assigning `is_allowed_for_review` value to `true` or `false`.
+
+#### Result
+
+By completing the steps above newly added switch is now visible in the customers form.
+
+{{< figure src="../img/allow_for_review_switch.png" title="Allowed for review switch added to customers form" >}}
+
+<!-- todo: after errors pr is finished , update module and finalise docs with create and update hooks -->
