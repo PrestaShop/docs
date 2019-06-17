@@ -106,13 +106,9 @@ In this sample a new toggable column which determines if the customer is eligabl
 
 #### Creating route for toggle column
 
-As in this sample module we are creating `ToggleColumn` we need to configure the route in which the toggling action will be performed. Indeed when the end-user clicks on this column, an ajax request is performed and must reach one new controller to handle the action (here: toggle a value on and off).
-
-{{% notice note %}}
-
- If you only want to display data then this step can be skipped. E.g you are creating `DataColumn`
-
-{{% /notice %}}
+`ToggleColumn` - used to display booleans, it will display an icon instead of the value. If user clicks on it, this triggers a toggle of the boolean value. More information about this column and all available parameters can be found [here]({{< relref "/1.7/development/components/grid/columns-reference/toggle.md" >}}).  
+As in this sample module we are creating `ToggleColumn` we need to configure the route in which the toggling action will be performed. Indeed when the end-user clicks on this column, an ajax request is performed and must reach one new controller to handle the action (here: toggle a value on and off).  
+If you only want to display data then this step can be skipped. E.g you are creating `DataColumn`. See [Column references]({{< relref "/1.7/development/components/grid/columns-reference/_index.md" >}}) for full list of grid columns available.
 
 - Create controller `DemoCQRSHooksUsage\Controller\Admin\CustomerReviewController`:
 
