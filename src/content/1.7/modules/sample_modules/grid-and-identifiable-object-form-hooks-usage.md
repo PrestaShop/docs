@@ -222,7 +222,7 @@ After completing the steps above by going to customers list you should see new c
 {{< figure src="../img/extended_customers_grid.png" title="Allowed for review column added to customers list" >}}
 
 
-### Adding new form field to customer form create and edit form
+### Adding new form field to customer form
 
 #### Modifying customers form builder
 
@@ -273,4 +273,40 @@ By completing the steps above newly added switch is now visible in the customers
 
 {{< figure src="../img/allow_for_review_switch.png" title="Allowed for review switch added to customers form" >}}
 
-<!-- todo: after errors pr is finished , update module and finalise docs with create and update hooks -->
+### Extending customers form after create and update actions
+
+In the previous example we have added switch but when we want to save its state (on or off) nothing happens. This is due to we did not used hooks
+which are built for this purpose - lets do that!
+
+{{% notice note %}}
+**This example has been simplified for practical reasons.** 
+
+You can find full implementation [here](https://github.com/friends-of-prestashop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to create or update reviewer state. [More about it here]({{< relref "cqrs.md" >}}).
+{{% /notice %}}
+
+```php
+
+public function hookActionAfterUpdateCustomerFormHandler(array $params)
+{
+    $this->updateCustomerReviewStatus($params);
+}
+
+public function hookActionAfterCreateCustomerFormHandler(array $params)
+{
+    $this->updateCustomerReviewStatus($params);
+}
+
+private function updateCustomerReviewStatus(array $params)
+{
+    $customerId = $params['id'];
+    /** @var array $customerFormData */
+    $customerFormData = $params['form_data'];
+    $isAllowedForReview = (bool) $customerFormData['is_allowed_for_review'];
+    
+    // implement review status saving here
+}
+
+```
+
+when we created the switch type form we named it `is_allowed_for_review`. By using the same name we can get the state (on or off) from
+the form field - in fact we can reach all customer form fields by just using `form_data` array received from parameters.
