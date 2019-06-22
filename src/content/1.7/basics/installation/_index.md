@@ -87,27 +87,37 @@ This step is only needed if you downloaded the development version.
 Use [composer](https://getcomposer.org/download/) to download the project's dependencies:
 
 ```bash
-cd /path/to/prestashop
-composer install
+$ cd /path/to/prestashop
+$ composer install
 ```
 
 ## Setting up file rights
 
 PrestaShop needs recursive write permissions on several directories:
 
-- /admin-dev/autoupgrade/
-- /app/logs
-- /app/Resources/translations
-- /cache
-- /config/themes
-- /download
-- /img
-- /log
-- /mails
-- /modules
-- /themes
-- /translations
-- /var
+- ./admin-dev/autoupgrade
+- ./app/logs
+- ./app/Resources/translations
+- ./cache
+- ./config/themes
+- ./download
+- ./img
+- ./log
+- ./mails
+- ./modules
+- ./themes
+- ./translations
+- ./var
+
+You can setup proper permissions with that one line:
+```bash
+$ sudo chmod +w -R admin-dev/autoupgrade app/logs app/Resources/translations cache config/themes download img log mails modules themes translations var
+```
+
+If you don't have any of above folder, plase create it before change permissions. For example:
+```bash
+$ sudo mkdir log app/logs
+```
 
 To ease up your life on a development environment, we suggest to either:
 
