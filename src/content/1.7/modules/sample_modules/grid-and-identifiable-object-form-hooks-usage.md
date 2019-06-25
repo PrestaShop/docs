@@ -275,7 +275,7 @@ By completing the steps above newly added switch is now visible in the customers
 
 ### Extending customers form after create and update actions
 
-In the previous example we have added switch but when we want to save its state (on or off) nothing happens. This is due to we did not used hooks
+In the previous example we have added a switch field ! But when we want to save its state (on or off) nothing happens. The data is not modified. This is because we have not used the hooks
 which are built for this purpose - lets do that!
 
 {{% notice note %}}
