@@ -227,7 +227,7 @@ After completing the steps above by going to customers list you should see new c
 #### Modifying customers form builder
 
 In this step we are appending to the customers form a new `SwitchType` form field - its one of many form types which already exist in PrestaShop. More information
-about it can be find [here]({{< relref "/1.7/development/components/form/types-reference/_index.md" >}}).
+about it can be found [here]({{< relref "/1.7/development/components/form/types-reference/_index.md" >}}).
 
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
