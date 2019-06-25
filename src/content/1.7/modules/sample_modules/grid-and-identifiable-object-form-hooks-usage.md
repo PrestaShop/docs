@@ -49,7 +49,7 @@ public function install()
 
 {{% notice note %}}
 Hooks `action`**Customer**`GridDefinitionModifier` and `action`**Customer**`GridQueryBuilderModifier` are built
-using grid id which in this case is **Customer**. If You want to use hook for any other grid 
+using grid id which in this case is **Customer**. If you want to use hook for any other grid 
 You can check any definition factory service in `PrestaShop\PrestaShop\Core\Grid\Definition\Factory` to see available grid ids. Grid id is returned by `getId()` method.
 <br />
 <br />
