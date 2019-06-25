@@ -53,7 +53,7 @@ using grid id which in this case is **Customer**. If you want to use hook for an
 You can check any definition factory service in `PrestaShop\PrestaShop\Core\Grid\Definition\Factory` to see available grid ids. Grid id is returned by `getId()` method.
 <br />
 <br />
-Hooks `action`**Customer**`FormBuilderModifier`,`actionAfterCreate`**Customer**`FormHandler` and `actionAfterUpdate`**Customer**`FormHandler` unique identifier which
+Hooks `action`**Customer**`FormBuilderModifier`,`actionAfterCreate`**Customer**`FormHandler` and `actionAfterUpdate`**Customer**`FormHandler` are built using unique identifier which
 in this case is **Customer** is retrieved from its form type **CustomerType**. E.g id retrieved from **ManufacturerType** will be **Manufacturer**. Some types might use
 function `getBlockPrefix` to retrieve the unique id
 {{% /notice %}}
