@@ -102,7 +102,7 @@ use PrestaShopBundle\Form\Admin\Type\YesAndNoChoiceType;
     }
 ```
 This hook, through `$params` array, received `GridDefinition` that defines how the grid is rendered. See [Grid definition]({{< relref "/1.7/development/components/grid/_index.md#grid-definition" >}}) for more information.  
-In this sample a new toggable column which determines if the customer is eligable to review products is added just after another column which has id `optin`. The sample code also demonstrates how add new filter.
+In this sample a new toggable column which determines if the customer is eligible to review products is added just after another column which has id `optin`. The sample code also demonstrates how add new filter.
 
 #### Creating route for toggle column
 
