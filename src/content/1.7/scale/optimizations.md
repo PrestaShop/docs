@@ -184,9 +184,9 @@ There are plenty of CDN providers, [Cloudflare](https://www.cloudflare.com) is a
 
 Just one slight consideration about CDNs though: any modification done to your shop's static assets, such as images, css and the like, may not be immediate available once behind a CDN. When those files are cached, if you modify them on your server, you will need to wait for the cache expiration (often configurable) before seeing the modification live - or invalidate part or all your cache. Most providers offer such features.
 
-### 6) Optimize your PrestaShop
+### 7) PrestaShop Settings
 
-In the performances tab of your prestashop:
+In the performances tab of your PrestaShop (Advanced Parameters > Performance):
 
 - Do not enable "Multi-Front synchronisation" if you only have one front server or if your smarty cache is shared 
 across all your front servers on the same file system.
@@ -196,3 +196,21 @@ across all your front servers on the same file system.
   the MySQL query cache will be more efficient. <br />
   If you still want to enable it, if you have only 1 front, use APC, and if you have several front, use a unique
   central memcached server host (not localhost!)
+
+In the file `config/defines.inc.php`:
+
+- Run your shop in production mode by setting `_PS_MODE_DEV_` to `false`.
+
+```
+if (!defined('_PS_MODE_DEV_')) {
+    define('_PS_MODE_DEV_', true);
+}
+```
+
+- Disable the profiler by setting `_PS_DEBUG_PROFILING_` to `false`.
+
+```
+if (!defined('_PS_DEBUG_PROFILING_')) {
+    define('_PS_DEBUG_PROFILING_', false);
+}
+```
