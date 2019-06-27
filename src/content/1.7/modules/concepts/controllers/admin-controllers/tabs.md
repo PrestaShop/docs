@@ -142,6 +142,7 @@ Here is the default structure of the side-menu from PrestaShop at the moment thi
            * AdminWebservice
            * AdminShopGroup
            * AdminShopUrl
+* DEFAULT
 
 ## How to check the tabs registration
 
