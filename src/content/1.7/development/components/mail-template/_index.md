@@ -1,22 +1,22 @@
 ---
-title: The Email Theme component
-menuTitle: Email Theme
+title: The Mail Template component
+menuTitle: Mail Template
 weight: 2
 ---
 
-# The Email Theme component
+# The Mail Template component
 {{< minver v="1.7.6" title="true" >}}
 
 ## Introduction
 
-Up until now PrestaShop used static templates to manage its emails. These templates had to be created for each
+Up until version 1.7.5 PrestaShop used static templates to manage its emails. These templates had to be created for each
 language and were downloaded on language installation and stored in the `mails` folder.
 
 This had a few drawbacks, you needed to download email packs each time you were installing a new language,
-and if the language has not been managed you often end up with emails in english. This gets even more complicated when you
-use an email theme which is therefore limited to the languages it was able to create.
+and if the language had not been managed you often ended up with emails in english. This gets even more complicated when you
+use an email theme (from addons or a freelance designer) which is therefore limited to the languages it was able to create.
 
-That's why we started a large refacto of this email feature, to avoid having too many breacking changes we still rely
+That's why we started a large refacto of this email feature, to avoid having too many breaking changes we still rely
 on static email templates, which are used by the `Mail::send` method, however these templates are now dynamically generated
 each time you install a new language. This is the first step to improving emailing in PrestaShop, as the feature gets developed
 further we will add more advanced customization in email templates.
@@ -34,7 +34,7 @@ As terms like layouts, templates and so can be confusing we are going to clarify
 
 The new email themes layout files are stored in the `mails/themes` folder, the `1.7.6` version comes with two email themes:
 
-* **classic** (the legacy email theme that was integrated with PrestaShop up until the 1.7.6 version)
+* **classic** (the legacy email theme that was integrated with PrestaShop up until the 1.7.5 version)
 * **modern** (a new email theme with a more modern and more responsive design)
 
 Each of these folder contains twig layouts which are organized in a conventional way:
@@ -54,7 +54,7 @@ Each of these folder contains twig layouts which are organized in a conventional
 |   |   |   |   ├── bankwire.html.twig # HTML layout for "account" transactional mail
 |   |   |   |   ├── cheque.txt.twig # TXT layout for "account" transactional mail
 |   |   |   |   ├── contact.html.twig # TXT layout for "account" transactional mail
-|   |   |   ├── modules
+|   |   |   ├── modules # Contains layouts specific to modules
 |   |   |   |   ├── followup # Module's name
 |   |   |   |   |   ├── followup_1.html.twig
 |   |   |   |   |   ├── followup_2.html.twig
@@ -68,8 +68,8 @@ As you can see there are two types of layouts (and similarly templates), **HTML*
 and **TXT** which only contain raw text, used for old email browsers or non interactive environment. The name of our layouts use the following convention:
 `{layout_name}.{layout_type}.twig`, for example:
 
-* `account.html.twig` : layout for the `account` mail with `html` type
-* `cheque.txt.twig` : layout for the `cheque` mail with `txt` type
+* `account.html.twig` : layout for the `account` mail template with `html` type
+* `cheque.txt.twig` : layout for the `cheque` mail template with `txt` type
 
 As you may have noticed, some of our layouts have both types (e.g.: `account`) whereas others only have html or txt type (`banwire`, `cheque`, ...).
 This is because you are not forced to define both types as they will be used as a fallback for each other:
@@ -78,7 +78,7 @@ This is because you are not forced to define both types as they will be used as 
 * if you only have the **txt** type, the same layout will be used for **html** layout (and you won't have images or other rich elements)
 
 {{% notice note %}}
-As a consequence of this fallback system, and since we mostly want rich HTML emails, most email themes will only contain html layouts and txt ones
+As a consequence of this fallback system, and since we mostly want rich HTML emails, most email themes will only contain html layouts, and txt layouts
 will be automatically generated from them.
 {{% /notice %}}
 
@@ -99,9 +99,9 @@ The workflow to generate is a bit complex, it has been divided into multiple cla
 
 ### Available hooks
 
-As you can see in the workflow a few hooks are available in the email generation for you include your own themes, layouts, variables, transformations, ...
+As you can see in the workflow a few hooks are available in the email generation for you to include your own themes, layouts, variables, transformations, ...
 
-* **actionListMailThemes** allows you to modify the `ThemeCollection` (add, remove, modify a theme or its layouts)
+* **actionListMailThemes** allows you to modify the `ThemeCollection` (add, remove, modify a theme or/and its layouts)
 * **actionBuildMailLayoutVariables** allows you to modify the variables of a specific layout
 * **actionGetMailLayoutTransformations** allows you to modify the transformations applied to a specific layout
 
@@ -147,14 +147,16 @@ One of the main advantages of the email generation is the possibility to use tra
   </table>
 ```
 
-## Automatic generation
+## Templates generation
+
+### Automatic generation
 
 So now that you know how the generation process works, you might wonder **when** exactly does it happen? There are a few cases when generation is **automatic**:
 
 * In `Language` class and more particularly during the calls to `Language::downloadAndInstallLanguagePack`, `Language::installLanguagePack` and of course `Language::installEmailsLanguagePack` which is now **deprecated**
 * In `PrestaShopBundle\Install\Upgrade::run` when languages are updated
 
-## Manual generation
+### Manual generation
 
 Of course sometimes you still want to manually generate your emails (new theme installed, changes in some layouts, ...), then you can use:
 
@@ -170,6 +172,7 @@ The default theme starting from `1.7.6` will be the **modern** theme, the *class
 
 {{% notice note %}}
 **I changed my default theme but my emails didn't change.**
+
 Indeed when you select your default theme you simply update your configuration, so any **future** generation will use the theme you selected.
 
 However no generation process is launched when you select a theme, so if you want to generate your emails with your newly selected theme you need to do it manually thanks to the "Generate emails" form.
@@ -177,7 +180,7 @@ However no generation process is launched when you select a theme, so if you wan
 {{% /notice %}}
 
 {{% notice note %}}
-**I tried to generate emails of a new theme but my templates are still in the former one.**
+**I tried to generate emails with a new theme but my templates are still in the former one.**
 
 Two possibilities for this issue:
 
@@ -199,13 +202,12 @@ generated in its folder and will be used from now (don't forget to enable the `o
 
 ### Reference
 
-* Here is an [example module](https://github.com/jolelievre/example_module_mailtheme) showing how to integrate with the email generation workflow
+* Here is an [example module](https://github.com/prestashop/example_module_mailtheme) showing how to integrate with the email generation workflow
 
-### Tutorials
+### Module Tutorials
 
-* [How to add a layout in a theme from my module?](./tutorials/add-a-layout-from-module)
-* [How to add layout variables from my module?](./tutorials/add-layout-variables-from-module)
-* [How to add a transformation from my module?](./tutorials/add-transformation-from-module)
-* [How to extend a layout in a theme from my module?](./tutorials/extend-a-layout-from-module)
-* [How to add an email theme from my module?](./tutorials/add-a-theme-from-module)
-* [How to generate an email theme on module installation?](./tutorials/generate-theme-on-module-install)
+* [How to add a layout in a theme from my module?]({{< ref "1.7/modules/mail_template/add-a-layout-from-module.md" >}})
+* [How to add layout variables from my module?]({{< ref "1.7/modules/mail_template/add-layout-variables-from-module.md" >}})
+* [How to add a transformation from my module?]({{< ref "1.7/modules/mail_template/add-transformation-from-module.md" >}})
+* [How to extend a layout in a theme from my module?]({{< ref "1.7/modules/mail_template/extend-a-layout-from-module.md" >}})
+* [How to add an email theme from my module?]({{< ref "1.7/modules/mail_template/add-a-theme-from-module.md" >}})

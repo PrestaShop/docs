@@ -191,6 +191,6 @@ class my_email_theme_module {
 }
 ```
 
-You can then go to the "Design > Email Theme" page and preview your layout you will see that your message has been inserted in your template.
+You can then go to the "Design > Email Theme" page and preview your layout you will see that your message has now changed its color.
 
-{{< figure src="../../img/modern_customizable_template.png" title="Your customizable template" >}}
+{{< figure src="../img/modern_transformed_template.png" title="Your customizable template" >}}

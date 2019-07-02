@@ -18,8 +18,8 @@ take advantage of its extension and blocks features.
   {{ parent() }}
   <table width="100%">
     <tr>
-      <td align="center" class="titleblock">
-        <font size="2" face="{{ languageDefaultFont }}Open-sans, sans-serif" color="#555454">
+      <td align="center" class="titleblock" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; direction: ltr; font-size: 0px; padding: 0 50px; text-align: center; vertical-align: top;">
+        <div  style="font-family:Open sans, arial, sans-serif;font-size:14px;line-height:25px;text-align:left;color:#555454;">
           {{ 'Thank you for purchasing this product on our store. Feel free to leave us a review if you are happy of this product:'|trans({}, 'EmailsBody', locale)|raw }}
           <a href="{shop_url}/post_review">{{ 'Post a review'|trans({}, 'EmailsBody', locale)|raw }}</a>
         </font>
@@ -84,21 +84,14 @@ class my_email_theme_module {
                 continue;
             }
 
-            $orderConfLayout = null;
-            /** @var LayoutInterface $layout */
-            foreach ($theme->getLayouts() as $layout) {
-                if ('order_conf' === $layout->getName() && empty($layout->getModuleName())) {
-                    $orderConfLayout = $layout;
-                    break;
-                }
-            }
-
-            //Replace the layout in the theme
+            // First parameter is the layout name, second one is the module name (empty value matches the core layouts)
+            $orderConfLayout = $theme->getLayouts()->getLayout('order_conf', '');
             if (null === $orderConfLayout) {
                 return;
             }
 
             //The layout collection extends from ArrayCollection so it has more feature than it seems..
+            //It allows to REPLACE the existing layout easily
             $orderIndex = $theme->getLayouts()->indexOf($orderConfLayout);
             $theme->getLayouts()->offsetSet($orderIndex, new Layout(
                 $orderConfLayout->getName(),
@@ -112,4 +105,4 @@ class my_email_theme_module {
 
 You can then go to the "Design > Email Theme" page and preview the `modern` **order_conf** layout.
 
-{{< figure src="../../img/extended_order_conf_layout.png" title="Your order_conf layout has been extended' layout list" >}}
+{{< figure src="../img/extended_order_conf_layout.png" title="Your order_conf layout has been extended' layout list" >}}

@@ -5,7 +5,7 @@ weight: 13
 
 # How to add an email theme from my module?
 
-Now, what if you want to add a whole new email theme available? Of course one possibility is to
+Now, what if you want to add a whole new email theme? Of course one possibility is to
 add a new theme folder in `mails/themes/...` but it's not the most convenient if you want to
 install/uninstall it easily and quickly, so let's integrate the theme in a module.
 
@@ -70,4 +70,4 @@ class my_email_theme_module {
 
 You can then go to the "Design > Email Theme" page and preview the `dark_modern` theme.
 
-{{< figure src="../../img/dark_modern_theme.png" title="Dark modern theme available" >}}
+{{< figure src="../img/dark_modern_theme.png" title="Dark modern theme available" >}}

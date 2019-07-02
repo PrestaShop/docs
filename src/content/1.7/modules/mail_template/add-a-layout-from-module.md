@@ -124,4 +124,4 @@ class my_email_theme_module {
 
 You can then go to the "Design > Email Theme" page and preview the `classic` or `modern` layouts list.
 
-{{< figure src="../../img/custom_template_list.png" title="Your custom template are now in the themes' layout list" >}}
+{{< figure src="../img/custom_template_list.png" title="Your custom template are now in the themes' layout list" >}}
