@@ -6,7 +6,7 @@ weight: 2
 
 # Classic module translation system
 
-The classic translation system is a heritage from previous versions of PrestaShop and provides retrocompatibility with PrestaShop 1.6. If you plan on supporting only versions 1.7.6 and up, consider using the [New translation system]({{< ref "new-system.md" >}}).
+The classic translation system is a heritage from previous versions of PrestaShop and provides retrocompatibility with PrestaShop 1.6. If you plan on supporting only versions 1.7.6 and up, consider using the [New translation system][new-translation-system].
 
 {{% notice note %}}
 **Native modules work differently**
@@ -15,30 +15,53 @@ In PrestaShop 1.7, native modules (the ones bundled with PrestaShop) use a diffe
 Read more about it here: [Native module translation]({{< ref "1.7/development/internationalization/translation/native-module-translation.md" >}}).
 {{% /notice %}}
 
+{{% notice info %}}
+Modern (symfony-based) modules can only be translated using the [New translation system]({{< ref "new-system.md" >}}).
+{{% /notice %}}
+
 ## How it works
 
-This system relies on the existence of translation dictionary files located inside the `translations` directory within a given module. These files can be generated using the Translation page in the Back Office (_International > Translations > Modify Translations_).
+This system works in two steps. 
 
-{{< figure src="../img/classic-translation-workflow.jpg" title="Translation workflow" >}}
+##### 1. Translation functions are used to display your module's wordings in another language
 
-In runtime, when the translation method is invoked, the Core uses the previously-generated dictionary file to look up the translation for the provided wording.
+PrestaShop provides functions that allow PHP files and Smarty templates to display translated wordings. By leveraging the module's dictionary files (generated in step 2), a module can use this feature to display a wording in another language during runtime. 
 
 {{< figure src="../img/classic-translation-system.jpg" title="How wordings are translated at runtime" >}}
 
-## Translating PHP files
+
+##### 2. Creating dictionary files
+
+The Back Office's Translation page (_International > Translations > Modify Translations_) is used to generate dictionary files. It extracts the module's wordings by analyzing its source code, then displays a form that allows to translate them manually into any language installed in your shop. Once translated, this information is stored into dictionary files, which are placed inside the module's `translations` directory. These dictionaries are used in step 1 to match the original wording with the translated one. In addition, dictionary files can be distributed with the module and be reused by other users.
+
+{{< figure src="../img/classic-translation-workflow.jpg" title="Translation workflow" >}}
+
+
+## Making your module translatable
+
+To make your module translatable, you need to adapt your module's source code. Find any wording you want to make translatable, then wrap it using the appropriate method as explained below. Once wrapped, your wordings will be ready to be translated through the translation interface.
+
+{{% notice tip %}}
+**By default, wordings are displayed as originally written.**
+
+Don't worry if you don't translate everything to all languages right away. Any wording left untranslated will be shown in its original language. Because of this, we suggest writing all your wordings in English, and then translating them to other languages.
+{{% /notice %}} 
+
+### PHP files
 
 In PHP files, translation is performed using the module's `l()` method.
 
-This method accepts upt to three parameters:
+This method accepts up to three parameters:
      
 - `$wording` – The wording you want to translate.
-- `$specific` – The contextual file name. If not provided, it defaults to the current module's technical name. [Read more on contextualization](#contextualization)
-- `$locale` – If provided, this language code is used as translation target instead of the contextual one.
+- `$specific` – (Optional) The contextual file name. If not provided, it defaults to the current module's technical name. [Contextualization](#contextualization) is explained below.
+- `$locale` – (Optional) The language you want to translate to. If not provided, the user's current language will be used.
 
+Now let's see some examples on how to use it.
 
-### Module's main class
+#### Module's main class
 
-Since the module main class extends the `Module` class, you just use `$this->l()`.
+When translating wordings in the module's main class, since it extends the `Module` class, you can simply call `$this->l()`.
 
 ```php
 class mymodule extends Module
@@ -51,7 +74,7 @@ class mymodule extends Module
 }
 ```
 
-### Module controllers
+#### Module controllers
 
 `ModuleAdminController` and `ModuleFrontController` can access the module instance via the `$this->module` property.
 
@@ -65,7 +88,7 @@ class MyModuleFrontController extends ModuleFrontController
 }
 ```
 
-### Other classes
+#### Other classes
 
 Other classes will need to retrieve the module's instance somehow. We recommend passing it as as a parameter in the constructor and storing it for later use.
 
@@ -86,11 +109,11 @@ class CustomModuleClass
 }
 ```
 
-If you really need to, you can also retrieve a new instance of your module using `Module::getInstanceByName('mymodulename')`.
+If you really need to, you can also retrieve a new instance of your module using `Module::getInstanceByName('mymodulename')`. This should be avoided though, as it's not a good practice.
 
-## Translating templates
+### Templates
 
-Wordings in .tpl files can be translated using the `{l}` function call, which Smarty will replace by the translation in the current language.
+Wordings in Smarty .tpl files can be translated using the `{l}` function call, which Smarty will replace by the translation in the current language.
 
 This function accepts three parameters:
 
@@ -184,7 +207,7 @@ We have two possible cases:
 1. `"Hello " . $my_module_name . "!"`
 2. `"Hello World!"`
 
-This can first be improved by keeping the first case, and replacing the variable content to "World" as needed:
+We can start improving this by keeping the first case, then replacing the variable content to "World" as needed:
 
 ```
 {if !isset($my_module_name) || !$my_module_name}
@@ -194,11 +217,11 @@ This can first be improved by keeping the first case, and replacing the variable
 {l s='Hello,' mod='mymodule'} {$my_module_name$}!
 ```
 
-This is a start! In this example, when `$my_module_name` is not defined, we capture the value of translating "World" and replace `$my_module_name` with that.
+This is a start! In this example, when `$my_module_name` is not defined, we capture the value of translating "World" and assign that value in `$my_module_name`. This way, we can simply display `$my_module_name` in any case.
 
-Now, when working in internationalization, it's better not to make assumptions regarding spacing and positioning of variables. For example, in French, there should be a non-breaking space before the exclamation mark (`!`), but other languages shouldn't. How can we handle this?
+Now, when working in internationalization, it's better not to make assumptions regarding spacing and positioning of variables. For example, in French, there should be a non-breaking space before the exclamation mark (`!`), but not in other languages. How can we handle this?
 
-In PrestaShop, you can interpolate variables using using [sprintf replacement markers](https://php.net/sprintf), such as `%s` or `%1$s`. Using this feature, we could get rid of the explicit concatenation of "Hello, ", "$my_module_name" and "!":
+In PrestaShop, you can interpolate variables within your wordings using using [sprintf replacement markers](https://php.net/sprintf), such as `%s` or `%1$s`. Using this feature, we could get rid of the explicit concatenation of "Hello, ", "$my_module_name" and "!", and let it depend on the translated wording:
 
 ```
 {if !isset($my_module_name) || !$my_module_name}
@@ -208,15 +231,20 @@ In PrestaShop, you can interpolate variables using using [sprintf replacement ma
 {l s='Hello %s!' sprintf=[$my_module_name] mod='mymodule'}
 ```
 
-### HTML content
+This way, since the variable replacement will happen _after_ the wording is translated, we can have a wording in English like `Hello %s!`, being translated as `Bonjour %s !` in French.
+
+Also, you can use sprintf markers (like `%s` and `%d`) or replacement tokens (like `[1]` and `%something%`). If you chose the latter, just provide an associative array: 
+`sprintf=['[1]' => 'some replacement, '%something%' => 'something else']`
+
+#### Interpolating HTML
 
 You may need to add HTML content in your translated string. Writing it directly in the string (original or translated) won't work, as the special characters would be escaped to avoid XSS security issues.
 
-Instead, you must replace some placeholders with the HTML code.
+Instead, you should use placeholders and replace them with HTML code.
 
 Let's take an example with a link in a string, which can be tricky to do. 
 The first solution that comes to mind would be to concatenate the translated strings with raw HTML code.
-But this solution is not recommended, because the words order could be different depending on the translation language.
+But as we explained before, this solution is not recommended, because the words order could be different depending on the translation language.
 
 ```php
 {l
@@ -232,17 +260,12 @@ But this solution is not recommended, because the words order could be different
 Let's look at the resulting string:
 
 ```html
-If you want a category to appear in the menu of your shop, go to <a href="..." target="_blank">Modules &gt; Modules &amp; Services &gt; Installed modules.</a> Then, configure your menu module.
+If you want a category to appear in the menu of your shop, go to <a href="(...)" target="_blank">Modules &gt; Modules &amp; Services &gt; Installed modules.</a> Then, configure your menu module.
 ```
 
-It remains quite simple, but you must make sure the parts `[1]` and `[/1]` still exist after translating it to other languages.
+Make sure to keep `[1]` and `[/1]` when translating the wording to other languages.
 
-{{% notice tip %}}
-You can use sprintf markers (like `%s` and `%d`) or replacement tokens (like `[1]` and `%something%`). If you chose the latter, just provide an associative array: 
-`sprintf=['[1]' => 'some replacement, '%something%' => 'something else']`
-{{% /notice %}}
-
-## Contextualization
+### Contextualization
 
 Sometimes the same wording would be translated differently when used in two different contexts. To allow translators to pick the best translation for each context, module developers can choose to contextualize wordings by specifying the file where it's used. When context is provided, translators can choose a different translation for each context.
 
@@ -271,21 +294,19 @@ When no context is provided, PrestaShop automatically sets it to your module's t
 Good news! Contextualization is performed automatically in template files, you don't need to do anything.
 
 
-## Creating translation files
+## Creating translation dictionary files
 
 Translation dictionary files can be created inside the PrestaShop Back Office:
 
 - Go to the "Translations" page under the "International" menu,
 - In the "Modify translations" section, find the "Type of translation" drop-down and select "Installed modules translations",
 - Choose the module you want to translate.
-- Choose the language you want to translate the module into. The destination language must already be installed to enable translation
-  in it.
+- Choose the language you want to translate the module into. The destination language must already be installed to enable translation in it.
 - Click the "Modify" button.
 
-The page that loads displays all the strings for all the selected module, grouped by [translation context](#contextualization). Groups where all wordings have already been translated appear collapsed, whereas groups where at least one string is missing appear expanded. In order to translate your module, simply fill out the empty fields.
+You will be presented with a page that displays all the wordings for the selected module, grouped by [translation context](#contextualization). Groups where all wordings have already been translated appear collapsed, whereas groups where at least one string is missing appear expanded. In order to translate your module, simply fill out the empty fields.
 
-Once all strings for your module are correctly translated, click on either the "Save and stay" button or the "Save" button at the bottom of
-your list of strings.
+Once all strings for your module are correctly translated, click on either the "Save and stay" button or the "Save" button at the bottom of the list.
 
 PrestaShop then saves the translations in a file named using the `<language_coode>.php` format and located in you module's `translations` directory (for instance, `/mymodule/translations/fr.php`). 
 
@@ -304,20 +325,53 @@ $_MODULE['<{mymodule}prestashop>mymodule_0f40e8817b005044250943f57a21c5e7'] = 'A
 
 This file shouldn't be modified manually! It is meant to be edited through the PrestaShop translation interface.
 
-Now that the module is translated to French translation, we can switch the interface to French and get the expected result: the module's wordings are now in French.
+## Limitations and caveats
 
-## Limitations
+### Making your wordings appear in the translation interface
 
-##### Language codes
+The translation interface relies on code analysis to "discover" wordings for translation. Therefore, when declaring wordings in your code, some care is needed in order to make sure they can be discovered.
 
-The classic translation system identifies languages using a two-letter code referred to as "Language code" or "ISO code", based on the ISO-619-1 standard ([see the unofficial list here][iso-619-1]). 
+1. The translation interface only detects wordings used through the `l()` function and the `{l}` Smarty tag. Therefore, they must be declared in a PHP or TPL file. They will be detected regardless of whether that code is actually used in runtime or not.
+
+2. **Always use literal values, not variables, with the `l()` function and the `{l}` Smarty tag.** Although variables are interpreted at runtime, they won't be understood by the code analyzer, which only supports literals. Passing variables to these methods will prevent those wordings from appearing in the translation interface.
+
+Example:
+
+```php
+// literal values will work
+$this->l('Some wording', 'somecontext');
+
+// dynamic content can be injected using placeholders & sprintf
+sprintf(
+    $this->l('Some wording with %s', 'somecontext'),
+    $dynamicContent
+);
+
+// this won't work, the interpreter will ignore variables
+$wording = 'Some wording';
+$context = 'somecontext';
+$this->l($wording, $context);
+
+// this will yield unexpected results
+$this->l('Some '. $var . ' wording');
+
+// dynamic behavior, like aliasing the l() function, won't work well either
+public function translate($wording) {
+   $this->l($wording);
+}
+``` 
+
+### Language codes
+
+The classic translation system identifies languages using a two-letter code referred to as "Language code" or "ISO code", based on the ISO-619-1 standard ([see an unofficial list here][iso-619-1]). 
 
 Since this standard does not include regional language variants, like British English, Canadian French or Swiss German for example, PrestaShop supports them through nonstandard language codes (`gb`, `qc` and `dh` respectively). 
 
-This historical choice is subject to debate because of the interoperability issues it raises. In order to fully address them, a later major version of PrestaShop will switch completely to [IETF language tags][ietf-language-tags] for language identification. 
+This historical choice is subject to debate because of the interoperability issues it raises. In order to fully address them, a future major version of PrestaShop will switch completely to [IETF language tags][ietf-language-tags] for language identification. PrestaShop already uses them for some purposes.
 
 In the meantime, refer to this list for the equivalences between language codes and IETF language tags: [Legacy to standard locales][legacy-to-standard].
 
 [iso-619-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [ietf-language-tags]: https://en.wikipedia.org/wiki/IETF_language_tag
 [legacy-to-standard]: https://github.com/PrestaShop/PrestaShop/blob/1.7.6.x/app/Resources/legacy-to-standard-locales.json
+[new-translation-system]: {{< ref "new-system.md" >}}
