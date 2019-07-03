@@ -18,12 +18,18 @@ Here are the possible files and folders for a PrestaShop 1.7 module:
 ➜  module tree -L 3
 .
 ├── config
-│   └── services.yml
+│   ├── services.yml
+│   ├── admin
+│   │    └── services.yml
+│   └── front
+│       └── services.yml
 ├── config.xml
 ├── controllers
 ├── logo.png
 ├── module_name.php
 ├── override
+├── src
+│   └── Entity
 ├── themes
 │   └── theme_name
 │       └── modules
