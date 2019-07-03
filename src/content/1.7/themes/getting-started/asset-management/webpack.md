@@ -10,7 +10,7 @@ aliases:
 	Webpack takes modules with dependencies and generates static assets representing those modules.
 
 The main interest of using Webpack is that it will compile all your styles - which we advise you to write using [Sass ](https://sass-lang.com/) - into a single CSS file.
-This way, your theme will make only one HTTP request for this single file, and since your browser will cache it for later re-use, it will even donwload this file only once.
+This way, your theme will make only one HTTP request for this single file, and since your browser will cache it for later re-use, it will even download this file only once.
 
 The same goes with your JavaScript code. Instead of loading jQuery along with its community plugins, your own custom plugins and any extra code you might need,
 Webpack compiles and minifies all this JavaScript code into a single file, which will be loaded once - and cached.
