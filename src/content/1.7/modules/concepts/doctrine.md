@@ -330,3 +330,11 @@ class YourModuleListCommentsModuleFrontController extends ModuleFrontController
 
 If you need more information about how to use an entity repository you can read the [Symfony documentation](https://symfony.com/doc/3.4/doctrine.html#fetching-objects-from-the-database)
 where you will also find examples for more advanced queries (with more conditions, joins, ...).
+
+## Example
+
+If you want a more advanced example you can have a look at the [ProductComments module](https://github.com/PrestaShop/productcomments/),
+additionally to what you read here it also defines custom repositories which use the Doctrine query builder to fetch array
+data directly (without using Entities). As well as some examples of [associations](https://symfony.com/doc/3.4/doctrine/associations.html)
+between Entities.
+
