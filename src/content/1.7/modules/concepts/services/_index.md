@@ -1,6 +1,6 @@
 ---
 title: Services
-weight: 20
+weight: 8
 ---
 
 # Services
@@ -79,7 +79,7 @@ you have included dependencies) so that they will be included in your module.
 At first you will need to create a clas for your service of course:
 
 ```php
-// yourmodule/src/YourService.php
+// modules/yourmodule/src/YourService.php
 namespace PrestaShop\Module\YourModule;
 
 use Symfony\Component\Translation\TranslatorInterface;

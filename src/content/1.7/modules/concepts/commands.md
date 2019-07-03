@@ -1,6 +1,6 @@
 ---
 title: Commands
-weight: 7
+weight: 10
 ---
 
 # Commands
