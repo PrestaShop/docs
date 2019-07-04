@@ -45,8 +45,10 @@ Create the file `yourmodule/composer.json` and paste:
 ```
 
 In __YourNamespace__ add your namespace. Then in console in your module root run command `composer dump-autoload`.
-The recommended convention is to use `PrestaShop\\Module\\YourModule` as your base namespace. This will generate
-a **vendor** folder contain an **autoload.php** file which allows the use of your namespace.
+This will generate a **vendor** folder contain an **autoload.php** file which allows the use of your namespace.
+
+The convention for namespaces used by PrestaShop is `PrestaShop\\Module\\ModuleName` as our base namespace, you can
+either follow this convention or adapt it to your business `YourCompany\\YourModuleName`.
 
 You can also use composer to include some dependencies in your module, you can find more information about composer
 on [Composer page](https://getcomposer.org/).
@@ -76,11 +78,11 @@ you have included dependencies) so that they will be included in your module.
 
 ### Define your services
 
-At first you will need to create a clas for your service of course:
+At first you will need to create a class for your service of course:
 
 ```php
 // modules/yourmodule/src/YourService.php
-namespace PrestaShop\Module\YourModule;
+namespace YourCompany\YourModule;
 
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -119,8 +121,8 @@ services:
   _defaults:
     public: true
 
-  prestashop.module.your_module.your_service:
-    class: PrestaShop\Module\YourModule\YourService
+  your_company.your_module.your_service:
+    class: YourCompany\YourModule\YourService
     arguments:
       - "@translator"
       - "My custom message"
@@ -130,7 +132,7 @@ This will then allow you to get your service from the Symfony container, like in
 
 ```php
 // modules/yourmodule/src/Controller/DemoController.php
-namespace PrestaShop\Module\YourModule\Controller;
+namespace YourCompany\YourModule\Controller;
 
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 
@@ -138,7 +140,7 @@ class DemoController extends FrameworkBundleAdminController
 {
     public function demoAction()
     {
-        $yourService = $this->get('prestashop.module.your_module.your_service');
+        $yourService = $this->get('your_company.your_module.your_service');
 
         return $this->render('@Modules/yourmodule/templates/admin/demo.html.twig', [
             'customMessage' => $yourService->getTranslatedCustomMessage(),
@@ -179,7 +181,7 @@ class YourModuleDemoModuleFrontController extends ModuleFrontController {
     public function display()
     {
         ...
-        $yourService = $this->get('prestashop.module.your_module.front.your_service');
+        $yourService = $this->get('your_company.your_module.front.your_service');
         ...
     }
 }
@@ -187,11 +189,12 @@ class YourModuleDemoModuleFrontController extends ModuleFrontController {
 
 ```php
 // modules/yourmodule/controllers/admin/demo.php
+// Legacy controllers have no namespace
 class YourModuleDemoModuleAdminController extends ModuleAdminController {
     public function display()
     {
         ...
-        $yourService = $this->get('prestashop.module.your_module.admin.your_service');
+        $yourService = $this->get('your_company.your_module.admin.your_service');
         ...
     }
 }
@@ -206,7 +209,7 @@ class yourmodule {
     {
         ...
         // The controller here is the ADMIN one so only admin services are accessible
-        $yourService = $this->context->controller->getContainer()->get('prestashop.module.your_module.admin.your_service');
+        $yourService = $this->context->controller->getContainer()->get('your_company.your_module.admin.your_service');
         ...
     }
 
@@ -214,7 +217,7 @@ class yourmodule {
     {
         ...
         // The controller here is the FRONT one so only front services are accessible
-        $yourService = $this->context->controller->getContainer()->get('prestashop.module.your_module.front.your_service');
+        $yourService = $this->context->controller->getContainer()->get('your_company.your_module.front.your_service');
         ...
     }
 }
@@ -250,13 +253,13 @@ services:
   _defaults:
     public: true
 
-  prestashop.module.your_module.common.open_service:
-    class: PrestaShop\Module\YourModule\YourService
+  your_company.your_module.common.open_service:
+    class: YourCompany\YourModule\YourService
     arguments:
-      - '@prestashop.module.your_module.common.open_dependency'
+      - '@your_company.your_module.common.open_dependency'
 
-  prestashop.module.your_module.common.open_dependency:
-    class: PrestaShop\Module\YourModule\YourServiceDependency
+  your_company.your_module.common.open_dependency:
+    class: YourCompany\YourModule\YourServiceDependency
 ```
 
 Then you can include this file in the environment you wish (front, admin, Symfony);

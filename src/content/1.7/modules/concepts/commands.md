@@ -34,7 +34,7 @@ At this moment, the only requirement is that you PHP file needs to be a class th
 
 ```php
 // your-module/src/Command/ExportCommand.php
-namespace YourNamespace\Command;
+namespace YourCompany\YourModule\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -63,8 +63,8 @@ Now, in order to make this really simple command available in the console, we re
 ```yaml
 # your-module/config/services.yml
 services:
-    your_module_export_command:
-        class: YourModule\Command\ExportCommand
+    your_company.your_module.export_command:
+        class: YourCompany\YourModule\Command\ExportCommand
         tags:
             - { name: 'console.command' }
 ```

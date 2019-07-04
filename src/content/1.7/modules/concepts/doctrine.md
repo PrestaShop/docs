@@ -33,7 +33,7 @@ Here is a simple example of a `ProductComment` entity:
 
 ```php
 // modules/yourmodule/src/Entity/ProductComment.php
-namespace PrestaShop\Module\YourModule\Entity;
+namespace YourCompany\YourModule\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -243,12 +243,12 @@ clean the foreign key statements (unless you are **ABSOLUTELY** sure of what you
 
 ### Saving an Entity
 
-Now that your Entity is managed and that your database structure is up to date you can start creating/update data in your database.
+Now that your Entity is managed and your database structure is up to date you can start creating/updating data in your database.
 Here is an example in a legacy controller:
 
 ```php
 // modules/yourmodule/controllers/front/PostComment.php
-use PrestaShop\Module\ProductComment\Entity\ProductComment;
+use YourCompany\YourModule\Entity\ProductComment;
 use Doctrine\ORM\EntityManagerInterface;
 
 class YourModulePostCommentModuleFrontController extends ModuleFrontController
@@ -295,7 +295,7 @@ some generic repository, and what's more? You don't even need to create it yours
 
 ```php
 // modules/yourmodule/controllers/front/ListComments.php
-use PrestaShop\Module\ProductComment\Entity\ProductComment;
+use YourCompany\YourModule\Entity\ProductComment;
 use Doctrine\ORM\EntityManagerInterface;
 
 class YourModuleListCommentsModuleFrontController extends ModuleFrontController
