@@ -1,7 +1,6 @@
 ---
 title: The Mail Template component
 menuTitle: Mail Template
-weight: 2
 ---
 
 # The Mail Template component
@@ -9,33 +8,39 @@ weight: 2
 
 ## Introduction
 
-Up until version 1.7.5 PrestaShop used static templates to manage its emails. These templates had to be created for each
-language and were downloaded on language installation and stored in the `mails` folder.
+PrestaShop's email notification system is based on static template files, one for each kind of message (like account creation, order confirmation, etc), which are stored in the `mails` folder. In order to localize these messages, PrestaShop needs a copy of each template, translated to every supported language. Shops download these translated versions when installing a new language pack. 
 
-This had a few drawbacks, you needed to download email packs each time you were installing a new language,
-and if the language had not been managed you often ended up with emails in english. This gets even more complicated when you
-use an email theme (from addons or a freelance designer) which is therefore limited to the languages it was able to create.
+This system has a few drawbacks. Shops need to download email packs every time a new language is installed,
+and if a template had not been translated to that language, you ended up with emails in English. This gets even more complicated when you use an email theme (from Addons or a freelance designer) which is therefore limited to the languages the authors translated by themselves. Also, any customization performed in a template has to be replicated for every installed language.
 
-That's why we started a large refacto of this email feature, to avoid having too many breaking changes we still rely
-on static email templates, which are used by the `Mail::send` method, however these templates are now dynamically generated
-each time you install a new language. This is the first step to improving emailing in PrestaShop, as the feature gets developed
-further we will add more advanced customization in email templates.
+Starting on 1.7.6, this feature has been significantly revamped. To avoid introducing breaking changes, the system still relies on static email templates, which are used by the `Mail::send` method. However, instead of downloading translated copies of each template, these files are now dynamically generated whenever you install a new language, using base templates, or _layouts_. 
+
+This is the first step to improving the email system in PrestaShop. As the feature gets further improved we will add more advanced customization for email templates.
 
 ### Vocabulary
 
-As terms like layouts, templates and so can be confusing we are going to clarify them in this page to be sure you know what we are referring to:
+Terms like "layouts", "templates" and "themes" can be confusing, so let's clarify them:
 
-* **layouts** are the files that will be **rendered** by Twig they can use logic statements, translation tools, extend other base layouts or include components, ... They are the basic files that compose your email theme and are located in the folders `mails/themes/classic`, `mails/themes/modern`, ...
-* **templates** are the static files (html or txt) that will be **generated** by our `MailThemeGenerator`, they contain no logic and are translated for **ONE** language. They are the files used by the `Mail` class when you send a mail and are located in the folders `mails/en`, `mails/fr`, ...
+* **Mail themes** are groups of **Layouts** with a given style, stored in the `mails/themes/` directory.
+  
+    You can have many mail themes installed, but only one active at a time.
+
+* **Layouts** are files that will be **rendered** using Twig to generate ready-to-use mail **Templates**.
+
+    They can use logic statements, translate wordings, extend other base layouts or include components. They are the basic files that make up your **Mail theme**.
+
+* **Templates** are static, translated files (html or txt) that will be **generated** by `MailThemeGenerator` from **Layouts** of a given **Mail theme** in a given language.
+
+    They contain no logic and are translated for **ONE** language. These are the files used by the `Mail` class when you send a mail and are located in the `mails/` directory, grouped by language (`mails/en/`, `mails/fr/`, ...).
 
 ## Architecture
 
 ### Folder structure
 
-The new email themes layout files are stored in the `mails/themes` folder, the `1.7.6` version comes with two email themes:
+The new email themes layout files are stored in the `mails/themes/` folder. PrestaShop 1.7.6 is bundled with two email themes:
 
-* **classic** (the legacy email theme that was integrated with PrestaShop up until the 1.7.5 version)
-* **modern** (a new email theme with a more modern and more responsive design)
+* **classic** – The default email theme that was bundled with PrestaShop up until the 1.7.5 version.
+* **modern** – A new email theme with a modern, responsive design.
 
 Each of these folder contains twig layouts which are organized in a conventional way:
 
@@ -44,128 +49,77 @@ Each of these folder contains twig layouts which are organized in a conventional
 ├── mails
 |   ├── themes
 |   |   ├── modern
-|   |   |   ├── assets # Contains the assets used in your layouts (optional)
-|   |   |   ├── components # Contains block parts or base layouts for your email theme (optional)
+|   |   |   ├── assets                          # Contains the assets used in your layouts (optional)
+|   |   |   ├── components                      # Contains block parts or base layouts for your email theme (optional)
 |   |   |   |   ├── footer.html.twig
 |   |   |   |   ├── layout.html.twig
-|   |   |   ├── core # Contains layouts for Core transactional mails
-|   |   |   |   ├── account.html.twig # HTML layout for "account" transactional mail
-|   |   |   |   ├── account.txt.twig # TXT layout for "account" transactional mail
-|   |   |   |   ├── bankwire.html.twig # HTML layout for "account" transactional mail
-|   |   |   |   ├── cheque.txt.twig # TXT layout for "account" transactional mail
-|   |   |   |   ├── contact.html.twig # TXT layout for "account" transactional mail
-|   |   |   ├── modules # Contains layouts specific to modules
-|   |   |   |   ├── followup # Module's name
+|   |   |   ├── core                            # Contains layouts for Core transactional mails
+|   |   |   |   ├── account.html.twig           # HTML layout for "account" transactional mail
+|   |   |   |   ├── account.txt.twig            # TXT layout for "account" transactional mail
+|   |   |   |   ├── bankwire.html.twig          # HTML layout for "bankwire" transactional mail
+|   |   |   |   ├── cheque.txt.twig             # TXT layout for "cheque" transactional mail
+|   |   |   |   ├── contact.html.twig           # HTML layout for "contact" transactional mail
+|   |   |   ├── modules                         # Contains layouts specific to a given module
+|   |   |   |   ├── followup                    # Module name
 |   |   |   |   |   ├── followup_1.html.twig
 |   |   |   |   |   ├── followup_2.html.twig
-|   |   |   |   ├── ps_emailalerts # Module's name
+|   |   |   |   ├── ps_emailalerts              # Module name
 |   |   |   |   |   ├── new_order.html.twig
 |   |   |   |   |   ├── followup_2.html.twig
 ...
 ```
 
-As you can see there are two types of layouts (and similarly templates), **HTML** layouts (which can contain tags for attractive design, images, links, ...)
-and **TXT** which only contain raw text, used for old email browsers or non interactive environment. The name of our layouts use the following convention:
-`{layout_name}.{layout_type}.twig`, for example:
+As you can see there are two types of layouts, one for each type of template:
 
-* `account.html.twig` : layout for the `account` mail template with `html` type
-* `cheque.txt.twig` : layout for the `cheque` mail template with `txt` type
+- **HTML** layouts, which generate HTML templates and can contain tags for attractive design, images, links, etc.
+- **TXT** layouts, which only contain plain text, used for old email clients or non interactive environments.
+ 
+ The layout name should respect the following convention: `{layout_name}.{layout_type}.twig`
+ 
+ For example:
 
-As you may have noticed, some of our layouts have both types (e.g.: `account`) whereas others only have html or txt type (`banwire`, `cheque`, ...).
+* `account.html.twig` : layout for the `account` mail template in its `html` version
+* `cheque.txt.twig` : layout for the `cheque` mail template in its `txt` version
+
+As you may have noticed, some of our layouts have both types (e.g.: `account`) whereas others only have html or txt type (`bankwire`, `cheque`, ...).
 This is because you are not forced to define both types as they will be used as a fallback for each other:
 
-* if you only have the **html** type, the same layout will be stripped and the raw text will be used as your **txt** layout
-* if you only have the **txt** type, the same layout will be used for **html** layout (and you won't have images or other rich elements)
+* If only the **html** type is available, the same layout will be stripped of html tags and the resulting plain text will be used as your **txt** layout.
+* If only the **txt** type is available, the same layout will be used for **html** layout (but it won't have images nor any other rich elements).
 
 {{% notice note %}}
-As a consequence of this fallback system, and since we mostly want rich HTML emails, most email themes will only contain html layouts, and txt layouts
-will be automatically generated from them.
+Thanks to this fallback system, and since we mostly want rich HTML emails, most email themes will only contain html layouts, and txt layouts will be automatically generated from them.
 {{% /notice %}}
 
 ### Themes and Layouts
 
-PrestaShop uses full objects to manipulate the email themes and layouts, they implement the following interfaces:
+PrestaShop uses objects to manipulate email themes and layouts, they implement the following interfaces:
 
-```php
-// src/Core/MailTemplate/ThemeInterface.php
-namespace PrestaShop\PrestaShop\Core\MailTemplate;
+- `PrestaShop\PrestaShop\Core\MailTemplate\ThemeInterface` – Describes a theme and provides a list of its layouts
+- `PrestaShop\PrestaShop\Core\MailTemplate\LayoutInterface` – Describes a theme layout (name, file paths, related module...)
 
-/**
- * Interface MailThemeInterface is used to define mail templates
- * themes. It is very simple for now (only a name) but it could evolve in
- * the future (include a config, a parent theme, ...)
- */
-interface ThemeInterface
-{
-    /**
-     * @return string
-     */
-    public function getName();
+These interfaces have a corresponding collection that is used in the core services and provided via hooks:
 
-    /**
-     * @return LayoutCollectionInterface
-     */
-    public function getLayouts();
-}
-```
+- `PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollectionInterface`
+- `PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutCollectionInterface` 
 
-```php
-// src/Core/MailTemplate/Layout/LayoutInterface.php
-namespace PrestaShop\PrestaShop\Core\MailTemplate\Layout;
+Of course, PrestaShop provides concrete implementations which you are encouraged to reuse:
 
-/**
- * Interface LayoutInterface is used to contain the basic info about a mail layout.
- */
-interface LayoutInterface
-{
-    /**
-     * Name of the layout to describe its purpose
-     *
-     * @return string
-     */
-    public function getName();
+- `PrestaShop\PrestaShop\Core\MailTemplate\Theme`
+- `PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollection`
+- `PrestaShop\PrestaShop\Core\MailTemplate\Layout\Layout`
+- `PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutCollection`
 
-    /**
-     * Absolute path of the html layout file
-     *
-     * @return string
-     */
-    public function getHtmlPath();
+### Generation workflow
 
-    /**
-     * Absolute path of the html layout file
-     *
-     * @return string
-     */
-    public function getTxtPath();
+The templates from layouts generation workflow is a bit complex, here are the main components:
 
-    /**
-     * Which module this layout is associated to (if any)
-     *
-     * @return string|null
-     */
-    public function getModuleName();
-}
-```
-
-Of course we provide concrete classes that implement these interfaces `PrestaShop\PrestaShop\Core\MailTemplate\Theme` and
-`PrestaShop\PrestaShop\Core\MailTemplate\Layout\Layout` which we encourage you to use in your modules (although you could
-implement your own objects as long as they implement the appropriate interfaces).
-
-Each of these interfaces has a corresponding collection `PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollectionInterface`
-and `PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutCollectionInterface` that are used in the core services and transmitted
-via hooks.
-
-### Workflow
-
-The workflow to generate is a bit complex, it has been divided into multiple classes to separate each operation which simplifies testing and code understanding.
-
-* **GenerateThemeMailTemplatesCommand** is the starting point that launches the email generation, it is merely a container of the generation settings
-* **GenerateThemeMailTemplatesCommandHandler** is the command bus handler in charge of executing the generation
-* **FolderThemeCatalog** is the class in charge of scanning the themes from folder structure it returns a type `ThemeCollection`
-* **MailTemplateGenerator** is the class driving the generation of a `ThemeInterface` for the requested `LanguageInterface`
-* **MailTemplateTwigRenderer** is the component which actually renders the layout, based on the Twig renderer, it also applies some `TransformationInterface` afterwards
-* **LayoutVariablesBuilder** is in charge of building the variables that will be used by the twig layouts
+* **GenerateThemeMailTemplatesCommand** describes the generation settings (eg. which theme are we generating and in which language).
+* **GenerateThemeMailTemplatesCommandHandler** is the command bus handler in charge of executing the generation using the configured `MailTemplateGenerator`.
+* **FolderThemeCatalog** provides a `ThemeCollection`, which it builds by scanning mail themes in folders.
+* **MailTemplateGenerator** drives the generation of a `ThemeInterface` for the requested `LanguageInterface`.
+* **MailTemplateTwigRenderer** actually renders the layout using the Twig renderer, and post-processes the result by applying any existing `TransformationInterface`.
+* **LayoutVariablesBuilder** provides variables to be used in the Twig layouts.
 
 {{< figure src="./img/email_generation_workflow.png" title="Email Generation Workflow (it is advised to open it in another tab as the image is quite big)" >}}
 
@@ -173,7 +127,7 @@ The workflow to generate is a bit complex, it has been divided into multiple cla
 
 ### Available hooks
 
-As you can see in the workflow a few hooks are available in the email generation for you to include your own themes, layouts, variables, transformations, ...
+As you can see in the workflow, the email generation process includes a few hooks that allow you to include your own themes, layouts, variables and transformations:
 
 * **actionListMailThemes** allows you to modify the `ThemeCollection` (add, remove, modify a theme or/and its layouts)
 * **actionBuildMailLayoutVariables** allows you to modify the variables of a specific layout
@@ -184,30 +138,29 @@ As you can see in the workflow a few hooks are available in the email generation
 {{% notice warning %}}
 **Layout variables are NOT template variables**
 
-Always keep in mind that the variables used by the `LayoutVariablesBuilder` will be used during template **generation**, meaning they will only be used
-when static templates are exported and won't be able to change when you send your emails. Do not mix them up with template variables (like firstname,
+Always keep in mind that the variables provided by the `LayoutVariablesBuilder` will only be available during template **generation**, meaning they their value will be fixed into the exported static templates, and won't change dynamically when your emails are being sent. They should not be confused with _template variables_ (like firstname,
 lastname, ...) which are replaced at the last moment when the email is sent by the `Mail::send` function.
 {{% /notice %}}
 
 Here is a quick resume of the differences:
 
-|               | Layout                    | Template                         |
-| ------------- |:------------------------- |:-------------------------------- |
-| Renderer      | Twig                      | Swift_Plugins_DecoratorPlugin    |
-| Syntax        | `{{ variable }}`          | `{ variable }`                   |
-| Interpreted   | On generation             | On sending                       |
-| Target        | All users/customers       | Specific user/action             |
-| Use cases     | Design, translations, ... | Customization (user, order, ...) |
+|               | Layout                    | Template                        
+| ------------- |:------------------------- |:--------------------------------
+| Renderer      | Twig                      | Swift_Plugins_DecoratorPlugin   
+| Syntax        | `{{ variable }}`          | `{ variable }`                  
+| Interpreted   | On generation             | When the email is being sent    
+| Target        | All users/customers       | Specific user/action            
+| Use cases     | Design, translations, ... | Customization (user, order, ...)
 
 {{% notice note %}}
-On the same principle, you can add twig logic in your templates (like conditions on email types, or why not your own
-layout variables to deal with customization) but it will only be useful during email generation. So don't use any twig
-logic to adapt the templates for your user or an order.
+On the same principle, you can add Twig logic in your templates, like conditions on email types, or even your own
+layout variables to deal with customization — but it will only be useful during email generation. So don't use any Twig
+logic to adapt the templates for a specific user or order.
 {{% /notice %}}
 
 ## Translation
 
-One of the main advantages of the email generation is the possibility to use translations in the layouts, here is an example:
+One of the main advantages of email generation is the possibility to use translations in the layouts, here is an example:
 
 ```twig
   <table width="100%">
@@ -237,40 +190,52 @@ Of course sometimes you still want to manually generate your emails (new theme i
 * In the Symfony command `prestashop:mail:generate` if you want to launch a CLI generation
 * In the "Design > Email Theme" page when you use the form to launch the generation manually (once per language)
 
-## Choosing my default theme
+## Choosing the default theme
 
 Your shop can only use one theme at a time, so if you go to the "Design > Email Theme" page you will be able to choose your default email theme.
 This default theme will be used each time the generation process is launched automatically (language installation, upgrade, ...).
 
 The default theme starting from `1.7.6` will be the **modern** theme, the *classic* theme was provided for backward compatibility and as an example.
 
-{{% notice note %}}
-**I changed my default theme but my emails didn't change.**
+### Troubleshooting
+
+##### I changed my default theme but my emails didn't change.
 
 Indeed when you select your default theme you simply update your configuration, so any **future** generation will use the theme you selected.
 
-However no generation process is launched when you select a theme, so if you want to generate your emails with your newly selected theme you need to do it manually thanks to the "Generate emails" form.
-/!\ The form only generates **one** language so you will have to repeat the action for each Language installed on your shop.
+However no generation process is launched when you select a theme, so if you want to generate your emails with your newly selected theme you need to do it manually in the "Generate emails" form.
+
+{{% notice info %}}
+The form only generates **one** language, so you will have to repeat the action for each Language installed on your shop.
 {{% /notice %}}
 
-{{% notice note %}}
-**I tried to generate emails with a new theme but my templates are still in the former one.**
+##### I tried to generate emails with a new theme, but my templates are still in the previous one.
 
-Two possibilities for this issue:
+There are two possibilities for this issue:
 
-* As you may have noticed the `GenerateThemeMailTemplatesCommand` and the "Generate emails" form have an **overwrite** option. We need this option because some shops
-may have installed email themes, or customized their templates manually. For that reason by default the generation process **does not** export a template when it **already exists**.
-If you want to erase the former templates you need to enable the `overwrite` option, be careful this will replace **all** existing templates you can't choose which ones.
+**1. Overwrite already-generated templates**
+
+As you may have noticed, the `GenerateThemeMailTemplatesCommand` and the "Generate emails" form have an **overwrite** option. We need this option because some shops may have installed email themes, or customized their templates manually. For that reason by default the generation process **does not export a template if it already exists**.
+If you want to replace the former templates you need to enable the `overwrite` option. 
 
 ![Overwrite templates option](./img/overwrite_templates.png)
 
-* As you may know email templates can be integrated in your PrestaShop theme (and I mean here the **shop theme** not the email theme). In which case they are no longer contained in
-the default `mails` folder but instead in `themes/{my_theme}/mails/...` folders, and they override the default ones. So even if you generate your new theme (both automatically and manually)
-the templates contained in the theme will have the priority. So you need to generate your theme manually and to select the shop theme you want to overwrite, then the templates will be
-generated in its folder and will be used from now (don't forget to enable the `overwrite` option if you want to replace them).
+{{% notice warning %}}
+Be careful, using this option will replace **all the existing templates**!
+{{% /notice %}}
+
+**2. Overwrite the shop theme's mail templates** 
+
+As you may know, your PrestaShop theme (the **shop's theme**, not the email theme) can include mail templates which override the shop's default ones. Those templates are not contained in the default `mails` folder, but the in `themes/{my_theme}/mails/` folder. Even if you generate your new mail theme (be it automatically or manually), the shop theme's templates will have higher priority and will be used instead of your mail theme's. 
+
+In that case, generate your mail theme manually and to select the shop theme you want to overwrite. Templates will be generated in its folder and will be used from now (don't forget to enable the `overwrite` option if you want to replace them).
 
 ![Select the theme you want to overwrite](./img/select_shop_theme.png)
+
+{{% notice warning %}}
+Be aware this operation will **permanently modify** your shop theme's files!
 {{% /notice %}}
+
 
 ## Learn more
 
