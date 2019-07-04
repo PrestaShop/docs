@@ -1,6 +1,6 @@
 ---
 title: Commands
-weight: 7
+weight: 10
 ---
 
 # Commands
@@ -24,36 +24,9 @@ You need to create the file and register it as a "command".
 
 ### Setup composer
 
-You need setup composer in your module before create the command.
-Create the file `your-module/composer.json` and paste:  
-```json
-{
-    "name": "<your name>/<nmodule name>",
-    "description": "<module description>",
-    "authors": [
-        {
-            "name": "<your name>",
-            "email": "<your email>"
-        }
-    ],
-    "require": {
-        "php": ">=5.6.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "<YourModule>\\": "src/"
-        },
-        "exclude-from-classmap": []
-    },
-    "config": {
-        "preferred-install": "dist"
-    },
-    "type": "prestashop-module",
-    "author": "<???>",
-    "license": "<???>"
-}
-```
-In __YourModule__ add your namespace. Then in console in your module root run command `composer dump-autoload`.
+First you need to setup your composer file, you will find more info about it in [Setup composer][setup-composer]
+
+[setup-composer]: {{< ref "/1.7/modules/concepts/services/_index.md#setup-composer" >}}
 
 ### Creation of the command
 
@@ -61,7 +34,7 @@ At this moment, the only requirement is that you PHP file needs to be a class th
 
 ```php
 // your-module/src/Command/ExportCommand.php
-namespace YourNamespace\Command;
+namespace YourCompany\YourModule\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -90,8 +63,8 @@ Now, in order to make this really simple command available in the console, we re
 ```yaml
 # your-module/config/services.yml
 services:
-    your_module_export_command:
-        class: YourModule\Command\ExportCommand
+    your_company.your_module.export_command:
+        class: YourCompany\YourModule\Command\ExportCommand
         tags:
             - { name: 'console.command' }
 ```

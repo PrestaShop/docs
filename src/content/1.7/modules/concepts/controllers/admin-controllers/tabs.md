@@ -149,3 +149,106 @@ Here is the default structure of the side-menu from PrestaShop at the moment thi
 Once you're done, just install (or reset) your module.
 
 The $tabs property will be read from PrestaShop and the tabs will be automatically displayed on the side menu. They will stay as long as your module is installed.
+
+## Modern Controllers and manual tab insertion
+
+If you created a modern controller using Symfony controllers and routing you can't create a Tab as is because the system is
+based on legacy controllers identified through their class names. But you can still trick it using the `_legacy_link` property
+in the routing (more details about this feature in the [Controller and Routing][controller-routing] page).
+
+Let's assume you already defined your Symfony route:
+
+```yaml
+# modules/your-module/config/routes.yml
+your_route_name:
+    path: your-module/demo
+    methods: [GET]
+    defaults:
+      _controller: 'MyModule\Controller\DemoController::demoAction'
+```
+
+What you need to do then is add the `_legacy_controller` and `_legacy_link` parameters:
+
+```yaml
+# modules/your-module/config/routes.yml
+your_route_name:
+    path: your-module/demo
+    methods: [GET]
+    defaults:
+      _controller: 'MyModule\Controller\DemoController::demoAction'
+      _legacy_controller: 'MyModuleDemoController'
+      _legacy_link: 'MyModuleDemoController'
+```
+
+So now any call in the menu system to `Link::getAdminkLink('MyModuleDemoController')'` will return your controller url `your-module/demo`
+But since the `MyModuleDemoController` class actually doesn't exist, the automatic tab registration based on the `$tabs` property won't work.
+So you need to insert your tab manually during your module installation:
+
+```php
+class example_module_mailtheme extends Module
+{
+    public function install()
+    {
+        return parent::install()
+            && $this->installTab()
+        ;
+    }
+
+    public function uninstall()
+    {
+        return parent::uninstall()
+            && $this->uninstallTab()
+        ;
+    }
+
+    public function enable($force_all = false)
+    {
+        return parent::enable($force_all)
+            && $this->installTab()
+        ;
+    }
+
+    public function disable($force_all = false)
+    {
+        return parent::disable($force_all)
+            && $this->uninstallTab()
+        ;
+    }
+
+    private function installTab()
+    {
+        $tabId = (int) Tab::getIdFromClassName('MyModuleDemoController');
+        if (!$tabId) {
+            $tabId = null;
+        }
+
+        $tab = new Tab($tabId);
+        $tab->active = 1;
+        $tab->class_name = 'MyModuleDemoController';
+        $tab->name = array();
+        foreach (Language::getLanguages(true) as $lang) {
+            $tab->name[$lang['id_lang']] = 'My Module Demo';
+        }
+        $tab->id_parent = (int) Tab::getIdFromClassName('ShopParameters');
+        $tab->module = $this->name;
+
+        return $tab->save();
+    }
+
+    private function uninstallTab()
+    {
+        $tabId = (int) Tab::getIdFromClassName('MyModuleDemoController');
+        if (!$tabId) {
+            return true;
+        }
+
+        $tab = new Tab($tabId);
+
+        return $tab->delete();
+    }
+}
+```
+
+And now you have your menu link directing to your Symfony controller with a nice url.
+
+[controller-routing]: {{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#the-legacy-link-property" >}}
