@@ -77,28 +77,25 @@ class my_email_theme_module {
 
         /** @var ThemeCollectionInterface $themes */
         $themes = $hookParams['mailThemes'];
-
-        /** @var ThemeInterface $theme */
-        foreach ($themes as $theme) {
-            if ('modern' !== $theme->getName()) {
-                continue;
-            }
-
-            // First parameter is the layout name, second one is the module name (empty value matches the core layouts)
-            $orderConfLayout = $theme->getLayouts()->getLayout('order_conf', '');
-            if (null === $orderConfLayout) {
-                return;
-            }
-
-            //The layout collection extends from ArrayCollection so it has more feature than it seems..
-            //It allows to REPLACE the existing layout easily
-            $orderIndex = $theme->getLayouts()->indexOf($orderConfLayout);
-            $theme->getLayouts()->offsetSet($orderIndex, new Layout(
-                $orderConfLayout->getName(),
-                __DIR__ . '/mails/layouts/extended_modern_order_conf_layout.html.twig',
-                ''
-            ));
+        $theme = $themes->getByName('modern');
+        if (!$theme) {
+            return;
         }
+
+        // First parameter is the layout name, second one is the module name (empty value matches the core layouts)
+        $orderConfLayout = $theme->getLayouts()->getLayout('order_conf', '');
+        if (null === $orderConfLayout) {
+            return;
+        }
+
+        //The layout collection extends from ArrayCollection so it has more feature than it seems..
+        //It allows to REPLACE the existing layout easily
+        $orderIndex = $theme->getLayouts()->indexOf($orderConfLayout);
+        $theme->getLayouts()->offsetSet($orderIndex, new Layout(
+            $orderConfLayout->getName(),
+            __DIR__ . '/mails/layouts/order_conf.html.twig',
+            ''
+        ));
     }
 }
 ```
