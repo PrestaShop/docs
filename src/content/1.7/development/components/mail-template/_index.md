@@ -82,6 +82,80 @@ As a consequence of this fallback system, and since we mostly want rich HTML ema
 will be automatically generated from them.
 {{% /notice %}}
 
+### Themes and Layouts
+
+PrestaShop uses full objects to manipulate the email themes and layouts, they implement the following interfaces:
+
+```php
+// src/Core/MailTemplate/ThemeInterface.php
+namespace PrestaShop\PrestaShop\Core\MailTemplate;
+
+/**
+ * Interface MailThemeInterface is used to define mail templates
+ * themes. It is very simple for now (only a name) but it could evolve in
+ * the future (include a config, a parent theme, ...)
+ */
+interface ThemeInterface
+{
+    /**
+     * @return string
+     */
+    public function getName();
+
+    /**
+     * @return LayoutCollectionInterface
+     */
+    public function getLayouts();
+}
+```
+
+```php
+// src/Core/MailTemplate/Layout/LayoutInterface.php
+namespace PrestaShop\PrestaShop\Core\MailTemplate\Layout;
+
+/**
+ * Interface LayoutInterface is used to contain the basic info about a mail layout.
+ */
+interface LayoutInterface
+{
+    /**
+     * Name of the layout to describe its purpose
+     *
+     * @return string
+     */
+    public function getName();
+
+    /**
+     * Absolute path of the html layout file
+     *
+     * @return string
+     */
+    public function getHtmlPath();
+
+    /**
+     * Absolute path of the html layout file
+     *
+     * @return string
+     */
+    public function getTxtPath();
+
+    /**
+     * Which module this layout is associated to (if any)
+     *
+     * @return string|null
+     */
+    public function getModuleName();
+}
+```
+
+Of course we provide concrete classes that implement these interfaces `PrestaShop\PrestaShop\Core\MailTemplate\Theme` and
+`PrestaShop\PrestaShop\Core\MailTemplate\Layout\Layout` which we encourage you to use in your modules (although you could
+implement your own objects as long as they implement the appropriate interfaces).
+
+Each of these interfaces has a corresponding collection `PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollectionInterface`
+and `PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutCollectionInterface` that are used in the core services and transmitted
+via hooks.
+
 ### Workflow
 
 The workflow to generate is a bit complex, it has been divided into multiple classes to separate each operation which simplifies testing and code understanding.
