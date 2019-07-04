@@ -1,15 +1,15 @@
 ---
-title: How to add layout variables from my module?
-weight: 10
+title: How to add layout variables from a module
+menuTitle: Adding layout variables
+weight: 40
 ---
 
-# How to add layout variables from my module?
+# How to add layout variables from a module
 
-You can add your own layout variables which may be used in you custom template then. To demonstrate
-this feature we assume you already have added you customizable layout to a theme (see [How to add a layout in a theme from my module?](../add-a-layout-from-module/)).
+You can add your own layout variables which may be used in you custom template. To demonstrate this feature we assume you already have added you custom layout to a theme (see [How to add a layout in a theme from a module](../add-a-layout-from-module/)).
 Here is an example of a layout using a `customMessage` variable.
 
-### Layout
+## Layout
 
 ```twig
 {# modules/my_email_theme_module/mails/layout/customizable_modern_layout.html.twig #}
@@ -38,7 +38,7 @@ Here is an example of a layout using a `customMessage` variable.
 {% endblock %}
 ```
 
-### Using the hook
+## Using the hook
 
 Now you need to add your variables for this specific layout, in order to do so you will use
 the `actionBuildMailLayoutVariables` hook.

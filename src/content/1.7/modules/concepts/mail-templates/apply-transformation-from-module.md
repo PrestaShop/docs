@@ -1,14 +1,17 @@
 ---
-title: How to add a transformation from my module?
-weight: 11
+title: How to apply a transformation from a module
+menuTitle: Applying transformations
+weight: 50
 ---
 
-# How to add a transformation from my module?
+# How to apply a transformation from a module
 
 The `TransformationInterface` is a powerful and handy way to modify your template's design easily.
 Here are the interface details:
 
 ```php
+namespace PrestaShop\PrestaShop\Core\MailTemplate\Transformation;
+
 interface TransformationInterface
 {
     /**
@@ -45,9 +48,9 @@ The `getType` method is used to filter transformations (a transformation is only
 `setLanguage` method it will allow you to know the language used in this generation which is handy if you need to add
 localized texts or images.
 
-### Layout
+## Layout
 
-For this example we will use the same layout we use in [How to add layout variables from my module?](../add-layout-variables-from-module/):
+For this example we will use the same layout we use in [How to add layout variables from a module]({{< ref "add-layout-variables-from-module.md" >}}):
 
 ```twig
 {# modules/my_email_theme_module/mails/layout/customizable_modern_layout.html.twig #}
@@ -76,12 +79,12 @@ For this example we will use the same layout we use in [How to add layout variab
 {% endblock %}
 ```
 
-Note the `subtitle` class on the span contain the custom message, we will use it as a css selector for our transformation.
+Note the `<span class="subtitle">` that contains the custom message, we will use a CSS selector for our transformation.
 
-### The Transformation class
+## The Transformation class
 
-In this example we are gonna create a class implementing the `TransformationInterface`, its purpose is to change the color
-of all the tags with the `subtitle` class.
+In this example we are going to create a class implementing the `TransformationInterface`. Its purpose is to change the color
+of all the `<span>` tags with the `subtitle` class.
 
 ```php
 namespace PrestaShop\Module\MyEmailThemeModule\MailTemplate\Transformation;
@@ -128,7 +131,7 @@ class CustomMessageColorTransformation extends AbstractTransformation
 }
 ```
 
-### Using the hook
+## Using the hook
 
 Now you need to add your transformation for this specific layout, in order to do so you will use
 the `actionGetMailLayoutTransformations` hook.

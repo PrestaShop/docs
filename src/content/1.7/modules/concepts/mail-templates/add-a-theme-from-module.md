@@ -1,19 +1,16 @@
 ---
-title: How to add an email theme from my module?
-weight: 13
+title: How to add an email theme from a module
+menuTitle: Adding a theme
+weight: 30
 ---
 
-# How to add an email theme from my module?
+# How to add an email theme from a module
 
-Now, what if you want to add a whole new email theme? Of course one possibility is to
-add a new theme folder in `mails/themes/...` but it's not the most convenient if you want to
-install/uninstall it easily and quickly, so let's integrate the theme in a module.
+Now, what if you want to add a whole new email theme? Of course one possibility is to add a new theme folder in `mails/themes/` but it's not the most convenient if you want to install/uninstall it easily and quickly, so let's integrate the theme in a module.
 
-Just like we did to [add a layout from a module](../add-a-layout-from-module) we are going to use
-the `actionListMailThemes` hook, except this time we are going to add a whole email theme. Now to
-ease things a bit we can use `FolderThemeScanner` used by the core to scan its own themes. 
+Just like we did to [add a layout from a module]({{< ref "add-a-layout-from-module.md" >}}) we are going to use the `actionListMailThemes` hook, except this time we are going to add a whole email theme. Now to ease things a bit we can use `FolderThemeScanner` used by the core to scan its own themes. 
 
-### Using the hook
+## Using the hook
 
 ```php
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\Layout;

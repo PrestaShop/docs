@@ -1,15 +1,14 @@
 ---
-title: How to extend a layout in a theme from my module?
-weight: 12
+title: How to extend a layout in a theme from a module
+menuTitle: Extending a layout
+weight: 10
 ---
 
-# How to extend a layout in a theme from my module?
+# How to extend a layout in a theme from a module
 
-Sometimes you may want to use the provided email theme but you would like to add some information or
-change the header/footer. One of the advantage of new theme layouts is that they use Twig so you can
-take advantage of its extension and blocks features.
+Sometimes you may want to use the provided email theme but you would like to add some information or change the header/footer. One of the advantages of new theme layouts is that they use Twig so you can take advantage of its extension and blocks features.
 
-### Layout
+## Layout
 
 ```twig
 {% extends '@MailThemes/modern/core/order_conf.html.twig' %}
@@ -29,7 +28,7 @@ take advantage of its extension and blocks features.
 {% endblock %}
 ```
 
-### Using the hook
+## Using the hook
 
 Now you need to add your layout to the theme's layout collection, in order to do so you will use 
 the `actionListMailThemes` hook.

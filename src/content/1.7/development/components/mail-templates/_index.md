@@ -245,8 +245,8 @@ Be aware this operation will **permanently modify** your shop theme's files!
 
 ### Module Tutorials
 
-* [How to add a layout in a theme from my module?]({{< ref "1.7/modules/concepts/mail-templates/add-a-layout-from-module.md" >}})
-* [How to add layout variables from my module?]({{< ref "1.7/modules/concepts/mail-templates/add-layout-variables-from-module.md" >}})
-* [How to add a transformation from my module?]({{< ref "1.7/modules/concepts/mail-templates/add-transformation-from-module.md" >}})
-* [How to extend a layout in a theme from my module?]({{< ref "1.7/modules/concepts/mail-templates/extend-a-layout-from-module.md" >}})
-* [How to add an email theme from my module?]({{< ref "1.7/modules/concepts/mail-templates/add-a-theme-from-module.md" >}})
+* [How to extend a layout in a theme from a module]({{< ref "1.7/modules/concepts/mail-templates/extend-a-layout-from-module.md" >}})
+* [How to add a layout in a theme from a module]({{< ref "1.7/modules/concepts/mail-templates/add-a-layout-from-module.md" >}})
+* [How to add an email theme from a module]({{< ref "1.7/modules/concepts/mail-templates/add-a-theme-from-module.md" >}})
+* [How to add layout variables from a module]({{< ref "1.7/modules/concepts/mail-templates/add-layout-variables-from-module.md" >}})
+* [How to apply a transformation from a module]({{< ref "1.7/modules/concepts/mail-templates/apply-transformation-from-module.md" >}})

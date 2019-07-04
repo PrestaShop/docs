@@ -1,19 +1,20 @@
 ---
-title: How to add a layout in a theme from my module?
-weight: 9
+title: How to add a layout in a theme from a module
+menuTitle: Adding a layout
+weight: 20
 ---
 
-# How to add a layout in a theme from my module?
+# How to add a layout in a theme from a module
 
-You can integrate your own layouts from your module, they will then be managed during
+You can add your own mail layouts from your module, they will then be included during
 email generation. Each time you install a language or if you generate them via the back
-office your layout will be rendered (and translated) and exported in the appropriate folders.
+office your layout will be rendered, translated and exported in the appropriate folders.
 
 Let's assume for this example you want to add your layout for both themes `classic` and `modern`.
 You will first have to prepare your layouts, let's say you store them in the `mail/layouts` folder
 of your module.
 
-### Layouts
+## Layouts
 
 ```twig
 {# modules/my_email_theme_module/mails/layout/custom_classic_layout.html.twig #}
@@ -55,7 +56,7 @@ of your module.
 {% endblock %}
 ```
 
-### Using the hook
+## Using the hook
 
 Now you need to add your layout to the theme's layout collection, in order to do so you will use 
 the `actionListMailThemes` hook.
