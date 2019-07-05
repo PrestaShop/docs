@@ -1,6 +1,8 @@
 ---
 title: Domain exceptions
-weight: 10
+weight: 30
+aliases:
+- /1.7/development/architecture/domain-exceptions/
 ---
 
 # Domain exceptions
@@ -80,7 +82,7 @@ private function updateCategoryFromCommandData(Category $category, EditCategoryC
 ```
 
 {{% notice tip %}}
-If you are not familiar with command handlers or how CQRS pattern is used in PrestaShop, you can read about it here: [CQRS]({{< ref "1.7/development/architecture/cqrs.md" >}}).
+If you are not familiar with command handlers or how CQRS pattern is used in PrestaShop, you can read about it here: [CQRS]({{< ref "cqrs.md" >}}).
 {{% /notice %}}
 
 We can see in the code above, that if category update fails, it will throw a `CannotEditCategoryException`. 

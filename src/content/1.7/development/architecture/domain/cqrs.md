@@ -1,9 +1,12 @@
 ---
-title: CQRS
+title: CQRS - Commands and Queries
+menuTitle: CQRS
 weight: 10
+aliases:
+- 1.7/development/architecture/cqrs/
 ---
 
-# CQRS
+# CQRS - Commands and Queries
 
 ## What is CQRS?
 
@@ -36,13 +39,13 @@ Fortunately, by implementing CQRS it allows PrestaShop to quickly build new API,
 ### Command and CommandHandler principles
 
 1. Any alteration on the state of the application MUST be performed through a `Command`.
-2. `Command` describes a __single__ action. It DOES NOT perform it.
-3. `Command` receives only scalar/native types on input.
-4. For every `Command` there is at least one `CommandHandler` whose role is to execute that `Command`.
-5. `CommandHandler` MUST be placed in the `Adapter` namespace as long as they have legacy dependencies.
-6. `CommandHandler` SHOULD NOT return anything on success, and SHOULD throw a typed `Exception` on failure. The "no return on success" rule can be broken only when creating entities. 
-7. `CommandHandler` MUST use the existing `ObjectModel` for writes as long as those classes exist.
-8. `CommandHandler` MUST implement an interface containing a single public method like this: 
+2. A `Command` describes a __single__ action. It DOES NOT perform it.
+3. A `Command` receives only primitive types on input (int, float, string, bool and array).
+4. For every `Command` there MUST be at least one `CommandHandler` whose role is to execute that `Command`.
+5. A `CommandHandler` MUST be placed in the `Adapter` namespace as long as it has legacy dependencies.
+6. A `CommandHandler` SHOULD NOT return anything on success, and SHOULD throw a typed `Exception` on failure. The "no return on success" rule can be broken only when creating entities. 
+7. A `CommandHandler` MUST use the existing `ObjectModel` for writes as long as those classes exist.
+8. A `CommandHandler` MUST implement an interface containing a single public method like this: 
 
 ```php
 public function handle(NameOfTheCommand $command);
@@ -51,14 +54,14 @@ public function handle(NameOfTheCommand $command);
 ### Query and QueryHandler principles
 
 1. Data retrieval SHOULD always go through a `Query`.
-2. `Query` describes a _single_ data query. It DOES NOT perform it.
-3. `Query` receives only scalar/native types on input.
-4. For every `Query` there is at least one `QueryHandler` whose role is to execute that `Query` and return the resulting data set.
-5. `QueryHandler` SHOULD return a typed object, and SHOULD throw a typed `Exception` on failure.
-6. `QueryHandler` SHOULD use the existing `ObjectModel` for reads as long as it's reasonable to do so (in particular for CUD operations in BO migration).
-7. `QueryHandler` MUST be placed in the `Adapter` namespace as long as they have legacy dependencies.
-8. `QueryHandler` SHOULD return data objects that make sense to the domain, and SHOULD NOT leak internal objects.
-9. `QueryHandler` MUST implement an interface containing a single public method and a typed return like this: 
+2. A `Query` describes a **single** data query. It DOES NOT perform it.
+3. A `Query` receives only primitive types on input (int, float, string, bool and array).
+4. For every `Query` there MUST be at least one `QueryHandler` whose role is to execute that `Query` and return the resulting data set.
+5. A `QueryHandler` SHOULD return a typed object, and SHOULD throw a typed `Exception` on failure.
+6. A `QueryHandler` SHOULD use the existing `ObjectModel` for reads as long as it's reasonable to do so (in particular for CUD operations in BO migration).
+7. A `QueryHandler` MUST be placed in the `Adapter` namespace as long as they have legacy dependencies.
+8. A `QueryHandler` SHOULD return data objects that make sense to the domain, and SHOULD NOT leak internal objects.
+9. A `QueryHandler` MUST implement an interface containing a single public method and a typed return like this: 
 
 ```php
 /**

@@ -2,7 +2,7 @@
 title: How to migrate Back Office pages to Symfony 3
 menuTitle: Migration guide
 chapter: true
-weight: 20
+weight: 30
 ---
 
 # How to migrate Back Office pages to Symfony 3

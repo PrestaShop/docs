@@ -1,7 +1,7 @@
 ---
 title: Legacy
 chapter: true
-weight: 30
+weight: 40
 ---
 
 # Legacy

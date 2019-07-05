@@ -5,7 +5,7 @@ weight: 20
 
 # Data Transfer Objects
 
-PrestaShop is using Data Transfer Objects (DTO in short) in its codebase, in this section you learn how you can benefit from using DTOs as well.
+PrestaShop is using Data Transfer Objects (or DTOs) in its codebase, in this section you learn how you can benefit from using DTOs as well.
 
 ## What is Data Transfer Object?
 
@@ -21,7 +21,7 @@ Benefits of using DTOs:
 
 ## Examples of Data Transfer Objects in PrestaShop
 
-PrestaShop extensively uses DTOs in it's `QueryHandlers` (you can learn more about it in [CQRS section]({{< ref "1.7/development/architecture/cqrs.md" >}})). As an example, you can take a look at `GetCustomerForEditingHandlerInterface` below.
+PrestaShop extensively uses DTOs in it's `QueryHandlers` (you can learn more about it in [CQRS section]({{< ref "cqrs.md" >}})). As an example, you can take a look at `GetCustomerForEditingHandlerInterface` below.
 
 ```php 
 namespace PrestaShop\PrestaShop\Core\Domain\Customer\QueryHandler;
