@@ -116,7 +116,7 @@ The templates from layouts generation workflow is a bit complex, here are the ma
 
 * **GenerateThemeMailTemplatesCommand** describes the generation settings (eg. which theme are we generating and in which language).
 * **GenerateThemeMailTemplatesCommandHandler** is the command bus handler in charge of executing the generation using the configured `MailTemplateGenerator`.
-* **FolderThemeCatalog** provides a `ThemeCollection`, which it builds by scanning mail themes in folders.
+* **FolderThemeCatalog** provides a `ThemeCollection`, which is built by scanning mail themes in folders.
 * **MailTemplateGenerator** drives the generation of a `ThemeInterface` for the requested `LanguageInterface`.
 * **MailTemplateTwigRenderer** actually renders the layout using the Twig renderer, and post-processes the result by applying any existing `TransformationInterface`.
 * **LayoutVariablesBuilder** provides variables to be used in the Twig layouts.
@@ -138,7 +138,7 @@ As you can see in the workflow, the email generation process includes a few hook
 {{% notice warning %}}
 **Layout variables are NOT template variables**
 
-Always keep in mind that the variables provided by the `LayoutVariablesBuilder` will only be available during template **generation**, meaning they their value will be fixed into the exported static templates, and won't change dynamically when your emails are being sent. They should not be confused with _template variables_ (like firstname,
+Always keep in mind that the variables provided by the `LayoutVariablesBuilder` will only be available during template **generation**, meaning that their value will be fixed into the exported static templates, and won't change dynamically when your emails are being sent. They should not be confused with _template variables_ (like firstname,
 lastname, ...) which are replaced at the last moment when the email is sent by the `Mail::send` function.
 {{% /notice %}}
 
