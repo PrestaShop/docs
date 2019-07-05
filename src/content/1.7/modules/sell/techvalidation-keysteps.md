@@ -7,7 +7,7 @@ title: Technical validation - Key steps
 Have you ever wondered how the PrestaShop Addons Team proceeds with the validation ?
 
 We are going to show you how to spare time so that you can pretty much "validate" your own module before submitting it to the Addons Marketplace.
-First you might want to read the [Technical Tools]({{<ref "1.7/modules/sell/technical-tools" >}}) and the [Good Practices]({{<ref "1.7/modules/creation/good-practices" >}}). 
+First you might want to read the [Technical Tools]({{< ref "technical-tools.md" >}}) and the [Good Practices]({{< ref "/1.7/modules/creation/good-practices" >}}). 
 
 ### 1. The Basics
 
@@ -40,7 +40,7 @@ After meeting each requirement provided by the Validator, here's a list of extra
     * There are other things we decline like loading a JS file in the whole back office when it is unnecessary. Make sure to only load what you need, when you need it.
 
 * Missing index.php files in your directories ? We decline.
-    * For [security reasons]({{<ref "1.7/modules/creation#keeping-things-secure" >}}), we strongly recommend you comply with this rule. Note that we have [a tool](https://github.com/jmcollin/autoindex) to help you fix that easily.
+    * For [security reasons]({{<ref "/1.7/modules/creation#keeping-things-secure" >}}), we strongly recommend you comply with this rule. Note that we have [a tool](https://github.com/jmcollin/autoindex) to help you fix that easily.
 
 * Modules are required to follow a specific folder convention. Files must be in the right folder.
     * For example JS and CSS files must be inside views/. The Validator will check this. Make sure to respect that as much as possible !
