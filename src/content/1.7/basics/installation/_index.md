@@ -96,10 +96,11 @@ $ composer install
 PrestaShop needs recursive write permissions on several directories:
 
 - ./admin-dev/autoupgrade
+- ./app/config
 - ./app/logs
 - ./app/Resources/translations
 - ./cache
-- ./config/themes
+- ./config
 - ./download
 - ./img
 - ./log
@@ -107,6 +108,7 @@ PrestaShop needs recursive write permissions on several directories:
 - ./modules
 - ./themes
 - ./translations
+- ./upload
 - ./var
 
 You can setup proper permissions with that one line:
