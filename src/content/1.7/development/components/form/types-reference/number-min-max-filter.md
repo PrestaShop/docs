@@ -22,6 +22,6 @@ None.
 
 ## Preview example
 
-{{< figure src="../img/min_max_inputs.png" title="IntegerMinMaxFilterType rendered in grid" >}}
+{{< figure src="../img/min_max_inputs.png" title="NumberMinMaxFilterType rendered in grid" >}}
 
 This type is built for grid filters usage but can be used in forms as well.
