@@ -61,3 +61,6 @@ Developers can already use large list of field types (see [Symfony types](https:
 * [ChangePasswordType](change-password)
 
 * [MoneyWithSuffixType](money-with-suffix)
+
+* [IntegerMinMaxFilterType](integer-min-max-filter)
+* [NumberMinMaxFilterType](number-min-max-filter)
