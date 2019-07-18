@@ -101,6 +101,8 @@ opcache.enable_file_override = On
 opcache.interned_strings_buffer=64
 opcache.memory_consumption=256
 opcache.max_accelerated_files=20000
+opcache.validate_timestamps=1
+opcache.revalidate_freq=0
 ```
 
 Also, your favorite ecommerce project made sure it's fully compatible with OPCache.
