@@ -21,6 +21,10 @@ the cart or the product sheet, when displaying the current stock, etc.).
 Specifically, a hook is a shortcut to the various methods available from
 the `Module` object, as assigned to that hook.
 
+For security reasons, during validation, we do not accept any call
+to another website/API in order to retrieve code that will later be
+executed on server or client.
+
 Modules' operating principles
 -----------------------------
 
