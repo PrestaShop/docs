@@ -30,7 +30,7 @@ Here is a few examples:
   {url entity=address id=$id_address}
   {url entity=address params=['id_address' => $id_address]}
   {url entity=address id=$id_address params=['delete' => 1]}
-  {url entity='sf' route='admin_module_manage'}
+  {url entity='sf' route='admin_module_manage' sf-params=['foo' => 'bar']}
 ```
 
 ...will respectively output:
