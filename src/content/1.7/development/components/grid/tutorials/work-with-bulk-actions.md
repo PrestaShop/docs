@@ -74,16 +74,13 @@ class MyModule extends Module
     {
         // $params['definition'] is instance of \PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinition
         $params['definition']->getBulkActions()->add(
-            ->add(
                 (new SubmitBulkAction('disable_selection'))
                     ->setName('Subscribe newsletter')
                     ->setOptions([
                         // in most cases submit action should be implemented by module
                         'submit_route' => 'admin_my_module_customers_bulk_subscribe_newsletter',
-                    ])
-                ) 
-            )
-        ;
+                    ]) 
+            );
     }
 }
 ```
