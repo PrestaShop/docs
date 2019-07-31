@@ -107,7 +107,10 @@ $hook = new Hook();
 $hook->name = 'displayAtSpecificPlace';
 $hook->title = 'The name of your hook',
 $hook->description = 'This is a custom hook!';
+$hook->position = 1;
 $hook->add(); // return true on success
+
+You can check if hook exists before this with Hook::getIdByName('hook_name')
 ```
 
 ...but PrestaShop enables you to do it the easy way:
@@ -116,4 +119,4 @@ $hook->add(); // return true on success
 $this->registerHook('displayAtSpecificPlace');
 ```
 
-If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you.
+If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you but be carefull : this will also plug the current module to the hook.
