@@ -1795,10 +1795,7 @@ displayOrderConfirmation
     Parameters:
     ```php
     array(
-      'total_to_pay' => (float) Total amount with tax,
-      'currency' => (string) Currency sign,
-      'objOrder' => (object) Order,
-      'currencyObj' => (object) Currency
+      'order' => (object) Order
     );
     ```
     
