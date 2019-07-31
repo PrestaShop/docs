@@ -1009,11 +1009,7 @@ actionValidateCustomerAddressForm
     Parameters:
     ```php
     array(
-      'cart' => (object) Cart,
-      'order' => (object) Order,
-      'customer' => (object) Customer,
-      'currency' => (object) Currency,
-      'orderStatus' => (object) OrderState
+      'form' => (object) CustomerAddressForm
     );
     ```
     
@@ -1024,6 +1020,16 @@ Doesn't necessarily have to be paid.
 
     Located in: /classes/PaymentModule.php
 
+    Parameters:
+    ```php
+    array(
+      'cart' => (object) Cart,
+      'order' => (object) Order,
+      'customer' => (object) Customer,
+      'currency' => (object) Currency,
+      'orderStatus' => (object) OrderState
+    );
+    ```
     
 actionWatermark
 : 
