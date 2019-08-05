@@ -1,7 +1,5 @@
 ---
 title: Adding module links in the back-office side menu
-weight: 2
-chapter: true
 ---
 
 # Adding module links in the back-office side menu
