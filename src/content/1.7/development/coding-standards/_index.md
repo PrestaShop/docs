@@ -26,7 +26,7 @@ All files containing code MUST:
 PHP files MUST follow the [PSR-2 standard](https://www.php-fig.org/psr/psr-2/) alongside [Symfony standards](https://symfony.com/doc/3.4/contributing/code/standards.html#structure).
 
 {{% notice note %}}
-Altough [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) are suggested, they are not enforced.
+Although [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) are suggested, they are not enforced.
 {{% /notice %}}
 
 [PHP CS Fixer](https://cs.sensiolabs.org/) has been configured for the PrestaShop project to help developers to comply with these conventions.
@@ -36,7 +36,7 @@ You can run it using the following command:
 php ./vendor/bin/php-cs-fixer fix
 ```
 
-And you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/develop/.github/contrib) sample in order to make sure you never forget to make your code compliant !
+And you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/develop/.github/contrib) sample in order to make sure you never forget to make your code compliant!
 
 ## Javascript code conventions
 
