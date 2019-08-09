@@ -1,7 +1,5 @@
 ---
 title: MaterialChoiceTableType
-menuTitle: MaterialChoiceTableType
-weight: 2
 ---
 
 # MaterialChoiceTableType

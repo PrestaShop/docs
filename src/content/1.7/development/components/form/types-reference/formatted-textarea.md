@@ -1,7 +1,5 @@
 ---
 title: FormattedTextareaType
-menuTitle: FormattedTextareaType
-weight: 2
 ---
 
 # FormattedTextareaType

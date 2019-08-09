@@ -1,7 +1,5 @@
 ---
 title: IpAddressType
-menuTitle: IpAddressType
-weight: 2
 ---
 
 # IpAddressType

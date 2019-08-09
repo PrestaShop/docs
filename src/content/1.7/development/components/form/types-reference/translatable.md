@@ -1,7 +1,5 @@
 ---
 title: TranslatableType
-menuTitle: TranslatableType
-weight: 2
 ---
 
 # TranslatableType

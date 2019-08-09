@@ -1,7 +1,5 @@
 ---
 title: ShopChoiceTreeType
-menuTitle: ShopChoiceTreeType
-weight: 2
 ---
 
 # ShopChoiceTreeType

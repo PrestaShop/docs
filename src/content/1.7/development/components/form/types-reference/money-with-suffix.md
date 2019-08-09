@@ -1,7 +1,5 @@
 ---
 title: MoneyWithSuffixType
-menuTitle: MoneyWithSuffixType
-weight: 2
 ---
 
 # MoneyWithSuffixType
