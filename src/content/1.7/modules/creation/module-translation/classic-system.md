@@ -221,7 +221,7 @@ This is a start! In this example, when `$my_module_name` is not defined, we capt
 
 Now, when working in internationalization, it's better not to make assumptions regarding spacing and positioning of variables. For example, in French, there should be a non-breaking space before the exclamation mark (`!`), but not in other languages. How can we handle this?
 
-In PrestaShop, you can interpolate variables within your wordings using using [sprintf replacement markers](https://php.net/sprintf), such as `%s` or `%1$s`. Using this feature, we could get rid of the explicit concatenation of "Hello, ", "$my_module_name" and "!", and let it depend on the translated wording:
+In PrestaShop, you can interpolate variables within your wordings using [sprintf replacement markers](https://php.net/sprintf), such as `%s` or `%1$s`. Using this feature, we could get rid of the explicit concatenation of "Hello, ", "$my_module_name" and "!", and let it depend on the translated wording:
 
 ```
 {if !isset($my_module_name) || !$my_module_name}
