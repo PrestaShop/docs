@@ -233,8 +233,17 @@ In PrestaShop, you can interpolate variables within your wordings using [sprintf
 
 This way, since the variable replacement will happen _after_ the wording is translated, we can have a wording in English like `Hello %s!`, being translated as `Bonjour %s !` in French.
 
-Also, you can use sprintf markers (like `%s` and `%d`) or replacement tokens (like `[1]` and `%something%`). If you chose the latter, just provide an associative array: 
-`sprintf=['[1]' => 'some replacement, '%something%' => 'something else']`
+{{% notice tip %}}
+**There's no fixed "special" format for placeholders.**
+
+You can use sprintf markers like `%s` and `%d`, or replacement tokens like `[foo]` and `%bar%`. If you choose to use tokens, just remember to provide an associative array: 
+
+```text
+sprintf=['[foo]' => 'some replacement, '%bar%' => 'something else']
+```
+{{% /notice %}}
+
+
 
 #### Interpolating HTML
 
@@ -248,10 +257,10 @@ But as we explained before, this solution is not recommended, because the words 
 
 ```php
 {l
-  s='If you want a category to appear in the menu of your shop, go to [1]Modules > Modules & Services > Installed modules.[/1] Then, configure your menu module.'
+  s='If you want a category to appear in the menu of your shop, go to [modules-link]Modules > Modules & Services > Installed modules.[/modules-link] Then, configure your menu module.'
   sprintf=[
-    '[1]' => "<a href=\"{$link->getAdminLink('AdminModules')}\" target=\"_blank\">",
-    '[/1]' => '</a>'
+    '[modules-link]' => "<a href=\"{$link->getAdminLink('AdminModules')}\" target=\"_blank\">",
+    '[/modules-link]' => '</a>'
   ]
   mod='mymodule'
 }
@@ -263,7 +272,7 @@ Let's look at the resulting string:
 If you want a category to appear in the menu of your shop, go to <a href="(...)" target="_blank">Modules &gt; Modules &amp; Services &gt; Installed modules.</a> Then, configure your menu module.
 ```
 
-Make sure to keep `[1]` and `[/1]` when translating the wording to other languages.
+Make sure to keep `[modules-link]` and `[/modules-link]` when translating the wording to other languages.
 
 ### Contextualization
 
