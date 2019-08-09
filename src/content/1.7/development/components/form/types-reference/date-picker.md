@@ -1,7 +1,5 @@
 ---
 title: DatePickerType
-menuTitle: DatePickerType
-weight: 2
 ---
 
 # DatePickerType

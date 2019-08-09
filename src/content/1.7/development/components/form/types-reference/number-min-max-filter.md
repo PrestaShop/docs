@@ -1,7 +1,5 @@
 ---
 title: NumberMinMaxFilterType
-menuTitle: NumberMinMaxFilterType
-weight: 2
 ---
 
 # NumberMinMaxFilterType

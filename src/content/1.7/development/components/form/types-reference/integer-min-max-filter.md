@@ -1,7 +1,5 @@
 ---
 title: IntegerMinMaxFilterType
-menuTitle: IntegerMinMaxFilterType
-weight: 2
 ---
 
 # IntegerMinMaxFilterType

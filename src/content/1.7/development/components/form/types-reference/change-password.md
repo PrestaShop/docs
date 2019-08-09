@@ -1,7 +1,5 @@
 ---
 title: ChangePasswordType
-menuTitle: ChangePasswordType
-weight: 2
 ---
 
 # ChangePasswordType

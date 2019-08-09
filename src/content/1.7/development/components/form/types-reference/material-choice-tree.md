@@ -1,7 +1,5 @@
 ---
 title: MaterialChoiceTreeType
-menuTitle: MaterialChoiceTreeType
-weight: 2
 ---
 
 # MaterialChoiceTreeType
