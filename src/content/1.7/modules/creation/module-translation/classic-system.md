@@ -332,7 +332,9 @@ $_MODULE['<{mymodule}prestashop>mymodule_533937acf0e84c92e787614bbb16a7a0'] = 'Ã
 $_MODULE['<{mymodule}prestashop>mymodule_0f40e8817b005044250943f57a21c5e7'] = 'Aucun nom fourni';
 ```
 
+{{% notice note %}} 
 This file shouldn't be modified manually! It is meant to be edited through the PrestaShop translation interface.
+{{% /notice %}}
 
 ## Limitations and caveats
 
