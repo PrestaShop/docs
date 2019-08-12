@@ -1,16 +1,23 @@
 ---
-title: Alter Back Office forms
+title: Alter Configuration Back Office forms
 weight: 4
 aliases:
 - /1.7/modules/concepts/hooks/alter_forms_on_modern_pages
 - /1.7/modules/concepts/hooks/alter-forms-on-modern-pages
 ---
 
-# Alter forms on modern pages
+# Alter configuration forms on modern pages
 {{< minver v="1.7.4" title="true" >}}
 
 One of the most common tasks for the PrestaShop developers is to alter the data and make it manageable for customers.
 In PrestaShop 1.6, a specific Form framework was created to help developers. In PrestaShop 1.7, the system has changed as we now rely on the Symfony Form component.
+
+{{% notice warning %}}
+**This system only works with pages from the "Configure" section of your back office.**
+
+If you want to customize an entity form, you're looking for Grid and identifiable object form hooks usage example.
+
+{{% /notice %}}
 
 Let's see an example on how to add, populate, validate and persist a new form field in PrestaShop 1.7.
 
