@@ -79,5 +79,6 @@ class MyGridDefinitionFactory extends AbstractGridDefinition
 ```
 
 {{% notice note %}}
-You need to create a custom Bulk Action? We got you [covered](../tutorials/create-custom-bulk-action)!
+You need to create a custom Bulk Action? We got you ([covered]({{< ref "1.7/development/components/grid/bulk-actions-reference/_index.md" >}}))!
+
 {{% /notice %}}
