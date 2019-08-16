@@ -9,7 +9,9 @@ PrestaShop is using Value Objects in its codebase. To help you understand better
 
 ## What is Value Object?
 
-A Value Object is small immutable object whos equality is not based on identity, this means that two Value Objects are equal when they have the same value, but not necessarily being the same object.
+[Value Objects](https://martinfowler.com/bliki/ValueObject.html) (VO for short) are small, simple, immutable objects, like Money or a date range, whose equality is not based on their identity. This means that any two given instances of a same VO are considered equal when they contain the same values.
+
+Value Objects are often referred to as Value Types as well. You can consider a Value Object like a data _type_, whose objective is to provide structure, validation, and meaning.
 
 Characteristics of Value Object are:
 
