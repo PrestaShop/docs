@@ -16,7 +16,7 @@ Value Objects are often referred to as Value Types as well. You can consider a V
 Characteristics of Value Object are:
 
 * It does not have an identity, contrary to an Entity (e.g. `Money($amount)` can be considered a VO because two instances of it can be considered equal as long as the `$amount` is equal, regardless of which bills that amount is made of; but `Bill($billNumber)` is an entity because it refers to a specific physical Bill).
-* It is immutable (e.g. it cannot be modified, but instead new instance of value object is created after its modification).
+* It is immutable (e.g. it cannot be modified; any modification on it yields a different instance).
 * It is self validating (e.g. value object cannot be created with invalid values, meaning that attempt to create `new Email('not an email')` would throw an exception).
 * It is interchangeable (e.g. `$a` and `$b` can replace one another without any side effects if they both are created like `$a = new Money(100)` and `$b = new Money(100)`).
 
