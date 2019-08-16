@@ -5,7 +5,7 @@ weight: 20
 
 # Value Objects
 
-PrestaShop is using Value Objects in its codebase, to help you understand better what they are, this article aims to explain what Value object is and how to use it.
+PrestaShop is using Value Objects in its codebase. To help you understand better what they are, this article aims to explain what Value object is and how to use it.
 
 ## What is Value Object?
 
