@@ -96,7 +96,7 @@ The folders are used this way:
 **/config/**
 : Contains configuration file. By default, it only has the theme.yml file.
 
-**/module/**
+**/modules/**
 : Contains either theme-specific modules, or the theme's version of native modules' template files.  
   For instance, the `themes/classic/modules/ps_categorytree/views/templates/front/ps_categorytree.tpl` file replaces the Category module's own `modules/ps_categorytree/views/templates/front/ps_categorytree.tpl`
 
