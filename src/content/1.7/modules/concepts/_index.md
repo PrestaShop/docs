@@ -10,10 +10,18 @@ chapter: true
 
 PrestaShop modules acts as Symfony bundles, extension points are added continuously in each minor version:
 
-| Version  | Symfony features                                     |
-|----------|------------------------------------------------------|
-| 1.7.3    | Twig templates inheritance and Services declaration  |
-| 1.7.4    | Forms customization and Console commands declaration |
-| 1.7.5    | Modern controllers creation and Security annotations |
-| 1.7.6    | Doctrine ORM support (both in Back & Front office)   |
-| 1.7.7    | Help us improve the developer experience!            |
+| Version  | Symfony features                                               |
+|----------|----------------------------------------------------------------|
+| 1.7.3    | [Twig templates][1] and [Services][2]                          |
+| 1.7.4    | [Configuration Forms][3] and [Console commands][4]             |
+| 1.7.5    | [Modern controllers and Security][5]                           |
+| 1.7.6    | [Doctrine ORM][6] and [Entity forms][7]                        |
+| 1.7.7    | Help us improve the developer experience!                      |
+
+[1]: {{< ref "1.7/modules/concepts/templating/_index.md" >}}
+[2]: {{< ref "1.7/modules/concepts/services/_index.md" >}}
+[3]: {{< ref "1.7/modules/concepts/forms/admin-forms.md" >}}
+[4]: {{< ref "1.7/modules/concepts/commands.md" >}}
+[5]: {{< ref "1.7/modules/concepts/controllers/admin-controllers/_index.md" >}}
+[6]: {{< ref "1.7/modules/concepts/doctrine/_index.md" >}}
+[7]: {{< ref "1.7/modules/sample_modules/grid-and-identifiable-object-form-hooks-usage/_index.md" >}}
