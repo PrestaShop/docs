@@ -97,8 +97,10 @@ class Mymodule extends Module
      */
     public function hookActionCustomerGridDefinitionModifier(array $params)
     {
-        // $params['definition'] is instance of \PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinition
-        $params['definition']->getActions()->add(
+        /** @var \PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinition */
+        $gridDefinition = $params['definition'];
+
+        $gridDefinition->getGridActions()->add(
             ->add(
                 (new LinkGridAction('new_action'))
                     ->setName($this->trans('New action', [], 'MyModule.Admin.Actions'))
@@ -128,9 +130,11 @@ First, you need to create a Grid action itself:
 
 use PrestaShop\PrestaShop\Core\Grid\Action\AbstractGridAction;
 
-/** It extends AbstractGridAction,
+/**
+ * It extends AbstractGridAction,
  * but you can also implement \PrestaShop\PrestaShop\Core\Grid\Action\GridActionInterface 
- */ if for some reason you want to avoid using the abstract class
+ * if for some reason you want to avoid using the abstract class
+ */ 
 final class MySpecificAction extends AbstractBulkAction
 {
     /**
