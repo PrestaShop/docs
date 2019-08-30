@@ -36,6 +36,8 @@ You can run it using the following command:
 php ./vendor/bin/php-cs-fixer fix
 ```
 
+The prestashop specific configuration file [can be found here](https://github.com/PrestaShop/PrestaShop/blob/develop/.php_cs.dist)
+
 And you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/develop/.github/contrib) sample in order to make sure you never forget to make your code compliant!
 
 ## Javascript code conventions
