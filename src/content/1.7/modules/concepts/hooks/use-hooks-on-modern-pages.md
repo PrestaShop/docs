@@ -45,41 +45,7 @@ Accessing the Product Catalog page in *debug mode* we can access the list of ava
 
 As we need to act on Dashboard but after the header, in the icons toolbar (with others export options) `hookdisplayDashboardToolbarIcons` sounds like the hook we are looking for.
 
-### Second step: create and register the Hook
-
-Create a [new module](http://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
-
-```php
-// foo.php
-
-/* ... */
-
-/**
- * Module installation.
- *
- * @return bool Success of the installation
- */
-public function install()
-{
-    return parent::install() && $this->registerHook('displayDashboardToolbarIcons');
-}
-
-/**
- * Add an "XML export" action in Product Catalog page.
- *
- * @return bool Success of the installation
- */
-public function hookDisplayDashboardToolbarIcons($hookParams)
-{
-  if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
-      // to be continued
-  }
-}
-```
-
-> 'route' property is only available for modern pages to find the route related to a page look at the debug toolbar.
-
-### Third step: create your own product serializer
+### Second step: create your own product serializer
 
 At this point, this is basic PHP code we need to produce. We need to retrieve the list of products from database, and serialize them into XML and dump into a file sent to the user.
 
@@ -88,11 +54,14 @@ At this point, this is basic PHP code we need to produce. We need to retrieve th
 Even if using old way to retrieve data is still valid (``Product::getProducts`` or through the webservice), we'd like to introduce a best practice here: using a repository and get ride of the Object model. This has a lot of advantages, you rely on database instead of model and you'll have better performances and control on your data.
 
 ```php
-// src/Repository/ProductRepository.php
-namespace Foo\Repository;
+<?php
+namespace PrestaShop\Module\Foo\Repository;
 
 use Doctrine\DBAL\Connection;
 
+/**
+ * Class ProductRepository.
+ */
 class ProductRepository
 {
     /**
@@ -125,40 +94,129 @@ class ProductRepository
         $statement = $this->connection->prepare($query);
         $statement->bindValue('langId', $langId);
         $statement->execute();
-        
+
         return $statement->fetchAll();
     }
 }
 ```
 
-And declare your repository as a service:
+And declare your repository as a service. By convention, the declaration the name of the service is `your_society.module.your_module_name.your_service_name`, here it could be `mysociety.module.foo.product_repository`:
 
 ```yaml
-# modules/foo/config/services.yml
-
 services:
-    product_repository:
-        class: Foo\Repository\ProductRepository
-        arguments: ['@doctrine.dbal.default_connection', '%database_prefix%']
+  _defaults:
+    public: true
+
+  <your_society>.module.<your_module_name>.<your_service_name>:
+    class: PrestaShop\Module\Foo\Repository\ProductRepository
+    arguments:
+      $connection: '@doctrine.dbal.default_connection'
+      $dbPrefix: '%database_prefix%'
 ```
 
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
 
-```php
-// foo.php
+### Third step: create and register the Hook
 
-/* ... */
-/**
- * Get the list of products for a specific lang.
- */
-public function hookDisplayDashboardToolbarIcons($hookParams)
+Create a [new module](http://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
+
+```php
+<?php
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+if (file_exists(__DIR__ . '/vendor/autoload.php')) {
+    require_once __DIR__ . '/vendor/autoload.php';
+}
+
+use PrestaShop\Module\Foo\Repository\ProductRepository;
+use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
+
+class Foo extends Module
 {
-    if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
-        $products = $this->get('product_repository')->findAllByLangId(1);
-        dump($products);
+    public function __construct()
+    {
+        $this->name = '<module_name>';
+        $this->tab = 'front_office_features';
+        $this->version = '1.0.0';
+        $this->author = '<your_name>';
+        $this->need_instance = 0;
+        $this->ps_versions_compliancy = [
+            'min' => '1.7',
+            'max' => _PS_VERSION_
+        ];
+        $this->bootstrap = true;
+
+        parent::__construct();
+
+        $this->displayName = $this->l('My foo module.');
+        $this->description = $this->l('This is a short description of my foo module.');
+
+        $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
     }
+
+    /**
+     * Module installation.
+     *
+     * @return bool Success of the installation
+     */
+    public function install()
+    {
+        return parent::install() && $this->registerHook('displayDashboardToolbarIcons');
+    }
+
+    /**
+     * Module uninstallation.
+     *
+     * @return bool Success of the uninstallation
+     */
+    public function uninstall()
+    {
+        if (!parent::uninstall()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Get the list of products for a specific lang.
+     */
+    public function hookDisplayDashboardToolbarIcons($hookParams)
+    {
+        if ($this->isSymfonyContext() && $hookParams['route'] === 'admin_product_catalog') {
+            $products = $this->getRepository()->findAllByLangId(1);
+            //The getRepository method is defined below
+            dump($products);
+        }
+    }
+
+    /**
+     * @return ProductRepository|null
+     */
+    private function getRepository()
+    {
+        if (null === $this->repository && $this->isSymfonyContext()) {
+            try {
+                $this->repository = $this->get('<your_service_name>');
+            } catch (\Exception $e) {
+                //Module is not installed so its services are not loaded
+                $this->repository = new ProductRepository(
+                    $this->get('doctrine.dbal.default_connection'),
+                    SymfonyContainer::getInstance()->getParameter('database_prefix')
+                );
+            }
+        }
+
+        return $this->repository;
+    }
+
 }
 ```
+
+> 'route' property is only available for modern pages to find the route related to a page look at the debug toolbar.
 
 In Product Catalog Page you should see the list of Products in debug toolbar in "Dump" section:
 
