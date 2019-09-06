@@ -15,7 +15,7 @@ The purpose of this chapter is to provide the best practices and tips for keepin
 Keeping a shop updated to the latest available version ensures you have the latest changes brought by the core team and the developer community.
 Depending on the version you upgrade to, you can get new features, security or performance improvements, or simply bug fixes.
 
-Furthermore, the support of PrestaShop 1.6 will end before the end of the year 2018. We advise you to use the 1.7 versions to get support, along with core and modules upgrades.
+Furthermore, the support of PrestaShop 1.6 is now ended. We advise you to use the 1.7 versions to get support, along with core and modules upgrades.
 
 ## Upgrade and migration, two different processes
 

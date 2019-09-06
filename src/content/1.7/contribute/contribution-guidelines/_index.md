@@ -122,7 +122,6 @@ Pull requests must be made in the appropriate branch, depending on the nature of
 
 * **Develop**. New features, bug fixes, improvements. PRs merged here will be released in the next minor or major version.
 * **Patch version branch** (eg. 1.7.4.x). For critical bug fixes and regressions only. PRs merged here will be released in a patch version. 
-* **1.6.1.x branch**. For PrestaShop 1.6 bug fixes only. 
 
 {{% callout %}}
 
@@ -132,7 +131,7 @@ PrestaShop only accepts PRs on branches which are subject to new releases.
 
 Once PrestaShop releases a new minor ("dot-zero") version, it won't release new patch versions for previous minor versions – with the exception of rare cases, for example if a security bug is found just before or after a minor release is published.
 
-This means that except for `1.6.1.x` (on extended support), only the latest minor version patch branch is supported.
+This means that only the latest minor version patch branch is supported.
 
 For example, the `1.7.4.x` branch is supported until the release of version 1.7.5.0. After that, the only supported version branch will be `1.7.5.x`, and so on.
 

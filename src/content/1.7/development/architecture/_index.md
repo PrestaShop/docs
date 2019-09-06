@@ -21,16 +21,17 @@ Here is how the files are organized:
     identification, for security reasons. **Important**: you should make
     sure to protect that folder with a `.htaccess` or `.htpasswd` file!
 -   `/app`: contains the configuration for the bundles and the framework.
+-   `/bin`: contains binaries installed by the framework, such as the console.
 -   `/cache`: contains temporary folders that are generated and re-used
     in order to alleviate the server's load.
 -   `/classes`: contains all the files pertaining to PrestaShop's object
     model (some are used for the front office, others for the
     back office). Each file represents (and contains) a PHP class, and
-    its methods/properties.
+    its methods/properties. These classes are part of the legacy.
 -   `/config`: contains all of PrestaShop's configuration files. Unless
     asked to, you should *never* edit them, as they are directly handled
     by PrestaShop's installer and back office.
--   `/controllers`: contains all the files pertaining to PrestaShop
+-   `/controllers`: contains all the files pertaining to PrestaShop legacy
     controllers – as in Model-View-Controller (or MVC), the software
     architecture used by PrestaShop. Each file controls a specific part
     of PrestaShop.
@@ -78,9 +79,11 @@ Here is how the files are organized:
     files in order to change the look of the PDF files that
     PrestaShop generates.
 -   `/src`: contains the architecture files, comprising the
-    Symfony framework, the legacy framework, and the Adapter classes.
+    Symfony framework, the new code, the legacy framework, and the Adapter classes.
 -   `/tests`: contains automated tests. This folder is not
     part of the public archive.
+-   `/tests-legacy`: contains old automated tests currently being rewritten.
+    This folder is not part of the public archive.
 -   `/themes`: contains all the currently-installed themes, each in its
     own folder.
 -   `/tools`: contains external tools that were integrated
@@ -91,11 +94,13 @@ Here is how the files are organized:
     However, if you wish to change the translation, you must do so using
     the PrestaShop internal tool, and not edit them directly in
     this folder.
--   `/travis-scripts`: contains Travis-specific scripts.
+-   `/travis-scripts`: contains Travis-specific scripts (we use [Travis](https://travis-ci.org/) as our [CI](https://en.wikipedia.org/wiki/Continuous_integration) management system for pull requests)
     This folder is not part of the public archive.
 -   `/upload`: contains the files that would be uploaded by clients for
     customizable products (for instance, a picture that a client wants
     printed on a mug).
+-   `/var`: contains various files needed by PrestaShop for its internal working, including
+    cache files, log files, sessions files ...
 -   `/vendor`: contains various 3rd-party tools and
     frameworks that are used by PrestaShop, such as Composer, cURL,
     Doctrine, etc.

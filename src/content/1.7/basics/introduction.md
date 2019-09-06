@@ -30,7 +30,7 @@ You should be familiar with PHP and Object-Oriented Programming before attemptin
 You can learn PHP here:
 
 * https://www.php.net/manual/en/getting-started.php
-* https://www.codecademy.com/tracks/php
+* https://www.codecademy.com/catalog/language/php
 
 You can learn Object-Oriented programming here:
 
@@ -47,19 +47,15 @@ Overriding is a system in itself. PrestaShop uses completely object-oriented cod
 
 ## PrestaShop’s technical architecture
 
-PrestaShop is based on a 3-tier architecture:
+## MVC as the root
+
+Until PrestaShop 1.6, PrestaShop was based on a 3-tier architecture:
 
 * Object/data. Database access is controlled through files in the “classes” folder.
 * Data control. User-provided content is controlled by files in the root folder.
 * Design. All of the theme’s files are in the “themes” folder.
 
 This is the same principle as the Model>View>Controller (MVC) architecture, only in a simpler and more accessible way.
-
-While all versions of PrestaShop up to 1.6 took pride in only using a custom architecture, it was decided to incorporate the Symfony PHP framework starting with PrestaShop 1.7.
-
-The driving idea is that we want our code to be more robust, more modular, and fully testable. The 1.6 architecture, inherited from version 1.5 and years of PrestaShop development, is not getting any younger, and its age is really starting to show.
-
-Using a proven and popular open-source framework will allow us to focus on our core business code (managing a cart, handling orders, calculating prices and taxes, generating invoices, etc.) with greater efficiency, while enjoying the stability of a globally recognized framework.
 
 A 3-tier architecture has many advantages:
 
@@ -84,3 +80,13 @@ The view does not do any processing; it only displays the result of the processi
 The Controller manages synchronization events between the Model and the View, and updates both as needed. It receives all the user events and triggers the actions to perform.
 
 If an action needs data to be changed, the Controller will “ask” the Model to change the data, and in turn the Model will notify the View that the data has been changed, so that the View can update itself.
+
+## Moving forward with Symfony
+
+While all versions of PrestaShop up to 1.6 took pride in only using a custom architecture, it was decided to incorporate the Symfony PHP framework starting with PrestaShop 1.7.
+
+The driving idea is that we want our code to be more robust, more modular, and fully testable. The 1.6 architecture, inherited from version 1.5 and years of PrestaShop development, is not getting any younger, and its age is really starting to show.
+
+Using a proven and popular open-source framework will allow us to focus on our core business code (managing a cart, handling orders, calculating prices and taxes, generating invoices, etc.) with greater efficiency, while enjoying the stability of a globally recognized framework.
+
+In the documentation, we will refer to the 1.6 framework as the "legacy" framework, as this is a popular [designation](https://en.wikipedia.org/wiki/Legacy_system) used in the software world.

@@ -67,7 +67,7 @@ As stated above, if you decide to work on PrestaShop itself, it's best to clone 
 * The maintenance branches (_1.6.1.x, 1.7.0.x, 1.7.1.x, 1.7.2.x, ..._) contains all patches made for each minor version.
     - For example, the _1.7.2.x_ branch contains all patches from 1.7.2.0 to 1.7.2.5.
     - Whenever a new minor or major version is ready for release, a new maintenance branch is created. For example, _1.7.0.x_ for version 1.7.0.0, _1.7.1.x_ for 1.7.0.0, _1.7.2.x_ for 1.7.2.0, and so forth.
-    - **Only the most recent maintenance branch accepts new contributions** (except [1.6.1.x](https://github.com/PrestaShop/PrestaShop/tree/1.6.1.x) which is in extended maintenance)
+    - **Only the most recent maintenance branch accepts new contributions**
     
 {{% /callout %}}
 
