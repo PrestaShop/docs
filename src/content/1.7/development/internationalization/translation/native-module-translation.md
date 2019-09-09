@@ -23,7 +23,7 @@ the file type.
 {{% notice warning %}}
 **This system only works with native modules.**
 
-See [here]({{< ref "1.7/modules/creation/module-translation.md" >}}) for 3rd party modules.
+See [here]({{< ref "1.7/modules/creation/module-translation/_index.md" >}}) for 3rd party modules.
 {{% /notice %}}
 
 The process of preparing text strings for translation is called internationalization, or i18n.
