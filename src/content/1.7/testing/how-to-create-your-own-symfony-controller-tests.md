@@ -24,12 +24,7 @@ class BarTest extends WebTestCase
 {
     public function testSomeAction()
     {
-        $url = '/modules/your/action';
-        /** or using the router
-         * $this->router->generate(
-         *     'route_name'
-         * );
-         */
+        $url = this->router->generate('route_name');
         $this->client->request('GET', $url);
         
         $response = $this->client->getResponse();

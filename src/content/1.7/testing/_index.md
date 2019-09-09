@@ -18,9 +18,9 @@ Automated tests are located into `tests` and `tests-legacy` folders.
 
 In the `tests` folder, you will find:
 
-- unit tests
-- integration tests
-- web acceptance tests
+- Unit tests
+- Integration tests
+- Web acceptance tests
 
 ##### Unit tests
 
@@ -62,7 +62,7 @@ These tests can be found in `E2E`, `Selenium` and `puppeeter` folders. There are
 They rely on Mocha.js and use webdriver.io as bridge to control a Selenium server.
 
 
-#### What are legacy tests in `tests-legacy` folder ?
+#### What are legacy tests in `tests-legacy` folder?
 
 We are currently refactoring how the test folder is structured. As this is a huge work that is going to take months, we have chosen the following strategy:
 
@@ -70,7 +70,7 @@ Tests that we are not satisfied of* remain in the `tests-legacy` folder and will
 
 We keep the legacy tests as they have value (they are able to detect mistakes in the modifications we bring to the codebase) but they are not being updated anymore as we want to replace them.
 
-#### What was wrong with these legacy tests ?
+#### What was wrong with these legacy tests?
 
 Theses tests were powered by PHPUnit but were not unit tests: they were integration tests, which means they would test several classes together, and would run additionnal services such as a database. This has made this test quite complex and sometimes lead to random failures.
 
