@@ -72,12 +72,12 @@ class ProductRepository
     /**
      * @var string the Database prefix.
      */
-    private $databasePrefix;
+    private $dbPrefix;
 
-    public function __construct(Connection $connection, $databasePrefix)
+    public function __construct(Connection $connection, $dbPrefix)
     {
         $this->connection = $connection;
-        $this->databasePrefix = $databasePrefix;
+        $this->dbPrefix = $dbPrefix;
     }
 
     /**
@@ -86,7 +86,7 @@ class ProductRepository
      */
     public function findAllbyLangId(int $langId)
     {
-        $prefix = $this->databasePrefix;
+        $prefix = $this->dbPrefix;
         $productTable = "${prefix}product";
         $productLangTable = "${prefix}product_lang";
 
