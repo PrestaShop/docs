@@ -49,7 +49,7 @@ This is the path of your asset. In order to make your assets fully overridable a
 For example:
 
 -   'assets/css/example.css' for something in your theme.
--   'modules/modulename/css/example.cs' for something in your module.
+-   'modules/modulename/css/example.css' for something in your module.
 
 **Extra parameters for stylesheet**
 
