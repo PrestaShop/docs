@@ -65,6 +65,12 @@ This allows a controller to be maintained easily, with its own identity but with
 
 See [the controllers chapter]({{< ref "1.7/modules/concepts/controllers/_index.md" >}}) for more details.
 
+### Service overrides
+
+PrestaShop is migrating to Symfony, and the parts migrated rely on Symfony container which enables service overrides and decorations. This is similar to overrides but avoids class erasing.
+
+See [the Symfony services chapter]({{< ref "1.7/modules/concepts/services/_index.md" >}}) for more details.
+
 ### Contributing
 
 Sometimes, the existing features may not be enough for your needs.

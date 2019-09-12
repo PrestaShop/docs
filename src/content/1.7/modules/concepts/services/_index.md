@@ -8,10 +8,17 @@ weight: 8
 
 ## Symfony Services
 
-You have the possibility to define your own Symfony services from your modules. But first we strongly advise you to use
-**namespaces** in your module, this can be done thanks to composer.
+You have the ability to modify the Symfony container configuration from a module. This means that
 
-### Setup composer
+- You have the possibility to define your own Symfony services from your modules.
+- You have the possibility to modify existing Symfony services declaration from your modules, which is somehow an Override mechanism
+
+### Create and declare a new Symfony service
+
+First we strongly advise you to use
+[**namespaces**](https://www.php.net/manual/en/language.namespaces.php) in your module, this can be done thanks to composer.
+
+#### Setup composer
 
 You need setup composer in your module before create the services.
 Create the file `yourmodule/composer.json` and paste:
@@ -76,7 +83,7 @@ creating your module archive and releasing it don't forget to run `composer dump
 you have included dependencies) so that they will be included in your module.
 {{% /notice %}}
 
-### Define your services
+#### Define your service
 
 At first you will need to create a class for your service of course:
 
@@ -154,6 +161,122 @@ If you need more details about dependency injection and how services work in the
 their documentation about the [Service Container](https://symfony.com/doc/3.4/service_container.html).
 {{% /notice %}}
 
+### Override an existing Symfony service
+
+The container definition can be modified by a module, which enables you to override an existing Symfony service being used in PrestaShop.
+
+This is a mechanism similar to PrestaShop standard overrides, but the main benefit is that the php code stays unmodified. This prevents issues linked to code definition or autoloading failures.
+
+As you can read it from the [Symfony documentation](https://symfony.com/doc/current/service_container/service_decoration.html), there are 2 ways to modify an existing service:
+
+#### Override the service
+
+When you choose to override a service, this means that you _replace the service by another one_. The previous service is not usable anymore. Every other part of the code where this service is used will use the new version.
+
+To do it: you declare your new service using the old service name. So if you want to override the service `prestashop.core.b2b.b2b_feature` with your own implementation, you write in `config/services.yml` :
+
+```yml
+  prestashop.core.b2b.b2b_feature:
+    class: 'YourCompany\YourModule\YourService'
+```
+
+That's done. The service registered under the name `prestashop.core.b2b.b2b_feature` is now your service. The previous `prestashop.core.b2b.b2b_feature` is gone.
+
+#### Decorate the service
+
+When you choose to decorate a service, this means that you _make everybody use your service but you keep the old service available_. The previous service has been given a new name and can still be used. Every other part of the code where this service was used will use the new version.
+
+To do it: you declare your new service using the 'decorates' keyword. So if you want to decorates the service `prestashop.core.b2b.b2b_feature` with my own implementation, you write in `config/services.yml` :
+
+```yml
+ my_own_b2b_feature_service:
+    class: 'YourCompany\YourModule\YourService'
+    decorates: 'prestashop.core.b2b.b2b_feature'
+```
+
+That's done. The service registered under the name `prestashop.core.b2b.b2b_feature` is now your service. The previous `prestashop.core.b2b.b2b_feature` is still available under the name `prestashop.core.b2b.b2b_feature.inner`
+
+The decoration strategy can be very useful if:
+
+- you want some areas of your code to use the new service, some others to use the old service
+- you want to use the old service in the implementation of the new service
+
+Indeed sometimes what you want is to modify a small part of the behavior of a class. So why replace it entirely ? You can reuse the existing behavior and modify only the needed part:
+
+```php
+// modules/yourmodule/src/YourService.php
+namespace YourCompany\YourModule;
+
+class YourService {
+
+    private $decoratedService;
+
+    /**
+     * @param DecoratedService $decoratedService
+     */
+    public function __construct($decoratedService)
+    {
+        $this->decoratedService = $decoratedService;
+    }
+
+    /**
+     * We want to modify the behavior of the function getTranslatedCustomMessage
+     * without replacing the whole DecoratedService implementation
+     *
+     * @return string
+     */
+    public function getTranslatedCustomMessage() {
+
+        $unmodifiedOutput = $this->decoratedService->getTranslatedCustomMessage();
+
+        $modifiedOutput = $this->modifyTheOutput($unmodifiedOutput);
+
+        return $modifiedOutput;
+    }
+}
+```
+
+This is only possible with service decoration, not service override, because the previous service is still available.
+
+#### Finding the right service
+
+The Symfony command `php ./bin/console debug:container` will provide you with a list of all the registered services.
+
+#### Maintaining compatibility
+
+What happens, however, if the service you have overriden or decorated is used somewhere else ? You have to make sure your modifications are still compatible with this place in order not to break any existing behavior.
+
+Even worse: what if another part of the code especially requires this class, like this:
+```php
+    /**
+     * @param ASpecificClass $service
+     */
+    public function __construct(ASpecificClass $service)
+    {
+        // ...
+    }
+```
+
+Here, this constructor will crash if you provide something else than an instance of `ASpecificClass` to it.
+
+In order to avoid this crash, 2 options are available:
+
+PrestaShop classes rely more and more on [interfaces](https://www.php.net/manual/en/language.oop5.interfaces.php). So if this code has been built with the idea of customization/extension in mind, instead of `public function __construct(ASpecificClass $service)` you should have:
+```php
+    /**
+     * @param MyInterface $service
+     */
+    public function __construct(MyInterface $service)
+    {
+        // ...
+    }
+```
+
+Your new service, which overrides or decorates the previous service, only needs to `implement` the interface to be compatible with it.
+
+If however no interface was used here, you probably need to `extend` the previous class, `ASpecificClass`, instead.
+
+As you can see, interfaces lay the ground for easy extension and customization, that is why we use them more and more in the Core codebase and we recommand you use them as well !
 
 ## Services in Legacy environment
 {{< minver v="1.7.6" title="true" >}}
