@@ -123,7 +123,7 @@ final class ExportBulkAction extends AbstractBulkAction
 Then you need to create template so it can render nicely in your grid.
 
 ```twig
-{# src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Actions/Bulk/export.html.twig #}
+{# mymodule/views/PrestaShop/Admin/Common/Grid/Actions/Bulk/export.html.twig #}
 
 {# This button should be used with SubmitBulkActionExtension grid extension in Javascript #}
 
