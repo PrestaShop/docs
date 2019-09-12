@@ -238,6 +238,46 @@ class YourService {
 
 This is only possible with service decoration, not service override, because the previous service is still available.
 
+#### Finding the right service
+
+The Symfony command `php ./bin/console debug:container` will provide you with a list of all the registered services.
+
+#### Maintaining compatibility
+
+What happens, however, if the service you have overriden or decorated is used somewhere else ? You have to make sure your modifications are still compatible with this place in order not to break any existing behavior.
+
+Even worse: what if another part of the code especially requires this class, like this:
+```php
+    /**
+     * @param ASpecificClass $service
+     */
+    public function __construct(ASpecificClass $service)
+    {
+        // ...
+    }
+```
+
+Here, this constructor will crash if you provide something else than an instance of `ASpecificClass` to it.
+
+In order to avoid this crash, 2 options are available:
+
+PrestaShop classes rely more and more on [interfaces](https://www.php.net/manual/en/language.oop5.interfaces.php). So if this code has been built with the idea of customization/extension in mind, instead of `public function __construct(ASpecificClass $service)` you should have:
+```php
+    /**
+     * @param MyInterface $service
+     */
+    public function __construct(MyInterface $service)
+    {
+        // ...
+    }
+```
+
+Your new service, which overrides or decorates the previous service, only needs to `implement` the interface to be compatible with it.
+
+If however no interface was used here, you probably need to `extend` the previous class, `ASpecificClass`, instead.
+
+As you can see, interfaces lay the ground for easy extension and customization, that is why we use them more and more in the Core codebase and we recommand you use them as well !
+
 ## Services in Legacy environment
 {{< minver v="1.7.6" title="true" >}}
 
