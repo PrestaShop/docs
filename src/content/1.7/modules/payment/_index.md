@@ -12,6 +12,10 @@ PrestaShop 1.7 introduces a new payment API. Below, you'll find information abou
 
 The main reason why the change was needed is on the customer side: Now, there is **only one** button to validate the order, not one by payment module anymore.
 
+The [bankwire module](https://github.com/PrestaShop/bankwire/pull/18) is an example of how a payment module for PS 1.6 is migrated to PS 1.7 API.<br/>
+A skeleton is also available [on GitHub](https://github.com/PrestaShop/paymentexample). 
+
+
 Requirements
 ------------
 
@@ -126,7 +130,3 @@ Everything can be retrieved, for example:
 $currency = new Currency($params['order']->id_currency);
 $total_to_pay = $params['order']->getOrdersTotalPaid();
 ```
-
-### Real life example
-
-See the [bankwire module](https://github.com/PrestaShop/bankwire/pull/18) for an example of how we migrated a simple 1.6 module to 1.7.
