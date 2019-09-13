@@ -408,20 +408,4 @@ Grid.
 
 ## Learn more
 
-### Reference
-
-* [Columns reference](./columns-reference/)
-* [Bulk Actions reference](./bulk-actions-reference/)
-* [Grid Actions reference](./actions-reference/)
-
-### Tutorials
-
-* [How to work with the Bulk actions?](./tutorials/work-with-bulk-actions)
-* [How to work with the Grid actions?](./tutorials/work-with-grid-actions)
-* [How to work with the Search Form?](./tutorials/work-with-search-form)
-* [How to extend a Grid with Javascript extensions?](./tutorials/extend-grid-with-javascript)
-* [How to modify an existing Grid in a module?](./tutorials/modify-grid-in-module)
-* [How to customize the Grid templates?](./tutorials/customize-templates)
-* [How to create a custom Bulk Action?](./tutorials/create-custom-bulk-action)
-* [How to create a custom Grid Action?](./tutorials/create-custom-grid-action)
-* [How to create a custom Column Type?](./tutorials/create-custom-column-type)
+{{% children %}}
