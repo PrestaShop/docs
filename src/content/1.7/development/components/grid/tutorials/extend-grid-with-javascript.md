@@ -1,9 +1,10 @@
 ---
-title: How to extend a Grid with Javascript extensions?
+title: How to extend a Grid with Javascript extensions
+menuTitle: Extend a Grid with Javascript extensions
 weight: 4
 ---
 
-# Extend a grid with Javascript extensions
+# How to extend a grid with Javascript extensions
 
 ## Introduction
 Javascript grid extensions supplement grid behavior and enhance user experience.

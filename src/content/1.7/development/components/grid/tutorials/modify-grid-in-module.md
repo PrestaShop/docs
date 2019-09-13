@@ -1,11 +1,12 @@
 ---
-title: How to modify an existing Grid in a module?
+title: How to modify an existing Grid in a module
+menuTitle: Modify an existing Grid in a module
 weight: 5
 ---
 
 {{< minver v="1.7.5.1" title="true" >}}
 
-# How to modify an existing Grid in a module?
+# How to modify an existing Grid in a module
 
 If you need to modify an existing Grid, like inverting two columns for instance, this is really easy to do it in a module thanks to the available hooks.
 
