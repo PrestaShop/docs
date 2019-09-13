@@ -14,10 +14,18 @@ Modules must follow some guidelines to work on PrestaShop.
 If you want to get started quickly, with a ready-to-use module template, you can use the module
 generator available on the [PrestaShop Validator](https://validator.prestashop.com/generator).
 
-It provides an easy way to generate a payment or shipping module, with the basic
+It provides an easy way to generate a payment (for PS 1.6 and below) or shipping module, with the basic
 structure, the default properties customized and the most common use cases covered (hook, upgrade...).
 
-**[> Generate a module](https://validator.prestashop.com/generator)**
+Other skeletons have been created to help you creating specific modules, as given in the following
+references list.
+
+**References:**
+
+* [Generate a module on PrestaShop Validator](https://validator.prestashop.com/generator)
+* [Skeleton of a Payment module for PrestaShop 1.7](https://github.com/PrestaShop/paymentexample)
+* [Skeleton of a module using CQRS feature](https://github.com/friends-of-presta/demo-cqrs-hooks-usage-module) ([More details about CQRS]({{< ref "1.7/development/architecture/domain/_index.md" >}}))
+
 
 ## Tutorial: Understanding your first module
 
