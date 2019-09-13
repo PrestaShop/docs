@@ -117,6 +117,11 @@ For example:
 <td align="left">async|defer|none (default: none)</td>
 <td align="left">Load JavaScript file with the corresponding attribute (Read more: <a href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html">Async vs Defer attributes</a>)</td>
 </tr>
+<tr class="even">
+<td align="left">server</td>
+<td align="left">local|remote (default: local)</td>
+<td align="left">Define if the JS resource is a local or remote path</td>
+</tr>
 </tbody>
 </table>
 
