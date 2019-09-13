@@ -1,9 +1,10 @@
 ---
-title: How to work with Grid Actions?
+title: How to use Grid Actions
+menuTitle: Grid Actions
 weight: 2
 ---
 
-# How to use Grid actions?
+# How to use Grid actions
 
 In addition to displaying data tables, Grid component also comes with a lot of additional features. One is the Grid actions.
 

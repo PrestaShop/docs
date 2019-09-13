@@ -1,7 +1,10 @@
 ---
-title: How to customize the Grid templates?
+title: How to customize the Grid templates
+menuTitle: Customize Grid Templates
 weight: 6
 ---
+
+# How to customize the Grid templates
 
 The Grid component is highly extensible from a structural and data point of view, but sometimes you need
 to customize how a grid, a row or a specific column is rendered.

@@ -1,5 +1,6 @@
 ---
-title: How to use Bulk actions in Grid?
+title: How to use Bulk actions in Grid
+menuTitle: Bulk Actions
 weight: 1
 ---
 
