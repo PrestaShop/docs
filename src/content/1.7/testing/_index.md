@@ -57,7 +57,7 @@ We use 2 technologies for the integration tests in the `Integration` folder:
 
 Finally, we have some web acceptance tests. These tests launch and control a browser that will then go on either the FO or the BO of a shop and perform several actions to check that the behavior, from the point of view of a browser, is as expected.
 
-These tests can be found in `E2E`, `Selenium` and `puppeeter` folders. There are slowly being merged into the `puppeeter` folder.
+These tests can be found in `E2E`, `Selenium` and `puppeeter` folders. They are slowly being merged into the `puppeeter` folder.
 
 They rely on Mocha.js and use webdriver.io as bridge to control a Selenium server.
 
@@ -66,7 +66,7 @@ They rely on Mocha.js and use webdriver.io as bridge to control a Selenium serve
 
 We are currently refactoring how the test folder is structured. As this is a huge work that is going to take months, we have chosen the following strategy:
 
-Tests that we are not satisfied of* remain in the `tests-legacy` folder and will be, one by one, replaced by tests of a higher quality inside the `tests` folder.
+Tests that we are not satisfied by remain in the `tests-legacy` folder and will be, one by one, replaced by tests of a higher quality inside the `tests` folder.
 
 We keep the legacy tests as they have value (they are able to detect mistakes in the modifications we bring to the codebase) but they are not being updated anymore as we want to replace them.
 

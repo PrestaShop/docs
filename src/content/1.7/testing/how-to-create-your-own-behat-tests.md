@@ -1,28 +1,28 @@
 ---
 title: How to create your own behat tests
-menuTitle: Creating your own behat tests
+menuTitle: Creating your own Behat tests
 weight: 20
 ---
 
-# How to create your own behat tests or add tests to PrestaShop
+# How to create your own Behat tests or add tests to PrestaShop
 {{< minver v="1.7.6" title="true" >}}
 
 Behat tests are great if you want to validate the behavior of a component of the code and/or follow a user-oriented scenario.
 
 By "component" we usually mean a group of classes being called together, sometimes using an external dependdency (a web API, a database system like mysql ...).
 
-By "user-oriented scenario" we mean "a scenario that is a serie of steps, each step is an action, and at the end of the serie there is an expected result"
+By "user-oriented scenario" we mean a scenario that is a series of steps, each step is an action, and at the end of the series there is an expected result
 
 ## What is Behat
 
 [Behat][1] is a [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) framework for PHP. 
 
-The main value of behat is that the test scenarios that are written are understandable by humans without technical knowledge needed. This makes them a lot more easier to read and maintain that some complex unit tests which are just code.
+Behat is a testing tool that brings one great asset to your tests: the test scenarios are written so that they are understandable by humans without technical knowledge needed ! This makes them easier to read and maintain.
 
-It is better to discover behat from its [documentation][1] but if you want to understand quickly what it does:
+It is better to discover Behat from its [documentation][1] but if you want to understand quickly what it does:
 
-- test scenarios (known as "features") are being parsed by behat following [gherkin][2] syntax
-- behat matches each scenario step with a regular expression that must be provided in a php file called feature context
+- test scenarios (known as "features") are being parsed by Behat following [gherkin][2] syntax
+- Behat matches each scenario step with a regular expression that must be provided as a method of a PHP class called feature context
 - the regexp indicates a php function to be run by behat
 - behat provides hooking capabilities to handle the test lifecycle (application boot, database reset, cache clear...)
 
