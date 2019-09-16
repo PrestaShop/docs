@@ -33,7 +33,7 @@ Although [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) are su
 
 You can run it using the following command:
 ```bash
-php ./vendor/bin/php-cs-fixer fix
+php ./bin/php-cs-fixer fix
 ```
 
 The prestashop specific configuration file [can be found here](https://github.com/PrestaShop/PrestaShop/blob/develop/.php_cs.dist)
