@@ -34,7 +34,10 @@ After meeting each requirement provided by the Validator, here's a list of extra
 * The presence of DROP/ALTER of PrestaShop tables.
     * It's highly forbidden to apply any changes on PrestaShop Core tables. It's very very dangerous and we don't allow any risk.
 
-* Except for [Payment Modules](https://github.com/PrestaShop/paymentexample/blob/master/paymentexample.php#L150), the use of iframes is STRICTLY FORBIDDEN.
+* The use of iframes is highly discouraged for security reasons, although they are implemented in different part of the core like in [Payment Modules](https://github.com/PrestaShop/paymentexample/blob/master/paymentexample.php#L150).
+    * Using an iframe authorizes to load content from a site that is not controlled by the PrestaShop app. This is the same problem as authorizing to load javascript files from an external source. If the source is being hacked, the attacker could potentially exploit other failures to take control of all the shops that would have installed the module.
+
+    * Therefore we need to check what your processes are, to ensure the security of the content that will be injected by this iframe into all the shops that will install the module. When submitting your module, the validation team will review the reasons why an iFrame is needed for this business and what are the measures taken by the provider to prevent attacks.
 
 * Every hook. If any of them is empty, we decline the zip.
     * There are other things we decline like loading a JS file in the whole back office when it is unnecessary. Make sure to only load what you need, when you need it.
