@@ -1,5 +1,5 @@
 ---
-title: How to create your own behat tests
+title: How to create your own Behat tests
 menuTitle: Creating your own Behat tests
 weight: 20
 ---
@@ -9,7 +9,7 @@ weight: 20
 
 Behat tests are great if you want to validate the behavior of a component of the code and/or follow a user-oriented scenario.
 
-By "component" we usually mean a group of classes being called together, sometimes using an external dependdency (a web API, a database system like mysql ...).
+By "component" we usually mean a group of classes being called together, sometimes using an external dependency (a web API or a database system like MySQL).
 
 By "user-oriented scenario" we mean a scenario that is a series of steps, each step is an action, and at the end of the series there is an expected result
 
