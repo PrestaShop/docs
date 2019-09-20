@@ -113,7 +113,7 @@ For example:
 <td align="left">If true, your style will be printed inside <code>&lt;script type=&quot;text/javascript&quot;&gt;</code> tags inside your HTML. Use with caution.</td>
 </tr>
 <tr class="odd">
-<td align="left">attribute</td>
+<td align="left">attributes</td>
 <td align="left">async|defer|none (default: none)</td>
 <td align="left">Load JavaScript file with the corresponding attribute (Read more: <a href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html">Async vs Defer attributes</a>)</td>
 </tr>
