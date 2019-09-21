@@ -19,12 +19,26 @@ By "user-oriented scenario" we mean a scenario that is a series of steps, each s
 
 Behat is a testing tool that brings one great asset to your tests: the test scenarios are written so that they are understandable by humans without technical knowledge needed ! This makes them easier to read and maintain.
 
+
+Example of a behat scenario:
+
+```yml
+  Scenario: With free shipping voucher, there is no shipping fees
+    Given on my shop, there is only 1 carrier which can ship my products
+    And his shipping fees of 5.0 euros in zone "US" for product whose price ranges between 0 and 150 euros
+    Given I start with an empty default cart
+    And I add a standard product into my cart, the price of the product is 50.0 euros
+    Then my cart price is currently 55 euros
+    When I use a cart rule with code "free4behat" that provides free shipping
+    Then my cart price is now 50 euros !
+ ```
+
 It is better to discover Behat from its [documentation][1] but if you want to understand quickly what it does:
 
-- test scenarios (known as "features") are being parsed by Behat following [gherkin][2] syntax
-- Behat matches each scenario step with a regular expression that must be provided as a method of a PHP class called feature context
-- the regexp indicates a php function to be run by behat
-- behat provides hooking capabilities to handle the test lifecycle (application boot, database reset, cache clear...)
+ - test scenarios (known as "features") are being parsed by Behat following [gherkin][2] syntax
+ - Behat matches each scenario step with a regular expression that must be provided as a method of a PHP class called feature context
+ - the regexp indicates a php function to be run by behat
+ - behat provides hooking capabilities to handle the test lifecycle (application boot, database reset, cache clear...)
 
 ## Launch the PrestaShop behat test suite
 
@@ -61,9 +75,9 @@ We will now add a new Behat test to demonstrate the different steps needed. This
 Let's say we want to check that the computation of a cart price is correctly impacted by a Free Shipping coupon.
 
 We will:
-- write this scenario as a human-readable text
-- convert it to gherkin syntax
-- run it using Behat
+ - write this scenario as a human-readable text
+ - convert it to gherkin syntax
+ - run it using Behat
 
 #### Write a new scenario and feature
 
@@ -108,27 +122,31 @@ We have now written a valid gherkin scenario !
 
 #### Run Behat on this new scenario
 
-This scenario is now runnable by Behat. I add it to the `free_shipping.feature` file.
+This scenario is now runnable by Behat. I add it to the `free_shipping.feature` file. Now this scenario is part of the PrestaShop testing suite for Behat !
 
-I run the whole feature to see the output:
+Let's see what happens if I run the whole feature to see the output:
 
 ```bash
 # from the PrestaShop root folder
 php ./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml --name="free shipping"
 ```
 
-I use the `--name` filter to allow Behat to target my specific file and not all the available tests.
+(I use the `--name` filter to allow Behat to target my specific file, and not all the available tests)
 
-Behat detects that some steps are not defined yet and suggests to create them for me:
+We can see that Behat detects that some steps are not defined yet and suggests to create them for me:
 ```
  >> cart suite has undefined steps. Please choose the context to generate snippets:
 ```
 
-However I am rather going to check into existing Context files (in `tests/Integration/Behaviour/Features/Context/` folder) to see if I can re-use existing steps (to avoid unnecessary duplication).
+That is one great asset from Behat: if it is unable to match one of the steps with one existing regexp, it can generate snippets ready-to-use for us !
 
-Luckily for me, it seems I can use existing steps for my whole feature! We will see later how to add a new step.
+However I am rather going to check into existing Context files (in `tests/Integration/Behaviour/Features/Context/` folder) to see if I can re-use existing steps. It's better to avoid unnecessary duplication.
 
-After checking available existing steps from either the other Feature files or the Context files, I have replaced all my steps by steps by steps that are already understandable by Behat. Here is my scenario now:
+Luckily for me, it seems I can use existing steps for my whole feature! So we do not need to add new Behat steps in the Context file. We will however see later how to add a new step.
+
+Back to my usecase: I check available existing steps from either the other Feature files or the Context files, so I can reuse them to replace all the steps I have written by steps that are already understandable by Behat.
+
+Here is my scenario now:
 
 ```yml
   Scenario: With free shipping voucher, there is no shipping fees
@@ -155,23 +173,34 @@ After checking available existing steps from either the other Feature files or t
     Then my cart total should be 50.0 tax included
 ```
 
-This one is valid and if I run my command, I can see Behat confirms it is valid: so the voucher works as expected !
+This one is valid: Behat is able to match each of the lines with one Context step. And if I run my command, I can see Behat go through the whole scenario successfully. This means that my free shipping voucher behavior is correct: Behat has checked that the cart total, after using the voucher, has no shipping fees.
+
+My feature is validated by Behat !
 
 #### Adding a new step
 
 Now we are going to add a new step that is not yet supported by existing Contexts.
 
 For example, have you noticed that the cart price is, before free shipping, 57€ and not 55€ ? It is because the step `Given there is a carrier named "carrier1"` generates a standard carrier whose handling cost is 2 by default.
+So when shipping fees are added, the handling cost is added too.
 
-Let's say we want to remove this handling cost, so my cart price will, without free shipping, be 55€.
+Let's say we want to remove this handling cost and only keep the shipping fees. This way my cart price will, without free shipping, be 55€ and not 57€.
 
-So we add the following step: `Given the carrier "carrier1" has no handling costs` to the scenario and we run again
+So we need to add a new step: `Given the carrier "carrier1" has no handling costs`.
+
+This step is unknown to Behat, so we will need to help Behat "understand it".
+
+We add the step to the scenario and we run again
 ```bash
 # from the PrestaShop root folder
 php ./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml --name="free shipping"
 ```
 
-Again, Behat detects the unmatched step and warns me `suite has undefined steps. Please choose the context to generate snippets:`. I choose to put the new step into `Tests\Integration\Behaviour\Features\Context\CarrierFeatureContext` as it is related to carriers. Behat generates the following snippet for me:
+Again, Behat detects the unmatched step and warns me `suite has undefined steps. Please choose the context to generate snippets:`.
+
+I accept the help of Behat and let him generate a snippet ready-to-use for me for my step.
+
+I choose to put the new step into `Tests\Integration\Behaviour\Features\Context\CarrierFeatureContext` as it is related to carriers. The generated snippet looks like this:
 
 ```php
     /**
@@ -183,15 +212,26 @@ Again, Behat detects the unmatched step and warns me `suite has undefined steps.
     }
 ```
 
-I can pick it, copy it into `CarrierFeatureContext` and implement it. This means performing the required process, be it call functions, perform SQL queries, that are required by the action "carrier has no costs". I also rename the function and improve the regular expression provided by Behat. Finally I get:
+I can pick it, copy it into `CarrierFeatureContext` file and *implement it*.
+
+Implementing a Behat step means: performing the required process, be it call functions, perform SQL queries, that are required by the action "carrier has no costs". I also rename the function and improve the regular expression provided by Behat.
+
+After I have implemented it, this is what my step looks like:
 
 ```php
     /**
-     * @Given the carrier :arg1 has no handling costs
+     * @Given the carrier :carrierName has no handling costs
      */
-    public function theCarrierHasNoHandlingCosts($arg1)
+    public function carrierHasNoHandlingCosts($carrierName)
     {
-        throw new PendingException();
+        // check a carrier with this name exists
+        $this->checkCarrierWithNameExists($carrierName);
+        // fetch the carrier
+        $carrier = $this->carriers[$carrierName];
+
+        // disable handling cost
+        $carrier->shipping_handling = false:
+        $carrier->save();
     }
 ```
 
@@ -223,7 +263,10 @@ Now I update my scenario:
     Then my cart total should be 50.0 tax included
 ```
 
-And I have now a dedicated scenario that validates the behavior of my free shipping voucher !
+Have you noticed my cart total, before using the voucher, is now 55€ and not 57€ ?
+And when this scenario is run by Behat, everything runs fine, so my calculations are correct !
+
+I have again a dedicated scenario that validates the behavior of my free shipping voucher.
 
 [1]: http://behat.org/en/latest/
 [2]: http://docs.behat.org/en/v2.5/guides/1.gherkin.html
