@@ -51,11 +51,13 @@ We use 2 technologies for the integration tests in the `Integration` folder:
 
 ### Web acceptance tests
 
-Finally, we have some web acceptance tests. These tests launch and control a browser that will then go on either the FO or the BO of a shop and perform several actions to check that the behavior, from the point of view of a browser, is as expected.
+Finally, we have some web acceptance tests. These tests launch and control a browser that will then go on either the FO or the BO of a shop and perform several actions to check that the behavior, from the point of view of a browser, is as expected. So these tests send real HTTP requests and check the returned DOM.
 
-These tests can be found in `E2E`, `Selenium` and `puppeeter` folders. They are slowly being merged into the `puppeeter` folder.
+These tests can be found in `E2E` and `puppeteer` folders.
 
-They rely on Mocha.js and use webdriver.io as bridge to control a Selenium server.
+E2E tests rely on Mocha.js and use webdriver.io as bridge to control a Selenium server.
+
+They are slowly being replaced by puppeteer tests as we are migrating the underlying technology behind these tests from [Selenium][4] to [Puppeteer][5].
 
 ## What are legacy tests in `tests-legacy` folder?
 
@@ -73,3 +75,5 @@ Theses tests were powered by PHPUnit but were not unit tests: they were integrat
 [1]: https://phpunit.de/
 [2]: https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs
 [3]: http://behat.org/en/latest/
+[4]: https://www.seleniumhq.org/
+[5]: https://github.com/GoogleChrome/puppeteer
