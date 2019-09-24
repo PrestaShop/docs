@@ -64,6 +64,9 @@ You must enable the autoloading for this Controller. For example using a `compos
           "MyModule\\Controller\\": "controller/"
         }
       },
+      "config": {
+          "prepend-autoloader": false
+      },
       "type": "prestashop-module"
     }
     ```
