@@ -175,7 +175,8 @@ This section assigns a handful of attributes to the class instance
     an impact on the front-end.
 -   'version' attribute. The version number for the module, displayed in
     the modules list. You can use as many level of version as you need
-    (i.e '1', '1.0', '1.0.3', '0.97.5.2').
+    (i.e '1', '1.0', '1.0.3', '0.97.5.2') but keep in mind to follow the 
+    [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver).
 -   'author' attribute. This is displayed as-is in the PrestaShop
     modules list.
 
