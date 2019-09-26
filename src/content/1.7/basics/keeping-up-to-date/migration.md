@@ -166,7 +166,7 @@ mysql> SHOW VARIABLES LIKE "secure_file_priv";
 #### Get changes between source and destination databases
 Now you have retrieved your data from the production shop, you have to adapt it to the new structure before inserting it on your new database.
 
-An efficient way to get the changes is getting a database structure diff between the 2 running shops. MySQL provides another tool for this called [mysqldiff](https://dev.mysql.com/doc/mysql-utilities/1.6/en/mysqldiff.html).
+An efficient way to get the changes is getting a database structure diff between the 2 running shops. MySQL provides another tool for this called [mysqldiff](https://docs.oracle.com/cd/E17952_01/mysql-utilities-1.5-en/mysqldiff.html).
 
 Note this utility may be not immediately available on your environment, even if you have the mysql client installed. For instance on Ubuntu, an additional package needs to be installed:
 
