@@ -10,7 +10,8 @@ aliases:
 A module is made of a lot of files, all stored in a folder that bears
 the same name as the module, that folder being in turn stored in the
 `/modules` folder at the root of the main PrestaShop folder:
-`/modules/<name_of_the_module>/`.
+`/modules/<name_of_the_module>/`. A module published in an archive file
+must be in a same subfolder. 
 
 Here are the possible files and folders for a PrestaShop 1.7 module:
 

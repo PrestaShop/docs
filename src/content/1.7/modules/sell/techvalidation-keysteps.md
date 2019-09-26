@@ -23,11 +23,14 @@ Let's now give you more details on how we handle them all.
 ### 2. Processing of New and Major updates
 
 What is a "New" Module? 
-Actually, it is a zip file. Your module is the product and since you can submit several zips per product, let's use the right words.
+Actually, it is a zip file. Your module is the product and since you can submit several zips per product, let's
+use the right words.
 
 Simple: the very first time you submit a zip for your module, it is called a "New" zip.
 Please, do not try to submit your module if you have never used the [Validator](https://validator.prestashop.com/).
-That tool is very powerful and useful and it will make everybody win a lot of time.
+That tool runs several checks to make sure your module will run smoothly on PrestaShop. As the current version is
+closed source, a [document](https://docs.google.com/document/d/1ti40qkdW0kKhSWTJX6lwH-485alLd21YX9VZnq-roZ8/edit?usp=sharing)
+summarize the different checks made by it.
 
 After meeting each requirement provided by the Validator, here's a list of extra points we check: 
 

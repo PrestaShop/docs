@@ -14,6 +14,8 @@ menuTitle: Good practices
 - Create your own database tables, do not alter PrestaShop's.
 - Develop your module in English, then use PrestaShop translation system to translate your module.
 - Go through directories using PrestaShop constants like: `_PS_CONFIG_DIR_ . '/config.inc.php'`
+- `CREATE TABLE` SQL statements must be followed by `IF NOT EXISTS` to avoid SQL errors
+- `DROP TABLE` SQL statements must be followed by `IF EXISTS` to avoid SQL errors
 
 ### Don't
 
@@ -61,6 +63,9 @@ menuTitle: Good practices
     // code
   }
   ```
+
+- A merchant is likely to have a shop running on a different shop than yours. In case a module is using PHP extensions not installed by default by PHP,
+add a preliminary check before using them (I.e with `extension_loaded`). This prevents fatal errors to be thrown on shops on which these extensions aren’t enabled.
 
 ## A few recommendations for your themes
 

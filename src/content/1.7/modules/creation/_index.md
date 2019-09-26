@@ -174,8 +174,8 @@ This section assigns a handful of attributes to the class instance
     "`front_office_features`" because this first module will mostly have
     an impact on the front-end.
 -   'version' attribute. The version number for the module, displayed in
-    the modules list. It is a string, so that you may use such variation
-    as "1.0b", "3.07 beta 3" or "0.94 (not for production use)".
+    the modules list. You can use as many level of version as you need
+    (i.e '1', '1.0', '1.0.3', '0.97.5.2').
 -   'author' attribute. This is displayed as-is in the PrestaShop
     modules list.
 
