@@ -1,7 +1,7 @@
 ---
 title: How to create your own Behat tests
 menuTitle: Creating your own Behat tests
-weight: 20
+weight: 30
 ---
 
 # How to create your own Behat tests or add tests to PrestaShop
