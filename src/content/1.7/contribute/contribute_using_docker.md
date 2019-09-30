@@ -1,6 +1,6 @@
 ---
 title: Contribute using Docker
-weight: 2
+weight: 3
 ---
 
 # How to become a Core Contributor using Docker
