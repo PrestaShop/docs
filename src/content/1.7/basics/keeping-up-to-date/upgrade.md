@@ -122,6 +122,10 @@ cp -R ~/Downloads/prestashop/* /var/www/html/
 Once the files have been copied, your shop database is ready to be
 upgraded.
 
+{{% notice note %}}
+Some web hosting providers gives you two user accounts to access your database. One with full privileges the other for using in scripts with limited rights. To be able to use this Database upgrade script you have to use the account with full privileges.
+{{% /notice %}}
+
 All the changes to apply have been defined in the \`install\` folder,
 running them can be done with a specific PHP script.
 
@@ -216,6 +220,10 @@ PrestaShop provides the module 1-click upgrade for free on the
 marketplace and your shop administration panel. It executes the
 previously given process automatically, and is available for almost all
 versions of PrestaShop.
+
+{{% notice note %}}
+The same note as above, in order to have this module working you must have set in `/app/config/parameters.php` database account with full privileges.
+{{% /notice %}}
 
 ### Note about version +4.0.0
 
