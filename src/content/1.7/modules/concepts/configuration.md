@@ -29,7 +29,7 @@ Configuration::hasKey(string $key);
 ```
 
 `$key` is the name of the configuration data to check. The method returns `true`
-is the data exists, `false` otherwise.
+if the data exists, `false` otherwise.
 
 ### Retrieve configuration data
 
