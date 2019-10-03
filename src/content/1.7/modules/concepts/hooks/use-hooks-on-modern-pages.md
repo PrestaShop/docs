@@ -85,7 +85,7 @@ At this point, this is basic PHP code we need to produce. We need to retrieve th
 
 #### Using Doctrine (DBAL) to retrieve data 
 
-Even if using old way to retrieve data is still valid (``Product::getProducts`` or through the webservice), we'd like to introduce a best practice here: using a repository and get ride of the Object model. This has a lot of advantages, you rely on database instead of model and you'll have better performances and control on your data.
+Even if using old way to retrieve data is still valid (``Product::getProducts`` or through the webservice), we'd like to introduce a best practice here: using a repository and get rid of the Object model. This has a lot of advantages, you rely on database instead of model and you'll have better performances and control on your data.
 
 ```php
 // src/Repository/ProductRepository.php
@@ -203,7 +203,7 @@ public function hookDisplayDashboardToolbarIcons($hookParams)
 ```
 
 {{% notice info %}}
-Note: the `serializer` service is not enabled in PrestaShop 1.7.3 but will be enabled in 1.7.4. If you really want to enable it in 1.7.3,uncomment the following configuration line in your `services.yml` file of your Shop.
+Note: the `serializer` service is not enabled in PrestaShop 1.7.3 but will be enabled in 1.7.4. If you really want to enable it in 1.7.3, uncomment the following configuration line in your `services.yml` file of your Shop.
 {{% /notice %}}
 
 
