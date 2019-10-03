@@ -133,6 +133,7 @@ To do it: you declare your new service using the 'decorates' keyword. So if you 
 That's done. The service registered under the name `prestashop.core.b2b.b2b_feature` is now your service. The previous `prestashop.core.b2b.b2b_feature` implementation is still available under the name `mymodule.my_own_b2b_feature_service.inner`.
 
 This means that in your container you can access 3 services now:
+
 - `mymodule.my_own_b2b_feature_service` your service
 - `prestashop.core.b2b.b2b_feature` is now an alias for `mymodule.my_own_b2b_feature_service` (see [service aliases](https://symfony.com/doc/current/service_container/alias_private.html)) so the other services which rely on it now use your implementation
 - `mymodule.my_own_b2b_feature_service.inner` is the previous implementation, still available
