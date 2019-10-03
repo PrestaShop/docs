@@ -39,14 +39,14 @@ The item is filled with key/values relative to the localization :
 
 This is a sample : 
 ```json
-  "bz": {
-    "name": "Brezhoneg (Breton)",
-    "iso_code": "bz",
+  "da": {
+    "name": "Dansk (Danish)",
+    "iso_code": "da",
     "date_format_lite": "Y-m-d",
     "date_format_full": "Y-m-d H:i:s",
     "is_rtl": "0",
-    "language_code": "bz",
-    "locale": "br-FR"
+    "language_code": "da-dk",
+    "locale": "da-DK"
   },
 ```
 
@@ -55,6 +55,11 @@ This is a sample :
 In this file, you need to add a key/value.
 
 The key is the ISO code, based on the ISO-619-1 standard ([see an unofficial list here][iso-619-1]). The value is the locale.
+
+This is a sample : 
+```json
+  "da": "da-DK",
+```
 
 ## How to trigger the content update on PrestaShop Languages Localisation Packages i18n.prestashop.com ?
 Finally, we need to update i18n.prestashop.com.
@@ -67,6 +72,11 @@ You must submit a PR in which you add a key/value :
 
 * The key is the locale of the language
 * The value is the name of the language which be displayed in the back-office.
+
+This is a sample : 
+```json
+  "da-DK": "Danish (Denmark)",
+```
 
 After the PR was merged, a nightly cron will fetch translations from Crowdin, update the repository with new updates, and deploy translations to i18n.prestashop.com.
 
