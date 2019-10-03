@@ -21,6 +21,7 @@ Here is a selection of free AMP installers:
 * [WampServer](http://www.wampserver.com/) (Windows)
 * [EasyPHP](https://www.easyphp.org/) (Windows)
 * [MAMP](https://www.mamp.info/) (Mac OS X)
+* [Laragon](https://laragon.org/) (Windows)
 
 
 
