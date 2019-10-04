@@ -6,7 +6,7 @@ weight: 10
 
 # How to edit a page on GitHub
 
-Editing a page on GitHub is the most stright-forward way of contributing content to PrestaShop DevDocs.
+Editing a page on GitHub is the most straight-forward way of contributing content to PrestaShop DevDocs.
 
 - **The good:** you don't need to have anything installed.
 - **The bad:** even if GitHub provides a preview of your markdown code, you won't be able to see exactly how it will look like on the site (for instance, shortcodes aren't interpreted by the GitHub preview).
