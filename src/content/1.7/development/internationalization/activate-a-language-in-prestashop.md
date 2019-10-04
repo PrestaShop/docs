@@ -8,7 +8,7 @@ aliases:
 # Activate a language in PrestaShop
 
 Most languages are available in [Crowdin](https://crowdin.com/project/prestashop-official) for translation, but not all are available in PrestaShop (International > Translations > Add a language).
-Indeed, because of a low completion level on [Crowdin](https://crowdin.com/project/prestashop-official), we do not send the translations to PrestaShop. However, it can smart to add a language if its translators are very active and want to see the results of their Crowdin translations quickly in their own shop.
+Indeed, because of a low completion level on [Crowdin](https://crowdin.com/project/prestashop-official), we do not send the translations to PrestaShop. However, it can be smart to add a language if its translators are very active and want to see the results of their Crowdin translations quickly in their own shop.
 If the language is not available in [Crowdin](https://crowdin.com/project/prestashop-official), you have to contact [Louise Bonnard on Crowdin](https://crowdin.com/profile/LouiseBonnard) for opening a project in the concerned language. 
 For that, it needs to be added as a new supported language in PrestaShop, and it takes two steps:
 
