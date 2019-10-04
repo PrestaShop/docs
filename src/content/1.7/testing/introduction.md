@@ -8,7 +8,7 @@ weight: 1
 
 PrestaShop is a complex software and uses automated testing to ensure that the new additions to the codebase do not break existing behaviors.
 
-Automated tests are located into `tests` and `tests-legacy` folders.
+Automated tests are located in `tests` and `tests-legacy` folders.
 
 ## What kind of tests do PrestaShop use?
 
@@ -42,7 +42,7 @@ integration tests.*
 ### Integration tests
 
 Unit tests can validate the behavior of a php class when it can be isolated.
-However some classes cannot be validated this way. Moreover, a lot of logic from PrestaShop is written into complex SQL queries that cannot be validated by those kind of tests. This is why we also need integration tests.
+However, some classes cannot be validated this way. Moreover, a lot of logic from PrestaShop is written into complex SQL queries that cannot be validated by those kind of tests. This is why we also need integration tests.
 
 We use 2 technologies for the integration tests in the `Integration` folder:
 
@@ -55,7 +55,7 @@ Finally, we have some web acceptance tests. These tests launch and control a bro
 
 These tests can be found in `E2E` and `puppeteer` folders.
 
-E2E tests rely on Mocha.js and use webdriver.io as bridge to control a Selenium server.
+E2E tests rely on Mocha.js and use webdriver.io as the bridge to control a Selenium server.
 
 They are slowly being replaced by puppeteer tests as we are migrating the underlying technology behind these tests from [Selenium][4] to [Puppeteer][5].
 
@@ -65,11 +65,11 @@ We are currently refactoring how the test folder is structured. As this is a hug
 
 Tests that we are not satisfied by remain in the `tests-legacy` folder and will be, one by one, replaced by tests of a higher quality inside the `tests` folder.
 
-We keep the legacy tests as they have value (they are able to detect mistakes in the modifications we bring to the codebase) but they are not being updated anymore as we want to replace them.
+We keep the legacy tests as they have value (they can detect mistakes in the modifications we bring to the codebase) but they are not being updated anymore as we want to replace them.
 
 #### What was wrong with these legacy tests?
 
-Theses tests were powered by PHPUnit but were not unit tests: they were integration tests, which means they would test several classes together, and would run additionnal services such as a database. This has made this test quite complex and sometimes lead to random failures.
+Theses tests were powered by PHPUnit but were not unit tests: they were integration tests, which means they would test several classes together and would run additional services such as a database. This has made this test quite complex and sometimes lead to random failures.
 
 
 [1]: https://phpunit.de/
