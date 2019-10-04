@@ -11,7 +11,7 @@ weight: 1
 
 Writing documentation is _hard_.
 
-We try to find excuses and rationalize and lie to ourselves so we can feel better about with the fact that we _should_ be doing it, but it's _"too much work"_.
+We try to find excuses and rationalize and lie to ourselves so we can feel better about the fact that we _should_ be doing it, but it's _"too much work"_.
 
 Here are two good reasons to try and convince you to start writing documentation, and help _you_ while you help others, too:
 
