@@ -5,27 +5,27 @@ weight: 3
 
 # How to become a Core Contributor using Docker
 
-If you're reading this, thank you! This means you're interested on contributing to PrestaShop.
-You probably are a PrestaShop developer, and your use of the project is slighty different from
-ours. For instance, there are little differences between PrestaShop 1.7 (the release) and the branch 1.7
-of PrestaShop in GitHub repository. This is because we create a release usable by everyone from our sources.
+If you're reading this, thank you! This means you're interested in contributing to PrestaShop.
+You probably are a PrestaShop developer, and your use of the project is slightly different from
+ours. For instance, there are few differences between PrestaShop 1.7 (the release) and the branch 1.7
+of PrestaShop in the GitHub repository. This is because we create a release usable by everyone from our sources.
 
 To be able to contribute you need:
 
 * a **GitHub account**,
-* to know **basics of git**,
+* to know the **basics of git**,
 * to have **docker** installed in your computer;
 
-No need to "know" docker, but you should have "docker" command available in your terminal.
+No need to "know" docker, but you should have the "docker" command available in your terminal.
 
 > If you need to install "docker", you can follow their [Documentation](https://docs.docker.com/install/).
 
 ## Install PrestaShop Core
 
-To install the core, you need to fork PrestaShop repository. A fork is a copy of original project on GitHub.
+To install the core, you need to fork the PrestaShop repository. A fork is a copy of the original project on GitHub.
 If you don't know what is a fork or how to fork a project on GitHub, you can follow the [GitHub tutorial](https://help.github.com/articles/fork-a-repo/).
 
-Once you have a forked the project, you need to download it on your computer.
+Once you have forked the project, you need to download it to your computer.
 
 For instance, if your GitHub nickname is `preston`, this is what you should do in your terminal:
 
@@ -76,9 +76,9 @@ Then you can start to do changes on PrestaShop Core, and create commits: YaY!
 ### Launch the test suite
 
 Your changes now sounds ok, and you're almost ready to share your changes with the community.
-Before all, you may ensure your changes doesn't break everything: this is why we have a test suite you can use.
+Before all, you may ensure your changes don't break everything: this is why we have a test suite you can use.
 
-You can execute it in your dockerized PrestaShop application without alter your website (it uses a specific database).
+You can execute it in your dockerized PrestaShop application without altering your website (it uses a specific database).
 
 ```
 docker exec prestashop-git sh tests/check_phpunit.sh
@@ -86,7 +86,7 @@ docker exec prestashop-git sh tests/check_phpunit.sh
 
 ### Publish your contribution on GitHub
 
-Once your changes sounds good and tests pass in your local computer, it's time to publish your work online and make a pull request.
+Once your changes sound good and tests pass on your local computer, it's time to publish your work online and make a pull request.
 
 The last thing you need to do in the terminal is to publish your branch on GitHub:
 
@@ -104,7 +104,7 @@ Then, you can create your Pull Request on GitHub! If you don't know how to do it
 ## Syncing your fork
 
 PrestaShop Core is a really active project with more than 30 contributions accepted per week, so your copy will become outdated
-really fast. To make your own copy up to date with the original project, only few commands are required:
+really fast. To make your own copy up to date with the original project, only a few commands are required:
 
 > You need to execute these commands at the root of your copy/fork.
 
@@ -117,5 +117,5 @@ git push -f origin develop
 
 ### What we have done here?
 
-We have added the location of original project to git so he can retrieve the latest commits, and the we apply this "history"
-to our local project. Note, here we have updated `develop` branch of PrestaShop project and same commands can be used to refresh every git branch.
+We have added the location of the original project to git so he can retrieve the latest commits, and then we apply this "history"
+to our local project. Note, here we have updated the `develop` branch of the PrestaShop project and the same commands can be used to refresh every git branch.
