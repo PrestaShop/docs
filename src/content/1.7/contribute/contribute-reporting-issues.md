@@ -10,7 +10,7 @@ PrestaShop is using GitHub to track bugs and issues. This is the best place to d
 
 ## Creating your account
 
-In order to participate, you need to create an account to use the bug tracker.
+To participate, you need to create an account to use the bug tracker.
 
 [Create your account here](https://github.com/join).
 
@@ -30,18 +30,18 @@ You can now create your first issue:
 
 ![Issue or Feature request](../img/github-select-issue-type.png)
 
-A text editors appears:
+A text editor appears:
 
 ![Issue or Feature request](../img/github-issue-editor.png)
 
-In order to fill the required information, just use the text editor. You can use the "preview" tab to see how your issue will be published.
+To fill the required information, just use the text editor. You can use the "preview" tab to see how your issue will be published.
 
 There are four main sections:
 
 1. **Describe the bug**, a clear and concise description of what the bug is.
 2. **To Reproduce**, describe the different steps and information to reproduce the issue.
 3. **Screenshots**, add screenshots in this section.
-4. **Additionnal information**, like your version of PHP and Mysql and your server configuration.
+4. **Additional information**, like your version of PHP and Mysql and your server configuration.
 5. Click the "Submit new issue" button when you are done.
 
 
@@ -57,6 +57,6 @@ When writing a bug report, please use these guidelines:
 - Write precise steps to reproduce. Be specific and verbose: do not fear to give details on how you did reproduce the bug.
     - After your steps, precisely describe the observed result and the expected result.
 
-These are inspired from [Mozilla's own guidelines](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines).
+These are inspired by [Mozilla's own guidelines](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines).
 
-GitHub provides a very good documentation about how to write [issues](https://guides.github.com/features/issues/) with it's [flavoured Markdown](https://github.github.com/gfm/). It is possible to [highlight code syntax](https://help.github.com/articles/creating-and-highlighting-code-blocks/), [add pictures](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/), or even to [link issues and pull requests](https://help.github.com/articles/autolinked-references-and-urls/).
+GitHub provides very good documentation about how to write [issues](https://guides.github.com/features/issues/) with its [flavoured Markdown](https://github.github.com/gfm/). It is possible to [highlight code syntax](https://help.github.com/articles/creating-and-highlighting-code-blocks/), [add pictures](https://help.github.com/articles/file-attachments-on-issues-and-pull-requests/), or even to [link issues and pull requests](https://help.github.com/articles/autolinked-references-and-urls/).
