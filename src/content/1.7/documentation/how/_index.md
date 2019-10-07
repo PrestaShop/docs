@@ -11,7 +11,7 @@ This documentation is collaborative, hosted on GitHub and served through GitHub 
 
 ## What to contribute
 
-We are happy that you want to contribute to the project! Here are some examples on how you can help.
+We are happy that you want to contribute to the project! Here are some examples of how you can help.
 
 #### Write
 
@@ -31,11 +31,11 @@ You can help us by reviewing new contributions. Even if you aren't that technica
  
 If you find an error, you can let us know by [submitting an issue](https://github.com/PrestaShop/docs/issues/new), or even fix it by yourself (read below for how).
  
-See the all the [current open Pull Requests](https://github.com/PrestaShop/docs/pulls).
+See all the [current open Pull Requests](https://github.com/PrestaShop/docs/pulls).
 
 ## How to edit a page
  
-To contribute, you'll need a GitHub account. If you don't have one, don't worry! It's free and it only takes a couple minutes. [Create your GitHub account](https://github.com/join).
+To contribute, you'll need a GitHub account. If you don't have one, don't worry! It's free and it only takes a couple of minutes. [Create your GitHub account](https://github.com/join).
 
 There are two ways to contribute to this documentation, each having its advantages:
 
