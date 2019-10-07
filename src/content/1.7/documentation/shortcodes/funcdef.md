@@ -37,5 +37,5 @@ add($autodate = true, $nullValues = false)
 {{% /callout %}}
 
 {{% notice info %}}
-Be aware that you need to leave at lease one trailing space after each `:` for the markup to be correctly interpreted as a definition list. 
+Be aware that you need to leave at least one trailing space after each `:` for the markup to be correctly interpreted as a definition list. 
 {{% /notice %}}
