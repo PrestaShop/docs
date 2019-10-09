@@ -1,6 +1,6 @@
 ---
 title: How issues are sorted
-weight: 4
+weight: 1
 ---
 
 # How issues are sorted

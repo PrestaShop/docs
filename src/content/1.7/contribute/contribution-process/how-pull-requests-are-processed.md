@@ -1,6 +1,6 @@
 ---
 title: How Pull Requests are processed
-weight: 6
+weight: 2
 ---
 
 # How issues are sorted
