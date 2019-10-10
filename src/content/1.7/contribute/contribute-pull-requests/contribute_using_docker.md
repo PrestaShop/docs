@@ -12,9 +12,11 @@ of PrestaShop in the GitHub repository. This is because we create a release usab
 
 To be able to contribute you need:
 
-* a **GitHub account**,
-* to know the **basics of git**,
-* to have **docker** installed in your computer;
+* a **GitHub account**
+* to know the **basics of git**
+* to be able to run **prestashop** from the sources
+
+In this part, we'll run PrestaShop using docker.
 
 No need to "know" docker, but you should have the "docker" command available in your terminal.
 
