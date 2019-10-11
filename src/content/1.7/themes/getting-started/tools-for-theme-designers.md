@@ -37,7 +37,7 @@ This document presents each tool, and how they can get you to become a more prod
 ## Before we get started: using the command line
 
 Many of the tools cited above are to be used through the command line -- launching commands in a text-based environment, line after line.
-While it has the advantage of being very powerful and easy to automate, it is also not intuitive and hard to grasp. Luckily, it only take a handful of commands to understand the power of the command line, and to adopt it for your everyday processes.
+While it has the advantage of being very powerful and easy to automate, it is also not intuitive and can be hard to grasp. Luckily, it only take a handful of commands to understand the power of the command line, and to adopt it for your everyday processes.
 
 Now, as a web-designer, you might be more used to work with graphical interfaces, such as Dreamweaver (for the more WYSIWYG-inclined), or a full-featured text editor, such as Sublime Text, Atom or Brackets (among many other possibilities). Using the command line can supplement this.
 
@@ -96,7 +96,7 @@ Note: You do not need to install or use Git if you are not interested in the lat
 
 ### How can you install it?
 
-Simply download the archive for the latest version of Git (2.10 as of this writing) and install it just like you would do for any other software:
+Simply download the archive for the latest version of Git (2.23 as of this writing) and install it just like you would do for any other software:
 
 * Windows: https://git-for-windows.github.io/
 
@@ -132,7 +132,7 @@ But not using the latest Git version also means that you cannot work with the de
 
 ### How can you install it?
 
-Download the archive for the latest version of Composer (1.2.2 as of this writing) and install it just like you would do for any other software:
+Download the archive for the latest version of Composer (1.9 as of this writing) and install it just like you would do for any other software:
 
 Note: you need to already have the PHP tool installed on your machine. You probably already have it if you're building websites locally. If not, install WampServer, EasyPHP, XAMPP or any other Windows Apache+PHP+MySQL package there is.
 
@@ -170,7 +170,7 @@ All the source files are located in the theme's `_dev` folder. The generated fil
 
 npm cannot be directly downloaded and installed. It is an integral part of the Node.js tool, therefore you need to download and install Node.js, which in turn will install npm for you.
 
-To download Node.js, head to https://nodejs.org/en/download/ and choose the LTS version for your platform. LTS means Long Term Support (currently, 6.9.1): this version contains less features than the Current version (currently, v7.2.0), but is very stable and will be supported until April 2018.
+To download Node.js, head to https://nodejs.org/en/download/ and choose the LTS version for your platform. LTS means Long Term Support (currently, 10.16.3): this version contains less features than the Current version (currently, v12.11.1), but is very stable and will be supported until April 2021.
 
 So, install Node.js on your machine, then test that npm is available:
 
@@ -197,9 +197,9 @@ Before Webpack, many were using task-runners such as Grunt or Gulp in order to o
 
 ### Why you should use it for your PrestaShop theme?
 
-Let’s where we’re at. So far was have installed:
+Let’s see where we’re at. So far was have installed:
 
-* Git: A better way to make snapshot of your codebase.
+* Git: A better way to make a snapshot of your codebase.
 * Composer: A better way to manage your PHP dependencies.
 * npm: A better way to automate tasks (among many other things).
 
@@ -208,7 +208,7 @@ Fear not, for Webpack is here to save the day! Webpack is a “module bundler”
 
 So, the main interest of using Webpack is that it will compile all your styles into a single CSS file. This way, your theme will make only one HTTP request for this single file, and since your browser will cache it for later re-use, it will even download this file only once.
 
-The same goes with your JavaScript code. Instead of loading jQuery along with its community plugins, your own custom plugins and any extra code you might need, Webpack compiles and minifies all this JavaScript code into a single file, which will be loaded once - and cached.
+The same goes for your JavaScript code. Instead of loading jQuery along with its community plugins, your own custom plugins and any extra code you might need, Webpack compiles and minifies all this JavaScript code into a single file, which will be loaded once - and cached.
 
 
 ### How can you install it?
