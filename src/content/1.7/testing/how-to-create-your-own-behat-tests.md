@@ -75,6 +75,7 @@ We will now add a new Behat test to demonstrate the different steps needed. This
 Let's say we want to check that the computation of a cart price is correctly impacted by a Free Shipping coupon.
 
 We will:
+
  - write this scenario as a human-readable text
  - convert it to gherkin syntax
  - run it using Behat
@@ -114,9 +115,10 @@ Then I convert it to use [Gherkin][2] syntax. This means each step must start wi
  ```
 
 There is no rule that requires to use `Given`, `When` or `Then`. You could use `Then` everywhere but usually we say that:
-- Given steps are used to lay the ground for the scenario, to describe existing items
-- When steps are used to trigger something, to make an event happen which modifies the software state
-- Then steps are used to validate the software state, to check it behaves as expected
+
+ - Given steps are used to lay the ground for the scenario, to describe existing items
+ - When steps are used to trigger something, to make an event happen which modifies the software state
+ - Then steps are used to validate the software state, to check it behaves as expected
 
 We have now written a valid gherkin scenario !
 
