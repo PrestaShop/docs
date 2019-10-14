@@ -93,7 +93,7 @@ Finally, if you're using a NAS or any other network storage solution to store yo
 
 Because file system tuning is a never ending story, not only you can cache the files' path, but also its contents.
 
-Good news is, OPCache will not only store your PHP files in memory, but it will store their bytecode, meaning the application already compiled, in a shared memory, available to all applications calls:
+Good news is, OPCache will not only store your PHP files in memory, but it will store their bytecode, meaning the already compiled application, in a shared memory, available to all the application's calls:
 
 ```
 [opcache]
@@ -122,7 +122,7 @@ composer dump-autoload --optimize --no-dev --classmap-authoritative
 * `--classmap-authoritative`: prevents Composer from scanning the file system for classes that are not found in the class map.
 
 {{% notice tip %}}
-If you install a new module in production, you need to execute again this command.
+If you install a new module in production, you need to execute this command again.
 {{% /notice %}}
 
 ### 4) Apache Settings
