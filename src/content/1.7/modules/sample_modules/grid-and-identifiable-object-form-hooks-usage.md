@@ -239,6 +239,7 @@ You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-
 // modules/ps_democqrshooksusage/ps_democqrshooksusage.php
 
 use Symfony\Component\Form\FormBuilderInterface;
+use PrestaShopBundle\Form\Admin\Type\SwitchType;
 
 public function hookActionCustomerFormBuilderModifier(array $params)
 {
