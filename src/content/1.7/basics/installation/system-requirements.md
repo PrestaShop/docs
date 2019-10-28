@@ -31,6 +31,19 @@ PrestaShop needs the following server configuration in order to run:
 
 PrestaShop can also work with NGINX 1.0 or later.
 
+## How to verify your server meets PrestaShop's requirements
+
+You can use our [system requirements tool](https://github.com/PrestaShop/php-ps-info/) to easily check if your environment fulfills PrestaShop's requirements. Here's how:
+
+1. Download the [latest version from GitHub](https://github.com/PrestaShop/php-ps-info/releases).
+2. Extract the zip file.
+3. Upload the `phppsinfo.php` file to your server and put it inside your current shop's directory or the one where you intend to install it.
+4. Open it up on your browser (`http://your-domain.com/path-to-your-prestashop/phppsinfo.php`).
+5. Type in the login and password if prompted (use `prestashop` for both).
+
+You'll get a web page detailing requirements and recommendations, and how your server does compared to them:
+
+{{< figure src="../img/phppsinfo.jpg" title="System requirements tool" >}}
 
 ## PHP requirements
 
