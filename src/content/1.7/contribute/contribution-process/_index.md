@@ -1,11 +1,14 @@
 ---
-title: What happens after you submit an issue or a Pull Request ?
+title: What happens after you submit an issue or Pull Request
+chapter: true
 weight: 30
 aliases:
   - /1.7/contribute/how-issues-are-sorted/
   - /1.7/contribute/how-pull-requests-are-processed/
 ---
 
-# Here are the processes applied by the PrestaShop team
+# What happens after you submit an issue or Pull Request
+
+The PrestaShop project receives a great number of new issues and Pull Requests every week. Each new submission goes through a process where PrestaShop maintainers analyze, qualify and prioritize them.
 
 {{% children %}}
