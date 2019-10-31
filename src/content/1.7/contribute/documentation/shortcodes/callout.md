@@ -1,5 +1,7 @@
 ---
 title: Callout
+aliases:
+    - /1.7/documentation/shortcodes/callout/
 ---
 
 # Callout

@@ -1,5 +1,7 @@
 ---
 title: Version pill
+aliases:
+    - /1.7/documentation/shortcodes/minver/
 ---
 
 # Version pill

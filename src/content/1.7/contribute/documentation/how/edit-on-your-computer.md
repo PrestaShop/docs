@@ -2,6 +2,8 @@
 title: How to edit a page on your computer
 menuTitle: Edit on your computer
 weight: 20
+aliases:
+    - /1.7/documentation/how/edit-on-your-computer/
 ---
 
 # How to edit a page on your computer using Git

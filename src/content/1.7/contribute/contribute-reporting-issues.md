@@ -1,6 +1,6 @@
 ---
 title: How to use GitHub to report an issue
-weight: 2
+weight: 10
 menuTitle: Reporting issues
 ---
 
