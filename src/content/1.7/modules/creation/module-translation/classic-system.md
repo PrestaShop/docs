@@ -99,7 +99,7 @@ class CustomModuleClass
     
     public function __construct(Module $module)
     {
-        $this->module = $module
+        $this->module = $module;
     }
     
     public function foo()
