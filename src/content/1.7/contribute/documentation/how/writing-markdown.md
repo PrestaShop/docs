@@ -1,6 +1,8 @@
 ---
 title: Writing Markdown
 weight: 30
+aliases:
+    - /1.7/documentation/how/writing-markdown/
 ---
 
 # Writing Markdown
@@ -13,4 +15,4 @@ If you don't know Markdown yet, have a look at this [quick Markdown guide from G
 
 ## Extended features: Shortcodes
 
-Hugo uses special short codes for many things. [Read about them here]({{< ref "1.7/documentation/shortcodes/_index.md" >}}).
+Hugo uses special short codes for many things. [Read about them here]({{< ref "1.7/contribute/documentation/shortcodes/_index.md" >}}).

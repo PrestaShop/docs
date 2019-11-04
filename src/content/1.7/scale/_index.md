@@ -1,11 +1,11 @@
 ---
 title: Scale
-weight: 8
-pre: "<b>8. </b>"
+weight: 7
+pre: "<b>7. </b>"
 chapter: true
 ---
 
-### Chapter 8
+### Chapter 7
 
 # How to make PrestaShop scale
 

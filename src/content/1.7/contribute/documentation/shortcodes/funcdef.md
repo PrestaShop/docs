@@ -1,5 +1,7 @@
 ---
 title: Function definition
+aliases:
+    - /1.7/documentation/shortcodes/funcdef/
 ---
 
 # Function definition

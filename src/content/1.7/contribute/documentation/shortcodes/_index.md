@@ -1,5 +1,8 @@
 ---
 title: Shortcodes
+menuTitle: Hugo functions (Shortcodes)
+aliases:
+    - /1.7/documentation/shortcodes/
 ---
 
 # Shortcodes
@@ -48,8 +51,8 @@ Here are the most useful shortcodes, both native and custom:
 - [notice][notice] – Displays a "note", "tip" or "warning" box to highlight important information.
 - [ref][ref] – Links to another DevDocs page or a section of the page.
 
-[ref]: {{< ref "1.7/documentation/shortcodes/ref.md" >}}
-[notice]: {{< ref "1.7/documentation/shortcodes/notice.md" >}}
-[funcdef]: {{< ref "1.7/documentation/shortcodes/funcdef.md" >}}
-[minver]: {{< ref "1.7/documentation/shortcodes/minver.md" >}}
-[callout]: {{< ref "1.7/documentation/shortcodes/callout.md" >}}
+[ref]: {{< ref "ref.md" >}}
+[notice]: {{< ref "notice.md" >}}
+[funcdef]: {{< ref "funcdef.md" >}}
+[minver]: {{< ref "minver.md" >}}
+[callout]: {{< ref "callout.md" >}}

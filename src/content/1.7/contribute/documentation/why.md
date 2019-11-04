@@ -1,6 +1,8 @@
 ---
 title: Why write documentation
 weight: 1
+aliases:
+    - /1.7/documentation/why/
 ---
 
 # Why write technical documentation?

@@ -5,7 +5,7 @@ weight: 1
 
 # How issues are sorted
 
-## What happens to the issue you have reported ?
+## What happens to the issue you have reported
 
 PrestaShop Quality Assurance team (aka QA) uses a transparent definition for the criteria used to qualify issues' severity, and how they should be applied through labels on github issues.
 
@@ -16,7 +16,7 @@ Please note that severity is to be distinguished from priority. Indeed, severity
 
 When a new issue is created, the first step is to understand what the problem is and then reproduce it. Once that work is done, the second step is to define the severity of that bug.
 
-Four severity levels are used:
+Four severity levels are used: Critical, Major, Minor and Trivial.
 
 ### Critical
 
@@ -32,7 +32,7 @@ Examples:
 - Difficulty to globally manage categories, products or customers
 - Difficulty to globally place and manage orders
 
-A critical issue should result in a patch version that should be released as soon as possible. [PrestaShop 1.7.2.5](http://build.prestashop.com/news/prestashop-1-7-2-5-maintenance-release/) is a good example: this patch release fixes two vulnerabilities affecting the Back Office.
+A critical issue should result in a patch version that should be released as soon as possible. [PrestaShop 1.7.2.5](https://build.prestashop.com/news/prestashop-1-7-2-5-maintenance-release/) is a good example: this patch release fixes two vulnerabilities affecting the Back Office.
 
 
 ### Major
@@ -96,6 +96,6 @@ Last criterion used is the business impact as of course.
 
 In the end, handling bugs requires two points of view: micro and macro. Severity analyzes the issue on its own, while Priority analyzes the issue in the context of the whole project.
 
-<hr />
+---
 
-This page is a (reworked) copy of http://build.prestashop.com/news/severity-classification/ .
+_(This article was originally published on our blog: [Introducing A New Bug Severity Classification](https://build.prestashop.com/news/severity-classification/))_

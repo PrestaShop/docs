@@ -1,9 +1,11 @@
 ---
-title: Contribute
+title: How to contribute
 weight: 2
+aliases:
+    - /1.7/documentation/how/
 ---
 
-# Contribute to PrestaShop's Developer Documentation
+# How to contribute to PrestaShop's Developer Documentation
 
 This documentation is collaborative, hosted on GitHub and served through GitHub Pages. Contributions are welcome!
 
@@ -51,5 +53,5 @@ Regardless of the path you choose to contribute, you'll end up creating a Pull R
 Once your PR is submitted, the team will promptly reviewed it and do its best to see that your contribution is added to the documentation!
 
 
-[1]: {{< ref "1.7/documentation/how/edit-on-github.md" >}}
-[2]: {{< ref "1.7/documentation/how/edit-on-your-computer.md" >}}
+[1]: {{< ref "edit-on-github.md" >}}
+[2]: {{< ref "edit-on-your-computer.md" >}}

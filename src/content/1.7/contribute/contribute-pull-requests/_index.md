@@ -1,9 +1,10 @@
 ---
 title: How to contribute to the Core by submitting a Pull Request
-weight: 10
+chapter: true
+weight: 20
 aliases:
   - /1.7/contribute/contribute_using_docker/
-menuTitle: Contribute by submitting Pull Requests
+menuTitle: Submitting code changes
 ---
 
 # How to contribute to the Core by submitting a Pull Request

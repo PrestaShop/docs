@@ -1,7 +1,7 @@
 ---
 title: How to use GitHub to report an issue
-weight: 2
-menuTitle: Contribute by reporting issues
+weight: 10
+menuTitle: Reporting issues
 ---
 
 # How to use GitHub to report an issue
