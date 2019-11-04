@@ -317,7 +317,7 @@ You will be presented with a page that displays all the wordings for the selecte
 
 Once all strings for your module are correctly translated, click on either the "Save and stay" button or the "Save" button at the bottom of the list.
 
-PrestaShop then saves the translations in a file named using the `<language_coode>.php` format and located in you module's `translations` directory (for instance, `/mymodule/translations/fr.php`). 
+PrestaShop then saves the translations in a file named using the `<language_code>.php` format and located in you module's `translations` directory (for instance, `/mymodule/translations/fr.php`). 
 
 The translation file looks like this:
 
@@ -332,8 +332,36 @@ $_MODULE['<{mymodule}prestashop>mymodule_533937acf0e84c92e787614bbb16a7a0'] = '�
 $_MODULE['<{mymodule}prestashop>mymodule_0f40e8817b005044250943f57a21c5e7'] = 'Aucun nom fourni';
 ```
 
-{{% notice note %}} 
+{{% notice note %}}
 This file shouldn't be modified manually! It is meant to be edited through the PrestaShop translation interface.
+{{% /notice %}}
+
+### Editing a dictionary file manually 
+
+If for any reason you need to edit your dictionary file manually or create it from scratch, here's how.
+
+Dictionary files are essentially a list of key-values that match a representation of the original wording as it appears in the code, and its translation to a given language. The key stays the same across all translation dictionary files for a given module.
+
+Translation keys have a tricky syntax, which is constructed as follows:  
+
+```php
+$translationKey = strtolower('<{' . $moduleName . '}prestashop>' . $sourceFile) . '_' . $md5;
+```
+
+As you can see, there are three parameters:
+
+1. `$moduleName` – Your module's technical name, in lower case.
+2. `$sourceFile` – Name of the file where the wording is used, according to the following rules:
+    - If the translation is performed in PHP code via call to `$this->l(...)` function:
+        - The second argument to that function, if provided.
+        - Your module's technical name, in lowercase, if not provided.
+    - If the translation is performed in a `.tpl` file via `{l}` smarty tag:
+        - The file name, in lowercase, without the extension removed (eg. `foo.tpl` → `foo`)
+    
+3. `$md5` – MD5 hash of the original wording you intend to translate.
+
+{{% notice tip %}}
+If you are manually building a translation file to use with the [New translation system]({{< ref "new-system.md" >}}), keep in mind the [Backward compatibility constraints]({{< ref "new-system.md#backwards-compatibility" >}}).
 {{% /notice %}}
 
 ## Limitations and caveats
