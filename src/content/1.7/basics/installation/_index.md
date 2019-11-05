@@ -118,7 +118,7 @@ $ chmod +w -R admin-dev/autoupgrade app/logs app/Resources/translations cache co
 
 If you don't have any of above folder, plase create it before change permissions. For example:
 ```bash
-$ sudo mkdir log app/logs
+$ mkdir log app/logs
 ```
 
 To ease up your life on a development environment, we suggest to either:
