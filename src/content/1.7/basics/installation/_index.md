@@ -116,7 +116,7 @@ You can setup proper permissions with that one line:
 $ chmod +w -R admin-dev/autoupgrade app/logs app/Resources/translations cache config/themes download img log mails modules themes translations var
 ```
 
-If you don't have any of above folder, plase create it before change permissions. For example:
+If you do not have any of above folder, please create it before changing permissions. For example:
 ```bash
 $ mkdir log app/logs
 ```
