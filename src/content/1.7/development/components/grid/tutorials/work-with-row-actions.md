@@ -6,7 +6,7 @@ weight: 2
 
 # How to use Row actions
 
-In addition to displaying data tables, Grid component also comes with a lot of additional features. One is the Row actions.
+In addition to displaying data tables, Grid component also comes with a lot of additional features. One is Row actions.
 
 ## What is a Row action?
 
@@ -81,7 +81,7 @@ final class CategoryGridDefinitionFactory extends AbstractGridDefinitionFactory
 }
 ```
 
-As you see, Grid stores Row actions using a `RowActionCollection` object. This means that every action needed for Grid must be added to `RowActionCollection` using `add()` method.
+As shown above, Grid stores Row actions using a `RowActionCollection` object. This means that every action needed for Grid must be added to `RowActionCollection` using `add()` method.
 You'll find the list of existing actions in the documentation.
 
 ## How to add Row actions to a Grid using a module?
