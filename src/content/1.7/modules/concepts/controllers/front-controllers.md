@@ -132,7 +132,7 @@ without URL rewriting.
 ### Example of method calls
 
 ```php
-Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337);
+Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337));
 ```
 * Without URL rewriting: `http://<shop_domain>/index.php?idPayment=1337&fc=module&module=cheque&controller=validation&id_lang=1`
 * With URL rewriting: `http://<shop_domain>/en/module/cheque/validation?idPayment=1337`
