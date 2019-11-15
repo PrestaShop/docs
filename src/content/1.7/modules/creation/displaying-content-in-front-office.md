@@ -388,6 +388,9 @@ Here is a list of Smarty variables that are common to all template pages:
 
 | File / folder       | Description                                                   |
 | ------------------- | ------------------------------------------------------------- |
+| $urls.base\_url           | Site URL.                                                     |
+| $urls.current\_url        | Current page URL.                                             |
+| $urls.shop\_domain\_url   | Shop URL.                                                     |
 | $urls.img\_ps\_url        | URL for PrestaShop's image folder.                            |
 | $urls.img\_cat\_url       | URL for the categories images folder.                         |
 | $urls.img\_lang\_url      | URL for the languages images folder.                          |
@@ -425,6 +428,12 @@ current page's Smarty variables, add the following call:
 
 ```
 {debug}
+```
+
+If you need to display a variable, add the following call:
+
+```
+{dump($variableName)}
 ```
 
 Comments are based on asterisk:
