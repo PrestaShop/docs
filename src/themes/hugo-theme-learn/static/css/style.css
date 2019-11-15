@@ -100,43 +100,45 @@
 div.notices {
   margin: 2rem 0;
   position: relative;
-  padding: 15px;
-  padding-left: 40px;
-  color: #555; }
+  padding: 1rem 2rem;
+  padding-left: 3.5rem;
+  color: #555;
+  font-size: 90%; }
   div.notices p {
-    font-size: 1rem;
+    font-size: 1em;
     margin-top: 0;
     margin-bottom: 0; }
   div.notices ul, div.notices ol {
     margin-top: .5rem;
     margin-bottom: .5rem; }
+  div.notices pre code {
+    font-size: 90%; }
+  div.notices pre:last-child {
+    margin-bottom: .8rem; }
   div.notices:before {
     position: absolute;
-    top: 15px;
+    top: .55rem;
     font-family: FontAwesome;
+    font-size: 1.5rem;
     content: '\F06A';
-    left: 15px; }
+    left: 1.3rem; }
   div.notices.info {
-    border-left: 5px solid #f0b37e;
     background: #fff2db; }
     div.notices.info:before {
       color: #f5a132; }
   div.notices.warning {
-    border-left: 5px solid rgba(217, 83, 79, 0.8);
     background: #fae2e2;
     color: #6d2622; }
     div.notices.warning:before {
       content: '\F071';
       color: #d9534f; }
   div.notices.note {
-    border-left: 5px solid #6ab0de;
     background: #e7f2fa; }
     div.notices.note:before {
       content: '\F05A';
       color: #4ea5de; }
   div.notices.tip {
-    background: #e6f9e6;
-    border-left: 5px solid rgba(92, 184, 92, 0.8); }
+    background: #e6f9e6; }
     div.notices.tip:before {
       content: '\F0EB';
       color: #5cb85c; }
