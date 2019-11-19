@@ -22,13 +22,11 @@ Each script should contain a main method named `upgrade_module_x_y_z`, where `x_
 {{% callout %}}
 ##### Script name
 
-You can name your script however you like, as long as it ends up with a dash (`-`) followed by the version number.
+You script must be named `upgrade`, followed by a dash (`-`) and the version number.
 
-Although we suggest using `upgrade-x.y.z.php`, the following formats are also correct:
+Although we suggest using `upgrade-x.y.z.php`, like:
 
-- `Upgrade-1.2.php`
-- `Install-4.5.6.php`
-- `Upgrade-MyModule-7.8.9.php`
+- `upgrade-1.2.3.php`
 
 {{% /callout %}}
 
