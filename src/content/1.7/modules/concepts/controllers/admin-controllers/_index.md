@@ -19,7 +19,7 @@ Using modern pages, you will have access to the PrestaShop debug toolbar, the se
 Somewhere in your module declare a new class that will act as a Controller:
 
 ```php
-// modules/your-module/controller/DemoController.php
+// modules/your-module/src/Controller/DemoController.php
 
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 
@@ -46,7 +46,7 @@ You must enable the autoloading for this Controller. For example using a `compos
 1. Use namespace for your Controller file
 
     ```php
-    // modules/your-module/controller/DemoController.php
+    // modules/your-module/src/Controller/DemoController.php
     
     namespace MyModule\Controller;
     
@@ -61,7 +61,7 @@ You must enable the autoloading for this Controller. For example using a `compos
       "description": "...",
       "autoload": {
         "psr-4": {
-          "MyModule\\Controller\\": "controller/"
+          "MyModule\\Controller\\": "src/Controller/"
         }
       },
       "config": {
