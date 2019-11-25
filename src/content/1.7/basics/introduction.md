@@ -72,7 +72,7 @@ It describes or contains the data that have been processed by the application. I
 #### View
 A view is the interface with which the user interacts.
 
-Its first role is to display the data that is been provided by the model. Its second role is to handle all the actions from the user (mouse click, element selection, buttons, etc.), and send these events to the controller.
+Its first role is to display the data that has been provided by the model. Its second role is to handle all the actions from the user (mouse click, element selection, buttons, etc.), and send these events to the controller.
 
 The view does not do any processing; it only displays the result of the processing performed by the model, and interacts with the user.
 
