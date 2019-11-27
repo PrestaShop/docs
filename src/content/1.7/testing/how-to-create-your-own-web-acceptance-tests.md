@@ -79,7 +79,9 @@ For example:
 The goal is to write your test code *once*, and only change things (by following the evolution of the application) in 
 your page objects.
 
-Your page objects must inherit from `BO/BOBasePage` or `FO/FOBasePage`.
+Your page objects must inherit from `BO/BOBasePage` or `FO/FOBasePage`. You will then be able to use the methods from 
+these files in order to make your tests more readable. Remember [KISS](https://en.wikipedia.org/wiki/KISS_principle) 
+and [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) !
 
 If you want your tests to be accepted in the PrestaShop repository, make sure to read the `CONVENTIONS.md` file in 
 `tests/puppeteer/pages/`.
