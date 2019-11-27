@@ -9,6 +9,7 @@ weight: 25
 Web Acceptance tests work by controlling a browser and using the web interface as a real user.
 
 We use:
+
 * [Puppeteer](https://github.com/puppeteer/puppeteer) as automation tool
 * [Mocha](https://mochajs.org/) as test framework
 * [Chai](https://www.chaijs.com/) as assertion library 
@@ -35,6 +36,7 @@ This organization allows you to let the FO or BO logic to be accessible by all o
 ### Tests files
 
 Tests files are located in `tests/puppeteer/campaigns`. There are a few special folders:
+
 * `commonTests` contains reutilizable test logic (like the BO `login()` function)
 * `data` contains all data used by tests: new products/categories/customers to be and existing ones (from fixtures), etc
 * `upgrade` contains everything related to the upgrade test scenario. This is still a WIP project as it's really
@@ -62,7 +64,6 @@ shortcuts, CRUD (when applicable).
 
 The End to end campaign tries to reproduce real user paths. It's a WIP.
 
-
 ## Running web acceptance tests
 
 Everything is explained in README in the `tests/puppeteer` folder. 
@@ -73,6 +74,7 @@ You'll need a working installation of PrestaShop in order to run the tests.
 The most important thing to remember is separation of concerns: you cannot have test logic in your 
 page objects, and you cannot have use of page logic in your tests.
 For example: 
+
 * use of `expect` is possible **only** in your test files, never in your page objects
 * use of selectors is possible **only** in your page objects, never in test files 
 
