@@ -64,7 +64,6 @@ shortcuts, CRUD (when applicable).
 
 The End to end campaign tries to reproduce real user paths. It's a WIP.
 
-
 ## Running web acceptance tests
 
 Everything is explained in README in the `tests/puppeteer` folder. 
