@@ -55,7 +55,7 @@ At PrestaShop, the Sanity campaign is run for every Pull Request.
 #### Functional tests
 
 The functional campaign is a collection of low level functional tests: the goal is to test each feature of all 
-functionalities. We go through all BO page and test everything: filters on tables, searching, modifying data via 
+functionalities. We go through all BO pages and test everything: filters on tables, searching, modifying data via 
 shortcuts, CRUD (when applicable). 
 
 #### End to end tests (soon)
