@@ -13,7 +13,7 @@ We use [Webpack](https://webpack.js.org/) to compile assets. You only need NodeJ
 
 ## Assets that need to be compiled
 
-- Back Office  
+- Back Office
     - Default theme
         - SASS files\
           Located in `admin-dev/themes/default/sass`
@@ -62,7 +62,9 @@ We use [Webpack](https://webpack.js.org/) to compile assets. You only need NodeJ
 You can rebuild all the assets at once by executing this command from the project root: 
 
 ```bash
-sh tools/assets/build.sh
+./tools/assets/build.sh
+# or alternatively, since 1.7.8:
+make assets
 ```
 
 ### Watching for changes
