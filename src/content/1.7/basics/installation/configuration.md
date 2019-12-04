@@ -22,14 +22,11 @@ Forcing the compilation of Smarty will always slow down the loading time of the 
 
 ## Displaying error messages
 
-PrestaShop’s default settings prevent the customer to see any server error message or any debugging code.
+PrestaShop’s default settings prevent the customer to see any server error message or any debugging code. You, on the other hand, need this information in order to correct any potential mistake in your code.
 
-You, on the other hand, need this information in order to correct any potential mistake in your code. To that end, open the `/config/defines.inc.php` file, and edit it to set `_PS_MODE_DEV_` to `true`:
+Go to the “Performances” page under the “Advanced parameters” menu to change the following Debug Mode settings:
 
-```php
-/* Debug only */
-define('_PS_MODE_DEV_', true);
-```
+* Debug mode: enable it.
 
 ## Using the dump() method
 
@@ -39,7 +36,7 @@ PrestaShop used to have custom debug methods available for developers: `p($varia
 
 All of this has changed with PrestaShop 1.7: we now rely solely on Symfony’s `VarDumper::dump()` function. You can now rely on a single method instead of having multiple debug functions. The dump() function is very powerful, and is always available on output (even without `die()`). Moreover, you can use it in your console scripts because this function also has a formatter in CLI mode.
 
-The `dump()` method is not activated by default. To activate it, you must enable the Debug mode, by setting `_PS_MODE_DEV_` to `true` (see above).
+The `dump()` method is not activated by default. To activate it, you must enable the Debug mode (see above).
 
 ## Enabling the multistore mode
 
@@ -71,7 +68,7 @@ It also contains the location of all the files and folders. If you need to chang
 
 When in development/test mode, you must make sure that all the error messages are displayed:
 
-* Set `define('_PS_MODE_DEV_', false);` to `true`.
+* Make sure that `define('_PS_MODE_DEV_', false);` is set to `true`.
 
 On the contrary, when in production mode, you must hide error messages as much as possible!
 
@@ -82,13 +79,5 @@ On the contrary, when in production mode, you must hide error messages as much a
 This file contains all the Smarty-related settings.
 
 The Smarty cache system should always be disabled, as it is not compatible with PrestaShop: keep `$smarty->caching = false;` as it is.
-
-`$smarty->compile_check` should be left to `false` in development mode.
-
-`$smarty->debugging` gives access to Smarty debug information when displaying a page. That setting is more easily modified in the “Performance” page of the advanced parameters menu : the “Debug console” option enables you to choose between never displaying Smarty’s debug information, always displaying it, or only displaying it when you add `?SMARTY_DEBUG` to the URL of the page you want to test, which can be very useful.
-
-When in production mode, `$smarty->force_compile` must be set to `false`, as it will give a 30% boost to your page load time.
-
-On the other hand, when editing a `.tpl` file, you must delete the `/tools/smarty/compile` folder (except the `index.php` file) in order to see your changes applied.
 
 Note that this setting can be made directly from the back office, in the “Performance” page under the “Advanced parameters” menu.
