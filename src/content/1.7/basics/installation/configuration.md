@@ -22,14 +22,11 @@ Forcing the compilation of Smarty will always slow down the loading time of the 
 
 ## Displaying error messages
 
-PrestaShop’s default settings prevent the customer to see any server error message or any debugging code.
+PrestaShop’s default settings prevent the customer to see any server error message or any debugging code. You, on the other hand, need this information in order to correct any potential mistake in your code.
 
-You, on the other hand, need this information in order to correct any potential mistake in your code. To that end, open the `/config/defines.inc.php` file, and edit it to set `_PS_MODE_DEV_` to `true`:
+Go to the “Performances” page under the “Advanced parameters” menu to change the following Debug settings:
 
-```php
-/* Debug only */
-define('_PS_MODE_DEV_', true);
-```
+* Debug mode: enable it.
 
 ## Using the dump() method
 
