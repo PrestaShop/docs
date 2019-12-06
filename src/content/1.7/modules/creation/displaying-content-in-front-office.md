@@ -41,7 +41,7 @@ Attaching code to a hook requires a specific method for each:
 -   `hookDisplayRightColumn()`: will simply do the same as
     `hookDisplayLeftColumn()`, but for the right column.
 -   `hookDisplayHeader()`: will add a link to the module's CSS file,
-    `/css/mymodule.css`.
+    `/css/mymodule.css` and module's JS file, `/js/mymodule.js`.
 
 ```php
 public function hookDisplayLeftColumn($params)
@@ -61,7 +61,23 @@ public function hookDisplayRightColumn($params)
 
 public function hookDisplayHeader()
 {
-    $this->context->controller->addCSS($this->_path.'css/mymodule.css', 'all');
+    $this->context->controller->registerStylesheet(
+        'mymodule-style',
+        $this->_path.'views/css/mymodule.css',
+        [
+            'media' => 'all',
+            'priority' => 1000,
+        ]
+    );
+
+    $this->context->controller->registerJavascript(
+        'mymodule-javascript',
+        $this->_path.'views/js/mymodule.js',
+        [
+            'position' => 'bottom',
+            'priority' => 1000,
+        ]
+    );
 }
 ```
 
@@ -73,8 +89,10 @@ stored in the configuration database table.
 The header hook is not part of the visual header, but enables us to put
 code in the `<head>` tag of the generated HTML file. This is very useful
 for JavaScript or CSS files. To add a link to our CSS file in the page's
-`<head>` tag, we use the `addCSS()` method, which generates the correct
-`<link>` tag to the CSS file indicated in parameters.
+`<head>` tag, we use the `registerStylesheet()` method, which generates
+the correct `<link>` tag to the CSS file indicated in parameters. To add
+our JS script in the page, we use the `registerJavascript()` method,
+which generates the correct `<script>` tag.
 
 Save your file, and already you can hook your module's template into the
 theme, move it around and transplant it (even though there is not
