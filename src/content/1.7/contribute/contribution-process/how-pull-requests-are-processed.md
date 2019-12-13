@@ -73,6 +73,11 @@ Once the Pull Request has been validated by all of the relevant people, it is fi
 
 After the Pull Request has finally passed the QA validation, it is merged in the project and the author becomes (if they weren't already) a contributor to this great open source project !
 
+### Graphical summary
+
+![Pull Request process summary](../../img/pull-request-process.png)
+
+
 ---
 
 _(This article was originally published on our blog: [What Happens To Pull Requests After They Are Submitted](https://build.prestashop.com/news/the-review-process/))_
