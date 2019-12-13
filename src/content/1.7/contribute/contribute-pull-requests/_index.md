@@ -20,7 +20,7 @@ To be able to contribute you need:
 * to know the **basics of git** and **how to use a github fork**
 * to be able to run **prestashop** from the sources
 
-PrestaShop is hosted on github.com and the way to submit code changes (pull requests) to the project is the standard *forks and pull requests flow*. This flow is explained by github in [the GitHub Forking Guide](https://guides.github.com/activities/forking/).
+PrestaShop is hosted on github.com and the way to submit code changes (pull requests) to the project is the standard *forks and pull requests flow*. This flow is explained in [the GitHub Forking Guide](https://guides.github.com/activities/forking/).
 
 If you have trouble using this flow, great help can be found on [help.github.com](https://help.github.com/).
 
