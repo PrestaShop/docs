@@ -140,7 +140,7 @@ Since the module is called MyModule, the translation domain should be `Modules.M
 ```php
 // file: controllers/front/something.php
 
-class MyModuleSomethingFrontController extends ModuleFrontController
+class MySomethingModuleFrontController extends ModuleFrontController
 {
     public function initContent()
     {
