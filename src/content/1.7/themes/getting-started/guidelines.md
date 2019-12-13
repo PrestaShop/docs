@@ -17,12 +17,12 @@ Your PHP code should be compatible with the following versions:
 
 - **PrestaShop** {{< minver v="1.7.0" >}} ~ {{< minver v="1.7.3" >}}: at least PHP 5.4
 - **PrestaShop** {{< minver v="1.7.4" >}}: at least PHP 5.6
+- **PrestaShop** {{< minver v="1.7.7" >}}: at least PHP 7.1
 
 ##### HTML / CSS / Javascript
 
 Your HTML/CSS/JS code should work with at least:
 
-- IE9+
 - Edge
 - Firefox 45
 - Chrome 29.
