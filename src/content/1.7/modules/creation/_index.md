@@ -248,7 +248,7 @@ parent::__construct();
 ```
 
 This will trigger a lot of actions from PrestaShop that you do not need
-to know about at this point. Calling the parent constuctor method must
+to know about at this point. Calling the parent constructor method must
 be done after the creation of the `this->name variable` and before any
 use of the `this->l()` translation method.
 
