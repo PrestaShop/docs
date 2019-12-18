@@ -48,7 +48,7 @@ Following [Symfony conventions](https://symfony.com/doc/3.4/contributing/code/co
 /**
  * @deprecated Since 1.7.6.0, use AnotherClass::someNewMethod() instead.
  */
-public function someOldMethod() 
+public function someOldMethod()
 {
     @trigger_error(
         sprintf(
@@ -69,6 +69,22 @@ Javascript files MUST follow the [Airbnb Javascript style guide](https://github.
 
 HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](http://codeguide.co/).
 Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
+
+[Stylelint](https://stylelint.io/) has been configured for the PrestaShop project to help developers to comply with these conventions.
+
+The prestashop specific configuration file can be found [here](https://github.com/PrestaShop/stylelint-config).
+
+Same as if you want to [compile assets][compile-assets], you need NodeJS and NPM to run it using the following command :
+
+```bash
+npm run scss-lint
+```
+
+If you want to use the stylelint's autofix functionality, you can use the following command :
+
+```bash
+npm run scss-fix
+```
 
 ## License information
 
@@ -124,4 +140,6 @@ All PrestaShop files MUST start with the PrestaShop license block:
  * @license   https://opensource.org/licenses/AFL-3.0  Academic Free License (AFL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
-``` 
+```
+
+[compile-assets]: {{< ref "/1.7/development/compile-assets/_index.md" >}}
