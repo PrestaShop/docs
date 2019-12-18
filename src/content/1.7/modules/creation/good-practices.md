@@ -25,6 +25,7 @@ menuTitle: Good practices
 - Don't use external ajax files to perform ajax tasks.
 - Don't go through directories using code and variables like: `dirname(__FILE__).'/../../config/config.inc.php'`
 - Don't edit the SQL structure of PrestaShop tables.
+- Don't obfuscate your code, making it not human readable.
 
 ## A few recommendations for your modules
 
