@@ -72,7 +72,7 @@ Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
 
 [Stylelint](https://stylelint.io/) has been configured for the PrestaShop project to help developers to comply with these conventions.
 
-The prestashop specific configuration file can be found [here](https://github.com/PrestaShop/stylelint-config).
+The PrestaShop configuration can be found [here](https://github.com/PrestaShop/stylelint-config).
 
 Same as if you want to [compile assets][compile-assets], you need NodeJS and NPM to run it using the following command :
 
