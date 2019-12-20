@@ -80,7 +80,7 @@ Same as if you want to [compile assets][compile-assets], you need NodeJS and NPM
 npm run scss-lint
 ```
 
-If you want to use the stylelint's autofix functionality, you can use the following command :
+If you want to use the autofix functionality, run this command:
 
 ```bash
 npm run scss-fix
