@@ -74,7 +74,7 @@ Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
 
 The PrestaShop configuration can be found [here](https://github.com/PrestaShop/stylelint-config).
 
-Same as if you want to [compile assets][compile-assets], you need NodeJS and NPM to run it using the following command :
+Same as if you want to [compile assets][compile-assets], you need NodeJS and NPM to run it using the following command:
 
 ```bash
 npm run scss-lint
