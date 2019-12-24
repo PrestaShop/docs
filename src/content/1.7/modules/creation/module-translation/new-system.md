@@ -251,9 +251,15 @@ Once saved, translations are stored in the database in the table `ps_translation
 
 ## Creating translation dictionary files
 
-This feature has not been implemented as of 1.7.6. If you need to distribute translated wordings with your module, you can either write classic dictionary files by hand, or export your wordings into an SQL dump, then import it during the module's install process.
+This feature has not been implemented as of 1.7.6. 
 
-Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is due to be implemented in 1.7.7.
+If you need to distribute translated wordings with your module, you can either [write classic dictionary files manually]({{< ref "classic-system#editing-a-dictionary-file-manually" >}}), or export your module's wordings from the database into a file, then import it during the module's install process.
+
+{{% notice tip %}}
+If you choose to export wordings from the database, you can easily extract only your module's wordings from the `ps_translation` table by filtering domains that start with `ModulesYourmodulename*`. You can disregard `id_translation`, but you will have to match the original `lang_id` to the shop's one (see `ps_lang`) when you re-import them.
+{{% /notice %}}
+
+Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is [due to be implemented in 1.7.8](https://github.com/PrestaShop/PrestaShop/issues/14968).
 
 ## Limitations and caveats
 
