@@ -259,7 +259,7 @@ If you need to distribute translated wordings with your module, you can either [
 If you choose to export wordings from the database, you can easily extract only your module's wordings from the `ps_translation` table by filtering domains that start with `ModulesYourmodulename*`. You can disregard `id_translation`, but you will have to match the original `lang_id` to the shop's one (see `ps_lang`) when you re-import them.
 {{% /notice %}}
 
-Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is due to be implemented in 1.7.7.
+Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is [due to be implemented in 1.7.8](https://github.com/PrestaShop/PrestaShop/issues/14968).
 
 ## Limitations and caveats
 
