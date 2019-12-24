@@ -54,15 +54,15 @@ Don't worry if you don't translate everything to all languages right away. Any w
 
 ### Translation domain
 
-An important part of the new translation system is **Translation Domains**. Essentially, translation domains replace the classic system's [contextualization][contextualization], which provides more flexibility for translators to translate the same wording differently depending on the context where it's used. 
+An important part of the new translation system is **Translation Domains**, which replaces the classic system's [contextualization][contextualization]. In the new translation system, all wordings must be linked to at least one translation domain.
 
-While the Core and Native modules have clearly defined [translation domain naming scheme][core-translation-domains], non-native modules must respect a specific convention:
+While the Core and Native modules have clearly defined [translation domain naming scheme][core-translation-domains], non-native modules must respect a specific naming convention:
 
 ```
 Modules.Nameofthemodule.Specificpart
 ```
 
-Translation Domains are always made of three parts, separated by dots:
+Translation Domain names are always made of three parts, separated by dots:
 
 1. The first part must always be **"Modules"**
 2. **"Nameofthemodule"** is the name of your module, with some rules:
@@ -278,7 +278,7 @@ Example:
 $this->trans('Some wording', [], 'Modules.Mymodule.Something');
 
 // dynamic content can be injected using placeholders & replacements
-$this->trans('Some wording with %foo%', ['%foo%' => $dynamicContent], 'Modules.Mymodule.Bar);
+$this->trans('Some wording with %foo%', ['%foo%' => $dynamicContent], 'Modules.Mymodule.Bar');
 
 // this won't work, the interpreter will ignore variables
 $wording = 'Some wording';
@@ -289,7 +289,7 @@ $this->trans($wording, [], $domain);
 $this->trans('Some '. $var . ' wording', [], 'Modules.Mymodule.Foo');
 
 // dynamic behavior, like aliasing the trans() function, won't work well either
-public function translate($wording) {
+function translate($wording) {
    $this->trans($wording, [], 'Modules.Mymodule.Foo');
 }
 ```

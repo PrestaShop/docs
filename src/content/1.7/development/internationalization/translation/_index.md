@@ -10,9 +10,9 @@ One of the main needs for localization is translating wordings to the another la
 PrestaShop 1.7 features a new translation system, based on the [Symfony Translation component](https://symfony.com/doc/3.4/translation.html).
 
 {{% notice warning %}}
-**This system is only available for Core and Native modules.**
+**This documentation is intended for Core and Native module translation.**
 
-See [here]({{< ref "1.7/modules/creation/module-translation/_index.md" >}}) for 3rd party modules.
+If you are a module developer, read the [module translation documentation]({{< ref "1.7/modules/creation/module-translation/_index.md" >}}) instead.
 {{% /notice %}}
 
 ## Overview
@@ -53,16 +53,24 @@ echo $translator->trans('This product is no longer available.', [], 'Shop.Notifi
 
 The `trans()` method takes three arguments:
 
-1. The wording to translate. Keep in mind that it has to be _exactly_ the same as the one in the default catalogue, or the translation won't work.
-2. An array of replacements, if any ([Learn more here](https://symfony.com/doc/3.4/components/translation/usage.html#component-translation-placeholders)).
-3. The [translation domain][translation-domains] for that wording.
+1. `$id` – The wording you want to translate. Keep in mind that it has to be _exactly_ the same as the one in the default catalogue, or the translation won't work.
+2. `$parameters` – An array of replacements, if any. ([Learn more about translation placeholders](https://symfony.com/doc/3.4/components/translation/usage.html#component-translation-placeholders)).
+3. `$domain` – The [translation domain][translation-domains] for that wording.
+
+{{% notice warning %}}
+Be aware that in Symfony-based Admin controllers, the second and third arguments have been swapped in order to allow `$replacements` to be optional. For more, see [FrameworkBundleAdminController](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/src/PrestaShopBundle/Controller/Admin/FrameworkBundleAdminController.php#L275).
+{{% /notice %}}
 
 ##### Inside controllers
 
 Controllers include a helper method named `trans()` that calls the translator internally:
 
 ```php
+// legacy controllers
 $this->trans('This product is no longer available.', [], 'Shop.Notifications.Error');
+
+// Symfony-based controllers (FrameworkBundleAdminController)
+$this->trans('This product is no longer available.', 'Shop.Notifications.Error', []);
 ```
 
 ##### Outside controllers
@@ -135,7 +143,10 @@ In `.twig` files, you can use the `trans` filter from Twig:
 <div>{{ 'Sort by'|trans({}, 'Admin.Actions') }}</div>
 ```
 
-For information on more advanced features, head on to the [Official documentation](https://symfony.com/doc/current/translation.html#twig-templates).
+For information on more advanced features, head on to the [Symfony translator component documentation](https://symfony.com/doc/current/translation.html#twig-templates).
 
+## Read more
+
+{{% children %}}
 
 [translation-domains]: {{< relref "translation-domains.md" >}}
