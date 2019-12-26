@@ -70,17 +70,17 @@ Javascript files MUST follow the [Airbnb Javascript style guide](https://github.
 HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](http://codeguide.co/).
 Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
 
-[Stylelint](https://stylelint.io/) has been configured for the PrestaShop project to help developers to comply with these conventions.
+To help developers to comply with these conventions, [Stylelint](https://stylelint.io/) has been configured in the PrestaShop project. You can find the configuration file [here](https://github.com/PrestaShop/stylelint-config).
 
-The PrestaShop configuration can be found [here](https://github.com/PrestaShop/stylelint-config).
+Same as if you want to [compile assets]({{< ref "/1.7/development/compile-assets.md" >}}), you need NodeJS and NPM to run Stylelint.
 
-Same as if you want to [compile assets][compile-assets], you need NodeJS and NPM to run it using the following command:
+You can run the linter like this:
 
 ```bash
 npm run scss-lint
 ```
 
-If you want to use the autofix functionality, run this command:
+You can fix errors using this command:
 
 ```bash
 npm run scss-fix
@@ -141,5 +141,3 @@ All PrestaShop files MUST start with the PrestaShop license block:
  * International Registered Trademark & Property of PrestaShop SA
  */
 ```
-
-[compile-assets]: {{< ref "/1.7/development/compile-assets/_index.md" >}}
