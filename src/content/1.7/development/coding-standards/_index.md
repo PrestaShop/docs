@@ -74,7 +74,7 @@ To help developers to comply with these conventions, [Stylelint](https://styleli
 
 Same as if you want to [compile assets]({{< ref "/1.7/development/compile-assets.md" >}}), you need NodeJS and NPM to run Stylelint.
 
-You can run the linter like this:
+Starting on {{< minver v="1.7.8" >}}, you can run the linter like this:
 
 ```bash
 npm run scss-lint
