@@ -111,7 +111,7 @@ PrestaShop needs recursive write permissions on several directories:
 - ./upload
 - ./var
 
-You can setup proper permissions with that one line:
+You can set up the appropriate permissions using this command:
 ```bash
 $ chmod +w -R admin-dev/autoupgrade app/logs app/Resources/translations cache config/themes download img log mails modules themes translations var
 ```
