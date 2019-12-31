@@ -66,6 +66,7 @@ $apiAccess->save();
 This first code allows you to pass the authentication layer. You also need access to the resources you expect to use.
 
 We need the Api account ID in order to grant it access, and an array having the resource name as key and the array of methods allowed as value.
+The available resources can be found in [`WebserviceRequest::getResources()` (link to definition)](https://github.com/PrestaShop/PrestaShop/blob/844ceb99b26f0b81c4f96b58a304fd3dbe27de41/classes/webservice/WebserviceRequest.php#L285]).
 
 For instance is we want to give all permissions for customers and orders resources for the account we previously created:
 
