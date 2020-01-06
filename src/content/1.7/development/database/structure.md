@@ -1,6 +1,6 @@
 ---
 title: Database structure
-weight: 3
+weight: 4
 ---
 
 # Maintaining the database

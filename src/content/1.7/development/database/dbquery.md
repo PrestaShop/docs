@@ -1,6 +1,6 @@
 ---
 title: DBQuery class
-weight: 1
+weight: 2
 ---
 
 # The DBQuery class
