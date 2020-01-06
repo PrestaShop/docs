@@ -86,44 +86,19 @@ class SomeFormType extends TranslatorAwareType
                 'required' => false,
                 'label' => $this->trans('This is a select box', 'Admin.Catalog.Feature'),
                 'choice_translation_domain' => 'Admin.Some.Domain',
-            ])
-            ->add('another_select_box', ChoiceType::class, [
-                'choices' => [
-                    'Another first option' => 0,
-                    'Another second option' => 1,
-                    'Another third option' => 2,
-                ],
-                'required' => false,
-                'label' => $this->trans('This is a different select box', 'Admin.Catalog.Feature'),
             ]);
     }
-    
-    /**
-     * {@inheritdoc}
-     */
-    public function configureOptions(OptionsResolver $resolver)
-    {
-        $resolver->setDefaults([
-            'translation_domain' => 'Admin.Catalog.Feature',
-        ]);
-    }
-
 }
 ```
 
-The form above declares two Choice fields (select boxes), with three different options each. 
+The form above declares a Choice field (select box), with three different options. 
 
-* The first Choice declares a specific `choice_translation_domain`: this explicit translation domain will be used to translate choices from this field.
-* The second Choice does not declare a translation domain. Therefore, it will inherit the one set in `translation_domain` within the `configureOptions()` method.
+Notice the declaration of `choice_translation_domain`. This explicit translation domain will be used to translate choices from this field.
 
-**Note:** you must be careful when using this pattern:
-
-* The analyzer expects the `ChoiceType` declaration to be inside a call to the `add()` method, using `ChoiceType::class` and not a FQCN.
-* The default translation domain expects a call to the `setDefaults()` method within `configureOptions()`.
+**Note:** you must be careful when using this pattern: The analyzer expects the `ChoiceType` declaration to be inside a call to the `add()` method, using `ChoiceType::class` and not a FQCN.
 
 {{% notice tip %}}
-To be safe, just do it exactly as the example above. If in doubt, have a look at [ChoiceExtractor](https://github.com/PrestaShop/TranslationToolsBundle/blob/master/Translation/Extractor/Visitor/Translation/FormType/ChoiceExtractor.php) and [DefaultTranslationDomainExtractor](https://github.com/PrestaShop/TranslationToolsBundle/blob/master/Translation/Extractor/Visitor/Translation/FormType/DefaultTranslationDomainExtractor.php). 
-{{% /notice %}}
+If in doubt, have a look at [ChoiceExtractor](https://github.com/PrestaShop/TranslationToolsBundle/blob/master/Translation/Extractor/Visitor/Translation/FormType/ChoiceExtractor.php) {{% /notice %}}
 
 #### Array literals
 
