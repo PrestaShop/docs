@@ -17,7 +17,12 @@ How to setup the benchmark of your PrestaShop shop
 - <a href="https://getcomposer.org/download/composer">composer</a>
 - The prestashop version you want to bench
 
-## Prepare your benchmark
+## Dockerized installation of benchmark
+
+To get an automatically pre-populated shop, you can use the following github repository:
+**[Prestashop performance project](https://github.com/PrestaShop/performance-project)**
+
+## Manually prepare your benchmark
 
 ### Prepare your dataset
 
