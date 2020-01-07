@@ -80,7 +80,7 @@ Starting on {{< minver v="1.7.8" >}}, you can run the linter like this:
 npm run scss-lint
 ```
 
-You can fix errors using this command:
+You can fix auto-fixable errors using this command:
 
 ```bash
 npm run scss-fix
