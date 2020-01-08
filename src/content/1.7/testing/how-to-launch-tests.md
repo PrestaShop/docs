@@ -44,6 +44,6 @@ If you want to display the browser, remove the `--headless` argument from webdri
 
 Find out more in the [StarterTheme tests Readme file](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Selenium/README.md).
 
-## Executing the Functional End-to-End (E2E) test suites
+## Executing the Functional test suites
 
 This is thoroughly explained in the [Puppeteer tests Readme file](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/puppeteer/README.md).
