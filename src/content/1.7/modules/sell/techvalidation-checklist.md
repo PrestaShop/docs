@@ -34,6 +34,14 @@ Additionally, distribution licenses like CC-0 or CC-by-sa are appropriate for ar
 
 Module may create all the table they need in the database. However altering core table is forbidden.
 
+#### Other modules are not altered
+
+Modifying core or other modules files is not allowed.
+
+#### File storage in proper directory
+
+Module may add / modify some files on the shop. To avoid issues with file permissions, we recommend storing files in the `var/%env%` directory.
+
 #### Use of iFrames is limited to highly secured websites
 
 The use of iframes is highly discouraged for security reasons, although they are implemented in different part of the core like in [Payment Modules](https://github.com/PrestaShop/paymentexample/blob/master/paymentexample.php#L150).
