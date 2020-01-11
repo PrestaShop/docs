@@ -22,7 +22,12 @@ To be able to contribute you need:
 
 PrestaShop is hosted on github.com and the way to submit code changes (pull requests) to the project is the standard *forks and pull requests flow*. This flow is explained in [the GitHub Forking Guide](https://guides.github.com/activities/forking/).
 
-If you have trouble using this flow, great help can be found on [help.github.com](https://help.github.com/).
+If you have trouble using this flow, great help can be found on [help.github.com](https://help.github.com/) or by looking at one of these detailed tutorials:
+
+- https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/
+- https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
+- https://mattstauffer.com/blog/how-to-contribute-to-an-open-source-github-project-using-your-own-fork/
+- https://dev.to/ceri_anne_dev/how-to-fork-and-contribute-to-a-github-repo-5bfp
 
 We explain 2 ways to run PrestaShop from the sources:
 
