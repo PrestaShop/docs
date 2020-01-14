@@ -55,7 +55,12 @@ prestashop-git | -- Installation successful! --
 prestashop-git | \n* Almost ! Starting web server now\n
 ```
 
-At this point, your PrestaShop installation is ready and the website is available at http://localhost:8001.
+At this point, your PrestaShop installation is ready and the website is available at http://localhost:8001. 
+
+Default MySql credentials to connect using 3rd party programs like Sequel Pro and others:
+Username: prestashop
+Password: prestashop
+Port: 3306
 
 The default credentials for the back-office are `demo@prestashop.com` / `prestashop_demo`.
 
