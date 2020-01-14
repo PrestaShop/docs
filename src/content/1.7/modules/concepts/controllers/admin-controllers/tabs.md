@@ -178,7 +178,7 @@ your_route_name:
       _legacy_link: 'MyModuleDemoController'
 ```
 
-So now any call in the menu system to `Link::getAdminkLink('MyModuleDemoController')'` will return your controller url `your-module/demo`
+So now any call in the menu system to `Link::getAdminLink('MyModuleDemoController')'` will return your controller url `your-module/demo`
 But since the `MyModuleDemoController` class actually doesn't exist, the automatic tab registration based on the `$tabs` property won't work.
 So you need to insert your tab manually during your module installation:
 
