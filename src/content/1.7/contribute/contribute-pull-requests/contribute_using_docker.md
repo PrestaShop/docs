@@ -62,7 +62,7 @@ The default credentials for the back-office are `demo@prestashop.com` / `prestas
 Default MySql credentials to connect using 3rd party programs like Sequel Pro and others:
 Username: `root`
 Password: `prestashop`
-Port: `32768`
+Port: `3306`
 
 You can check MySQL port using command line
 
