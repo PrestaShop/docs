@@ -64,7 +64,7 @@ Username: `root`
 Password: `prestashop`
 Port: `32768`
 
-You can check MySql port using command line
+You can check MySQL port using command line
 
 ```
 docker ps
