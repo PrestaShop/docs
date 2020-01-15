@@ -29,7 +29,7 @@ If you have trouble using this flow, great help can be found on [help.github.com
 - https://mattstauffer.com/blog/how-to-contribute-to-an-open-source-github-project-using-your-own-fork/
 - https://dev.to/ceri_anne_dev/how-to-fork-and-contribute-to-a-github-repo-5bfp
 
-This flow is a standard process for opensource projects to handle contributions but it can look quite complex. [This article](https://dev.to/mathieuks/introduction-to-github-fork-workflow-why-is-it-so-complex-3ac8) about the flow can help you understand the reasons for each part of the process.
+This flow is a standard process for open source projects to handle contributions but it can look quite complex. [This article](https://dev.to/mathieuks/introduction-to-github-fork-workflow-why-is-it-so-complex-3ac8) about the flow can help you understand the reasons for each part of the process.
 
 We explain 2 ways to run PrestaShop from the sources:
 
