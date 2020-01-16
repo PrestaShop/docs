@@ -70,7 +70,6 @@ You can check MySQL port using command line
 docker-compose ps mysql
 ```
 
-Now you can see all docker containers.
 
 > You can now close the terminal if you want.
 
