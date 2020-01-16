@@ -67,7 +67,7 @@ Port: `3306`
 You can check MySQL port using command line
 
 ```
-docker ps
+docker-compose ps mysql
 ```
 
 Now you can see all docker containers.
