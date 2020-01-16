@@ -59,7 +59,7 @@ At this point, your PrestaShop installation is ready and the website is availabl
 
 The default credentials for the back-office are `demo@prestashop.com` / `prestashop_demo`.
 
-Default MySql credentials to connect using 3rd party programs like Sequel Pro and others:
+Default MySQL credentials to connect using 3rd party programs like Sequel Pro and others:
 Username: `root`
 Password: `prestashop`
 
