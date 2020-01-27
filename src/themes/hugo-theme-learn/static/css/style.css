@@ -37,8 +37,8 @@
 /* Color of <hr> separator in menu */
 @font-face {
   font-family: 'Novacento Sans Wide';
-  src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot");
-  src: url("../fonts/Novecentosanswide-UltraLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-UltraLight-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-UltraLight-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-UltraLight-webfont.svg#novecento_sans_wideultralight") format("svg");
+  src: url("/fonts/Novecentosanswide-UltraLight-webfont.eot");
+  src: url("/fonts/Novecentosanswide-UltraLight-webfont.eot?#iefix") format("embedded-opentype"), url("/fonts/Novecentosanswide-UltraLight-webfont.woff2") format("woff2"), url("/fonts/Novecentosanswide-UltraLight-webfont.woff") format("woff"), url("/fonts/Novecentosanswide-UltraLight-webfont.ttf") format("truetype"), url("/fonts/Novecentosanswide-UltraLight-webfont.svg#novecento_sans_wideultralight") format("svg");
   font-style: normal;
   font-weight: 200; }
 
@@ -46,13 +46,13 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 300;
-  src: url("../fonts/Work_Sans_300.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_300.woff") format("woff"), url("../fonts/Work_Sans_300.woff2") format("woff2"), url("../fonts/Work_Sans_300.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_300.ttf") format("truetype"); }
+  src: url("/fonts/Work_Sans_300.eot?#iefix") format("embedded-opentype"), url("/fonts/Work_Sans_300.woff") format("woff"), url("/fonts/Work_Sans_300.woff2") format("woff2"), url("/fonts/Work_Sans_300.svg#WorkSans") format("svg"), url("/fonts/Work_Sans_300.ttf") format("truetype"); }
 
 @font-face {
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("../fonts/Work_Sans_500.woff") format("woff"), url("../fonts/Work_Sans_500.woff2") format("woff2"), url("../fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("../fonts/Work_Sans_500.ttf") format("truetype"); }
+  src: url("/fonts/Work_Sans_500.eot?#iefix") format("embedded-opentype"), url("/fonts/Work_Sans_500.woff") format("woff"), url("/fonts/Work_Sans_500.woff2") format("woff2"), url("/fonts/Work_Sans_500.svg#WorkSans") format("svg"), url("/fonts/Work_Sans_500.ttf") format("truetype"); }
 
 .callout {
   padding: 1rem 1.3rem;
@@ -120,7 +120,7 @@ div.notices {
     top: .55rem;
     font-family: FontAwesome;
     font-size: 1.5rem;
-    content: '\F06A';
+    content: '';
     left: 1.3rem; }
   div.notices.info {
     background: #fff2db; }
@@ -925,7 +925,7 @@ cite {
   font-size: 0.925rem; }
 
 cite:before {
-  content: "\2014    "; }
+  content: "\2014 \0020"; }
 
 pre {
   margin: 1.7rem 0;
@@ -996,8 +996,6 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap;
   border: inherit; }
-
-/*# sourceMappingURL=nucleus.css.map */
 /* Color of text by default */
 /* Color of titles h2-h3-h4-h5 */
 /* Color of links */
@@ -1723,7 +1721,7 @@ td {
       cursor: pointer; } }
 
 .copy-to-clipboard {
-  background-image: url("../images/clippy.svg");
+  background-image: url("/images/clippy.svg");
   background-position: 50% 50%;
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -2048,5 +2046,6 @@ a[data-featherlight] {
   margin-right: 3rem; }
   a[data-featherlight] > img {
     max-height: 350px; }
+
 
 /*# sourceMappingURL=style.css.map*/
