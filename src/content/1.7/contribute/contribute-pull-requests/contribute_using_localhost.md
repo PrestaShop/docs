@@ -80,6 +80,17 @@ cd /path/to/prestashop
 composer install
 ```
 
+### Compile assets
+{{< minver v="1.7.8" title="true" >}}
+
+From the 1.7.8 version the assets are no longer present in the repository and need to be compiled (we explained with more details why in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/)).
+You will need `npm` installed on your environment (here is the documentation about [how to compile assets][compile-assets]), then you can simply run:
+
+```bash
+cd /path/to/prestashop
+make assets
+```
+
 ### Setting up file rights
 
 PrestaShop needs recursive write permissions on several directories:
@@ -166,4 +177,5 @@ to our local project. Note, here we have updated the `develop` branch of the Pre
 
 [getting-started-guide]: http://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements.md" >}}
+[compile-assets]: {{< ref "1.7/development/compile-assets.md" >}}
 
