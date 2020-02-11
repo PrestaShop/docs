@@ -110,7 +110,7 @@ Displaying content
 Now that we have access to the left column, we should display something
 there for the customer to see.
 
-The visible part of the module is defined in .`tpl` files placed in
+The visible part of the module is defined in `.tpl` files placed in
 specific View folders:
 
 -   `/views/templates/front/`: front office features.
