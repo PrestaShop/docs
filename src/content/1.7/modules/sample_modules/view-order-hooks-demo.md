@@ -8,8 +8,18 @@ weight: 10
 
 ## Introduction
 
-In this tutorial we are going to build module which extends Orders page
+In this tutorial we are going to build module which extends Order view page with:
+
+ - User Signature card below the Customer card.
+ - Package tracking card below the the card with 'Status', 'Documents',.. tabs.
+ - 
 
 ## Prerequisites
 
 - To be familiar with basic module creation.
+
+#### Result
+
+After completing the steps above
+
+ {{< figure src="../img/view-order-hooks-demo/view-order-demo-result.png" title="Signature card " >}}
