@@ -308,6 +308,8 @@ actionBeforeAjaxDie&lt;ControllerName>&lt;Method>
     
 actionBeforeCartUpdateQty
 : 
+    **(deprecated since 1.6.1.1)**
+    
     Located in: /classes/Cart.php
 
     
