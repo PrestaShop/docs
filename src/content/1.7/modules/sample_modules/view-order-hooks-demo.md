@@ -17,6 +17,10 @@ the following components:
  - Customer's review card below the Messages card
  - Other orders from this customer card at the bottom of the page
  - Previous / Next order buttons at the top of the Order page
+ 
+While creating these components you will learn how to:
+
+ - Use Repository classes extending Symfony EntityRepository (https://symfony.com/doc/3.4/doctrine/repository.html)
 
 ## Prerequisites
 
