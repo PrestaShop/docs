@@ -39,6 +39,10 @@ On module installation the following hooks are being registered:
  - `displayAdminOrder` - displayed at the bottom of the Order page
  - `displayAdminOrderTop` - displayed at the top of the Order page
  - `actionGetAdminOrderButtons` - gets back office order buttons
+ 
+These hooks are visualized in the picture below:
+
+ {{< figure src="../img/view-order-hooks-demo/ps-view-order-page-hooks.jpg" title="Order page hooks locations" >}}
 
 ## Result
 
@@ -46,4 +50,4 @@ After completing the steps above the results should be:
 
  - Signature and Package tracking cards:
 
- {{< figure src="../img/view-order-hooks-demo/view-order-demo-result.png" title="Signature card " >}}
+ {{< figure src="../img/view-order-hooks-demo/view-order-demo-result.png" title="Signature card" >}}
