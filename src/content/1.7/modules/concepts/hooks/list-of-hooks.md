@@ -1401,6 +1401,8 @@ displayBackOfficeHeader
     
 displayBackOfficeOrderActions
 : 
+    Displayed between Customer and Messages cards in the Order page
+    
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
     

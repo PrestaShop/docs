@@ -31,14 +31,14 @@ While creating these components you will learn how to:
 
 On module installation the following hooks are being registered:
 
- - `displayBackOfficeOrderActions` - for adding actions to Order page between Customer and Messages cards
+ - `displayBackOfficeOrderActions` - displayed between Customer and Messages cards in the Order page
  - `displayAdminOrderTabContent` - for adding tab content to Order page
  - `displayAdminOrderTabLink` - for adding tab links for tab content
  - `displayAdminOrderMain` - for adding Order main information
  - `displayAdminOrderSide` - for adding Order side information
- - `displayAdminOrder` - for adding info to the bottom of the Order page
- - `displayAdminOrderTop` - for adding info to the top of the Order page
- - `actionGetAdminOrderButtons` - for adding info at
+ - `displayAdminOrder` - displayed at the bottom of the Order page
+ - `displayAdminOrderTop` - displayed at the top of the Order page
+ - `actionGetAdminOrderButtons` - gets back office order buttons
 
 ## Result
 
