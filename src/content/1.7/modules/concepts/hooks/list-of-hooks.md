@@ -1190,6 +1190,8 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentOrder
 : 
+    **(deprecated since 1.7.0.0) - use displayAdminOrderTabLink and displayAdminOrderTabContent**
+   
     Display new elements in Back Office, AdminOrder, panel Order
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel content
 
