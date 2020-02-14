@@ -21,10 +21,25 @@ the following components:
 While creating these components you will learn how to:
 
  - Use Repository classes extending Symfony EntityRepository (https://symfony.com/doc/3.4/doctrine/repository.html)
-
+ - Use Twig templates to render HTML (https://twig.symfony.com/)
+ 
 ## Prerequisites
 
 - To be familiar with basic module creation.
+
+### Register hooks
+
+On module installation the following hooks are being registered:
+
+ - `displayBackOfficeOrderActions` - for adding actions to Order page between Customer and Messages cards
+ - `displayAdminOrderContentOrder` - for adding Order content to Order page
+ - `displayAdminOrderTabContent` - for adding tab content to Order page
+ - `displayAdminOrderTabLink` - for adding tab links for tab content
+ - `displayAdminOrderMain` - for adding Order main information
+ - `displayAdminOrderSide` - for adding Order side information
+ - `displayAdminOrder` - for adding info to the bottom of the Order page
+ - `displayAdminOrderTop` - for adding info to the top of the Order page
+ - `actionGetAdminOrderButtons` - for adding info at
 
 ## Result
 
