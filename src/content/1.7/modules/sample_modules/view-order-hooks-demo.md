@@ -66,7 +66,7 @@ These hooks are visualized in the picture below:
 
 ### Create User Signature card below the Customer card.
 
-Lets create `signature` table in the database:
+Lets create `Installer` class responsible for creating `signature` table in the database:
 
 ```php
 <?php
@@ -269,7 +269,7 @@ class DemoViewOrderHooks extends Module
 }
 ```
 
-Lets create SignatureRepository class:
+Lets create `SignatureRepository` class:
 
 ```php
 <?php
@@ -283,6 +283,30 @@ class SignatureRepository extends EntityRepository
 {
 }
 ```
+
+Lets create services configuration for the above classes to use dependency injection (DI) in `config/services.yml`:
+
+```php
+parameters:
+  signatureImgDirectory: 'signatures/'
+
+services:
+  prestashop.module.demovieworderhooks:
+    class: DemoViewOrderHooks
+    factory: [Module, getInstanceByName]
+    arguments:
+      - 'demovieworderhooks'
+
+  prestashop.module.demovieworderhooks.repository.order_repository:
+    class: PrestaShop\Module\DemoViewOrderHooks\Repository\OrderRepository
+
+  prestashop.module.demovieworderhooks.repository.signature_repository:
+    class: PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository
+    factory: ['@doctrine.orm.default_entity_manager', getRepository]
+    arguments:
+      - PrestaShop\Module\DemoViewOrderHooks\Entity\Signature
+```
+ 
 
 ## Result
 
