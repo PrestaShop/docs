@@ -13,7 +13,7 @@ The module will add the following components:
 
  - User Signature card below the Customer card.
  
-While creating these components you will learn how to:
+While creating this component you will learn how to:
 
  - Use Repository classes extending Symfony EntityRepository (https://symfony.com/doc/3.4/doctrine/repository.html)
  - Use Twig templates to render HTML (https://twig.symfony.com/)
@@ -60,8 +60,7 @@ These hooks are visualized in the picture below:
     }
  ```
 
-Let's start from the first one - 'displayBackOfficeOrderActions' and create a demo for it. To use the hook we will
-need to write it's usage method: `hookDisplayBackOfficeOrderActions`
+Let's start from the first one - `displayBackOfficeOrderActions` and create a demo for it. 
 
 ### Create User Signature card below the Customer card.
 
@@ -482,6 +481,12 @@ Lets add several methods to `DemoViewOrderHooks` class:
         return "@Modules/$this->name/views/templates/admin/";
     }
 ```
+
+For each registered hook, you must create a non-static public method, 
+starting with the “hook” keyword followed by the name of the hook you want to use 
+(starting with either “display” or “action”). In our case: `hookDisplayBackOfficeOrderActions`
+For more information see: https://devdocs.prestashop.com/1.7/modules/concepts/hooks/#execution
+
 ```php
     /**
      * Displays customer's signature.
