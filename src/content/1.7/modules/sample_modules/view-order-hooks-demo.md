@@ -267,7 +267,8 @@ class DemoViewOrderHooks extends Module
 }
 ```
 
-Let's create `Signature` entity class and use Object Relational Mapping (ORM) annotations:
+Let's create `Signature` entity class and use Doctrine Object Relational Mapping (ORM) annotations.
+For more information: https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#define-an-entity
 
 ```php
 <?php
@@ -385,7 +386,8 @@ class SignatureRepository extends EntityRepository
 }
 ```
 
-Lets create services configuration for the above classes to use dependency injection (DI) in `config/services.yml`:
+Lets create services configuration for the above classes in `config/services.yml`. 
+For more information: https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
 
 ```yaml
 parameters:
