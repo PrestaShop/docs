@@ -15,8 +15,10 @@ The module will add the following components:
  
 While creating this component you will learn how to:
 
+ - Use Doctrine (https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/)
  - Use Repository classes extending Symfony EntityRepository (https://symfony.com/doc/3.4/doctrine/repository.html)
- - Use Twig templates to render HTML (https://twig.symfony.com/)
+ - Use Symfony services (https://devdocs.prestashop.com/1.7/modules/concepts/services/)
+ - Use Twig templates to render HTML (https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/templating-with-twig/)
  - Various design patterns: Repository, Factory, Presenter
 
 ## Prerequisites
