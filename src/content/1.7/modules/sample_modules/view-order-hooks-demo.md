@@ -267,7 +267,7 @@ class DemoViewOrderHooks extends Module
 }
 ```
 
-Let's create `Signature` entity class:
+Let's create `Signature` entity class and use Object Relational Mapping (ORM) annotations:
 
 ```php
 <?php
