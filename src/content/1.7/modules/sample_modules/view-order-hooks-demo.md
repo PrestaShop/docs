@@ -414,7 +414,6 @@ Let's create `SignaturePresenter` class responsible for returning order customer
 
 ```php
 <?php
-
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoViewOrderHooks\Presenter;
@@ -472,7 +471,8 @@ Let's create a twig template in `modules/demovieworderhooks/views/templates/admi
 {% endblock %}
 ```
 
-Lets add several methods to `DemoViewOrderHooks` class:
+Lets add several methods to `DemoViewOrderHooks` class.
+`getModuleTemplatePath` - get's the path of the templates folder.
 
 ```php
     /**
@@ -521,4 +521,4 @@ After completing the steps above the result should be:
 
  {{< figure src="../img/view-order-hooks-demo/view-order-demo-result.png" title="Signature card" >}}
 
-Feel free to experiment with the other installed hooks!
+Feel free to experiment with other Order view page hooks!
