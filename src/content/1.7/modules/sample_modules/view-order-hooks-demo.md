@@ -60,7 +60,7 @@ These hooks are visualized in the picture below:
     }
  ```
 
-Let's take the first hook and create a demo for him. To use the hook we will
+Let's start from the first one - 'displayBackOfficeOrderActions' and create a demo for it. To use the hook we will
 need to write it's usage method: `hookDisplayBackOfficeOrderActions`
 
 ### Create User Signature card below the Customer card.
