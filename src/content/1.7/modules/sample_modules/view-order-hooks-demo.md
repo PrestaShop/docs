@@ -8,9 +8,8 @@ weight: 10
 
 ## Introduction
 
-In this tutorial we are going to build module which extends Order view page. 
-By the following tutorial you will learn to extend Order page with 
-the following components:
+In this tutorial we are going to build a module to extend Order view page. 
+The module will add the following components:
 
  - User Signature card below the Customer card.
  - Package tracking card below the the card with 'Status', 'Documents',.. tabs.
