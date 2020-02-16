@@ -12,10 +12,6 @@ In this tutorial we are going to build a module to extend Order view page.
 The module will add the following components:
 
  - User Signature card below the Customer card.
- - Package tracking card below the the card with 'Status', 'Documents',.. tabs.
- - Customer's review card below the Messages card
- - Other orders from this customer card at the bottom of the page
- - Previous / Next order buttons at the top of the Order page
  
 While creating these components you will learn how to:
 
