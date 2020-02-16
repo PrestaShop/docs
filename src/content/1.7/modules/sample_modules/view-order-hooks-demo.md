@@ -196,7 +196,7 @@ class FixturesInstaller
 }
 
 ```
-Then let's create `InstallerFactory` which will be used both to install and uninstall database:
+Then let's create `InstallerFactory` which will be used create `Installer` object.
 
 ```php
 <?php
