@@ -539,40 +539,6 @@ class OrderRepository
 
 ```
 
-
-
-
-
-Then lets create services configuration for the above classes in `config/services.yml`. 
-For more information: https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
-
-```yaml
-parameters:
-  signatureImgDirectory: 'signatures/'
-
-services:
-  prestashop.module.demovieworderhooks:
-    class: DemoViewOrderHooks
-    factory: [Module, getInstanceByName]
-    arguments:
-      - 'demovieworderhooks'
-
-  prestashop.module.demovieworderhooks.repository.order_repository:
-    class: PrestaShop\Module\DemoViewOrderHooks\Repository\OrderRepository
-
-  prestashop.module.demovieworderhooks.repository.signature_repository:
-    class: PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository
-    factory: ['@doctrine.orm.default_entity_manager', getRepository]
-    arguments:
-      - PrestaShop\Module\DemoViewOrderHooks\Entity\Signature
-
-  prestashop.module.demovieworderhooks.presenter.signature_presenter:
-    class: PrestaShop\Module\DemoViewOrderHooks\Presenter\SignaturePresenter
-    arguments:
-      - '@=service("prestashop.module.demovieworderhooks").getPathUri() ~ parameter("signatureImgDirectory")'
-
-```
-
 Let's create `SignaturePresenter` class responsible for returning order customer data  
 in `src/Presenter/`:
 
@@ -612,6 +578,36 @@ class SignaturePresenter
         ];
     }
 }
+```
+
+Then lets create services configuration for the above classes in `config/services.yml`. 
+For more information: https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
+
+```yaml
+parameters:
+  signatureImgDirectory: 'signatures/'
+
+services:
+  prestashop.module.demovieworderhooks:
+    class: DemoViewOrderHooks
+    factory: [Module, getInstanceByName]
+    arguments:
+      - 'demovieworderhooks'
+
+  prestashop.module.demovieworderhooks.repository.order_repository:
+    class: PrestaShop\Module\DemoViewOrderHooks\Repository\OrderRepository
+
+  prestashop.module.demovieworderhooks.repository.signature_repository:
+    class: PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository
+    factory: ['@doctrine.orm.default_entity_manager', getRepository]
+    arguments:
+      - PrestaShop\Module\DemoViewOrderHooks\Entity\Signature
+
+  prestashop.module.demovieworderhooks.presenter.signature_presenter:
+    class: PrestaShop\Module\DemoViewOrderHooks\Presenter\SignaturePresenter
+    arguments:
+      - '@=service("prestashop.module.demovieworderhooks").getPathUri() ~ parameter("signatureImgDirectory")'
+
 ```
 
 Let's create a twig templates in `modules/demovieworderhooks/views/templates/admin/`:
