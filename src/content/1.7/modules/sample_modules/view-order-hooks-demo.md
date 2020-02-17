@@ -416,7 +416,12 @@ class SignatureRepository extends EntityRepository
 }
 ```
 
-Lets create services configuration for the above classes in `config/services.yml`. 
+Let's put our signature picture, `john_doe.png` inside `/signatures/` folder.
+
+ {{< figure src="../img/view-order-hooks-demo/john_doe.png" title="Signature" >}}
+
+
+Then lets create services configuration for the above classes in `config/services.yml`. 
 For more information: https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
 
 ```yaml
