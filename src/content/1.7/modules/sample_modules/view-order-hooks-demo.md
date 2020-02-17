@@ -565,6 +565,12 @@ services:
     factory: ['@doctrine.orm.default_entity_manager', getRepository]
     arguments:
       - PrestaShop\Module\DemoViewOrderHooks\Entity\Signature
+
+  prestashop.module.demovieworderhooks.presenter.signature_presenter:
+    class: PrestaShop\Module\DemoViewOrderHooks\Presenter\SignaturePresenter
+    arguments:
+      - '@=service("prestashop.module.demovieworderhooks").getPathUri() ~ parameter("signatureImgDirectory")'
+
 ```
 
 Let's create `SignaturePresenter` class responsible for returning order customer data  
