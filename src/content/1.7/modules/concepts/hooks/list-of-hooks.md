@@ -538,6 +538,14 @@ actionFrontControllerSetVariables
 
     Located in: /classes/controller/FrontController.php
     
+    Parameters since {{< minver v="1.7.7" >}}:
+    
+    ```php
+    array(
+      'templateVars' => &(array)
+    );
+    ```
+    
     Example usage:
     
     Your hook implementation should return array of values that will be added to `prestashop` object.
