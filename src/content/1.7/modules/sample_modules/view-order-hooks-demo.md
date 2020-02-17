@@ -666,6 +666,21 @@ Lets add several methods to `DemoViewOrderHooks` class.
     }
 ```
 
+Render a twig template method:
+
+```php
+    /**
+     * Render a twig template.
+     */
+    private function render(string $template, array $params = []): string
+    {
+        /** @var Twig_Environment $twig */
+        $twig = $this->get('twig');
+
+        return $twig->render($template, $params);
+    }
+```
+
 For each registered hook, you must create a non-static public method, 
 starting with the “hook” keyword followed by the name of the hook you want to use 
 (starting with either “display” or “action”). In our case: `hookDisplayBackOfficeOrderActions`
