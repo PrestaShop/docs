@@ -386,17 +386,6 @@ class Signature
         return $this->orderId;
     }
 
-    /**
-     * @param int $orderId
-     *
-     * @return Signature
-     */
-    public function setOrderId(int $orderId): Signature
-    {
-        $this->orderId = $orderId;
-
-        return $this;
-    }
 }
 
 ```
@@ -419,6 +408,139 @@ class SignatureRepository extends EntityRepository
 Let's put our signature picture, `john_doe.png` inside `/signatures/` folder.
 
  {{< figure src="../img/view-order-hooks-demo/john_doe.png" title="Signature" >}}
+
+Let's create Order Repository and data structures for interacting with Orders data:
+
+Data Transfer Object `Order.php` in `src/DTO`
+
+```php
+<?php
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoViewOrderHooks\DTO;
+
+use DateTimeImmutable;
+
+final class Order
+{
+    /**
+     * @var int
+     */
+    private $orderId;
+
+    /**
+     * @var string
+     */
+    private $reference;
+
+    /**
+     * @var int
+     */
+    private $orderStateId;
+
+    /**
+     * @var DateTimeImmutable
+     */
+    private $orderDate;
+
+    public function __construct(int $orderId, string $reference, int $orderStateId, DateTimeImmutable $orderDate)
+    {
+        $this->orderId = $orderId;
+        $this->reference = $reference;
+        $this->orderStateId = $orderStateId;
+        $this->orderDate = $orderDate;
+    }
+
+    public function getOrderId(): int
+    {
+        return $this->orderId;
+    }
+
+    public function getReference(): string
+    {
+        return $this->reference;
+    }
+}
+```
+
+Orders collection `Orders.php` in `src/Collection`:
+
+```php
+<?php
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoViewOrderHooks\Collection;
+
+use PrestaShop\Module\DemoViewOrderHooks\DTO\Order;
+use PrestaShop\PrestaShop\Core\Data\AbstractTypedCollection;
+
+final class Orders extends AbstractTypedCollection
+{
+    /**
+     * {@inheritdoc}
+     */
+    protected function getType()
+    {
+        return Order::class;
+    }
+}
+```
+
+`OrderRepository` in `src\Repository`:
+
+```php
+<?php
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoViewOrderHooks\Repository;
+
+use DateTimeImmutable;
+use Db;
+use Order as PrestaShopOrder;
+use PrestaShop\Module\DemoViewOrderHooks\Collection\Orders;
+use PrestaShop\Module\DemoViewOrderHooks\DTO\Order;
+
+class OrderRepository
+{
+    /**
+     * @var Db
+     */
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = Db::getInstance();
+    }
+
+    /**
+     * Get all orders that a customer has placed.
+     */
+    public function getCustomerOrders(int $customerId, array $excludeOrderIds = []): Orders
+    {
+        $orders = PrestaShopOrder::getCustomerOrders($customerId);
+        $ordersCollection = new Orders();
+
+        foreach ($orders as $order) {
+            if (in_array($order['id_order'], $excludeOrderIds)) {
+                continue;
+            }
+
+            $ordersCollection->add(new Order(
+                (int) $order['id_order'],
+                $order['reference'],
+                (int) $order['current_state'],
+                new DateTimeImmutable($order['date_add'])
+            ));
+        }
+
+        return $ordersCollection;
+    }
+}
+
+```
+
+
+
 
 
 Then lets create services configuration for the above classes in `config/services.yml`. 
@@ -445,7 +567,8 @@ services:
       - PrestaShop\Module\DemoViewOrderHooks\Entity\Signature
 ```
 
-Let's create `SignaturePresenter` class responsible for returning order customer data:
+Let's create `SignaturePresenter` class responsible for returning order customer data  
+in `src/Presenter/`:
 
 ```php
 <?php
@@ -485,7 +608,29 @@ class SignaturePresenter
 }
 ```
 
-Let's create a twig template in `modules/demovieworderhooks/views/templates/admin/customer_signature.html.twig`:
+Let's create a twig templates in `modules/demovieworderhooks/views/templates/admin/`:
+
+card.html.twig
+
+```twig
+{% trans_default_domain 'Module.Demovieworderhooks.Admin' %}
+
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-header-title">
+      {% block card_title %}
+      {% endblock %}
+    </h3>
+  </div>
+
+  <div class="card-body">
+    {% block card_body %}
+    {% endblock %}
+  </div>
+</div>
+```
+
+`customer_signature.html.twig` extending `card.html.twig`
 
 ```twig
 {% extends '@Modules/demovieworderhooks/views/templates/admin/card.html.twig' %}
