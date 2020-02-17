@@ -24,6 +24,7 @@ While creating this component you will learn how to:
 ## Prerequisites
 
 - To be familiar with basic module creation.
+- To be familiar how Composer autoloads classes (https://devdocs.prestashop.com/1.7/modules/concepts/composer/)
 
 ### Register hooks
 
@@ -66,7 +67,8 @@ Let's start from the first one - `displayBackOfficeOrderActions` and create a de
 
 ### Create User Signature card below the Customer card.
 
-Lets create `Installer` class responsible for creating `signature` table in the database:
+Lets create `Installer` class inside `/demovieworderhooks/src/Install` forlder structure
+ responsible for creating `signature` table in the database:
 
 ```php
 <?php
@@ -151,8 +153,34 @@ class Installer
         return $this->executeQueries($queries);
     }
 }
+
 ```
-Also let's create `FixturesInstaller` class for populating our database with data
+
+Let's create `composer.json` in the root of the module, for example:
+
+```json
+{
+    "name": "prestashop/demovieworderhooks",
+    "authors": [
+        {
+            "name": "Name Surname",
+            "email": "author@email.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "PrestaShop\\Module\\DemoViewOrderHooks\\": "src/"
+      }
+    }
+}
+```
+
+Then run `composer install` on the terminal. 
+Also run `composer dump-autoload` to re-generate the vendor/autoload.php file.
+If files were autoloaded successfully you should see something similar to 
+`PrestaShop\\Module\\DemoViewOrderHooks\\' => array($baseDir . '/src')` in 
+`modules/demovieworderhooks/vendor/composer/autoload_psr4.php` generated.
+Let's create `FixturesInstaller` class for populating our database with data:
 
 ```php
 <?php
