@@ -164,6 +164,33 @@ Remember, this is only needed for the Pull Request form, not for your commit mes
 
 [how-to-compile-assets]: {{% ref "1.7/development/compile-assets.md" %}}
 
+
+## Dependencies
+
+Adding third party software in the core or in a module might sometimes be faster and easier than to develop it from scratch and then to maintain it. Composer and NPM are used to manage such dependencies in the PrestaShop open source project.
+
+It is possible to add new dependencies, after a careful selection and study. A few rules must be followed.
+
+### Licenses
+
+The first step is to check the **legal compliance** of a third party software. The PrestaShop open source project being distributed under the OSL license, dependencies must be compatible with it. 
+
+Below is a list of the known compatible licenses that can accepted:
+
+- MIT
+- ISC
+- BSD
+- AFL
+- EUPL
+- Apache 
+
+Then, a last check is done to be sure that there is no additional clause that would introduce a restriction of use.
+
+If the legal compliance is confirmed, it will be possible to go the next step: the technical review.
+
+
 ## Read more
 
 {{% children %}}
+
+
