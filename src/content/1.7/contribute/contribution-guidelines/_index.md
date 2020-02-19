@@ -157,6 +157,8 @@ WS | if the changes impact the Web Services
 CO | if the changes impact the Core (non-visible functionality)
 LO | if the changes impact localization functionality
 TE | if the changes impact automated tests
+ME | if the changes only import a git branch into another (eg. merge maintenance branch into develop)
+PM | if the changes are related to project management (eg. edit Github pull request form)
 
 {{% notice note %}}
 Remember, this is only needed for the Pull Request form, not for your commit messages.
