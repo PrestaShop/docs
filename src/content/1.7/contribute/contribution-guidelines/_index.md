@@ -173,18 +173,31 @@ It is possible to add new dependencies, after a careful selection and study. A f
 
 ### Licenses
 
-The first step is to check the **legal compliance** of a third party software. The PrestaShop open source project being distributed under the OSL license, dependencies must be compatible with it. 
+The first step is to check the **legal compliance** of a third party software. The PrestaShop open source project being written and distributed under the OSL license, aggregated dependencies must be compatible with it. 
 
-Below is a list of the known compatible licenses that can accepted:
+Below is a list of the known compatible licenses that can accepted for software:
 
 - MIT
 - ISC
 - BSD
 - AFL
 - EUPL
-- Apache 
+- Apache
+- CC-O
+- Unlicense
 
-Then, a last check is done to be sure that there is no additional clause that would introduce a restriction of use.
+Additionally, artwork (e.g: icons, pictures, fonts, but not only) is usually distributed with specific licenses. Below is a list of known compatible licenses that can be accepted for artwork:
+
+- CC-0
+- CC-by-sa
+- CC-by
+- Art Libre
+- Artistic
+- Unlicense
+
+In general, public domain is not acceptable, as it doesn't exist in all juridictions or countries.
+
+If the proposed dependency is available with a compliant license, a last check is done to be sure that there is no additional clause that would introduce a restriction of use.
 
 If the legal compliance is confirmed, it will be possible to go the next step: the technical review.
 
