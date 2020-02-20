@@ -447,6 +447,11 @@ for their own settings.
 
 ### Handling the Multistore feature
 
+What is a module compatible multistore ?
+A multi-store compatible module is a module that can be configured differently from one store to another.
+It is also a module that can be configured quickly in the same way on all stores thanks to the all shops context or the group of shops.
+Finally, the module must be able to be activated on one shop and deactivated on another.
+
 By default, all these methods work within the confines of the current
 store context, whether PrestaShop is using the multistore feature or
 not.
