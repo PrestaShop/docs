@@ -1,7 +1,5 @@
 ---
 title: Shipping FAQ
-alias:
-- 1.7/faq/
 ---
 
 # Shipping FAQ
