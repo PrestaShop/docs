@@ -17,7 +17,7 @@ To run a local DevDocs install on your system, you will need:
 - Basic knowledge of your platform's command line.
 - A GitHub account (That you can [create for free](https://github.com/join)).
 - Git ([Setup guide](https://help.github.com/articles/set-up-git/)).
-- Hugo site generator ([Install guide](https://gohugo.io/getting-started/installing)).
+- Hugo site generator 0.55.0+ ([Install guide](https://gohugo.io/getting-started/installing)). 
 
 ## Installation
 
