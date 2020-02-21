@@ -10,14 +10,48 @@ title: Shipping FAQ
 
 ## Shipping information
 
-Where and how should I read and write the following informations to be sure that my module is compatible with every shipping modules:
+**Q:** Where and how should I read and write the following informations to be sure that my module is compatible with every shipping modules:
 
 - Tracking number
 - Carrier name
 - Estimated delivery date
 - Real delivery date
 
-TODO:write answer
+**A:** These details are stored at different places.
+
+### Carrier details
+
+Information related to a shipping (= delivery method) may be found / stored with the class `Carrier`.
+* You may call `Carrier::getCarriers(...)` to retrieve all the carriers existing on the shop, with the details about their name, the module related, the delay...
+* If you need to update one of these carriers, you may use the `Carrier` (ObjectModel) class. Instantiate the carrier you need with:
+
+```php
+// From the carrier ID stored in the var $carrierId
+
+$carrier = new \Carrier($carrierId);
+
+// Apply changes to the $carrier object, then save.
+$carrier->save();
+```
+
+### Order specific details
+
+Some other details are specific to each order, like the tracking number. Regarding the required fields in your question, there is no place to store the real delivery date in the core tables.
+
+You may reach the order delivery details with the following example:
+
+```php
+// From an Order ID you have
+$order = new Order($orderId);
+$orderCarrier = new OrderCarrier($order->getIdOrderCarrier());
+
+// 1- Get tracking number
+$trackingNumber = $orderCarrier->tracking_number;
+
+// 2- Set tracking number
+$orderCarrier->tracking_number = 'ABDC00F';
+$orderCarrier->save();
+```
 
 ## How do I add a service fee to an order? 
 
