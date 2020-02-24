@@ -449,7 +449,7 @@ for their own settings.
 
 What is a module compatible with the multi-store feature?
 A multi-store compatible module is a module that can be configured differently from one store to another.
-It is also a module that can be configured quickly in the same way on all stores thanks to the all shops context or the group of shops.
+Also the same module can have a shared configuration between all shops.
 Finally, the module must be able to be activated on one shop and deactivated on another.
 
 By default, all these methods work within the confines of the current
