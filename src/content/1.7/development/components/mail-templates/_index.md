@@ -96,7 +96,7 @@ Thanks to this fallback system, and since we mostly want rich HTML emails, most 
 PrestaShop uses objects to manipulate email themes and layouts, they implement the following interfaces:
 
 - `PrestaShop\PrestaShop\Core\MailTemplate\ThemeInterface` – Describes a theme and provides a list of its layouts
-- `PrestaShop\PrestaShop\Core\MailTemplate\LayoutInterface` – Describes a theme layout (name, file paths, related module...)
+- `PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutInterface` – Describes a theme layout (name, file paths, related module...)
 
 These interfaces have a corresponding collection that is used in the core services and provided via hooks:
 
