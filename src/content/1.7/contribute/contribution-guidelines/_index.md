@@ -64,6 +64,10 @@ Some tips:
 
 ### Compiled assets
 
+{{% notice note %}}
+Assets no longer need to be compiled in the develop branch. More information in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/).
+{{% /notice %}}
+
 Some source files like SCSS and JavaScript need to be compiled to work on a PrestaShop shop. To ease up the life of contributors who don't want to fuzz around installing node and NPM, we require those files to be compiled and committed in the same Pull Request as the source changes.
 
 Make sure to follow these guidelines:
