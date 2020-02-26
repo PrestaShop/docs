@@ -445,9 +445,9 @@ As you can see, this in a very useful and easy-to-use object, and you
 will certainly use it in many situations. Most native modules use it too
 for their own settings.
 
-### Handling the Multistore feature
+### Handling the multistore feature
 
-What is a module compatible with the multi-store feature?
+What is a module compatible with the multistore feature?
 It is a module that can be configured differently from one store to another.
 Also the same module can have a shared configuration between all shops.
 Finally, the module must be able to be activated on one shop and deactivated on another.
