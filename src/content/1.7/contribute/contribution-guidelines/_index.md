@@ -10,20 +10,23 @@ aliases:
 
 Ready to contribute code? Here's what you need to know to get your Pull Request accepted.
 
+The PrestaShop project receives dozens of contributions every week, and every single one of them is reviewed by project maintainers. The review process ensures that only changes that meet a certain quality standard are merged in the codebase. 
+
+Please note that the following guidelines apply to all contributions to the project, and not following them may lead to your contribution being rejected.
+
 ## Commits
 
 ### Atomic commits
 
-In the past, we used to have only one commit by pull request. This was a bad habit. We now require contributors to make **atomic commits**, so you will surely have more than one commit in a single pull request. This will be helpful to review, cherry-pick or revert changes (we hope to never have to do that 😉).
+We consider a good practice to make **atomic commits**, meaning that each commit's purpose is **one, and only one, complete fix or change**. Typically, ask yourself if what you are doing is one or several tasks. 
 
-**What's an atomic commit?** It means that the commit's purpose is **one, and only one, complete fix or change**. Typically, ask yourself if what you are doing is one or several tasks. Do not hesitate to use `git add -p ...` ([details here](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging)) if you have made several changes in the same file but not all those changes are meant to be in the current commit.
+Atomic commits make review easier, and it also helps for cherry-picking or reverting changes (we hope to never have to do that 😉).
+
+{{% notice tip %}}
+Do not hesitate to use [interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) if you have made several changes in the same file but not all those changes are meant to be in a single commit.
+{{% /notice %}}
 
 ### Writing a good commit message
-
-{{% notice note %}}
-In the past, we used to ask to prepend commit names with *FO, BO, CO...* <br>
-**This is no longer needed.**
-{{% /notice %}}
 
 The commit name should give an idea of the nature and context of the change that has been done. The more details, the better! The commit name should be as unique and recognizable as your commit itself. There are multitude of articles on the web regarding commit messages, here are two that you can find useful:
 
@@ -75,23 +78,15 @@ Make sure to follow these guidelines:
 
 ## Pull Requests
 
-Now that you have made atomic commits, you surely have a lot of commits for one pull request.
- 
-**A pull request should answer to a single given issue**. Do not ever make a single pull request for many purposes. Do not hesitate to split your big commit into several subprojects. It will be easier and quicker to review.
+Changes submitted through your Pull Request will be reviewed by PrestaShop maintainers. The code review process is generally regarded as a good practice and adopted by hundreds of software projects around the world. It provides lot of benefits:
 
-As all your commits messages are well-formatted, just make a summary of your pull request’s purpose in its GitHub title. A summary does not mean it can not be explicit. Please describe what your pull request does in detail (avoid "Fix product page" or "Category page improvement"). Then, just fill the PR template table to answer some questions which will help the team make a decision faster.
+- **it helps spotting errors in the code**, because we all make mistakes and it's very hard to find one's own mistakes.
+- **it helps improving code quality** not only by ensuring it's readable and understandable, but also by pinpointing design, performance or security issues that may have been unintentionally introduced by the author.
+- **it helps spread knowledge of the code base**, because the reviewer will learn how your code works too.
 
-Please note that all the pull requests must follow those guidelines. If the commit messages are not well-formatted, the pull request's title is not correct, or the table is not properly filled, we will not be able to accept your pull request.
+And don't forget that reviewing is a discussion, not a to-do list: the goal is to find the best solution by sharing different points of view.
 
-### Pull requests requirements
-
-Code submitted through your Pull Request will be reviewed by PrestaShop maintainers. The code review process is generally regarded as a good practice and adopted by hundreds of software projects around the world. It provides lot of benefits:
-- it helps spotting errors in the code, because we all make mistakes and it's very hard to find one's own mistakes
-- it helps improving code quality not only by ensuring it's readable and understandable, but also by pinpointing design, performance or security issues that may have been unintentionally introduced by the author
-- it helps spread knowledge of the code base, because the reviewer will learn how your code works too
-- and don't forget that reviewing is a discussion, not a to-do list: the goal is to find the best solution by sharing different opinions
-
-However, reviewing code is hard and can be exhausting. Making your pull request as easy as possible to review will help in getting it accepted swiftly. Completing the pull request form (explained below), properly explaining the reasons behind some of your technical choices, as well as any part of the code that could be tricky to understand... those are some examples of things that you can do to help ease up the process.
+However, reviewing code is hard and can be exhausting. Making your pull request as easy to review as possible will help in getting it accepted swiftly. Completing the pull request form (explained below) properly, explaining the reasons behind some of your technical choices as well as any part of the code that could be tricky to understand... those are some examples of things that you can do to help ease up the process.
 
 Also, please avoid submitting very large PRs when it can be avoided.
 
@@ -99,7 +94,7 @@ Also, please avoid submitting very large PRs when it can be avoided.
 - A PR with a lot of changed lines will take a long time to review, and consequently the reviewer might miss possible issues. If your PR is too big, it may be rejected due to risk of regressions.
 - The longer it takes to merge a PR, the more it is likely that it will be blocked by merge conflicts. Whenever a Pull Request is rebased, it has to be reviewed again, thus increasing the time to merge, thus increasing the risk of conflicts...
 
-Remember: smaller changes are easier to review, easier to test and easier to merge.
+Remember: **smaller changes are easier to review, easier to test and easier to merge.**
 
 ### The Pull Request form
 
@@ -107,14 +102,20 @@ When you create a new Pull Request, you will be presented with a form to complet
 
 ![Screenshot of the New Pull Request Form](../img/new-pull-request.png)
 
-It is very important that you complete this table correctly, as it is vital for:
+The first step is to write a summary of your pull request's purpose in its GitHub title. A summary does not mean it can not be explicit. Please describe what your pull request does in detail (avoid "Fix product page" or "Category page improvement").
 
-- Making sure the branch is correct
+{{% notice note %}}
+Writing a good Pull request title is important as this the only thing that people will see in the Change log.
+{{% /notice %}}
+
+Then, proceed to complete the Pull Request table. This step is vital for:
+
+- Making sure the branch your PR targets is the one that you meant
 - Understanding your change
 - Making sure that it works as expected
 - Tracking when a PR fixes a known issue
-- Tracking if a release breaks retro-compatibility
-- Building the change log
+- Tracking if a change introduces affects backwards compatibility (BC breaks)
+- Building the change log (changes are grouped by type and category).
 
 #### Target branch
 
@@ -168,4 +169,5 @@ Remember, this is only needed for the Pull Request form, not for your commit mes
 
 ## Read more
 
+- [What happens after you submit a contribution]({{< ref "1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}})
 {{% children %}}
