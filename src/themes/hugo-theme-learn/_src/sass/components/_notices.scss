@@ -26,6 +26,14 @@ div.notices {
       top: .5rem;
       bottom: .5rem;
     }
+
+    li {
+      margin-bottom: 0 !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
   }
 
   // code blocks
