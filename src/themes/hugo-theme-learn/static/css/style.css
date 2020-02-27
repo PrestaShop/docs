@@ -111,6 +111,10 @@ div.notices {
   div.notices ul, div.notices ol {
     margin-top: .5rem;
     margin-bottom: .5rem; }
+    div.notices ul li, div.notices ol li {
+      margin-bottom: 0 !important; }
+    div.notices ul:last-child, div.notices ol:last-child {
+      margin-bottom: 0 !important; }
   div.notices pre code {
     font-size: 90%; }
   div.notices pre:last-child {
