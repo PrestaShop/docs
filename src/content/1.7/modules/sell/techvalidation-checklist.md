@@ -21,7 +21,7 @@ The module respected the [expected structure]({{< ref "1.7/modules/creation/modu
 
 A module and its dependencies must be compatible with the OSL (core) and AFL (modules and themes) licenses used to manage and distribute the PrestaShop open source project. Compatible licences are:
 
-* OSL
+* Apache license
 * AFL
 * MIT
 * BSD
