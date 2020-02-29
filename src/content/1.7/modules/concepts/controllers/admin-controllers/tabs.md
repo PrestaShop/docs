@@ -224,7 +224,7 @@ class example_module_mailtheme extends Module
         $tab->active = 1;
         $tab->class_name = 'MyModuleDemoController';
         $tab->name = array();
-        foreach (Language::getLanguages(true) as $lang) {
+        foreach (Language::getLanguages() as $lang) {
             $tab->name[$lang['id_lang']] = 'My Module Demo';
         }
         $tab->id_parent = (int) Tab::getIdFromClassName('ShopParameters');
