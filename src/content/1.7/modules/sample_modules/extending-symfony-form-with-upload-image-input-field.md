@@ -8,7 +8,9 @@ weight: 10
 
 ## Introduction
 
-In this tutorial we are going to build module which extends Suppliers form with the Upload image field.
+In this tutorial we are going to build module which extends Suppliers form 
+(Catalog->Brands & Suppliers->Suppliers->Edit) with the Upload image field.
+
 We will learn more about the following topics: 
 
     - how to add `field type` to Symfony form with `FormBuilder`
@@ -19,5 +21,21 @@ We will learn more about the following topics:
 ## Prerequisites
 
 - To be familiar with basic module creation.
-- To be familiar how Composer autoloads classes (https://devdocs.prestashop.com/1.7/modules/concepts/composer/)
+- To be familiar how Composer autoload classes (https://devdocs.prestashop.com/1.7/modules/concepts/composer/)
 - Basic understanding of Symfony forms could be helpful
+
+### Register hooks
+
+On module installation the following hooks are being registered:
+
+- `action`**Supplier**`FormBuilderModifier` - for adding new  column to `Suppliers` form.
+- `actionAfterUpdate`**Supplier**`FormHandler` - to upload an image when `Suppliers` form is submitted.
+
+```php
+    public function install()
+    {
+        return parent::install()
+            && $this->registerHook('actionSupplierFormBuilderModifier')
+            && $this->registerHook('actionAfterUpdateSupplierFormHandler');
+    }
+```
