@@ -112,8 +112,12 @@ Here is the default structure of the side-menu from PrestaShop at the moment thi
            * AdminCmsContent
            * AdminModulesPositions
            * AdminImages
-           * AdminParentShipping
-           * AdminParentPayment
+    * AdminParentShipping
+           * AdminCarriers
+           * AdminShipping
+    * AdminParentPayment
+           * AdminPayment
+           * AdminPaymentPreferences
     * AdminInternational
            * AdminParentLocalization
            * AdminParentCountries
