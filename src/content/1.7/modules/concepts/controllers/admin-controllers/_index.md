@@ -95,4 +95,10 @@ your_route_name:
 Any callable can be used to populate the ``_controller`` attribute, you don't even need to create your own controller! You could even use a public function from your module main class. Even so, we strongly suggest using a controller.
 {{% /notice %}}
 
+{{% notice tip %}}
+For controllers to link with the routes correctly always use double colon (`::`) and not the single colon (`:`) 
+to separate classes and method names! 
+Since Symfony 4.1 the bundle notation is going to be deprectated: https://symfony.com/blog/new-in-symfony-4-1-deprecated-the-bundle-notation
+{{% /notice %}}
+
 The Controller in the previous example will be available if you browse `/admin-dev/modules/your-module/demo`.
