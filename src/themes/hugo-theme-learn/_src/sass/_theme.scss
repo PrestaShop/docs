@@ -289,7 +289,11 @@ select[multiple=multiple] {
   }
 
   @media (min-width: $tocBreakpoint) {
-      margin-right: $tocWidth;
+    margin-right: $tocWidth;
+  }
+
+  @media (max-width: $contentMaxWidthBreakpoint) {
+    font-size: 0.9375rem;
   }
 
   .tabs-wrapper.ui-theme-badges {
