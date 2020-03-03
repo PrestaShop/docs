@@ -12,6 +12,11 @@ div.notices {
   padding-left: 3.5rem;
   color: #555;
   font-size: 90%;
+  border-radius: .2rem;
+
+  @media (min-width: $tocBreakpoint) {
+    margin: 2rem 2rem;
+  }
 
   p {
     font-size: 1em;
