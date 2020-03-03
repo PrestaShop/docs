@@ -37,7 +37,6 @@ On module installation the following hooks can be registered:
  - `displayAdminOrderSide` - for adding Order side information
  - `displayAdminOrder` - displayed at the bottom of the Order page
  - `displayAdminOrderTop` - displayed at the top of the Order page
- - `actionGetAdminOrderButtons` - gets back office order buttons
  
 These hooks are visualized in the picture below:
 
