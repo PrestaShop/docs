@@ -8,8 +8,10 @@ $monospaceFont: "Consolas", "Menlo", monospace;
 
 $primaryColor: #df0067;
 
+$pageTitleColor: #222;
+
 $mainTextColor: #444; /* Color of text by default */
-$mainTitlesTextColor: #444; /* Color of titles h2-h3-h4-h5 */
+$mainTitlesTextColor: #444; /* Color of titles h2-h3-h4-h5-h6 */
 $mainLinkColor: $primaryColor; /* Color of links */
 $mainLinkHoverColor: #d01616; /* Color of hovered links */
 $mainAnchorColor: $primaryColor; /* color of anchors on titles */

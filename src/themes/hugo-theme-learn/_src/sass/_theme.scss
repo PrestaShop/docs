@@ -334,18 +334,74 @@ h5,
 h6 {
   font-family: $headerFont;
   text-rendering: optimizeLegibility;
-  color: #5e5e5e;
+  color: $mainTitlesTextColor;
   font-weight: 400;
   letter-spacing: -1px;
 }
 
 h1 {
-  color: #222;
+  color: $pageTitleColor;
   line-height: 1;
   border-bottom: 4px solid #f0f2f4;
   padding: .8em 0 .3em;
   font-size: 3rem;
   font-weight: 600;
+}
+
+h2, h3, h4 {
+  margin-left: -.05rem !important; // difference between fonts
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+
+  &:hover .anchor {
+    visibility: visible;
+  }
+
+  a {
+    font-weight: inherit;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 110% !important;
+  margin: 2em 0 1rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 130% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.3rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0;
+}
+
+h6 {
+  font-size: 1.1rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0;
+
+  &:before {
+    content: '› '
+  }
 }
 
 blockquote {
@@ -1062,56 +1118,6 @@ pre {
   margin-left: 0.5em;
   position: absolute;
   margin-top:0.1em;
-}
-
-/* Redfines headers style */
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  line-height: 1.1;
-
-  &:hover .anchor {
-    visibility: visible;
-  }
-
-  a {
-    font-weight: inherit;
-  }
-}
-
-h2 {
-  font-size: 2rem;
-  line-height: 110% !important;
-  margin: 2em 0 1rem 0;
-}
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 130% !important;
-  margin: 1.5em 0 1rem 0;
-  font-weight: bold;
-}
-
-h4 {
-  font-size: 1.5rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0;
-}
-
-h5 {
-  font-size: 1.2rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0;
-}
-
-h6 {
-  font-size: 1rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0;
 }
 
 p {
