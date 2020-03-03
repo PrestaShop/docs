@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Color of text by default */
-/* Color of titles h2-h3-h4-h5 */
+/* Color of titles h2-h3-h4-h5-h6 */
 /* Color of links */
 /* Color of hovered links */
 /* color of anchors on titles */
@@ -18,7 +18,7 @@
 /* Color of 'page visited' icons in menu */
 /* Color of <hr> separator in menu */
 /* Color of text by default */
-/* Color of titles h2-h3-h4-h5 */
+/* Color of titles h2-h3-h4-h5-h6 */
 /* Color of links */
 /* Color of hovered links */
 /* color of anchors on titles */
@@ -1004,8 +1004,10 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap;
   border: inherit; }
+
+/*# sourceMappingURL=nucleus.css.map */
 /* Color of text by default */
-/* Color of titles h2-h3-h4-h5 */
+/* Color of titles h2-h3-h4-h5-h6 */
 /* Color of links */
 /* Color of hovered links */
 /* color of anchors on titles */
@@ -1291,7 +1293,7 @@ h5,
 h6 {
   font-family: "Work Sans", "Helvetica", "Arial", sans-serif;
   text-rendering: optimizeLegibility;
-  color: #5e5e5e;
+  color: #444;
   font-weight: 400;
   letter-spacing: -1px; }
 
@@ -1302,6 +1304,57 @@ h1 {
   padding: .8em 0 .3em;
   font-size: 3rem;
   font-weight: 600; }
+
+h2, h3, h4 {
+  margin-left: -.05rem !important; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1; }
+  h2:hover .anchor,
+  h3:hover .anchor,
+  h4:hover .anchor,
+  h5:hover .anchor,
+  h6:hover .anchor {
+    visibility: visible; }
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    font-weight: inherit; }
+
+h2 {
+  font-size: 2rem;
+  line-height: 110% !important;
+  margin: 2em 0 1rem 0; }
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 130% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold; }
+
+h4 {
+  font-size: 1.3rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold; }
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0; }
+
+h6 {
+  font-size: 1.1rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0; }
+  h6:before {
+    content: '› '; }
 
 blockquote {
   border-left: 10px solid #f0f2f4; }
@@ -1847,53 +1900,6 @@ pre:hover .copy-to-clipboard {
   position: absolute;
   margin-top: 0.1em; }
 
-/* Redfines headers style */
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  line-height: 1.1; }
-  h2:hover .anchor,
-  h3:hover .anchor,
-  h4:hover .anchor,
-  h5:hover .anchor,
-  h6:hover .anchor {
-    visibility: visible; }
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
-    font-weight: inherit; }
-
-h2 {
-  font-size: 2rem;
-  line-height: 110% !important;
-  margin: 2em 0 1rem 0; }
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 130% !important;
-  margin: 1.5em 0 1rem 0;
-  font-weight: bold; }
-
-h4 {
-  font-size: 1.5rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0; }
-
-h5 {
-  font-size: 1.2rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0; }
-
-h6 {
-  font-size: 1rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0; }
-
 p {
   margin: 0 0 1rem 0; }
 
@@ -1964,9 +1970,6 @@ input[type="week"]:focus,
 select[multiple=multiple]:focus {
   border-color: transparent;
   box-shadow: none; }
-
-h2, h3, h4, h5 {
-  color: #444 !important; }
 
 a {
   color: #df0067; }
