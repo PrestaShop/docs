@@ -24,9 +24,52 @@ We will learn more about the following topics:
 - To be familiar how Composer autoload classes (https://devdocs.prestashop.com/1.7/modules/concepts/composer/)
 - Basic understanding of Symfony forms could be helpful
 
+### Composer
+
+We use composer for our classes autoloading.
+
+```.json
+{
+    "name": "prestashop/demosymfonyforms",
+    "authors": [
+        {
+            "name": "Preston PrestaShop",
+            "email": "preston@prestashop.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "DemoSymfonyForms\\": "src/"
+      },
+      "config": {
+        "prepend-autoloader": false
+      },
+      "type": "prestashop-module"
+    }
+}
+```
+
+Lets run `composer install` from terminal/command line and see `vendors` folder appear.
+
 ### Module class and constructor
 
+{{% notice note %}}
+It is important to require `autoload.php` like `require_once __DIR__ . '/vendor/autoload.php';` 
+for module to install correctly if you plan to create a service class like we will create `SupplierSecondImageUploader`. 
+However if you register that class as a service in the `.yml` file then you can skip this require_once.
+{{% /notice %}}
+
 ```php
+<?php
+
+declare(strict_types=1);
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+require_once __DIR__ . '/vendor/autoload.php';
+
 class demosymfonyforms extends Module
 {
     public function __construct()
