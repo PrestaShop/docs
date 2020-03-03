@@ -17,6 +17,8 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 * `displayProductButtons` has been renamed into `displayProductAdditionalInfo`.<br>
   Don’t worry, we kept an alias :)
 
+Some hooks have been modified in the order view page in version {{< minver v="1.7.7" >}} see [Modified order hooks][modified-order-hooks] for more details.
+
 ## Full list
 
 {{% funcdef %}}
@@ -1206,6 +1208,8 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
 
     Located in: /controllers/admin/AdminOrdersController.php
 
+    Replaced by **displayAdminOrderTabContent** in 1.7.7
+
     
 displayAdminOrderContentShip
 : 
@@ -1214,23 +1218,94 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
 
     Located in: /controllers/admin/AdminOrdersController.php
 
+    Replaced by **displayAdminOrderTabContent** in 1.7.7
+
+
+displayAdminOrderTabContent
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays new tab contents on the order view page
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
     
 displayAdminOrderLeft
 : 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
-
     
+    Replaced by **displayAdminOrderMain** in 1.7.7
+
+
+displayAdminOrderMain
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page at the end of the main column
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
 displayAdminOrderRight
 : 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
-
     
+    Replaced by **displayAdminOrderSide** in 1.7.7
+
+
+displayAdminOrderSide
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page at the end of the side column
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+displayBackOfficeOrderActions
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page in the side column under the customer view
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
 displayAdminOrderTabOrder
 : 
     Display new elements in Back Office, AdminOrder, panel Order
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel tabs
 
     Located in: /controllers/admin/AdminOrdersController.php
+
+    Replaced by **displayAdminOrderTabLink** in 1.7.7
 
     
 displayAdminOrderTabShip
@@ -1239,6 +1314,23 @@ displayAdminOrderTabShip
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel tabs
 
     Located in: /controllers/admin/AdminOrdersController.php
+
+    Replaced by **displayAdminOrderTabLink** in 1.7.7
+
+displayAdminOrderTabLink
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays new tab links on the order view page
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
 
     
 displayAdminProductsExtra
@@ -1726,7 +1818,24 @@ This hook displays new blocks on the invoice (order)
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
-    
+    Replaced by **displayAdminOrderMain** in 1.7.7
+
+displayAdminOrderTop
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content at the top of the order view page
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
 displayInvoiceLegalFreeText
 : 
     PDF Invoice - Legal Free Text
@@ -2305,4 +2414,31 @@ actionAfterCreate&lt;FormName>FormHandler
     ]
     ```
 
+actionAdminAdminPreferencesControllerPostProcessBefore
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    On post-process in Admin Preferences', 'This hook is called on Admin Preferences post-process before processing the form
+
+    Located in: /src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
+
+    Parameters:
+    ```php
+    [
+        'controller' => (AdministrationController) Symfony controller,
+    ]
+    ```
+
+displayFooterCategory
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook adds new blocks under the products listing in a category/search
+
+    Located in: /themes/classic/templates/catalog/listing/product-list.tpl
+
+
+
 {{% /funcdef %}}
+
+[modified-order-hooks]: {{< ref "/1.7/modules/core_updates/1.7.7.md#modified-hooks" >}}
