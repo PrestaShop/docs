@@ -12,7 +12,7 @@
     padding: 15px 25px;
   }
 
-  @media only all and (max-width: $tocBreakpoint) {
+  @media only all and (max-width: $tocBreakpoint - 1px) {
     position: static;
     border: 0;
     margin-top: 3rem;

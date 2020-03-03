@@ -284,11 +284,11 @@ select[multiple=multiple] {
 #body-inner {
   max-width: $contentMaxWidth;
 
-  @media (min-width: $sidebarFullWidth + $contentMaxWidth + $tocWidth + ($contentPadding * 2)) {
+  @media (min-width: $contentMaxWidthBreakpoint) {
     margin-left: calc((100% - #{$contentMaxWidth} - #{$tocWidth}) / 2);
   }
 
-  @media only all and (min-width: $tocBreakpoint) {
+  @media (min-width: $tocBreakpoint) {
       margin-right: $tocWidth;
   }
 

@@ -31,10 +31,13 @@ $menuSectionActiveCategoryBgColor: #fff; /* Color of background for the active c
 $menuVisitedColor: #ff3333; /* Color of 'page visited' icons in menu */
 $menuSectionHrColor: #2b2020; /* Color of <hr> separator in menu */
 
-$tocBreakpoint: 1200px;
+$tocBreakpoint: 1280px;
 
 $paragraphSpacing: 1rem; // vertical spacing below paragraphs
 $tocWidth: 340px; // width of the Table of contents bar
 $sidebarFullWidth: 300px;
 $contentMaxWidth: 1300px;
 $contentPadding: 32px;
+
+// screen size after which the content will stop growing
+$contentMaxWidthBreakpoint: $sidebarFullWidth + $contentMaxWidth + $tocWidth + ($contentPadding * 2);
