@@ -49,14 +49,17 @@ We use composer for our classes autoloading.
 }
 ```
 
-Lets run `composer install` from terminal/command line and see `vendors` folder appear.
+Lets run `composer install` from terminal/command line and see `vendors` folder appear. 
+After adding `autoload` field, you have to re-run this command `composer dump-autoload`.
+See https://getcomposer.org/doc/01-basic-usage.md to learn more about basic usage of composer.
 
 ### Module class and constructor
 
 {{% notice note %}}
 It is important to require `autoload.php` like `require_once __DIR__ . '/vendor/autoload.php';` 
 for module to install correctly if you plan to create a service class like we will create `SupplierSecondImageUploader`. 
-However if you register that class as a service in the `.yml` file then you can skip this require_once.
+We need it because we reuse constants between classes and currently PrestaShop modules do not support autoloading
+ them by default even the service is registered in `config/services.yml`
 {{% /notice %}}
 
 ```php
@@ -103,5 +106,12 @@ On module installation the following hooks are being registered:
     }
 ```
 
+### Create uninstall method
 
+```php
+    public function uninstall()
+    {
+        return parent::uninstall();
+    }
+``` 
 
