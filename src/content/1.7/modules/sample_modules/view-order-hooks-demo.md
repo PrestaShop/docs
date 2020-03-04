@@ -272,8 +272,6 @@ class Installer implements InstallerInterface
     {
         $queries = [
             'DROP TABLE IF EXISTS `'._DB_PREFIX_.'signature`',
-            'DROP TABLE IF EXISTS `'._DB_PREFIX_.'order_review`',
-            'DROP TABLE IF EXISTS `'._DB_PREFIX_.'package_location`',
         ];
 
         return $this->executeQueries($queries);
@@ -297,7 +295,6 @@ class Installer implements InstallerInterface
             'displayAdminOrderSide',
             'displayAdminOrder',
             'displayAdminOrderTop',
-            'actionGetAdminOrderButtons',
         ];
 
         return (bool) $module->registerHook($hooks);
