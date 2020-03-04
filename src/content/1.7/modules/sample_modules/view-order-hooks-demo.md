@@ -32,13 +32,13 @@ project needs and don't hesitate to write a note to PrestaShop Core developers i
 - To be familiar with basic module creation.
 - To be familiar how Composer autoloads classes (https://devdocs.prestashop.com/1.7/modules/concepts/composer/)
 
-### Register hooks
+### Available Order View page hooks
 
 On module installation the following hooks can be registered:
 
  - `displayBackOfficeOrderActions` - displayed between Customer and Messages cards in the Order page
- - `displayAdminOrderTabContent` - for adding tab content to Order page
  - `displayAdminOrderTabLink` - for adding tab links for tab content
+ - `displayAdminOrderTabContent` - for adding tab content to Order page
  - `displayAdminOrderMain` - for adding Order main information
  - `displayAdminOrderSide` - for adding Order side information
  - `displayAdminOrder` - displayed at the bottom of the Order page
@@ -48,7 +48,9 @@ These hooks are visualized in the picture below:
 
  {{< figure src="../img/view-order-hooks-demo/ps-view-order-page-hooks.jpg" title="Order page hooks locations" >}}
 
-Let's start from the first one - `displayBackOfficeOrderActions` and create a demo for it.
+Let's take - `displayBackOfficeOrderActions` and create a demo for it.
+
+### Composer autoloading
 
 Let's create `composer.json` in the root of the module to autoload classes with the namespaces
  (PrestaShop\\Module\\DemoViewOrderHooks\\) we define from the `src` folder.
