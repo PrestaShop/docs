@@ -7,8 +7,28 @@ weight: 10
 
 ## Signature card (displayBackOfficeOrderActions hook)
 
+Lets create custom repository `SignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
+Symfony Repository classes help to interact with the database by providing frequently used functions to
+get the data (for example filtered data by a certain criteria).
+
+```php
+<?php
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoViewOrderHooks\Repository;
+
+use Doctrine\ORM\EntityRepository;
+
+class SignatureRepository extends EntityRepository
+{
+}
+```
+
 Let's create `Signature` entity class and use Doctrine Object Relational Mapping (ORM) annotations.
 For more information: https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#define-an-entity
+Also we map this entity with the repository with 
+`repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository"`
+This mapping allows to use functions of `SignatureRepository` instead of only the `EntityRepository`.
 
 ```php
 <?php
@@ -21,7 +41,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table()
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository")
  */
 class Signature
 {
@@ -98,23 +118,6 @@ class Signature
 
 }
 
-```
-
-Lets create custom repository `SignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
-Symfony Repository classes help to interact with the database by providing frequently used functions to
-get the data (for example filtered data by a certain criteria).
-
-```php
-<?php
-declare(strict_types=1);
-
-namespace PrestaShop\Module\DemoViewOrderHooks\Repository;
-
-use Doctrine\ORM\EntityRepository;
-
-class SignatureRepository extends EntityRepository
-{
-}
 ```
 
 Let's put our signature picture, `john_doe.png` inside `/signatures/` folder.

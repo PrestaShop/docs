@@ -48,33 +48,7 @@ If files were autoloaded successfully you should see something similar to
 ### Module installation
 
 Let's use SOLID principles (https://en.wikipedia.org/wiki/SOLID) to make code more understandable, 
-flexible and maintainable. For example let's create `InstallerInterface` to represent 
-`Interface segregation principle` (https://en.wikipedia.org/wiki/Interface_segregation_principle).
-This principle splits interfaces that are very large into smaller and more specific ones so that
- clients will only have to know about the methods that are of interest to them.
- 
- ```php
-<?php
-/**
- * 2007-2020 PrestaShop
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Academic Free License 3.0 (AFL-3.0).
- * It is also available through the world-wide-web at this URL: https://opensource.org/licenses/AFL-3.0
- */
-
-declare(strict_types=1);
-
-namespace PrestaShop\Module\DemoViewOrderHooks\Install;
-
-interface InstallerInterface
-{
-    public function install(): void;
-}
-```
-
-Let's create `FixturesInstaller` class to represent `Single responsibility principle`
+flexible and maintainable. Create `FixturesInstaller` class to represent `Single responsibility principle`
  (https://en.wikipedia.org/wiki/Single_responsibility_principle) responsible only for module 
  fixtures data inserted to the database. 
 
@@ -99,7 +73,7 @@ use Order;
 /**
  * Installs data fixtures for the module.
  */
-class FixturesInstaller implements InstallerInterface
+class FixturesInstaller
 {
     /**
      * @var Db
@@ -155,7 +129,7 @@ use Module;
 /**
  * Class responsible for modifications needed during installation/uninstallation of the module.
  */
-class Installer implements InstallerInterface
+class Installer
 {
     /**
      * @var FixturesInstaller
