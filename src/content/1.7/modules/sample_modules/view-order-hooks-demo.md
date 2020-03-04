@@ -20,6 +20,12 @@ While creating this component you will learn how to:
  - Use Symfony services (https://devdocs.prestashop.com/1.7/modules/concepts/services/)
  - Use Twig templates to render HTML (https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/templating-with-twig/)
  - Various design patterns: Repository, Factory, Presenter
+ 
+{{% notice note %}}
+We use this module to demonstrate how to use these concepts/components because they bring some additional value
+but this is not mandatory. These are just some of the "how to" examples. Would recommend to focus on your
+project needs and don't hesitate to write a note to PrestaShop Core developers if we could do it better!
+{{% /notice %}}
 
 ## Prerequisites
 
@@ -66,7 +72,7 @@ Let's start from the first one - `displayBackOfficeOrderActions` and create a de
 
 ### Create User Signature card below the Customer card.
 
-Lets create `Installer` class inside `/demovieworderhooks/src/Install` forlder structure
+Lets create `Installer` class inside `/demovieworderhooks/src/Install` folder structure
  responsible for creating `signature` table in the database:
 
 ```php
