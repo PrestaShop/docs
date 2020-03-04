@@ -78,12 +78,147 @@ If files were autoloaded successfully you should see something similar to
 ### Create User Signature card below the Customer card.
 
 Let's use SOLID principles (https://en.wikipedia.org/wiki/SOLID) to make code more understandable, 
-flexible and maintainable. For example lets create `Installer` class inside `/demovieworderhooks/src/Install` 
-folder structure to represent `Single responsibility principle` (https://en.wikipedia.org/wiki/Single_responsibility_principle) 
-responsible only for module installation. 
+flexible and maintainable. For example let's create `InstallerInterface` to represent 
+`Interface segregation principle` (https://en.wikipedia.org/wiki/Interface_segregation_principle).
+This principle splits interfaces that are very large into smaller and more specific ones so that
+ clients will only have to know about the methods that are of interest to them.
+ 
+ ```php
+<?php
+/**
+ * 2007-2020 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License 3.0 (AFL-3.0).
+ * It is also available through the world-wide-web at this URL: https://opensource.org/licenses/AFL-3.0
+ */
+
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoViewOrderHooks\Install;
+
+interface InstallerInterface
+{
+    public function install(): void;
+}
+```
+
+Let's create `FixturesInstaller` class to represent `Single responsibility principle`
+ (https://en.wikipedia.org/wiki/Single_responsibility_principle) responsible only for module 
+ fixtures data inserted to the database. 
 
 ```php
 <?php
+/**
+ * 2007-2020 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License 3.0 (AFL-3.0).
+ * It is also available through the world-wide-web at this URL: https://opensource.org/licenses/AFL-3.0
+ */
+
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoViewOrderHooks\Install;
+
+use Configuration;
+use Country;
+use DateTime;
+use Db;
+use joshtronic\LoremIpsum;
+use Order;
+
+/**
+ * Installs data fixtures for the module.
+ */
+class FixturesInstaller implements InstallerInterface
+{
+    /**
+     * @var LoremIpsum
+     */
+    private $loremIpsum;
+
+    /**
+     * @var Db
+     */
+    private $db;
+
+    public function __construct(Db $db)
+    {
+        $this->loremIpsum = new LoremIpsum();
+        $this->db = $db;
+    }
+
+    public function install(): void
+    {
+        $orderIds = Order::getOrdersIdByDate('2000-01-01', '2100-01-01');
+
+        foreach ($orderIds as $orderId) {
+            $this->insertSignature($orderId);
+            $this->insertOrderReview($orderId);
+
+            $order = new Order($orderId);
+
+            if ($order->hasBeenShipped()) {
+                $this->insertPackageLocations($orderId);
+            }
+        }
+    }
+
+    private function insertOrderReview(int $orderId): void
+    {
+        $this->db->insert('order_review', [
+            'id_order' => $orderId,
+            'score' => rand(0, 3),
+            'comment' => $this->loremIpsum->sentence(),
+        ]);
+    }
+
+    private function insertSignature(int $orderId): void
+    {
+        $this->db->insert('signature', [
+            'id_order' => $orderId,
+            'filename' => 'john_doe.png',
+        ]);
+    }
+
+    private function insertPackageLocations(int $orderId): void
+    {
+        $numberOfLocations = rand(4, 6);
+        $countries = Country::getCountries(Configuration::get('PS_LANG_DEFAULT'));
+        $numberOfCountries = count($countries);
+
+        for ($i = 0; $i < $numberOfLocations; $i++) {
+            // Last location will not have a date
+            $date = $i === 0 ? null : (new DateTime('-'.$i.' days'))->format('Y-m-d H:i:s');
+
+            $this->db->insert('package_location', [
+                'id_order' => $orderId,
+                'location' => $countries[rand(0, $numberOfCountries - 1)]['name'],
+                'position' => $numberOfLocations - $i,
+                'date' => $date,
+            ]);
+        }
+    }
+}
+```
+Lets create `Installer` class inside `/demovieworderhooks/src/Install` folder structure. 
+It is responsible only for module installation (hook registration, database creation, 
+population database data). When it comes to database creation we use PrestaShop `DbCore` class 
+functions because doctrine is not fully supported for modules installation at 1.7.7.0 release
+ (https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#creating-the-database).
+```php
+<?php
+/**
+ * 2007-2020 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License 3.0 (AFL-3.0).
+ * It is also available through the world-wide-web at this URL: https://opensource.org/licenses/AFL-3.0
+ */
 
 declare(strict_types=1);
 
@@ -95,7 +230,7 @@ use Module;
 /**
  * Class responsible for modifications needed during installation/uninstallation of the module.
  */
-class Installer
+class Installer implements InstallerInterface
 {
     /**
      * @var FixturesInstaller
@@ -128,21 +263,15 @@ class Installer
 
         return true;
     }
- 
-    private function registerHooks(Module $module): bool
-    {
-        // All hooks in the order view page.
-        $hooks = [
-            'displayBackOfficeOrderActions',
-            'displayAdminOrderTabContent',
-            'displayAdminOrderTabLink',
-            'displayAdminOrderMain',
-            'displayAdminOrderSide',
-            'displayAdminOrder',
-            'displayAdminOrderTop'
-        ];
 
-        return (bool) $module->registerHook($hooks);
+    /**
+     * Module's uninstallation entry point.
+     *
+     * @return bool
+     */
+    public function uninstall(): bool
+    {
+        return $this->uninstallDatabase();
     }
 
     /**
@@ -159,8 +288,50 @@ class Installer
               `filename` varchar(64) NOT NULL,
               PRIMARY KEY (`id_signature`),
               UNIQUE KEY (`id_order`)
-            ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;'
+            ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;',
+        ];
+
         return $this->executeQueries($queries);
+    }
+
+    /**
+     * Uninstall database modifications.
+     *
+     * @return bool
+     */
+    private function uninstallDatabase(): bool
+    {
+        $queries = [
+            'DROP TABLE IF EXISTS `'._DB_PREFIX_.'signature`',
+            'DROP TABLE IF EXISTS `'._DB_PREFIX_.'order_review`',
+            'DROP TABLE IF EXISTS `'._DB_PREFIX_.'package_location`',
+        ];
+
+        return $this->executeQueries($queries);
+    }
+
+    /**
+     * Register hooks for the module.
+     *
+     * @param Module $module
+     *
+     * @return bool
+     */
+    private function registerHooks(Module $module): bool
+    {
+        // All hooks in the order view page.
+        $hooks = [
+            'displayBackOfficeOrderActions',
+            'displayAdminOrderTabContent',
+            'displayAdminOrderTabLink',
+            'displayAdminOrderMain',
+            'displayAdminOrderSide',
+            'displayAdminOrder',
+            'displayAdminOrderTop',
+            'actionGetAdminOrderButtons',
+        ];
+
+        return (bool) $module->registerHook($hooks);
     }
 
     /**
@@ -184,52 +355,6 @@ class Installer
 
 ```
 
-Let's create `FixturesInstaller` class for populating our database with data:
-
-```php
-<?php
-
-declare(strict_types=1);
-
-namespace PrestaShop\Module\DemoViewOrderHooks\Install;
-
-use Db;
-use Order;
-
-/**
- * Installs data fixtures for the module.
- */
-class FixturesInstaller
-{
-    /**
-     * @var Db
-     */
-    private $db;
-
-    public function __construct(Db $db)
-    {
-        $this->db = $db;
-    }
-
-    public function install(): void
-    {
-        $orderIds = Order::getOrdersIdByDate('2000-01-01', '2100-01-01');
-
-        foreach ($orderIds as $orderId) {
-            $this->insertSignature($orderId);
-        }
-    }
-
-    private function insertSignature(int $orderId): void
-    {
-        $this->db->insert('signature', [
-            'id_order' => $orderId,
-            'filename' => 'john_doe.png',
-        ]);
-    }
-}
-
-```
 Then let's create `InstallerFactory` which will be used create `Installer` object.
 
 ```php
