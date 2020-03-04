@@ -50,7 +50,21 @@ These hooks are visualized in the picture below:
 
 Let's start from the first one - `displayBackOfficeOrderActions` and create a demo for it.
 
-Let's create `composer.json` in the root of the module, for example:
+Let's create `composer.json` in the root of the module to autoload classes with the namespaces
+ (PrestaShop\\Module\\DemoViewOrderHooks\\) we define from the `src` folder.
+ (https://getcomposer.org/doc/01-basic-usage.md#autoloading). Using composer PSR-4 `autoload` helps
+  us autoload classes without the need to use `require_once __DIR__.'/vendor/autoload.php';` .
+ 
+{{% notice note %}}
+Even though using `autoload` block in `composer.json` helps us to autoload classes from the specified
+folder `src` with the namespace `PrestaShop\\Module\\DemoViewOrderHooks\\` we might have some 
+autoloading issues if we use our classes in our module main file `demovieworderhooks.php` because
+it is out of `src` scope. For example, we might define a constant if one of our class and use it in
+`demovieworderhooks.php` when we will get error: `the class is not defined`. Then a solution can be 
+including `require_once __DIR__.'/vendor/autoload.php';` before the main module class 
+`demovieworderhooks.php` is defined.
+{{% /notice %}}
+
 
 ```json
 {
