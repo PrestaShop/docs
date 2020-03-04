@@ -637,7 +637,6 @@ class OrderRepository
 }
 
 ```
-
 Let's create `SignaturePresenter` class responsible for returning order customer data  
 in `src/Presenter/`:
 
@@ -678,10 +677,11 @@ class SignaturePresenter
     }
 }
 ```
-
 Then lets create services configuration for the above classes in `config/services.yml`. 
 For more information: https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
-
+Symfony services uses `dependency injection` (https://en.wikipedia.org/wiki/Dependency_injection).
+The intent behind dependency injection is to achieve Separation of Concerns of construction and use of objects. 
+This can increase readability and code reuse, reduce dependencies, lead to more testable code.
 ```yaml
 parameters:
   signatureImgDirectory: 'signatures/'
