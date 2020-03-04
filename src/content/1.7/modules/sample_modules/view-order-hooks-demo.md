@@ -48,7 +48,7 @@ These hooks are visualized in the picture below:
 
  {{< figure src="../img/view-order-hooks-demo/ps-view-order-page-hooks.jpg" title="Order page hooks locations" >}}
 
-Let's take - `displayBackOfficeOrderActions` and create a demo for it.
+## Module base creation
 
 ### Composer autoloading
 
@@ -66,7 +66,6 @@ it is out of `src` scope. For example, we might define a constant if one of our 
 including `require_once __DIR__.'/vendor/autoload.php';` before the main module class 
 `demovieworderhooks.php` is defined.
 {{% /notice %}}
-
 
 ```json
 {
@@ -91,7 +90,7 @@ If files were autoloaded successfully you should see something similar to
 `PrestaShop\\Module\\DemoViewOrderHooks\\' => array($baseDir . '/src')` in 
 `modules/demovieworderhooks/vendor/composer/autoload_psr4.php` generated.
 
-### Create User Signature card below the Customer card.
+### Module installation
 
 Let's use SOLID principles (https://en.wikipedia.org/wiki/SOLID) to make code more understandable, 
 flexible and maintainable. For example let's create `InstallerInterface` to represent 
@@ -288,11 +287,11 @@ class Installer implements InstallerInterface
      */
     private function registerHooks(Module $module): bool
     {
-        // All hooks in the order view page.
+        // Hooks available in the order view page.
         $hooks = [
             'displayBackOfficeOrderActions',
-            'displayAdminOrderTabContent',
             'displayAdminOrderTabLink',
+            'displayAdminOrderTabContent',
             'displayAdminOrderMain',
             'displayAdminOrderSide',
             'displayAdminOrder',
@@ -324,6 +323,9 @@ class Installer implements InstallerInterface
 ```
 
 Then let's create `InstallerFactory` which will be used create `Installer` object.
+We call it factory because it deals with creating objects without having to specify the exact class
+of the object that will be created. More about factory design pattern: 
+https://en.wikipedia.org/wiki/Factory_method_pattern
 
 ```php
 <?php
@@ -393,6 +395,7 @@ class DemoViewOrderHooks extends Module
 
 }
 ```
+## Signature widget 
 
 Let's create `Signature` entity class and use Doctrine Object Relational Mapping (ORM) annotations.
 For more information: https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#define-an-entity
@@ -487,7 +490,9 @@ class Signature
 
 ```
 
-Lets create `SignatureRepository` class:
+Lets create custom repository `SignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
+Symfony Repository classes help to interact with the database by providing frequently used functions to
+get the data (for example filtered data by a certain criteria).
 
 ```php
 <?php
