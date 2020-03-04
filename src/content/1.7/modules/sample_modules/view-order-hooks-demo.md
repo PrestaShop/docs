@@ -677,10 +677,11 @@ class SignaturePresenter
     }
 }
 ```
-Then lets create services configuration for the above classes in `config/services.yml`. 
-For more information: https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
-Symfony services uses `dependency injection` 
+Then lets use Symfony Dependency Injection 
 (https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/).
+and create services configuration for the above 
+classes in `config/services.yml`. For more information: 
+https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
 The intent behind dependency injection is to achieve Separation of Concerns of construction and use of objects. 
 This can increase readability and code reuse, reduce dependencies, lead to more testable code.
 ```yaml
