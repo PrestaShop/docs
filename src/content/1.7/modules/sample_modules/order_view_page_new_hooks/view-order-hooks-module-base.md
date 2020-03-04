@@ -15,8 +15,8 @@ Let's create `composer.json` in the root of the module to autoload classes with 
 {{% notice note %}}
 Even though using `autoload` block in `composer.json` helps us to autoload classes from the specified
 folder `src` with the namespace `PrestaShop\\Module\\DemoViewOrderHooks\\` we might have some 
-autoloading issues if we use our classes in our module main file `demovieworderhooks.php` because
-it is out of `src` scope. For example, we might define a constant if one of our class and use it in
+autoloading issues if we use our classes in our module main file `demovieworderhooks.php`.
+For example, we might define a constant if one of our class and use it in
 `demovieworderhooks.php` when we will get error: `the class is not defined`. Then a solution can be 
 including `require_once __DIR__.'/vendor/autoload.php';` before the main module class 
 `demovieworderhooks.php` is defined.
@@ -289,6 +289,8 @@ use PrestaShop\Module\DemoViewOrderHooks\Install\InstallerFactory;
 if (!defined('_PS_VERSION_')) {
     exit;
 }
+
+require_once __DIR__.'/vendor/autoload.php';
 
 class DemoViewOrderHooks extends Module
 {
