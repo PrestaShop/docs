@@ -504,9 +504,13 @@ Let's put our signature picture, `john_doe.png` inside `/signatures/` folder.
 
  {{< figure src="../img/view-order-hooks-demo/john_doe.png" title="Signature" >}}
 
-Let's create Order Repository and data structures for interacting with Orders data:
-
-Data Transfer Object `Order.php` in `src/DTO`
+Let's create Order Repository and data structures for interacting with Orders data.
+Data Transfer Object (https://en.wikipedia.org/wiki/Data_transfer_object)
+`Order.php` in `src/DTO` to carry data between processes. The main benefit is that it reduces
+the amount of data that needs to be sent inside application and encapsulates parameters for
+method calls (This can be useful if a method takes more than 4 or 5 parameters.). Also it is more 
+convenient than using associative array where you need to remember it's indexes to get the 
+certain values (no autocomplete is provided).
 
 ```php
 <?php
