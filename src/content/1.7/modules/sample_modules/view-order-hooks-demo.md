@@ -47,33 +47,40 @@ On module installation the following hooks can be registered:
 These hooks are visualized in the picture below:
 
  {{< figure src="../img/view-order-hooks-demo/ps-view-order-page-hooks.jpg" title="Order page hooks locations" >}}
- 
- ```php
- 
-    private function registerHooks(Module $module): bool
-    {
-        // All hooks in the order view page.
-        $hooks = [
-            'displayBackOfficeOrderActions',
-            'displayAdminOrderTabContent',
-            'displayAdminOrderTabLink',
-            'displayAdminOrderMain',
-            'displayAdminOrderSide',
-            'displayAdminOrder',
-            'displayAdminOrderTop',
-            'actionGetAdminOrderButtons',
-        ];
 
-        return (bool) $module->registerHook($hooks);
+Let's start from the first one - `displayBackOfficeOrderActions` and create a demo for it.
+
+Let's create `composer.json` in the root of the module, for example:
+
+```json
+{
+    "name": "prestashop/demovieworderhooks",
+    "authors": [
+        {
+            "name": "Name Surname",
+            "email": "author@email.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "PrestaShop\\Module\\DemoViewOrderHooks\\": "src/"
+      }
     }
- ```
+}
+```
 
-Let's start from the first one - `displayBackOfficeOrderActions` and create a demo for it. 
+Then run `composer install` on the terminal. 
+Also run `composer dump-autoload` to re-generate the vendor/autoload.php file.
+If files were autoloaded successfully you should see something similar to 
+`PrestaShop\\Module\\DemoViewOrderHooks\\' => array($baseDir . '/src')` in 
+`modules/demovieworderhooks/vendor/composer/autoload_psr4.php` generated.
 
 ### Create User Signature card below the Customer card.
 
-Lets create `Installer` class inside `/demovieworderhooks/src/Install` folder structure
- responsible for creating `signature` table in the database:
+Let's use SOLID principles (https://en.wikipedia.org/wiki/SOLID) to make code more understandable, 
+flexible and maintainable. For example lets create `Installer` class inside `/demovieworderhooks/src/Install` 
+folder structure to represent `Single responsibility principle` (https://en.wikipedia.org/wiki/Single_responsibility_principle) 
+responsible only for module installation. 
 
 ```php
 <?php
@@ -121,23 +128,21 @@ class Installer
 
         return true;
     }
-
-    /**
-     * A helper that executes multiple database queries.
-     *
-     * @param array $queries
-     *
-     * @return bool
-     */
-    private function executeQueries(array $queries): bool
+ 
+    private function registerHooks(Module $module): bool
     {
-        foreach ($queries as $query) {
-            if (!Db::getInstance()->execute($query)) {
-                return false;
-            }
-        }
+        // All hooks in the order view page.
+        $hooks = [
+            'displayBackOfficeOrderActions',
+            'displayAdminOrderTabContent',
+            'displayAdminOrderTabLink',
+            'displayAdminOrderMain',
+            'displayAdminOrderSide',
+            'displayAdminOrder',
+            'displayAdminOrderTop'
+        ];
 
-        return true;
+        return (bool) $module->registerHook($hooks);
     }
 
     /**
@@ -157,34 +162,28 @@ class Installer
             ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8;'
         return $this->executeQueries($queries);
     }
-}
 
-```
-
-Let's create `composer.json` in the root of the module, for example:
-
-```json
-{
-    "name": "prestashop/demovieworderhooks",
-    "authors": [
-        {
-            "name": "Name Surname",
-            "email": "author@email.com"
+    /**
+     * A helper that executes multiple database queries.
+     *
+     * @param array $queries
+     *
+     * @return bool
+     */
+    private function executeQueries(array $queries): bool
+    {
+        foreach ($queries as $query) {
+            if (!Db::getInstance()->execute($query)) {
+                return false;
+            }
         }
-    ],
-    "autoload": {
-      "psr-4": {
-        "PrestaShop\\Module\\DemoViewOrderHooks\\": "src/"
-      }
+
+        return true;
     }
 }
+
 ```
 
-Then run `composer install` on the terminal. 
-Also run `composer dump-autoload` to re-generate the vendor/autoload.php file.
-If files were autoloaded successfully you should see something similar to 
-`PrestaShop\\Module\\DemoViewOrderHooks\\' => array($baseDir . '/src')` in 
-`modules/demovieworderhooks/vendor/composer/autoload_psr4.php` generated.
 Let's create `FixturesInstaller` class for populating our database with data:
 
 ```php
