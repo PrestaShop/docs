@@ -336,6 +336,8 @@ classes in `config/services.yml`. For more information:
 https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
 The intent behind dependency injection is to achieve Separation of Concerns of construction and use of objects. 
 This can increase readability and code reuse, reduce dependencies, lead to more testable code.
+It also reduces memory consumption as services are, by default, created once and shared 
+in the whole project.
 ```yaml
 parameters:
   signatureImgDirectory: 'signatures/'
