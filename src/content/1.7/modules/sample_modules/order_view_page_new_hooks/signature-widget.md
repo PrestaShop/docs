@@ -5,7 +5,9 @@ weight: 2
 
 # Signature card 
 
-## Signature card (displayBackOfficeOrderActions hook)
+## displayBackOfficeOrderActions hook
+
+We use this hook to display scanned customer signature.
 
 Lets create custom repository `OrderSignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
 Symfony Repository classes help to interact with the database by providing frequently used functions to
