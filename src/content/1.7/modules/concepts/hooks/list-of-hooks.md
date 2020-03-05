@@ -1060,6 +1060,38 @@ actionWatermark
     );
     ```
     
+actionGetAdminOrderButtons
+: 
+    This hook is used to generate the buttons collection on the order view page thanks (see ActionsBarButtonsCollection)
+
+    Located in: /src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php
+
+    Parameters:
+    ```php
+    array(
+     'controller' => (OrderController) Symfony controller,
+     'id_order' => (int) Order ID,
+     'actions_bar_buttons_collection' => (ActionsBarButtonsCollection) Collection of ActionsBarButtonInterface
+    );
+    ```
+
+
+actionAdminAdminPreferencesControllerPostProcessBefore
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    On post-process in Admin Preferences', 'This hook is called on Admin Preferences post-process before processing the form
+
+    Located in: /src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
+
+    Parameters:
+    ```php
+    [
+        'controller' => (AdministrationController) Symfony controller,
+    ]
+    ```
+
+
 additionalCustomerFormFields
 : 
     Add fields to the Customer form
@@ -1190,7 +1222,10 @@ displayAdminOrder
     Display new elements in the Back Office, tab AdminOrder
 This hook launches modules when the AdminOrder tab is displayed in the Back Office
 
-    Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
+    Located in:
+
+        - admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
+        - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -1284,7 +1319,7 @@ displayAdminOrderSide
     );
     ```
 
-displayBackOfficeOrderActions
+displayBackOfficeOrderActions->displayAdminOrderSideMiddle
 : 
     Available since: {{< minver v="1.7.7" >}}
 
@@ -2141,6 +2176,22 @@ This hook displays new elements in the top of the main wrapper
     - themes/classic/templates/checkout/checkout.tpl
     - themes/classic/templates/layouts/layout-both-columns.tpl
 
+displayAdditionalCustomerAddressFields
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook allows to display the extra field values added in an address from using hook 'additionalCustomerAddressFields'
+
+    Located in: /themes/classic/templates/customer/_partials/block-address.tpl
+
+displayFooterCategory
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook adds new blocks under the products listing in a category/search
+
+    Located in: /themes/classic/templates/catalog/listing/product-list.tpl
+
 
 filterCategoryContent
 : 
@@ -2418,30 +2469,5 @@ actionAfterCreate&lt;FormName>FormHandler
         'id' => $id,
     ]
     ```
-
-actionAdminAdminPreferencesControllerPostProcessBefore
-: 
-    Available since: {{< minver v="1.7.7" >}}
-
-    On post-process in Admin Preferences', 'This hook is called on Admin Preferences post-process before processing the form
-
-    Located in: /src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
-
-    Parameters:
-    ```php
-    [
-        'controller' => (AdministrationController) Symfony controller,
-    ]
-    ```
-
-displayFooterCategory
-: 
-    Available since: {{< minver v="1.7.7" >}}
-
-    This hook adds new blocks under the products listing in a category/search
-
-    Located in: /themes/classic/templates/catalog/listing/product-list.tpl
-
-
 
 {{% /funcdef %}}
