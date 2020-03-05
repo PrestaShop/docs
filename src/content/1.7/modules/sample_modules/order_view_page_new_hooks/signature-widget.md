@@ -208,7 +208,7 @@ final class Order
 }
 ```
 
-Orders collection `Orders.php` in `src/Collection`:
+`OrderCollection.php` in `src/Collection`:
 
 ```php
 <?php
@@ -219,7 +219,7 @@ namespace PrestaShop\Module\DemoViewOrderHooks\Collection;
 use PrestaShop\Module\DemoViewOrderHooks\DTO\Order;
 use PrestaShop\PrestaShop\Core\Data\AbstractTypedCollection;
 
-final class Orders extends AbstractTypedCollection
+final class OrderCollection extends AbstractTypedCollection
 {
     /**
      * {@inheritdoc}
@@ -242,7 +242,7 @@ namespace PrestaShop\Module\DemoViewOrderHooks\Repository;
 use DateTimeImmutable;
 use Db;
 use Order as PrestaShopOrder;
-use PrestaShop\Module\DemoViewOrderHooks\Collection\Orders;
+use PrestaShop\Module\DemoViewOrderHooks\Collection\OrderCollection;
 use PrestaShop\Module\DemoViewOrderHooks\DTO\Order;
 
 class OrderRepository
@@ -260,7 +260,7 @@ class OrderRepository
     /**
      * Get all orders that a customer has placed.
      */
-    public function getCustomerOrders(int $customerId, array $excludeOrderIds = []): Orders
+    public function getCustomerOrders(int $customerId, array $excludeOrderIds = []): OrderCollection
     {
         $orders = PrestaShopOrder::getCustomerOrders($customerId);
         $ordersCollection = new Orders();
@@ -432,6 +432,8 @@ For each registered hook, you must create a non-static public method,
 starting with the “hook” keyword followed by the name of the hook you want to use 
 (starting with either “display” or “action”). In our case: `hookDisplayBackOfficeOrderActions`
 For more information see: https://devdocs.prestashop.com/1.7/modules/concepts/hooks/#execution
+We add this code at the bottom of the main module class `demovieworderhooks.php`
+and also add the missing `use` statemets for new classes.
 
 ```php
     /**
