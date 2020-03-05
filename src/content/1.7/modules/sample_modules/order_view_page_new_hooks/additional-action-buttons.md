@@ -50,6 +50,13 @@ Let's add hook related code to main module class `demovieworderhooks`:
     }
 ```
 
+{{% notice note %}}
+we used full path here `\PrestaShopBundle\Controller\Admin\Sell\Order\ActionsBarButton`
+but a slightly better approach could be with `use` statement followed by imported class namespace
+above the class declaration:
+`use PrestaShopBundle\Controller\Admin\Sell\Order\ActionsBarButton;`
+{{% /notice %}}
+
 With `$router = $this->get('router');` we inject the router capable to generate url links
 to controller actions from routes and their parameters. For example: 
 
