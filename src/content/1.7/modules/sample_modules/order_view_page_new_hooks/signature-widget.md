@@ -281,8 +281,14 @@ class OrderRepository
         return $ordersCollection;
     }
 }
-
 ```
+
+{{% notice note %}}
+Unlike the previous `OrderSignatureRepository` this repository uses legacy PrestaShop classes, 
+it performs the request using the `Db` class. We have to do this because core objects
+ from PrestaShop do not use Doctrine entities, so we can't use a Doctrine repository to manage them.
+{{% /notice %}}
+
 Let's create `OrderSignaturePresenter` class responsible for returning order customer data  
 in `src/Presenter/`:
 
