@@ -12,9 +12,11 @@ In this tutorial we are going to build a module to extend Order view page.
 The module will add the following components:
 
  - User Signature card below the Customer card.
+ - Additional action buttons in the main buttons bar.
  
 While creating this component you will learn how to:
 
+ - Create a module with namespace thanks to composer
  - Use Doctrine (https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/)
  - Use Repository classes extending Symfony EntityRepository (https://symfony.com/doc/3.4/doctrine/repository.html)
  - Use Symfony services (https://devdocs.prestashop.com/1.7/modules/concepts/services/)
