@@ -7,7 +7,7 @@ weight: 10
 
 ## Signature card (displayBackOfficeOrderActions hook)
 
-Lets create custom repository `SignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
+Lets create custom repository `OrderSignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
 Symfony Repository classes help to interact with the database by providing frequently used functions to
 get the data (for example filtered data by a certain criteria).
 
@@ -19,15 +19,20 @@ namespace PrestaShop\Module\DemoViewOrderHooks\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
-class SignatureRepository extends EntityRepository
+class OrderSignatureRepository extends EntityRepository
 {
 }
 ```
 
-Let's create `Signature` entity class and use Doctrine Object Relational Mapping (ORM) annotations.
+{{% notice note %}}
+It is important that custom repository name represent the database table name. In this case we have `order_signature`
+table created and the repository starts with the same wording `OrderSignatureRepository`.
+{{% /notice %}}
+
+Let's create `OrderSignature` entity class and use Doctrine Object Relational Mapping (ORM) annotations.
 For more information: https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#define-an-entity
 Also we map this entity with the repository with 
-`repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository"`
+`repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\OrderSignatureRepository"`
 This mapping allows to use functions of `SignatureRepository` instead of only the `EntityRepository`.
 
 ```php

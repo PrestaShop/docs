@@ -181,7 +181,7 @@ class Installer
     private function installDatabase(): bool
     {
         $queries = [
-            'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'signature` (
+            'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.'order_signature` (
               `id_signature` int(11) NOT NULL AUTO_INCREMENT,
               `id_order` int(11) NOT NULL,
               `filename` varchar(64) NOT NULL,
