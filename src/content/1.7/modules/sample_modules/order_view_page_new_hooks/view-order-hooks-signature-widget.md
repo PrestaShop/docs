@@ -418,11 +418,11 @@ For more information see: https://devdocs.prestashop.com/1.7/modules/concepts/ho
      */
     public function hookDisplayBackOfficeOrderActions(array $params)
     {
-        /** @var SignatureRepository $signatureRepository */
-        $signatureRepository = $this->get('prestashop.module.demovieworderhooks.repository.signature_repository');
+        /** @var OrderSignatureRepository $signatureRepository */
+        $signatureRepository = $this->get('prestashop.module.demovieworderhooks.repository.order_signature_repository');
 
-        /** @var SignaturePresenter $signaturePresenter */
-        $signaturePresenter = $this->get('prestashop.module.demovieworderhooks.presenter.signature_presenter');
+        /** @var OrderSignaturePresenter $signaturePresenter */
+        $signaturePresenter = $this->get('prestashop.module.demovieworderhooks.presenter.order_signature_presenter');
 
         $signature = $signatureRepository->findOneBy(['orderId' => $params['id_order']]);
 
