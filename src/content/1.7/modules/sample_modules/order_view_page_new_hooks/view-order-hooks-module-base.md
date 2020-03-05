@@ -96,7 +96,7 @@ class FixturesInstaller
 
     private function insertSignature(int $orderId): void
     {
-        $this->db->insert('signature', [
+        $this->db->insert('order_signature', [
             'id_order' => $orderId,
             'filename' => 'john_doe.png',
         ]);
@@ -201,7 +201,7 @@ class Installer
     private function uninstallDatabase(): bool
     {
         $queries = [
-            'DROP TABLE IF EXISTS `'._DB_PREFIX_.'signature`',
+            'DROP TABLE IF EXISTS `'._DB_PREFIX_.'order_signature`',
         ];
 
         return $this->executeQueries($queries);

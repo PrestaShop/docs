@@ -46,9 +46,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository")
+ * @ORM\Entity(repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\OrderSignatureRepository")
  */
-class Signature
+class OrderSignature
 {
     /**
      * @var int|null
@@ -84,9 +84,9 @@ class Signature
     /**
      * @param int $id
      *
-     * @return Signature
+     * @return self
      */
-    public function setId(int $id): Signature
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -104,9 +104,9 @@ class Signature
     /**
      * @param string $filename
      *
-     * @return Signature
+     * @return self
      */
-    public function setFilename(string $filename): Signature
+    public function setFilename(string $filename): self
     {
         $this->filename = $filename;
 
@@ -127,7 +127,7 @@ class Signature
 
 Let's put our signature picture, `john_doe.png` inside `/signatures/` folder.
 
- {{< figure src="../img/view-order-hooks-demo/john_doe.png" title="Signature" >}}
+ {{< figure src="../../img/view-order-hooks-demo/john_doe.png" title="Signature" >}}
 
 Let's create Order Repository and data structures for interacting with Orders data.
 Data Transfer Object (https://en.wikipedia.org/wiki/Data_transfer_object)
@@ -262,7 +262,7 @@ class OrderRepository
 }
 
 ```
-Let's create `SignaturePresenter` class responsible for returning order customer data  
+Let's create `OrderSignaturePresenter` class responsible for returning order customer data  
 in `src/Presenter/`:
 
 ```php
@@ -273,9 +273,9 @@ namespace PrestaShop\Module\DemoViewOrderHooks\Presenter;
 
 use Gender;
 use Order;
-use PrestaShop\Module\DemoViewOrderHooks\Entity\Signature;
+use PrestaShop\Module\DemoViewOrderHooks\Entity\OrderSignature;
 
-class SignaturePresenter
+class OrderSignaturePresenter
 {
     /**
      * @var string
@@ -287,7 +287,7 @@ class SignaturePresenter
         $this->signatureImgDir = $signatureImgDir;
     }
 
-    public function present(Signature $signature, int $languageId): array
+    public function present(OrderSignature $signature, int $languageId): array
     {
         $order = new Order($signature->getOrderId());
         $customer = $order->getCustomer();
@@ -323,14 +323,14 @@ services:
   prestashop.module.demovieworderhooks.repository.order_repository:
     class: PrestaShop\Module\DemoViewOrderHooks\Repository\OrderRepository
 
-  prestashop.module.demovieworderhooks.repository.signature_repository:
-    class: PrestaShop\Module\DemoViewOrderHooks\Repository\SignatureRepository
+  prestashop.module.demovieworderhooks.repository.order_signature_repository:
+    class: PrestaShop\Module\DemoViewOrderHooks\Repository\OrderSignatureRepository
     factory: ['@doctrine.orm.default_entity_manager', getRepository]
     arguments:
-      - PrestaShop\Module\DemoViewOrderHooks\Entity\Signature
+      - PrestaShop\Module\DemoViewOrderHooks\Entity\OrderSignature
 
-  prestashop.module.demovieworderhooks.presenter.signature_presenter:
-    class: PrestaShop\Module\DemoViewOrderHooks\Presenter\SignaturePresenter
+  prestashop.module.demovieworderhooks.presenter.order_signature_presenter:
+    class: PrestaShop\Module\DemoViewOrderHooks\Presenter\OrderSignaturePresenter
     arguments:
       - '@=service("prestashop.module.demovieworderhooks").getPathUri() ~ parameter("signatureImgDirectory")'
 
@@ -373,7 +373,7 @@ card.html.twig
       {{ signature.gender }} {{ signature.firstName }} {{ signature.lastName }}
     </div>
     <div class="text-center">
-      <img src="{{ signature.filename }}" alt="">
+      <img src="{{ signature.imagePath }}" alt="">
     </div>
   </div>
 {% endblock %}
