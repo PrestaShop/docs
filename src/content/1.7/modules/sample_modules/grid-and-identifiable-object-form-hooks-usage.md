@@ -1,6 +1,6 @@
 ---
 title: Grid and identifiable object form hooks usage example
-weight: 10
+weight: 1
 ---
 
 # Grid and identifiable object form hooks usage example

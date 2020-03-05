@@ -1,6 +1,6 @@
 ---
 title: Order view page new hooks demo tutorial 
-weight: 10
+weight: 2
 ---
 
 # Order view page new hooks demo tutorial
