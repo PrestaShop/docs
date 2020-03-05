@@ -417,7 +417,7 @@ Lets add several methods to `DemoViewOrderHooks` class.
      */
     private function getModuleTemplatePath(): string
     {
-        return "@Modules/$this->name/views/templates/admin/";
+        return '@Modules/' . $this->name . '/views/templates/admin/';
     }
 ```
 
