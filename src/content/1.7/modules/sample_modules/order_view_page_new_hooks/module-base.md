@@ -34,7 +34,11 @@ including `require_once __DIR__.'/vendor/autoload.php';` before the main module 
     "autoload": {
       "psr-4": {
         "PrestaShop\\Module\\DemoViewOrderHooks\\": "src/"
-      }
+      },
+      "config": {
+        "prepend-autoloader": false
+      },
+      "type": "prestashop-module"
     }
 }
 ```
