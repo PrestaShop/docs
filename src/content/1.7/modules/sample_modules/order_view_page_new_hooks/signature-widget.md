@@ -417,7 +417,7 @@ Lets add several methods to `DemoViewOrderHooks` class.
      */
     private function getModuleTemplatePath(): string
     {
-        return sprintf('@Modules/"%s"/views/templates/admin/', $this->name);
+        return sprintf('@Modules/%s/views/templates/admin/', $this->name);
     }
 ```
 
