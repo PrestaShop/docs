@@ -441,7 +441,7 @@ starting with the “hook” keyword followed by the name of the hook you want t
 (starting with either “display” or “action”). In our case: `hookDisplayBackOfficeOrderActions`
 For more information see: https://devdocs.prestashop.com/1.7/modules/concepts/hooks/#execution
 We add this code at the bottom of the main module class `demovieworderhooks.php`
-and also add the missing `use` statemets for new classes.
+and also add the missing `use` statements for new classes.
 
 ```php
     /**
