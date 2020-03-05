@@ -17,8 +17,6 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 * `displayProductButtons` has been renamed into `displayProductAdditionalInfo`.<br>
   Don’t worry, we kept an alias :)
 
-Some hooks have been modified in the order view page in version {{< minver v="1.7.7" >}} see [Modified order hooks][modified-order-hooks] for more details.
-
 ## Full list
 
 {{% funcdef %}}
@@ -1203,22 +1201,24 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentOrder
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderTabContent`
+
     Display new elements in Back Office, AdminOrder, panel Order
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel content
 
     Located in: /controllers/admin/AdminOrdersController.php
 
-    Replaced by **displayAdminOrderTabContent** in 1.7.7
-
     
 displayAdminOrderContentShip
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderTabContent`
+
     Display new elements in Back Office, AdminOrder, panel Shipping
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel content
 
     Located in: /controllers/admin/AdminOrdersController.php
-
-    Replaced by **displayAdminOrderTabContent** in 1.7.7
 
 
 displayAdminOrderTabContent
@@ -1239,9 +1239,10 @@ displayAdminOrderTabContent
     
 displayAdminOrderLeft
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderMain`
+
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
-    
-    Replaced by **displayAdminOrderMain** in 1.7.7
 
 
 displayAdminOrderMain
@@ -1262,9 +1263,10 @@ displayAdminOrderMain
 
 displayAdminOrderRight
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderSide`
+
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
-    
-    Replaced by **displayAdminOrderSide** in 1.7.7
 
 
 displayAdminOrderSide
@@ -1300,22 +1302,24 @@ displayBackOfficeOrderActions
 
 displayAdminOrderTabOrder
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderTabLink`
+
     Display new elements in Back Office, AdminOrder, panel Order
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel tabs
 
     Located in: /controllers/admin/AdminOrdersController.php
 
-    Replaced by **displayAdminOrderTabLink** in 1.7.7
-
     
 displayAdminOrderTabShip
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderTabLink`
+
     Display new elements in Back Office, AdminOrder, panel Shipping
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel tabs
 
     Located in: /controllers/admin/AdminOrdersController.php
-
-    Replaced by **displayAdminOrderTabLink** in 1.7.7
 
 displayAdminOrderTabLink
 : 
@@ -1813,12 +1817,13 @@ displayHome
     
 displayInvoice
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderTop`
+
     Invoice
 This hook displays new blocks on the invoice (order)
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
-
-    Replaced by **displayAdminOrderMain** in 1.7.7
 
 displayAdminOrderTop
 : 
@@ -2440,5 +2445,3 @@ displayFooterCategory
 
 
 {{% /funcdef %}}
-
-[modified-order-hooks]: {{< ref "/1.7/modules/core_updates/1.7.7.md#modified-hooks" >}}
