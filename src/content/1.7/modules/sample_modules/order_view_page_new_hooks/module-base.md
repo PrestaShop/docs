@@ -44,7 +44,7 @@ including `require_once __DIR__.'/vendor/autoload.php';` before the main module 
 }
 ```
 
-Then run `composer install` on the terminal. 
+Then run `composer install` on the terminal/command line inside `/modules/demovieworderhooks/` folder. 
 Also run `composer dump-autoload` to re-generate the vendor/autoload.php file.
 If files were autoloaded successfully you should see something similar to 
 `PrestaShop\\Module\\DemoViewOrderHooks\\' => array($baseDir . '/src')` in 
