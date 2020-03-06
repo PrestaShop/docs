@@ -379,7 +379,7 @@ class OrderSignaturePresenter
             'firstName' => $customer->firstname,
             'lastName' => $customer->lastname,
             'gender' => $gender->name,
-            'filename' => $this->signatureImgDir.$signature->getFilename()
+            'imagePath' => $this->signatureImgDir.$signature->getFilename()
         ];
     }
 }
@@ -388,8 +388,8 @@ Then lets use Symfony Dependency Injection
 (https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/).
 and create services configuration for the above 
 classes in `demovieworderhooks/config/services.yml`. For more information: 
-https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services
-The intent behind dependency injection is to achieve Separation of Concerns of construction and use of objects. 
+https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services.
+The intention behind dependency injection is to achieve Separation of Concerns of construction and use of objects. 
 This can increase readability and code reuse, reduce dependencies, lead to more testable code.
 It also reduces memory consumption as services are, by default, created once and shared 
 in the whole project.
@@ -505,10 +505,14 @@ and also add the missing `use` statements for new classes.
     public function hookDisplayBackOfficeOrderActions(array $params)
     {
         /** @var OrderSignatureRepository $signatureRepository */
-        $signatureRepository = $this->get('prestashop.module.demovieworderhooks.repository.order_signature_repository');
+        $signatureRepository = $this->get(
+            'prestashop.module.demovieworderhooks.repository.order_signature_repository'
+        );
 
         /** @var OrderSignaturePresenter $signaturePresenter */
-        $signaturePresenter = $this->get('prestashop.module.demovieworderhooks.presenter.order_signature_presenter');
+        $signaturePresenter = $this->get(
+            'prestashop.module.demovieworderhooks.presenter.order_signature_presenter'
+        );
 
         $signature = $signatureRepository->findOneByOrderId($params['id_order']);
 
@@ -589,10 +593,14 @@ class DemoViewOrderHooks extends Module
     public function hookDisplayBackOfficeOrderActions(array $params)
     {
         /** @var OrderSignatureRepository $signatureRepository */
-        $signatureRepository = $this->get('prestashop.module.demovieworderhooks.repository.order_signature_repository');
+        $signatureRepository = $this->get(
+            'prestashop.module.demovieworderhooks.repository.order_signature_repository'
+        );
 
         /** @var OrderSignaturePresenter $signaturePresenter */
-        $signaturePresenter = $this->get('prestashop.module.demovieworderhooks.presenter.order_signature_presenter');
+        $signaturePresenter = $this->get(
+            'prestashop.module.demovieworderhooks.presenter.order_signature_presenter'
+        );
 
         $signature = $signatureRepository->findOneByOrderId($params['id_order']);
 
@@ -627,9 +635,13 @@ class DemoViewOrderHooks extends Module
 
 ```
 
+Now we have all the code needed so let's go to the `Modules->Module Manager`. Find our module with search `demo`
+and click the drop down near the `disable` button and select `reset` to reload the module with the newly 
+described symfony services.
+
 ## Result
 
-After completing the steps above the result should be:
+After completing the steps above the result should be visible inside the selected Order View page:
 
  - Signature card:
 
