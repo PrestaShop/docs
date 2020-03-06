@@ -53,9 +53,10 @@ If files were autoloaded successfully you should see something similar to
 ### Module installation
 
 Let's use SOLID principles (https://en.wikipedia.org/wiki/SOLID) to make code more understandable, 
-flexible and maintainable. Create `FixturesInstaller` class to represent `Single responsibility principle`
- (https://en.wikipedia.org/wiki/Single_responsibility_principle) responsible only for module 
- fixtures data inserted to the database. 
+flexible and maintainable. Create `FixturesInstaller` class inside `/demovieworderhooks/src/Install`
+folderto represent `Single responsibility principle` 
+(https://en.wikipedia.org/wiki/Single_responsibility_principle) responsible only for module 
+fixtures data inserted to the database. 
 
 ```php
 <?php
