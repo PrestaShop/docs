@@ -20,7 +20,7 @@ autoloading issues if we use our classes in our module main file `demovieworderh
 For example, we might define a constant if one of our class and use it in
 `demovieworderhooks.php` when we will get error: `the class is not defined`. Then a solution can be 
 including `require_once __DIR__.'/vendor/autoload.php';` before the main module class 
-`demovieworderhooks.php` is defined.
+`demovieworderhooks` is defined.
 {{% /notice %}}
 
 ```json
