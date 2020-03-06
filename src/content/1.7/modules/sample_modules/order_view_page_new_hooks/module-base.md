@@ -258,10 +258,10 @@ class Installer
 
 ```
 
-Then let's create `InstallerFactory` which will be used create `Installer` object.
-We call it factory because it deals with creating objects without having to specify the exact class
-of the object that will be created. More about factory design pattern: 
-https://en.wikipedia.org/wiki/Factory_method_pattern
+Then let's create `InstallerFactory` inside `/demovieworderhooks/src/Install` which will be used 
+to create `Installer` object. We call it factory because it deals with creating objects without 
+having to specify the exact class of the object that will be created. 
+More about factory design pattern: https://en.wikipedia.org/wiki/Factory_method_pattern
 
 ```php
 <?php
