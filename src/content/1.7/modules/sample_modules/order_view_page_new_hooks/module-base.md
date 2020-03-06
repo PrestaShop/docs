@@ -350,3 +350,8 @@ class DemoViewOrderHooks extends Module
 
 }
 ```
+
+Now we can install the module through PrestaShop Back Office `Modules\Module Catalog`. 
+In the search box type `Demo`, click `Enter` and then you should see the module with name
+`Demo view order hooks` suggested for Installation. Click `Install`, you should see the green box
+at the top right corner telling you about the success!
