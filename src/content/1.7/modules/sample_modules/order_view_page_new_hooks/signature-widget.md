@@ -9,8 +9,8 @@ weight: 2
 
 We use this hook to display scanned customer signature.
 
-Lets create custom repository `OrderSignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
-Symfony Repository classes help to interact with the database by providing frequently used functions
+Lets create custom repository `OrderSignatureRepository` class inside `demovieworderhooks/src/Repository` folder.
+Symfony Repository classes (https://symfony.com/doc/3.3/doctrine/repository.html) help to interact with the database by providing frequently used functions
 like `findOneBy` to get the data (for example filtered data by a certain criteria - `orderId` 
 field from `OrderSignature` entity).
 
@@ -50,10 +50,11 @@ It is important that custom repository name represent the database table name. I
 table created and the repository starts with the same wording `OrderSignatureRepository`.
 {{% /notice %}}
 
-Let's create `OrderSignature` entity class and use Doctrine Object Relational Mapping (ORM) annotations.
-For more information: https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#define-an-entity
+Let's create `OrderSignature` entity class inside `demovieworderhooks/src/Entity` folder and use 
+Doctrine Object Relational Mapping (ORM) annotations: 
+https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#define-an-entity.
 Also we map this entity with the repository with 
-`repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\OrderSignatureRepository"`
+`repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\OrderSignatureRepository"`.
 This mapping allows to use functions of `SignatureRepository` instead of only the `EntityRepository`.
 
 ```php
