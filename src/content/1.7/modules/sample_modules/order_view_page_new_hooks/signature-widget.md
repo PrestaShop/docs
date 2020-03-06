@@ -309,7 +309,7 @@ class OrderRepository
     public function getCustomerOrders(int $customerId, array $excludeOrderIds = []): OrderCollection
     {
         $orders = PrestaShopOrder::getCustomerOrders($customerId);
-        $ordersCollection = new Orders();
+        $ordersCollection = new OrderCollection();
 
         foreach ($orders as $order) {
             if (in_array($order['id_order'], $excludeOrderIds)) {
