@@ -155,7 +155,7 @@ class OrderSignature
 
 ```
 
-Let's put our signature picture, `john_doe.png` inside `/signatures/` folder.
+Let's put our signature picture, `john_doe.png` inside `demovieworderhooks/signatures/` folder.
 
  {{< figure src="../../img/view-order-hooks-demo/john_doe.png" title="Signature" >}}
 
