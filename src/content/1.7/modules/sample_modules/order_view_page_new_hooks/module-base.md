@@ -7,8 +7,9 @@ weight: 1
 
 ### Composer autoloading
 
-Let's create `composer.json` in the root of the module to autoload classes with the namespaces
- (PrestaShop\\Module\\DemoViewOrderHooks\\) we define from the `src` folder.
+Let's create module folder `demovieworderhooks` inside `modules` directory (located in the root of
+ PrestaShop project). Then create `composer.json` in the root of the module to autoload classes 
+ with the namespaces  (PrestaShop\\Module\\DemoViewOrderHooks\\) we define from the `src` folder
  (https://getcomposer.org/doc/01-basic-usage.md#autoloading). Using composer PSR-4 `autoload` helps
   us autoload classes without the need to use `require_once __DIR__.'/vendor/autoload.php';` .
  
