@@ -291,8 +291,8 @@ class InstallerFactory
 }
 ```
 
-And use it in the `DemoViewOrderHooks` class which extends the `Module` class inside the 
- `modules/demovieworderhooks` folder: 
+Let's create main module file: `demovieworderhooks.php` inside the `modules/demovieworderhooks` folder. 
+and use it in the `DemoViewOrderHooks` class which extends the `Module` class:
 
 ```php
 <?php
