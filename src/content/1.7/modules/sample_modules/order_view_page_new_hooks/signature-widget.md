@@ -10,11 +10,21 @@ weight: 2
 We use this hook to display scanned customer signature.
 
 Lets create custom repository `OrderSignatureRepository` class (https://symfony.com/doc/3.3/doctrine/repository.html):
-Symfony Repository classes help to interact with the database by providing frequently used functions to
-get the data (for example filtered data by a certain criteria).
+Symfony Repository classes help to interact with the database by providing frequently used functions
+like `findOneBy` to get the data (for example filtered data by a certain criteria - `orderId` 
+field from `OrderSignature` entity).
 
 ```php
 <?php
+/**
+ * 2007-2020 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License 3.0 (AFL-3.0).
+ * It is also available through the world-wide-web at this URL: https://opensource.org/licenses/AFL-3.0
+ */
+
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoViewOrderHooks\Repository;
@@ -23,6 +33,15 @@ use Doctrine\ORM\EntityRepository;
 
 class OrderSignatureRepository extends EntityRepository
 {
+    /**
+     * @param int $orderId
+     *
+     * @return object|null
+     */
+    public function findOneByOrderId(int $orderId)
+    {
+        return $this->findOneBy(['orderId' => $orderId]);
+    }
 }
 ```
 
