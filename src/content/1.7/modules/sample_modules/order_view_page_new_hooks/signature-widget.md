@@ -486,6 +486,111 @@ and also add the missing `use` statements for new classes.
     }
 ```
 
+The full main module file with dependencies could be:
+
+```php
+<?php
+/**
+ * 2007-2020 PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License 3.0 (AFL-3.0).
+ * It is also available through the world-wide-web at this URL: https://opensource.org/licenses/AFL-3.0
+ */
+
+declare(strict_types=1);
+
+use PrestaShop\Module\DemoViewOrderHooks\Collection\OrderCollection;
+use PrestaShop\Module\DemoViewOrderHooks\Install\InstallerFactory;
+use PrestaShop\Module\DemoViewOrderHooks\Presenter\OrderSignaturePresenter;
+use PrestaShop\Module\DemoViewOrderHooks\Repository\OrderRepository;
+use PrestaShop\Module\DemoViewOrderHooks\Repository\OrderSignatureRepository;
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+// need it because InstallerFactory is not autoloaded during the install
+require_once __DIR__.'/vendor/autoload.php';
+
+class DemoViewOrderHooks extends Module
+{
+    public function __construct()
+    {
+        $this->name = 'demovieworderhooks';
+        $this->author = 'PrestaShop';
+        $this->version = '1.0.0';
+        $this->ps_versions_compliancy = ['min' => '1.7.7.0', 'max' => _PS_VERSION_];
+
+        parent::__construct();
+
+        $this->displayName = $this->l('Demo view order hooks');
+        $this->description = $this->l('Demonstration of new hooks in PrestaShop 1.7.7 order view page');
+    }
+
+    public function install()
+    {
+        if (!parent::install()) {
+            return false;
+        }
+
+        $installer = InstallerFactory::create();
+
+        return $installer->install($this);
+    }
+
+    public function uninstall()
+    {
+        $installer = InstallerFactory::create();
+
+        return $installer->uninstall() && parent::uninstall();
+    }
+
+    /**
+     * Displays customer's signature.
+     */
+    public function hookDisplayBackOfficeOrderActions(array $params)
+    {
+        /** @var OrderSignatureRepository $signatureRepository */
+        $signatureRepository = $this->get('prestashop.module.demovieworderhooks.repository.order_signature_repository');
+
+        /** @var OrderSignaturePresenter $signaturePresenter */
+        $signaturePresenter = $this->get('prestashop.module.demovieworderhooks.presenter.order_signature_presenter');
+
+        $signature = $signatureRepository->findOneByOrderId($params['id_order']);
+
+        if (!$signature) {
+            return '';
+        }
+
+        return $this->render($this->getModuleTemplatePath() . 'customer_signature.html.twig', [
+            'signature' => $signaturePresenter->present($signature, (int) $this->context->language->id),
+        ]);
+    }
+
+    /**
+     * Render a twig template.
+     */
+    private function render(string $template, array $params = []): string
+    {
+        /** @var Twig_Environment $twig */
+        $twig = $this->get('twig');
+
+        return $twig->render($template, $params);
+    }
+
+    /**
+     * Get path to this module's template directory
+     */
+    private function getModuleTemplatePath(): string
+    {
+        return sprintf('@Modules/%s/views/templates/admin/', $this->name);
+    }
+}
+
+```
+
 ## Result
 
 After completing the steps above the result should be:
