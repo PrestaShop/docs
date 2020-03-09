@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* Color of text by default */
-/* Color of titles h2-h3-h4-h5 */
+/* Color of titles h2-h3-h4-h5-h6 */
 /* Color of links */
 /* Color of hovered links */
 /* color of anchors on titles */
@@ -18,7 +18,7 @@
 /* Color of 'page visited' icons in menu */
 /* Color of <hr> separator in menu */
 /* Color of text by default */
-/* Color of titles h2-h3-h4-h5 */
+/* Color of titles h2-h3-h4-h5-h6 */
 /* Color of links */
 /* Color of hovered links */
 /* color of anchors on titles */
@@ -103,7 +103,11 @@ div.notices {
   padding: 1rem 2rem;
   padding-left: 3.5rem;
   color: #555;
-  font-size: 90%; }
+  font-size: 90%;
+  border-radius: .2rem; }
+  @media (min-width: 1280px) {
+    div.notices {
+      margin: 2rem 2rem; } }
   div.notices p {
     font-size: 1em;
     margin-top: 0;
@@ -284,7 +288,7 @@ div.notices {
   /* the following styles are needed to avoid "style jumps" when elements get .highlight added */ }
   #toc > .wrapper {
     padding: 15px 25px; }
-  @media only all and (max-width: 1200px) {
+  @media only all and (max-width: 1279px) {
     #toc {
       position: static;
       border: 0;
@@ -1000,8 +1004,10 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap;
   border: inherit; }
+
+/*# sourceMappingURL=nucleus.css.map */
 /* Color of text by default */
-/* Color of titles h2-h3-h4-h5 */
+/* Color of titles h2-h3-h4-h5-h6 */
 /* Color of links */
 /* Color of hovered links */
 /* color of anchors on titles */
@@ -1253,13 +1259,16 @@ select[multiple=multiple] {
   margin-top: 2px; }
 
 #body-inner {
-  max-width: 1300px; }
-  @media (min-width: 2004px) {
+  max-width: 1000px; }
+  @media (min-width: 1704px) {
     #body-inner {
-      margin-left: calc((100% - 1300px - 340px) / 2); } }
-  @media only all and (min-width: 1200px) {
+      margin-left: calc((100% - 1000px - 340px) / 2); } }
+  @media (min-width: 1280px) {
     #body-inner {
       margin-right: 340px; } }
+  @media (max-width: 1704px) {
+    #body-inner {
+      font-size: 0.9375rem; } }
   #body-inner .tabs-wrapper.ui-theme-badges {
     background: #1d1f21; }
     #body-inner .tabs-wrapper.ui-theme-badges .tabs-nav li {
@@ -1284,7 +1293,7 @@ h5,
 h6 {
   font-family: "Work Sans", "Helvetica", "Arial", sans-serif;
   text-rendering: optimizeLegibility;
-  color: #5e5e5e;
+  color: #444;
   font-weight: 400;
   letter-spacing: -1px; }
 
@@ -1295,6 +1304,57 @@ h1 {
   padding: .8em 0 .3em;
   font-size: 3rem;
   font-weight: 600; }
+
+h2, h3, h4 {
+  margin-left: -.05rem !important; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1; }
+  h2:hover .anchor,
+  h3:hover .anchor,
+  h4:hover .anchor,
+  h5:hover .anchor,
+  h6:hover .anchor {
+    visibility: visible; }
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+    font-weight: inherit; }
+
+h2 {
+  font-size: 2rem;
+  line-height: 110% !important;
+  margin: 2em 0 1rem 0; }
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 130% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold; }
+
+h4 {
+  font-size: 1.3rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0;
+  font-weight: bold; }
+
+h5 {
+  font-size: 1.2rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0; }
+
+h6 {
+  font-size: 1.1rem;
+  line-height: 110% !important;
+  margin: 1.5em 0 1rem 0; }
+  h6:before {
+    content: '› '; }
 
 blockquote {
   border-left: 10px solid #f0f2f4; }
@@ -1840,53 +1900,6 @@ pre:hover .copy-to-clipboard {
   position: absolute;
   margin-top: 0.1em; }
 
-/* Redfines headers style */
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
-  line-height: 1.1; }
-  h2:hover .anchor,
-  h3:hover .anchor,
-  h4:hover .anchor,
-  h5:hover .anchor,
-  h6:hover .anchor {
-    visibility: visible; }
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
-    font-weight: inherit; }
-
-h2 {
-  font-size: 2rem;
-  line-height: 110% !important;
-  margin: 2em 0 1rem 0; }
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 130% !important;
-  margin: 1.5em 0 1rem 0;
-  font-weight: bold; }
-
-h4 {
-  font-size: 1.5rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0; }
-
-h5 {
-  font-size: 1.2rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0; }
-
-h6 {
-  font-size: 1rem;
-  line-height: 110% !important;
-  margin: 1.5em 0 1rem 0; }
-
 p {
   margin: 0 0 1rem 0; }
 
@@ -1957,9 +1970,6 @@ input[type="week"]:focus,
 select[multiple=multiple]:focus {
   border-color: transparent;
   box-shadow: none; }
-
-h2, h3, h4, h5 {
-  color: #444 !important; }
 
 a {
   color: #df0067; }
