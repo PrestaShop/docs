@@ -59,7 +59,7 @@ Event Name            | Description
  `updatedProduct`      | On the product page, selecting a new combination will reload the DOM via ajax calls. After the update, this event is fired.
  `handleError`        | This event is fired after a fail of POST request. Have the `eventType` as first parameter.
  `updateFacets`        | On every product list page (category, search results, pricedrop and so on), the list is updated via ajax calls if you change filters or sorting options. Each time the facets is reloaded, this event is triggered.
- `responsive update`  | While broswer is resized, this event is fired with a `mobile` parameter.
+ `responsive update`  | While browser is resized, this event is fired with a `mobile` parameter.
 
 ### Triggering delegated events
 
