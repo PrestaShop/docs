@@ -38,11 +38,11 @@ project needs and don't hesitate to write a note to PrestaShop Core developers i
 
 On module installation the following hooks can be registered:
 
- - `displayBackOfficeOrderActions` - displayed between Customer and Messages cards in the Order page
  - `displayAdminOrderTabLink` - for adding tab links for tab content
  - `displayAdminOrderTabContent` - for adding tab content to Order page
  - `displayAdminOrderMain` - for adding Order main information
- - `displayAdminOrderSide` - for adding Order side information
+ - `displayAdminOrderSide` - displayed between Customer and Messages cards in the Order page
+ - `displayAdminOrderSideBottom` - for adding Order side information
  - `displayAdminOrder` - displayed at the bottom of the Order page
  - `displayAdminOrderTop` - displayed at the top of the Order page
  - `actionGetAdminOrderButtons` - to display additional action buttons into the main buttons bar.

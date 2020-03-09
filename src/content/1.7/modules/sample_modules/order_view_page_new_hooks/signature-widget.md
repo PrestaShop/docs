@@ -5,7 +5,7 @@ weight: 2
 
 # Signature card 
 
-## displayBackOfficeOrderActions hook
+## displayAdminOrderSide hook
 
 We use this hook to display scanned customer signature.
 
@@ -502,7 +502,7 @@ and also add the missing `use` statements for new classes.
     /**
      * Displays customer's signature.
      */
-    public function hookDisplayBackOfficeOrderActions(array $params)
+    public function hookDisplayAdminOrderSide(array $params)
     {
         /** @var OrderSignatureRepository $signatureRepository */
         $signatureRepository = $this->get(
