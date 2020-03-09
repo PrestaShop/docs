@@ -1284,7 +1284,23 @@ displayAdminOrderMain
 : 
     Available since: {{< minver v="1.7.7" >}}
 
-    This hook displays content in the order view page at the end of the main column
+    This hook displays content in the order view page in the main column under the details view
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
+displayAdminOrderMainBottom
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page at the bottom of the main column
 
     Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 
@@ -1319,11 +1335,27 @@ displayAdminOrderSide
     );
     ```
 
-displayBackOfficeOrderActions->displayAdminOrderSideMiddle
+displayAdminOrderSide
 : 
     Available since: {{< minver v="1.7.7" >}}
 
     This hook displays content in the order view page in the side column under the customer view
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
+displayAdminOrderSideBottom
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page at the bottom of the side column
 
     Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 
@@ -1541,6 +1573,8 @@ displayBackOfficeHeader
     
 displayBackOfficeOrderActions
 : 
+    This hook displays content in the order view page after action buttons (or aliased to side column in migrated page)
+    
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
     
