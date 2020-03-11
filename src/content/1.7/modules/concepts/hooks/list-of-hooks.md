@@ -1062,7 +1062,7 @@ actionWatermark
     
 actionGetAdminOrderButtons
 : 
-    This hook is used to generate the buttons collection on the order view page thanks (see ActionsBarButtonsCollection)
+    This hook is used to generate the buttons collection on the order view page (see ActionsBarButtonsCollection)
 
     Located in: /src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php
 
@@ -1080,7 +1080,7 @@ actionAdminAdminPreferencesControllerPostProcessBefore
 : 
     Available since: {{< minver v="1.7.7" >}}
 
-    On post-process in Admin Preferences', 'This hook is called on Admin Preferences post-process before processing the form
+    This hook is called on Admin Preferences post-process before processing the form
 
     Located in: /src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
 
