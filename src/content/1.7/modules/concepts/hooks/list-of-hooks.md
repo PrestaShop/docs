@@ -1236,7 +1236,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentOrder
 : 
-    **(deprecated since 1.7.7)**
+    **(removed since 1.7.7 in favor of)**
     → `displayAdminOrderTabContent`
 
     Display new elements in Back Office, AdminOrder, panel Order
@@ -1247,7 +1247,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentShip
 : 
-    **(deprecated since 1.7.7)**
+    **(removed since 1.7.7 in favor of)**
     → `displayAdminOrderTabContent`
 
     Display new elements in Back Office, AdminOrder, panel Shipping
@@ -1274,7 +1274,7 @@ displayAdminOrderTabContent
     
 displayAdminOrderLeft
 : 
-    **(deprecated since 1.7.7)**
+    **(removed since 1.7.7 in favor of)**
     → `displayAdminOrderMain`
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
@@ -1314,7 +1314,7 @@ displayAdminOrderMainBottom
 
 displayAdminOrderRight
 : 
-    **(deprecated since 1.7.7)**
+    **(removed since 1.7.7 in favor of)**
     → `displayAdminOrderSide`
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
@@ -1369,7 +1369,7 @@ displayAdminOrderSideBottom
 
 displayAdminOrderTabOrder
 : 
-    **(deprecated since 1.7.7)**
+    **(removed since 1.7.7 in favor of)**
     → `displayAdminOrderTabLink`
 
     Display new elements in Back Office, AdminOrder, panel Order
@@ -1380,7 +1380,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderTabShip
 : 
-    **(deprecated since 1.7.7)**
+    **(removed since 1.7.7 in favor of)**
     → `displayAdminOrderTabLink`
 
     Display new elements in Back Office, AdminOrder, panel Shipping
@@ -1573,6 +1573,9 @@ displayBackOfficeHeader
     
 displayBackOfficeOrderActions
 : 
+    **(deprecated since 1.7.7)**
+    → `actionGetAdminOrderButtons`
+
     This hook displays content in the order view page after action buttons (or aliased to side column in migrated page)
     
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
