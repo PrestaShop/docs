@@ -15,7 +15,7 @@ The main reason why the change was needed is on the customer side: Now, there is
 The [bankwire module](https://github.com/PrestaShop/bankwire/pull/18) is an example of how a payment module for PS 1.6 is migrated to PS 1.7 API.<br/>
 A skeleton is also available [on GitHub](https://github.com/PrestaShop/paymentexample). 
 
-Please note that your module won't be listed in payment methods admin page unless it is referenced in [the official list](http://api.prestashop.com/xml/tab_modules_list_17.xml). However you can still configure it through the Module Manager.
+Please note that your module won't be listed in payment methods admin page unless it is referenced in [the official list](https://api.prestashop.com/xml/tab_modules_list_17.xml). However you can still configure it through the Module Manager.
 
 
 Requirements

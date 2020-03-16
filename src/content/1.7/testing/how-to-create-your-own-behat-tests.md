@@ -270,8 +270,8 @@ And when this scenario is run by Behat, everything runs fine, so my calculations
 
 I have again a dedicated scenario that validates the behavior of my free shipping voucher.
 
-[1]: http://behat.org/en/latest/
-[2]: http://docs.behat.org/en/v2.5/guides/1.gherkin.html
+[1]: https://behat.org/en/latest/
+[2]: https://docs.behat.org/en/v2.5/guides/1.gherkin.html
 
 
 

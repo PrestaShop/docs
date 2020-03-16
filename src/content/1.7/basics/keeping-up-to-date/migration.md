@@ -629,7 +629,7 @@ PrestaShop.
 
 It must be enabled from the administration panel before being accessible.
 See the doc for more details:
-http://doc.prestashop.com/display/PS17/Webservice
+https://doc.prestashop.com/display/PS17/Webservice
 
 Once ready, an API will be available for all the ressources enabled for
 your key. Basically, the web-service in another interface for object
@@ -650,8 +650,8 @@ automatic, because:
 
 Useful links:
 
--   [Learning how-to use the webservice API](http://doc.prestashop.com/display/PS16/Using+the+PrestaShop+Web+Service)
--   [Getting a list of all available ressources, ready for import/export](http://doc.prestashop.com/display/PS16/Web+service+one-page+documentation#Webserviceone-pagedocumentation-Availableresources)
+-   [Learning how-to use the webservice API](https://doc.prestashop.com/display/PS16/Using+the+PrestaShop+Web+Service)
+-   [Getting a list of all available ressources, ready for import/export](https://doc.prestashop.com/display/PS16/Web+service+one-page+documentation#Webserviceone-pagedocumentation-Availableresources)
 
 ## Migration modules and services
 
