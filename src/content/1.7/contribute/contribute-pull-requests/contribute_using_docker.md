@@ -20,7 +20,9 @@ In this part, we'll run PrestaShop using docker.
 
 No need to "know" docker, but you should have the "docker" command available in your terminal.
 
-> If you need to install "docker", you can follow their [Documentation](https://docs.docker.com/install/).
+{{% notice note %}}
+If you need to install "docker", you can follow their [Documentation](https://docs.docker.com/install/).
+{{% /notice %}}
 
 ## Install PrestaShop Core
 

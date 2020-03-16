@@ -21,6 +21,7 @@ Now you can create your Pull Request on GitHub.
 Now you can create your Pull Request on GitHub. If you don't know how to do it, you can read [GitHub documentation](https://help.github.com/articles/creating-a-pull-request/).
 
 If you find this process quite complex, the following articles can help you:
+
 - [The SIMPLEST way to make a pull request](https://dev.to/lukegarrigan/the-simplest-way-to-make-a-pull-request-2h61)
 - [The github workflow explained](https://dev.to/mathieuks/introduction-to-github-fork-workflow-why-is-it-so-complex-3ac8)
 

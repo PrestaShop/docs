@@ -137,7 +137,10 @@ git checkout -b "add-emoticons-support"
 
 Then you can start to do changes on PrestaShop Core, and create commits: YaY!
 
-> A good practice is to have meaningful commits labels: it's better to have "corrected type hinting in FooBar" than "fixed stuff". 
+
+{{% notice note %}}
+A good practice is to have meaningful commits labels: it's better to have "corrected type hinting in FooBar" than "fixed stuff". 
+{{% /notice %}}
 
 ### Publish your work
 
