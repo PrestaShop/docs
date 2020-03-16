@@ -141,8 +141,7 @@ Then you can start to do changes on PrestaShop Core, and create commits: YaY!
 
 ### Publish your work
 
-See [next page]({{</* ref "1.7/contribute/create-pull-request.md" */>}})
-
+See [next page] ({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}})
 
 [getting-started-guide]: http://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements.md" >}}

@@ -99,6 +99,4 @@ docker exec prestashop-git sh tests/check_phpunit.sh
 
 ### Publish your work
 
-See [next page]({{</* ref "1.7/contribute/create-pull-request.md" */>}})
-
-
+See [next page] ({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}})
