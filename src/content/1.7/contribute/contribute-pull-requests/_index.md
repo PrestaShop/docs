@@ -31,6 +31,6 @@ If you have trouble using this flow, great help can be found on [help.github.com
 
 This flow is a standard process for open source projects to handle contributions but it can look quite complex. [This article](https://dev.to/mathieuks/introduction-to-github-fork-workflow-why-is-it-so-complex-3ac8) about the flow can help you understand the reasons for each part of the process.
 
-We explain 2 ways to run PrestaShop from the sources:
+We explain 2 ways to run PrestaShop from the sources: using docker or localhost
 
 {{% children %}}
