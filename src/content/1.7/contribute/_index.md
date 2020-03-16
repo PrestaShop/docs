@@ -11,4 +11,4 @@ chapter: true
 
 PrestaShop is a community project, made by hundreds of developers collaborating around the world. You can get involved too!
 
-{{% children %}}
+{{% childr
