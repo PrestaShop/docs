@@ -1062,6 +1062,8 @@ actionWatermark
     
 actionGetAdminOrderButtons
 : 
+    Available since: {{< minver v="1.7.7" >}}
+
     This hook is used to generate the buttons collection on the order view page (see ActionsBarButtonsCollection)
 
     Located in: /src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php
@@ -1236,7 +1238,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentOrder
 : 
-    **(removed since 1.7.7 in favor of)**
+    **(removed in 1.7.7 in favor of)**
     → `displayAdminOrderTabContent`
 
     Display new elements in Back Office, AdminOrder, panel Order
@@ -1247,7 +1249,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentShip
 : 
-    **(removed since 1.7.7 in favor of)**
+    **(removed in 1.7.7 in favor of)**
     → `displayAdminOrderTabContent`
 
     Display new elements in Back Office, AdminOrder, panel Shipping
@@ -1274,7 +1276,7 @@ displayAdminOrderTabContent
     
 displayAdminOrderLeft
 : 
-    **(removed since 1.7.7 in favor of)**
+    **(removed in 1.7.7 in favor of)**
     → `displayAdminOrderMain`
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
@@ -1314,7 +1316,7 @@ displayAdminOrderMainBottom
 
 displayAdminOrderRight
 : 
-    **(removed since 1.7.7 in favor of)**
+    **(removed in 1.7.7 in favor of)**
     → `displayAdminOrderSide`
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
@@ -1369,7 +1371,7 @@ displayAdminOrderSideBottom
 
 displayAdminOrderTabOrder
 : 
-    **(removed since 1.7.7 in favor of)**
+    **(removed in 1.7.7 in favor of)**
     → `displayAdminOrderTabLink`
 
     Display new elements in Back Office, AdminOrder, panel Order
@@ -1380,7 +1382,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderTabShip
 : 
-    **(removed since 1.7.7 in favor of)**
+    **(removed in 1.7.7 in favor of)**
     → `displayAdminOrderTabLink`
 
     Display new elements in Back Office, AdminOrder, panel Shipping
@@ -2217,7 +2219,7 @@ displayAdditionalCustomerAddressFields
 : 
     Available since: {{< minver v="1.7.7" >}}
 
-    This hook allows to display the extra field values added in an address from using hook 'additionalCustomerAddressFields'
+    This hook allows to display extra field values added in an address form using hook 'additionalCustomerAddressFields'
 
     Located in: /themes/classic/templates/customer/_partials/block-address.tpl
 
