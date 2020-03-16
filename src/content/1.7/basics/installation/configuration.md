@@ -49,7 +49,7 @@ Enabling the multistore mode is easy: go to the general preferences page, and pu
 
 You can switch back and forth between single store and multistore mode? In single store mode, only the main store is used.
 
-You can read more about the multistore mode in the PrestaShop 1.6 User Guide: http://doc.prestashop.com/display/PS16/Managing+Multiple+Shops.
+You can read more about the multistore mode in the PrestaShop 1.6 User Guide: https://doc.prestashop.com/display/PS16/Managing+Multiple+Shops.
 
 ## About the configuration files
 

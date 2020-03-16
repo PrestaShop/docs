@@ -175,7 +175,7 @@ git push -f origin develop
 We have added the location of the original project to git so he can retrieve the latest commits, and then we apply this "history"
 to our local project. Note, here we have updated the `develop` branch of the PrestaShop project and the same commands can be used to refresh every git branch.
 
-[getting-started-guide]: http://doc.prestashop.com/display/PS17/Getting+Started
+[getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements.md" >}}
 [compile-assets]: {{< ref "1.7/development/compile-assets.md" >}}
 

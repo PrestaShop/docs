@@ -67,7 +67,7 @@ Javascript files MUST follow the [Airbnb Javascript style guide](https://github.
 
 ## HTML, CSS (Sass), Twig & Smarty code conventions
 
-HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](http://codeguide.co/).
+HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](https://codeguide.co/).
 Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
 
 ## License information
