@@ -78,7 +78,7 @@ All PrestaShop files MUST start with the PrestaShop license block:
 
 ```
 /**
- * 2007-2019 PrestaShop SA and Contributors
+ * 2007-2020 PrestaShop SA and Contributors
  *
  * NOTICE OF LICENSE
  *
@@ -107,7 +107,7 @@ All PrestaShop files MUST start with the PrestaShop license block:
 
 ```
 /**
- * 2007-2019 PrestaShop SA and Contributors
+ * 2007-2020 PrestaShop SA and Contributors
  *
  * NOTICE OF LICENSE
  *
