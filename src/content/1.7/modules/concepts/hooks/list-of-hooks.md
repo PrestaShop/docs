@@ -1578,7 +1578,9 @@ displayBackOfficeOrderActions
     **(deprecated since 1.7.7)**
     → `actionGetAdminOrderButtons`
 
-    This hook displays content in the order view page after action buttons (or aliased to side column in migrated page)
+    This hook displays content in the order view page after action buttons
+
+    Since the version **1.7.7** this hook no longer exists, an alias on the new `displayAdminOrderSide` exists but it is not displayed the same way, so it is recommended to use the dedicated `actionGetAdminOrderButtons` hook to add buttons
     
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
