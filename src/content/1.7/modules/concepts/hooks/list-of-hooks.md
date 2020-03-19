@@ -1071,9 +1071,9 @@ actionGetAdminOrderButtons
     Parameters:
     ```php
     array(
-     'controller' => (OrderController) Symfony controller,
-     'id_order' => (int) Order ID,
-     'actions_bar_buttons_collection' => (ActionsBarButtonsCollection) Collection of ActionsBarButtonInterface
+       'controller' => (OrderController) Symfony controller,
+       'id_order' => (int) Order ID,
+       'actions_bar_buttons_collection' => (ActionsBarButtonsCollection) Collection of ActionsBarButtonInterface
     );
     ```
 
