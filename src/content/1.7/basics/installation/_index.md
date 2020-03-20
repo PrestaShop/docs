@@ -105,6 +105,11 @@ PrestaShop comes in two "flavors":
 **Prefer cloning the repository using git for the development version.**
 
 If you intend to work on PrestaShop itself, we suggest using Git to clone the source code of PrestaShop from the GitHub repository.
+
+**For case-sensitive systems, you need to configure git to ignore case:**
+```shell
+git config --global core.ignorecase true
+```
 {{% /notice %}}
 
 {{% callout %}}
