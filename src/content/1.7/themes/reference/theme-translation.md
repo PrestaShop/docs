@@ -34,11 +34,11 @@ It is best to perform the following steps only after your shop is ready to be ex
 
 1. On your shop, go to International > Translations
 
-	![Translations section in the menu](../img/translations-1.png)
+	![Translations section in the menu](../img/translations-menu.png)
 	
 2. Then go to the "Add / Update a language" section and choose the languages that you wish to support in your theme.
 
-	![Add / Update a language](../img/translations-2.png)
+	![Add / Update a language](../img/translations-add-update-language.png)
 
 ## 3. Translate your theme's custom translations
 
@@ -48,15 +48,15 @@ Again, on the same "Translations" page as in the previous step, go to the "Modif
 * The theme you wish to translate (in this example, we are translating "lifestyle")
 * Language to translate to (eg. "French")
 
-![Modify translations](../img/translations-3.png)
+![Modify translations](../img/translations-modify.png)
 
 When you click on "Modify", a new page opens up that allows you to translate your theme's wordings. On the left column, go to "Shop" and "your theme name" ("Lifestyle" in this example).
 
-![Translation tree](../img/translations-4.png)
+![Translation tree](../img/translations-tree.png)
 
 A form appears on the right, showing all the customized wordings that you added in the `.tpl` files. 
 
-![Translation form](../img/translations-5.png)
+![Translation form](../img/translations-form.png)
 
 At this point, all you need to do is translate them, then redo the process for each one of the languages you want to translate your theme in.
 
@@ -64,7 +64,7 @@ At this point, all you need to do is translate them, then redo the process for e
 
 Once all translations are done, you now need to export all of the wordings that you want to include in your theme. For this, go back to the "Translations" page, then scroll to the "Export a language" section:
 
-![Export a language](../img/translations-5.png)
+![Export a language](../img/translations-export-language.png)
 
 Once the .zip file has been downloaded, extract it and add this folder to your theme's translations folder. This way, when you will export your theme, translations will be included with it.
 
@@ -74,10 +74,10 @@ After all the previous steps have been performed, all that's left to do is expor
 
 1. On your shop, go to Design > Theme & logo.
 
-	![Theme and logo in the menu](../img/translations-6.png)
+	![Theme and logo in the menu](../img/translations-theme-and-logo.png)
 
 2. In this page, on the top right corner, click on the "Export current theme" button.
 
-	![Export current theme button](../img/translations-7.png)
+	![Export current theme button](../img/translations-export-current-theme.png)
 
 After this step, the theme will be zipped an ready, and will include the translations that we added before. To verify it, just unzip the zip file and check that all the files are present.
