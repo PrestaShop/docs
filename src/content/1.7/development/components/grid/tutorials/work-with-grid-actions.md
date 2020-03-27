@@ -101,7 +101,7 @@ class Mymodule extends Module
         /** @var \PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinition */
         $gridDefinition = $params['definition'];
 
-        $gridDefinition->getGridActions()->add(
+        $gridDefinition->getGridActions()
             ->add(
                 (new LinkGridAction('new_action'))
                     ->setName($this->trans('New action', [], 'MyModule.Admin.Actions'))
