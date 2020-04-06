@@ -42,7 +42,7 @@ We use [Webpack](https://webpack.js.org/) to compile assets. You only need NodeJ
     New theme     | `cd admin-dev/themes/new-theme/`
     FO Core       | `cd themes/`
     Classic theme | `cd themes/classic/_dev/`
-    
+
 
 2. Run npm install (first time only)
 
@@ -59,7 +59,7 @@ We use [Webpack](https://webpack.js.org/) to compile assets. You only need NodeJ
 ### Build all assets at once
 {{< minver v="1.7.6" title="true" >}}
 
-You can rebuild all the assets at once by executing this command from the project root: 
+You can rebuild all the assets at once by executing this command from the project root:
 
 ```bash
 ./tools/assets/build.sh

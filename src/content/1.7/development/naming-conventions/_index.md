@@ -10,7 +10,7 @@ As with [Coding standards][coding-standards] naming consistency is very importan
 ## Naming conventions
 
 {{% notice note %}}
-At the moment naming conventions strictly applies for Back Office migration only. 
+At the moment naming conventions strictly applies for Back Office migration only.
 {{% /notice %}}
 
 ### Controllers & actions
@@ -35,9 +35,9 @@ For a complete example see code below.
 namespace PrestaShopBundle\Controller\Admin\Sell\Customer;
 
 // Controller name is prefixed with Customer in singular form
-class CustomerController 
+class CustomerController
 {
-    // Index page which is opened when 
+    // Index page which is opened when
     // user clicks "Improve > Sell > Customers" in side menu.
     // It shows list of customers and KPIs.
     public function indexAction()
