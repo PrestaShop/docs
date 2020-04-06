@@ -8,10 +8,10 @@ weight: 10
 
 ## Introduction
 
-In this tutorial we are going to build module which extends Suppliers form 
-(Catalog->Brands & Suppliers->Suppliers->Edit) with the Upload image field.
+In this tutorial we are going to build a module which extends Suppliers form 
+(Catalog -> Brands & Suppliers -> Suppliers -> Edit) with the Upload image field.
 
-We will learn more about the following topics: 
+We will learn more about the following topics:
 
     - how to add `field type` to Symfony form with `FormBuilder`
     - how Symfony renders form fields with `form_rest` / `form_widget`
@@ -26,7 +26,7 @@ We will learn more about the following topics:
 
 ### Composer
 
-We use composer for our classes autoloading.
+We use composer for our classes auto loading.
 
 ```.json
 {
@@ -94,8 +94,8 @@ class demosymfonyforms extends Module
 
 On module installation the following hooks are being registered:
 
-- `action`**Supplier**`FormBuilderModifier` - for adding new  column to `Suppliers` form.
-- `actionAfterUpdate`**Supplier**`FormHandler` - to upload an image when `Suppliers` form is submitted.
+- `actionSupplierFormBuilderModifier` - for adding new  column to `Suppliers` form.
+- `actionAfterUpdateSupplierFormHandler` - to upload an image when `Suppliers` form is submitted.
 
 ```php
     public function install()
