@@ -26,7 +26,7 @@ We will learn more about the following topics:
 
 ### Composer
 
-We use composer for our classes auto loading.
+We use composer for our classes autoloading. Let's create `composer.json` file inside module:
 
 ```.json
 {
