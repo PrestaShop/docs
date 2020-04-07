@@ -1,6 +1,6 @@
 ---
 title: Extending Symfony form with upload image field tutorial
-weight: 10
+weight: 3
 ---
 
 # Extending Symfony form with upload image field tutorial
@@ -114,4 +114,3 @@ On module installation the following hooks are being registered:
         return parent::uninstall();
     }
 ``` 
-
