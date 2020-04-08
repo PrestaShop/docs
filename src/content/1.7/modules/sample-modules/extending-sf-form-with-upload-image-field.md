@@ -12,5 +12,10 @@ aliases:
 ## Introduction
 
 In this tutorial we are going to build a module which extends `Suppliers` form (SELL -> Catalog -> Brands & Suppliers).
+You will learn how to:
 
+- create Symfony controller
+- repository classes
+- Symfony entity
+- Uploader class
  
