@@ -11,3 +11,6 @@ aliases:
 
 ## Introduction
 
+In this tutorial we are going to build a module which extends `Suppliers` form (SELL -> Catalog -> Brands & Suppliers).
+
+ 
