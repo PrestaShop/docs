@@ -2,6 +2,8 @@
 title: Core changes
 weight: 60
 chapter: true
+aliases:
+    - /1.7/modules/core_updates/
 ---
 
 # Core changes

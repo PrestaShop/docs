@@ -1,6 +1,8 @@
 ---
 title: Order view page new hooks demo tutorial 
 weight: 2
+aliases:
+    - /1.7/modules/sample_modules/order_view_page_new_hooks/
 ---
 
 # Order view page new hooks demo tutorial

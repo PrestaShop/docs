@@ -1,6 +1,8 @@
 ---
 title: Signature card 
 weight: 2
+aliases:
+    - /1.7/modules/sample_modules/order_view_page_new_hooks/signature-widget/
 ---
 
 # Signature card 
