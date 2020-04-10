@@ -5,7 +5,7 @@ aliases:
     - /1.7/modules/sample_modules/grid-and-identifiable-object-form-hooks-usage
 ---
 
-# Grid and identifiable object form hooks usage example
+# Extending Symfony form with upload image field
 {{< minver v="1.7.7" title="true" >}}
 
 
@@ -180,7 +180,7 @@ class Installer
 }
 ```
 
-Let's use Installer class inside the main module class
+Let's use Installer class inside the main module class.
 
 ```php
     /**
@@ -208,4 +208,179 @@ Let's use Installer class inside the main module class
     }
 ```
 
- 
+Let's create `SupplierExtraImage` entity class:
+
+```php
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoExtendSymfonyForm\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="PrestaShop\Module\DemoExtendSymfonyForm\Repository\SupplierExtraImageRepository")
+ */
+class SupplierExtraImage
+{
+    /**
+     * @var int
+     *
+     * @ORM\Id
+     * @ORM\Column(name="id_extra_image", type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * @ORM\Column(name="id_supplier", type="integer")
+     */
+    private $supplierId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string")
+     */
+    private $imageName;
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSupplierId()
+    {
+        return $this->supplierId;
+    }
+
+    /**
+     * @param mixed $supplierId
+     */
+    public function setSupplierId($supplierId): void
+    {
+        $this->supplierId = $supplierId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageName(): string
+    {
+        return $this->imageName;
+    }
+
+    /**
+     * @param string $imageName
+     */
+    public function setImageName(string $imageName): void
+    {
+        $this->imageName = $imageName;
+    }
+
+}
+```
+
+Let's create `SupplierExtraImageRepository` class:
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace PrestaShop\Module\DemoExtendSymfonyForm\Repository;
+
+use Doctrine\ORM\EntityRepository;
+use PrestaShop\Module\DemoExtendSymfonyForm\Entity\SupplierExtraImage;
+
+/**
+ * Class SupplierExtraImageRepository
+ * @package PrestaShop\Module\DemoExtendSymfonyForm\Repository
+ */
+class SupplierExtraImageRepository extends EntityRepository
+{
+    /**
+     * @param $supplierId
+     * @param $imageName
+     */
+    public function upsertSupplierImageName($supplierId, $imageName)
+    {
+        /** @var SupplierExtraImage $supplierExtraImage */
+        $supplierExtraImage = $this->findOneBy(['supplierId' => $supplierId]);
+        if (!$supplierExtraImage) {
+            $supplierExtraImage = new SupplierExtraImage();
+            $supplierExtraImage->setSupplierId($supplierId);
+        }
+        $supplierExtraImage->setImageName($imageName);
+
+        $em = $this->getEntityManager();
+        $em->persist($supplierExtraImage);
+        $em->flush();
+    }
+
+    /**
+     * @param SupplierExtraImage $supplierExtraImage
+     */
+    public function deleteExtraImage(SupplierExtraImage $supplierExtraImage)
+    {
+        $em = $this->getEntityManager();
+        if ($supplierExtraImage) {
+            $em->remove($supplierExtraImage);
+            $em->flush();
+        }
+    }
+}
+```
+
+Let's create hook `hookActionSupplierFormBuilderModifier`:
+
+```php
+    /**
+     * @param array $params
+     */
+    public function hookActionSupplierFormBuilderModifier(array $params)
+    {
+        /** @var SupplierExtraImageRepository $supplierExtraImageRepository */
+        $supplierExtraImageRepository = $this->get(
+            'prestashop.module.demoextendsymfonyform.repository.supplier_extra_image_repository'
+        );
+
+        $translator = $this->getTranslator();
+        /** @var FormBuilderInterface $formBuilder */
+        $formBuilder = $params['form_builder'];
+        $formBuilder
+            ->add('upload_image_file', FileType::class, [
+                'label' => $translator->trans('Upload image file', [], 'Modules.DemoExtendSymfonyForm'),
+                'required' => false,
+            ]);
+
+        /** @var SupplierExtraImage $supplierExtraImage */
+        $supplierExtraImage = $supplierExtraImageRepository->findOneBy(['supplierId' => $params['id']]);
+        if ($supplierExtraImage && file_exists(_PS_SUPP_IMG_DIR_ . $supplierExtraImage->getImageName())) {
+            $formBuilder
+                ->add('image_file', CustomContentType::class, [
+                    'required' => false,
+                    'template' => '@Modules/demoextendsymfonyform2/src/View/upload_image.html.twig',
+                    'data' => [
+                        'supplierId' => $params['id'],
+                        'imageUrl' => self::SUPPLIER_EXTRA_IMAGE_PATH . $supplierExtraImage->getImageName(),
+                    ],
+                ]);
+        }
+
+    }
+```
