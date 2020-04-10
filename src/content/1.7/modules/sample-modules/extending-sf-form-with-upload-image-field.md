@@ -518,7 +518,19 @@ class SupplierExtraImageUploader implements ImageUploaderInterface
 }
 ```
 
-Let's create hook `hookActionAfterUpdateSupplierFormHandler`:
+Let's create hook `hookActionAfterUpdateSupplierFormHandler` inside main module class:
+
+```php
+    /**
+     * @param array $params
+     */
+    public function hookActionAfterUpdateSupplierFormHandler(array $params)
+    {
+        $this->uploadImage($params);
+    }
+```
+
+Let's create one more hook `hookActionAfterCreateSupplierFormHandler` inside main module class:
 
 ```php
     /**
