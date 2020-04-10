@@ -542,4 +542,26 @@ Let's create one more hook `hookActionAfterCreateSupplierFormHandler` inside mai
     }
 ```
 
+Let's add `UploadImage` function to main class:
+
+```php
+    /**
+     * @param array $params
+     */
+    private function uploadImage(array $params): void
+    {
+        /** @var ImageUploaderInterface $supplierExtraImageUploader */
+        $supplierExtraImageUploader = $this->get(
+            'prestashop.module.demoextendsymfonyform.uploader.supplier_extra_image_uploader'
+        );
+
+        /** @var UploadedFile $uploadedFile */
+        $uploadedFile = $params['form_data']['upload_image_file'];
+
+        if ($uploadedFile instanceof UploadedFile) {
+            $supplierExtraImageUploader->upload($params['id'], $uploadedFile);
+        }
+    }
+```
+
 
