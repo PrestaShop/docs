@@ -180,5 +180,32 @@ class Installer
 }
 ```
 
+Let's use Installer class inside the main module class
+
+```php
+    /**
+     * @return bool
+     */
+    public function install()
+    {
+        if (!parent::install()) {
+            return false;
+        }
+
+        $installer = new Installer();
+
+        return $installer->install($this);
+    }
+
+    /**
+     * @return bool
+     */
+    public function uninstall()
+    {
+        $installer = new Installer();
+
+        return $installer->uninstall() && parent::uninstall();
+    }
+```
 
  
