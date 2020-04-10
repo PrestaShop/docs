@@ -384,3 +384,15 @@ Let's create hook `hookActionSupplierFormBuilderModifier`:
 
     }
 ```
+
+Let's create hook `hookActionAfterUpdateSupplierFormHandler`:
+
+```php
+    /**
+     * @param array $params
+     */
+    public function hookActionAfterUpdateSupplierFormHandler(array $params)
+    {
+        $this->uploadImage($params);
+    }
+```
