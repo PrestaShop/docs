@@ -433,8 +433,6 @@ class SupplierExtraImageUploader implements ImageUploaderInterface
         $destination = _PS_SUPP_IMG_DIR_ . $originalImageName;
         $this->uploadFromTemp($tempImageName, $destination);
         $this->supplierExtraImageRepository->upsertSupplierImageName($supplierId, $originalImageName);
-
-
     }
 
     /**
