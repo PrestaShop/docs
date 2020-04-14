@@ -62,7 +62,7 @@ class DemoExtendSymfonyForm2 extends Module
 }
 ```
 
-Let's create Installer class:
+Let's create Installer class responsible for hooks registration and database management:
 
 ```php
 declare(strict_types=1);
@@ -180,7 +180,8 @@ class Installer
 }
 ```
 
-Let's use Installer class inside the main module class.
+Let's use `Installer` class inside the main module class by adding code snippet 
+below to `DemoExtendSymfonyForm2` class.
 
 ```php
     /**
@@ -346,7 +347,7 @@ class SupplierExtraImageRepository extends EntityRepository
 }
 ```
 
-Let's create hook `hookActionSupplierFormBuilderModifier`:
+Let's create hook `hookActionSupplierFormBuilderModifier` function inside Main module class:
 
 ```php
     /**
@@ -550,7 +551,7 @@ Let's create one more hook `hookActionAfterCreateSupplierFormHandler` inside mai
     /**
      * @param array $params
      */
-    public function hookActionAfterUpdateSupplierFormHandler(array $params)
+    public function hookActionAfterCreateSupplierFormHandler(array $params)
     {
         $this->uploadImage($params);
     }
