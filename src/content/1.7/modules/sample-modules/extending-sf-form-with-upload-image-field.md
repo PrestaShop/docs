@@ -12,7 +12,17 @@ aliases:
 ## Introduction
 
 In this tutorial we are going to build a module which extends `Suppliers` form 
-(SELL -> Catalog -> Brands & Suppliers). You will learn how to create:
+(SELL -> Catalog -> Brands & Suppliers). This module will address the following need
+"I'd like to add an 'upload image' field to the Supplier Add/Edit form because I want to
+display a new logo for each supplier on my shop. So this new field must allow me to add,
+edit and delete image files linked to a supplier. Obviously I expect the uploaded files
+to be stored in a consistent way with how PrestaShop usually stores such files."
+
+We are going to create the module to address this need by using PrestaShop hooks in
+the Add/Edit Supplier Back-Office page and we will follow some software development best
+practices such as SOLID principles to make our code as clear and maintainable as possible.
+
+You will learn how to create:
 
 - Main module class
 - Installer class
