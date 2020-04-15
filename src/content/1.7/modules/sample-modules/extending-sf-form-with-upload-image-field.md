@@ -361,7 +361,10 @@ class SupplierExtraImageRepository extends EntityRepository
 }
 ```
 
-Let's create hook `hookActionSupplierFormBuilderModifier` function inside Main module class:
+Let's create hook `hookActionSupplierFormBuilderModifier` 
+function inside Main module class. This is a hook available for [CRUD forms]
+(https://devdocs.prestashop.com/1.7/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage/) in
+PrestaShop Symfony pages.
 
 ```php
     /**
