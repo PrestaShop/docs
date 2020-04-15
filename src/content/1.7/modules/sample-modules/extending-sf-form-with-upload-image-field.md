@@ -390,6 +390,8 @@ PrestaShop Symfony pages.
         /** @var SupplierExtraImage $supplierExtraImage */
         $supplierExtraImage = $supplierExtraImageRepository->findOneBy(['supplierId' => $params['id']]);
         if ($supplierExtraImage && file_exists(_PS_SUPP_IMG_DIR_ . $supplierExtraImage->getImageName())) {
+            // When an image is already registered for this supplier, we add to the Symfony an
+            // 'image_file' to provide a preview input to BO user and also provide a "delete button"
             $formBuilder
                 ->add('image_file', CustomContentType::class, [
                     'required' => false,
