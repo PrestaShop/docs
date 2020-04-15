@@ -20,7 +20,7 @@ to be stored in a consistent way with how PrestaShop usually stores such files."
 
 We are going to create the module to address this need by using PrestaShop hooks in
 the Add/Edit Supplier Back-Office page and we will follow some software development best
-practices such as SOLID principles to make our code as clear and maintainable as possible.
+practices such as SOLID principles to make our code as maintainable as possible !
 
 You will learn how to create:
 
