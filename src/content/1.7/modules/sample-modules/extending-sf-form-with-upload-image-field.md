@@ -38,6 +38,8 @@ Let's create main module class `DemoExtendSymfonyForm2`
 
 ```php
 <?php
+// since this module is compatible with PS 1.7.7 and later, we
+// can use PHP7 strict types because PHP5 support has been dropped for PS 1.7.7
 declare(strict_types=1);
 
 // use statements
