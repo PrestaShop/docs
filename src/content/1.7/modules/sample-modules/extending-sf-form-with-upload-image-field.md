@@ -24,13 +24,13 @@ practices such as SOLID principles to make our code as clear and maintainable as
 
 You will learn how to create:
 
-- Main module class
-- Installer class
-- Create Symfony controller
-- Doctrine entity
-- Repository class
-- Image Uploader class
-- Twig View template
+- Main module class: main module entry point and hook entry point
+- Installer class: responsible for module installation and uninstallation process
+- Create Symfony controller: needed as we add a new "delete image" controller action
+- Doctrine entity: this model is responsible for the image data persistence
+- Repository class: this model is for image database search and retrieve
+- Image Uploader class: this class is responsible for image upload process
+- Twig View template: needed for display
 
 ### Main module class
 
