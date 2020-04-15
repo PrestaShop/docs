@@ -219,7 +219,9 @@ below to `DemoExtendSymfonyForm2` class.
     }
 ```
 
-Let's create `SupplierExtraImage` entity class:
+Let's create `SupplierExtraImage` entity class. We use [Doctrine]
+ (https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/) 
+ which is available for PrestaShop modules since version 1.7.6.
 
 ```php
 declare(strict_types=1);
