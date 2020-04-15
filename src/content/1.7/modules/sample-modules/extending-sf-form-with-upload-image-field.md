@@ -380,6 +380,7 @@ PrestaShop Symfony pages.
         $translator = $this->getTranslator();
         /** @var FormBuilderInterface $formBuilder */
         $formBuilder = $params['form_builder'];
+        // we add to the Symfony form an `upload_image_file` field that will be used by BO user to upload image files
         $formBuilder
             ->add('upload_image_file', FileType::class, [
                 'label' => $translator->trans('Upload image file', [], 'Modules.DemoExtendSymfonyForm'),
