@@ -45,7 +45,7 @@ declare(strict_types=1);
 if (!defined('_PS_VERSION_')) {
     exit;
 }
-
+// needed as use Composer to autoload this module
 require_once __DIR__.'/vendor/autoload.php';
 
 /**
