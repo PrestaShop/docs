@@ -166,6 +166,17 @@ secured by redirecting it to HTTPS.
 public $ssl = true;
 ```
 
+### Ajax request
+
+When you call controller via ajax, you nedd to add ajax parameter in teh url.
+
+```php
+Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337, 'ajax'=>true);
+```
+
+* Without URL rewriting: `http://<shop_domain>/index.php?idPayment=1337&fc=module&module=cheque&controller=validation&id_lang=1&ajax=true`
+* With URL rewriting: `http://<shop_domain>/en/module/cheque/validation?idPayment=1337&ajax=true`
+
 ## Addendum: Execution order of the controller’s functions
 
   * **__construct()**: Sets all the controller’s member variables.
