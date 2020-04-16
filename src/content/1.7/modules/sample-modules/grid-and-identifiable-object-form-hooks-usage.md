@@ -35,7 +35,6 @@ On module installation the following hooks are being registered:
 - `actionAfterUpdate`**Customer**`FormHandler` - to execute the update process of added field from the module.
 
 ```php
-
 public function install()
 {
     return parent::install() &&
@@ -65,6 +64,7 @@ function `getBlockPrefix` to retrieve the unique id
 #### Extending grid definition and filters
 
 ```php
+
 use PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinitionInterface;
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ToggleColumn;
 use PrestaShopBundle\Form\Admin\Type\YesAndNoChoiceType;
@@ -314,3 +314,6 @@ private function updateCustomerReviewStatus(array $params)
 when we created the switch type form we named it `is_allowed_for_review`. By using the same name we can get the state (on or off).
 This hook receives from `$params` the form data, that you can retrieve like this: `$params['form_data']`.
 All the form data is available here, including `is_allowed_for_review` data which comes from the switch.
+
+You can find example module here: 
+https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform2
