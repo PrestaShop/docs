@@ -1,7 +1,7 @@
 ---
 title: How to create your own web acceptance tests
 menuTitle: Creating your own web acceptance tests
-weight: 25
+weight: 30
 ---
 
 # How to create your own web acceptance tests or add tests to PrestaShop
