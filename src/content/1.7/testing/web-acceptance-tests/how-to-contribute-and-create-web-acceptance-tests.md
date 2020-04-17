@@ -35,7 +35,7 @@ Using inheritance in final classes makes it possible to use the generic and abst
 
 There is a main mother class, called `CommonPage`, located at the root of the `pages` folder.
 
-We have another level of heritage in each root folder (`BO` and `FO`) through the classes `BOmainPage.js` and `FOMainPage.js`. Of course, `CommonPage` is not meant to be instantiated (it’s kind of abstract class) !
+We have another level of inheritance in each root folder (`BO` and `FO`) through the classes `BOmainPage.js` and `FOMainPage.js`. Of course, `CommonPage` is **not** meant to be instantiated (it’s kind of an abstract class) !
 
 When you create new page classes, make sure to make them inherit from their respective `XXMainPage` to be sure to be able to use both generic methods and specific methods.
 
@@ -46,7 +46,7 @@ Examples:
 - Checkout page (which is part of the FO) extends from `FOBasePage`  
 
 #### Methods
-Methods inside a page class must be properly named about their primary function. Remember to KISS (Keep it stupid simple: https://en.wikipedia.org/wiki/KISS_principle) ! You should be able to understand what a method does just by looking at its name.
+Methods inside a page class must be properly named about their primary function. Remember to [KISS](https://en.wikipedia.org/wiki/KISS_principle) ! You should be able to understand what a method does just by looking at its name.
 
 Methods inside a page class **CANNOT USE** the `expect` keyword or any kind of asserting function, since their sole purpose is to interact with the page they’re linked with. They don’t validate anything per se, they just expose functionalities. 
 To validate a behavior in your test logic, your methods can return booleans, integers (number of lines, elements, etc), strings, objects... It’s up to you.
@@ -65,13 +65,13 @@ Examples:
 #### Selectors
 Selectors are used on every page and are stored as attributes of the class. They should be named following this convention:
 
-*nametype\* in `camelCase`.
+**nameType*** in `camelCase`.
 
 For example, a button used to submit the main form in the order page should be named: `submitMainFormButton`.
 
 
 #### Types
-Each selector must belong to a certain type. The whole list (not exhaustive) is here:
+Each selector must belong to a certain type. Here is a non-exhaustive list:
 - button
 - link
 - block
@@ -105,17 +105,17 @@ We currently have 2 campaigns implemented:
 - **Functional**: it’s the biggest and most important campaign. Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), CRUD (Create Read Update Delete) of items (Orders, Customers, Products, and so on), settings changes…
 
 We plan on implementing 2 more campaigns:
-- **End to end**: its purpose is to check that popular user paths are working as intended. It will walk through the application and mimic a real user working on their daily routines as a merchant: checking products, generating invoices, creating a customer account and an order, adding a special voucher for a specific user, etc. The selected user paths will be chosen by the Product Team. Thanks to their merchants and agencies interviews, they have a pretty good idea of what a merchant does every day and how they use the software.
-- **Regression**: a test campaign tailored to only target majors and critical issues in the few last versions of PrestaShop, to make sure they don’t come back (hence the name).
+- **End to end**: its purpose is to check that popular user paths are working as intended. It will walk through the application and mimic a real user working on their daily routines as a merchant: checking products, generating invoices, creating a customer account, and an order, adding a special voucher for a specific user, etc. The selected user paths will be chosen by the Product Team. Thanks to their merchants and agencies interviews, they have a pretty good idea of what merchants do every day and how they use the software.
+- **Regression**: a test campaign tailored to only target major and critical issues in the few last versions of PrestaShop, to make sure they don’t come back (hence the name).
 
 #### Mocha and Mochawesome
-Mocha (https://mochajs.org/) is our test runner (a framework that reads our test code and runs it). We use it in coordination with Mochawesome (https://www.npmjs.com/package/mochawesome), a plugin for Mocha. Mochawesome produces a full JSON report in addition to a beautiful HTML report (which we don’t really use). The JSON file is sent to our Nightly Board, it is then inserted into the database to let visitors browse reports and visualize statistics.
+[Mocha](https://mochajs.org/) is our test runner (a framework that reads our test code and runs it). We use it in coordination with [Mochawesome](https://www.npmjs.com/package/mochawesome), a plugin for Mocha. Mochawesome produces a full JSON report in addition to a beautiful HTML report (which we don’t really use). The JSON file is sent to our [Nightly Board](https://nightly.prestashop.com/), it is then inserted into the database to let visitors browse reports and visualize statistics.
 
 #### Lambda function (Why ?)
-Using lambda functions in mocha is discouraged (https://mochajs.org/#arrow-functions). They bind `this` to the scope of the lambda function, making it impossible to use internal Mocha methods and objects. Since we use the Mocha context to store our Page Objects, we strongly advise you to use the normal `function()` syntax. 
+Using lambda functions in mocha is [discouraged](https://mochajs.org/#arrow-functions). They bind `this` to the scope of the lambda function, making it impossible to use internal Mocha methods and objects. Since we use the Mocha context to store our Page Objects, we strongly advise you to use the normal `function()` syntax.  
 
 #### Utils
-The utils directory contain files that are necessary to run tests
+The utils directory contain files that are necessary to run tests.
 
 ##### Globals
 This file contains all global variables that can be used in test files, pages and common tests.
@@ -123,21 +123,21 @@ This file contains all global variables that can be used in test files, pages an
 The description of each variable in this file can be found in README.md.
 
 ##### Browser helper
-The helper is used to centralize browser and tab functions called in all tests. 
+This helper file is used to centralize the browser and tab functions called in all tests. 
 This approach has one goal : to have the same browser’s configuration everywhere and of course to facilitate maintenance.
 
 The functions that exist (for now) in this file are the following : 
-- `createBrowser` : used to create a browser with the global configuration
-- `closeBrowser` : usually called at the end of a test, to close the browser created for the test
-- `newTab` : allow us to open a new tab in a browser
-- `setDownloadBehavior` : employed only for tests that contain files downloading
+- `createBrowser`: used to create a browser with the global configuration
+- `closeBrowser`: usually called at the end of a test, to close the browser created for the test
+- `newTab`: allow us to open a new tab in a browser
+- `setDownloadBehavior`: used only for tests that contain files downloading
 
-Note that all these functions are used at mocha hooks functions in the global describe but can be called somewhere else.
+Note that all these functions are used at mocha hooks functions in the global `describe` but can be called somewhere else.
 
 ##### Files
 Some of our tests need to create files (ex: Create file in BO), or to check some text in a PDF file (ex: Create and check invoice). For this specific need, we use functions in `Files.js`.
 
-When a test is finished, all created/downloaded files are deleted using a function from the same file : ‘deleteFile` as part of the cleaning behind approach.
+When a test is finished, all created/downloaded files are deleted using a function from the same file : `deleteFile` as part of the "cleaning behind" approach.
 
 #### Initialize pages
 In each and every test, we initialize the pages that will be needed. The initialization is done in a function called `init` which returns an object with multiple entries (pages) of pages.
@@ -157,7 +157,7 @@ const init = async function () {
 ```
   
 #### Expect
-We use the `expect` keyword from the `chai` library (https://www.chaijs.com/api/bdd/). This allows us to write assertions in a much more readable way. You can use whatever way to assert you want/need. Don’t forget that you can use the second argument of `expect` to log out a better error message when your assertion fails.
+We use the `expect` keyword from the [Chai library](https://www.chaijs.com/api/bdd/). This allows us to write assertions in a much more readable way. You can use whatever way to assert you want/need. Don’t forget that you can use the second argument of `expect` to log out a better error message when your assertion fails.
 
 Example :
 
@@ -167,13 +167,13 @@ await expect(isCustomerConnected, ‘Customer is disconnected in FO’).to.be.tr
 ```  
 
 #### Test identifier
-Our team thinks it’s very important to be able to follow how tests results evolve. So it’s been decided to add a unique identifier to every step in the test.
+Our team thinks it’s very important to be able to follow how tests results evolve, so it’s been decided to add a unique identifier to every step in the test.
 
 Why? To be able to identify each and every test and compare from one report to another, to know how the results change.
 
 For example, you could have 10 failed tests one day, and 10 the day after. How do you know if it’s the same 10 tests failing, or another distribution (for example, 5 tests fixed, 5 other tests failing)? With this system we can calculate the evolution and show it on the Board.
 
-For that, we first created a base context for each and every test file, and after that we make a call to the function `addContextItem` with the unique value inside the test file. 
+We first create a base context for each and every test file, and then we make a call to the function `addContextItem` with the unique value inside the test file. 
 
 Example :
 
@@ -209,5 +209,5 @@ The only assumption we have to make is the presence of certain items like Orders
 If you need to rely on the fixtures too, make sure to use the description of the objects you’re looking for in the `data` folder. If it’s not complete, you can expand it and make a Pull Request, we’ll be happy to improve our datasets !
 
 #### Faker
-When we need to create new items, we rely on Faker(https://github.com/marak/Faker.js/) to create random data. 
+When we need to create new items, we rely on [Faker](https://github.com/marak/Faker.js/) to create random data.  
 This helps us make sure we’re testing with randomized sets of data and covering a lot of cases. It’s very important to check the specifications before to make sure you’re properly setting up your faker : input length, authorized characters, range of dates/values, etc.
