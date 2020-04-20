@@ -30,7 +30,7 @@ HTTP has several methods that can perform processing on data as defined in the R
 
 ## Enabling & Creating an access to the webservice
 
-Reach the [dedicated page]({{< ref "1.7/development/webservice/tutorials/provide-access" >}}).
+Reach the [dedicated page]({{< ref "1.7/development/webservice/tutorials/1-creating-access" >}}).
 
 ## Accessing the webservice
 
@@ -84,7 +84,6 @@ Each API comes with two schema APIs:
 Both calls are very much alike, only synopsis contains more information about the data format and types:
 
 ```xml
-
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
     <address>
