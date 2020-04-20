@@ -1,0 +1,65 @@
+---
+title: 5 - Update a resource
+weight: 5
+---
+
+# Update a resource
+
+### Update workflow
+
+The update workflow is quite similar to the [creation workflow](/1.7/development/webservice/tutorials/6-create-resource/#creation-workflow), the main difference is that the initial input is not a blank XML but an existing one, so we use the `get()` method to get a prefilled XML, and then we can update its fields.
+
+{{< figure src="../../../img/update-resource.png" title="Update Resource via Webservice" >}}
+
+> You can update this schema using the [source XML file](/schemas/1.7/update-resource.xml) importable in services like [draw.io](https://draw.io).
+
+### Retrieve the resource
+
+```php
+try {
+    // creating web service access
+    $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
+ 
+    // The key-value array
+    $opt = [
+        'resource' => 'customers',
+        'id' => 2, // Here we use hard coded value but of course you could get this ID from a request parameter or anywhere else
+    ];
+
+    // call to retrieve customer with ID 2
+    $xml = $webService->get($opt);
+} catch (PrestaShopWebserviceException $ex) {
+    // Shows a message related to the error
+    echo 'Other error: <br />' . $ex->getMessage();
+}
+```
+
+### Fill the schema and update resource
+
+Quite similar to the resource creation, except we can update only some fields (since the other are already present) and we use the `edit()` method.
+
+| Key          | Value                  |
+|--------------|------------------------|
+| **resource** | customers              |
+| **id**       | *resource_id* (int)    |
+| **putXml**   | *XML content* (string) |
+
+```php
+$customerFields = $xml->customer->children();
+$customerFields->firstname = 'John';
+$customerFields->lastname = 'DOE';
+
+$opt = [
+    'resource' => 'customers',
+    'id' => (int) $customerFields->id,
+    'putXml' => $xml->asXML(),
+];
+
+$updatedXml = $webService->edit($opt);
+$customerFields = $updatedXml->customer->children();
+echo 'Customer updated with ID ' . $customerFields->id . PHP_EOL;
+```
+
+{{% notice warning %}}
+This example voluntarily deals with simple resource that doesn't have complicated relationship or special webservice fields, this way we can use the API result as an XML input directly. Some more complex resources (categories, products, ...) are not as straight forward, and you'll need to use a less generic code to clean the extra fields or copy them into a blank schema.
+{{% /notice %}}
