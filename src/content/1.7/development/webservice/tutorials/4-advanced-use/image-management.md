@@ -2,7 +2,7 @@
 title: Image management
 aliases:
   - /1.7/development/webservice/tutorials/change_product_image/
-weight: 1
+weight: 2
 ---
 
 # Image management
