@@ -1,5 +1,6 @@
 ---
-title: 4 - Advanced use
+title: Advanced use
+menuTitle: 4 - Advanced use
 chapter: true
 weight: 4
 ---

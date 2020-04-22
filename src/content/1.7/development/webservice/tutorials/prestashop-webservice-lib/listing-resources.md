@@ -1,5 +1,6 @@
 ---
-title: 2 - Listing resources
+title: Listing resources
+menuTitle: 2 - Listing resources
 weight: 2
 ---
 

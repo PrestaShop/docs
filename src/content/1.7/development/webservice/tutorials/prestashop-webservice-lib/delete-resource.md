@@ -1,5 +1,6 @@
 ---
-title: 6 - Delete a resource
+title: Delete a resource
+menuTitle: 6 - Delete a resource
 weight: 6
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: 4 - Create a resource
+title: Create a resource
+menuTitle: 4 - Create a resource
 weight: 4
 ---
 

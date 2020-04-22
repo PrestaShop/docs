@@ -1,5 +1,6 @@
 ---
-title: 3 - Retrieve a resource
+title: Retrieve a resource
+menuTitle: 3 - Retrieve a resource
 weight: 3
 ---
 

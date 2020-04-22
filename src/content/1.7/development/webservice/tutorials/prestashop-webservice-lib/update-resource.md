@@ -1,5 +1,6 @@
 ---
-title: 5 - Update a resource
+title: Update a resource
+menuTitle: 5 - Update a resource
 weight: 5
 ---
 

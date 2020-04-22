@@ -1,5 +1,5 @@
 ---
-title: 1 - Creating access to the Webservice
+title: Creating access to the Webservice
 menuTitle: 1 - Creating access
 aliases:
   - /1.7/development/webservice/tutorials/provide-access/

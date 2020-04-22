@@ -1,13 +1,14 @@
 ---
-title: 1 - Accessing the Webservice
+title: Setup library
+menuTitle: 1 - Setup library
 weight: 1
 ---
 
-# PrestaShop Webservice lib
+# Setup library
 
 Now that your webservice is configured and accessible you might want to use it. To help you perform requests on your webservice, you can use the [PHP library for PrestaShop Webservices](https://github.com/PrestaShop/PrestaShop-webservice-lib).
 
-## Install the lib
+## Install the library
 
 ### Prerequisites
 

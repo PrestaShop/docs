@@ -30,7 +30,7 @@ HTTP has several methods that can perform processing on data as defined in the R
 
 ## Enabling & Creating an access to the webservice
 
-Reach the [dedicated page]({{< ref "1.7/development/webservice/tutorials/1-creating-access" >}}).
+Reach the [dedicated page]({{< ref "1.7/development/webservice/tutorials/creating-access" >}}).
 
 ## Accessing the webservice
 
