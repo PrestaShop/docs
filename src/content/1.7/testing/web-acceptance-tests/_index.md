@@ -7,9 +7,9 @@ chapter: true
 
 # Introduction
 
-Web Acceptance tests work by controlling a browser and using the web interface as a real user.
+Web Acceptance tests work by controlling a browser and using the web interface like a real user.
 
-For that we use:
+We use the following stack:
 
 * [Puppeteer](https://github.com/puppeteer/puppeteer) as automation tool
 * [Mocha](https://mochajs.org/) as test framework

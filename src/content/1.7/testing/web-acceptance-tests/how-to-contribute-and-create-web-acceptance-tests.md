@@ -23,7 +23,7 @@ The name of the class must be simple and linked to the page in PrestaShop. You s
 
 The name of the file is a little different: the main page name is always `index.js`.
 
-Examples:
+Example:
  
 For BO products pages located at `pages/catalog/products/`, we use 2 classes:
 - `index.js` for products listing page 
@@ -120,7 +120,7 @@ The utils directory contain files that are necessary to run tests.
 ##### Globals
 This file contains all global variables that can be used in test files, pages and common tests.
 
-The description of each variable in this file can be found in README.md.
+The description of each variable in this file can be found in [README.md](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/puppeteer/README.md).
 
 ##### Browser helper
 This helper file is used to centralize the browser and tab functions called in all tests. 
