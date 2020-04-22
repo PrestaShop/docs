@@ -163,7 +163,7 @@ Though we’re discussing it just now, MySQL tuning is just as important.
 
 Our intention here is to optimize the instance’s throughput by adding caches.
 
-As for PHP, it allows the service to work as much as possible in memory and avoid disk accesses, hence reducing latency.
+As for PHP, it allows the service to work as much as possible in memory and avoid disk access, hence reducing latency.
 
 #### Caching
 
