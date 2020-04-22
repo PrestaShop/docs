@@ -118,7 +118,7 @@ opcache.validate_timestamps=0
 opcache.revalidate_path=0
 ```
 
-Keep in mind if you deactivate `validate_timestamps` OPCache will never update your code unless you let him know explicitly (either through internal functions or by restarting the webserver).
+Keep in mind if you deactivate `validate_timestamps` OPCache will never update your code unless you let it know explicitly (either through internal functions or by restarting the web server).
 
 
 Also, your favorite ecommerce project made sure it's fully compatible with OPCache.
