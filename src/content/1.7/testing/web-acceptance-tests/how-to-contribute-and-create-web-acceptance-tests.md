@@ -8,34 +8,33 @@ weight: 2
 
 
 ### Architecture
-POM ([Page Object Model](https://martinfowler.com/bliki/PageObject.html), also called Page Object Pattern) is a way to organize your code in a test framework. It encourages you to separate your test logic from your page manipulation logic.
+[Page Object Model](https://martinfowler.com/bliki/PageObject.html) (also called Page Object Pattern) is a way to organize your code in a test framework. It encourages you to separate your test logic from your page manipulation logic.
 
-Our team uses the POM to organize our code: on one side we have our page logic, and on the other side we have our test logic.
+Our team uses POM as an architecture to organize the code: on one side we have our page logic, and on the other side we have our test logic.
 
-The goal is to write your test code once, and only change the page logic when the application is updated.
+The goal is to write your test code once, and only change the page logic when someone updates the application.
 
 Both are described in the following paragraphs.
 
 ### Pages
 
 #### Name
-The name of the class must be simple and linked to the page in PrestaShop. You should be able to find the corresponding page in the application using the folder hierarchy, and the class name.
+The name of the class must be simple and linked to the page in the shop. You should be able to find the corresponding page in the application using the folder hierarchy, and the class name.
 
 The name of the file is a little different: the main page name is always `index.js`.
 
 Example:
  
 For BO products pages located at `pages/catalog/products/`, we use 2 classes:
-- `index.js` for products listing page 
+- `index.js` for products listing page (main page)
 - `add.js` for add/edit product page
  
 #### Inheritance
-We heavily use inheritance in the pages to make sure all our generic methods are available from everywhere and you don’t need to instantiate separate objects. 
-Using inheritance in final classes makes it possible to use the generic and abstracted methods from parent classes to create some more specific methods to use in the child pages.
+We heavily use inheritance in the pages to make sure all our generic methods are available from everywhere, and you don’t need to instantiate separate objects. 
 
 There is a main mother class, called `CommonPage`, located at the root of the `pages` folder.
 
-We have another level of inheritance in each root folder (`BO` and `FO`) through the classes `BOmainPage.js` and `FOMainPage.js`. Of course, `CommonPage` is **not** meant to be instantiated (it’s kind of an abstract class) !
+We have another level of inheritance in each root folder (`BO` and `FO`) through the classes `BOmainPage.js` and `FOMainPage.js`. Of course, `CommonPage` is **not** meant to be instantiated (it’s kind of abstract class) !
 
 When you create new page classes, make sure to make them inherit from their respective `XXMainPage` to be sure to be able to use both generic methods and specific methods.
 
@@ -101,8 +100,8 @@ Each selector must belong to a certain type. Here is a non-exhaustive list:
 #### Campaigns
 We currently have 2 campaigns implemented:
 
-- **Sanity**: its purpose is to validate a Pull Request. It is executed in a CI environment (on Travis CI) for every Pull Request and is mandatory, i.e. a failed test blocks the merge. It consists of a few tests of the core features of PrestaShop: orders in BO, Products in BO, catalog in FO, cart in FO, Checkout process in FO, and installation of the build.
-- **Functional**: it’s the biggest and most important campaign. Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), CRUD (Create Read Update Delete) of items (Orders, Customers, Products, and so on), settings changes…
+- **Sanity**: its purpose is to validate a Pull Request. Executed for every one on [Travis CI](https://travis-ci.com/), this campaign must fully pass before merging the PR (one failed test blocks the merge). It consists of a few tests of the core features of PrestaShop: shop installation, orders/products pages in BO, and catalog/cart/checkout process in FO.
+- **Functional**: it is the biggest and most important campaign. Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) items (orders, customers, products…), setting changes, etc.
 
 We plan on implementing 2 more campaigns:
 - **End to end**: its purpose is to check that popular user paths are working as intended. It will walk through the application and mimic a real user working on their daily routines as a merchant: checking products, generating invoices, creating a customer account, and an order, adding a special voucher for a specific user, etc. The selected user paths will be chosen by the Product Team. Thanks to their merchants and agencies interviews, they have a pretty good idea of what merchants do every day and how they use the software.
@@ -135,7 +134,7 @@ The functions that exist (for now) in this file are the following :
 Note that all these functions are used at mocha hooks functions in the global `describe` but can be called somewhere else.
 
 ##### Files
-Some of our tests need to create files (ex: Create file in BO), or to check some text in a PDF file (ex: Create and check invoice). For this specific need, we use functions in `Files.js`.
+Some of our tests need to create files (ex: Create files in BO), or to check some text in a PDF file (ex: Create and check invoice). For this specific need, we use functions in `Files.js`.
 
 When a test is finished, all created/downloaded files are deleted using a function from the same file : `deleteFile` as part of the "cleaning behind" approach.
 
@@ -195,9 +194,9 @@ You must be able to launch a test independently, as well as in a whole campaign.
 - Your test must clean behind itself in a reliable manner
 - Deleting files (invoices, images) and artifacts
 
-The shop must end in the same state it was in before your test, as much as possible (since some actions are logged and create artefacts, that may not be always easy to clean though) and let subsequent tests run smoothly! That means deleting the items you created, reverting your changes, etc.
+The shop must end in the same state it was in before your test, as much as possible (since some actions are logged and create artifacts, that may not be always easy to clean though) and let subsequent tests run smoothly! That means deleting the items you created, reverting your changes, etc.
 
-A rule of thumb: can you launch your test suite multiple times? If yes, you know you’re not dependent on the data and you’re properly cleaning behind.
+A rule of thumb: can you launch your test suite multiple times? If yes, you know you’re not dependent on the data, and you’re properly cleaning behind.
 
 ### Data
 
