@@ -25,7 +25,7 @@ We already saw that the get method can be used to retrieve either a list or a sp
 
 ```php
 try {
-    // creating web service access
+    // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
  
     // The key-value array

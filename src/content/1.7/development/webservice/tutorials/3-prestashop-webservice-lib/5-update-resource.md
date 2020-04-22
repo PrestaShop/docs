@@ -17,7 +17,7 @@ The update workflow is quite similar to the [creation workflow](/1.7/development
 
 ```php
 try {
-    // creating web service access
+    // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
  
     // The key-value array

@@ -28,7 +28,7 @@ We are going to use the same `get()` method but provide an additional `id` param
 
 ```php
 try {
-    // creating web service access
+    // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
  
     // The key-value array
@@ -106,7 +106,7 @@ $customerFields = $xml->customer->children();
 $firstName = $customerFields->firstname;
 $lastName = $customerFields->lastname;
 echo 'Details for '. $firstName . ' ' . $lastName . PHP_EOL . PHP_EOL;
-foreach($customerFields as $key => $value) {
+foreach ($customerFields as $key => $value) {
     echo $key . ': ' . $value . PHP_EOL;
 }
 ```

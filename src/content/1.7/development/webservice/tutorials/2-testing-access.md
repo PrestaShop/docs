@@ -6,9 +6,10 @@ weight: 2
 
 # Testing access to the Webservice
 
+Now that your access key is generated you can test your store's webservice, its endpoint is located in the `/api/` uri at the root of your installation of Prestashop.
+
 ## Accessing /api/
 
-Now that your access key is generated you can test your store's webservice, its endpoint is located in the `/api/` folder at the root of your installation of Prestashop.
 The quickest way to test your API is to use your browser:
 
 * If PrestaShop is installed at the root of your server, you can access the API here: http://example.com/api/
@@ -60,7 +61,7 @@ The products</description>
 
 ## Resource schemas
 
-You can also see that each resource provides two link to access its schemas:
+You can also see that each resource provides two links to access its schemas:
 
 - **blank schema** which you can use as a blank content to create a resource
 - **synopsis schema** which is the same blank schema with additional details on each field
@@ -132,7 +133,7 @@ You can also see that each resource provides two link to access its schemas:
 
 ## JSON format
 
-The Web services can also output JSON instead of XML. To enable JSON output you have two choices:
+The Webservices can also output JSON instead of XML. To enable JSON output you have two choices:
 
 ### Query parameter
 

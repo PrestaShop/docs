@@ -18,7 +18,7 @@ As we saw in the previous code sample, we need the `get()` method to retrieve an
 
 ```php
 try {
-    // creating web service access
+    // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
  
     // The key-value array

@@ -14,7 +14,7 @@ Custom prices will be added in an alias field that you need to indicate in your 
 
 ### Example
 
-Let's say you want to retrieve the price for combination `25` of the product `2`, with tax, in a web service field name `my_price`, then you'll need to query:
+Let's say you want to retrieve the price for combination `25` of the product `2`, with tax, in a webservice field name `my_price`, then you'll need to query:
 
 `/api/products/2?price[my_price][use_tax]=1&price[my_price][product_attribute]=25`
 
