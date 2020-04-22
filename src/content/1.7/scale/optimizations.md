@@ -189,7 +189,7 @@ So we work here with the memory area that holds cached data for InnoDB tables, i
 
 Again, these options should be adapted to your shop. 
 
-Setting up the ```innodb_buffer_pool_size``` to 1G maybe too much for your SQL instance, just make sure you have enough memory according to the value you configure.
+Setting up the `innodb_buffer_pool_size` to 1G may be too much for your SQL instance, just make sure you have enough memory according to the value you configure.
 
 The important thing is, if possible, to set ```innodb_buffer_pool_size``` to a greater value than your database size.
 
