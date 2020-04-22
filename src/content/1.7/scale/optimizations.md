@@ -187,7 +187,7 @@ Buffering is almost another word for caching.
 
 So we work here with the memory area that holds cached data for InnoDB tables, indexes, and other auxiliary buffers, etc..
 
-Again, those options should be adapted to your shop. 
+Again, these options should be adapted to your shop. 
 
 Setting up the ```innodb_buffer_pool_size``` to 1G maybe too much for your SQL instance, just make sure you have enough memory according to the value you configure.
 
