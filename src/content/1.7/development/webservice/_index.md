@@ -53,7 +53,7 @@ To test/call your APIs we recommend you use an API client such as [Insomnia](htt
 {{% /notice %}}
 
 {{% notice warning %}}
-As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with you access key rights and how (and whose) you distribute them.
+As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with you access key rights and how (and to whom) you disclose them.
 {{% /notice %}}
 
 ## Using your webservice API

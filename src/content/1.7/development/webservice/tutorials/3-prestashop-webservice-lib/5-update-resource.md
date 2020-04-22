@@ -20,14 +20,11 @@ try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
  
-    // The key-value array
-    $opt = [
+    // call to retrieve customer with ID 2
+    $xml = $webService->get([
         'resource' => 'customers',
         'id' => 2, // Here we use hard coded value but of course you could get this ID from a request parameter or anywhere else
-    ];
-
-    // call to retrieve customer with ID 2
-    $xml = $webService->get($opt);
+    ]);
 } catch (PrestaShopWebserviceException $ex) {
     // Shows a message related to the error
     echo 'Other error: <br />' . $ex->getMessage();
@@ -49,13 +46,11 @@ $customerFields = $xml->customer->children();
 $customerFields->firstname = 'John';
 $customerFields->lastname = 'DOE';
 
-$opt = [
+$updatedXml = $webService->edit([
     'resource' => 'customers',
     'id' => (int) $customerFields->id,
     'putXml' => $xml->asXML(),
-];
-
-$updatedXml = $webService->edit($opt);
+]);
 $customerFields = $updatedXml->customer->children();
 echo 'Customer updated with ID ' . $customerFields->id . PHP_EOL;
 ```

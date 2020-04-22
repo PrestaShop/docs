@@ -1,5 +1,6 @@
 ---
 title: 4 - Advanced use
+chapter: true
 weight: 4
 ---
 

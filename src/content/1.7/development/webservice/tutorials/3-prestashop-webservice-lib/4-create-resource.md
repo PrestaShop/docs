@@ -28,13 +28,8 @@ try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
  
-    // The key-value array
-    $opt = [
-        'url' => 'http://example.com/api/customers?schema=blank',
-    ];
-
     // call to retrieve the blank schema
-    $blankXml = $webService->get($opt);
+    $blankXml = $webService->get(['url' => 'http://example.com/api/customers?schema=blank']);
 } catch (PrestaShopWebserviceException $ex) {
     // Shows a message related to the error
     echo 'Other error: <br />' . $ex->getMessage();
@@ -61,12 +56,10 @@ $customerFields->lastname = 'DOE';
 $customerFields->email = 'john.doe@unknown.com';
 $customerFields->password = 'password1234';
 
-$opt = [
-    'resource' => 'customers',
-    'postXml' => $blankXml->asXML(),
-];
-
-$createdXml = $webService->add($opt);
+$createdXml = $webService->add([
+   'resource' => 'customers',
+   'postXml' => $blankXml->asXML(),
+]);
 $newCustomerFields = $createdXml->customer->children();
 echo 'Customer created with ID ' . $newCustomerFields->id . PHP_EOL;
 ```

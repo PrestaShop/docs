@@ -12,7 +12,7 @@ PrestaShop offers a feature that allows to set specific prices depending on vari
 
 Custom prices will be added in an alias field that you need to indicate in your parameters.
 
-### Example
+## Example
 
 Let's say you want to retrieve the price for combination `25` of the product `2`, with tax, in a webservice field name `my_price`, then you'll need to query:
 
@@ -23,22 +23,22 @@ This will add an XML node into the product response:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<product>
-	<id><![CDATA[2]]></id>
-    ...
-    <my_price><![CDATA[34.460000]]></my_price>
-    ...
-</product>
+    <product>
+        <id><![CDATA[2]]></id>
+        ...
+        <my_price><![CDATA[34.460000]]></my_price>
+        ...
+    </product>
 </prestashop>
 ```
 
-### Specific price parameters
+## Specific price parameters
 
 | Name | Type | Description |
 |------|------|-------------|
 | **country** | int | Customer's country (use the resource ID) |
 | **state** | int | Customer's state (use the resource ID) |
-| **county** | int | Customer's zipcode |
+| **county** | int | Customer's zip/postal code |
 | **currency** | int | Currency used for the price (use the resource ID) |
 | **group** | int | Customer's user group (use the resource ID) |
 | **quantity** | int | Quantity of products |

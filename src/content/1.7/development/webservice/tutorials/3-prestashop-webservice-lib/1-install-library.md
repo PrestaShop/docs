@@ -5,11 +5,11 @@ weight: 1
 
 # PrestaShop Webservice lib
 
-Now that your webservice is configured and accessible you might want to use it. To help you perform request on your webservice we provide a [PHP library for PrestaShop Webservices](https://github.com/PrestaShop/PrestaShop-webservice-lib).
+Now that your webservice is configured and accessible you might want to use it. To help you perform requests on your webservice, you can use the [PHP library for PrestaShop Webservices](https://github.com/PrestaShop/PrestaShop-webservice-lib).
 
 ## Install the lib
 
-### Pre-requisites
+### Prerequisites
 
 * You need a server with `mod_rewrite` enabled
 * You need the `curl` extension enabled in PHP
@@ -50,7 +50,7 @@ And regenerate your `autoload`:
 composer dump-autoload
 ```
 
-Then you can use the library via autoloading:
+Then you can use the library with Composer's autoloading:
 
 ```php
 <?php
@@ -98,9 +98,9 @@ Once the instance is created you can access the following methods:
 
 It is essential that you understand how to handle errors with the webservice library. By implementing error-catch method early, you will more easily detect issues, and be able to correct them on the go.
 
-Error handling with the webservice library is done using PHP exceptions. If you do not know about them, you should read http://php.net/manual/en/language.exceptions.php, as exceptions are an essential part of good coding practices.
+Error handling with the webservice library is done using PHP exceptions. If you do not know about them, you should [read about it](http://php.net/manual/en/language.exceptions.php), as exceptions are an essential part of good coding practices.
 
-The error handling is done within a `try..catch` block, with the webservice instanciation and execution being done in the `try` section, the `catch` one containing the error handling code. There are many types of exception that exist you can catch specific ones which allows you to deal with each error case accordingly, the webservice library uses `PrestaShopWebserviceException` so you can catch this one only to deal with errors related to webservice.
+The error handling is done within a `try...catch` block, with the webservice instantiation and execution being done in the `try` section, the `catch` one containing the error handling code. There are many types of exception that exist you can catch specific ones which allows you to deal with each error case accordingly, the webservice library uses `PrestaShopWebserviceException` so you can catch this one only to deal with errors related to webservice.
 
 ```php
 try {
@@ -108,7 +108,7 @@ try {
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
  
     // call to retrieve all customers
-    $xml = $webService->get(array('resource' => 'customers'));
+    $xml = $webService->get(['resource' => 'customers']);
 } catch (PrestaShopWebserviceException $ex) {
     // Shows a message related to the error
     echo 'Other error: <br />' . $ex->getMessage();

@@ -5,4 +5,4 @@ weight: 9
 
 # Tutorials
 
-{{% children %}}
+{{% children list="ol" %}}
