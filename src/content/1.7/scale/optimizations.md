@@ -32,7 +32,7 @@ There's no way to enumerate all the performance issues we've encountered, but le
 
 ### 1) PHP
 
-PHP tuning is very important for your application’s performance, either you’re running PrestaShop or any other PHP software.
+PHP tuning is very important for your application’s performance, whether you’re running PrestaShop or any other PHP software.
 
 
 First, try to use PHP >=7 when possible. Hard work has been done on performance starting on this version and it will provide a nice speed boost to your shop!
