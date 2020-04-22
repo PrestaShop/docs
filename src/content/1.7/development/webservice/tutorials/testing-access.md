@@ -15,17 +15,37 @@ The quickest way to test your API is to use your browser:
 * If PrestaShop is installed at the root of your server, you can access the API here: http://example.com/api/
 * If PrestaShop is installed in a subfolder of your server, you can access the API here: http://example.com/prestashop/api/
 
+### Browser prompt
+
 The shop should prompt you for a username and a password to enter. The username is the authentication key you created and **there is no password to enter**. If no permission has been set for the key, than the browser will keep asking you to enter the key indefinitely.
 
-The second and more appropriate way to access the API is to include your access key in the url, this will prevent you from entering any user name.
-This is also the recommended way to call the API from a javascript client, or any application. Here is an example, assuming your access API key is `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`:
+### Include key in url (risky)
+
+The second way to access the API is to include your access key in the url, this will prevent you from entering any user name. Here is an example, assuming your access API key is `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`:
 
 * At the root of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/
 * In a subfolder of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestashop/api/
 
-{{% notice note %}}
-To test/call your APIs we recommend you use an API client such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, especially for write actions.
+{{% notice warning %}}
+This method might be convenient for development but **very risky** as you expose your API key directly in the url, so anyone able to see (or hack) your browser history would be able to get your key. This should **never** be used on a production shop.
 {{% /notice %}}
+
+### Using an Authorization header (recommended)
+
+The best way to authenticate your API calls is to use an `Authorization` header, this way you don't expose your API key directly but a `base64_encode` compute of your `user:password` couple. Although PrestaShop API only has a user with empty password, so in order to compute your authorization key you can do as follows:
+
+```php
+$apiKey = `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`;
+$authorizationKey = base64_encode($apiKey . ':'); // VUNDTExROU4yQVJTSFdDWExUNzRLVUtTU0szNEJGS1g6
+```
+
+Then you can use this value in your request header:
+
+| Key             | Value                                                |
+|-----------------|------------------------------------------------------|
+| `Authorization` | `Basic VUNDTExROU4yQVJTSFdDWExUNzRLVUtTU0szNEJGS1g6` |
+
+To test/call your APIs we recommend you use an API client such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, you can easily switch with HTTP methods, and it's easier to set request parameters and headers.
 
 {{% notice warning %}}
 As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with your access key rights and how (and to whom) you disclose them.
