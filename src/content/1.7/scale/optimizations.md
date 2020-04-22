@@ -170,7 +170,7 @@ As for PHP, it allows the service to work as much as possible in memory and avoi
 Those parameters allow better cache information for further reuse, first by enabling it, then by increasing its sizes. 
 Again, the idea is to keep the query results in memory rather than looking them up to the (higher latency) hard drive.
 
-As always, those values should be adapted to your own environment, you probably won’t need a ``host_cache_size`` of 1000. 
+As always, these values should be adjusted to your own environment, you probably won’t need a ``host_cache_size`` of 1000. 
 
 ```
 query_cache_limit = 128K 
