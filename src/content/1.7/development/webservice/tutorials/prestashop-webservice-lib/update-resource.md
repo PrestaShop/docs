@@ -34,7 +34,7 @@ try {
 
 ## Fill the schema and update resource
 
-Quite similar to the resource creation, except we can update only some fields (since the other are already present) and we use the `edit()` method.
+Quite similar to the resource creation, except we can update only some fields (since the others are already present) and we use the `edit()` method.
 
 | Key          | Value                  |
 |--------------|------------------------|
@@ -57,5 +57,5 @@ echo 'Customer updated with ID ' . $customerFields->id . PHP_EOL;
 ```
 
 {{% notice warning %}}
-This example voluntarily deals with simple resource that doesn't have complicated relationship or special webservice fields, this way we can use the API result as an XML input directly. Some more complex resources (categories, products, ...) are not as straight forward, and you'll need to use a less generic code to clean the extra fields or copy them into a blank schema.
+This example voluntarily deals with a simple resource that doesn't have complicated relationships or special webservice fields, this way we can use the API result as an XML input directly. Some more complex resources (categories, products, ...) are not as straightforward, and you'll need to use a less generic code to clean the extra fields or copy them into a **blank schema**.
 {{% /notice %}}

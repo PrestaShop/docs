@@ -42,7 +42,7 @@ try {
 Now that you have the empty XML structure you can fill it with your data, once it is done you will use the `add()` method to create the new resource.
 
 {{% notice note %}}
-Remember that each resource has its own validation rules (required fields, field types and formats, ...), if you don't respect these rules the webservice will refuse the creation. To know the details a resource validation rules you can use the *synopsis* schema (ex: http://example.com/api/customers?schema=synopsis)
+Remember that each resource has its own validation rules (required fields, field types and formats, ...), if you don't respect these rules the webservice will refuse the creation. To know the details a resource validation rules you can use the *synopsis* schema (e.g. `http://example.com/api/customers?schema=synopsis`)
 {{% /notice %}}
 
 | Key          | Value                  |
