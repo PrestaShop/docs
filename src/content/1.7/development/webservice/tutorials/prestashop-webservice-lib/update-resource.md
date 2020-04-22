@@ -6,7 +6,7 @@ weight: 5
 
 # Update a resource
 
-### Update workflow
+## Update workflow
 
 The update workflow is quite similar to the [creation workflow](/1.7/development/webservice/tutorials/6-create-resource/#creation-workflow), the main difference is that the initial input is not a blank XML but an existing one, so we use the `get()` method to get a prefilled XML, and then we can update its fields.
 
@@ -14,7 +14,7 @@ The update workflow is quite similar to the [creation workflow](/1.7/development
 
 > You can update this schema using the [source XML file](/schemas/1.7/update-resource.xml) importable in services like [draw.io](https://draw.io).
 
-### Retrieve the resource
+## Retrieve the resource
 
 ```php
 try {
@@ -32,7 +32,7 @@ try {
 }
 ```
 
-### Fill the schema and update resource
+## Fill the schema and update resource
 
 Quite similar to the resource creation, except we can update only some fields (since the other are already present) and we use the `edit()` method.
 

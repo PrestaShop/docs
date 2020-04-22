@@ -25,7 +25,7 @@ We are going to use the same `get()` method but provide an additional `id` param
 | **resource** | customers           |
 | **id**       | *resource_id* (int) |
 
-### Using PrestaShopWebservice::get
+## Using PrestaShopWebservice::get
 
 ```php
 try {
@@ -43,7 +43,7 @@ try {
 }
 ```
 
-### Returned data
+## Returned data
 
 You will receive the same xml as if you request http://example.com/api/customers/1 in your browser:
 
@@ -87,7 +87,7 @@ You will receive the same xml as if you request http://example.com/api/customers
         <associations>
             <groups nodeType="group" api="groups">
                 <group xlink:href="http://local.prestashop-177/api/groups/3">
-                <id><![CDATA[3]]></id>
+                    <id><![CDATA[3]]></id>
                 </group>
             </groups>
         </associations>
@@ -95,7 +95,7 @@ You will receive the same xml as if you request http://example.com/api/customers
 </prestashop>
 ```
 
-### Access resource fields
+## Access resource fields
 
 You can now loop through this XML object to get each customer field value, or access specific fields individually
 

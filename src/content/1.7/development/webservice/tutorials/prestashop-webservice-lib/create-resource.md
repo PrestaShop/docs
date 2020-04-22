@@ -6,7 +6,7 @@ weight: 4
 
 # Create a resource
 
-### Creation workflow
+## Creation workflow
 
 The creation workflow is a bit more complex than reading some data from the API, mainly because we rarely manage data via XML format. In most use cases the user is presented with a human understandable component, like a form, and the data entered is then processed. Besides we need to make sure that the XML sent to the webservice is understandable and complete.
 
@@ -16,7 +16,7 @@ As we explained in a previous tutorial the webservice provides two [resource sch
 
 > You can update this schema using the [source XML file](/schemas/1.7/create-resource.xml) importable in services like [draw.io](https://draw.io).
 
-### Retrieve the blank schema
+## Retrieve the blank schema
 
 We already saw that the get method can be used to retrieve either a list or a specific resource (with the `resource` and `id` parameters) but it can only be used to get a specific `url`
 
@@ -37,7 +37,7 @@ try {
 }
 ```
 
-### Fill the schema and create new resource
+## Fill the schema and create new resource
 
 Now that you have the empty XML structure you can fill it with your data, once it is done you will use the `add()` method to create the new resource.
 
