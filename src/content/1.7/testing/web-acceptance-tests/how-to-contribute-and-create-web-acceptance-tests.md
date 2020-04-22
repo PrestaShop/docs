@@ -100,7 +100,7 @@ Each selector must belong to a certain type. Here is a non-exhaustive list:
 #### Campaigns
 We currently have 2 campaigns implemented:
 
-- **Sanity**: its purpose is to validate a Pull Request. Executed for every one on [Travis CI](https://travis-ci.com/), this campaign must fully pass before merging the PR (one failed test blocks the merge). It consists of a few tests of the core features of PrestaShop: shop installation, orders/products pages in BO, and catalog/cart/checkout process in FO.
+- **Sanity**: its purpose is to validate a Pull Request. Executed on [Travis CI](https://travis-ci.com/), this campaign must fully pass before merging the PR (one failed test blocks the merge). It consists of a few tests of the core features of PrestaShop: shop installation, orders/products pages in BO, and catalog/cart/checkout process in FO.
 - **Functional**: it is the biggest and most important campaign. Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) items (orders, customers, products…), setting changes, etc.
 
 We plan on implementing 2 more campaigns:
