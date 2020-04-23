@@ -52,8 +52,8 @@ You will receive the same xml as if you request http://example.com/api/customers
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
     <customer>
         <id><![CDATA[2]]></id>
-        <id_default_group xlink:href="http://local.prestashop-177/api/groups/3"><![CDATA[3]]></id_default_group>
-        <id_lang xlink:href="http://local.prestashop-177/api/languages/1"><![CDATA[1]]></id_lang>
+        <id_default_group xlink:href="http://example.com/api/groups/3"><![CDATA[3]]></id_default_group>
+        <id_lang xlink:href="http://example.com/api/languages/1"><![CDATA[1]]></id_lang>
         <newsletter_date_add><![CDATA[2013-12-13 08:19:15]]></newsletter_date_add>
         <ip_registration_newsletter></ip_registration_newsletter>
         <last_passwd_gen><![CDATA[2020-04-09 13:31:19]]></last_passwd_gen>
@@ -86,7 +86,7 @@ You will receive the same xml as if you request http://example.com/api/customers
         <reset_password_validity><![CDATA[0000-00-00 00:00:00]]></reset_password_validity>
         <associations>
             <groups nodeType="group" api="groups">
-                <group xlink:href="http://local.prestashop-177/api/groups/3">
+                <group xlink:href="http://example.com/api/groups/3">
                     <id><![CDATA[3]]></id>
                 </group>
             </groups>
