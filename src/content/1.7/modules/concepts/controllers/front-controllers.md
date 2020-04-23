@@ -40,6 +40,16 @@ class ChequeValidationModuleFrontController extends ModuleFrontController
 That's all, methods added to the class will be taken in account by PrestaShop
 automatically.
 
+## Available properties
+
+The controllers added in a module extend [`ModuleFrontController`](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.x/classes/controller/ModuleFrontController.php), itself extending [`FrontController`](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.x/classes/controller/FrontController.php) & [`Controller`](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.x/classes/controller/Controller.php).
+They provide access to the environment in which they run.
+
+* `$this->module` is the instance of the module responsible of the controller.
+* `$this->context` delivers the result of `Context::getContext()`.
+
+Other existing properties may be useful and can be discovered by looking at the parent classes content (by following links above) or with `dump($this)`.
+
 ## Adding methods to the controller
 
 There are basically two kinds of HTTP calls possible for a controller:
@@ -132,7 +142,7 @@ without URL rewriting.
 ### Example of method calls
 
 ```php
-Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337);
+Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337));
 ```
 * Without URL rewriting: `http://<shop_domain>/index.php?idPayment=1337&fc=module&module=cheque&controller=validation&id_lang=1`
 * With URL rewriting: `http://<shop_domain>/en/module/cheque/validation?idPayment=1337`

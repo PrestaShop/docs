@@ -20,4 +20,4 @@ PrestaShop modules acts as Symfony bundles, extension points are added continuou
 [4]: {{< ref "1.7/modules/concepts/commands.md" >}}
 [5]: {{< ref "1.7/modules/concepts/controllers/admin-controllers/_index.md" >}}
 [6]: {{< ref "1.7/modules/concepts/doctrine/_index.md" >}}
-[7]: {{< ref "1.7/modules/sample_modules/grid-and-identifiable-object-form-hooks-usage/_index.md" >}}
+[7]: {{< ref "1.7/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage/_index.md" >}}

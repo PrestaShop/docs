@@ -1,8 +1,9 @@
 ---
 title: Tutorials
 weight: 9
+chapter: true
 ---
 
 # Tutorials
 
-{{% children %}}
+{{% children list="ol" %}}

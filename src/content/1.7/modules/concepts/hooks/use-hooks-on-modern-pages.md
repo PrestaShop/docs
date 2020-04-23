@@ -47,7 +47,7 @@ As we need to act on Dashboard but after the header, in the icons toolbar (with 
 
 ### Second step: create and register the Hook
 
-Create a [new module](http://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
+Create a [new module](https://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
 
 ```php
 // foo.php
@@ -254,7 +254,7 @@ And now, the template:
 ```twig
 {# in views/PrestaShop/Foo/download_link.twig #}
 <a id="desc-product-export" class="list-toolbar-btn" href="{{ filepath }}" download>
-  <b data-toggle="pstooltip" class="label-tooltip" data-original-title="{{ "Export XML"|trans({}, 'Module.Foo' }}" data-html="true" data-placement="top">
+  <b data-toggle="pstooltip" class="label-tooltip" data-original-title="{{ "Export XML"|trans({}, 'Module.Foo') }}" data-html="true" data-placement="top">
     <i class="material-icons">cloud_upload</i>
   </b>
 </a>

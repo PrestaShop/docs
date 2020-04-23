@@ -1,12 +1,12 @@
 const path = require('path');
 
 const PATHS = {
-  'static': path.join(__dirname, "..", "static"),
-  sass: path.join(__dirname, "sass"),
-  js: path.join(__dirname, "js"),
+  'static': path.join(__dirname, '..', 'static'),
+  sass: path.join(__dirname, 'sass'),
+  js: path.join(__dirname, 'js'),
 };
 
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
   return {
@@ -15,37 +15,38 @@ module.exports = () => {
     },
     output: {
       path: path.join(PATHS.static, 'js'),
-        filename: "[name].js"
+      filename: '[name].js'
     },
-    devtool: "source-map",
+    devtool: 'source-map',
     module: {
-      loaders: [
+      rules: [
+        {
+          test: /\.(svg|woff|woff2|eot|ttf|otf)$/,
+          loader: 'url-loader?limit=10000&mimetype=application/font-woff'
+        },
         {
           test:/\.scss$/,
-          use: ExtractTextPlugin.extract({
-            fallback: 'style-loader',
-            use: [
-              {
-                loader: "css-loader",
-                options: {
-                  sourceMap: true,
-                  // avoid verifying url() sources
-                  url: false
-                }
+          use: [
+            'style-loader',
+            MiniCssExtractPlugin.loader,
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
               },
-              {
-                loader: 'sass-loader',
-                options: {
-                  sourceMap: true
-                }
-              }
-            ]
-          })
-        }
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        },
       ]
     },
     plugins: [
-      new ExtractTextPlugin({
+      new MiniCssExtractPlugin({
         // path is relative to output path
         filename: '../css/style.css',
         disable: false,

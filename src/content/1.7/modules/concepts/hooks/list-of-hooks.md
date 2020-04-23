@@ -308,6 +308,9 @@ actionBeforeAjaxDie&lt;ControllerName>&lt;Method>
     
 actionBeforeCartUpdateQty
 : 
+    **(deprecated since 1.6.1.1)**
+    → `actionCartUpdateQuantityBefore`
+    
     Located in: /classes/Cart.php
 
     
@@ -537,6 +540,14 @@ actionFrontControllerSetVariables
     Add variables to `javascript` object that is available in Front Office.
 
     Located in: /classes/controller/FrontController.php
+    
+    Parameters since {{< minver v="1.7.7" >}}:
+    
+    ```php
+    array(
+      'templateVars' => &(array)
+    );
+    ```
     
     Example usage:
     
@@ -1049,6 +1060,40 @@ actionWatermark
     );
     ```
     
+actionGetAdminOrderButtons
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook is used to generate the buttons collection on the order view page (see ActionsBarButtonsCollection)
+
+    Located in: /src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php
+
+    Parameters:
+    ```php
+    array(
+       'controller' => (OrderController) Symfony controller,
+       'id_order' => (int) Order ID,
+       'actions_bar_buttons_collection' => (ActionsBarButtonsCollection) Collection of ActionsBarButtonInterface
+    );
+    ```
+
+
+actionAdminAdminPreferencesControllerPostProcessBefore
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook is called on Admin Preferences post-process before processing the form
+
+    Located in: /src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
+
+    Parameters:
+    ```php
+    [
+        'controller' => (AdministrationController) Symfony controller,
+    ]
+    ```
+
+
 additionalCustomerFormFields
 : 
     Add fields to the Customer form
@@ -1179,7 +1224,10 @@ displayAdminOrder
     Display new elements in the Back Office, tab AdminOrder
 This hook launches modules when the AdminOrder tab is displayed in the Back Office
 
-    Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
+    Located in:
+
+        - admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
+        - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -1190,6 +1238,9 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentOrder
 : 
+    **(removed in 1.7.7 in favor of)**
+    → `displayAdminOrderTabContent`
+
     Display new elements in Back Office, AdminOrder, panel Order
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel content
 
@@ -1198,24 +1249,131 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderContentShip
 : 
+    **(removed in 1.7.7 in favor of)**
+    → `displayAdminOrderTabContent`
+
     Display new elements in Back Office, AdminOrder, panel Shipping
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel content
 
     Located in: /controllers/admin/AdminOrdersController.php
 
+
+displayAdminOrderTabContent
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays new tab contents on the order view page
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
     
 displayAdminOrderLeft
 : 
+    **(removed in 1.7.7 in favor of)**
+    → `displayAdminOrderMain`
+
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
-    
+
+displayAdminOrderMain
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page in the main column under the details view
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
+displayAdminOrderMainBottom
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page at the bottom of the main column
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
 displayAdminOrderRight
 : 
+    **(removed in 1.7.7 in favor of)**
+    → `displayAdminOrderSide`
+
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
-    
+
+displayAdminOrderSide
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page at the end of the side column
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+displayAdminOrderSide
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page in the side column under the customer view
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
+displayAdminOrderSideBottom
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content in the order view page at the bottom of the side column
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
 displayAdminOrderTabOrder
 : 
+    **(removed in 1.7.7 in favor of)**
+    → `displayAdminOrderTabLink`
+
     Display new elements in Back Office, AdminOrder, panel Order
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel tabs
 
@@ -1224,10 +1382,28 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     
 displayAdminOrderTabShip
 : 
+    **(removed in 1.7.7 in favor of)**
+    → `displayAdminOrderTabLink`
+
     Display new elements in Back Office, AdminOrder, panel Shipping
 This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel tabs
 
     Located in: /controllers/admin/AdminOrdersController.php
+
+displayAdminOrderTabLink
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays new tab links on the order view page
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
 
     
 displayAdminProductsExtra
@@ -1399,6 +1575,13 @@ displayBackOfficeHeader
     
 displayBackOfficeOrderActions
 : 
+    **(deprecated since 1.7.7)**
+    → `actionGetAdminOrderButtons`
+
+    This hook displays content in the order view page after action buttons
+
+    Since the version **1.7.7** this hook no longer exists, an alias on the new `displayAdminOrderSide` exists but it is not displayed the same way, so it is recommended to use the dedicated `actionGetAdminOrderButtons` hook to add buttons
+    
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
     
@@ -1710,12 +1893,30 @@ displayHome
     
 displayInvoice
 : 
+    **(deprecated since 1.7.7)**
+    → `displayAdminOrderTop`
+
     Invoice
 This hook displays new blocks on the invoice (order)
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
 
-    
+displayAdminOrderTop
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook displays content at the top of the order view page
+
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+
+    Parameters:
+    ```php
+    array(
+      'id_order' => (int) Order ID
+    );
+    ```
+
+
 displayInvoiceLegalFreeText
 : 
     PDF Invoice - Legal Free Text
@@ -2015,6 +2216,22 @@ This hook displays new elements in the top of the main wrapper
 
     - themes/classic/templates/checkout/checkout.tpl
     - themes/classic/templates/layouts/layout-both-columns.tpl
+
+displayAdditionalCustomerAddressFields
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook allows to display extra field values added in an address form using hook 'additionalCustomerAddressFields'
+
+    Located in: /themes/classic/templates/customer/_partials/block-address.tpl
+
+displayFooterCategory
+: 
+    Available since: {{< minver v="1.7.7" >}}
+
+    This hook adds new blocks under the products listing in a category/search
+
+    Located in: /themes/classic/templates/catalog/listing/product-list.tpl
 
 
 filterCategoryContent

@@ -1,11 +1,11 @@
 ---
 title: Contribute
-weight: 7
-pre: "<b>7. </b>"
+weight: 6
+pre: "<b>6. </b>"
 chapter: true
 ---
 
-### Chapter 7
+### Chapter 6
 
 # Contribute
 

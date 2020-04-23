@@ -40,14 +40,51 @@ The prestashop specific configuration file [can be found here](https://github.co
 
 And you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/develop/.github/contrib) sample in order to make sure you never forget to make your code compliant!
 
+### Deprecations
+
+Following [Symfony conventions](https://symfony.com/doc/3.4/contributing/code/conventions.html#deprecating-code), method and class deprecations in PrestaShop must be noted by adding the appropriate Phpdoc as well as a deprecation error:
+
+```php
+/**
+ * @deprecated Since 1.7.6.0, use AnotherClass::someNewMethod() instead.
+ */
+public function someOldMethod()
+{
+    @trigger_error(
+        sprintf(
+            '%s is deprecated since version 1.7.6.0. Use %s instead.',
+            __METHOD__,
+            AnotherClass::class . '::someNewMethod()'
+        ),
+        E_USER_DEPRECATED
+    );
+}
+```
+
 ## Javascript code conventions
 
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
 
 ## HTML, CSS (Sass), Twig & Smarty code conventions
 
-HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](http://codeguide.co/).
+HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](https://codeguide.co/).
 Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
+
+To help developers to comply with these conventions, [Stylelint](https://stylelint.io/), a stylesheet linter, has been configured in the PrestaShop project. You can find the configuration file [on this repository](https://github.com/PrestaShop/stylelint-config).
+
+Same as if you want to [compile assets]({{< ref "/1.7/development/compile-assets.md" >}}), you need NodeJS and NPM to run Stylelint.
+
+Starting on {{< minver v="1.7.8" >}}, you can run the linter like this:
+
+```bash
+npm run scss-lint
+```
+
+You can fix auto-fixable errors using this command:
+
+```bash
+npm run scss-fix
+```
 
 ## License information
 
@@ -57,7 +94,7 @@ All PrestaShop files MUST start with the PrestaShop license block:
 
 ```
 /**
- * 2007-2019 PrestaShop SA and Contributors
+ * 2007-2020 PrestaShop SA and Contributors
  *
  * NOTICE OF LICENSE
  *
@@ -86,7 +123,7 @@ All PrestaShop files MUST start with the PrestaShop license block:
 
 ```
 /**
- * 2007-2019 PrestaShop SA and Contributors
+ * 2007-2020 PrestaShop SA and Contributors
  *
  * NOTICE OF LICENSE
  *
@@ -98,15 +135,9 @@ All PrestaShop files MUST start with the PrestaShop license block:
  * obtain it through the world-wide-web, please send an email
  * to license@prestashop.com so we can send you a copy immediately.
  *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to https://www.prestashop.com for more information.
- *
  * @author    PrestaShop SA <contact@prestashop.com>
  * @copyright 2007-2019 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0  Academic Free License (AFL 3.0)
  * International Registered Trademark & Property of PrestaShop SA
  */
-``` 
+```

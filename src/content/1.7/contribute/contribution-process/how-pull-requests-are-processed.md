@@ -3,15 +3,13 @@ title: How Pull Requests are processed
 weight: 2
 ---
 
-# How issues are sorted
-
-## What happens to the pull request you have submitted ?
+# How Pull Requests are processed
 
 All submitted pull requests go through a thorough process which aims to provide a stable, consistent and reliable software that we all know under the name PrestaShop. Here is this process in details.
 
 ## Automatic tasks when you open a Pull Request
 
-When you submit a new Pull Request to the project repository https://github.com/PrestaShop/PrestaShop, some automatic checks are triggered.
+When you submit a new Pull Request to the [project repository](https://github.com/PrestaShop/PrestaShop), some automatic checks are triggered.
 
 ### Continuous Integration
 
@@ -24,7 +22,7 @@ Just like reading a book with two different styles in it, having a codebase with
 
 If PrettyCI states that your pull request has issues, you need to fix the issues by looking at PrettyCI output to understand what needs to be fixed.
 
-The second tool is [Travis](http://travis-ci.org/). Travis is a Continous Integration system that will look at the Pull Request and run several checks, be it code-style checkers, format checkers or automated tests, and provide you the result in the Pull Request. If something is wrong it will block the PR from being merged. This is a standard approach to ensure that new contributions in a codebase do not break existing features and behaviors.
+The second tool is [Travis](https://travis-ci.org/). Travis is a Continous Integration system that will look at the Pull Request and run several checks, be it code-style checkers, format checkers or automated tests, and provide you the result in the Pull Request. If something is wrong it will block the PR from being merged. This is a standard approach to ensure that new contributions in a codebase do not break existing features and behaviors.
 
 If Travis states that your pull request has issues, you need to fix the issues by looking at Travis output to understand what needs to be fixed.
 
@@ -38,7 +36,7 @@ In addition, the new [Github Actions](https://github.com/features/actions) have 
 
 For example he detects mistakes in the pull request description, he add some labels to classify the pull requests, he welcomes new contributors to the project ...
 
-[Read his article for the full details.](http://build.prestashop.com/news/prestonbot-reaches-stable-version/)
+[Read his article for the full details.](https://build.prestashop.com/news/prestonbot-reaches-stable-version/)
 
 If something is wrong, Prestonbot will write a comment in the pull request to tell you what to fix.
 
@@ -75,6 +73,11 @@ Once the Pull Request has been validated by all of the relevant people, it is fi
 
 After the Pull Request has finally passed the QA validation, it is merged in the project and the author becomes (if they weren't already) a contributor to this great open source project !
 
-<hr />
+### Graphical summary
 
-This page is a (reworked) copy of http://build.prestashop.com/news/the-review-process/ .
+![Pull Request process summary](../../img/pull-request-process.png)
+
+
+---
+
+_(This article was originally published on our blog: [What Happens To Pull Requests After They Are Submitted](https://build.prestashop.com/news/the-review-process/))_

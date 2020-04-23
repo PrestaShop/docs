@@ -78,7 +78,7 @@ final class CustomerGridDefinitionFactory extends AbstractGridDefinitionFactory
 As you see, Grid stores Grid actions using a `GridActionCollection` object. This means that every action needed for Grid must be added to `GridActionCollection` using `add()` method.
 You'll find the list of existing actions in the documentation.
 
-## How to add Bulk actions to a Grid using a module?
+## How to add Grid actions to a Grid using a module?
 
 You can add additional actions to any Grid by hooking to the Grid workflow. You have to follow these steps:
 
@@ -94,14 +94,14 @@ class Mymodule extends Module
     // ...
 
     /**
-     * Use hook to add Bulk action for subscribing multiple customers to newsletter
+     * Use hook to add Grid action for subscribing multiple customers to newsletter
      */
     public function hookActionCustomerGridDefinitionModifier(array $params)
     {
         /** @var \PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinition */
         $gridDefinition = $params['definition'];
 
-        $gridDefinition->getGridActions()->add(
+        $gridDefinition->getGridActions()
             ->add(
                 (new LinkGridAction('new_action'))
                     ->setName($this->trans('New action', [], 'MyModule.Admin.Actions'))
@@ -171,17 +171,13 @@ final class MySpecificAction extends AbstractBulkAction
 Then you need to create template so it can render nicely in your grid.
 
 ```twig
-{# mymodule/views/PrestaShop/Admin/Common/Grid/Actions/my_specific.html.twig #}
+{# mymodule/views/PrestaShop/Admin/Common/Grid/Actions/Grid/my_specific.html.twig #}
 
-{# This button should be used with SubmitBulkActionExtension grid extension in Javascript #}
-
-<button id="{{ '%s_grid_bulk_action_%s'|format(grid.id, action.id) }}"
-        class="dropdown-item js-bulk-action-submit-btn"
-        type="button"
-        data-form-url="{{ path(action.options.submit_route) }}"
-        data-form-method="GET"
->
+<a id="{{ '%s_grid_bulk_action_%s'|format(grid.id, action.id) }}" href="{{ path(action.options.route, action.options.route_params) }}" class="dropdown-item">
+  {% if action.icon is not empty %}
+    <i class="material-icons">{{ action.icon }}</i>
+  {% endif %}
   {{ action.name }}
-</button>
+</a>
 ```
-Last thing is to add your newly created Bulk action to Grid's `BulkActionCollection` and then it should be available in your Grid!
+Last thing is to add your newly created Grid action to Grid's `GridActionCollection` and then it should be available in your Grid!

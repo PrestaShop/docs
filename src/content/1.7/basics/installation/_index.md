@@ -13,7 +13,9 @@ Read [System Requirements][system-requirements].
 
 ## Installing a local environment
 
-Installing any web-application locally requires that you first install the adequate environment, namely the Apache web server, the PHP language interpreter, the MySQL database server, and ideally the phpMyAdmin tool. This is called an *AMP package: Apache+MySQL+PHP and the operating system, giving WAMP (Windows+Apache+MySQL+PHP), MAMP (Mac OS X+…) and LAMP (Linux+…). Since all of the items packaged are open-source, these installers are most of the time free.
+Installing any web-application locally requires that you first install the adequate environment, namely the Apache web server, the PHP language interpreter, the MySQL database server, and ideally a MySQL admin tool such as phpMyAdmin tool. 
+
+This is called an *AMP package: Apache+MySQL+PHP and the operating system, giving WAMP (Windows+Apache+MySQL+PHP), MAMP (Mac OS X+…) and LAMP (Linux+…). Since all of the items packaged are open-source, these installers are most of the time free.
 
 Here is a selection of free AMP installers:
 
@@ -23,16 +25,64 @@ Here is a selection of free AMP installers:
 * [MAMP](https://www.mamp.info/) (Mac OS X)
 * [Laragon](https://laragon.org/) (Windows)
 
+To install LAMP on your computer follow these steps (tested on Debian Buster).
+- Update your system
+  - `apt update`
+- Install MySQL
+  - `apt install default-mysql-server default-mysql-client`
+- Install Apache server
+  - `apt install apache2`
+- Install PHP
+  - `apt install libapache2-mod-php7.3 php7.3 php7.3-common php7.3-curl php7.3-gd php7.3-imagick php7.3-mbstring php7.3-mysql php7.0-json php7.3-xsl php7.3-intl php7.3-zip`
 
+## Creating a database for your shop
 
-## Creating a database for your local shop
+If you are installing PrestaShop on a web server, then you must create the database and give access to a privileged user.
+You will need this user's credentials to configure PrestaShop during the installation process.
 
-Open the phpMyAdmin tool using your browser. Its location depends on the AMP pack you chose:
+### Using phpMyAdmin
 
-* http://127.0.0.1/phpmyadmin (XAMPP, WampServer, MAMP),
-* http://127.0.0.1/mysql (EasyPHP)
+We assume you have root access to `phpMyAdmin`, and you're using version 4.x.
 
-In the “Databases” tab, indicate the database name you want and validate by clicking on the “Create a database” button.
+ * Sign in to `phpMyAdmin` as the root user
+ * Click `User accounts`, and then click on `Add user account`
+ * Fill the `User name` and the `Password`
+ * In the `Database for user account`, select `Create database` and `Grant all privileges`
+ * Create user and database and make sure the COLLATION of your database is `utf8mb4_general_ci`
+ 
+### From the command line
+
+The database must be created with 4-Byte UTF-8 encoding (`utf8mb4_general_ci`).
+For information on installation and configuring MySQL see the [MySQL 5.6 documentation](https://dev.mysql.com/doc/refman/5.6/en/).
+Connect as root to your MySql server. In this example our root user is called `adminusername`:
+
+```bash
+$ mysql -u adminusername -p
+```
+
+Create the database and give it a name like "prestashop":
+
+```bash
+> CREATE DATABASE prestashop COLLATE utf8mb4_general_ci;
+```
+
+Grant privileges to that database to a new user (the one that PrestaShop will use to connect to the database). Let's call it "prestashopuser".
+
+```bash
+> GRANT ALL PRIVILEGES ON prestashop.* TO "prestashopuser"@"hostname" IDENTIFIED BY "somepassword";
+```
+
+In the example above,
+
+- `prestashop` is the name of the new database
+- `hostname` is usually localhost (`127.0.0.1` or `localhost`), if you don't know the value, check with a system adminitrator
+- `somepassword` must be a strong password and of course, only known by you
+
+Finally, flush privileges:
+
+```bash
+> FLUSH PRIVILEGES;
+```
 
 ## Downloading PrestaShop
 
@@ -79,41 +129,66 @@ Clone the repository using Git or extract the zip package in a `prestashop` fold
 * EasyPHP: `C:\easyphp\www`
 * MAMP: `/Applications/MAMP/htdocs/`
 
-## Download dependencies using composer
+## Download dependencies
 
 {{% notice note %}}
 This step is only needed if you downloaded the development version.
 {{% /notice %}}
 
-Use [composer](https://getcomposer.org/download/) to download the project's dependencies:
+### PHP dependencies
+
+Use [composer][composer] to download the project's dependencies:
 
 ```bash
 cd /path/to/prestashop
 composer install
+# or alternatively, since 1.7.8:
+make composer
 ```
+### JavaScript and CSS dependencies
+
+PrestaShop uses NPM to manage dependencies and [Webpack][webpack] to compile them into static assets. 
+You only need NodeJS 8.x (12.x maximum [get it here][nodejs]), NPM will take care of it all.
+
+```bash
+cd /path/to/prestashop
+make assets
+```
+
+Alternatively, you can [compile assets][compile-assets] manually.
+
 
 ## Setting up file rights
 
 PrestaShop needs recursive write permissions on several directories:
 
-- /admin-dev/autoupgrade/
-- /app/logs
-- /app/Resources/translations
-- /cache
-- /config/themes
-- /download
-- /img
-- /log
-- /mails
-- /modules
-- /themes
-- /translations
-- /var
+- ./admin-dev/autoupgrade
+- ./app/config
+- ./app/logs
+- ./app/Resources/translations
+- ./cache
+- ./config
+- ./download
+- ./img
+- ./log
+- ./mails
+- ./modules
+- ./themes
+- ./translations
+- ./upload
+- ./var
 
-To ease up your life on a development environment, we suggest to either:
+You can set up the appropriate permissions using this command:
+```bash
+$ chmod +w -R admin-dev/autoupgrade app/config app/logs app/Resources/translations cache config download img log mails modules themes translations upload var
+```
 
-- Make Apache run with your own user.
-- Add your own user and Apache's to a common user group (eg. "_www"), then `chown` all PrestaShop files to "youruser:_www". 
+If you do not have some of the folders above, please create them before changing permissions. For example:
+```bash
+$ mkdir log app/logs
+```
+
+To ease up your life on a development environment, we suggest to make Apache run with your own user and group.
 
 {{% notice warning %}}
 <b>Never do that in production!</b> Carefully change permissions folder by folder instead.
@@ -138,5 +213,9 @@ You may find this error message the first time you open up the Back Office.
 
 This problem may arise in case-insensitive file systems like MacOS due to a misconfiguration. Check your Apache configuration and make sure that the root directory path to your PrestaShop matches the capitalization of the actual system path exactly. A typical error is for example having a folder named `/path/to/PrestaShop` (capital P, capital S) and then configuring it in Apache as `/path/to/Prestashop` (missing the capital S).
 
-[getting-started-guide]: http://doc.prestashop.com/display/PS17/Getting+Started
+[getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements.md" >}}
+[compile-assets]: {{< ref "1.7/development/compile-assets.md" >}}
+[webpack]: https://webpack.js.org/
+[composer]: https://getcomposer.org/download/
+[nodejs]: https://nodejs.org/

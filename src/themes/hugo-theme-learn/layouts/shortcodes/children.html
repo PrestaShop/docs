@@ -3,9 +3,9 @@
 {{ $depth :=  .Get "depth" | default 1 }}
 {{ $withDescription :=  .Get "description" | default false }}
 {{ $sortTerm :=  .Get "sort" | default "Weight" }}
+{{ $list :=  .Get "list" | default "ul" }}
 
-
-<ul class="children children-{{$style}}">
+{{(printf "<%s class='children children-%s'>" $list $style)|safeHTML}}
 	{{ .Scratch.Set "pages" .Page.Pages }}
     {{ if .Page.Sections}}
 	    {{ .Scratch.Set "pages" (.Page.Pages | union .Page.Sections) }}
@@ -25,7 +25,7 @@
 	{{else}}
 		{{template "childs" dict "menu" $pages "style" $style "showhidden" $showhidden "count" 1 "depth" $depth "pages" .Site.Pages "description" $withDescription "sortTerm" $sortTerm}}
 	{{end}}
-</ul>
+{{(printf "</%s>" $list)|safeHTML}}
 
 {{.Inner|safeHTML}}
 

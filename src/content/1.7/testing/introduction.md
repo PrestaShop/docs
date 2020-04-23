@@ -74,6 +74,6 @@ Theses tests were powered by PHPUnit but were not unit tests: they were integrat
 
 [1]: https://phpunit.de/
 [2]: https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs
-[3]: http://behat.org/en/latest/
+[3]: https://behat.org/en/latest/
 [4]: https://www.seleniumhq.org/
 [5]: https://github.com/GoogleChrome/puppeteer

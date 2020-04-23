@@ -80,16 +80,19 @@ Very similar to the *LinkGridAction*, but capable to manage User accesses on the
 |                    | `route_param_field`             |
 |                    | `confirm_message`               |
 |                    | `accessibility_checker`         |
+|                    | `clickable_row`                 |
 | **Requirements**   | `route`                         |
 |                    | `route_param_name`              |
 |                    | `route_param_field`             |
 | **Defaults**       | `confirm_message` => ''         |
 |                    | `accessibility_checker` => null |
+|                    | `clickable_row` => false        |
 | **Allowed Types**  | `route` (string)                |
 |                    | `route_param_name` (string)     |
 |                    | `route_param_field` (string)    |
 |                    | `confirm_message` (string)      |
 |                    | `accessibility_checker` (callable or null  or instance of AccessibilityCheckerInterface) |
+|                    | `clickable_row` (boolean)       |
 
 ### SubmitRowAction
 
@@ -213,6 +216,8 @@ class MyGridDefinitionFactory extends AbstractGridDefinition
                             'route' => 'edit_stuff',
                             'route_param_name' => 'stuffId',
                             'route_param_field' => 'stuffId',
+                            // A click on the row will have the same effect as this action
+                            'clickable_row' => true,
                         ])
                     )
                     ->add(

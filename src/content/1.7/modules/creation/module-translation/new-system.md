@@ -54,15 +54,15 @@ Don't worry if you don't translate everything to all languages right away. Any w
 
 ### Translation domain
 
-An important part of the new translation system is **Translation Domains**. Essentially, translation domains replace the classic system's [contextualization][contextualization], which provides more flexibility for translators to translate the same wording differently depending on the context where it's used. 
+An important part of the new translation system is **Translation Domains**, which replaces the classic system's [contextualization][contextualization]. In the new translation system, all wordings must be linked to at least one translation domain.
 
-While the Core and Native modules have clearly defined [translation domain naming scheme][core-translation-domains], non-native modules must respect a specific convention:
+While the Core and Native modules have clearly defined [translation domain naming scheme][core-translation-domains], non-native modules must respect a specific naming convention:
 
 ```
 Modules.Nameofthemodule.Specificpart
 ```
 
-Translation Domains are always made of three parts, separated by dots:
+Translation Domain names are always made of three parts, separated by dots:
 
 1. The first part must always be **"Modules"**
 2. **"Nameofthemodule"** is the name of your module, with some rules:
@@ -140,11 +140,11 @@ Since the module is called MyModule, the translation domain should be `Modules.M
 ```php
 // file: controllers/front/something.php
 
-class MyModuleSomethingFrontController extends ModuleFrontController
+class MymoduleSomethingModuleFrontController extends ModuleFrontController
 {
     public function initContent()
     {
-        $this->title = $this->module->trans('My module title', [], 'Modules.Mymodule.Something);
+        $this->title = $this->trans('My module title', [], 'Modules.Mymodule.Something);
     }
 }
 ```
@@ -251,9 +251,15 @@ Once saved, translations are stored in the database in the table `ps_translation
 
 ## Creating translation dictionary files
 
-This feature has not been implemented as of 1.7.6. If you need to distribute translated wordings with your module, you can either write classic dictionary files by hand, or export your wordings into an SQL dump, then import it during the module's install process.
+This feature has not been implemented as of 1.7.6. 
 
-Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is due to be implemented in 1.7.7.
+If you need to distribute translated wordings with your module, you can either [write classic dictionary files manually]({{< ref "classic-system#editing-a-dictionary-file-manually" >}}), or export your module's wordings from the database into a file, then import it during the module's install process.
+
+{{% notice tip %}}
+If you choose to export wordings from the database, you can easily extract only your module's wordings from the `ps_translation` table by filtering domains that start with `ModulesYourmodulename*`. You can disregard `id_translation`, but you will have to match the original `lang_id` to the shop's one (see `ps_lang`) when you re-import them.
+{{% /notice %}}
+
+Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is [due to be implemented in 1.7.8](https://github.com/PrestaShop/PrestaShop/issues/14968).
 
 ## Limitations and caveats
 
@@ -272,7 +278,7 @@ Example:
 $this->trans('Some wording', [], 'Modules.Mymodule.Something');
 
 // dynamic content can be injected using placeholders & replacements
-$this->trans('Some wording with %foo%', ['%foo%' => $dynamicContent], 'Modules.Mymodule.Bar);
+$this->trans('Some wording with %foo%', ['%foo%' => $dynamicContent], 'Modules.Mymodule.Bar');
 
 // this won't work, the interpreter will ignore variables
 $wording = 'Some wording';
@@ -283,7 +289,7 @@ $this->trans($wording, [], $domain);
 $this->trans('Some '. $var . ' wording', [], 'Modules.Mymodule.Foo');
 
 // dynamic behavior, like aliasing the trans() function, won't work well either
-public function translate($wording) {
+function translate($wording) {
    $this->trans($wording, [], 'Modules.Mymodule.Foo');
 }
 ```

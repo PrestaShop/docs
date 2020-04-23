@@ -5,8 +5,13 @@ weight: 10
 ---
 
 <style type="text/css">
+.h-version-titles th:not(:first-child) {
+  text-align: center;
+}
+
 .support-yes, .example-yes {
   background-color: #8ce48c;
+  text-align: center;
 }
 .support-no, .example-no {
   background-color: #e89b9b;
@@ -26,11 +31,24 @@ PrestaShop needs the following server configuration in order to run:
 * **System:** Unix, Linux or Windows.
 * **Web server:** Apache Web Server 2.2 or any later version.
 * **PHP:** We recommend PHP 7.1 or later. See the compatibility chart below for more details. 
-* **MySQL:** 5.0 minimum, 5.6 or later recommended.
+* **MySQL:** 5.6 minimum, a recent version is recommended.
 * **Server RAM:** The more the merrier. We recommend setting the memory allocation per script (`memory_limit`) to a minimum of `256M`.
 
 PrestaShop can also work with NGINX 1.0 or later.
 
+## How to verify your server meets PrestaShop's requirements
+
+You can use our [system requirements tool](https://github.com/PrestaShop/php-ps-info/) to easily check if your environment fulfills PrestaShop's requirements. Here's how:
+
+1. Download the [latest version from GitHub](https://github.com/PrestaShop/php-ps-info/releases).
+2. Extract the zip file.
+3. Upload the `phppsinfo.php` file to your server and put it inside your current shop's directory or the one where you intend to install it.
+4. Open it up on your browser (`http://your-domain.com/path-to-your-prestashop/phppsinfo.php`).
+5. Type in the login and password if prompted (use `prestashop` for both).
+
+You'll get a web page detailing requirements and recommendations, and how your server does compared to them:
+
+{{< figure src="../img/phppsinfo.jpg" title="System requirements tool" >}}
 
 ## PHP requirements
 
@@ -40,9 +58,9 @@ PrestaShop can also work with NGINX 1.0 or later.
   <thead>
     <tr>
       <th></th>
-      <th colspan="10" style="text-align:center">PHP Version</th>
+      <th colspan="11" style="text-align:center">PHP Version</th>
     </tr>
-    <tr>
+    <tr class="h-version-titles">
       <th>PrestaShop Version</th>
       <th>&lt;=&nbsp;5.1</th>
       <th>5.2</th>
@@ -53,7 +71,8 @@ PrestaShop can also work with NGINX 1.0 or later.
       <th>7.0</th>
       <th>7.1</th>
       <th>7.2</th>
-      <th>&gt;=&nbsp;7.3</th>
+      <th>7.3</th>
+      <th>&ge;&nbsp;7.4</th>
     </tr>
   </thead>
 <tbody>
@@ -67,9 +86,10 @@ PrestaShop can also work with NGINX 1.0 or later.
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes">
-      <i class="fa fa-check" aria-hidden="true" title="title="Recommended version"></i>
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
       <span class="sr-only">Recommended version</span>
     </td>
+    <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
@@ -83,9 +103,10 @@ PrestaShop can also work with NGINX 1.0 or later.
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes">
-      <i class="fa fa-check" aria-hidden="true" title="title="Recommended version"></i>
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
       <span class="sr-only">Recommended version</span>
     </td>
+    <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
@@ -99,9 +120,10 @@ PrestaShop can also work with NGINX 1.0 or later.
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes">
-      <i class="fa fa-check" aria-hidden="true" title="title="Recommended version"></i>
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
       <span class="sr-only">Recommended version</span>
     </td>
+    <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
@@ -116,11 +138,29 @@ PrestaShop can also work with NGINX 1.0 or later.
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes">
-      <i class="fa fa-check" aria-hidden="true" title="title="Recommended version"></i>
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
       <span class="sr-only">Recommended version</span>
     </td>
     <td class="support-no"><span class="sr-only">No</span></td>
+    <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
+  <tr>
+      <td>1.7.7</td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
+      <td class="support-yes">
+        <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
+        <span class="sr-only">Recommended version</span>
+      </td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+    </tr>
 </tbody>
 </table>
 
@@ -141,6 +181,7 @@ PrestaShop needs a few additions to PHP and MySQL in order to fully work. Make s
 * **Fileinfo**. The [File information extension](https://php.net/manual/en/book.fileinfo.php) is used to find out the file type of uploaded files.
 * **GD**. The [GD extension](https://php.net/manual/en/book.image.php) is used to create thumbnails for the images that you upload.
 * **Intl**. The [Internationalization extension](https://php.net/manual/en/book.intl.php) is used to display localized data, such as amounts in different currencies.
+* **Mbstring**. The [Multibyte string extension](https://www.php.net/manual/en/book.mbstring.php) to perform string operations everywhere.
 * **Zip**. The [Zip extension](https://php.net/manual/en/book.zip.php) is used to expand compressed files such as modules and localization packages.
 
 ### Settings

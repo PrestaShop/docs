@@ -112,8 +112,12 @@ Here is the default structure of the side-menu from PrestaShop at the moment thi
            * AdminCmsContent
            * AdminModulesPositions
            * AdminImages
-           * AdminParentShipping
-           * AdminParentPayment
+    * AdminParentShipping
+           * AdminCarriers
+           * AdminShipping
+    * AdminParentPayment
+           * AdminPayment
+           * AdminPaymentPreferences
     * AdminInternational
            * AdminParentLocalization
            * AdminParentCountries
@@ -178,7 +182,7 @@ your_route_name:
       _legacy_link: 'MyModuleDemoController'
 ```
 
-So now any call in the menu system to `Link::getAdminkLink('MyModuleDemoController')'` will return your controller url `your-module/demo`
+So now any call in the menu system to `Link::getAdminLink('MyModuleDemoController')'` will return your controller url `your-module/demo`
 But since the `MyModuleDemoController` class actually doesn't exist, the automatic tab registration based on the `$tabs` property won't work.
 So you need to insert your tab manually during your module installation:
 
@@ -224,7 +228,7 @@ class example_module_mailtheme extends Module
         $tab->active = 1;
         $tab->class_name = 'MyModuleDemoController';
         $tab->name = array();
-        foreach (Language::getLanguages(true) as $lang) {
+        foreach (Language::getLanguages() as $lang) {
             $tab->name[$lang['id_lang']] = 'My Module Demo';
         }
         $tab->id_parent = (int) Tab::getIdFromClassName('ShopParameters');

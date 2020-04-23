@@ -110,7 +110,7 @@ Displaying content
 Now that we have access to the left column, we should display something
 there for the customer to see.
 
-The visible part of the module is defined in .`tpl` files placed in
+The visible part of the module is defined in `.tpl` files placed in
 specific View folders:
 
 -   `/views/templates/front/`: front office features.
@@ -356,7 +356,7 @@ public function hookDisplayLeftColumn($params)
             'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display'),
             'my_module_message' => $this->l('This is a simple text message') // Do not forget to enclose your strings in the l() translation method
         ]
-    ];
+    );
 
     return $this->display(__FILE__, 'mymodule.tpl');
 }
@@ -388,6 +388,9 @@ Here is a list of Smarty variables that are common to all template pages:
 
 | File / folder       | Description                                                   |
 | ------------------- | ------------------------------------------------------------- |
+| $urls.base\_url           | Site URL.                                                     |
+| $urls.current\_url        | Current page URL.                                             |
+| $urls.shop\_domain\_url   | Shop URL.                                                     |
 | $urls.img\_ps\_url        | URL for PrestaShop's image folder.                            |
 | $urls.img\_cat\_url       | URL for the categories images folder.                         |
 | $urls.img\_lang\_url      | URL for the languages images folder.                          |
@@ -425,6 +428,12 @@ current page's Smarty variables, add the following call:
 
 ```
 {debug}
+```
+
+If you need to display a variable, add the following call:
+
+```
+{dump($variableName)}
 ```
 
 Comments are based on asterisk:

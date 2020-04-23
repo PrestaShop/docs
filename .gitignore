@@ -2,3 +2,5 @@
 node_modules/
 hugo
 .idea/
+/src/themes/hugo-theme-learn/static/js/main.js
+/src/themes/hugo-theme-learn/static/js/main.js.map

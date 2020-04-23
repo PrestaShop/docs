@@ -249,7 +249,7 @@ In the file `config/defines.inc.php`:
 
 ```
 if (!defined('_PS_MODE_DEV_')) {
-    define('_PS_MODE_DEV_', true);
+    define('_PS_MODE_DEV_', false);
 }
 ```
 

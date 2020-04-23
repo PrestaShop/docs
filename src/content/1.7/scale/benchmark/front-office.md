@@ -9,11 +9,19 @@ aliases:
 How to benchmark your PrestaShop Shop (Front-office)
 ==================
 
-## Benchmark methodology
+## Automatically benchmark with `Gatling` (recommended)
+
+Follow instruction on **[Back-Office benchmark page](https://devdocs.prestashop.com/1.7/scale/benchmark/back-office/)** to get a pre-populated shop and to run Gatling scenarios on it.
+
+**[Prestashop performance project](https://github.com/PrestaShop/performance-project)** on Github includes Front-Office scenarios you can edit to get your own scenarios running.
+
+## Benchmark with `Siege` tool
+
+### Benchmark methodology
 In order to benchmark the performances of your shop, you will use the siege testing tool.
 Try to always use the latest available version <a href="http://download.joedog.org/siege/siege-latest.tar.gz">HERE</a>.
  
-## Setup siege configuration
+### Setup siege configuration
 
 Create a txt file ```url.txt``` with various urls from your shop: (prepend with the domain of your shop)
 
@@ -34,7 +42,7 @@ http://localhost:8080/recherche?controller=search&s=sweater
 http://localhost:8080/2-accueil
 ```
 
-## Run the siege benchmark
+### Run the siege benchmark
 
 Then run a siege benchmark using this file:
 ```text
@@ -85,7 +93,7 @@ Longest transaction:	        0.57
 Shortest transaction:	        0.02
 ```
 
-## Interpret the results
+### Interpret the results
 
 In the siege result output, here is the useful results:
 

@@ -19,7 +19,7 @@ Using modern pages, you will have access to the PrestaShop debug toolbar, the se
 Somewhere in your module declare a new class that will act as a Controller:
 
 ```php
-// modules/your-module/controller/DemoController.php
+// modules/your-module/src/Controller/DemoController.php
 
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 
@@ -46,7 +46,7 @@ You must enable the autoloading for this Controller. For example using a `compos
 1. Use namespace for your Controller file
 
     ```php
-    // modules/your-module/controller/DemoController.php
+    // modules/your-module/src/Controller/DemoController.php
     
     namespace MyModule\Controller;
     
@@ -61,7 +61,7 @@ You must enable the autoloading for this Controller. For example using a `compos
       "description": "...",
       "autoload": {
         "psr-4": {
-          "MyModule\\Controller\\": "controller/"
+          "MyModule\\Controller\\": "src/Controller/"
         }
       },
       "config": {
@@ -93,6 +93,12 @@ your_route_name:
 
 {{% notice tip %}}
 Any callable can be used to populate the ``_controller`` attribute, you don't even need to create your own controller! You could even use a public function from your module main class. Even so, we strongly suggest using a controller.
+{{% /notice %}}
+
+{{% notice tip %}}
+For controllers to link with the routes correctly always use double colon (`::`) and not the single colon (`:`) 
+to separate classes and method names! 
+Since Symfony 4.1 the bundle notation is going to be deprecated: https://symfony.com/blog/new-in-symfony-4-1-deprecated-the-bundle-notation
 {{% /notice %}}
 
 The Controller in the previous example will be available if you browse `/admin-dev/modules/your-module/demo`.

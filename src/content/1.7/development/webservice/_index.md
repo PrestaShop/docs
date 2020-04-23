@@ -28,33 +28,9 @@ HTTP has several methods that can perform processing on data as defined in the R
 | PUT       | Update | UPDATE |
 | DELETE    | Delete | DELETE |
 
-## Creating an access to the webservice
+## Enabling & Creating an access to the webservice
 
-Before you can do anything, there are few steps you need to do to create an access to the web service.
-
-### Enabling the web service
-
-Go in the PrestaShop back office, open the "Web service" page under the "Advanced Parameters" menu, and then choose "Yes" for the "Enable PrestaShop Webservice" option.
-
-{{< figure src="./img/enable_webservice.png" title="Enabling Webservice" >}}
-
-### Creating an access key
-
-In order to have access to the API you need to create an access key, this will allow you to finely tune the permissions you give to the different data of your shop.
-You will use this key later in each call to the API. Open the "Webservice" page under the "Advanced Parameters" menu, and then click the "Add New" button to access the account configuration section.
-
-{{< figure src="./img/create_access_key.png" title="Creating an access key" >}}
-
-Each access key is defined by this information:
-
-* **Key** - The API key serves as the main identifier for the webservice account you are creating. Click the "Generate" button to get an unique authentication key. You can also create your own (which must be 32 characters long), but using a generated key prevents wrong-doers from guessing your key too easily.
-            Using this key, you and other selected users will be able to access the webservice.
-* **Key description** - Helps you remember who you created that key for, what are the access rights assigned to it, etc. The description is not public, but make sure to put all the keywords pertaining to the user, so that you can find their key more quickly.
-* **Status** - You can disable any key at any time.
-* **Permissions** - This section is very important, as it enables you to assign rights for each resource you want to make available to this key. Indeed, you might want a user to have read and write access on some resources, but only read access on others – and no access to the more important ones.
-                    In the list of permissions, the top left checkbox enables you to define all the rights for a given resource. Likewise, the checkbox at the top of each column enables you to give the select right (View, Modify, etc.) to all the resources. 
-                    Make sure to only select the rights needed for the usage of that key. **Do not give all the rights for all resources to any key**, keep that to yours and yours only.
-* **Shop association** - This only appears in multistore mode. It enables you to choose which of your stores the key owner should have access to.
+Reach the [dedicated page]({{< ref "1.7/development/webservice/tutorials/creating-access" >}}).
 
 ## Accessing the webservice
 
@@ -77,7 +53,7 @@ To test/call your APIs we recommend you use an API client such as [Insomnia](htt
 {{% /notice %}}
 
 {{% notice warning %}}
-As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with you access key rights and how (and whose) you distribute them.
+As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with you access key rights and how (and to whom) you disclose them.
 {{% /notice %}}
 
 ## Using your webservice API
@@ -108,7 +84,6 @@ Each API comes with two schema APIs:
 Both calls are very much alike, only synopsis contains more information about the data format and types:
 
 ```xml
-
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
     <address>
