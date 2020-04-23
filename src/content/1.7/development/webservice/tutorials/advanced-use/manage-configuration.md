@@ -1,25 +1,26 @@
 ---
-title: Configuration
+title: Manage Configuration
+menuTitle: Configuration
 weight: 4
 ---
 
-# Dealing with Configuration
+# Manage Configuration
 
 You can manage your shop configuration thanks to the API, in this example we will set the `PS_MULTISHOP_FEATURE_ACTIVE` to true (which enables multishop mode).
 
 ## API call
 
-First check if the configuration is already set by calling `/api/configurations/?display=[id,name,value]&filter[name]=[PS_MULTISHOP_FEATURE_ACTIVE]`
+First check if the configuration already exists by calling `/api/configurations/?display=[id,name,value]&filter[name]=[PS_MULTISHOP_FEATURE_ACTIVE]`
 
 If the configuration doesn't exist yet, you need to POST on the `configuration` API `/api/configurations/`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<configuration>
-	<value>1</value>
-	<name>PS_MULTISHOP_FEATURE_ACTIVE</name>
-</configuration>
+    <configuration>
+        <value>1</value>
+        <name>PS_MULTISHOP_FEATURE_ACTIVE</name>
+    </configuration>
 </prestashop>
 ```
 
@@ -28,11 +29,11 @@ If it is already defined you need to update it via a PUT using the configuration
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<configuration>
-    <id>411</id>
-	<value>1</value>
-	<name>PS_MULTISHOP_FEATURE_ACTIVE</name>
-</configuration>
+    <configuration>
+        <id>411</id>
+        <value>1</value>
+        <name>PS_MULTISHOP_FEATURE_ACTIVE</name>
+    </configuration>
 </prestashop>
 ```
 
@@ -56,11 +57,10 @@ try {
     $configurationValue = 1;
 
     // Start by checking if the configuration is present and get its ID
-    $opt = [
+    $xml = $webService->get([
         'resource' => 'configurations',
         'filter[name]' => '['. $configurationName . ']',
-    ];
-    $xml = $webService->get($opt);
+    ]);
 
     $configurationId = null;
     if ($xml->configurations->configuration->count() > 0) {
@@ -69,16 +69,12 @@ try {
 
     // Get the base XML, either a blank one or the existing one
     if (null === $configurationId) {
-        $opt = [
-            'url' => $webServiceUrl . 'api/configurations?schema=blank'
-        ];
-        $configurationXml = $webService->get($opt);    
+        $configurationXml = $webService->get(['url' => $webServiceUrl . 'api/configurations?schema=blank']);    
     } else {
-        $opt = [
+        $configurationXml = $webService->get([
             'resource' => 'configurations',
             'id' => $configurationId,
-        ];
-        $configurationXml = $webService->get($opt);    
+        ]);    
     }
 
     // Update values
@@ -90,26 +86,22 @@ try {
 
 // Either create new configuration or update it
 if (null === $configurationId) {
-    $opt = [
-        'resource' => 'configurations',
-        'postXml' => $configurationXml->asXML(),
-    ];
-
     try {
-        $webService->add($opt);
+        $webService->add([
+            'resource' => 'configurations',
+            'postXml' => $configurationXml->asXML(),
+        ]);
         echo 'Successfully created configuration ' . $configurationName . ' = ' . $configurationValue . PHP_EOL;
     } catch (PrestaShopWebserviceException $e) {
         echo 'Error while adding the configuration:' . $e->getMessage() . PHP_EOL;
     }
 } else {
-    $opt = [
-        'resource' => 'configurations',
-        'id' => $configurationId,
-        'putXml' => $configurationXml->asXML(),
-    ];
-
     try {
-        $webService->edit($opt);
+        $webService->edit([
+            'resource' => 'configurations',
+            'id' => $configurationId,
+            'putXml' => $configurationXml->asXML(),
+        ]);
         echo 'Successfully updated configuration ' . $configurationName . ' = ' . $configurationValue . PHP_EOL;
     } catch (PrestaShopWebserviceException $e) {
         echo 'Error while updating the configuration:' . $e->getMessage() . PHP_EOL;
