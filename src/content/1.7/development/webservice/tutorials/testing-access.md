@@ -27,7 +27,7 @@ The second way to access the API is to include your access key in the url, this 
 * In a subfolder of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestashop/api/
 
 {{% notice warning %}}
-This method might be convenient for development but **very risky** as you expose your API key directly in the url, so anyone able to see (or hack) your browser history would be able to get your key. This should **never** be used on a production shop.
+This method might be convenient for development but **very risky** as you expose your API key directly in the url, so anyone able to see (or hack) your browser history or access logs would be able to get your key. This should **never** be used on a production shop.
 {{% /notice %}}
 
 ### Using an Authorization header (recommended)
