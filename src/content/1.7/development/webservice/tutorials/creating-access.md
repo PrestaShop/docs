@@ -1,10 +1,12 @@
 ---
-title: Provide access to the Webservice
-menuTitle: Provide access
-weight: 3
+title: Creating access to the Webservice
+menuTitle: 1 - Creating access
+aliases:
+  - /1.7/development/webservice/tutorials/provide-access/
+weight: 1
 ---
 
-A few steps must be completed to get access to the web service.
+# Creating access to the Webservice
 
 ## Enable the webservice
 
@@ -37,7 +39,7 @@ Configuration::updateValue('PS_WEBSERVICE', 0);
 ### Via the user interface
 
 In order to have access to the API you need to create an access key, this will allow you to finely tune the permissions you give to the different data of your shop.
-You will use this key later in each call to the API. Open the "Webservice" page under the "Advanced Parameters" menu, and then click the "Add New" button to access the account configuration section.
+You will use this key later in each call to the API. Open the "Webservice" page under the "Advanced Parameters" menu, and then click the "Add new webservice key" button to access the account configuration section.
 
 {{< figure src="../../img/create_access_key.png" title="Creating an access key" >}}
 
@@ -66,7 +68,7 @@ $apiAccess->save();
 This first code allows you to pass the authentication layer. You also need access to the resources you expect to use.
 
 We need the Api account ID in order to grant it access, and an array having the resource name as key and the array of methods allowed as value.
-The available resources can be found in [`WebserviceRequest::getResources()` (link to definition)](https://github.com/PrestaShop/PrestaShop/blob/844ceb99b26f0b81c4f96b58a304fd3dbe27de41/classes/webservice/WebserviceRequest.php#L285]).
+The available resources can be found in [`WebserviceRequest::getResources()` (link to definition)](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/classes/webservice/WebserviceRequest.php#L285]).
 
 For instance is we want to give all permissions for customers and orders resources for the account we previously created:
 
