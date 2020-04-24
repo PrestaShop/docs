@@ -196,10 +196,10 @@ The important thing is, if possible, to set `innodb_buffer_pool_size` to a great
 
 ```
 read_buffer_size			= 2M 
-read_rnd_buffer_size			= 1M
+read_rnd_buffer_size		= 1M
 join_buffer_size			= 2M 
 sort_buffer_size 			= 2M
-innodb_buffer_pool_size 		= 1G
+innodb_buffer_pool_size 	= 1G
 
 ```
 
