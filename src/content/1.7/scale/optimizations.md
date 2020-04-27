@@ -32,10 +32,12 @@ There's no way to enumerate all the performance issues we've encountered, but le
 
 ### 1) PHP
 
+PHP tuning is very important for your application’s performance, whether you’re running PrestaShop or any other PHP software.
+
+
 First, try to use PHP >=7 when possible. Hard work has been done on performance starting on this version and it will provide a nice speed boost to your shop!
 
-If you're using PHP-FPM (which should be the case for most "modern" installations), you have to check the `pool`
-configuration.
+If you're using PHP-FPM (which should be the case for most "modern" installations), you have to check the `pool` configuration.
 It's usually stored in the file ```/etc/php/7.x/fpm/pool.d/www.conf```.
 Inside this file, the most important setting is the ```pm.max_children``` setting. It must be greater than the max number
 of concurrent users you want to simulate during the bench.
@@ -97,11 +99,27 @@ Good news is, OPCache will not only store your PHP files in memory, but it will 
 
 ```
 [opcache]
-opcache.enable_file_override = On
-opcache.interned_strings_buffer=64
+opcache.enable=1
+opcache.enable_cli=0
 opcache.memory_consumption=256
-opcache.max_accelerated_files=20000
+opcache.interned_strings_buffer=32
+opcache.max_accelerated_files=16229
+opcache.max_wasted_percentage=10
+opcache.revalidate_freq=10
+opcache.fast_shutdown=1
+opcache.enable_file_override=0
+opcache.max_file_size=0
 ```
+
+If you can manage it, here are few options you could configure:
+
+```
+opcache.validate_timestamps=0
+opcache.revalidate_path=0
+```
+
+Keep in mind if you deactivate `validate_timestamps` OPCache will never update your code unless you let it know explicitly (either through internal functions or by restarting the web server).
+
 
 Also, your favorite ecommerce project made sure it's fully compatible with OPCache.
 
@@ -141,31 +159,59 @@ If you're using PHP-FPM, you should be able to use apache mpm_event. Using the f
 
 ### 5) MySQL/MariaDB Settings
 
-If you using MySQL < 8 or MariaDB, enable the query cache by putting this setting in the ```/etc/mysql/my.cnf``` file:
+Though we’re discussing it just now, MySQL tuning is just as important.
+
+Our intention here is to optimize the instance’s throughput by adding caches.
+
+As for PHP, it allows the service to work as much as possible in memory and avoid disk access, hence reducing latency.
+
+#### Caching
+
+These parameters allow better cache information for further reuse, first by enabling it, then by increasing its size. 
+Again, the idea is to keep the query results in memory rather than looking them up to the (higher latency) hard drive.
+
+As always, these values should be adjusted to your own environment, you probably won’t need a ``host_cache_size`` of 1000. 
 
 ```
-query_cache_limit               = 128K
-query_cache_size                = 32M
-query_cache_type                = ON
+query_cache_limit = 128K 
+query_cache_size = 32M
+query_cache_type = ON
+table_open_cache = 1000
+thread_cache_size = 80
+host_cache_size=1000
 ```
 
-Other important settings are:
+#### Buffering
+
+Buffering is almost another word for caching. 
+
+So we work here with the memory area that holds cached data for InnoDB tables, indexes, and other auxiliary buffers, etc..
+
+Again, these options should be adapted to your shop. 
+
+Setting up the `innodb_buffer_pool_size` to 1G may be too much for your SQL instance, just make sure you have enough memory according to the value you configure.
+
+The important thing is, if possible, to set `innodb_buffer_pool_size` to a greater value than your database size.
+
 
 ```
-table_open_cache                      = 1000
-read_buffer_size                      = 2M
-read_rnd_buffer_size                  = 1M
-thread_cache_size                     = 80
-join_buffer_size                      = 2M
-sort_buffer_size                      = 2M
-max_connections                       = 400
-tmp_table_size                        = 32M
-max_heap_table_size                   = 32M
-table_definition_cache                = 1000
-performance_schema                    = OFF
+read_buffer_size			= 2M 
+read_rnd_buffer_size		= 1M
+join_buffer_size			= 2M 
+sort_buffer_size 			= 2M
+innodb_buffer_pool_size 	= 1G
+
 ```
 
-Try to set the value of ```innodb_buffer_pool_size``` to something greater than the size of your database on disk.
+#### Other parameters
+
+Some other parameters to increase the MySQL performance, such as disabling the performance schema (used for monitoring), memory tables and enhancing GROUP BY queries.
+
+```
+performance_schema = OFF
+max_heap_table_size = 32M
+tmp_table_size = 32M
+```
 
 Before launching the benchmark, and after importing the data, it's always great to launch an ANALYZE TABLE on all your
 database by running on your server:
