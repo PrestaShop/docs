@@ -32,7 +32,7 @@ There's no way to enumerate all the performance issues we've encountered, but le
 
 ### 1) PHP
 
-PHP tuning is very important for your application’s performance, either you’re running PrestaShop or any other PHP software.
+PHP tuning is very important for your application’s performance, whether you’re running PrestaShop or any other PHP software.
 
 
 First, try to use PHP >=7 when possible. Hard work has been done on performance starting on this version and it will provide a nice speed boost to your shop!
@@ -118,7 +118,7 @@ opcache.validate_timestamps=0
 opcache.revalidate_path=0
 ```
 
-Keep in mind if you deactivate `validate_timestamps` OPCache will never update your code unless you let him know explicitly (either through internal functions or by restarting the webserver).
+Keep in mind if you deactivate `validate_timestamps` OPCache will never update your code unless you let it know explicitly (either through internal functions or by restarting the web server).
 
 
 Also, your favorite ecommerce project made sure it's fully compatible with OPCache.
@@ -163,14 +163,14 @@ Though we’re discussing it just now, MySQL tuning is just as important.
 
 Our intention here is to optimize the instance’s throughput by adding caches.
 
-As for PHP, it allows the service to work as much as possible in memory and avoid disk accesses, hence reducing latency.
+As for PHP, it allows the service to work as much as possible in memory and avoid disk access, hence reducing latency.
 
 #### Caching
 
-Those parameters allow better cache information for further reuse, first by enabling it, then by increasing its sizes. 
+These parameters allow better cache information for further reuse, first by enabling it, then by increasing its size. 
 Again, the idea is to keep the query results in memory rather than looking them up to the (higher latency) hard drive.
 
-As always, those values should be adapted to your own environment, you probably won’t need a ``host_cache_size`` of 1000. 
+As always, these values should be adjusted to your own environment, you probably won’t need a ``host_cache_size`` of 1000. 
 
 ```
 query_cache_limit = 128K 
@@ -187,19 +187,19 @@ Buffering is almost another word for caching.
 
 So we work here with the memory area that holds cached data for InnoDB tables, indexes, and other auxiliary buffers, etc..
 
-Again, those options should be adapted to your shop. 
+Again, these options should be adapted to your shop. 
 
-Setting up the ```innodb_buffer_pool_size``` to 1G maybe too much for your SQL instance, just make sure you have enough memory according to the value you configure.
+Setting up the `innodb_buffer_pool_size` to 1G may be too much for your SQL instance, just make sure you have enough memory according to the value you configure.
 
-The important thing is, if possible, to set ```innodb_buffer_pool_size``` to a greater value than your database size.
+The important thing is, if possible, to set `innodb_buffer_pool_size` to a greater value than your database size.
 
 
 ```
 read_buffer_size			= 2M 
-read_rnd_buffer_size			= 1M
+read_rnd_buffer_size		= 1M
 join_buffer_size			= 2M 
 sort_buffer_size 			= 2M
-innodb_buffer_pool_size 		= 1G
+innodb_buffer_pool_size 	= 1G
 
 ```
 
