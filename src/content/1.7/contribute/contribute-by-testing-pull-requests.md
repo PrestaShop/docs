@@ -4,11 +4,11 @@ weight: 50
 menuTitle: Test Pull Requests and branches
 ---
 
-# Why testing Pull Requests
+# Why test Pull Requests
 
 Tests determine the quality of a software. This process involves evaluating information that is related to a shop.
 
-To help on testing, we provide a [Vagrant](http://www.vagrantup.com/) configuration designed for testing branches and pull requests.
+To make testing easier, we provide a [Vagrant](http://www.vagrantup.com/) configuration designed for testing branches and pull requests.
 
 ## What is installed
 
@@ -34,4 +34,19 @@ With it, you can control every aspect of the machine, and help us by having a si
 
 ## Getting started
 
-Go to [https://github.com/PrestaShop/vagrant](https://github.com/PrestaShop/vagrant) and follow instructions.
+The process is pretty simple.
+
+First, you must clone the repository [https://github.com/PrestaShop/vagrant](https://github.com/PrestaShop/vagrant).
+
+Second, execute the script `run.sh` (or `run.bat` if you're under Windows) and follow instruction.
+
+If there is a prompt asking for a network interface, remember it's the communication between the virtual machine and our network card.
+
+Example:
+{{< figure src="/images/1.7/contribute/vagrant/run-script.png" alt="Running the run.sh script" >}}
+
+Then all you need is waiting for a feedback.
+
+The first installation can take a while because it needs to download the vagrant box, installs all needed packages and configures the system to make it compatible with PrestaShop.
+
+
