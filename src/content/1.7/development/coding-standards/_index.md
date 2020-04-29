@@ -29,6 +29,8 @@ PHP files MUST follow the [PSR-2 standard](https://www.php-fig.org/psr/psr-2/) a
 Although [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) are suggested, they are not enforced.
 {{% /notice %}}
 
+### Making your code follow our coding standards
+
 [PHP CS Fixer](https://cs.sensiolabs.org/) has been configured for the PrestaShop project to help developers to comply with these conventions.
 
 You can run it using the following command:
@@ -36,9 +38,34 @@ You can run it using the following command:
 php ./vendor/bin/php-cs-fixer fix
 ```
 
-The prestashop specific configuration file [can be found here](https://github.com/PrestaShop/PrestaShop/blob/develop/.php_cs.dist)
+The prestashop specific configuration file [can be found here](https://github.com/PrestaShop/PrestaShop/blob/develop/.php_cs.dist). Also, you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/develop/.github/contrib) sample in order to make sure you never forget to make your code compliant!
 
-And you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/develop/.github/contrib) sample in order to make sure you never forget to make your code compliant!
+### Strict typing
+{{< minver v="1.7.7" title="true" >}}
+
+Starting on 1.7.7, all new PHP code should be strictly typed.
+
+This means that all new methods **must** specify a type for all parameters as well as the return type. Similarly, all new classes must enforce type strictness via `declare`:
+
+```php
+<?php
+/** 2007-2020 PrestaShop SA and Contributors... */
+
+declare(strict_types=1);
+
+namespace Foo\Bar;
+
+class MyClass
+{
+    public function doStuff(string $foo, array $bar): void
+    {
+    }   
+}
+```
+
+{{% notice note %}}
+**It's important to have all classes declare type strictness.** Since PHP 7 is still inherently weakly typed, it's not enough to have your class declare type strictness to make it _enforce_ type strictness. If the class consuming your code does not enforce type strictness as well, methods called by it will have their parameters silently _coerced_ into the specified type instead of being type checked. [Read this article for more details and examples](https://dev.to/robdwaller/how-php-type-declarations-actually-work-1mm5).
+{{% /notice %}}
 
 ### Deprecations
 
