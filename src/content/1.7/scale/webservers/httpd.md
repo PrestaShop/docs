@@ -1,5 +1,5 @@
 ---
-title: Optimize your httpd configuration
+title: Optimize your httpd/apache2 configuration
 ---
 
 

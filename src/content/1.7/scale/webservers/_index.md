@@ -54,7 +54,7 @@ It is often said that nginx is faster than httpd, which is not entirely true. Ng
 If you want to know more about configuring [nginx for PrestaShop](../webservers/nginx/).
 
 
-#### httpd
+####  httpd/apache2
 
 Apache's httpd is the usual suspect and the most popular webserver of alls.
 
