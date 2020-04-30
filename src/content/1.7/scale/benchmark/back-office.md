@@ -151,7 +151,7 @@ docker run -it --rm \
 			-DrampDurationInSeconds=900
 			-DhttpBaseUrlFO=http://shop2.stack1.prestashop.net
 			-DhttpBaseUrlBO=http://shop2.stack1.prestashop.net/ps-admin
-			-DadminUser=admin@prestashop.com
+			-DadminUser=demo@prestashop.com
 			-DadminPassword=prestashop" \
 		--add-host=sandbox.prestashop.com:192.168.0.4 \
 		prestashop/performance-gatling \
