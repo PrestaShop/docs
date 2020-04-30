@@ -1,10 +1,10 @@
 # PrestaShop Technical Documentation
 
-This documentation is available at http://devdocs.prestashop.com/
+This documentation is available at https://devdocs.prestashop.com/
 
 ## Contributing
 
-Contributions are more than welcome! [Find out how](http://devdocs.prestashop.com/1.7/contribute/documentation/how/).
+Contributions are more than welcome! [Find out how](https://devdocs.prestashop.com/1.7/contribute/documentation/how/).
 
 ## Rendering the site locally
 
@@ -79,4 +79,4 @@ src/themes/hugo-theme-learn/_src/sass
 
 ## License
 
-Content from this documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+Content from this documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
