@@ -273,7 +273,7 @@ $helper->toolbar_btn = [
 ];
 
 // Load current value
-$helper->fields_value['MYMODULE_NAME'] = Configuration::get('MYMODULE_NAME');
+$helper->fields_value['MYMODULE_NAME'] = Tools::getValue('MYMODULE_NAME', Configuration::get('MYMODULE_NAME'));
 
 return $helper->generateForm($fieldsForm);
 ```
