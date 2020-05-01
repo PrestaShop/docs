@@ -17,6 +17,7 @@ use PrestaShop\PrestaShop\Core\MailTemplate\Layout\Layout;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCatalogInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollectionInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeInterface;
+use PrestaShop\PrestaShop\Core\MailTemplate\FolderThemeScanner;
 
 class my_email_theme_module {
     public function install() {
