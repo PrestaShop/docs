@@ -38,15 +38,55 @@ The process is pretty simple.
 
 First, you must clone the repository [https://github.com/PrestaShop/vagrant](https://github.com/PrestaShop/vagrant).
 
-Second, execute the script `run.sh` (or `run.bat` if you're under Windows) and follow instruction.
+Second, execute the script `run.sh` (or `run.bat` if you're under Windows) and follow instructions.
 
-If there is a prompt asking for a network interface, remember it's the communication between the virtual machine and our network card.
+Most of the time, there is a prompt asking for a network interface, remember it's the communication between the virtual machine and our network card.
 
-Example:
 {{< figure src="/images/1.7/contribute/vagrant/run-script.png" alt="Running the run.sh script" >}}
 
-Then all you need is waiting for a feedback.
+The first installation will take a while, because it needs to download the vagrant box, installs all needed packages and configures the system to make it compatible with PrestaShop.
+{{< figure src="/images/1.7/contribute/vagrant/script-ended-successful.png" alt="Script running successfuly" >}}
 
-The first installation can take a while because it needs to download the vagrant box, installs all needed packages and configures the system to make it compatible with PrestaShop.
+Then, visit [http://192.168.42.42/prestashop](http://192.168.42.42/prestashop).
 
+phpMyAdmin is also available at [http://192.168.42.42/phpmyadmin](http://192.168.42.42/phpmyadmin).
+
+### Environments
+
+#### Available PHP versions
+
+- 7.1
+- 7.2
+- 7.3
+- 7.4
+
+#### PrestaShop
+
+- Username: `demo@prestashop.com`
+- Password: `prestashop_demo`
+
+#### MySQL
+
+phpMyAdmin is available at [http://192.168.42.42/phpmyadmin](http://192.168.42.42/phpmyadmin).
+
+- MySQL Host: `127.0.0.1`
+- Database name: `prestashop`
+- Username: `prestashop`
+- Password: `prestashop`
+- Port: `3306`
+
+#### SSH
+
+You can login into the virtual machine with `vagrant ssh`
+
+
+### Troubleshooting
+
+If something went wrong during the installation, the error is displayed explaining which command is failing.
+
+* Invalid branch name:
+{{< figure src="/images/1.7/contribute/vagrant/build-failed.png" alt="Invalid git branch name" >}}
+
+* Invalid PHP version:
+{{< figure src="/images/1.7/contribute/vagrant/invalid-php-version.png" alt="Invalid PHP version" >}}
 
