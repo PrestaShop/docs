@@ -17,5 +17,5 @@ We use the following stack:
 
 ## Running web acceptance tests
 
-Everything is explained in README in the `tests/puppeteer` folder. 
+Everything is explained in [README](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/puppeteer/README.md) in the `tests/puppeteer` folder. 
 You'll need a working installation of PrestaShop in order to run the tests.
