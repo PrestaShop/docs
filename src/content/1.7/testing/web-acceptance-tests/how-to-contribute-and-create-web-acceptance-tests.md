@@ -129,7 +129,7 @@ The description of each variable in this file can be found in [README.md](https:
 This helper file is used to centralize the browser and tab functions called in all tests. 
 This approach has one goal : to have the same browser’s configuration everywhere and of course to facilitate maintenance.
 
-The functions that exist (for now) in this file are the following :
+The functions that exist (for now) in this file are the following:
 
 - `createBrowser`: used to create a browser with the global configuration
 - `closeBrowser`: usually called at the end of a test, to close the browser created for the test
