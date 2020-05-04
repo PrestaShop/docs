@@ -28,6 +28,7 @@ The name of the file is a little different: the main page name is always `index.
 Example:
  
 For BO products pages located at `pages/catalog/products/`, we use 2 classes:
+
 - `index.js` for products listing page (main page)
 - `add.js` for add/edit product page
  
@@ -73,6 +74,7 @@ For example, a button used to submit the main form in the order page should be n
 
 #### Types
 Each selector must belong to a certain type. Here is a non-exhaustive list:
+
 - button
 - link
 - block
@@ -106,6 +108,7 @@ We currently have 2 campaigns implemented:
 - **Functional**: it is the biggest and most important campaign. Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) items (orders, customers, products…), setting changes, etc.
 
 We plan on implementing 2 more campaigns:
+
 - **End to end**: its purpose is to check that popular user paths are working as intended. It will walk through the application and mimic a real user working on their daily routines as a merchant: checking products, generating invoices, creating a customer account, and an order, adding a special voucher for a specific user, etc. The selected user paths will be chosen by the Product Team. Thanks to their merchants and agencies interviews, they have a pretty good idea of what merchants do every day and how they use the software.
 - **Regression**: a test campaign tailored to only target major and critical issues in the few last versions of PrestaShop, to make sure they don’t come back (hence the name).
 
@@ -127,7 +130,8 @@ The description of each variable in this file can be found in [README.md](https:
 This helper file is used to centralize the browser and tab functions called in all tests. 
 This approach has one goal : to have the same browser’s configuration everywhere and of course to facilitate maintenance.
 
-The functions that exist (for now) in this file are the following : 
+The functions that exist (for now) in this file are the following :
+
 - `createBrowser`: used to create a browser with the global configuration
 - `closeBrowser`: usually called at the end of a test, to close the browser created for the test
 - `newTab`: allow us to open a new tab in a browser
@@ -145,7 +149,8 @@ In each and every test, we initialize the pages that will be needed. The initial
 
 This function is called at the beginning of the test and each time we change the browser’s tab.
 
-Example: 
+Example:
+
 ```
 // For test ‘Filter Customer’
 const init = async function () {
