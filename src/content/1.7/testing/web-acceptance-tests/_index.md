@@ -1,6 +1,5 @@
 ---
-title: Web acceptance tests 
-menuTitle: Web acceptance tests 
+title: Web acceptance tests
 weight: 30
 chapter: true
 ---
