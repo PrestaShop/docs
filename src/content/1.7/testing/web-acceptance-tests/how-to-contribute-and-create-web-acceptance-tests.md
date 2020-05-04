@@ -53,7 +53,7 @@ Methods inside a page class **CANNOT USE** the `expect` keyword or any kind of a
 To validate a behavior in your test logic, your methods can return booleans, integers (number of lines, elements, etc), strings, objects... It’s up to you.
 
 Examples: 
-```
+```js
    /**
    * Get order status
    * @return {Promise<string>}
@@ -150,7 +150,7 @@ This function is called at the beginning of the test and each time we change the
 
 Example:
 
-```
+```js
 // For test ‘Filter Customer’
 const init = async function () {
   return {
@@ -166,7 +166,7 @@ We use the `expect` keyword from the [Chai library](https://www.chaijs.com/api/b
 
 Example :
 
-``` 
+```js
 Const isCustomerConnected = await this.pageObject.foLoginPage.isCustomerConnected();
 await expect(isCustomerConnected, ‘Customer is disconnected in FO’).to.be.true;
 ```  
@@ -182,7 +182,7 @@ We first create a base context for each and every test file, and then we make a 
 
 Example :
 
-```
+```js
 // From test : puppeteer/campaigns/functional/BO/04_customers/01_customers/07_helpCard.js
 const baseContext = 'functional_BO_customers_customers_helpCard';
 // And inside each `it`, we make a call
