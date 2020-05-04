@@ -2,6 +2,8 @@
 title: How to contribute and create web acceptance tests
 menuTitle: Contributing to the creation of web acceptance tests
 weight: 2
+aliases:
+   - /1.7/testing/how-to-create-your-own-web-acceptance-tests
 ---
 
 ## How to contribute and create web acceptance tests
