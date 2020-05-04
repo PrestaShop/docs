@@ -114,7 +114,7 @@ We plan on implementing 2 more campaigns:
 ### Mocha and Mochawesome
 [Mocha](https://mochajs.org/) is our test runner (a framework that reads our test code and runs it). We use it in coordination with [Mochawesome](https://www.npmjs.com/package/mochawesome), a plugin for Mocha. Mochawesome produces a full JSON report in addition to a beautiful HTML report (which we don’t really use). The JSON file is sent to our [Nightly Board](https://nightly.prestashop.com/), it is then inserted into the database to let visitors browse reports and visualize statistics.
 
-### Lambda function (Why ?)
+### Lambda function (Why?)
 Using lambda functions in mocha is [discouraged](https://mochajs.org/#arrow-functions). They bind `this` to the scope of the lambda function, making it impossible to use internal Mocha methods and objects. Since we use the Mocha context to store our Page Objects, we strongly advise you to use the normal `function()` syntax.  
 
 ### Utils
