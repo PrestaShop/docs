@@ -7,7 +7,7 @@ weight: 2
 
 Patch releases are "maintainance" releases: they provide bug fixes and security patches, but do not provide enhancements or new features. They are part of a necessary maintenance process.
 
-### Scope of maintainance
+## Scope of maintainance
 
 When a minor version is released, such as PrestaShop 1.7.7.0, the related branch becomes the latest and maintained branch.
 This means that, when PrestaShop 1.7.7.0 is out :
@@ -16,7 +16,7 @@ This means that, when PrestaShop 1.7.7.0 is out :
 
 When PrestaShop 1.7.7.0 is released, PrestaShop 1.7.6 reaches its [End Of Life](https://en.wikipedia.org/wiki/End-of-life_(product)), just like all previous minor versions.
 
-### When is it decided to release a patch ?
+## When is it decided to release a patch ?
 
 A patch release is scheduled when a "trigger bug" is reported:
 - A major bug in maintained branch
@@ -32,7 +32,7 @@ If minor or trivial regressions are reported for PrestaShop 1.7.6, they are sche
 
 From the moment a "trigger bug" is reported, there start a *6 weeks long timer*. Our process states that a patch release must be delivered within these 6 weeks.
 
-### What happens in six weeks
+## What happens in six weeks
 
 From the moment the 6 weeks timer is started, Product Team register into the dedicated Kanban the bugs to be fixed in the patch release, whether they are trivial, minor or major.
 
