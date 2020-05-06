@@ -176,7 +176,7 @@ secured by redirecting it to HTTPS.
 public $ssl = true;
 ```
 
-## Addendum: Execution order of the controller’s functions
+## Execution order of the controller’s functions
 
   * **__construct()**: Sets all the controller’s member variables.
   * **init()**: Initializes the controller.
@@ -186,3 +186,50 @@ public $ssl = true;
   * **initContent()**: Initializes the content.
   * **initFooter()**: Called after initContent().
   * **display()** or **displayAjax()**: Displays the content.
+
+## Using a front controller as a cron task
+
+There is no dedicated handler for CLI calls. However a workaround can be found with front controllers. The following code provides a base for a cron task in the module `examplemodule`.
+
+**modules/examplemodule/controllers/front/cron.php**
+
+```php
+<?php
+class ExampleModuleCronModuleFrontController extends ModuleFrontController
+{
+    /** @var bool If set to true, will be redirected to authentication page */
+    public $auth = false;
+
+    /** @var bool */
+    public $ajax;
+
+    public function display()
+    {
+        $this->ajax = 1;
+
+        echo "hello";
+    }
+}
+```
+
+This controller can now be triggered:
+
+* By calling it via curl: `curl http://<shop_url>/index.php?fc=module&module=examplemodule&controller=cron`
+* By creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller:
+
+**modules/examplemodule/cron.php**
+
+```php
+$_GET['fc'] = 'module';
+$_GET['module'] = 'examplemodule';
+$_GET['controller'] = 'cron';
+
+require_once dirname(__FILE__) . '/../../index.php';
+```
+
+Then, this file can be called to check the code has been executed:
+
+```bash
+$ php cron.php 
+hello
+```
