@@ -13,32 +13,42 @@ When you submit a new Pull Request to the [project repository](https://github.co
 
 ### Continuous Integration
 
-Two automatic code checker tools are active on the project.
+Four automatic code checker tools are active on the project.
 
-The first tool is [PrettyCI](https://prettyci.com/). This tool will look at your Pull Request and check whether the code-style is correct. If not, it will block the PR from being merged and tell you what is wrong.
+#### GitHub Actions
+
+The first tool is a [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) [GitHub Action](https://github.com/features/actions). This tool will look at your Pull Request and check whether the php syntax and code-style is correct. If not, it will block the PR from being merged and tell you what is wrong.
 
 It is a lot easier to work on a big codebase like PrestaShop if all code is written following the same conventions: snake_case or camelCase, how to write the phpDoc, when to use white spaces ... it makes the code look like if it was written by a single developer.
 Just like reading a book with two different styles in it, having a codebase with a unified style is making it easier to browse. A unified code-style also makes the pull requests easier to review.
 
-If PrettyCI states that your pull request has issues, you need to fix the issues by looking at PrettyCI output to understand what needs to be fixed.
+If the Github Action states that your pull request has issues, you need to fix the issues by looking at the Github Action output to understand what needs to be fixed.
 
-The second tool is [Travis](https://travis-ci.org/). Travis is a Continous Integration system that will look at the Pull Request and run several checks, be it code-style checkers, format checkers or automated tests, and provide you the result in the Pull Request. If something is wrong it will block the PR from being merged. This is a standard approach to ensure that new contributions in a codebase do not break existing features and behaviors.
+The second tool is a [ESLint](https://eslint.org/) GitHub Action. This one checks whether the Javascript syntax and code-style is correct. Likewise, it will block the PR from being merged if there is a syntax or code-style issue.
+
+The third tool is a [stylelint](https://stylelint.io/) GitHub Action. This one checks whether the CSS syntax and code-style is correct. It will block the PR from being merged as well if there is a syntax or code-style issue.
+
+These GitHub Actions are executed automatically for every Pull Request.
+
+#### Test runner
+
+The fourth tool is [Travis](https://travis-ci.org/). Travis is a Continous Integration system that will look at the Pull Request and run several checks, be it code-style checkers, format checkers or automated tests, and provide you the result in the Pull Request. If something is wrong it will block the PR from being merged. This is a standard approach to ensure that new contributions in a codebase do not break existing features and behaviors.
 
 If Travis states that your pull request has issues, you need to fix the issues by looking at Travis output to understand what needs to be fixed.
 
-These tools are executed automatically for every Pull Request.
+Travis runs automatically for every Pull Request.
 
-In addition, the new [Github Actions](https://github.com/features/actions) have been activated on the `develop` branch, which now benefits from an additional php 7.2 syntax compliancy check.
+### Prestonbot and Issuebot
 
-### Prestonbot
-
-[Prestonbot](https://github.com/PrestaShop/prestonbot) is a custom bot that looks at all Pull Requests and tries to help us manage the project. He has multiple capabilities.
+[Prestonbot](https://github.com/PrestaShop/prestonbot) (based on [Carsonbot](https://github.com/carsonbot/carsonbot)) is a custom bot that looks at all Pull Requests and tries to help us manage the project. He has multiple capabilities.
 
 For example he detects mistakes in the pull request description, he add some labels to classify the pull requests, he welcomes new contributors to the project ...
 
 [Read his article for the full details.](https://build.prestashop.com/news/prestonbot-reaches-stable-version/)
 
 If something is wrong, Prestonbot will write a comment in the pull request to tell you what to fix.
+
+Issuebot (based on the [probot framework](https://github.com/probot/probot)) is another bot that automates our issue/PR workflow. It will make sure your Pull Request metadata, such as labels or Kanban cards, are valid.
 
 ## The code review
 
