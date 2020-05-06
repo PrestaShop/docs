@@ -64,9 +64,7 @@ Examples:
 ```
 
 ### Selectors
-Selectors are used on every page and are stored as attributes of the class. They should be named following this convention:
-
-**nameType*** in `camelCase`.
+Selectors are used on every page and are stored as attributes of the class. They should be named following this convention: **nameType** in `camelCase`.
 
 For example, a button used to submit the main form in the order page should be named: `submitMainFormButton`.
 
@@ -74,29 +72,9 @@ For example, a button used to submit the main form in the order page should be n
 ### Types
 Each selector must belong to a certain type. Here is a non-exhaustive list:
 
-- button
-- link
-- block
-- image
-- icon
-- text
-- modal
-- *other HTML elements...*
-
-
-- table
-- table-header
-- table-cell
-- table-row
-- *other table elements...*
-
-
-- form
-- input
-- select
-- radio
-- checkbox
-- *other forms inputs...*
+- Button, link, block, image, icon, text, modal, **other HTML elements...**
+- Table, table-header, row, column, **other table elements...**
+- Form, input, select, radio, checkbox, **other forms inputs...**
 
 ## Tests
 
@@ -114,7 +92,7 @@ We plan on implementing 2 more campaigns:
 ### Mocha and Mochawesome
 [Mocha](https://mochajs.org/) is our test runner (a framework that reads our test code and runs it). We use it in coordination with [Mochawesome](https://www.npmjs.com/package/mochawesome), a plugin for Mocha. Mochawesome produces a full JSON report in addition to a beautiful HTML report (which we don’t really use). The JSON file is sent to our [Nightly Board](https://nightly.prestashop.com/), it is then inserted into the database to let visitors browse reports and visualize statistics.
 
-### Lambda function (Why?)
+#### Lambda function in describes
 Using lambda functions in mocha is [discouraged](https://mochajs.org/#arrow-functions). They bind `this` to the scope of the lambda function, making it impossible to use internal Mocha methods and objects. Since we use the Mocha context to store our Page Objects, we strongly advise you to use the normal `function()` syntax.  
 
 ### Utils
