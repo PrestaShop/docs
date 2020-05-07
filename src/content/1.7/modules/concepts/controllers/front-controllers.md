@@ -189,7 +189,18 @@ public $ssl = true;
 
 ## Using a front controller as a cron task
 
-There is no dedicated handler for CLI calls. However a workaround can be found with front controllers. The following code provides a base for a cron task in the module `examplemodule`.
+Thanks to Symfony, modules may implement [Console commands](https://symfony.com/doc/current/console.html) for cron tasks.
+
+For modules compatible with early versions of PrestaShop 1.7 and previous major versions, there is no dedicated handler for CLI calls. A workaround is available with front controllers containing specific checks for CLI calls.
+
+Implementing a controller instead of a simple PHP script will allow you to 
+avoid some issues such as a non-instanciated Context or Symfony Kernel,
+especially on the latest versions of PrestaShop (i.e display of prices from PS 1.7.6).
+That's why, even for CLI calls triggered by a cron jobs, we recommend having a
+controller. The trick is to define it as an Ajax call to prevent the page
+template to be displayed.
+
+The following code provides a base for a cron task in the module `examplemodule`.
 
 **modules/examplemodule/controllers/front/cron.php**
 
@@ -207,15 +218,20 @@ class ExampleModuleCronModuleFrontController extends ModuleFrontController
     {
         $this->ajax = 1;
 
-        echo "hello";
+        if (php_sapi_name() !== 'cli') {
+            $this->ajaxDie('Forbidden call.');
+        }
+
+        // Additional token checks
+
+        // ...
+
+        $this->ajaxDie("hello\n");
     }
 }
 ```
 
-This controller can now be triggered:
-
-* By calling it via curl: `curl http://<shop_url>/index.php?fc=module&module=examplemodule&controller=cron`
-* By creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller:
+This controller can now be triggered by creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller:
 
 **modules/examplemodule/cron.php**
 
@@ -227,9 +243,9 @@ $_GET['controller'] = 'cron';
 require_once dirname(__FILE__) . '/../../index.php';
 ```
 
-Then, this file can be called to check the code has been executed:
+The code is now callable via the php command on a terminal:
 
 ```bash
-$ php cron.php 
+$ php modules/examplemodule/cron.php 
 hello
 ```
