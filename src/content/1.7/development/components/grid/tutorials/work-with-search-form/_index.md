@@ -137,7 +137,7 @@ final class ManufacturerFilters extends Filters
 
 ## Controller actions
 
-The Grid filtering workflow is divided into three controllers:
+The Grid filtering workflow is divided into three actions:
 
 - search action: it parses the filters from the POST request, then redirects to the list action
 - list action: it parses the filters from GET request, persists them into database and finally renders the grid
@@ -164,8 +164,11 @@ You can use the `ResponseBuilder` service to easily create the search response, 
 - the list route for redirection
 
 ```php
-use PrestaShopBundle\Service\Grid\ResponseBuilder;
 use PrestaShop\PrestaShop\Core\Grid\Definition\Factory\ManufacturerGridDefinitionFactory;
+use PrestaShopBundle\Service\Grid\ResponseBuilder;
+use PrestaShopBundle\Security\Annotation\AdminSecurity;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class ManufacturerController extends FrameworkBundleAdminController
 {
@@ -196,7 +199,7 @@ class ManufacturerController extends FrameworkBundleAdminController
 ```
 
 ```yaml
-# Routing
+# your-module/config/routes.yml
 admin_manufacturers_search:
   path: /
   methods: POST
@@ -212,7 +215,7 @@ admin_manufacturers_search:
 As this controller is almost always the same, starting 1.7.7, we introduced a common controller. So all you need to do is define the routing:
 
 ```yaml
-# Routing
+# your-module/config/routes.yml
 admin_addresses_search:
   path: /
   methods: [POST]
@@ -287,4 +290,4 @@ It is defined in the `SearchAndResetType` options, it uses `admin_common_reset_s
 
 ## Search form in 1.7.5
 
-In the 1.7.5 version, first one that integrated the grid component, the system was a bit different and used controller/action to identify the filters. It had many drawbacks and was abandoned in favor of a unique id but in case you need it here is [how to work with search form in 1.7.5]({{< ref "/1.7/development/components/grid/tutorials/work-with-search-form/in-1-7-5.md" >}}).
+In the 1.7.5 version, first one that integrated the grid component, the system was a bit different and used controller/action to identify the filters. It had a few drawbacks and was abandoned in favor of a unique id but in case you need it here is [how to work with search form in 1.7.5]({{< ref "/1.7/development/components/grid/tutorials/work-with-search-form/in-1-7-5.md" >}}).

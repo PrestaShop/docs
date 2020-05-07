@@ -6,7 +6,7 @@ weight: 13
 
 ## Filter types reference
 
-Filter types are actually Symfony Form types used in the grid to filter columns.
+Filter types are actually Symfony Form types used in the grid to filter columns. Each filter must be associated to a column present in the definition using the `setAssociatedColumn` function present in all Filter types.
 
 ### SearchAndResetType
 
@@ -29,22 +29,22 @@ Usually inserted at last this button submit the POST filtering request, it then 
 
 ### CountryChoiceType
 
-Builds a country selector, it contains various options but they are automatically filled with the list of country.
+Builds a country selector, it contains various options, but they are automatically filled with the list of country.
 
-| Properties         | Expected value(s)             |
-|--------------------| ------------------------------|
-| **Options**        | `choices`                     |
-|                    | `choice_attr`                 |
-|                    | `withDniAttr`                 |
-|                    | `withPostcodeAttr`            |
-| **Defaults**       | `choices` => []               |
-|                    | `choice_attr` => []           |
-|                    | `withDniAttr` => boolean      |
-|                    | `withPostcodeAttr` => boolean |
-| **Allowed Types**  | `choices` => []               |
-|                    | `choice_attr` => []           |
-|                    | `withDniAttr` => boolean      |
-|                    | `withPostcodeAttr` => boolean |
+| Properties         | Expected value(s)               |
+|--------------------| --------------------------------|
+| **Options**        | `choices`                       |
+|                    | `choice_attr`                   |
+|                    | `with_dni_attr`                 |
+|                    | `with_postcode_attr`            |
+| **Defaults**       | `choices` => []                 |
+|                    | `choice_attr` => []             |
+|                    | `with_dni_attr` => boolean      |
+|                    | `with_postcode_attr` => boolean |
+| **Allowed Types**  | `choices` => []                 |
+|                    | `choice_attr` => []             |
+|                    | `with_dni_attr` => boolean      |
+|                    | `with_postcode_attr` => boolean |
 
 ### DateRangeType
 

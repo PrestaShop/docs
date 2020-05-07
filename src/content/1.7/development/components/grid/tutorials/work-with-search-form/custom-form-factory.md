@@ -103,6 +103,7 @@ final class CategoryFilterFormFactory implements GridFilterFormFactoryInterface
 ### Service definitions
 
 ```yaml
+# your-module/config/services.yml
     # Define form factory decorator
     prestashop.core.grid.filter.category_form_factory:
         class: 'PrestaShop\PrestaShop\Core\Grid\Filter\CategoryFilterFormFactory'
@@ -124,9 +125,10 @@ final class CategoryFilterFormFactory implements GridFilterFormFactoryInterface
 ## Simply change the action
 {{< minver v="1.7.7" title="true" >}}
 
-If you just need to change the form action PrestaShop provides a `FilterFormFactoryFormActionDecorator` decorator that simply sets the action you need to use. All you need to do is define the services properly:
+If you just need to change the form action PrestaShop provides a `FilterFormFactoryFormActionDecorator` class that sets the action you need to use. All you need to do is define the services properly:
 
 ```yaml
+# your-module/config/services.yml
     # Define form factory decorator
     prestashop.core.grid.filter.credit_slip_form_factory:
         class: 'PrestaShop\PrestaShop\Core\Grid\Filter\FilterFormFactoryFormActionDecorator'
