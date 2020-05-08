@@ -119,7 +119,7 @@ In that case, they would be in the theme's own `/modules` folder, and
 therefore under the following path: `/themes/[my-theme]/modules`
 
 Each module has its own sub-folder inside the `/modules` folder:
-/bankwire, `/birthdaypresent`, etc.
+`/bankwire`, `/birthdaypresent`, etc.
 
 About the cache
 ---------------
