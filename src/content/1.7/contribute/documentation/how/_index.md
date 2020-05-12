@@ -50,7 +50,7 @@ There are two ways to contribute to this documentation, each having its advantag
 
 Regardless of the path you choose to contribute, you'll end up creating a Pull Request – **don't forget to submit it!**.
 
-Once your PR is submitted, the team will promptly reviewed it and do its best to see that your contribution is added to the documentation!
+Once your PR is submitted, the team will promptly review it and do its best to see that your contribution is added to the documentation!
 
 
 [1]: {{< ref "edit-on-github.md" >}}
