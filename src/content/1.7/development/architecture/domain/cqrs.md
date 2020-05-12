@@ -80,3 +80,13 @@ PrestaShop uses 2 commands buses:
 
 1. `CommandBus` - for dispatching `Commands` only
 2. `QueryBus` - for dispatching `Queries` only
+
+### CQRS in Debug Toolbar
+
+To help you understand which command/queries are used on a page and how you can interact with them a profiler has been added in the Symfony debug toolbar.
+
+{{< figure src="../img/cqrs-debug-toolbar.png" title="CQRS Debug Toolbar" >}}
+
+It shows you a quick resume of the CQRS commands/queries used on the page, you can then have more details in the Symfony profiler page:
+
+{{< figure src="../img/cqrs-profiler.png" title="CQRS Profiler" >}}
