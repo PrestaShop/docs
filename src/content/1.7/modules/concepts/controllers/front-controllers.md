@@ -176,7 +176,7 @@ secured by redirecting it to HTTPS.
 public $ssl = true;
 ```
 
-## Addendum: Execution order of the controller’s functions
+## Execution order of the controller’s functions
 
   * **__construct()**: Sets all the controller’s member variables.
   * **init()**: Initializes the controller.
@@ -186,3 +186,66 @@ public $ssl = true;
   * **initContent()**: Initializes the content.
   * **initFooter()**: Called after initContent().
   * **display()** or **displayAjax()**: Displays the content.
+
+## Using a front controller as a cron task
+
+Thanks to Symfony, modules may implement [Console commands](https://symfony.com/doc/current/console.html) for cron tasks.
+
+For modules compatible with early versions of PrestaShop 1.7 and previous major versions, there is no dedicated handler for CLI calls. A workaround is available with front controllers containing specific checks for CLI calls.
+
+Implementing a controller instead of a simple PHP script will allow you to 
+avoid some issues such as a non-instanciated Context or Symfony Kernel,
+especially on the latest versions of PrestaShop (i.e display of prices from PS 1.7.6).
+That's why, even for CLI calls triggered by a cron jobs, we recommend having a
+controller. The trick is to define it as an Ajax call to prevent the page
+template to be displayed.
+
+The following code provides a base for a cron task in the module `examplemodule`.
+
+**modules/examplemodule/controllers/front/cron.php**
+
+```php
+<?php
+class ExampleModuleCronModuleFrontController extends ModuleFrontController
+{
+    /** @var bool If set to true, will be redirected to authentication page */
+    public $auth = false;
+
+    /** @var bool */
+    public $ajax;
+
+    public function display()
+    {
+        $this->ajax = 1;
+
+        if (php_sapi_name() !== 'cli') {
+            $this->ajaxDie('Forbidden call.');
+        }
+
+        // Additional token checks
+
+        // ...
+
+        $this->ajaxDie("hello\n");
+    }
+}
+```
+
+This controller can now be triggered by creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller:
+
+**modules/examplemodule/cron.php**
+
+```php
+$_GET['fc'] = 'module';
+$_GET['module'] = 'examplemodule';
+$_GET['controller'] = 'cron';
+
+require_once dirname(__FILE__) . '/../../index.php';
+```
+
+The code is now callable via the php command on a terminal:
+
+```bash
+$ php modules/examplemodule/cron.php 
+hello
+```

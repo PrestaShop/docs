@@ -24,11 +24,3 @@ behave like the core ones thanks the class inheritance:
 
 The core classes can be found in the `/classes/controller` folder.
 
-## PHP Scripts not going through the PrestaShop or Symfony dispatcher
-
-Implementing a controller instead of a simple PHP script will allow you to 
-avoid some issues such as a non-instanciated Context or Symfony Kernel,
-especially on the latest version of PrestaShop. That's why, even for unexpected
-calls such as CLI calls triggered by a cron jobs, we recommend having a
-controller. The trick is to define it as an Ajax call to prevent the page
-template to be displayed.
