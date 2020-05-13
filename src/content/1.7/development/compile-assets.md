@@ -89,7 +89,7 @@ You may be using an old version or one we don't support yet. Also, while some fo
 
 How we manage to work with this, as well as working on previous PrestaShop version, is that we use a tool to easily swap between node version.
 
-There are a lot of tools able to do this. At PrestaShop, we mainly use the ['n' package](https://www.npmjs.com/package/n?activeTab=versions) or [nvm](https://www.npmjs.com/package/nvm).
+There are a lot of tools able to do this. At PrestaShop, we mainly use the ['n' package](https://www.npmjs.com/package/n?activeTab=versions) or [nvm](https://github.com/nvm-sh/nvm).
 This is pretty easy to use, when you are working on a directory which need an older or newer node version, use one of these tools to switch and then `npm install && npm run build`.
 
 PrestaShop currently have a [pull request](https://github.com/PrestaShop/PrestaShop/pull/18562) opened, after it, the classic theme will be compatible with node 12. This the last main directory that needs to be compatible with this version, after, you should be able to work with node 12.x without any problems !
