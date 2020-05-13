@@ -145,4 +145,4 @@ PrestaShop provides its own test suite, running with selenium. It covers the fea
 
 These tests are launched every time a change is suggested to the core, but you can also run them with your module installed. You will certify it did not break a critical feature of the core.
 
-This section will be completed when these tests will be available on a dedicated repository. In the meantime you can already reach them on GitHub, in the [tests/E2E folder](https://github.com/PrestaShop/PrestaShop/tree/1.7.3.x/tests/E2E) of PrestaShop files.
+This section will be completed when these tests will be available on a dedicated repository. In the meantime you can already reach them on GitHub, in the [tests/puppeteer folder](https://github.com/PrestaShop/PrestaShop/tree/1.7.7.x/tests/puppeteer) of PrestaShop files.
