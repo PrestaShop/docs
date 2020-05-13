@@ -78,7 +78,7 @@ php vendor/bin/php-cs-fixer fix [--dry-run]
 
 This example provides the output expected by this tool, here with a file requiring changes:
 
-```bash
+```
 $ php vendor/bin/php-cs-fixer fix --dry-run
 Loaded config PrestaShop coding standard from "<path_to_your_module>/.php_cs.dist".
 Using cache file ".php_cs.cache".
