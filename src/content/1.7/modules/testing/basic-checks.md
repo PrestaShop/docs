@@ -7,7 +7,7 @@ weight: 1
 
 ## Syntax check
 
-Making sure your file is understoodd by PHP is a trivial but critical check.
+First of all, making sure your file is understood by PHP is a trivial but critical check.
 PHP provides a linter to verify a file can be run:
 
 ```bash
