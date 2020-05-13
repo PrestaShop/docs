@@ -9,10 +9,13 @@ weight: 3
 
 This example is taken from the module `ps_checkout`. The latest version and more checks can be found in https://github.com/PrestaShopCorp/ps_checkout/tree/master/.github/workflows.
 
+### PHP Checks
+
 ```yaml
 name: PHP tests
 on: [push, pull_request]
 jobs:
+  # Check there is no syntax errors in the project
   php-linter:
     name: PHP Syntax check 5.6|7.2|7.3
     runs-on: ubuntu-latest
@@ -29,7 +32,7 @@ jobs:
       - name: PHP syntax checker 7.3
         uses: prestashop/github-action-php-lint/7.3@master
 
-
+  # Check the PHP code follow the coding standards
   php-cs-fixer:
     name: PHP-CS-Fixer
     runs-on: ubuntu-latest
@@ -40,7 +43,7 @@ jobs:
       - name: Run PHP-CS-Fixer
         uses: prestashopcorp/github-action-php-cs-fixer@master
 
-
+  # Run PHPStan against the module and a PrestaShop release
   phpstan:
     name: PHPStan
     runs-on: ubuntu-latest
@@ -51,12 +54,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.0.0
 
+      # Add vendor folder in cache to make next builds faster
       - name: Cache vendor folder
         uses: actions/cache@v1
         with:
           path: vendor
           key: php-${{ hashFiles('composer.lock') }}
 
+      # Add composer local folder in cache to make next builds faster
       - name: Cache composer folder
         uses: actions/cache@v1
         with:
@@ -65,11 +70,51 @@ jobs:
 
       - run: composer install
 
+      # Docker images prestashop/prestashop may be used, even if the shop remains uninstalled
       - name: Pull PrestaShop files (Tag ${{ matrix.presta-versions }})
         run: docker run -tid --rm -v ps-volume:/var/www/html --name temp-ps prestashop/prestashop:${{ matrix.presta-versions }}
 
+      # Run a container for PHPStan, having access to the module content and PrestaShop sources.
+      # This tool is outside the composer.json because of the compatibility with PHP 5.6
       - name : Run PHPStan
         run: docker run --rm --volumes-from temp-ps -v $PWD:/web/module -e _PS_ROOT_DIR_=/var/www/html --workdir=/web/module phpstan/phpstan:0.11.19 analyse --configuration=/web/module/tests/phpstan/phpstan.neon
+```
+
+### Build module artifact
+
+```yaml
+name: Build
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    name: build dependencies & create artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.0.0
+
+      # Optional step compiling JS files
+      - name: Build JS dependencies
+        uses: PrestaShopCorp/github-action-build-js/12@v1.0
+        with:
+          cmd: yarn
+          path: ./_dev
+
+      # Install PHP dependencies (Production ONLY)
+      - name: Install composer dependencies
+        run: composer install --no-dev -o
+
+      # Remove development files
+      - name: Clean-up project
+        uses: PrestaShopCorp/github-action-clean-before-deploy@v1.0
+
+      # Zip files and upload to artifacts list
+      - name: Create & upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ github.event.repository.name }}
+          path: ../
 ```
 
 ## GitLab
@@ -82,7 +127,8 @@ stages:
   - build
   - deploy
 
-# Install wget, git and composer
+# Preliminary code to run, preparing the environment for a PHP job.
+# Install wget, git and composer, then get dependencies.
 .before_script_php_template: &before_script_php
   before_script:
     - apt-get update && apt-get install wget git zip unzip -y
@@ -126,6 +172,7 @@ phpstan-php-7-2:
     ln -s /builds/ps-addons/$CI_PROJECT_NAME /var/www/html/modules/$CI_PROJECT_NAME
     php -d memory_limit=-1 ~/.composer/vendor/bin/phpstan analyse --configuration=/var/www/html/modules/$CI_PROJECT_NAME/tests/phpstan/phpstan.neon
 
+# Optional job installing JS dependencies and compiling scripts
 before-deploy:
   image: node:10.16
   stage: build
@@ -135,7 +182,7 @@ before-deploy:
     - npm install
     - npm run build
 
-
+# Clean development files and zip content for the marketplace
 deploy-artifact-release:
   <<: *before_script_php
   image: php:7.2
