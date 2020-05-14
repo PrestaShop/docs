@@ -55,7 +55,7 @@ return [
         
     // Checkbox field
     (new FormField)
-        ->setName('checkbox_field[]')
+        ->setName('checkbox_field')
         ->setType('checkbox')
         ->setValue(1)
         ->setLabel($this->l('Checkbox type')),
