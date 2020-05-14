@@ -77,7 +77,7 @@ Sometimes, the existing features may not be enough for your needs.
 An event can be missing, or a controller method should be probably better in a dedicated class to be accessible.
 
 If you think some changes in the core would be useful for the community, we encourage you to suggest them on the
-[PrestaShop source code](https://github.com/PrestaShop/PrestaShop) with a pull-request.
+[PrestaShop source code](https://github.com/PrestaShop/PrestaShop) with a pull request.
 
 By doing so, you may cover long-term needs the core developers probably don't know about.
 
