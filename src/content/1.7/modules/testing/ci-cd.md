@@ -5,6 +5,10 @@ weight: 3
 
 # CI/CD
 
+In the previous page we detailed some testing tools and how to execute them. Thay may be run locally, in order to check the code is fine before pushing it to a remote git repository, but they can also be automatically run by a dedicated test environment after each push. This can be useful to prevent code being pushed to production if one of your tools reports an issue you missed.
+
+Our modules are hosted on GitHub and GitLab repositories and each of them provide a solution for running these tests automatically. The following files allow the tools to run on both environments.
+
 ## GitHub
 
 This example is taken from the module `ps_checkout`. The latest version and more checks can be found in https://github.com/PrestaShopCorp/ps_checkout/tree/master/.github/workflows.
