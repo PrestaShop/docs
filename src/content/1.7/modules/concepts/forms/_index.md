@@ -43,7 +43,7 @@ return [
     (new FormField)
         ->setName('select_field')
         ->setType('select')
-        ->setAvailableValues(array('key' => 'value 1', 'key2' => 'value2'))
+        ->setAvailableValues(['key' => 'value 1', 'key2' => 'value2'])
         ->setLabel($this->l('Select type')),
         
     // Country select field (like select but add a 'js js-country' class)
