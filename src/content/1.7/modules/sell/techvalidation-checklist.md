@@ -104,6 +104,31 @@ PrestaShop provides a e-commerce software ready use in many languages. The code 
 
 Like for PrestaShop, the code submitted on the marketplace has to be written in English, even if the only user of this code is likely to from only one country or language. A lang unknown by the reviewer would make the validation impossible to do.
 
+#### Risk of conflicts between modules is low
+
+* Configuration keys
+
+Configuration data is shared between the shop and every module installed. This is convenient if your need to get a value from another part of the shop, but include some risks if two modules stores some data in the same key.
+
+Too avoid conflicts, configuration keys must be prefixed by the module name. For instance, using a configuration key in the module `TheModule` would be:
+
+```php
+Configuration::get('THE_MODULE_PAYMENT_METHODS_ORDER');
+Configuration::updateValue('THE_MODULE_PAYMENT_METHODS_ORDER', [...]);
+```
+
+instead of
+
+```php
+Configuration::get('PAYMENT_METHODS_ORDER');
+Configuration::updateValue('PAYMENT_METHODS_ORDER', [...]);
+```
+
+* Classes
+
+This also applies to classes defined outside a namespace.
+Having the module name as a prefix will reduce the risk of colision between classes.
+
 #### Ajax / Cron tasks are secured & in a controller
 
 All the AJAX and CRON files must be protected with a unique and secured token to avoid any security issues (outside attacks,...). 
@@ -111,7 +136,7 @@ Even the front controllers must be secured with a secured token when you use AJA
 
 AJAX and CRON scripts must be placed in a controller ([More details]({{< ref "1.7/modules/concepts/controllers#php-scripts-not-going-through-the-prestashop-or-symfony-dispatcher" >}})).
 
-#### Code in hook is run when needed
+#### Code in hook is run only when needed
 
 Several hooks are called on all pages of the back-office or front-office. When a module is registered on one of them, it may impact the page performance on low-end servers if it runs too much code.
 
@@ -207,7 +232,7 @@ Encouraged code comments:
 #### Empty & generated files are removed
 
 As they have no consequences in the module execution, empty files can be removed before submission.
-Generated files such as log files, PDFs etc. should be removed as well, as they:
+Generated files such as log files, invoice or other documents in PDFs etc. should be removed as well, as they:
 
 * increase the weight of your submissions,
 * add a risk of overwritten files when deployed on a shop,
