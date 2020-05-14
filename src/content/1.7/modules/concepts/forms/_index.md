@@ -82,7 +82,7 @@ return [
     // Password field
     (new FormField)
         ->setName('password_field')
-        ->setType('password_')
+        ->setType('password')
         ->setLabel($this->l('Password')),
         
     // Email field
