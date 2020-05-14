@@ -111,7 +111,7 @@ Even the front controllers must be secured with a secured token when you use AJA
 
 AJAX and CRON scripts must be placed in a controller ([More details]({{< ref "1.7/modules/concepts/controllers#php-scripts-not-going-through-the-prestashop-or-symfony-dispatcher" >}})).
 
-#### Code in hook is run when needed
+#### Code in hook is run only when needed
 
 Several hooks are called on all pages of the back-office or front-office. When a module is registered on one of them, it may impact the page performance on low-end servers if it runs too much code.
 
@@ -207,7 +207,7 @@ Encouraged code comments:
 #### Empty & generated files are removed
 
 As they have no consequences in the module execution, empty files can be removed before submission.
-Generated files such as log files, PDFs etc. should be removed as well, as they:
+Generated files such as log files, invoice or other documents in PDFs etc. should be removed as well, as they:
 
 * increase the weight of your submissions,
 * add a risk of overwritten files when deployed on a shop,
