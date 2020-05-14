@@ -31,7 +31,7 @@ return [
         ->setRequired(true)
         ->setValue("John")
         ->setMaxLength("128")
-        ->setLabel($this->l('Your first name')),
+        ->setLabel($this->trans('Your first name')),
         
     // File field
     (new FormField)
