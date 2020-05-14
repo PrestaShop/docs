@@ -104,6 +104,31 @@ PrestaShop provides a e-commerce software ready use in many languages. The code 
 
 Like for PrestaShop, the code submitted on the marketplace has to be written in English, even if the only user of this code is likely to from only one country or language. A lang unknown by the reviewer would make the validation impossible to do.
 
+#### Risk of conflicts between modules is low
+
+* Configuration keys
+
+Configuration data is shared between the shop and every module installed. This is convenient if your need to get a value from another part of the shop, but include some risks if two modules stores some data in the same key.
+
+Too avoid conflicts, configuration keys must be prefixed by the module name. For instance, using a configuration key in the module `Ps_Checkout` would be:
+
+```php
+Configuration::get('PS_CHECKOUT_PAYMENT_METHODS_ORDER');
+onfiguration::updateValue('PS_CHECKOUT_PAYMENT_METHODS_ORDER', [...]);
+```
+
+instead of
+
+```php
+Configuration::get('PAYMENT_METHODS_ORDER');
+Configuration::updateValue('PAYMENT_METHODS_ORDER', [...]);
+```
+
+* Classes
+
+This also applies to classes defined outside a namespace.
+Having the module name as a prefix will reduce the risk of colision between classes.
+
 #### Ajax / Cron tasks are secured & in a controller
 
 All the AJAX and CRON files must be protected with a unique and secured token to avoid any security issues (outside attacks,...). 
