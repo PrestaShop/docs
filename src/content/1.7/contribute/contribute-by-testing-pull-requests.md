@@ -14,6 +14,7 @@ To make testing easier, we provide a [Vagrant](http://www.vagrantup.com/) config
 
 - Debian 10 Buster
 - Git
+- Apache 2.4
 - Multiple PHP versions (7.1, 7.2, 7.3, 7.4)
 - MariaDB 10
 - NodeJS
@@ -40,7 +41,7 @@ First, you must clone the repository [https://github.com/PrestaShop/vagrant](htt
 
 Second, execute the script `run.sh` (or `run.bat` if you're under Windows) and follow instructions.
 
-Most of the time, there is a prompt asking for a network interface, remember it's the communication between the virtual machine and our network card.
+Most of the time, there is a prompt asking for a network interface, remember it's the communication between the virtual machine and the network card.
 
 {{< figure src="/images/1.7/contribute/vagrant/run-script.png" alt="Running the run.sh script" >}}
 
@@ -89,4 +90,3 @@ If something went wrong during the installation, the error is displayed explaini
 
 * Invalid PHP version:
 {{< figure src="/images/1.7/contribute/vagrant/invalid-php-version.png" alt="Invalid PHP version" >}}
-
