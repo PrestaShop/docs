@@ -110,11 +110,11 @@ Like for PrestaShop, the code submitted on the marketplace has to be written in 
 
 Configuration data is shared between the shop and every module installed. This is convenient if your need to get a value from another part of the shop, but include some risks if two modules stores some data in the same key.
 
-Too avoid conflicts, configuration keys must be prefixed by the module name. For instance, using a configuration key in the module `Ps_Checkout` would be:
+Too avoid conflicts, configuration keys must be prefixed by the module name. For instance, using a configuration key in the module `TheModule` would be:
 
 ```php
-Configuration::get('PS_CHECKOUT_PAYMENT_METHODS_ORDER');
-Configuration::updateValue('PS_CHECKOUT_PAYMENT_METHODS_ORDER', [...]);
+Configuration::get('THE_MODULE_PAYMENT_METHODS_ORDER');
+Configuration::updateValue('THE_MODULE_PAYMENT_METHODS_ORDER', [...]);
 ```
 
 instead of
