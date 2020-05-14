@@ -6,7 +6,7 @@ chapter: true
 
 # Forms
 
-From PrestaShop 1.7, fields are managed in FormField class and display is set in themes/<themeName>/templates/_partials/form-fields.tpl template.
+From PrestaShop 1.7, fields are managed in FormField class and display is set in `themes/<themeName>/templates/_partials/form-fields.tpl` template.
 
 The useful methods to manage this fields are:
 
