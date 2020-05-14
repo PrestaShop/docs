@@ -22,7 +22,7 @@ The useful methods to manage this fields are:
 
 Here are all the possible types of fields:
 
-```
+```php
 return [
     // Standard text field
     (new FormField)
