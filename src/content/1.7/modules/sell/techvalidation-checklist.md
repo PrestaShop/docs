@@ -114,7 +114,7 @@ Too avoid conflicts, configuration keys must be prefixed by the module name. For
 
 ```php
 Configuration::get('PS_CHECKOUT_PAYMENT_METHODS_ORDER');
-onfiguration::updateValue('PS_CHECKOUT_PAYMENT_METHODS_ORDER', [...]);
+Configuration::updateValue('PS_CHECKOUT_PAYMENT_METHODS_ORDER', [...]);
 ```
 
 instead of
