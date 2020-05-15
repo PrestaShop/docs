@@ -140,9 +140,7 @@ You will get an Invoice would look like this:
 
 ## Alter or Add information available into PDF templates
 
-Remember the main PDF files we have listed in the previous sections ?
-
-A dynamic hook allows you to alter or add more information that will become available in the related templates.
+A dynamic hook allows you to alter or add more information that will become available in the previous templates.
 
 There is the list of available Template Classes in the Core:
 
