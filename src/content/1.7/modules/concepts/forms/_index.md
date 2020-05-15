@@ -64,7 +64,7 @@ return [
     (new FormField)
         ->setName('radio_field')
         ->setType('radio-buttons')
-        ->setAvailableValues(array('key' => 'value 1', 'key2' => 'value2'))
+        ->setAvailableValues(['key' => 'value 1', 'key2' => 'value2'])
         ->setLabel($this->l('Radio buttons type')),
         
     // Date field
