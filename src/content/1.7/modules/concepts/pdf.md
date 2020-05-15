@@ -136,7 +136,7 @@ pdf
 
 You will get an Invoice would look like this:
 
-{{< figure src="../img/invoice-style.png" title="Stylized Invoice exemple" >}}
+{{< figure src="../img/invoice-style.png" title="Stylized Invoice example" >}}
 
 ## Alter or Add information available into PDF templates
 
