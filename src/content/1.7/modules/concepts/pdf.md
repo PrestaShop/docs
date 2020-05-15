@@ -92,6 +92,7 @@ pdf
 ```
 
 ### Supply Orders
+{{< minver v="1.7.0" title="true" >}}
 
 Since 1.7, Supply Orders are not available anymore in the Back Office but you can still "trigger" the generation of the PDF files.
 
