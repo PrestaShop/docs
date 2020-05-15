@@ -262,8 +262,6 @@ They are set in the ``PaymentModule:validateOrder`` function.
 This is also the right place to `dump` them and figure out what they provide.
 {{% /notice %}}
 
-In this section, will we learn how to alter or add our own Smarty variables.
-
 ### Add or alter Smarty variables
 
 As always, you can hook into this email workflow and while there are multiples hooks that can fit this specific needs, the best one is named `actionGetExtraMailTemplateVars`.
