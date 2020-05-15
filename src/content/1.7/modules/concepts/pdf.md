@@ -177,8 +177,6 @@ $hook_name = 'displayPDF' . $template;
 In `modules/your-module/your-module.php`:
 
 ```php
-
-
 public function hookDisplayPDFInvoice($hookArgs)
 {
     $customer = $this->context->customer;
