@@ -118,7 +118,7 @@ pdf
 └── pagination.tpl
 ```
 
-### Minimal Exemple: customize design of the Invoices
+### Minimal Example: customize design of the Invoices
 
 ```smarty
 {* /themes/your-theme/pdf/invoice.style-tab.tpl *}
