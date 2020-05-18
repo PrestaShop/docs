@@ -14,7 +14,7 @@ If you're confident with using it, we created several images for easier deployme
 * https://hub.docker.com/r/prestashop/prestashop-git/, containing the git repository content with different PHP version. For advanced users.
 * https://hub.docker.com/r/prestashop/base/, containing the required stack to run PrestaShop, without the core files. Recommended if you already have the shop files on your disk.
 
-Please note we try to follow best practices, and the MySQL is NOT provided with these images. You have to deploy your own server in a dedicated container.
+Please note we try to follow best practices, and MySQL service is NOT provided with these images. You have to deploy your own server in a dedicated container.
 
 
 When your environment is ready, it's time to configure it before running tests.
@@ -23,7 +23,7 @@ When your environment is ready, it's time to configure it before running tests.
 
 > From PrestaShop {{< minver v="1.7.2" >}}
 
-Managing your modules was only possible from the administration inferface. Continuous integration of modules may require preliminary steps like their installation, that's why we added a simple way to manage them in command line.
+Managing your modules was only possible from the administration interface. Continuous integration of modules may require preliminary steps like their installation, that's why we added a simple way to manage them in command line.
 
 ```bash
 php bin/console prestashop:module --help
@@ -67,13 +67,13 @@ Use `php app/console` instead of `php bin/console` for versions prior {{< minver
 {{% /notice %}}
 
 #### Multishop
-In case you want to run your action for a specific shop or shop group, you have two optionnal parameters ``--id_shop=<id>`` and ``--id_shop_group=<id>`` which modify the current shop context before calling the actual command.
+In case you want to run your action for a specific shop or shop group, you have two optionnal parameters ``--id_shop=<id>`` and ``--id_shop_group=<id>`` which modifies the current shop context before calling the actual command.
 
 ### Configuration
 
 This feature allows an automatic configuration of your module but DOES NOT display the configuration page.
 
-This feature targets any developers who would like to test its modules after an installation without having to pass the configuration screen, or an agency who has a generic configuration to set on every shops.
+This feature is intended for developers wishing to test their modules after an installation without having to pass the configuration screen, or a PrestaShop agency who has a generic configuration to set on every shops.
 With only one command, we expect a module to be totally functional for tests or production.
 
 If we reuse the previous command, we could expect something like this:
@@ -141,8 +141,8 @@ php:
 
 ## Core Functional tests
 
-PrestaShop provides its own test suite, running with selenium. It covers the features of PrestaShop and grows each time a bug is resolved or a feature is added.
+PrestaShop provides its own test suite, running with puppeteer. It covers the features of PrestaShop and grows each time a bug is resolved or a feature is added.
 
-These tests are launched every time a change is suggested to the core, but you can also run them with your module installed. You will certify it did not break a critical feature of the core.
+These tests are launched every time a change is suggested to the core, but you can also run them with your module installed. This will ensure your module code does not break a critical feature of the core.
 
 This section will be completed when these tests will be available on a dedicated repository. In the meantime you can already reach them on GitHub, in the [tests/puppeteer folder](https://github.com/PrestaShop/PrestaShop/tree/1.7.7.x/tests/puppeteer) of PrestaShop files.

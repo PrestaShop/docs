@@ -43,8 +43,8 @@ the code written in your modules (i.e namespaces, traits, strict typing...).
 
 If some errors are reported by this tool, this gives you the opportunity :
 
-* to make changes on the module,
-* to warn the merchants about the PHP compatibility range.
+* to make changes on the module
+* to warn the merchants about the PHP compatibility range
 
 ## Coding standards
 

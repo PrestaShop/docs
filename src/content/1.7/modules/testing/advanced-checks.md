@@ -71,11 +71,11 @@ composer require --dev prestashop/php-dev-tools
 php vendor/bin/prestashop-coding-standards phpstan:init
 ```
 
-Files will be copied in the folder `tests/phpstan/` of your module. We provide this library to setup an proper environment for a module, for instance to handle constants that are only defined when PrestaShop is installed. If only the source is downloaded in your test environment, the configuration we provide will use an extension file defining these constants for you. In the next version of this library, we expect more rules to be added to avoid false positive issues and add pertinent erros in a module context.
+Files will be copied in the folder `tests/phpstan/` of your module. We provide this library to setup a proper environment for a module, for instance to handle constants that are only defined when PrestaShop is installed. If only the source is downloaded in your test environment, the configuration we provide will use an extension file defining these constants for you. In the next version of this library, we expect more rules to be added to avoid false positive issues and add pertinent errors in a module context.
 
 ### Usage
 
-Running PHPStan can be done in several ways, and depend on the way you installed it. But in all cases, an environment variable `_PS_ROOT_DIR_` must be set, pointing to the PrestaShop root folder.
+Running PHPStan can be done in several ways, and depends on the way you installed it. But in all cases, an environment variable `_PS_ROOT_DIR_` must be set, targeting the PrestaShop root folder.
 
 * **Project requires PHP 7 min**
 
