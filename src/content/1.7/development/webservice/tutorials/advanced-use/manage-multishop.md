@@ -16,11 +16,9 @@ The Multishop can be enabled via the `PS_MULTISHOP_FEATURE_ACTIVE` configuration
 
 Once you have several instances you can access to the shop list and their IDs.
 
-| Result | API call | PHP Webservice lib options |
-|--------|----------|----------------------------|
-| List `shops` | `/api/shops/` | {{< code php >}}$opt = [
-    'resource' => 'shops'
-];{{< /code >}} |
+| Result       | API call      | PHP Webservice lib options                                               |
+|--------------|---------------|--------------------------------------------------------------------------|
+| List `shops` | `/api/shops/` | {{< code php >}}$opt = [<br>    'resource' => 'shops'<br>];{{< /code >}} |
 
 ## Define shop specific override
 

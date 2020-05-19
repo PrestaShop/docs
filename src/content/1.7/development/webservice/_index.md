@@ -1,7 +1,7 @@
 ---
 title: The PrestaShop Webservices
 menuTitle: Webservice
-weight: 2
+weight: 40
 ---
 
 # The PrestaShop Webservices

@@ -10,9 +10,21 @@ You can manage your shop configuration thanks to the API, in this example we wil
 
 ## API call
 
-First check if the configuration already exists by calling `/api/configurations/?display=[id,name,value]&filter[name]=[PS_MULTISHOP_FEATURE_ACTIVE]`
+First check if the configuration already exists by using [filters and display parameters]({{< ref "1.7/development/webservice/tutorials/advanced-use/additional-list-parameters" >}}) `/api/configurations/?display=[id,name,value]&filter[name]=[PS_MULTISHOP_FEATURE_ACTIVE]`
 
-If the configuration doesn't exist yet, you need to POST on the `configuration` API `/api/configurations/`
+### Create configuration
+
+If the configuration doesn't exist yet, you will receive an empty list:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <configurations>
+    </configurations>
+</prestashop>
+```
+
+So you need to POST on the `configuration` API `/api/configurations/` to create this new value
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -24,7 +36,24 @@ If the configuration doesn't exist yet, you need to POST on the `configuration` 
 </prestashop>
 ```
 
-If it is already defined you need to update it via a PUT using the configuration ID: `/api/configurations/411`
+### Update configuration
+
+If it is already defined you will receive a list with the searched configuration:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <configurations>
+        <configuration>
+            <id><![CDATA[411]]></id>
+            <value><![CDATA[1]]></value>
+            <name><![CDATA[PS_MULTISHOP_FEATURE_ACTIVE]]></name>
+        </configuration>
+    </configurations>
+</prestashop>
+```
+
+So you need to update it via a PUT using the configuration ID: `/api/configurations/411`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
