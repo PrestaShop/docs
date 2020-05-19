@@ -11,17 +11,19 @@ All webservice APIs are accessible through the `/api/` gateway. For instance, `h
 
 Most resources can be accessed in a REST manner, with the 5 main HTTP request methods: GET, POST, PUT, DELETE, HEAD. The only exceptions are:
 
-- `search`: only GET and HEAD.
-- `stock_availables`: only GET, POST, and HEAD.
-- `stock_movements`: only GET and HEAD.
-- `stocks`: only GET and HEAD.
-- `supply_order_details`: only GET and HEAD.
-- `supply_order_histories`: only GET and HEAD.
-- `supply_order_receipt_histories`: only GET and HEAD.
-- `supply_order_states`: only GET and HEAD.
-- `supply_orders`: only GET and HEAD.
-- `warehouse_product_locations`: only GET and HEAD.
-- `warehouses`: only GET, POST, PUT, and HEAD.
+| Key | GET | POST | PUT | DELETE | HEAD |
+|-----|-----|------|-----|--------|------|
+| search | X | | | | X |
+| stock_availables | X | X | | | X |
+| stock_movements | X | | | | X |
+| stocks | X | | | | X |
+| supply_order_details | X | | | | X |
+| supply_order_histories | X | | | | X |
+| supply_order_receipt_histories | X | | | | X |
+| supply_order_states | X | | | | X |
+| supply_orders | X | | | | X |
+| warehouse_product_locations | X | | | | X |
+| warehouses | X | X | X | | X |
 
 All resources have two schemas that are accessible via a parameter:
 
@@ -33,16 +35,16 @@ All resources have two schemas that are accessible via a parameter:
 | Resource | Description |
 |----------|-------------|
 | addresses | The Customer, Manufacturer and Customer addresses |
-| carriers | The Carriers |
-| cart_rules | Cart rules management |
+| carriers | The Carriers that perform deliveries |
+| cart_rules | Cart rules management (discount, promotions, ...) |
 | carts | Customer's carts |
 | categories | The product categories |
 | combinations | The product combinations |
-| configurations | Shop configuration |
+| configurations | Shop configuration, used to store miscellaneous parameters from the shop (maintenance, multi shop, email settings, ...) |
 | contacts | Shop contacts |
 | content_management_system | Content management system |
-| countries | The countries |
-| currencies | The currencies |
+| countries | The countries available on the shop |
+| currencies | The currencies installed on the shop |
 | customer_messages | Customer services messages |
 | customer_threads | Customer services threads |
 | customers | The e-shop's customers |
@@ -50,7 +52,7 @@ All resources have two schemas that are accessible via a parameter:
 | deliveries | Product deliveries |
 | employees | The Employees |
 | groups | The customer's groups |
-| guests | The guests |
+| guests | The guests (customers not logged in) |
 | image_types | The image types |
 | images | The images |
 | images/general/header | The shop's logo in the header |
@@ -71,43 +73,43 @@ All resources have two schemas that are accessible via a parameter:
 | order_histories | The Order histories |
 | order_invoices |The Order invoices |
 | order_payments |The Order payments |
-| order_slip | The Order slips |
-| order_states |The Order states |
+| order_slip | The Order slips (used for refund) |
+| order_states |The Order states (Waiting for transfer, Payment accepted, ...) |
 | orders | The Customers orders |
 | price_ranges | Price range |
 | product_customization_fields | The Product customization fields |
-| product_feature_values | The product feature values |
-| product_features | The product features |
-| product_option_values | The product options value |
-| product_options | The product options |
+| product_feature_values | The product feature values (Ceramic, Polyester, ... - Removable cover, Short sleeves, ...) |
+| product_features | The product features (Composition, Property, ...) |
+| product_option_values | The product options value (S, M, L, ... - White, Camel, ...) |
+| product_options | The product options (Size, Color, ...) |
 | product_suppliers | Product Suppliers |
 | products | The products |
 | search | Search |
 | shop_groups | Shop groups from multi-shop feature |
 | shop_urls | Shop urls from multi-shop feature |
 | shops | Shops from multi-shop feature |
-| specific_price_rules |Specific price management |
+| specific_price_rules | Specific price rules management |
 | specific_prices | Specific price management |
 | states | The available states of countries |
-| stock_availables | Available quantities |
-| stock_movement_reasons | The stock movement reason |
+| stock_availables | Available quantities of products |
+| stock_movement_reasons | The stock movement reason (Increase, Decrease, Custom Order, ...)  |
 | stock_movements | Stock movements management |
-| stocks |Stocks |
+| stocks | Stocks for products |
 | stores | The stores |
 | suppliers | The product suppliers |
 | supply_order_details | Supply Order Details |
-| supply_order_histories |Supply Order Histories |
+| supply_order_histories | Supply Order Histories |
 | supply_order_receipt_histories | Supply Order Receipt Histories |
 | supply_order_states | Supply Order States |
 | supply_orders | Supply Orders |
-| tags |The Products tags |
-| tax_rule_groups | Tax rule groups |
-| tax_rules | Tax rules entity |
+| tags | The Products tags |
+| tax_rule_groups | Group of Tax rule, along with their name |
+| tax_rules | Tax rules, to associate Tax with a country, zip code, ... |
 | taxes | The tax rate |
-| translated_configurations | Shop configuration |
+| translated_configurations | Shop configuration which are translated |
 | warehouse_product_locations | Location of products in warehouses |
 | warehouses | Warehouses |
-| weight_ranges | Weight ranges |
+| weight_ranges | Weight ranges for deliveries |
 | zones | The Countries zones |
 
 ## Schema synopsis format
@@ -117,20 +119,20 @@ When displaying a resource schema in synopsis mode, the API gives some useful in
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<customer>
-    <id_default_group></id_default_group>
-    <id_lang format="isUnsignedId"></id_lang>
-    <newsletter_date_add></newsletter_date_add>
-    <ip_registration_newsletter></ip_registration_newsletter>
-    <last_passwd_gen readOnly="true"></last_passwd_gen>
-    <secure_key format="isMd5" readOnly="true"></secure_key>
-    <deleted format="isBool"></deleted>
-    <passwd required="true" maxSize="255" format="isPasswd"></passwd>
-    <lastname required="true" maxSize="255" format="isCustomerName"></lastname>
-    <firstname required="true" maxSize="255" format="isCustomerName"></firstname>
-    <email required="true" maxSize="255" format="isEmail"></email>
-    ...
-</customer>
+    <customer>
+        <id_default_group></id_default_group>
+        <id_lang format="isUnsignedId"></id_lang>
+        <newsletter_date_add></newsletter_date_add>
+        <ip_registration_newsletter></ip_registration_newsletter>
+        <last_passwd_gen readOnly="true"></last_passwd_gen>
+        <secure_key format="isMd5" readOnly="true"></secure_key>
+        <deleted format="isBool"></deleted>
+        <passwd required="true" maxSize="255" format="isPasswd"></passwd>
+        <lastname required="true" maxSize="255" format="isCustomerName"></lastname>
+        <firstname required="true" maxSize="255" format="isCustomerName"></firstname>
+        <email required="true" maxSize="255" format="isEmail"></email>
+        ...
+    </customer>
 </prestashop>
 ```
 
@@ -200,6 +202,7 @@ When displaying a resource schema in synopsis mode, the API gives some useful in
 | Format | Description | Expected format |
 |--------|-------------|-----------------|
 | isAddress | A valid postal address. | {{< code >}}/^[^!<>?=+@{}_$%]*$/u{{< /code >}} |
+| isDniLite | A valid DNI (Documento Nacional de Identidad) identifier. Specific to some Spanish speaking countries or any country configured with DNI field. | {{< code >}}/^[0-9A-Za-z-.]{1,16}$/U{{< /code >}} |
 | isCityName | A valid city name. | {{< code >}}/^[^!<>;?=+@#"°{}_$%]*$/u{{< /code >}} |
 | isCoordinate | A valid latitude-longitude coordinates, in 00000.0000 form. | {{< code >}}/^\-?[0-9]{1,8}\.[0-9]{1,8}$/s{{< /code >}} |
 | isMessage | A valid message. | {{< code >}}/[<>{}]/i{{< /code >}} |
@@ -213,7 +216,6 @@ When displaying a resource schema in synopsis mode, the API gives some useful in
 | Format | Description | Expected format |
 |--------|-------------|-----------------|
 | isAbsoluteUrl | A valid absolute URL. | {{< code >}}/^(https?:)?\/\/[$~:;#,%&_=\(\)\[\]\.\? \+\-@\/a-zA-Z0-9]+$/{{< /code >}} |
-| isDniLite | A valid DNI (Documento Nacional de Identidad) identifier. Specific to Spanish shops. | {{< code >}}/^[0-9A-Za-z-.]{1,16}$/U{{< /code >}} |
 | isEan13 | A valid barcode (EAN13). | {{< code >}}/^[0-9]{0,13}$/{{< /code >}} |
 | isIsbn | A valid barcode (ISBN). | {{< code >}}/^[0-9-]{0,32}$/{{< /code >}} |
 | isLinkRewrite | A valid friendly URL. | {{< code >}}/^[_a-zA-Z0-9\-]+$/{{< /code >}} |
