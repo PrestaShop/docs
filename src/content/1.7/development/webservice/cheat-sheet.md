@@ -16,28 +16,23 @@ All these options can be added to your queries as query parameters (either `GET`
 
 ## List options
 
-| Key | Value | Description |
-|-----|-------|-------------|
-| **display** | `[field1,field2 …]` | Only display fields in brackets |
-| **display** | `full` | Display all fields |
-
-| Key | Value | Description |
-|-----|-------|-------------|
-| **filter[field]** | {{< code >}}[1|5]{{< /code >}} | `OR` operator: list of possible values                              |
-| **filter[field]** | `[1,10]`     | `Interval` operator: define interval of possible values             |
-| **filter[field]** | `[John]`     | `Literal` value (not case sensitive)                                |
-| **filter[field]** | `[Jo]%`      | `Begin` operator: fields begins with the value (not case sensitive) |
-| **filter[field]** | `%[hn]`      | `End` operator: fields ends with the value (not case sensitive)     |
-| **filter[field]** | `%[oh]%`     | `Contains` operator: fields contains the value (not case sensitive) |
-
-| Key | Value | Description |
-|-----|-------|-------------|
-| **sort** | `[field1_ASC,field2_DESC,field3_ASC]` | The `sort` value is composed of a field name and the expected order separated by a `_` |
-
-| Key | Value | Description |
-|-----|-------|-------------|
-| **limit** | Number | Limit the result to "Number" |
-| **limit** | Starting index, Number | Limit the result to "Number" from the "Index" |
+| Key               | Value                                 | Description                                                                            |
+|-------------------|---------------------------------------|----------------------------------------------------------------------------------------|
+| `display`         |                                       |                                                                                        |
+| **display**       | `[field1,field2 …]`                   | Only display fields in brackets                                                        |
+| **display**       | `full`                                | Display all fields                                                                     |
+| `filter`          |                                       |                                                                                        |
+| **filter[field]** | {{< code >}}[1|5]{{< /code >}}        | `OR` operator: list of possible values                                                 |
+| **filter[field]** | `[1,10]`                              | `Interval` operator: define interval of possible values                                |
+| **filter[field]** | `[John]`                              | `Literal` value (not case sensitive)                                                   |
+| **filter[field]** | `[Jo]%`                               | `Begin` operator: fields begins with the value (not case sensitive)                    |
+| **filter[field]** | `%[hn]`                               | `End` operator: fields ends with the value (not case sensitive)                        |
+| **filter[field]** | `%[oh]%`                              | `Contains` operator: fields contains the value (not case sensitive)                    |
+| `sort`            |                                       |                                                                                        |
+| **sort**          | `[field1_ASC,field2_DESC,field3_ASC]` | The `sort` value is composed of a field name and the expected order separated by a `_` |
+| `limit`           |                                       |                                                                                        |
+| **limit**         | Number                                | Limit the result to "Number"                                                           |
+| **limit**         | Starting index, Number                | Limit the result to "Number" from the "Index"                                          |
 
 ## Using the webservice in Multishop mode
 
