@@ -21,7 +21,8 @@ The grid component allows to filter its content, to manage the filtering you wil
 You should use `AbstractGridDefinitionFactory` as a parent class, and define a const `GRID_ID` which will be used as a key to persist the `Filters`.
 
 ```php
-final class ManufacturerGridDefinitionFactory extends AbstractGridDefinitionFactory {
+final class ManufacturerGridDefinitionFactory extends AbstractGridDefinitionFactory
+{
     const GRID_ID = 'manufacturer';
 
     /**
@@ -79,7 +80,7 @@ final class ManufacturerGridDefinitionFactory extends AbstractGridDefinitionFact
 
 ### The filters types
 
-In the filters collection you define all the available filters (which will match your grid columns), you can define a specific type depending on the column.
+The filters collection allows you to define all the available filters (which will match your grid columns). You can define a specific type depending on the column.
 You can basically use any Symfony form type (including your custom ones) and PrestaShop provides a few [filter types]({{< ref "/1.7/development/components/grid/filter-types-reference/_index.md" >}}) that might be useful to you.
 
 ### Filterable grid definition
@@ -141,11 +142,10 @@ The Grid filtering workflow is divided into three actions:
 
 - search action: it parses the filters from the POST request, then redirects to the list action
 - list action: it parses the filters from GET request, persists them into database and finally renders the grid
-- reset action: to clean the persisted filters and reset to the default ones
+- reset action: it cleans the persisted filters and reset to the default ones
 
 {{% notice info %}}
 In this tutorial we assume the search and list actions have the same url, thus we don't need to specify the search route in the form action. Search manages the **POST** request and list the **GET** request.
-
 {{% /notice %}}
 
 {{% notice note %}}
@@ -268,9 +268,9 @@ class ManufacturerController extends FrameworkBundleAdminController
 
 ### Reset action
 
-Last action is used to reset the persisted filters and your grid filtering/sorting. This action is the same for nearly all grids so PrestaShop provides a common controller to manage it, and you actually already set it via the grid definition.
+This action resets the persisted filters and your grid filtering/sorting. This action is the same for nearly all grids so PrestaShop provides a common controller to manage it, and you actually already set it via the grid definition.
 
-It is defined in the `SearchAndResetType` options, it uses `admin_common_reset_search_by_filter_id` and only needs the filter id to identify the filters to clear, and a redirection route.
+It is defined in the [`SearchAndResetType` options]({{< ref "/1.7/development/components/grid/filter-types-reference#searchandresettype" >}}), it uses `admin_common_reset_search_by_filter_id` and only needs the filter id to identify the filters to clear, and a redirection route.
 
 ```php
     ...
