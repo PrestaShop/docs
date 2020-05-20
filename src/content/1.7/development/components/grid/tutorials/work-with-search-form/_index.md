@@ -89,7 +89,8 @@ You can basically use any Symfony form type (including your custom ones) and Pre
 Starting the 1.7.7 we made it even easier, you can use the `AbstractFilterableGridDefinitionFactory`. This will allow you use the [common search controller](#common-search-controller).
 
 ```php
-final class AddressGridDefinitionFactory extends AbstractFilterableGridDefinitionFactory {
+final class AddressGridDefinitionFactory extends AbstractFilterableGridDefinitionFactory
+{
     const GRID_ID = 'address';
 
     /**

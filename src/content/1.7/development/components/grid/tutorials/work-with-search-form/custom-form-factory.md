@@ -6,7 +6,7 @@ weight: 1
 
 # Create your custom form factory
 
-In some cases the generic form factory is not enough for your need. In PrestaShop the category grid has two specific features:
+In some cases the generic form factory is not enough for your need. In PrestaShop the category grid has three specific features:
 
 - it can manage a parent category which changes the grid rendering (only displays children) so it needs to dynamically add a parameter
 - its search url doesn't match the list so it needs to specify the form action
@@ -17,7 +17,7 @@ To manage this additional behaviour we create a decorator that uses the default 
 ## Decorate the default factory
 
 {{% notice note %}}
-In those example we use decorator that are based on the default grid factory. But you could create a fully autonomous class as long as it implements the `GridFilterFormFactoryInterface`.
+In those examples we use decorator that are based on the default grid factory. But you could create a fully autonomous class as long as it implements the `GridFilterFormFactoryInterface`.
 {{% /notice %}}
 
 ### Factory decorator
