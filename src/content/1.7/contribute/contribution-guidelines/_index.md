@@ -114,7 +114,7 @@ And don't forget that reviewing is a discussion, not a to-do list: the goal is t
 
 However, reviewing code is hard and can be exhausting. Making your pull request as easy to review as possible will help in getting it accepted swiftly. Completing the pull request form (explained below) properly, explaining the reasons behind some of your technical choices as well as any part of the code that could be tricky to understand... those are some examples of things that you can do to help ease up the process.
 
-Also, please avoid submitting very large PRs when it can be avoided.
+**Avoid submitting very large PRs** when it can be avoided.
 
 - If you modified a lot of files or a very big number of lines, it is unlikely that you're addressing a single issue: please try and submit one PR for each issue you solve. This way, a problem in one change won't block other valid changes from being merged.
 - A PR with a lot of changed lines will take a long time to review, and consequently the reviewer might miss possible issues. If your PR is too big, it may be rejected due to risk of regressions.
@@ -157,19 +157,20 @@ Pull Requests titles are used to build the Changelog we publish on each release.
 {{% /notice %}}
 {{% /callout %}}
 
-Once you have chosen a title for your Pull Request, you are asked to fill out the Pull Request table. 
+Once you have chosen a title for your Pull Request, you are asked to fill out the Pull Request table. **Filling it out properly is mandatory**. 
+
+Along other reasons, it helps maintainers:
+
+- Make sure that the change works as expected
+- Track when a change fixes a known issue
+- Track if a change introduced affects backwards compatibility (BC breaks)
+- Build the change log (changes are grouped by type and category).
 
 Let's see what each of the rows is for.
 
 #### Branch
 
 This part is needed to cross-check that your PR targets the branch that you intended. Just write the name of the target branch, as explained above in [Choosing the right base branch](#choosing-the-right-base-branch).
-
-
-- Making sure that it works as expected
-- Tracking when a PR fixes a known issue
-- Tracking if a change introduces affects backwards compatibility (BC breaks)
-- Building the change log (changes are grouped by type and category).
 
 #### Description 
 
