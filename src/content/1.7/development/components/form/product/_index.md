@@ -19,13 +19,15 @@ Except for the initial save, all product modifications are **updates**, which is
 Once the product is created and its ID has been generated most of the other CQRS commands are **updates** so they will need a `ProductId` identifier.
 They allow **partial updates** to minimize the amount of sent data, of course even partial update require a minimum of consistency and will have validation rules such as required fields in some cases.
 
-## Page form
+## Product form
 
-This form combines different sub form types, each one is managed by a dedicated CQRS command (sometimes more).
+This form combines different sub form types, each one is handled by dedicated CQRS commands.
 
 | Form type                | Field      | Description                                              | CQRS Command                                           |
 |:-------------------------|:-----------|:---------------------------------------------------------|:-------------------------------------------------------|
-| **BasicInformationType** | `basic`    | Contains the basic product information of the Product | `AddProductCommand` and `UpdateBasicProductCommand` |
+| **BasicInformationType** | `basic` | Contains the basic product information of the Product | `AddProductCommand` and `UpdateBasicInformationCommand` |
+| **DescriptionType** | `description`    | Contains the description of the Product | `UpdateDescriptionCommand` |
+| **ShortcutType** | `shortcut`    | Contains shortcut for prices and quantity of the Product | `UpdatePricesCommand`, `UpdateStockCommand` and `UpdateOptionsCommand` |
 | **RelationshipsType**    | `relationships` | Contains relationships of the product | N/A |
 | **ShortcutType**         | `shortcuts`     | Contains shortcut fields editable in other sub forms but accessible in first tab easily | N/A |
 | **TypeaheadProductPackCollectionType** | `pack_items` | List of products (for Pack of product) | `AddProductToPackCommand` `UpdateProductPackCommand` `RemoveProductFromPachCommand` |
@@ -38,17 +40,29 @@ This form combines different sub form types, each one is managed by a dedicated 
 | `product_id` | `HiddenType` | The *Product* ID |
 | `type_product` | `ChoiceType` | Type of product: Standard, virtual or Pack of Product |
 | `name` | `TranslateType` | Product name (localized) |
-| `description` | `TranslateType` | Product description (localized) |
-| `description_short` | `TranslateType` | Product short description (localized) |
 | `active` | `CheckboxType` | Boolean to indicate if Product is `active` |
 
-### ShortcutType
+### DescriptionType
 
 | Fields | Field type                       | Description            |
 |:-------|:---------------------------------|:-----------------------|
-| `price` | `MoneyType` | Product price (tax excluded) |
-| `price_ttc` | `MoneyType` | Product price (tax included) |
-| `quantity` | `NumberType` | Product stock quantity |
+| `description` | `TranslateType` | Product description (localized) |
+| `description_short` | `TranslateType` | Product short description (localized) |
+
+### ShortcutType
+
+| Fields | Field type                       | Description            | CQRS Commands |
+|:-------|:---------------------------------|:-----------------------|---------------|
+| `price` | `MoneyType` | Product price (tax excluded) | `UpdatePricesCommand` |
+| `price_ttc` | `MoneyType` | Product price (tax included) | |
+| `quantity` | `NumberType` | Product stock quantity | |
+| `id_tax_rules_group` | `ChoiceType` | **One** of the *TaxRulesGroup* entity | `UpdateStockCommand` |
+| `reference` | `TextType` | Product reference | `UpdateOptionsCommand` |
+
+
+## Component forms (WIP)
+
+These forms are displayed on the page but not integrated in the product form, they are independent component forms that use ajax requests instead.
 
 ### RelationshipsType
 
@@ -69,7 +83,7 @@ This form combines different sub form types, each one is managed by a dedicated 
 
 ## To be defined
 
-These are the old form types that need to be defined
+These are the old form types that need to be split and redefined
 
 | Form type          | Fields | Field type                       | Description            |
 |:-------------------|:-------|:---------------------------------|:-----------------------|
