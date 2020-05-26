@@ -40,6 +40,10 @@ The quickest way to test your API is to use your browser:
 * If PrestaShop is installed at the root of your server, you can access the API here: http://example.com/api/
 * If PrestaShop is installed in a subfolder of your server, you can access the API here: http://example.com/prestashop/api/
 
+{{% notice warning %}}
+The endpoint `/api` is reachable if URL is correctly rewritten to use it. For httpd, this is done by the `.htaccess` which means you need to make sure httpd is processing this file (it needs `mod_rewrite` enabled and VirtualHost must have `AllowOverride All`).
+{{% /notice %}}
+
 The shop should prompt you for a username and a password to enter. The username is the authentication key you created and **there is no password to enter**.
 
 The second and more appropriate way to access the API is to include your access key in the url, this will prevent you from entering any user name.
