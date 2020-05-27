@@ -1,11 +1,10 @@
 ---
-title: The old Product Form
-menuTitle: Old Form
+title: The Product Form before 1.7.8
+menuTitle: Before 1.7.8
 weight: 1
 ---
 
-# The Old Product Form
-{{< minver v="1.7.0" title="true" >}}
+# The Product Form before 1.7.8
 
 The product form is divided into multiple sub forms, here is a list that defines each sub forms along with its fields:
 

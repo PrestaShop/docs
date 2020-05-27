@@ -7,7 +7,8 @@ weight: 42
 # The New Product Form
 {{< minver v="1.7.8" title="true" >}}
 
-In most recent Product page the form is divided into multiple sub forms. Each form has one (or more) dedicated CQRS command to manage its content.
+In most recent Product page, which was remade in 1.7.8, the form is divided into multiple sub forms. Each form has dedicated CQRS commands to manage its content.
+For previous versions you can read this documentation about [product form before 1.7.8]({{< ref "1.7/development/page-reference/back-office/product/form/product-form-before-1-7-8" >}}).
 
 ## Creation / Update commands
 
