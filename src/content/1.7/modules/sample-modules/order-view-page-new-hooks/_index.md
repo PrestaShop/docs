@@ -10,7 +10,7 @@ aliases:
 
 ## Introduction
 
-In this tutorial we are going to build a module to extend Order view page. 
+In this tutorial we are going to build a module to extend Order view page and the Orders' preview. 
 The module will add the following components:
 
  - User Signature card below the Customer card.
