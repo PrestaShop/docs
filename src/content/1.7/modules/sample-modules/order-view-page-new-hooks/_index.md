@@ -2,10 +2,10 @@
 title: Order view page new hooks demo tutorial 
 weight: 2
 aliases:
-    - /1.7/modules/sample_modules/order_view_page_new_hooks/
+    - /1.7/modules/sample_modules/order_pages_new_hooks/
 ---
 
-# Order view page new hooks demo tutorial
+# Order pages new hooks demo tutorial
 {{< minver v="1.7.7.0" title="true" >}}
 
 ## Introduction
@@ -36,9 +36,9 @@ project needs and don't hesitate to write a note to PrestaShop Core developers i
 - To be familiar with basic module creation.
 - To be familiar how Composer autoloads classes (https://devdocs.prestashop.com/1.7/modules/concepts/composer/)
 
-### Available Order View page hooks
+### Available hooks
 
-On module installation the following hooks can be registered:
+On module installation the following hooks can be registered, on the order view page:
 
  - `displayAdminOrderTabLink` - for adding tab links for tab content
  - `displayAdminOrderTabContent` - for adding tab content to Order page
@@ -48,10 +48,15 @@ On module installation the following hooks can be registered:
  - `displayAdminOrder` - displayed at the bottom of the Order page
  - `displayAdminOrderTop` - displayed at the top of the Order page
  - `actionGetAdminOrderButtons` - to display additional action buttons into the main buttons bar.
+
+on the listing page:
+ - `displayOrderPreview ` -  displayed at the bottom of the order's preview on the order's listing page.
  
 These hooks are visualized in the picture below:
 
- {{< figure src="../img/view-order-hooks-demo/ps-view-order-page-hooks.jpg" title="Order page hooks locations" >}}
+ {{< figure src="../img/view-order-hooks-demo/ps-view-order-page-hooks.jpg" title="Order view page hooks locations" >}}
+ 
+ {{< figure src="../img/view-order-hooks-demo/ps-listing-order-page-hook.png" title="Order listing page hooks locations" >}}
 
 This tutorial has these sections:
 
