@@ -1,7 +1,6 @@
 ---
 title: The Product Form
 menuTitle: Product Form
-weight: 42
 ---
 
 # The New Product Form
