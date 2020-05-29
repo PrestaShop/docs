@@ -10,7 +10,8 @@ Patch releases are "maintainance" releases: they provide bug fixes and security 
 ## Scope of maintainance
 
 When a minor version is released, such as PrestaShop 1.7.7.0, the related branch becomes the latest and maintained branch.
-This means that, when PrestaShop 1.7.7.0 is out :
+This means that, when PrestaShop 1.7.7.0 is out:
+
 - There will be no more PrestaShop 1.7.6 patch releases, for either bug or security issues
 - There might be, if necessary, patch releases for PrestaShop 1.7.7. (which means: 1.7.7.1, 1.7.7.2 and so on ...) until next minor release is delivered (PrestaShop 1.7.8)
 
@@ -19,6 +20,7 @@ When PrestaShop 1.7.7.0 is released, PrestaShop 1.7.6 reaches its [End Of Life](
 ## When is it decided to release a patch ?
 
 A patch release is scheduled when a "trigger bug" is reported:
+
 - A major bug in maintained branch
 - A security issue in maintained branch
 
