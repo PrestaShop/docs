@@ -103,31 +103,3 @@ Since Symfony 4.1 the bundle notation is going to be deprecated: https://symfony
 {{% /notice %}}
 
 The Controller in the previous example will be available if you browse `/admin-dev/modules/your-module/demo`.
-
-
-## How to map an action of your controller to a URI
-
-This is really simple (and very well documented in Symfony's [Routing component documentation](https://symfony.com/doc/3.4/routing.html)):
-
-For instance:
-
-```yaml
-# modules/your-module/config/routes.yml
-your_route_name:
-    path: your-module/demo
-    methods: [GET]
-    defaults:
-      _controller: 'MyModule\Controller\DemoController::demoAction'
-```
-
-{{% notice tip %}}
-Any callable can be used to populate the ``_controller`` attribute, you don't even need to create your own controller! You could even use a public function from your module main class. Even so, we strongly suggest using a controller.
-{{% /notice %}}
-
-{{% notice tip %}}
-For controllers to link with the routes correctly always use double colon (`::`) and not the single colon (`:`) 
-to separate classes and method names! 
-Since Symfony 4.1 the bundle notation is going to be deprecated: https://symfony.com/blog/new-in-symfony-4-1-deprecated-the-bundle-notation
-{{% /notice %}}
-
-The Controller in the previous example will be available if you browse `/admin-dev/modules/your-module/demo`.

@@ -12,7 +12,7 @@ Most of standard extension needs can be fulfilled using one [hook][hooks].
 
 If there is no hook available for your need, and you only need to modify the display of the page, you might want to [override the template][template-override].
 
-But sometimes you want to modify the page deeper. You need to modify the controller behavior.
+But sometimes you want to modify the page deeper. In this case, you need to modify the controller behavior.
 
 If the Back Office page you want to modify is powered by Symfony, you have 3 options:
 
@@ -22,7 +22,7 @@ If the Back Office page you want to modify is powered by Symfony, you have 3 opt
 
 ## Remap the routing
 
-In Symfony, [routes](https://symfony.com/doc/3.4/routing.html) such as `/sell/catalog/orders` are mapped to controllers by YAML configuration files such as this one:
+In Symfony, [routes](https://symfony.com/doc/3.4/routing.html) such as `/sell/orders/orders` are mapped to controllers by YAML configuration files such as this one:
 ```yaml
 admin_orders_index:
   path: /sell/orders/orders/
@@ -55,11 +55,11 @@ All module routes are prefixed with `modules`, which is why the URL of this rema
 
 {{% notice tip %}}
 Routing is computed and cached by Symfony. You will probably need to clear this cache for Symfony to acknowledge your updated routing.
-You can do it by using `php bin/console cache:clear`
+You can do it by using `php bin/console cache:clear`.
 {{% /notice %}}
 
 {{% notice tip %}}
-if you have trouble writing the right routing configuration for your controller, you can use Symfony debugger to dump the routes with `php bin/console debug:router`
+if you have trouble writing the right routing configuration for your controller, you can use Symfony debugger to dump the routes with `php bin/console debug:router`.
 {{% /notice %}}
 
 ## Override the controller
