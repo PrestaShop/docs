@@ -2,10 +2,9 @@
 title: Interacting with APIs
 ---
 
-Interacting with APIs
-=====================
+# Interacting with APIs
 
-There is different options to transfer data between your shop and any external service.
+There are different options to transfer data between your shop and any external service.
 The method you choose will depend on the usecase:
 
 * if data must be pulled or pushed to the shop,
@@ -59,7 +58,7 @@ As the webservice is only an interface to get and update objects on the database
 Module controller may be implemented to allow any external service to reach your shop, then trigger specific actions or retrieve content.
 
 You should implement a method that filters non-authenticated calls. This prevents guests accessing private content, or trigger actions on your behalf.
-This can be done by generating your own token and checking it eveytime the controller is called. `Tools::encrypt($passwd)` may be useful.
+This can be done by generating your own token and checking it everytime the controller is called. `Tools::encrypt($token)` may be useful.
 
 **Resources:**
 
