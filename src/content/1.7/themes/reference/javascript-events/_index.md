@@ -69,9 +69,9 @@ after the DOM was modified (like after an ajax call).
 Here is a simple way to trigger a delegated event.
 
 ```js
-var body = $('body'); // Our events are usually attached to the body
+const body = $('body'); // Our events are usually attached to the body
 
-var event = jQuery.Event('click');
+const event = jQuery.Event('click');
 event.target = body.find('.js-theClassYouNeed');
 
 body.trigger(event);
