@@ -11,8 +11,8 @@ title: Product FAQ
 
 **Q:** How can I override the cover image of my products?
 
-**A:** By default, when a product is displayed in a list its cover image is used, it is configurable in the BackOffice and is set in product properties via the `cover_image_id` property.
-If you want to change this default behaviour you can use the `actionGetProductPropertiesAfter` in your module and change this property.
+**A:** By default, when a product is displayed in a list its cover image is used, it is configurable in the BackOffice and is set in product properties via the `cover_image_id` key.
+If you want to change this default behaviour you can use the `actionGetProductPropertiesAfter` in your module and change this key.
 
 ```php
 /**
