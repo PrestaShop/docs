@@ -37,6 +37,7 @@ Any module:
 -   can display a variety of content (blocks, text, etc.), perform many
     tasks (batch update, import, export, etc.), interface with other
     tools, and much much more.
+-   facilitates [interactions between the shop and external services]({{< ref "1.7/modules/creation/external-services" >}}).
 -   can be made as configurable as necessary; the more configurable it
     is, the easier it will be to use, and thus will be able to address
     the needs of a wider range of users.
