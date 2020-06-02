@@ -14,6 +14,14 @@ All these options can be added to your queries as query parameters (either `GET`
 | **output_format** | `XML, JSON` | Change the output format |
 | **ps_method** | `GET, POST, PUT, DELETE` | Override the HTTP method used for the request |
 
+## Resource options
+
+| Key          | Value                              | Result                                                   |
+|--------------|------------------------------------|----------------------------------------------------------|
+| **language** | `3`                                | Only display localized fields in one language            |
+|              | {{< code >}}[3|5|...]{{< /code >}} | Display localized fields for specified list of languages |
+|              | `[2,5]`                            | Display localized fields for an interval of languages    |
+
 ## List options
 
 | Key               | Value                                 | Description                                                                            |
