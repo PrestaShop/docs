@@ -307,7 +307,7 @@ Basically, the process and the result will be the same. The existing
 data on the shop will be kept, as well as your module and your current
 theme.
 
-You can subscribe for this service on the marketplace: https://addons.prestashop.com/en/support/18689-upgrade-pack-prestashop.html
+You can [subscribe for the upgrade service on the marketplace](https://addons.prestashop.com/en/support/18689-upgrade-pack-prestashop.html).
 
 Many agencies and freelancers in your area may also provide this kind of
 service.
