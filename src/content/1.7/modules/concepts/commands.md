@@ -15,7 +15,8 @@ Since version 1.7 of PrestaShop, everyone have access to the PrestaShop console 
 Since v1.7.5, you can add and provide your own commands into the PrestaShop console using modules.
 
 {{% notice warning %}}
-If you use PrestaShop Core legacy classes, it will not works yet. We will fix it soon.
+If you load and use PrestaShop Core legacy classes such as an ObjectModel within a Command context, you might run into issues. This is a known limitation of the Commands.
+Removing this limitation is being explored for future PS versions.
 {{% /notice %}}
 
 Let's see an example of a really common task when we usually use CRON scripts: you want to export your products into an XML file in order to import them into an another platform (a PIM or an ERP).
