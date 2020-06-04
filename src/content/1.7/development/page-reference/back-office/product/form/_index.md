@@ -66,6 +66,10 @@ This form combines different sub form types, each one is handled by dedicated CQ
 | `id_tax_rules_group` | `ChoiceType` | **One** of the *TaxRulesGroup* entity | `UpdateProductStockCommand` |
 | `reference` | `TextType` | Product reference | `UpdateProductOptionsCommand` |
 
+{{% notice info %}}
+Relationship commands (like product packs, related products, product features, ...) use a single `UpdateRelationshipCommand`, it needs the list of associated entities as an input, and the handler uses this list to assign/remove the relationship.
+{{% /notice %}}
+
 ### TypeaheadProductPackCollectionType
 
 | Field  | Field type                       | Description            | CQRS Commands |
@@ -78,7 +82,7 @@ This form combines different sub form types, each one is handled by dedicated CQ
 
 | Fields | Field type                       | Description            | CQRS Commands |
 |:-------|:---------------------------------|:-----------------------|---------------|
-| `features` | `CollectionType` [`ProductFeatureType`] | List of sub forms for product *Feature* entity | `AddProductFeatureValueCommand` `UpdateProductFeatureValueCommand` `RemoveProductFeatureValueCommand` `CreateFeatureValueCommand` |
+| `features` | `CollectionType` [`ProductFeatureType`] | List of sub forms for product *Feature* entity | `UpdateProductFeatureValuesCommand` `CreateCustomFeatureValueCommand` |
 | `id_manufacturer` | `ChoiceType` | **One** of the `ManufacturerCore` | `UpdateProductManufacturerCommand` (TBD: should this be included in basic information?) |
 | `related_products` | `TypeaheadProductCollectionType` | List of related products | `UpdateRelatedProductsCommand` `CleanRelatedProductsCommand` |
 
