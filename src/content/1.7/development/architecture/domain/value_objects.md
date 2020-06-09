@@ -32,7 +32,7 @@ use PrestaShop\PrestaShop\Core\Domain\Currency\ValueObject\ExchangeRate;
 // If we were to create ExchangeRate with value of -1,
 // then CurrencyConstraintException would be thrown.
 
-$exchangeRate = new ExchangeRate(-1); // throws exception, becasue exhange rate value is not within boundaries
+$exchangeRate = new ExchangeRate(-1); // throws exception, because exhange rate value is not within boundaries
 
 // However, if ExchangeRate value is within allowed boundaries,
 // then it will successfully produce us new instance of ExchangeRate.
