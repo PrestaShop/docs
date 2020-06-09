@@ -6,7 +6,7 @@ weight: 6
 
 # Multilingual / localized Fields
 
-Some entities have multilingual / localized fields, by default the API calls returns the value for all languages installed in the Shop, but you might want to fine tune the expected result using the `language` parameter.
+Some entities have multilingual / localized fields, by default the API calls return the value for all languages installed in the Shop, but you might want to fine tune the expected result using the `language` parameter.
 
 ## Language parameter
 
