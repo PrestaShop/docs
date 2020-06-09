@@ -27,7 +27,7 @@ Contributors wishing to edit a module's files should follow the following proces
 
 ## License
 
-Unless specified otherwise, PrestaShop modules are ars released under the [Academic Free License 3.0][AFL-3.0]. All contributions made to those modules are automatically licensed under the same terms.
+Unless specified otherwise, PrestaShop modules are released under the [Academic Free License 3.0][AFL-3.0]. All contributions made to those modules are automatically licensed under the same terms.
 
 ### File headers
 
