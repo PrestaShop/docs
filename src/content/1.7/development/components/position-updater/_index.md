@@ -1,7 +1,6 @@
 ---
 title: The Position Updater component
 menuTitle: Position Updater
-weight: 2
 ---
 
 # The Position updater component
