@@ -53,8 +53,8 @@ In order to use symfony DI you need to declare some yml config:
 ```
 services:
   # The name of the service must match the full namespace class
-  MyModule\Controller\AdminAjaxPrestashopWishlistController:
-    class: MyModule\Controller\AdminAjaxPrestashopWishlistController
+  MyModule\Controller\DemoController:
+    class: MyModule\Controller\DemoController
     arguments:
       - '@doctrine.cache.provider'
 ```
