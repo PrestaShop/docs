@@ -77,9 +77,8 @@ Here are some examples:
 If you need to escape quotes in the _translated_ text, do it like this:
 
 ```html+smarty
-{capture name="foo"}{l s='Don\'t do this at home' d='Modules.Mymodule'}{/capture}
 <script type="text/javascript">
-  var thisIsAString = '{$smarty.capture.foo|escape:'javascript'}';
+  var thisIsAString = '{l|escape:"javascript" s="Don't do this at home" d="Modules.Mymodule"}';
 </script>
 ``` 
 
