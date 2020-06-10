@@ -27,11 +27,19 @@ use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 
 class DemoController extends FrameworkBundleAdminController
 {
-    public function __construct(EntityManager 
+    private $cache;
+       
+    // you can use symfony DI to inject services
+    public function __construct(CacheProvider $cache)
+    {
+        $this->cache = $cache;
+    }
+    
     public function demoAction()
     {
-        // you can retrieve any service with the container property
-        $this->container->get('doctrine');
+        // you can also retrieve services directly from the container
+        $cache = $this->container->get('doctrine.cache');
+        
         return $this->render('@Modules/your-module/templates/admin/demo.html.twig');
     }
 }
@@ -40,11 +48,11 @@ class DemoController extends FrameworkBundleAdminController
 You have access to the Container, to Twig as rendering engine, the Doctrine ORM, everything from Symfony framework ecosystem.
 Note that you must return a `Response` object, but this can be a `JsonResponse` if you plan to make a single point application (or "SPA").
 
-In order to use symfony DI you need to declare some yml configs:
-
-(the name of service need to match the full namespace of your class)
+In order to use symfony DI you need to declare some yml config:
 ```
-MyModule\Controller\AdminAjaxPrestashopWishlistController:
+services:
+  # The name of the service must match the full namespace class
+  MyModule\Controller\AdminAjaxPrestashopWishlistController:
     class: MyModule\Controller\AdminAjaxPrestashopWishlistController
     arguments:
       - '@doctrine.cache.provider'
