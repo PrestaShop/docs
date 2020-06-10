@@ -32,6 +32,26 @@ As a template designer you will find the markup of each elements in `_partials/f
   ];
 ```
 
+### {hook}
+
+The `{hook}` function invokes a given named hook and displays its content (if any is returned).
+
+```smarty
+{hook h="displayBeforeSomething"}
+```
+
+Although not recommended, you can execute a hook for a specific module as well:
+
+```smarty
+{hook h="displayBeforeSomething" mod="mysupermodule"}
+```
+
+You can choose to exclude some modules, which won't be notified of the hook:
+
+```smarty
+{hook h="displayBeforeSomething" excl="foreveralone,derpmodule"}
+```
+
 ### {l}
 
 The `{l}` function allows you to insert translated text in your template using the [Translation system]({{ ref "/1.7/development/internationalization/translation/_index.md" >}}).
