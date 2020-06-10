@@ -23,6 +23,7 @@ Somewhere in your module declare a new class that will act as a Controller:
 
 namespace MyModule\Controller;
 
+use Doctrine\Common\Cache\CacheProvider;
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 
 class DemoController extends FrameworkBundleAdminController
