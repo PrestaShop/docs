@@ -7,7 +7,7 @@ weight: 13
 
 One of the interaction with the Customers involve sending mails, including pdf files.
 
-For exemple, for every order you do on a Shop as a Customer we expect to receive an Invoice.
+For example, for every order you do on a Shop as a Customer we expect to receive an Invoice.
 
 Working on what make a shop an unique experience, as a Developer you will be asked to customize every PDF files that PrestaShop can produce.
 
@@ -205,7 +205,7 @@ In `themes/your-theme/pdf/invoice.note-tab.tpl`:
 
 You will get an Invoice would look like this:
 
-{{< figure src="../img/invoice-note.png" title="Invoice with extra content exemple" >}}
+{{< figure src="../img/invoice-note.png" title="Invoice with extra content example" >}}
 
 ## Variables
 

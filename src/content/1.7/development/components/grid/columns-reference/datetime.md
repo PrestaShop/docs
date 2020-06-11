@@ -8,14 +8,14 @@ weight: 10
 {{< minver v="1.7.5" title="true" >}}
 
 You can use this column type in your Grid to format datetime values.
-It is common to get datetime value (e.g. Created at, Updated at & etc.) from database and format them before displaying.
+It is common to get datetime values (e.g. Created at, Updated at & etc.) from the database and format them before displaying.
 
 ## Available options
 
-| Properties  | Type   | Expected value                                                     |
-| ----------- | ------ | ------------------------------------------------------------------ |
-| **field**   | string | **required** Record field name which column displays.              |
-| **format**  | string | **default:** `Y-m-d H:i:s` Format to use when formatting datetime. |
+| Properties  | Type   | Expected value                                                                |
+| ----------- | ------ | ----------------------------------------------------------------------------- |
+| **field**   | string | **required** The record field name that the column displays.                  |
+| **format**  | string | **default:** `Y-m-d H:i:s` The format to use when formatting datetime values. |
 
 ## Example usage
 
@@ -26,8 +26,8 @@ use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 $dateTimeColumn = new DateTimeColumn('datetime');
 $dateTimeColumn->setName('Created at');
 $dateTimeColumn->setOptions([
-     'field' => 'date_add',     // field name that has datetime value
-     'format' => 'Y/d/m H:i:s', // define custom format for datetime
+     'field' => 'date_add',     // the field name that has a datetime value
+     'format' => 'Y/d/m H:i:s', // define a custom format for the datetime
 ]);
 
 $columns = new ColumnCollection();

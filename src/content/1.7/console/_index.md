@@ -9,4 +9,4 @@ chapter: true
 
 # Console
 
-This sections aims to becomes the source of console commands.
+This sections aims to become the source of console commands.

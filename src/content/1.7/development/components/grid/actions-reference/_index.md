@@ -10,8 +10,8 @@ Grid Actions are tasks available for your grid for common actions.
 
 ### SimpleGridAction
 
-This action allow to add a label to the Grid Actions block. Then you can manage the behavior when
-clicking on this label using Javascript for exemple.
+This action allows to add a label to the Grid Actions block. Then you can manage the behavior when
+clicking on this label using Javascript for example.
 
 {{% notice note %}}
 "Refresh list", "Show SQL query" and "Export to SQL Manager" actions are created using `SimpleGridAction` actions.
@@ -157,7 +157,7 @@ This row action will delete the Category in Catalog > Categories page.
 | **Defaults**       | `category_id_field` (string)        |
 |                    | `category_delete_route` => (string) |
 
-## Use case exemple
+## Use case example
 
 ```php
 <?php
@@ -173,9 +173,9 @@ use PrestaShop\PrestaShop\Core\Grid\Action\Row\Type\LinkRowAction;
 use PrestaShop\PrestaShop\Core\Grid\Action\Row\Type\SubmitRowAction;
 
 /**
- * How to define the Grid actions?
- * You can adapt this exemple or look at the existing ones
- * in PrestaShop Core.
+ * How to define the Grid's actions?
+ * You can adapt this example or look at the existing ones
+ * in PrestaShop's Core.
  */
 class MyGridDefinitionFactory extends AbstractGridDefinition
 {

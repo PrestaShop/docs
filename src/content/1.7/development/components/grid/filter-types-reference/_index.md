@@ -92,7 +92,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 /**
  * How to define the Grid filters?
- * You can adapt this exemple or look at the existing ones
+ * You can adapt this example or look at the existing ones
  * in PrestaShop Core.
  */
 class MyGridDefinitionFactory extends AbstractGridDefinition

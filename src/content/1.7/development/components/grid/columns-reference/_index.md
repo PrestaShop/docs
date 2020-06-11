@@ -7,7 +7,7 @@ weight: 10
 # Column Types reference
 {{< minver v="1.7.5" title="true" >}}
 
-Most important Grid definition part is defining columns. PrestaShop already comes with a list of predefined columns that you can use in your own Grids.
+The most important part of a Grid definition is defining columns. PrestaShop already comes with a list of predefined column types that you can use in your own Grids.
 
 ## Supported Types
 
@@ -63,9 +63,9 @@ use PrestaShop\PrestaShop\Core\Grid\Action\Row\RowActionCollection;
 use PrestaShop\PrestaShop\Core\Grid\Action\Row\Type\LinkRowAction;
 
 /**
- * How to define the Grid columns?
- * You can adapt this exemple or look at the existing ones
- * in PrestaShop Core.
+ * How to define the Grid's columns?
+ * You can adapt this example or look at the existing ones
+ * in PrestaShop's Core.
  */
 class MyGridDefinitionFactory extends AbstractGridDefinition
 {

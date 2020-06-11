@@ -7,8 +7,8 @@ weight: 60
 # EmployeeNameWithAvatarColumn Type
 {{< minver v="1.7.5" title="true" >}}
 
-It is special type of column that allows you to add employee name with avatar column to your Grid.
-You can see how it looks be default:
+This is a special type that allows you to add a column with the employee name and its avatar to your Grid.
+You can see how it looks by default:
 
 {{< figure src="../img/employee-name.png" title="Employee name with avatar column" >}}
 
@@ -22,7 +22,7 @@ You can see how it looks be default:
 
 **type:** `string` **required**
 
-Employee's name field.
+The employee's name field.
 
 ## Example usage
 

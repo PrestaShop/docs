@@ -6,7 +6,7 @@ weight: 12
 
 ## Bulk Actions reference
 
-You can define actions for every selected rows of your grid. PrestaShop already comes with a list of common bulk actions that you can use in your own Grids.
+You can define actions for every selected row of your grid. PrestaShop already comes with a list of common bulk actions that you can use in your own Grids.
 
 ### SubmitBulkAction
 
@@ -42,7 +42,7 @@ This bulk action will delete the selected Customers in Sell > Customers page.
 | **Requirements**   | `customers_bulk_delete_route`          |
 | **Allowed Types**  | `customers_bulk_delete_route` (string) |
 
-## Use case exemple
+## Use case example
 
 ```php
 <?php
@@ -54,9 +54,9 @@ use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\Type\SubmitBulkAction;
 use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\BulkActionCollection;
 
 /**
- * How to define the Grid bulk actions?
- * You can adapt this exemple or look at the existing ones
- * in PrestaShop Core.
+ * How to define the Grid's bulk actions?
+ * You can adapt this example or look at the existing ones
+ * in PrestaShop's Core.
  */
 class MyGridDefinitionFactory extends AbstractGridDefinition
 {

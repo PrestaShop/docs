@@ -9,16 +9,16 @@ weight: 2
 
 ## Introduction
 
-Grid component provides tools which allows you to build, manage and display your data tables. The most important parts 
+The Grid component provides tools that allow you to build, manage and display your data tables. The most important parts 
 of Grid component are:
 
-* _Grid definition_ - defines structural information about grid.
-* _Grid data_ - stores data for grid.
-* _Search criteria_ - stores sorting, pagination and filters data for grid.
+* _Grid definition_ - defines structural information about a grid.
+* _Grid data_ - stores data for a grid.
+* _Search criteria_ - stores sorting, pagination and filters data for a grid.
 
 ## Grid definition
 
-This is the most fundamental part of Grid component. Grid definition stores structural information about your Grid
+This is the most fundamental part of the Grid component. A Grid definition stores structural information about your Grid
 that defines:
 
 * **Id** - unique id for Grid identification. It is used to dispatch hooks and identify Grid in other parts of the application.
@@ -35,11 +35,11 @@ PrestaShop already provides you with an abstract factory implementation `PrestaS
 that you can use to create Grid definitions.
 
 {{% notice note %}}
-When creating Grid definition it is _recommended_ to use `PrestaShop\PrestaShop\Core\Grid\Definition\Factory\AbstractGridDefinitionFactory`
-as it allows you to define your structure, but takes care of definition creation.
+When creating a Grid definition it is _recommended_ to use `PrestaShop\PrestaShop\Core\Grid\Definition\Factory\AbstractGridDefinitionFactory`
+as it allows you to define your structure, but takes care of the definition creation.
 {{% /notice %}}
 
-To create new grid definition, we will use `AbstractGridDefinitionFactory`.
+To create a new grid definition, we will use `AbstractGridDefinitionFactory`.
 
 ```php
 namespace PrestaShop\PrestaShop\Core\Grid\Definition\Factory;
@@ -90,11 +90,11 @@ We have just created a basic Grid Definition factory in which we defined our Gri
 name `Products` and 3 data columns.
 
 {{% notice note %}}
-It is _recommended_ to keep your name translatable. To make that easy
-`AbstractGridDefinitionFactory` provides access to translator via `trans()` method.
+It is _recommended_ to keep your name translatable. To make that easy,
+`AbstractGridDefinitionFactory` provides access to the translator via the `trans()` method.
 {{% /notice %}}
 
-And finally register your Grid definition factory as a service.
+Finally, register your Grid definition factory as a service.
 
 ```yaml
 prestashop.core.grid.definition.factory.product_grid_definition_factory:
@@ -103,14 +103,14 @@ prestashop.core.grid.definition.factory.product_grid_definition_factory:
     public: true
 ``` 
 
-Most of the time you won't be creating Grid Definition by yourself but delegating this task to other services.
-But in case you need to create Grid Definition by hand, here's how you can do that.
+Most of the time you won't be creating Grid Definitions by yourself but delegating this task to other services,
+but in case you need to create a Grid Definition by hand, here's how you can do that.
 
 ```php
 $productsGridDefinitionFactory = $container->get('prestashop.core.grid.definition.factory.product_grid_definition_factory');
 $productsGridDefinition = $productsGridDefinitionFactory->getDefinition();
 
-// you can access all information thats was defined
+// you can access all information that was defined
 $productsGridDefinition->getColumns(); // collection of defined columns
 $productsGridDefinition->getName(); // "Products"
 $productsGridDefinition->getId(); // "products"
@@ -118,22 +118,22 @@ $productsGridDefinition->getId(); // "products"
 
 ## Search Criteria
 
-In Grid component Search Criteria is used for Grid's data sorting, paginating & filtering. Search Criteria
-can be loaded from database, URL query or anywhere else. 
+In the Grid component, Search Criteria is used for Grid's data sorting, paginating & filtering. Search Criteria
+can be loaded from the database, URL query or anywhere else. 
 
 {{% notice info %}}
-Grid component itself does not manage Search Criteria but instead it provides interface for it.
-In PrestaShop [Filters component](#) is used to resolve Search Criteria for Grid.
+The Grid component itself does not manage Search Criteria but instead it provides an interface for it.
+In PrestaShop, the [Filters component](#) is used to resolve Search Criteria for a Grid.
 {{% /notice %}}
 
 {{% notice note %}}
-Search Criteria is immutable. This means that once Search Criteria is created it cannot be changed.
+Search Criteria is immutable. This means that once a Search Criteria object is created it cannot be changed.
 {{% /notice %}}
 
 ### Creating Search Criteria
 
-Even though most of the time Search Criteria will be created using [Filters component](#), you can still
-create it by yourself. Grid provides simple implementation for it.
+Even though most of the time Search Criteria will be created using the [Filters component](#), you can still
+create it manually. Grid provides a simple implementation for it.
 
 ```php
 use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria;
@@ -159,16 +159,16 @@ $searchCriteria->getLimit();    // 10
 ```
 
 {{% notice note %}}
-Class `PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria` is only available since {{< minver v="1.7.6" >}}
+The class `PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria` is only available since {{< minver v="1.7.6" >}}
 {{% /notice %}}
 
-When creating Search Criteria you can skip some or all it's data. If you set both `orderWay` and `orderBy` to `null`
+When creating Search Criteria you can skip some or all of its data. If you set both `orderWay` and `orderBy` to `null`
 it will disable sorting. If you set both `offset` and `limit` to `null` it will disable pagination.
 
 ```php
 use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria;
 
-// both sorting, pagination and filtering are disabled with this search criteria
+// sorting, pagination and filtering are disabled with this search criteria
 $emptySearchCriteria = new SearchCriteria();
 
 // only pagination is set
@@ -184,21 +184,21 @@ $emptySortingSearchCriteria = new SearchCriteria(
 
 ## Grid Data
 
-The final part of Grid component is data. Grid Data is stored in `PrestaShop\PrestaShop\Core\Grid\Data\GridData`. 
+The final part of the Grid component is data. Grid Data is stored in `PrestaShop\PrestaShop\Core\Grid\Data\GridData`. 
 
 ### Creating Grid Data
 
-Grid component does not create Grid Data directly but instead relies on `PrestaShop\PrestaShop\Core\Grid\Data\Factory\GridDataFactoryInterface`.
-PrestaShop provides you with `DoctrineGridDataFactory` implementation out of the box which supports retrieving data from
-MySQL database using Doctrine. However, if you need to load data from REST API, Elasticsearch or any other data store,
+The Grid component does not create Grid Data directly but instead relies on `PrestaShop\PrestaShop\Core\Grid\Data\Factory\GridDataFactoryInterface`.
+PrestaShop provides you with a `DoctrineGridDataFactory` implementation out of the box which supports retrieving data from a
+MySQL database using Doctrine. However, if you need to load data from a REST API, Elasticsearch or any other data store,
 you can implement your own Grid Data factory.
 
 We will be using `DoctrineGridDataFactory` to create data for our Grid. When using `DoctrineGridDataFactory` you have
-to implement `DoctrineQueryBuilderInterface` which will be used by data factory to build Doctrine queries.
+to implement `DoctrineQueryBuilderInterface` which will be used by the data factory to build Doctrine queries.
 
 {{% notice info %}}
 When implementing `DoctrineQueryBuilderInterface` it is recommended to use `PrestaShop\PrestaShop\Core\Grid\Query\AbstractDoctrineQueryBuilder`
-as it provides access to Doctrine `Connection` and database tables prefix.
+as it provides access to the Doctrine `Connection` and database tables prefix.
 {{% /notice %}}
 
 ```php
@@ -230,8 +230,8 @@ final class ProductQueryBuilder extends AbstractDoctrineQueryBuilder
         $this->contextShopId = $contextShopId;
     }
 
-    // Get Search query builder returns QueryBuilder that is used to fetch filtered, sorted and paginated data from database.
-    // This query builder is also used to get SQL query that was executed.
+    // Get Search query builder returns a QueryBuilder that is used to fetch filtered, sorted and paginated data from the database.
+    // This query builder is also used to get the SQL query that was executed.
     public function getSearchQueryBuilder(SearchCriteriaInterface $searchCriteria)
     {
         $qb = $this->getBaseQuery();
@@ -258,7 +258,7 @@ final class ProductQueryBuilder extends AbstractDoctrineQueryBuilder
         return $qb;
     }
     
-    // Get Count query builder that is used to get total count of all records (products)
+    // Get Count query builder that is used to get the total count of all records (products)
     public function getCountQueryBuilder(SearchCriteriaInterface $searchCriteria)
     {
         $qb = $this->getBaseQuery();
@@ -286,7 +286,7 @@ final class ProductQueryBuilder extends AbstractDoctrineQueryBuilder
 }
 ```
 
-Once Query builder is done, last step is to register it and configure `DoctrineGridDataFactory` to use it.
+Once the Query builder is done, the last step is to register it as a service and configure your `DoctrineGridDataFactory` to use it.
 
 ```yaml
 # Register ProductQueryBuilder
@@ -298,17 +298,17 @@ prestashop.core.grid.query.product_query_builder:
         - "@=service('prestashop.adapter.legacy.context').getContext().shop.id"
     public: true
     
-# Configure Grid Data factory to use query builder that we registered above
+# Configure our Grid Data factory to use the query builder that we registered above
 prestashop.core.grid.data.factory.product_data_factory:
     class: 'PrestaShop\PrestaShop\Core\Grid\Data\Factory\DoctrineGridDataFactory'
     arguments:
         - '@prestashop.core.grid.query.product_query_builder' # service id of our query builder
-        - '@prestashop.core.hook.dispatcher' # every doctrine query builder needs hook dispatcher
-        - '@prestashop.core.grid.query.doctrine_query_parser' # parser to get raw SQL query
+        - '@prestashop.core.hook.dispatcher' # every doctrine query builder needs the hook dispatcher
+        - '@prestashop.core.grid.query.doctrine_query_parser' # parser to get the raw SQL query
         - 'products' # this should match your grid id, in our case it's "products"
 ```
 
-And that's it! Now we can use our Grid Data factory together with Search Criteria to get sorted, paginated and 
+That's it! Now we can use our Grid Data factory together with Search Criteria to get sorted, paginated and 
 filtered data for our Grid.
 
 ```php
@@ -319,26 +319,26 @@ $productGridDataFactory = $container->get('prestashop.core.grid.data.factory.pro
 $productGridData = $productDataFactory->getData($searchCriteria);
 
 $productGridData->getRecords(); // returns RecordCollection that contains products data
-$productGridData->getRecordsTotal(); // returns total count of products
-$productGridData->getQuery(); // get last executed query which was used to get RecordCollection
+$productGridData->getRecordsTotal(); // returns the total count of products
+$productGridData->getQuery(); // get the last executed query that was used to get RecordCollection
 ```
 
 ## Working with Grid
 
-We already know how to create and use Grid Definition and Grid Data factories. Now it's time to combine those services
+We already know how to create and use Grid Definitions and Grid Data factories. Now it's time to combine those services
 to create our Grid!
 
 ### Configuring Grid factory
 
 As always, you should not create Grid by hand, PrestaShop already comes with `PrestaShop\PrestaShop\Core\Grid\GridFactory`
-whose primary job is to create Grid.
+whose primary job is to create a Grid.
 
 {{% notice note %}}
-It is recommended to use `PrestaShop\PrestaShop\Core\Grid\GridFactory` to create Grids although you may need to create
-your own Grid factory is some rare cases.  
+It is recommended to use the `PrestaShop\PrestaShop\Core\Grid\GridFactory` to create Grids although you may need to create
+your own Grid factory in some rare cases.
 {{% /notice %}}
 
-Let's configure `GridFactory` with our Grid Definition and Grid Data factories.
+Let's configure a `GridFactory` with our Grid Definition and Grid Data factory.
 
 ```yaml
 # Configure Grid factory to use services we have implemented
@@ -374,14 +374,14 @@ class ProductController extends FrameworkBundleAdminController
         $productGrid = $productGridFactory->getGrid($searchCriteria);
         
         return $this->render('@PrestaShop/Admin/Product/products.html.twig', [
-            // $this->presentGrid() is helper method provided by FrameworkBundleAdminController
+            // $this->presentGrid() is a helper method provided by FrameworkBundleAdminController
             'productsGrid' => $this->presentGrid($productGrid),
         ]);
     }
 }
 ```
 
-To see Grid in your page you have to include it's template which is provided by PrestaShop.
+To see the Grid in your page you have to include its template, which is provided by PrestaShop.
 
 ```twig
 {# @PrestaShop/Admin/Product/products.html.twig #}
@@ -389,8 +389,7 @@ To see Grid in your page you have to include it's template which is provided by 
 {% include '@PrestaShop/Admin/Common/Grid/grid_panel.html.twig' with {'grid': productsGrid} %}
 ```
 
-It is possible to include provided template and modify some parts of it or you can create your own template to render
-Grid. 
+It is possible to include the provided template and modify some parts of it, or you can create your own template to render the Grid. 
 
 ## Workflows
 

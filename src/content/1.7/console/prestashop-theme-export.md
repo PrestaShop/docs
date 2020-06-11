@@ -8,9 +8,9 @@ title: prestashop:theme:export
 
 * Path: `src/PrestaShopBundle/Command/ExportThemeCommand.php`
 * Arguments:
-  * `theme`: Theme to export directory name
+  * `theme`: Directory name of the theme to export
 
 ## Description
 
-This command aims to create a zip file to distribute theme with its dependencies.
+This command aims to create a zip file to distribute a theme with its dependencies.
 

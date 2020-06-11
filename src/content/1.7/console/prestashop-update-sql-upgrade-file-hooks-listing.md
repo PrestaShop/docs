@@ -12,4 +12,4 @@ title: prestashop:update:sql-upgrade-file-hooks-listing
 
 ## Description
 
-This command aims to adds SQL to SQL upgrade file which contains hook insert operations.
+This command aims to add SQL to SQL upgrade file which contains hook insert operations.
