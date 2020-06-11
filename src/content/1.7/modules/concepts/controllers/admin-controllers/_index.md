@@ -52,7 +52,7 @@ services:
       - '@doctrine.cache.provider'
 ```
 
-You can also retrieve services with the container avaiable in symfony controllers ->
+You can also retrieve services with the container available in symfony controllers ->
 ```php
 // modules/your-module/src/Controller/DemoController.php
 
