@@ -8,8 +8,8 @@ title: prestashop:update:sql-upgrade-file-hooks-listing
 
 * Path: `src/PrestaShopBundle/Command/AppendHooksListForSqlUpgradeFileCommand.php`
 * Arguments:
-  * `ps-version`: PrestaShop version for which sql upgrade file will be searched
+  * `ps-version`: PrestaShop version for which the SQL upgrade file will be searched
 
 ## Description
 
-This command aims to add SQL to SQL upgrade file which contains hook insert operations.
+This command aims to add SQL to the SQL upgrade file which contains hook insert operations.
