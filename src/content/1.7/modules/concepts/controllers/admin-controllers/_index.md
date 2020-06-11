@@ -17,7 +17,6 @@ Using modern pages, you will have access to the PrestaShop debug toolbar, the se
 ## How to declare a new Controller
 
 Somewhere in your module declare a new class that will act as a Controller:
-
 ```php
 // modules/your-module/src/Controller/DemoController.php
 
@@ -38,6 +37,34 @@ class DemoController extends FrameworkBundleAdminController
     
     public function demoAction()
     {
+        return $this->render('@Modules/your-module/templates/admin/demo.html.twig');
+    }
+}
+```
+
+If you want Symfony Dependency Injection to inject services into your controller, you need to use specific YAML service declaration:
+```
+services:
+  # The name of the service must match the full namespace class
+  MyModule\Controller\DemoController:
+    class: MyModule\Controller\DemoController
+    arguments:
+      - '@doctrine.cache.provider'
+```
+
+You can also retrieve services with the container avaiable in symfony controllers ->
+```php
+// modules/your-module/src/Controller/DemoController.php
+
+namespace MyModule\Controller;
+
+use Doctrine\Common\Cache\CacheProvider;
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
+
+class DemoController extends FrameworkBundleAdminController
+{
+    public function demoAction()
+    {
         // you can also retrieve services directly from the container
         $cache = $this->container->get('doctrine.cache');
         
@@ -48,16 +75,6 @@ class DemoController extends FrameworkBundleAdminController
 
 You have access to the Container, to Twig as rendering engine, the Doctrine ORM, everything from Symfony framework ecosystem.
 Note that you must return a `Response` object, but this can be a `JsonResponse` if you plan to make a single point application (or "SPA").
-
-In order to use symfony DI you need to declare some yml config:
-```
-services:
-  # The name of the service must match the full namespace class
-  MyModule\Controller\DemoController:
-    class: MyModule\Controller\DemoController
-    arguments:
-      - '@doctrine.cache.provider'
-```
 
 {{% notice note %}}
 This controller works exactly the same as the Core Back Office ones.
