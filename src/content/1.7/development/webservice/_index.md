@@ -205,14 +205,18 @@ You can add these **GET** parameters to your request to modify the READ response
 
 ##### Control returned fields with "display"
 
-The `display` parameter can be used to return all fields when used with the **full** value: `http://example.com/api/addresses/1?display=full`.
+The `display` parameter can be used to return all fields when used with the **full** value: `http://example.com/api/addresses/?display=full`.
 
-You can also ask for certain fields if you use a list of fields names in brackets: `http://example.com/api/addresses/1?display=[id,lastname,firstname,phone_mobile]`
+You can also ask for certain fields if you use a list of fields names in brackets: `http://example.com/api/addresses/?display=[id,lastname,firstname,phone_mobile]`
+
+{{% notice note %}}
+This parameter can only be used for listings, not for individual records. If you want individual record with specific fields, you need to use both `display` and `filter` parameters.
+{{% /notice %}}
 
 {{% notice note %}}
 A response obtained with "display" other than "full" can't be used in a **PUT** (update) request, because the `WebserviceRequest` class validation for fields is the same for **POST** (create) and **PUT** (update).
 
-This should be fixed in a near future with a *yet-to-come-pull-request*!
+This should be fixed in a near future with a *yet-to-come-pull-request* introducing the PATCH method!
 {{% /notice %}}
 
 ##### Control returned items with "filter"
@@ -227,8 +231,8 @@ Other operators can be used, such as:
 
 - **NOT EQUAL** (single value): `http://example.com/api/customers?filter[firstname]=![hubert]` (apologies to all Huberts)
 - **NOT EQUAL** (multiple values): `http://example.com/api/customers?filter[firstname]=![hubert|leon|gaspard]` (apologies again...)
-- **GREATER THAN**: `http://example.com/api/customers?filter[birthday]=>[2000-00-00%2000:00:00]` (millenials only :-))
-- **LOWER THAN**: `http://example.com/api/customers?filter[birthday]=<[2000-00-00%2000:00:00]` (previous century only :-D)
+- **GREATER THAN**: `http://example.com/api/customers?filter[birthday]=>[2000-00-00%2000:00:00]` (millenials only 🙂)
+- **LOWER THAN**: `http://example.com/api/customers?filter[birthday]=<[2000-00-00%2000:00:00]` (previous century only 😄)
 
 This can be used in combination with the `display` parameter! Let's say you want to get the mobile phone numbers of customers #1, #7 and #42: `http://example.com/api/addresses?filter[id_customer]=[1|7|42]&display=[phone_mobile]`
 
@@ -248,7 +252,11 @@ The `date=1` parameter must be used to allow date filtering (see exemple above).
 
 The `limit=0,100` parameter can be used to limit the number of returned items (similar to MySQL's LIMIT clause).
 
-The `sendmail=1` parameter can be used if you need to change the state of an order AND you want the emails to be sent to the customer: you will have to do a **POST** on `http://example.com/api/order_histories?sendmail=1`
+The `sort=[field1_ASC,field2_DESC]` parameter can be used to sort the results (similar to MySQL's ORDER BY clause, with underscore to separate the field name and the order way).
+
+The `language=1` or `language=[1|2]` parameter can be used to return only these languages for translatable fields (eg: product description, category name, etc.).
+
+The `sendemail=1` parameter can be used if you need to change the state of an order AND you want the emails to be sent to the customer: you will have to do a **POST** on `http://example.com/api/order_histories?sendemail=1`
 
 ### Create a resource
 
