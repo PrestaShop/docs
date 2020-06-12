@@ -11,9 +11,9 @@ The most basic column is DataColumn. It is used to display raw field data in Gri
 
 ## Available options
 
-| Properties | Type   | Expected value                                        |
-| ---------- | ------ | ----------------------------------------------------- |
-| **field**  | string | **required** Record field name which column displays. |
+| Properties | Type   | Expected value                                               |
+| ---------- | ------ | ------------------------------------------------------------ |
+| **field**  | string | **required** The record field name that the column displays. |
 
 ## Example usage
 

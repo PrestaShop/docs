@@ -92,7 +92,7 @@ When using `output_format=JSON` (or default output)
 
 ### Special case for single language
 
-When you only have one  language in your shop (or if you specified only one via the `language` paramater), the format of localized fields is different and a single value is returned:
+When you only have one language in your shop (or if you specified only one via the `language` parameter), the format of localized fields is different, and a single value is returned:
 
 ```json
 {

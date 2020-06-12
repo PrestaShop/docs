@@ -7,7 +7,7 @@ weight: 20
 # ActionColumn Type
 {{< minver v="1.7.5" title="true" >}}
 
-This type of column allows to add actions to your Grid rows. The action target the corresponding row.
+This column type allows adding actions to your Grid rows. The action targets the corresponding row.
 For more info about possible actions see [Actions reference][actions-reference].
 
 ## Available options

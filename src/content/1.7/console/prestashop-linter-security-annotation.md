@@ -12,12 +12,12 @@ title: prestashop:linter:security-annotation
 
 ## Description
 
-This command aims to check if Back Office route controllers has configured Security annotations.
+This command aims to check if Back Office controller routes have configured Security annotations.
 
 Two options are available: Listing and Finding Missing.
 
 ### Listing
-This option aims to list all routes and theirs related permissions.
+This option aims to list all routes, and their related permissions.
 
 ### Finding missing
 This option aims to find routes with missing security annotations.    

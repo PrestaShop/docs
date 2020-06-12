@@ -141,7 +141,7 @@ if (200 == $httpCode) {
 ## Update the image of a resource
 
 {{% notice info %}}
-It's almost the same principle as adding an image except the API expects a PUT method. Since not all clients manage this HTTP method we can add a parameter `ps_method` in the URL to simulate it (recommended workaround).
+It's almost the same principle as adding an image except the API expects a PUT method. Since not all clients can handle this HTTP method, we can add a parameter `ps_method` in the URL to simulate it (recommended workaround).
 {{% /notice %}}
 
 ### Using an HTML form

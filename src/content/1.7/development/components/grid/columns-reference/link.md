@@ -7,16 +7,16 @@ weight: 10
 # LinkColumn Type
 {{< minver v="1.7.6" title="true" >}}
 
-This LinkColumn displays a raw field data encapsulated in a link (very useful to add an edition link on a name for example).
+This LinkColumn displays a raw field data encapsulated in a link (very useful for adding an edition link on a name, for example).
 
 ## Available options
 
 | Properties     | Type   | Expected value                                                                     |
 | -------------- | ------ | ---------------------------------------------------------------------------------- |
-| **field**      | string | **required** Record field name which column displays.                              |
-| **route** | string | **required** Route used to generated link url. |
-| **route_param_name** | string | **required** Parameter name used by the route to generate the url. |
-| **route_param_field** | string | **required** Record field containing the route parameter. |
+| **field**      | string | **required** The record field name that the column displays.                              |
+| **route** | string | **required** The route used to generate the link url. |
+| **route_param_name** | string | **required** The parameter name used by the route to generate the url. |
+| **route_param_field** | string | **required** The record field containing the route parameter. |
 
 ## Example usage
 

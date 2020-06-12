@@ -12,4 +12,4 @@ title: prestashop:licenses:update
 
 This command aims to rewrite your license headers to be up-to-date.
 
-It works on multiples files extensions: css, html.twig, js, json, php, tpl, vue.
+It works on multiple files extensions: `.css`, `.html.twig`, `.js`, `.json`, `.php`, `.tpl`, `.vue`.

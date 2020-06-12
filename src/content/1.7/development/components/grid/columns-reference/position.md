@@ -7,19 +7,19 @@ weight: 20
 # PositionColumn Type
 {{< minver v="1.7.5" title="true" >}}
 
-This type of columns allows you to define rows position using a drag and drop feature. Besides this column definition
+This column type allows you to define rows position using a drag and drop feature. Besides this column definition
 you need to use our javascript `PositionExtension` and prepare a route to manage the positions update. To help you create
 this controller you can use our [PositionUpdater][position-updater-reference] component.
 
 ## Available options
 
-| Properties   | Type   | Expected value                                                                             |
-| ------------ | ------ | ------------------------------------------------------------------------------------------ |
-| **id_field** | string | **required** Record field containing its id.                                               |
-| **position_field** | string | **required** Record field containing its position.                                   |
-| **update_route** | string | **required** Route called to update records position.                                  |
-| **update_method** | string | **default:** `GET` Method used to call the update route.                              |
-| **record_route_params** | array | **default:** `[]` Associative array to inject record fields in the update route. |
+| Properties   | Type   | Expected value                                                                                |
+| ------------ | ------ | --------------------------------------------------------------------------------------------- |
+| **id_field** | string | **required** The record field containing its id.                                              |
+| **position_field** | string | **required** The record field containing its position.                                  |
+| **update_route** | string | **required** The route called to update records position.                                 |
+| **update_method** | string | **default:** `GET` The HTTP method used to call the update route.                        |
+| **record_route_params** | array | **default:** `[]` An associative array to inject record fields in the update route. |
 
 ## Example usage
 

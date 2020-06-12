@@ -33,7 +33,7 @@ You can specify which fields you want for each resource using the `display` para
 
 ## Filter parameter
 
-You can filter the expected resulted with the `filter` parameter
+You can filter the expected result with the `filter` parameter
 
 | Key               | Value                               | Result                                                              |
 |-------------------|-------------------------------------|---------------------------------------------------------------------|
@@ -65,7 +65,7 @@ You can filter the expected resulted with the `filter` parameter
 
 ## Sort parameter
 
-You can sort the expected resulted with the `sort` parameter
+You can sort the expected result with the `sort` parameter
 
 | Key      | Value | Result |
 |----------|-------|--------|
@@ -84,7 +84,7 @@ You can sort the expected resulted with the `sort` parameter
 
 ## Limit parameter
 
-You can define a limit to the expected resulted with the `limit` parameter (which may allow you to perform pagination)
+You can define a limit to the expected result with the `limit` parameter (which may allow you to perform pagination)
 
 | Key          | Value           | Result                                                                                                               |
 |--------------|-----------------|-----------------------------------------------------------------------------------------------------------|

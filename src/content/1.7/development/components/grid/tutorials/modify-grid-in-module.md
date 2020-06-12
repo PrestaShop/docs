@@ -107,7 +107,7 @@ The `ColumnCollection` class have two functions for that:
 If you need to insert a new column "$newColumn" after a specific column with the id "name", this is how you can do that:
 
 ```php
-$newColumn = new DataColumn('exemple') ...
+$newColumn = new DataColumn('example') ...
 $columns->addAfter('name', $newColumn);
 ```
 
@@ -142,7 +142,7 @@ With these query builders, the Grid Query Builder is able to retrieve and filter
 
 Thanks to the Count query builder, the pagination system works out of the box so you don't need to implement your own.
 
-Using a hook, we can alter both of them to - for exemple - retrieve new information and fill a new column.
+Using a hook, we can alter both of them to - for example - retrieve new information and fill a new column.
 
 ### QueryBuilder configuration
 
