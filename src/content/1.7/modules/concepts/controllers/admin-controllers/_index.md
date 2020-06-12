@@ -17,16 +17,57 @@ Using modern pages, you will have access to the PrestaShop debug toolbar, the se
 ## How to declare a new Controller
 
 Somewhere in your module declare a new class that will act as a Controller:
-
 ```php
 // modules/your-module/src/Controller/DemoController.php
 
+namespace MyModule\Controller;
+
+use Doctrine\Common\Cache\CacheProvider;
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
+
+class DemoController extends FrameworkBundleAdminController
+{
+    private $cache;
+       
+    // you can use symfony DI to inject services
+    public function __construct(CacheProvider $cache)
+    {
+        $this->cache = $cache;
+    }
+    
+    public function demoAction()
+    {
+        return $this->render('@Modules/your-module/templates/admin/demo.html.twig');
+    }
+}
+```
+
+If you want Symfony Dependency Injection to inject services into your controller, you need to use specific YAML service declaration:
+```
+services:
+  # The name of the service must match the full namespace class
+  MyModule\Controller\DemoController:
+    class: MyModule\Controller\DemoController
+    arguments:
+      - '@doctrine.cache.provider'
+```
+
+You can also retrieve services with the container available in symfony controllers ->
+```php
+// modules/your-module/src/Controller/DemoController.php
+
+namespace MyModule\Controller;
+
+use Doctrine\Common\Cache\CacheProvider;
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 
 class DemoController extends FrameworkBundleAdminController
 {
     public function demoAction()
     {
+        // you can also retrieve services directly from the container
+        $cache = $this->container->get('doctrine.cache');
+        
         return $this->render('@Modules/your-module/templates/admin/demo.html.twig');
     }
 }
