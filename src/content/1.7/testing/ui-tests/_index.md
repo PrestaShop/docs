@@ -2,6 +2,8 @@
 title: UI tests
 weight: 30
 chapter: true
+aliases:
+  - /1.7/testing/web-acceptance-tests
 ---
 
 # Introduction

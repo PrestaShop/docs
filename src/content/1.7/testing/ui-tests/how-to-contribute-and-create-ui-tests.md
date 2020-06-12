@@ -4,7 +4,7 @@ menuTitle: Creation of UI tests
 weight: 2
 aliases:
    - /1.7/testing/how-to-create-your-own-web-acceptance-tests
-   - /1.7/testing/web-acceptance-tests
+   - /1.7/testing/web-acceptance-tests/how-to-contribute-and-create-web-acceptance-tests/
 ---
 
 # How to contribute and create UI tests
