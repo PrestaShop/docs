@@ -1,12 +1,13 @@
 ---
-title: How to contribute and create web acceptance tests
-menuTitle: Creation of web acceptance tests
+title: How to contribute and create UI tests
+menuTitle: Creation of UI tests
 weight: 2
 aliases:
    - /1.7/testing/how-to-create-your-own-web-acceptance-tests
+   - /1.7/testing/web-acceptance-tests/how-to-contribute-and-create-web-acceptance-tests/
 ---
 
-# How to contribute and create web acceptance tests
+# How to contribute and create UI tests
 
 ## Architecture
 [Page Object Model](https://martinfowler.com/bliki/PageObject.html) (also called Page Object Pattern) is a way to organize your code in a test framework. It encourages you to separate your test logic from your page manipulation logic.
@@ -101,7 +102,11 @@ The utils directory contain files that are necessary to run tests.
 #### Globals
 This file contains all global variables that can be used in test files, pages and common tests.
 
-The description of each variable in this file can be found in [README.md](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/puppeteer/README.md).
+The description of each variable in this file can be found in [README.md](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/UI/README.md).
+
+#### Setup
+[Mocha](https://mochajs.org/) gives us the possibility to load and run files before test files (with [\--file option](https://mochajs.org/#-file-filedirectoryglob)).
+For our campaigns, we use that option to run `setup.js` file, So we can open only one browser for all campaign (and not one browser per test).
 
 #### Browser helper
 This helper file is used to centralize the browser and tab functions called in all tests. 
@@ -109,17 +114,18 @@ This approach has one goal : to have the same browser’s configuration everywhe
 
 The functions that exist (for now) in this file are the following:
 
-- `createBrowser`: used to create a browser with the global configuration
-- `closeBrowser`: usually called at the end of a test, to close the browser created for the test
+- `createBrowser`: used to create a browser with the global configuration, we create one browser for all campaign
+- `closeBrowser`: usually called at the end of a run, to close the browser created and delete downloaded files
+- `createBrowserContext`: used to create a browser context, a browser can have multiple contexts that don't share cookies/cache
+- `closeBrowserContext`: usually called at the end of a test, to close the browser context created for the test
 - `newTab`: allow us to open a new tab in a browser
-- `setDownloadBehavior`: used only for tests that contain files downloading
 
 Note that all these functions are used at mocha hooks functions in the global `describe` but can be called somewhere else.
 
 #### Files
 Some of our tests need to create files (ex: Create files in BO), or to check some text in a PDF file (ex: Create and check invoice). For this specific need, we use functions in `Files.js`.
 
-When a test is finished, all created/downloaded files are deleted using a function from the same file : `deleteFile` as part of the "cleaning behind" approach.
+When a test is finished, all created files are deleted using a function from the same file : `deleteFile` as part of the "cleaning behind" approach.
 
 ### Initialize pages
 In each and every test, we initialize the pages that will be needed. The initialization is done in a function called `init` which returns an object with multiple entries (pages) of pages.
@@ -161,7 +167,7 @@ We first create a base context for each and every test file, and then we make a 
 Example :
 
 ```js
-// From test : puppeteer/campaigns/functional/BO/04_customers/01_customers/07_helpCard.js
+// From test : UI/campaigns/functional/BO/04_customers/01_customers/07_helpCard.js
 const baseContext = 'functional_BO_customers_customers_helpCard';
 // And inside each `it`, we make a call
 // For example, in the “Go To Customer’s Page” step we will have :
