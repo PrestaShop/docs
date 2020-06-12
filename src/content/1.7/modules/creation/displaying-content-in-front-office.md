@@ -23,13 +23,13 @@ public function install()
 
     return parent::install() &&
         $this->registerHook('leftColumn') &&
-        $this->registerHook('header') &&
+        $this->registerHook('actionFrontControllerSetMedia') &&
         Configuration::updateValue('MYMODULE_NAME', 'my friend');
 }
 ```
 
 As you can see, we make it so that the module is hooked to the
-"`leftColumn`" and "`header`" hooks. In addition to this, we will add
+"`leftColumn`" and "`actionFrontControllerSetMedia`" hooks. In addition to this, we will add
 code for the "`rightColumn`" hook.
 
 Attaching code to a hook requires a specific method for each:
@@ -40,45 +40,45 @@ Attaching code to a hook requires a specific method for each:
     located in the `/views/templates/hook/` folder.
 -   `hookDisplayRightColumn()`: will simply do the same as
     `hookDisplayLeftColumn()`, but for the right column.
--   `hookDisplayHeader()`: will add a link to the module's CSS file,
+-   `hookActionFrontControllerSetMedia()`: will add a link to the module's CSS file,
     `/css/mymodule.css` and module's JS file, `/js/mymodule.js`.
 
 ```php
-public function hookDisplayLeftColumn($params)
-{
-    $this->context->smarty->assign([
-        'my_module_name' => Configuration::get('MYMODULE_NAME'),
-        'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display')
-      ]);
+    public function hookDisplayLeftColumn($params)
+    {
+        $this->context->smarty->assign([
+            'my_module_name' => Configuration::get('MYMODULE_NAME'),
+            'my_module_link' => $this->context->link->getModuleLink('mymodule', 'display')
+        ]);
 
-      return $this->display(__FILE__, 'mymodule.tpl');
-}
+        return $this->display(__FILE__, 'mymodule.tpl');
+    }
 
-public function hookDisplayRightColumn($params)
-{
-    return $this->hookDisplayLeftColumn($params);
-}
+    public function hookDisplayRightColumn($params)
+    {
+        return $this->hookDisplayLeftColumn($params);
+    }
 
-public function hookDisplayHeader()
-{
-    $this->context->controller->registerStylesheet(
-        'mymodule-style',
-        $this->_path.'views/css/mymodule.css',
-        [
-            'media' => 'all',
-            'priority' => 1000,
-        ]
-    );
+    public function hookActionFrontControllerSetMedia()
+    {
+        $this->context->controller->registerStylesheet(
+            'mymodule-style',
+            $this->_path.'views/css/mymodule.css',
+            [
+                'media' => 'all',
+                'priority' => 1000,
+            ]
+        );
 
-    $this->context->controller->registerJavascript(
-        'mymodule-javascript',
-        $this->_path.'views/js/mymodule.js',
-        [
-            'position' => 'bottom',
-            'priority' => 1000,
-        ]
-    );
-}
+        $this->context->controller->registerJavascript(
+            'mymodule-javascript',
+            $this->_path.'views/js/mymodule.js',
+            [
+                'position' => 'bottom',
+                'priority' => 1000,
+            ]
+        );
+    }
 ```
 
 We are using the Context (`$this->context`) to change a Smarty variable:
@@ -86,12 +86,12 @@ Smarty's `assign()` method makes it possible for us to set the
 template's name variable with the value of the `MYMODULE_NAME` setting
 stored in the configuration database table.
 
-The header hook is not part of the visual header, but enables us to put
-code in the `<head>` tag of the generated HTML file. This is very useful
-for JavaScript or CSS files. To add a link to our CSS file in the page's
-`<head>` tag, we use the `registerStylesheet()` method, which generates
-the correct `<link>` tag to the CSS file indicated in parameters. To add
-our JS script in the page, we use the `registerJavascript()` method,
+The `actionFrontControllerSetMedia` hook is not part of the visual header,
+but enables us to put assets after code in the `<head>` tag of the generated HTML file.
+This is very useful for JavaScript or CSS files. To add a link to our CSS
+file in the page's `<head>` tag, we use the `registerStylesheet()` method,
+which generates the correct `<link>` tag to the CSS file indicated in parameters.
+To add our JS script in the page, we use the `registerJavascript()` method,
 which generates the correct `<script>` tag.
 
 Save your file, and already you can hook your module's template into the
