@@ -1,7 +1,6 @@
 ---
 title: The Import component
 menuTitle: Import
-weight: 2
 ---
 
 # The Import component

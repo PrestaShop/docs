@@ -1,7 +1,6 @@
 ---
 title: The Faceted Search component
 menuTitle: Faceted Search
-weight: 2
 ---
 
 # The Faceted Search Architecture
