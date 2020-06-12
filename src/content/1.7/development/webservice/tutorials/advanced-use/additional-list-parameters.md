@@ -58,7 +58,7 @@ You can filter the expected result with the `filter` parameter
     'resource' => 'customers',
     'filter[firstname]' => '[John]',
 ];{{< /code >}} |
-| Only the `manufacturers` whose name begins with "Appl" | {{< code >}}/api/manufacturers/?filter[firstname]=[John]{{< /code >}} | {{< code php >}}$opt = [
+| Only the `manufacturers` whose name begins with "Appl" | {{< code >}}/api/manufacturers/?filter[name]=[appl]%{{< /code >}} | {{< code php >}}$opt = [
     'resource' => 'manufacturers',
     'filter[name]' => '[appl]%',
 ];{{< /code >}} |
