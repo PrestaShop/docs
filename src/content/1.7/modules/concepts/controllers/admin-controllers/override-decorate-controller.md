@@ -10,20 +10,21 @@ If you want to extend the behavior of a Back Office page in PrestaShop, you have
 
 Most of standard extension needs can be fulfilled using one [hook][hooks].
 
-If there is no hook available for your need, and you only need to modify the display of the page, you might want to [override the template][template-override].
+If there is no hook available for your need, and you only need to modify the visual appearance of the page, you might want to [override a template][template-override].
 
-But sometimes you want to modify the page deeper. In this case, you need to modify the controller behavior.
+But sometimes you want to modify the page in a deeper way. In this case, you need to modify the controller's behavior.
 
 If the Back Office page you want to modify is powered by Symfony, you have 3 options:
 
-- remap the route to target a new Controller you create
-- override the existing Core controller
-- decorate the existing Core controller
+- Remap the route to target a new Controller you create
+- Override the existing Core controller
+- Decorate the existing Core controller
 
-## Remap the routing
+## Remap the route
 
 In Symfony, [routes](https://symfony.com/doc/3.4/routing.html) such as `/sell/orders/orders` are mapped to controllers by YAML configuration files such as this one:
 ```yaml
+# src/PrestaShopBundle/Resources/config/routing/admin/sell/orders/orders.yml
 admin_orders_index:
   path: /sell/orders/orders/
   methods: [GET]
@@ -35,11 +36,11 @@ admin_orders_index:
 
 In your module, you have the possibility to replace this configuration item by your own.
 
-So for example if you want that people browsing the Back Office on URL `/sell/orders/orders/` hit your own controller `MyModule\Controller\DemoController`, you can do this:
+So for example, if you want that people browsing the Back Office on URL `/sell/orders/orders/` to hit your own controller `MyModule\Controller\DemoController` instead of the Core's, you can do this:
 ```yaml
 # modules/your-module/config/routes.yml
 admin_orders_index:
-    path: /demo/orders
+    path: /sell/orders/orders/
     methods: [GET]
     defaults:
       _controller: 'MyModule\Controller\DemoController::demoAction'
@@ -64,7 +65,7 @@ if you have trouble writing the right routing configuration for your controller,
 
 ## Override the controller
 
-Since 1.7.7, PrestaShop Back Office controllers are registered as services, and services can be [overridden][override-services].
+Since 1.7.7, PrestaShop Back Office controllers are registered as services, and like all public services, they can be [overridden][override-services] by modules.
 
 For example, the controller responsible for the page "Improve > Design > CMS Pages" is registered with service ID `PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController`.
 
@@ -78,15 +79,16 @@ With the following configuration item, we can override this configuration to mak
 
 Thanks to this, whenever Symfony forwards a request to the Core controller `PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController` it will be forwarded to `DemoController` instead.
 
+{{% notice warning %}}
+**This method is not recommended** unless you intend to rewrite the whole controller. In addition, if the implementation is updated in later versions of PrestaShop, your override will ignore these updates, which might create bugs.
+{{% /notice %}}
 {{% notice tip %}}
 if you have trouble writing the right service configuration for your controller, you can use Symfony debugger to dump the routes with `php bin/console debug:container`. It can also be helpful to find the service ID of the controller.
 {{% /notice %}}
 
 ## Decorate the controller
 
-However overriding a controller or a service is usually not recommanded, because this means you completely rewrite its behavior. If the implementation is updated in later versions of PrestaShop, your override will ignore these updates, which might create bugs.
-
-It is better to use [decoration](https://symfony.com/doc/3.4/service_container/service_decoration.html) which keeps the behavior of the decorated controller while allowing you to extend its behavior by modiying received inputs and outputs.
+It is better to use [decoration](https://symfony.com/doc/3.4/service_container/service_decoration.html) which keeps the behavior of the decorated controller while allowing you to extend its behavior by modifying received inputs and outputs.
 
 Back to the controller responsible for the page "Improve > Design > CMS Pages" which is registered with service ID `PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController`.
 
