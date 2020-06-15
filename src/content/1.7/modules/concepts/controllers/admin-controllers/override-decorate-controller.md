@@ -46,9 +46,18 @@ admin_orders_index:
       _controller: 'MyModule\Controller\DemoController::demoAction'
 ```
 
-{{% notice warning %}}
-Keep the items `_legacy_controller` and `_legacy_link` as they are necessary to enable matching with legacy URL `index.php?controller=AdminOrders` and modern URL `/sell/orders/orders/`
+{{% notice tip %}}
+In the above example, the `path` has not been changed however you can change it to whatever you want like `/demo/orders` ! This however will re-route internal links but external or hardcoded links will keep targeting the old path.
 {{% /notice %}}
+
+{{% notice warning %}}
+Keep the item `_legacy_controller` if your controller relies on it to configure a [AdminSecurity annotation](/1.7/development/architecture/migration-guide/controller-routing/#access-rules-convention) such as `@AdminSecurity("is_granted('read', request.get('_legacy_controller'))")`
+{{% /notice %}}
+
+{{% notice warning %}}
+Keep the items `_legacy_controller` and `_legacy_link` if you want to reroute internal links and legacy URLs like `index.php?controller=AdminOrders` as well.
+{{% /notice %}}
+
 
 Thanks to this, whenever an HTTP request is matched to the route `admin_orders_index`, then your controller `demoAction()` will be executed.
 
@@ -82,8 +91,15 @@ Thanks to this, whenever Symfony forwards a request to the Core controller `Pres
 {{% notice warning %}}
 **This method is not recommended** unless you intend to rewrite the whole controller. In addition, if the implementation is updated in later versions of PrestaShop, your override will ignore these updates, which might create bugs.
 {{% /notice %}}
+
 {{% notice tip %}}
 if you have trouble writing the right service configuration for your controller, you can use Symfony debugger to dump the routes with `php bin/console debug:container`. It can also be helpful to find the service ID of the controller.
+{{% /notice %}}
+
+Instead of replacing the whole controller, we recommend _extending_ its behavior using [service decoration](https://symfony.com/doc/3.4/service_container/service_decoration.html). By implementing the [decorator pattern](https://refactoring.guru/design-patterns/decorator), you can keep most or all of the original behavior of the decorated controller, and only customize the parts you want.
+
+{{% notice note %}}
+While you could achieve a similar end with an override (by making your controller extend the original one), the composition pattern provides a greater degree of freedom, while leaving all complexity of initialization and dependency management to the service container.
 {{% /notice %}}
 
 ## Decorate the controller
