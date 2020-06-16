@@ -9,6 +9,7 @@ weight: 3
 * Since 1.7.3 you create and override templates and services in your modules.
 * Since 1.7.4, you can create and override forms and console commands.
 * Since 1.7.5, you can create your own "modern" controllers!
+* Since 1.7.7, you can decorate Core controllers
 
 Starting on PrestaShop 1.7.5, you can rely on the modern environment to add new entry points to your applications.
 
