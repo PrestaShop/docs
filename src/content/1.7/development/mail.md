@@ -16,6 +16,7 @@ This example is assuming you are using in a controller named `mycontroller` of a
 {{% /notice %}}
 
 ```php
+<?php
 class mymodulemycontrollerModuleFrontController extends ModuleFrontController
 {
 
@@ -56,6 +57,7 @@ The name of the template files is in second parameter. In the under example the 
 After installation, the templates email files are moved under the active folder theme: `theme\classic\modules\yourmodulename\mails\en\....`.
 
 ```php
+<?php
 class mymodulemycontrollerModuleFrontController extends ModuleFrontController
 {
 

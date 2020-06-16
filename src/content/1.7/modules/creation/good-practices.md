@@ -60,6 +60,7 @@ menuTitle: Good practices
 - If you need to load a .js or .tpl (containing JavaScript) to the backoffice, put restrictions in place on your hooks (hookbackofficeheader/top/footer)! Specific examples: if your JS only applies to your module's configuration page, use:  
   
   ```php
+  <?php
   if (Tools::getValue('configure') === $this->name) {
     // code
   }

@@ -25,12 +25,14 @@ The Webservice switch is stored in the configuration table of PrestaShop.
 In order to enable the webservice API:
 
 ```php
+<?php
 Configuration::updateValue('PS_WEBSERVICE', 1);
 ```
 
 With the equivalent for disabling it:
 
 ```php
+<?php
 Configuration::updateValue('PS_WEBSERVICE', 0);
 ```
 
@@ -60,6 +62,7 @@ Each access key is defined by this information:
 Creating API keys can be done with the class WebserviceKey.
 
 ```php
+<?php
 $apiAccess = new WebserviceKey();
 $apiAccess->key = 'GENERATE_A_COMPLEX_VALUE';
 $apiAccess->save();
@@ -73,6 +76,7 @@ The available resources can be found in [`WebserviceRequest::getResources()` (li
 For instance is we want to give all permissions for customers and orders resources for the account we previously created:
 
 ```php
+<?php
 $permissions = [
   'customers' => ['GET' => 1, 'POST' => 1, 'PUT' => 1, 'DELETE' => 1, 'HEAD' => 1],
   'orders' => ['GET' => 1, 'POST' => 1, 'PUT' => 1, 'DELETE' => 1, 'HEAD' => 1],

@@ -32,6 +32,7 @@ For example:
 For example:
 
 ```php
+<?php
 /**
  * File: /upgrade/upgrade-1.1.php
  */
@@ -45,6 +46,7 @@ function upgrade_module_1_1($module) {
 ...and then:
 
 ```php
+<?php
 /**
  * File: /upgrade/upgrade-1.2.php
  */
@@ -73,6 +75,7 @@ When upgrading from... | Target version | Executed scripts
 Here is the `/upgrade/upgrade-1.4.9.php` file from the `gamification` module:
 
 ```php
+<?php
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -92,6 +95,7 @@ function upgrade_module_1_4_9($object)
 The homeslider module's `install-1.2.1.php` file does even more:
 
 ```php
+<?php
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -129,6 +133,7 @@ For instance, here's the `install-1.2.php` file from the blockbestseller
 module:
 
 ```php
+<?php
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -151,6 +156,7 @@ Let's assume that you are working on a module that you already have it installed
 Since the version that you are planning to update to is 1.1.0, the first thing would be to create an upgrade script for that version:
 
 ```php
+<?php
 // File: /upgrade/upgrade-1.1.0
 
 if (!defined('_PS_VERSION_')) {
@@ -167,6 +173,7 @@ function upgrade_module_1_1_0($module)
 Now, update your module version to 1.1.0:
 
 ```php
+<?php
 class my_module extends Module
 {
     public function __construct()

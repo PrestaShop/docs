@@ -147,6 +147,7 @@ In this example we do nothing more than returning the exact output from the deco
 However we could modify the input request or the output given by decorated controller before returning it. Example:
 
 ```php
+<?php
     public function indexAction(CmsPageCategoryFilters $categoryFilters, CmsPageFilters $cmsFilters, Request $request)
     {
         $output = $this->decoratedController->indexAction($categoryFilters, $cmsFilters, $request);

@@ -469,6 +469,7 @@ Lets add several methods to `DemoViewOrderHooks` class.
 `getModuleTemplatePath` - get's the path of the templates folder.
 
 ```php
+<?php
     /**
      * Get path to this module's template directory
      */
@@ -481,6 +482,7 @@ Lets add several methods to `DemoViewOrderHooks` class.
 Render a twig template method:
 
 ```php
+<?php
     /**
      * Render a twig template.
      */
@@ -501,6 +503,7 @@ We add this code at the bottom of the main module class `demovieworderhooks.php`
 and also add the missing `use` statements for new classes.
 
 ```php
+<?php
     /**
      * Displays customer's signature.
      */

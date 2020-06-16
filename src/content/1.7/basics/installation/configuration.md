@@ -27,6 +27,7 @@ PrestaShop’s default settings prevent the customer to see any server error mes
 You, on the other hand, need this information in order to correct any potential mistake in your code. To that end, open the `/config/defines.inc.php` file, and edit it to set `_PS_MODE_DEV_` to `true`:
 
 ```php
+<?php
 /* Debug only */
 define('_PS_MODE_DEV_', true);
 ```

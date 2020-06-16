@@ -42,6 +42,7 @@ We need to register a hook into a module (let's name it `customers` for the sake
 The Customers Grid id is "customer", you can find this information in the the associated class: `CustomerGridDefinitionFactory`.
 
 ```php
+<?php
 /**
  * Hooks allows to modify Customer grid definition.
  * This hook is a right place to add/remove columns or actions (bulk, grid).
@@ -65,6 +66,7 @@ Once we have registered the hook, we can alter the columns:
 * and position them precisely;
 
 ```php
+<?php
 /** @var ColumnCollection */
 $columns = $definition->getColumns();
 $columns->remove('social_title')
@@ -82,6 +84,7 @@ It's not really nice... because we also need to delete the related search filter
 Let's do that:
 
 ```php
+<?php
 /** @var FilterCollection $filters */
 $filters = $definition->getFilters();
 
@@ -107,6 +110,7 @@ The `ColumnCollection` class have two functions for that:
 If you need to insert a new column "$newColumn" after a specific column with the id "name", this is how you can do that:
 
 ```php
+<?php
 $newColumn = new DataColumn('example') ...
 $columns->addAfter('name', $newColumn);
 ```
@@ -114,6 +118,7 @@ $columns->addAfter('name', $newColumn);
 The operation is **more difficult** with an existing column. We need to remove and add it again to the right position:
 
 ```php
+<?php
 $columns->remove('the_column_we_need_to_move');
 
 $columnWeNeedToMove = new ... // we create the column
@@ -151,6 +156,7 @@ We want to retrieve the number of orders for each customer.
 To alter the QueryBuilder, we have a hook named `action{GridId}GridQueryBuilderModifier`. This is how you can fill the column data to retrieve the number of orders from a customers:
 
 ```php
+<?php
 public function hookActionCustomerGridQueryBuilderModifier(array $params)
 {
     $searchQueryBuilder = $params['search_query_builder'];

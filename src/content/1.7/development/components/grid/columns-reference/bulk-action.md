@@ -18,6 +18,7 @@ This column type allows adding bulk action checkboxes to your Grid. This only ad
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\BulkActionColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

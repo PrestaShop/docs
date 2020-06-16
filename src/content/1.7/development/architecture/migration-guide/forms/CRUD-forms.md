@@ -49,6 +49,7 @@ To create a Form data provider you must implement the following interface:
 In the example below, you can see a `ContactFormDataProvider` that queries the database (in this case, using `ObjectModel`) to retrieve data when a specific identifiable object id (in this case, `Contact`) is given, and that returns static data with defaults to use when creating a new element. 
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
 
 use Contact;
@@ -162,6 +163,7 @@ prestashop.core.form.builder.form_builder_factory:create
 Finally, use it in your controller:
 
 ```php
+<?php
 public function createAction($contactId)
 {
     $contactFormBuilder = $this->get('prestashop.core.form.identifiable_object.builder.contact_form_builder');
@@ -212,6 +214,7 @@ When creating your Form Data Handler you must implement the following interface:
 In the example below, you can see a `ConctactFormDataHandler` that uses `ObjectModel` to create and update an instance of `Contact`:
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
 
 final class ContactFormDataHandler implements FormDataHandlerInterface
@@ -333,6 +336,7 @@ prestashop.core.form.identifiable_object.handler.form_handler_factory:create
 Finally, you can use it in your controller like this:
 
 ```php
+<?php
 public function createAction(Request $request)
 {
     $contactFormBuilder = $this->get('prestashop.core.form.identifiable_object.builder.contact_form_builder');
@@ -383,6 +387,7 @@ Let's analyze the `create` flow in the example above.
 First, we create the form using the FormBuilder:
 
 ```php
+<?php
 $contactFormBuilder = $this->get('prestashop.core.form.identifiable_object.builder.contact_form_builder');
 $contactForm = $contactFormBuilder->getForm();
 ```
@@ -390,12 +395,14 @@ $contactForm = $contactFormBuilder->getForm();
 Then, we merge the form's data with the one from the `Request` (if submitted):
 
 ```php
+<?php
 $contactForm->handleRequest($request);
 ```
 
 Afterwards, we process the form (this will save the form in case it was sent, and do nothing otherwise), and save the result of the process for further analysis:
 
 ```php
+<?php
 $contactFormHandler = $this->get('prestashop.core.form.identifiable_object.handler.contact_form_handler');
 $result = $contactFormHandler->handle($contactForm);
 ```
@@ -403,6 +410,7 @@ $result = $contactFormHandler->handle($contactForm);
 Now, if the form was actually saved and everything went well, we can show a success message and redirect to the listing page:
 
 ```php
+<?php
 if (null !== $result->getIdentifiableObjectId()) {
     $this->addFlash('success', $this->trans('Successful creation.', 'Admin.Notifications.Success'));
 
@@ -413,6 +421,7 @@ if (null !== $result->getIdentifiableObjectId()) {
 Finally, if the form wasn't submit or if something went wrong, we just show the form.
 
 ```php
+<?php
 return $this->render('@PrestaShop/Admin/Configure/ShopParameters/Contact/Contacts/create.html.twig', [
     'contactForm' => $contactForm->createView(),
 ]);

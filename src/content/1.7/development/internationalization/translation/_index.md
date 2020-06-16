@@ -48,6 +48,7 @@ This section provides an quick reference on how to use the Translator. For more 
 To translate wordings in PHP files, you first need an instance of the `Translator` service (explained below). Then, you can use the `trans()` method to translate your wording:
 
 ```php
+<?php
 echo $translator->trans('This product is no longer available.', [], 'Shop.Notifications.Error');
 ``` 
 
@@ -66,6 +67,7 @@ Be aware that in Symfony-based Admin controllers, the second and third arguments
 Controllers include a helper method named `trans()` that calls the translator internally:
 
 ```php
+<?php
 // legacy controllers
 $this->trans('This product is no longer available.', [], 'Shop.Notifications.Error');
 
@@ -78,6 +80,7 @@ $this->trans('This product is no longer available.', 'Shop.Notifications.Error',
 If you are outside a controller, and after careful consideration you think you absolutely need some stuff translated, then you can add it as a dependency of your class:
 
 ```php
+<?php
 // SomeService.php
 
 namespace PrestaShop\PrestaShop\Core\Foo\Bar;
@@ -109,6 +112,7 @@ prestashop.core.foo.bar.some_service:
 And finally, use the translator at will:
 
 ```php
+<?php
 // SomeService.php
 
 $this->translator->trans('This product is no longer available.', [], 'Shop.Notifications.Error');

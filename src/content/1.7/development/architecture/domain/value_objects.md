@@ -25,6 +25,7 @@ Characteristics of Value Object are:
 As an example, we can take a look at `PrestaShop\PrestaShop\Core\Domain\Currency\ValueObject\ExchangeRate` value object. `ExchangeRate` is used to pass currency exchange rate between different parts of system.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Domain\Currency\ValueObject\ExchangeRate;
 
 // ExchangeRate has VO has rules to protect.
@@ -43,6 +44,7 @@ $exhangeRate = new ExchangeRate(1.25); // this would work, since 1.25 is a valid
 Another good side effect of using value objects in your code is that it helps you avoid unnesecery assertions.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Domain\Currency\ValueObject\ExchangeRate;
 
 class MyService

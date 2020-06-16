@@ -87,8 +87,9 @@ Be careful when copying translatable wordings, you must use the exact same strin
 
 Example:
 ```php
+<?php
 // legacy controller
-$this->trans('Before activating the webservice, you must be sure to: ', array(), 'Admin.Advparameters.Help')
+$this->trans('Before activating the webservice, you must be sure to: ', array(), 'Admin.Advparameters.Help');
 ```
 ... must become:
 ```twig

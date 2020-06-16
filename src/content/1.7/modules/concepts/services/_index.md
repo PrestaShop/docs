@@ -24,6 +24,7 @@ First we strongly advise you to use
 At first you will need to create a class for your service of course:
 
 ```php
+<?php
 // modules/yourmodule/src/YourService.php
 namespace YourCompany\YourModule;
 
@@ -74,6 +75,7 @@ services:
 This will then allow you to get your service from the Symfony container, like in your modern controllers:
 
 ```php
+<?php
 // modules/yourmodule/src/Controller/DemoController.php
 namespace YourCompany\YourModule\Controller;
 
@@ -146,6 +148,7 @@ The decoration strategy can be very useful if:
 Indeed sometimes what you want is to modify a small part of the behavior of a class. So why replace it entirely ? You can reuse the existing behavior and modify only the needed part:
 
 ```php
+<?php
 // modules/yourmodule/src/YourService.php
 namespace YourCompany\YourModule;
 
@@ -190,6 +193,7 @@ What happens, however, if the service you have overriden or decorated is used so
 
 Even worse: what if another part of the code especially requires this class, like this:
 ```php
+<?php
     /**
      * @param ASpecificClass $service
      */
@@ -205,6 +209,7 @@ In order to avoid this crash, 2 options are available:
 
 PrestaShop classes rely more and more on [interfaces](https://www.php.net/manual/en/language.oop5.interfaces.php). So if this code has been built with the idea of customization/extension in mind, instead of `public function __construct(ASpecificClass $service)` you should have:
 ```php
+<?php
     /**
      * @param MyInterface $service
      */
@@ -241,6 +246,7 @@ files in sub folders:
 You can then access your services from any legacy controllers (in which the container is automatically injected):
 
 ```php
+<?php
 // modules/yourmodule/controllers/front/Demo.php
 class YourModuleDemoModuleFrontController extends ModuleFrontController {
     public function display()
@@ -253,6 +259,7 @@ class YourModuleDemoModuleFrontController extends ModuleFrontController {
 ```
 
 ```php
+<?php
 // modules/yourmodule/controllers/admin/demo.php
 // Legacy controllers have no namespace
 class YourModuleDemoModuleAdminController extends ModuleAdminController {
@@ -268,6 +275,7 @@ class YourModuleDemoModuleAdminController extends ModuleAdminController {
 But you can also access them from your module, to display its content or in hooks:
 
 ```php
+<?php
 // modules/yourmodule/yourmodule.php
 class yourmodule {
     public function getContent()

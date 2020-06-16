@@ -27,6 +27,7 @@ module `cheque`.
 We create a file `/modules/cheque/controllers/front/validation.php` and its class:
 
 ```php
+<?php
 /**
  * <ModuleName> => cheque
  * <FileName> => validation.php
@@ -75,6 +76,7 @@ The smarty engine is available in the `context` property of the controller.
 Assigning variables can be done with its method `assign(array $vars)`.
 
 ```php
+<?php
 public function initContent()
 {
   // In the template, we need the vars paymentId & paymentStatus to be defined
@@ -98,6 +100,7 @@ need to write its complete path, as PrestaShop expects to find it in the folder
 `views/templates/front/` of the same module.
 
 ```php
+<?php
 public function initContent()
 {
   // In the template, we need the vars paymentId & paymentStatus to be defined
@@ -129,6 +132,7 @@ When done, controllers generally redirects to another route, by using
 Addresses to your controller can be generated easily with the class `Link`:
 
 ```php
+<?php
 public function Link::getModuleLink($module, $controller, array $params = array());
 ```
 
@@ -142,6 +146,7 @@ without URL rewriting.
 ### Example of method calls
 
 ```php
+<?php
 Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337));
 ```
 * Without URL rewriting: `http://<shop_domain>/index.php?idPayment=1337&fc=module&module=cheque&controller=validation&id_lang=1`
@@ -155,6 +160,7 @@ Set the property `$auth` to `true` if you want guests to be redirected to the
 login page automatically.
 
 ```php
+<?php
 public $auth = true;
 public $guestAllowed = false;
 ```
@@ -164,6 +170,7 @@ public $guestAllowed = false;
 You can force the maintenance page to be displayed when a customer reaches a controller.
 
 ```php
+<?php
 protected $maintenance = true;
 ```
 
@@ -173,6 +180,7 @@ When SSL is enabled to a shop, you can force a call to a controller to be
 secured by redirecting it to HTTPS.
 
 ```php
+<?php
 public $ssl = true;
 ```
 
@@ -236,6 +244,7 @@ This controller can now be triggered by creating a PHP file that initiates the r
 **modules/examplemodule/cron.php**
 
 ```php
+<?php
 $_GET['fc'] = 'module';
 $_GET['module'] = 'examplemodule';
 $_GET['controller'] = 'cron';

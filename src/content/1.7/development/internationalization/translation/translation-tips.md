@@ -33,6 +33,7 @@ Failure to comply with these guidelines will result in the wording not being add
 Examples:
 
 ```php
+<?php
 // literal values will work
 $this->trans('Some wording', [], 'Admin.Catalog.Feature');
 
@@ -66,6 +67,7 @@ In Twig files, you can use `trans_default_domain` to set up your default domain.
 When declaring Symfony form types, you declare choices for `ChoiceType` fields as literal (untranslated) strings:
 
 ```php
+<?php
 use PrestaShopBundle\Form\Admin\Type\TranslatorAwareType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
@@ -105,6 +107,7 @@ If in doubt, have a look at [ChoiceExtractor](https://github.com/PrestaShop/Tran
 You can declare wordings as arrays as well. This obviously won't translate the wordings at runtime but it will make them discoverable by the extractor.
 
 ```php
+<?php
 [
     'key' => 'This is a sample text',
     'domain' => 'Admin.Some.Feature',

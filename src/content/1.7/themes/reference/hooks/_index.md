@@ -18,6 +18,7 @@ When your module or theme calls a hook, PrestaShop executes it.
 From a regular PHP file:
 
 ```php
+<?php
 Hook::exec('MyCustomHook');
 ```
 
@@ -46,6 +47,7 @@ global_settings:
 You can also register your hook from a module:
 
 ```php
+<?php
 // Create the function for the MyCustomHook hook public function
 MyCustomHook($params) { // method body }
 

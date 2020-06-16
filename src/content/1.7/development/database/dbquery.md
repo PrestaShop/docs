@@ -8,6 +8,7 @@ weight: 2
 The DBQuery class is a query builder which helps you create SQL queries. For instance:
 
 ```php
+<?php
 $sql = new DbQuery();
 $sql->select('*');
 $sql->from('cms', 'c');

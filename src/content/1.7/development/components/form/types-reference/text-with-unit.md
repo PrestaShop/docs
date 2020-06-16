@@ -21,6 +21,7 @@ None.
 Add `TextWithUnitType` to your form and optionally you can configure `unit` for it.
 
 ```php
+<?php
 
 use Symfony\Component\Form\AbstractType;
 use PrestaShopBundle\Form\Admin\Type\TextWithUnitType;

@@ -77,6 +77,7 @@ class DemoExtendSymfonyForm2 extends Module
 Let's create Installer class responsible for hooks registration and database management:
 
 ```php
+<?php
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoExtendSymfonyForm\Install;
@@ -196,6 +197,7 @@ Let's use `Installer` class inside the main module class by adding code snippet
 below to `DemoExtendSymfonyForm2` class.
 
 ```php
+<?php
     /**
      * @return bool
      */
@@ -226,6 +228,7 @@ Let's create `SupplierExtraImage` entity class. We use [Doctrine]
  which is available for PrestaShop modules since version 1.7.6.
 
 ```php
+<?php
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoExtendSymfonyForm\Entity;
@@ -367,6 +370,7 @@ function inside Main module class. This is a hook available for [CRUD forms]
 PrestaShop Symfony pages.
 
 ```php
+<?php
     /**
      * @param array $params
      */
@@ -409,6 +413,7 @@ PrestaShop Symfony pages.
 Let's create `SupplierExtraImageUploader` class:
 
 ```php
+<?php
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoExtendSymfonyForm\Uploader;
@@ -554,6 +559,7 @@ class SupplierExtraImageUploader implements ImageUploaderInterface
 Let's create hook `hookActionAfterUpdateSupplierFormHandler` inside main module class:
 
 ```php
+<?php
     /**
      * @param array $params
      */
@@ -566,6 +572,7 @@ Let's create hook `hookActionAfterUpdateSupplierFormHandler` inside main module 
 Let's create one more hook `hookActionAfterCreateSupplierFormHandler` inside main module class:
 
 ```php
+<?php
     /**
      * @param array $params
      */
@@ -578,6 +585,7 @@ Let's create one more hook `hookActionAfterCreateSupplierFormHandler` inside mai
 Let's add `UploadImage` function to main class:
 
 ```php
+<?php
     /**
      * @param array $params
      */

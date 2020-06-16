@@ -127,6 +127,7 @@ Luckily, there is a solution, you can create and register your own custom action
 First, you need to create a Grid action itself:
 
 ```php
+<?php
 // modules/mymodule/src/Grid/Action/Type/
 
 use PrestaShop\PrestaShop\Core\Grid\Action\AbstractGridAction;

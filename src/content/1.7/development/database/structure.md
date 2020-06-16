@@ -71,6 +71,7 @@ the same name as we saw in the SQL upgrade file.
 If we reuse the previous example, we will find the corresponding file *[/install/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php](https://github.com/PrestaShop/PrestaShop/blob/1.7.3.x/install-dev/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php)*:
 
 ```php
+<?php
 function ps_1730_add_quick_access_evaluation_catalog()
 {
   // Code inserting values in database

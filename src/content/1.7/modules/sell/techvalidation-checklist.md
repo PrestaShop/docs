@@ -113,6 +113,7 @@ Configuration data is shared between the shop and every module installed. This i
 Too avoid conflicts, configuration keys must be prefixed by the module name. For instance, using a configuration key in the module `TheModule` would be:
 
 ```php
+<?php
 Configuration::get('THE_MODULE_PAYMENT_METHODS_ORDER');
 Configuration::updateValue('THE_MODULE_PAYMENT_METHODS_ORDER', [...]);
 ```
@@ -120,6 +121,7 @@ Configuration::updateValue('THE_MODULE_PAYMENT_METHODS_ORDER', [...]);
 instead of
 
 ```php
+<?php
 Configuration::get('PAYMENT_METHODS_ORDER');
 Configuration::updateValue('PAYMENT_METHODS_ORDER', [...]);
 ```
@@ -147,6 +149,7 @@ Examples:
 * Module filtering the creation of orders from another module
 
 ```php
+<?php
     /**
      * Hook executed at the order confirmation
      */
@@ -164,6 +167,7 @@ Examples:
 * Filter for a hook called on all BO pages:
 
 ```php
+<?php
     /**
      * Display content ONLY in the admin payment controller
      */
@@ -192,6 +196,7 @@ To have a code easier to maintain / review, you must remove the commented lines 
 Commented code to be removed:
 
 ```php
+<?php
     public function hookPaymentOptions($params)
     {
         // if (false === $this->active) { // <-- never called, to be removed
@@ -215,6 +220,7 @@ Commented code to be removed:
 Encouraged code comments:
 
 ```php
+<?php
     /**
      * Add payment option at the checkout in the front office
      *

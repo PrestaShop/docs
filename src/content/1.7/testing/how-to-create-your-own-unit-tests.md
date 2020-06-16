@@ -17,6 +17,7 @@ For unit tests, we **strongly** encourage you to base your test on the PHPUnit's
 For instance:
 
 ```php
+<?php
 namespace Tests\Unit\Foo;
 
 use PHPUnit\Framework\TestCase;

@@ -24,6 +24,7 @@ this controller you can use our [PositionUpdater][position-updater-reference] co
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\PositionColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

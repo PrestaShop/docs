@@ -22,6 +22,7 @@ In order to load existing data into the form (when editing, for instance) and sa
 You can create your own based on one of the existing implementations, or on the interface:
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Form;
 
 interface FormDataProviderInterface
@@ -98,6 +99,7 @@ In modern pages, Controllers have or should have only one responsability: handle
 This is how we manage a form submit inside a Controller:
 
 ```php
+<?php
 $form = $this->get('prestashop.adapter.performance.form_handler')->getForm();
 $form->handleRequest($request);
 

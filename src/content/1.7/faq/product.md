@@ -15,6 +15,7 @@ title: Product FAQ
 If you want to change this default behaviour you can use the `actionGetProductPropertiesAfter` in your module and change this key.
 
 ```php
+<?php
 /**
  * Here is an example where we use the first combination image instead of the default cover image,
  * this is useful when you want to display an image matching your current research for example.

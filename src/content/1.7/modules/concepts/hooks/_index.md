@@ -29,6 +29,7 @@ Hook names are prefixed with "action" or "display". This prefix indicates if a h
 Every hook you want to use must be registered first. This is usually done during the installation of your module, by calling the method `Module::registerHook($hookName)`.
 
 ```php
+<?php
 public function install()
 {
     // [...]
@@ -49,6 +50,7 @@ For each registered hook, you must create a non-static public method, starting w
 This method receives one (and only one) argument: an array of the contextual information sent to the hook.
 
 ```php
+<?php
 public function hookDisplayHeader(array $params)
 {
     // Your code.
@@ -75,6 +77,7 @@ It is easy to call a hook from within a controller: you simply have to use its n
 
 For instance:
 ```php
+<?php
 $this->context->smarty->assign(
     'HOOK_LEFT_COLUMN',
     Hook::exec('displayLeftColumn')
@@ -103,9 +106,10 @@ Call of a hook for a specific module:
 You can create new PrestaShop hooks by adding a new record in the Hook table. This can be done with the Hook class, which inherit ObjectModel features:
 
 ```php
+<?php
 $hook = new Hook();
 $hook->name = 'displayAtSpecificPlace';
-$hook->title = 'The name of your hook',
+$hook->title = 'The name of your hook';
 $hook->description = 'This is a custom hook!';
 $hook->position = 1;
 $hook->add(); // return true on success
@@ -116,6 +120,7 @@ You can check if hook exists before this with Hook::getIdByName('hook_name')
 ...but PrestaShop enables you to do it the easy way:
 
 ```php
+<?php
 $this->registerHook('displayAtSpecificPlace');
 ```
 

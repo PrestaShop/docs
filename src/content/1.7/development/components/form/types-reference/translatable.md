@@ -25,6 +25,7 @@ The `TranslatableType` allows you to configure multilanguage input. This multila
 First, you have to add `TranslatableType` to your form.
 
 ```php
+<?php
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;

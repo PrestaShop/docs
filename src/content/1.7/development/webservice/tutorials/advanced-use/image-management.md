@@ -50,6 +50,7 @@ Except for the general shop images, all the images API will return the same kind
 You can get the information about a specific resource's images using our Webservice library:
 
 ```php
+<?php
 try {
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
 

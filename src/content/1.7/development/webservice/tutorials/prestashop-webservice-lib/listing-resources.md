@@ -18,6 +18,7 @@ As we saw in the previous code sample, we need the `get()` method to retrieve an
 ## Using PrestaShopWebservice::get
 
 ```php
+<?php
 try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
@@ -49,6 +50,7 @@ The returned object is a `SimpleXMLElement` object containing this kind of data:
 You can now loop through this XML object to get each customer ID
 
 ```php
+<?php
 $resources = $xml->customers->children();
 foreach ($resources as $resource) {
     $attributes = $resource->attributes();

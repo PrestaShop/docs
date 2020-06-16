@@ -42,6 +42,7 @@ this feature available. This can be done by implementing the interface
 As soon as a module implements the `WidgetInterface`, two methods must be declared:
 
 ```php
+<?php
 public function renderWidget($hookName, array $configuration);
 public function getWidgetVariables($hookName, array $configuration);
 ```
@@ -68,6 +69,7 @@ The first one is by triggering a hook manually registered to the module, but not
 * From a PHP class
 
 ```php
+<?php
 Hook::exec($hook_name)
 ```
 
@@ -87,17 +89,18 @@ The function `renderWidget()` of a specific module can be called directly:
 
 * From a Smarty template (recommended)
 
-```php
-// Generic call
+```smarty
+<!-- Generic call -->
 {widget name='<module_name>'}
 
-// Call with a hook name
+<!-- Call with a hook name -->
 {widget name='<module_name>' hook='<hook_name>'}
 ```
 
 * From a PHP class
 
 ```php
+<?php
 Hook::coreRenderWidget(Module $module, $hook_name, $params);
 ```
 

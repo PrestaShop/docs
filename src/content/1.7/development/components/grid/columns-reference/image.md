@@ -18,6 +18,7 @@ This column is used to display an image from a row. You need to specify which fi
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ImageColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

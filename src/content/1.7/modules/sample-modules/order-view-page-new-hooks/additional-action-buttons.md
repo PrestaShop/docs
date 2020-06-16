@@ -14,6 +14,7 @@ We use this hook to display additional action buttons into the main buttons bar.
 Let's add hook related code to main module class `demovieworderhooks`:
 
 ```php
+<?php
     /**
      * Add buttons to main buttons bar
      */
@@ -63,6 +64,7 @@ With `$router = $this->get('router');` we inject the router capable to generate 
 to controller actions from routes and their parameters. For example: 
 
 ```php
+<?php
 $viewCustomerUrl = $router->generate('admin_customers_view', ['customerId'=> (int)$order->id_customer]);
 ```
 

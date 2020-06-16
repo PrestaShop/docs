@@ -36,6 +36,7 @@ If you want to add the same name to all available and active languages available
 
 
 ```php
+<?php
 public $tabs = array(
     array(
         'name' => 'Merchant Expertise', // One name for all langs
@@ -55,6 +56,7 @@ If a language is installed on the shop but is not found in your translated names
 Hence, we advise you to define the English value first.
 
 ```php
+<?php
 public $tabs = array(
     array(
         'name' => array(
@@ -187,6 +189,7 @@ But since the `MyModuleDemoController` class actually doesn't exist, the automat
 So you need to insert your tab manually during your module installation:
 
 ```php
+<?php
 class example_module_mailtheme extends Module
 {
     public function install()

@@ -16,6 +16,7 @@ To delete a resource you only need its ID, then you can use the `delete()` metho
 ## Using PrestaShopWebservice::delete
 
 ```php
+<?php
 try {
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
 

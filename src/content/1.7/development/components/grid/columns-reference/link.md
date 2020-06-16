@@ -21,6 +21,7 @@ This LinkColumn displays a raw field data encapsulated in a link (very useful fo
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\LinkColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

@@ -48,6 +48,7 @@ Fortunately, by implementing CQRS it allows PrestaShop to quickly build new API,
 8. A `CommandHandler` MUST implement an interface containing a single public method like this: 
 
 ```php
+<?php
 public function handle(NameOfTheCommand $command);
 ```
 
@@ -64,6 +65,7 @@ public function handle(NameOfTheCommand $command);
 9. A `QueryHandler` MUST implement an interface containing a single public method and a typed return like this: 
 
 ```php
+<?php
 /**
  * @param NameOfTheQuery $query
  *

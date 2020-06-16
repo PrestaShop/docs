@@ -28,6 +28,7 @@ We are going to use the same `get()` method but provide an additional `id` param
 ## Using PrestaShopWebservice::get
 
 ```php
+<?php
 try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
@@ -100,6 +101,7 @@ You will receive the same xml as if you request http://example.com/api/customers
 You can now loop through this XML object to get each customer field value, or access specific fields individually
 
 ```php
+<?php
 $customerFields = $xml->customer->children();
 $firstName = $customerFields->firstname;
 $lastName = $customerFields->lastname;

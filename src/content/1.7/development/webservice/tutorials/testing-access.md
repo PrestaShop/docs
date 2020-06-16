@@ -35,6 +35,7 @@ This method might be convenient for development but **very risky** as you expose
 The best way to authenticate your API calls is to use an `Authorization` header, this way you don't expose your API key directly but a `base64_encode` compute of your `user:password` couple. Although PrestaShop API only has a user with empty password, so in order to compute your authorization key you can do as follows:
 
 ```php
+<?php
 $apiKey = `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`;
 $authorizationKey = base64_encode($apiKey . ':'); // VUNDTExROU4yQVJTSFdDWExUNzRLVUtTU0szNEJGS1g6
 ```

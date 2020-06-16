@@ -13,6 +13,7 @@ Forms are the biggest part of the migration. Before, we had form helpers that to
 For instance, this is code that you can find in a Legacy Controller:
 
 ```php
+<?php
 $this->fields_options = array(
     'general' => array(
         'title' => $this->trans('Logs by email', array(), 'Admin.Advparameters.Feature'),

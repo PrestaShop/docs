@@ -24,6 +24,7 @@ Let's see an example on how to add, populate, validate and persist a new form fi
 #### Create the module and register the hooks
 
 ```php
+<?php
 # /modules/module_name/module_name.php
 
 public function hookActionAdministrationPageForm(&$hookParams)
@@ -112,6 +113,7 @@ Assuming we want to notify an error when validating the Product form on the fiel
 In the hook (`actionProductUpdate`, `actionAdminProductsControllerSaveAfter`, ...):
 
 ```php
+<?php
 // add error
 Context::getContext()->controller->errors['step6_myfield'] = [$this->l('Syntax error in field')];
 

@@ -21,6 +21,7 @@ This ToggleColumn is used to display booleans, it will display an icon instead o
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ToggleColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 
