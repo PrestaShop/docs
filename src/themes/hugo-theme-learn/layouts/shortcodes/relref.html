@@ -7,7 +7,7 @@
 	{{- end -}}
 {{- else -}}
 	{{- with .Site.GetPage "section" (.Get 0) }}
-		{{- .Permalink -}}
+		{{- .RelPermalink -}}
 	{{- else -}}
 		{{- .Get 0 | relref .Page -}}
 	{{- end -}}
