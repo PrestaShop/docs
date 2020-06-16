@@ -233,6 +233,7 @@ When developing a PrestaShop module, you may want to add specific styles for you
 If you develop a front controller, simply extend the `setMedia()` method. For instance:
 
 ```php
+<?php
 public function setMedia()
 {
     parent::setMedia();
@@ -264,6 +265,7 @@ public function setMedia()
 If you only have your module's class, register your code on the actionFrontControllerSetMedia hook, and add your asset on the go inside the hook:
 
 ```php
+<?php
 public function hookActionFrontControllerSetMedia($params)
 {
     // Only on product page
@@ -321,6 +323,7 @@ It works for both JavaScript and CSS assets.
 Both `unregisterJavascript` and `unregisterStylesheet` methods take only one argument: the unique ID of the resource you want to remove.
 
 ```php
+<?php
 // In a front controller
 public function setMedia()
 {

@@ -25,6 +25,7 @@ The `TextWithLengthCounterType` represents text input with value length counter.
 First, you have to add `TextWithLengthCounterType` to your form.
 
 ```php
+<?php
 
 use Symfony\Component\Form\AbstractType;
 use PrestaShopBundle\Form\Admin\Type\TextWithLengthCounterType;

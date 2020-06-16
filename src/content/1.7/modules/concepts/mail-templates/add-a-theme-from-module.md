@@ -13,6 +13,7 @@ Just like we did to [add a layout from a module]({{< ref "add-a-layout-from-modu
 ## Using the hook
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\Layout;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCatalogInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollectionInterface;

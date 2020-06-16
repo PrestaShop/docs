@@ -156,6 +156,7 @@ There is the list of available Template Classes in the Core:
 To guess the hook for each template, we can look at the `HTMLTemplate` abstract Class:
 
 ```php
+<?php
 // l. 160
 $template = ucfirst(str_replace('HTMLTemplate', '', get_class($this)));
 $hook_name = 'displayPDF' . $template;
@@ -177,6 +178,7 @@ $hook_name = 'displayPDF' . $template;
 In `modules/your-module/your-module.php`:
 
 ```php
+<?php
 public function hookDisplayPDFInvoice($hookArgs)
 {
     $customer = $this->context->customer;

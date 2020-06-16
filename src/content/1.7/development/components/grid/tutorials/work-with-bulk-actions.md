@@ -95,6 +95,7 @@ PrestaShop already comes with a bunch of Bulk actions that are available for use
 First, you need to create Bulk action itself:
 
 ```php
+<?php
 // modules/mymodule/src/Grid/Action/Bulk
 
 use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\AbstractBulkAction;

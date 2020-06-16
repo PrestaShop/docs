@@ -59,6 +59,7 @@ There are a couple of classes implemented in PrestaShop, that ease up the entity
 This class holds all import types, that are available by default in PrestaShop and allows to retrieve them easily:
 
 ```php
+<?php
 // src/Core/Import/Entity.php
 
 final class Entity
@@ -89,6 +90,7 @@ Every entity, which is available for import in PrestaShop, has it's own fields p
 For example, the entity fields provider for `Customer` entity builds the entity fields collection in the following way:
 
 ```php
+<?php
 // src/Core/Import/EntityField/Provider/CustomerFieldsProvider.php
 
 final class CustomerFieldsProvider implements EntityFieldsProviderInterface
@@ -133,6 +135,7 @@ final class CustomerFieldsProvider implements EntityFieldsProviderInterface
 Currently there is one `DataRowCollectionFactory` implementation available in PrestaShop, which builds the `DataRowCollection` by reading a data file:
 
 ```php
+<?php
 // src/Core/Import/File/DataRow/Factory/DataRowCollectionFactory.php
 
 final class DataRowCollectionFactory implements DataRowCollectionFactoryInterface
@@ -175,6 +178,7 @@ As mentioned in previous topics, there are two configuration objects (`ImportCon
 There is one implementation of each of the two configuration interfaces in PrestaShop. Both of them are available to build the relevant import config object out of Symfony `Request`:
 
 ```php
+<?php
 // src/Core/Import/Configuration/ImportConfigFactory.php
 
 final class ImportConfigFactory implements ImportConfigFactoryInterface
@@ -209,6 +213,7 @@ final class ImportConfigFactory implements ImportConfigFactoryInterface
 ```
 
 ```php
+<?php
 // src/Core/Import/Configuration/ImportRuntimeConfigFactory.php
 
 final class ImportRuntimeConfigFactory implements ImportRuntimeConfigFactoryInterface
@@ -234,6 +239,7 @@ To handle the import process we must prepare an `ImportHandler`, which will have
 There are three main methods exposed by the interface, which are essential for import logic execution:
 
 ```php
+<?php
 // src/Core/Import/Handler/ImportHandlerInterface.php
 
 interface ImportHandlerInterface
@@ -272,6 +278,7 @@ The `Importer` is responsible for running the import logic from `ImportHandler`,
 The `PrestaShop\PrestaShop\Core\Import\ImporterInterface` exposes only one method:
 
 ```php
+<?php
 // src/Core/Import/ImporterInterface.php
 
 interface ImporterInterface
@@ -297,6 +304,7 @@ The controller action below is being called multiple times (via _AJAX_) by the _
 until all data is imported from the source file:
 
 ```php
+<?php
 // src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/ImportController.php
 
 public function processImportAction(Request $request)

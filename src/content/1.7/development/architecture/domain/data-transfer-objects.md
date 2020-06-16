@@ -23,7 +23,8 @@ Benefits of using DTOs:
 
 PrestaShop extensively uses DTOs in it's `QueryHandlers` (you can learn more about it in [CQRS section]({{< ref "cqrs.md" >}})). As an example, you can take a look at `GetCustomerForEditingHandlerInterface` below.
 
-```php 
+```php
+<?php 
 namespace PrestaShop\PrestaShop\Core\Domain\Customer\QueryHandler;
 
 use PrestaShop\PrestaShop\Core\Domain\Customer\QueryResult\EditableCustomer;
@@ -46,7 +47,8 @@ interface GetCustomerForEditingHandlerInterface
 Now imagine you are using implementation of `GetCustomerForEditingHandlerInterface` handler in your code.
 
 ```php
-use use PrestaShop\PrestaShop\Core\Domain\Customer\QueryResult\EditableCustomer;
+<?php
+use PrestaShop\PrestaShop\Core\Domain\Customer\QueryResult\EditableCustomer;
 
 /** EditableCustomer $editableCustomer */
 $editableCustomer = $handler->handle($query);

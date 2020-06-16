@@ -42,6 +42,7 @@ To make this easier, PrestaShop features a Dev Mode, which allows you to configu
 - In the directory config/ of your PrestaShop, open the file defines.inc.php. The Dev Mode is to be activated at the very start of the file: you must modify the following line to change the defined value to true (it is set to false by default):
 
 ```php
+<?php
 define('_PS_MODE_DEV_', true);
 ```
 
@@ -96,6 +97,7 @@ After creating the perfect product page using the Contributor Kit, submit your m
 At this stage, you can find the module_key for your module. This is to be entered into the constructor in this format:
 
 ```php
+<?php
 public function __construct() {
   // etc.
   $this->module_key = 'c1614c239af92968e5fae97f366e9961';

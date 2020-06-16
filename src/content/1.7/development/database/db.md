@@ -8,6 +8,7 @@ weight: 1
 ## Get link to the database
 
 ```php
+<?php
 /**
  * @var \Db $db
  */
@@ -22,6 +23,7 @@ The first call to this method initialize the link to the database, and return th
 ### Execute a raw SQL request (SELECT only)
 
 ```php
+<?php
 $request = 'SELECT `id_table` FROM `' . _DB_PREFIX_ . 'some_table` ...';
 
 /** @var array $result */
@@ -35,6 +37,7 @@ The result is an associative array, containing an array for each row.
 ### Execute a raw SQL request (SELECT only) and get the first row
 
 ```php
+<?php
 $request = "SELECT `id_table` FROM `' . _DB_PREFIX_ . 'some_table` ...";
 
 /** @var array $result */
@@ -49,6 +52,7 @@ This function automatically adds "LIMIT 1" to the query.
 ### Execute a SELECT request with only one column and one row
 
 ```php
+<?php
 $request = "SELECT `count('sales')` FROM `' . _DB_PREFIX_ . 'some_table` ...";
 
 /** @var string|false $salesCount */
@@ -63,6 +67,7 @@ It prevent to loop in several arrays in order to get the first value of the firs
 ### Execute a raw SQL request (UPDATE, INSERT...)
 
 ```php
+<?php
 $request = "INSERT INTO `' . _DB_PREFIX_ . 'some_table` (`id_table`) VALUES (10)";
 
 /** @var array|false */
@@ -74,6 +79,7 @@ Return an array if the request was properly executed, false otherwise.
 ### Insert a row in the database
 
 ```php
+<?php
 /** @var bool $result */
 $result = $db->insert('db_table', array(
     'id_lang' => (int) $lang,
@@ -89,6 +95,7 @@ The result is boolean saying if the request was properly executed or not.
 ### Update a row in the database
 
 ```php
+<?php
 /** @var bool $result */
 $result = $db->update('db_table', array(
     'value' => pSQL($value),

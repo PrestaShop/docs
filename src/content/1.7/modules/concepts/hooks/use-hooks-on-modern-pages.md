@@ -50,6 +50,7 @@ As we need to act on Dashboard but after the header, in the icons toolbar (with 
 Create a [new module](https://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
 
 ```php
+<?php
 // foo.php
 
 /* ... */
@@ -88,6 +89,7 @@ At this point, this is basic PHP code we need to produce. We need to retrieve th
 Even if using old way to retrieve data is still valid (``Product::getProducts`` or through the webservice), we'd like to introduce a best practice here: using a repository and get rid of the Object model. This has a lot of advantages, you rely on database instead of model and you'll have better performances and control on your data.
 
 ```php
+<?php
 // src/Repository/ProductRepository.php
 namespace Foo\Repository;
 
@@ -151,6 +153,7 @@ Prestashop automatically checks if modules have a `config/services.yml` file and
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
 
 ```php
+<?php
 // foo.php
 
 /* ... */
@@ -176,6 +179,7 @@ Now we retrieve the product list from our module and that we are able to display
 we could already create our XML file with raw PHP. Let's see how we can do it using the components provided by Symfony "out of box".
 
 ```php
+<?php
 // foo.php
 
 /* ... */
@@ -224,6 +228,7 @@ Now we have serialized our products, it's time to render an Icon link with the f
 We could (of course) use Smarty to render a template, but it's a chance to discover Twig which is also available as a service. First, let's refactor and finalize our hook call:
 
 ```php
+<?php
 /**
  * Make products export in XML.
  *

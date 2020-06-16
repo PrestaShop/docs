@@ -41,6 +41,7 @@ as it allows you to define your structure, but takes care of the definition crea
 To create a new grid definition, we will use `AbstractGridDefinitionFactory`.
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Grid\Definition\Factory;
 
 use PrestaShop\PrestaShop\Core\Grid\Definition\Factory\AbstractGridDefinitionFactory;
@@ -106,6 +107,7 @@ Most of the time you won't be creating Grid Definitions by yourself but delegati
 but in case you need to create a Grid Definition by hand, here's how you can do that.
 
 ```php
+<?php
 $productsGridDefinitionFactory = $container->get('prestashop.core.grid.definition.factory.product_grid_definition_factory');
 $productsGridDefinition = $productsGridDefinitionFactory->getDefinition();
 
@@ -135,6 +137,7 @@ Even though most of the time Search Criteria will be created using the [Filters 
 create it manually. Grid provides a simple implementation for it.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria;
 
 $filters = [
@@ -165,6 +168,7 @@ When creating Search Criteria you can skip some or all of its data. If you set b
 it will disable sorting. If you set both `offset` and `limit` to `null` it will disable pagination.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria;
 
 // sorting, pagination and filtering are disabled with this search criteria
@@ -201,6 +205,7 @@ as it provides access to the Doctrine `Connection` and database tables prefix.
 {{% /notice %}}
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Query\AbstractDoctrineQueryBuilder;
 
 final class ProductQueryBuilder extends AbstractDoctrineQueryBuilder
@@ -311,6 +316,7 @@ That's it! Now we can use our Grid Data factory together with Search Criteria to
 filtered data for our Grid.
 
 ```php
+<?php
 $searchCriteria = ...
 
 /** PrestaShop\PrestaShop\Core\Grid\Data\Factory\GridDataFactoryInterface $productGridDataFactory */
@@ -357,6 +363,7 @@ And we are done! Let's see how to use it and render it in the page.
 In Back Office controllers, you can use the Grid Factory to create a Grid and render it.
 
 ```php
+<?php
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 

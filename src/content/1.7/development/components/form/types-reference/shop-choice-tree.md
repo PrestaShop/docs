@@ -23,6 +23,7 @@ The `ShopChoiceTreeType` is subtype of `MaterialChoiceTreeType` which is configu
 Add `ShopChoiceTreeType` to your form.
 
 ```php
+<?php
 
 use Symfony\Component\Form\AbstractType;
 use PrestaShopBundle\Form\Admin\Type\ShopChoiceTreeType;

@@ -16,6 +16,7 @@ This is basically three steps:
 Most of the time, you will dispatch the hook using an instance of `HookDispatcher`. It can be retrieved from the service container and/or injected, as it's done for example in Form Handlers:
 
 ```php
+<?php
 final class FormHandler extends AbstractFormHandler
 {
     /* [...] */

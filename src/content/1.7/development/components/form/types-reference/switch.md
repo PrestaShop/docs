@@ -22,6 +22,7 @@ None.
 Add `SwitchType` to your form.
 
 ```php
+<?php
 
 use Symfony\Component\Form\AbstractType;
 use PrestaShopBundle\Form\Admin\Type\SwitchType;

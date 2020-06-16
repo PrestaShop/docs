@@ -72,6 +72,7 @@ class MyClass
 Following [Symfony conventions](https://symfony.com/doc/3.4/contributing/code/conventions.html#deprecating-code), method and class deprecations in PrestaShop must be noted by adding the appropriate Phpdoc as well as a deprecation error:
 
 ```php
+<?php
 /**
  * @deprecated Since 1.7.6.0, use AnotherClass::someNewMethod() instead.
  */

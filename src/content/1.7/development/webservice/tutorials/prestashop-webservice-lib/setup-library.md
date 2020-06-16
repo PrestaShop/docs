@@ -67,6 +67,7 @@ If you don't use composer you can download the [library archive](https://github.
 You will then need to manually load the `PSWebServiceLibrary` in your PHP script or application:
 
 ```php
+<?php
 require_once('./PSWebServiceLibrary.php');
 
 $webService = new PrestaShopWebservice(...);
@@ -83,6 +84,7 @@ First, you must create an instance of the `PrestaShopWebservice` object, which t
 - A boolean value, indicating whether the Webservice must use its debug mode.
 
 ```php
+<?php
 $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
 ```
 
@@ -104,6 +106,7 @@ Error handling with the webservice library is done using PHP exceptions. If you 
 The error handling is done within a `try...catch` block, with the webservice instantiation and execution being done in the `try` section, the `catch` one containing the error handling code. There are many types of exception that exist you can catch specific ones which allows you to deal with each error case accordingly, the webservice library uses `PrestaShopWebserviceException` so you can catch this one only to deal with errors related to webservice.
 
 ```php
+<?php
 try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);

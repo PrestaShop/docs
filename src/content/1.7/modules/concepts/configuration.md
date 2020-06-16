@@ -16,6 +16,7 @@ get or store data in this table.
 ### Store configuration data
 
 ```php
+<?php
 Configuration::updateValue(string $key, mixed $value);
 ```
 
@@ -25,6 +26,7 @@ Configuration::updateValue(string $key, mixed $value);
 ### Check a configuration data exists
 
 ```php
+<?php
 Configuration::hasKey(string $key);
 ```
 
@@ -36,6 +38,7 @@ if the data exists, `false` otherwise.
 #### Single key
 
 ```php
+<?php
 Configuration::get(string $key);
 ```
 
@@ -44,14 +47,16 @@ If the key does not exist, the returned value will be null.
 
 Example:
 ```php
+<?php
 Configuration::get('PS_VERSION_DB');
 
-==> '1.7.4.0'
+// returns '1.7.4.0'
 ```
 
 #### Multiple keys
 
 ```php
+<?php
 Configuration::getMultiple(array $keys);
 ```
 
@@ -61,9 +66,11 @@ This returns an array, containing the values stored in the configuration table o
 
 Example:
 ```php
+<?php
 Configuration::getMultiple(array('PS_VERSION_DB', 'UNKNOWN_KEY'));
 
-==> array(
+// returns this array:
+array(
   'PS_VERSION_DB' => '1.7.4.0',
   'UNKNOWN_KEY' => null,
 )

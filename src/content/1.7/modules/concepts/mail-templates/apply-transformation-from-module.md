@@ -10,6 +10,7 @@ The `TransformationInterface` is a powerful and handy way to modify your templat
 Here are the interface details:
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\MailTemplate\Transformation;
 
 interface TransformationInterface
@@ -87,6 +88,7 @@ In this example we are going to create a class implementing the `TransformationI
 of all the `<span>` tags with the `subtitle` class.
 
 ```php
+<?php
 namespace PrestaShop\Module\MyEmailThemeModule\MailTemplate\Transformation;
 
 use PrestaShop\PrestaShop\Core\Exception\InvalidArgumentException;
@@ -137,6 +139,7 @@ Now you need to add your transformation for this specific layout, in order to do
 the `actionGetMailLayoutTransformations` hook.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\MailTemplate\MailTemplateInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\MailTemplateRendererInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutInterface;

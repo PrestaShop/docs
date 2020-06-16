@@ -28,6 +28,7 @@ The getContent() method
 First, here is the complete code for the getContent() method:
 
 ```php
+<?php
 public function getContent()
 {
     $output = null;
@@ -110,6 +111,7 @@ The configuration form itself is displayed with the `displayForm()`
 method. Here is its code, which we are going to explain after the jump:
 
 ```php
+<?php
 public function displayForm()
 {
     // Get default language
@@ -199,6 +201,7 @@ Let's run down that method:
 
 
 ```php
+<?php
 'input' => [
     [
         'type' => 'text',
@@ -243,6 +246,7 @@ chapter of this developer guide, with a page dedicated to `HelperForm`.
 Here is our sample code, as a reminder:
 
 ```php
+<?php
 $helper = new HelperForm();
 
 // Module, Token and currentIndex

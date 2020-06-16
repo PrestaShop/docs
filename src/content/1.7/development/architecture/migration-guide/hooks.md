@@ -17,6 +17,7 @@ Use this trick to find out which hooks are called on a legacy page.
 In ``classes/Hook``, find the [exec() function](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Hook.php#L733) and add the following code:
 
 ```php
+<?php
 file_put_contents('hooks.txt', PHP_EOL. $hook_name, FILE_APPEND | LOCK_EX);
 ```
 
@@ -39,6 +40,7 @@ This is an example with the Logs page (still in progress as of 12/12/2017):
 You can dispatch a hook using the controller helper `dispatchHook($name, array $parameters)`:
 
 ```php
+<?php
 $this->dispatchHook('actionAdminPerformanceControllerPostProcessBefore', array('controller' => $this));
 ```
 
@@ -49,6 +51,7 @@ If you need to dispatch a hook from a non-controller class, you'll need to injec
 If your class is defined as a Symfony service, the HookDispatcher is available as a service called `prestashop.core.hook.dispatcher`.
 
 ```php
+<?php
 use PrestaShopBundle\Service\Hook\HookEvent;
 use PrestaShop\PrestaShop\Core\Hook\HookDispatcher;
 

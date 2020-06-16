@@ -26,6 +26,7 @@ Information related to a shipping (= delivery method) may be found / stored with
 * If you need to update one of these carriers, you may use the `Carrier` (ObjectModel) class. Instantiate the carrier you need with:
 
 ```php
+<?php
 // From the carrier ID stored in the var $carrierId
 
 $carrier = new \Carrier($carrierId);
@@ -41,6 +42,7 @@ Some other details are specific to each order, like the tracking number. Regardi
 You may reach the order delivery details with the following example:
 
 ```php
+<?php
 // From an Order ID you have
 $order = new Order($orderId);
 $orderCarrier = new OrderCarrier($order->getIdOrderCarrier());

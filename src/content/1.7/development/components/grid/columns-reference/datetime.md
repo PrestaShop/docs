@@ -20,6 +20,7 @@ It is common to get datetime values (e.g. Created at, Updated at & etc.) from th
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\DateTimeColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

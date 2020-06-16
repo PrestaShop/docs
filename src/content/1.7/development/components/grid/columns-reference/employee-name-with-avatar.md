@@ -27,6 +27,7 @@ The employee's name field.
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Employee\EmployeeNameWithAvatarColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

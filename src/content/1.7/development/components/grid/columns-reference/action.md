@@ -19,6 +19,7 @@ For more info about possible actions see [Actions reference][actions-reference].
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ActionColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

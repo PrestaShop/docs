@@ -30,6 +30,7 @@ We have some standard action names:
 For a complete example see code below.
 
 ```php
+<?php
 // CustomerController.php
 
 namespace PrestaShopBundle\Controller\Admin\Sell\Customer;
@@ -85,6 +86,7 @@ PrestaShop templates follow these naming conventions:
 - Template name should match controller's action name without `action` suffix. For example, if you have `CustomerController:viewAction()` action, then your template name should be `view.html.twig`.
 
 ```php
+<?php
 // CustomerController.php
 
 namespace PrestaShopBundle\Controller\Admin\Sell\Customer;
@@ -168,6 +170,7 @@ admin_customers_transform_guest_to_customer:
 When registering service in YAML, its id should follow Fully-qualified class name. See example below.
 
 ```php
+<?php
 // src/Core/Payment/PaymentOptionFormDecorator.php
 
 namespace PrestaShop\PrestaShop\Core\Payment;

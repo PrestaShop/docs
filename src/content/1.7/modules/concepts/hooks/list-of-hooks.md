@@ -29,6 +29,7 @@ action&lt;AdminControllerName>&lt;Action>After
 
     Parameters:
     ```php
+    <?php
     array(
       'controller' => (AdminController),
       'return' => (mixed)
@@ -43,6 +44,7 @@ action&lt;AdminControllerName>&lt;Action>Before
 
     Parameters:
     ```php
+    <?php
     array(
       'controller' => (AdminController)
     );
@@ -56,6 +58,7 @@ action&lt;AdminControllerName>FormModifier
 
     Parameters:
     ```php
+    <?php
     array(
       'object' => &(ObjectModel),
       'fields' => &(array),
@@ -70,6 +73,7 @@ action&lt;AdminControllerName>ListingFieldsModifier
 
     Parameters:
     ```php
+    <?php
     array(
       'select' => &(string), 'join' => &(string),
       'where' => &(string),
@@ -86,6 +90,7 @@ action&lt;AdminControllerName>OptionsModifier
 
     Parameters:
     ```php
+    <?php
     array(
       'options' => &(array),
       'option_vars' => &(array),
@@ -100,6 +105,7 @@ actionAdmin&lt;Action>After
 
     Parameters:
     ```php
+    <?php
     array(
       'controller' => (AdminController),
       'return' => (mixed)
@@ -114,6 +120,7 @@ actionAdmin&lt;Action>Before
 
     Parameters:
     ```php
+    <?php
     array(
       'controller' => (AdminController)
     );
@@ -123,10 +130,7 @@ actionAdminControllerSetMedia
 : 
     Located in: /classes/controller/AdminController.php
 
-    Parameters:
-    ```php
-    N/A
-    ```
+    Parameters: N/A
     
 actionAdminLoginControllerSetMedia
 : 
@@ -134,10 +138,7 @@ actionAdminLoginControllerSetMedia
 
     Located in: /controllers/admin/AdminLoginController.php
 
-    Parameters:
-    ```php
-    N/A
-    ```
+    Parameters: N/A
     
 actionAdminMetaAfterWriteRobotsFile
 : 
@@ -147,6 +148,7 @@ actionAdminMetaAfterWriteRobotsFile
 
     Parameters:
     ```php
+    <?php
     array(
       'rb_data' => (array) File data,
       'write_fd' => &(resource) File handle
@@ -161,6 +163,7 @@ actionAdminMetaBeforeWriteRobotsFile
 
     Parameters:
     ```php
+    <?php
     array(
       'rb_data' => &(array) File data
     );
@@ -172,10 +175,7 @@ actionAdminMetaSave
 
     Located in: /controllers/admin/AdminMetaController.php
 
-    Parameters:
-    ```php
-    N/A
-    ```
+    Parameters: N/A
     
 actionAdminOrdersTrackingNumberUpdate
 : 
@@ -183,6 +183,7 @@ actionAdminOrdersTrackingNumberUpdate
 
     Parameters:
     ```php
+    <?php
     array(
       'order' => (Order),
       'customer' => (Customer),
@@ -196,6 +197,7 @@ actionAdminProductsListingFieldsModifier
 
     Parameters:
     ```php
+    <?php
     array(
       '_ps_version' => (string) PrestaShop version,
       'sql_select' => &(array),
@@ -212,6 +214,7 @@ actionAdminProductsListingResultsModifier
 
     Parameters:
     ```php
+    <?php
     array(
       '_ps_version' => (string) PrestaShop version,
       'products' => &(PDOStatement),
@@ -223,10 +226,7 @@ actionAdminThemesControllerUpdate_optionsAfter
 : 
     Located in: /controllers/admin/AdminThemesController.php
 
-    Parameters:
-    ```php
-    N/A
-    ```
+    Parameters: N/A
     
 actionAjaxDie&lt;ControllerName>&lt;Method>Before
 : 
@@ -234,6 +234,7 @@ actionAjaxDie&lt;ControllerName>&lt;Method>Before
 
     Parameters:
     ```php
+    <?php
     array(
       'value' => (string)
     );
@@ -407,6 +408,7 @@ actionCustomerAccountAdd
 
     Parameters:
     ```php
+    <?php
     array(
       'newCustomer' => (object) Customer object
     );
@@ -544,6 +546,7 @@ actionFrontControllerSetVariables
     Parameters since {{< minver v="1.7.7" >}}:
     
     ```php
+    <?php
     array(
       'templateVars' => &(array)
     );
@@ -554,6 +557,7 @@ actionFrontControllerSetVariables
     Your hook implementation should return array of values that will be added to `prestashop` object.
     
     ```php
+    <?php
     public function hookActionFrontControllerSetVariables()
     {
         return [
@@ -712,6 +716,7 @@ actionOrderEdited
 
     Parameters:
     ```php
+    <?php
     array( 'order' => (object) Order
 );
     ```
@@ -731,6 +736,7 @@ actionOrderReturn
 
     Parameters:
     ```php
+    <?php
     array(
       'orderReturn' => (object) OrderReturn
     );
@@ -745,6 +751,7 @@ WARNING: only invoked when a product is actually removed from an order.
 
     Parameters:
     ```php
+    <?php
     array(
       'order' => Order,
       'productList' => array(
@@ -771,6 +778,7 @@ actionOrderStatusPostUpdate
 
     Parameters:
     ```php
+    <?php
     array(
       'newOrderStatus' => (object) OrderState,
       'id_order' => (int) Order ID
@@ -785,6 +793,7 @@ actionOrderStatusUpdate
 
     Parameters:
     ```php
+    <?php
     array(
       'newOrderStatus' => (object) OrderState,
       'id_order' => (int) Order ID
@@ -814,6 +823,7 @@ actionPaymentCCAdd
 
     Parameters:
     ```php
+    <?php
     array(
       'paymentCC' => (object) OrderPayment object
     );
@@ -827,6 +837,7 @@ actionPaymentConfirmation
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -928,6 +939,7 @@ actionProductFlagsModifier
     
     Parameters:
     ```php
+    <?php
     array(
         'flags' => (array) &$flags,
         'product' => (Product) $product,
@@ -945,6 +957,7 @@ actionSearch
 
     Parameters:
     ```php
+    <?php
     array(
       'expr' => (string) Search query,
       'total' => (int) Amount of search results
@@ -956,6 +969,7 @@ actionSetInvoice
     Located in: /classes/order/Order.php
     Parameters:
     ```php
+    <?php
     array(
       'Order' => order object,
       'OrderInvoice' => order invoice object,
@@ -972,6 +986,7 @@ actionShopDataDuplication
 
     Parameters:
     ```php
+    <?php
     array(
       'old_id_shop' => (int) Old shop ID,
       'new_id_shop' => (int) New shop ID
@@ -1003,6 +1018,7 @@ Quantity is updated only when a customer effectively places their order
 
     Parameters:
     ```php
+    <?php
     array(
       'id_product' => (int) Product ID,
       'id_product_attribute' => (int) Product attribute ID,
@@ -1018,6 +1034,7 @@ actionValidateCustomerAddressForm
 
     Parameters:
     ```php
+    <?php
     array(
       'form' => (object) CustomerAddressForm
     );
@@ -1032,6 +1049,7 @@ Doesn't necessarily have to be paid.
 
     Parameters:
     ```php
+    <?php
     array(
       'cart' => (object) Cart,
       'order' => (object) Order,
@@ -1054,6 +1072,7 @@ actionWatermark
 
     Parameters:
     ```php
+    <?php
     array(
       'id_image' => (int) Image ID,
       'id_product' => (int) Product ID
@@ -1070,6 +1089,7 @@ actionGetAdminOrderButtons
 
     Parameters:
     ```php
+    <?php
     array(
        'controller' => (OrderController) Symfony controller,
        'id_order' => (int) Order ID,
@@ -1088,6 +1108,7 @@ actionAdminAdminPreferencesControllerPostProcessBefore
 
     Parameters:
     ```php
+    <?php
     [
         'controller' => (AdministrationController) Symfony controller,
     ]
@@ -1141,6 +1162,7 @@ This hook launches modules when the AdminCustomers tab is displayed in the Back 
 
     Parameters:
     ```php
+    <?php
     array(
       'id_customer' = (int) Customer ID
     );
@@ -1158,6 +1180,7 @@ This hook launches modules when the Addresses list into the AdminCustomers tab i
 
     Parameters:
     ```php
+    <?php
 	array(
 	  'id_address' => (int) Address ID
 	)
@@ -1231,6 +1254,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
 
     Parameters:
     ```php
+    <?php
     array(
      'id_order' = (int) Order ID
     );
@@ -1268,6 +1292,7 @@ displayAdminOrderTabContent
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1292,6 +1317,7 @@ displayAdminOrderMain
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1308,6 +1334,7 @@ displayAdminOrderMainBottom
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1332,6 +1359,7 @@ displayAdminOrderSide
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1347,6 +1375,7 @@ displayAdminOrderSide
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1363,6 +1392,7 @@ displayAdminOrderSideBottom
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1400,6 +1430,7 @@ displayAdminOrderTabLink
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1618,6 +1649,7 @@ displayBeforeCarrier
 
     Parameters:
     ```php
+    <?php
     array(
         'carriers' => array(
             array(
@@ -1680,6 +1712,7 @@ displayCarrierList
 
     Parameters:
     ```php
+    <?php
     array(
       'address' => (object) Address object
     );
@@ -1911,6 +1944,7 @@ displayAdminOrderTop
 
     Parameters:
     ```php
+    <?php
     array(
       'id_order' => (int) Order ID
     );
@@ -1994,6 +2028,7 @@ displayOrderConfirmation
 
     Parameters:
     ```php
+    <?php
     array(
       'order' => (object) Order
     );
@@ -2020,6 +2055,7 @@ displayOrderDetail
 
     Parameters:
     ```php
+    <?php
     array(
       'order' => (object) Order object
     );
@@ -2095,6 +2131,7 @@ This hook expects ProductExtraContent instances, which will be properly displaye
 	
 	Parameters:
     ```php
+    <?php
     array(
         'product' => (object) Product object
     ),
@@ -2119,6 +2156,7 @@ This hook displays content in the right sidebar of the product page
 
     Parameters:
     ```php
+    <?php
     array(
         'product' => (object) Product object
     ),
@@ -2152,6 +2190,7 @@ displayRightColumn
 
     Parameters:
     ```php
+    <?php
     array(
       'cart' => (object) Cart object
     );
@@ -2245,6 +2284,7 @@ This hook is called just before fetching content page category
 
     Parameters:
     ```php
+    <?php
     array(
         'object' => (object) Category object
     ),
@@ -2349,6 +2389,7 @@ action<KpiIdentifier>KpiRowModifier
 
     Parameters:
     ```php
+    <?php
     array(
         'kpis' => KpiInterface[] $kpis
     ),
@@ -2364,6 +2405,7 @@ action&lt;HookName>Form
 
     Parameters:
     ```php
+    <?php
     [
         'form_builder' => (FormBuilderInterface) $this->formBuilder,
     ]
@@ -2379,6 +2421,7 @@ action&lt;HookName>Save
 
     Parameters:
     ```php
+    <?php
     [
         'errors' => (array) &$errors,
         'form_data' => (array) &$data,
@@ -2393,6 +2436,7 @@ action&lt;GridDefinitionId>GridDefinitionModifier
 
     Parameters:
     ```php
+    <?php
     [
         'definition' => (GridDefinition) $definition,
     ]
@@ -2405,6 +2449,7 @@ action&lt;GridDefinitionId>GridQueryBuilderModifier
 
     Parameters:
     ```php
+    <?php
     [
         'search_query_builder' => (QueryBuilder) $searchQueryBuilder,
         'count_query_builder' => (QueryBuilder) $countQueryBuilder,
@@ -2419,6 +2464,7 @@ action&lt;GridDefinitionId>GridDataModifier
 
     Parameters:
     ```php
+    <?php
     [
         'data' => (GridData) $data,
     ]
@@ -2431,6 +2477,7 @@ action&lt;GridDefinitionId>GridFilterFormModifier
 
     Parameters:
     ```php
+    <?php
     [
         'filter_form_builder' => (FormBuilderInterface) $formBuilder,
     ]
@@ -2443,6 +2490,7 @@ action&lt;GridDefinitionId>GridPresenterModifier
 
     Parameters:
     ```php
+    <?php
     [
         'presented_grid' => (array) &$presentedGrid,
     ]
@@ -2455,6 +2503,7 @@ action&lt;FormName>FormBuilderModifier
 
     Parameters:
     ```php
+    <?php
     [
         'form_builder' => (FormBuilderInterface) $formBuilder,
         'data' => (array) &$data,
@@ -2469,6 +2518,7 @@ actionBeforeUpdate&lt;FormName>FormHandler
 
     Parameters:
     ```php
+    <?php
     [
         'form_data' => &$data,
         'id' => (int) $id,
@@ -2482,6 +2532,7 @@ actionAfterUpdate&lt;FormName>FormHandler
 
     Parameters:
     ```php
+    <?php
     [
         'id' => (int) $id,
     ]
@@ -2494,6 +2545,7 @@ actionBeforeCreate&lt;FormName>FormHandler
 
     Parameters:
     ```php
+    <?php
     [
         'form_data' => &$data,
     ]
@@ -2506,6 +2558,7 @@ actionAfterCreate&lt;FormName>FormHandler
 
     Parameters:
     ```php
+    <?php
     [
         'id' => $id,
     ]

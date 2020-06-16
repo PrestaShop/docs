@@ -32,6 +32,7 @@ about namespace setup in [Setup composer][setup-composer] page.
 Here is a simple example of a `ProductComment` entity:
 
 ```php
+<?php
 // modules/yourmodule/src/Entity/ProductComment.php
 namespace YourCompany\YourModule\Entity;
 
@@ -247,6 +248,7 @@ Now that your Entity is managed and your database structure is up to date you ca
 Here is an example in a legacy controller:
 
 ```php
+<?php
 // modules/yourmodule/controllers/front/PostComment.php
 use YourCompany\YourModule\Entity\ProductComment;
 use Doctrine\ORM\EntityManagerInterface;
@@ -294,6 +296,7 @@ An Entity repository is the service that will allow you to fetch your entities f
 some generic repository, and what's more? You don't even need to create it yourself you simply get it via the entity manager.
 
 ```php
+<?php
 // modules/yourmodule/controllers/front/ListComments.php
 use YourCompany\YourModule\Entity\ProductComment;
 use Doctrine\ORM\EntityManagerInterface;

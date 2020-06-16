@@ -18,6 +18,7 @@ The most basic column is DataColumn. It is used to display raw field data in Gri
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\DataColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

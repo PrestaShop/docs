@@ -19,6 +19,7 @@ This basic BadgeColumn displays a raw field data in Grid, associated with a badg
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\BadgeColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

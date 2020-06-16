@@ -25,6 +25,7 @@ We already saw that the get method can be used to retrieve either a list or a sp
 | **url** | blank schema url |
 
 ```php
+<?php
 try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
@@ -51,6 +52,7 @@ Remember that each resource has its own validation rules (required fields, field
 | **postXml**  | *XML content* (string) |
 
 ```php
+<?php
 $customerFields = $blankXml->customer->children();
 $customerFields->firstname = 'John';
 $customerFields->lastname = 'DOE';

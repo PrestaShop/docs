@@ -16,6 +16,7 @@ To create a functional test, we encourage you to base your test class on our own
 For instance:
 
 ```php
+<?php
 namespace Tests\Functional\Foo;
 
 use Tests\Integration\PrestaShopBundle\Test\WebTestCase;

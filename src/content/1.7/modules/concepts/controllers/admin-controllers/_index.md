@@ -19,6 +19,7 @@ Using modern pages, you will have access to the PrestaShop debug toolbar, the se
 
 Somewhere in your module declare a new class that will act as a Controller:
 ```php
+<?php
 // modules/your-module/src/Controller/DemoController.php
 
 namespace MyModule\Controller;
@@ -55,6 +56,7 @@ services:
 
 You can also retrieve services with the container available in symfony controllers ->
 ```php
+<?php
 // modules/your-module/src/Controller/DemoController.php
 
 namespace MyModule\Controller;
@@ -88,6 +90,7 @@ You must enable the autoloading for this Controller. For example using a `compos
 1. Use namespace for your Controller file
 
     ```php
+    <?php
     // modules/your-module/src/Controller/DemoController.php
     
     namespace MyModule\Controller;

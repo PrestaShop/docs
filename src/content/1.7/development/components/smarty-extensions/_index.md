@@ -21,6 +21,7 @@ As a template designer you will find the markup of each elements in `_partials/f
 ...where `$field` is an array, like this example:
 
 ```php
+<?php
   $field = [
     'name' => 'user_email',
     'type' => 'email',
@@ -214,6 +215,7 @@ This data modifier takes an array, where the key is the class name and the value
 Note that each class name is passed through the `classname` modifier.
 
 ```php
+<?php
   $body_classes = [
     "lang-fr" => true,
     "rtl" => false,

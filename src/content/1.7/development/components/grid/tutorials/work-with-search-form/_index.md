@@ -21,6 +21,7 @@ The grid component allows to filter its content, to manage the filtering you wil
 You should use `AbstractGridDefinitionFactory` as a parent class, and define a const `GRID_ID` which will be used as a key to persist the `Filters`.
 
 ```php
+<?php
 final class ManufacturerGridDefinitionFactory extends AbstractGridDefinitionFactory
 {
     const GRID_ID = 'manufacturer';
@@ -89,6 +90,7 @@ You can basically use any Symfony form type (including your custom ones) and Pre
 Starting the 1.7.7 we made it even easier, you can use the `AbstractFilterableGridDefinitionFactory`. This will allow you use the [common search controller](#common-search-controller).
 
 ```php
+<?php
 final class AddressGridDefinitionFactory extends AbstractFilterableGridDefinitionFactory
 {
     const GRID_ID = 'address';
@@ -110,6 +112,7 @@ You need to define a `Filters` class linked to your Grid, it will allow you to d
 It will also make your list action simpler as PrestaShop provides a parameter resolver responsible of automatically create and fill a `Filters` object.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Definition\Factory\ManufacturerGridDefinitionFactory;
 use PrestaShop\PrestaShop\Core\Search\Filters;
 
@@ -165,6 +168,7 @@ You can use the `ResponseBuilder` service to easily create the search response, 
 - the list route for redirection
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Definition\Factory\ManufacturerGridDefinitionFactory;
 use PrestaShopBundle\Service\Grid\ResponseBuilder;
 use PrestaShopBundle\Security\Annotation\AdminSecurity;
@@ -237,6 +241,7 @@ Thanks to the internal parameter resolver you can directly use your `Filters` cl
 - persists the filters in the database
 
 ```php
+<?php
 class ManufacturerController extends FrameworkBundleAdminController
 {
     ...
@@ -274,6 +279,7 @@ This action resets the persisted filters and your grid filtering/sorting. This a
 It is defined in the [`SearchAndResetType` options]({{< ref "/1.7/development/components/grid/filter-types-reference#searchandresettype" >}}), it uses `admin_common_reset_search_by_filter_id` and only needs the filter id to identify the filters to clear, and a redirection route.
 
 ```php
+<?php
     ...
             ->add((new Filter('actions', SearchAndResetType::class))
                 ->setAssociatedColumn('actions')

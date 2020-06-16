@@ -64,6 +64,7 @@ Now let's see some examples on how to use it.
 When translating wordings in the module's main class, since it extends the `Module` class, you can simply call `$this->l()`.
 
 ```php
+<?php
 class mymodule extends Module
 {
     public function __construct()
@@ -79,6 +80,7 @@ class mymodule extends Module
 `ModuleAdminController` and `ModuleFrontController` can access the module instance via the `$this->module` property.
 
 ```php
+<?php
 class MyModuleFrontController extends ModuleFrontController
 {
     public function initContent()
@@ -93,6 +95,7 @@ class MyModuleFrontController extends ModuleFrontController
 Other classes will need to retrieve the module's instance somehow. We recommend passing it as as a parameter in the constructor and storing it for later use.
 
 ```php
+<?php
 class CustomModuleClass 
 {
     private $module;
@@ -123,7 +126,7 @@ This function accepts three parameters:
 
 For instance, translating the string "Welcome to this page!" can be done like this:
 
-```php
+```smarty
 {l s='Welcome to this page!' mod='mymodule'}
 ```
 
@@ -255,7 +258,7 @@ Let's take an example with a link in a string, which can be tricky to do.
 The first solution that comes to mind would be to concatenate the translated strings with raw HTML code.
 But as we explained before, this solution is not recommended, because the words order could be different depending on the translation language.
 
-```php
+```smarty
 {l
   s='If you want a category to appear in the menu of your shop, go to [modules-link]Modules > Modules & Services > Installed modules.[/modules-link] Then, configure your menu module.'
   sprintf=[
@@ -289,6 +292,7 @@ Contextualization works differently in the Core, see [Core Translation]({{< ref 
 Context is defined by setting the second parameter of `l()` to something of your choosing. By convention, we suggest using the name of the php file it's located in, like this:
 
 ```php
+<?php
 // in SomeFile.php
 
 $module->l('Some wording', 'somefile');
@@ -322,6 +326,7 @@ PrestaShop then saves the translations in a file named using the `<language_code
 The translation file looks like this:
 
 ```php
+<?php
 // fr.php
 
 global $_MODULE;
@@ -345,6 +350,7 @@ Dictionary files are essentially a list of key-values that match a representatio
 Translation keys have a tricky syntax, which is constructed as follows:  
 
 ```php
+<?php
 $translationKey = strtolower('<{' . $moduleName . '}prestashop>' . $sourceFile) . '_' . $md5;
 ```
 
@@ -377,6 +383,7 @@ The translation interface relies on code analysis to "discover" wordings for tra
 Example:
 
 ```php
+<?php
 // literal values will work
 $this->l('Some wording', 'somecontext');
 

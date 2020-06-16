@@ -23,6 +23,7 @@ In those examples we use decorator that are based on the default grid factory. B
 ### Factory decorator
 
 ```php
+<?php
 /**
  * Class CategoryFilterFormFactory decorates original filter factory to add custom submit action.
  */

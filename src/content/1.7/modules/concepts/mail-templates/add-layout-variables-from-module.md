@@ -44,6 +44,7 @@ Now you need to add your variables for this specific layout, in order to do so y
 the `actionBuildMailLayoutVariables` hook.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutVariablesBuilderInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutInterface;
 

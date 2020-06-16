@@ -17,6 +17,7 @@ The update workflow is quite similar to the [creation workflow]({{< ref "1.7/dev
 ## Retrieve the resource
 
 ```php
+<?php
 try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
@@ -43,6 +44,7 @@ Quite similar to the resource creation, except we can update only some fields (s
 | **putXml**   | *XML content* (string) |
 
 ```php
+<?php
 $customerFields = $xml->customer->children();
 $customerFields->firstname = 'John';
 $customerFields->lastname = 'DOE';

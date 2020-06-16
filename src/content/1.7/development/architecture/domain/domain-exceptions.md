@@ -53,6 +53,7 @@ which defines the PrestaShop's domain.
 Let's analyze one exception from `Category` domain, `CannotEditCategoryException`:
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Domain\Category\Exception;
 
 /**
@@ -67,6 +68,7 @@ As we can guess from the comment in the code, this exception is supposed to be t
 Let's see a real usage in a command handler:
 
 ```php
+<?php
 // src/Adapter/Category/CommandHandler/EditCategoryHandler.php
 
 private function updateCategoryFromCommandData(Category $category, EditCategoryCommand $command)
@@ -91,6 +93,7 @@ The exception then needs to be handled in the upper layers of the code.
 In our example all category domain exceptions are handled in the `CategoryController`:
 
 ```php
+<?php
 // src/PrestaShopBundle/Controller/Admin/Sell/Catalog/CategoryController.php
 
 public function editAction($categoryId, Request $request)
@@ -121,6 +124,7 @@ or catching `CannotAddCategoryException` means that a category cannot be added. 
 If we expand our previous example with a better overview with different exception types:
 
 ```php
+<?php
 public function editAction($categoryId, Request $request)
 {
     try {

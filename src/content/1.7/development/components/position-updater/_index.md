@@ -32,6 +32,7 @@ To allow our component to automatically compute position updates we need a few d
 You can define this `PositionDefinition` manually:
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Position\PositionDefinition;
     
 $positionDefinition = new PositionDefinition(
@@ -67,6 +68,7 @@ The only thing you have to do now is provide the updates you want to apply to yo
 to help you build your update, it is defined as a Symfony service accessible via `prestashop.core.grid.position.position_update_factory`.
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdateFactory;
 use PrestaShop\PrestaShop\Core\Grid\Position\PositionDefinition;
 use PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdate;
@@ -130,6 +132,7 @@ Now that you built your `PositionUpdate` object all you need to do is perform th
 the `GridPositionUpdater` service which id is `PrestaShop\PrestaShop\Core\Grid\Position\GridPositionUpdater`
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdate;
 use PrestaShop\PrestaShop\Core\Grid\Position\GridPositionUpdaterInterface;
 use PrestaShop\PrestaShop\Core\Grid\Position\Exception\PositionUpdateException;
@@ -166,6 +169,7 @@ admin_link_block_update_positions:
 ```
 
 ```php
+<?php
 namespace PrestaShop\Module\LinkList\Controller\Admin\Improve\Design;
 
 use PrestaShop\PrestaShop\Core\Grid\Position\Exception\PositionDataException;

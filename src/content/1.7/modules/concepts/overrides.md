@@ -37,6 +37,7 @@ If a class does not make what a module expects, you can extend it in a module fo
 For instance you could have a single Tools class for core and module helper methods:
 
 ```php
+<?php
 class MyModuleTools extends Tools
 {
     /**
@@ -52,6 +53,7 @@ class MyModuleTools extends Tools
 Once included in another file, all these following method would be callable:
 
 ```php
+<?php
 MyModuleTools::array_pluck($data, 'id');
 MyModuleTools::getValue('userId'); // Defined in Tools
 MyModuleTools::getShopDomain(); // Defined in Tools
@@ -122,6 +124,7 @@ It will be copied in `/override/controllers/front/ProductController.php` during 
 Let's consider the file `/modules/<module_name>/override/classes/controllers/FrontController.php`, overriding only one method of the core file.
 
 ```php
+<?php
 /*
  * With this override, you have a new Smarty variable called "currentController" available in header.tpl
  * This allows you to use a different header if you are on a product page, category page or home.

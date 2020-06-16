@@ -33,6 +33,7 @@ Then an array containing all the ressources (= Object Model subclasses) you want
 For instance, in the module blockreassurance we have an ObjectModel class, called `reassuranceClass`. If we wanted to make it available in the webservice, it would look like this:
 
 ```php
+<?php
 /**
  * Add an entity in the Webservice
  *

@@ -37,6 +37,7 @@ prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
 and in `ContactFormDataHandler`:
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
 
 use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
@@ -63,6 +64,7 @@ Right now the first step is completed – the Command Bus is injected in the For
 Instead of modifying the entity object directly in the _Form Data Handler's_ `update()` method, we can delegate that task to a `Command`. All we have to do is create an instance of that command using the form's `$data` and then dispatch it using the `CommandBus`.
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
 
 use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
@@ -114,6 +116,7 @@ As a general rule, Commands Handlers return nothing. However, when creating a ne
 In this specific case, we allow Command Handlers to return the id of the newly created object after it's inserted into the database:
 
 ```php
+<?php
 public function create(array $data)
 {
     $addContactCommand = new AddContactCommand(
@@ -147,6 +150,7 @@ prestashop.core.form.identifiable_object.data_provider.contact_form_data_provide
 and in `ContactFormDataProvider`:
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
 
 use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
@@ -173,6 +177,7 @@ The first step is completed – the Query Bus is injected in the Form Data Provi
 Instead of retrieving the data using an SQL query or retrieving the entity data using `ObjectModel` directly in the _Form Data Provider_'s `getData()` method, we can delegate that task to a `Query`. All that we have to do is create an instance of the Query using provided `$id` and dispatch it using the `QueryBus`. The appropriate Handler will take care of retrieving the information we need and returning it in a structured form.
 
 ```php
+<?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
 
 use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;

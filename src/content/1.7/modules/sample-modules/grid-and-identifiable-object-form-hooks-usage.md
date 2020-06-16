@@ -35,6 +35,7 @@ On module installation the following hooks are being registered:
 - `actionAfterUpdate`**Customer**`FormHandler` - to execute the update process of added field from the module.
 
 ```php
+<?php
 public function install()
 {
     return parent::install() &&
@@ -64,6 +65,7 @@ function `getBlockPrefix` to retrieve the unique id
 #### Extending grid definition and filters
 
 ```php
+<?php
 
 use PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinitionInterface;
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ToggleColumn;
@@ -115,6 +117,7 @@ If you only want to display data then this step can be skipped. E.g you are crea
 - Create controller `DemoCQRSHooksUsage\Controller\Admin\CustomerReviewController`:
 
 ```php
+<?php
 namespace DemoCQRSHooksUsage\Controller\Admin;
 
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
@@ -133,6 +136,7 @@ You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-
 {{% /notice %}}
 
 ```php
+<?php
 namespace DemoCQRSHooksUsage\Controller\Admin;
 
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
@@ -169,6 +173,7 @@ By just extending grid definition we won't be able to display any data since we 
 conditions by extending [doctrine's query builder](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/query-builder.html).
 
 ```php
+<?php
 use Doctrine\DBAL\Query\QueryBuilder;
 use PrestaShop\PrestaShop\Core\Search\Filters\CustomerFilters;
 
@@ -238,6 +243,7 @@ You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-
 {{% /notice %}}
 
 ```php
+<?php
 // modules/ps_democqrshooksusage/ps_democqrshooksusage.php
 
 use Symfony\Component\Form\FormBuilderInterface;
@@ -288,6 +294,7 @@ You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-
 {{% /notice %}}
 
 ```php
+<?php
 
 public function hookActionAfterUpdateCustomerFormHandler(array $params)
 {

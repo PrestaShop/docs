@@ -113,6 +113,7 @@ They are PHP arrays, and they hold messages as a string.
 Since PrestaShop 1.7, you can [redirect the customer AND display a message after an action](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/controller/FrontController.php#L614-L633).
 
 ```php
+<?php
 $this->success[] = $this->l('Information successfully updated.');
 $this->redirectWithNotifications($this->getCurrentURL());
 ```

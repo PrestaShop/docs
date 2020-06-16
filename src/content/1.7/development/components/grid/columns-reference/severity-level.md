@@ -19,6 +19,7 @@ Use this column to display severity level in your Grid.
 ## Example usage
 
 ```php
+<?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Status\SeverityLevelColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 

@@ -65,6 +65,7 @@ folders can be added later.
 The main mymodule.php file must start with the following test:
 
 ```php
+<?php
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -90,6 +91,7 @@ example: `MyModule`. Furthermore, that class must extend the `Module`
 class, in order to inherit all its methods and attributes.
 
 ```php
+<?php
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -116,6 +118,7 @@ when the module is loaded by PrestaShop. This is therefore the best
 place to set most of its details.
 
 ```php
+<?php
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -153,6 +156,7 @@ Let's examine each line from this first version of the `MyModule`
 class...
 
 ```php
+<?php
 // This line defines the class constructor function.
 $this->name = 'mymodule';
 $this->tab = 'front_office_features';
@@ -215,6 +219,7 @@ section in the "Modules" page:
 Let's continue with the next line in this block of code:
 
 ```php
+<?php
 $this->need_instance = 0;
 $this->ps_versions_compliancy = [
     'min' => '1.5',
@@ -244,6 +249,7 @@ environment (namely, PrestaShop):
 Next, we call the constructor method from the parent PHP class:
 
 ```php
+<?php
 parent::__construct();
 ```
 
@@ -256,6 +262,7 @@ The next section deals with text strings, which are encapsulated in
 PrestaShop's translation method, `l()`:
 
 ```php
+<?php
 $this->displayName = $this->l('My module');
 $this->description = $this->l('Description of my module.');
 
@@ -318,6 +325,7 @@ method.
 Here is the bare minimum for the `install()` method:
 
 ```php
+<?php
 public function install()
 {
     return parent::install();
@@ -348,6 +356,7 @@ tasks during installation:
 
 
 ```php
+<?php
 public function install()
 {
     if (Shop::isFeatureActive()) {
@@ -374,6 +383,7 @@ If any of the lines in the testing block fails, the method returns
 Here is the bare minimum for the uninstall() method:
 
 ```php
+<?php
 public function uninstall()
 {
     return parent::uninstall();
@@ -386,6 +396,7 @@ delete the data added to the database during the installation (
 this:
 
 ```php
+<?php
 public function uninstall()
 {
     if (!parent::uninstall() ||
@@ -434,6 +445,7 @@ anything goes. For instance, here is how to handle a PHP array using the
 `Configuration` object:
 
 ```php
+<?php
 // Storing a serialized array.
 Configuration::updateValue('MYMODULE_SETTINGS', serialize(array(true, true, false)));
 
@@ -504,6 +516,7 @@ The Shop object
 Another of install()'s lines is this:
 
 ```php
+<?php
 if (Shop::isFeatureActive()) {
     Shop::setContext(Shop::CONTEXT_ALL);
 }
@@ -567,6 +580,7 @@ Once your module is online, its files could be accessed by anyone from the Inter
 You can achieve this by adding an `index.php` file at the root of any module folder you create. Here is a suggestion for what to put in the file.
 
 ```php
+<?php
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate");

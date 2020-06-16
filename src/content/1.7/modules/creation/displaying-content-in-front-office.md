@@ -15,6 +15,7 @@ by implementing the hooks' methods, and that was actually done in the
 `install()` method we wrote earlier, using the `registerHook()` method:
 
 ```php
+<?php
 public function install()
 {
     if (Shop::isFeatureActive()) {
@@ -44,6 +45,7 @@ Attaching code to a hook requires a specific method for each:
     `/css/mymodule.css` and module's JS file, `/js/mymodule.js`.
 
 ```php
+<?php
     public function hookDisplayLeftColumn($params)
     {
         $this->context->smarty->assign([
@@ -292,6 +294,7 @@ Here are our two files:
 - *display.php*
 
 ```php
+<?php
 class mymoduledisplayModuleFrontController extends ModuleFrontController
 {
     public function initContent()
@@ -366,6 +369,7 @@ our template file:
 - *mymodule.php*
 
 ```php
+<?php
 public function hookDisplayLeftColumn($params)
 {
     $this->context->smarty->assign(

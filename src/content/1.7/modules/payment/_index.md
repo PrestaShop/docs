@@ -27,6 +27,7 @@ To make a payment module for PrestaShop 1.7, you'll have to respect some element
 -   You will need to declare the following namespace.
 
     ```php
+    <?php
     use PrestaShop\PrestaShop\Core\Payment\PaymentOption;
     ```
 
@@ -129,6 +130,7 @@ The params passed to the following hooks have been modified:
 Everything can be retrieved, for example:
 
 ```php
+<?php
 $currency = new Currency($params['order']->id_currency);
 $total_to_pay = $params['order']->getOrdersTotalPaid();
 ```

@@ -119,6 +119,7 @@ Now let's see some examples on how to use it.
 When translating wordings in the module's main class, since it extends the `Module` class, you can simply call `$this->trans()`.
 
 ```php
+<?php
 // file: mymodule.php
 
 class mymodule extends Module
@@ -138,6 +139,7 @@ Since the module is called MyModule, the translation domain should be `Modules.M
 `ModuleAdminController` and `ModuleFrontController` can access the module instance via the `$this->module` property.
 
 ```php
+<?php
 // file: controllers/front/something.php
 
 class MymoduleSomethingModuleFrontController extends ModuleFrontController
@@ -156,6 +158,7 @@ Be aware that in symfony controllers, the second and third arguments have been s
 {{% /notice %}}
 
 ```php
+<?php
 namespace PrestaShop\Module\MyModule;
 
 class SomeAdminController extends FrameworkBundleAdminController
@@ -172,6 +175,7 @@ class SomeAdminController extends FrameworkBundleAdminController
 Other classes will need to retrieve the module's instance somehow. We recommend passing it as as a parameter in the constructor and storing it for later use.
 
 ```php
+<?php
 class CustomModuleClass 
 {
     private $module;
@@ -231,6 +235,7 @@ The first parameter can be used to replace tokens in your wording after it's tra
 To be translatable through the new translation interface, modules must opt-in. This can be done by declaring this function on your module's main class:
 
 ```php
+<?php
 public function isUsingNewTranslationSystem()
 {
     return true;
@@ -274,6 +279,7 @@ The translation interface relies on code analysis to "discover" wordings for tra
 Example:
 
 ```php
+<?php
 // literal values will work
 $this->trans('Some wording', [], 'Modules.Mymodule.Something');
 

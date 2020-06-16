@@ -205,6 +205,7 @@ I accept the help of Behat and let him generate a snippet ready-to-use for me fo
 I choose to put the new step into `Tests\Integration\Behaviour\Features\Context\CarrierFeatureContext` as it is related to carriers. The generated snippet looks like this:
 
 ```php
+<?php
     /**
      * @Given the carrier :arg1 has no handling costs
      */
@@ -221,6 +222,7 @@ Implementing a Behat step means: performing the required process, be it call fun
 After I have implemented it, this is what my step looks like:
 
 ```php
+<?php
     /**
      * @Given the carrier :carrierName has no handling costs
      */
