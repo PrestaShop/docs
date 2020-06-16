@@ -6,7 +6,7 @@ weight: 5
 
 # Manage Multishop
 
-In order to use web services when the multishop feature is enabled, you can use the regular API requests and add the `id_shop` parameter (or the `id_shop_group` parameter for overriding by group).
+In order to use web services when the multishop feature is enabled, you can use the regular API requests and add the `id_shop` parameter (or the `id_group_shop` parameter for overriding by group).
 
 ## Enable Multishop
 
@@ -27,7 +27,7 @@ To deal with shop specific values you can use the regular APIs and specify the `
 | Key               | Value         |
 |-------------------|---------------|
 | **id_shop**       | Shop id       |
-| **id_shop_group** | Shop group id |
+| **id_group_shop** | Shop group id |
 
 ## Create shop
 

@@ -10,8 +10,8 @@ There is no longer any theme data in the database with PrestaShop 1.7. Hence a t
 it is on the disk.
 
 If you want the theme to appears in the backoffice, it only needs to contain a `config/theme.yml` file.
-This will only display it, if you want to select it as your active theme, it has to be valid. Read :doc:`What
-makes a valid theme <testing>`
+This will only display it, if you want to select it as your active theme, it has to be valid. Read ["What
+makes a valid theme"]({{< ref "1.7/themes/distribution/testing.md" >}}).
 
 
 ![Export current theme](../img/export-current-theme.png)
