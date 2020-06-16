@@ -13,7 +13,7 @@ PrestaShop modules acts as Symfony bundles, extension points are added continuou
 | 1.7.4    | [Configuration Forms][3] and [Console commands][4]             |
 | 1.7.5    | [Modern controllers and Security][5]                           |
 | 1.7.6    | [Doctrine ORM][6] and [Entity forms][7]                        |
-| 1.7.6    | [Controllers as services][8]                     |
+| 1.7.7    | [Controllers as services][8]                     |
 
 [1]: {{< ref "1.7/modules/concepts/templating/_index.md" >}}
 [2]: {{< ref "1.7/modules/concepts/services/_index.md" >}}
