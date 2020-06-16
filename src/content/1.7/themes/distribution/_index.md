@@ -10,3 +10,4 @@ will walk you through creating a zip and passing Addons validation.
 
 But first, you need to test your theme!
 
+{{% children %}}
