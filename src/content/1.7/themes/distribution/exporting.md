@@ -11,7 +11,7 @@ it's on the disk.
 
 If you want to theme to appears in the backoffice, it's simply have to contain a `config/theme.yml` file.
 This will only display it, if you want to select it as your active theme, it has to be valid. Read ["What
-makes a valid theme"]({{< ref "1.7/themes/distribution/testing/" >}}).
+makes a valid theme"]({{< ref "1.7/themes/distribution/testing.md" >}}).
 
 
 ![Export current theme](../img/export-current-theme.png)
