@@ -9,7 +9,7 @@ title: Exporting your theme
 There is no longer any theme data in the database with PrestaShop 1.7. Hence a theme is installed as soon as
 it is on the disk.
 
-If you want to theme to appears in the backoffice, it only needs to contain a `config/theme.yml` file.
+If you want the theme to appears in the backoffice, it only needs to contain a `config/theme.yml` file.
 This will only display it, if you want to select it as your active theme, it has to be valid. Read :doc:`What
 makes a valid theme <testing>`
 
