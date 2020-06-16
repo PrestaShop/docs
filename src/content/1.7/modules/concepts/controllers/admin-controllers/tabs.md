@@ -154,7 +154,16 @@ Once you're done, just install (or reset) your module.
 
 The $tabs property will be read from PrestaShop and the tabs will be automatically displayed on the side menu. They will stay as long as your module is installed.
 
-## Modern Controllers and manual tab insertion
+## Automatic hiding of disabled modules
+{{< minver v="1.7.7" title="true" >}}
+
+When you disable a module all its related Tabs will be automatically hidden, they are still in the database but their `enabled` field is set to `false` and the BackOffice menu automatically prevents them from being displayed.
+When the module is `enabled` again the Tabs are automatically displayed again.
+
+## Modern Controllers
+
+### Manual tab insertion
+{{< minver v="1.7.5" title="true" >}}
 
 If you created a modern controller using Symfony controllers and routing you can't create a Tab as is because the system is
 based on legacy controllers identified through their class names. But you can still trick it using the `_legacy_link` property
@@ -190,6 +199,8 @@ So you need to insert your tab manually during your module installation:
 
 ```php
 <?php
+use Language;
+
 class example_module_mailtheme extends Module
 {
     public function install()
@@ -230,9 +241,11 @@ class example_module_mailtheme extends Module
         $tab = new Tab($tabId);
         $tab->active = 1;
         $tab->class_name = 'MyModuleDemoController';
+        // Only since 1.7.7, you can define a route name
+        $tab->route_name = 'admin_my_symfony_routing';
         $tab->name = array();
         foreach (Language::getLanguages() as $lang) {
-            $tab->name[$lang['id_lang']] = 'My Module Demo';
+            $tab->name[$lang['locale']] = $this->trans('My Module Demo', array(), 'Modules.MyModule.Admin', $lang['locale']);
         }
         $tab->id_parent = (int) Tab::getIdFromClassName('ShopParameters');
         $tab->module = $this->name;
@@ -255,5 +268,95 @@ class example_module_mailtheme extends Module
 ```
 
 And now you have your menu link directing to your Symfony controller with a nice url.
+
+### Automatic tab registration
+{{< minver v="1.7.7" title="true" >}}
+
+Modern controllers can also be registered via the `$tabs` property, you don't need to manually create the Tab object in this case, and you can take full advantage of the Symfony routing (no more `_legacy_link`).
+
+Here is an example with a Symfony controller (example comes from the `ps_linklist` module), nothing specific in this controller but you will note the security annotation `@AdminSecurity` that uses `request.get('_legacy_controller')` which will make the link between this controller and the routing configuration.
+
+```php
+// yourmodule/src/Controller/Admin/Improve/Design
+
+namespace PrestaShop\Module\LinkList\Controller\Admin\Improve\Design;
+
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
+use PrestaShopBundle\Security\Annotation\AdminSecurity;
+use PrestaShopBundle\Security\Annotation\ModuleActivated;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+/**
+ * Class LinkBlockController.
+ *
+ * @ModuleActivated(moduleName="ps_linklist", redirectRoute="admin_module_manage")
+ */
+class LinkBlockController extends FrameworkBundleAdminController
+{
+    /**
+     * @AdminSecurity("is_granted('read', request.get('_legacy_controller'))", message="Access denied.")
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function listAction(Request $request)
+    {
+        //Get hook list, then loop through hooks setting it in in the filter
+        ...
+
+        return $this->render('@Modules/ps_linklist/views/templates/admin/link_block/list.html.twig', [
+            'grids' => $presentedGrids,
+            'enableSidebar' => true,
+            'layoutHeaderToolbarBtn' => $this->getToolbarButtons(),
+            'help_link' => $this->generateSidebarLink($request->attributes->get('_legacy_controller')),
+        ]);
+    }
+}
+```
+
+Now here is the routing configuration, we can see the `_legacy_controller` option, that will be used by the controller, is present with a value of `AdminLinkWidget` which will be used as our **class_name** for the tab.
+
+```yaml
+# yourmodule/config/routes.yml
+admin_link_block_list:
+  path: /link-widget/list
+  methods: [GET]
+  defaults:
+    _controller: 'PrestaShop\Module\LinkList\Controller\Admin\Improve\Design\LinkBlockController::listAction'
+    # _legacy_controller is used to manage permissions
+    _legacy_controller: AdminLinkWidget
+    # No need for _legacy_link in this case
+```
+
+Finally here is the `$tabs` property used for automatic registration, it still needs a `class_name` field that will be used for permission checking, it will also be used to create the default `AUTHORIZATION_ROLES` related to this **class_name**.
+
+```php
+// yourmodule/ps_linklist.php
+use Language;
+
+class Ps_Linklist extends Module
+{
+    public function __construct() {
+        ...
+        $tabNames = [];
+        foreach (Language::getLanguages(true) as $lang) {
+            $tabNames[$lang['locale']] = $this->trans('Link List', array(), 'Modules.Linklist.Admin', $lang['locale']);
+        }
+        $this->tabs = [
+            [
+                'route_name' => 'admin_link_block_list',
+                'class_name' => 'AdminLinkWidget',
+                'visible' => true,
+                'name' => $tabNames,
+                'parent_class_name' => 'AdminParentThemes',
+            ],
+        ];
+        ...
+    }
+}
+```
 
 [controller-routing]: {{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#the-legacy-link-property" >}}
