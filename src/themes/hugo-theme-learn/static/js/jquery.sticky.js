@@ -11,19 +11,19 @@
 //              might need to adjust the width in some cases.
 
 (function (factory) {
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else if (typeof module === 'object' && module.exports) {
-        // Node/CommonJS
-        module.exports = factory(require('jquery'));
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define(['jquery'], factory);
+  } else if (typeof module === 'object' && module.exports) {
+    // Node/CommonJS
+    module.exports = factory(require('jquery'));
+  } else {
+    // Browser globals
+    factory(jQuery);
+  }
 }(function ($) {
-    var slice = Array.prototype.slice; // save ref to original slice()
-    var splice = Array.prototype.splice; // save ref to original slice()
+  var slice = Array.prototype.slice; // save ref to original slice()
+  var splice = Array.prototype.splice; // save ref to original slice()
 
   var defaults = {
       topSpacing: 0,
@@ -79,13 +79,13 @@
           if (s.currentTop !== newTop) {
             var newWidth;
             if (s.getWidthFrom) {
-                padding =  s.stickyElement.innerWidth() - s.stickyElement.width();
-                newWidth = $(s.getWidthFrom).width() - padding || null;
+              padding =  s.stickyElement.innerWidth() - s.stickyElement.width();
+              newWidth = $(s.getWidthFrom).width() - padding || null;
             } else if (s.widthFromWrapper) {
-                newWidth = s.stickyWrapper.width();
+              newWidth = s.stickyWrapper.width();
             }
             if (newWidth == null) {
-                newWidth = s.stickyElement.width();
+              newWidth = s.stickyElement.width();
             }
             s.stickyElement
               .css('width', newWidth)
@@ -140,14 +140,14 @@
         var s = sticked[i];
         var newWidth = null;
         if (s.getWidthFrom) {
-            if (s.responsiveWidth) {
-                newWidth = $(s.getWidthFrom).width();
-            }
+          if (s.responsiveWidth) {
+            newWidth = $(s.getWidthFrom).width();
+          }
         } else if(s.widthFromWrapper) {
-            newWidth = s.stickyWrapper.width();
+          newWidth = s.stickyWrapper.width();
         }
         if (newWidth != null) {
-            s.stickyElement.css('width', newWidth);
+          s.stickyElement.css('width', newWidth);
         }
       }
     },
@@ -165,9 +165,9 @@
 
           stickyElement.wrapAll(function() {
             if ($(this).parent("#" + wrapperId).length == 0) {
-                    return wrapper;
+              return wrapper;
             }
-});
+          });
 
           var stickyWrapper = stickyElement.parent();
 
@@ -234,8 +234,8 @@
           var i = sticked.length;
           while (i-- > 0) {
             if (sticked[i].stickyElement.get(0) === that) {
-                splice.call(sticked,i,1);
-                removeIdx = i;
+              splice.call(sticked,i,1);
+              removeIdx = i;
             }
           }
           if(removeIdx !== -1) {

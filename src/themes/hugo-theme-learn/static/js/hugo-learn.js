@@ -10,10 +10,8 @@ var getUrlParameter = function getUrlParameter(sPageURL) {
           sParameterName = sURLVariables[i].split('=');
           obj[sParameterName[0]] = sParameterName[1];
       }
-      return obj;
-    } else {
-      return undefined;
     }
+    return obj;
 };
 
 var processImages = function processImages() {
@@ -22,8 +20,13 @@ var processImages = function processImages() {
   // Wrap image inside a featherlight (to get a full size view in a popup)
   images.wrap(function(){
     var image =$(this);
-    if (!image.parent("a").length) {
-      return "<a href='" + image[0].src + "' data-featherlight='image'></a>";
+    var o = getUrlParameter(image[0].src);
+    var f = o['featherlight'];
+    // IF featherlight is false, do not use feather light
+    if (f != 'false') {
+      if (!image.parent("a").length) {
+        return "<a href='" + image[0].src + "' data-featherlight='image'></a>";
+      }
     }
   });
 
@@ -60,10 +63,10 @@ var processImages = function processImages() {
 };
 
 var addAnchors = function addAnchors() {
-  var text, clip = new Clipboard('.anchor');
+  var text, clip = new ClipboardJS('.anchor');
   $("h1,h2,h3,h4,h5,h6").append(function(index, html) {
     var element = $(this);
-    var url = document.location.origin + document.location.pathname;
+    var url = encodeURI(document.location.origin + document.location.pathname);
     var link = url + "#" + element[0].id;
     return " <span class='anchor' data-clipboard-text='" + link + "'>" +
       "<i class='fa fa-link fa-lg'></i>" +
@@ -78,6 +81,10 @@ var addAnchors = function addAnchors() {
   clip.on('success', function(e) {
     e.clearSelection();
     $(e.trigger).attr('aria-label', 'Link copied to clipboard!').addClass('tooltipped tooltipped-s');
+  });
+  $('code.language-mermaid').each(function(index, element) {
+    var content = $(element).html().replace(/&amp;/g, '&');
+    $(element).parent().replaceWith('<div class="mermaid" align="center">' + content + '</div>');
   });
 };
 
