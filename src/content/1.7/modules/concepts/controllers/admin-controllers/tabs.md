@@ -169,8 +169,9 @@ They are automatically added to the `SUPER_ADMIN` group, and the group of the Em
 ## Automatic hiding of disabled modules
 {{< minver v="1.7.7" title="true" >}}
 
-When you disable a module all its related Tabs will be automatically hidden, they are still in the database but their `enabled` field is set to `false` and the BackOffice menu automatically prevents them from being displayed.
-When the module is `enabled` again the Tabs are automatically displayed again.
+When you disable a module, all its related Tabs will be automatically hidden from the Back Office menu. 
+
+Tabs are kept in database with their `enabled` field is set to `false`. Once the module is enabled again all its Tabs are automatically enabled as well.
 
 ## Modern Controllers
 
@@ -284,21 +285,18 @@ And now you have your menu link directing to your Symfony controller with a nice
 ### Automatic tab registration
 {{< minver v="1.7.7" title="true" >}}
 
-Modern controllers can also be registered via the `$tabs` property, you don't need to manually create the Tab object in this case, and you can take full advantage of the Symfony routing (no more `_legacy_link`).
+Modern controllers can also be registered via the `$tabs` property. You don't need to manually create the Tab object in this case, and you can take full advantage of the Symfony routing (no need for `_legacy_link`).
 
-Here is an example with a Symfony controller (example comes from the `ps_linklist` module), nothing specific in this controller but you will note the security annotation `@AdminSecurity` that uses `request.get('_legacy_controller')` which will make the link between this controller and the routing configuration.
+Here is an example with a Symfony controller (example comes from the [ps_linklist](https://github.com/PrestaShop/ps_linklist) module). Nothing specific in this controller but notice the security annotation `@AdminSecurity` that uses `request.get('_legacy_controller')` which will make the link between this controller and the routing configuration.
 
 ```php
+<?php
 // yourmodule/src/Controller/Admin/Improve/Design
 
 namespace PrestaShop\Module\LinkList\Controller\Admin\Improve\Design;
 
-use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 use PrestaShopBundle\Security\Annotation\AdminSecurity;
-use PrestaShopBundle\Security\Annotation\ModuleActivated;
-use Symfony\Component\HttpFoundation\RedirectResponse;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+// (...)
 
 /**
  * Class LinkBlockController.
@@ -316,20 +314,12 @@ class LinkBlockController extends FrameworkBundleAdminController
      */
     public function listAction(Request $request)
     {
-        //Get hook list, then loop through hooks setting it in in the filter
-        ...
-
-        return $this->render('@Modules/ps_linklist/views/templates/admin/link_block/list.html.twig', [
-            'grids' => $presentedGrids,
-            'enableSidebar' => true,
-            'layoutHeaderToolbarBtn' => $this->getToolbarButtons(),
-            'help_link' => $this->generateSidebarLink($request->attributes->get('_legacy_controller')),
-        ]);
+        // (...)
     }
 }
 ```
 
-Now here is the routing configuration, we can see the `_legacy_controller` option, that will be used by the controller, is present with a value of `AdminLinkWidget` which will be used as our **class_name** for the tab.
+Now here is the routing configuration. We can see the `_legacy_controller` option is present with a value of `AdminLinkWidget`. This will be used for the `AdminSecurity` annotation, but also as our Tab's **class_name**.
 
 ```yaml
 # yourmodule/config/routes.yml
@@ -343,7 +333,7 @@ admin_link_block_list:
     # No need for _legacy_link in this case
 ```
 
-Finally here is the `$tabs` property used for automatic registration, it still needs a `class_name` field that will be used for permission checking, it will also be used to create the default `AUTHORIZATION_ROLES` related to this **class_name**.
+Finally, here is the `$tabs` property used for automatic registration. It still requires a `class_name` field: it will be used to create the default `AUTHORIZATION_ROLES` related to this **class_name**, and later to check for those permissions.
 
 ```php
 // yourmodule/ps_linklist.php
