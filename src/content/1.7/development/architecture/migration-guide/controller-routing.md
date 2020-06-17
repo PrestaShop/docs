@@ -275,6 +275,7 @@ As Module, especially if using legacy controllers, don't always have access to t
 {{< minver v="1.7.0" title="true" >}}
 
 ```php
+<?php
 use Link;
 
 // Generate url with Symfony route
@@ -295,6 +296,7 @@ $symfonyUrl = Link::getUrlSmarty(array(
 {{< minver v="1.7.5" title="true" >}}
 
 ```php
+<?php
 use Context;
 
 $link = Context::getContext()->link;

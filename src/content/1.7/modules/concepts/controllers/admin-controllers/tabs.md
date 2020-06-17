@@ -336,6 +336,7 @@ admin_link_block_list:
 Finally, here is the `$tabs` property used for automatic registration. It still requires a `class_name` field: it will be used to create the default `AUTHORIZATION_ROLES` related to this **class_name**, and later to check for those permissions.
 
 ```php
+<?php
 // yourmodule/ps_linklist.php
 use Language;
 
