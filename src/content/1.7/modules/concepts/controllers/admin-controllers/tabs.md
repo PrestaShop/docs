@@ -154,6 +154,18 @@ Once you're done, just install (or reset) your module.
 
 The $tabs property will be read from PrestaShop and the tabs will be automatically displayed on the side menu. They will stay as long as your module is installed.
 
+## Tab permissions, accesses and roles
+
+When you create a new `Tab` it automatically creates the appropriate roles in `Tab::initAccess` based on the `class_name`. For example using `AdminLinkWidget` as the class name will create the following roles:
+
+- `ROLE_MOD_TAB_ADMINLINKWIDGET_CREATE`
+- `ROLE_MOD_TAB_ADMINLINKWIDGET_DELETE`
+- `ROLE_MOD_TAB_ADMINLINKWIDGET_READ`
+- `ROLE_MOD_TAB_ADMINLINKWIDGET_UPDATE`
+
+These roles will allow you to manage detailed permission in your controllers, you can read this documentation if you need more details about [Controller Security]({{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#security" >}}).
+They are automatically added to the `SUPER_ADMIN` group, and the group of the Employee installing the module, but you can then edit privileges for other Employee groups.
+
 ## Automatic hiding of disabled modules
 {{< minver v="1.7.7" title="true" >}}
 
