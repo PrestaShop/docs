@@ -76,76 +76,76 @@ Here is the default structure of the side-menu from PrestaShop at the moment thi
 * AdminDashboard
 * SELL
     * AdminParentOrders
-           * AdminOrders
-           * AdminInvoices
-           * AdminSlip
-           * AdminDeliverySlip
-           * AdminCarts
+        * AdminOrders
+        * AdminInvoices
+        * AdminSlip
+        * AdminDeliverySlip
+        * AdminCarts
     * AdminCatalog
-       * AdminProducts
-           * AdminCategories
-           * AdminTracking
-           * AdminParentAttributesGroups
-           * AdminParentManufacturers
-           * AdminAttachments
-           * AdminParentCartRules
+        * AdminProducts
+            * AdminCategories
+            * AdminTracking
+            * AdminParentAttributesGroups
+            * AdminParentManufacturers
+            * AdminAttachments
+            * AdminParentCartRules
     * AdminParentCustomer
-           * AdminCustomers
-           * AdminAddresses
-           * AdminOutstanding
+            * AdminCustomers
+            * AdminAddresses
+            * AdminOutstanding
     * AdminParentCustomerThreads
-           * AdminCustomerThreads
-           * AdminOrderMessage
-           * AdminReturn
+            * AdminCustomerThreads
+            * AdminOrderMessage
+            * AdminReturn
     * AdminStats
     * AdminStock
-           * AdminWarehouses
-           * AdminParentStockManagement
-           * AdminSupplyOrders
-           * AdminStockConfiguration
+         * AdminWarehouses
+         * AdminParentStockManagement
+         * AdminSupplyOrders
+         * AdminStockConfiguration
 * IMPROVE
     * AdminParentModulesSf
-           * AdminModulesSf
-           * AdminModules
-           * AdminAddonsCatalog
+         * AdminModulesSf
+         * AdminModules
+         * AdminAddonsCatalog
     * AdminParentThemes
-           * AdminThemes
-           * AdminThemesCatalog
-           * AdminCmsContent
-           * AdminModulesPositions
-           * AdminImages
+         * AdminThemes
+         * AdminThemesCatalog
+         * AdminCmsContent
+         * AdminModulesPositions
+         * AdminImages
     * AdminParentShipping
-           * AdminCarriers
-           * AdminShipping
+         * AdminCarriers
+         * AdminShipping
     * AdminParentPayment
-           * AdminPayment
-           * AdminPaymentPreferences
+         * AdminPayment
+         * AdminPaymentPreferences
     * AdminInternational
-           * AdminParentLocalization
-           * AdminParentCountries
-           * AdminParentTaxes
-           * AdminTranslations
+         * AdminParentLocalization
+         * AdminParentCountries
+         * AdminParentTaxes
+         * AdminTranslations
 * CONFIGURE
     * ShopParameters
-           * AdminParentPreferences
-           * AdminParentOrderPreferences
-           * AdminPPreferences
-           * AdminParentCustomerPreferences
-           * AdminParentStores
-           * AdminParentMeta
-           * AdminParentSearchConf
+         * AdminParentPreferences
+         * AdminParentOrderPreferences
+         * AdminPPreferences
+         * AdminParentCustomerPreferences
+         * AdminParentStores
+         * AdminParentMeta
+         * AdminParentSearchConf
     * AdminAdvancedParameters
-           * AdminInformation
-           * AdminPerformance
-           * AdminAdminPreferences
-           * AdminEmails
-           * AdminImport
-           * AdminParentEmployees
-           * AdminParentRequestSql
-           * AdminLogs
-           * AdminWebservice
-           * AdminShopGroup
-           * AdminShopUrl
+         * AdminInformation
+         * AdminPerformance
+         * AdminAdminPreferences
+         * AdminEmails
+         * AdminImport
+         * AdminParentEmployees
+         * AdminParentRequestSql
+         * AdminLogs
+         * AdminWebservice
+         * AdminShopGroup
+         * AdminShopUrl
 * DEFAULT
 
 ## How to check the tabs registration
