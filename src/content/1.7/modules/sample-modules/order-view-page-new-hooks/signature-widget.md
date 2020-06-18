@@ -19,7 +19,8 @@ field from `OrderSignature` entity).
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -62,7 +63,8 @@ This mapping allows to use functions of `SignatureRepository` instead of only th
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -172,7 +174,8 @@ certain values (no autocomplete is provided).
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -243,7 +246,8 @@ final class Order
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -275,7 +279,8 @@ final class OrderCollection extends AbstractTypedCollection
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -343,7 +348,8 @@ in `src/Presenter/`:
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -536,7 +542,8 @@ The full main module file with dependencies could be:
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
