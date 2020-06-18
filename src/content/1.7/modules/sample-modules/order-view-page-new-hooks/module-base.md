@@ -63,7 +63,8 @@ fixtures data inserted to the database.
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -119,7 +120,8 @@ functions because doctrine is not fully supported for modules installation at 1.
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -268,7 +270,8 @@ More about factory design pattern: https://en.wikipedia.org/wiki/Factory_method_
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
@@ -299,7 +302,8 @@ And create `DemoViewOrderHooks` class which extends the `Module` class:
 ```php
 <?php
 /**
- * 2007-2020 PrestaShop
+ * Copyright since 2007 PrestaShop SA and Contributors
+ * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
  *
  * NOTICE OF LICENSE
  *
