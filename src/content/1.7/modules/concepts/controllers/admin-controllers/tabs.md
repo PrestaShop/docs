@@ -90,13 +90,13 @@ Here is the default structure of the side-menu from PrestaShop at the moment thi
             * AdminAttachments
             * AdminParentCartRules
     * AdminParentCustomer
-            * AdminCustomers
-            * AdminAddresses
-            * AdminOutstanding
+         * AdminCustomers
+         * AdminAddresses
+         * AdminOutstanding
     * AdminParentCustomerThreads
-            * AdminCustomerThreads
-            * AdminOrderMessage
-            * AdminReturn
+         * AdminCustomerThreads
+         * AdminOrderMessage
+         * AdminReturn
     * AdminStats
     * AdminStock
          * AdminWarehouses
