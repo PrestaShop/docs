@@ -3,6 +3,8 @@ title: Advanced use
 menuTitle: 4 - Advanced use
 chapter: true
 weight: 4
+aliases:
+  - /1.7/development/webservice/tutorials/advanced-use/
 ---
 
 # Advanced tutorials

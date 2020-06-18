@@ -1,7 +1,9 @@
 ---
 title: Tutorials
-weight: 1
+weight: 20
 chapter: true
+aliases:
+  - /1.7/development/webservice/tutorials/
 ---
 
 # Tutorials

@@ -2,6 +2,8 @@
 title: Manage Multishop
 menuTitle: Multishop
 weight: 5
+aliases:
+  - /1.7/development/webservice/tutorials/advanced-use/manage-multishop/
 ---
 
 # Manage Multishop
@@ -10,7 +12,7 @@ In order to use web services when the multishop feature is enabled, you can use 
 
 ## Enable Multishop
 
-The Multishop can be enabled via the `PS_MULTISHOP_FEATURE_ACTIVE` configuration value, here is a tutorial to [manage configuration via API]({{< ref "1.7/development/webservice/tutorials/advanced-use/manage-configuration" >}}).
+The Multishop can be enabled via the `PS_MULTISHOP_FEATURE_ACTIVE` configuration value, here is a tutorial to [manage configuration via API]({{< relref "manage-configuration" >}}).
 
 ## List shops
 
@@ -31,7 +33,7 @@ To deal with shop specific values you can use the regular APIs and specify the `
 
 ## Create shop
 
-You can refer to the tutorial explaining how to [create a resource]({{< ref "1.7/development/webservice/tutorials/prestashop-webservice-lib/create-resource" >}}) or [update a resource]({{< ref "1.7/development/webservice/tutorials/prestashop-webservice-lib/update-resource" >}}) to add/update a `shop`. It also will need a `shop_url` otherwise using its `id_shop` will result in a redirection by the API.
+You can refer to the tutorial explaining how to [create a resource]({{< relref "../prestashop-webservice-lib/create-resource" >}}) or [update a resource]({{< relref "../prestashop-webservice-lib/update-resource" >}}) to add/update a `shop`. It also will need a `shop_url` otherwise using its `id_shop` will result in a redirection by the API.
 
 ```php
 <?php

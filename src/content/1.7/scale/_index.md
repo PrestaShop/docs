@@ -1,7 +1,7 @@
 ---
 title: Scale
-weight: 7
-pre: "<b>7. </b>"
+weight: 8
+pre: "<b>8. </b>"
 chapter: true
 ---
 

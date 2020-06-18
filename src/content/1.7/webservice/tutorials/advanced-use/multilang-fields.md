@@ -2,6 +2,8 @@
 title: Multilingual Fields
 menuTitle: Multilingual
 weight: 6
+aliases:
+  - /1.7/development/webservice/tutorials/advanced-use/multilang-fields/
 ---
 
 # Multilingual / localized Fields
