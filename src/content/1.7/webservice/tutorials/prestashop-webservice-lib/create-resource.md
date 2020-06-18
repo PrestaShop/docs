@@ -2,6 +2,8 @@
 title: Create a resource
 menuTitle: 4 - Create a resource
 weight: 4
+aliases:
+  - /1.7/development/webservice/tutorials/prestashop-webservice-lib/create-resource/
 ---
 
 # Create a resource
@@ -10,7 +12,7 @@ weight: 4
 
 The creation workflow is a bit more complex than reading some data from the API, mainly because we rarely manage data via XML format. In most use cases the user is presented with a human understandable component, like a form, and the data entered is then processed. Besides we need to make sure that the XML sent to the webservice is understandable and complete.
 
-As we explained in a previous tutorial the webservice provides two [resource schemas]({{< ref "1.7/development/webservice/tutorials/testing-access#resource-schemas" >}}). For creation we are going to use the *blank* schema which is an empty representation of a resource. This empty XML will be filled with our data and then sent to the webservice using the `add()` method.
+As we explained in a previous tutorial the webservice provides two [resource schemas]({{< relref "../testing-access#resource-schemas" >}}). For creation we are going to use the *blank* schema which is an empty representation of a resource. This empty XML will be filled with our data and then sent to the webservice using the `add()` method.
 
 {{< figure src="../../../img/create-resource.png" title="Update Resource via Webservice" >}}
 

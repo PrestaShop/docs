@@ -2,13 +2,15 @@
 title: Update a resource
 menuTitle: 5 - Update a resource
 weight: 5
+aliases:
+  - /1.7/development/webservice/tutorials/prestashop-webservice-lib/update-resource/
 ---
 
 # Update a resource
 
 ## Update workflow
 
-The update workflow is quite similar to the [creation workflow]({{< ref "1.7/development/webservice/tutorials/prestashop-webservice-lib/create-resource#creation-workflow" >}}), the main difference is that the initial input is not a blank XML but an existing one, so we use the `get()` method to get a prefilled XML, and then we can update its fields.
+The update workflow is quite similar to the [creation workflow]({{< relref "create-resource#creation-workflow" >}}), the main difference is that the initial input is not a blank XML but an existing one, so we use the `get()` method to get a prefilled XML, and then we can update its fields.
 
 {{< figure src="../../../img/update-resource.png" title="Update Resource via Webservice" >}}
 

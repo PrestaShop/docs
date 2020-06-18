@@ -1,11 +1,11 @@
 ---
 title: Frequently Asked Questions
-weight: 8
-pre: "<b>8. </b>"
+weight: 9
+pre: "<b>9. </b>"
 chapter: true
 ---
 
-### Chapter 8
+### Chapter 9
 
 # Frequently Asked Questions
 

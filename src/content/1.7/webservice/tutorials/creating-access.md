@@ -1,9 +1,10 @@
 ---
 title: Creating access to the Webservice
 menuTitle: 1 - Creating access
-aliases:
-  - /1.7/development/webservice/tutorials/provide-access/
 weight: 1
+aliases:
+  - /1.7/development/webservice/tutorials/creating-access/
+  - /1.7/development/webservice/tutorials/provide-access/
 ---
 
 # Creating access to the Webservice

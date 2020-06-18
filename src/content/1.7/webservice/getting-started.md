@@ -1,12 +1,9 @@
 ---
-title: The PrestaShop Webservice API
-menuTitle: Webservice API
-weight: 40
+title: Getting Started
+weight: 10
 ---
 
-# The PrestaShop Webservice API
-
-PrestaShop enables merchants to give third-party tools access to their shop's database through a CRUD API, otherwise called a web service.
+# Getting Started
 
 ## About CRUD & REST
 
@@ -30,7 +27,7 @@ HTTP has several methods that can perform processing on data as defined in the R
 
 ## Enabling & Creating an access to the webservice
 
-Reach the [dedicated page]({{< ref "1.7/development/webservice/tutorials/creating-access" >}}).
+Reach the [dedicated page]({{< relref "tutorials/creating-access" >}}).
 
 ## Accessing the webservice
 

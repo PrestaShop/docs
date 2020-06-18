@@ -2,6 +2,8 @@
 title: Setup library
 menuTitle: 1 - Setup library
 weight: 1
+aliases:
+  - /1.7/development/webservice/tutorials/prestashop-webservice-lib/setup-library/
 ---
 
 # Setup library

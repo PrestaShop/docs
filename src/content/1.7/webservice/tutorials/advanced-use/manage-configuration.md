@@ -2,6 +2,8 @@
 title: Manage Configuration
 menuTitle: Configuration
 weight: 4
+aliases:
+  - /1.7/development/webservice/tutorials/advanced-use/manage-configuration/
 ---
 
 # Manage Configuration
@@ -10,7 +12,7 @@ You can manage your shop configuration thanks to the API, in this example we wil
 
 ## API call
 
-First check if the configuration already exists by using [filters and display parameters]({{< ref "1.7/development/webservice/tutorials/advanced-use/additional-list-parameters" >}}) `/api/configurations/?display=[id,name,value]&filter[name]=[PS_MULTISHOP_FEATURE_ACTIVE]`
+First check if the configuration already exists by using [filters and display parameters]({{< relref "additional-list-parameters" >}}) `/api/configurations/?display=[id,name,value]&filter[name]=[PS_MULTISHOP_FEATURE_ACTIVE]`
 
 ### Create configuration
 
