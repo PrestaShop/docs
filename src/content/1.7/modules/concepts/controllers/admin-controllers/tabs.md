@@ -258,7 +258,7 @@ class example_module_mailtheme extends Module
         $tab->route_name = 'admin_my_symfony_routing';
         $tab->name = array();
         foreach (Language::getLanguages() as $lang) {
-            $tab->name[$lang['locale']] = $this->trans('My Module Demo', array(), 'Modules.MyModule.Admin', $lang['locale']);
+            $tab->name[$lang['id_lang']] = $this->trans('My Module Demo', array(), 'Modules.MyModule.Admin', $lang['locale']);
         }
         $tab->id_parent = (int) Tab::getIdFromClassName('ShopParameters');
         $tab->module = $this->name;
