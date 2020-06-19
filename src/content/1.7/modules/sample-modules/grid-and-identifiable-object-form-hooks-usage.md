@@ -71,7 +71,11 @@ use PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinitionInterface;
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ToggleColumn;
 use PrestaShopBundle\Form\Admin\Type\YesAndNoChoiceType;
 
-/**
+class Ps_DemoCQRSHooksUsage extends Module
+{
+    // ...
+    
+    /**
      * Hook allows to modify Customers grid definition.
      * This hook is a right place to add/remove columns or actions (bulk, grid).
      *
@@ -104,6 +108,9 @@ use PrestaShopBundle\Form\Admin\Type\YesAndNoChoiceType;
             ->setAssociatedColumn('is_allowed_for_review')
         );
     }
+    
+    // ...
+}
 ```
 This hook, through `$params` array, received `GridDefinition` that defines how the grid is rendered. See [Grid definition]({{< relref "/1.7/development/components/grid/_index.md#grid-definition" >}}) for more information.  
 In this sample a new toggable column which determines if the customer is eligible to review products is added just after another column which has id `optin`. The sample code also demonstrates how add new filter.
@@ -177,7 +184,12 @@ conditions by extending [doctrine's query builder](https://www.doctrine-project.
 use Doctrine\DBAL\Query\QueryBuilder;
 use PrestaShop\PrestaShop\Core\Search\Filters\CustomerFilters;
 
-/**
+class Ps_DemoCQRSHooksUsage extends Module
+{
+
+    // ...
+
+    /**
      * Hook allows to modify Customers query builder and add custom sql statements.
      *
      * @param array $params
@@ -216,7 +228,9 @@ use PrestaShop\PrestaShop\Core\Search\Filters\CustomerFilters;
             }
         }
     }
-
+    
+    // ...
+}
 ```
 
 This sample demonstrates how to extend sql of the customers grid. From our custom database table `democqrshooksusage_reviewer` we fetch the result of field `is_allowed_for_review`. This name must match the id we added in the grid definition. In order for sorting to work we also add `orderBy` condition and finally, in order
@@ -249,27 +263,35 @@ You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-
 use Symfony\Component\Form\FormBuilderInterface;
 use PrestaShopBundle\Form\Admin\Type\SwitchType;
 
-public function hookActionCustomerFormBuilderModifier(array $params)
+class Ps_DemoCQRSHooksUsage extends Module
 {
-    /** @var FormBuilderInterface $formBuilder */
-    $formBuilder = $params['form_builder'];
-    $formBuilder->add('is_allowed_for_review', SwitchType::class, [
-        'label' => $this->getTranslator()->trans('Allow reviews', [], 'Modules.Ps_DemoCQRSHooksUsage'),
-        'required' => false,
-    ]);
     
-    $customerId = $params['id'];
-    
-    $params['data']['is_allowed_for_review'] = $this->getIsAllowedForReview($customerId);
+    // ...
 
-    $formBuilder->setData($params['data']);
-}
+    public function hookActionCustomerFormBuilderModifier(array $params)
+    {
+        /** @var FormBuilderInterface $formBuilder */
+        $formBuilder = $params['form_builder'];
+        $formBuilder->add('is_allowed_for_review', SwitchType::class, [
+            'label' => $this->getTranslator()->trans('Allow reviews', [], 'Modules.Ps_DemoCQRSHooksUsage'),
+            'required' => false,
+        ]);
+
+        $customerId = $params['id'];
+
+        $params['data']['is_allowed_for_review'] = $this->getIsAllowedForReview($customerId);
+
+        $formBuilder->setData($params['data']);
+    }
+
+    private function getIsAllowedForReview($customerId)
+    {
+        // implement your data retrieval logic here
+
+        return true;
+    }
     
-private function getIsAllowedForReview($customerId)
-{
-    // implement your data retrieval logic here
-    
-    return true;
+    // ...
 }
 ```
 
