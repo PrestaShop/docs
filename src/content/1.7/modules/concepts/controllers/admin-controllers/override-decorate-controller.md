@@ -44,6 +44,7 @@ admin_orders_index:
     methods: [GET]
     defaults:
       _controller: 'MyModule\Controller\DemoController::demoAction'
+      _disable_module_prefix: true
 ```
 
 {{% notice tip %}}
@@ -56,10 +57,9 @@ Keep the item `_legacy_controller` if your controller relies on it to configure 
 Keep the items `_legacy_controller` and `_legacy_link` if you want to reroute internal links and legacy URLs like `index.php?controller=AdminOrders` as well.
 {{% /notice %}}
 
-
 Thanks to this, whenever an HTTP request is matched to the route `admin_orders_index`, then your controller `demoAction()` will be executed.
 
-All module routes are prefixed with `modules`, which is why the URL of this remapped route is `modules/demo/orders`.
+Thanks to option `_disable_module_prefix: true` (available from PS 1.7.7.0) the route path is `/sell/orders/orders`, just like the original route.
 
 {{% notice tip %}}
 Routing is computed and cached by Symfony. You will need to clear this cache for Symfony to acknowledge your updated routing.
