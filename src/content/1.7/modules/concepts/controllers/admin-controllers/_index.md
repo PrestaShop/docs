@@ -146,4 +146,23 @@ to separate classes and method names!
 Since Symfony 4.1 the bundle notation is going to be deprecated: https://symfony.com/blog/new-in-symfony-4-1-deprecated-the-bundle-notation
 {{% /notice %}}
 
-The Controller in the previous example will be available if you browse `/admin-dev/modules/your-module/demo`.
+The Controller in the previous example will now be available if you browse `/admin-dev/modules/your-module/demo`. Pay attention to this path: it starts with `/modules`.
+
+This is because all module routes are, by default, prefixed with `/modules`.
+
+### Disabling the prefix
+
+{{% minver v="1.7.7" title="true" %}}
+
+If however you need or wish your route not to be prefixed, you can use the `_disable_module_prefix` route option to disable the prefix introduced in [PrestaShop 1.7.7.0](https://github.com/PrestaShop/PrestaShop/pull/19782).
+
+```yaml
+# modules/your-module/config/routes.yml
+your_route_name:
+    path: your-module/demo
+    methods: [GET]
+    defaults:
+      _controller: 'MyModule\Controller\DemoController::demoAction'
+      _disable_module_prefix: true
+```
+
