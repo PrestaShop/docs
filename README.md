@@ -1,5 +1,7 @@
 # PrestaShop Technical Documentation
 
+[![Build Status](https://travis-ci.com/PrestaShop/docs.svg?branch=master)](https://travis-ci.com/PrestaShop/docs)
+
 This documentation is available at https://devdocs.prestashop.com/
 
 ## Contributing
