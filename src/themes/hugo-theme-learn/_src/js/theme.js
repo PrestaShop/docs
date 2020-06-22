@@ -22,7 +22,6 @@ menuItems.forEach(e => {
     } else {
       e.parentElement.classList.toggle('parent');
       e.parentElement.classList.toggle('visited');
-      e.parentElement.classList.toggle('active');
     }
 
     toggleIcon(icon);
