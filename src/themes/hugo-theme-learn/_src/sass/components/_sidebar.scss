@@ -146,7 +146,6 @@ $text-trailing-indent: .5rem;
           // special extra padding for 2nd level, to account for chapter numbers on the 1st level
           padding-left: $tree-step-size + .2rem;
         }
-
       }
 
       li {
@@ -154,12 +153,6 @@ $text-trailing-indent: .5rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
-
-
-        }
-
-        span {
-          overflow: visible;
         }
       }
 
@@ -209,8 +202,7 @@ $text-trailing-indent: .5rem;
       }
 
       li > a {
-        text-indent: -$text-trailing-indent;
-        padding-left: 1rem + $text-trailing-indent;
+        padding-left: 1rem;
       }
 
       &.visited {

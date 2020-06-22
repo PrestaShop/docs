@@ -238,8 +238,6 @@ div.notices {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-    #sidebar ul.topics li span {
-      overflow: visible; }
     #sidebar ul.topics li.parent > ul,
     #sidebar ul.topics li.active > ul {
       display: block; }
@@ -264,8 +262,7 @@ div.notices {
           white-space: nowrap;
           display: block; }
       #sidebar ul li li > a {
-        text-indent: -0.5rem;
-        padding-left: 1.5rem; }
+        padding-left: 1rem; }
       #sidebar ul li.visited + span {
         margin-right: 16px; }
       #sidebar ul li.visited > a .read-icon {
