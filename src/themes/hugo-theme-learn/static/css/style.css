@@ -234,6 +234,12 @@ div.notices {
       background: #251f29; }
     #sidebar ul.topics > li > ul > li {
       padding-left: 1.2rem; }
+    #sidebar ul.topics li.isParent > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    #sidebar ul.topics li span {
+      overflow: visible; }
     #sidebar ul.topics li.parent > ul,
     #sidebar ul.topics li.active > ul {
       display: block; }

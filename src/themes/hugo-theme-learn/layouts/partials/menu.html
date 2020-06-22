@@ -103,18 +103,26 @@
  {{with .sect}}
   {{if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{safeHTML .Params.head}}
+    {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
     <li data-nav-id="{{.RelPermalink}}" title="{{.Title}}" class="dd-item
         {{if .IsAncestor $currentNode }}parent{{end}}
         {{if eq .File.UniqueID $currentFileUniqueID}}active{{end}}
         {{if .Params.alwaysopen}}parent{{end}}
+        {{ if ne $numberOfPages 0 }}isParent{{ end }}
         ">
       <a href="{{.RelPermalink}}">
-          {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+          <span>
+            {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
+          </span>
+
           {{ if $showvisitedlinks}}
             <i class="fa fa-check read-icon"></i>
           {{ end }}
+
+          {{ if ne $numberOfPages 0 }}
+            <i class="fa {{if .Params.alwaysopen}}fa-angle-up{{ else if .IsAncestor $currentNode }}fa-angle-up{{ else }}fa-angle-down{{end}}"></i>
+          {{ end }}
       </a>
-      {{ $numberOfPages := (add (len .Pages) (len .Sections)) }}
       {{ if ne $numberOfPages 0 }}
         <ul>
           {{ $currentNode.Scratch.Set "pages" .Pages }}

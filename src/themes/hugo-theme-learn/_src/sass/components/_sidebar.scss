@@ -142,11 +142,27 @@ $text-trailing-indent: .5rem;
           background: $active-block-bg;
         }
 
+
+
         > ul > li {
           // special extra padding for 2nd level, to account for chapter numbers on the 1st level
           padding-left: $tree-step-size + .2rem;
         }
 
+      }
+
+      li {
+        &.isParent > a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+
+        }
+
+        span {
+          overflow: visible;
+        }
       }
 
       // only display first level-children below the current one
