@@ -142,8 +142,6 @@ $text-trailing-indent: .5rem;
           background: $active-block-bg;
         }
 
-
-
         > ul > li {
           // special extra padding for 2nd level, to account for chapter numbers on the 1st level
           padding-left: $tree-step-size + .2rem;
