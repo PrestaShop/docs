@@ -263,6 +263,9 @@ site, as it severely slows everything down! You should always perform
 all your tests in a test site, ideally on your own computer rather than
 online.
 
+If you still can't see the changes you made, you might have forgotten to 
+register `actionFrontControllerSetMedia` hook.
+
 Embedding a template in the theme
 ---------------------------------
 
