@@ -69,7 +69,8 @@ Create the database and give it a name like "prestashop":
 Grant privileges to that database to a new user (the one that PrestaShop will use to connect to the database). Let's call it "prestashopuser".
 
 ```bash
-> GRANT ALL PRIVILEGES ON prestashop.* TO "prestashopuser"@"hostname" IDENTIFIED BY "somepassword";
+> CREATE USER "prestashopuser"@"hostname" IDENTIFIED BY "somepassword";
+> GRANT ALL PRIVILEGES ON prestashop.* TO "prestashopuser"@"hostname";
 ```
 
 In the example above,
