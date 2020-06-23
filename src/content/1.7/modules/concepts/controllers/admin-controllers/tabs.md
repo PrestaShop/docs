@@ -166,6 +166,13 @@ When you create a new `Tab` it automatically creates the appropriate roles in `T
 These roles will allow you to manage detailed permission in your controllers, you can read this documentation if you need more details about [Controller Security]({{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#security" >}}).
 They are automatically added to the `SUPER_ADMIN` group, and the group of the Employee installing the module, but you can then edit privileges for other Employee groups.
 
+{{% notice note %}}
+**Hidden Tabs**
+
+Tabs are usually visible and accessible in the menu, but there are also **invisible** tabs, they are only created for permissions to manage Security. All the controllers present in `controllers/admin` in your module are automatically added as hidden Tabs (if no visible Tab exists).
+{{% /notice %}}
+
+
 ## Automatic hiding of disabled modules
 {{< minver v="1.7.7" title="true" >}}
 
@@ -361,5 +368,12 @@ class Ps_Linklist extends Module
     }
 }
 ```
+
+{{% notice note %}}
+**Hidden Tabs**
+
+Since 1.7.7, when you create a Symfony route with the `_legacy_controller` if no visible Tab has been created an invisible one is automatically created so the permissions will be correctly handled.
+{{% /notice %}}
+
 
 [controller-routing]: {{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#the-legacy-link-property" >}}
