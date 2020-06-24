@@ -4,11 +4,11 @@ const menuItems = document.querySelectorAll('ul.topics li.isParent > a');
 
 function toggleIcon(icon) {
   if (icon.classList.contains('fa-angle-up')) {
-    icon.classList.remove('fa-angle-up')
-    icon.classList.add('fa-angle-down')
+    icon.classList.remove('fa-angle-up');
+    icon.classList.add('fa-angle-down');
   } else {
-    icon.classList.add('fa-angle-up')
-    icon.classList.remove('fa-angle-down')
+    icon.classList.add('fa-angle-up');
+    icon.classList.remove('fa-angle-down');
   }
 }
 
@@ -20,7 +20,11 @@ menuItems.forEach(e => {
     if (e.parentElement.classList.contains('parent') && !e.parentElement.classList.contains('active')) {
       e.parentElement.classList.remove('parent');
     } else {
-      e.parentElement.classList.toggle('parent');
+      if (e.parentElement.classList.contains('parent')) {
+        e.parentElement.classList.toggle('parent');
+      }
+
+      e.parentElement.classList.toggle('active');
       e.parentElement.classList.toggle('visited');
     }
 

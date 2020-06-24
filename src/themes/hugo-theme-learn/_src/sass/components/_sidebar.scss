@@ -81,12 +81,14 @@ $text-trailing-indent: .5rem;
       }
     }
 
-    &.active {
+    &.currentPage {
       a {
         background: #fff;
         color: #777 !important;
       }
+    }
 
+    &.active {
       i {
         color: #777 !important;
       }
@@ -216,7 +218,7 @@ $text-trailing-indent: .5rem;
         }
       }
 
-      &.active {
+      &.currentPage {
         & > a {
           background: #fff;
           color: #777 !important;

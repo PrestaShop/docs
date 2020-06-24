@@ -204,7 +204,7 @@ div.notices {
       color: #d9d9d9 !important; }
     #sidebar h5.parent + ul.topics {
       display: block; }
-    #sidebar h5.active a {
+    #sidebar h5.currentPage a {
       background: #fff;
       color: #777 !important; }
     #sidebar h5.active i {
@@ -268,7 +268,7 @@ div.notices {
       #sidebar ul li.visited > a .read-icon {
         color: #00bdf3;
         display: inline; }
-      #sidebar ul li.active > a {
+      #sidebar ul li.currentPage > a {
         background: #fff;
         color: #777 !important; }
   #sidebar #shortcuts li {
@@ -2016,7 +2016,7 @@ a:hover {
     color: #ccc; }
     #sidebar a:hover {
       color: #e6e6e6; }
-  #sidebar ul li.active > a {
+  #sidebar ul li.currentPage > a {
     background: #fff;
     color: #777 !important; }
   #sidebar hr {

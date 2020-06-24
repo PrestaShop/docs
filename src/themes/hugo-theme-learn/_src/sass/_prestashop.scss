@@ -70,7 +70,7 @@ a:hover {
       color: $menuSectionsLinkHoverColor;
     }
   }
-  ul li.active > a {
+  ul li.currentPage > a {
     background: $menuSectionActiveCategoryBgColor;
     color: $menuSectionActiveCategoryColor !important;
   }
