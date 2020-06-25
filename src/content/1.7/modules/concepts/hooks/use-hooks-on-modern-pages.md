@@ -243,7 +243,7 @@ public function hookDisplayDashboardToolbarIcons($params)
 
         $this->writeFile($productsXml, $filepath);
 
-        return $this->get('twig')->render('@PrestaShop/Foo/download_link.twig',[
+        return $this->get('twig')->render('@Module/Foo/download_link.twig',[
             'filepath' => _PS_BASE_URL_.'/products.xml',
         ]);
     }
