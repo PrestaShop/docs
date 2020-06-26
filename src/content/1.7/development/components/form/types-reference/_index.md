@@ -16,7 +16,7 @@ Developers can already use large list of field types (see [Symfony types](https:
 
 * [IpAddressType](ip-address)
 
-* [ResizableTextType](resizable-text)
+* ResizableTextType
     
 * [TextWithLengthCounterType](text-with-length-counter)
 
@@ -24,9 +24,9 @@ Developers can already use large list of field types (see [Symfony types](https:
 
 * [TranslatableType](translatable)
 
-* [TranslateTextType](translate-text)
+* TranslateTextType
 
-* [TranslateType](translate)
+* TranslateType
 
 #### Choice fields
 
@@ -40,7 +40,7 @@ Developers can already use large list of field types (see [Symfony types](https:
 
 * [MaterialMultipleChoiceTableType](material-multiple-choice-table)
 
-* [ShopChoiceTreeType](shop-choice)
+* ShopChoiceTreeType
 
 * [SwitchType](switch)
 
@@ -54,7 +54,7 @@ Developers can already use large list of field types (see [Symfony types](https:
 
 #### Button fields
 
-* [SearchAndResetType](search-and-reset)
+* SearchAndResetType
 
 #### Other fields
 
