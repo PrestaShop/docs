@@ -166,3 +166,7 @@ your_route_name:
       _disable_module_prefix: true
 ```
 
+
+## Secure your controller
+
+It is safer to define permissions required to use your controller, this can be configured using the `@AdminSecurity` annotation and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#security" >}}).

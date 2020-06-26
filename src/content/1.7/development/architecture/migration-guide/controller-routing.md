@@ -265,9 +265,54 @@ admin_system_information:
 PrestaShop uses YAML files for service declaration and routing, please don't use annotations for that!
 {{% /notice %}}
 
-### Link generation
+## Link generation
 
-#### The _legacy_link property
+### Manual generation (legacy)
+
+As Module, especially if using legacy controllers, don't always have access to the symfony container or router the `Link` object offers some helpers to help generate urls related to Symfony controllers and routes.
+
+#### Using router via Link::getUrlSmarty
+{{< minver v="1.7.0" title="true" >}}
+
+```php
+<?php
+use Link;
+
+// Generate url with Symfony route
+$symfonyUrl = Link::getUrlSmarty(array('entity' => 'sf', 'route' => 'admin_product_catalog'));
+
+// Generate url with Symfony route and arguments
+$symfonyUrl = Link::getUrlSmarty(array(
+    'entity' => 'sf',
+    'route' => 'admin_product_unit_action',
+    'sf-params' => array(
+        'action' => 'delete',
+        'id' => 42,
+    )
+));
+```
+
+#### Using router via $link->getAdminLink
+{{< minver v="1.7.5" title="true" >}}
+
+```php
+<?php
+use Context;
+
+$link = Context::getContext()->link;
+
+// Generate url with Symfony route (first argument is the legacy controller, even though it should be ignored)
+$symfonyUrl = $link->getAdminLink('AdminProducts', true, array('route' => 'admin_product_catalog'));
+
+// Generate url with Symfony route and arguments
+$symfonyUrl = $link->getAdminLink('AdminProducts', true, array(
+    'route' => 'admin_product_unit_action',
+    'action' => 'delete',
+    'id' => 42,
+));
+```
+
+### The Automatic _legacy_link (recommended)
 {{< minver v="1.7.5" title="true" >}}
 
 When migrating a new page to Symfony, you **must** get rid of all the former link references to the legacy controller.
@@ -277,6 +322,8 @@ component.
 However although you can find all the references of a controller in the core code, you can't know every references that
 could exist in modules or tabs (or you might simply miss some legacy calls). That's where we got you covered (starting in PrestaShop 1.7.5) with `_legacy_link`,
 this parameter is associated to any migrated route and is formatted as such:
+
+#### Routing configuration
 
 ```yaml
 route_name:
@@ -315,7 +362,7 @@ admin_emails:
             - AdminEmails:list
 ```
 
-#### The Link->getAdminLink conversion
+#### Automatic conversion
 
 Not every developer use the `getAdminLink` method the same way, therefore the `_legacy_link` is able to recognize different
 uses of this method, for example via an `action` parameter (e.g: `?controller=AdminEmails&action=export`).
@@ -363,7 +410,7 @@ admin_payment_preferences_process:
     $link->getAdminLink('AdminPaymentPreferences', true, [], ['action' => 'export']);
 ```
 
-#### The _legacy_link auto redirection
+#### Automatic redirection
 
 Finally some urls might have been generated manually or hard coded. To avoid losing these legacy urls a Symfony listener
 checks each call to the back office and tries to match it to a migrated url if it is found then the response is *automatically*
@@ -402,11 +449,11 @@ class to manage routing conversion.
 <?php
     // classes/Link.php, in getAdminLink()
     $routes = array(
-    'AdminModulesSf' => 'admin_module_manage',
-    'AdminStockManagement' => 'admin_stock_overview',
-    //...
-    'LegacyController' => 'migrated_route',
-);
+        'AdminModulesSf' => 'admin_module_manage',
+        'AdminStockManagement' => 'admin_stock_overview',
+        //...
+        'LegacyController' => 'migrated_route',
+    );
 ```
 
 This will only work for **one route/one controller** the association by action does not work before **1.7.5**.
