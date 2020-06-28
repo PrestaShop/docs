@@ -43,6 +43,35 @@ They can easily be applied by using the `header-stamp` binary from [PrestaShop m
 
 A list of the project contributors must be stored inside the module. Usually it's a file named CONTRIBUTORS.md . It must be up-to-date when a new version is released.
 
+## About compatibility
+
+### Semantic Versioning and BC breaks
+
+PrestaShop and its modules follows [SemVer](https://semver.org/). This means that contributions should strive not to introduce breaking compatibility changes. Therefore, each Pull Request must not introduce such changes, unless aiming to release a new major version.
+
+It is possible to introduce a change that is not backward compatible into the code for a minor or patch version, but it must be for a good reason.
+
+Valid reasons include, but not only:
+- fixing a security issue
+- fixing a major issue that cannot be fixed in a backward compatible manner
+- introducing a major new feature of high value
+
+### Compatibility with the Core
+
+The property `ps_versions_compliancy` allows modules to define a compatibility scope with PrestaShop Core.
+Submitted Pull Requests must comply with the full defined scope.
+
+For example if the module compatibility scope includes PS 1.6 and PS 1.7, it is not possible to merge a Pull Request that can only be used with PS 1.7.
+
+If the module uses an extended scope such as:
+```
+$this->ps_versions_compliancy = array(
+    'min' => '1.7.0.0',
+    'max' => _PS_VERSION_,
+);
+```
+Because the `max` value will always use the latest PrestaShop version, it means the module must remain compatible with incoming (not released) PrestaShop versions too.
+
 [report-issue]: https://github.com/PrestaShop/PrestaShop/issues/new/choose
 [1]: {{< ref "1.7/development/coding-standards/_index.md" >}}
 [2]: {{< ref "1.7/contribute/contribution-guidelines" >}}
