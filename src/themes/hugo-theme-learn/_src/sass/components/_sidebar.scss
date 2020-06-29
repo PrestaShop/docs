@@ -81,12 +81,14 @@ $text-trailing-indent: .5rem;
       }
     }
 
-    &.active {
+    &.currentPage {
       a {
         background: #fff;
         color: #777 !important;
       }
+    }
 
+    &.active {
       i {
         color: #777 !important;
       }
@@ -146,7 +148,14 @@ $text-trailing-indent: .5rem;
           // special extra padding for 2nd level, to account for chapter numbers on the 1st level
           padding-left: $tree-step-size + .2rem;
         }
+      }
 
+      li {
+        &.isParent > a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
       }
 
       // only display first level-children below the current one
@@ -195,8 +204,7 @@ $text-trailing-indent: .5rem;
       }
 
       li > a {
-        text-indent: -$text-trailing-indent;
-        padding-left: 1rem + $text-trailing-indent;
+        padding-left: 1rem;
       }
 
       &.visited {
@@ -210,7 +218,7 @@ $text-trailing-indent: .5rem;
         }
       }
 
-      &.active {
+      &.currentPage {
         & > a {
           background: #fff;
           color: #777 !important;
