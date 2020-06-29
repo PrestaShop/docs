@@ -24,7 +24,7 @@ Developers can already use large list of field types (see [Symfony types](https:
 
 * [TranslatableType](translatable)
 
-* TranslateTextType
+* TranslateTextType (deprecated since 1.7.6, use TranslatableType)
 
 * TranslateType
 
