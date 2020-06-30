@@ -11,7 +11,9 @@ install:
 # Build the website
 script:
   - ./bin/installHugo.sh
-  - cd src
+  - cd src/themes/hugo-theme-learn/_src
+  - npm install && npm run build
+  - cd ../../../
   - ../hugo
   # Create a CNAME file which mapping to our custom domain
   - echo 'devdocs.prestashop.com' > public/CNAME
