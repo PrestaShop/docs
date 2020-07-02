@@ -62,50 +62,7 @@ how to create a module that works with PS 1.6, we strongly advise you to
 read that article from top to bottom in order to get up to speed with
 1.7 development.
 
-A few native modules have been split between 1.6 & 1.7 versions of PrestaShop, as listed here:
-
-| Original module for PrestaShop 1.6 | Updated module for PrestaShop 1.7 |
-| -----------------------------------|-----------------------------------|
-| [advancedeucompliance](https://github.com/PrestaShop/advancedeucompliance) | [ps_legalcompliance](https://github.com/PrestaShop/ps_legalcompliance) |
-| [bankwire](https://github.com/PrestaShop/bankwire) | [ps_wirepayment](https://github.com/PrestaShop/ps_wirepayment) |
-| [blockadvertising](https://github.com/PrestaShop/blockadvertising) | [ps_advertising](https://github.com/PrestaShop/ps_advertising) |
-| [blockbanner](https://github.com/PrestaShop/blockbanner) | [ps_banner](https://github.com/PrestaShop/ps_banner) |
-| [blockbestsellers](https://github.com/PrestaShop/blockbestsellers) | [ps_bestsellers](https://github.com/PrestaShop/ps_bestsellers) |
-| [blockcart](https://github.com/PrestaShop/blockcart) | [ps_shoppingcart](https://github.com/PrestaShop/ps_shoppingcart) |
-| [blockcategories](https://github.com/PrestaShop/blockcategories) | [ps_categorytree](https://github.com/PrestaShop/ps_categorytree) |
-| [blockcms](https://github.com/PrestaShop/blockcms) | [ps_linklist](https://github.com/PrestaShop/ps_linklist) |
-| [blockcmsinfo](https://github.com/PrestaShop/blockcmsinfo) | [ps_customtext](https://github.com/PrestaShop/ps_customtext) |
-| [blockcontact](https://github.com/PrestaShop/blockcontact) | [ps_contactinfo](https://github.com/PrestaShop/ps_contactinfo) |
-| [blockcurrencies](https://github.com/PrestaShop/blockcurrencies) | [ps_currencyselector](https://github.com/PrestaShop/ps_currencyselector) |
-| [blockcustomerprivacy](https://github.com/PrestaShop/blockcustomerprivacy) | [ps_dataprivacy](https://github.com/PrestaShop/ps_dataprivacy) |
-| [blocklanguages](https://github.com/PrestaShop/blocklanguages) | [ps_languageselector](https://github.com/PrestaShop/ps_languageselector) |
-| [blocklayered](https://github.com/PrestaShop/blocklayered) | [ps_facetedsearch](https://github.com/PrestaShop/ps_facetedsearch) |
-| [blockmanufacturer](https://github.com/PrestaShop/blockmanufacturer) | [ps_brandlist](https://github.com/PrestaShop/ps_brandlist) |
-| [blockmyaccount](https://github.com/PrestaShop/blockmyaccount) | [ps_customeraccountlinks](https://github.com/PrestaShop/ps_customeraccountlinks) |
-| [blocknewsletter](https://github.com/PrestaShop/blocknewsletter) | [ps_emailsubscription](https://github.com/PrestaShop/ps_emailsubscription) |
-| [blocknewproducts](https://github.com/PrestaShop/blocknewproducts) | [ps_newproducts](https://github.com/PrestaShop/ps_newproducts) |
-| [blockrss](https://github.com/PrestaShop/blockrss) | [ps_rssfeed](https://github.com/PrestaShop/ps_rssfeed) |
-| [blocksearch](https://github.com/PrestaShop/blocksearch) | [ps_searchbar](https://github.com/PrestaShop/ps_searchbar) |
-| [blocksocial](https://github.com/PrestaShop/blocksocial) | [ps_socialfollow](https://github.com/PrestaShop/ps_socialfollow) |
-| [blockspecials](https://github.com/PrestaShop/blockspecials) | [ps_specials](https://github.com/PrestaShop/ps_specials) |
-| [blocksupplier](https://github.com/PrestaShop/blocksupplier) | [ps_supplierlist](https://github.com/PrestaShop/ps_supplierlist) |
-| [blocktopmenu](https://github.com/PrestaShop/blocktopmenu) | [ps_mainmenu](https://github.com/PrestaShop/ps_mainmenu) |
-| [blockuserinfo](https://github.com/PrestaShop/blockuserinfo) | [ps_customersignin](https://github.com/PrestaShop/ps_customersignin) |
-| [blockviewed](https://github.com/PrestaShop/blockviewed) | [ps_viewedproduct](https://github.com/PrestaShop/ps_viewedproduct) |
-| [carriercompare](https://github.com/PrestaShop/carriercompare) | [ps_carriercomparison](https://github.com/PrestaShop/ps_carriercomparison) |
-| [cashondelivery](https://github.com/PrestaShop/cashondelivery) | [ps_cashondelivery](https://github.com/PrestaShop/ps_cashondelivery) |
-| [cheque](https://github.com/PrestaShop/cheque) | [ps_checkpayment](https://github.com/PrestaShop/ps_checkpayment) |
-| [crossselling](https://github.com/PrestaShop/crossselling) | [ps_crossselling](https://github.com/PrestaShop/ps_crossselling) |
-| [feeder](https://github.com/PrestaShop/feeder) | [ps_feeder](https://github.com/PrestaShop/ps_feeder) |
-| [followup](https://github.com/PrestaShop/followup/) | [ps_reminder](https://github.com/PrestaShop/ps_reminder) |
-| [ganalytics](https://github.com/PrestaShop/ganalytics) | [ps_googleanalytics](https://github.com/PrestaShop/ps_googleanalytics) |
-| [homefeatured](https://github.com/PrestaShop/homefeatured) | [ps_featuredproducts](https://github.com/PrestaShop/ps_featuredproducts) |
-| [homeslider](https://github.com/PrestaShop/homeslider) | [ps_imageslider](https://github.com/PrestaShop/ps_imageslider) |
-| [mailalerts](https://github.com/PrestaShop/mailalerts) | [ps_emailalerts](https://github.com/PrestaShop/ps_emailalerts) |
-| [onboarding](https://github.com/PrestaShop/onboarding) | [welcome](https://github.com/PrestaShop/welcome) |
-| [productscategory](https://github.com/PrestaShop/productscategory) | [ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts) |
-| [producttooltip](https://github.com/PrestaShop/producttooltip) | [ps_productinfo](https://github.com/PrestaShop/ps_productinfo) |
-| [socialsharing](https://github.com/PrestaShop/socialsharing) | [ps_sharebuttons](https://github.com/PrestaShop/ps_sharebuttons) |
+Some native modules have had their names changed in PrestaShop 1.7. [See the full list here]({{< ref "/1.7/development/native-modules/_index.md#module-name-changes-since-16" >}}).
 
 Modules folder
 --------------
