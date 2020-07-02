@@ -13,5 +13,6 @@ When you write a theme, you often need to change the markup, but if you do this,
 This means that almost every selectors we use inside every JS files are inside these two files.
 
 You can easily update these mapping because these 2 files send an event on dom ready : `selectorsInit` for the core mapping file, and `themeSelectorsInit` for the classic theme.
+Also, if you place your file without these events, you need place it after the core/theme js bundle, it will work as it would with the event.
 
 These selectors are mapped inside the `prestashop` object, this means that if you attach a method which override the `prestashop.selectors` or `prestashop.themeSelectors` object, you'll be able to change a lot of markup if you manage to override every selectors properly.
