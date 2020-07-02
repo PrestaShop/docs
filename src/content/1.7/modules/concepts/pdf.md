@@ -164,14 +164,15 @@ $hook_name = 'displayPDF' . $template;
 
 #### List of available Hooks
 
-| Concept       | Hook name                 |
-|---------------|---------------------------|
-| Invoice       | displayPDFInvoice         |
-| Delivery Slip | displayPDFDeliverySlip    |
-| Order Return  | displayPDFOrderReturn     |
-| Order Slip    | displayPDFOrderSlip       |
-| Supply Order  | displayPDFSupplyOrderForm |
-| RGPD Archive  | displayPDFPSGDPRModule    |
+| Concept       | Hook name                   |
+|---------------|-----------------------------|
+| Invoice       | displayPDFInvoice           |
+| Invoice       | displayInvoiceLegalFreeText |
+| Delivery Slip | displayPDFDeliverySlip      |
+| Order Return  | displayPDFOrderReturn       |
+| Order Slip    | displayPDFOrderSlip         |
+| Supply Order  | displayPDFSupplyOrderForm   |
+| RGPD Archive  | displayPDFPSGDPRModule      |
 
 ### Minimal Example: add an extra property to the Invoice
 
