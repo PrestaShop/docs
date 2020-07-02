@@ -66,7 +66,7 @@ Avoid overwrite the production resources (images, conf ...) with the
 default data. These folders can be removed from the new release:
 
 -   img/
--   overrides/
+-   override/
 
 All the other files present in the new release will overwrite the
 existing files. All changes you made on the original source code will be
