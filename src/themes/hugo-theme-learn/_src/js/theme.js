@@ -14,20 +14,23 @@ function toggleIcon(icon) {
 
 menuItems.forEach(e => {
   e.addEventListener('click', event => {
-    event.preventDefault();
-    const icon = e.querySelector('i.fa');
+    if (event.target.classList.contains('fa')) {
+      event.preventDefault();
 
-    if (e.parentElement.classList.contains('parent') && !e.parentElement.classList.contains('active')) {
-      e.parentElement.classList.remove('parent');
-    } else {
-      if (e.parentElement.classList.contains('parent')) {
-        e.parentElement.classList.toggle('parent');
+      const icon = e.querySelector('i.fa');
+
+      if (e.parentElement.classList.contains('parent') && !e.parentElement.classList.contains('active')) {
+        e.parentElement.classList.remove('parent');
+      } else {
+        if (e.parentElement.classList.contains('parent')) {
+          e.parentElement.classList.toggle('parent');
+        }
+
+        e.parentElement.classList.toggle('active');
+        e.parentElement.classList.toggle('visited');
       }
 
-      e.parentElement.classList.toggle('active');
-      e.parentElement.classList.toggle('visited');
+      toggleIcon(icon);
     }
-
-    toggleIcon(icon);
   });
 });
