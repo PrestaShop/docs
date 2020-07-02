@@ -2,7 +2,7 @@ $tree-step-size: 1rem;
 $active-block-bg: #251f29;
 $sidebar-bg: #322a38;
 $sidebar-mobile-width: 230px;
-$text-trailing-indent: .5rem;
+$text-trailing-indent: 0.5rem;
 
 #sidebar-toggle-span {
   display: none;
@@ -124,10 +124,8 @@ $text-trailing-indent: .5rem;
     }
 
     &.topics {
-
       // first level
       > li {
-
         > a {
           line-height: 2rem;
           font-size: 1.1rem;
@@ -146,7 +144,7 @@ $text-trailing-indent: .5rem;
 
         > ul > li {
           // special extra padding for 2nd level, to account for chapter numbers on the 1st level
-          padding-left: $tree-step-size + .2rem;
+          padding-left: $tree-step-size + 0.2rem;
         }
       }
 
@@ -155,6 +153,13 @@ $text-trailing-indent: .5rem;
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          i {
+            padding: 8px;
+            padding-right: 16px;
+            padding-left: 16px;
+            margin-right: -16px;
+          }
         }
       }
 
@@ -171,7 +176,6 @@ $text-trailing-indent: .5rem;
           display: block;
         }
       }
-
     }
 
     ul {
@@ -234,7 +238,8 @@ $text-trailing-indent: .5rem;
     }
 
     h3 {
-      font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+      font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva',
+        'Arial', sans-serif;
       color: white;
       margin-top: 1rem;
       padding-left: 1rem;

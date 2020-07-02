@@ -238,6 +238,11 @@ div.notices {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      #sidebar ul.topics li.isParent > a i {
+        padding: 8px;
+        padding-right: 16px;
+        padding-left: 16px;
+        margin-right: -16px; }
     #sidebar ul.topics li.parent > ul,
     #sidebar ul.topics li.active > ul {
       display: block; }
@@ -275,7 +280,7 @@ div.notices {
     padding: 2px 0;
     list-style: none; }
   #sidebar #shortcuts h3 {
-    font-family: "Novacento Sans Wide", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: 'Novacento Sans Wide', 'Helvetica', 'Tahoma', 'Geneva', 'Arial', sans-serif;
     color: white;
     margin-top: 1rem;
     padding-left: 1rem; }
