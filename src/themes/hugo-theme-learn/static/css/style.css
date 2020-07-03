@@ -1497,6 +1497,10 @@ th {
   background: #f7f7f7;
   padding: 0.5rem .8rem;
   font-size: 1.1em; }
+  th[align="center"] {
+    text-align: center; }
+  th[align="right"] {
+    text-align: right; }
 
 td {
   padding: 0.5rem .8rem;
