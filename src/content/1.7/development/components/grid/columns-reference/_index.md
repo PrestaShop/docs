@@ -111,5 +111,5 @@ class MyGridDefinitionFactory extends AbstractGridDefinition
 ```
 
 {{% notice note %}}
-You need to create a custom Column Type? We got you [covered](../tutorials/create-custom-bulk-action)!
+You need to create a custom Column Type? We got you [covered](../tutorials/create-custom-column-type)!
 {{% /notice %}}
