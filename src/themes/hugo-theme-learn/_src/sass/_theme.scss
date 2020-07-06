@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "mixins/variables";
+@import 'mixins/variables';
 
 .button,
 .button-secondary {
@@ -48,7 +48,6 @@ th {
 #header #logo-svg,
 #header #logo-svg path,
 #sidebar,
-#sidebar ul,
 #body,
 #body .padding,
 #body .nav {
@@ -74,21 +73,21 @@ fieldset {
 }
 
 textarea,
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"],
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-select[multiple=multiple] {
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='time'],
+input[type='week'],
+select[multiple='multiple'] {
   background-color: white;
   border: 1px solid #ddd;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -99,7 +98,8 @@ select[multiple=multiple] {
 
   &:focus {
     border-color: #00bdf3;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .06), 0 0 5px rgba(0, 169, 218, .7)
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06),
+      0 0 5px rgba(0, 169, 218, 0.7);
   }
 }
 
@@ -220,7 +220,6 @@ select[multiple=multiple] {
   }
 
   img {
-
     &.inline {
       display: inline !important;
       margin: 0 !important;
@@ -239,7 +238,7 @@ select[multiple=multiple] {
       padding: 15px 3rem;
     }
     @media only all and (max-width: 47.938em) {
-        padding: 5px 1rem;
+      padding: 5px 1rem;
     }
   }
 
@@ -313,7 +312,8 @@ select[multiple=multiple] {
     }
   }
 
-  ul, ol {
+  ul,
+  ol {
     margin: 0 0 $paragraphSpacing;
   }
 
@@ -343,13 +343,15 @@ h1 {
   color: $pageTitleColor;
   line-height: 1;
   border-bottom: 4px solid #f0f2f4;
-  padding: .8em 0 .3em;
+  padding: 0.8em 0 0.3em;
   font-size: 3rem;
   font-weight: 600;
 }
 
-h2, h3, h4 {
-  margin-left: -.05rem !important; // difference between fonts
+h2,
+h3,
+h4 {
+  margin-left: -0.05rem !important; // difference between fonts
 }
 
 h2,
@@ -400,7 +402,7 @@ h6 {
   margin: 1.5em 0 1rem 0;
 
   &:before {
-    content: '› '
+    content: '› ';
   }
 }
 
@@ -510,7 +512,6 @@ section {
 .children-li p {
   font-size: small;
   font-style: italic;
-
 }
 
 .children-h2 p,
@@ -533,7 +534,7 @@ code {
   white-space: nowrap;
   color: #444;
   background: #1b1f230d;
-  padding: .2em .4em;
+  padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
@@ -583,12 +584,12 @@ table {
   border: none;
   table-layout: auto;
   margin-bottom: 1rem;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 th {
   background: #f7f7f7;
-  padding: 0.5rem .8rem;
+  padding: 0.5rem 0.8rem;
   font-size: 1.1em;
 
   &[align="center"] {
@@ -601,7 +602,7 @@ th {
 }
 
 td {
-  padding: 0.5rem .8rem;
+  padding: 0.5rem 0.8rem;
   border-bottom: 1px solid #eaeaea;
 }
 
@@ -652,21 +653,21 @@ td {
 .two-column-bullet {
   width: 50%;
   @media only all and (max-width: 47.938em) {
-      width: 100%;
+    width: 100%;
   }
 }
 
 .three-column-bullet {
   width: 33.33333%;
   @media only all and (max-width: 47.938em) {
-      width: 100%;
+    width: 100%;
   }
 }
 
 .four-column-bullet {
   width: 25%;
   @media only all and (max-width: 47.938em) {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -706,7 +707,8 @@ td {
     z-index: 1000000;
     display: none;
     padding: 5px 8px;
-    font: normal normal 11px/1.5 "Work Sans", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font: normal normal 11px/1.5 'Work Sans', 'Helvetica', 'Tahoma', 'Geneva',
+      'Arial', sans-serif;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -730,7 +732,7 @@ td {
     height: 0;
     color: rgba(0, 0, 0, 0.8);
     pointer-events: none;
-    content: "";
+    content: '';
     border: 5px solid transparent;
   }
 
@@ -984,7 +986,7 @@ td {
 }
 
 .copy-to-clipboard {
-  background-image: url($imgPath + "clippy.svg");
+  background-image: url($imgPath+'clippy.svg');
   background-position: 50% 50%;
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -995,7 +997,7 @@ td {
   vertical-align: middle;
   position: relative;
   color: #5e5e5e;
-  margin-left: -.2rem;
+  margin-left: -0.2rem;
   cursor: pointer;
   border-radius: 0 2px 2px 0;
   margin-bottom: 1px;
@@ -1008,11 +1010,11 @@ pre {
     top: 4px;
     border-radius: 2px;
     opacity: 0;
-    transition: opacity ease-in .2s;
+    transition: opacity ease-in 0.2s;
   }
   &:hover .copy-to-clipboard {
     opacity: 1;
-    transition: opacity ease-in .5s;
+    transition: opacity ease-in 0.5s;
   }
 }
 
@@ -1041,7 +1043,7 @@ pre {
 
     &:after {
       display: block;
-      content: "";
+      content: '';
       height: 1px;
       width: 0%;
       background-color: #0082a7; /*#CE3B2F*/
@@ -1059,7 +1061,7 @@ pre {
 }
 
 #sidebar-toggle-span {
-  border-right: thin solid #DAD8D8 !important;
+  border-right: thin solid #dad8d8 !important;
   padding-right: 0.5rem !important;
   margin-right: 1rem !important;
 }
@@ -1121,11 +1123,11 @@ pre {
 .anchor {
   color: #00bdf3;
   font-size: 0.5em;
-  cursor:pointer;
-  visibility:hidden;
+  cursor: pointer;
+  visibility: hidden;
   margin-left: 0.5em;
   position: absolute;
-  margin-top:0.1em;
+  margin-top: 0.1em;
 }
 
 p {
@@ -1133,11 +1135,11 @@ p {
 }
 
 figure img {
-  box-shadow: 0 11px 56px 0 rgba(0,0,0,0.40);
+  box-shadow: 0 11px 56px 0 rgba(0, 0, 0, 0.4);
 }
 
 figcaption h4 {
-  opacity: .85;
+  opacity: 0.85;
   font-size: 0.9em;
   text-align: center;
   margin-bottom: 2.5rem;
@@ -1187,7 +1189,7 @@ figcaption h4 {
   }
 
   :hover {
-    cursor:  pointer;
+    cursor: pointer;
   }
 }
 

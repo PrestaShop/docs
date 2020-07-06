@@ -16,8 +16,8 @@ menuItems.forEach(e => {
   e.addEventListener('click', event => {
     if (event.target.classList.contains('fa')) {
       event.preventDefault();
-
       const icon = e.querySelector('i.fa');
+      $(e.parentElement.querySelector(':scope > ul')).slideToggle();
 
       if (e.parentElement.classList.contains('parent') && !e.parentElement.classList.contains('active')) {
         e.parentElement.classList.remove('parent');
