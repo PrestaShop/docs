@@ -1,6 +1,6 @@
 ---
 title: Understanding the "src" folder
-weight: 10
+weight: 30
 ---
 
 # Understanding the "src" folder
