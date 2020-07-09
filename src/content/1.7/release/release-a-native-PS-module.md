@@ -59,7 +59,7 @@ Get this PR approved and merge it into `dev`. See an [example](https://github.co
 
 ### Merge dev into master
 
-Then create a new PR to merge branch `dev` into branch `master`. See an [example](https://github.com/PrestaShop/ps_shoppingcart/pull/51) of such PR.
+Create a new PR to merge branch `dev` into branch `master`. See an [example](https://github.com/PrestaShop/ps_shoppingcart/pull/51) of such PR.
 
 Kindly ask the QA team to perform a release test on this PR, warning them that this PR is a release PR and consequently they need to check the whole module behavior.
 
@@ -75,6 +75,8 @@ Create a new tag with "v<new_version>" that targets the last commit on `master` 
 
 Create a release on Github based on the tag you just pushed.
 In the content section, write a small changelog: list the PRs merged since the last version so that people can know what is included in the release (see this [example](https://github.com/PrestaShop/ps_shoppingcart/releases/tag/v2.0.3)).
+
+(by the way, GitHub is able to create the release _and_ the tag at the same time from the "create a new release" page)
 
 Attach to GitHub release a stand-alone ready-to-use ZIP archive of the module.
 
