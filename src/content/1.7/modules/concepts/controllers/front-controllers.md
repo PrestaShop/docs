@@ -139,7 +139,7 @@ Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPaym
 
 ### Ajax request
 
-When you call controller via ajax, you nedd to add ajax parameter in teh url.
+When you call controller via AJAX, you nedd to add `ajax` parameter in the url.
 
 ```php
 Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337, 'ajax'=>true);
