@@ -8,6 +8,8 @@ aliases:
 
 # Contribution guidelines
 
+If you wish to start contributing smootly, have a look at the [good first issues](https://github.com/PrestaShop/PrestaShop/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and pick one to work with, this label lists all beginner-friendly improvements and bugs to fix. Read more about this label on [Build](https://build.prestashop.com/news/a-definition-of-the-good-first-issue-label).
+
 Ready to contribute code? Here's what you need to know to get your Pull Request accepted.
 
 The PrestaShop project receives dozens of contributions every week, and every single one of them is reviewed by project maintainers. The review process ensures that only changes that meet a certain quality standard are merged in the codebase. 
