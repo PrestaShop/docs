@@ -37,6 +37,6 @@ markup:
     renderer:
       unsafe: true
   tableOfContents:
-    endLevel: 3
+    endLevel: 4
     ordered: false
     startLevel: 1
