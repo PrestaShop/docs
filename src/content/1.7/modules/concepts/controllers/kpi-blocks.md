@@ -32,7 +32,7 @@ You can follow these steps to easily add a KPI row to a modern page:
 
 * Build the KPI row in your controller's action and assign it to twig by returning it:
     ```php
-<?php
+    <?php
     public function showSettingsAction(Request $request)
     {
         // Create the KPI row factory service
