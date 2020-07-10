@@ -20,8 +20,7 @@ Please note we try to follow best practices, and MySQL service is NOT provided w
 When your environment is ready, it's time to configure it before running tests.
 
 ## Module management in command line
-
-> From PrestaShop {{< minver v="1.7.2" >}}
+{{< minver v="1.7.2" title="true" >}}
 
 Managing your modules was only possible from the administration interface. Continuous integration of modules may require preliminary steps like their installation, that's why we added a simple way to manage them in command line.
 

@@ -150,8 +150,11 @@ There is the list of available Template Classes in the Core:
 * `HTMLTemplateOrderSlip`
 * `HTMLTemplateSupplyOrderForm`
 
-> If your shop is available for the European Union, the GDPR module *must* be installed
-> This means you can generate another PDF thanks to the class named `HTMLTemplatePSGDPRModule`. This PDF will contains all the Customer Information.
+{{% notice note %}}
+If your shop is available for the European Union, the GDPR module *must* be installed.
+
+This means you can generate another PDF thanks to the class named `HTMLTemplatePSGDPRModule`. This PDF will contain all the Customer Information.
+{{% /notice %}}
 
 To guess the hook for each template, we can look at the `HTMLTemplate` abstract Class:
 

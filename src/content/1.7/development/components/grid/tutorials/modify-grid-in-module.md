@@ -175,6 +175,8 @@ public function hookActionCustomerGridQueryBuilderModifier(array $params)
 }
 ```
 
-> The result column name (here `nb_orders`) must be the same of the `field` option of the related column: this is how the mapping of data works.
+{{% notice note %}}
+The result column name (here `nb_orders`) must be the same of the `field` option of the related column: this is how the mapping of data works.
+{{% /notice %}}
 
 Once the new hook is registered and the module activated, you should see the "Customers" grid customized according to the use cases we have listed in the introduction: great!

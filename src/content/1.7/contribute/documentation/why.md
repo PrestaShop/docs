@@ -8,8 +8,7 @@ aliases:
 # Why write technical documentation?
 
 > The best documentation is no documentation: code should be self-explanatory.
-> 
-<cite>All the lazy developers in history</cite>
+> <cite>All the lazy developers in history</cite>
 
 Writing documentation is _hard_.
 

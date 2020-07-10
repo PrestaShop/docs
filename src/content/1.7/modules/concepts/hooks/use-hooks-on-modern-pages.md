@@ -18,7 +18,9 @@ Starting from PrestaShop 1.7.3, you can access the modern Services Container int
 
 Of course, you also have access to every service used by the Core of PrestaShop. This means that you can rely on all services defined in `PrestaShopBundle/config/` folder, except from the ones declared in `adapter` folder: they will be removed at some point.
 
-> If you don't know what is a service, take a look at the Symfony documentation about the [services container](https://symfony.com/doc/3.3/service_container.html).
+{{% notice tip %}}
+If you don't know what a service is, have a look at the Symfony documentation about the [service container](https://symfony.com/doc/3.3/service_container.html).
+{{% /notice %}}
 
 ## Better modules on modern pages
 
@@ -78,7 +80,9 @@ public function hookDisplayDashboardToolbarIcons($hookParams)
 }
 ```
 
-> 'route' property is only available for modern pages to find the route related to a page look at the debug toolbar.
+{{% notice note %}}
+The `route` property is only available for modern pages. To find out the route for a given page, look at the Debug toolbar.
+{{% /notice %}}
 
 ### Third step: create your own product serializer
 

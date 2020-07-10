@@ -28,11 +28,11 @@ and _include_ them in each file.
 
 The [official Smarty documentation](https://www.smarty.net/inheritance) has a nice and simple example. In their own words:
 
-> "Template inheritance is an approach to managing templates that resembles object-oriented programming techniques.
+> Template inheritance is an approach to managing templates that resembles object-oriented programming techniques.
   Instead of the traditional use of {include ...} tags to manage parts of templates, you can inherit the
   contents of one template to another (like extending a class) and change blocks of content therein (like
   overriding methods of a class.) This keeps template management minimal and efficient, since each template
-  only contains the differences from the template it extends."
+  only contains the differences from the template it extends.
 
 ## PrestaShop real life example
 
