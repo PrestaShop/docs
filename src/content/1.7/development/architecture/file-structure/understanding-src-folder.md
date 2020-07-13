@@ -51,7 +51,10 @@ Context or specific constants but on the configuration files of PrestaShop legac
 
 ## PrestaShopBundle
 
-Adapter classes belong to the `PrestaShopBundle` namespace. The bundle contains the "glue" between Symfony framework and PrestaShop business services.
+Bundle classes belong to the `PrestaShopBundle` namespace. This folder contains the code composing the application layer, meaning:
+
+- Classes wrapping PrestaShop business logic into a Symfony application
+- Classes relying heavily on Symfony such as Controllers, Twig templates, Form Types, etc.
 
 Code in this namespace should follow these rules:
 
