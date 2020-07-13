@@ -14,7 +14,9 @@ The update workflow is quite similar to the [creation workflow]({{< relref "crea
 
 {{< figure src="../../../img/update-resource.png" title="Update Resource via Webservice" >}}
 
-> You can update this schema using the [source XML file](/schemas/1.7/update-resource.xml) importable in services like [draw.io](https://draw.io).
+{{% notice note %}}
+You can update this schema using the [source XML file](/schemas/1.7/update-resource.xml) importable in services like [draw.io](https://draw.io).
+{{% /notice %}}
 
 ## Retrieve the resource
 

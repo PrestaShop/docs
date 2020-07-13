@@ -38,7 +38,9 @@ For instance, if your GitHub nickname is `preston`, this is what you should do i
 git clone https://github.com/preston/PrestaShop.git
 ```
 
-> Of course, you need to replace "preston" by your own nickname here.
+{{% notice note %}}
+Of course, you need to replace "preston" with your own nickname here.
+{{% /notice %}}
 
 Then you can start the effective installation:
 
@@ -47,7 +49,9 @@ cd PrestaShop
 docker-compose up
 ```
 
-> The installation can take between 10-15 minutes, don't close the terminal!
+{{% notice tip %}}
+The installation can take between 10-15 minutes, don't close the terminal!
+{{% /notice %}}
 
 You'll see a lot of information displayed in your terminal, you should spot the following ones:
 
@@ -71,8 +75,9 @@ You can check MySQL port using command line
 docker-compose ps mysql
 ```
 
-
-> You can now close the terminal if you want.
+{{% notice tip %}}
+You can now close the terminal if you want.
+{{% /notice %}}
 
 ## Make your first contribution
 
@@ -86,7 +91,9 @@ git checkout -b "add-emoticons-support"
 
 Then you can start to do changes on PrestaShop Core, and create commits: YaY!
 
-> A good practice is to have meaningful commits labels: it's better to have "corrected type hinting in FooBar" than "fixed stuff". 
+{{% notice tip %}}
+A good practice is to write meaningful commits messages: it's better to have "corrected type hinting in FooBar" than "fixed stuff".
+{{% /notice %}} 
 
 ### Launch the test suite
 
@@ -101,4 +108,4 @@ docker exec prestashop-git sh tests/check_phpunit.sh
 
 ### Publish your work
 
-See [next page] ({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}})
+See [Submit a Pull Request]({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}}).

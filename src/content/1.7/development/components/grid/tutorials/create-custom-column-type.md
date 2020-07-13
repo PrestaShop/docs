@@ -6,4 +6,7 @@ weight: 9
 
 # How to create a custom Column Type
 
-> Do you know how to do it? Please feel free to contribute to the docs!
+{{% notice tip %}}
+Do you know how to do it? Please feel free to contribute to the docs!
+{{% /notice %}}
+

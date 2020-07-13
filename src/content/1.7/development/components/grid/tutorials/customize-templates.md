@@ -25,7 +25,9 @@ The templating of the component Grid is using Twig in PrestaShop 1.7. As the com
 
 We have created a Twig layer that is able to render Grid using the information from Grid that is formatted in Grid presenter.
 
-> This means that, by implementing your own presenter you can control the data sent to the user.
+{{% notice tip %}}
+This means that, by implementing your own presenter, you can control the data sent to the user.
+{{% /notice %}}
 
 ### How it works under the hood?
 
@@ -124,7 +126,10 @@ of most of them:
 * The **empty state** templates define the rendering of the Grid in case you have no data to render;
 * Finally, the **pagination** template is responsible of... guess what? the rendering of the pagination system! Obvious 😎.
 
-> Customize these template when you want to alter the rendering of the structure of your Grids.
+{{% notice note %}}
+Customize these templates when you want to alter the rendering of the structure of your Grids.
+{{% /notice %}}
+
 
 ## The Columns Contents and Headers
 

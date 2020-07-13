@@ -79,7 +79,9 @@ For instance, `/modules/<module_name>/controllers/front/payment.php` is a valid 
 
 #### Override Core classes of PrestaShop: the `override` folder
 
-> Try to avoid the overriding of Core classes, this make the upgrade of your application risky.
+{{% notice tip %}}
+Try to avoid the overriding Core classes, this make the upgrade of your application risky.
+{{% /notice %}}
 
 You need to follow the same path as the PrestaShop application in your module. For instance:
 
