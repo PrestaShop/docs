@@ -136,7 +136,11 @@ Having the module name as a prefix will reduce the risk of colision between clas
 All the AJAX and CRON files must be protected with a unique and secured token to avoid any security issues (outside attacks,...). 
 Even the front controllers must be secured with a secured token when you use AJAX in it.
 
-AJAX and CRON scripts must be placed in a controller ([More details]({{< ref "1.7/modules/concepts/controllers#php-scripts-not-going-through-the-prestashop-or-symfony-dispatcher" >}})).
+AJAX and CRON scripts must be placed in a controller and not in a separate script to call on its own.
+For more details:
+
+* [Documentation]({{< ref "1.7/modules/concepts/controllers/front-controllers" >}}#using-a-front-controller-as-a-cron-task)
+* [Original issue leading to the use of ModuleFrontControllers](https://github.com/PrestaShop/PrestaShop/issues/14648)
 
 #### Code in hook is run only when needed
 

@@ -250,7 +250,9 @@ class ExampleModuleCronModuleFrontController extends ModuleFrontController
 }
 ```
 
-This controller can now be triggered by creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller:
+This controller can now be triggered by creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller.
+
+This kind of script is also useful if a standalone PHP script interacting with PrestaShop has been migrated to a ModuleFrontController. The URLs to call would change by moving into a Controller, but the old one would be still accessible with this workaround.
 
 **modules/examplemodule/cron.php**
 
