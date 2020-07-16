@@ -20,17 +20,16 @@ Not following these rules may lead to your contribution being rejected by projec
 
 ## Work on a separate branch
 
-Each time you want to work on a contribution, create a dedicated branch, based on the appropriate branch from the project (described below). Using separate branches for your contributions will allow you to update your contributions easily during the code review process, and submit multiple contributions at the same time.
+Each time you want to work on a contribution, create a local dedicated branch based on the appropriate project branch (described below). Using separate branches for your contributions will allow you to submit multiple contributions at the same time, and update your contributions easily during the code review process.
 
-## Choosing the right base branch
+### Choosing the right base branch
 
-Contributions may be made to the appropriate branch, depending on the nature of your change.
+Contributions may be made to the appropriate branch, depending on the nature of your change:
 
 * **Develop**. New features, bug fixes, improvements. Contributions merged here will be released in the next minor or major version.
 * **Patch version branch** (eg. 1.7.4.x). For critical bug fixes and regressions only. Contributions merged here will be released in a patch version. 
 
 {{% callout %}}
-
 ##### About supported branches
 
 PrestaShop only accepts contributions on branches which are subject to new releases.
@@ -94,11 +93,11 @@ Some tips:
 
 ## Compiled assets
 
+Some source files like SCSS and JavaScript need to be compiled to work on a PrestaShop shop. To ease up the life of contributors who don't want to fuzz around installing node and NPM, we require those files to be compiled and committed in the same Pull Request as the source changes.
+
 {{% notice note %}}
 Assets no longer need to be compiled in the develop branch. More information in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/).
 {{% /notice %}}
-
-Some source files like SCSS and JavaScript need to be compiled to work on a PrestaShop shop. To ease up the life of contributors who don't want to fuzz around installing node and NPM, we require those files to be compiled and committed in the same Pull Request as the source changes.
 
 Make sure to follow these guidelines:
 
