@@ -12,7 +12,11 @@ Ready to contribute code? Here's what you need to know to get your Pull Request 
 
 The PrestaShop project receives dozens of contributions every week, and every single one of them is reviewed by project maintainers. The review process ensures that only changes that meet a certain quality standard are merged in the codebase. 
 
-**Please note that the following guidelines apply to all contributions to the project.** Not following them may lead to your contribution to be rejected.
+{{% notice warning %}}
+**The following guidelines apply to all code contributions to the project.**
+
+Not following these rules may lead to your contribution being rejected by project maintainers.
+{{% /notice %}}
 
 ## Work on a separate branch
 
