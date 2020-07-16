@@ -41,7 +41,9 @@ If you want to remake the build of a release for comparison and repeatability pu
 
 ## 2. Make a new version on GitHub
 
-You need first to merge (using a Pull Request) into the GitHub branch the work you have carried out for the Build: updating the version number and modifying Changelog and Contributors files.
+Only maintainers of the project are granted rights to create new GitHub versions on the PrestaShop repository. However someone who forked the repository can create such a release on his own repository. This can be n opportunity to learn the process, or to reproduce the release for studying purposes.
+
+The first step is to merge (using a Pull Request) into the GitHub branch the work you have carried out for the Build: updating the version number and modifying Changelog and Contributors files.
 
 When it is merged, tag the last commit on this branch (not the merge commit, but rather the one before).
 
