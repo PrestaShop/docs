@@ -1,5 +1,5 @@
 ---
-title: How to contribute to the Core by submitting a Pull Request
+title: How to contribute code changes
 chapter: true
 weight: 20
 aliases:
@@ -7,7 +7,7 @@ aliases:
 menuTitle: Submitting code changes
 ---
 
-# How to contribute to the Core by submitting a Pull Request
+# How to contribute code changes
 
 If you're reading this, thank you! This means you're interested in contributing to PrestaShop.
 You probably are a PrestaShop developer, and your use of the project is slightly different from
@@ -22,7 +22,12 @@ To be able to contribute you need:
 
 PrestaShop is hosted on github.com and the way to submit code changes (pull requests) to the project is the standard *forks and pull requests flow*. This flow is explained in [the GitHub Forking Guide](https://guides.github.com/activities/forking/).
 
-If you have trouble using this flow, great help can be found on [help.github.com](https://help.github.com/) or by looking at one of these detailed tutorials:
+- [The beginner's guide to contributing to a GitHub project
+](https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/)
+- [Using the Fork-and-Branch Git Workflow
+](https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/)
+- [How to contribute (via pull request) to an open-source GitHub project using your own fork](https://mattstauffer.com/blog/how-to-contribute-to-an-open-source-github-project-using-your-own-fork/)
+- [How to Fork and contribute to a Github repo](https://dev.to/ceri_anne_dev/how-to-fork-and-contribute-to-a-github-repo-5bfp)
 
 - https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/
 - https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
