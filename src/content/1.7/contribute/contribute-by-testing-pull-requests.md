@@ -1,10 +1,10 @@
 ---
-title: Contribute by testing Pull Requests and branches
-weight: 50
+title: How to test Pull Requests and branches
 menuTitle: Test Pull Requests and branches
+weight: 50
 ---
 
-# Why test Pull Requests
+# How to test Pull Requests
 
 Tests determine the quality of a software. This process involves evaluating information that is related to a shop.
 
