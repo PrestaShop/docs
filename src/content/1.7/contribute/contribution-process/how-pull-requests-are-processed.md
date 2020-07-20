@@ -88,6 +88,11 @@ After the Pull Request has finally passed the QA validation, it is merged in the
 ![Pull Request process summary](../../img/pull-request-process.png)
 
 
+## Other useful resources
+
+- [What it means to rebase a Pull Request submitted on GitHub](https://dev.to/mathieuks/what-it-means-to-rebase-a-pull-request-submitted-on-github-5717) on dev.to, by Mathieu Ferment
+- [How to resolve a git merge conflict](https://opensource.com/article/20/4/git-merge-conflict) on opensource.com by Brian Breniser
+
 ---
 
 _(This article was originally published on our blog: [What Happens To Pull Requests After They Are Submitted](https://build.prestashop.com/news/the-review-process/))_
