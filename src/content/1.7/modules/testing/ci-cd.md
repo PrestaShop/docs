@@ -1,9 +1,10 @@
 ---
-title: CI/CD
+title: Continuous Integration / Continuous Deployment
+menuTitle: CI/CD
 weight: 3
 ---
 
-# CI/CD
+# Continuous Integration / Continuous Deployment
 
 In the previous page we detailed some testing tools and how to execute them. Thay may be run locally, in order to check the code is fine before pushing it to a remote git repository, but they can also be automatically run by a dedicated test environment after each push. This can be useful to prevent code being pushed to production if one of your tools reports an issue you missed.
 
