@@ -170,7 +170,7 @@ Every page of every theme loads the following files:
 <td align="left">core.js</td>
 <td align="left">corejs</td>
 <td align="left">0</td>
-<td align="left">Provided by PrestaShop. Contains Jquery3, dispatches PrestaShop events and holds PrestaShop logic.</td>
+<td align="left">Provided by PrestaShop. Contains jQuery3, dispatches PrestaShop events and holds PrestaShop logic.</td>
 </tr>
 <tr class="even">
 <td align="left">theme.js</td>
