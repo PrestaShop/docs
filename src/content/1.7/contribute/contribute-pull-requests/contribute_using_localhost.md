@@ -62,7 +62,9 @@ For instance, if your GitHub nickname is `preston`, this is what you should do i
 git clone https://github.com/preston/PrestaShop.git
 ```
 
-> Of course, you need to replace "preston" by your own nickname here.
+{{% notice note %}}
+Of course, you need to replace "preston" with your own nickname here.
+{{% /notice %}}
 
 Clone the repository inside the document folder of the AMP installer you chose:
 
@@ -123,7 +125,7 @@ The installer can be run from your browser, if you browse http://127.0.0.1/prest
 
 You can read the [Getting Started guide][getting-started-guide] for more details.
 
-That's it ! You have now a running shop on localhost !
+That's it! You have now a running shop on localhost!
 
 ## Make your first contribution
 
@@ -135,16 +137,15 @@ Let's say you want to suggest a new feature, like emoticon support everywhere. A
 git checkout -b "add-emoticons-support"
 ```
 
-Then you can start to do changes on PrestaShop Core, and create commits: YaY!
+Then you can start to do changes on PrestaShop Core, and create commits: Yay!
 
-
-{{% notice note %}}
-A good practice is to have meaningful commits labels: it's better to have "corrected type hinting in FooBar" than "fixed stuff". 
+{{% notice tip %}}
+A good practice is to write meaningful commits labels: it's better to have "Corrected type hinting in FooBar" than "Fixed stuff". 
 {{% /notice %}}
 
 ### Publish your work
 
-See [next page] ({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}})
+See [Submit a Pull Request]({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}}).
 
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements.md" >}}

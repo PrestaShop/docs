@@ -37,6 +37,7 @@ Rendered result:
 {{% /callout %}}
 
 {{% notice info %}}
-**Internal links need to be "slugified" to work.**<br>
+**Internal links need to be "slugified" to work.**
+
 If you feel lost, here's a [tool that will slugify your titles](https://you.tools/slugify/).
 {{% /notice %}}

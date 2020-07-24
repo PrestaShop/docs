@@ -1,9 +1,10 @@
 ---
-title: Submit a Pull Request
+title: How to push your changes to GitHub
+menuTitle: Publish your changes to GitHub
 weight: 4
 ---
 
-# Publish your contribution on GitHub
+# Hot to publish your contribution to GitHub
 
 Once your changes sound good and tests pass on your local computer, you can contribute to the open source project by submitting these changes as a Pull Request on GitHub.
 

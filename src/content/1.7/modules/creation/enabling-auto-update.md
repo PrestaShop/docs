@@ -157,7 +157,7 @@ Since the version that you are planning to update to is 1.1.0, the first thing w
 
 ```php
 <?php
-// File: /upgrade/upgrade-1.1.0
+// File: /upgrade/upgrade-1.1.0.php
 
 if (!defined('_PS_VERSION_')) {
     exit;

@@ -287,7 +287,7 @@ If the legal compliance is confirmed, it will be possible to go the next step: t
 ## Read more
 
 - [What happens after you submit a contribution]({{< ref "1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}})
-{{% children %}}
+{{% children /%}}
 
 
 [how-to-compile-assets]: {{% ref "1.7/development/compile-assets.md" %}}

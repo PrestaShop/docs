@@ -165,7 +165,7 @@ class SomeAdminController extends FrameworkBundleAdminController
 {
     public function someAction()
     {
-        $this->trans('Some text being translated, [], 'Modules.Mymodule.Admin');
+        $this->trans('Some text being translated', [], 'Modules.Mymodule.Admin');
     }
 }
 ```

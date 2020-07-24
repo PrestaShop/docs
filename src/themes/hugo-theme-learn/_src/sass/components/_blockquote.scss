@@ -1,0 +1,64 @@
+blockquote {
+  margin: 1rem 0;
+  position: relative;
+  padding: 1rem 2rem 1rem 3.5rem;
+  color: #888;
+  //font-size: .9em;
+
+  @media (min-width: $tocBreakpoint) {
+    margin: 1.5rem 2rem;
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: {
+      top: 0;
+      bottom: 0;
+    }
+  }
+
+  ul, ol {
+    margin: {
+      top: .5rem;
+      bottom: .5rem;
+    }
+
+    li {
+      margin-bottom: 0 !important;
+    }
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  // code blocks
+  pre {
+    code {
+      font-size: 90%;
+    }
+
+    &:last-child {
+      margin-bottom: .8rem;
+    }
+  }
+
+  // icon
+  &:before {
+    color: #999;
+    position: absolute;
+    top: .50rem;
+    font-family: FontAwesome;
+    font-size: 1.3rem;
+    content: '\f10d';
+    left: 1.3rem;
+  }
+
+  cite {
+    display: block;
+    text-align: right;
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: .9em;
+  }
+}

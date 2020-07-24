@@ -17,7 +17,6 @@ As with all shortcodes, keep in mind that headers inside won't appear in the art
 #### This is a callout
 
 This is a very important block of text. Also, notice how the title doesn't appear in the table of contents.
-
 {{%/* /callout */%}} 
 ```
 
@@ -27,5 +26,4 @@ Rendered result:
 #### This is a callout
 
 This is a very important block of text. Also, notice how the title doesn't appear in the table of contents.
-
 {{% /callout %}} 

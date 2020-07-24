@@ -152,6 +152,17 @@ Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPaym
 * Without URL rewriting: `http://<shop_domain>/index.php?idPayment=1337&fc=module&module=cheque&controller=validation&id_lang=1`
 * With URL rewriting: `http://<shop_domain>/en/module/cheque/validation?idPayment=1337`
 
+### Ajax request
+
+When you call controller via AJAX, you nedd to add `ajax` parameter in the url.
+
+```php
+Context::getContext()->link->getModuleLink('cheque', 'validation', array('idPayment' => 1337, 'ajax'=>true);
+```
+
+* Without URL rewriting: `http://<shop_domain>/index.php?idPayment=1337&fc=module&module=cheque&controller=validation&id_lang=1&ajax=true`
+* With URL rewriting: `http://<shop_domain>/en/module/cheque/validation?idPayment=1337&ajax=true`
+
 ## Restricting access
 
 ### Logged customers only
@@ -239,7 +250,9 @@ class ExampleModuleCronModuleFrontController extends ModuleFrontController
 }
 ```
 
-This controller can now be triggered by creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller:
+This controller can now be triggered by creating a PHP file that initiates the route to the controller, then includes the index.php at the root of PrestaShop in order to init the dispatcher and your controller.
+
+This kind of script is also useful if a standalone PHP script interacting with PrestaShop has been migrated to a ModuleFrontController. The URLs to call would change by moving into a Controller, but the old one would be still accessible with this workaround.
 
 **modules/examplemodule/cron.php**
 
