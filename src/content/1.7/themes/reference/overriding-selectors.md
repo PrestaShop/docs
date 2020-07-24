@@ -10,7 +10,7 @@ When you write a theme, you often need to change the markup, but if you do this,
 
 Two selectors maps are available since `1.7.8` one on the core side `(/themes/_core/js/selectors.js)` and another one inside the classic theme `(/themes/classic/_dev/js/selectors.js)`.
 
-This means that almost every selectors we use inside every JS files are inside these two files.
+That means that almost every selectors we use inside every JS files are inside these two files.
 
 You can easily update these mapping because these 2 files send an event on dom ready : `selectorsInit` for the core mapping file, and `themeSelectorsInit` for the classic theme.
 Also, if you place your file without these events, you need place it after the core/theme js bundle, it will work as it would with the event.
