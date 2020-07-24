@@ -8,7 +8,7 @@ aliases:
 
 When you write a theme, you often need to change the markup, but if you do this, you'll encounter some problems because core's and classic's javascript use some class in order to work.
 
-[This PR](https://github.com/PrestaShop/PrestaShop/pull/20002) introduce 2 selectors maps, on core on the core side `(/themes/_core/js/selectors.js)` and another one inside the classic theme `(/themes/classic/_dev/js/selectors.js)`.
+Two selectors maps are available since `1.7.8` one on the core side `(/themes/_core/js/selectors.js)` and another one inside the classic theme `(/themes/classic/_dev/js/selectors.js)`.
 
 This means that almost every selectors we use inside every JS files are inside these two files.
 
