@@ -88,7 +88,7 @@ The `route` property is only available for modern pages. To find out the route f
 
 At this point, this is basic PHP code we need to produce. We need to retrieve the list of products from database, and serialize them into XML and dump into a file sent to the user.
 
-#### Using Doctrine (DBAL) to retrieve data 
+#### Using Doctrine (DBAL) to retrieve data
 
 Even if using old way to retrieve data is still valid (``Product::getProducts`` or through the webservice), we'd like to introduce a best practice here: using a repository and get rid of the Object model. This has a lot of advantages, you rely on database instead of model and you'll have better performances and control on your data.
 
@@ -131,7 +131,7 @@ class ProductRepository
         $statement = $this->connection->prepare($query);
         $statement->bindValue('langId', $langId);
         $statement->execute();
-        
+
         return $statement->fetchAll();
     }
 }
@@ -247,7 +247,7 @@ public function hookDisplayDashboardToolbarIcons($params)
 
         $this->writeFile($productsXml, $filepath);
 
-        return $this->get('twig')->render('@Module/Foo/download_link.twig',[
+        return $this->get('twig')->render('@Modules/Foo/download_link.twig', [
             'filepath' => _PS_BASE_URL_.'/products.xml',
         ]);
     }
