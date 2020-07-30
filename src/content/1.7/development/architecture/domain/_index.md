@@ -1,7 +1,7 @@
 ---
 title: Domain-driven architecture
 menuTitle: Domain-driven architecture
-weight: 20
+weight: 40
 ---
 
 # Domain-driven architecture

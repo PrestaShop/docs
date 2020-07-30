@@ -1,11 +1,11 @@
 ---
-title: How to migrate Back Office pages to Symfony 3
+title: How to migrate Back Office pages to Symfony
 menuTitle: Migration guide
 chapter: true
-weight: 30
+weight: 60
 ---
 
-# How to migrate Back Office pages to Symfony 3
+# How to migrate Back Office pages to Symfony
 
 Migrating a legacy page in PrestaShop requires working on three parts of the application: templates, forms and controllers which contain the business logic.
 
