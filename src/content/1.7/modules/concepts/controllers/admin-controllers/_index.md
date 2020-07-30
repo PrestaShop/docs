@@ -15,7 +15,9 @@ Starting on PrestaShop 1.7.5, you can rely on the modern environment to add new 
 
 Using modern pages, you will have access to the PrestaShop debug toolbar, the service container, Twig and Doctrine, among others. For your views, the PrestaShop UI Kit is available, built on top of Bootstrap 4 and ensuring your views are consistent with the PrestaShop Back Office.
 
-## How to declare a new Controller
+## How to declare a new Controller 
+
+{{< minver v="1.7.5" title="true" >}}
 
 Somewhere in your module declare a new class that will act as a Controller:
 ```php
@@ -123,6 +125,8 @@ Now we have created and loaded your controller, you need to declare a route. A r
 
 ## How to map an action of your controller to a URI
 
+{{< minver v="1.7.5" title="true" >}}
+
 This is really simple (and very well documented in Symfony's [Routing component documentation](https://symfony.com/doc/3.4/routing.html)):
 
 For instance:
@@ -168,5 +172,7 @@ your_route_name:
 
 
 ## Secure your controller
+
+{{< minver v="1.7.5" title="true" >}}
 
 It is safer to define permissions required to use your controller, this can be configured using the `@AdminSecurity` annotation and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#security" >}}).
