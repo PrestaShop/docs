@@ -55,7 +55,7 @@ You can choose to exclude some modules, which won't be notified of the hook:
 
 ### {l}
 
-The `{l}` function allows you to insert translated text in your template using the [Translation system]({{ ref "/1.7/development/internationalization/translation/_index.md" >}}).
+The `{l}` function allows you to insert translated text in your template using the [Translation system]({{< ref "/1.7/development/internationalization/translation/_index.md" >}}).
 
 This function takes the following of arguments:
 
