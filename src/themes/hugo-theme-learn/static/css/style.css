@@ -1994,21 +1994,21 @@ div.notices {
     margin-left: 5px; }
 
 textarea:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="url"]:focus,
-input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-select[multiple=multiple]:focus {
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus,
+input[type='text']:focus,
+input[type='url']:focus,
+input[type='color']:focus,
+input[type='date']:focus,
+input[type='datetime']:focus,
+input[type='datetime-local']:focus,
+input[type='month']:focus,
+input[type='time']:focus,
+input[type='week']:focus,
+select[multiple='multiple']:focus {
   border-color: transparent;
   box-shadow: none; }
 
@@ -2026,7 +2026,7 @@ a:hover {
 
 #body a.highlight:after {
   display: block;
-  content: "";
+  content: '';
   height: 1px;
   width: 0;
   -webkit-transition: width 0.5s ease;
@@ -2065,7 +2065,7 @@ a:hover {
   font-size: 18px; }
 
 #logo::before {
-  content: "";
+  content: '';
   width: 40px;
   height: 40px;
   background: url(/images/preston-logo@2x.png) center/40px no-repeat;
@@ -2074,7 +2074,7 @@ a:hover {
   margin-right: 10px; }
 
 .function-definition dt {
-  font-family: "Consolas", "Menlo", monospace;
+  font-family: 'Consolas', 'Menlo', monospace;
   background: #f0f0f0;
   display: inline-block;
   padding: 0 5px; }
@@ -2093,7 +2093,7 @@ a:hover {
 
 .article-footer {
   margin-top: 5rem;
-  font-size: .75rem; }
+  font-size: 0.75rem; }
 
 a[data-featherlight] {
   display: block;
@@ -2101,6 +2101,17 @@ a[data-featherlight] {
   margin-right: 3rem; }
   a[data-featherlight] > img {
     max-height: 350px; }
+
+#hookFilter label {
+  margin-bottom: 10px; }
+
+#hookFilter input:focus {
+  border-color: #df0067; }
+
+#hookFilter .empty {
+  display: none; }
+  #hookFilter .empty.show {
+    display: block; }
 
 
 /*# sourceMappingURL=style.css.map*/

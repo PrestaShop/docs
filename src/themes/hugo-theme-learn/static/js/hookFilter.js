@@ -1,5 +1,4 @@
 $(function() {
-
   const allItems = $('#hookFilter ~ dl dt');
 
   const escapeRegExp = function(string) {
@@ -17,6 +16,7 @@ $(function() {
   };
 
   const filterList = function(search) {
+    let count = 0;
     const regex = new RegExp(escapeRegExp(search), 'i');
     allItems.each(function() {
       const $item = $(this);
@@ -25,14 +25,27 @@ $(function() {
       const matchesSearch = Boolean(text.match(regex));
       $item.toggle(matchesSearch);
       $sibling.toggle(matchesSearch);
+
+      if (matchesSearch) {
+        count += 1;
+      }
     });
+
+    if (count === 0) {
+      $('#hookFilter .empty').addClass('show');
+    } else {
+      $('#hookFilter .empty').removeClass('show');
+    }
   };
 
-  $('#hookFilter input[type="text"]').on('change', function(e) {
-    const searchText = $(this).val().replace(/^\s+|\s+$/, '');
+  $('#hookFilter input[type="text"]').on('input', function(e) {
+    const searchText = $(this)
+      .val()
+      .replace(/^\s+|\s+$/, '');
     if (searchText.length > 0) {
       filterList(searchText);
     } else {
+      $('#hookFilter .empty').removeClass('show');
       displayAll();
     }
   });
