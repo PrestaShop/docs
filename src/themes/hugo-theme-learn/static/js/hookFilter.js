@@ -18,6 +18,7 @@ $(function() {
   const filterList = function(search) {
     let count = 0;
     const regex = new RegExp(escapeRegExp(search), 'i');
+
     allItems.each(function() {
       const $item = $(this);
       const $sibling = $item.next('dd');
