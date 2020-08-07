@@ -8,6 +8,7 @@ $(function() {
   const displayAll = function() {
     allItems.each(function() {
       const $item = $(this);
+
       if ($item.is(':hidden')) {
         $item.show();
         $item.next('dd').show();
@@ -32,17 +33,14 @@ $(function() {
       }
     });
 
-    if (count === 0) {
-      $('#hookFilter .empty').addClass('show');
-    } else {
-      $('#hookFilter .empty').removeClass('show');
-    }
+    $('#hookFilter .empty').toggleClass('show', count === 0);
   };
 
   $('#hookFilter input[type="text"]').on('input', function(e) {
     const searchText = $(this)
       .val()
       .replace(/^\s+|\s+$/, '');
+
     if (searchText.length > 0) {
       filterList(searchText);
     } else {
