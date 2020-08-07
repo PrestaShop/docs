@@ -20,6 +20,14 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 ## Full list
 
 {{% funcdef %}}
+
+<div id="hookFilter" class="quickfilter">
+  <label for="filter">Search hooks</label>
+  <input type="text" name="filter" id="filter" placeholder="Type to filter">
+  <p class="empty">No hooks found</p>
+</div>
+
+<script src="/js/hookFilter.js"></script>
     
 action&lt;AdminControllerName>&lt;Action>After
 : 
@@ -543,13 +551,13 @@ actionFrontControllerSetVariables
 
     Located in: /classes/controller/FrontController.php
     
-    Parameters since {{< minver v="1.7.7" >}}:
+    Parameters since {{< minver v="1.7.7" >}}
     
     ```php
-    <?php
-    array(
-      'templateVars' => &(array)
-    );
+      <?php
+      array(
+        'templateVars' => &(array)
+      );
     ```
     
     Example usage:
@@ -716,9 +724,9 @@ actionOrderEdited
 
     Parameters:
     ```php
-    <?php
-    array( 'order' => (object) Order
-);
+      <?php
+        array( 'order' => (object) Order
+      );
     ```
     
 actionOrderHistoryAddAfter
@@ -765,9 +773,9 @@ WARNING: only invoked when a product is actually removed from an order.
         (int) quantity 2,
         ...,
         (int) quantity n 
-    )
-);
-The order of IDs and quantities is important!
+      )
+    );
+    The order of IDs and quantities is important!
     ```
     
 actionOrderStatusPostUpdate
@@ -2194,8 +2202,8 @@ displayRightColumn
     array(
       'cart' => (object) Cart object
     );
-Note that the Cart object can also be retrieved from the current Context.
     ```
+    Note that the Cart object can also be retrieved from the current Context.
     
 displayRightColumnProduct
 : 
