@@ -55,6 +55,7 @@ Do not hesitate to use [interactive staging](https://git-scm.com/book/en/v2/Git-
 {{% /notice %}}
 
 {{% callout %}}
+
 ### Writing a good commit message
 
 The commit name should give an idea of the nature and context of the change that has been done. The more details, the better! The commit name should be as unique and recognizable as your commit itself. There are multitude of articles on the web regarding commit messages, here are two that you can find useful: [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/) and [What makes a good commit message?](https://hackernoon.com/what-makes-a-good-commit-message-995d23687ad).
@@ -125,6 +126,8 @@ Remember: **smaller changes are easier to review, easier to test and easier to m
 ### The Pull Request form
 
 When you create a new Pull Request, you will be presented with a form that looks like this:
+
+(click on it to see full size)
 
 ![Screenshot of the New Pull Request Form](../img/new-pull-request.png)
 

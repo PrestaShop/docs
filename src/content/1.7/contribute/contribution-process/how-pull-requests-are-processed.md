@@ -85,6 +85,8 @@ After the Pull Request has finally passed the QA validation, it is merged in the
 
 ### Graphical summary
 
+(click on it to see full size)
+
 ![Pull Request process summary](../../img/pull-request-process.png)
 
 
