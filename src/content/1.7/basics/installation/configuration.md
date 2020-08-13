@@ -1,6 +1,6 @@
 ---
 title: Configuration
-weight: 15
+weight: 30
 ---
 
 # Configuring PrestaShop

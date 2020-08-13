@@ -20,7 +20,7 @@ In this part, we'll run PrestaShop by setting up a localhost environment on your
 
 * a **running mysql database**
 * be able to execute **php scripts**
-* a **running web server** (apache or nginx, this page explains how to use apache)
+* a **running web server** (Apache or Nginx, this page explains how to use Apache)
 
 ## Installing PrestaShop for development
 

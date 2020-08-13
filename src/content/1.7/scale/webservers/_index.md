@@ -42,12 +42,12 @@ As usual, the surest way to tune your shop is:
 
 ### Webservers
 
-We will show you the different ways to implement those options for both [nginx](https://www.nginx.com/) and [httpd](https://httpd.apache.org/docs/2.4/programs/httpd.html), the two most popular and widespread webservers.
+We will show you the different ways to implement those options for both [Nginx](https://www.nginx.com/) and [Apache httpd](https://httpd.apache.org/docs/2.4/programs/httpd.html), the two most popular and widespread webservers.
 
 But before we go on, just a few words about them.
 Don't worry, it won't be long before reaching the crunchy part.
 
-#### nginx
+#### Nginx
 
 It is often said that nginx is faster than httpd, which is not entirely true. Nginx uses an asynchronous mechanism which is very efficient to sustain heavy loads and static assets (such as pictures and scripts) but slightly increases response time for dynamic content (such as, you know php).
 
