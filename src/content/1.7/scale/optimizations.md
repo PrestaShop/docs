@@ -145,7 +145,7 @@ If you install a new module in production, you need to execute this command agai
 
 ### 4) Apache Settings
 
-If you're using PHP-FPM, you should be able to use apache mpm_event. Using the following configuration (to set in the mpm_event.conf file) should allow you to test up to 400 concurrent users:
+If you're using PHP-FPM, you should be able to use Apache mpm_event. Using the following configuration (to set in the mpm_event.conf file) should allow you to test up to 400 concurrent users:
 
 ```
    ServerLimit             16

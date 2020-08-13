@@ -34,7 +34,7 @@ PrestaShop needs the following server configuration in order to run:
 * **MySQL:** 5.6 minimum, a recent version is recommended.
 * **Server RAM:** The more the merrier. We recommend setting the memory allocation per script (`memory_limit`) to a minimum of `256M`.
 
-PrestaShop can also work with NGINX 1.0 or later.
+PrestaShop can also work with Nginx 1.0 or later.
 
 ## How to verify your server meets PrestaShop's requirements
 
