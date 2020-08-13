@@ -65,7 +65,7 @@ Creating API keys can be done with the class WebserviceKey.
 ```php
 <?php
 $apiAccess = new WebserviceKey();
-$apiAccess->key = 'GENERATE_A_COMPLEX_VALUE';
+$apiAccess->key = 'GENERATE_A_COMPLEX_VALUE_32_CHAR';
 $apiAccess->save();
 ```
 
