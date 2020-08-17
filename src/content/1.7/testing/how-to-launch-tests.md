@@ -46,4 +46,4 @@ Find out more in the [StarterTheme tests Readme file](https://github.com/PrestaS
 
 ## Executing the Functional test suites
 
-This is thoroughly explained in the [Puppeteer tests Readme file](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/puppeteer/README.md).
+This is thoroughly explained in the [Puppeteer tests Readme file](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/UI/README.md).
