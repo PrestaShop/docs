@@ -1,13 +1,13 @@
 ---
-title: Release a new version of PrestaShop
+title: Release a new PrestaShop version
 weight: 4
 ---
 
-# Release a new version of PrestaShop
+# Release a new PrestaShop version
 
 ## Overview
 
-What does it mean, "to release a new version of "PrestaShop" ? Actually many different answers are eligible.
+What does it mean, "to release a new version of "PrestaShop"? Actually many different answers are eligible.
 
 You could say that "a new version of PrestaShop is released when there is a new release on the GitHub repository". Or you could say "a new version of PrestaShop is released when I can download a new version on prestashop.com". You could also say "a new version of PrestaShop is released when the auto-upgrade module allows to upgrade to this new version".
 
@@ -16,8 +16,8 @@ So let's first put some words on all of these statements, to avoid any confusion
 Steps to release a new version of PrestaShop:
 
 1. Create a new Build of PrestaShop, which is a ZIP archive which contains the software
-2. Make it available on GitHub as a GitHub release, and tag the branch used for the build to mark the exact code commit corresponding to this build
-3. Make it available on prestashop.com as a downloadable ZIP archive
+2. Make it available on GitHub as a GitHub release, and tag the commit used as basis for the build. This  way, it's possible to identify the exact point in git history where release was built.
+3. Make the ZIP archive available to download on prestashop.com
 4. Activate multiple settings in PrestaShop Addons system so the PrestaShop API allows the new version of PrestaShop to download modules adapted to it
 5. Activate multiple settings in PrestaShop Internationalization API so it allows the new version of PrestaShop to download localization packs
 6. Update the XML stream being used by auto-upgrade module to monitor what versions of PrestaShop are available
