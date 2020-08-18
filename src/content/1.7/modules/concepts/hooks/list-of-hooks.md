@@ -547,7 +547,7 @@ actionFrontControllerSetVariables
 : 
     Available since: {{< minver v="1.7.5" >}}
     
-    Add variables to `javascript` object that is available in Front Office. There are also available in smarty templates in modules.your_module_name.
+    Add variables to `javascript` object that is available in Front Office. These are also available in smarty templates in modules.your_module_name.
 
     Located in: /classes/controller/FrontController.php
     
