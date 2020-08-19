@@ -30,7 +30,7 @@ When a hook is dispatched, Hook class will look into the registry to check what 
 $id = Hook::exec('actionModifyZoning', ['address_id' => $addressID]);
 ```
 
-The modules which have previously subscribed to this hook will be called and will be able act on this hook. Depending on the hook nature, they can alter the data being passed, trigger an event of even return a result (a data structure or raw HTML) to be used within PrestaShop.
+The modules which have previously subscribed to this hook will be called and will be able to act on this hook. Depending on the hook nature, they can alter the data being passed, trigger an event or even return a result (a data structure or raw HTML) to be used within PrestaShop.
 
 The calls will happen thanks to `Hook::coreCallHook`. The function being called is a dynamic function whose name is built from the hook name: `hook+hookName`.
 
@@ -61,9 +61,9 @@ Class HookDispatcher is actually a wrapper of Symfony EventDispatcher.
 
 First, on setup, class LegacyHookSubscriber will retrieve all legacy hooks using `hooks = Hook::getHooks();`.
 
-Then it will create as many event subscriptions as there are hooks, following a naming convention.
+Then it will create as many event subscriptions as there are hooks, following a naming convention based on database IDs.
 
-For example if module 267 has subscribed to hook 82, LegacyHookSubscriber will create a subscription `call_82_267`.
+For example if module with `id_module` 267 has subscribed to hook with `id_hook` 82, `LegacyHookSubscriber` will create a subscription `call_82_267`.
 
 ### Dispatching
 
@@ -75,7 +75,7 @@ $this->hookDispatcher->dispatchWithParameters("actionModifyForm", ['form_builder
 
 The HookDispatcher will act as standard dispatcher and call the eligible event listeners and subscribers, including LegacyHookSubscriber.
 
-Using a dedicated magic method `__call()`, the LegacyHookSubscriber will track which hook has been called and trigger the related `Hook::exec()` call.
+Using a dedicated magic method `__call()`, the `LegacyHookSubscriber` will parse the called method (ex: `call_82_267`) to retrieve the appropriate hook and module (using their respective IDs) and trigger the related `Hook::exec()` call with the appropriate parameters.
 
 ### To sum up
 
@@ -86,4 +86,3 @@ When a hook is dispatched inside Symfony-powered pages of the Back-office, the H
 [sf-event-dispatcher]: https://symfony.com/doc/current/components/event_dispatcher.html
 [sf-hook-dispatcher-class]: https://github.com/PrestaShop/PrestaShop/blob/develop/src/Core/Hook/HookDispatcher.php
 [legacy-hook-subscriber]: https://github.com/PrestaShop/PrestaShop/blob/develop/src/Adapter/LegacyHookSubscriber.php
-
