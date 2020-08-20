@@ -8,7 +8,7 @@ weight: 50
 
 Tests determine the quality of a software. This process involves evaluating information that is related to a shop.
 
-To make testing easier, we provide a [Vagrant](http://www.vagrantup.com/) configuration designed for testing branches and pull requests.
+To make testing easier, we provide a [Vagrant](https://www.vagrantup.com/) configuration designed for testing branches and pull requests.
 
 ## What is installed
 
@@ -60,6 +60,10 @@ phpMyAdmin is also available at [http://192.168.42.42/phpmyadmin](http://192.168
 - 7.2
 - 7.3
 - 7.4
+
+{{% notice tip %}}
+Be aware that some PrestaShop versions are not compatible with all the above environments. See [System requirements](https://devdocs.prestashop.com/1.7/basics/installation/system-requirements/) to find out which version is compatible with which PHP version.
+{{% /notice %}}
 
 #### PrestaShop
 
