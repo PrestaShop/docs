@@ -1,6 +1,7 @@
 ---
 title: Contribution guidelines for modules
 menuTitle: Project Modules
+weight: 40
 ---
 
 # Contribution guidelines for modules
@@ -16,14 +17,17 @@ Contributors wishing to edit a module's files should follow the following proces
 3. Clone your fork to your local machine in the ```/modules``` directory of your PrestaShop installation.
 4. Create a branch in your local clone of the module for your changes.
 5. Change the files in your branch.
-
-  - Be sure to follow the [coding standards][1].
-  - Do not update the module's version number.
+    
+    - Make sure to follow the [coding standards][1].
+    - Do not update the module's version number.
 
 6. Push your changed branch to your fork in your GitHub account.
-7. Create a pull request for your changes on the `dev` branch of the module's project. Make sure to describe your change as best as you can: a good description can help a lot on making your contribution accepted.  
-  If you need help to make a pull request, read the [GitHub help page about creating pull requests][3].
-8. Wait for one of the module maintainers either to include your change in the codebase, or to comment on possible improvements you should make to your code.
+7. Create a pull request for your changes on the `dev` branch of the module's project. 
+
+    - Make sure to describe your change as best as you can: a good description can help a lot on making your contribution accepted.  
+    - If you need help to make a pull request, read the [GitHub help page about creating pull requests][3].
+    
+8. Wait for one of the module maintainers to either include your change in the codebase, or  comment on possible improvements you should make to your code.
 
 ## Requirements
 
@@ -31,7 +35,7 @@ Contributors wishing to edit a module's files should follow the following proces
 
 Unless specified otherwise, PrestaShop modules are released under the [Academic Free License 3.0][AFL-3.0]. All contributions made to those modules are automatically licensed under the same terms.
 
-A license file must be stored inside the module (usually it's a LICENSE.md file). Its content is the terms of the AFL-3.0 license.
+A license file must be stored inside the module (usually it's a `LICENSE.md` file). Its content is the terms of the AFL-3.0 license.
 
 ### File headers
 
@@ -41,7 +45,7 @@ They can easily be applied by using the `header-stamp` binary from [PrestaShop m
 
 ### Contributors file
 
-A list of the project contributors must be stored inside the module. Usually it's a file named CONTRIBUTORS.md . It must be up-to-date when a new version is released.
+A list of the project contributors must be stored inside the module. Usually it's a file named `CONTRIBUTORS.md`. It must be up-to-date when a new version is released.
 
 ## About compatibility
 
@@ -70,7 +74,7 @@ $this->ps_versions_compliancy = array(
     'max' => _PS_VERSION_,
 );
 ```
-Because the `max` value will always use the latest PrestaShop version, it means the module must remain compatible with incoming (not released) PrestaShop versions too.
+Because the `max` value will always use the latest PrestaShop version, it means the module must remain compatible with upcoming (not released) PrestaShop versions too.
 
 [report-issue]: https://github.com/PrestaShop/PrestaShop/issues/new/choose
 [1]: {{< ref "1.7/development/coding-standards/_index.md" >}}
