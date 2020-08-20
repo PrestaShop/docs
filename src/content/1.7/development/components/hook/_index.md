@@ -42,7 +42,7 @@ Throughout the software, multiple hooks are dispatched: this means at some point
 $id = Hook::exec('actionModifyZoning', ['address_id' => $addressID]);
 ```
 
-## Modules callback
+## Module callback
 
 Modules which have previously subscribed to this hook will be notified and will be able to act on this hook. Depending on the hook's nature, they can alter the data being passed, trigger an event or even return a result (a data structure or raw HTML) to be used within PrestaShop.
 

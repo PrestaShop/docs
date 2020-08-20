@@ -1,6 +1,6 @@
 ---
 title: Register a new hook
-weight: 60
+weight: 10
 aliases:
   - /1.7/development/register-new-hook/
 ---
