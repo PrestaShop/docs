@@ -671,11 +671,12 @@ actionObjectAttributeGroupAddBefore
 actionObjectDeleteAfter
 : 
     Located in: /classes/ObjectModel.php
-
+    
     
 actionObjectDeleteBefore
 : 
     Located in: /classes/ObjectModel.php
+
 
 actionObject&lt;ObjectName>AddBefore
 : 
@@ -685,25 +686,26 @@ actionObject&lt;ObjectName>AddAfter
 : 
     Located in: /classes/ObjectModel.php
 
+
 actionObject&lt;ObjectName>UpdateBefore
 : 
     Located in: /classes/ObjectModel.php
+    
     
 actionObject&lt;ObjectName>UpdateAfter
 : 
     Located in: /classes/ObjectModel.php
 
-actionObject&lt;ObjectName>UpdateBefore
-: 
-    Located in: /classes/ObjectModel.php
 
 actionObject&lt;ObjectName>DeleteBefore
 : 
     Located in: /classes/ObjectModel.php
 
+
 actionObject&lt;ObjectName>DeleteAfter
 : 
     Located in: /classes/ObjectModel.php
+ 
  
 actionObjectProductInCartDeleteAfter
 : 
