@@ -6,7 +6,7 @@ chapter: true
 
 # Hooks
 
-Hooks are a way to associate your code to some specific PrestaShop events.
+[Hooks][hooks-component] are a way to associate your code to some specific PrestaShop events.
 
 Most of the time, they are used to insert content in a page. The place it will be added (header, footer, left or right column ...) will depend on the hook you choose.
 
@@ -125,3 +125,5 @@ $this->registerHook('displayAtSpecificPlace');
 ```
 
 If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you but be carefull : this will also plug the current module to the hook.
+
+[hooks-component]: {{< ref "/1.7/development/components/hook/_index.md" >}}
