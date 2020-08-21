@@ -48,7 +48,7 @@ Since version 1.5, PrestaShop is able to host more than one store within a singl
 
 Enabling the multistore mode is easy: go to the general preferences page, and put the “Enable Multistore” option to “Yes”.
 
-You can switch back and forth between single store and multistore mode? In single store mode, only the main store is used.
+You can switch back and forth between single store and multistore mode. In single store mode, only the main store is used.
 
 You can read more about the multistore mode in [PrestaShop 1.7 User Guide](https://doc.prestashop.com/display/PS17/Managing+Multiple+Shops).
 
