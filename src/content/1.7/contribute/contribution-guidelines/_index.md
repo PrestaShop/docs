@@ -60,7 +60,20 @@ Atomic commits make it easier to review, cherry-pick or revert changes (hopefull
 - Use [interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) when you have made several changes in the same file but not all those changes are meant to be in a single commit.
 - **Avoid merge commits in your Pull Request.** They make the commit history more difficult to understand, and they can lead to hidden changes which are not visible by reviewers. If you need to resolve conflicts with the base branch, rebase your branch instead.
 
+### Do not submit merge commits
 
+If you work long enough, at some point you might need to retrieve new commits from the `develop` upstream branch into your branch.
+This happens for example if your branch cannot be merged because of [git conflicts](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-merge-conflicts).
+
+You will find out from a quick google search that there are two strategies to achieve that: merge `develop` into your branch on rebase your branch on top of `develop`.
+
+Although both approaches do have their [pros and cons](https://www.atlassian.com/git/articles/git-team-workflows-merge-or-rebase), the PrestaShop project requires you to choose the Rebase strategy. We believe this helps keeping a clear git history which is very helpful when trying to track bug sources, and some changes brought in by [merge commits](https://www.atlassian.com/git/tutorials/using-branches/git-merge) might now be displayed into GitHub Pull Request review interface.
+
+If you are not familiar with rebases, here are some useful links about it:
+
+- [What it means to rebase a Pull Request submitted on GitHub](https://dev.to/mathieuks/what-it-means-to-rebase-a-pull-request-submitted-on-github-5717) on dev.to, by Mathieu Ferment
+- [How to resolve a git merge conflict](https://opensource.com/article/20/4/git-merge-conflict) on opensource.com by Brian Breniser
+- [How to rebase a GitHub pull request](https://anavarre.net/how-to-rebase-a-github-pull-request/) by Aurelien Navarre
 
 ## Compiled assets
 
@@ -71,7 +84,6 @@ We used to require these compiled files to be committed and included in the same
 
 - In the `1.7.7.x` branch, compiled assets are still required and should be committed.
 - In the `develop` branch, assets are no longer versioned and should no longer be committed. 
-
 
 More information in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/).
 {{% /notice %}}
