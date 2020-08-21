@@ -6,7 +6,7 @@ weight: 20
 
 # Configure Apache Httpd
 
-The following file is provided as an example configuration for your Nginx server.
+The following file is provided as an example configuration for your Apache server.
 It may be incomplete, and remember you must adapt it for your own server's needs!
 
 > In Apache 2.4, `Order Allow,Deny` has been replaced by `Require all granted`. 
