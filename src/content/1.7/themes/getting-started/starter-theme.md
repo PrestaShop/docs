@@ -44,7 +44,7 @@ modifying it, and building your own theme.
 Do not use it as a parent theme, you will only run into trouble and
 waste your time.
 
-Once you removed all style in `_dev/css`, your theme should like this:
+Once you removed all style in `_dev/css`, your theme should look like this:
 
 ![Screenshot of the StarterTheme once you removed the dev style](../img/starter-theme-no-style.png)
 
