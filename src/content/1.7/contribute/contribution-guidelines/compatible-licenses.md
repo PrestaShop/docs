@@ -15,6 +15,7 @@ Below is a list of the known compatible licenses that can accepted for software 
 - Apache
 - BSD
 - CC-O
+- EPL
 - EUPL
 - ISC
 - MIT
