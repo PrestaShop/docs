@@ -101,7 +101,7 @@ PrestaShop comes in two "flavors":
 - **Release package**. A zip package, tuned for production environments.
 - **Development version**. The raw source code as it is on the GitHub repository, including automated test suites, build scripts and source codes for assets that are otherwise compiled (like javascript and css files).
 
-![Download files](img/download-links.png)
+![Download files](../img/download-links.png)
 
 {{% notice tip %}}
 **Prefer cloning the repository using git for the development version.**
