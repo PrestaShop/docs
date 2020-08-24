@@ -10,9 +10,33 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 ## Rendering the site locally
 
-### Prerequisites
+### By `docker-compose`
 
-#### [Hugo](https://gohugo.io/)
+1. Clone the repository somewhere on your system:
+    ```
+    git clone https://github.com/PrestaShop/docs.git
+    ```
+
+2. Switch to the `docs` directory:
+    ```
+    cd docs
+    ```
+
+3. Create `.env` file by `.env.example`:
+    ```
+    cp .env.example .env
+    ```
+
+4. Launch Hugo service:
+    ```
+    docker-compose up hugo
+    ```
+
+### Natively
+
+#### Prerequisites
+
+##### [Hugo](https://gohugo.io/)
 
 TL;DR:
 
@@ -22,19 +46,19 @@ TL;DR:
 
 Or read the [Official install guide](https://gohugo.io/getting-started/installing).
 
-#### Node.js and NPM
+##### Node.js and NPM
 
 > This is only needed if you want to customize the style.
 
 [Download Node here](https://nodejs.org/en/)
 
-### Clone the repository somewhere on your system
+#### Clone the repository somewhere on your system
 
 ```
 git clone https://github.com/PrestaShop/docs.git
 ```
 
-### Launching the site
+#### Launching the site
 
 1. Switch to the `src` directory:
     ```
@@ -53,6 +77,7 @@ git clone https://github.com/PrestaShop/docs.git
     
     Any change you perform on your data will be updated almost instantly.
 
+
 ## Customizing the style
 
 We use Sass for styling and Webpack for bundling.
@@ -63,6 +88,20 @@ src/themes/hugo-theme-learn/_src/sass
 ```
 
 ### How to build the theme
+
+#### By `docker-compose`
+
+1. Install NPM dependencies (only the first time)
+    ```
+    docker-compose run --rm npm install
+    ```
+    
+2. Launch build
+    ```
+    docker-compose run --rm npm run build
+    ```
+
+#### Natively
 
 1. Switch to the theme's `_src` folder
     ```
