@@ -24,7 +24,7 @@ return Db::getInstance()->executeS($sql);
 
 __toString()
 : 
-	  Generate and get the query.
+    Generate and get the query.
 
 build()
 : 
