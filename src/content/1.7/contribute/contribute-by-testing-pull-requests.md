@@ -62,8 +62,9 @@ phpMyAdmin is also available at [http://192.168.42.42/phpmyadmin](http://192.168
 - 7.4
 
 {{% notice tip %}}
-Be aware that some PrestaShop versions are not compatible with all the above environments. See [System requirements](https://devdocs.prestashop.com/1.7/basics/installation/system-requirements/) to find out which version is compatible with which PHP version.
+Be aware that some PrestaShop versions are not compatible with all the above environments. See [System requirements]({{< ref "1.7/basics/installation/system-requirements.md" >}}) to find out which version is compatible with which PHP version.
 {{% /notice %}}
+
 
 #### PrestaShop
 
