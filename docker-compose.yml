@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+
+  hugo:
+    build: https://github.com/gohugoio/hugo.git
+    volumes:
+      - ./:/site
+    working_dir: /site/src
+    ports:
+      - ${HUGO_SERVER_PORT}:1313
+    command: server --bind 0.0.0.0
+
+  npm:
+    image: node:14.8
+    volumes:
+      - ./:/site
+    working_dir: /site/src/themes/hugo-theme-learn/_src
+    entrypoint: npm

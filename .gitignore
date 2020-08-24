@@ -1,6 +1,7 @@
-/src/public/
-node_modules/
-hugo
+.env
 .idea/
+/src/public/
 /src/themes/hugo-theme-learn/static/js/main.js
 /src/themes/hugo-theme-learn/static/js/main.js.map
+hugo
+node_modules/
