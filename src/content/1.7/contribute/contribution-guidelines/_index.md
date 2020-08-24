@@ -58,8 +58,7 @@ Atomic commits make it easier to review, cherry-pick or revert changes (hopefull
 
 - Write [meaningful commit messages]({{< ref "writing-a-good-commit-message" >}}).
 - Use [interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) when you have made several changes in the same file but not all those changes are meant to be in a single commit.
-- **Avoid merge commits in your Pull Request.** They make the commit history more difficult to understand, and they can lead to hidden changes which are not visible by reviewers. If you need to resolve conflicts with the base branch, rebase your branch instead.
-
+- **Avoid merge commits in your Pull Request.** They make the commit history more difficult to understand, and they can lead to hidden changes which are not visible by reviewers. If you need to resolve conflicts with the base branch, [rebase your branch](https://anavarre.net/how-to-rebase-a-github-pull-request/) instead.
 
 
 ## Compiled assets
