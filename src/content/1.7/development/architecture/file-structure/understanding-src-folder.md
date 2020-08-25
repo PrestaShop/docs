@@ -76,7 +76,7 @@ Here are some examples of subsystems belonging to PrestaShopBundle:
 
 Here's a recap for the dependency rules.
 
-Subsystem | Namespace | Can use Core | Can user Adapter | Can use Legacy
+Subsystem | Namespace | Can use Core | Can use Adapter | Can use Legacy
 --- | --- | :---: | :---: | :---:
 Core | `PrestaShop\PrestaShop\Core` | Yes | No [^1] | No 
 Adapter | `PrestaShop\PrestaShop\Adapter` | Yes | Yes | Yes
