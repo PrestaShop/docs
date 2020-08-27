@@ -7,7 +7,7 @@ weight: 70
 
 The UIKit is a project extending Bootstrap 4 in order to provide some components with PrestaShop's colors. You can see every components on [this page](https://cdn.rawgit.com/PrestaShop/prestashop-ui-kit/develop/index.html).
 
-## How do we use the UIKit ?
+## How do we use the UIKit?
 
 We use it by adding it into our [npm dependency](https://www.npmjs.com/package/prestakit), and then you've multiple possibilities to use it.
 
