@@ -43,4 +43,4 @@ It's mainly used on migrated pages, legacy pages rely on Bootstrap 3 for the mom
 
 ## How to contribute?
 
-You're able to contribute to the UIKit on [his own repository](https://github.com/PrestaShop/prestashop-ui-kit) but keep in mind that your changes won't be effective until we provide a new release on npm and your changes won't be effective on the PrestaShop project until we update the dependency inside the new-theme directory.
+You can contribute to UIKit on [its own repository](https://github.com/PrestaShop/prestashop-ui-kit) but keep in mind that your changes won't be effective until we provide a new release on npm and your changes won't be effective on the PrestaShop project until we update the dependency inside the new-theme directory.
