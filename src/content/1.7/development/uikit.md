@@ -39,7 +39,7 @@ Some components are not provided from Bootstrap, they have been done for our own
 
 ## Where is the UIKit used?
 
-It's mainly used on migrated pages, legacy pages rely on Bootstrap 3 for the moment, and it's not using the UIKit at all. The UIKit can also be used inside modules, even if they are on legacy pages, by overriding styles inside their particular markup.
+It's mainly used on migrated pages, legacy pages rely on Bootstrap 3 for the moment and are not using UIKit at all. UIKit can also be used inside modules, even if they are on legacy pages, by overriding styles inside their particular markup.
 
 ## How to contribute?
 
