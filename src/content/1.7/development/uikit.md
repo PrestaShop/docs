@@ -3,7 +3,7 @@ title: The UIKit
 weight: 70
 ---
 
-# What's the PrestaShop UIKit ?
+# What's the PrestaShop UIKit?
 
 The UIKit is a project extending Bootstrap 4 in order to provide some components with PrestaShop's colors. You can see every components on [this page](https://cdn.rawgit.com/PrestaShop/prestashop-ui-kit/develop/index.html).
 
