@@ -25,7 +25,7 @@ We use it by adding it into our [npm dependency](https://www.npmjs.com/package/p
 
 ## Custom components
 
-Some components are not provided from Bootstrap, they have been done for our own use, here is a list of them :
+Some components are not provided from Bootstrap, they have been done for our own use, here is a list of them:
 
 - ps-number-input
 - custom-file-input
