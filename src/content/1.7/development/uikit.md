@@ -37,7 +37,7 @@ Some components are not provided from Bootstrap, they have been done for our own
 - md-checkbox
 - toast
 
-## Where is the UIKit used ?
+## Where is the UIKit used?
 
 It's mainly used on migrated pages, legacy pages rely on Bootstrap 3 for the moment, and it's not using the UIKit at all. The UIKit can also be used inside modules, even if they are on legacy pages, by overriding styles inside their particular markup.o
 
