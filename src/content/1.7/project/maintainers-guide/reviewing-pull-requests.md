@@ -47,5 +47,5 @@ A Pull Request may only be merged after the following requirements have been ful
 
 Pull Requests may be closed after 30 days of inactivity following a request for modifications.
 
-[contribution-guidelines]: {{< ref "/1.7/contribute/contribution-guidelines/" >}}
+[contribution-guidelines]: {{< ref "/1.7/contribute/contribution-guidelines/_index.md" >}}
 [prestashop-core-repository]: https://github.com/PrestaShop/PrestaShop/
