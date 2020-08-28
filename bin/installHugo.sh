@@ -3,15 +3,13 @@ set -euo pipefail
 
 export HUGO_VERSION="0.72.0"
 
-if [ `uname` = "Linux" ]
-then
-	export HUGO_OS="Linux-64bit"
-elif [ `uname` = "Darwin" ]
-then
+if [ `uname` = "Linux" ]; then
+    export HUGO_OS="Linux-64bit"
+elif [ `uname` = "Darwin" ]; then
     export HUGO_OS="macOS-64bit"
 else
-	echo 'This script only works on Linux and Mac os'
-	exit 1
+    echo 'This script only works on Linux and Mac os'
+    exit 1
 fi
 
 cd "$( dirname "$0" )/../" && pwd
