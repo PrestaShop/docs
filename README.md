@@ -16,8 +16,7 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 TL;DR:
 
-* **Linux**: `./bin/installHugo.sh`
-* **Mac**: `brew install hugo`
+* **Mac and Linux**: `./bin/installHugo.sh`
 * **Windows**: Grab the [release binary](https://github.com/gohugoio/hugo/releases)
 
 Or read the [Official install guide](https://gohugo.io/getting-started/installing).
