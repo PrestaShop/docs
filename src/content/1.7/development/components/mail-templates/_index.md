@@ -121,7 +121,7 @@ The templates from layouts generation workflow is a bit complex, here are the ma
 * **MailTemplateTwigRenderer** actually renders the layout using the Twig renderer, and post-processes the result by applying any existing `TransformationInterface`.
 * **LayoutVariablesBuilder** provides variables to be used in the Twig layouts.
 
-{{< figure src="./img/email_generation_workflow.png" title="Email Generation Workflow (it is advised to open it in another tab as the image is quite big)" >}}
+{{< figure src="./img/email_generation_workflow.svg" title="Email Generation Workflow (it is advised to open it in another tab as the image is quite big)" >}}
 
 {{% notice note %}}
 You can update this schema using the [source XML file](/schemas/1.7/email_generation_workflow.xml) importable in services like [draw.io](https://draw.io).
