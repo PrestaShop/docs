@@ -409,7 +409,7 @@ You can update this schema using the [source XML file](/schemas/1.7/grid_workflo
 
 ### Hooks
 
-{{< figure src="../img/grid_workflow_hooks.png" title="Available hooks when creating a Grid" >}}
+{{< figure src="../img/grid_workflow_hooks.svg" title="Available hooks when creating a Grid" >}}
 
 {{% notice note %}}
 You can update this schema using the [source XML file](/schemas/1.7/grid_workflow_hooks.xml) importable in services like [draw.io](https://draw.io).
