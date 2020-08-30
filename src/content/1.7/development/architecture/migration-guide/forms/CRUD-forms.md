@@ -457,4 +457,4 @@ The following schema depicts the complete form flow, including the `Domain tier`
 {{< figure src="../img/identifiable-object-schema-with-cqrs-domain-tier.png" title="Identifiable object forms schema" >}}
 
 
-[form-types]: {{< relref "/#form-types" >}}
+[form-types]: {{< relref "./#form-types" >}}
