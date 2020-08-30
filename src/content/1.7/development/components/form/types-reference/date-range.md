@@ -38,4 +38,4 @@ class CustomType extends AbstractType
 
 ## Preview example
 
-{{< figure src="../img/date_range.png" title="DateRangeType rendered in form example" >}}
+{{< figure src="../img/date-range.png" title="DateRangeType rendered in form example" >}}

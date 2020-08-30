@@ -4,7 +4,7 @@ title: MaterialMultipleChoiceTableType
 
 ## MaterialMultipleChoiceTableType
 
-MaterialMultipleChoiceTableType renders checkbox choices using choices table layout. It is similar to [MaterialChoiceTableType](material-choice-table),
+MaterialMultipleChoiceTableType renders checkbox choices using choices table layout. It is similar to [MaterialChoiceTableType]({{< ref "material-choice-table" >}}),
 but it allows using multiple checkboxes per row. Requires Javascript component to work as expected.
 
 ## Type options
