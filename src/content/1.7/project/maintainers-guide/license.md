@@ -15,6 +15,6 @@ PrestaShop's [Native Modules][native-modules] and the **Classic theme** are rele
 Third party content may be included in PrestaShop as long as its original authors have released it under a [compatible license][compatible-licenses]. If the proposed content is available with a compliant license, a last check must be done to make sure that there is no additional clause that would introduce a restriction of use.
 
 
-[native-modules]: {{< ref "/1.7/development/native-modules/" >}}
-[compatible-licenses]: {{< ref "/1.7/contribute/contribution-guidelines/compatible-licenses" >}}
+[native-modules]: {{< ref "/1.7/development/native-modules/_index.md" >}}
+[compatible-licenses]: {{< ref "/1.7/contribute/contribution-guidelines/compatible-licenses.md" >}}
 

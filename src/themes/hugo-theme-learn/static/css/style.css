@@ -1149,7 +1149,9 @@ hr {
 
 table {
   border: none;
-  table-layout: auto;
+  display: block;
+  width: 100%;
+  overflow-x: auto;
   margin-bottom: 1rem;
   font-size: 0.9em; }
 

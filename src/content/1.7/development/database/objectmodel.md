@@ -100,7 +100,7 @@ __construct($id = NULL, $id_lang = NULL)
 
 add($autodate = true, $nullValues = false)
 : 
-    Save current object to database (add or update).
+    Adds current object to the database.
 
 associateTo(integer|array $id_shops)
 : 
