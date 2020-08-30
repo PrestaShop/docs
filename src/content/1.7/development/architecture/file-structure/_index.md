@@ -162,7 +162,7 @@ The [CLDR database](http://cldr.unicode.org/) is also located in this directory.
 
 Contains all HTML and text templates for e-mails sent by PrestaShop. Each language has its specific folder, where you can manually edit their content if you wish. PrestaShop contains a tool to edit your e-mails, located in the back office, in the Localization &gt; Translation page.
 
-Since {{< minver v="1.7.6" >}} this directory also contains [Mail themes]({{< ref "/1.7/development/components/mail-templates/_index" >}}).
+Since {{< minver v="1.7.6" >}} this directory also contains [Mail themes]({{< ref "/1.7/development/components/mail-templates/" >}}).
 
 ### /modules
 
@@ -241,7 +241,7 @@ Contains various 3rd-party libraries required by PrestaShop through Composer, su
 
 ### /webservice
 
-Contains the main endpoint for the [Webservice API]({{< ref "/1.7/webservice/_index" >}}).
+Contains the main endpoint for the [Webservice API]({{< ref "/1.7/webservice/" >}}).
 
 ## Folders removed in 1.7
 

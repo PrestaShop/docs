@@ -17,7 +17,7 @@ You have the ability to modify the Symfony container configuration from a module
 
 First we strongly advise you to use
 [**namespaces**](https://www.php.net/manual/en/language.namespaces.php) & autoloading in your module, which can be done thanks to composer.
-[A dedicated chapter]({{< ref "1.7/modules/concepts/composer/_index" >}}) is available to learn more about Composer and to set it up.
+[A dedicated chapter]({{< ref "1.7/modules/concepts/composer" >}}) is available to learn more about Composer and to set it up.
 
 #### Define your service
 

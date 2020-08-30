@@ -109,7 +109,7 @@ compatible.
 
 ### What's in a layout file
 
-The layout is the very top level of the [template inheritance]({{< ref "1.7/themes/reference/template-inheritance/_index" >}})
+The layout is the very top level of the [template inheritance]({{< ref "1.7/themes/reference/template-inheritance/" >}})
 tree. Basically it hold the opening and closing `<html>` tags.
 
 Typical layout files look like the following snippet. This one is a full one

@@ -21,7 +21,7 @@ In order to reduce code duplication, the only necessary template is the file
 We already covered [how PrestaShop chooses the right template to use]({{< ref "templates-layouts" >}})
 so we know that the category template extends the product-list template.
 
-We already covered how the [template inherience]({{< ref "1.7/themes/reference/template-inheritance/_index" >}}) allows you to redefine only a
+We already covered how the [template inherience]({{< ref "1.7/themes/reference/template-inheritance/" >}}) allows you to redefine only a
 small part of bigger template.
 
 So basically you are all set to create a category template or a search result template

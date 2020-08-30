@@ -213,4 +213,4 @@ PrestaShop comes with a lot of Grids (Products, Customers, Orders & etc) and kee
 
 - Grid id should be in lowercase and written in `snake_case`
 
-[coding-standards]: {{< ref "/1.7/development/coding-standards/_index" >}}
+[coding-standards]: {{< ref "/1.7/development/coding-standards/" >}}

@@ -15,11 +15,11 @@ PrestaShop modules acts as Symfony bundles, extension points are added continuou
 | 1.7.6    | [Doctrine ORM][6] and [Entity forms][7]                        |
 | 1.7.7    | [Controllers as services][8]                     |
 
-[1]: {{< ref "1.7/modules/concepts/templating/_index" >}}
-[2]: {{< ref "1.7/modules/concepts/services/_index" >}}
+[1]: {{< ref "1.7/modules/concepts/templating/" >}}
+[2]: {{< ref "1.7/modules/concepts/services/" >}}
 [3]: {{< ref "1.7/modules/concepts/forms/admin-forms" >}}
 [4]: {{< ref "1.7/modules/concepts/commands" >}}
-[5]: {{< ref "1.7/modules/concepts/controllers/admin-controllers/_index" >}}
-[6]: {{< ref "1.7/modules/concepts/doctrine/_index" >}}
-[7]: {{< ref "1.7/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage/_index" >}}
+[5]: {{< ref "1.7/modules/concepts/controllers/admin-controllers/" >}}
+[6]: {{< ref "1.7/modules/concepts/doctrine" >}}
+[7]: {{< ref "1.7/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage" >}}
 [8]: {{< ref "1.7/modules/concepts/controllers/admin-controllers/override-decorate-controller" >}}

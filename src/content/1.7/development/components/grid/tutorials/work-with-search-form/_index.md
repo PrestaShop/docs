@@ -82,7 +82,7 @@ final class ManufacturerGridDefinitionFactory extends AbstractGridDefinitionFact
 ### The filters types
 
 The filters collection allows you to define all the available filters (which will match your grid columns). You can define a specific type depending on the column.
-You can basically use any Symfony form type (including your custom ones) and PrestaShop provides a few [filter types]({{< ref "/1.7/development/components/grid/filter-types-reference/_index" >}}) that might be useful to you.
+You can basically use any Symfony form type (including your custom ones) and PrestaShop provides a few [filter types]({{< ref "/1.7/development/components/grid/filter-types-reference/" >}}) that might be useful to you.
 
 ### Filterable grid definition
 {{< minver v="1.7.7" title="true" >}}

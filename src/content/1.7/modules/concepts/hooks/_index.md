@@ -126,4 +126,4 @@ $this->registerHook('displayAtSpecificPlace');
 
 If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you but be carefull : this will also plug the current module to the hook.
 
-[hooks-component]: {{< ref "/1.7/development/components/hook/_index" >}}
+[hooks-component]: {{< ref "/1.7/development/components/hook/" >}}

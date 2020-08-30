@@ -43,4 +43,4 @@ $columns = new ColumnCollection();
 $columns->add($actionColumn);
 ```
 
-[actions-reference]: {{< ref "/1.7/development/components/grid/actions-reference/_index" >}}
+[actions-reference]: {{< ref "/1.7/development/components/grid/actions-reference/" >}}
