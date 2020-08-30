@@ -15,8 +15,8 @@ which can be toggled. It can have two states - turned on or off. In customer cre
 form we will add switch which will also manage the same state. By following this tutorial you will learn
 how to:
 
-- extend modern grids. [Grid component]({{< relref "/1.7/development/components/grid/_index.md" >}}) 
-- extend identifiable object form. [identifiable object form]({{< relref "CRUD-forms.md" >}}) 
+- extend modern grids. [Grid component]({{< relref "/1.7/development/components/grid/_index" >}}) 
+- extend identifiable object form. [identifiable object form]({{< relref "CRUD-forms" >}}) 
 
 The module created within this tutorial can be found [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module)
 
@@ -112,14 +112,14 @@ class Ps_DemoCQRSHooksUsage extends Module
     // ...
 }
 ```
-This hook, through `$params` array, received `GridDefinition` that defines how the grid is rendered. See [Grid definition]({{< relref "/1.7/development/components/grid/_index.md#grid-definition" >}}) for more information.  
+This hook, through `$params` array, received `GridDefinition` that defines how the grid is rendered. See [Grid definition]({{< relref "/1.7/development/components/grid/_index#grid-definition" >}}) for more information.  
 In this sample a new toggable column which determines if the customer is eligible to review products is added just after another column which has id `optin`. The sample code also demonstrates how add new filter.
 
 ### Creating route for toggle column
 
-`ToggleColumn` - used to display booleans, it will display an icon instead of the value. If user clicks on it, this triggers a toggle of the boolean value. More information about this column and all available parameters can be found [here]({{< relref "/1.7/development/components/grid/columns-reference/toggle.md" >}}).  
+`ToggleColumn` - used to display booleans, it will display an icon instead of the value. If user clicks on it, this triggers a toggle of the boolean value. More information about this column and all available parameters can be found [here]({{< relref "/1.7/development/components/grid/columns-reference/toggle" >}}).  
 As in this sample module we are creating `ToggleColumn` we need to configure the route in which the toggling action will be performed. Indeed when the end-user clicks on this column, an ajax request is performed and must reach one new controller to handle the action (here: toggle a value on and off).  
-If you only want to display data then this step can be skipped. E.g you are creating `DataColumn`. See [Column references]({{< relref "/1.7/development/components/grid/columns-reference/_index.md" >}}) for full list of grid columns available.
+If you only want to display data then this step can be skipped. E.g you are creating `DataColumn`. See [Column references]({{< relref "/1.7/development/components/grid/columns-reference/_index" >}}) for full list of grid columns available.
 
 - Create controller `DemoCQRSHooksUsage\Controller\Admin\CustomerReviewController`:
 
@@ -139,7 +139,7 @@ class CustomerReviewController extends FrameworkBundleAdminController
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to toggle the reviewer state. [More about it here]({{< relref "cqrs.md" >}}).
+You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to toggle the reviewer state. [More about it here]({{< relref "cqrs" >}}).
 {{% /notice %}}
 
 ```php
@@ -248,12 +248,12 @@ After completing the steps above by going to customers list you should see new c
 ### Modifying customers form builder
 
 In this step we are appending to the customers form a new `SwitchType` form field - its one of many form types which already exist in PrestaShop. More information
-about it can be found [here]({{< relref "/1.7/development/components/form/types-reference/_index.md" >}}).
+about it can be found [here]({{< relref "/1.7/development/components/form/types-reference/_index" >}}).
 
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to get reviewer state. [More about it here]({{< relref "cqrs.md" >}}).
+You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to get reviewer state. [More about it here]({{< relref "cqrs" >}}).
 {{% /notice %}}
 
 ```php
@@ -312,7 +312,7 @@ dedicated to handle this topic - lets do that!
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to create or update reviewer state. [More about it here]({{< relref "cqrs.md" >}}).
+You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to create or update reviewer state. [More about it here]({{< relref "cqrs" >}}).
 {{% /notice %}}
 
 ```php

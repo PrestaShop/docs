@@ -186,7 +186,7 @@ Contains all the template files (`.tpl`) related to PDF file generation (invoice
 
 ### /src
 
-Contains the new architecture files (**Core**, **Adapter** and **PrestaShop Bundle**). To learn more, see [Understanding the "src" folder]({{< relref "understanding-src-folder.md" >}}). 
+Contains the new architecture files (**Core**, **Adapter** and **PrestaShop Bundle**). To learn more, see [Understanding the "src" folder]({{< relref "understanding-src-folder" >}}). 
 
 ### /tests
 

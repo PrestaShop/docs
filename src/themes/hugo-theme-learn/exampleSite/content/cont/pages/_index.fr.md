@@ -83,7 +83,7 @@ Une page **Défaut** est n'importe quelle autre page.
     hugo new site <new_project>
     ```
 
-**Hugo-theme-learn** fournit des [archétypes]({{< relref "cont/archetypes.fr.md" >}}) pour vous aider à créer ce type de pages.
+**Hugo-theme-learn** fournit des [archétypes]({{< relref "cont/archetypes.fr" >}}) pour vous aider à créer ce type de pages.
 
 ## Configuration des Front Matter
 

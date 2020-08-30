@@ -71,4 +71,4 @@ Forms are created and declared [as services](https://symfony.com/doc/3.4/form/fo
 
 {{% children %}}
 
-[controllers-and-routing]: {{< relref "../controller-routing.md" >}}
+[controllers-and-routing]: {{< relref "../controller-routing" >}}

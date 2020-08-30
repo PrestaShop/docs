@@ -153,4 +153,4 @@ For information on more advanced features, head on to the [Symfony translator co
 
 {{% children %}}
 
-[translation-domains]: {{< relref "translation-domains.md" >}}
+[translation-domains]: {{< relref "translation-domains" >}}
