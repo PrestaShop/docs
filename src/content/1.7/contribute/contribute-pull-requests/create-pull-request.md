@@ -28,7 +28,7 @@ If you find this process quite complex, the following articles can help you:
 
 {{% notice note %}}
 Do not forget to complete the contribution table, this is really important for the Core Team to really understand what is the value of your contribution.
-See [our contribution guidelines]({{< ref "1.7/contribute/contribution-guidelines/_index.md" >}})
+See [our contribution guidelines]({{< ref "1.7/contribute/contribution-guidelines/_index" >}})
 {{% /notice %}}
 
 ## Syncing your fork

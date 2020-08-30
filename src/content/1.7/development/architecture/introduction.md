@@ -299,8 +299,8 @@ Remember the overview at the top of the article? Have a look at this more detail
 [addons-themes]: https://addons.prestashop.com/en/3-templates-prestashop
 [smarty]: https://www.smarty.net/
 [bootstrap]: https://getbootstrap.com/
-[child-theme]: {{< ref "/1.7/themes/reference/template-inheritance/parent-child-feature.md" >}}
-[theme-module-override]: {{< ref "/1.7/themes/reference/overriding-modules.md" >}}
+[child-theme]: {{< ref "/1.7/themes/reference/template-inheritance/parent-child-feature" >}}
+[theme-module-override]: {{< ref "/1.7/themes/reference/overriding-modules" >}}
 [twig]: https://twig.symfony.com/
 [github]: https://github.com/PrestaShop/prestashop-ui-kit/
 [addons-marketplace]: https://addons.prestashop.com/

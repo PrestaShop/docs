@@ -21,7 +21,7 @@ Benefits of using DTOs:
 
 ## Examples of Data Transfer Objects in PrestaShop
 
-PrestaShop extensively uses DTOs in it's `QueryHandlers` (you can learn more about it in [CQRS section]({{< ref "cqrs.md" >}})). As an example, you can take a look at `GetCustomerForEditingHandlerInterface` below.
+PrestaShop extensively uses DTOs in it's `QueryHandlers` (you can learn more about it in [CQRS section]({{< ref "cqrs" >}})). As an example, you can take a look at `GetCustomerForEditingHandlerInterface` below.
 
 ```php
 <?php 

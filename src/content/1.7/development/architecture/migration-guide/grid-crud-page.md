@@ -25,4 +25,4 @@ Finally, all tables are provided with common actions: export, access to SQL mana
 
 In PrestaShop, all grids in modern CRUD pages are managed by the [Grid component][grid-component].
 
-[grid-component]: {{< ref "/1.7/development/components/grid/_index.md" >}}
+[grid-component]: {{< ref "/1.7/development/components/grid/_index" >}}

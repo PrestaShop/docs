@@ -53,5 +53,5 @@ Regardless of the path you choose to contribute, you'll end up creating a Pull R
 Once your PR is submitted, the team will promptly review it and do its best to see that your contribution is added to the documentation!
 
 
-[1]: {{< ref "edit-on-github.md" >}}
-[2]: {{< ref "edit-on-your-computer.md" >}}
+[1]: {{< ref "edit-on-github" >}}
+[2]: {{< ref "edit-on-your-computer" >}}

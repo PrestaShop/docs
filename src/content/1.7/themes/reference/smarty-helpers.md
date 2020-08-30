@@ -7,4 +7,4 @@ aliases:
 
 # Helpers: functions and modifiers
 
-PrestaShop 1.7 provides several smarty helper functions and modifiers. See [Smarty extensions]({{< ref "/1.7/development/components/smarty-extensions/_index.md" >}}) for a full reference.
+PrestaShop 1.7 provides several smarty helper functions and modifiers. See [Smarty extensions]({{< ref "/1.7/development/components/smarty-extensions/_index" >}}) for a full reference.

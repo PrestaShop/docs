@@ -17,7 +17,7 @@ To link to another page in the documentation, use `ref`:
 Rendered result:
 
 {{% callout %}}
-[This is a link to Configuration]({{< ref "1.7/basics/installation/configuration.md" >}})
+[This is a link to Configuration]({{< ref "1.7/basics/installation/configuration" >}})
 {{% /callout %}}
 
 {{% notice tip %}}

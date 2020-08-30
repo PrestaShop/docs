@@ -51,7 +51,7 @@ localized texts or images.
 
 ## Layout
 
-For this example we will use the same layout we use in [How to add layout variables from a module]({{< ref "add-layout-variables-from-module.md" >}}):
+For this example we will use the same layout we use in [How to add layout variables from a module]({{< ref "add-layout-variables-from-module" >}}):
 
 ```twig
 {# modules/my_email_theme_module/mails/layout/customizable_modern_layout.html.twig #}

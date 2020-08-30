@@ -106,4 +106,4 @@ The root folder for the modern theme is `/admin-dev/themes/new-theme`.
 
 To find out more, read [How to compile assets][compile-assets].
 
-[compile-assets]: {{< ref "/1.7/development/compile-assets.md" >}}
+[compile-assets]: {{< ref "/1.7/development/compile-assets" >}}

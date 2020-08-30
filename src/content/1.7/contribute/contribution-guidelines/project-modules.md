@@ -77,7 +77,7 @@ $this->ps_versions_compliancy = array(
 Because the `max` value will always use the latest PrestaShop version, it means the module must remain compatible with upcoming (not released) PrestaShop versions too.
 
 [report-issue]: https://github.com/PrestaShop/PrestaShop/issues/new/choose
-[1]: {{< ref "1.7/development/coding-standards/_index.md" >}}
+[1]: {{< ref "1.7/development/coding-standards/_index" >}}
 [2]: {{< ref "1.7/contribute/contribution-guidelines" >}}
 [3]: https://help.github.com/articles/using-pull-requests
 [AFL-3.0]: https://opensource.org/licenses/AFL-3.0

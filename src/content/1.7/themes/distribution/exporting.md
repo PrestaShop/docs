@@ -11,7 +11,7 @@ it is on the disk.
 
 If you want the theme to appears in the backoffice, it only needs to contain a `config/theme.yml` file.
 This will only display it, if you want to select it as your active theme, it has to be valid. Read ["What
-makes a valid theme"]({{< ref "1.7/themes/distribution/testing.md" >}}).
+makes a valid theme"]({{< ref "1.7/themes/distribution/testing" >}}).
 
 
 ![Export current theme](../img/export-current-theme.png)
@@ -32,7 +32,7 @@ Use `php app/console` instead of `php bin/console` for versions prior to {{< min
 Exporting your theme using the button or the command line will export the following data:
 
 * All theme files in directory
-* Dependencies specified in `theme.yml` ([See theme.yml doc]({{< ref "1.7/themes/getting-started/theme-yml.md" >}}))
+* Dependencies specified in `theme.yml` ([See theme.yml doc]({{< ref "1.7/themes/getting-started/theme-yml" >}}))
 * Theme translations
 
 ## Distributing on Addons
@@ -42,4 +42,4 @@ Please note that if you want to sell your theme on the PrestaShop Addons, there 
 **LIST OF REQUIREMENTS**
 
 * Use BootStrap 4 alpha 4 -- [follow the appropriate doc](https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.4/docs).
-* Add your key -- [follow the appropriate doc]({{< ref "1.7/themes/getting-started/theme-yml.md" >}}).
+* Add your key -- [follow the appropriate doc]({{< ref "1.7/themes/getting-started/theme-yml" >}}).

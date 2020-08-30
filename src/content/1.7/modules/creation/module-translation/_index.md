@@ -30,6 +30,6 @@ PrestaShop 1.7 introduced a new translation system, which is available for third
 
 Which one will you use?
 
-- [New translation system]({{< ref "new-system.md" >}}) {{< minver v="1.7.6" >}}
-- [Classic translation system]({{< ref "classic-system.md" >}})
+- [New translation system]({{< ref "new-system" >}}) {{< minver v="1.7.6" >}}
+- [Classic translation system]({{< ref "classic-system" >}})
 

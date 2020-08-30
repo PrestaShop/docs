@@ -55,4 +55,4 @@ Confirm the creation by clicking again on "Create Pull Request".
 
 That's it, your Pull Request has been created! The team will review it, and once it is approved and merged it will be available for everyone.
  
-[1]: {{< ref "writing-markdown.md" >}}
+[1]: {{< ref "writing-markdown" >}}

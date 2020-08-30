@@ -239,5 +239,5 @@ class MyGridDefinitionFactory extends AbstractGridDefinition
 ```
 
 {{% notice note %}}
-You need to create a custom Bulk Action? We got you [covered]({{< ref "../tutorials/create-custom-column-type.md" >}})!
+You need to create a custom Bulk Action? We got you [covered]({{< ref "../tutorials/create-custom-column-type" >}})!
 {{% /notice %}}
