@@ -45,7 +45,7 @@ Some default shortcodes are provided by Hugo (read [shortcodes documentation](ht
 
 Here are the most useful shortcodes, both native and custom:
 
-- [callout][callout] – Displays a styled function definition list.
+- [callout][callout] – Displays a block inside your document to make some information stand out.
 - [funcdef][funcdef] – Displays a styled function definition list.
 - [minver][minver] – Displays a version pill.
 - [notice][notice] – Displays a "note", "tip" or "warning" box to highlight important information.
