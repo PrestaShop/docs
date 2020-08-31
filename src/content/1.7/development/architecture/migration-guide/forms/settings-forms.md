@@ -131,10 +131,24 @@ Every form in modern controllers must be handled this way, and the controller co
 {{% callout %}}
 ##### Summary with a schema
 
-The following schema sums up how Form Handlers, Form Builders, Controllers and Data Providers are wired together.
+The following schemas sums up how Form Handlers, Form Builders, Controllers and Data Providers are wired together.
 
-- [JPEG version](../img/form-schema.jpg)
-- [XML version](/schemas/1.7/form-schema.xml) (open it using [draw.io](https://draw.io))
+###### Display Form schema
+
+{{< figure src="../img/form-display.svg" title="Display Form schema" >}}
+
+{{% notice note %}}
+You can update this schema using the [source XML file](/schemas/1.7/form-display.xml) importable in services like [draw.io](https://draw.io).
+{{% /notice %}}
+
+###### Submit Form schema
+
+{{< figure src="../img/form-submit.svg" title="Submit Form schema" >}}
+
+{{% notice note %}}
+You can update this schema using the [source XML file](/schemas/1.7/form-submit.xml) importable in services like [draw.io](https://draw.io).
+{{% /notice %}}
+
 {{% /callout %}}
 
 ## Render the form using Twig

@@ -14,7 +14,7 @@ The creation workflow is a bit more complex than reading some data from the API,
 
 As we explained in a previous tutorial the webservice provides two [resource schemas]({{< relref "../testing-access#resource-schemas" >}}). For creation we are going to use the *blank* schema which is an empty representation of a resource. This empty XML will be filled with our data and then sent to the webservice using the `add()` method.
 
-{{< figure src="../../../img/create-resource.png" title="Update Resource via Webservice" >}}
+{{< figure src="../../../img/create-resource.svg" title="Update Resource via Webservice" >}}
 
 {{% notice note %}}
 You can update this schema using the [source XML file](/schemas/1.7/create-resource.xml) importable in services like [draw.io](https://draw.io).
