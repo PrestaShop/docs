@@ -12,7 +12,7 @@ aliases:
 
 The update workflow is quite similar to the [creation workflow]({{< relref "create-resource#creation-workflow" >}}), the main difference is that the initial input is not a blank XML but an existing one, so we use the `get()` method to get a prefilled XML, and then we can update its fields.
 
-{{< figure src="../../../img/update-resource.png" title="Update Resource via Webservice" >}}
+{{< figure src="../../../img/update-resource.svg" title="Update Resource via Webservice" >}}
 
 {{% notice note %}}
 You can update this schema using the [source XML file](/schemas/1.7/update-resource.xml) importable in services like [draw.io](https://draw.io).
