@@ -43,9 +43,25 @@ A Pull Request may only be merged after the following requirements have been ful
 - Automated checks (including automated tests) are passing.
 - The change has been approved by the QA team using the "QA ✓" label, unless there's a general agreement that the change is not testable by QA.
 
+### Marking Pull Requests
+
+When merging a Pull Request on the Core Repository, maintainer must do the following, if it has not been done by someone else:
+
+- Link the Pull Request to the right milestone. The milestone to choose is the next target release.
+- Add the label "Key feature" if the Pull Request must be mentioned in the Release Note.
+- Add the label "BC break" if the Pull Request introduces a [BC Break][bc-break].
+
+The items above are very important as they will be key to writing a good Release Note and ChangeLog for the next version.
+
+It is also recommended to :
+
+- Thank the Pull Request author and anybody else who invested notable energy into the Pull Request (code review, code suggestions, QA validation, usecase specification ...).
+- If the Pull Request is related to an issue, check whether the issue is fixed and closed (it might be done automatically depending on the Pull Request) and whether it should be.
+
 ## Stale Pull Requests
 
 Pull Requests may be closed after 30 days of inactivity following a request for modifications.
 
 [contribution-guidelines]: {{< ref "/1.7/contribute/contribution-guidelines/_index.md" >}}
 [prestashop-core-repository]: https://github.com/PrestaShop/PrestaShop/
+[bc-break]: https://stackoverflow.com/questions/8891005/what-does-bc-break-mean
