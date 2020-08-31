@@ -33,7 +33,7 @@ From a Smarty template:
 If you want the user to be able to see your hook in PrestaShop's
 Position page (in the back office), it has to be registered.
 
-You can register your hook from your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-yml.md" >}}):
+You can register your hook from your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-yml" >}}):
 
 ```yaml
 global_settings:

@@ -51,8 +51,8 @@ Here are the most useful shortcodes, both native and custom:
 - [notice][notice] – Displays a "note", "tip" or "warning" box to highlight important information.
 - [ref][ref] – Links to another DevDocs page or a section of the page.
 
-[ref]: {{< ref "ref.md" >}}
-[notice]: {{< ref "notice.md" >}}
-[funcdef]: {{< ref "funcdef.md" >}}
-[minver]: {{< ref "minver.md" >}}
-[callout]: {{< ref "callout.md" >}}
+[ref]: {{< ref "ref" >}}
+[notice]: {{< ref "notice" >}}
+[funcdef]: {{< ref "funcdef" >}}
+[minver]: {{< ref "minver" >}}
+[callout]: {{< ref "callout" >}}

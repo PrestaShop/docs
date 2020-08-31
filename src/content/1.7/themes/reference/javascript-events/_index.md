@@ -13,7 +13,7 @@ weight: 4
 PrestaShop 1.7 has reworked a lot of javascript code, almost rewriting everything.
 
 {{% notice info %}}
-It's recommended to read more about [PrestaShop asset management]({{< ref "1.7/themes/getting-started/asset-management/_index.md" >}}) before continuing.
+It's recommended to read more about [PrestaShop asset management]({{< ref "1.7/themes/getting-started/asset-management/" >}}) before continuing.
 {{% /notice %}}
 
 A default store loads a lot less files in 1.7 compared to 1.6, there are no specific files per page for instance. The 2 new important files you have to master are:

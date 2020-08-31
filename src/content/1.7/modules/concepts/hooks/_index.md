@@ -41,7 +41,7 @@ public function install()
 }
 ```
 
-If you do not know where you can register, [a list of available hooks]({{< ref "1.7/modules/concepts/hooks/list-of-hooks.md" >}}) is available.
+If you do not know where you can register, [a list of available hooks]({{< ref "1.7/modules/concepts/hooks/list-of-hooks" >}}) is available.
 
 ### Execution
 
@@ -126,4 +126,4 @@ $this->registerHook('displayAtSpecificPlace');
 
 If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you but be carefull : this will also plug the current module to the hook.
 
-[hooks-component]: {{< ref "/1.7/development/components/hook/_index.md" >}}
+[hooks-component]: {{< ref "/1.7/development/components/hook/" >}}

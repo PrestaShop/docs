@@ -77,4 +77,4 @@ Some hooks are directly rendered in templates, because PrestaShop developers wan
 ) }}
 ```
 
-[hooks-component]: {{< ref "/1.7/development/components/hook/_index.md" >}}
+[hooks-component]: {{< ref "/1.7/development/components/hook/" >}}

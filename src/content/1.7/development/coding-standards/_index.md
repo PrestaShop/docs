@@ -100,7 +100,7 @@ Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
 
 To help developers to comply with these conventions, [Stylelint](https://stylelint.io/), a stylesheet linter, has been configured in the PrestaShop project. You can find the configuration file [on this repository](https://github.com/PrestaShop/stylelint-config).
 
-Same as if you want to [compile assets]({{< ref "/1.7/development/compile-assets.md" >}}), you need NodeJS and NPM to run Stylelint.
+Same as if you want to [compile assets]({{< ref "/1.7/development/compile-assets" >}}), you need NodeJS and NPM to run Stylelint.
 
 Starting on {{< minver v="1.7.8" >}}, you can run the linter like this:
 

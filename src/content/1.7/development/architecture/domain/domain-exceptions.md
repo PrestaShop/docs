@@ -84,7 +84,7 @@ private function updateCategoryFromCommandData(Category $category, EditCategoryC
 ```
 
 {{% notice tip %}}
-If you are not familiar with command handlers or how CQRS pattern is used in PrestaShop, you can read about it here: [CQRS]({{< ref "cqrs.md" >}}).
+If you are not familiar with command handlers or how CQRS pattern is used in PrestaShop, you can read about it here: [CQRS]({{< ref "cqrs" >}}).
 {{% /notice %}}
 
 We can see in the code above, that if category update fails, it will throw a `CannotEditCategoryException`. 

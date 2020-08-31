@@ -59,5 +59,5 @@ $(() => {
 });
 ```
 
-[actions-reference]: {{< ref "/1.7/development/components/grid/actions-reference/_index.md" >}}
-[position-updater-reference]: {{< ref "/1.7/development/components/position-updater/_index.md" >}}
+[actions-reference]: {{< ref "/1.7/development/components/grid/actions-reference/" >}}
+[position-updater-reference]: {{< ref "/1.7/development/components/position-updater/" >}}

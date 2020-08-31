@@ -18,7 +18,7 @@ Do not go further if you haven’t made a backup of your shop.
 Rollback will be the only way to go back if something does not go well,
 and this requires a backup.
 
-Learn [how to backup your shop]({{< ref "/1.7/basics/keeping-up-to-date/backup.md" >}})
+Learn [how to backup your shop]({{< ref "/1.7/basics/keeping-up-to-date/backup" >}})
 {{% /notice %}}
 
 This chapter describes several ways to complete an upgrade of

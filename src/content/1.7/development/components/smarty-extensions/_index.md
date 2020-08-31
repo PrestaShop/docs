@@ -55,7 +55,7 @@ You can choose to exclude some modules, which won't be notified of the hook:
 
 ### {l}
 
-The `{l}` function allows you to insert translated text in your template using the [Translation system]({{< ref "/1.7/development/internationalization/translation/_index.md" >}}).
+The `{l}` function allows you to insert translated text in your template using the [Translation system]({{< ref "/1.7/development/internationalization/translation/" >}}).
 
 This function takes the following of arguments:
 
@@ -128,7 +128,7 @@ Here is a few examples:
 
 ### Widgets
 
-PrestaShop 1.7 introduced a new way to display modules in a theme, called [Widgets]({{< ref "/1.7/modules/concepts/widgets/_index.md" >}}). Instead of using a hook and hooking your module to it, the widget functions allow you explicitly manipulate your module from a template.
+PrestaShop 1.7 introduced a new way to display modules in a theme, called [Widgets]({{< ref "/1.7/modules/concepts/widgets" >}}). Instead of using a hook and hooking your module to it, the widget functions allow you explicitly manipulate your module from a template.
 
 {{% notice warning %}}
 **Avoid using this feature if you can.**

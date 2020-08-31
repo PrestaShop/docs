@@ -12,7 +12,7 @@ PrestaShop 1.7 features a new translation system, based on the [Symfony Translat
 {{% notice warning %}}
 **This documentation is intended for Core and Native module translation.**
 
-If you are a module developer, read the [module translation documentation]({{< ref "1.7/modules/creation/module-translation/_index.md" >}}) instead.
+If you are a module developer, read the [module translation documentation]({{< ref "1.7/modules/creation/module-translation/" >}}) instead.
 {{% /notice %}}
 
 ## Overview
@@ -153,4 +153,4 @@ For information on more advanced features, head on to the [Symfony translator co
 
 {{% children %}}
 
-[translation-domains]: {{< relref "translation-domains.md" >}}
+[translation-domains]: {{< relref "translation-domains" >}}

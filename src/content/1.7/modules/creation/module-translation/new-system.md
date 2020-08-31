@@ -11,7 +11,7 @@ weight: 1
 The new module translation system is based on the new system introduced in PrestaShop 1.7 for the Core and Native modules. It aims to harmonize translation systems throughout PrestaShop while providing backwards compatibility.
 
 {{% notice info %}}
-This feature is only available for PrestaShop 1.7.6 and later. If you need to support older versions, see the [Classic translation system]({{< ref "classic-system.md" >}}).
+This feature is only available for PrestaShop 1.7.6 and later. If you need to support older versions, see the [Classic translation system]({{< ref "classic-system" >}}).
 {{% /notice %}}
 
 ## Vocabulary
@@ -38,7 +38,7 @@ The Back Office's Translation page (_International > Translations > Modify Trans
 
 
 {{% notice note %}}
-If your module has already been translated using the [classic translation system]({{< ref "classic-system.md" >}}), the new translation interface can also source translations from your existing classic translation dictionary files. This means that you can keep your old controllers for compatibility with older PrestaShop versions, and add Symfony controllers for 1.7.6+, without losing your previous translations.
+If your module has already been translated using the [classic translation system]({{< ref "classic-system" >}}), the new translation interface can also source translations from your existing classic translation dictionary files. This means that you can keep your old controllers for compatibility with older PrestaShop versions, and add Symfony controllers for 1.7.6+, without losing your previous translations.
 {{% /notice %}}
 
 
@@ -81,7 +81,7 @@ Translation Domain names are always made of three parts, separated by dots:
 
 #### Backwards compatibility
 
-If you want your module to be compatible with previously-generated [classic translation dictionary files]({{< ref "classic-system.md" >}}), then the third component of the Translation domain must be set to the name of the file where the wording is used, respecting the following rules:
+If you want your module to be compatible with previously-generated [classic translation dictionary files]({{< ref "classic-system" >}}), then the third component of the Translation domain must be set to the name of the file where the wording is used, respecting the following rules:
   
   - The first letter must be in upper case, and the rest in lower case
   - If the file extension is `.tpl`, the extension must be removed

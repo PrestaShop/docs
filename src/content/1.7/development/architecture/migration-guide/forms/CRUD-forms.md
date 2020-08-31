@@ -94,7 +94,7 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-The core actually uses the CQRS pattern to retrieve data, instead of `ObjectModel`. For more information, have a look at our recommended approach on [how to use CQRS in forms]({{< relref "CQRS-usage-in-forms.md" >}}).
+The core actually uses the CQRS pattern to retrieve data, instead of `ObjectModel`. For more information, have a look at our recommended approach on [how to use CQRS in forms]({{< relref "CQRS-usage-in-forms" >}}).
 {{% /notice %}}
 
 Don't forget to register your class as a service, you will need it to use it with the [Form builder](#form-builder).
@@ -255,7 +255,7 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-The core actually uses the CQRS pattern to retrieve data, instead of `ObjectModel`. For more information, have a look at our recommended approach on [how to use CQRS in forms]({{< relref "CQRS-usage-in-forms.md" >}}).
+The core actually uses the CQRS pattern to retrieve data, instead of `ObjectModel`. For more information, have a look at our recommended approach on [how to use CQRS in forms]({{< relref "CQRS-usage-in-forms" >}}).
 {{% /notice %}}
 
 Don't forget to register your Form Data Handler as a service, you will need it to use it with your [Form Handler](#form-handler).
@@ -452,9 +452,9 @@ For more details, check out the [ContactsController source code on GitHub](https
 
 ## Summary as a schema
 
-The following schema depicts the complete form flow, including the `Domain tier` which uses the CQRS pattern. [Learn more about it here]({{< relref "CQRS-usage-in-forms.md" >}}).
+The following schema depicts the complete form flow, including the `Domain tier` which uses the CQRS pattern. [Learn more about it here]({{< relref "CQRS-usage-in-forms" >}}).
 
 {{< figure src="../img/identifiable-object-schema-with-cqrs-domain-tier.png" title="Identifiable object forms schema" >}}
 
 
-[form-types]: {{< relref "_index.md#form-types" >}}
+[form-types]: {{< relref "./#form-types" >}}

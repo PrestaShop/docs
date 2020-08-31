@@ -116,7 +116,7 @@ Before proposing to add a new dependency, make sure you do this:
 
 ## Related topics
 
-- [What happens after you submit a contribution]({{< ref "1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}})
+- [What happens after you submit a contribution]({{< ref "1.7/contribute/contribution-process/how-pull-requests-are-processed" >}})
 
 ## Read more
 

@@ -620,7 +620,7 @@ developers to request the database.
 This can be used while developing a module responsible of the export
 and/or import of the objects from/to the database.
 
-For more details, see the page dedicated to [ObjectModels]({{< ref "1.7/development/database/objectmodel.md" >}})
+For more details, see the page dedicated to [ObjectModels]({{< ref "1.7/development/database/objectmodel" >}})
 
 ### Web service (API)
 

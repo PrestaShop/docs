@@ -6,7 +6,7 @@ weight: 30
 # CQRS usage in forms
 
 {{% notice note %}}
-This article assumes that you are already familiar with CQRS and [CRUD forms]({{< relref "CRUD-forms.md" >}}), as this topic only demonstrates the usage of the CQRS approach.
+This article assumes that you are already familiar with CQRS and [CRUD forms]({{< relref "CRUD-forms" >}}), as this topic only demonstrates the usage of the CQRS approach.
 {{% /notice %}}
  
 ## The basics
@@ -223,5 +223,5 @@ final class ContactFormDataProvider implements FormDataProviderInterface
 
 In the example above, the Handle to the `GetContactForEditing` query returns an instance of `EditableContact`, which is an immutable Data Transfer Object (DTO) containing all the information we need.
 
-[form-data-handler]: {{< relref "CRUD-forms.md#form-data-handler" >}}
-[form-data-provider]: {{< relref "CRUD-forms.md#form-data-provider" >}}
+[form-data-handler]: {{< relref "CRUD-forms#form-data-handler" >}}
+[form-data-provider]: {{< relref "CRUD-forms#form-data-provider" >}}

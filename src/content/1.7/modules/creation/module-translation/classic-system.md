@@ -12,11 +12,11 @@ The classic translation system is a heritage from previous versions of PrestaSho
 **Native modules work differently**
 
 In PrestaShop 1.7, native modules (the ones bundled with PrestaShop) use a different system.
-Read more about it here: [Native module translation]({{< ref "1.7/development/internationalization/translation/native-module-translation.md" >}}).
+Read more about it here: [Native module translation]({{< ref "1.7/development/internationalization/translation/native-module-translation" >}}).
 {{% /notice %}}
 
 {{% notice info %}}
-Modern (symfony-based) modules can only be translated using the [New translation system]({{< ref "new-system.md" >}}).
+Modern (symfony-based) modules can only be translated using the [New translation system]({{< ref "new-system" >}}).
 {{% /notice %}}
 
 ## How it works
@@ -284,7 +284,7 @@ Sometimes the same wording would be translated differently when used in two diff
 Although contextualization is optional, we strongly suggest to contextualize all your wordings.
 
 {{% notice note %}}
-Contextualization works differently in the Core, see [Core Translation]({{< ref "/1.7/development/internationalization/translation/_index.md" >}}).
+Contextualization works differently in the Core, see [Core Translation]({{< ref "/1.7/development/internationalization/translation/" >}}).
 {{% /notice %}}
 
 ##### Contextualize translations in PHP files
@@ -367,7 +367,7 @@ As you can see, there are three parameters:
 3. `$md5` – MD5 hash of the original wording you intend to translate.
 
 {{% notice tip %}}
-If you are manually building a translation file to use with the [New translation system]({{< ref "new-system.md" >}}), keep in mind the [Backward compatibility constraints]({{< ref "new-system.md#backwards-compatibility" >}}).
+If you are manually building a translation file to use with the [New translation system]({{< ref "new-system" >}}), keep in mind the [Backward compatibility constraints]({{< ref "new-system.md#backwards-compatibility" >}}).
 {{% /notice %}}
 
 ## Limitations and caveats
@@ -420,4 +420,4 @@ In the meantime, refer to this list for the equivalences between language codes 
 [iso-619-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [ietf-language-tags]: https://en.wikipedia.org/wiki/IETF_language_tag
 [legacy-to-standard]: https://github.com/PrestaShop/PrestaShop/blob/1.7.6.x/app/Resources/legacy-to-standard-locales.json
-[new-translation-system]: {{< ref "new-system.md" >}}
+[new-translation-system]: {{< ref "new-system" >}}
