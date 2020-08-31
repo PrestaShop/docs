@@ -15,7 +15,7 @@ add or remove grid feature while loading only necessary javascript code. In this
 
 ## Getting started
 To start we will need to have a plain grid already created in php side
-(you can find more docs about grid here https://devdocs.prestashop.com/1.7/development/components/grid).
+(you can find more docs about grid in [The Grid component page]({{< ref "/1.7/development/components/grid/" >}}).
 After following the Grid documentation directions you should now have a fully working php grid.
 As an example we will use a grid that display taxes items.
 
