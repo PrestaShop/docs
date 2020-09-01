@@ -45,7 +45,7 @@ The prestashop specific configuration file [can be found here](https://github.co
 
 Starting on 1.7.7, all new PHP code should be strictly typed.
 
-This means that all new methods **must** specify a type for all parameters as well as the return type. Similarly, all new classes must enforce type strictness via `declare`:
+This means that all new methods **must** specify a type for all parameters as well as the return type. Similarly, all new classes except interfaces must enforce type strictness via `declare`:
 
 ```php
 <?php
