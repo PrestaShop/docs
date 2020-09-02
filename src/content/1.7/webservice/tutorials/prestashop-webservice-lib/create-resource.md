@@ -61,7 +61,7 @@ $customerFields = $blankXml->customer->children();
 $customerFields->firstname = 'John';
 $customerFields->lastname = 'DOE';
 $customerFields->email = 'john.doe@unknown.com';
-$customerFields->password = 'password1234';
+$customerFields->passwd = 'password1234';
 
 $createdXml = $webService->add([
    'resource' => 'customers',
