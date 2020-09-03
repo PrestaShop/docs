@@ -98,7 +98,7 @@ Note that all those commands are in this namespace: `PrestaShop\PrestaShop\Core\
 
 ### The **actionProductCancel** hook
 
-Since prestashop 1.7.7, the `actionProductCancel` hook is triggered by all refund actions, it was not the case in 1.7.6, see the differences in the table below:
+Since Prestashop 1.7.7, the `actionProductCancel` hook is triggered by all refund actions, it was not the case in 1.7.6, see the differences in the table below:
 
 |Does this action trigger the `actionProductCancel` hook ?| 1.7.6 | 1.7.7
 |:-------|:-------|:-----------------------|
@@ -146,4 +146,3 @@ if ($order->hasBeenShipped()) {
   // this is a 'cancel product'
 
 ```
-
