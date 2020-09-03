@@ -57,7 +57,7 @@ $command = new CancelOrderProductCommand(
     $orderId
 );
 
-// give it to the command bus
+// Give it to the command bus
 $this->commandBus->handle($command);
 ```
 
