@@ -51,7 +51,7 @@ In the code, it looks like this:
 use PrestaShop\PrestaShop\Core\CommandBus\CommandBusInterface;
 use PrestaShop\PrestaShop\Core\Domain\Order\Command\CancelOrderProductCommand;
 
-// instantiate the corresponding command
+// Instantiate the corresponding command
 $command = new CancelOrderProductCommand(
     $cancelledProducts,
     $orderId
