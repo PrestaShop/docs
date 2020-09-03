@@ -109,9 +109,9 @@ Since prestashop 1.7.7, the `actionProductCancel` hook is triggered by all refun
 
 #### How to know which action triggered the `actionProductCancel` hook ?
 
-##### In prestashop 1.7.7
+##### In Prestashop 1.7.7
 
-Since prestashop 1.7.7, the `actionProductCancel` hook has an `action` parameter indicating which action was performed. Its value is one of the attributes of the `CancellationActionType` class. 
+Since Prestashop 1.7.7, the `actionProductCancel` hook has an `action` parameter indicating which action was performed. Its value is one of the attributes of the `CancellationActionType` class. 
 
 ```php
 <?php
@@ -146,5 +146,4 @@ if ($order->hasBeenShipped()) {
   // this is a 'cancel product'
 
 ```
-
 
