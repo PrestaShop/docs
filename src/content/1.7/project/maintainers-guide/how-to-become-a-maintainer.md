@@ -57,4 +57,4 @@ A project maintainer can be revoked for any of the following reasons:
 - On their demand, for personal reasons.
 
 [future-architecture]: https://build.prestashop.com/news/prestashop-in-2019-and-beyond-part-3-the-future-architecture/
-[slack]: {{< param ProjectUrls.GitHub >}}
+[slack]: {{< param ProjectUrls.Slack >}}
