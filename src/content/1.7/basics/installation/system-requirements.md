@@ -58,11 +58,11 @@ You'll get a web page detailing requirements and recommendations, and how your s
   <thead>
     <tr>
       <th></th>
-      <th colspan="11" style="text-align:center">PHP Version</th>
+      <th colspan="12" style="text-align:center">PHP Version</th>
     </tr>
     <tr class="h-version-titles">
       <th>PrestaShop Version</th>
-      <th>&lt;=&nbsp;5.1</th>
+      <th>&le;&nbsp;5.1</th>
       <th>5.2</th>
       <th>5.3</th>
       <th>5.4</th>
@@ -72,7 +72,8 @@ You'll get a web page detailing requirements and recommendations, and how your s
       <th>7.1</th>
       <th>7.2</th>
       <th>7.3</th>
-      <th>&ge;&nbsp;7.4</th>
+      <th>7.4</th>
+      <th>&ge;&nbsp;8.0</th>
     </tr>
   </thead>
 <tbody>
@@ -89,6 +90,7 @@ You'll get a web page detailing requirements and recommendations, and how your s
       <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
       <span class="sr-only">Recommended version</span>
     </td>
+    <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
@@ -109,6 +111,7 @@ You'll get a web page detailing requirements and recommendations, and how your s
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
+    <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
   <tr>
     <td>1.7.4</td>
@@ -123,6 +126,7 @@ You'll get a web page detailing requirements and recommendations, and how your s
       <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
       <span class="sr-only">Recommended version</span>
     </td>
+    <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
@@ -143,6 +147,7 @@ You'll get a web page detailing requirements and recommendations, and how your s
     </td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-no"><span class="sr-only">No</span></td>
+    <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
   <tr>
       <td>1.7.7</td>
@@ -153,6 +158,25 @@ You'll get a web page detailing requirements and recommendations, and how your s
       <td class="support-no"><span class="sr-only">No</span></td>
       <td class="support-no"><span class="sr-only">No</span></td>
       <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
+      <td class="support-yes">
+        <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
+        <span class="sr-only">Recommended version</span>
+      </td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+    </tr>
+  <tr>
+      <td>1.7.8</td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
       <td class="support-yes"><span class="sr-only">Yes</span></td>
       <td class="support-yes"><span class="sr-only">Yes</span></td>
       <td class="support-yes">
