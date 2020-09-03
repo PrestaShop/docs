@@ -131,9 +131,9 @@ public function hookActionProductCancel($params)
 
 ```
 
-##### In prestashop 1.7.6
+##### In Prestashop 1.7.6
 
-In prestashop 1.7.6 there's no 'action' parameter, but you can still guess what action was being performed given the order's history, here's how it looks like in the code:
+In Prestashop 1.7.6 there's no 'action' parameter, but you can still guess what action was being performed given the order's history, here's how it looks like in the code:
 
 ```php
 <?php
@@ -146,6 +146,5 @@ if ($order->hasBeenShipped()) {
   // this is a 'cancel product'
 
 ```
-
 
 
