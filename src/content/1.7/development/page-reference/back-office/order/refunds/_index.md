@@ -31,7 +31,7 @@ The **Partial refund** button is available once a payment was made on the order,
 
 ### Introduction
 
-Since Prestashop 1.7.7 cancellation actions (that is to say **cancel product**, **return product**, **standard refund** and **partial refund**) are implemented following the CQRS design pattern.
+Since Prestashop 1.7.7, cancellation actions (that is to say **cancel product**, **return product**, **standard refund** and **partial refund**) are implemented following the CQRS design pattern.
 
 {{% notice info %}}
 You will find more informations about Prestashop's CQRS implementation [on this page](/1.7/development/architecture/domain/cqrs/).
