@@ -82,7 +82,7 @@ Note that all those commands are in this namespace: `PrestaShop\PrestaShop\Core\
 | **IssueReturnProductCommand** |||
 || `int $orderId` | The id of the order containing the products to be returned |
 || `array $refunds`<br><br>Contains a list of refunds, each refund is an array containing an OrderDetail ID (int) and a quantity (int) to be refunded:<br><br>`[$orderDetailId => ['quantity' => $quantity]]`| An array containing a list of products (oderDetails) to be returned |
-|| `bool $restockRefundedProducts` | Wether returned product should be put back the stock (incrementing its quantity in stock) |
+|| `bool $restockRefundedProducts` | Wether returned product should be put back in the stock (incrementing its quantity in stock) |
 || `bool $refundShippingCost` | Wether shipping cost should be refunded |
 || `bool $generateCreditSlip` | Wether a credit splip should be generated |
 || `bool $generateVoucher` | Wether a voucher should be generated |
