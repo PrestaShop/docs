@@ -76,7 +76,7 @@ Note that all those commands are in this namespace: `PrestaShop\PrestaShop\Core\
 || `int $orderId`| The id of the order containing the products to be refunded |
 || `array $refunds`<br><br>Contains a list of refunds, each refund is an array containing an OrderDetail ID (int) and a quantity (int) to be refunded:<br><br>`[$orderDetailId => ['quantity' => $quantity]]`| An array containing a list of products (oderDetails) to be refunded |
 || `bool $refundShippingCost`| Wether shipping cost should be refunded |
-|| `bool $generateCreditSlip`| Wether a credit splip should be generated |
+|| `bool $generateCreditSlip`| Wether a credit slip should be generated |
 || `bool $generateVoucher`| Wether a voucher should be generated |
 || `int $voucherRefundType`| Id of the voucher refund type, those can be found in the file `VoucherRefundType.php` |
 | **IssueReturnProductCommand** |||
