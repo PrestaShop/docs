@@ -1,7 +1,8 @@
 ---
 title: Domain-driven architecture
 menuTitle: Domain-driven architecture
-weight: 40
+weight: 60
+summary: "Where PrestaShop architecture is going"
 ---
 
 # Domain-driven architecture
