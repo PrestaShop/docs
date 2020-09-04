@@ -92,7 +92,7 @@ Note that all those commands are in this namespace: `PrestaShop\PrestaShop\Core\
 || `array $refunds`<br><br>Contains a list of refunds, each refund is an array containing an OrderDetail ID (int), a quantity (int) and amount (float) to be refunded:<br><br>`[$orderDetailId => [`<br>`'quantity' => $quantity,'amount' => $amount]`<br>`]`| An array containing a list of products (oderDetails) to be refunded |
 || `string $shippingCostRefundAmount` | Amount to be refunded for shipping cost |
 || `bool $restockRefundedProducts` | Wether refunded products should be put back in the stock (incrementing its quantity in stock) |
-|| `bool $generateCreditSlip` | Wether a credit splip should be generated |
+|| `bool $generateCreditSlip` | Wether a credit slip should be generated |
 || `bool $generateVoucher` | Wether a voucher should be generated |
 || `int $voucherRefundType`| Id of the voucher refund type, those can be found in the file `VoucherRefundType.php` |
 
