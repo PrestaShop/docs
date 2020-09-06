@@ -137,7 +137,7 @@ use PrestaShop\PrestaShop\Core\Grid\Action\AbstractGridAction;
  * but you can also implement \PrestaShop\PrestaShop\Core\Grid\Action\GridActionInterface 
  * if for some reason you want to avoid using the abstract class
  */ 
-final class MySpecificAction extends AbstractBulkAction
+final class MySpecificAction extends AbstractGridAction
 {
     /**
      * {@inheritdoc}
@@ -174,7 +174,7 @@ Then you need to create template so it can render nicely in your grid.
 ```twig
 {# mymodule/views/PrestaShop/Admin/Common/Grid/Actions/Grid/my_specific.html.twig #}
 
-<a id="{{ '%s_grid_bulk_action_%s'|format(grid.id, action.id) }}" href="{{ path(action.options.route, action.options.route_params) }}" class="dropdown-item">
+<a id="{{ '%s_grid_action_%s'|format(grid.id, action.id) }}" href="{{ path(action.options.route, action.options.route_params) }}" class="dropdown-item">
   {% if action.icon is not empty %}
     <i class="material-icons">{{ action.icon }}</i>
   {% endif %}
