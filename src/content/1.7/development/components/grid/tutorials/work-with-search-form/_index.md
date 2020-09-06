@@ -71,7 +71,6 @@ final class ManufacturerGridDefinitionFactory extends AbstractGridDefinitionFact
                     ],
                     'redirect_route' => 'admin_manufacturers_index',
                 ])
-                ->setAssociatedColumn('actions')
             )
         ;
     }
@@ -290,7 +289,6 @@ It is defined in the [`SearchAndResetType` options]({{< ref "/1.7/development/co
                     ],
                     'redirect_route' => 'admin_manufacturers_index',
                 ])
-                ->setAssociatedColumn('actions')
             )
     ...
 ```
