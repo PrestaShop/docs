@@ -100,7 +100,7 @@ class Mymodule extends Module
     // ...
 
     /**
-     * Use hook to add Row action for subscribing multiple customers to newsletter
+     * Use hook to add Row action for subscribing customer to newsletter
      */
     public function hookActionCustomerGridDefinitionModifier(array $params)
     {
@@ -108,15 +108,15 @@ class Mymodule extends Module
         $gridDefinition = $params['definition'];
 
         $gridDefinition->getGridActions()
-            ->add((new SubmitRowAction('export'))
-                ->setName($this->trans('Export', [], 'Admin.Actions'))
-                ->setIcon('export')
+            ->add((new SubmitRowAction('subscribe'))
+                ->setName($this->trans('Subscribe', [], 'Admin.Actions'))
+                ->setIcon('mail')
                 ->setOptions([
-                    'route' => 'admin_categories_export',
-                    'route_param_name' => 'categoryId',
-                    'route_param_field' => 'id_category',
+                    'route' => 'admin_customer_subscribe',
+                    'route_param_name' => 'customerId',
+                    'route_param_field' => 'id_customer',
                     'confirm_message' => $this->trans(
-                        'Export selected item?',
+                        'Subscribe to newsletter?',
                         [],
                         'Admin.Notifications.Warning'
                     ),
@@ -165,7 +165,7 @@ final class MySpecificRowAction extends AbstractRowAction
     protected function configureOptions(OptionsResolver $resolver)
     {
         /**
-         * options passed to the resolver will be available in the Grid action
+         * options passed to the resolver will be available in the Grid Row action
          * and also in the template responsible of rendering the action.
          */
         $resolver
