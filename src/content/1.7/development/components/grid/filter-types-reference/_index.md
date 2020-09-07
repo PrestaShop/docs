@@ -147,7 +147,6 @@ class MyGridDefinitionFactory extends AbstractGridDefinition
                             ],
                             'redirect_route' => 'admin_monitorings_index',
                         ])
-                        ->setAssociatedColumn('actions')
                 );
         }
 }
