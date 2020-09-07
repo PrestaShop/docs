@@ -175,4 +175,4 @@ There is a simple rule to guess which template will be rendered: `{grid_id}_{col
 
 And what will happens if you define the following template? `my-module/views/PrestaShop/Admin/Common/Grid/Columns/Content/my_grid_name_action.html.twig`
 
-You're right, the template will be overriden *only* for the column type "data" with the id "name". So extensible and powerful!
+You're right, the template will be overriden *only* for the column type "action" with the id "name". So extensible and powerful!
