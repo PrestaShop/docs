@@ -1,6 +1,8 @@
 ---
 title: File structure
 weight: 20
+menuTitle: File structure
+summary: "An explanation about each directory content of the project"
 ---
 
 # File structure

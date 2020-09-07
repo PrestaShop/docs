@@ -2,7 +2,8 @@
 title: How to migrate Back Office pages to Symfony
 menuTitle: Migration guide
 chapter: true
-weight: 60
+weight: 40
+summary: "The guide we use to migrate pages to Symfony"
 ---
 
 # How to migrate Back Office pages to Symfony

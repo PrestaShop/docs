@@ -2,6 +2,7 @@
 title: Introduction to PrestaShop's Architecture
 menuTitle: Introduction
 weight: 10
+summary: "Learn how PrestaShop is structured: back-end, front-end, business stack, themes and modules"
 ---
 
 # Introduction to PrestaShop's Architecture
