@@ -43,4 +43,4 @@ class SomeType extends AbstractType
 
 ## Preview example
 
-{{< figure src="../img/money_with_suffix.png" title="ShopChoiceTreeType rendered in form" >}}
+{{< figure src="../img/money_with_suffix.png" title="MoneyWithSuffixType rendered in form" >}}
