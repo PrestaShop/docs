@@ -75,7 +75,7 @@ class MyModule extends Module
     {
         // $params['definition'] is instance of \PrestaShop\PrestaShop\Core\Grid\Definition\GridDefinition
         $params['definition']->getBulkActions()->add(
-                (new SubmitBulkAction('disable_selection'))
+                (new SubmitBulkAction('subscribe_newsletter'))
                     ->setName('Subscribe newsletter')
                     ->setOptions([
                         // in most cases submit action should be implemented by module
