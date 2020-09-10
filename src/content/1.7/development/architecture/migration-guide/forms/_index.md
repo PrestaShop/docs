@@ -53,7 +53,7 @@ Form types must be created in the `src/PrestaShopBundle/Form/Admin/{Menu}/{Page}
 
 PrestaShop provides some built-in Form types that will help you integrate the specific form components PrestaShop uses in the Back Office. You'll find them inside the *Types* folder:
 
-* `ChoiceCategoryTreeType`
+* `ChoiceCategoriesTreeType`
 * `CustomMoneyType`
 * `DatePickerType`
 * `TextWithUnitType`
