@@ -3,7 +3,7 @@ title: Migration project and strategy
 weight: 10
 ---
 
-This is a summary of current Migration Strategy. It provides an overview of our current vision, in the end of this year 2020, of the Symfony Migration project.
+This is a summary of the current Migration Strategy. It provides an overview of our current vision, in the end of this year 2020, of the Symfony Migration project.
 
 # Different kind of pages
 
@@ -11,21 +11,21 @@ Back-Office pages can be classified in four categories:
 
 1. [Configuration / Settings Form pages][form-pages]
 
-These pages allow user to modify configuration settings in PrestaShop.
+These pages allow the user to modify configuration settings in PrestaShop.
 
 2. [Listing pages][grid-pages]
 
-These pages allow user to browse PrestaShop content using listings. These listings usually provide some actions user can trigger, such as "enable/disable", "delete", "bulk delete".
+These pages allow the user to browse PrestaShop content using listings. These listings usually provide some actions the user can trigger, such as "enable/disable", "delete", "bulk delete".
 
 3. [Add/Edit Form pages][identifiable-form-pages]
 
-These pages allow user to create or edit records from PrestaShop data model (example: create/edit customers).
+These pages allow the user to create or edit records from PrestaShop data model (example: create/edit customers).
 
 4. Other pages
 
-There are some pages that are unique : Carriers Edit page, Dashboard, Customer Service page ...
+There are some pages that are unique: Carriers Edit page, Dashboard, Customer Service page ...
 
-Sometimes a page will have a mixed content. For example there are pages that provide two listings or one listing and one configuration form.
+Sometimes a page will have mixed content. For example there are pages that provide two listings or one listing and one configuration form.
 
 # Where we started from
 
@@ -40,14 +40,12 @@ We believe PrestaShop project has grown too big to follow this 3-layers model, r
 
 # The beginning of the Migration project: Configuration Form
 
-The Migration project started by migrating Configuration Form pages.
-
-[You can read more about it by clicking on this link][form-pages].
+The Migration project started by migrating [Configuration Form pages][form-pages].
 
 The chosen structure to handle such pages was the following:
 
 1. A View layer: Twig template, rendering manually the Symfony form
-2. A controller layer: Symfony Controller empty of business logic (following the ["Thin Controller, Fat Model"][thin-ctrlers] principle), in charge of controlling the View, formatting data, handling security and routing
+2. A Controller layer: Symfony Controller empty of business logic (following the ["Thin Controller, Fat Model"][thin-ctrlers] principle), in charge of controlling the View, formatting data, handling security and routing
 3. In Model layer: Symfony Form is built and managed by a FormHandler
 4. Also part of the Model layer, DataProvider is in charge of data retrieval and saving the data
 
@@ -55,9 +53,7 @@ Since the DataProvider interacts with ObjectModel, it belongs to [Adapter namesp
 
 # Phase 2: listings
 
-For migrating Listing pages, the Grid component was built.
-
-[You can read more about it by clicking on this link][grid-pages].
+For migrating Listing pages, the [Grid component][grid-pages] was built.
 
 The chosen layer structure to handle such pages was the following:
 
@@ -131,7 +127,7 @@ We dont want to render manually Form inputs, so we now aim to build a Twig Form 
 
 # Towards a Core domain
 
-Between phase 1 and phase 4, two years passed. Two years where we experimented, explored, struggled and we got the hang of what was needed for PrestaShop to mover forward.
+Between phase 1 and phase 4, two years passed. Two years where we experimented, explored, struggled and we got the hang of what was needed for PrestaShop to move forward.
 
 We now have a better understanding of what the direction we are aiming for. We now know we want to build a full Core Domain for the future of PrestaShop.
 
@@ -145,7 +141,7 @@ The [future PrestaShop architecture][future-architecture] is based on 5 key elem
 4. APIs
 5. Extensions
 
-The **Core** sits in the back-end and is at the center of it all. It accounts for all the business needs and use cases that PrestaShop is capable of doing (managing products, shopping carts, orders, etc.). The Core is _domain-oriented_, meaning that it is built around business use cases, expressed in an [ubiquitous language][ubiquitous-langage]. The Core is also master of its own Domain; in  order to let it be the guardian of system-wide coherence, it has to be isolated from other services and be the only one capable of performing state transitions. Other services can only interact with the Core through well-defined interfaces, that we call the Core API. Incidentally, this also means that Core behavior can be _extended_, not _modified_, by other services–or at least not in a way that it puts system coherence at risk. In addition, the Core is designed to be easily testable and is covered by automated tests.
+The **Core** sits in the back-end and is at the center of it all. It accounts for all the business needs and use cases that PrestaShop is capable of doing (managing products, shopping carts, orders, etc.). The Core is _domain-oriented_, meaning that it is built around business use cases, expressed in an [ubiquitous language][ubiquitous-langage]. The Core is also master of its own Domain; in  order to let it be the guardian of system-wide coherence, it has to be isolated from other services and be the only one capable of performing state transitions. Other services can only interact with the Core through well-defined interfaces, that we call the Core API. Incidentally, this also means that Core behavior can be _extended_, not _modified_, by other services or at least not in a way that it puts system coherence at risk. In addition, the Core is designed to be easily testable and is covered by automated tests.
 
 In the future architecture, the Back Office (BO) and the Front Office (FO) are independent **front-end applications**, each one running entirely on the browser. They are fully component-based (our framework of choice is [VueJs][vue-js], and built using separate toolsets called **Software Development Kits** (SDKs): one for the FO, one for the BO. These SDKs would not only include reusable components, but also bidirectional communication channels based on stable **contracts**, both within the front-end application (events) as well as with the back-end (through APIs). The BO SDK also integrates the UI Kit, which provides an uniform style for the whole Back Office.
 
