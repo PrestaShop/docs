@@ -146,7 +146,7 @@ class MymoduleSomethingModuleFrontController extends ModuleFrontController
 {
     public function initContent()
     {
-        $this->title = $this->trans('My module title', [], 'Modules.Mymodule.Something);
+        $this->title = $this->module->trans('My module title', [], 'Modules.Mymodule.Something);
     }
 }
 ```
@@ -165,7 +165,7 @@ class SomeAdminController extends FrameworkBundleAdminController
 {
     public function someAction()
     {
-        $this->trans('Some text being translated', [], 'Modules.Mymodule.Admin');
+        $this->text = $this->trans('Some text being translated', [], 'Modules.Mymodule.Admin');
     }
 }
 ```
