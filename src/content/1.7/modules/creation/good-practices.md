@@ -77,7 +77,7 @@ add a preliminary check before using them (I.e with `extension_loaded`). This pr
   - modules
   - image standards
 - You should not have HTML in your PHP code; use Smarty or helper classes for views.
-- We do not accept themes using the PrestaShop base them to which only color, font and image changes etc. have been made. You should create a unique theme!  :-)
+- We do not accept themes using the PrestaShop base theme to which only color, font and image changes etc. have been made. You should create a unique theme!  :-)
 - You should keep the store logo by default in your theme's zip, in the header and footer of your theme.
 
 **A few recommendations for your email templates**
