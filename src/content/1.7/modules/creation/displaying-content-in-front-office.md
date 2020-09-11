@@ -404,7 +404,7 @@ to the left column's hook.
 All Smarty variables are global. You should therefore pay attention not
 to name your own variable with the name of an existing Smarty variable,
 in order to avoid overwriting it. It is good practice to avoid overly
-simple names, such as `{products}`, and to prefix it with your module's
+simple names, such as `{$products}`, and to prefix it with your module's
 name, or even your own name or initials, such as:
 `{$henryb_mymodule_products}`.
 
