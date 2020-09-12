@@ -13,7 +13,7 @@ Your module's wordings are written in English, but internationalization is very 
 
 Ideally, you should translate your module in all the languages that are installed on your shop. This can be a tedious task, but a whole system has been put in place in order to help you out.
 
-PrestaShop provides an interface so that merchants can translate any wordings in their shop, including you module's. This section can be found in under _International > Translations_.
+PrestaShop provides an interface so that merchants can translate any wordings in their shop, including your module's. This section can be found in under _International > Translations_.
 
 The process of preparing your module for translation is called internationalization, or i18n.
 
