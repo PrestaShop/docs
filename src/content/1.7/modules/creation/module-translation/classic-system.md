@@ -217,7 +217,7 @@ We can start improving this by keeping the first case, then replacing the variab
   {capture name='my_module_tempvar'}{l s='World' mod='mymodule'}{/capture}
   {assign var='my_module_name' value=$smarty.capture.my_module_tempvar}
 {/if}
-{l s='Hello,' mod='mymodule'} {$my_module_name$}!
+{l s='Hello,' mod='mymodule'} {$my_module_name}!
 ```
 
 This is a start! In this example, when `$my_module_name` is not defined, we capture the value of translating "World" and assign that value in `$my_module_name`. This way, we can simply display `$my_module_name` in any case.
