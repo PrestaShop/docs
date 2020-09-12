@@ -92,7 +92,7 @@ class MyModuleFrontController extends ModuleFrontController
 
 #### Other classes
 
-Other classes will need to retrieve the module's instance somehow. We recommend passing it as as a parameter in the constructor and storing it for later use.
+Other classes will need to retrieve the module's instance somehow. We recommend passing it as a parameter in the constructor and storing it for later use.
 
 ```php
 <?php
