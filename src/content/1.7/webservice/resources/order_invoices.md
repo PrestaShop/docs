@@ -55,6 +55,5 @@ title: Order invoices
 	<date_add><![CDATA[]]></date_add>
 </order_invoice>
 </prestashop>
-
 ```
 

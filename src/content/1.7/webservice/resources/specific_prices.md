@@ -53,6 +53,5 @@ title: Specific prices
 	<to><![CDATA[]]></to>
 </specific_price>
 </prestashop>
-
 ```
 

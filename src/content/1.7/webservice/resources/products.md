@@ -207,6 +207,5 @@ title: Products
 </associations>
 </product>
 </prestashop>
-
 ```
 

@@ -35,6 +35,5 @@ title: Order carriers
 	<date_add><![CDATA[]]></date_add>
 </order_carrier>
 </prestashop>
-
 ```
 

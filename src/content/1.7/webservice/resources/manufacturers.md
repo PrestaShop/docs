@@ -46,6 +46,5 @@ title: Manufacturers
 </associations>
 </manufacturer>
 </prestashop>
-
 ```
 

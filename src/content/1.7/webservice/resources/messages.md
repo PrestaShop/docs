@@ -33,6 +33,5 @@ title: Messages
 	<date_add><![CDATA[]]></date_add>
 </message>
 </prestashop>
-
 ```
 

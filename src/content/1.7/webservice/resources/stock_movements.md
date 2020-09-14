@@ -61,6 +61,5 @@ title: Stock movements
 	<date_add><![CDATA[]]></date_add>
 </stock_mvt>
 </prestashop>
-
 ```
 

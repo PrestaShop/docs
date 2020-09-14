@@ -33,6 +33,5 @@ title: Shop urls
 	<virtual_uri><![CDATA[]]></virtual_uri>
 </shop_url>
 </prestashop>
-
 ```
 

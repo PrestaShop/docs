@@ -33,6 +33,5 @@ title: Supply order receipt histories
 	<date_add><![CDATA[]]></date_add>
 </supply_order_receipt_history>
 </prestashop>
-
 ```
 

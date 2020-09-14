@@ -63,6 +63,5 @@ title: Addresses
 	<date_upd><![CDATA[]]></date_upd>
 </address>
 </prestashop>
-
 ```
 

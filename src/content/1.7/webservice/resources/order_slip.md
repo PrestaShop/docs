@@ -59,6 +59,5 @@ title: Order slip
 </associations>
 </order_slip>
 </prestashop>
-
 ```
 

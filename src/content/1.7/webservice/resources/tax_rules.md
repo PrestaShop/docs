@@ -35,6 +35,5 @@ title: Tax rules
 	<description><![CDATA[]]></description>
 </tax_rule>
 </prestashop>
-
 ```
 

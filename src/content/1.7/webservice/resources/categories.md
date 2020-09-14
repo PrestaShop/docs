@@ -60,6 +60,5 @@ title: Categories
 </associations>
 </category>
 </prestashop>
-
 ```
 

@@ -31,6 +31,5 @@ title: Product suppliers
 	<product_supplier_price_te><![CDATA[]]></product_supplier_price_te>
 </product_supplier>
 </prestashop>
-
 ```
 

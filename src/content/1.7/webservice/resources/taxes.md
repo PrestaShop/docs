@@ -27,6 +27,5 @@ title: Taxes
 	<name><language id="1"></language><language id="2"></language></name>
 </tax>
 </prestashop>
-
 ```
 

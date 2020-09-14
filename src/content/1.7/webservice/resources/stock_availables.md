@@ -35,6 +35,5 @@ title: Stock availables
 	<location><![CDATA[]]></location>
 </stock_available>
 </prestashop>
-
 ```
 

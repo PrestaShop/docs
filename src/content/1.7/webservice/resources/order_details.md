@@ -119,6 +119,5 @@ title: Order details
 </associations>
 </order_detail>
 </prestashop>
-
 ```
 

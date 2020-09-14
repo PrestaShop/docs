@@ -31,6 +31,5 @@ title: Groups
 	<name><language id="1"></language><language id="2"></language></name>
 </group>
 </prestashop>
-
 ```
 

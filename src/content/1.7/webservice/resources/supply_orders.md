@@ -65,6 +65,5 @@ title: Supply orders
 </associations>
 </supply_order>
 </prestashop>
-
 ```
 

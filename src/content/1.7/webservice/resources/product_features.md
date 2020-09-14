@@ -23,6 +23,5 @@ title: Product features
 	<name><language id="1"></language><language id="2"></language></name>
 </product_feature>
 </prestashop>
-
 ```
 

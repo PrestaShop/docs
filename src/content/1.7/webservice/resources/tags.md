@@ -23,6 +23,5 @@ title: Tags
 	<name><![CDATA[]]></name>
 </tag>
 </prestashop>
-
 ```
 

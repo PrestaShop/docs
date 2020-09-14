@@ -43,6 +43,5 @@ title: Currencies
 	<pattern><language id="1"></language><language id="2"></language></pattern>
 </currency>
 </prestashop>
-
 ```
 

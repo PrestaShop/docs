@@ -23,6 +23,5 @@ title: Zones
 	<active><![CDATA[]]></active>
 </zone>
 </prestashop>
-
 ```
 

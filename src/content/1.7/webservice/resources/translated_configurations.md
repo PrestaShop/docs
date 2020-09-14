@@ -31,6 +31,5 @@ title: Translated configurations
 	<id_shop><![CDATA[]]></id_shop>
 </translated_configuration>
 </prestashop>
-
 ```
 

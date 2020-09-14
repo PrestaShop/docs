@@ -53,6 +53,5 @@ title: Warehouses
 </associations>
 </warehouse>
 </prestashop>
-
 ```
 

@@ -29,6 +29,5 @@ title: Tax rule groups
 	<date_upd><![CDATA[]]></date_upd>
 </tax_rule_group>
 </prestashop>
-
 ```
 

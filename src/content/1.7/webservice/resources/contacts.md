@@ -27,6 +27,5 @@ title: Contacts
 	<description><language id="1"></language><language id="2"></language></description>
 </contact>
 </prestashop>
-
 ```
 

@@ -42,6 +42,5 @@ title: Stocks
 	<price_te><![CDATA[]]></price_te>
 </stock>
 </prestashop>
-
 ```
 

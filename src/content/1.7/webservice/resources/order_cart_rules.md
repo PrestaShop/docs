@@ -35,6 +35,5 @@ title: Order cart rules
 	<deleted><![CDATA[]]></deleted>
 </order_cart_rule>
 </prestashop>
-
 ```
 

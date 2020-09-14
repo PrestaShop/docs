@@ -33,6 +33,5 @@ title: Deliveries
 	<price><![CDATA[]]></price>
 </delivery>
 </prestashop>
-
 ```
 

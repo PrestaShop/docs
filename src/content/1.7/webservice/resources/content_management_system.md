@@ -39,6 +39,5 @@ title: Content management system
 	<content><language id="1"></language><language id="2"></language></content>
 </content>
 </prestashop>
-
 ```
 

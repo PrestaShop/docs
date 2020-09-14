@@ -31,6 +31,5 @@ title: Supply order histories
 	<date_add><![CDATA[]]></date_add>
 </supply_order_history>
 </prestashop>
-
 ```
 

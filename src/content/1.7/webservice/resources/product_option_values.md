@@ -27,6 +27,5 @@ title: Product option values
 	<name><language id="1"></language><language id="2"></language></name>
 </product_option_value>
 </prestashop>
-
 ```
 

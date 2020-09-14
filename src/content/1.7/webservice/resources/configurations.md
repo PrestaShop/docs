@@ -31,6 +31,5 @@ title: Configurations
 	<date_upd><![CDATA[]]></date_upd>
 </configuration>
 </prestashop>
-
 ```
 

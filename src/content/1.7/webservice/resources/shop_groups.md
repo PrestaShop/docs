@@ -31,6 +31,5 @@ title: Shop groups
 	<deleted><![CDATA[]]></deleted>
 </shop_group>
 </prestashop>
-
 ```
 

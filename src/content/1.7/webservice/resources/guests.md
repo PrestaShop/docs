@@ -49,6 +49,5 @@ title: Guests
 	<mobile_theme><![CDATA[]]></mobile_theme>
 </guest>
 </prestashop>
-
 ```
 

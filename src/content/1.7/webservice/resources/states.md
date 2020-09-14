@@ -29,6 +29,5 @@ title: States
 	<active><![CDATA[]]></active>
 </state>
 </prestashop>
-
 ```
 

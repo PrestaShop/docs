@@ -37,6 +37,5 @@ title: Suppliers
 	<meta_keywords><language id="1"></language><language id="2"></language></meta_keywords>
 </supplier>
 </prestashop>
-
 ```
 

@@ -25,6 +25,5 @@ title: Weight ranges
 	<delimiter2><![CDATA[]]></delimiter2>
 </weight_range>
 </prestashop>
-
 ```
 

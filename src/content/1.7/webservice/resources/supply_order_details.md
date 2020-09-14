@@ -65,6 +65,5 @@ title: Supply order details
 	<price_with_order_discount_te><![CDATA[]]></price_with_order_discount_te>
 </supply_order_detail>
 </prestashop>
-
 ```
 

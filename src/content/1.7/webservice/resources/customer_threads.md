@@ -49,6 +49,5 @@ title: Customer threads
 </associations>
 </customer_thread>
 </prestashop>
-
 ```
 

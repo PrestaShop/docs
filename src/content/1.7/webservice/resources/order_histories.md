@@ -27,6 +27,5 @@ title: Order histories
 	<date_add><![CDATA[]]></date_add>
 </order_history>
 </prestashop>
-
 ```
 

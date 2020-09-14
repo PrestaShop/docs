@@ -41,6 +41,5 @@ title: Order payments
 	<date_add><![CDATA[]]></date_add>
 </order_payment>
 </prestashop>
-
 ```
 

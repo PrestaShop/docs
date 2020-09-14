@@ -29,6 +29,5 @@ title: Stock movement reasons
 	<name><language id="1"></language><language id="2"></language></name>
 </stock_movement_reason>
 </prestashop>
-
 ```
 

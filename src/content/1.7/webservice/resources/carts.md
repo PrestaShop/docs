@@ -67,6 +67,5 @@ title: Carts
 </associations>
 </cart>
 </prestashop>
-
 ```
 

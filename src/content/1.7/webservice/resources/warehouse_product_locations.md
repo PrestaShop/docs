@@ -27,6 +27,5 @@ title: Warehouse product locations
 	<location><![CDATA[]]></location>
 </warehouse_product_location>
 </prestashop>
-
 ```
 

@@ -91,6 +91,5 @@ title: Customers
 </associations>
 </customer>
 </prestashop>
-
 ```
 

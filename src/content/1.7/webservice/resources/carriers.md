@@ -61,6 +61,5 @@ title: Carriers
 	<delay><language id="1"></language><language id="2"></language></delay>
 </carrier>
 </prestashop>
-
 ```
 

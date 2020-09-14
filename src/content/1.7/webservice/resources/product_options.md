@@ -37,6 +37,5 @@ title: Product options
 </associations>
 </product_option>
 </prestashop>
-
 ```
 

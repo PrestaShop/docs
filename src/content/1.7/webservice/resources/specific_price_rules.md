@@ -43,6 +43,5 @@ title: Specific price rules
 	<to><![CDATA[]]></to>
 </specific_price_rule>
 </prestashop>
-
 ```
 

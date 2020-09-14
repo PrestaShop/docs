@@ -33,6 +33,5 @@ title: Shops
 	<theme_name><![CDATA[]]></theme_name>
 </shop>
 </prestashop>
-
 ```
 

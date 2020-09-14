@@ -35,6 +35,5 @@ title: Languages
 	<date_format_full><![CDATA[]]></date_format_full>
 </language>
 </prestashop>
-
 ```
 

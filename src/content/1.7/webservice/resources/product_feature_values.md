@@ -25,6 +25,5 @@ title: Product feature values
 	<value><language id="1"></language><language id="2"></language></value>
 </product_feature_value>
 </prestashop>
-
 ```
 

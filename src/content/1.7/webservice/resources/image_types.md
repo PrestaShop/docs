@@ -35,6 +35,5 @@ title: Image types
 	<stores><![CDATA[]]></stores>
 </image_type>
 </prestashop>
-
 ```
 

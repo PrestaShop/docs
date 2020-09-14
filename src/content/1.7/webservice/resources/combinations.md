@@ -70,6 +70,5 @@ title: Combinations
 </associations>
 </combination>
 </prestashop>
-
 ```
 

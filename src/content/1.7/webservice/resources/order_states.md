@@ -49,6 +49,5 @@ title: Order states
 	<template><language id="1"></language><language id="2"></language></template>
 </order_state>
 </prestashop>
-
 ```
 

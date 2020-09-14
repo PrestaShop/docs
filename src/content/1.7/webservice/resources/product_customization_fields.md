@@ -31,6 +31,5 @@ title: Product customization fields
 	<name><language id="1"></language><language id="2"></language></name>
 </customization_field>
 </prestashop>
-
 ```
 

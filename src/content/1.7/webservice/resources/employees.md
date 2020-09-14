@@ -71,6 +71,5 @@ title: Employees
 	<has_enabled_gravatar><![CDATA[]]></has_enabled_gravatar>
 </employee>
 </prestashop>
-
 ```
 

@@ -50,6 +50,5 @@ title: Customizations
 </associations>
 </customization>
 </prestashop>
-
 ```
 

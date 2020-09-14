@@ -39,6 +39,5 @@ title: Customer messages
 	<read><![CDATA[]]></read>
 </customer_message>
 </prestashop>
-
 ```
 

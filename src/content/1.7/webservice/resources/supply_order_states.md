@@ -33,6 +33,5 @@ title: Supply order states
 	<name><language id="1"></language><language id="2"></language></name>
 </supply_order_state>
 </prestashop>
-
 ```
 

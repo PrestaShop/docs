@@ -25,6 +25,5 @@ title: Price ranges
 	<delimiter2><![CDATA[]]></delimiter2>
 </price_range>
 </prestashop>
-
 ```
 
