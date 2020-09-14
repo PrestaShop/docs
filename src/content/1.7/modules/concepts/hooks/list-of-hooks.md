@@ -1783,11 +1783,6 @@ displayCMSPrintButton
     Located in: /themes/classic/templates/cms/page.tpl
 
     
-displayCrossSellingShoppingCart
-: 
-    Located in: themes/classic/templates/checkout/cart-empty.tpl
-
-    
 displayContentWrapperBottom
 : 
     Content wrapper section (bottom)
