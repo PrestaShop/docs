@@ -79,7 +79,7 @@ class DemoController extends FrameworkBundleAdminController
 ```
 
 You have access to the Container, to Twig as rendering engine, the Doctrine ORM, everything from Symfony framework ecosystem.
-Note that you must return a `Response` object, but this can be a `JsonResponse` if you plan to make a single point application (or "SPA").
+Note that you must return a `Response` object, but this can be a `JsonResponse` if you plan to make a single page application (or "SPA").
 
 {{% notice note %}}
 This controller works exactly the same as the Core Back Office ones.
