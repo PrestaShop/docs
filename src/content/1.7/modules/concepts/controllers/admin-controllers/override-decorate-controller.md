@@ -97,7 +97,7 @@ If you have trouble writing the right service configuration for your controller,
 Instead of replacing the whole controller, we recommend _extending_ its behavior using [service decoration](https://symfony.com/doc/3.4/service_container/service_decoration.html). By implementing the [decorator pattern](https://refactoring.guru/design-patterns/decorator), you can keep most or all of the original behavior of the decorated controller, and only customize the parts you want.
 
 {{% notice note %}}
-While you could achieve a similar end with an override (by making your controller extend the original one), the composition pattern provides a greater degree of freedom, while leaving all complexity of initialization and dependency management to the service container.
+While you could achieve a similar end with an override (by making your controller extend the original one), the decorator pattern provides a greater degree of freedom, while leaving all complexity of initialization and dependency management to the service container.
 {{% /notice %}}
 
 
