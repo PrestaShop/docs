@@ -8,32 +8,35 @@ aliases:
 
 # Create hooks available in Front Office
 
-This section of the documentation is only about front office hooks: display and action.
-
+This section of the documentation is only about front office hooks: [display and action]({{< ref "1.7/development/components/hook/_index.md" >}}).
 
 ## Creating a dynamic hook
 
 When your module or theme calls a hook, PrestaShop executes it.
 
-From a regular PHP file:
+This is how it is called from a PHP file:
 
 ```php
 <?php
 Hook::exec('MyCustomHook');
 ```
 
-From a Smarty template:
+This is how it is called from a Smarty template:
 
 ```html
 {hook h='MyCustomHook'}
 ```
 
-## Making your hook visible and reusable
+## Register the hook to make it visible and reusable
 
-If you want the user to be able to see your hook in PrestaShop's
-Position page (in the back office), it has to be registered.
+If you add a hook call, it is better to register it.
 
-You can register your hook from your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-yml.md" >}}):
+This will enable Back Office user to:
+- see it in the hooks list
+- be able to plug some modules on it (in Position page)
+- allow other modules to listen to this hook being called and add some extra behavior
+
+You can register your hook from your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-yml" >}}):
 
 ```yaml
 global_settings:
