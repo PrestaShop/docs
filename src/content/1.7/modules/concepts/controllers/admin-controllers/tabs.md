@@ -28,7 +28,7 @@ Depending on the options you provide, your links won’t be displayed the same w
 
 ## How to add names and their translations to a tab
 
-Be default, your tab will be displayed in the menu with its class name. If you want to use something more explicit, you can set the name property.
+By default, your tab will be displayed in the menu with its class name. If you want to use something more explicit, you can set the name property.
 
 ### Option 1: Use the same name for all languages
 
