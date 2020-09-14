@@ -1,10 +1,8 @@
-
 ---
 title: Addresses
 ---
 
 # Resources for Addresses
-
 
 ### Address
 

@@ -1,10 +1,8 @@
-
 ---
 title: Tax rule groups
 ---
 
 # Resources for Tax rule groups
-
 
 ### Tax_rule_group
 

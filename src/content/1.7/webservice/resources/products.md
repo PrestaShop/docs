@@ -1,10 +1,8 @@
-
 ---
 title: Products
 ---
 
 # Resources for Products
-
 
 ### Product
 

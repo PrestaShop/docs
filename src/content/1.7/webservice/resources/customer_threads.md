@@ -1,10 +1,8 @@
-
 ---
 title: Customer threads
 ---
 
 # Resources for Customer threads
-
 
 ### Customer_thread
 

@@ -1,10 +1,8 @@
-
 ---
 title: Translated configurations
 ---
 
 # Resources for Translated configurations
-
 
 ### Translated_configuration
 

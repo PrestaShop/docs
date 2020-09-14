@@ -1,10 +1,8 @@
-
 ---
 title: Messages
 ---
 
 # Resources for Messages
-
 
 ### Message
 

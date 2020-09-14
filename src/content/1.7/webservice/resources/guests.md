@@ -1,10 +1,8 @@
-
 ---
 title: Guests
 ---
 
 # Resources for Guests
-
 
 ### Guest
 

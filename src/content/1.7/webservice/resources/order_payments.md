@@ -1,10 +1,8 @@
-
 ---
 title: Order payments
 ---
 
 # Resources for Order payments
-
 
 ### Order_payment
 

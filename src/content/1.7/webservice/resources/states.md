@@ -1,10 +1,8 @@
-
 ---
 title: States
 ---
 
 # Resources for States
-
 
 ### State
 

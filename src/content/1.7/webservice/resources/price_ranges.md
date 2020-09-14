@@ -1,10 +1,8 @@
-
 ---
 title: Price ranges
 ---
 
 # Resources for Price ranges
-
 
 ### Price_range
 

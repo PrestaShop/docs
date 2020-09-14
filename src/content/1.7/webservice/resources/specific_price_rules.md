@@ -1,10 +1,8 @@
-
 ---
 title: Specific price rules
 ---
 
 # Resources for Specific price rules
-
 
 ### Specific_price_rule
 

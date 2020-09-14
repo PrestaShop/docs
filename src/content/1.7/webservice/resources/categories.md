@@ -1,10 +1,8 @@
-
 ---
 title: Categories
 ---
 
 # Resources for Categories
-
 
 ### Category
 

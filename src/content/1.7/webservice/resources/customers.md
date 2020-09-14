@@ -1,10 +1,8 @@
-
 ---
 title: Customers
 ---
 
 # Resources for Customers
-
 
 ### Customer
 

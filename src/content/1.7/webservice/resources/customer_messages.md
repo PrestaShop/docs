@@ -1,10 +1,8 @@
-
 ---
 title: Customer messages
 ---
 
 # Resources for Customer messages
-
 
 ### Customer_message
 

@@ -1,10 +1,8 @@
-
 ---
 title: Order invoices
 ---
 
 # Resources for Order invoices
-
 
 ### Order_invoice
 

@@ -1,10 +1,8 @@
-
 ---
 title: Supply order receipt histories
 ---
 
 # Resources for Supply order receipt histories
-
 
 ### Supply_order_receipt_history
 

@@ -1,10 +1,8 @@
-
 ---
 title: Order details
 ---
 
 # Resources for Order details
-
 
 ### Order_detail
 

@@ -1,10 +1,8 @@
-
 ---
 title: Weight ranges
 ---
 
 # Resources for Weight ranges
-
 
 ### Weight_range
 

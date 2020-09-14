@@ -1,10 +1,8 @@
-
 ---
 title: Stocks
 ---
 
 # Resources for Stocks
-
 
 ### Stock
 

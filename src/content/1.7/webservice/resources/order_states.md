@@ -1,10 +1,8 @@
-
 ---
 title: Order states
 ---
 
 # Resources for Order states
-
 
 ### Order_state
 

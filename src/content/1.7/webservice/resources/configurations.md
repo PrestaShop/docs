@@ -1,10 +1,8 @@
-
 ---
 title: Configurations
 ---
 
 # Resources for Configurations
-
 
 ### Configuration
 

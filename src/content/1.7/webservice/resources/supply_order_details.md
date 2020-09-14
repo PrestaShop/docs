@@ -1,10 +1,8 @@
-
 ---
 title: Supply order details
 ---
 
 # Resources for Supply order details
-
 
 ### Supply_order_detail
 

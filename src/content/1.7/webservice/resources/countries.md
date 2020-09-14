@@ -1,10 +1,8 @@
-
 ---
 title: Countries
 ---
 
 # Resources for Countries
-
 
 ### Country
 

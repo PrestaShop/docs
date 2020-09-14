@@ -1,10 +1,8 @@
-
 ---
 title: Shops
 ---
 
 # Resources for Shops
-
 
 ### Shop
 

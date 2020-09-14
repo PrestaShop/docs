@@ -1,10 +1,8 @@
-
 ---
 title: Carts
 ---
 
 # Resources for Carts
-
 
 ### Cart
 

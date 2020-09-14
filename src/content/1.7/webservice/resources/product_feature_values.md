@@ -1,10 +1,8 @@
-
 ---
 title: Product feature values
 ---
 
 # Resources for Product feature values
-
 
 ### Product_feature_value
 

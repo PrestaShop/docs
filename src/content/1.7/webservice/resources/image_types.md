@@ -1,10 +1,8 @@
-
 ---
 title: Image types
 ---
 
 # Resources for Image types
-
 
 ### Image_type
 

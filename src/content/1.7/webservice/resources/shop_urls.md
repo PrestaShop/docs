@@ -1,10 +1,8 @@
-
 ---
 title: Shop urls
 ---
 
 # Resources for Shop urls
-
 
 ### Shop_url
 

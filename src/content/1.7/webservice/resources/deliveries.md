@@ -1,10 +1,8 @@
-
 ---
 title: Deliveries
 ---
 
 # Resources for Deliveries
-
 
 ### Delivery
 

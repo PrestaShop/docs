@@ -1,10 +1,8 @@
-
 ---
 title: Product customization fields
 ---
 
 # Resources for Product customization fields
-
 
 ### Customization_field
 

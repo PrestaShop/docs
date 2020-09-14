@@ -1,10 +1,8 @@
-
 ---
 title: Product features
 ---
 
 # Resources for Product features
-
 
 ### Product_feature
 

@@ -1,10 +1,8 @@
-
 ---
 title: Order carriers
 ---
 
 # Resources for Order carriers
-
 
 ### Order_carrier
 

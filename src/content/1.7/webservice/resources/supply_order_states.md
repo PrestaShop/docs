@@ -1,10 +1,8 @@
-
 ---
 title: Supply order states
 ---
 
 # Resources for Supply order states
-
 
 ### Supply_order_state
 

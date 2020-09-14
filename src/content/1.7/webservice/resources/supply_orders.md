@@ -1,10 +1,8 @@
-
 ---
 title: Supply orders
 ---
 
 # Resources for Supply orders
-
 
 ### Supply_order
 

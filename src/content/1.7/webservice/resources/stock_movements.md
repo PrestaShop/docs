@@ -1,10 +1,8 @@
-
 ---
 title: Stock movements
 ---
 
 # Resources for Stock movements
-
 
 ### Stock_mvt
 

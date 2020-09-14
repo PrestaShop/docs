@@ -1,10 +1,8 @@
-
 ---
 title: Specific prices
 ---
 
 # Resources for Specific prices
-
 
 ### Specific_price
 

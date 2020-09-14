@@ -1,10 +1,8 @@
-
 ---
 title: Taxes
 ---
 
 # Resources for Taxes
-
 
 ### Tax
 

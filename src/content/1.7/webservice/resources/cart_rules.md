@@ -1,10 +1,8 @@
-
 ---
 title: Cart rules
 ---
 
 # Resources for Cart rules
-
 
 ### Cart_rule
 

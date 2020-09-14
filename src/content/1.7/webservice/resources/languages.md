@@ -1,10 +1,8 @@
-
 ---
 title: Languages
 ---
 
 # Resources for Languages
-
 
 ### Language
 

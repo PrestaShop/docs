@@ -1,10 +1,8 @@
-
 ---
 title: Stock availables
 ---
 
 # Resources for Stock availables
-
 
 ### Stock_available
 

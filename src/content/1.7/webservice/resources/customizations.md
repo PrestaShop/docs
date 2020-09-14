@@ -1,10 +1,8 @@
-
 ---
 title: Customizations
 ---
 
 # Resources for Customizations
-
 
 ### Customization
 

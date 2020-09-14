@@ -1,10 +1,8 @@
-
 ---
 title: Shop groups
 ---
 
 # Resources for Shop groups
-
 
 ### Shop_group
 

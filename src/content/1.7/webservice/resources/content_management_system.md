@@ -1,10 +1,8 @@
-
 ---
 title: Content management system
 ---
 
 # Resources for Content management system
-
 
 ### Content
 

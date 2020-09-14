@@ -1,10 +1,8 @@
-
 ---
 title: Order slip
 ---
 
 # Resources for Order slip
-
 
 ### Order_slip
 

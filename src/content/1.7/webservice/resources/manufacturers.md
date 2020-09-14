@@ -1,10 +1,8 @@
-
 ---
 title: Manufacturers
 ---
 
 # Resources for Manufacturers
-
 
 ### Manufacturer
 

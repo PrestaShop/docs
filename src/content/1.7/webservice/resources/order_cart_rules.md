@@ -1,10 +1,8 @@
-
 ---
 title: Order cart rules
 ---
 
 # Resources for Order cart rules
-
 
 ### Order_cart_rule
 

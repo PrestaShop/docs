@@ -1,10 +1,8 @@
-
 ---
 title: Groups
 ---
 
 # Resources for Groups
-
 
 ### Group
 

@@ -1,10 +1,8 @@
-
 ---
 title: Stock movement reasons
 ---
 
 # Resources for Stock movement reasons
-
 
 ### Stock_movement_reason
 

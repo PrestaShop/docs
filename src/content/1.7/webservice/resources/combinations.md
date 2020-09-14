@@ -1,10 +1,8 @@
-
 ---
 title: Combinations
 ---
 
 # Resources for Combinations
-
 
 ### Combination
 

@@ -1,10 +1,8 @@
-
 ---
 title: Tax rules
 ---
 
 # Resources for Tax rules
-
 
 ### Tax_rule
 

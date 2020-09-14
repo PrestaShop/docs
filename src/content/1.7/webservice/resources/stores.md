@@ -1,10 +1,8 @@
-
 ---
 title: Stores
 ---
 
 # Resources for Stores
-
 
 ### Store
 

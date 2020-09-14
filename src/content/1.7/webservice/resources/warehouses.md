@@ -1,10 +1,8 @@
-
 ---
 title: Warehouses
 ---
 
 # Resources for Warehouses
-
 
 ### Warehouse
 

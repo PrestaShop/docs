@@ -1,10 +1,8 @@
-
 ---
 title: Contacts
 ---
 
 # Resources for Contacts
-
 
 ### Contact
 

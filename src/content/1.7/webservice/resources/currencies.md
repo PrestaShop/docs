@@ -1,10 +1,8 @@
-
 ---
 title: Currencies
 ---
 
 # Resources for Currencies
-
 
 ### Currency
 
