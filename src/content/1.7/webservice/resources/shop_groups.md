@@ -6,30 +6,37 @@ title: Shop groups
 
 ### Shop_group
 
-|        Name        |    Format     | Required | Read Only | Max size | Not filterable | Description |
-| :----------------- | :------------ | :------- | :-------- | :------- | :------------- | :---------- |
-| **name**           | isGenericName | true     |           | 64       |                |             |
-| **share_customer** | isBool        |          |           |          |                |             |
-| **share_order**    | isBool        |          |           |          |                |             |
-| **share_stock**    | isBool        |          |           |          |                |             |
-| **active**         | isBool        |          |           |          |                |             |
-| **deleted**        | isBool        |          |           |          |                |             |
+|        Name        |    Format     | Required | Max size | Description |
+| :----------------- | :------------ | :------- | :------- | :---------- |
+| **name**           | isGenericName | ✔️       | 64       |             |
+| **share_customer** | isBool        | ❌        |          |             |
+| **share_order**    | isBool        | ❌        |          |             |
+| **share_stock**    | isBool        | ❌        |          |             |
+| **active**         | isBool        | ❌        |          |             |
+| **deleted**        | isBool        | ❌        |          |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<shop_group>
-	<id><![CDATA[]]></id>
-	<name><![CDATA[]]></name>
-	<share_customer><![CDATA[]]></share_customer>
-	<share_order><![CDATA[]]></share_order>
-	<share_stock><![CDATA[]]></share_stock>
-	<active><![CDATA[]]></active>
-	<deleted><![CDATA[]]></deleted>
-</shop_group>
+  <shop_group>
+    <id>
+    </id>
+    <name>
+    </name>
+    <share_customer>
+    </share_customer>
+    <share_order>
+    </share_order>
+    <share_stock>
+    </share_stock>
+    <active>
+    </active>
+    <deleted>
+    </deleted>
+  </shop_group>
 </prestashop>
 ```
 

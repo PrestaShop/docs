@@ -6,34 +6,43 @@ title: Stock availables
 
 ### Stock_available
 
-|           Name           |    Format    | Required | Read Only | Max size | Not filterable | Description |
-| :----------------------- | :----------- | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_product**           | isUnsignedId | true     |           |          |                |             |
-| **id_product_attribute** | isUnsignedId | true     |           |          |                |             |
-| **id_shop**              | isUnsignedId |          |           |          |                |             |
-| **id_shop_group**        | isUnsignedId |          |           |          |                |             |
-| **quantity**             | isInt        | true     |           |          |                |             |
-| **depends_on_stock**     | isBool       | true     |           |          |                |             |
-| **out_of_stock**         | isInt        | true     |           |          |                |             |
-| **location**             | isString     |          |           | 255      |                |             |
+|           Name           |    Format    | Required | Max size |     Description      |
+| :----------------------- | :----------- | :------- | :------- | :------------------- |
+| **id_product**           | isUnsignedId | ✔️       |          | Product ID           |
+| **id_product_attribute** | isUnsignedId | ✔️       |          | Product attribute ID |
+| **id_shop**              | isUnsignedId | ❌        |          | Shop ID              |
+| **id_shop_group**        | isUnsignedId | ❌        |          | Shop group ID        |
+| **quantity**             | isInt        | ✔️       |          |                      |
+| **depends_on_stock**     | isBool       | ✔️       |          |                      |
+| **out_of_stock**         | isInt        | ✔️       |          |                      |
+| **location**             | isString     | ❌        | 255      |                      |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<stock_available>
-	<id><![CDATA[]]></id>
-	<id_product><![CDATA[]]></id_product>
-	<id_product_attribute><![CDATA[]]></id_product_attribute>
-	<id_shop><![CDATA[]]></id_shop>
-	<id_shop_group><![CDATA[]]></id_shop_group>
-	<quantity><![CDATA[]]></quantity>
-	<depends_on_stock><![CDATA[]]></depends_on_stock>
-	<out_of_stock><![CDATA[]]></out_of_stock>
-	<location><![CDATA[]]></location>
-</stock_available>
+  <stock_available>
+    <id>
+    </id>
+    <id_product>
+    </id_product>
+    <id_product_attribute>
+    </id_product_attribute>
+    <id_shop>
+    </id_shop>
+    <id_shop_group>
+    </id_shop_group>
+    <quantity>
+    </quantity>
+    <depends_on_stock>
+    </depends_on_stock>
+    <out_of_stock>
+    </out_of_stock>
+    <location>
+    </location>
+  </stock_available>
 </prestashop>
 ```
 

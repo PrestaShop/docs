@@ -6,22 +6,27 @@ title: Product features
 
 ### Product_feature
 
-|     Name     |    Format     | Required | Read Only | Max size | Not filterable | Description |
-| :----------- | :------------ | :------- | :-------- | :------- | :------------- | :---------- |
-| **position** | isInt         |          |           |          |                |             |
-| **name**     | isGenericName | true     |           | 128      |                |             |
+|     Name     |    Format     | Required | Max size | Description |
+| :----------- | :------------ | :------- | :------- | :---------- |
+| **position** | isInt         | ❌        |          |             |
+| **name**     | isGenericName | ✔️       | 128      |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<product_feature>
-	<id><![CDATA[]]></id>
-	<position><![CDATA[]]></position>
-	<name><language id="1"></language><language id="2"></language></name>
-</product_feature>
+  <product_feature>
+    <id>
+    </id>
+    <position>
+    </position>
+    <name>
+      <language id="1"/>
+      <language id="2"/>
+    </name>
+  </product_feature>
 </prestashop>
 ```
 

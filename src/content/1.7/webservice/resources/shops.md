@@ -6,32 +6,40 @@ title: Shops
 
 ### Shop
 
-|       Name        |    Format     | Required | Read Only | Max size | Not filterable | Description |
-| :---------------- | :------------ | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_shop_group** |               | true     |           |          |                |             |
-| **id_category**   |               | true     |           |          |                |             |
-| **active**        | isBool        |          |           |          |                |             |
-| **deleted**       | isBool        |          |           |          |                |             |
-| **name**          | isGenericName | true     |           | 64       |                |             |
-| **color**         | isColor       |          |           |          |                |             |
-| **theme_name**    | isThemeName   |          |           |          |                |             |
+|       Name        |    Format     | Required | Max size |  Description  |
+| :---------------- | :------------ | :------- | :------- | :------------ |
+| **id_shop_group** |               | ✔️       |          | Shop group ID |
+| **id_category**   |               | ✔️       |          |               |
+| **active**        | isBool        | ❌        |          |               |
+| **deleted**       | isBool        | ❌        |          |               |
+| **name**          | isGenericName | ✔️       | 64       |               |
+| **color**         | isColor       | ❌        |          |               |
+| **theme_name**    | isThemeName   | ❌        |          |               |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<shop>
-	<id><![CDATA[]]></id>
-	<id_shop_group><![CDATA[]]></id_shop_group>
-	<id_category><![CDATA[]]></id_category>
-	<active><![CDATA[]]></active>
-	<deleted><![CDATA[]]></deleted>
-	<name><![CDATA[]]></name>
-	<color><![CDATA[]]></color>
-	<theme_name><![CDATA[]]></theme_name>
-</shop>
+  <shop>
+    <id>
+    </id>
+    <id_shop_group>
+    </id_shop_group>
+    <id_category>
+    </id_category>
+    <active>
+    </active>
+    <deleted>
+    </deleted>
+    <name>
+    </name>
+    <color>
+    </color>
+    <theme_name>
+    </theme_name>
+  </shop>
 </prestashop>
 ```
 

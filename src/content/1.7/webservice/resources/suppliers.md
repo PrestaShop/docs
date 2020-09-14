@@ -6,36 +6,54 @@ title: Suppliers
 
 ### Supplier
 
-|         Name         |    Format     | Required | Read Only | Max size | Not filterable | Description |
-| :------------------- | :------------ | :------- | :-------- | :------- | :------------- | :---------- |
-| **link_rewrite**     |               |          |           |          |                |             |
-| **name**             | isCatalogName | true     |           | 64       |                |             |
-| **active**           |               |          |           |          |                |             |
-| **date_add**         | isDate        |          |           |          |                |             |
-| **date_upd**         | isDate        |          |           |          |                |             |
-| **description**      | isCleanHtml   |          |           |          |                |             |
-| **meta_title**       | isGenericName |          |           | 255      |                |             |
-| **meta_description** | isGenericName |          |           | 512      |                |             |
-| **meta_keywords**    | isGenericName |          |           | 255      |                |             |
+|         Name         |    Format     | Required | Max size | Description |
+| :------------------- | :------------ | :------- | :------- | :---------- |
+| **link_rewrite**     |               | ❌        |          |             |
+| **name**             | isCatalogName | ✔️       | 64       |             |
+| **active**           |               | ❌        |          |             |
+| **date_add**         | isDate        | ❌        |          |             |
+| **date_upd**         | isDate        | ❌        |          |             |
+| **description**      | isCleanHtml   | ❌        |          |             |
+| **meta_title**       | isGenericName | ❌        | 255      |             |
+| **meta_description** | isGenericName | ❌        | 512      |             |
+| **meta_keywords**    | isGenericName | ❌        | 255      |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<supplier>
-	<id><![CDATA[]]></id>
-	<link_rewrite><![CDATA[]]></link_rewrite>
-	<name><![CDATA[]]></name>
-	<active><![CDATA[]]></active>
-	<date_add><![CDATA[]]></date_add>
-	<date_upd><![CDATA[]]></date_upd>
-	<description><language id="1"></language><language id="2"></language></description>
-	<meta_title><language id="1"></language><language id="2"></language></meta_title>
-	<meta_description><language id="1"></language><language id="2"></language></meta_description>
-	<meta_keywords><language id="1"></language><language id="2"></language></meta_keywords>
-</supplier>
+  <supplier>
+    <id>
+    </id>
+    <link_rewrite>
+    </link_rewrite>
+    <name>
+    </name>
+    <active>
+    </active>
+    <date_add>
+    </date_add>
+    <date_upd>
+    </date_upd>
+    <description>
+      <language id="1"/>
+      <language id="2"/>
+    </description>
+    <meta_title>
+      <language id="1"/>
+      <language id="2"/>
+    </meta_title>
+    <meta_description>
+      <language id="1"/>
+      <language id="2"/>
+    </meta_description>
+    <meta_keywords>
+      <language id="1"/>
+      <language id="2"/>
+    </meta_keywords>
+  </supplier>
 </prestashop>
 ```
 

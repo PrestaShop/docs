@@ -6,34 +6,43 @@ title: Tax rules
 
 ### Tax_rule
 
-|          Name          |    Format     | Required | Read Only | Max size | Not filterable | Description |
-| :--------------------- | :------------ | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_tax_rules_group** | isUnsignedId  | true     |           |          |                |             |
-| **id_state**           | isUnsignedId  |          |           |          |                |             |
-| **id_country**         | isUnsignedId  | true     |           |          |                |             |
-| **zipcode_from**       | isPostCode    |          |           |          |                |             |
-| **zipcode_to**         | isPostCode    |          |           |          |                |             |
-| **id_tax**             | isUnsignedId  | true     |           |          |                |             |
-| **behavior**           | isUnsignedInt |          |           |          |                |             |
-| **description**        | isString      |          |           |          |                |             |
+|          Name          |    Format     | Required |    Description     |
+| :--------------------- | :------------ | :------- | :----------------- |
+| **id_tax_rules_group** | isUnsignedId  | ✔️       | Tax rules group ID |
+| **id_state**           | isUnsignedId  | ❌        | State ID           |
+| **id_country**         | isUnsignedId  | ✔️       | Country ID         |
+| **zipcode_from**       | isPostCode    | ❌        |                    |
+| **zipcode_to**         | isPostCode    | ❌        |                    |
+| **id_tax**             | isUnsignedId  | ✔️       |                    |
+| **behavior**           | isUnsignedInt | ❌        |                    |
+| **description**        | isString      | ❌        |                    |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<tax_rule>
-	<id><![CDATA[]]></id>
-	<id_tax_rules_group><![CDATA[]]></id_tax_rules_group>
-	<id_state><![CDATA[]]></id_state>
-	<id_country><![CDATA[]]></id_country>
-	<zipcode_from><![CDATA[]]></zipcode_from>
-	<zipcode_to><![CDATA[]]></zipcode_to>
-	<id_tax><![CDATA[]]></id_tax>
-	<behavior><![CDATA[]]></behavior>
-	<description><![CDATA[]]></description>
-</tax_rule>
+  <tax_rule>
+    <id>
+    </id>
+    <id_tax_rules_group>
+    </id_tax_rules_group>
+    <id_state>
+    </id_state>
+    <id_country>
+    </id_country>
+    <zipcode_from>
+    </zipcode_from>
+    <zipcode_to>
+    </zipcode_to>
+    <id_tax>
+    </id_tax>
+    <behavior>
+    </behavior>
+    <description>
+    </description>
+  </tax_rule>
 </prestashop>
 ```
 

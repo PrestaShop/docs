@@ -6,52 +6,80 @@ title: Stores
 
 ### Store
 
-|      Name      |       Format       | Required | Read Only | Max size | Not filterable | Description |
-| :------------- | :----------------- | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_country** | isUnsignedId       | true     |           |          |                |             |
-| **id_state**   | isNullOrUnsignedId |          |           |          |                |             |
-| **hours**      | isJson             |          |           | 65000    |                |             |
-| **postcode**   |                    |          |           | 12       |                |             |
-| **city**       | isCityName         | true     |           | 64       |                |             |
-| **latitude**   | isCoordinate       |          |           | 13       |                |             |
-| **longitude**  | isCoordinate       |          |           | 13       |                |             |
-| **phone**      | isPhoneNumber      |          |           | 16       |                |             |
-| **fax**        | isPhoneNumber      |          |           | 16       |                |             |
-| **email**      | isEmail            |          |           | 255      |                |             |
-| **active**     | isBool             | true     |           |          |                |             |
-| **date_add**   | isDate             |          |           |          |                |             |
-| **date_upd**   | isDate             |          |           |          |                |             |
-| **name**       | isGenericName      | true     |           | 255      |                |             |
-| **address1**   | isAddress          | true     |           | 255      |                |             |
-| **address2**   | isAddress          |          |           | 255      |                |             |
-| **note**       | isCleanHtml        |          |           | 65000    |                |             |
+|      Name      |       Format       | Required | Max size | Description |
+| :------------- | :----------------- | :------- | :------- | :---------- |
+| **id_country** | isUnsignedId       | ✔️       |          | Country ID  |
+| **id_state**   | isNullOrUnsignedId | ❌        |          | State ID    |
+| **hours**      | isJson             | ❌        | 65000    |             |
+| **postcode**   |                    | ❌        | 12       |             |
+| **city**       | isCityName         | ✔️       | 64       |             |
+| **latitude**   | isCoordinate       | ❌        | 13       |             |
+| **longitude**  | isCoordinate       | ❌        | 13       |             |
+| **phone**      | isPhoneNumber      | ❌        | 16       |             |
+| **fax**        | isPhoneNumber      | ❌        | 16       |             |
+| **email**      | isEmail            | ❌        | 255      |             |
+| **active**     | isBool             | ✔️       |          |             |
+| **date_add**   | isDate             | ❌        |          |             |
+| **date_upd**   | isDate             | ❌        |          |             |
+| **name**       | isGenericName      | ✔️       | 255      |             |
+| **address1**   | isAddress          | ✔️       | 255      |             |
+| **address2**   | isAddress          | ❌        | 255      |             |
+| **note**       | isCleanHtml        | ❌        | 65000    |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<store>
-	<id><![CDATA[]]></id>
-	<id_country><![CDATA[]]></id_country>
-	<id_state><![CDATA[]]></id_state>
-	<hours><language id="1"></language><language id="2"></language></hours>
-	<postcode><![CDATA[]]></postcode>
-	<city><![CDATA[]]></city>
-	<latitude><![CDATA[]]></latitude>
-	<longitude><![CDATA[]]></longitude>
-	<phone><![CDATA[]]></phone>
-	<fax><![CDATA[]]></fax>
-	<email><![CDATA[]]></email>
-	<active><![CDATA[]]></active>
-	<date_add><![CDATA[]]></date_add>
-	<date_upd><![CDATA[]]></date_upd>
-	<name><language id="1"></language><language id="2"></language></name>
-	<address1><language id="1"></language><language id="2"></language></address1>
-	<address2><language id="1"></language><language id="2"></language></address2>
-	<note><language id="1"></language><language id="2"></language></note>
-</store>
+  <store>
+    <id>
+    </id>
+    <id_country>
+    </id_country>
+    <id_state>
+    </id_state>
+    <hours>
+      <language id="1"/>
+      <language id="2"/>
+    </hours>
+    <postcode>
+    </postcode>
+    <city>
+    </city>
+    <latitude>
+    </latitude>
+    <longitude>
+    </longitude>
+    <phone>
+    </phone>
+    <fax>
+    </fax>
+    <email>
+    </email>
+    <active>
+    </active>
+    <date_add>
+    </date_add>
+    <date_upd>
+    </date_upd>
+    <name>
+      <language id="1"/>
+      <language id="2"/>
+    </name>
+    <address1>
+      <language id="1"/>
+      <language id="2"/>
+    </address1>
+    <address2>
+      <language id="1"/>
+      <language id="2"/>
+    </address2>
+    <note>
+      <language id="1"/>
+      <language id="2"/>
+    </note>
+  </store>
 </prestashop>
 ```
 

@@ -6,24 +6,30 @@ title: Product feature values
 
 ### Product_feature_value
 
-|      Name      |    Format     | Required | Read Only | Max size | Not filterable | Description |
-| :------------- | :------------ | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_feature** | isUnsignedId  | true     |           |          |                |             |
-| **custom**     | isBool        |          |           |          |                |             |
-| **value**      | isGenericName | true     |           | 255      |                |             |
+|      Name      |    Format     | Required | Max size | Description |
+| :------------- | :------------ | :------- | :------- | :---------- |
+| **id_feature** | isUnsignedId  | ✔️       |          |             |
+| **custom**     | isBool        | ❌        |          |             |
+| **value**      | isGenericName | ✔️       | 255      |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<product_feature_value>
-	<id><![CDATA[]]></id>
-	<id_feature><![CDATA[]]></id_feature>
-	<custom><![CDATA[]]></custom>
-	<value><language id="1"></language><language id="2"></language></value>
-</product_feature_value>
+  <product_feature_value>
+    <id>
+    </id>
+    <id_feature>
+    </id_feature>
+    <custom>
+    </custom>
+    <value>
+      <language id="1"/>
+      <language id="2"/>
+    </value>
+  </product_feature_value>
 </prestashop>
 ```
 

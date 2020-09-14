@@ -6,28 +6,34 @@ title: States
 
 ### State
 
-|      Name      |     Format     | Required | Read Only | Max size | Not filterable | Description |
-| :------------- | :------------- | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_zone**    | isUnsignedId   | true     |           |          |                |             |
-| **id_country** | isUnsignedId   | true     |           |          |                |             |
-| **iso_code**   | isStateIsoCode | true     |           | 7        |                |             |
-| **name**       | isGenericName  | true     |           | 32       |                |             |
-| **active**     | isBool         |          |           |          |                |             |
+|      Name      |     Format     | Required | Max size | Description |
+| :------------- | :------------- | :------- | :------- | :---------- |
+| **id_zone**    | isUnsignedId   | ✔️       |          | Zone ID     |
+| **id_country** | isUnsignedId   | ✔️       |          | Country ID  |
+| **iso_code**   | isStateIsoCode | ✔️       | 7        |             |
+| **name**       | isGenericName  | ✔️       | 32       |             |
+| **active**     | isBool         | ❌        |          |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<state>
-	<id><![CDATA[]]></id>
-	<id_zone><![CDATA[]]></id_zone>
-	<id_country><![CDATA[]]></id_country>
-	<iso_code><![CDATA[]]></iso_code>
-	<name><![CDATA[]]></name>
-	<active><![CDATA[]]></active>
-</state>
+  <state>
+    <id>
+    </id>
+    <id_zone>
+    </id_zone>
+    <id_country>
+    </id_country>
+    <iso_code>
+    </iso_code>
+    <name>
+    </name>
+    <active>
+    </active>
+  </state>
 </prestashop>
 ```
 

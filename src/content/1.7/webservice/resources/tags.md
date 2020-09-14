@@ -6,22 +6,25 @@ title: Tags
 
 ### Tag
 
-|    Name     |    Format     | Required | Read Only | Max size | Not filterable | Description |
-| :---------- | :------------ | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_lang** | isUnsignedId  | true     |           |          |                |             |
-| **name**    | isGenericName | true     |           | 32       |                |             |
+|    Name     |    Format     | Required | Max size | Description |
+| :---------- | :------------ | :------- | :------- | :---------- |
+| **id_lang** | isUnsignedId  | ✔️       |          | Lang ID     |
+| **name**    | isGenericName | ✔️       | 32       |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<tag>
-	<id><![CDATA[]]></id>
-	<id_lang><![CDATA[]]></id_lang>
-	<name><![CDATA[]]></name>
-</tag>
+  <tag>
+    <id>
+    </id>
+    <id_lang>
+    </id_lang>
+    <name>
+    </name>
+  </tag>
 </prestashop>
 ```
 

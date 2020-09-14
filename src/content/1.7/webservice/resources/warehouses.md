@@ -6,52 +6,64 @@ title: Warehouses
 
 ### Warehouse
 
-|        Name         |      Format       | Required | Read Only | Max size | Not filterable | Description |
-| :------------------ | :---------------- | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_address**      | isUnsignedId      | true     |           |          |                |             |
-| **id_employee**     | isUnsignedId      | true     |           |          |                |             |
-| **id_currency**     | isUnsignedId      | true     |           |          |                |             |
-| **valuation**       |                   |          | true      |          | true           |             |
-| **deleted**         |                   |          |           |          |                |             |
-| **reference**       | isString          | true     |           | 64       |                |             |
-| **name**            | isString          | true     |           | 45       |                |             |
-| **management_type** | isStockManagement | true     |           |          |                |             |
-| **associations**    |                   |          |           |          |                |             |
+|        Name         |      Format       | Required | Writable | Max size | Not filterable | Description |
+| :------------------ | :---------------- | :------- | :------- | :------- | :------------- | :---------- |
+| **id_address**      | isUnsignedId      | ✔️       | ✔️       |          |                |             |
+| **id_employee**     | isUnsignedId      | ✔️       | ✔️       |          |                | Employee ID |
+| **id_currency**     | isUnsignedId      | ✔️       | ✔️       |          |                | Currency ID |
+| **valuation**       |                   | ❌        | ❌        |          | true           |             |
+| **deleted**         |                   | ❌        | ✔️       |          |                |             |
+| **reference**       | isString          | ✔️       | ✔️       | 64       |                |             |
+| **name**            | isString          | ✔️       | ✔️       | 45       |                |             |
+| **management_type** | isStockManagement | ✔️       | ✔️       |          |                |             |
+| **associations**    |                   | ❌        | ✔️       |          |                |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<warehouse>
-	<id><![CDATA[]]></id>
-	<id_address><![CDATA[]]></id_address>
-	<id_employee><![CDATA[]]></id_employee>
-	<id_currency><![CDATA[]]></id_currency>
-	<deleted><![CDATA[]]></deleted>
-	<reference><![CDATA[]]></reference>
-	<name><![CDATA[]]></name>
-	<management_type><![CDATA[]]></management_type>
-<associations>
-<stocks>
-	<stock>
-	<id><![CDATA[]]></id>
-	</stock>
-</stocks>
-<carriers>
-	<carrier>
-	<id><![CDATA[]]></id>
-	</carrier>
-</carriers>
-<shops>
-	<shop>
-	<id><![CDATA[]]></id>
-	<name><![CDATA[]]></name>
-	</shop>
-</shops>
-</associations>
-</warehouse>
+  <warehouse>
+    <id>
+    </id>
+    <id_address>
+    </id_address>
+    <id_employee>
+    </id_employee>
+    <id_currency>
+    </id_currency>
+    <deleted>
+    </deleted>
+    <reference>
+    </reference>
+    <name>
+    </name>
+    <management_type>
+    </management_type>
+    <associations>
+      <stocks>
+        <stock>
+          <id>
+          </id>
+        </stock>
+      </stocks>
+      <carriers>
+        <carrier>
+          <id>
+          </id>
+        </carrier>
+      </carriers>
+      <shops>
+        <shop>
+          <id>
+          </id>
+          <name>
+          </name>
+        </shop>
+      </shops>
+    </associations>
+  </warehouse>
 </prestashop>
 ```
 

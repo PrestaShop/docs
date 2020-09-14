@@ -6,34 +6,43 @@ title: Order carriers
 
 ### Order_carrier
 
-|            Name            |      Format      | Required | Read Only | Max size | Not filterable | Description |
-| :------------------------- | :--------------- | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_order**               | isUnsignedId     | true     |           |          |                |             |
-| **id_carrier**             | isUnsignedId     | true     |           |          |                |             |
-| **id_order_invoice**       | isUnsignedId     |          |           |          |                |             |
-| **weight**                 | isFloat          |          |           |          |                |             |
-| **shipping_cost_tax_excl** | isFloat          |          |           |          |                |             |
-| **shipping_cost_tax_incl** | isFloat          |          |           |          |                |             |
-| **tracking_number**        | isTrackingNumber |          |           |          |                |             |
-| **date_add**               | isDate           |          |           |          |                |             |
+|            Name            |      Format      | Required |   Description    |
+| :------------------------- | :--------------- | :------- | :--------------- |
+| **id_order**               | isUnsignedId     | ✔️       | Order ID         |
+| **id_carrier**             | isUnsignedId     | ✔️       | Carrier ID       |
+| **id_order_invoice**       | isUnsignedId     | ❌        | Order invoice ID |
+| **weight**                 | isFloat          | ❌        |                  |
+| **shipping_cost_tax_excl** | isFloat          | ❌        |                  |
+| **shipping_cost_tax_incl** | isFloat          | ❌        |                  |
+| **tracking_number**        | isTrackingNumber | ❌        |                  |
+| **date_add**               | isDate           | ❌        |                  |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<order_carrier>
-	<id><![CDATA[]]></id>
-	<id_order><![CDATA[]]></id_order>
-	<id_carrier><![CDATA[]]></id_carrier>
-	<id_order_invoice><![CDATA[]]></id_order_invoice>
-	<weight><![CDATA[]]></weight>
-	<shipping_cost_tax_excl><![CDATA[]]></shipping_cost_tax_excl>
-	<shipping_cost_tax_incl><![CDATA[]]></shipping_cost_tax_incl>
-	<tracking_number><![CDATA[]]></tracking_number>
-	<date_add><![CDATA[]]></date_add>
-</order_carrier>
+  <order_carrier>
+    <id>
+    </id>
+    <id_order>
+    </id_order>
+    <id_carrier>
+    </id_carrier>
+    <id_order_invoice>
+    </id_order_invoice>
+    <weight>
+    </weight>
+    <shipping_cost_tax_excl>
+    </shipping_cost_tax_excl>
+    <shipping_cost_tax_incl>
+    </shipping_cost_tax_incl>
+    <tracking_number>
+    </tracking_number>
+    <date_add>
+    </date_add>
+  </order_carrier>
 </prestashop>
 ```
 

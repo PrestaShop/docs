@@ -6,24 +6,28 @@ title: Weight ranges
 
 ### Weight_range
 
-|      Name      |     Format      | Required | Read Only | Max size | Not filterable | Description |
-| :------------- | :-------------- | :------- | :-------- | :------- | :------------- | :---------- |
-| **id_carrier** | isInt           | true     |           |          |                |             |
-| **delimiter1** | isUnsignedFloat | true     |           |          |                |             |
-| **delimiter2** | isUnsignedFloat | true     |           |          |                |             |
+|      Name      |     Format      | Required | Description |
+| :------------- | :-------------- | :------- | :---------- |
+| **id_carrier** | isInt           | ✔️       | Carrier ID  |
+| **delimiter1** | isUnsignedFloat | ✔️       |             |
+| **delimiter2** | isUnsignedFloat | ✔️       |             |
 
 
-### Example
+### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-<weight_range>
-	<id><![CDATA[]]></id>
-	<id_carrier><![CDATA[]]></id_carrier>
-	<delimiter1><![CDATA[]]></delimiter1>
-	<delimiter2><![CDATA[]]></delimiter2>
-</weight_range>
+  <weight_range>
+    <id>
+    </id>
+    <id_carrier>
+    </id_carrier>
+    <delimiter1>
+    </delimiter1>
+    <delimiter2>
+    </delimiter2>
+  </weight_range>
 </prestashop>
 ```
 
