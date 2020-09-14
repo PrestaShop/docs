@@ -19,25 +19,18 @@ title: Translated configurations
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <translated_configuration>
-    <id>
-    </id>
+    <id><![CDATA[]]></id>
     <value>
       <language id="1"/>
       <language id="2"/>
     </value>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
-    <name>
-    </name>
-    <id_shop_group>
-    </id_shop_group>
-    <id_shop>
-    </id_shop>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
+    <name><![CDATA[]]></name>
+    <id_shop_group><![CDATA[]]></id_shop_group>
+    <id_shop><![CDATA[]]></id_shop>
   </translated_configuration>
 </prestashop>
 ```

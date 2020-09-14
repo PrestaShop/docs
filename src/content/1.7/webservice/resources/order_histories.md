@@ -17,19 +17,13 @@ title: Order histories
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <order_history>
-    <id>
-    </id>
-    <id_employee>
-    </id_employee>
-    <id_order_state>
-    </id_order_state>
-    <id_order>
-    </id_order>
-    <date_add>
-    </date_add>
+    <id><![CDATA[]]></id>
+    <id_employee><![CDATA[]]></id_employee>
+    <id_order_state><![CDATA[]]></id_order_state>
+    <id_order><![CDATA[]]></id_order>
+    <date_add><![CDATA[]]></date_add>
   </order_history>
 </prestashop>
 ```

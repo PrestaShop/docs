@@ -19,17 +19,12 @@ title: Product options
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <product_option>
-    <id>
-    </id>
-    <is_color_group>
-    </is_color_group>
-    <group_type>
-    </group_type>
-    <position>
-    </position>
+    <id><![CDATA[]]></id>
+    <is_color_group><![CDATA[]]></is_color_group>
+    <group_type><![CDATA[]]></group_type>
+    <position><![CDATA[]]></position>
     <name>
       <language id="1"/>
       <language id="2"/>
@@ -41,8 +36,7 @@ title: Product options
     <associations>
       <product_option_values>
         <product_option_value>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </product_option_value>
       </product_option_values>
     </associations>

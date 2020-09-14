@@ -25,38 +25,24 @@ title: Customer threads
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <customer_thread>
-    <id>
-    </id>
-    <id_lang>
-    </id_lang>
-    <id_shop>
-    </id_shop>
-    <id_customer>
-    </id_customer>
-    <id_order>
-    </id_order>
-    <id_product>
-    </id_product>
-    <id_contact>
-    </id_contact>
-    <email>
-    </email>
-    <token>
-    </token>
-    <status>
-    </status>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <id_lang><![CDATA[]]></id_lang>
+    <id_shop><![CDATA[]]></id_shop>
+    <id_customer><![CDATA[]]></id_customer>
+    <id_order><![CDATA[]]></id_order>
+    <id_product><![CDATA[]]></id_product>
+    <id_contact><![CDATA[]]></id_contact>
+    <email><![CDATA[]]></email>
+    <token><![CDATA[]]></token>
+    <status><![CDATA[]]></status>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
     <associations>
       <customer_messages>
         <customer_message>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </customer_message>
       </customer_messages>
     </associations>

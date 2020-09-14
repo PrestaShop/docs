@@ -34,55 +34,33 @@ title: Stock movements
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <stock_mvt>
-    <id>
-    </id>
-    <id_product>
-    </id_product>
-    <id_product_attribute>
-    </id_product_attribute>
-    <id_warehouse>
-    </id_warehouse>
-    <id_currency>
-    </id_currency>
-    <management_type>
-    </management_type>
-    <id_employee>
-    </id_employee>
-    <id_stock>
-    </id_stock>
-    <id_stock_mvt_reason>
-    </id_stock_mvt_reason>
-    <id_order>
-    </id_order>
-    <id_supply_order>
-    </id_supply_order>
+    <id><![CDATA[]]></id>
+    <id_product><![CDATA[]]></id_product>
+    <id_product_attribute><![CDATA[]]></id_product_attribute>
+    <id_warehouse><![CDATA[]]></id_warehouse>
+    <id_currency><![CDATA[]]></id_currency>
+    <management_type><![CDATA[]]></management_type>
+    <id_employee><![CDATA[]]></id_employee>
+    <id_stock><![CDATA[]]></id_stock>
+    <id_stock_mvt_reason><![CDATA[]]></id_stock_mvt_reason>
+    <id_order><![CDATA[]]></id_order>
+    <id_supply_order><![CDATA[]]></id_supply_order>
     <product_name>
       <language id="1"/>
       <language id="2"/>
     </product_name>
-    <ean13>
-    </ean13>
-    <upc>
-    </upc>
-    <reference>
-    </reference>
-    <mpn>
-    </mpn>
-    <physical_quantity>
-    </physical_quantity>
-    <sign>
-    </sign>
-    <last_wa>
-    </last_wa>
-    <current_wa>
-    </current_wa>
-    <price_te>
-    </price_te>
-    <date_add>
-    </date_add>
+    <ean13><![CDATA[]]></ean13>
+    <upc><![CDATA[]]></upc>
+    <reference><![CDATA[]]></reference>
+    <mpn><![CDATA[]]></mpn>
+    <physical_quantity><![CDATA[]]></physical_quantity>
+    <sign><![CDATA[]]></sign>
+    <last_wa><![CDATA[]]></last_wa>
+    <current_wa><![CDATA[]]></current_wa>
+    <price_te><![CDATA[]]></price_te>
+    <date_add><![CDATA[]]></date_add>
   </stock_mvt>
 </prestashop>
 ```

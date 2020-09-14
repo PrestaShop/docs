@@ -18,21 +18,14 @@ title: States
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <state>
-    <id>
-    </id>
-    <id_zone>
-    </id_zone>
-    <id_country>
-    </id_country>
-    <iso_code>
-    </iso_code>
-    <name>
-    </name>
-    <active>
-    </active>
+    <id><![CDATA[]]></id>
+    <id_zone><![CDATA[]]></id_zone>
+    <id_country><![CDATA[]]></id_country>
+    <iso_code><![CDATA[]]></iso_code>
+    <name><![CDATA[]]></name>
+    <active><![CDATA[]]></active>
   </state>
 </prestashop>
 ```

@@ -83,67 +83,37 @@ title: Products
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <product>
-    <id>
-    </id>
-    <id_manufacturer>
-    </id_manufacturer>
-    <id_supplier>
-    </id_supplier>
-    <id_category_default>
-    </id_category_default>
-    <new>
-    </new>
-    <cache_default_attribute>
-    </cache_default_attribute>
-    <id_default_image>
-    </id_default_image>
-    <id_default_combination>
-    </id_default_combination>
-    <id_tax_rules_group>
-    </id_tax_rules_group>
-    <position_in_category>
-    </position_in_category>
-    <type>
-    </type>
-    <id_shop_default>
-    </id_shop_default>
-    <reference>
-    </reference>
-    <supplier_reference>
-    </supplier_reference>
-    <location>
-    </location>
-    <width>
-    </width>
-    <height>
-    </height>
-    <depth>
-    </depth>
-    <weight>
-    </weight>
-    <quantity_discount>
-    </quantity_discount>
-    <ean13>
-    </ean13>
-    <isbn>
-    </isbn>
-    <upc>
-    </upc>
-    <mpn>
-    </mpn>
-    <cache_is_pack>
-    </cache_is_pack>
-    <cache_has_attachments>
-    </cache_has_attachments>
-    <is_virtual>
-    </is_virtual>
-    <state>
-    </state>
-    <additional_delivery_times>
-    </additional_delivery_times>
+    <id><![CDATA[]]></id>
+    <id_manufacturer><![CDATA[]]></id_manufacturer>
+    <id_supplier><![CDATA[]]></id_supplier>
+    <id_category_default><![CDATA[]]></id_category_default>
+    <new><![CDATA[]]></new>
+    <cache_default_attribute><![CDATA[]]></cache_default_attribute>
+    <id_default_image><![CDATA[]]></id_default_image>
+    <id_default_combination><![CDATA[]]></id_default_combination>
+    <id_tax_rules_group><![CDATA[]]></id_tax_rules_group>
+    <position_in_category><![CDATA[]]></position_in_category>
+    <type><![CDATA[]]></type>
+    <id_shop_default><![CDATA[]]></id_shop_default>
+    <reference><![CDATA[]]></reference>
+    <supplier_reference><![CDATA[]]></supplier_reference>
+    <location><![CDATA[]]></location>
+    <width><![CDATA[]]></width>
+    <height><![CDATA[]]></height>
+    <depth><![CDATA[]]></depth>
+    <weight><![CDATA[]]></weight>
+    <quantity_discount><![CDATA[]]></quantity_discount>
+    <ean13><![CDATA[]]></ean13>
+    <isbn><![CDATA[]]></isbn>
+    <upc><![CDATA[]]></upc>
+    <mpn><![CDATA[]]></mpn>
+    <cache_is_pack><![CDATA[]]></cache_is_pack>
+    <cache_has_attachments><![CDATA[]]></cache_has_attachments>
+    <is_virtual><![CDATA[]]></is_virtual>
+    <state><![CDATA[]]></state>
+    <additional_delivery_times><![CDATA[]]></additional_delivery_times>
     <delivery_in_stock>
       <language id="1"/>
       <language id="2"/>
@@ -152,62 +122,34 @@ title: Products
       <language id="1"/>
       <language id="2"/>
     </delivery_out_stock>
-    <on_sale>
-    </on_sale>
-    <online_only>
-    </online_only>
-    <ecotax>
-    </ecotax>
-    <minimal_quantity>
-    </minimal_quantity>
-    <low_stock_threshold>
-    </low_stock_threshold>
-    <low_stock_alert>
-    </low_stock_alert>
-    <price>
-    </price>
-    <wholesale_price>
-    </wholesale_price>
-    <unity>
-    </unity>
-    <unit_price_ratio>
-    </unit_price_ratio>
-    <additional_shipping_cost>
-    </additional_shipping_cost>
-    <customizable>
-    </customizable>
-    <text_fields>
-    </text_fields>
-    <uploadable_files>
-    </uploadable_files>
-    <active>
-    </active>
-    <redirect_type>
-    </redirect_type>
-    <id_type_redirected>
-    </id_type_redirected>
-    <available_for_order>
-    </available_for_order>
-    <available_date>
-    </available_date>
-    <show_condition>
-    </show_condition>
-    <condition>
-    </condition>
-    <show_price>
-    </show_price>
-    <indexed>
-    </indexed>
-    <visibility>
-    </visibility>
-    <advanced_stock_management>
-    </advanced_stock_management>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
-    <pack_stock_type>
-    </pack_stock_type>
+    <on_sale><![CDATA[]]></on_sale>
+    <online_only><![CDATA[]]></online_only>
+    <ecotax><![CDATA[]]></ecotax>
+    <minimal_quantity><![CDATA[]]></minimal_quantity>
+    <low_stock_threshold><![CDATA[]]></low_stock_threshold>
+    <low_stock_alert><![CDATA[]]></low_stock_alert>
+    <price><![CDATA[]]></price>
+    <wholesale_price><![CDATA[]]></wholesale_price>
+    <unity><![CDATA[]]></unity>
+    <unit_price_ratio><![CDATA[]]></unit_price_ratio>
+    <additional_shipping_cost><![CDATA[]]></additional_shipping_cost>
+    <customizable><![CDATA[]]></customizable>
+    <text_fields><![CDATA[]]></text_fields>
+    <uploadable_files><![CDATA[]]></uploadable_files>
+    <active><![CDATA[]]></active>
+    <redirect_type><![CDATA[]]></redirect_type>
+    <id_type_redirected><![CDATA[]]></id_type_redirected>
+    <available_for_order><![CDATA[]]></available_for_order>
+    <available_date><![CDATA[]]></available_date>
+    <show_condition><![CDATA[]]></show_condition>
+    <condition><![CDATA[]]></condition>
+    <show_price><![CDATA[]]></show_price>
+    <indexed><![CDATA[]]></indexed>
+    <visibility><![CDATA[]]></visibility>
+    <advanced_stock_management><![CDATA[]]></advanced_stock_management>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
+    <pack_stock_type><![CDATA[]]></pack_stock_type>
     <meta_description>
       <language id="1"/>
       <language id="2"/>
@@ -247,64 +189,51 @@ title: Products
     <associations>
       <categories>
         <category>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </category>
       </categories>
       <images>
         <image>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </image>
       </images>
       <combinations>
         <combination>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </combination>
       </combinations>
       <product_option_values>
         <product_option_value>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </product_option_value>
       </product_option_values>
       <product_features>
         <product_feature>
-          <id>
-          </id>
-          <id_feature_value>
-          </id_feature_value>
+          <id><![CDATA[]]></id>
+          <id_feature_value><![CDATA[]]></id_feature_value>
         </product_feature>
       </product_features>
       <tags>
         <tag>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </tag>
       </tags>
       <stock_availables>
         <stock_available>
-          <id>
-          </id>
-          <id_product_attribute>
-          </id_product_attribute>
+          <id><![CDATA[]]></id>
+          <id_product_attribute><![CDATA[]]></id_product_attribute>
         </stock_available>
       </stock_availables>
       <accessories>
         <product>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </product>
       </accessories>
       <product_bundle>
         <product>
-          <id>
-          </id>
-          <id_product_attribute>
-          </id_product_attribute>
-          <quantity>
-          </quantity>
+          <id><![CDATA[]]></id>
+          <id_product_attribute><![CDATA[]]></id_product_attribute>
+          <quantity><![CDATA[]]></quantity>
         </product>
       </product_bundle>
     </associations>

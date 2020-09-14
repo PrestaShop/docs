@@ -20,25 +20,16 @@ title: Shops
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <shop>
-    <id>
-    </id>
-    <id_shop_group>
-    </id_shop_group>
-    <id_category>
-    </id_category>
-    <active>
-    </active>
-    <deleted>
-    </deleted>
-    <name>
-    </name>
-    <color>
-    </color>
-    <theme_name>
-    </theme_name>
+    <id><![CDATA[]]></id>
+    <id_shop_group><![CDATA[]]></id_shop_group>
+    <id_category><![CDATA[]]></id_category>
+    <active><![CDATA[]]></active>
+    <deleted><![CDATA[]]></deleted>
+    <name><![CDATA[]]></name>
+    <color><![CDATA[]]></color>
+    <theme_name><![CDATA[]]></theme_name>
   </shop>
 </prestashop>
 ```

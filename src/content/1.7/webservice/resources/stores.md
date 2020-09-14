@@ -30,39 +30,25 @@ title: Stores
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <store>
-    <id>
-    </id>
-    <id_country>
-    </id_country>
-    <id_state>
-    </id_state>
+    <id><![CDATA[]]></id>
+    <id_country><![CDATA[]]></id_country>
+    <id_state><![CDATA[]]></id_state>
     <hours>
       <language id="1"/>
       <language id="2"/>
     </hours>
-    <postcode>
-    </postcode>
-    <city>
-    </city>
-    <latitude>
-    </latitude>
-    <longitude>
-    </longitude>
-    <phone>
-    </phone>
-    <fax>
-    </fax>
-    <email>
-    </email>
-    <active>
-    </active>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <postcode><![CDATA[]]></postcode>
+    <city><![CDATA[]]></city>
+    <latitude><![CDATA[]]></latitude>
+    <longitude><![CDATA[]]></longitude>
+    <phone><![CDATA[]]></phone>
+    <fax><![CDATA[]]></fax>
+    <email><![CDATA[]]></email>
+    <active><![CDATA[]]></active>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
     <name>
       <language id="1"/>
       <language id="2"/>

@@ -20,25 +20,16 @@ title: Deliveries
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <delivery>
-    <id>
-    </id>
-    <id_carrier>
-    </id_carrier>
-    <id_range_price>
-    </id_range_price>
-    <id_range_weight>
-    </id_range_weight>
-    <id_zone>
-    </id_zone>
-    <id_shop>
-    </id_shop>
-    <id_shop_group>
-    </id_shop_group>
-    <price>
-    </price>
+    <id><![CDATA[]]></id>
+    <id_carrier><![CDATA[]]></id_carrier>
+    <id_range_price><![CDATA[]]></id_range_price>
+    <id_range_weight><![CDATA[]]></id_range_weight>
+    <id_zone><![CDATA[]]></id_zone>
+    <id_shop><![CDATA[]]></id_shop>
+    <id_shop_group><![CDATA[]]></id_shop_group>
+    <price><![CDATA[]]></price>
   </delivery>
 </prestashop>
 ```

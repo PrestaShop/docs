@@ -15,13 +15,10 @@ title: Product features
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <product_feature>
-    <id>
-    </id>
-    <position>
-    </position>
+    <id><![CDATA[]]></id>
+    <position><![CDATA[]]></position>
     <name>
       <language id="1"/>
       <language id="2"/>

@@ -21,27 +21,17 @@ title: Order cart rules
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <order_cart_rule>
-    <id>
-    </id>
-    <id_order>
-    </id_order>
-    <id_cart_rule>
-    </id_cart_rule>
-    <id_order_invoice>
-    </id_order_invoice>
-    <name>
-    </name>
-    <value>
-    </value>
-    <value_tax_excl>
-    </value_tax_excl>
-    <free_shipping>
-    </free_shipping>
-    <deleted>
-    </deleted>
+    <id><![CDATA[]]></id>
+    <id_order><![CDATA[]]></id_order>
+    <id_cart_rule><![CDATA[]]></id_cart_rule>
+    <id_order_invoice><![CDATA[]]></id_order_invoice>
+    <name><![CDATA[]]></name>
+    <value><![CDATA[]]></value>
+    <value_tax_excl><![CDATA[]]></value_tax_excl>
+    <free_shipping><![CDATA[]]></free_shipping>
+    <deleted><![CDATA[]]></deleted>
   </order_cart_rule>
 </prestashop>
 ```

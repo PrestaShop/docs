@@ -33,60 +33,37 @@ title: Combinations
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <combination>
-    <id>
-    </id>
-    <id_product>
-    </id_product>
-    <location>
-    </location>
-    <ean13>
-    </ean13>
-    <isbn>
-    </isbn>
-    <upc>
-    </upc>
-    <mpn>
-    </mpn>
-    <quantity>
-    </quantity>
-    <reference>
-    </reference>
-    <supplier_reference>
-    </supplier_reference>
-    <wholesale_price>
-    </wholesale_price>
-    <price>
-    </price>
-    <ecotax>
-    </ecotax>
-    <weight>
-    </weight>
-    <unit_price_impact>
-    </unit_price_impact>
-    <minimal_quantity>
-    </minimal_quantity>
-    <low_stock_threshold>
-    </low_stock_threshold>
-    <low_stock_alert>
-    </low_stock_alert>
-    <default_on>
-    </default_on>
-    <available_date>
-    </available_date>
+    <id><![CDATA[]]></id>
+    <id_product><![CDATA[]]></id_product>
+    <location><![CDATA[]]></location>
+    <ean13><![CDATA[]]></ean13>
+    <isbn><![CDATA[]]></isbn>
+    <upc><![CDATA[]]></upc>
+    <mpn><![CDATA[]]></mpn>
+    <quantity><![CDATA[]]></quantity>
+    <reference><![CDATA[]]></reference>
+    <supplier_reference><![CDATA[]]></supplier_reference>
+    <wholesale_price><![CDATA[]]></wholesale_price>
+    <price><![CDATA[]]></price>
+    <ecotax><![CDATA[]]></ecotax>
+    <weight><![CDATA[]]></weight>
+    <unit_price_impact><![CDATA[]]></unit_price_impact>
+    <minimal_quantity><![CDATA[]]></minimal_quantity>
+    <low_stock_threshold><![CDATA[]]></low_stock_threshold>
+    <low_stock_alert><![CDATA[]]></low_stock_alert>
+    <default_on><![CDATA[]]></default_on>
+    <available_date><![CDATA[]]></available_date>
     <associations>
       <product_option_values>
         <product_option_value>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </product_option_value>
       </product_option_values>
       <images>
         <image>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </image>
       </images>
     </associations>

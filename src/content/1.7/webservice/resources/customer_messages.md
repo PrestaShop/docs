@@ -23,31 +23,19 @@ title: Customer messages
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <customer_message>
-    <id>
-    </id>
-    <id_employee>
-    </id_employee>
-    <id_customer_thread>
-    </id_customer_thread>
-    <ip_address>
-    </ip_address>
-    <message>
-    </message>
-    <file_name>
-    </file_name>
-    <user_agent>
-    </user_agent>
-    <private>
-    </private>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
-    <read>
-    </read>
+    <id><![CDATA[]]></id>
+    <id_employee><![CDATA[]]></id_employee>
+    <id_customer_thread><![CDATA[]]></id_customer_thread>
+    <ip_address><![CDATA[]]></ip_address>
+    <message><![CDATA[]]></message>
+    <file_name><![CDATA[]]></file_name>
+    <user_agent><![CDATA[]]></user_agent>
+    <private><![CDATA[]]></private>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
+    <read><![CDATA[]]></read>
   </customer_message>
 </prestashop>
 ```

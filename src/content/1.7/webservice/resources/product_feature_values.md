@@ -16,15 +16,11 @@ title: Product feature values
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <product_feature_value>
-    <id>
-    </id>
-    <id_feature>
-    </id_feature>
-    <custom>
-    </custom>
+    <id><![CDATA[]]></id>
+    <id_feature><![CDATA[]]></id_feature>
+    <custom><![CDATA[]]></custom>
     <value>
       <language id="1"/>
       <language id="2"/>

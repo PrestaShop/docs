@@ -17,15 +17,11 @@ title: Contacts
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <contact>
-    <id>
-    </id>
-    <email>
-    </email>
-    <customer_service>
-    </customer_service>
+    <id><![CDATA[]]></id>
+    <email><![CDATA[]]></email>
+    <customer_service><![CDATA[]]></customer_service>
     <name>
       <language id="1"/>
       <language id="2"/>

@@ -15,15 +15,11 @@ title: Tags
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <tag>
-    <id>
-    </id>
-    <id_lang>
-    </id_lang>
-    <name>
-    </name>
+    <id><![CDATA[]]></id>
+    <id_lang><![CDATA[]]></id_lang>
+    <name><![CDATA[]]></name>
   </tag>
 </prestashop>
 ```

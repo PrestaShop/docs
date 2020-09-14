@@ -29,25 +29,16 @@ title: Categories
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <category>
-    <id>
-    </id>
-    <id_parent>
-    </id_parent>
-    <active>
-    </active>
-    <id_shop_default>
-    </id_shop_default>
-    <is_root_category>
-    </is_root_category>
-    <position>
-    </position>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <id_parent><![CDATA[]]></id_parent>
+    <active><![CDATA[]]></active>
+    <id_shop_default><![CDATA[]]></id_shop_default>
+    <is_root_category><![CDATA[]]></is_root_category>
+    <position><![CDATA[]]></position>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
     <name>
       <language id="1"/>
       <language id="2"/>
@@ -75,14 +66,12 @@ title: Categories
     <associations>
       <categories>
         <category>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </category>
       </categories>
       <products>
         <product>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </product>
       </products>
     </associations>

@@ -28,37 +28,22 @@ title: Order states
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <order_state>
-    <id>
-    </id>
-    <unremovable>
-    </unremovable>
-    <delivery>
-    </delivery>
-    <hidden>
-    </hidden>
-    <send_email>
-    </send_email>
-    <module_name>
-    </module_name>
-    <invoice>
-    </invoice>
-    <color>
-    </color>
-    <logable>
-    </logable>
-    <shipped>
-    </shipped>
-    <paid>
-    </paid>
-    <pdf_delivery>
-    </pdf_delivery>
-    <pdf_invoice>
-    </pdf_invoice>
-    <deleted>
-    </deleted>
+    <id><![CDATA[]]></id>
+    <unremovable><![CDATA[]]></unremovable>
+    <delivery><![CDATA[]]></delivery>
+    <hidden><![CDATA[]]></hidden>
+    <send_email><![CDATA[]]></send_email>
+    <module_name><![CDATA[]]></module_name>
+    <invoice><![CDATA[]]></invoice>
+    <color><![CDATA[]]></color>
+    <logable><![CDATA[]]></logable>
+    <shipped><![CDATA[]]></shipped>
+    <paid><![CDATA[]]></paid>
+    <pdf_delivery><![CDATA[]]></pdf_delivery>
+    <pdf_invoice><![CDATA[]]></pdf_invoice>
+    <deleted><![CDATA[]]></deleted>
     <name>
       <language id="1"/>
       <language id="2"/>

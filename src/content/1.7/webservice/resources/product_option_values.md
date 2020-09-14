@@ -17,17 +17,12 @@ title: Product option values
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <product_option_value>
-    <id>
-    </id>
-    <id_attribute_group>
-    </id_attribute_group>
-    <color>
-    </color>
-    <position>
-    </position>
+    <id><![CDATA[]]></id>
+    <id_attribute_group><![CDATA[]]></id_attribute_group>
+    <color><![CDATA[]]></color>
+    <position><![CDATA[]]></position>
     <name>
       <language id="1"/>
       <language id="2"/>

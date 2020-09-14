@@ -35,55 +35,31 @@ title: Addresses
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <address>
-    <id>
-    </id>
-    <id_customer>
-    </id_customer>
-    <id_manufacturer>
-    </id_manufacturer>
-    <id_supplier>
-    </id_supplier>
-    <id_warehouse>
-    </id_warehouse>
-    <id_country>
-    </id_country>
-    <id_state>
-    </id_state>
-    <alias>
-    </alias>
-    <company>
-    </company>
-    <lastname>
-    </lastname>
-    <firstname>
-    </firstname>
-    <vat_number>
-    </vat_number>
-    <address1>
-    </address1>
-    <address2>
-    </address2>
-    <postcode>
-    </postcode>
-    <city>
-    </city>
-    <other>
-    </other>
-    <phone>
-    </phone>
-    <phone_mobile>
-    </phone_mobile>
-    <dni>
-    </dni>
-    <deleted>
-    </deleted>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <id_customer><![CDATA[]]></id_customer>
+    <id_manufacturer><![CDATA[]]></id_manufacturer>
+    <id_supplier><![CDATA[]]></id_supplier>
+    <id_warehouse><![CDATA[]]></id_warehouse>
+    <id_country><![CDATA[]]></id_country>
+    <id_state><![CDATA[]]></id_state>
+    <alias><![CDATA[]]></alias>
+    <company><![CDATA[]]></company>
+    <lastname><![CDATA[]]></lastname>
+    <firstname><![CDATA[]]></firstname>
+    <vat_number><![CDATA[]]></vat_number>
+    <address1><![CDATA[]]></address1>
+    <address2><![CDATA[]]></address2>
+    <postcode><![CDATA[]]></postcode>
+    <city><![CDATA[]]></city>
+    <other><![CDATA[]]></other>
+    <phone><![CDATA[]]></phone>
+    <phone_mobile><![CDATA[]]></phone_mobile>
+    <dni><![CDATA[]]></dni>
+    <deleted><![CDATA[]]></deleted>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
   </address>
 </prestashop>
 ```

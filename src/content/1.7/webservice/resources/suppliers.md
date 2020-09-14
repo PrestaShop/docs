@@ -22,21 +22,14 @@ title: Suppliers
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <supplier>
-    <id>
-    </id>
-    <link_rewrite>
-    </link_rewrite>
-    <name>
-    </name>
-    <active>
-    </active>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <link_rewrite><![CDATA[]]></link_rewrite>
+    <name><![CDATA[]]></name>
+    <active><![CDATA[]]></active>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
     <description>
       <language id="1"/>
       <language id="2"/>

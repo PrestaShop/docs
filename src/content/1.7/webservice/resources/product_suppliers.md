@@ -19,23 +19,15 @@ title: Product suppliers
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <product_supplier>
-    <id>
-    </id>
-    <id_product>
-    </id_product>
-    <id_product_attribute>
-    </id_product_attribute>
-    <id_supplier>
-    </id_supplier>
-    <id_currency>
-    </id_currency>
-    <product_supplier_reference>
-    </product_supplier_reference>
-    <product_supplier_price_te>
-    </product_supplier_price_te>
+    <id><![CDATA[]]></id>
+    <id_product><![CDATA[]]></id_product>
+    <id_product_attribute><![CDATA[]]></id_product_attribute>
+    <id_supplier><![CDATA[]]></id_supplier>
+    <id_currency><![CDATA[]]></id_currency>
+    <product_supplier_reference><![CDATA[]]></product_supplier_reference>
+    <product_supplier_price_te><![CDATA[]]></product_supplier_price_te>
   </product_supplier>
 </prestashop>
 ```

@@ -19,21 +19,14 @@ title: Groups
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <group>
-    <id>
-    </id>
-    <reduction>
-    </reduction>
-    <price_display_method>
-    </price_display_method>
-    <show_prices>
-    </show_prices>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <reduction><![CDATA[]]></reduction>
+    <price_display_method><![CDATA[]]></price_display_method>
+    <show_prices><![CDATA[]]></show_prices>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
     <name>
       <language id="1"/>
       <language id="2"/>

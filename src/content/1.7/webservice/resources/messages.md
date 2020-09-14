@@ -20,25 +20,16 @@ title: Messages
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <message>
-    <id>
-    </id>
-    <id_cart>
-    </id_cart>
-    <id_order>
-    </id_order>
-    <id_customer>
-    </id_customer>
-    <id_employee>
-    </id_employee>
-    <message>
-    </message>
-    <private>
-    </private>
-    <date_add>
-    </date_add>
+    <id><![CDATA[]]></id>
+    <id_cart><![CDATA[]]></id_cart>
+    <id_order><![CDATA[]]></id_order>
+    <id_customer><![CDATA[]]></id_customer>
+    <id_employee><![CDATA[]]></id_employee>
+    <message><![CDATA[]]></message>
+    <private><![CDATA[]]></private>
+    <date_add><![CDATA[]]></date_add>
   </message>
 </prestashop>
 ```

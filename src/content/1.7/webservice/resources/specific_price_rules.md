@@ -25,35 +25,21 @@ title: Specific price rules
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <specific_price_rule>
-    <id>
-    </id>
-    <id_shop>
-    </id_shop>
-    <id_country>
-    </id_country>
-    <id_currency>
-    </id_currency>
-    <id_group>
-    </id_group>
-    <name>
-    </name>
-    <from_quantity>
-    </from_quantity>
-    <price>
-    </price>
-    <reduction>
-    </reduction>
-    <reduction_tax>
-    </reduction_tax>
-    <reduction_type>
-    </reduction_type>
-    <from>
-    </from>
-    <to>
-    </to>
+    <id><![CDATA[]]></id>
+    <id_shop><![CDATA[]]></id_shop>
+    <id_country><![CDATA[]]></id_country>
+    <id_currency><![CDATA[]]></id_currency>
+    <id_group><![CDATA[]]></id_group>
+    <name><![CDATA[]]></name>
+    <from_quantity><![CDATA[]]></from_quantity>
+    <price><![CDATA[]]></price>
+    <reduction><![CDATA[]]></reduction>
+    <reduction_tax><![CDATA[]]></reduction_tax>
+    <reduction_type><![CDATA[]]></reduction_type>
+    <from><![CDATA[]]></from>
+    <to><![CDATA[]]></to>
   </specific_price_rule>
 </prestashop>
 ```

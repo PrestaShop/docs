@@ -24,19 +24,13 @@ title: Manufacturers
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <manufacturer>
-    <id>
-    </id>
-    <active>
-    </active>
-    <name>
-    </name>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <active><![CDATA[]]></active>
+    <name><![CDATA[]]></name>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
     <description>
       <language id="1"/>
       <language id="2"/>
@@ -60,8 +54,7 @@ title: Manufacturers
     <associations>
       <addresses>
         <address>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </address>
       </addresses>
     </associations>

@@ -16,17 +16,12 @@ title: Price ranges
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <price_range>
-    <id>
-    </id>
-    <id_carrier>
-    </id_carrier>
-    <delimiter1>
-    </delimiter1>
-    <delimiter2>
-    </delimiter2>
+    <id><![CDATA[]]></id>
+    <id_carrier><![CDATA[]]></id_carrier>
+    <delimiter1><![CDATA[]]></delimiter1>
+    <delimiter2><![CDATA[]]></delimiter2>
   </price_range>
 </prestashop>
 ```

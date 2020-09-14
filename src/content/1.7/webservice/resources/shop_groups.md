@@ -19,23 +19,15 @@ title: Shop groups
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <shop_group>
-    <id>
-    </id>
-    <name>
-    </name>
-    <share_customer>
-    </share_customer>
-    <share_order>
-    </share_order>
-    <share_stock>
-    </share_stock>
-    <active>
-    </active>
-    <deleted>
-    </deleted>
+    <id><![CDATA[]]></id>
+    <name><![CDATA[]]></name>
+    <share_customer><![CDATA[]]></share_customer>
+    <share_order><![CDATA[]]></share_order>
+    <share_stock><![CDATA[]]></share_stock>
+    <active><![CDATA[]]></active>
+    <deleted><![CDATA[]]></deleted>
   </shop_group>
 </prestashop>
 ```

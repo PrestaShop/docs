@@ -21,27 +21,17 @@ title: Tax rules
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <tax_rule>
-    <id>
-    </id>
-    <id_tax_rules_group>
-    </id_tax_rules_group>
-    <id_state>
-    </id_state>
-    <id_country>
-    </id_country>
-    <zipcode_from>
-    </zipcode_from>
-    <zipcode_to>
-    </zipcode_to>
-    <id_tax>
-    </id_tax>
-    <behavior>
-    </behavior>
-    <description>
-    </description>
+    <id><![CDATA[]]></id>
+    <id_tax_rules_group><![CDATA[]]></id_tax_rules_group>
+    <id_state><![CDATA[]]></id_state>
+    <id_country><![CDATA[]]></id_country>
+    <zipcode_from><![CDATA[]]></zipcode_from>
+    <zipcode_to><![CDATA[]]></zipcode_to>
+    <id_tax><![CDATA[]]></id_tax>
+    <behavior><![CDATA[]]></behavior>
+    <description><![CDATA[]]></description>
   </tax_rule>
 </prestashop>
 ```

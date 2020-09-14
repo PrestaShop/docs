@@ -24,31 +24,19 @@ title: Countries
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <country>
-    <id>
-    </id>
-    <id_zone>
-    </id_zone>
-    <id_currency>
-    </id_currency>
-    <call_prefix>
-    </call_prefix>
-    <iso_code>
-    </iso_code>
-    <active>
-    </active>
-    <contains_states>
-    </contains_states>
-    <need_identification_number>
-    </need_identification_number>
-    <need_zip_code>
-    </need_zip_code>
-    <zip_code_format>
-    </zip_code_format>
-    <display_tax_label>
-    </display_tax_label>
+    <id><![CDATA[]]></id>
+    <id_zone><![CDATA[]]></id_zone>
+    <id_currency><![CDATA[]]></id_currency>
+    <call_prefix><![CDATA[]]></call_prefix>
+    <iso_code><![CDATA[]]></iso_code>
+    <active><![CDATA[]]></active>
+    <contains_states><![CDATA[]]></contains_states>
+    <need_identification_number><![CDATA[]]></need_identification_number>
+    <need_zip_code><![CDATA[]]></need_zip_code>
+    <zip_code_format><![CDATA[]]></zip_code_format>
+    <display_tax_label><![CDATA[]]></display_tax_label>
     <name>
       <language id="1"/>
       <language id="2"/>

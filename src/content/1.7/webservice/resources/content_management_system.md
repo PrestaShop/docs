@@ -23,19 +23,13 @@ title: Content management system
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <content>
-    <id>
-    </id>
-    <id_cms_category>
-    </id_cms_category>
-    <position>
-    </position>
-    <indexation>
-    </indexation>
-    <active>
-    </active>
+    <id><![CDATA[]]></id>
+    <id_cms_category><![CDATA[]]></id_cms_category>
+    <position><![CDATA[]]></position>
+    <indexation><![CDATA[]]></indexation>
+    <active><![CDATA[]]></active>
     <meta_description>
       <language id="1"/>
       <language id="2"/>

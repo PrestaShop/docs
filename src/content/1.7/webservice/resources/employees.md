@@ -39,63 +39,35 @@ title: Employees
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <employee>
-    <id>
-    </id>
-    <id_lang>
-    </id_lang>
-    <last_passwd_gen>
-    </last_passwd_gen>
-    <stats_date_from>
-    </stats_date_from>
-    <stats_date_to>
-    </stats_date_to>
-    <stats_compare_from>
-    </stats_compare_from>
-    <stats_compare_to>
-    </stats_compare_to>
-    <passwd>
-    </passwd>
-    <lastname>
-    </lastname>
-    <firstname>
-    </firstname>
-    <email>
-    </email>
-    <active>
-    </active>
-    <id_profile>
-    </id_profile>
-    <bo_color>
-    </bo_color>
-    <default_tab>
-    </default_tab>
-    <bo_theme>
-    </bo_theme>
-    <bo_css>
-    </bo_css>
-    <bo_width>
-    </bo_width>
-    <bo_menu>
-    </bo_menu>
-    <stats_compare_option>
-    </stats_compare_option>
-    <preselect_date_range>
-    </preselect_date_range>
-    <id_last_order>
-    </id_last_order>
-    <id_last_customer_message>
-    </id_last_customer_message>
-    <id_last_customer>
-    </id_last_customer>
-    <reset_password_token>
-    </reset_password_token>
-    <reset_password_validity>
-    </reset_password_validity>
-    <has_enabled_gravatar>
-    </has_enabled_gravatar>
+    <id><![CDATA[]]></id>
+    <id_lang><![CDATA[]]></id_lang>
+    <last_passwd_gen><![CDATA[]]></last_passwd_gen>
+    <stats_date_from><![CDATA[]]></stats_date_from>
+    <stats_date_to><![CDATA[]]></stats_date_to>
+    <stats_compare_from><![CDATA[]]></stats_compare_from>
+    <stats_compare_to><![CDATA[]]></stats_compare_to>
+    <passwd><![CDATA[]]></passwd>
+    <lastname><![CDATA[]]></lastname>
+    <firstname><![CDATA[]]></firstname>
+    <email><![CDATA[]]></email>
+    <active><![CDATA[]]></active>
+    <id_profile><![CDATA[]]></id_profile>
+    <bo_color><![CDATA[]]></bo_color>
+    <default_tab><![CDATA[]]></default_tab>
+    <bo_theme><![CDATA[]]></bo_theme>
+    <bo_css><![CDATA[]]></bo_css>
+    <bo_width><![CDATA[]]></bo_width>
+    <bo_menu><![CDATA[]]></bo_menu>
+    <stats_compare_option><![CDATA[]]></stats_compare_option>
+    <preselect_date_range><![CDATA[]]></preselect_date_range>
+    <id_last_order><![CDATA[]]></id_last_order>
+    <id_last_customer_message><![CDATA[]]></id_last_customer_message>
+    <id_last_customer><![CDATA[]]></id_last_customer>
+    <reset_password_token><![CDATA[]]></reset_password_token>
+    <reset_password_validity><![CDATA[]]></reset_password_validity>
+    <has_enabled_gravatar><![CDATA[]]></has_enabled_gravatar>
   </employee>
 </prestashop>
 ```

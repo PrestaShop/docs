@@ -19,23 +19,15 @@ title: Configurations
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <configuration>
-    <id>
-    </id>
-    <value>
-    </value>
-    <name>
-    </name>
-    <id_shop_group>
-    </id_shop_group>
-    <id_shop>
-    </id_shop>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <value><![CDATA[]]></value>
+    <name><![CDATA[]]></name>
+    <id_shop_group><![CDATA[]]></id_shop_group>
+    <id_shop><![CDATA[]]></id_shop>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
   </configuration>
 </prestashop>
 ```

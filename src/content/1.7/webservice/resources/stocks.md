@@ -25,33 +25,20 @@ title: Stocks
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <stock>
-    <id>
-    </id>
-    <id_warehouse>
-    </id_warehouse>
-    <id_product>
-    </id_product>
-    <id_product_attribute>
-    </id_product_attribute>
-    <reference>
-    </reference>
-    <ean13>
-    </ean13>
-    <isbn>
-    </isbn>
-    <upc>
-    </upc>
-    <mpn>
-    </mpn>
-    <physical_quantity>
-    </physical_quantity>
-    <usable_quantity>
-    </usable_quantity>
-    <price_te>
-    </price_te>
+    <id><![CDATA[]]></id>
+    <id_warehouse><![CDATA[]]></id_warehouse>
+    <id_product><![CDATA[]]></id_product>
+    <id_product_attribute><![CDATA[]]></id_product_attribute>
+    <reference><![CDATA[]]></reference>
+    <ean13><![CDATA[]]></ean13>
+    <isbn><![CDATA[]]></isbn>
+    <upc><![CDATA[]]></upc>
+    <mpn><![CDATA[]]></mpn>
+    <physical_quantity><![CDATA[]]></physical_quantity>
+    <usable_quantity><![CDATA[]]></usable_quantity>
+    <price_te><![CDATA[]]></price_te>
   </stock>
 </prestashop>
 ```

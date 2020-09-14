@@ -20,23 +20,15 @@ title: Supply order states
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <supply_order_state>
-    <id>
-    </id>
-    <delivery_note>
-    </delivery_note>
-    <editable>
-    </editable>
-    <receipt_state>
-    </receipt_state>
-    <pending_receipt>
-    </pending_receipt>
-    <enclosed>
-    </enclosed>
-    <color>
-    </color>
+    <id><![CDATA[]]></id>
+    <delivery_note><![CDATA[]]></delivery_note>
+    <editable><![CDATA[]]></editable>
+    <receipt_state><![CDATA[]]></receipt_state>
+    <pending_receipt><![CDATA[]]></pending_receipt>
+    <enclosed><![CDATA[]]></enclosed>
+    <color><![CDATA[]]></color>
     <name>
       <language id="1"/>
       <language id="2"/>

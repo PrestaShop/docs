@@ -19,23 +19,15 @@ title: Supply order histories
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <supply_order_history>
-    <id>
-    </id>
-    <id_supply_order>
-    </id_supply_order>
-    <id_employee>
-    </id_employee>
-    <id_state>
-    </id_state>
-    <employee_firstname>
-    </employee_firstname>
-    <employee_lastname>
-    </employee_lastname>
-    <date_add>
-    </date_add>
+    <id><![CDATA[]]></id>
+    <id_supply_order><![CDATA[]]></id_supply_order>
+    <id_employee><![CDATA[]]></id_employee>
+    <id_state><![CDATA[]]></id_state>
+    <employee_firstname><![CDATA[]]></employee_firstname>
+    <employee_lastname><![CDATA[]]></employee_lastname>
+    <date_add><![CDATA[]]></date_add>
   </supply_order_history>
 </prestashop>
 ```

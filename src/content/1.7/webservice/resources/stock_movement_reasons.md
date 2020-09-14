@@ -18,19 +18,13 @@ title: Stock movement reasons
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <stock_movement_reason>
-    <id>
-    </id>
-    <sign>
-    </sign>
-    <deleted>
-    </deleted>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
+    <id><![CDATA[]]></id>
+    <sign><![CDATA[]]></sign>
+    <deleted><![CDATA[]]></deleted>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
     <name>
       <language id="1"/>
       <language id="2"/>

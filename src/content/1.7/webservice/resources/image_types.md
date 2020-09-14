@@ -21,27 +21,17 @@ title: Image types
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <image_type>
-    <id>
-    </id>
-    <name>
-    </name>
-    <width>
-    </width>
-    <height>
-    </height>
-    <categories>
-    </categories>
-    <products>
-    </products>
-    <manufacturers>
-    </manufacturers>
-    <suppliers>
-    </suppliers>
-    <stores>
-    </stores>
+    <id><![CDATA[]]></id>
+    <name><![CDATA[]]></name>
+    <width><![CDATA[]]></width>
+    <height><![CDATA[]]></height>
+    <categories><![CDATA[]]></categories>
+    <products><![CDATA[]]></products>
+    <manufacturers><![CDATA[]]></manufacturers>
+    <suppliers><![CDATA[]]></suppliers>
+    <stores><![CDATA[]]></stores>
   </image_type>
 </prestashop>
 ```

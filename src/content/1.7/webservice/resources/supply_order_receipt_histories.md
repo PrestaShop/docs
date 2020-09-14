@@ -20,25 +20,16 @@ title: Supply order receipt histories
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <supply_order_receipt_history>
-    <id>
-    </id>
-    <id_supply_order_detail>
-    </id_supply_order_detail>
-    <id_employee>
-    </id_employee>
-    <id_supply_order_state>
-    </id_supply_order_state>
-    <employee_firstname>
-    </employee_firstname>
-    <employee_lastname>
-    </employee_lastname>
-    <quantity>
-    </quantity>
-    <date_add>
-    </date_add>
+    <id><![CDATA[]]></id>
+    <id_supply_order_detail><![CDATA[]]></id_supply_order_detail>
+    <id_employee><![CDATA[]]></id_employee>
+    <id_supply_order_state><![CDATA[]]></id_supply_order_state>
+    <employee_firstname><![CDATA[]]></employee_firstname>
+    <employee_lastname><![CDATA[]]></employee_lastname>
+    <quantity><![CDATA[]]></quantity>
+    <date_add><![CDATA[]]></date_add>
   </supply_order_receipt_history>
 </prestashop>
 ```

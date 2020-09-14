@@ -34,51 +34,29 @@ title: Carriers
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <carrier>
-    <id>
-    </id>
-    <deleted>
-    </deleted>
-    <is_module>
-    </is_module>
-    <id_tax_rules_group>
-    </id_tax_rules_group>
-    <id_reference>
-    </id_reference>
-    <name>
-    </name>
-    <active>
-    </active>
-    <is_free>
-    </is_free>
-    <url>
-    </url>
-    <shipping_handling>
-    </shipping_handling>
-    <shipping_external>
-    </shipping_external>
-    <range_behavior>
-    </range_behavior>
-    <shipping_method>
-    </shipping_method>
-    <max_width>
-    </max_width>
-    <max_height>
-    </max_height>
-    <max_depth>
-    </max_depth>
-    <max_weight>
-    </max_weight>
-    <grade>
-    </grade>
-    <external_module_name>
-    </external_module_name>
-    <need_range>
-    </need_range>
-    <position>
-    </position>
+    <id><![CDATA[]]></id>
+    <deleted><![CDATA[]]></deleted>
+    <is_module><![CDATA[]]></is_module>
+    <id_tax_rules_group><![CDATA[]]></id_tax_rules_group>
+    <id_reference><![CDATA[]]></id_reference>
+    <name><![CDATA[]]></name>
+    <active><![CDATA[]]></active>
+    <is_free><![CDATA[]]></is_free>
+    <url><![CDATA[]]></url>
+    <shipping_handling><![CDATA[]]></shipping_handling>
+    <shipping_external><![CDATA[]]></shipping_external>
+    <range_behavior><![CDATA[]]></range_behavior>
+    <shipping_method><![CDATA[]]></shipping_method>
+    <max_width><![CDATA[]]></max_width>
+    <max_height><![CDATA[]]></max_height>
+    <max_depth><![CDATA[]]></max_depth>
+    <max_weight><![CDATA[]]></max_weight>
+    <grade><![CDATA[]]></grade>
+    <external_module_name><![CDATA[]]></external_module_name>
+    <need_range><![CDATA[]]></need_range>
+    <position><![CDATA[]]></position>
     <delay>
       <language id="1"/>
       <language id="2"/>

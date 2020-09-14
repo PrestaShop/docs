@@ -46,80 +46,45 @@ title: Customers
 ### Blank schema
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
   <customer>
-    <id>
-    </id>
-    <id_default_group>
-    </id_default_group>
-    <id_lang>
-    </id_lang>
-    <newsletter_date_add>
-    </newsletter_date_add>
-    <ip_registration_newsletter>
-    </ip_registration_newsletter>
-    <last_passwd_gen>
-    </last_passwd_gen>
-    <secure_key>
-    </secure_key>
-    <deleted>
-    </deleted>
-    <passwd>
-    </passwd>
-    <lastname>
-    </lastname>
-    <firstname>
-    </firstname>
-    <email>
-    </email>
-    <id_gender>
-    </id_gender>
-    <birthday>
-    </birthday>
-    <newsletter>
-    </newsletter>
-    <optin>
-    </optin>
-    <website>
-    </website>
-    <company>
-    </company>
-    <siret>
-    </siret>
-    <ape>
-    </ape>
-    <outstanding_allow_amount>
-    </outstanding_allow_amount>
-    <show_public_prices>
-    </show_public_prices>
-    <id_risk>
-    </id_risk>
-    <max_payment_days>
-    </max_payment_days>
-    <active>
-    </active>
-    <note>
-    </note>
-    <is_guest>
-    </is_guest>
-    <id_shop>
-    </id_shop>
-    <id_shop_group>
-    </id_shop_group>
-    <date_add>
-    </date_add>
-    <date_upd>
-    </date_upd>
-    <reset_password_token>
-    </reset_password_token>
-    <reset_password_validity>
-    </reset_password_validity>
+    <id><![CDATA[]]></id>
+    <id_default_group><![CDATA[]]></id_default_group>
+    <id_lang><![CDATA[]]></id_lang>
+    <newsletter_date_add><![CDATA[]]></newsletter_date_add>
+    <ip_registration_newsletter><![CDATA[]]></ip_registration_newsletter>
+    <last_passwd_gen><![CDATA[]]></last_passwd_gen>
+    <secure_key><![CDATA[]]></secure_key>
+    <deleted><![CDATA[]]></deleted>
+    <passwd><![CDATA[]]></passwd>
+    <lastname><![CDATA[]]></lastname>
+    <firstname><![CDATA[]]></firstname>
+    <email><![CDATA[]]></email>
+    <id_gender><![CDATA[]]></id_gender>
+    <birthday><![CDATA[]]></birthday>
+    <newsletter><![CDATA[]]></newsletter>
+    <optin><![CDATA[]]></optin>
+    <website><![CDATA[]]></website>
+    <company><![CDATA[]]></company>
+    <siret><![CDATA[]]></siret>
+    <ape><![CDATA[]]></ape>
+    <outstanding_allow_amount><![CDATA[]]></outstanding_allow_amount>
+    <show_public_prices><![CDATA[]]></show_public_prices>
+    <id_risk><![CDATA[]]></id_risk>
+    <max_payment_days><![CDATA[]]></max_payment_days>
+    <active><![CDATA[]]></active>
+    <note><![CDATA[]]></note>
+    <is_guest><![CDATA[]]></is_guest>
+    <id_shop><![CDATA[]]></id_shop>
+    <id_shop_group><![CDATA[]]></id_shop_group>
+    <date_add><![CDATA[]]></date_add>
+    <date_upd><![CDATA[]]></date_upd>
+    <reset_password_token><![CDATA[]]></reset_password_token>
+    <reset_password_validity><![CDATA[]]></reset_password_validity>
     <associations>
       <groups>
         <group>
-          <id>
-          </id>
+          <id><![CDATA[]]></id>
         </group>
       </groups>
     </associations>
