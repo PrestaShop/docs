@@ -22,8 +22,8 @@ title: Product feature values
     <id_feature><![CDATA[]]></id_feature>
     <custom><![CDATA[]]></custom>
     <value>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </value>
   </product_feature_value>
 </prestashop>

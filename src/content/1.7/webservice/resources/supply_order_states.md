@@ -30,8 +30,8 @@ title: Supply order states
     <enclosed><![CDATA[]]></enclosed>
     <color><![CDATA[]]></color>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
   </supply_order_state>
 </prestashop>

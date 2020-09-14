@@ -29,13 +29,13 @@ title: Currencies
   <currency>
     <id><![CDATA[]]></id>
     <names>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </names>
     <name><![CDATA[]]></name>
     <symbol>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </symbol>
     <iso_code><![CDATA[]]></iso_code>
     <numeric_iso_code><![CDATA[]]></numeric_iso_code>
@@ -46,8 +46,8 @@ title: Currencies
     <unofficial><![CDATA[]]></unofficial>
     <modified><![CDATA[]]></modified>
     <pattern>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </pattern>
   </currency>
 </prestashop>

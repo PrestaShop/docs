@@ -38,8 +38,8 @@ title: Countries
     <zip_code_format><![CDATA[]]></zip_code_format>
     <display_tax_label><![CDATA[]]></display_tax_label>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
   </country>
 </prestashop>

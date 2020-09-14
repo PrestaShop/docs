@@ -23,8 +23,8 @@ title: Translated configurations
   <translated_configuration>
     <id><![CDATA[]]></id>
     <value>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </value>
     <date_add><![CDATA[]]></date_add>
     <date_upd><![CDATA[]]></date_upd>

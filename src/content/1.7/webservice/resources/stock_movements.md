@@ -48,8 +48,8 @@ title: Stock movements
     <id_order><![CDATA[]]></id_order>
     <id_supply_order><![CDATA[]]></id_supply_order>
     <product_name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </product_name>
     <ean13><![CDATA[]]></ean13>
     <upc><![CDATA[]]></upc>

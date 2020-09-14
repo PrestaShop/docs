@@ -28,8 +28,8 @@ title: Product customization fields
     <is_module><![CDATA[]]></is_module>
     <is_deleted><![CDATA[]]></is_deleted>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
   </customization_field>
 </prestashop>

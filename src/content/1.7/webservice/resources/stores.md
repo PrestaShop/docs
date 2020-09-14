@@ -36,8 +36,8 @@ title: Stores
     <id_country><![CDATA[]]></id_country>
     <id_state><![CDATA[]]></id_state>
     <hours>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </hours>
     <postcode><![CDATA[]]></postcode>
     <city><![CDATA[]]></city>
@@ -50,20 +50,20 @@ title: Stores
     <date_add><![CDATA[]]></date_add>
     <date_upd><![CDATA[]]></date_upd>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
     <address1>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </address1>
     <address2>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </address2>
     <note>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </note>
   </store>
 </prestashop>

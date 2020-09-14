@@ -115,12 +115,12 @@ title: Products
     <state><![CDATA[]]></state>
     <additional_delivery_times><![CDATA[]]></additional_delivery_times>
     <delivery_in_stock>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </delivery_in_stock>
     <delivery_out_stock>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </delivery_out_stock>
     <on_sale><![CDATA[]]></on_sale>
     <online_only><![CDATA[]]></online_only>
@@ -151,40 +151,40 @@ title: Products
     <date_upd><![CDATA[]]></date_upd>
     <pack_stock_type><![CDATA[]]></pack_stock_type>
     <meta_description>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </meta_description>
     <meta_keywords>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </meta_keywords>
     <meta_title>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </meta_title>
     <link_rewrite>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </link_rewrite>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
     <description>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </description>
     <description_short>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </description_short>
     <available_now>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </available_now>
     <available_later>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </available_later>
     <associations>
       <categories>

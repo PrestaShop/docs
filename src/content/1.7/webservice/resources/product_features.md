@@ -20,8 +20,8 @@ title: Product features
     <id><![CDATA[]]></id>
     <position><![CDATA[]]></position>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
   </product_feature>
 </prestashop>

@@ -24,8 +24,8 @@ title: Taxes
     <active><![CDATA[]]></active>
     <deleted><![CDATA[]]></deleted>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
   </tax>
 </prestashop>

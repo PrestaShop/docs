@@ -58,8 +58,8 @@ title: Carriers
     <need_range><![CDATA[]]></need_range>
     <position><![CDATA[]]></position>
     <delay>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </delay>
   </carrier>
 </prestashop>

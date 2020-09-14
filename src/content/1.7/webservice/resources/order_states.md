@@ -45,12 +45,12 @@ title: Order states
     <pdf_invoice><![CDATA[]]></pdf_invoice>
     <deleted><![CDATA[]]></deleted>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
     <template>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </template>
   </order_state>
 </prestashop>

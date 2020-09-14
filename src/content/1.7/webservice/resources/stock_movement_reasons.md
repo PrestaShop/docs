@@ -26,8 +26,8 @@ title: Stock movement reasons
     <date_add><![CDATA[]]></date_add>
     <date_upd><![CDATA[]]></date_upd>
     <name>
-      <language id="1"/>
-      <language id="2"/>
+      <language id="1"><![CDATA[]]></language>
+      <language id="2"><![CDATA[]]></language>
     </name>
   </stock_movement_reason>
 </prestashop>
