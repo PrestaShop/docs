@@ -7,7 +7,7 @@ title: Warehouse product locations
 ### Warehouse_product_location
 
 |           Name           |    Format    | Required | Max size |     Description      |
-| :----------------------- | :----------- | :------- | :------- | :------------------- |
+| :----------------------- | :----------- | :------: | -------: | :------------------- |
 | **id_product**           | isUnsignedId | ✔️       |          | Product ID           |
 | **id_product_attribute** | isUnsignedId | ✔️       |          | Product attribute ID |
 | **id_warehouse**         | isUnsignedId | ✔️       |          | Warehouse ID         |

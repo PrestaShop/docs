@@ -7,7 +7,7 @@ title: Image types
 ### Image_type
 
 |       Name        |     Format      | Required | Max size | Description |
-| :---------------- | :-------------- | :------- | :------- | :---------- |
+| :---------------- | :-------------- | :------: | -------: | :---------- |
 | **name**          | isImageTypeName | ✔️       | 64       |             |
 | **width**         | isImageSize     | ✔️       |          |             |
 | **height**        | isImageSize     | ✔️       |          |             |

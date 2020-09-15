@@ -7,7 +7,7 @@ title: Customizations
 ### Customization
 
 |           Name           |    Format    | Required |     Description      |
-| :----------------------- | :----------- | :------- | :------------------- |
+| :----------------------- | :----------- | :------: | :------------------- |
 | **id_address_delivery**  | isUnsignedId | ✔️       | Delivery address ID  |
 | **id_cart**              | isUnsignedId | ✔️       | Cart ID              |
 | **id_product**           | isUnsignedId | ✔️       | Product ID           |

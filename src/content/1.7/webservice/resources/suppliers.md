@@ -7,7 +7,7 @@ title: Suppliers
 ### Supplier
 
 |         Name         |    Format     | Required | Max size | Description |
-| :------------------- | :------------ | :------- | :------- | :---------- |
+| :------------------- | :------------ | :------: | -------: | :---------- |
 | **link_rewrite**     |               | ❌        |          |             |
 | **name**             | isCatalogName | ✔️       | 64       |             |
 | **active**           |               | ❌        |          |             |

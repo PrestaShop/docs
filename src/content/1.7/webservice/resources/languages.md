@@ -7,7 +7,7 @@ title: Languages
 ### Language
 
 |         Name         |      Format       | Required | Max size | Description |
-| :------------------- | :---------------- | :------- | :------- | :---------- |
+| :------------------- | :---------------- | :------: | -------: | :---------- |
 | **name**             | isGenericName     | ✔️       | 32       |             |
 | **iso_code**         | isLanguageIsoCode | ✔️       | 2        |             |
 | **locale**           | isLocale          | ❌        | 5        |             |

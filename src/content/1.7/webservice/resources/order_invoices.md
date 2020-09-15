@@ -7,7 +7,7 @@ title: Order invoices
 ### Order_invoice
 
 |                Name                 |    Format    | Required | Max size | Description |
-| :---------------------------------- | :----------- | :------- | :------- | :---------- |
+| :---------------------------------- | :----------- | :------: | -------: | :---------- |
 | **id_order**                        | isUnsignedId | ✔️       |          | Order ID    |
 | **number**                          | isUnsignedId | ✔️       |          |             |
 | **delivery_number**                 | isUnsignedId | ❌        |          |             |

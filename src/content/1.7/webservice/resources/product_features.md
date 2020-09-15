@@ -7,7 +7,7 @@ title: Product features
 ### Product_feature
 
 |     Name     |    Format     | Required | Max size | Description |
-| :----------- | :------------ | :------- | :------- | :---------- |
+| :----------- | :------------ | :------: | -------: | :---------- |
 | **position** | isInt         | ❌        |          |             |
 | **name**     | isGenericName | ✔️       | 128      |             |
 

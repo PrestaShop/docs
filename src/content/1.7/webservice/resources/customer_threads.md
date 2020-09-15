@@ -7,7 +7,7 @@ title: Customer threads
 ### Customer_thread
 
 |       Name       |    Format     | Required | Max size | Description |
-| :--------------- | :------------ | :------- | :------- | :---------- |
+| :--------------- | :------------ | :------: | -------: | :---------- |
 | **id_lang**      | isUnsignedId  | ✔️       |          | Lang ID     |
 | **id_shop**      | isUnsignedId  | ❌        |          | Shop ID     |
 | **id_customer**  | isUnsignedId  | ❌        |          | Customer ID |

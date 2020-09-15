@@ -7,7 +7,7 @@ title: Configurations
 ### Configuration
 
 |       Name        |    Format    | Required | Max size |  Description  |
-| :---------------- | :----------- | :------- | :------- | :------------ |
+| :---------------- | :----------- | :------: | -------: | :------------ |
 | **value**         |              | ❌        |          |               |
 | **name**          | isConfigName | ✔️       | 254      |               |
 | **id_shop_group** | isUnsignedId | ❌        |          | Shop group ID |

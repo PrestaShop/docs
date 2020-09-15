@@ -7,7 +7,7 @@ title: Guests
 ### Guest
 
 |          Name           |    Format     | Required | Max size |     Description     |
-| :---------------------- | :------------ | :------- | :------- | :------------------ |
+| :---------------------- | :------------ | :------: | -------: | :------------------ |
 | **id_customer**         | isUnsignedId  | ❌        |          | Customer ID         |
 | **id_operating_system** | isUnsignedId  | ❌        |          | Operating system ID |
 | **id_web_browser**      | isUnsignedId  | ❌        |          | Web browser ID      |

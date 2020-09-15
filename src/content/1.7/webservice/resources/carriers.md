@@ -7,7 +7,7 @@ title: Carriers
 ### Carrier
 
 |           Name           |    Format     | Required | Max size | Not filterable |    Description     |
-| :----------------------- | :------------ | :------- | :------- | :------------- | :----------------- |
+| :----------------------- | :------------ | :------: | -------: | :------------- | :----------------- |
 | **deleted**              | isBool        | ❌        |          |                |                    |
 | **is_module**            | isBool        | ❌        |          |                |                    |
 | **id_tax_rules_group**   |               | ❌        |          | true           | Tax rules group ID |

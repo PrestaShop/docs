@@ -7,7 +7,7 @@ title: Manufacturers
 ### Manufacturer
 
 |         Name          |    Format     | Required | Writable | Max size | Not filterable | Description |
-| :-------------------- | :------------ | :------- | :------- | :------- | :------------- | :---------- |
+| :-------------------- | :------------ | :------: | :------: | -------: | :------------- | :---------- |
 | **active**            |               | ❌        | ✔️       |          |                |             |
 | **link_rewrite**      |               | ❌        | ❌        |          | true           |             |
 | **name**              | isCatalogName | ✔️       | ✔️       | 64       |                |             |

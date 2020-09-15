@@ -7,7 +7,7 @@ title: Cart rules
 ### Cart_rule
 
 |             Name              |    Format     | Required | Max size | Description |
-| :---------------------------- | :------------ | :------- | :------- | :---------- |
+| :---------------------------- | :------------ | :------: | -------: | :---------- |
 | **id_customer**               | isUnsignedId  | ❌        |          | Customer ID |
 | **date_from**                 | isDate        | ✔️       |          |             |
 | **date_to**                   | isDate        | ✔️       |          |             |

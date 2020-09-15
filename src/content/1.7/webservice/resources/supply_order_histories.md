@@ -7,7 +7,7 @@ title: Supply order histories
 ### Supply_order_history
 
 |          Name          |    Format    | Required | Description |
-| :--------------------- | :----------- | :------- | :---------- |
+| :--------------------- | :----------- | :------: | :---------- |
 | **id_supply_order**    | isUnsignedId | ✔️       |             |
 | **id_employee**        | isUnsignedId | ✔️       | Employee ID |
 | **id_state**           | isUnsignedId | ✔️       | State ID    |

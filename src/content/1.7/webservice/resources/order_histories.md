@@ -7,7 +7,7 @@ title: Order histories
 ### Order_history
 
 |        Name        |    Format    | Required | Description |
-| :----------------- | :----------- | :------- | :---------- |
+| :----------------- | :----------- | :------: | :---------- |
 | **id_employee**    | isUnsignedId | ❌        | Employee ID |
 | **id_order_state** | isUnsignedId | ✔️       |             |
 | **id_order**       | isUnsignedId | ✔️       | Order ID    |

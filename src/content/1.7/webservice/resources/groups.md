@@ -7,7 +7,7 @@ title: Groups
 ### Group
 
 |           Name           |        Format        | Required | Max size | Description |
-| :----------------------- | :------------------- | :------- | :------- | :---------- |
+| :----------------------- | :------------------- | :------: | -------: | :---------- |
 | **reduction**            | isFloat              | ❌        |          |             |
 | **price_display_method** | isPriceDisplayMethod | ✔️       |          |             |
 | **show_prices**          | isBool               | ❌        |          |             |

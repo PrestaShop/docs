@@ -7,7 +7,7 @@ title: Order cart rules
 ### Order_cart_rule
 
 |         Name         |    Format    | Required |   Description    |
-| :------------------- | :----------- | :------- | :--------------- |
+| :------------------- | :----------- | :------: | :--------------- |
 | **id_order**         | isUnsignedId | ✔️       | Order ID         |
 | **id_cart_rule**     | isUnsignedId | ✔️       |                  |
 | **id_order_invoice** | isUnsignedId | ❌        | Order invoice ID |

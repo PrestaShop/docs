@@ -7,7 +7,7 @@ title: Order states
 ### Order_state
 
 |       Name       |    Format     | Required | Max size | Description |
-| :--------------- | :------------ | :------- | :------- | :---------- |
+| :--------------- | :------------ | :------: | -------: | :---------- |
 | **unremovable**  | isBool        | ❌        |          |             |
 | **delivery**     | isBool        | ❌        |          |             |
 | **hidden**       | isBool        | ❌        |          |             |

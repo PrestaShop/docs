@@ -7,7 +7,7 @@ title: Customers
 ### Customer
 
 |              Name              |     Format     | Required | Writable | Max size |   Description    |
-| :----------------------------- | :------------- | :------- | :------- | :------- | :--------------- |
+| :----------------------------- | :------------- | :------: | :------: | -------: | :--------------- |
 | **id_default_group**           |                | ❌        | ✔️       |          | Default group ID |
 | **id_lang**                    | isUnsignedId   | ❌        | ✔️       |          | Lang ID          |
 | **newsletter_date_add**        |                | ❌        | ✔️       |          |                  |

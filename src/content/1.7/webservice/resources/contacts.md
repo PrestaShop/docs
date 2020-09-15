@@ -7,7 +7,7 @@ title: Contacts
 ### Contact
 
 |         Name         |    Format     | Required | Max size | Description |
-| :------------------- | :------------ | :------- | :------- | :---------- |
+| :------------------- | :------------ | :------: | -------: | :---------- |
 | **email**            | isEmail       | ❌        | 255      |             |
 | **customer_service** | isBool        | ❌        |          |             |
 | **name**             | isGenericName | ✔️       | 255      |             |

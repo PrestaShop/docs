@@ -7,7 +7,7 @@ title: Carts
 ### Cart
 
 |            Name             |    Format    | Required | Max size |     Description     |
-| :-------------------------- | :----------- | :------- | :------- | :------------------ |
+| :-------------------------- | :----------- | :------: | -------: | :------------------ |
 | **id_address_delivery**     | isUnsignedId | ❌        |          | Delivery address ID |
 | **id_address_invoice**      | isUnsignedId | ❌        |          | Invoice address ID  |
 | **id_currency**             | isUnsignedId | ✔️       |          | Currency ID         |

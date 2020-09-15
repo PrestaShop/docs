@@ -7,7 +7,7 @@ title: Products
 ### Product
 
 |             Name              |       Format        | Required | Writable | Max size | Not filterable |    Description     |
-| :---------------------------- | :------------------ | :------- | :------- | :------- | :------------- | :----------------- |
+| :---------------------------- | :------------------ | :------: | :------: | -------: | :------------- | :----------------- |
 | **id_manufacturer**           | isUnsignedId        | ❌        | ✔️       |          |                | Manufacturer ID    |
 | **id_supplier**               | isUnsignedId        | ❌        | ✔️       |          |                | Supplier ID        |
 | **id_category_default**       | isUnsignedId        | ❌        | ✔️       |          |                |                    |

@@ -7,7 +7,7 @@ title: Zones
 ### Zone
 
 |    Name    |    Format     | Required | Max size | Description |
-| :--------- | :------------ | :------- | :------- | :---------- |
+| :--------- | :------------ | :------: | -------: | :---------- |
 | **name**   | isGenericName | ✔️       | 64       |             |
 | **active** | isBool        | ❌        |          |             |
 

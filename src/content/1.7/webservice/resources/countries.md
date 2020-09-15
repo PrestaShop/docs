@@ -7,7 +7,7 @@ title: Countries
 ### Country
 
 |              Name              |      Format       | Required | Max size | Description |
-| :----------------------------- | :---------------- | :------- | :------- | :---------- |
+| :----------------------------- | :---------------- | :------: | -------: | :---------- |
 | **id_zone**                    | isUnsignedId      | ✔️       |          | Zone ID     |
 | **id_currency**                | isUnsignedId      | ❌        |          | Currency ID |
 | **call_prefix**                | isInt             | ❌        |          |             |

@@ -7,7 +7,7 @@ title: Deliveries
 ### Delivery
 
 |        Name         |    Format    | Required |  Description   |
-| :------------------ | :----------- | :------- | :------------- |
+| :------------------ | :----------- | :------: | :------------- |
 | **id_carrier**      | isUnsignedId | ✔️       | Carrier ID     |
 | **id_range_price**  | isUnsignedId | ✔️       | Range price ID |
 | **id_range_weight** | isUnsignedId | ✔️       |                |

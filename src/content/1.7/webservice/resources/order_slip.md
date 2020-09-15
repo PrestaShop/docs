@@ -7,7 +7,7 @@ title: Order slip
 ### Order_slip
 
 |            Name             |    Format    | Required | Description |
-| :-------------------------- | :----------- | :------- | :---------- |
+| :-------------------------- | :----------- | :------: | :---------- |
 | **id_customer**             | isUnsignedId | ✔️       | Customer ID |
 | **id_order**                | isUnsignedId | ✔️       | Order ID    |
 | **conversion_rate**         | isFloat      | ✔️       |             |

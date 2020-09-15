@@ -7,7 +7,7 @@ title: Stock movements
 ### Stock_mvt
 
 |           Name           |    Format     | Required |     Description      |
-| :----------------------- | :------------ | :------- | :------------------- |
+| :----------------------- | :------------ | :------: | :------------------- |
 | **id_product**           |               | ❌        | Product ID           |
 | **id_product_attribute** |               | ❌        | Product attribute ID |
 | **id_warehouse**         |               | ❌        | Warehouse ID         |

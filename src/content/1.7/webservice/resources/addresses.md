@@ -7,7 +7,7 @@ title: Addresses
 ### Address
 
 |        Name         |       Format       | Required | Max size |   Description   |
-| :------------------ | :----------------- | :------- | :------- | :-------------- |
+| :------------------ | :----------------- | :------: | -------: | :-------------- |
 | **id_customer**     | isNullOrUnsignedId | ❌        |          | Customer ID     |
 | **id_manufacturer** | isNullOrUnsignedId | ❌        |          | Manufacturer ID |
 | **id_supplier**     | isNullOrUnsignedId | ❌        |          | Supplier ID     |

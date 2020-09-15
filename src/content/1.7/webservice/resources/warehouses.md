@@ -7,7 +7,7 @@ title: Warehouses
 ### Warehouse
 
 |        Name         |      Format       | Required | Writable | Max size | Not filterable | Description |
-| :------------------ | :---------------- | :------- | :------- | :------- | :------------- | :---------- |
+| :------------------ | :---------------- | :------: | :------: | -------: | :------------- | :---------- |
 | **id_address**      | isUnsignedId      | ✔️       | ✔️       |          |                |             |
 | **id_employee**     | isUnsignedId      | ✔️       | ✔️       |          |                | Employee ID |
 | **id_currency**     | isUnsignedId      | ✔️       | ✔️       |          |                | Currency ID |

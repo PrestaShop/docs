@@ -7,7 +7,7 @@ title: Order payments
 ### Order_payment
 
 |        Name         |    Format     | Required | Max size | Description |
-| :------------------ | :------------ | :------- | :------- | :---------- |
+| :------------------ | :------------ | :------: | -------: | :---------- |
 | **order_reference** | isAnything    | ❌        | 9        |             |
 | **id_currency**     | isUnsignedId  | ✔️       |          | Currency ID |
 | **amount**          | isPrice       | ✔️       |          |             |

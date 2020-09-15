@@ -7,7 +7,7 @@ title: Customer messages
 ### Customer_message
 
 |          Name          |    Format    | Required | Max size |    Description     |
-| :--------------------- | :----------- | :------- | :------- | :----------------- |
+| :--------------------- | :----------- | :------: | -------: | :----------------- |
 | **id_employee**        | isUnsignedId | ❌        |          | Employee ID        |
 | **id_customer_thread** |              | ❌        |          | Customer Thread ID |
 | **ip_address**         | isIp2Long    | ❌        | 15       |                    |

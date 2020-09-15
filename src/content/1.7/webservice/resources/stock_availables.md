@@ -7,7 +7,7 @@ title: Stock availables
 ### Stock_available
 
 |           Name           |    Format    | Required | Max size |     Description      |
-| :----------------------- | :----------- | :------- | :------- | :------------------- |
+| :----------------------- | :----------- | :------: | -------: | :------------------- |
 | **id_product**           | isUnsignedId | ✔️       |          | Product ID           |
 | **id_product_attribute** | isUnsignedId | ✔️       |          | Product attribute ID |
 | **id_shop**              | isUnsignedId | ❌        |          | Shop ID              |

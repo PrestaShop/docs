@@ -7,7 +7,7 @@ title: Product feature values
 ### Product_feature_value
 
 |      Name      |    Format     | Required | Max size | Description |
-| :------------- | :------------ | :------- | :------- | :---------- |
+| :------------- | :------------ | :------: | -------: | :---------- |
 | **id_feature** | isUnsignedId  | ✔️       |          |             |
 | **custom**     | isBool        | ❌        |          |             |
 | **value**      | isGenericName | ✔️       | 255      |             |

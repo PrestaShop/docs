@@ -7,7 +7,7 @@ title: Categories
 ### Category
 
 |           Name            |    Format     | Required | Writable | Max size | Not filterable |   Description   |
-| :------------------------ | :------------ | :------- | :------- | :------- | :------------- | :-------------- |
+| :------------------------ | :------------ | :------: | :------: | -------: | :------------- | :-------------- |
 | **id_parent**             | isUnsignedInt | ❌        | ✔️       |          |                | Parent ID       |
 | **level_depth**           | isUnsignedInt | ❌        | ❌        |          |                |                 |
 | **nb_products_recursive** |               | ❌        | ❌        |          | true           |                 |
