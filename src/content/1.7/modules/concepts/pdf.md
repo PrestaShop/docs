@@ -175,7 +175,7 @@ $hook_name = 'displayPDF' . $template;
 | Order Return  | displayPDFOrderReturn       |
 | Order Slip    | displayPDFOrderSlip         |
 | Supply Order  | displayPDFSupplyOrderForm   |
-| RGPD Archive  | displayPDFPSGDPRModule      |
+| GDPR Archive  | displayPDFPSGDPRModule      |
 
 ### Minimal Example: add an extra property to the Invoice
 
