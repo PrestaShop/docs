@@ -29,7 +29,7 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 
 <script src="/js/hookFilter.js"></script>
     
-action&lt;AdminControllerName>&lt;Action>After
+action&lt;AdminControllerClassName>&lt;Action>After
 : 
     Called after performing &lt;Action> in any &lt;AdminController>
 
@@ -44,7 +44,7 @@ action&lt;AdminControllerName>&lt;Action>After
     );
     ```
     
-action&lt;AdminControllerName>&lt;Action>Before
+action&lt;AdminControllerClassName>&lt;Action>Before
 : 
     Called before performing &lt;Action> in any &lt;AdminController>
 
@@ -58,7 +58,7 @@ action&lt;AdminControllerName>&lt;Action>Before
     );
     ```
     
-action&lt;AdminControllerName>FormModifier
+action&lt;AdminControllerClassName>FormModifier
 : 
     Called when rendering a form in any &lt;AdminController>
 
@@ -75,7 +75,7 @@ action&lt;AdminControllerName>FormModifier
     );
     ```
     
-action&lt;AdminControllerName>ListingFieldsModifier
+action&lt;AdminControllerClassName>ListingFieldsModifier
 : 
     Located in: /classes/controller/AdminController.php
 
@@ -92,7 +92,7 @@ action&lt;AdminControllerName>ListingFieldsModifier
     );
     ```
     
-action&lt;AdminControllerName>OptionsModifier
+action&lt;AdminControllerClassName>OptionsModifier
 : 
     Located in: /classes/controller/AdminController.php
 
