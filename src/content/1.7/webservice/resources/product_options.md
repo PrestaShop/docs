@@ -7,7 +7,7 @@ title: Product options
 ### Product_option
 
 |        Name        |    Format     | Required | Max size | Description |
-| :----------------- | :------------ | :------- | :------- | :---------- |
+| :----------------- | :------------ | :------: | -------: | :---------- |
 | **is_color_group** | isBool        | ❌        |          |             |
 | **group_type**     |               | ✔️       |          |             |
 | **position**       | isInt         | ❌        |          |             |

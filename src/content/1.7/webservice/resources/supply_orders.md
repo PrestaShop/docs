@@ -7,7 +7,7 @@ title: Supply orders
 ### Supply_order
 
 |            Name            |    Format     | Required | Description  |
-| :------------------------- | :------------ | :------- | :----------- |
+| :------------------------- | :------------ | :------: | :----------- |
 | **id_supplier**            | isUnsignedId  | ✔️       | Supplier ID  |
 | **id_lang**                | isUnsignedId  | ✔️       | Lang ID      |
 | **id_warehouse**           | isUnsignedId  | ✔️       | Warehouse ID |

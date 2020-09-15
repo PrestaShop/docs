@@ -7,7 +7,7 @@ title: Tax rules
 ### Tax_rule
 
 |          Name          |    Format     | Required |    Description     |
-| :--------------------- | :------------ | :------- | :----------------- |
+| :--------------------- | :------------ | :------: | :----------------- |
 | **id_tax_rules_group** | isUnsignedId  | ✔️       | Tax rules group ID |
 | **id_state**           | isUnsignedId  | ❌        | State ID           |
 | **id_country**         | isUnsignedId  | ✔️       | Country ID         |

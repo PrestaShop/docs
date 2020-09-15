@@ -7,7 +7,7 @@ title: Supply order details
 ### Supply_order_detail
 
 |               Name                |    Format     | Required |     Description      |
-| :-------------------------------- | :------------ | :------- | :------------------- |
+| :-------------------------------- | :------------ | :------: | :------------------- |
 | **id_supply_order**               | isUnsignedId  | ✔️       |                      |
 | **id_product**                    | isUnsignedId  | ✔️       | Product ID           |
 | **id_product_attribute**          | isUnsignedId  | ✔️       | Product attribute ID |

@@ -7,7 +7,7 @@ title: Content management system
 ### Content
 
 |         Name         |    Format     | Required |   Max size    |   Description   |
-| :------------------- | :------------ | :------- | :------------ | :-------------- |
+| :------------------- | :------------ | :------: | ------------: | :-------------- |
 | **id_cms_category**  | isUnsignedInt | ❌        |               | CMS Category ID |
 | **position**         |               | ❌        |               |                 |
 | **indexation**       |               | ❌        |               |                 |

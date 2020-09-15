@@ -7,7 +7,7 @@ title: Price ranges
 ### Price_range
 
 |      Name      |     Format      | Required | Description |
-| :------------- | :-------------- | :------- | :---------- |
+| :------------- | :-------------- | :------: | :---------- |
 | **id_carrier** | isInt           | ✔️       | Carrier ID  |
 | **delimiter1** | isUnsignedFloat | ✔️       |             |
 | **delimiter2** | isUnsignedFloat | ✔️       |             |

@@ -7,7 +7,7 @@ title: Product option values
 ### Product_option_value
 
 |          Name          |    Format     | Required | Max size | Description |
-| :--------------------- | :------------ | :------- | :------- | :---------- |
+| :--------------------- | :------------ | :------: | -------: | :---------- |
 | **id_attribute_group** | isUnsignedId  | ✔️       |          |             |
 | **color**              | isColor       | ❌        |          |             |
 | **position**           | isInt         | ❌        |          |             |

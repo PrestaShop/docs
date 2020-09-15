@@ -7,7 +7,7 @@ title: Stores
 ### Store
 
 |      Name      |       Format       | Required | Max size | Description |
-| :------------- | :----------------- | :------- | :------- | :---------- |
+| :------------- | :----------------- | :------: | -------: | :---------- |
 | **id_country** | isUnsignedId       | ✔️       |          | Country ID  |
 | **id_state**   | isNullOrUnsignedId | ❌        |          | State ID    |
 | **hours**      | isJson             | ❌        | 65000    |             |

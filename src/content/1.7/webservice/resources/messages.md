@@ -7,7 +7,7 @@ title: Messages
 ### Message
 
 |      Name       |    Format    | Required | Max size | Description |
-| :-------------- | :----------- | :------- | :------- | :---------- |
+| :-------------- | :----------- | :------: | -------: | :---------- |
 | **id_cart**     | isUnsignedId | ❌        |          | Cart ID     |
 | **id_order**    | isUnsignedId | ❌        |          | Order ID    |
 | **id_customer** | isUnsignedId | ❌        |          | Customer ID |

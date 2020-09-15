@@ -7,7 +7,7 @@ title: Order details
 ### Order_detail
 
 |               Name                |    Format     | Required |     Description      |
-| :-------------------------------- | :------------ | :------- | :------------------- |
+| :-------------------------------- | :------------ | :------: | :------------------- |
 | **id_order**                      | isUnsignedId  | ✔️       | Order ID             |
 | **product_id**                    | isUnsignedId  | ❌        | Product ID           |
 | **product_attribute_id**          | isUnsignedId  | ❌        | Product attribute ID |

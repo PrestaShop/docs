@@ -7,7 +7,7 @@ title: Specific prices
 ### Specific_price
 
 |            Name            |     Format      | Required |     Description      |
-| :------------------------- | :-------------- | :------- | :------------------- |
+| :------------------------- | :-------------- | :------: | :------------------- |
 | **id_shop_group**          | isUnsignedId    | ❌        | Shop group ID        |
 | **id_shop**                | isUnsignedId    | ✔️       | Shop ID              |
 | **id_cart**                | isUnsignedId    | ✔️       | Cart ID              |

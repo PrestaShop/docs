@@ -7,7 +7,7 @@ title: Currencies
 ### Currency
 
 |         Name         |      Format       | Required | Max size | Not filterable | Description |
-| :------------------- | :---------------- | :------- | :------- | :------------- | :---------- |
+| :------------------- | :---------------- | :------: | -------: | :------------- | :---------- |
 | **names**            |                   | ❌        |          |                |             |
 | **name**             | isGenericName     | ✔️       | 255      | true           |             |
 | **symbol**           |                   | ❌        | 255      |                |             |

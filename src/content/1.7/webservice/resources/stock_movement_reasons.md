@@ -7,7 +7,7 @@ title: Stock movement reasons
 ### Stock_movement_reason
 
 |     Name     |    Format     | Required | Max size | Description |
-| :----------- | :------------ | :------- | :------- | :---------- |
+| :----------- | :------------ | :------: | -------: | :---------- |
 | **sign**     |               | ❌        |          |             |
 | **deleted**  |               | ❌        |          |             |
 | **date_add** | isDate        | ❌        |          |             |

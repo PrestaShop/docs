@@ -7,7 +7,7 @@ title: Product suppliers
 ### Product_supplier
 
 |              Name              |    Format    | Required | Max size |     Description      |
-| :----------------------------- | :----------- | :------- | :------- | :------------------- |
+| :----------------------------- | :----------- | :------: | -------: | :------------------- |
 | **id_product**                 | isUnsignedId | ✔️       |          | Product ID           |
 | **id_product_attribute**       | isUnsignedId | ✔️       |          | Product attribute ID |
 | **id_supplier**                | isUnsignedId | ✔️       |          | Supplier ID          |

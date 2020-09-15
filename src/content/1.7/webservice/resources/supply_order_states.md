@@ -7,7 +7,7 @@ title: Supply order states
 ### Supply_order_state
 
 |        Name         |    Format     | Required | Max size | Description |
-| :------------------ | :------------ | :------- | :------- | :---------- |
+| :------------------ | :------------ | :------: | -------: | :---------- |
 | **delivery_note**   | isBool        | ❌        |          |             |
 | **editable**        | isBool        | ❌        |          |             |
 | **receipt_state**   | isBool        | ❌        |          |             |

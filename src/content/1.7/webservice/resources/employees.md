@@ -7,7 +7,7 @@ title: Employees
 ### Employee
 
 |             Name             |    Format     | Required | Writable | Max size |       Description        |
-| :--------------------------- | :------------ | :------- | :------- | :------- | :----------------------- |
+| :--------------------------- | :------------ | :------: | :------: | -------: | :----------------------- |
 | **id_lang**                  | isUnsignedInt | ✔️       | ✔️       |          | Lang ID                  |
 | **last_passwd_gen**          |               | ❌        | ❌        |          |                          |
 | **stats_date_from**          | isDate        | ❌        | ❌        |          |                          |

@@ -7,7 +7,7 @@ title: Orders
 ### Order
 
 |             Name             |      Format      | Required | Not filterable |     Description     |
-| :--------------------------- | :--------------- | :------- | :------------- | :------------------ |
+| :--------------------------- | :--------------- | :------: | :------------- | :------------------ |
 | **id_address_delivery**      | isUnsignedId     | ✔️       |                | Delivery address ID |
 | **id_address_invoice**       | isUnsignedId     | ✔️       |                | Invoice address ID  |
 | **id_cart**                  | isUnsignedId     | ✔️       |                | Cart ID             |

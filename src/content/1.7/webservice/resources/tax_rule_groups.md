@@ -7,7 +7,7 @@ title: Tax rule groups
 ### Tax_rule_group
 
 |     Name     |    Format     | Required | Max size | Description |
-| :----------- | :------------ | :------- | :------- | :---------- |
+| :----------- | :------------ | :------: | -------: | :---------- |
 | **name**     | isGenericName | ✔️       | 64       |             |
 | **active**   | isBool        | ❌        |          |             |
 | **deleted**  | isBool        | ❌        |          |             |

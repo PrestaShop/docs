@@ -7,7 +7,7 @@ title: Translated configurations
 ### Translated_configuration
 
 |       Name        |    Format    | Required | Max size |  Description  |
-| :---------------- | :----------- | :------- | :------- | :------------ |
+| :---------------- | :----------- | :------: | -------: | :------------ |
 | **value**         |              | ❌        |          |               |
 | **date_add**      | isDate       | ❌        |          |               |
 | **date_upd**      | isDate       | ❌        |          |               |

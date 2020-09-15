@@ -7,7 +7,7 @@ title: Shop groups
 ### Shop_group
 
 |        Name        |    Format     | Required | Max size | Description |
-| :----------------- | :------------ | :------- | :------- | :---------- |
+| :----------------- | :------------ | :------: | -------: | :---------- |
 | **name**           | isGenericName | ✔️       | 64       |             |
 | **share_customer** | isBool        | ❌        |          |             |
 | **share_order**    | isBool        | ❌        |          |             |

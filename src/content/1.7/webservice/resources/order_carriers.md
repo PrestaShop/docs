@@ -7,7 +7,7 @@ title: Order carriers
 ### Order_carrier
 
 |            Name            |      Format      | Required |   Description    |
-| :------------------------- | :--------------- | :------- | :--------------- |
+| :------------------------- | :--------------- | :------: | :--------------- |
 | **id_order**               | isUnsignedId     | ✔️       | Order ID         |
 | **id_carrier**             | isUnsignedId     | ✔️       | Carrier ID       |
 | **id_order_invoice**       | isUnsignedId     | ❌        | Order invoice ID |

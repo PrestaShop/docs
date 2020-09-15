@@ -7,7 +7,7 @@ title: Specific price rules
 ### Specific_price_rule
 
 |        Name        |     Format      | Required | Description |
-| :----------------- | :-------------- | :------- | :---------- |
+| :----------------- | :-------------- | :------: | :---------- |
 | **id_shop**        | isUnsignedId    | ✔️       | Shop ID     |
 | **id_country**     | isUnsignedId    | ✔️       | Country ID  |
 | **id_currency**    | isUnsignedId    | ✔️       | Currency ID |

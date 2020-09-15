@@ -7,7 +7,7 @@ title: States
 ### State
 
 |      Name      |     Format     | Required | Max size | Description |
-| :------------- | :------------- | :------- | :------- | :---------- |
+| :------------- | :------------- | :------: | -------: | :---------- |
 | **id_zone**    | isUnsignedId   | ✔️       |          | Zone ID     |
 | **id_country** | isUnsignedId   | ✔️       |          | Country ID  |
 | **iso_code**   | isStateIsoCode | ✔️       | 7        |             |

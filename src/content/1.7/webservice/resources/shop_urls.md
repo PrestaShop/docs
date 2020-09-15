@@ -7,7 +7,7 @@ title: Shop urls
 ### Shop_url
 
 |       Name       |   Format    | Required | Max size | Description |
-| :--------------- | :---------- | :------- | :------- | :---------- |
+| :--------------- | :---------- | :------: | -------: | :---------- |
 | **id_shop**      |             | ✔️       |          | Shop ID     |
 | **active**       | isBool      | ❌        |          |             |
 | **main**         | isBool      | ❌        |          |             |

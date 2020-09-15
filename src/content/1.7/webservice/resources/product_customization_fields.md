@@ -7,7 +7,7 @@ title: Product customization fields
 ### Customization_field
 
 |      Name      |    Format    | Required | Max size | Description |
-| :------------- | :----------- | :------- | :------- | :---------- |
+| :------------- | :----------- | :------: | -------: | :---------- |
 | **id_product** | isUnsignedId | ✔️       |          | Product ID  |
 | **type**       | isUnsignedId | ✔️       |          |             |
 | **required**   | isBool       | ✔️       |          |             |

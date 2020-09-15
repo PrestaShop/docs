@@ -7,7 +7,7 @@ title: Shops
 ### Shop
 
 |       Name        |    Format     | Required | Max size |  Description  |
-| :---------------- | :------------ | :------- | :------- | :------------ |
+| :---------------- | :------------ | :------: | -------: | :------------ |
 | **id_shop_group** |               | ✔️       |          | Shop group ID |
 | **id_category**   |               | ✔️       |          |               |
 | **active**        | isBool        | ❌        |          |               |

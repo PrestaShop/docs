@@ -7,7 +7,7 @@ title: Combinations
 ### Combination
 
 |          Name           |     Format      | Required | Max size | Description |
-| :---------------------- | :-------------- | :------- | :------- | :---------- |
+| :---------------------- | :-------------- | :------: | -------: | :---------- |
 | **id_product**          | isUnsignedId    | ✔️       |          | Product ID  |
 | **location**            | isGenericName   | ❌        | 64       |             |
 | **ean13**               | isEan13         | ❌        | 13       |             |

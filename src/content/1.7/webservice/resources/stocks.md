@@ -7,7 +7,7 @@ title: Stocks
 ### Stock
 
 |           Name           |    Format     | Required | Writable | Not filterable |     Description      |
-| :----------------------- | :------------ | :------- | :------- | :------------- | :------------------- |
+| :----------------------- | :------------ | :------: | :------: | :------------- | :------------------- |
 | **id_warehouse**         | isUnsignedId  | ✔️       | ✔️       |                | Warehouse ID         |
 | **id_product**           | isUnsignedId  | ✔️       | ✔️       |                | Product ID           |
 | **id_product_attribute** | isUnsignedId  | ✔️       | ✔️       |                | Product attribute ID |

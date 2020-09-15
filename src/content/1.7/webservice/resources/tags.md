@@ -7,7 +7,7 @@ title: Tags
 ### Tag
 
 |    Name     |    Format     | Required | Max size | Description |
-| :---------- | :------------ | :------- | :------- | :---------- |
+| :---------- | :------------ | :------: | -------: | :---------- |
 | **id_lang** | isUnsignedId  | ✔️       |          | Lang ID     |
 | **name**    | isGenericName | ✔️       | 32       |             |
 
