@@ -42,7 +42,7 @@ All the above, plus:
 
 ## How to apply to be a maintainer
 
-1. Open an issue on the open source repository explaining why you apply to become a maintainer, and on what part of the project (Core or module/subproject).
+1. [Open an issue on the open source repository](https://github.com/PrestaShop/open-source/issues/new) explaining why you apply to become a maintainer, and on what part of the project (Core or module/subproject).
 2. Discuss with current maintainers on this issue; particularly, this will be the time for maintainers to analyze the candidate’s motivation and skills on the different parts of the project that they applied for.
 3. Once all questions have been answered, current maintainers vote.
 4. If the qualified majority of two-thirds positive votes is achieved, the new maintainer is approved.
