@@ -81,14 +81,14 @@ Example with a product with ID = 3 and locale = en-US
 
 1. `en-US/catalog/product-3.tpl`
 2. `catalog/product-3.tpl`
-3. `en/US/catalog/listing/product.tpl`
-4. `catalog/listing/product.tpl`
+3. `en-US/catalog/product.tpl`
+4. `catalog/product.tpl`
 
 Another example with category template for the category with ID = 9 and locale = en-US.
 
 1. `en-US/catalog/listing/category-9.tpl`
 2. `catalog/listing/category-9.tpl`
-3. `en/US/catalog/listing/category.tpl`
+3. `en-US/catalog/listing/category.tpl`
 4. `catalog/listing/category.tpl`
 5. `en-US/catalog/listing/product-list.tpl`
 6. `catalog/listing/product-list.tpl`
