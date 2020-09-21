@@ -94,8 +94,8 @@ Once the instance is created you can access the following methods:
 
 | Method   | HTTP equivalent   | SQL    |
 |----------|-------------------|--------|
-| get()    | POST              | INSERT |
-| add()    | GET               | SELECT |
+| add()    | POST              | INSERT |
+| get()    | GET               | SELECT |
 | edit()   | PUT               | UPDATE |
 | delete() | DELETE            | DELETE |
 
