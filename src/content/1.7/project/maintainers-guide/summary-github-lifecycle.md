@@ -1,12 +1,12 @@
 ---
-title: Summary of how GitHub issues and Pull Requests are processed
+title: Summary of how GitHub Issues and Pull Requests are processed
 ---
 
-# Summary of how GitHub issues and Pull Requests are processed
+# Summary of how GitHub Issues and Pull Requests are processed
 
 GitHub is the main tool used by maintainers to manage the PrestaShop project.
 
-This page quickly describes how issues and Pull Requests are processed on GitHub.
+This page quickly describes how [Issues](https://guides.github.com/features/issues/) and [Pull Requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests) are processed on GitHub.
 
 ## The teams
 
@@ -20,7 +20,7 @@ A maintainer will naturally belong to the Developers team but can also assist an
 
 ## Issues
 
-Currently, there are 4 different types of issues submitted by users on GitHub.
+Currently, there are 4 different types of Issues submitted by users on GitHub.
 
 ### Feature Request
 
@@ -46,7 +46,7 @@ If the bug report is confirmed, one of the key elements to evaluate is whether i
 
 The work of analyzing and testing all submitted bug reports is a very complex one, because there might be a very diverse range of reports. Moreover quite a huge number of them are actually not related to the software but to how the shop is being used: the server configuration, the shop configuration, the installed modules and the installed theme might introduce buggy behaviors that user mistakenly believe come from the software.
 
-This is why so much issues cannot be reproducted on our side, but to find it out multiple explorations and attempts are necessary.
+This is why so much Issues cannot be reproducted on our side, but to find it out multiple explorations and attempts are necessary.
 
 ### Support request
 
@@ -54,7 +54,7 @@ We sometimes receive support requests on GitHub, ranging from questions about th
 
 ### Other
 
-There are some issues which do not fit in the previous categories, such as [releases issues](https://github.com/PrestaShop/PrestaShop/issues/20804). They serve a specific purpose.
+There are some Issues which do not fit in the previous categories, such as [releases Issues](https://github.com/PrestaShop/PrestaShop/issues/20804). They serve a specific purpose.
 
 ## Pull Requests
 
@@ -95,7 +95,7 @@ On regular Pull Requests, the QA team is in charge of testing the Pull Request. 
 
 Some Pull Requests however cannot be tested by QA team, the Developers team might validate them.
 
-If the Pull Request is tested successfully, the label "QA approved" is applied. Else, the author is notified about the issues found by the tests.
+If the Pull Request is tested successfully, the label "QA approved" is applied. Else, the author is notified about the Issues found by the tests.
 
 ### Merging the Pull Request
 
