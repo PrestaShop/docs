@@ -40,7 +40,7 @@ This will add an XML node into the product response:
 |------|------|-------------|
 | **country** | int | Customer's country (use the resource ID) |
 | **state** | int | Customer's state (use the resource ID) |
-| **county** | int | Customer's zip/postal code |
+| **postcode** | int | Customer's zip/postal code |
 | **currency** | int | Currency used for the price (use the resource ID) |
 | **group** | int | Customer's user group (use the resource ID) |
 | **quantity** | int | Quantity of products |
