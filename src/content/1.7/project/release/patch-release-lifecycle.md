@@ -71,7 +71,7 @@ This Build is extensively re-tested by the QA, then provided to everyone. Once r
 
 By the end of the week, if no new regression has been reported, the RC1 is rebranded and becomes the final release. **The new minor version of PrestaShop is out.**
 
-Most of the time, a couple final regressions will be reported. In that case, the bugs are fixed, an RC2 build is published, and the timer is reset. This cycle repeats until no new regressions are reported within the the defined timeframe.
+Most of the time, a couple final regressions will be reported. In that case, the bugs are fixed, an RC2 build is published, and the timer is reset. This cycle repeats until no new regressions are reported within the defined timeframe.
 
 Finally the latest built Release Candidate becomes the new latest stable PrestaShop software minor release.
 
