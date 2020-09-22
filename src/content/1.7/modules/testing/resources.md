@@ -86,7 +86,7 @@ Use `php app/console` instead of `php bin/console` for versions prior {{< minver
 
 
 #### Source of data configuration
-When not provided, we use by default a file `self_config.yml` stored in the module root folder. You can use another file by setting the the `<YML file path>`.
+When not provided, we use by default a file `self_config.yml` stored in the module root folder. You can use another file by setting the `<YML file path>`.
 
 #### Format supported
 We are going to make it simple and allow only file extension: yaml.
