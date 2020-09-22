@@ -47,7 +47,7 @@ class DemoController extends FrameworkBundleAdminController
 ```
 
 If you want Symfony Dependency Injection to inject services into your controller, you need to use specific YAML service declaration:
-```
+```yaml
 services:
   # The name of the service must match the full namespace class
   MyModule\Controller\DemoController:
@@ -102,7 +102,7 @@ You must enable the autoloading for this Controller. For example using a `compos
 
 2. Configure composer to autoload this namespace
 
-    ```
+    ```json
     {
       "name": "you/your-module",
       "description": "...",
