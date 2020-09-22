@@ -39,7 +39,7 @@ First, we will use the hook able to alter the **Definition** of the grid: the De
 
 We need to register a hook into a module (let's name it `customers` for the sake of the example).
 
-The Customers Grid id is "customer", you can find this information in the the associated class: `CustomerGridDefinitionFactory`.
+The Customers Grid id is "customer", you can find this information in the associated class: `CustomerGridDefinitionFactory`.
 
 ```php
 <?php
