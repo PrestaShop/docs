@@ -18,7 +18,6 @@ git push origin add-emoticons-support
 You will need to use your GitHub credentials.
 {{% /notice %}}
 
-Now you can create your Pull Request on GitHub.
 Now you can create your Pull Request on GitHub. If you don't know how to do it, you can read [GitHub documentation](https://help.github.com/articles/creating-a-pull-request/).
 
 If you find this process quite complex, the following articles can help you:
