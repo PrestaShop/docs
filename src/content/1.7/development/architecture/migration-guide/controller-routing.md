@@ -461,3 +461,23 @@ class to manage routing conversion.
 This will only work for **one route/one controller** the association by action does not work before **1.7.5**.
 
 {{% /notice %}}
+
+### Javascript generation
+
+In order to avoid hardcoded links in JavaScript, you can use the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/components/router.js)
+
+You can use it like this:
+```
+import Router from '@components/router';
+
+this.router = new Router();
+const route = this.router.generate('my_route', {parameters});
+```
+
+It however uses a computed file that you might need to recompute if you modified some route settings.
+
+You can recompute it using this:
+```
+php bin/console fos:js-routing:dump --format=json
+```
+And put it in `admin-dev/themes/new-theme/js/fos_js_routes.json`
