@@ -23,14 +23,14 @@ Both are described in the following paragraphs.
 ### Name
 The name of the class must be simple and linked to the page in the shop. You should be able to find the corresponding page in the application using the folder hierarchy, and the class name.
 
-The name of the file is a little different: the main page name is always `index.js`.
+The convention for naming the file itself is different: the main page name is always `index.js`, while other pages should always have a relevant name.
 
 Example:
  
 For BO products pages located at `pages/catalog/products/`, we use 2 classes:
 
-- `index.js` for products listing page (main page)
-- `add.js` for add/edit product page
+- `index.js` for the products listing page (main page)
+- `add.js` for the add/edit product page
  
 ### Inheritance
 We heavily use inheritance in the pages to make sure all our generic methods are available from everywhere, and you don’t need to instantiate separate objects. 
