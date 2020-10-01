@@ -38,7 +38,7 @@ For instance you could have a single Tools class for core and module helper meth
 
 ```php
 <?php
-class MyModuleTools extends Tools
+class MyCustomTools extends Tools
 {
     /**
      * Adding a new method for the example
@@ -54,9 +54,9 @@ Once included in another file, all these following method would be callable:
 
 ```php
 <?php
-MyModuleTools::array_pluck($data, 'id');
-MyModuleTools::getValue('userId'); // Defined in Tools
-MyModuleTools::getShopDomain(); // Defined in Tools
+MyCustomTools::array_pluck($data, 'id');
+MyCustomTools::getValue('userId'); // Defined in Tools
+MyCustomTools::getShopDomain(); // Defined in Tools
 ```
 
 ### Controllers
