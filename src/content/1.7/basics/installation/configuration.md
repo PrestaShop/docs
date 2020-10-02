@@ -93,3 +93,10 @@ When in production mode, `$smarty->force_compile` must be set to `false`, as it 
 On the other hand, when editing a `.tpl` file, you must delete the `/tools/smarty/compile` folder (except the `index.php` file) in order to see your changes applied.
 
 Note that this setting can be made directly from the back office, in the “Performance” page under the “Advanced parameters” menu.
+
+## Disable the Back-Office token protection
+
+Back-Office pages require the use of a token. If needed, this protection can be disabled using an environment variable:
+```bash
+SetEnv _TOKEN_ disabled
+```
