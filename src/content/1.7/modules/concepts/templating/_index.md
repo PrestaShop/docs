@@ -5,3 +5,5 @@ chapter: true
 ---
 
 # Templates
+
+{{% children %}}
