@@ -35,7 +35,7 @@ applied on very old shops.
 The first step is to download the latest version on https://www.prestashop.com/.
 
 If you upgrade to another version of PrestaShop 1.6, the release files
-can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).
+can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?field_main_version_tid=2875&sort_by=field_version_number_value&sort_order=DESC).
 
 Download can also be done in command line, as done here with the version
 1.7.3.2:
