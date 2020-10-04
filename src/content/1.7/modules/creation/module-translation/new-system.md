@@ -146,7 +146,7 @@ class MymoduleSomethingModuleFrontController extends ModuleFrontController
 {
     public function initContent()
     {
-        $this->title = $this->module->trans('My module title', [], 'Modules.Mymodule.Something);
+        $this->title = $this->module->trans('My module title', [], 'Modules.Mymodule.Something');
     }
 }
 ```
