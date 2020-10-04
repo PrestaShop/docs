@@ -37,7 +37,7 @@ Here is a selection of free AMP installers:
 * [XAMPP](https://www.apachefriends.org/en/xampp.html) (Windows, Mac OS X, Linux, Solaris)
 * [WampServer](http://www.wampserver.com/) (Windows)
 * [EasyPHP](https://www.easyphp.org/) (Windows)
-* [MAMP](https://www.mamp.info/) (Mac OS X)
+* [MAMP](https://www.mamp.info/) (Windows, Mac OS X)
 * [Laragon](https://laragon.org/) (Windows)
 
 ### Creating a database for your local shop
