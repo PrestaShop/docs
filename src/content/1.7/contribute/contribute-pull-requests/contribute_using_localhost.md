@@ -37,7 +37,7 @@ Here is a selection of free AMP installers:
 * [XAMPP](https://www.apachefriends.org/en/xampp.html) (Windows, Mac OS X, Linux, Solaris)
 * [WampServer](http://www.wampserver.com/) (Windows)
 * [EasyPHP](https://www.easyphp.org/) (Windows)
-* [MAMP](https://www.mamp.info/) (Windows, Mac OS X)
+* [MAMP](https://www.mamp.info/en/mamp/mac/) (Windows, Mac OS X)
 * [Laragon](https://laragon.org/) (Windows)
 
 ### Creating a database for your local shop
@@ -150,4 +150,3 @@ See [Submit a Pull Request]({{< ref "1.7/contribute/contribute-pull-requests/cre
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements" >}}
 [compile-assets]: {{< ref "1.7/development/compile-assets" >}}
-
