@@ -350,7 +350,7 @@ PrestaShop is installed with demonstration data including products, customers, o
 
 Cleaning your shop from this demonstration data should be done before starting the import of your data. The free module “PrestaShop cleaner” can handle that in a few clicks.
 
-On your destination shop, search for the module “PrestaShop cleaner” or “pscleaner”.
+On your destination shop, search for the module "PrestaShop cleaner" or "pscleaner", or download and install the [latest version from GitHub](https://github.com/PrestaShop/pscleaner/releases/).
 
 Important: Make sure to run this tool **on the new shop**, not the one in production.
 
