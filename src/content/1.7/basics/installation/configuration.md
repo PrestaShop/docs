@@ -99,5 +99,13 @@ Note that this setting can be made directly from the back office, in the “Perf
 Back-Office pages require the use of a token. If needed, this protection can be disabled using an environment variable:
 
 ### Apache with mod_headers
+
 ```bash
 SetEnv _TOKEN_ disabled
+```
+
+### Nginx with ngx_http_headers_module
+
+```bash
+add_header _TOKEN_ disabled;
+```
