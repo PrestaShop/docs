@@ -103,7 +103,7 @@ Before all, you may ensure your changes don't break everything: this is why we h
 You can execute it in your dockerized PrestaShop application without altering your website (it uses a specific database).
 
 ```
-docker exec prestashop-git sh tests/check_phpunit.sh
+docker exec prestashop-git sh tests/check_unit.sh
 ```
 
 ### Publish your work
