@@ -34,6 +34,8 @@ Additionally, distribution licenses like CC-0 or CC-by-sa are appropriate for ar
 
 Module may create all the table they need in the database. However altering core table is forbidden.
 
+In case you wanted to add columns for an existing table, the workaround is to create a new table with a foreign key targetting the primary key of the core table.
+
 #### Other modules are not altered
 
 Modifying core or other modules files is not allowed.
