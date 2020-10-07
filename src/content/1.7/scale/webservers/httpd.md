@@ -18,11 +18,11 @@ Then, you can add the following section to you main httpd configuration file:
 
 ```
 <IfModule deflate_module>
-AddOutputFilterByType DEFLATE text/plain  
-AddOutputFilterByType DEFLATE text/css 
-AddOutputFilterByType DEFLATE application/json application/x-javascript  text/javascript application/javascript text/js 
-AddOutputFilterByType DEFLATE text/xml application/xml application/xml+rss text/javascript application/javascript
-AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/json application/x-javascript  text/javascript application/javascript text/js
+  AddOutputFilterByType DEFLATE text/xml application/xml application/xml+rss text/javascript application/javascript
+  AddOutputFilterByType DEFLATE image/svg+xml
 </IfModule>
 ```
 
@@ -45,8 +45,9 @@ Then you can add the following configuration parameters:
 ```
 <IfModule mod_headers.c>
  <FilesMatch "\.(ico|jpe?g|png|gif|css|woff2)$">
- Header set Cache-Control "max-age=2592000, public"
+   Header set Cache-Control "max-age=2592000, public"
  </FilesMatch>
+</IfModule>
 ```
 
 ### Expire
@@ -61,22 +62,21 @@ And then set your own parameters:
 
 ```
 <IfModule mod_expires.c>
+  AddType application/x-font-woff .woff
+  AddType image/svg+xml .svg
 
-    AddType application/x-font-woff .woff
-    AddType image/svg+xml .svg
+  ExpiresActive On
 
-    ExpiresActive On
-
-    ExpiresDefault "access plus 7200 seconds"
-    ExpiresByType image/jpg "access plus 1 month"
-    ExpiresByType image/jpeg "access plus 1 month"
-    ExpiresByType image/gif "access plus 1 month"
-    ExpiresByType image/png "access plus 1 month"
-    ExpiresByType image/x-icon "access plus 1 month"
-    ExpiresByType application/x-font-woff "access plus 1 month"
-    <FilesMatch \.php$>
+  ExpiresDefault "access plus 7200 seconds"
+  ExpiresByType image/jpg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+  ExpiresByType application/x-font-woff "access plus 1 month"
+  <FilesMatch \.php$>
     # Do not allow PHP scripts to be cached unless they explicitly send cache headers themselves.
-        ExpiresActive Off
-    </FilesMatch>
+    ExpiresActive Off
+  </FilesMatch>
 </IfModule>
 ```
