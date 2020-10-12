@@ -50,7 +50,7 @@ On module installation the following hooks can be registered, on the order view 
  - `displayAdminOrderTop` - displayed at the top of the Order page
  - `actionGetAdminOrderButtons` - to display additional action buttons into the main buttons bar.
 
-on the listing page:
+And on the listing page:
  - `displayOrderPreview ` -  displayed at the bottom of the order's preview on the order's listing page.
  
 These hooks are visualized in the picture below:
