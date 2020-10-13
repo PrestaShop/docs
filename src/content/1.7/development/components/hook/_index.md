@@ -36,7 +36,6 @@ You can also register multiple hooks. Here is how a Module subscribes to hook `r
 
 ```php
 <?php
-<?php
 class somemodule extends Module
 {
     const AVAILABLE_HOOKS = [
