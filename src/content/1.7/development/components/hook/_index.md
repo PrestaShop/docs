@@ -36,18 +36,13 @@ You can also register multiple hooks. Here is how a Module subscribes to hook `r
 
 ```php
 <?php
-class somemodule extends Module
+public class somemodule extends Module
 {
     const AVAILABLE_HOOKS = [
         'registerGDPRConsent',
         'displayProductAdditionalInfo',
-    ];
-    
-    public function __construct()
-    {
-        $this->name = 'somemodule';
-    }  
-    
+    ]; 
+
     public function install()
     {
         return parent::install() && $this->registerHook(self::AVAILABLE_HOOKS);
