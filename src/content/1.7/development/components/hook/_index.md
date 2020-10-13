@@ -31,6 +31,27 @@ public class somemodule extends Module
     }
 }
 ```
+You can also register multiple hooks. Here is how a Module subscribes to hook `registerGDPRConsent` and `displayProductAdditionalInfo`:
+
+
+```php
+<?php
+public class somemodule extends Module
+{
+    public $hooks;
+    public function __construct()
+    {
+        $this->name = 'somemodule';
+        $this->hooks = ['registerGDPRConsent', 'displayProductAdditionalInfo'];
+    }  
+    
+    public function install()
+    {
+        return parent::install() && $this->registerHook($this->hooks);
+    }
+}
+```
+
 
 ## Hook dispatcher
 
