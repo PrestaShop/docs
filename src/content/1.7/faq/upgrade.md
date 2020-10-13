@@ -13,8 +13,8 @@ title: Upgrade FAQ
 
 **A:** It is likely that some SQL configuration is not correct.
 
-First, identify what is the `slug` of the Back Office pages. You can find them into SQL table `ps_authorization_role`. This will tell you the SQL identifier for these pages.
+First, identify what is the `slug` of the Back Office pages. You can find them into the SQL table `ps_authorization_role`. This will tell you the SQL identifier for these pages.
 
 Second, identify the _Role_ of the User you use to browse the Back Office.
 
-Third, check whether the table `ps_access` grants access to the Back Office pages, using the identifier of the role and the identifiers of the Back Office pages. There must a record for the role and the page. If there is no such record, create it to grant access.
+Third, check whether the table `ps_access` grants access to the Back Office pages, using the identifier of the role and the identifiers of the Back Office pages. There must be a record for the role and the page. If there is no such record, create it to grant access.
