@@ -23,7 +23,7 @@ Here is how a Module subscribes to hook `registerGDPRConsent`:
 
 ```php
 <?php
-public class somemodule extends Module
+class Somemodule extends Module
 {
     public function install()
     {
@@ -31,6 +31,25 @@ public class somemodule extends Module
     }
 }
 ```
+You can also register multiple hooks. Here is how a Module subscribes to hook `registerGDPRConsent` and `displayProductAdditionalInfo`:
+
+
+```php
+<?php
+class Somemodule extends Module
+{
+    const AVAILABLE_HOOKS = [
+        'registerGDPRConsent',
+        'displayProductAdditionalInfo',
+    ]; 
+
+    public function install()
+    {
+        return parent::install() && $this->registerHook(self::AVAILABLE_HOOKS);
+    }
+}
+```
+
 
 ## Hook dispatcher
 
@@ -52,7 +71,7 @@ This means that in order to fully subscribe to a hook, a module must call `regis
 
 ```php
 <?php
-class somemodule extends Module
+class Somemodule extends Module
 {
     public function install()
     {
