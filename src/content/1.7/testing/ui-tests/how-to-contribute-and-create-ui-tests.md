@@ -57,10 +57,11 @@ Examples:
 ```js
    /**
    * Get order status
+   * @param page
    * @return {Promise<string>}
    */
-  async getOrderStatus() {
-    return this.getTextContent(`${this.orderStatusesSelect} option[selected='selected']`, false);
+  async getOrderStatus(page) {
+    return this.getTextContent(page, `${this.orderStatusesSelect} option[selected='selected']`, false);
   }
 ```
 
@@ -127,22 +128,16 @@ Some of our tests need to create files (ex: Create files in BO), or to check som
 
 When a test is finished, all created files are deleted using a function from the same file : `deleteFile` as part of the "cleaning behind" approach.
 
-### Initialize pages
-In each and every test, we initialize the pages that will be needed. The initialization is done in a function called `init` which returns an object with multiple entries (pages) of pages.
-
-This function is called at the beginning of the test and each time we change the browser’s tab.
+### Require pages
+In each and every test, we require the pages that will be needed. The initialization is done inside of the class.
 
 Example:
 
 ```js
-// For test ‘Filter Customer’
-const init = async function () {
-  return {
-    loginPage: new LoginPage(page),
-    dashboardPage: new DashboardPage(page),
-    customersPage: new CustomersPage(page),
-  };
-};
+// For test 'Filter Customer'
+const dashboardPage = require('@pages/BO/dashboard');
+const ordersPage = require('@pages/BO/orders');
+const viewCustomerPage = require('@pages/BO/customers/view');
 ```
   
 ### Expect
@@ -151,8 +146,8 @@ We use the `expect` keyword from the [Chai library](https://www.chaijs.com/api/b
 Example :
 
 ```js
-Const isCustomerConnected = await this.pageObject.foLoginPage.isCustomerConnected();
-await expect(isCustomerConnected, ‘Customer is disconnected in FO’).to.be.true;
+Const isCustomerConnected = await foLoginPage.isCustomerConnected(page);
+await expect(isCustomerConnected, 'Customer is disconnected in FO').to.be.true;
 ```  
 
 ### Test identifier
