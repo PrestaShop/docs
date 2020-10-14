@@ -42,7 +42,7 @@ Attaching code to a hook requires a specific method for each:
 -   `hookDisplayRightColumn()`: will simply do the same as
     `hookDisplayLeftColumn()`, but for the right column.
 -   `hookActionFrontControllerSetMedia()`: will add a link to the module's CSS file,
-    `/css/mymodule.css` and module's JS file, `/js/mymodule.js`.
+    `/views/css/mymodule.css` and module's JS file, `/views/js/mymodule.js`.
 
 ```php
 <?php
@@ -210,7 +210,7 @@ This is just regular HTML code... except for a few Smarty calls:
     point to PrestaShop's root directory.
 
 In addition to that, we are going to create a CSS file, and save it as
-/css/mymodule.css in the module's folder (or any sub-folder you like to
+/views/css/mymodule.css in the module's folder (or any sub-folder you like to
 keep you CSS in):
 
 ```css
@@ -221,7 +221,7 @@ div#mymodule_block_home p {
 ```
 
 Save the template file in the module's `/views/templates/hook/` folder
-and the CSS file in the module's `/css/` folder, reload your shop's
+and the CSS file in the module's `/views/css/` folder, reload your shop's
 homepage: the content of the template should appear on top of the left
 column, right below the shop's logo (if you have indeed moved it at the
 top of the "Left Column" hook during the transplanting part).
