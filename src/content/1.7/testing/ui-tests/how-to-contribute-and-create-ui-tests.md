@@ -136,8 +136,7 @@ Example:
 ```js
 // For test 'Filter Customer'
 const dashboardPage = require('@pages/BO/dashboard');
-const ordersPage = require('@pages/BO/orders');
-const viewCustomerPage = require('@pages/BO/customers/view');
+const customersPage = require('@pages/BO/customers');
 ```
   
 ### Expect
