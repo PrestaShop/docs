@@ -37,7 +37,7 @@ We heavily use inheritance in the pages to make sure all our generic methods are
 
 There is a main mother class, called `CommonPage`, located at the root of the `pages` folder.
 
-We have another level of inheritance in each root folder (`BO` and `FO`) through the classes `BOmainPage.js` and `FOMainPage.js`. Of course, `CommonPage` is **not** meant to be instantiated (it’s kind of abstract class) !
+We have another level of inheritance in each root folder (`BO` and `FO`) through the classes `BOmainPage.js` and `FOMainPage.js`. Of course, `CommonPage` is **not** meant to be instantiated (it’s kind of an abstract class) !
 
 When you create new page classes, make sure to make them inherit from their respective `XXMainPage` to be sure to be able to use both generic methods and specific methods.
 
@@ -53,7 +53,7 @@ Methods inside a page class must be properly named about their primary function.
 Methods inside a page class **CANNOT USE** the `expect` keyword or any kind of asserting function, since their sole purpose is to interact with the page they’re linked with. They don’t validate anything per se, they just expose functionalities. 
 To validate a behavior in your test logic, your methods can return booleans, integers (number of lines, elements, etc), strings, objects... It’s up to you.
 
-Examples: 
+Example: 
 ```js
    /**
    * Get order status
@@ -64,9 +64,10 @@ Examples:
     return this.getTextContent(page, `${this.orderStatusesSelect} option[selected='selected']`, false);
   }
 ```
+This method returns the text content of the selected option in the Status `select` element in the Orders page.
 
 ### Selectors
-Selectors are used on every page and are stored as attributes of the class. They should be named following this convention: **nameType** in `camelCase`.
+Selectors are used on every page and are stored as attributes of the class. They should be named following this convention: **nameType** in `camelCase`, with `name` being the distinctive information about the element and `type` being its type (see below).
 
 For example, a button used to submit the main form in the order page should be named: `submitMainFormButton`.
 
@@ -81,10 +82,10 @@ Each selector must belong to a certain type. Here is a non-exhaustive list:
 ## Tests
 
 ### Campaigns
-We currently have 2 campaigns implemented:
+We currently have 2 [campaigns](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/UI/campaigns) implemented:
 
-- **Sanity**: its purpose is to validate a Pull Request. Executed on [Travis CI](https://travis-ci.com/), this campaign must fully pass before merging the PR (one failed test blocks the merge). It consists of a few tests of the core features of PrestaShop: shop installation, orders/products pages in BO, and catalog/cart/checkout process in FO.
-- **Functional**: it is the biggest and most important campaign. Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) items (orders, customers, products…), setting changes, etc.
+- **Sanity**: its purpose is to validate a Pull Request. Executed on [Travis CI](https://travis-ci.com/), [this campaign](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/UI/campaigns/sanity) must fully pass before merging the PR (one failed test blocks the merge). It consists of a few tests of the core features of PrestaShop: shop installation, orders/products pages in BO, and catalog/cart/checkout process in FO.
+- **Functional**: it is the biggest and most important [campaign](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/UI/campaigns/functional). Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) items (orders, customers, products…), setting changes, etc.
 
 We plan on implementing 2 more campaigns:
 
@@ -95,7 +96,7 @@ We plan on implementing 2 more campaigns:
 [Mocha](https://mochajs.org/) is our test runner (a framework that reads our test code and runs it). We use it in coordination with [Mochawesome](https://www.npmjs.com/package/mochawesome), a plugin for Mocha. Mochawesome produces a full JSON report in addition to a beautiful HTML report (which we don’t really use). The JSON file is sent to our [Nightly Board](https://nightly.prestashop.com/), it is then inserted into the database to let visitors browse reports and visualize statistics.
 
 #### Lambda function in describes
-Using lambda functions in mocha is [discouraged](https://mochajs.org/#arrow-functions). They bind `this` to the scope of the lambda function, making it impossible to use internal Mocha methods and objects. Since we use the Mocha context to store our Page Objects, we strongly advise you to use the normal `function()` syntax.  
+Using lambda functions in mocha is [discouraged](https://mochajs.org/#arrow-functions). They bind `this` to the scope of the lambda function, making it impossible to use internal Mocha methods and objects. Since we may use the Mocha context to store some variables in the future, we strongly advise you to use the normal `function()` syntax.  
 
 ### Utils
 The utils directory contain files that are necessary to run tests.
