@@ -98,12 +98,12 @@ A good practice is to write meaningful commits messages: it's better to have "co
 ### Launch the test suite
 
 Your changes now sounds ok, and you're almost ready to share your changes with the community.
-Before all, you may ensure your changes don't break everything: this is why we have a test suite you can use.
+Before all, you may ensure your changes don't break everything: this is why we have multiple test suites you can use. Want to read more about tests in PrestaShop? Head to [this]({{< ref "1.7/testing/introduction.md" >}} page.
 
 You can execute it in your dockerized PrestaShop application without altering your website (it uses a specific database).
 
 ```
-docker exec prestashop-git sh tests/check_phpunit.sh
+docker exec prestashop-git sh tests/check_unit.sh
 ```
 
 ### Publish your work
