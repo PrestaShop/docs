@@ -43,9 +43,13 @@ All the above, plus:
 ## How to apply to be a maintainer
 
 1. [Open an issue on the open source repository](https://github.com/PrestaShop/open-source/issues/new) explaining why you apply to become a maintainer, and on what part of the project (Core or module/subproject).
-2. Discuss with current maintainers on this issue; particularly, this will be the time for maintainers to analyze the candidate’s motivation and skills on the different parts of the project that they applied for.
+2. Discuss with current maintainers on this issue; particularly, this will be the time for maintainers to analyze the candidate's motivation and skills on the different parts of the project that they applied for.
 3. Once all questions have been answered, current maintainers vote.
 4. If the qualified majority of two-thirds positive votes is achieved, the new maintainer is approved.
+
+Upon approval, new maintainer is granted full maintainer rights and accesses for a 90-day trial period. This period aims to provide both the maintainer team and the new maintainer a better understanding of this new arrival and to validate whether expectations meet reality. Both maintainer team or new maintainer can express their wish for this situation to end before the 90-day trial period, revoking the maintainer status.
+
+At the end of the 90-day trial period, the maintainer is confirmed in his position.
 
 ## How to lose the maintainer status
 
