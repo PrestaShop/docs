@@ -28,7 +28,19 @@ EventEmitter.on('PSComponentsInitiated', () => {
 })
 ```
 
-You are able to use a custom component like this :
+You are able to use a custom component [following this example](https://github.com/PrestaShop/example-modules/blob/master/demosymfonyform/views/js/form.js):
+
+```js
+$(document).ready(function() {
+  window.prestashop.component.initComponents([
+    'TranslatableField',
+    'TinyMCEEditor',
+    'TranslatableInput',
+  ]);
+});
+```
+
+You are also able to initiate it manually:
 
 ```js
 EventEmitter.on('PSComponentsInitiated', () => {
@@ -50,15 +62,3 @@ EventEmitter.on('PSComponentsInitiated', () => {
 ```
 
 ## What if components are not initiated ?
-
-You are able to initiate every components you wants [following this example](https://github.com/PrestaShop/example-modules/blob/master/demosymfonyform/views/js/form.js):
-
-```js
-$(document).ready(function() {
-  window.prestashop.component.initComponents([
-    'TranslatableField',
-    'TinyMCEEditor',
-    'TranslatableInput',
-  ]);
-});
-```
