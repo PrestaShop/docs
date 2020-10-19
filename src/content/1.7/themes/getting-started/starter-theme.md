@@ -6,7 +6,7 @@ weight: 30
 # Starter Theme
 
 {{% notice warning %}}
-This project is not maintained anymore by the core team.
+This project is not maintained anymore by the core team but you can start with the [classic theme](https://github.com/PrestaShop/PrestaShop/tree/develop/themes/classic)
 {{% /notice %}}
 
 PrestaShop 1.7 introduces a new way for designers to create their theme from scratch: the Starter Theme. The default theme for PS 1.7 is based on the Starter Theme.
@@ -17,7 +17,7 @@ This means that a lot of themes are tied to the default theme's technical choice
 
 With the Starter Theme, the PrestaShop team decided to build a skeleton theme that will give you a kickstart for your custom theme, with all the minimum code (essential template files, markup and JavaScript code) and enough freedom to make your own choices. You can choose to use Bootstrap, Foundation or Blueprint. The Starter Theme is not opinionated: there is no decision made to use either one library or another.
 
-By using the Starter Theme as the foundation for your custom theme, everything is ready for you, you *just* have to create upon it.
+By using the Starter Theme as the foundation for your custom theme, everything is ready for you, you _just_ have to create upon it.
 
 ## Downloading the Starter Theme
 
