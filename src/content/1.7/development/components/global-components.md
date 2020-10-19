@@ -48,3 +48,17 @@ EventEmitter.on('PSComponentsInitiated', () => {
   window.prestashop.component.instance.myCustomComponent = new window.prestashop.component.MyCustomComponent();
 });
 ```
+
+## What if components are not initiated ?
+
+You are able to initiate every components you wants [following this example](https://github.com/PrestaShop/example-modules/blob/master/demosymfonyform/views/js/form.js):
+
+```js
+$(document).ready(function() {
+  window.prestashop.component.initComponents([
+    'TranslatableField',
+    'TinyMCEEditor',
+    'TranslatableInput',
+  ]);
+});
+```
