@@ -1,11 +1,11 @@
 ---
-title: Global components
+title: Global JavaScript components
 weight: 70
 ---
 
-# Global components ?
+# Global JavaScript components ?
 
-It's a [new system](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/app/utils/init-components.js) mainly created for module developers, which allow you to use components we already use in the core without importing it.
+It's a [new system](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/app/utils/init-components.js) mainly created for module developers, which allow you to use components we already use in the core without importing it. [Here is the ADR](https://github.com/PrestaShop/ADR/blob/master/0009-expose-js-components-using-window-variable.md) we used to decide what we should do to avoid this problem.
 
 You are now able to use components we expose to the `window.prestashop.component` object without importing anything.
 
@@ -28,7 +28,7 @@ EventEmitter.on('PSComponentsInitiated', () => {
 })
 ```
 
-You are able to custom a component like this :
+You are able to use a custom component like this :
 
 ```js
 EventEmitter.on('PSComponentsInitiated', () => {
