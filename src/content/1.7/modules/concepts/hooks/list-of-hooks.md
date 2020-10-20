@@ -1762,7 +1762,24 @@ This hook adds extra buttons to the product lines, in the shopping cart
 
     Located in: /themes/classic/templates/checkout/_partials/cart-detailed-product-line.tpl
 
+displayCartModalContent
+: 
+    Available since: {{< minver v="1.7.8" >}}
     
+    Content of Add-to-cart modal
+This hook displays content in the middle of the window that appears after adding product to cart
+
+    Located in: /themes/classic/modules/ps_shoppingcart/modal.tpl
+
+displayCartModalFooter
+: 
+    Available since: {{< minver v="1.7.8" >}}
+    
+    Bottom of Add-to-cart modal 
+This hook displays content in the bottom of window that appears after adding product to cart
+
+    Located in: /themes/classic/modules/ps_shoppingcart/modal.tpl
+
 displayCheckoutSubtotalDetails
 : 
     Located in: /themes/classic/templates/checkout/_partials/cart-detailed-totals.tpl
