@@ -181,7 +181,7 @@ You must be able to launch a test independently, as well as in a whole campaign.
 
 The shop must end in the same state it was in before your test, as much as possible (since some actions are logged and create artifacts, that may not be always easy to clean though) and let subsequent tests run smoothly! That means deleting the items you created, reverting your changes, etc.
 
-A rule of thumb: can you launch your test suite multiple times ? If yes, you know you’re not dependent on the data, and you’re properly cleaning behind.
+A rule of thumb: can you launch your test suite multiple times? If yes, you know you’re not dependent on the data, and you’re properly cleaning behind.
 
 ## Data
 
