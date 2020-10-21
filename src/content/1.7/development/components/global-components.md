@@ -11,7 +11,7 @@ You are now able to use components we expose to the `window.prestashop.component
 
 This object contains two attributes :
 
-- `component` which contain some components you can instanciate
+- `component` which contain some components you can instantiate;
 - `instance` which contains every instances of initiated components
 
 It allow module developers to avoid importing path such as `../../../../admin-dev/themes/new-module/js/components/translatable-field` because it was making hard to add a CI in order to build the module.
