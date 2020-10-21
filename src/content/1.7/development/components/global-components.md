@@ -60,5 +60,3 @@ EventEmitter.on('PSComponentsInitiated', () => {
   window.prestashop.component.instance.myCustomComponent = new window.prestashop.component.MyCustomComponent();
 });
 ```
-
-## What if components are not initiated ?
