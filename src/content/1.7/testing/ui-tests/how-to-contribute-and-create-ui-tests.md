@@ -108,7 +108,7 @@ The description of each variable in this file can be found in [README.md](https:
 
 #### Setup
 [Mocha](https://mochajs.org/) gives us the possibility to load and run files before test files (with [\--file option](https://mochajs.org/#-file-filedirectoryglob)).
-For our campaigns, we use that option to run `setup.js` file, So we can open only one browser for all campaign (and not one browser per test).
+We use that option to run our `setup.js` file. This file opens only one browser for the whole campaign (and not one browser per test), since we're then running each test file in its [own context](https://github.com/microsoft/playwright/blob/master/docs/api.md#class-browsercontext).
 
 #### Browser helper
 This helper file is used to centralize the browser and tab functions called in all tests. 
@@ -116,21 +116,21 @@ This approach has one goal : to have the same browser’s configuration everywhe
 
 The functions that exist (for now) in this file are the following:
 
-- `createBrowser`: used to create a browser with the global configuration, we create one browser for all campaign
-- `closeBrowser`: usually called at the end of a run, to close the browser created and delete downloaded files
+- `createBrowser`: used to create a browser with the global configuration, we create one browser for the whole campaign
+- `closeBrowser`: usually called at the end of a run, to close the browser created and delete the downloaded files
 - `createBrowserContext`: used to create a browser context, a browser can have multiple contexts that don't share cookies/cache
 - `closeBrowserContext`: usually called at the end of a test, to close the browser context created for the test
-- `newTab`: allow us to open a new tab in a browser
+- `newTab`: allows us to open a new tab in a browser
 
-Note that all these functions are used at mocha hooks functions in the global `describe` but can be called somewhere else.
+Note that all these functions are used in mocha hooks functions in the global `describe` but can be called somewhere else.
 
 #### Files
-Some of our tests need to create files (ex: Create files in BO), or to check some text in a PDF file (ex: Create and check invoice). For this specific need, we use functions in `Files.js`.
+Some of our tests need to create files (ex: Create files in BO), or to check some text in a PDF file (ex: Create and check invoice). For this specific need, we use some functions in `Files.js`.
 
-When a test is finished, all created files are deleted using a function from the same file : `deleteFile` as part of the "cleaning behind" approach.
+When a test is finished, all created files are deleted using a function from the same file : `deleteFile`, following the "[cleaning behind](#cleaning-behind)" approach.
 
 ### Require pages
-In each and every test, we require the pages that will be needed. The initialization is done inside of the class.
+In each and every test, we `require` the pages that will be needed. The initialization is done when you require the class (no need to use the `new` keyword).
 
 Example:
 
@@ -155,9 +155,9 @@ Our team thinks it’s very important to be able to follow how tests results evo
 
 Why? To be able to identify each and every test and compare from one report to another, to know how the results change.
 
-For example, you could have 10 failed tests one day, and 10 the day after. How do you know if it’s the same 10 tests failing, or another distribution (for example, 5 tests fixed, 5 other tests failing)? With this system we can calculate the evolution and show it on the Board.
+For example, you could have 10 failed tests one day, and 10 the day after. How do you know if it’s the same 10 tests failing, or another distribution (for example, 5 tests fixed, 5 other tests failing)? With this system we can calculate the trend and show it on the Nightly Board.
 
-We first create a base context for each and every test file, and then we make a call to the function `addContextItem` with the unique value inside the test file. 
+We first create a base context for each and every test file, and then we make a call to the function `addContextItem` with the unique value for this step, inside the test file. 
 
 Example :
 
@@ -170,7 +170,7 @@ testContext.addContextItem(this, 'testIdentifier', 'goToCustomersPage', baseCont
 // In the report, the final identifier will look like this: ‘functional_BO_customers_customers_filterAndQuickEditCustomers_goToCustomersPage’
 ```
 
-Be careful, identifiers **must be unique** through the whole campaign !
+Be careful, identifiers **must be unique** through the whole campaign ! We have a dedicated Github Action to help us find duplicates, so if you submit a PR we'll see it directly.
 
 ### Cleaning behind
 You must be able to launch a test independently, as well as in a whole campaign. That means :
@@ -181,14 +181,14 @@ You must be able to launch a test independently, as well as in a whole campaign.
 
 The shop must end in the same state it was in before your test, as much as possible (since some actions are logged and create artifacts, that may not be always easy to clean though) and let subsequent tests run smoothly! That means deleting the items you created, reverting your changes, etc.
 
-A rule of thumb: can you launch your test suite multiple times? If yes, you know you’re not dependent on the data, and you’re properly cleaning behind.
+A rule of thumb: can you launch your test suite multiple times ? If yes, you know you’re not dependent on the data, and you’re properly cleaning behind.
 
 ## Data
 
 ### Demo Data
 Our tests rely heavily on the demo fixtures (= demo data added when installing the vanilla PrestaShop package). However, we describe these data in separate files to make sure there’s no reference hard written in our code.
 
-The only assumption we have to make is the presence of certain items like Orders or Products in the catalog.
+The only assumption we have to make is the presence of certain items like Orders or Products in the catalog after a vanilla installation.
 
 If you need to rely on the fixtures too, make sure to use the description of the objects you’re looking for in the `data` folder. If it’s not complete, you can expand it and make a Pull Request, we’ll be happy to improve our datasets !
 
