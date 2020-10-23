@@ -61,13 +61,11 @@ We suggest that you build your own using https://gitignore.io.
 If you are building a full project for a client, you can read our article on [building a gitignore for PrestaShop](https://build.prestashop.com/howtos/misc/prestashop-perfect-gitignore/).
 {{% /notice %}}
 
-## Create your theme from the Starter Theme
+## Create your theme from the Classic Theme
 
-When you want to create a theme, the best way is to use the Starter Theme as a base theme.
+When you want to create a theme, the best way is to use the Classic theme (included with PrestaShop) as a base.
 
-Create a new folder under `themes/`, download the Starter Theme, and copy its files in your new folder.
-
-[Download the Starter Theme](https://github.com/PrestaShop/StarterTheme.git)
+Create a new folder under `themes/`, and copy the contents of `classic` in it.
 
 ##### Create your theme.yml file
 

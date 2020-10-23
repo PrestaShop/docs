@@ -9,7 +9,7 @@ aliases:
 
 The head part is very important in term of SEO and performances.
 
-Have look at StarterTheme and Classic head part to see real life examples.
+Have look at Classic's head part to see real life examples.
 
 
 ## Assets
@@ -22,11 +22,8 @@ There are 2 importants files to use:
 * `_partials/stylesheets.tpl`
 * `_partials/javascript.tpl`
 
-There 2 files are used to take full advantage of the new features of 1.7, like async
+These 2 files are used to take full advantage of the new features of 1.7, like async
 loading for javascript or automatic inline for CSS.
-
-If you're using StarterTheme (which we believe you do) there is nothing to do,
-it works out of the box.
 
 {{% notice warning %}}
   The `_partials/javascript.tpl` has to be included at the bottom of your page as well.

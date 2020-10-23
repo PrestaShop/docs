@@ -91,7 +91,7 @@ The PrestaShop Open Source project makes heavy use of Git in order to keep versi
 
 As a theme designer, you will need Git in order to retrieve the latest version of PrestaShop 1.7 and its default theme, "Classic".
 
-Note: You do not need to install or use Git if you are not interested in the latest development of PrestaShop or the Starter Theme.
+Note: You do not need to install or use Git if you are not interested in the latest development of PrestaShop.
 
 
 ### How can you install it?
@@ -126,7 +126,7 @@ Thing is, PrestaShop uses Composer to build its own package dependencies. While 
 
 In short, you need to use Composer when working with the latest development version from Github, in order to have a complete set of packages.
 
-Yes, that means that if you choose not to retrieve the latest PrestaShop (or Starter Theme) files using Git, but to simply install the latest public archive, then you do not need to worry about Composer.
+Yes, that means that if you choose not to retrieve the latest PrestaShop files using Git, but to simply install the latest public archive, then you do not need to worry about Composer.
 But not using the latest Git version also means that you cannot work with the development version of PrestaShop, and that you rely on the Core developers to release upgraded packages, thus giving you no head start in developing with new features. Your call!
 
 

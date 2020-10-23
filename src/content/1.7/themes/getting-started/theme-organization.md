@@ -16,7 +16,7 @@ Here are a few important tidbits:
 - Each theme is made of template files (.tpl), image files (.jpg, .png and such), one or more CSS files (.css), and usually JavaScript files (.js).
 - Each theme has a preview.png image file in its folder, enabling the shop-owner to see what the theme looks like directly from the back office, and select the theme appropriately.
 
-The best way to learn how to create a theme for PrestaShop 1.7 is to dive into the StarterTheme.
+The best way to learn how to create a theme for PrestaShop 1.7 is to dive into the Classic Theme.
 
 Here is its organization, which is explained further below.
 
@@ -121,13 +121,12 @@ There is a list of files that need to exists, even if they're empty. Please see 
 to know [what makes a theme valid]({{< ref "1.7/themes/distribution/testing" >}}).
 
 It could be that you've built some sort of groundbreaking theme and it doesn't exactly work like the
-Starter Theme does. For instance, if you don't have a product page, then you don't need the product.tpl file.
+Classic Theme does. For instance, if you don't have a product page, then you don't need the product.tpl file.
 In that case, you just have to create an empty product.tpl file. Be nice to the next developer and
 add a comment indicating where the code related to products can be found ;)
 
 #### Required libraries
 
-jQuery v2.1 is loaded by the core (bundled in `core.js`) file, but no other libraries, since the idea is that the
-Starter Theme should not be opinionated.
+jQuery v3.4 is loaded by the core (bundled in `core.js`) file.
 
 Read more about [assets management]({{< ref "1.7/themes/getting-started/asset-management/" >}}).

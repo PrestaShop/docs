@@ -23,26 +23,8 @@ Each suite needs a specific PHPUnit configuration. This is why each test suite h
 * `composer phpunit-sf`
 
 {{% notice tip %}}
-You can execute the entire PHPUnit testsuites using the `composer test-all` command.
+You can execute the entire PHPUnit test suites using the `composer test-all` command.
 {{% /notice %}}
-
-## Executing the StarterTheme test suites
-
-{{% notice note %}}
-Note: This suite is being phased out by the new E2E tests suite
-{{% /notice %}}
-
-Before executing the StarterTheme tests you need to install the dependencies and create a configuration file.
-
-1. In `tests/Selenium` folder, execute the command `npm install` (node 6+ && npm are required).
-2. Create `settings.js` from [settings.dist.js](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Selenium/settings.dist.js) file.
-3. Start the launch of test suite using `npm run test` command.
-
-{{% notice tip %}}
-If you want to display the browser, remove the `--headless` argument from webdriver.io configuration file.
-{{% /notice %}}
-
-Find out more in the [StarterTheme tests Readme file](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Selenium/README.md).
 
 ## Executing the Functional test suites
 

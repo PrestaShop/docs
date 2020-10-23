@@ -14,8 +14,8 @@ The theme's name MUST match its directory name. For instance, if the theme is na
 Users will be able to choose the layout for each page from the theme's settings page. Layouts are automatically parsed from the theme's /templates/layouts folder, so this configuration key is optional, but it allows designers to provide some more user-friendly info than just a filename.
 
 ```yaml
-  name: StarterTheme # The name must match the directory name
-  display_name: Starter Theme
+  name: mysupertheme # The name must match the directory name
+  display_name: My Super Theme
   version: 1.0.0
   theme_key: 3c6e0b8a9c15224a8228b9a98ca1531d # Needed by PrestaShop Addons
   author:
