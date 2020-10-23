@@ -75,7 +75,7 @@ All well-written 1.6 modules should work with little to no changes in version 1.
 
 What this means for any shop upgrade is that in order for a PS 1.6 to migrate to PS 1.7, you will have to:
 
-- Rewrite the theme. You can use the Starter Theme or the default theme as a foundation.
+- Rewrite the theme. You can use the default theme ("classic") as a foundation.
 - Adapt the Product page modules (CSS and JavaScript).
 - Adapt the Modules page modules (CSS and JavaScript).
 

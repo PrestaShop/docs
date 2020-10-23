@@ -21,10 +21,6 @@ modifying the main theme so you can update it!
   If you need to modify the markup more deeply, modify the theme, don't create a child theme.
 {{% /notice %}}
 
-{{% notice warning %}}
-  Do not use StarterTheme as a parent theme EVER. StarterTheme is meant to be modified.
-{{% /notice %}}
-
 ## The principle
 
 So far we talked about extending template within the same theme. In PrestaShop 1.7 you can now extend templates

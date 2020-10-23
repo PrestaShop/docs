@@ -18,8 +18,7 @@ Webpack compiles and minifies all this JavaScript code into a single file, which
 
 {{% notice note %}}
   Webpack is not at all required by PrestaShop, you are free to use your favorite tool!
-  The documentation explains Webpack since it's the tool we chose for the Classic theme, and StarterTheme
-  ships with a ready-to-use configuration file.
+  The documentation explains Webpack since it's the tool we chose for the Classic theme.
 {{% /notice %}}
 
 ![Webpack](../img/webpack.png)
@@ -39,7 +38,7 @@ If you want to compile your assets using Webpack (and we advise you to), follow 
 
 ## Webpack configuration
 
-The [Webpack configuration file for StarterTheme](https://github.com/PrestaShop/StarterTheme/blob/develop/_dev/webpack.config.js) is thus:
+The [Webpack configuration file for Classic Theme](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/themes/classic/_dev/webpack.config.js) is thus:
 
 1. All CSS rules go to the `assets/css/theme.css` file.
 2. All JavaScript code go to the `assets/js/theme.js` file.
