@@ -34,7 +34,7 @@ To install LAMP on your computer follow these steps (tested on Debian Buster).
 - Install Apache server
   - `apt install apache2`
 - Install PHP
-  - `apt install libapache2-mod-php7.3 php7.3 php7.3-common php7.3-curl php7.3-gd php7.3-imagick php7.3-mbstring php7.3-mysql php7.0-json php7.3-xsl php7.3-intl php7.3-zip`
+  - `apt install libapache2-mod-php7.3 php7.3 php7.3-common php7.3-curl php7.3-gd php7.3-imagick php7.3-mbstring php7.3-mysql php7.3-json php7.3-xsl php7.3-intl php7.3-zip`
 
 ## Creating a database for your shop
 
