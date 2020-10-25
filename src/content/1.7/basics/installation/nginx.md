@@ -18,7 +18,7 @@ server {
     # listen [::]:80;
 
     # SSL Ipv4 & v6
-    # listen 443 ssl;
+    # listen 443 ssl http2;
     # listen [::]:443 ssl;
 
     # Your SSL Certificates, don't forget to take a look at Certbot (https://certbot.eff.org)
