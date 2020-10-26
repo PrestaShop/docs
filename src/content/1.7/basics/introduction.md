@@ -29,13 +29,13 @@ You should be familiar with PHP and Object-Oriented Programming before attemptin
 
 You can learn PHP here:
 
-* https://www.php.net/manual/en/getting-started.php
-* https://www.codecademy.com/catalog/language/php
+* [Getting started on PHP documentation](https://www.php.net/manual/en/getting-started.php)
+* [Learning PHP on CodeCademy](https://www.codecademy.com/catalog/language/php)
 
 You can learn Object-Oriented programming here:
 
-* https://en.wikipedia.org/wiki/Object-oriented_programming
-* https://net.tutsplus.com/tutorials/php/object-oriented-php-for-beginners/
+* [Object-oriented programming on Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming)
+* [Object oriented php for beginners](https://net.tutsplus.com/tutorials/php/object-oriented-php-for-beginners/)
 
 A module is an extension to PrestaShop that enables any developer to add the following:
 
@@ -55,7 +55,7 @@ Until PrestaShop 1.6, PrestaShop was based on a 3-tier architecture:
 * Data control. User-provided content is controlled by files in the root folder.
 * Design. All of the theme’s files are in the “themes” folder.
 
-This is the same principle as the Model>View>Controller (MVC) architecture, only in a simpler and more accessible way.
+This is the same principle as the [Model>View>Controller (MVC) architecture](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), only in a simpler and more accessible way.
 
 A 3-tier architecture has many advantages:
 
@@ -83,7 +83,7 @@ If an action needs data to be changed, the Controller will “ask” the Model t
 
 ## Moving forward with Symfony
 
-While all versions of PrestaShop up to 1.6 took pride in only using a custom architecture, it was decided to incorporate the Symfony PHP framework starting with PrestaShop 1.7.
+While all versions of PrestaShop up to 1.6 took pride in only using a custom architecture, it was decided to incorporate the [Symfony PHP framework](https://symfony.com/) starting with PrestaShop 1.7.
 
 The driving idea is that we want our code to be more robust, more modular, and fully testable. The 1.6 architecture, inherited from version 1.5 and years of PrestaShop development, is not getting any younger, and its age is really starting to show.
 
