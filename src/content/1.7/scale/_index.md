@@ -9,7 +9,7 @@ chapter: true
 
 # How to make PrestaShop scale
 
-Scaling your PrestaShop instalation is something we hope every merchant will need, because it means their business is growing.
+Scaling your PrestaShop installation is something we hope every merchant will need, because it means their business is growing.
 
 Hopefully, there are plenty of advices in these pages that will help.
 
@@ -38,3 +38,12 @@ It may not be as simple as it sounds, as PrestaShop requires many files being sh
 Also, once you have set up your first server, setting additional ones should be far easier.
 
 The good thing is that, though requiring more sweat at first, horizontal scaling is better in terms of performances. Done well, adding a second server may easily double your application performance, if not more.
+
+### Further than LAMP
+
+Another way to scale your shop is to introduce other systems to improve your performances. Here is a quicklist of what can be used:
+
+1. Using a reverse proxy such as varnish for Front Office
+2. Using Redis to store sessions
+3. Use elasticsearch or a solution built on it for processing customer searches
+4. Use a CDN for static files
