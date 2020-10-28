@@ -47,3 +47,5 @@ Another way to scale your shop is to introduce other systems to improve your per
 2. Using Redis to store sessions
 3. Use elasticsearch or a solution built on it for processing customer searches
 4. Use a CDN for static files
+
+Note: services like a CDN or reverse proxy are useful in a production environment, not in a development environment.
