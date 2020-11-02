@@ -4,7 +4,7 @@ title: Processes
 
 # Processes
 
-## Security
+## Security recommendations
 
 Maintainer GitHub accounts are granted extended rights on the PrestaShop organization.
 
