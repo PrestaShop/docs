@@ -300,7 +300,7 @@ This change is specific to the table product.
 + `id_type_redirected` int(10) unsigned NOT NULL DEFAULT '0',
 ```
 
-When a product is disabled, the merchant can choose to which other page customers will be redirected to if they tries to access it.
+When a product is disabled, the merchant can choose to which other page customers will be redirected to if they try to access it.
 On PrestaShop 1.7 the number of options has increased, and a redirection to a category page is now possible.
 
 For data coming from PrestaShop 1.6, existing redirections must be updated.
