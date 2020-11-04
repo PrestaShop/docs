@@ -34,6 +34,34 @@ Fulfilling the above requirements does not automatically imply that such a contr
 Conversely, non-compliant contributions **should not** be accepted.  
 {{% /notice %}}
 
+### Collaborate with other teams
+
+Pull Requests introduce into the codebase many kinds of changes.
+
+**Some Pull Requests do fix bugs.** Sometimes the fix is done in a simple way, and the review is easy, sometimes the solution is more complex, and the reviewer must evaluate whether the submitted solution is good or if a better (simpler ?) is desirable. It is recommended in such cases to ask for the opinion of other maintainers.
+
+**Some Pull Requests do introduce new behavior changes** (a new button, a new Back-Office page, a new feature...) . If the change is impactful, such Pull Requests cannot be merged without the **Product Team** approval. It can be asked by marking the Pull Request and/or the related Issue with label "Waiting for PM" and Product Team will mark validated changes with label "PM ✓".
+
+**Some Pull Requests do introduce new UX changes** (changing a layout, modifying a color...) . If the change is impactful, such Pull Requests cannot be merged without the **UX Team** approval. It can be asked by marking the Pull Request and/or the related Issue with label "Waiting for UX" and UX Team will mark validated changes with label "UX ✓".
+
+**Some Pull Requests do introduce new wording changes**. Usually, [Prestonbot][prestonbot] will detect such Pull Requests and automatically add the "Waiting for wording" label. The Wording Team will review the Pull Request and work with the author until it is valid. At this moment the Pull Request is labelled "Wording ✓". Without this label, such Pull Requests cannot be merged.
+
+**Some Pull Requests do introduce new technical changes** (a new dependency, a new extensibility mechanism)... If the change is impactful, it is recommended for Pull Requests to ask for the opinion of multiple maintainers. For changes that are important, a [Voting phase][adr] might be needed.
+
+All these Teams can be reached out on the [Slack][slack] channel.
+
+### Discussing with author
+
+During review, maintainers can ask questions to the Pull Request author (for example to better understand a technical choice). Simply writing the question as a comment is enough.
+
+When doing so, it is recommended to add the label "Waiting for author" on the Pull Request. This helps other maintainers to know this Pull Request state.
+
+### Bots helping maintainers
+
+There are multiple bots that monitor the Issues and Pull Requests on GitHub.
+
+[Prestonbot][prestonbot] will try to add relevant informations on new Pull Requests and evaluate whether there are missing/invalid items. Following the Pull Request template, Prestonbot will add labels on the Pull Requests.
+
 ## Merging Pull Requests
 
 A Pull Request may only be merged after the following requirements have been fulfilled:
@@ -43,7 +71,7 @@ A Pull Request may only be merged after the following requirements have been ful
 - Automated checks (including automated tests) are passing.
 - The change has been approved by the QA team using the "QA ✓" label, unless there's a general agreement that the change is not testable by QA.
 
-### Marking Pull Requests
+### Marking merged Pull Requests
 
 When merging a Pull Request on the Core Repository, maintainer must do the following, if it has not been done by someone else:
 
@@ -65,3 +93,6 @@ Pull Requests may be closed after 30 days of inactivity following a request for 
 [contribution-guidelines]: {{< ref "/1.7/contribute/contribution-guidelines/_index.md" >}}
 [prestashop-core-repository]: https://github.com/PrestaShop/PrestaShop/
 [bc-break]: https://stackoverflow.com/questions/8891005/what-does-bc-break-mean
+[slack]: {{< param ProjectUrls.Slack >}}
+[adr]: https://github.com/prestashop/ADR
+[prestonbot]: {{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}
