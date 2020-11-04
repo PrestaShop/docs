@@ -12,7 +12,7 @@ The very best place to start looking for an answer is:
 - The [User's guide](https://doc.prestashop.com/display/PS17/User+Guide) if you are a user
 
 {{% notice tip %}}
-If you are a developer and you think there is a missing item in the Developer documentation, consider [creating an issue on the Documentation Repository](https://github.com/PrestaShop/docs/issues). This will help us planning what to do to improve it.
+If you are a developer and you think there is a missing item in the Developer documentation, consider [creating an issue on the Documentation Repository](https://github.com/PrestaShop/docs/issues). This will help us discuss what to do to improve it.
 {{% /notice %}}
 
 If you need help with your shop or third-party modules, please have a look at the PrestaShop Company's [support plans](https://www.prestashop.com/support).
