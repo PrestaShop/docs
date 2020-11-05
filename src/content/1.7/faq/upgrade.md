@@ -25,7 +25,7 @@ Third, check whether the table `ps_access` grants access to the Back Office page
 If during upgrade process, it fails with the error message:
 
 ```
-[Ajax/Server operation backup file error] textStatus: "Error" errorThrown: "" JqXHR: "",
+[Ajax/Server operation [...]] textStatus: "Error" errorThrown: "" JqXHR: "",
 ```
 
 This error message indicates something went wrong on server side.
