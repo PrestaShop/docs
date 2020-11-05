@@ -62,6 +62,47 @@ There are multiple bots that monitor the Issues and Pull Requests on GitHub.
 
 [Prestonbot][prestonbot] will try to add relevant informations on new Pull Requests and evaluate whether there are missing/invalid items. Following the Pull Request template, Prestonbot will add labels on the Pull Requests.
 
+### Lists of red flags
+
+Here is a list of things of items that should not be approved in a Pull Request
+
+- Anti-patterns or code that clearly violates software development best practices such as [SOLID][solid] principles.
+- Code that does not complies with current PrestaShop architecture, unless for good reasons (example: some View logic inside the Model layer).
+- Code that scales poorly and/or performs poorly.
+- Code that is very hard to read and consequently less maintainable.
+- Code that ignore one standard PrestaShop usecase (example: logic that only makes sense for EU rules or USA rules).
+- Code that ignore part of PrestaShop user audience (example: CSS that is not [RTL][rtl]-compliant).
+- Code that is not secure.
+
+More details available [here][pull-request-process].
+
+#### About [BC breaks][bc-break]
+
+Since PrestaShop follows [SemVer][semver], we should not accept Pull Requests introducing Breaking Changes unless they will be delivered in a new Major version.
+
+Exceptions to this rule can however be made, for good reasons only such as:
+- Security issue that cannot be fixed in a backward compatible manner
+- Architecture/Design issue that cannot be fixed in an efficient and backward compatible manner
+- Expected and announced beforehand change such as migrating a legacy page into a Symfony page
+
+### Maintainers are gatekeepers
+
+Approving a Pull Request is actually a meaningful act. It carries multiple messages:
+
+**1. The submitted code is correct and its quality meets our expectations.**
+
+This is obviously a requirement for the Pull Request to be approved.
+
+**2. The outcome of this Pull Request is desireable.**
+
+Some Pull Requests are correct but are not merged because they do not benefit the project. For example a Pull Request that enables the support of XCF format for images is likely to be rejected as this image format is very rarely used in eCommerce.
+
+**3. We accept to introduce this new code into our scope.**
+
+Code that is merged inside the project becomes part of its scope. It means the maintainers team agree to maintain, manage, test, document and update this code as if it was their own.
+
+Part of the Pull Request might also be integrated into PrestaShop public API which must evolve in a backward compatible manner to comply with [SemVer][semver]. This means that once that it is released, it is quite frozen and must be preserved.
+
 ## Merging Pull Requests
 
 A Pull Request may only be merged after the following requirements have been fulfilled:
@@ -96,3 +137,7 @@ Pull Requests may be closed after 30 days of inactivity following a request for 
 [slack]: {{< param ProjectUrls.Slack >}}
 [adr]: https://github.com/prestashop/ADR
 [prestonbot]: {{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}
+[solid]: https://en.wikipedia.org/wiki/SOLID
+[RTL]: {{< ref "/1.7/themes/reference/rtl.md" >}}
+[pull-request-process]: {{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}
+[semver]: https://semver.org/
