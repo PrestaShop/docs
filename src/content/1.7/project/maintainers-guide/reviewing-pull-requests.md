@@ -38,7 +38,7 @@ Conversely, non-compliant contributions **should not** be accepted.
 
 Pull Requests introduce into the codebase many kinds of changes.
 
-**Some Pull Requests do fix bugs.** Sometimes the fix is done in a simple way, and the review is easy, sometimes the solution is more complex, and the reviewer must evaluate whether the submitted solution is good or if a better (simpler ?) is desirable. It is recommended in such cases to ask for the opinion of other maintainers.
+**Some Pull Requests do fix bugs.** Sometimes the fix is done in a simple way, and the review is easy, sometimes the solution is more complex, and the reviewer must evaluate whether the submitted solution is good or if a better (simpler?) is desirable. It is recommended in such cases to ask for the opinion of other maintainers.
 
 **Some Pull Requests do introduce new behavior changes** (a new button, a new Back-Office page, a new feature...) . If the change is impactful, such Pull Requests cannot be merged without the **Product Team** approval. It can be asked by marking the Pull Request and/or the related Issue with label "Waiting for PM" and Product Team will mark validated changes with label "PM ✓".
 
