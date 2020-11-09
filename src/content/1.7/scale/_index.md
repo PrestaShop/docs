@@ -43,9 +43,9 @@ The good thing is that, though requiring more sweat at first, horizontal scaling
 
 Another way to scale your shop is to introduce other systems to improve your performances. Here is a quicklist of what can be used:
 
-1. Using a reverse proxy such as varnish for Front Office
-2. Using Redis to store sessions
-3. Use elasticsearch or a solution built on it for processing customer searches
-4. Use a CDN for static files
+1. Using a HTTP accelerator such as Varnish for Front Office
+2. Using an in-memory data structure store such as Redis to store sessions
+3. Use Elasticsearch or a solution built on it for processing customer searches
+4. Use a Content Delivery Network (CDN) for static files
 
-Note: services like a CDN or reverse proxy are useful in a production environment, not in a development environment.
+Note: services like a CDN or HTTP accelerator are useful in a production environment, not in a development environment.
