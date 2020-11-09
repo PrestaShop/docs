@@ -82,7 +82,7 @@ jobs:
       # Run a container for PHPStan, having access to the module content and PrestaShop sources.
       # This tool is outside the composer.json because of the compatibility with PHP 5.6
       - name : Run PHPStan
-        run: docker run --rm --volumes-from temp-ps -v $PWD:/web/module -e _PS_ROOT_DIR_=/var/www/html --workdir=/web/module phpstan/phpstan:0.11.19 analyse --configuration=/web/module/tests/phpstan/phpstan.neon ./
+        run: docker run --rm --volumes-from temp-ps -v $PWD:/web/module -e _PS_ROOT_DIR_=/var/www/html --workdir=/web/module phpstan/phpstan:0.12 analyse --configuration=/web/module/tests/phpstan/phpstan.neon
 ```
 
 ### Build module artifact
@@ -173,9 +173,9 @@ phpstan-php-7-2:
   stage: tests
   script: |
     php composer.phar install --dev
-    php composer.phar global require phpstan/phpstan-shim:0.11.19
+    php composer.phar global require phpstan/phpstan-shim:0.12
     ln -s /builds/ps-addons/$CI_PROJECT_NAME /var/www/html/modules/$CI_PROJECT_NAME
-    php -d memory_limit=-1 ~/.composer/vendor/bin/phpstan analyse --configuration=/var/www/html/modules/$CI_PROJECT_NAME/tests/phpstan/phpstan.neon ./
+    php -d memory_limit=-1 ~/.composer/vendor/bin/phpstan analyse --configuration=/var/www/html/modules/$CI_PROJECT_NAME/tests/phpstan/phpstan.neon
 
 # Optional job installing JS dependencies and compiling scripts
 before-deploy:
