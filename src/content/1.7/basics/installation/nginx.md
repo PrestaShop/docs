@@ -18,7 +18,7 @@ server {
     # listen [::]:80;
 
     # SSL Ipv4 & v6
-    # listen 443 ssl;
+    # listen 443 ssl http2;
     # listen [::]:443 ssl;
 
     # Your SSL Certificates, don't forget to take a look at Certbot (https://certbot.eff.org)
@@ -199,7 +199,7 @@ server {
 
         # [REQUIRED EDIT] Connection to PHP-FPM - choose one
         # fastcgi_pass 127.0.0.1:9000;
-        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+        fastcgi_pass unix:/run/php/php7.1-fpm.sock;
 
         fastcgi_keep_conn on;
         fastcgi_read_timeout 30s;
