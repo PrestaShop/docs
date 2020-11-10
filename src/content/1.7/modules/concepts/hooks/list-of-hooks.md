@@ -2480,7 +2480,7 @@ action&lt;HookName>Save
     
 action&lt;GridDefinitionId>GridDefinitionModifier
 : 
-    Available since: {{< minver v="1.7.5" >}}
+    Available since: {{< minver v="1.7.6" >}}
     Located in: /src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php
 
     Parameters:
@@ -2493,7 +2493,7 @@ action&lt;GridDefinitionId>GridDefinitionModifier
     
 action&lt;GridDefinitionId>GridQueryBuilderModifier
 : 
-    Available since: {{< minver v="1.7.5" >}}
+    Available since: {{< minver v="1.7.6" >}}
     Located in: /src/Core/Grid/Data/Factory/DoctrineGridDataFactory.php
 
     Parameters:
@@ -2508,7 +2508,7 @@ action&lt;GridDefinitionId>GridQueryBuilderModifier
     
 action&lt;GridDefinitionId>GridDataModifier
 : 
-    Available since: {{< minver v="1.7.5" >}}
+    Available since: {{< minver v="1.7.6" >}}
     Located in: /src/Core/Grid/GridFactory.php
 
     Parameters:
@@ -2521,7 +2521,7 @@ action&lt;GridDefinitionId>GridDataModifier
     
 action&lt;GridDefinitionId>GridFilterFormModifier
 : 
-    Available since: {{< minver v="1.7.5" >}}
+    Available since: {{< minver v="1.7.6" >}}
     Located in: /src/Core/Grid/Filter/GridFilterFormFactory.php
 
     Parameters:
@@ -2534,7 +2534,7 @@ action&lt;GridDefinitionId>GridFilterFormModifier
     
 action&lt;GridDefinitionId>GridPresenterModifier
 : 
-    Available since: {{< minver v="1.7.5" >}}
+    Available since: {{< minver v="1.7.6" >}}
     Located in: /src/Core/Grid/Presenter/GridPresenter.php
 
     Parameters:
