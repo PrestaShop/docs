@@ -64,14 +64,14 @@ There are multiple bots that monitor the Issues and Pull Requests on GitHub.
 
 ### Lists of red flags
 
-Here is a list of things of items that should not be approved in a Pull Request
+Here is a list of things that should not be approved in a Pull Request
 
 - Anti-patterns or code that clearly violates software development best practices such as [SOLID][solid] principles.
-- Code that does not complies with current PrestaShop architecture, unless for good reasons (example: some View logic inside the Model layer).
+- Code that does not comply with current PrestaShop architecture, unless for good reasons (example: some View logic inside the Model layer).
 - Code that scales poorly and/or performs poorly.
 - Code that is very hard to read and consequently less maintainable.
-- Code that ignore one standard PrestaShop usecase (example: logic that only makes sense for EU rules or USA rules).
-- Code that ignore part of PrestaShop user audience (example: CSS that is not [RTL][rtl]-compliant).
+- Code that ignores one standard PrestaShop usecase (example: logic that only makes sense for EU rules or USA rules).
+- Code that ignores part of PrestaShop user audience (example: CSS that is not [RTL][rtl]-compliant).
 - Code that is not secure.
 
 More details available [here][pull-request-process].
@@ -93,7 +93,7 @@ Approving a Pull Request is actually a meaningful act. It carries multiple messa
 
 This is obviously a requirement for the Pull Request to be approved.
 
-**2. The outcome of this Pull Request is desireable.**
+**2. The outcome of this Pull Request is desirable.**
 
 Some Pull Requests are correct but are not merged because they do not benefit the project. For example a Pull Request that enables the support of XCF format for images is likely to be rejected as this image format is very rarely used in eCommerce.
 
