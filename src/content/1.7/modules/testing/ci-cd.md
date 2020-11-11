@@ -175,7 +175,7 @@ phpstan-php-7-2:
     php composer.phar install --dev
     php composer.phar global require phpstan/phpstan-shim:0.12
     ln -s /builds/ps-addons/$CI_PROJECT_NAME /var/www/html/modules/$CI_PROJECT_NAME
-    php -d memory_limit=-1 ~/.composer/vendor/bin/phpstan analyse --configuration=/var/www/html/modules/$CI_PROJECT_NAME/tests/phpstan/phpstan.neon .
+    php -d memory_limit=-1 ~/.composer/vendor/bin/phpstan analyse --configuration=/var/www/html/modules/$CI_PROJECT_NAME/tests/phpstan/phpstan.neon
 
 # Optional job installing JS dependencies and compiling scripts
 before-deploy:
