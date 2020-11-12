@@ -269,11 +269,11 @@ Some notable examples:
 
 #### Logs table
 
-You can regularly clean your _log_ SQL table from old logs.
+You can regularly clean your _log_ database table from old logs.
 
 #### Configuration table
 
-The _configuration_ SQL table can grow as you install more and more modules and a lot of them do store data inside it. Some of them do remove this data when they are being uninstalled and other do not. This can result in a _configuration_ SQL table quite big and that can be cleaned up.
+The _configuration_ database table can grow as you install more and more modules and a lot of them do store data inside it. Some of them do remove this data when they are being uninstalled and other do not. This can result in a _configuration_ database table quite big and that can be cleaned up.
 
 Note that _configuration_ table content is being loaded _for every request_ PrestaShop handles so it can really slow your shop down.
 
