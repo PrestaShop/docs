@@ -260,3 +260,35 @@ if (!defined('_PS_DEBUG_PROFILING_')) {
     define('_PS_DEBUG_PROFILING_', false);
 }
 ```
+
+### 8) PrestaShop database cleaning
+
+Some SQL tables of PrestaShop can grow very big in time. Some of the data being stored there is sometimes not relevant anymore or not needed anymore.
+
+Some notable examples:
+
+#### Logs table
+
+You can regularly clean your _log_ database table from old logs.
+
+#### Configuration table
+
+The _configuration_ database table can grow as you install more and more modules and a lot of them do store data inside it. Some of them do remove this data when they are being uninstalled and other do not. This can result in a _configuration_ database table quite big and that can be cleaned up.
+
+Note that _configuration_ table content is being loaded _for every request_ PrestaShop handles so it can really slow your shop down.
+
+### 9) Modules optimization
+
+PrestaShop can be optimized, but the other systems running on it should be optimized too! Some modules can slow your shop down especially if they are hooked on critical Front Office pages. You should benchmark and profile the modules installed on your shop as they are not always fine-tuned for optimization.
+
+Things you might look for in these modules
+- greedy resource consumption
+- lack of caching
+- over-caching*
+- hooked or enabled on too much pages
+
+*For example some modules do rely on Smarty cache, but Smarty cache badly configured can result in hundred of template files being scattered on the server, producing way too much I/O.
+
+### 10) Using MySQl replica
+
+A simple setup for MySQL replication strategy is a single instance for WRITE requests and multiple instances for READ requests. Because the Front Office actually does not perform a lot of write requests this can boost your Front office performances.
