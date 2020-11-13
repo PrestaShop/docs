@@ -56,6 +56,83 @@ We sometimes receive support requests on GitHub, ranging from questions about th
 
 There are some Issues which do not fit in the previous categories, such as [releases Issues](https://github.com/PrestaShop/PrestaShop/issues/20804). They serve a specific purpose.
 
+## Projects
+
+Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects)’ tab of the PrestaShop’s GitHub repository, versions kanbans organize the Core team’s work. Both the product and the tech teams use it to prepare and plan the next developments and, since we deal with an open source project, the purpose of having those kanbans public is to help the community and the external mainteners to know what is at stake.
+
+### Definition of states
+
+A ticket can either be an issue or a pull request. Most of the time, pull requests fix issues so it is most likely that you run into issues while browsing the kanban. A ticket should always have an owner, be it a PM or a developer.
+
+Community contributions are no longer part of the kanban and they must be approved by the product team before being merged!
+Only ticket developed or fixed by the core team take part in the kanban, that should reflect the core team’s work.
+For example, an issue reports a bug prioritized for the 1.7.8.0, the ticket must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+
+It is a bug? It must be reported in the functional specifications.
+It is an improvement? It must be validated, prioritized, and specified.
+
+A pull request that shown no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher ticket, it will be back in the to do column again to be completed by the core team.
+
+Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the ticket ready to be coded, otherwise it will not take part in the backlog.
+
+A ready ticket must contain an explicit title and description referring to:
+- validated & available specifications
+- validated & available mockups
+- validated & available wording
+- available acceptance tests
+
+#### Not ready
+
+**All the prioritized tickets to include in this version** but that need to be prepared by the core team - assigned to a PM or the lead dev as owner.
+
+_Who adds tickets to this column?_ Mostly the PM once they approved the ticket, but it could also be the developers.
+
+#### Backlog
+
+**All the ready tickets reviewed during the grooming** by the lead PM and the lead dev and discussed/assigned to a developer during the sprint planning.
+
+_Who adds tickets to this column?_ It is the lead PM with the approval of the lead dev.
+
+#### To do
+
+**All the ready tickets to be developed**, presented by the owners during the sprint planning.
+
+_Who adds tickets to this column?_ It is the lead PM with the approval of the lead dev. 
+
+#### Blocked / Need specs
+
+**All the tickets that lack information and need to be respecified** or that are waiting for some previous ticket to be merged.
+
+_Who adds tickets to this column?_ It is the lead PM, with the approval of the lead dev, after the PM/dev assigned to the ticket has raised the blocking element. Add a comment to precise what is expected.
+
+#### In progress
+
+**All the tickets that are being coded**, assigned to a developer.
+
+_Who adds tickets to this column?_ It is the assigned developer, once he/she starts working on it.
+
+#### To be reviewed
+
+**All the tickets whose code needs to be reviewed** - at least two approvals from core-developers are required.
+
+_Who adds tickets to this column?_ It is the developer assigned to the ticket.
+
+#### To be tested
+
+**All the tickets approved that need to be tested** by the QA team.
+
+_Who adds tickets to this column?_ It is the second developer who reviews and approves the ticket, he must also add the 'waiting for QA' label.
+
+#### To be merged
+
+**All the tickets that are ready to be merged** because approved by the QA team.
+
+_Who adds tickets to this column?_ It is the QA team that has just validated the ticket.
+
+#### Done
+
+All the tickets that are now part of the history, great work to all! 
+
 ## Pull Requests
 
 When a contributor submits a Pull Request, it goes through multiple stages.
