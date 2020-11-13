@@ -16,7 +16,7 @@ In order to have a front controller read by PrestaShop, these 3 rules have
 to be followed:
 
 * it is stored in the subfolder `controllers/front/` of the module.
-* in CamelCase, the class name follows this format: `<ModuleName><FileName>ModuleFrontController`.
+* in CamelCase, the class name follows this format: `<ModuleClassName><FileName>ModuleFrontController`.
 * it extends the class `ModuleFrontController`.
 
 ### Minimum controller example
@@ -29,9 +29,9 @@ We create a file `/modules/cheque/controllers/front/validation.php` and its clas
 ```php
 <?php
 /**
- * <ModuleName> => cheque
+ * <ModuleClassName> => Cheque
  * <FileName> => validation.php
- * Format expected: <ModuleName><FileName>ModuleFrontController
+ * Format expected: <ModuleClassName><FileName>ModuleFrontController
  */
 class ChequeValidationModuleFrontController extends ModuleFrontController
 {
