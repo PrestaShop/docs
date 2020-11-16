@@ -64,9 +64,9 @@ Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects
 
 A ticket can either be an issue or a pull request. Most of the time, pull requests fix issues so it is most likely that you run into issues while browsing the kanban. A ticket should always have an owner, be it a PM or a developer.
 
-Community contributions are no longer part of the kanban and they must be approved by the product team before being merged!
-Only ticket developed or fixed by the core team take part in the kanban, that should reflect the core team’s work.
-For example, an issue reports a bug prioritized for the 1.7.8.0, the ticket must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+Community contributions are no longer part of the kanban. Only tickets developed or fixed by the Core team take part in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the ticket must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+
+Community contributions must be approved by the Core product team. Ideally before being reviewed, at least before being merged. Here is why:
 
 It is a bug? It must be reported in the functional specifications.
 It is an improvement? It must be validated, prioritized, and specified.
@@ -177,4 +177,3 @@ If the Pull Request is tested successfully, the label "QA approved" is applied. 
 ### Merging the Pull Request
 
 Pull Requests that have been validated by QA can be merged. They must also be milestoned, and if they fix an issue, the issue must be labelled, milestoned, and closed.
-
