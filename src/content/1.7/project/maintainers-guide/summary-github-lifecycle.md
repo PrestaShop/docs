@@ -62,7 +62,8 @@ Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects
 
 ### Definition of states
 
-A ticket can either be an issue or a pull request. Most of the time, pull requests fix issues so it is most likely that you run into issues while browsing the kanban. A ticket should always have an owner, be it a PM or a developer.
+A ticket can either be an issue or a pull request. A pull request should always be linked to the issue it fixes. 
+That's said, there should only have issues in the kanban and it always have an owner, be it a PM or a developer.
 
 Community contributions are no longer part of the kanban. Only tickets developed or fixed by the Core team are included in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the ticket must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
 
