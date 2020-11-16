@@ -64,7 +64,7 @@ Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects
 
 A ticket can either be an issue or a pull request. Most of the time, pull requests fix issues so it is most likely that you run into issues while browsing the kanban. A ticket should always have an owner, be it a PM or a developer.
 
-Community contributions are no longer part of the kanban. Only tickets developed or fixed by the Core team take part in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the ticket must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+Community contributions are no longer part of the kanban. Only tickets developed or fixed by the Core team are included in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the ticket must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
 
 Community contributions must be approved by the Core product team. Ideally before being reviewed, at least before being merged. Here is why:
 
