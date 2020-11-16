@@ -71,7 +71,7 @@ Community contributions must be approved by the Core product team. Ideally befor
 It is a bug? It must be reported in the functional specifications.
 It is an improvement? It must be validated, prioritized, and specified.
 
-A pull request that shown no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher ticket, it will be back in the to do column again to be completed by the core team.
+A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher ticket, it will be back in the to do column again to be completed by the core team.
 
 Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the ticket ready to be coded, otherwise it will not take part in the backlog.
 
