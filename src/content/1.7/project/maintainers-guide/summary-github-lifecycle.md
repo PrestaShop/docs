@@ -110,7 +110,7 @@ _Who adds tickets to this column?_ It is the lead PM, with the approval of the l
 
 **All the tickets that are being coded**, assigned to a developer.
 
-_Who adds tickets to this column?_ It is the assigned developer, once he/she starts working on it.
+_Who adds issues to this column?_ It is the assigned developer, once he/she starts working on it.
 
 #### To be reviewed
 
