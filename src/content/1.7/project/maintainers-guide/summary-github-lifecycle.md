@@ -91,7 +91,7 @@ _Who adds issues to this column?_ Mostly the PM once they approved the issue, bu
 
 #### Backlog
 
-**All the ready issues reviewed during the grooming** by the lead PM and the lead dev and discussed/assigned to a developer during the sprint planning.
+**All issues that are considered _ready_** by the lead PM and the lead dev. Issues in this column will be discussed with Core developers.
 
 _Who adds issues to this column?_ It is the lead PM with the approval of lead developers.
 
