@@ -115,7 +115,7 @@ _Who adds issues to this column?_ It is the assigned developer, once he/she star
 
 #### To be reviewed
 
-**All the issues whose code needs to be reviewed** - at least two approvals from core-developers are required.
+**All the issues where a Pull Request has been made and is waiting for code review**
 
 _Who adds issues to this column?_ It is the developer assigned to the issue.
 
