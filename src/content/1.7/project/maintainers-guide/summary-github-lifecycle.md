@@ -109,7 +109,7 @@ _Who adds issues to this column?_ It is the issue owner, after the PM/dev assign
 
 #### In progress
 
-**All the issues that are being coded**, assigned to a developer.
+**All the issues that are being actively worked on**, assigned to developer who has claimed it.
 
 _Who adds issues to this column?_ It is the assigned developer, once he/she starts working on it.
 
