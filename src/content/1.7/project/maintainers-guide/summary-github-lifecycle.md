@@ -26,17 +26,17 @@ Currently, there are 4 different types of Issues submitted by users on GitHub.
 
 When a user submits a feature request or an improvement, it can be either a functional request to add or change a behavior (example: add a new Back office page) or a technical request (example: support PostgreSQL).
 
-Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev".
+Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev" by the QA team in charge of qualifying the issues.
 
-The team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted  requests are added to the roadmap and labelled as "to be specified" if researches or specifications are needed or "to do". Labels will help triaging the backlog.
+The Core Product team or the Core Developers team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted requests are added to the roadmap and labelled as "to be specified" if researches or specifications are needed or "to do". Labels will help triaging the backlog.
 
 ### Bug report
 
 When a user submits a bug report, the QA team will analyse it and attempt to reproduce it. If it can be reproduced and is confirmed to be an issue, it will be labelled as "to do" and added to the roadmap.
 
-If it cannot be reproduced, QA team will attempt to explore the issue with the contributor to isolate the very settings responsible for the buggy behavior.
+If it cannot be reproduced, QA team will attempt to explore the issue with the author to isolate the very settings responsible for the buggy behavior.
 
-If the user does not answer for 30 days or after multiple attempts, it cannot be reproduced on our side, the issue is as labelled as "can't reproduced" and closed.
+If the user does not answer for 30 days or after multiple attempts, it cannot be reproduced on our side, the issue is labelled as "can't reproduced" and closed by the QA team.
 
 #### Regressions
 
@@ -50,7 +50,7 @@ This is why so much issues cannot be reproducted on our side, but to find it out
 
 ### Support request
 
-We sometimes receive support requests on GitHub, ranging from questions about the software to "please help me to do X in my shop" requests. GitHub is for the software development so we usually redirect users to other channels using the [Support template](https://github.com/PrestaShop/PrestaShop/issues/new?template=3_support_question.md).
+Sometimes support requests are submitted on GitHub, ranging from questions about the software to "please help me to do X in my shop" requests. GitHub is for the software development so usually these requests are redirect to other channels using the [Support template](https://github.com/PrestaShop/PrestaShop/issues/new?template=3_support_question.md).
 
 ### Other
 
@@ -63,7 +63,7 @@ Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects
 ### Definition of states
 
 A pull request should always be linked to the issue it fixes. 
-That's said, there should only have issues in the kanban and it always have an owner, be it a PM or a developer.
+That's said, there should only have issues in the kanban and it always have an owner, be it a product manager or a developer.
 
 Community contributions are no longer part of the kanban. Only issues developed or fixed by the Core team are included in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
 
@@ -85,31 +85,31 @@ An issue is ready when it contains:
 
 #### Not ready
 
-**All the issues that should be included in this version** but that are not yet ready - need to be assigned to an owner, be it a Project Manager or a Lead Developer.
+**All the issues that should be included in this version** but that are not yet ready - need to be assigned to an owner, be it a Product Manager or a Lead Developer.
 
-_Who adds issues to this column?_ Mostly the PM once they approved the issue, but it could also be the developers.
+_Who adds issues to this column?_ Mostly the Product Manager once they approved the issue, but it could also be the core developers.
 
 #### Backlog
 
-**All issues that are considered _ready_** by the lead PM and the lead dev. Issues in this column will be discussed with Core developers.
+**All issues that are considered _ready_** by the lead Product Manager and the lead dev. Issues in this column will be discussed with Core developers.
 
-_Who adds issues to this column?_ It is the lead PM with the approval of lead developers.
+_Who adds issues to this column?_ It is the lead Product Manager with the approval of lead developers.
 
 #### To do
 
 **All the issues that are considered _ready_ and validated by the developers**, optionally assigned to one.
 
-_Who adds issues to this column?_ It is the lead PM with the approval of Core developers. 
+_Who adds issues to this column?_ It is the lead Product Manager with the approval of Core developers. 
 
 #### Blocked / Need specs
 
 **All the issues which have been started but lack information and need to be respecified** or that are blocked by some other task.
 
-_Who adds issues to this column?_ It is the issue owner, after the PM/dev assigned to the issue has explained the blocking element. A comment must be added to explain what is blocking and what is expected.
+_Who adds issues to this column?_ It is the issue owner, after the Product Manager or developer assigned to the issue has explained the blocking element. A comment must be added to explain what is blocking and what is expected.
 
 #### In progress
 
-**All the issues that are being actively worked on**, assigned to developer who has claimed it.
+**All the issues that are being actively worked on**, assigned to a developer who has claimed it.
 
 _Who adds issues to this column?_ It is the assigned developer, once he/she starts working on it.
 
@@ -123,13 +123,13 @@ _Who adds issues to this column?_ It is the developer working on the issue.
 
 **All the issues with an approved Pull Request that is waiting for validation** by the QA team.
 
-_Who moves issues to this column?_ It is the second maintainer who approves the Pull Request (PRs require at least two approvals), he must also add the "waiting for QA" label on the Pull Request.
+_Who moves issues to this column?_ It is the second maintainer who approves the Pull Request (PRs require at least two approvals), he/she must also add the "waiting for QA" label on the Pull Request.
 
 #### To be merged
 
 **All the issues with a Pull Request that is ready to be merged**, once approved by the QA team.
 
-_Who moves issues to this column?_ It is the QA analyst that approves the Pull Request.
+_Who moves issues to this column?_ It is the QA analyst or the core developer that approves the Pull Request, he/she must also add the "QA approved" label on the Pull Request.
 
 #### Done
 
@@ -141,19 +141,24 @@ When a contributor submits a Pull Request, it goes through multiple stages.
 
 ### Is it eligible
 
-Maintainers must first validate that the Pull Request is eligible to review (the template is filled, the license headers are correct, the target branch is the right one ...).
+Maintainers must first validate that the Pull Request is eligible to review (the template is filled, an issue is linked to the Pull Request, the license headers are correct, the target branch is the right one ...).
 
-If there is an issue with the Pull Request and it is not eligible, maintainers kindly ask the contributor to fix it.
+If the Pull Request is not eligible, maintainers kindly ask the contributor to fix it and apply the label "Waiting for author" on the Pull Request.
+If the issue associated to the Pull Request is in a project, then the issue should be moved in the "in progress" column.
 
 ### About the intent
 
-If the Pull Request is eligible, maintainers can evaluate if the changes brought by the Pull Request are desirables.
+If the Pull Request is eligible, maintainers should evaluate if the changes brought by the Pull Request are desirables.
 
 - If the Pull Request brings in changes in design, they should ask the validation of UX designers by adding the label "Waiting for UX".
 - If the Pull Request brings in changes to the product, they should ask the validation of Product managers by adding the label "Waiting for PM".
 - If the Pull Request brings in changes in wording, they can should the validation of UX designers by adding the label "Waiting for wording".
 
-If one "Waiting for ..." label has been applied, the team in charge will process the Pull Request and then add a "... approved" label. For example if Product team validates the new behavior implemented in a Pull Request, they will remove the "Waiting for PM" label and add the "PM approved" label instead.
+If the issue associated to the Pull Request is in a project, then the issue should be moved in the "blocked / need specs" column.
+
+If one "Waiting for ..." label has been applied, the team in charge will process the Pull Request and then add a "... approved" label. 
+For example if Product team validates the new behavior implemented in a Pull Request, they will remove the "Waiting for PM" label and add the "PM approved" label instead.
+If the issue associated to the Pull Request is in a project, then the issue should be moved in the "in progress" column.
 
 There are some automated bots running on GitHub that will help maintainers to label the Pull Requests. For example Prestonbot is able to extract the new wordings and add the "Waiting for wording" label. You can read more about them [here]({{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}).
 
@@ -174,11 +179,11 @@ When the Pull Request has been approved (it needs two approvals on the Core repo
 
 On regular Pull Requests, the QA analyst is in charge of testing the Pull Request. They will use the "How to test" part of the Pull Request description to validate the behavior implemented, and also run some more tests to validate there are no regressions.
 
-Some technical Pull Requests however cannot be tested by QA analysts, the Developers team might test them.
+Some technical Pull Requests however cannot be tested by QA analysts, the core developers might test them.
 
 If the Pull Request is tested successfully, the label "QA approved" is applied and the associated issue is moved in the "to be merged" column by the person who tested it.
 Otherwise, the author is notified about the issues found during the tests, the label "waiting for author" is applied and the associated issue is moved in the "in progress" column by the person who tested it.
 
 ### Merging the Pull Request
 
-Pull Requests that have been validated by QA analyst or developer can be merged. The developer who merges the pull request adds the milestone of the version in which the PR will be available. The associated issue must also be milestoned, labelled as "fixed", closed and moved in the "done" column.
+Pull Requests that have been validated by QA analyst or developer can be merged. The maintainer who merges the pull request adds the milestone of the version in which the PR will be available. If the issue associated to the Pull Request is in a project, then it must be milestoned, labelled as "fixed", closed and moved in the "done" column.
