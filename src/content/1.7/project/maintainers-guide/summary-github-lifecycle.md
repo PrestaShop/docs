@@ -98,7 +98,7 @@ _Who adds issues to this column?_ It is the lead PM with the approval of lead de
 
 **All the issues that are considered _ready_ and validated by the developers**, optionally assigned to one.
 
-_Who adds tickets to this column?_ It is the lead PM with the approval of the lead dev. 
+_Who adds issues to this column?_ It is the lead PM with the approval of Core developers. 
 
 #### Blocked / Need specs
 
