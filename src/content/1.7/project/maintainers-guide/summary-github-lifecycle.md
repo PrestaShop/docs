@@ -117,7 +117,7 @@ _Who adds issues to this column?_ It is the assigned developer, once he/she star
 
 **All the issues where a Pull Request has been made and is waiting for code review**
 
-_Who adds issues to this column?_ It is the developer assigned to the issue.
+_Who adds issues to this column?_ It is the developer working on the issue.
 
 #### To be tested
 
