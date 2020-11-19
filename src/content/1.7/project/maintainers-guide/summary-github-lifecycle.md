@@ -74,7 +74,7 @@ It is an improvement? It must be validated, prioritized, and specified.
 
 A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher ticket, it will be back in the to do column again to be completed by the core team.
 
-Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the ticket ready to be coded, otherwise it will not be included in the backlog.
+Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the issue ready to be worked on, otherwise it will not be included in the backlog.
 
 A ready ticket must contain an explicit title and description referring to:
 - validated & available specifications
