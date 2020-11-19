@@ -123,7 +123,7 @@ _Who adds issues to this column?_ It is the developer working on the issue.
 
 **All the issues with an approved Pull Request that is waiting for validation** by the QA team.
 
-_Who adds issues to this column?_ It is the second developer who reviews and approves the issue, he must also add the 'waiting for QA' label.
+_Who moves issues to this column?_ It is the second maintainer who approves the Pull Request (PRs require at least two approvals), he must also add the "waiting for QA" label on the Pull Request.
 
 #### To be merged
 
@@ -168,7 +168,7 @@ A maintainer can choose to
 - Provides comments wihout blocking or approving
 - Approve the Pull Request
 
-When the Pull Request has been approved (it needs two approvals on the Core repository), the Pull Request must be tested. It is labelled "Waiting for QA" by the second developer who reviews and approves the pull request.
+When the Pull Request has been approved (it needs two approvals on the Core repository), the Pull Request must be tested. It is labelled "Waiting for QA" by the second maintainer who approves the pull request.
 
 ### Testing the Pull Request
 
