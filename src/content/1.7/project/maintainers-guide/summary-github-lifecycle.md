@@ -72,7 +72,7 @@ Community contributions must be approved by the Core product team. Ideally befor
 It is a bug? The specifications must be completed only when it's incomplete or when there's a behavior change.
 It is a feature request or an improvement? It must be validated, prioritized, and specified. Specification can be written by a contributor or by the Core Product team. The Core Product team has the final word in whether the specification is valid or not.
 
-A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher issue, it will be back in the to do column again to be completed by the core team.
+A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher issue, it will be back in the to do column again to be completed by a developer.
 
 Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the issue ready to be worked on, otherwise it will not be included in the backlog.
 
