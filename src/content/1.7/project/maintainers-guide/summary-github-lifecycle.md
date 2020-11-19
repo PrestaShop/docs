@@ -22,21 +22,21 @@ A maintainer will naturally belong to the Developers team but can also assist an
 
 Currently, there are 4 different types of Issues submitted by users on GitHub.
 
-### Feature Request
+### Feature request or improvement
 
-When a user submits a Feature Request, it can be either a Product feature request (example: add a new Back office page) or a Technical feature request (example: support PostgreSQL).
+When a user submits a feature request or an improvement, it can be either a functional request to add or change a behavior (example: add a new Back office page) or a technical request (example: support PostgreSQL).
 
-Product feature requests are labelled "Waiting for PM" while Technical feature request are labelled "Waiting for dev".
+Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev".
 
-The team in charge will then analyse the request and either reject it or accept it. Rejected feature requests are closed while accepted feature requests are added to the roadmap and labelled. Labels will help triaging the backlog.
+The team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted  requests are added to the roadmap and labelled as "to be specified" if researches or specifications are needed or "to do". Labels will help triaging the backlog.
 
 ### Bug report
 
-When a user submits a bug report, the QA team will analyse it and attempt to reproduce it. If it can be reproduced and is confirmed to be an issue, it will be labelled and added to the roadmap.
+When a user submits a bug report, the QA team will analyse it and attempt to reproduce it. If it can be reproduced and is confirmed to be an issue, it will be labelled as "to do" and added to the roadmap.
 
 If it cannot be reproduced, QA team will attempt to explore the issue with the contributor to isolate the very settings responsible for the buggy behavior.
 
-If the user does not answer for 30 days or after multiple attempts, it cannot be reproduced on our side, the issue is closed.
+If the user does not answer for 30 days or after multiple attempts, it cannot be reproduced on our side, the issue is as labelled as "can't reproduced" and closed.
 
 #### Regressions
 
@@ -44,9 +44,9 @@ If the bug report is confirmed, one of the key elements to evaluate is whether i
 
 #### This is not easy
 
-The work of analyzing and testing all submitted bug reports is a very complex one, because there might be a very diverse range of reports. Moreover quite a huge number of them are actually not related to the software but to how the shop is being used: the server configuration, the shop configuration, the installed modules and the installed theme might introduce buggy behaviors that the user mistakenly believes come from the software.
+The work of analyzing and reproducing all submitted bug reports is a very complex one, because there might be a very diverse range of reports. Moreover quite a huge number of them are actually not related to the software but to how the shop is being used: the server configuration, the shop configuration, the installed modules and the installed theme might introduce buggy behaviors that the user mistakenly believes come from the software.
 
-This is why so much Issues cannot be reproducted on our side, but to find it out multiple explorations and attempts are necessary.
+This is why so much issues cannot be reproducted on our side, but to find it out multiple explorations and attempts are necessary.
 
 ### Support request
 
@@ -54,7 +54,7 @@ We sometimes receive support requests on GitHub, ranging from questions about th
 
 ### Other
 
-There are some Issues which do not fit in the previous categories, such as [releases Issues](https://github.com/PrestaShop/PrestaShop/issues/20804). They serve a specific purpose.
+There are some issues which do not fit in the previous categories, such as [releases Issues](https://github.com/PrestaShop/PrestaShop/issues/20804) to follow the progress of a release, or [epic issues](https://github.com/PrestaShop/PrestaShop/issues/9723) used to group together all requests concerning the same subject.
 
 ## Projects
 
@@ -62,7 +62,7 @@ Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects
 
 ### Definition of states
 
-An issue can either be an issue or a pull request. A pull request should always be linked to the issue it fixes. 
+A pull request should always be linked to the issue it fixes. 
 That's said, there should only have issues in the kanban and it always have an owner, be it a PM or a developer.
 
 Community contributions are no longer part of the kanban. Only issues developed or fixed by the Core team are included in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
@@ -70,7 +70,7 @@ Community contributions are no longer part of the kanban. Only issues developed 
 Community contributions must be approved by the Core product team. Ideally before being reviewed, at least before being merged. Here is why:
 
 It is a bug? It must be reported in the functional specifications.
-It is an improvement? It must be validated, prioritized, and specified.
+It is a feature request or an improvement? It must be validated, prioritized, and specified.
 
 A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher issue, it will be back in the to do column again to be completed by the core team.
 
@@ -148,33 +148,36 @@ If there is an issue with the Pull Request and it is not eligible, maintainers k
 
 If the Pull Request is eligible, maintainers can evaluate if the changes brought by the Pull Request are desirables.
 
-- If the Pull Request brings in changes in design, they can ask the validation of UX designers by adding the label "Waiting for UX".
-- If the Pull Request brings in changes to the product, they can ask the validation of Product managers by adding the label "Waiting for PM".
-- If the Pull Request brings in changes in wording, they can ask the validation of UX designers by adding the label "Waiting for wording".
+- If the Pull Request brings in changes in design, they should ask the validation of UX designers by adding the label "Waiting for UX".
+- If the Pull Request brings in changes to the product, they should ask the validation of Product managers by adding the label "Waiting for PM".
+- If the Pull Request brings in changes in wording, they can should the validation of UX designers by adding the label "Waiting for wording".
 
 If one "Waiting for ..." label has been applied, the team in charge will process the Pull Request and then add a "... approved" label. For example if Product team validates the new behavior implemented in a Pull Request, they will remove the "Waiting for PM" label and add the "PM approved" label instead.
 
 There are some automated bots running on GitHub that will help maintainers to label the Pull Requests. For example Prestonbot is able to extract the new wordings and add the "Waiting for wording" label. You can read more about them [here]({{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}).
 
-### About the code
+### Reviewing the code
 
-If the Pull Request is validated and there are no more "Waiting for ..." labels, then it awaits a [code review]({{< ref "/1.7/project/maintainers-guide/reviewing-pull-requests.md" >}}). Maintainers provide this code review.
+If the Pull Request is validated and there are no more "Waiting for ..." labels, then it awaits a [code review]({{< ref "/1.7/project/maintainers-guide/reviewing-pull-requests.md" >}}). The issue associated to the Pull Request is moved in the "To be reviewed" column by the developer assigned to the issue.
+
+Maintainers provide this code review.
 
 A maintainer can choose to
 - Ask for changes in the Pull Request (which blocks merging)
 - Provides comments wihout blocking or approving
 - Approve the Pull Request
 
-When the Pull Request has been approved (it needs two approvals on the Core repository), the Pull Request must be tested. It is labelled "Waiting for QA".
+When the Pull Request has been approved (it needs two approvals on the Core repository), the Pull Request must be tested. It is labelled "Waiting for QA" by the second developer who reviews and approves the pull request.
 
 ### Testing the Pull Request
 
-On regular Pull Requests, the QA team is in charge of testing the Pull Request. They will use the "How to test" part of the Pull Request description to validate the behavior implemented, and also run some more tests to validate there are no regressions.
+On regular Pull Requests, the QA analyst is in charge of testing the Pull Request. They will use the "How to test" part of the Pull Request description to validate the behavior implemented, and also run some more tests to validate there are no regressions.
 
-Some Pull Requests however cannot be tested by QA team, the Developers team might validate them.
+Some technical Pull Requests however cannot be tested by QA analysts, the Developers team might test them.
 
-If the Pull Request is tested successfully, the label "QA approved" is applied. Else, the author is notified about the Issues found by the tests.
+If the Pull Request is tested successfully, the label "QA approved" is applied and the associated issue is moved in the "to be merged" column by the person who tested it.
+Otherwise, the author is notified about the issues found during the tests, the label "waiting for author" is applied and the associated issue is moved in the "in progress" column by the person who tested it.
 
 ### Merging the Pull Request
 
-Pull Requests that have been validated by QA can be merged. They must also be milestoned, and if they fix an issue, the issue must be labelled, milestoned, and closed.
+Pull Requests that have been validated by QA analyst or developer can be merged. The developer who merges the pull request adds the milestone of the version in which the PR will be available. The associated issue must also be milestoned, labelled as "fixed", closed and moved in the "done" column.
