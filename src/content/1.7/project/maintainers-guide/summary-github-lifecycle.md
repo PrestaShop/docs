@@ -126,7 +126,7 @@ _Who adds tickets to this column?_ It is the second developer who reviews and ap
 
 #### To be merged
 
-**All the tickets that are ready to be merged** because approved by the QA team.
+**All the issues with a Pull Request that is ready to be merged**, once approved by the QA team.
 
 _Who adds tickets to this column?_ It is the QA team that has just validated the ticket.
 
