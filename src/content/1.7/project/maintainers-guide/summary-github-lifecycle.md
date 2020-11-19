@@ -84,7 +84,7 @@ A ready ticket must contain an explicit title and description referring to:
 
 #### Not ready
 
-**All the prioritized tickets to include in this version** but that need to be prepared by the core team - assigned to a PM or the lead dev as owner.
+**All the issues that should be included in this version** but that are not yet ready - need to be assigned to an owner, be it a Project Manager or a Lead Developer.
 
 _Who adds tickets to this column?_ Mostly the PM once they approved the ticket, but it could also be the developers.
 
