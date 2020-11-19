@@ -70,7 +70,7 @@ Community contributions are no longer part of the kanban. Only issues developed 
 Community contributions must be approved by the Core product team. Ideally before being reviewed, at least before being merged. Here is why:
 
 It is a bug? The specifications must be completed only when it's incomplete or when there's a behavior change.
-It is a feature request or an improvement? It must be validated, prioritized, and specified.
+It is a feature request or an improvement? It must be validated, prioritized, and specified. Specification can be written by a contributor or by the Core Product team. The Core Product team has the final word in whether the specification is valid or not.
 
 A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher issue, it will be back in the to do column again to be completed by the core team.
 
