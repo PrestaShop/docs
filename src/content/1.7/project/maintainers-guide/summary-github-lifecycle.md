@@ -92,7 +92,7 @@ _Who adds tickets to this column?_ Mostly the PM once they approved the ticket, 
 
 **All the ready tickets reviewed during the grooming** by the lead PM and the lead dev and discussed/assigned to a developer during the sprint planning.
 
-_Who adds tickets to this column?_ It is the lead PM with the approval of the lead dev.
+_Who adds issues to this column?_ It is the lead PM with the approval of lead developers.
 
 #### To do
 
