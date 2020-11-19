@@ -62,21 +62,21 @@ Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects
 
 ### Definition of states
 
-A ticket can either be an issue or a pull request. A pull request should always be linked to the issue it fixes. 
+An issue can either be an issue or a pull request. A pull request should always be linked to the issue it fixes. 
 That's said, there should only have issues in the kanban and it always have an owner, be it a PM or a developer.
 
-Community contributions are no longer part of the kanban. Only tickets developed or fixed by the Core team are included in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the ticket must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+Community contributions are no longer part of the kanban. Only issues developed or fixed by the Core team are included in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
 
 Community contributions must be approved by the Core product team. Ideally before being reviewed, at least before being merged. Here is why:
 
 It is a bug? It must be reported in the functional specifications.
 It is an improvement? It must be validated, prioritized, and specified.
 
-A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher ticket, it will be back in the to do column again to be completed by the core team.
+A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher issue, it will be back in the to do column again to be completed by the core team.
 
 Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the issue ready to be worked on, otherwise it will not be included in the backlog.
 
-A ready ticket must contain an explicit title and description referring to:
+A ready issue must contain an explicit title and description referring to:
 - validated & available specifications
 - validated & available mockups
 - validated & available wording
@@ -86,11 +86,11 @@ A ready ticket must contain an explicit title and description referring to:
 
 **All the issues that should be included in this version** but that are not yet ready - need to be assigned to an owner, be it a Project Manager or a Lead Developer.
 
-_Who adds tickets to this column?_ Mostly the PM once they approved the ticket, but it could also be the developers.
+_Who adds issues to this column?_ Mostly the PM once they approved the issue, but it could also be the developers.
 
 #### Backlog
 
-**All the ready tickets reviewed during the grooming** by the lead PM and the lead dev and discussed/assigned to a developer during the sprint planning.
+**All the ready issues reviewed during the grooming** by the lead PM and the lead dev and discussed/assigned to a developer during the sprint planning.
 
 _Who adds issues to this column?_ It is the lead PM with the approval of lead developers.
 
@@ -104,35 +104,35 @@ _Who adds issues to this column?_ It is the lead PM with the approval of Core de
 
 **All the issues which have been started but lack information and need to be respecified** or that are blocked by some other task.
 
-_Who adds tickets to this column?_ It is the lead PM, with the approval of the lead dev, after the PM/dev assigned to the ticket has raised the blocking element. Add a comment to precise what is expected.
+_Who adds issues to this column?_ It is the lead PM, with the approval of the lead dev, after the PM/dev assigned to the issue has raised the blocking element. Add a comment to precise what is expected.
 
 #### In progress
 
-**All the tickets that are being coded**, assigned to a developer.
+**All the issues that are being coded**, assigned to a developer.
 
 _Who adds issues to this column?_ It is the assigned developer, once he/she starts working on it.
 
 #### To be reviewed
 
-**All the tickets whose code needs to be reviewed** - at least two approvals from core-developers are required.
+**All the issues whose code needs to be reviewed** - at least two approvals from core-developers are required.
 
-_Who adds tickets to this column?_ It is the developer assigned to the ticket.
+_Who adds issues to this column?_ It is the developer assigned to the issue.
 
 #### To be tested
 
 **All the issues with an approved Pull Request that is waiting for validation** by the QA team.
 
-_Who adds tickets to this column?_ It is the second developer who reviews and approves the ticket, he must also add the 'waiting for QA' label.
+_Who adds issues to this column?_ It is the second developer who reviews and approves the issue, he must also add the 'waiting for QA' label.
 
 #### To be merged
 
 **All the issues with a Pull Request that is ready to be merged**, once approved by the QA team.
 
-_Who moves tickets to this column?_ It is the QA analyst that approves the Pull Request.
+_Who moves issues to this column?_ It is the QA analyst that approves the Pull Request.
 
 #### Done
 
-All the tickets that are now part of the history, great work to all! 
+All the issues that are now part of the history, great work to all! 
 
 ## Pull Requests
 
