@@ -105,7 +105,7 @@ _Who adds issues to this column?_ It is the lead PM with the approval of Core de
 
 **All the issues which have been started but lack information and need to be respecified** or that are blocked by some other task.
 
-_Who adds issues to this column?_ It is the lead PM, with the approval of the lead dev, after the PM/dev assigned to the issue has raised the blocking element. Add a comment to precise what is expected.
+_Who adds issues to this column?_ It is the issue owner, after the PM/dev assigned to the issue has explained the blocking element. A comment must be added to explain what is blocking and what is expected.
 
 #### In progress
 
