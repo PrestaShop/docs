@@ -120,7 +120,7 @@ _Who adds tickets to this column?_ It is the developer assigned to the ticket.
 
 #### To be tested
 
-**All the tickets approved that need to be tested** by the QA team.
+**All the issues with an approved Pull Request that is waiting for validation** by the QA team.
 
 _Who adds tickets to this column?_ It is the second developer who reviews and approves the ticket, he must also add the 'waiting for QA' label.
 
