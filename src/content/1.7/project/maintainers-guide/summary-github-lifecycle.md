@@ -76,11 +76,12 @@ A pull request that shows no activity for more than three months must be closed.
 
 Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the issue ready to be worked on, otherwise it will not be included in the backlog.
 
-A ready issue must contain an explicit title and description referring to:
+An issue is ready when it contains:
+- an explicit title and description
 - validated & available specifications
 - validated & available mockups
 - validated & available wording
-- available acceptance tests
+- validated & available acceptance tests
 
 #### Not ready
 
