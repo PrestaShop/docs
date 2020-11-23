@@ -341,3 +341,4 @@ additionally to what you read here it also defines custom repositories which use
 data directly (without using Entities). As well as some examples of [associations](https://symfony.com/doc/3.4/doctrine/associations.html)
 between Entities.
 
+You can also have a look at our dedicated [Example module](https://github.com/PrestaShop/example-modules/tree/master/demodoctrine) which contains a full example, including form handling, multi languages, repositories, ...
