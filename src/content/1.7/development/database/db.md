@@ -98,18 +98,21 @@ The result is boolean saying if the request was properly executed or not.
 <?php
 $now = date('Y-m-d H:i:s');
 /** @var bool $result */
-$result = $db->insert('db_table', array(
-    array(
-        'name' => 'John Doe',
-        'email' => 'john.doe@email.com',
-        'date_add' => $now,
-    ),
-    array(
-        'name' => 'Jane Doe',
-        'email' => 'jane.doe@email.com',
-        'date_add' => $now,
-    ),
-));
+$result = $db->insert(
+    'db_table',
+    [
+        [
+            'name' => 'John Doe',
+            'email' => 'john.doe@email.com',
+            'date_add' => $now,
+        ],
+        [
+            'name' => 'Jane Doe',
+            'email' => 'jane.doe@email.com',
+            'date_add' => $now,
+        ],
+    ]
+);
 ```
 This will execute the `INSERT` SQL command only once.
 
