@@ -92,6 +92,35 @@ $result = $db->insert('db_table', array(
 
 The result is boolean saying if the request was properly executed or not.
 
+### Insert multiple rows in the database (batch insert)
+
+```php
+<?php
+$now = date('Y-m-d H:i:s');
+/** @var bool $result */
+$result = $db->insert(
+    'db_table',
+    [
+        [
+            'name' => 'John Doe',
+            'email' => 'john.doe@email.com',
+            'date_add' => $now,
+        ],
+        [
+            'name' => 'Jane Doe',
+            'email' => 'jane.doe@email.com',
+            'date_add' => $now,
+        ],
+    ]
+);
+```
+This will execute the `INSERT` SQL command only once.
+
+`_DB_PREFIX_` will be automatically prefixed to the table name.
+
+The result is boolean saying if the request was properly executed or not.
+
+
 ### Update a row in the database
 
 ```php
