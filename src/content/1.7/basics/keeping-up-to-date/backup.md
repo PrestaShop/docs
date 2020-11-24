@@ -20,9 +20,10 @@ The first elements to backup are the files on the web server where you have depl
 ### Copy files
 
 To complete this step, your shop folder must be copied somewhere else. Although it can be simply copied on another folder on your server, making an additional copy of your files on another computer is a nice additional security measure. To do so, connect to your server using an FTP, SSH or RDP connection (depending on your server and hosting provider), copy the files in another location, then download them on your computer.
+
 Note that depending on the number of files and your internet connection, this may take a few hours to complete. But if you’re an advanced user and have a complete access to your server, the next part may help you go faster.
 
-### Bonus: Compress your files before download
+#### Bonus: Compress your files before download
 
 As said before, downloading the whole PrestaShop folder one file at a time will take a long time to complete.
 If you can run commands on your server, you can make a backup faster by compressing the whole content in a single archive file, then downloading this file locally.
@@ -87,7 +88,7 @@ Click of “Go”, wait for the dump to be generated, then download it.
 
 ## Other MySQL clients
 
-As said at the beginning of this chapter, there are a lot of ways to connect to a MySQL server. Many different softwares also provide a dump or export option as well.
+There are a lot of ways to connect to a MySQL server. Many different softwares also provide a dump or export option as well.
 
 * MySQL Workbench: https://dev.mysql.com/doc/workbench/en/wb-migration-wizard.html
 * Navicat MySQL: https://www.navicat.com/manual/online_manual/en/navicat/win_manual/#/dump_execute_sql
