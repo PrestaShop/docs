@@ -49,8 +49,8 @@ This example will be based on an example of quotes from various authors that nee
 This is the base entity, it contains:
 - the author name (no need to translate it)
 - a collection of `QuoteLang` which contains all the translatable fields using a [OneToMany Bidirectional relation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/association-mapping.html#one-to-many-bidirectional)
-- it contains the dates of creation and updates (which rely on [Doctrine lifecycle callbacks](https://symfony.com/doc/3.4/doctrine/lifecycle_callbacks.html) to be filled automatically)
-- it also defines an associated repository `PrestaShop\Module\DemoDoctrine\Repository\QuoteRepository`
+- the dates of creation and updates (which rely on [Doctrine lifecycle callbacks](https://symfony.com/doc/3.4/doctrine/lifecycle_callbacks.html) to be filled automatically)
+- the definition of the associated repository `PrestaShop\Module\DemoDoctrine\Repository\QuoteRepository`
 
 ```php
 <?php
@@ -120,7 +120,7 @@ class Quote
     /**
      * @return int
      */
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
     }
@@ -128,7 +128,7 @@ class Quote
     /**
      * @return ArrayCollection
      */
-    public function getQuoteLangs()
+    public function getQuoteLangs(): ArrayCollection
     {
         return $this->quoteLangs;
     }
@@ -137,7 +137,7 @@ class Quote
      * @param int $langId
      * @return QuoteLang|null
      */
-    public function getQuoteLangByLangId(int $langId)
+    public function getQuoteLangByLangId(int $langId): ?QuoteLang
     {
         foreach ($this->quoteLangs as $quoteLang) {
             if ($langId === $quoteLang->getLang()->getId()) {
@@ -152,7 +152,7 @@ class Quote
      * @param QuoteLang $quoteLang
      * @return $this
      */
-    public function addQuoteLang(QuoteLang $quoteLang)
+    public function addQuoteLang(QuoteLang $quoteLang): self
     {
         $quoteLang->setQuote($this);
         $this->quoteLangs->add($quoteLang);
@@ -163,7 +163,7 @@ class Quote
     /**
      * @return string
      */
-    public function getQuoteContent()
+    public function getQuoteContent(): string
     {
         if ($this->quoteLangs->count() <= 0) {
             return '';
@@ -177,7 +177,7 @@ class Quote
     /**
      * @return string
      */
-    public function getAuthor()
+    public function getAuthor(): string
     {
         return $this->author;
     }
@@ -186,7 +186,7 @@ class Quote
      * @param string $author
      * @return $this
      */
-    public function setAuthor(string $author)
+    public function setAuthor(string $author): self
     {
         $this->author = $author;
 
@@ -200,7 +200,7 @@ class Quote
      *
      * @return $this
      */
-    public function setDateAdd(DateTime $dateAdd)
+    public function setDateAdd(DateTime $dateAdd): self
     {
         $this->dateAdd = $dateAdd;
 
@@ -212,7 +212,7 @@ class Quote
      *
      * @return DateTime
      */
-    public function getDateAdd()
+    public function getDateAdd(): DateTime
     {
         return $this->dateAdd;
     }
@@ -224,7 +224,7 @@ class Quote
      *
      * @return $this
      */
-    public function setDateUpd(DateTime $dateUpd)
+    public function setDateUpd(DateTime $dateUpd): self
     {
         $this->dateUpd = $dateUpd;
 
@@ -236,7 +236,7 @@ class Quote
      *
      * @return DateTime
      */
-    public function getDateUpd()
+    public function getDateUpd(): DateTime
     {
         return $this->dateUpd;
     }
@@ -247,7 +247,7 @@ class Quote
      * @ORM\PrePersist
      * @ORM\PreUpdate
      */
-    public function updatedTimestamps()
+    public function updatedTimestamps(): void
     {
         $this->setDateUpd(new DateTime());
 
@@ -313,7 +313,7 @@ class QuoteLang
     /**
      * @return Quote
      */
-    public function getQuote()
+    public function getQuote(): Quote
     {
         return $this->quote;
     }
@@ -322,7 +322,7 @@ class QuoteLang
      * @param Quote $quote
      * @return $this
      */
-    public function setQuote(Quote $quote)
+    public function setQuote(Quote $quote): self
     {
         $this->quote = $quote;
 
@@ -332,7 +332,7 @@ class QuoteLang
     /**
      * @return Lang
      */
-    public function getLang()
+    public function getLang(): Lang
     {
         return $this->lang;
     }
@@ -341,7 +341,7 @@ class QuoteLang
      * @param Lang $lang
      * @return $this
      */
-    public function setLang(Lang $lang)
+    public function setLang(Lang $lang): self
     {
         $this->lang = $lang;
 
@@ -351,7 +351,7 @@ class QuoteLang
     /**
      * @return string
      */
-    public function getContent()
+    public function getContent(): string
     {
         return $this->content;
     }
@@ -360,7 +360,7 @@ class QuoteLang
      * @param string $content
      * @return $this
      */
-    public function setContent(string $content)
+    public function setContent(string $content): self
     {
         $this->content = $content;
 
@@ -371,7 +371,7 @@ class QuoteLang
 
 {{% notice tip %}}
 **More about Doctrine relations**
-If you need more info about how to setup and handle Doctrine relations you can read the [Symfony documentation](https://symfony.com/doc/3.4/doctrine/associations.html) about it.
+If you need more info about how to setup and handle Doctrine relations, you can read the [Symfony documentation](https://symfony.com/doc/3.4/doctrine/associations.html) about it.
 Focus on the `Annotation` sections since PrestaShop only handles this kind of configuration from modules' Entities. Here are some additional link that might be useful:
 - [Doctrine Association mapping](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/association-mapping.html)
 - [Mastering Doctrine Relationships in Symfony 3 (video tutorial)](https://symfonycasts.com/screencast/symfony3-doctrine-relations)
@@ -398,7 +398,7 @@ $languages = $this->langRepository->findAll();
 $entityManager = $container->get('doctrine.orm.default_entity_manager');
 
 // This are some fixtures data
-$quotesData [
+$quotesData = [
     [
         'author' => 'Pierre Augustin Caron de Beaumarchais',
         'quotes' => [
@@ -432,7 +432,7 @@ foreach ($quotesData as $quoteData) {
     }
 
     // Usually we should also persist the QuoteLang entities, but since we setup the cascading persist in the Quote
-    // entity it is not necessary here, this action allows the entity manager to be aware of this new entity
+    // entity it is not necessary here, this action allows the entity manager to be aware of this new entity.
     $entityManager->persist($quote);
 }
 
@@ -444,8 +444,7 @@ $entityManager->flush();
 
 ### Creating your repository service
 
-It is more efficient to have a dedicated repository service to handle your entity, as mentioned when creating the `Quote` entity a repository `PrestaShop\Module\DemoDoctrine\Repository\QuoteRepository`
-has been configured and assigned to this entity, this allows the Doctrine entity manager to map them, but we can also define our own service so that we can get it via a service name.
+It is more efficient to have a dedicated repository service to handle your entity, as mentioned when creating the `Quote` entity a repository `PrestaShop\Module\DemoDoctrine\Repository\QuoteRepository` has been configured and assigned to this entity, this allows the Doctrine entity manager to map them, but we can also define our own service so that we can get it via a service name.
 
 ```yml
 services:
@@ -490,7 +489,7 @@ class QuoteRepository extends EntityRepository
      *
      * @return array
      */
-    public function getQuotes($langId = 0)
+    public function getQuotes(int $langId = 0): array
     {
         /** @var QueryBuilder $qb */
         $qb = $this->createQueryBuilder('q')
