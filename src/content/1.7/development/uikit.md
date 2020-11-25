@@ -1,5 +1,5 @@
 ---
-title: The UIKit
+title: UIKit
 weight: 70
 ---
 
