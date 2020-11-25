@@ -22,7 +22,7 @@ The latest versions of this module allow updates from PS 1.6 to PS 1.7 only.
 
 This module has been reworked internally for PrestaShop 1.6 & 1.7.
 
-Technical details about this major version can be found on a [specific document (Google docs)](https://docs.google.com/document/d/1DQMP6bg5_fgbJQScdidCQCEmAi4MzRgYNhdGVcYOqm4/edit#heading=h.sn6tqvhtvo8p).
+Documentation about this major version is documented in [Upgrade module pages]({{< ref "/1.7/development/upgrade-module/_index.md" >}}).
 
 ## Download / Installation
 
@@ -51,8 +51,7 @@ On PrestaShop 1.6:
 
 ## Usage
 
-The configuration page of the module displays some checks and the
-options available for an upgrade.
+The configuration page of the module displays some checks and the options available for an upgrade.
 
 {{< figure src="/images/1.7/upgrade-migration/image61.png" >}}
 
