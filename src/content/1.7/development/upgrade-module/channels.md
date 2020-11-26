@@ -20,15 +20,15 @@ This channel will look at the latest version of the same major version.
 
 ### RC
 
-Channel currently disabled. This was done to avoid people getting stuck on pre release software of which they cannot upgrade later.
+This channel is currently disabled. This was done to avoid people getting stuck on pre release software of which they cannot upgrade later.
 
 ### Beta
 
-Channel currently disabled. This was done to avoid people getting stuck on pre release software of which they cannot upgrade later.
+This channel is currently disabled. This was done to avoid people getting stuck on pre release software of which they cannot upgrade later.
 
 ### Alpha
 
-Channel currently disabled. This was done to avoid people getting stuck on pre release software of which they cannot upgrade later.
+This channel is currently disabled. This was done to avoid people getting stuck on pre release software of which they cannot upgrade later.
 
 ### Private
 
@@ -36,8 +36,8 @@ This channel allows you to fetch a version from a custom link instead of the off
 
 ### Archive
 
-This channel will not fetch available versions data from PrestaShop API but will look at a `prestashop.zip` file inside your `admin.../autoupgrade/download` folder.
+This channel will not fetch available versions data from PrestaShop API but will look at a `prestashop.zip` file inside your `<admin directory>/autoupgrade/download` folder.
 
 ### Directory
 
-This channel will not fetch available versions data from PrestaShop API but will look at directory content `/admin.../autoupgrade/latest/`
+This channel will not fetch available versions data from PrestaShop API but will look at directory content `/<admin directory>/autoupgrade/latest/`

@@ -14,7 +14,7 @@ Upgrade module can be used as a Command Line Interface.
 Entry point is *cli-upgrade.php*.
 The following parameters are mandatory:
 
-* **--dir**: Tells where the admin directory is.
+* **--dir**: Tells where the admin directory is
 * **--channel**: Selects what upgrade to run (minor, major etc.)
 * **--action**: Sets the step you want to start from (Default: `UpgradeNow`)
 
@@ -36,7 +36,7 @@ Entry point is *cli-rollback.php*.
 The following parameters are mandatory:
 
 * **--dir**: Tells where the admin directory is.
-* **--backup**: Select the backup to restore (this can be found in your folder `<admin>/autoupgrade/backup/`)
+* **--backup**: Select the backup to restore (this can be found in your folder `<admin directory>/autoupgrade/backup/`)
 
 Exemple
 ```
