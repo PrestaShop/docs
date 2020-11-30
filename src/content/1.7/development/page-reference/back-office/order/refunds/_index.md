@@ -140,9 +140,10 @@ In Prestashop 1.7.6 there's no 'action' parameter, but you can still guess what 
 
 if ($order->hasBeenShipped()) {
   // this is a 'return product' action
-} else if ($order->hasBeenPaid() {
+} else if ($order->hasBeenPaid()) {
   // this is a 'standard refund'
 } else {
   // this is a 'cancel product'
+}
 
 ```
