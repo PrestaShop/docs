@@ -52,7 +52,7 @@ When writing a bug report, please use these guidelines:
 - Make sure you can reproduce your bug every time.
 - Make sure your software is up to date.
     - Ideally, test an in-development version to see whether your bug has already been fixed.
-- Search the Forge to see whether your bug has already been reported.
+- Search in github issues to see whether your bug has already been reported.
 - Write a clear summary.
 - Write precise steps to reproduce. Be specific and verbose: do not fear to give details on how you did reproduce the bug.
     - After your steps, precisely describe the observed result and the expected result.
