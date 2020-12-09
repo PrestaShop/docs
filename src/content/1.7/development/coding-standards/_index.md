@@ -103,11 +103,6 @@ class MyClass
             E_USER_DEPRECATED
         );
     }
-
-    public function someNewMethod()
-    {
-        echo 'The new method is here!';
-    }
 }
 ```
 
