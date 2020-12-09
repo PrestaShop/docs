@@ -69,23 +69,45 @@ class MyClass
 
 ### Deprecations
 
-Following [Symfony conventions](https://symfony.com/doc/3.4/contributing/code/conventions.html#deprecating-code), method and class deprecations in PrestaShop must be noted by adding the appropriate Phpdoc as well as a deprecation error:
+Following [Symfony conventions](https://symfony.com/doc/4.4/contributing/code/conventions.html#deprecating-code), method and class deprecations in PrestaShop must be noted by adding the appropriate Phpdoc as well as a deprecation error:
 
 ```php
 <?php
+
+namespace PrestaShop\Awesome\Path;
+
+@trigger_error(
+    sprintf(
+        '%s is deprecated since version 1.7.8.0 and will be removed in the next major version.',
+        MyClass::class
+    ),
+    E_USER_DEPRECATED
+);
+
 /**
- * @deprecated Since 1.7.6.0, use AnotherClass::someNewMethod() instead.
+ * @deprecated Since 1.7.8.0 and will be removed in the next major.
  */
-public function someOldMethod()
+class MyClass
 {
-    @trigger_error(
-        sprintf(
-            '%s is deprecated since version 1.7.6.0. Use %s instead.',
-            __METHOD__,
-            AnotherClass::class . '::someNewMethod()'
-        ),
-        E_USER_DEPRECATED
-    );
+    /**
+     * @deprecated Since 1.7.6.0, use AnotherClass::someNewMethod() instead.
+     */
+    public function someOldMethod()
+    {
+        @trigger_error(
+            sprintf(
+                '%s is deprecated since version 1.7.6.0. Use %s instead.',
+                __METHOD__,
+                AnotherClass::class . '::someNewMethod()'
+            ),
+            E_USER_DEPRECATED
+        );
+    }
+
+    public function someNewMethod()
+    {
+        echo 'The new method is here!';
+    }
 }
 ```
 
