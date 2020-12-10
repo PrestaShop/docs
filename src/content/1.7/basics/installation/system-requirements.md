@@ -204,7 +204,9 @@ PrestaShop needs a few additions to PHP and MySQL in order to fully work. Make s
 * **DOM**. The [DOM extension](https://php.net/manual/en/book.dom.php) is needed to parse XML documents. PrestaShop uses it for various functionalities, like the Store Locator. It is also used by some modules, as well as the pear_xml_parse library.
 * **Fileinfo**. The [File information extension](https://php.net/manual/en/book.fileinfo.php) is used to find out the file type of uploaded files.
 * **GD**. The [GD extension](https://php.net/manual/en/book.image.php) is used to create thumbnails for the images that you upload.
+* **Iconv**. The [ICONV extension](https://www.php.net/manual/en/book.iconv.php) is used to convert character sets.
 * **Intl**. The [Internationalization extension](https://php.net/manual/en/book.intl.php) is used to display localized data, such as amounts in different currencies.
+* **Json**. The [Json extension](https://www.php.net/manual/en/json.installation.php) is used to manage JSON format.
 * **Mbstring**. The [Multibyte string extension](https://www.php.net/manual/en/book.mbstring.php) to perform string operations everywhere.
 * **Zip**. The [Zip extension](https://php.net/manual/en/book.zip.php) is used to expand compressed files such as modules and localization packages.
 
