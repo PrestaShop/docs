@@ -187,7 +187,8 @@ actionAdminMetaSave
     
 actionAdminOrdersTrackingNumberUpdate
 : 
-    Located in: /controllers/admin/AdminOrdersController.php
+    Located in: /controllers/admin/AdminOrdersController.php for PrestaShop <1.7.7
+    Located in: /src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php since 1.7.7
 
     Parameters:
     ```php
