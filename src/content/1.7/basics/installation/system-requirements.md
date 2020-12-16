@@ -208,6 +208,10 @@ PrestaShop needs a few additions to PHP and MySQL in order to fully work. Make s
 * **Intl**. The [Internationalization extension](https://php.net/manual/en/book.intl.php) is used to display localized data, such as amounts in different currencies.
 * **JSON**. The [JSON extension](https://www.php.net/manual/en/json.installation.php) is used to manage JSON format.
 * **Mbstring**. The [Multibyte string extension](https://www.php.net/manual/en/book.mbstring.php) to perform string operations everywhere.
+* **OpenSSL**. The [OpenSSL extension](https://www.php.net/manual/en/book.openssl.php) is used to improve security.
+* **PDO**. The [PHP Data Objects extension](https://www.php.net/manual/en/book.pdo.php) is used to connect to databases.
+* **PDO (MySQL)**. The [PDO_MYSQL driver](https://www.php.net/manual/en/ref.pdo-mysql.php) is used to connect to MySQL databases.
+* **SimpleXML**. The [SimpleXML extension](https://www.php.net/manual/en/intro.simplexml.php) is used to manage XML files.
 * **Zip**. The [Zip extension](https://php.net/manual/en/book.zip.php) is used to expand compressed files such as modules and localization packages.
 
 ### Settings
