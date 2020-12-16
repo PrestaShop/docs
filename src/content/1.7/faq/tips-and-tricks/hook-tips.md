@@ -4,8 +4,8 @@ title: Hook tips
 
 # Hook tips
 
-Let's say we are need to add some javascript to order create page. So we use `hookActionAdminControllerSetMedia`.
-To filter out only order controller we can do the following:
+Let's say we are need to add some javascript to the 'Order create' BO page. So we use `hookActionAdminControllerSetMedia`.
+This hook is called on every BO page, so we need to filter the executions.
 ```php
 if ('AdminOrders' === Tools::getValue('controller')) {
     // now we know we are only applying changes to admin order pages,
@@ -40,8 +40,8 @@ if ('admin_orders_create' === $currentRoute) {
 }
 ```
 
-There are even more methods to check it, for example, thanks to `LegacyParametersConverter` which was introduced in 1.7.7.0, you can get controller action using following approach:
+Other methods are available. For example, thanks to `LegacyParametersConverter` which was introduced in 1.7.7.0, you can get controller action parameter using following approach:
 ```php
 $action = Tools::getValue('action');
 ```
-If `legacy_params` are configured correctly, above mentioned code snipped should return 'addorder'
+The configuration `legacy_params` for migrated page allows to link legacy parameters with new Symfony routes. If they are configured correctly, above mentioned code snippet should return 'addorder'. So you can use the legacy parameters to check a Symfony page identity.
