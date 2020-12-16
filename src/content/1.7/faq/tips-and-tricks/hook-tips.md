@@ -40,7 +40,7 @@ if ('admin_orders_create' === $currentRoute) {
 }
 ```
 
-There is even more methods to check it, for example, thanks to `LegacyParametersConverter` which was introduced in 1.7.7.0, you can get controller action using following approach:
+There are even more methods to check it, for example, thanks to `LegacyParametersConverter` which was introduced in 1.7.7.0, you can get controller action using following approach:
 ```php
 $action = Tools::getValue('action');
 ```
