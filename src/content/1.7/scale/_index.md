@@ -5,7 +5,7 @@ pre: "<b>8. </b>"
 chapter: true
 ---
 
-### Chapter 7
+### Chapter 8
 
 # How to make PrestaShop scale
 
