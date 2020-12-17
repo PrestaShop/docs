@@ -21,7 +21,7 @@ params:
     gitHub: "https://github.com/PrestaShop/PrestaShop/"
     reportBug: "https://github.com/PrestaShop/PrestaShop/issues"
     slack: "https://github.com/PrestaShop/open-source/blob/master/slack/readme.md"
-  coverImage: "1.7/twitter-cover.jpg"
+  coverImage: "images/social-cover.jpg"
 
 # For search functionality
 outputs:
