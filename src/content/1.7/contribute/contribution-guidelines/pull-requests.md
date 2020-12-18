@@ -67,26 +67,26 @@ If you need space, just write a short summary about your change in the table, th
 
 Type is used to describe what kind of a change your Pull Request is. Refer to the following table to choose the most appropriate:
 
-Type | Scope
------|------
-bug fix | The changes fix a bug.
+Type        | Scope
+------------|------
+bug fix     | The changes fix a bug.
 improvement | The changes improve an already existing feature (eg. cosmetic or UX changes, performance improvement, etc). 
 new feature | The changes introduce a behavior that didn't exist before (eg. add a button, a new page, a new block...)
-refacto | The changes only refactor code, without changing any of its side effects.
+refacto     | The changes only refactor code, without changing any of its side effects.
 
 The category is the main part of the project affected by your changes. Choose the code that most closely describes your change:
 
 Code | Scope
 -----|------
-FO | The changes impact the Front Office
-BO | The changes impact the Back Office
-IN | The changes impact the Installer
-WS | The changes impact the Web Services
-CO | The changes impact the Core (non-visible functionality)
-LO | The changes impact localization functionality
-TE | The changes impact automated tests
-ME | The changes only import a git branch into another (eg. merge maintenance branch into develop)
-PM | The changes are related to project management (eg. edit Github pull request form)
+FO   | The changes impact the Front Office
+BO   | The changes impact the Back Office
+IN   | The changes impact the Installer
+WS   | The changes impact the Web Services
+CO   | The changes impact the Core (non-visible functionality)
+LO   | The changes impact localization functionality
+TE   | The changes impact automated tests
+ME   | The changes only import a git branch into another (eg. merge maintenance branch into develop)
+PM   | The changes are related to project management (eg. edit Github pull request form)
 
 {{% notice tip %}}
 Remember, this is only needed for the Pull Request form, not for your commit messages.
