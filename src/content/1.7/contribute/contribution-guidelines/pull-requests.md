@@ -135,5 +135,9 @@ In addition to being code reviewed, each individual contribution is manually ver
 {{% notice tip %}}
 **Think about tests!**
 
-Including automated tests (unit, integration or functional) that verify your changes can singificantly increase the chances that your Pull Request is accepted.
+Including automated tests (unit, integration or functional) that verify your changes can significantly increase the chances that your Pull Request is accepted.
 {{% /notice %}} 
+
+### Possible impacts
+
+PrestaShop's QA team will not only verify the right behavior of your change but also verify that other related parts of the software are still working as expected. For example modifying a CSS class can disrupt the display of all the web pages which rely on it. Please mention all the impacts you are aware of that need to be checked in order to help QA team find and verify all of them. 
