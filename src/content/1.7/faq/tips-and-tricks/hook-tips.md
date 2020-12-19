@@ -13,8 +13,7 @@ if ('AdminOrders' === Tools::getValue('controller')) {
 }
 ```
 
-In case we are using Prestashop version lower than 1.7.7.0, then Order page is not yet migrated to Symfony framework
-and we can check if it has following query parameters
+In case we are using Prestashop version lower than 1.7.7.0, then Order page is not yet migrated to Symfony framework and we can check if it has following query parameters:
 ```php
 if (Tools::getValue('addorder')) {
     // this way we know this is order create page
