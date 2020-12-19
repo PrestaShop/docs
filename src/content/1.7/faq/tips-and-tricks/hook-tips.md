@@ -4,7 +4,7 @@ title: Hook tips
 
 # Hook tips
 
-Let's say we are need to add some javascript to the 'Order create' BO page. So we use `hookActionAdminControllerSetMedia`.
+Let's say we need to add some javascript to the 'Order create' BO page. So we use `hookActionAdminControllerSetMedia`.
 This hook is called on every BO page, so we need to filter the executions.
 ```php
 if ('AdminOrders' === Tools::getValue('controller')) {
