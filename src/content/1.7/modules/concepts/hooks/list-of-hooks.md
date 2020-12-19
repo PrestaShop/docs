@@ -2407,7 +2407,7 @@ overrideMinimalPurchasePrice
     
 sendMailAlterTemplateVars
 : 
-    Located in: /prestashop/classes/Mail.php
+    Located in: /classes/Mail.php
 
     
 termsAndConditions
