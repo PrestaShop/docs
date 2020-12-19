@@ -972,7 +972,7 @@ actionProductFlagsModifier
     
     Add and remove product labels available on product list
 
-    Located in: src/Adapter/Presenter/Product/ProductLazyArray.php
+    Located in: /src/Adapter/Presenter/Product/ProductLazyArray.php
     
     Parameters:
     ```php
@@ -2407,7 +2407,7 @@ overrideMinimalPurchasePrice
     
 sendMailAlterTemplateVars
 : 
-    Located in: /prestashop/classes/Mail.php
+    Located in: /classes/Mail.php
 
     
 termsAndConditions
