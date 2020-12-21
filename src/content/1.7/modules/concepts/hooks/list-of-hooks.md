@@ -2317,7 +2317,16 @@ displayFooterCategory
 : 
     Available since: {{< minver v="1.7.7" >}}
 
-    This hook adds new blocks under the products listing in a category/search
+    This hook adds new blocks under all product listings - in a category, on search page, on bestsellers page etc.
+
+    Located in: /themes/classic/templates/catalog/listing/product-list.tpl
+
+
+displayHeaderCategory
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    This hook adds new blocks above all product listings - in a category, on search page, on bestsellers page etc.
 
     Located in: /themes/classic/templates/catalog/listing/product-list.tpl
 
