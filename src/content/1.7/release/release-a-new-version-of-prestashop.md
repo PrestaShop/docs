@@ -38,7 +38,7 @@ Please check that:
 * check that generated FOS JSON routing file is up-to-date
   * `php bin/console fos:js-routing:dump --format=json --target=admin-dev/themes/new-theme/js/fos_js_routes.json`
 * new native modules are integrated into composer.json and composer.lock
-  * `composer outdated -D prestashop/*`
+  * `composer outdated -D "prestashop/*"`
 * nightly builds are green
   * https://nightly.prestashop.com/
 * latest docker image runs
@@ -56,7 +56,7 @@ If you want to create a new version of PrestaShop from its branch `1.7.6.x`, her
 1. Clone the repository, checkout the branch
   * `git clone git@github.com:PrestaShop/PrestaShop.git`
 2. Update the code to acknowledge the new version:
- - update version number in files `app/AppKernel.php` and `nstall-dev/install_version.php` (see the 1.7.6.6 [example](https://github.com/PrestaShop/PrestaShop/pull/19980))
+ - update version number in files `app/AppKernel.php` and `install-dev/install_version.php` (see the 1.7.6.6 [example](https://github.com/PrestaShop/PrestaShop/pull/19980))
  - update the Changelog file `docs/CHANGELOG.txt` and the `CONTRIBUTORS.md` files with new content and new contributors (see the 1.7.6.6 [example](https://github.com/PrestaShop/PrestaShop/pull/20032))
 3. Use the embedded CLI [PrestaShop Release Creator](https://github.com/PrestaShop/PrestaShop/blob/develop/tools/build/README.md) to create the ZIP archive
 
