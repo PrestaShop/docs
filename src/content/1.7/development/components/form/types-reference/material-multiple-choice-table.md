@@ -14,7 +14,8 @@ but it allows using multiple checkboxes per row. Requires Javascript component t
 | multiple_choices   | array | none          | Each item of array should contain a `name` which represents column header and `valid options` for [ChoiceType](https://symfony.com/doc/3.4/reference/forms/types/choice.html) including the 'choices' array which values are rendered as column selections |
 | choices            | array | none          | The 'choices' array for [ChoiceType](https://symfony.com/doc/3.4/reference/forms/types/choice.html). These values represents the first column of the table.                                                                                                |
 | scrollable         | bool  | true          | Whether to make table scrollable or not                                                                                                                                                                                                                    |
-| headers_to_disable | array | []            | Array of header names to be disabled if needed                                                                                                                                                                                                             |
+| headers_to_disable | array | []            | Array of header names to be disabled if needed |
+| headers_fixed      | bool  | true          | Whether to make table header fixed or not on scroll (since 1.7.8.x) |
 
 ## Required Javascript components
 | Component                                                            | Description                         |
