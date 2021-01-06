@@ -7,17 +7,17 @@ weight: 10
 
 # Getting started
 
-Before diving into the technical aspects of the multistore, this article will show you the basics of setting up multiple shops from your Prestashop's back office.
+Before diving into technical aspects of the multistore, this article will show you the basics of setting up multiple shops from your Prestashop's back office.
 
 ## Enabling multistore
 
-By default, your Prestashop will manage only one store, to manage more than one store you must enable multistore features in the back office.
+By default, your shop will manage only one store, if you want to manage more than one store you must enable multistore features in the back office.
 
-- In **Shop Parameters** > **General**, click on "enable multistore"
+- In **Shop Parameters** > **General**, click on "Enable multistore"
 
 ## Creating a new store
 
-Once the multistore mode has been enabled, a new BO page dedicated to managing your multiple stores appears in the menu:
+Once the multistore mode has been enabled, a new BO page dedicated to the management of your multiple stores appears in the menu:
 
 - **Advanced Parameters** > **Multistore**
 
