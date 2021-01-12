@@ -9,7 +9,7 @@ weight: 30
 
 When multistore is disabled and you fetch a configuration value, you are in a **single store context**, so you are fetching configuration values of your only store. All you have to do is use the **legacy configuration adapter** (more on that later).
 
-But what about when you want to fetch a configuration value while having more than one activated shop ? This is where the **ShopConstraint** value object (VO) comes in handy, this is what you will use in order to specify which store(s)'s configuration value you are targetting.
+But what if you want to fetch a configuration value with more than one activated shop? This is where the **ShopConstraint** value object (VO) comes in handy, this is what you will use in order to specify which store(s) configuration value you are targeting.
 
 {{% notice note %}}
 If you don't know what is a value object, you will find out about it and its use in the [value objects]({{< ref "/1.7/development/architecture/domain/value_objects" >}}) documentation.
@@ -43,7 +43,7 @@ class MyController
         );
 
         // Get the needed configuration value, passing your ShopConstraint object as a third parameter
-        $roundType = (int) $this->shopConfiguration->get('PS_ROUND_TYPE', null, $shopConstraint);
+        $roundType = (int) $configuration->get('PS_ROUND_TYPE', null, $shopConstraint);
 
         // ...
     }

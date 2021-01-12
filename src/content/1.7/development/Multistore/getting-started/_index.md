@@ -7,7 +7,7 @@ weight: 10
 
 # Getting started
 
-Before diving into technical aspects of the multistore, this article will show you the basics of setting up multiple shops from your Prestashop's back office.
+Before diving into technical aspects of the multistore, this article will show you the basics of setting up multiple shops from your PrestaShop's back office.
 
 ## Enabling multistore
 
