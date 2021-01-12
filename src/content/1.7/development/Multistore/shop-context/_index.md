@@ -61,15 +61,14 @@ $shopContextAdapter = $this->get('prestashop.adapter.shop.context');
 // Get a list of all active shops
 $shopList = $shopContext->getShops(false, true);
 
-// Is the current context a group of shops ?
+// Is the current context a group of shops?
 $isShopGroupContext = $shopContext->isShopGroupContext();
 
-// Is the current context a single shop ?
+// Is the current context a single shop?
 $isSingleShopContext = $shopContext->isSingleShopContext();
 
 // Is "all shops" context
 $isAllShopContext = $shopContext->isAllContext();
-
 
 // Get a list of IDs for all shops belonging to the current context (useful is the current context is a group) 
 $shopList = $shopContext->getContextListShopID();

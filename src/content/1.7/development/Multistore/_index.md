@@ -9,7 +9,7 @@ aliases:
 
 # Prestashop multistore feature
 
-PrestaShop allows managing multiple stores in a single Prestashop instance, this feature is called multistore.
+PrestaShop allows managing multiple stores in a single PrestaShop instance, this feature is called multistore.
 
 
 ## Topics
