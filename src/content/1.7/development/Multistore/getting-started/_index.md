@@ -30,3 +30,9 @@ It might be useful to create different shop groups if you want to apply differen
 ## Choosing a shop context
 
 From now on, at the top of the back office pages, you will see a dropdown allowing you to select a shop or a shop group, so that the actions made in configuration pages will be applied to the chosen context (all shops, all shops belonging to a specific group, or a specific shop).
+
+{{< figure src="../../img/multistore-dropdown.png" title="Multistore context dropdown" >}}
+
+{{% notice note %}}
+Not all features and modules are compatible with multistore.
+{{% /notice %}}
