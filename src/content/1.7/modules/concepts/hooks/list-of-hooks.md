@@ -181,13 +181,16 @@ actionAdminMetaSave
 : 
     Called after saving the configuration in AdminMeta
 
-    Located in: /controllers/admin/AdminMetaController.php
+    Located in: /controllers/admin/AdminMetaController.php for PrestaShop < 1.7.6
 
     Parameters: N/A
+
+    Removed in PrestaShop 1.7.6, replacement hooks are `action<HookName>(Form|Save)`
     
 actionAdminOrdersTrackingNumberUpdate
 : 
-    Located in: /controllers/admin/AdminOrdersController.php
+    Located in: /controllers/admin/AdminOrdersController.php for PrestaShop < 1.7.7
+    Located in: /src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php since 1.7.7
 
     Parameters:
     ```php
@@ -232,9 +235,11 @@ actionAdminProductsListingResultsModifier
     
 actionAdminThemesControllerUpdate_optionsAfter
 : 
-    Located in: /controllers/admin/AdminThemesController.php
+    Located in: /controllers/admin/AdminThemesController.php for PrestaShop < 1.7.6
 
     Parameters: N/A
+
+    Removed in PrestaShop 1.7.6, replacement hooks are `action(Before|After)(Create|Update)<FormName>FormHandler`
     
 actionAjaxDie&lt;ControllerName>&lt;Method>Before
 : 
