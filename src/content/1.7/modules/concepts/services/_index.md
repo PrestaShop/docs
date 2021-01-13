@@ -282,7 +282,7 @@ class yourmodule {
     {
         ...
         // The controller here is the ADMIN one so only admin services are accessible
-        $yourService = $this->context->controller->getContainer()->get('your_company.your_module.admin.your_service');
+        $yourService = $this->get('your_company.your_module.admin.your_service');
         ...
     }
 
@@ -290,7 +290,7 @@ class yourmodule {
     {
         ...
         // The controller here is the FRONT one so only front services are accessible
-        $yourService = $this->context->controller->getContainer()->get('your_company.your_module.front.your_service');
+        $yourService = $this->get('your_company.your_module.front.your_service');
         ...
     }
 }
