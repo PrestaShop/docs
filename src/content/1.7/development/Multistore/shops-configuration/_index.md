@@ -71,4 +71,4 @@ This is how configuration values are stored in database, depending on the curren
 When fetching a configuration value, the configuration service will look for the corresponding value for the current context, if there is none, you will get the configuration value for the next parent context having a configuration value, it goes from the most precise to the most generic context:<br>
 **Single shop => Group shop => All shops**
 
-For example, if you are in single shop context but no configuration value is set for this shop, then if there is a configuration value for the shop group, you well get it, otherwise you will get the "all shop" value as a default.
+For example, if you are in single shop context but no configuration value is set for this shop, then if there is a configuration value for the shop group, you will get it, otherwise you will get the "all shop" value as a default.
