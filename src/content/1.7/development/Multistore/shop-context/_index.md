@@ -7,7 +7,7 @@ weight: 20
 
 # Shop context
 
-In many cases, your code will need to know if the multistore mode is enabled, if there are more than one shops activated, and if yes, what is the current shop context. This is where the shop context and multistore feature adapters will come in handy.
+In many cases, your code will need to know if the multistore mode is enabled, if there are more than one shop activated, and if yes, what is the current shop context. This is where the shop context and multistore feature adapters will come in handy.
 
 ## The multistore feature adapter
 
@@ -19,7 +19,7 @@ The multistore feature adapter can be used to:
 
 - detect if multistore was enabled in the configuration,
 
-- detect if multistore is active (if it is enabled, and if there are more than one active shops),
+- detect if multistore is active (if it is enabled, and if there are more than one active shop),
 
 - enable/disable the multistore feature.
 
@@ -48,7 +48,7 @@ $multistoreFeature->enable();
 **Service identifier:** `prestashop.adapter.shop.context` <br>
 **Class:** `PrestaShop\PrestaShop\Adapter\Shop\Context`
 
-When the multistore feature is enabled, at the top of all the back office pages, a dropdown appears, it allows selecting the shop context we want (all shops, a group shop, a single shop...). The shop context adapter will tell you in what context your code is operating.
+When the multistore feature is enabled, at the top of all back office pages, a dropdown appears, it allows selecting the shop context we want (all shops, a group shop, a single shop). The shop context adapter will tell you in what context your code is operating.
 
 Here are some examples of commonly used functions in the shop context adapter:
 
@@ -56,7 +56,7 @@ Here are some examples of commonly used functions in the shop context adapter:
 <?php
 
 // Get the shop context adapter from the service container
-$shopContextAdapter = $this->get('prestashop.adapter.shop.context');
+$shopContext = $this->get('prestashop.adapter.shop.context');
 
 // Get a list of all active shops
 $shopList = $shopContext->getShops(false, true);
