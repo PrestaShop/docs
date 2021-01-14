@@ -11,7 +11,7 @@ Before diving into technical aspects of the multistore, this article will show y
 
 ## Enabling multistore
 
-By default, your shop will manage only one store, if you want to manage more than one store you must enable multistore features in the back office.
+By default, you can manage only one store in your back-office, if you want to manage more than one store you must enable multistore feature.
 
 - In **Shop Parameters** > **General**, click on "Enable multistore"
 
