@@ -53,3 +53,22 @@ class MyController
 {{% notice note %}}
 Note that the ShopConstraint VO is not solely dedicated to being used with the configuration service. If you write a method/function that should have different behaviors depending on a given shop / shop group, then using the ShopConstraint VO is a good idea.
 {{% /notice %}}
+
+## Fetched configuration values depending on context
+
+This is how configuration values are stored in database, depending on the current shop context (in the table `ps_configuration`): 
+
+| Current context | configuration name | id_shop |  id_shop_group  | value |
+|:-------|:-------|:--------|-----------------------|:-------|
+|All shop context | PS_ENABLE_SHOP | NULL | NULL | 'all shop value' |
+|Group shop context (ex: shop group's id is 2)  | PS_ENABLE_SHOP | NULL | 2 | 'group shop value' |
+|Single shop context (ex: shop's id is 3 and its group id is 2 ) | PS_ENABLE_SHOP | 3 | 2 | 'single shop value' |
+
+{{% notice note %}}
+ Note that setting the value of a parent context does not override the values for children contexts that were set before. For example, if a configuration value is set for a **single shop**, setting a configuration value in **all shop context** will not override it.
+{{% /notice %}}
+
+When fetching a configuration value, the configuration service will look for the corresponding value for the current context, if there is none, you will get the configuration value for the next parent context having a configuration value, it goes from the most precise to the most generic context:<br>
+**Single shop => Group shop => All shops**
+
+For example, if you are in single shop context but no configuration value is set for this shop, then if there is a configuration value for the shop group, you well get it, otherwise you will get the "all shop" value as a default.
