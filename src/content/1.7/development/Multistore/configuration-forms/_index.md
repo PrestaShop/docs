@@ -96,5 +96,3 @@ Multistore checkboxes' names begin with `multistore_` followed by the name of th
         return $configuration;
     }
 ````
-
-
