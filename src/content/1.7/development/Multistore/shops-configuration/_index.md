@@ -60,15 +60,15 @@ This is how configuration values are stored in database, depending on the curren
 
 | Current context | configuration name | id_shop |  id_shop_group  | value |
 |:-------|:-------|:--------|-----------------------|:-------|
-|All shop context | PS_ENABLE_SHOP | NULL | NULL | 'all shop value' |
-|Group shop context (ex: shop group's id is 2)  | PS_ENABLE_SHOP | NULL | 2 | 'group shop value' |
-|Single shop context (ex: shop's id is 3 and its group id is 2 ) | PS_ENABLE_SHOP | 3 | 2 | 'single shop value' |
+|All shops context | PS_SHOP_ENABLE | NULL | NULL | 'all shops value' |
+|Group shop context (ex: shop group's id is 2)  | PS_SHOP_ENABLE | NULL | 2 | 'group shop value' |
+|Single shop context (ex: shop's id is 3 and its group id is 2 ) | PS_SHOP_ENABLE | 3 | 2 | 'single shop value' |
 
 {{% notice note %}}
- Note that setting the value of a parent context does not override the values for children contexts that were set before. For example, if a configuration value is set for a **single shop**, setting a configuration value in **all shop context** will not override it.
+ Note that setting the value of a parent context does not override the values for children contexts that were set before. For example, if a configuration value is set for a **single shop**, setting a configuration value in **all shops context** will not override it.
 {{% /notice %}}
 
 When fetching a configuration value, the configuration service will look for the corresponding value for the current context, if there is none, you will get the configuration value for the next parent context having a configuration value, it goes from the most precise to the most generic context:<br>
 **Single shop => Group shop => All shops**
 
-For example, if you are in single shop context but no configuration value is set for this shop, then if there is a configuration value for the shop group, you will get it, otherwise you will get the "all shop" value as a default.
+For example, if you are in single shop context but no configuration value is set for this shop, then if there is a configuration value for the shop group, you will get it, otherwise you will get the "all shops" value as a default.
