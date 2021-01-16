@@ -1395,22 +1395,6 @@ displayAdminOrderSide
 : 
     Available since: {{< minver v="1.7.7" >}}
 
-    This hook displays content in the order view page at the end of the side column
-
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
-
-    Parameters:
-    ```php
-    <?php
-    array(
-      'id_order' => (int) Order ID
-    );
-    ```
-
-displayAdminOrderSide
-: 
-    Available since: {{< minver v="1.7.7" >}}
-
     This hook displays content in the order view page in the side column under the customer view
 
     Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
