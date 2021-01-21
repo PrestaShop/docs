@@ -1245,6 +1245,42 @@ displayAdminForm
 : 
     Located in: admin-dev/themes/default/template/helpers/form/form.tpl
 
+displayAdminGridTableBefore
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    This hook adds new blocks before Grid component table.
+
+    Located in: src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
+
+    Parameters:
+    ```php
+    <?php
+    array(
+      'grid' = Grid $grid,
+      'controller' => (string) $controller
+      'legacy_controller' => (string) $legacyController
+    );
+    ```
+
+displayAdminGridTableAfter
+: 
+    Available since: {{< minver v="1.7.8" >}}
+    
+    This hook adds new blocks after Grid component table.
+
+    Located in: src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
+
+    Parameters:
+    ```php
+    <?php
+    array(
+      'grid' = Grid $grid,
+      'controller' => (string) $controller
+      'legacy_controller' => (string) $legacyController
+    );
+    ```
+
     
 displayAdminListAfter
 : 
