@@ -40,7 +40,9 @@ In order to have the most extensible signatures, these 2 methods take 3 argument
 
 **ID**
 
-This unique identifier needed for each asset. This is useful to either override or unregister something already loaded by the Core or a native module.
+This unique identifier needed for each asset. Reusing the same ID is useful to either override or unregister something already loaded by the Core or a native module.
+
+However, avoid generic names when adding new JS and CSS files to avoid collision with other extensions. Prefixing with your module or theme name is a good start.
 
 **Relative path**
 
