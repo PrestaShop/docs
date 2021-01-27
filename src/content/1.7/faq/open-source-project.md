@@ -12,6 +12,6 @@ Not having an issue fixed immediately (or in a fixed timeframe) does not mean th
 
 Developer time is limited, so if the amount of issues opened in a certain timeframe exceeds the amount of issues that can be processed using the available developer time, tasks will simply pile up. This is common to ALL projects. Due to the number of pending issues, sometimes they may get lost in the pile and be forgotten about, so it's not a bad idea to ping us there from time to time to remind us about it, even if it's been a long while.
 
-But here's the upside: PrestaShop is an open source, community project. If you find that any issue is critical for you, and it's important to have it fixed ASAP, then you can _invest_ into having it done. You can hire a developer to fix it, or if you are a developer yourself, you can try doing it on your own. The most important thing is to share that fix with everyone by [submitting a Pull Request][contribute-pr] – that's what the open source spirit is all about.
+But here's the upside: PrestaShop is an open source, community project. If you find that any issue is critical for you, and it's important to have it fixed as soon as possible, then you can _invest_ into having it done. You can hire a developer to fix it, or if you are a developer yourself, you can try doing it on your own. The most important thing is to share that fix with everyone by [submitting a Pull Request][contribute-pr] – that's what the open source spirit is all about.
 
 [contribute-pr]: {{< ref "/1.7/contribute/contribute-pull-requests/" >}}
