@@ -13,7 +13,7 @@ As a developer, there are several changes that you could and should bring to the
 
 When your development has an impact on the front office, whether you are building a theme or simply a module which displays information to the customer, you should force the template file compilation and disable the cache, so as to always see the result of your changes directly.
 
-Go to the “Performances” page under the “Advanced parameters” menu to change the following Smarty settings:
+Go to the “Performance” page under the “Advanced parameters” menu to change the following Smarty settings:
 
 * Template cache: switch it to “Force compilation”.
 * Cache: disable it.
@@ -32,9 +32,9 @@ You, on the other hand, need this information in order to correct any potential 
 define('_PS_MODE_DEV_', true);
 ```
 
-## Using the dump() function
+You can also enable developer mode directly from your back-office, go to the “Performance” page under the “Advanced parameters” menu and change the following setting: "Debug mode" to "Yes". Don't forget to disable developer mode as soon as you've done debugging your code.
 
-These two functions enable you to check for the state of a given variable at a specific place within your code.
+## Using the dump() function
 
 PrestaShop used to have custom debug functions available for developers: `p($variable)` and `d($variable)`. They were used to display the content of a variable, and were really a wrapper around the well-known `print_r()` method. On top of that, PrestaShop had the `ppp()` and `ddd()` functions, which were respectively the aliases of `p()` and `d()`; and the various `fd()`, `epr()` and `dieObject()` functions.
 
@@ -54,11 +54,15 @@ You can read more about the multistore mode in [PrestaShop 1.7 User Guide](https
 
 ## About the configuration files
 
-There are three main configuration files, all located in the `/config` folder:
+There are four main configuration files, three located in the `/config` folder:
 
 * `config.inc.php`
 * `defines.inc.php`
 * `smarty.config.inc.php`
+
+and one located in the `/app/config` folder:
+
+* `parameters.php`
 
 ### config.inc.php
 
@@ -78,6 +82,8 @@ On the contrary, when in production mode, you must hide error messages as much a
 
 * Make sure that `define('_PS_MODE_DEV_', false);` is set to `false`.
 
+You can override constant values from this file by setting them in `/config/defines_custom.inc.php`. This is also a great place to put your custom constants which needs to be available globally in the system.
+
 ### smarty.config.inc.php
 
 This file contains all the Smarty-related settings.
@@ -90,9 +96,13 @@ The Smarty cache system should always be disabled, as it is not compatible with 
 
 When in production mode, `$smarty->force_compile` must be set to `false`, as it will give a 30% boost to your page load time.
 
-On the other hand, when editing a `.tpl` file, you must delete the `/tools/smarty/compile` folder (except the `index.php` file) in order to see your changes applied.
+On the other hand, when editing a `.tpl` file, you must delete the `/var/cache/(dev|prod)/smarty/compile` folder (except the `index.php` file) in order to see your changes applied or clear cache directly from Back-Office.
 
 Note that this setting can be made directly from the back office, in the “Performance” page under the “Advanced parameters” menu.
+
+### parameters.php
+
+This file contains some of important settings such as database connection details and caching mechanism. If you change something in this file, make sure to delete cache files manually from `/var/cache/(dev|prod)` folder.
 
 ## Disable the Back-Office token protection
 
