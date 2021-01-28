@@ -23,8 +23,8 @@ PrestaShop controllers follow these naming conventions:
 
 We have some standard action names:
 - `indexAction` : display the listing
-- `createAction` : show language creation form page and handle its submit
-- `editAction` : show language edit form page and handle its submit
+- `createAction` : show Customer creation form page and handle its submit
+- `editAction` : show Customer edit form page and handle its submit
 - `deleteAction` : delete an item
 
 For a complete example see code below.
@@ -104,7 +104,7 @@ class CustomerController extends AbstractAdminController
 }
 ```
 
-For a default page, you should be following our standard action names. Applying this rule, this means you should have matching template names:
+For a default page, you should be following our standard action names. Applying this rule means that you should have matching template names:
 - `index.html.twig`
 - `create.html.twig`
 - `edit.html.twig`
