@@ -62,12 +62,24 @@ class MyFormType extends TranslatorAwareType
 
 ```
 
+Last but not least, you must make the frontend aware of these state modifications, you just need to add the `MultistoreConfigField` in your javascript:
+
+```js
+window.prestashop.component.initComponents(
+    [
+        'MultistoreConfigField',
+    ],
+);
+````
+
+
+
 Doing this will have several effects:
 
 - Each field implementing the `multistore_configuration_key` will have a multistore checkbox before them.
 - The checkboxes will automatically be checked or not depending on the configuration for the current shop context.
 - When the configuration value is inherited, the checkbox will be unchecked, and the field disabled and greyed out.
-- Checking or unchecking a checkbox will enable/disable the field for the current shop context.
+- Thanks to the javascript component, checking or unchecking a checkbox will enable/disable the field for the current shop context.
 
 
 ## Saving data from a multistore configuration form
