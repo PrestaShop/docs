@@ -4,6 +4,7 @@ menuTitle: TinyMCE
 ---
 
 # Modify the TinyMCE configuration
+{{< minver v="1.7.8" title="true" >}}
 
 You are able to modify the configuration by using the `actionAdminControllerSetMedia` hook.
 
