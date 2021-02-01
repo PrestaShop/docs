@@ -72,27 +72,57 @@ Doing this will have several effects:
 
 ## Saving data from a multistore configuration form
 
-- When receiving the data from the form, you will also receive values from the multistore checkboxes that were added to your form.
-- Fields having their multistore checkboxes unchecked should not be saved.
+When receiving the data from the form, you will also receive values from the multistore checkboxes that were added to your form:
 
-Multistore checkboxes' names begin with `multistore_` followed by the name of the field it is applied to. For example the checkbox having the name `multistore_maintenance_text` applies to the field having the name `maintenance_text`. On the frontend part, if the checkbox is unchecked, the corresponding field has been disabled, but it would be a good idea to check in the backend that when a checkbox is unchecked, you don't deal with the data of its corresponding field, and to remove the disabled fields from the list of fields that will be treated, here is an example from `src/Adapter/Shop/MaintenanceConfiguration.php`:
+- When a multistore checkbox is pushed unchecked, we want to delete the configuration value for the current context (so that it inherits its value from parent contexts).
+- When a multistore checkbox is pushed checked, we want to save the configuration value for the current context.
+
+When your configuration form is multistore compatible, your configuration class should extend the `AbstractMultistoreConfiguration` abstract class instead of directly implementing the `DataConfigurationInterface` interface. This will give you access to helper methods that will make it easy to store the right configuration values at the right place and for the right context.
+
+The two helper methods are
+
+- **`getShopConstraint()`:** this will give you a ShopConstraint object reflecting the current context
+```php
+public function getShopConstraint(): ?ShopConstraint
+```
+- **`updateConfigurationValue()`:** this will save or delete the configuration value for the given configuration key, taking into account the state of the multistore checkbox and the current shop context. Note that this helper method is totally compatible with non multistore fields.
+```php
+public function updateConfigurationValue(string $configurationKey, string $fieldName, array $input, ?ShopConstraint $shopConstraint, array $options = []): void
+```
+
+As an example, see how it's used in the `MaintenanceConfiguration` class
 
 ```php
 <?php
 
-    public function removeDisabledFields(array $configuration): array
+/**
+ * This class loads and saves data configuration for the Maintenance page.
+ */
+class MaintenanceConfiguration extends AbstractMultistoreConfiguration
+{
+
+    // .... data loading doesn't change
+
+
+    /**
+     * {@inheritdoc}
+     */
+    public function updateConfiguration(array $configurationInputValues)
     {
-        if ($this->shopContext->isAllShopContext()) {
-            return $configuration;
-        }
+        $shopConstraint = $this->getShopConstraint();
 
-        // Remove fields that have their multistore checkbox unchecked
-        foreach ($configuration as $key => $value) {
-            if (substr($key, 0, 11) !== 'multistore_' && $configuration['multistore_' . $key] !== true) {
-                unset($configuration[$key]);
-            }
-        }
+        // note that $configurationInputValues is an associative array where keys are field names and values are field values, it's the data coming from the form
 
-        return $configuration;
+        $this->updateConfigurationValue('PS_SHOP_ENABLE', 'enable_shop', $configurationInputValues, $shopConstraint);
+        $this->updateConfigurationValue('PS_MAINTENANCE_IP', 'maintenance_ip', $configurationInputValues, $shopConstraint);
+        $this->updateConfigurationValue('PS_MAINTENANCE_TEXT', 'maintenance_text', $configurationInputValues, $shopConstraint, ['html' => true]);
+
+        return [];
     }
-````
+}
+```
+
+As you can see, by using these two helper methods you can easily store your configuration values in a multistore context.
+
+
+
