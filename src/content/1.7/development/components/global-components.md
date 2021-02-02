@@ -4,6 +4,7 @@ weight: 70
 ---
 
 # Global JavaScript components?
+{{< minver v="1.7.8" title="true" >}}
 
 It's a [new system](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/app/utils/init-components.js) available since the 1.7.8 version mainly created for module developers, which allow you to use components we already use in the core without importing it. [Here is the ADR](https://github.com/PrestaShop/ADR/blob/master/0009-expose-js-components-using-window-variable.md) where we decided what we should do to avoid this problem.
 
