@@ -32,8 +32,7 @@ Please check that:
 * All controllers are secured by annotations, and legacy link are provided for Symfony routes
   * `php bin/console prestashop:linter:security-annotation`
   * `php bin/console prestashop:linter:legacy-link`
-* There are no known vulnerabilities in composer dependencies
-  * `php bin/console security:check`
+* Please verify there are no known vulnerabilities in composer dependencies thanks to [Fabpot Local PHP Security Checker][security-checker]
 * For minor and major releases, check we have not forgotten important `@todo` annotations in modern code
 * All new hooks are [registered][register-new-hook]
 * Check that generated [FOS JSON routing][fos-js-routing] file is up-to-date
@@ -185,3 +184,4 @@ The release is now complete, congratulations. You can close the Relese Tracker G
 [how-to-build-assets]: {{< ref "/1.7/development/compile-assets.md" >}}
 [git-create-tag]: https://git-scm.com/book/en/v2/Git-Basics-Tagging
 [release-tracker-issue]: https://github.com/PrestaShop/PrestaShop/issues/19959
+[security-checker]: https://github.com/fabpot/local-php-security-checker
