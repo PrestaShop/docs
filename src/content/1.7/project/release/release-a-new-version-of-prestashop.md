@@ -122,27 +122,27 @@ Open GitHub and go to ["Releases" page][core-github-releases], click "Draft a ne
 - use the Changelog as description
 - attach the ZIP archive
 
-And publish the new release !
+And publish the new release!
 
 You can update the Release Tracker GitHub issue: step "Release" is done.
 
 ## 4. Make a new version on prestashop.com
 
-This information is private to PrestaShop company. It simply involves uploading the ZIP on the website for distribution.
+This information is currently private to PrestaShop company. It simply involves uploading the ZIP on the website for distribution.
 
 ## 5. Configure Addons API for the new version
 
-This information is private to PrestaShop company.
+This information is currently private to PrestaShop company.
 It aims to allow the Addons API to serve modules for the new version.
 
 ## 6. Configure Internationalization API for the new version
 
-This information is private to PrestaShop company.
+This information is currently private to PrestaShop company.
 It aims to allow the Internationalization API to serve localization packs for the new version.
 
 ## 7. Update XML stream to allow auto-upgrade module to perform upgrades to the new version
 
-This information is private to PrestaShop company.
+This information is currently private to PrestaShop company.
 
 It aims to update the XML document used by PrestaShop API for the upgrade process. Once updated, the [auto-upgrade module][autoupgrade-repository] is able to parse it and acknowledge the new available version.
 
