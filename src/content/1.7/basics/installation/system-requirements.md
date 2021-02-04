@@ -226,3 +226,52 @@ extension = php_gd2.dll
 allow_url_fopen = On
 allow_url_include = Off
 ```
+
+## MySQL / MariaDB requirements
+
+### MySQL / MariaDB compatibility chart
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2" style="text-align:center">MySQL Version</th>
+      <th colspan="2" style="text-align:center">MariaDB Version</th>
+    </tr>
+    <tr class="h-version-titles">
+      <th>PrestaShop Version</th>
+      <th>&le;&nbsp;5.6</th>
+      <th>&ge;&nbsp;5.7</th>
+      <th>&le;&nbsp;10.1</th>
+      <th>&ge;&nbsp;10.2</th>
+    </tr>
+  </thead>
+<tbody>
+  <tr>
+    <td>&le;&nbsp;1.7.6</td>
+    <td class="support-yes"><span class="sr-only">Yes</span></td>
+    <td class="support-yes">
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
+      <span class="sr-only">Recommended version</span>
+    </td>
+    <td class="support-yes"><span class="sr-only">Yes</span></td>
+    <td class="support-yes">
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
+      <span class="sr-only">Recommended version</span>
+    </td>
+  </tr>
+  <tr>
+    <td>&ge;&nbsp;1.7.7</td>
+    <td class="support-no"><span class="sr-only">No</span></td>
+    <td class="support-yes">
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
+      <span class="sr-only">Recommended version</span>
+    </td>
+    <td class="support-no"><span class="sr-only">No</span></td>
+    <td class="support-yes">
+      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
+      <span class="sr-only">Recommended version</span>
+    </td>
+  </tr>
+</tbody>
+</table>
