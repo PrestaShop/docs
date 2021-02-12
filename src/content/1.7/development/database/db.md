@@ -70,8 +70,8 @@ It prevent to loop in several arrays in order to get the first value of the firs
 <?php
 $request = "INSERT INTO `' . _DB_PREFIX_ . 'some_table` (`id_table`) VALUES (10)";
 
-/** @var bool */
-$db->execute($request);
+/** @var bool $result */
+$result = $db->execute($request);
 ```
 
 Return true if the request was properly executed, false otherwise.
