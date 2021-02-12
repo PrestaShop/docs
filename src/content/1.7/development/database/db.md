@@ -137,6 +137,19 @@ Method signature: `update($table, $data, $where = '', $limit = 0, $null_values =
 
 The result is boolean saying if the request was properly executed or not.
 
+### Delete rows in the database
+
+```php
+<?php
+/** @var bool $result */
+$result = $db->delete('db_table', 'id_table = 10');
+```
+Method signature: delete($table, $where = '', $limit = 0, $use_cache = true, $add_prefix = true)
+
+`_DB_PREFIX_` will be automatically prefixed to the table name if $add_prefix is true (by default).
+
+The result is boolean saying if the request was properly executed or not.
+
 ### Security
 
 To prevent SQL injection, make sure variables used in queries are correctly escaped: 
