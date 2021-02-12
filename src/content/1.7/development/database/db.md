@@ -141,4 +141,4 @@ The result is boolean saying if the request was properly executed or not.
 To prevent SQL injection, make sure variables used in queries are correctly escaped: 
  * cast with `(int)` for integers
  * use `pSQL()` for strings
-The `bqSQL()` function can also be used. Note that it escapes the `\`` character, then it calls `pSQL()`.
+The `bqSQL()` function can also be used. Note that it escapes the ``` ` ``` character, then it calls `pSQL()`.
