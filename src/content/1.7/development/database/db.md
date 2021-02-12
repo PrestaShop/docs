@@ -133,6 +133,6 @@ $result = $db->update('db_table', array(
 ```
 Method signature: update($table, $data, $where = '', $limit = 0, $null_values = false, $use_cache = true, $add_prefix = true)
 
-`_DB_PREFIX_` will be automatically prefixed to the table name if $add_prefix is true (by default).
+`_DB_PREFIX_` will be automatically prefixed to the table name if `$add_prefix` is `true` (by default).
 
 The result is boolean saying if the request was properly executed or not.
