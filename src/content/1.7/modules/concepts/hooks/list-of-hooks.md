@@ -1103,7 +1103,7 @@ Doesn't necessarily have to be paid.
     
 actionValidateStepComplete
 : 
-    This hook is called on checkout page, when confirming delivery section. Carrier modules that display extra content to the customer can hook here and prevent him from advancing further, if he did enter required information. 
+    This hook is called on checkout page, when confirming delivery section. Carrier modules that display extra content to the customer can hook here and prevent him from advancing further, if he didn't enter required information. 
     
     Be aware that the hook will only be called for a module specified in `external_module_name` property of the carrier.
 
