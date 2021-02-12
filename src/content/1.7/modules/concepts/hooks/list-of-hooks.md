@@ -1101,6 +1101,36 @@ Doesn't necessarily have to be paid.
     );
     ```
     
+actionValidateStepComplete
+: 
+    This hook is called on checkout page, when confirming delivery section. Carrier modules that display extra content to the customer can hook here and prevent him from advancing further, if he did enter required information. 
+    
+    Be aware that the hook will only be called for a module specified in `external_module_name` property of the carrier.
+
+    Located in: /classes/checkout/CheckoutDeliveryStep.php
+
+    Parameters:
+    ```php
+    <?php
+    array(
+      'step_name' => 'delivery',
+      'request_params' => $requestParams,
+      'completed' => &$isComplete,
+    );
+    ```
+    
+    Usage:
+    ```php
+    <?php
+    public function hookActionValidateStepComplete($params)
+    {
+        if ( --- your logic --- ) {
+            $this->context->controller->errors[] = $this->l('Please select a pickup branch!');
+            $params['completed']  = false;
+        }
+    }
+    ```
+    
 actionWatermark
 : 
     After a watermark has been added to an image.
