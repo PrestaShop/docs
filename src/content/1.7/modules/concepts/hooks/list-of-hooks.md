@@ -1758,8 +1758,7 @@ displayBeforeCarrier
     
 displayCarrierExtraContent
 : 
-    Display additional content for a carrier (e.g pickup points)
-This hook calls only the module related to the carrier, in order to add options when needed
+    Displays additional content for a carrier. It can be used for selecting pickup points, delivery time etc. This hook calls only the module related to the carrier, in order to add options only when needed. Your module name must be specified in `external_module_name` property of the carrier, otherwise it won't be called.
 
     Located in: /classes/checkout/DeliveryOptionsFinder.php
 
