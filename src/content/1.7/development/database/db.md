@@ -32,7 +32,8 @@ $result = $db->executeS($request);
 
 As the method deals with raw SQL requests, the `_DB_PREFIX_` must be used.
 
-The result is an associative array, containing an array for each row.
+The result is an array of associative arrays, containing an array for each row.
+It should only be used for read only queries: SELECT, SHOW, etc.
 
 ### Execute a raw SQL request (SELECT only) and get the first row
 
