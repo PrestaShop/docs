@@ -138,5 +138,7 @@ The result is boolean saying if the request was properly executed or not.
 
 ### Security
 
-To avoid SQL injection, make sure to cast or sanitize your variables: use (int) for integers and pSQL() for strings.
+To prevent SQL injection, make sure variables used in queries are correctly escaped: 
+ * cast with `(int)` for integers
+ * use `pSQL()` for strings
 bqSQL() can also be used. Note that it escape the ` character and calls pSQL().
