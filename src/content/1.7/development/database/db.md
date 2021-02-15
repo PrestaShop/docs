@@ -135,3 +135,10 @@ $result = $db->update('db_table', array(
 `_DB_PREFIX_` will be automatically prefixed to the table name.
 
 The result is boolean saying if the request was properly executed or not.
+
+### Security
+
+To prevent SQL injection, make sure variables used in queries are correctly escaped: 
+ * cast with `(int)` for integers
+ * use `pSQL()` for strings
+The `bqSQL()` function can also be used. Note that it escapes the ``` ` ``` character, then it calls `pSQL()`.
