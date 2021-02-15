@@ -121,7 +121,7 @@ This will execute the `INSERT` SQL command only once.
 The result is boolean saying if the request was properly executed or not.
 
 
-### Update a row in the database
+### Update row(s) in the database
 
 ```php
 <?php
@@ -131,8 +131,9 @@ $result = $db->update('db_table', array(
     'date_upd' => date('Y-m-d H:i:s'),
 ), 'id_table = 10', 1, true);
 ```
+Method signature: `update($table, $data, $where = '', $limit = 0, $null_values = false, $use_cache = true, $add_prefix = true)`
 
-`_DB_PREFIX_` will be automatically prefixed to the table name.
+`_DB_PREFIX_` will be automatically prefixed to the table name if `$add_prefix` is `true` (by default).
 
 The result is boolean saying if the request was properly executed or not.
 
