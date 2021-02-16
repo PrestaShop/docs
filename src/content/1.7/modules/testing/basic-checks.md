@@ -86,3 +86,34 @@ Using cache file ".php_cs.cache".
 
 Checked all files in 0.085 seconds, 12.000 MB memory used
 ```
+
+## License headers
+
+When the extension is open-source, sharing the license is one important task.
+
+[Header-Stamp](https://github.com/PrestaShopCorp/header-stamp) is a tool that applies a header on all compatible files (PHP, JS...).
+In these headers, details can be found about the author, the license, the original year of publication.
+Everytime there is a change to make, one command would apply it to all your files.
+
+This tool is part of `prestashop/php-dev-tools` available on [Packagist](https://packagist.org/packages/prestashop/php-dev-tools), which can be required via composer.
+
+As an example, the license AFL is going to be applied on a PrestaShop native module. There is a AFL template existing in the lib that can be used,
+and there are a few folder to ignore while these changes are applied (`vendor` because libraries have their own license, test & _dev because they
+won't be part of the release package).
+
+Commands to install and use the tool would be:
+
+```bash
+# Install dependencies
+composer require --dev prestashop/php-dev-tools
+
+# Apply header block
+php vendor/bin/header-stamp --license=vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,tests,_dev
+```
+
+To return the list of files that would be updated because their header block is missing or different from the one to apply, use the
+`--dry-run` parameter.
+
+```bash
+php vendor/bin/header-stamp --license=vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,tests,_dev --dry-run
+```
