@@ -97,8 +97,8 @@ Everytime there is a change to make, one command would apply it to all your file
 
 This tool is part of `prestashop/php-dev-tools` available on [Packagist](https://packagist.org/packages/prestashop/php-dev-tools), which can be required via composer.
 
-As an example, the license AFL is going to be applied on a PrestaShop native module. There is a AFL template existing in the lib that can be used,
-and there are a few folder to ignore while these changes are applied (`vendor` because libraries have their own license, test & _dev because they
+As an example, the license AFL is going to be applied on a PrestaShop native module. There is a AFL template existing in the package that can be used,
+and there are a few folders to ignore while these changes are applied (`vendor` because libraries have their own license, `test` and `_dev` because they
 won't be part of the release package).
 
 Commands to install and use the tool would be:
