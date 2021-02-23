@@ -130,6 +130,10 @@ For instance, translating the string "Welcome to this page!" can be done like th
 {l s='Welcome to this page!' mod='mymodule'}
 ```
 
+{{% notice info %}}
+The `mod` argument value must go with simple quotes. Double quotes are not recognized.
+{{% /notice %}}
+
 In our sample module, the `mymodule.tpl` file...
 
 ```html
