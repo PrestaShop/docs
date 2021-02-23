@@ -1,0 +1,50 @@
+name: Build
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: sudo apt-get install python-pygments
+
+      - name: Setup Hugo
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.76.5'
+
+      - name: Clean public directory
+        run: rm -rf ./src/public
+
+      - name: Make assets
+        run: cd src/themes/hugo-theme-learn/_src && npm install && npm run build && cd ../../../
+
+      - name: Build
+        run: ../hugo
+
+      - name: Create a CNAME file which mapping to our custom domain
+        run: echo 'devdocs.prestashop.com' > public/CNAME
+
+      - name: Return to root directory
+        run: cd ..
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./src/public
