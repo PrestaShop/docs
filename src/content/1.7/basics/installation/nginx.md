@@ -97,7 +97,7 @@ server {
         add_header X-Content-Type-Options nosniff;
     }
 
-    # Force files inupload directory to be downloaded
+    # Force files in upload directory to be downloaded
     location ~ ^/upload/ {
         add_header Content-Disposition Attachment;
         add_header X-Content-Type-Options nosniff;
@@ -118,7 +118,7 @@ server {
         access_log off;
     }
 
-    # [REQUIRED EDIT IF MULTILANG]
+    # [REQUIRED EDIT] if you are using multiple languages
     # rewrite ^/fr$ /fr/ redirect;
     # rewrite ^/fr/(.*) /$1;
 
@@ -157,7 +157,7 @@ server {
         deny all;
     }
     # Source code directories
-    location ~ ^/(app|bin|cache|classes|config|controllers|docs|localization|override|src|tests|tools|translations|travis-scripts|vendor|var)/ {
+    location ~ ^/(app|bin|cache|classes|config|controllers|docs|localization|override|src|tests|tests-legacy|tools|translations|travis-scripts|vendor|var)/ {
         deny all;
     }
     # vendor in modules directory
