@@ -56,14 +56,15 @@ There are some issues which do not fit in the previous categories, such as [rele
 
 ## Projects
 
-Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects)’ tab of the PrestaShop’s GitHub repository, versions kanbans organize the Core team’s work. Both the product and the tech teams use it to prepare and plan the next developments and, since we deal with an open source project, the purpose of having those kanbans public is to help the community and the external mainteners to know what is at stake.
+Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects)’ tab of the PrestaShop’s GitHub repository, versions kanbans define the scope of a minor version in terms of what the Core Maintainers and Core Product teams agree must be included before that release is out.
+Both the product and the maintainers teams use it to prepare and plan the next developments and, since we deal with an open source project, the purpose of having those kanbans public is to help the community and the external mainteners to know what is at stake.
 
 ### Definition of states
 
 A pull request should always be linked to the issue it fixes. 
-That's said, there should only have issues in the kanban and it always have an owner, be it a product manager or a developer.
+That's said, there should only have "must-have" issues in the kanban and it always have an owner, be it a product manager or a developer.
 
-Community contributions are no longer part of the kanban. Only issues developed or fixed by the Core team are included in the kanban, as it should reflect the Core team’s work. For example, an issue reports a bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+"Nice to have" community issues are no longer part of the kanban. Only "must-have" issues are included in the kanban, as it must reflect the progress of the version. For example, an issue reports a must-have bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
 
 Community contributions must be approved by the Core product team. Ideally before being reviewed, at least before being merged. Here is why:
 
@@ -83,13 +84,13 @@ An issue is ready when it contains:
 
 #### Not ready
 
-**All the issues that should be included in this version** but that are not yet ready - need to be assigned to an owner, be it a Product Manager or a Lead Developer.
+**All the must-have issues that should be included in this version** but that are not yet ready - need to be assigned to an owner, be it a Product Manager or a Lead Developer.
 
-_Who adds issues to this column?_ Mostly the Product Manager once they approved the issue, but it could also be the core developers.
+_Who adds issues to this column?_ Mostly the Product Manager once they approved the issue, but it could also be the core maintainers.
 
 #### Backlog
 
-**All issues that are considered _ready_** by the lead Product Manager and the lead dev. Issues in this column will be discussed with Core developers.
+**All issues that are considered _ready_** by the lead Product Manager and the lead dev. Issues in this column will be discussed with the core maintainers.
 
 _Who adds issues to this column?_ It is the lead Product Manager with the approval of lead developers.
 
@@ -97,7 +98,7 @@ _Who adds issues to this column?_ It is the lead Product Manager with the approv
 
 **All the issues that are considered _ready_ and validated by the developers**, optionally assigned to one.
 
-_Who adds issues to this column?_ It is the lead Product Manager with the approval of Core developers. 
+_Who adds issues to this column?_ It is the lead Product Manager with the approval of core maintainers. 
 
 #### Blocked / Need specs
 
@@ -127,7 +128,7 @@ _Who moves issues to this column?_ It is the second maintainer who approves the 
 
 **All the issues with a Pull Request that is ready to be merged**, once approved by the QA team.
 
-_Who moves issues to this column?_ It is the QA analyst or the core developer that approves the Pull Request, he/she must also add the "QA approved" label on the Pull Request.
+_Who moves issues to this column?_ It is the QA analyst or the core maintainers that approves the Pull Request, he/she must also add the "QA approved" label on the Pull Request.
 
 #### Done
 
@@ -139,7 +140,7 @@ When a contributor submits a Pull Request, it goes through multiple stages.
 
 ### Is it eligible
 
-Maintainers must first validate that the Pull Request is eligible to review (the template is filled, an issue is linked to the Pull Request, the license headers are correct, the target branch is the right one ...).
+Core Maintainers must first validate that the Pull Request is eligible to review (the template is filled, an issue is linked to the Pull Request, the license headers are correct, the target branch is the right one ...).
 
 If the Pull Request is not eligible, maintainers kindly ask the contributor to fix it and apply the label "Waiting for author" on the Pull Request.
 If the issue associated to the Pull Request is in a project, then the issue should be moved in the "in progress" column.
