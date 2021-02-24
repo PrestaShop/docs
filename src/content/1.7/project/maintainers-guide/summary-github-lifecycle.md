@@ -86,7 +86,7 @@ An issue is ready when it contains:
 
 **All the must-have issues that should be included in this version** but that are not yet ready - need to be assigned to an owner, be it a Product Manager or a Lead Developer.
 
-_Who adds issues to this column?_ Mostly the Product Manager once they approved the issue, but it could also be the core maintainers.
+_Who adds issues to this column?_ Mostly Core product team members once they choosed to prioritize the issue as a "must-have", but it could also be the core maintainers.
 
 #### Backlog
 
