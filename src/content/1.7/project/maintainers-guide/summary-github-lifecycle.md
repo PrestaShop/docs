@@ -13,7 +13,7 @@ This page quickly describes how [Issues](https://guides.github.com/features/issu
 On GitHub, there are mainly three teams working together on the project.
 
 - Core Product Team: this team takes care of the product vision of the software. It has Product Managers, UX Designers, and a Product Content Manager (employees of PrestaShop's company)
-- Quality Assurance (QA) team: this team takes care of ensuring the quality of the software. It has QA analysts, QA automation engineers (employees of PrestaShop's company) and issues managers.
+- Quality Assurance (QA) team: this team takes care of ensuring the quality of the software. It has QA analysts, QA automation engineers and issues managers in charge of reproducing and qualifying issues (employees of PrestaShop's company).
 - Core Maintainers Team: this team takes care of the code and act as maintainer for the project (most of them are employees of the PrestaShop Company, but not all of them)
 
 A maintainer will naturally belong to the Developers team but can also assist and work with the Product Team and QA Team.
@@ -26,7 +26,7 @@ Currently, there are 4 different types of Issues submitted by users on GitHub.
 
 When a user submits a feature request or an improvement, it can be either a functional request to add or change a behavior (example: add a new Back office page) or a technical request (example: support PostgreSQL).
 
-Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev" by the issue manager (belonging to the QA team) in charge of qualifying the issues.
+Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev" by the issue manager.
 
 The Core Product team or the Core Maintainers team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted requests are added to the backlog and labelled as "to be specified" if researches or specifications are needed or "to do". Labels will help triaging the backlog.
 
