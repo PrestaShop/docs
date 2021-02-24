@@ -26,27 +26,25 @@ Currently, there are 4 different types of Issues submitted by users on GitHub.
 
 When a user submits a feature request or an improvement, it can be either a functional request to add or change a behavior (example: add a new Back office page) or a technical request (example: support PostgreSQL).
 
-Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev" by the QA team in charge of qualifying the issues.
+Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev" by the issue manager (belonging to the QA team) in charge of qualifying the issues.
 
-The Core Product team or the Core Developers team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted requests are added to the roadmap and labelled as "to be specified" if researches or specifications are needed or "to do". Labels will help triaging the backlog.
+The Core Product team or the Core Maintainers team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted requests are added to the backlog and labelled as "to be specified" if researches or specifications are needed or "to do". Labels will help triaging the backlog.
 
 ### Bug report
 
-When a user submits a bug report, the QA team will analyse it and attempt to reproduce it. If it can be reproduced and is confirmed to be an issue, it will be labelled as "to do" and added to the roadmap.
+When a user submits a bug report, the issue manager will analyse it and attempt to reproduce it. If it can be reproduced and is confirmed to be an issue, it will be labelled as "to do" and added to the backlog.
 
-If it cannot be reproduced, QA team will attempt to explore the issue with the author to isolate the very settings responsible for the buggy behavior.
-
-If the user does not answer for 30 days or after multiple attempts, it cannot be reproduced on our side, the issue is labelled as "can't reproduced" and closed by the QA team.
-
-#### Regressions
-
-If the bug report is confirmed, one of the key elements to evaluate is whether it is a regression. A regression is a bug that cannot be observed in the previous PrestaShop version, it means the software quality level has decreased instead of increasing. Regressions are usually milestoned to be fixed in the next patch version.
-
-#### This is not easy
+If it cannot be reproduced, the issue manager will attempt to explore the issue with the author to isolate the very settings responsible for the buggy behavior.
 
 The work of analyzing and reproducing all submitted bug reports is a very complex one, because there might be a very diverse range of reports. Moreover quite a huge number of them are actually not related to the software but to how the shop is being used: the server configuration, the shop configuration, the installed modules and the installed theme might introduce buggy behaviors that the user mistakenly believes come from the software.
 
 This is why so much issues cannot be reproducted on our side, but to find it out multiple explorations and attempts are necessary.
+
+If the user does not answer for 30 days or after multiple attempts, it cannot be reproduced on our side, the issue is labelled as "can't reproduced" and closed by the issue manager.
+
+#### Regressions
+
+If the bug report is confirmed, one of the key elements to evaluate is whether it is a regression. A regression is a bug that cannot be observed in the previous PrestaShop version, it means the software quality level has decreased instead of increasing. Regressions are usually milestoned to be fixed in the next patch version.
 
 ### Support request
 
