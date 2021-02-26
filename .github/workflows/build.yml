@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install python-pygments
 
-      - name: Setup Hugo
+      - name: Setup Node
         uses: actions/setup-node@v2
         with:
           node-version: '12'
@@ -35,7 +35,7 @@ jobs:
         run: cd src/themes/hugo-theme-learn/_src && npm install && npm run build && cd ../../../
 
       - name: Build
-        run: cd src/ && ../hugo
+        run: cd src/ && hugo
 
       - name: Create a CNAME file which mapping to our custom domain
         run: cd src/ && echo 'devdocs.prestashop.com' > public/CNAME
