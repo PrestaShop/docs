@@ -35,10 +35,10 @@ jobs:
         run: cd src/themes/hugo-theme-learn/_src && npm install && npm run build && cd ../../../
 
       - name: Build
-        run: ../hugo
+        run: cd src/ && ../hugo
 
       - name: Create a CNAME file which mapping to our custom domain
-        run: echo 'devdocs.prestashop.com' > public/CNAME
+        run: cd src/ && echo 'devdocs.prestashop.com' > public/CNAME
 
       - name: Return to root directory
         run: cd ..
