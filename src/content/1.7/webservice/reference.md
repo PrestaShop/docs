@@ -13,19 +13,19 @@ All webservice APIs are accessible through the `/api/` gateway. For instance, `h
 
 Most resources can be accessed in a REST manner, with the 5 main HTTP request methods: GET, POST, PUT, DELETE, HEAD. The only exceptions are:
 
-| Key | GET | POST | PUT | DELETE | HEAD |
-|-----|-----|------|-----|--------|------|
-| search | X | | | | X |
-| stock_availables | X | X | | | X |
-| stock_movements | X | | | | X |
-| stocks | X | | | | X |
-| supply_order_details | X | | | | X |
-| supply_order_histories | X | | | | X |
-| supply_order_receipt_histories | X | | | | X |
-| supply_order_states | X | | | | X |
-| supply_orders | X | | | | X |
-| warehouse_product_locations | X | | | | X |
-| warehouses | X | X | X | | X |
+| Key                            | GET | POST | PUT | DELETE | HEAD |
+|--------------------------------|:---:|:----:|:---:|:------:|:----:|
+| search                         | ✅  |      |     |        | ✅   |
+| stock_availables               | ✅  | ✅   |     |        | ✅   |
+| stock_movements                | ✅  |      |     |        | ✅   |
+| stocks                         | ✅  |      |     |        | ✅   |
+| supply_order_details           | ✅  |      |     |        | ✅   |
+| supply_order_histories         | ✅  |      |     |        | ✅   |
+| supply_order_receipt_histories | ✅  |      |     |        | ✅   |
+| supply_order_states            | ✅  |      |     |        | ✅   |
+| supply_orders                  | ✅  |      |     |        | ✅   |
+| warehouse_product_locations    | ✅  |      |     |        | ✅   |
+| warehouses                     | ✅  | ✅   | ✅  |        | ✅   |
 
 All resources have two schemas that are accessible via a parameter:
 
