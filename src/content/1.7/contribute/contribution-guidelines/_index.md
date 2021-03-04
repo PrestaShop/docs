@@ -87,7 +87,7 @@ Changes submitted through your Pull Request will be reviewed by PrestaShop maint
 
 Reviewing code is hard, takes a lot of time, and can be exhausting. Making your pull request as easy to review as possible will help in getting it accepted swiftly. 
 
-- **Take time to describe your change.** Completing the [Pull Request Form]({{< ref "pull-requests" >}}), explaining the reasons behind your technical choices as well as any part of the code that could be tricky to understand – these simple tasks can help maintainers understand your change and be confident about acceptiong them.
+- **Take time to describe your change.** Completing the [Pull Request Form]({{< ref "pull-requests" >}}), explaining the reasons behind your technical choices as well as any part of the code that could be tricky to understand – these simple tasks can help maintainers understand your change and be confident about accepting them.
 
 - **Avoid submitting very large PRs when it can be avoided.** If you modified a lot of files or a very big number of lines, it is unlikely that you're addressing a single issue: please try and submit one PR for each issue you solve. This way, a problem in one change won't block other valid changes from being merged.
     
