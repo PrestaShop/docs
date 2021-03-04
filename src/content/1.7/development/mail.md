@@ -78,7 +78,7 @@ class mymodulemycontrollerModuleFrontController extends ModuleFrontController
             NULL,  //from name
             NULL, //file attachment
             NULL, //mode smtp
-            '/modules/yourmodulename/mails' //custom template path
+            _PS_MODULE_DIR_ . 'yourmodulename/mails' //custom template path
         );
     }
 }
