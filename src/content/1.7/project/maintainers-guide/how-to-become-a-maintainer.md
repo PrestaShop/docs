@@ -1,5 +1,6 @@
 ---
 title: How to become a maintainer
+weight: 10
 ---
 
 # How to become a maintainer

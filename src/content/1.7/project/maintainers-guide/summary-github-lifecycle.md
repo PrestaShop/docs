@@ -1,5 +1,6 @@
 ---
 title: Summary of how GitHub Issues and Pull Requests are processed
+weight: 20
 ---
 
 # Summary of how GitHub Issues and Pull Requests are processed

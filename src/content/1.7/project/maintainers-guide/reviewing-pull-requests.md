@@ -1,5 +1,6 @@
 ---
 title: Reviewing Pull Requests
+weight: 30
 ---
 
 # Reviewing Pull Requests
