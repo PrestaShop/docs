@@ -48,7 +48,7 @@ If the bug report is confirmed, one of the key elements to evaluate is whether i
 
 ### Support request
 
-Sometimes support requests are submitted on GitHub, ranging from questions about the software to "please help me to do X in my shop" requests. GitHub is for the software development so usually these requests are redirect to other channels using the [Support template](https://github.com/PrestaShop/PrestaShop/issues/new?template=3_support_question.md).
+Sometimes support requests are submitted on GitHub, ranging from questions about the software to "please help me to do X in my shop". GitHub issues are not a Q&A forum, so these requests are usually redirected to other channels using the [Support template](https://github.com/PrestaShop/PrestaShop/issues/new?template=3_support_question.md) and closed.
 
 ### Other
 
