@@ -52,7 +52,7 @@ Sometimes support requests are submitted on GitHub, ranging from questions about
 
 ### Other
 
-There are some issues which do not fit in the previous categories, such as [releases Issues](https://github.com/PrestaShop/PrestaShop/issues/20804) to follow the progress of a release, or [epic issues](https://github.com/PrestaShop/PrestaShop/issues/9723) used to group together all requests concerning the same subject.
+Some issues do not fit in the previous categories, such as [Releases Issues](https://github.com/PrestaShop/PrestaShop/labels/Release) which are used to follow the progress of a release, or [Epic Issues](https://github.com/PrestaShop/PrestaShop/labels/Epic) that group together all requests belonging to the same subject.
 
 ## Projects
 
