@@ -64,7 +64,7 @@ You can update the Release Tracker GitHub issue: step "Docker image" is done.
 * Check that the release note has been published on the [Build Blog](http://build.prestashop.com)
 * Check that the [PrestaShop.com](https://www.prestashop.com) shows the right "latest version", and the links are correct
 * Check that the latest release has an available docker image on the [Docker repository][docker-repository]
-* Check that the [public demo](http://demo.prestashop.com) runs on the latest version (a few hours after the docker image release)
+* Check that the [public demo](https://demo.prestashop.com) runs on the latest version (a few hours after the docker image release)
 
 
 {{% notice tip %}}

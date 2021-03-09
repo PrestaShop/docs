@@ -25,7 +25,7 @@ The following tasks will require you to perform changes and submit them as a Pul
 
 * **Make sure your branch is up-to-date with upstream.** Especially if you already had a local clone of the repository.
 
-* **Create a local branch for you work.** Keep it! You will need to go back to it later. 
+* **Create a local branch for your work.** Keep it! You will need to go back to it later. 
 
 ## 3. Merge any not-yet published security fixes
 
@@ -96,7 +96,7 @@ By default, the release package will create two files in a new subdirectory in `
 **Make sure to keep them both!** You will need them later on.
 {{% /notice %}}
 
-As an optional step, consider downloading the latest stable release package and compare the contents of the zip archieves to look for suspicious changes.
+As an optional step, consider downloading the latest stable release package and compare the contents of the zip archives to look for suspicious changes.
 
 ## 6. Upload your build for archiving
 
@@ -130,7 +130,7 @@ For patch versions, the beta and RC phase can be skipped (example: `prestashop_1
 {{% notice warning %}}
 **This step requires special rights.**
 
-Send both files to a maintainer from the PrestaShop Company with access to the Archive Drive to perform this step.
+Send both ZIP and XML files to a maintainer from the PrestaShop Company with access to the Archive Drive to perform this step.
 {{% /notice %}}
 
 ## 7. Communicate and wait for QA validation

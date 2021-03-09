@@ -68,7 +68,7 @@ Create a [new Release Draft on GitHub](https://github.com/PrestaShop/PrestaShop/
 {{% callout %}}
 ##### If the Changelog content is too long
 
-It's not inusual to have very long changelogs, especially in minor versions. To reduce its size, we recommend putting it in a collapsable paragraph:
+It's not unusual to have very long changelogs, especially in minor versions. To reduce its size, we recommend putting it in a collapsable paragraph:
 
 ```html
 # Full Changelog
