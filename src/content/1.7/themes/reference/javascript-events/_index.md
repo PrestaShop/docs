@@ -54,7 +54,7 @@ Event Name            | Description
  `updateDeliveryForm` | During checkout, if the delivery address is modified, this event will be trigged.
  `changedCheckoutStep` | Each checkout step **submission** will fire this event.
  `updateProductList`  | On every product list page (category, search results, pricedrop and so on), the list is updated via ajax calls if you change filters or sorting options. Each time the DOM is reloaded with new product list, this event is triggered.
- `clickQuickView`     | If your theme handles it, this event will be trigged when use click on the quickview link.
+ `clickQuickView`     | If your theme handles it, this event will be trigged when you click on the quickview link.
  `updateProduct`      | On the product page, selecting a new combination will reload the DOM via ajax calls. After the update, this event is fired.
  `updatedProduct`      | On the product page, selecting a new combination will reload the DOM via ajax calls. After the update, this event is fired.
  `handleError`        | This event is fired after a fail of POST request. Have the `eventType` as first parameter.
