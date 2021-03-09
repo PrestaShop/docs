@@ -38,7 +38,7 @@ If it cannot be reproduced, the issue manager will attempt to explore the issue 
 
 The work of analyzing and reproducing all submitted bug reports is a very complex one, because there might be a very diverse range of reports. Moreover quite a high number of them are actually not related to the software but to how the shop is being used: the server configuration, the shop configuration, the installed modules and the chosen theme might introduce an unexpected behavior that the user mistakenly blames on a software defect.
 
-This is why so much issues cannot be reproducted on our side, but to find it out multiple explorations and attempts are necessary.
+This is why so many issues cannot be reproduced by issue managers, but figuring that out might require a long time, multiple attempts, and lots of questions.
 
 If the issue manager is unable to reproduced the problem after multiple attempts, or if the user does not answer after 30 days, the issue is labelled as "Can't reproduce" and closed.
 
