@@ -38,7 +38,7 @@ Hence we didn't want to return json data about the result and let javascript
 reconstitute the page.
 
 We made the core generate the sub template part and return it to the client. In the
-end javascript is only used to the place the content of HTML placeholders.
+end javascript is only used to replace the content of HTML placeholders.
 
 Each ajax call will regenerate the following templates:
 
