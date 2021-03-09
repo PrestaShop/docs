@@ -13,7 +13,7 @@ This page quickly describes how [Issues](https://guides.github.com/features/issu
 On GitHub, there are mainly three teams working together on the project.
 
 - Core Product Team: this team takes care of the product vision of the software. It has Product Managers, UX Designers, and a Product Content Manager (employees of the PrestaShop Company)
-- Quality Assurance (QA) team: this team takes care of ensuring the quality of the software. It has QA analysts, QA automation engineers and issues managers in charge of reproducing and qualifying issues (employees of PrestaShop's company).
+- Quality Assurance (QA) team: this team takes care of ensuring the quality of the software. It has QA analysts, QA automation engineers and issues managers in charge of reproducing and qualifying issues (employees of the PrestaShop company).
 - Core Maintainers Team: this team takes care of the code and act as maintainer for the project (most are employees of the PrestaShop Company, but not all of them)
 
 A maintainer will naturally belong to the Developers team but can also assist and work with the Product Team and QA Team.
