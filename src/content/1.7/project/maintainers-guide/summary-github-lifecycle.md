@@ -40,7 +40,7 @@ The work of analyzing and reproducing all submitted bug reports is a very comple
 
 This is why so much issues cannot be reproducted on our side, but to find it out multiple explorations and attempts are necessary.
 
-If the user does not answer for 30 days or after multiple attempts, it cannot be reproduced on our side, the issue is labelled as "can't reproduced" and closed by the issue manager.
+If the issue manager is unable to reproduced the problem after multiple attempts, or if the user does not answer after 30 days, the issue is labelled as "Can't reproduce" and closed.
 
 #### Regressions
 
