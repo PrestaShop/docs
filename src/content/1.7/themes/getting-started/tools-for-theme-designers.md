@@ -70,7 +70,7 @@ All operating systems give you access to a command line interface (CLI).
 
 * Unix/Linux: Oh come on, don't tell me you don't already use bash, tcsh, zsh or any other POSIX variation of the concept! :)
 
-There a many default tools and commands which you can use and even combine, but we're going to use some non-standards tools: npm, Git, Composer and Webpack. Because they are non-standards, you will have to install and configure them first.
+There are many default tools and commands which you can use and even combine, but we're going to use some non-standards tools: npm, Git, Composer and Webpack. Because they are non-standards, you will have to install and configure them first.
 
 Note that you do not HAVE TO use these exactly: you can choose alternatives such as Gulp or Grunt if you're more familiar with them. We simply use Webpack :)
 
