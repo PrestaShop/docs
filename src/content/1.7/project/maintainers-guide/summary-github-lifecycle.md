@@ -28,7 +28,7 @@ When a user submits a feature request or an improvement, it can be either a func
 
 Functional requests are labelled "Waiting for PM" while technical requests are labelled "Waiting for dev" by the issue manager.
 
-The Core Product team or the Core Maintainers team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted requests are added to the backlog and labelled as "to be specified" if researches or specifications are needed or "to do". Labels will help triaging the backlog.
+The Core Product team or the Core Maintainers team in charge will then analyse the request and either reject it or accept it. Rejected requests are closed with "no change required" label, while accepted requests are added to the backlog and labelled either as "to be specified" (if researches or specifications are needed) or "to do". Labels will help triaging the backlog.
 
 ### Bug report
 
