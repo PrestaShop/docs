@@ -61,7 +61,7 @@ After this step, you should obtain two files:
 - Add the contents of the changelog at the top end of PrestaShop's [Changelog file][changelog-file].
 - Update PrestaShop's [Contributors file][contributors-file] by adding the new contributors.
 - Commit your changed files with following message: `// Changelog [version]`
-- You may push this branch to your own fork, if you wish to.
+- You may push this branch to your own (private) fork, if you wish to.
 
 {{% notice tip %}}
 If you're lost, see [this example][update-author-pr-example] from the 1.7.6.6 release.
