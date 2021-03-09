@@ -34,7 +34,7 @@ The Core Product team or the Core Maintainers team in charge will then analyse t
 
 When a user submits a bug report, the issue manager will analyse it and attempt to reproduce it. If it can be reproduced and is confirmed to be an issue, it will be labelled as "to do" and added to the backlog.
 
-If it cannot be reproduced, the issue manager will attempt to explore the issue with the author to isolate the very settings responsible for the buggy behavior.
+If it cannot be reproduced, the issue manager will attempt to explore the issue with the author to find out if the undesired behavior is indeed a defect in PrestaShop or a misconfiguration or specific to the author's environment.
 
 The work of analyzing and reproducing all submitted bug reports is a very complex one, because there might be a very diverse range of reports. Moreover quite a huge number of them are actually not related to the software but to how the shop is being used: the server configuration, the shop configuration, the installed modules and the installed theme might introduce buggy behaviors that the user mistakenly believes come from the software.
 
