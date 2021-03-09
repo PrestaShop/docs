@@ -70,7 +70,7 @@ All operating systems give you access to a command line interface (CLI).
 
 * Unix/Linux: Oh come on, don't tell me you don't already use bash, tcsh, zsh or any other POSIX variation of the concept! :)
 
-There a many default tools and commands which you can use and even combine, but we're going to use some non-standards tools: npm, Git, Composer and Webpack. Because they are non-standards, you will have to install and configure them first.
+There are many default tools and commands which you can use and even combine, but we're going to use some non-standards tools: npm, Git, Composer and Webpack. Because they are non-standards, you will have to install and configure them first.
 
 Note that you do not HAVE TO use these exactly: you can choose alternatives such as Gulp or Grunt if you're more familiar with them. We simply use Webpack :)
 
@@ -203,7 +203,7 @@ Let’s see where we’re at. So far was have installed:
 * Composer: A better way to manage your PHP dependencies.
 * npm: A better way to automate tasks (among many other things).
 
-It’s all fine and dandy, but all of this remains very developer-centric, and there comes a time when you you have to think about the user, and optimize for the browser.
+It’s all fine and dandy, but all of this remains very developer-centric, and there comes a time when you have to think about the user, and optimize for the browser.
 Fear not, for Webpack is here to save the day! Webpack is a “module bundler”, meaning that it turns your assets into JavaScript modules, and packs them into static assets.
 
 So, the main interest of using Webpack is that it will compile all your styles into a single CSS file. This way, your theme will make only one HTTP request for this single file, and since your browser will cache it for later re-use, it will even download this file only once.

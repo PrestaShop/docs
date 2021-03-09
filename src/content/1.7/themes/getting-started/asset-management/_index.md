@@ -112,7 +112,7 @@ For example:
 <tr class="even">
 <td align="left">inline</td>
 <td align="left">true|false (default: false)</td>
-<td align="left">If true, your style will be printed inside <code>&lt;script type=&quot;text/javascript&quot;&gt;</code> tags inside your HTML. Use with caution.</td>
+<td align="left">If true, your JavaScript will be printed inside <code>&lt;script type=&quot;text/javascript&quot;&gt;</code> tags inside your HTML. Use with caution.</td>
 </tr>
 <tr class="odd">
 <td align="left">attributes</td>
