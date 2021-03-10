@@ -56,7 +56,7 @@ Some issues do not fit in the previous categories, such as [Releases Issues](htt
 
 ## Projects
 
-Available in the ‘[Projects](https://github.com/PrestaShop/PrestaShop/projects)’ tab of the PrestaShop’s GitHub repository, versions kanbans define the scope of a minor version in terms of what the Core Maintainers and Core Product teams agree must be included before that release is out.
+Available in the "[Projects](https://github.com/PrestaShop/PrestaShop/projects)" tab of PrestaShop’s GitHub repository, versions kanban boards define the scope of a minor version in terms of what the Core Maintainers and Core Product teams agree must be included before that release is out.
 Both the product and the maintainers teams use it to prepare and plan the next developments and, since we deal with an open source project, the purpose of having those kanbans public is to help the community and the external mainteners to know what is at stake.
 
 ### Definition of states
