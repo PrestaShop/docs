@@ -15,12 +15,12 @@ How to setup the benchmark of your PrestaShop shop
 - git
 - php-7+
 - <a href="https://getcomposer.org/download/composer">composer</a>
-- The prestashop version you want to bench
+- The PrestaShop version you want to bench
 
 ## Dockerized installation of benchmark
 
 To get an automatically pre-populated shop, you can use the following github repository:
-**[Prestashop performance project](https://github.com/PrestaShop/performance-project)**
+**[PrestaShop performance project](https://github.com/PrestaShop/performance-project)**
 
 ## Manually prepare your benchmark
 
@@ -28,7 +28,7 @@ To get an automatically pre-populated shop, you can use the following github rep
 
 Before launching a benchmark of PrestaShop, you need to put a few entries in your database.
 
-The prestashop shop Generator will help you to do this.
+The PrestaShop shop Generator will help you to do this.
 
 First clone the project from the following url, and set the number of entries you want for each main entities:
 
@@ -92,13 +92,13 @@ directory
 php app/console.php
 ```
 
-#### How to use this dataset during Prestashop install?
+#### How to use this dataset during PrestaShop install?
 
 Actually it's quite simple. Just copy the content of the ```generated_data``` folders (three folders should be 
-there: data, img and langs) in the prestashop ```install/fixtures/fashion``` folders (overwrite the folders already 
+there: data, img and langs) in the PrestaShop ```install/fixtures/fashion``` folders (overwrite the folders already 
 there).
 
-Then launch a standard prestashop install.
+Then launch a standard PrestaShop install.
 
 ### Prepare your shop
 
@@ -111,7 +111,7 @@ The smarty cache should be enabled, but the multi-front synchronisation should b
 
 Make sure also to have at least french and english enabled and the internationalization page.
 
-If you are running a prestashop version from source, properly setup your environment for production:
+If you are running a PrestaShop version from source, properly setup your environment for production:
 
 ```text
 export SYMFONY_ENV=prod
