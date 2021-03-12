@@ -13,7 +13,7 @@ How to benchmark your PrestaShop Shop (Front-office)
 
 Follow instruction on **[Back-Office benchmark page](https://devdocs.prestashop.com/1.7/scale/benchmark/back-office/)** to get a pre-populated shop and to run Gatling scenarios on it.
 
-**[Prestashop performance project](https://github.com/PrestaShop/performance-project)** on Github includes Front-Office scenarios you can edit to get your own scenarios running.
+**[PrestaShop performance project](https://github.com/PrestaShop/performance-project)** on Github includes Front-Office scenarios you can edit to get your own scenarios running.
 
 ## Benchmark with `Siege` tool
 
