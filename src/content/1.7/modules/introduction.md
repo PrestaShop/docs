@@ -82,7 +82,7 @@ Each module has its own sub-folder inside the `/modules` folder:
 About the cache
 ---------------
 
-The `/cache/class_index.php` file contains the link between the class
+The `/var/cache/ENV/class_index.php` file contains the link between the class
 and the declaration file. If there is a caching issue, this file can
 safely be deleted.
 
@@ -96,5 +96,5 @@ When the store's front-end doesn't quite reflect your changes and
 emptying the browser's cache is not effective, you should try emptying
 the following folders:
 
-    /cache/smarty/cache
-    /cache/smarty/compile
+    /var/cache/ENV/smarty/cache
+    /var/cache/ENV/smarty/compile
