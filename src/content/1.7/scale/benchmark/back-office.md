@@ -13,7 +13,7 @@ How to benchmark your PrestaShop Shop (Back-office)
 In order to benchmark the performances of the backoffice of your shop, you will use the **[Gatling](https://gatling.io/)** testing tool.
 
 ><b>Note:
->Backoffice benchmark is only possible starting with prestashop 1.7.4.0!</b>
+>Backoffice benchmark is only possible starting with PrestaShop 1.7.4.0!</b>
 
 >If you want still want to run the test for version < 1.7.4.0, take a look at this PR: https://github.com/PrestaShop/PrestaShop/pull/8876
 
@@ -30,7 +30,7 @@ In order to benchmark the performances of the backoffice of your shop, you will 
 ### Clone the repository
 
 To follow these instructions, you will use the following github repository:
-**[Prestashop performance project](https://github.com/PrestaShop/performance-project)**
+**[PrestaShop performance project](https://github.com/PrestaShop/performance-project)**
 
 ```
 git clone git@github.com:PrestaShop/performance-project.git
@@ -38,14 +38,14 @@ git clone git@github.com:PrestaShop/performance-project.git
 
 ### Shop filled with fixtures
 
-Benchmarks require a pre-populated shop. But this shop content has to be the same at each new bench in order to get reproducible results. Prestashop ShopCreator project will help to generate fixtures, used during shop installation to populate the benched shop.
+Benchmarks require a pre-populated shop. But this shop content has to be the same at each new bench in order to get reproducible results. PrestaShop ShopCreator project will help to generate fixtures, used during shop installation to populate the benched shop.
 
 #### Generate fixtures
 
     cd performance-project
     cd shop
 
-`README.md` contains instructions to get a working shop filled with fixtures, using “Prestashop ShopCreator” project
+`README.md` contains instructions to get a working shop filled with fixtures, using “PrestaShop ShopCreator” project
 
 	git clone git@github.com:PrestaShop/prestashop-shop-creator.git
 
@@ -61,11 +61,11 @@ Once your config is ready, run fixture generation in ShopCreator directory
 
 	php app/console.php
 
-Fixtures are created in /generated_data/ directory. It contains xml files with data for each Prestashop entity, and images for products, categories…
+Fixtures are created in /generated_data/ directory. It contains xml files with data for each PrestaShop entity, and images for products, categories…
 
 #### Install a shop with generated fixtures
 
-To use these generated fixtures, you need to copy the directory content into the installation directory of Prestashop before installing the shop
+To use these generated fixtures, you need to copy the directory content into the installation directory of PrestaShop before installing the shop
 
 	cp -R generated_data/* [prestashop]/install/fixtures/fashion/
 
