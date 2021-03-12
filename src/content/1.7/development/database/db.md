@@ -76,7 +76,7 @@ Be careful, if your request has a limit, the method `numRows()` doesn't return t
 ```php
 $db->Affected_Rows();
 ```
-returns the number of rows impacted by the latest INSERT, UPDATE, REPLACE or DELETE query.
+Returns the number of rows impacted by the latest `INSERT`, `UPDATE`, `REPLACE` or `DELETE` query.
 
 ### Execute a raw SQL request (UPDATE, INSERT...)
 
