@@ -65,6 +65,19 @@ As the method deals with raw SQL requests, the `_DB_PREFIX_` must be used.
 This method is convenient when you need only one value to retrieve from the database.
 It prevent to loop in several arrays in order to get the first value of the first row.
 
+### Gets the number of rows in a result
+```php
+$db->numRows();
+```
+This method caches and returns the number of rows from the last result set. 
+Be carefull, if your request has a limit, numRows doesn't return the total rows, you have to make a SELECT COUNT(*).
+
+### Gets the number of affected rows
+```php
+$db->Affected_Rows();
+```
+returns the number of rows impacted by the latest INSERT, UPDATE, REPLACE or DELETE query.
+
 ### Execute a raw SQL request (UPDATE, INSERT...)
 
 ```php
