@@ -23,7 +23,7 @@ Since version 1.6.1.0, PrestaShop uses the PSR-2 norm. We recommend using this n
 
 ### 2. Method search engine
 
-**A search engine is available within the Validator** to help you work out which methods are available for the various versions of PrestaShop. Make the most of this and use it to save time! It is not entirely up-to-date but we intend to work on it. You can find the search engine [here](https://validator.prestashop.com/guide/search).
+**A search engine is available within the Validator** to help you work out which methods are available for the various versions of PrestaShop. Make the most of this and use it to save time! It is not entirely up-to-date but we intend to work on it. You can find the search engine [here](https://validator.prestashop.com/guide/).
 
 
 ### 3. The Module Generator
