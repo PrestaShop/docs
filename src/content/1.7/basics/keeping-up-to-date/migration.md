@@ -344,21 +344,9 @@ If you want to add the extracted data without overriding the existing records on
 
 ### Preparing the destination shop
 
-#### Clean demo data
+Make sure to select 'dont install demo data' when installing the shop
 
-PrestaShop is installed with demonstration data including products, customers, orders etc. They can be removed to make room for your own data.
-
-Cleaning your shop from this demonstration data should be done before starting the import of your data. The free module “PrestaShop cleaner” can handle that in a few clicks.
-
-On your destination shop, search for the module "PrestaShop cleaner" or "pscleaner", or download and install the [latest version from GitHub](https://github.com/PrestaShop/pscleaner/releases/).
-
-Important: Make sure to run this tool **on the new shop**, not the one in production.
-
-{{< figure src="/images/1.7/upgrade-migration/ps-cleaner-card.png" title="PrestaShop cleaner card on the module catalog" >}}
-
-Once installed, go on the module configuration page by clicking on the configure button. You will find different available actions. The first half is responsible of erasing some content of your shop (product catalog, orders, customers etc.), while the other one checks, removes and optimizes your database content.
-
-{{< figure src="/images/1.7/upgrade-migration/ps-cleaner-configuration-page.png" title="PrestaShop cleaner configuration page" >}}
+{{< figure src="/images/1.7/upgrade-migration/migration-update-langs.png" title="Checking IDs of installed languages on a shop" >}}
 
 #### Install languages
 
