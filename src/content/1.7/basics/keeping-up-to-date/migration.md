@@ -344,9 +344,9 @@ If you want to add the extracted data without overriding the existing records on
 
 ### Preparing the destination shop
 
-Make sure to select 'dont install demo data' when installing the shop
+Make sure to select `dont install demo data` when installing the shop
 
-{{< figure src="/images/1.7/upgrade-migration/migration-update-langs.png" title="Checking IDs of installed languages on a shop" >}}
+{{< figure src="/images/1.7/upgrade-migration/install-without-data-min.png" title="'Dont install demo data" >}}
 
 #### Install languages
 
