@@ -59,11 +59,20 @@ Some issues do not fit in the previous categories, such as [Releases Issues](htt
 Available in the "[Projects](https://github.com/PrestaShop/PrestaShop/projects)" tab of PrestaShop’s GitHub repository, versions kanban boards define the scope of a minor version in terms of what the Core Maintainers and Core Product teams agree must be included before that release is out.
 Both the product and the maintainers teams use it to prepare and plan the next developments and, since we deal with an open source project, the purpose of having those kanbans public is to help the community and the external mainteners to know what is at stake.
 
-### Definition of states
+### Patches versions
 
-There should only have "must-have" issues in the kanban and it always have an owner, be it a product manager or a developer.
+There should only have regressions issues in the kanban of a patch version. For example, 1.7.7.1 and 1.7.7.2 (and so on...) kanbans only includes the regressions of the 1.7.7.0 version.
 
-"Nice to have" community issues are no longer part of the kanban. Only "must-have" issues are included in the kanban, as it must reflect the progress of the version. For example, an issue reports a must-have bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+### Minor versions
+
+There should only have "must-have" issues in the kanban of a minor/major version and it always have an owner, be it a product manager or a developer.
+Only "must-have" issues are included in the kanban, as it must reflect the progress of the version. For example, an issue reports a must-have bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
+
+### Nice to have
+
+"Nice to have" issues are part of another [kanban](https://github.com/PrestaShop/PrestaShop/projects/13) and are not intended for a particular version.
+
+## Definition of states
 
 Community contributions that fix a feature request or an improvement, must be approved by the Core product team if they bring a change in the functional behavior and by the Core developer team if they bring a change in the technical behavior. Ideally before being reviewed, at least before being merged. Here is why:
 
@@ -72,7 +81,9 @@ It is a feature request or an improvement? It must be validated, prioritized, an
 
 A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher issue, it will be back in the to do column again to be completed by a developer.
 
-Also, an important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the issue ready to be worked on, otherwise it will not be included in the backlog.
+### Definition of ready
+
+An important notion to keep in mind is the definition of ready. Several elements must be prepared upstream to get the issue ready to be worked on, otherwise it will not be included in the backlog.
 
 An issue is ready when it contains:
 - an explicit title and description
