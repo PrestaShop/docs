@@ -61,8 +61,7 @@ Both the product and the maintainers teams use it to prepare and plan the next d
 
 ### Definition of states
 
-A pull request should always be linked to the issue it fixes. 
-That's said, there should only have "must-have" issues in the kanban and it always have an owner, be it a product manager or a developer.
+There should only have "must-have" issues in the kanban and it always have an owner, be it a product manager or a developer.
 
 "Nice to have" community issues are no longer part of the kanban. Only "must-have" issues are included in the kanban, as it must reflect the progress of the version. For example, an issue reports a must-have bug prioritized for the 1.7.8.0, the issue must appear in the 1.7.8 kanban while the linked pull request must have the 1.7.8.0 milestone.
 
