@@ -32,7 +32,7 @@ title: Customers
 | **id_risk**                    | isUnsignedInt  | ❌        | ✔️       |          | Risk ID          |
 | **max_payment_days**           | isUnsignedInt  | ❌        | ✔️       |          |                  |
 | **active**                     | isBool         | ❌        | ✔️       |          |                  |
-| **note**                       | isCleanHtml    | ❌        | ✔️       | 65000    |                  |
+| **note**                       |                | ❌        | ✔️       | 65000    |                  |
 | **is_guest**                   | isBool         | ❌        | ✔️       |          |                  |
 | **id_shop**                    | isUnsignedId   | ❌        | ✔️       |          | Shop ID          |
 | **id_shop_group**              | isUnsignedId   | ❌        | ✔️       |          | Shop group ID    |
