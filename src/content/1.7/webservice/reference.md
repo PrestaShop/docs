@@ -37,6 +37,8 @@ All resources have two schemas that are accessible via a parameter:
 | Resource | Description |
 |----------|-------------|
 | addresses | The Customer, Manufacturer and Customer addresses |
+| attachments | The product Attachments |
+| attachments/file | The product Attachments files |
 | carriers | The Carriers that perform deliveries |
 | cart_rules | Cart rules management (discount, promotions, ...) |
 | carts | Customer's carts |
