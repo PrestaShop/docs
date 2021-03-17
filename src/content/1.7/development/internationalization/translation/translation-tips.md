@@ -114,3 +114,8 @@ You can declare wordings as arrays as well. This obviously won't translate the w
     'parameters' => [],
 ];
 ```
+## Translate core wordings
+
+You can translate core wordings (mainly present in PHP files) via Classic theme translation interface.
+
+{{% notice note %}}This tip also works if you don't use the Classic theme on your shop.{{% /notice %}}
