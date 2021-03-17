@@ -17,7 +17,7 @@ title: Combinations
 | **quantity**            | isInt           | ❌        | 10       |             |
 | **reference**           |                 | ❌        | 64       |             |
 | **supplier_reference**  |                 | ❌        | 64       |             |
-| **wholesale_price**     | isPrice         | ❌        | 27       |             |
+| **wholesale_price**     | isNegativePrice | ❌        | 27       |             |
 | **price**               | isNegativePrice | ❌        | 20       |             |
 | **ecotax**              | isPrice         | ❌        | 20       |             |
 | **weight**              | isFloat         | ❌        |          |             |
