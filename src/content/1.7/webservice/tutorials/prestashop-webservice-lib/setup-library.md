@@ -22,14 +22,14 @@ Now that your webservice is configured and accessible you might want to use it. 
 If you are starting a new project you can init your composer project along with the dependency:
 
 ```bash
-composer init --require="Prestashop/Prestashop-webservice-lib:dev-master" -n  
+composer init --require="prestashop/prestashop-webservice-lib:dev-master" -n  
 composer install
 ```
 
 Or if you already have an existing project simply add the dependency:
 
 ```bash
-composer require "Prestashop/Prestashop-webservice-lib"  
+composer require prestashop/prestashop-webservice-lib
 ```
 
 The library is not PSR compliant and has no namespace therefore you need to update your `composer.json` file to include the class in your `autoload`:
@@ -37,7 +37,7 @@ The library is not PSR compliant and has no namespace therefore you need to upda
 ```json
 {
     "require": {
-        "Prestashop/Prestashop-webservice-lib": "dev-master"
+        "prestashop/prestashop-webservice-lib": "dev-master"
     },
     "autoload": {
         "files": [
