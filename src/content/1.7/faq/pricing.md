@@ -32,7 +32,7 @@ In order to obtain this secure key, you need 2 items:
 
 The secure key is computed like this:
 ```
-$secureKey = md5(_COOKIE_KEY_.Configuration::get('PS_SHOP_NAME'));
+$secureKey = md5(_COOKIE_KEY_ . Configuration::get('PS_SHOP_NAME'));
 ```
 
 Assuming your admin directory is, for example, `admin_9282`, the URL you need to call will then be `myshop.com/admin_9282/cron_currency_rates.php?secure_key={my_secure_key}`
