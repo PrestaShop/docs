@@ -14,7 +14,7 @@ title: Pricing FAQ
 
 These exchange rates are updated every day by authorities in charge of these currencies.
 
-PrestaShop gathers these rates and expose them through API endpoint https://api.prestashop.com/xml/currencies.xml (URL available in the code through constant `_PS_CURRENCY_FEED_URL_`).
+The PrestaShop company gathers these rates and expose them through API endpoint https://api.prestashop.com/xml/currencies.xml (URL available in the code through constant `_PS_CURRENCY_FEED_URL_`).
 
 Function `Currency::refreshCurrencies()` is able to fetch these rates and update a shop currency data. In order to update currency exchange rates regularly, you need to setup an automatic task that execute `Currency::refreshCurrencies()` regularly.
 
@@ -52,4 +52,4 @@ Example of such a cronjob:
 ```
 
 [crontab]: https://en.wikipedia.org/wiki/Cron
-[cron-doc]: https://crontab.guru/every-1-hour
+[cron-doc]: https://crontab.guru
