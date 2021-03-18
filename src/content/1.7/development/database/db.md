@@ -70,7 +70,8 @@ It prevent to loop in several arrays in order to get the first value of the firs
 $db->numRows();
 ```
 This method caches and returns the number of rows from the last result set. 
-Be careful, if your request has a limit, the method `numRows()` doesn't return the total rows. If you need, you have to make a `SELECT COUNT(*)`.
+
+Be careful, if your request has a limit, the method `numRows()` is limited too. If you need to retrieve the number of rows without limits, you need to use `SELECT COUNT(*)`.
 
 ### Gets the number of affected rows
 ```php
