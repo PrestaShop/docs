@@ -66,6 +66,20 @@ This method is convenient if you want to retrieve only one value from the databa
 
 It avoids to loop in several arrays in order to get the first value of the first row.
 
+### Gets the number of rows in a result
+```php
+$db->numRows();
+```
+This method caches and returns the number of rows from the last result set. 
+
+Be careful, if your request has a limit, the method `numRows()` is limited too. If you need to retrieve the number of rows without limits, you need to use `SELECT COUNT(*)`.
+
+### Gets the number of affected rows
+```php
+$db->Affected_Rows();
+```
+Returns the number of rows impacted by the latest `INSERT`, `UPDATE`, `REPLACE` or `DELETE` query.
+
 ### Execute a raw SQL request (UPDATE, INSERT...)
 
 ```php
