@@ -14,7 +14,7 @@ title: Customer messages
 | **message**            | isCleanHtml  | ✔️       | 16777216 |                    |
 | **file_name**          |              | ❌        |          |                    |
 | **user_agent**         |              | ❌        |          |                    |
-| **private**            |              | ❌        |          |                    |
+| **private**            | isBool       | ❌        |          |                    |
 | **date_add**           | isDate       | ❌        |          |                    |
 | **date_upd**           | isDate       | ❌        |          |                    |
 | **read**               | isBool       | ❌        |          |                    |

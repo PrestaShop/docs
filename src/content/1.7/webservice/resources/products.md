@@ -23,7 +23,7 @@ title: Products
 | **id_shop_default**           | isUnsignedId        | ❌        | ✔️       |          |                | Default shop ID    |
 | **reference**                 | isReference         | ❌        | ✔️       | 64       |                |                    |
 | **supplier_reference**        | isReference         | ❌        | ✔️       | 64       |                |                    |
-| **location**                  | isReference         | ❌        | ✔️       | 64       |                |                    |
+| **location**                  | isString            | ❌        | ✔️       | 255      |                |                    |
 | **width**                     | isUnsignedFloat     | ❌        | ✔️       |          |                |                    |
 | **height**                    | isUnsignedFloat     | ❌        | ✔️       |          |                |                    |
 | **depth**                     | isUnsignedFloat     | ❌        | ✔️       |          |                |                    |
@@ -224,6 +224,11 @@ title: Products
           <id_product_attribute><![CDATA[]]></id_product_attribute>
         </stock_available>
       </stock_availables>
+      <attachments>
+        <attachment>
+          <id><![CDATA[]]></id>
+        </attachment>
+      </attachments>
       <accessories>
         <product>
           <id><![CDATA[]]></id>

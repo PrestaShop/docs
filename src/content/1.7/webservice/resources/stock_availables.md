@@ -12,7 +12,7 @@ title: Stock availables
 | **id_product_attribute** | isUnsignedId | ✔️       |          | Product attribute ID |
 | **id_shop**              | isUnsignedId | ❌        |          | Shop ID              |
 | **id_shop_group**        | isUnsignedId | ❌        |          | Shop group ID        |
-| **quantity**             | isInt        | ✔️       |          |                      |
+| **quantity**             | isInt        | ✔️       | 10       |                      |
 | **depends_on_stock**     | isBool       | ✔️       |          |                      |
 | **out_of_stock**         | isInt        | ✔️       |          |                      |
 | **location**             | isString     | ❌        | 255      |                      |

@@ -25,6 +25,7 @@ title: Orders
 | **date_add**                 | isDate           | ❌        |                |                     |
 | **date_upd**                 | isDate           | ❌        |                |                     |
 | **shipping_number**          | isTrackingNumber | ❌        | true           |                     |
+| **note**                     | isCleanHtml      | ❌        |                |                     |
 | **id_shop_group**            | isUnsignedId     | ❌        |                | Shop group ID       |
 | **id_shop**                  | isUnsignedId     | ❌        |                | Shop ID             |
 | **secure_key**               | isMd5            | ❌        |                |                     |
@@ -79,6 +80,7 @@ title: Orders
     <date_add><![CDATA[]]></date_add>
     <date_upd><![CDATA[]]></date_upd>
     <shipping_number><![CDATA[]]></shipping_number>
+    <note><![CDATA[]]></note>
     <id_shop_group><![CDATA[]]></id_shop_group>
     <id_shop><![CDATA[]]></id_shop>
     <secure_key><![CDATA[]]></secure_key>
