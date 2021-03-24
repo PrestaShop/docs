@@ -17,7 +17,7 @@ This object contains two attributes:
 
 It allows module developers to avoid importing path such as `../../../../admin-dev/themes/new-module/js/components/translatable-field` because it was making hard to add a CI in order to build the module.
 
-## How to use?
+## How to use
 
 There is an event sent after the execution of `initPrestashopComponents` which you can stick on: `PSComponentsInitiated`.
 
