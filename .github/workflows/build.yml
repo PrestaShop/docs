@@ -32,7 +32,7 @@ jobs:
         working-directory: src
 
       - name: Make assets
-        run: npm install && npm run build && cd ../../../
+        run: npm install && npm run build
         working-directory: src/themes/hugo-theme-learn/_src
 
       - name: Build
