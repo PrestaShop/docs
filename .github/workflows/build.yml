@@ -1,6 +1,6 @@
 name: Build
 
-on: 
+on:
   push:
     branches:
       - master
@@ -24,24 +24,24 @@ jobs:
           node-version: '12'
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.76.5'
+        run: ../bin/installHugo.sh
+        working-directory: src
 
       - name: Clean public directory
-        run: rm -rf ./src/public
+        run: rm -rf ./public
+        working-directory: src
 
       - name: Make assets
-        run: cd src/themes/hugo-theme-learn/_src && npm install && npm run build && cd ../../../
+        run: npm install && npm run build && cd ../../../
+        working-directory: src/themes/hugo-theme-learn/_src
 
       - name: Build
-        run: cd src/ && hugo
+        run: hugo
+        working-directory: src
 
       - name: Create a CNAME file which mapping to our custom domain
-        run: cd src/ && echo 'devdocs.prestashop.com' > public/CNAME
-
-      - name: Return to root directory
-        run: cd ..
+        run: echo 'devdocs.prestashop.com' > public/CNAME
+        working-directory: src
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
