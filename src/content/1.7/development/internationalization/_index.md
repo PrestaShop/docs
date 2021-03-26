@@ -14,7 +14,7 @@ To achieve this goal, PrestaShop relies on multiple features:
 
 2. This Translator can load multiple translation sources, it can be the software translation catalog files, it can be modules catalog files, it can be theme catalog files...
 
-3. For each translation catalog files, PrestaShop provides pre-translated packs for [a lot of languages](https://crowdin.com/project/prestashop-official).
+3. For each translation catalog file, PrestaShop provides pre-translated packs for [a lot of languages](https://crowdin.com/project/prestashop-official).
 
 4. If however a wording is not translated for one language and you need it, PrestaShop provides a Translation interface in the Back Office to allow to add the missing translation or customize the already existing translations.
 

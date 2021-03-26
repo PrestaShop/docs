@@ -10,7 +10,7 @@ aliases:
 
 Wordings in the software are exported into [Crowdin][crowdin], a translation platform. This allows contributors to translate these into all supported languages.
 
-Each night, a cron job fetches translations from Crowdin, update the [PrestaShop/TranslationFiles repository][translation-files-repo] with new updates, and deploy translations to domain i18n.prestashop.com.
+Each night, a cron job fetches translations from Crowdin, updates the [PrestaShop/TranslationFiles repository][translation-files-repo] with new updates, and deploys translations to domain i18n.prestashop.com.
 
 i18n.prestashop.com is a domain hosted by PrestaShop company to store all supported Languages Localization Packages. This is the domain where localization packs are downloaded when you use the "Download a Language Pack" feature in Back Office.
 
@@ -18,7 +18,7 @@ i18n.prestashop.com is a domain hosted by PrestaShop company to store all suppor
 
 Most existing languages are available in [Crowdin][crowdin] for translation, but not all are available in PrestaShop.
 
-This is because some languages have a a low completion level on Crowdin.
+This is because some languages have a low completion level on Crowdin.
 
 ## Activate support for a new language in PrestaShop
 
