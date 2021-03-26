@@ -19,6 +19,10 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 
 ## Full list
 
+{{% notice tip %}}
+**Tip:** Some hooks whose names include a page or component name are described generically using placeholders. If you can't find a hook like `actionAdminCustomersFormModifier`, try searching for `FormModifier`. 
+{{% /notice %}}
+
 {{% funcdef %}}
 
 <div id="hookFilter" class="quickfilter">
