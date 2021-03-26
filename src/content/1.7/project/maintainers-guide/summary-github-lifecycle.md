@@ -1,6 +1,7 @@
 ---
 title: Summary of how GitHub Issues and Pull Requests are processed
 weight: 20
+menuTitle: Processing issues and PRs
 ---
 
 # Summary of how GitHub Issues and Pull Requests are processed
