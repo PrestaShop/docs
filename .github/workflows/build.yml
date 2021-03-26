@@ -15,9 +15,6 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Install dependencies
-        run: sudo apt-get install python-pygments
-
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
