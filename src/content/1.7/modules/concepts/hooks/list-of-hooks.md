@@ -20,7 +20,9 @@ A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
 ## Full list
 
 {{% notice tip %}}
-**Tip:** Some hooks whose names include a page or component name are described generically using placeholders. If you can't find a hook like `actionAdminCustomersFormModifier`, try searching for `FormModifier`. 
+**Search tip:** Some hooks are generated dynamically, so their names are documented in a generic way.
+
+For example, `actionAdminCustomersFormModifier` is documented as `action<AdminControllerClassName>FormModifier`, so you won't find it if you search for the exact name. When you see a controller name or action in the hook name and you can't find it, try searching for a part of the hook name, like `FormModifier`.
 {{% /notice %}}
 
 {{% funcdef %}}
