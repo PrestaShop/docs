@@ -228,7 +228,7 @@ Hence, a CDN will reduce drastically the amount of hits made to your server.
 
 There are plenty of CDN providers, [Cloudflare](https://www.cloudflare.com) is a good and free one. You can use as well to minify your page or to easily enable SSL on your site.
 
-Just one slight consideration about CDNs though: any modification done to your shop's static assets, such as images, css and the like, may not be immediate available once behind a CDN. When those files are cached, if you modify them on your server, you will need to wait for the cache expiration (often configurable) before seeing the modification live - or invalidate part or all your cache. Most providers offer such features.
+Just one slight consideration about CDNs though: any modification done to your shop's static assets, such as images, css and the like, may not be immediately available once behind a CDN. When those files are cached, if you modify them on your server, you will need to wait for the cache expiration (often configurable) before seeing the modification live - or invalidate part or all your cache. Most providers offer such features.
 
 ### 7) PrestaShop Settings
 
