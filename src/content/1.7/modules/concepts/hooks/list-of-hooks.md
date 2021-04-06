@@ -558,7 +558,7 @@ actionFrontControllerSetVariables
 : 
     Available since: {{< minver v="1.7.5" >}}
     
-    Add variables to `javascript` object that is available in Front Office. These are also available in smarty templates in modules.your_module_name.
+    Add global variables to `javascript` object and `smarty` templates. Available in Front Office only.
 
     Located in: /classes/controller/FrontController.php
     
@@ -573,14 +573,14 @@ actionFrontControllerSetVariables
     
     Example usage:
     
-    Your hook implementation should return array of values that will be added to `prestashop` object.
+    Your hook implementation should return array of values that will be added to `prestashop` object in `javascript` and `$modules` object in `smarty`.
     
     ```php
     <?php
     public function hookActionFrontControllerSetVariables()
     {
         return [
-            'hello_text' => 'Hello world',
+            'your_variable_name' => 'Your variable value',
         ];
     }
     ```
@@ -588,9 +588,16 @@ actionFrontControllerSetVariables
     In Front Office you can access it globally using:
     
     ```javascript
-    console.log(prestashop.modules.your_module_name.hello_text);
+    console.log(prestashop.modules.your_module_name.your_variable_name);
     "Hello world"
     ```
+    
+    with smarty
+    
+    ```smarty
+    {$modules.your_module_name.your_variable_name};
+    ```    
+    
     
 actionGetExtraMailTemplateVars
 : 
