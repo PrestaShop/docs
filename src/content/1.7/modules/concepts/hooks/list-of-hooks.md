@@ -821,6 +821,11 @@ WARNING: only invoked when a product is actually removed from an order.
 actionOrderStatusPostUpdate
 : 
     Called after the status of an order changes.
+    
+    {{% notice tip %}}
+	This hook is fired BEFORE the new OrderStatus is saved into the database.
+	If you need to register after this insertion, use `actionOrderHistoryAddAfter` or `actionObjectOrderHistoryAddAfter` instead.
+    {{% /notice %}}
 
     Located in: /classes/order/OrderHistory.php
 
