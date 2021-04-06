@@ -823,9 +823,8 @@ actionOrderStatusPostUpdate
     Called after the status of an order changes.
     
     {{% notice tip %}}
-	This hook is fired BEFORE the new OrderStatus is saved into the database,  
-	if you need to register after this insertion,  
-	use `actionOrderHistoryAddAfter` or `actionObjectOrderHistoryAddAfter` instead
+	This hook is fired BEFORE the new OrderStatus is saved into the database.
+	If you need to register after this insertion, use `actionOrderHistoryAddAfter` or `actionObjectOrderHistoryAddAfter` instead.
     {{% /notice %}}
 
     Located in: /classes/order/OrderHistory.php
