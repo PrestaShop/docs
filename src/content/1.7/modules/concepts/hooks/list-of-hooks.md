@@ -588,7 +588,7 @@ actionFrontControllerSetVariables
     In Front Office you can access it globally using:
     
     ```javascript
-    console.log(prestashop.modules.your_module_name.you_variable_name);
+    console.log(prestashop.modules.your_module_name.your_variable_name);
     "Hello world"
     ```
     
