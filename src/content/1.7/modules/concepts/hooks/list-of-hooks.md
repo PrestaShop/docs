@@ -580,7 +580,7 @@ actionFrontControllerSetVariables
     public function hookActionFrontControllerSetVariables()
     {
         return [
-            'you_variable_name' => 'Your variable value',
+            'your_variable_name' => 'Your variable value',
         ];
     }
     ```
