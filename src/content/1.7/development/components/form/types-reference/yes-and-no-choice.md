@@ -17,6 +17,30 @@ The `YesAndNoChoiceType` represents `select` input with options `Yes` and `No`.
     
 None.
 
+## Code example
+
+Add `YesAndNoChoiceType` to your form.
+
+```php
+<?php
+
+use Symfony\Component\Form\AbstractType;
+use PrestaShopBundle\Form\Admin\Type\YesAndNoChoiceType;
+
+class SomeType extends AbstractType
+{
+    public function buildForm(FormBuilderInterface $builder, array $options)
+    {
+        $builder->add('yesandnochoicetype', YesAndNoChoiceType::class, [
+            'choices' => [
+                'Yes' => true,
+                'No' => false,
+            ],
+        ]);
+    }
+}
+```
+
 ## Preview example
 
 {{< figure src="../img/yes_and_no_choice.png" title="YesAndNoChoiceType rendered in form" >}}
