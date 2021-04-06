@@ -26,8 +26,10 @@ Add `NumberMinMaxFilterType` to your form.
 
 ```php
 <?php
+
 use Symfony\Component\Form\AbstractType;
 use PrestaShopBundle\Form\Admin\Type\NumberMinMaxFilterType;
+
 class SomeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
