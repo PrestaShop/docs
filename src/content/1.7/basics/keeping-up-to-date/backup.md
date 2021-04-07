@@ -8,6 +8,12 @@ aliases:
 
 # How to backup PrestaShop
 
+{{% notice warning %}} 
+**Important**
+
+It is strongly recommended not to leave your backups at the root of your store or in another place where could be exposed on publicly.
+{{% /notice %}}
+
 Before starting anything, you must think first about safety.
 Any modification made on a shop could break it, so you must make sure all your data has been backed up before going further. This basically implies saving two things: your files and your database.
 
@@ -60,7 +66,7 @@ With `yourdbname` an example name for the PrestaShop database.
 
 Your server is likely to require credentials. These details can also be provided as parameters:
 ```
-mysqldump -h<IP_or_hostname> -u<user> -p db1 > dump.sql
+mysqldump -h <IP_or_hostname> -u <user> --single-transaction --create-options -ecqQ -p db1 > dump.sql
 ```
 
 If you do not remember your database name or credentials, you can find them in your configuration files:
