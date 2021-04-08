@@ -221,7 +221,7 @@ So you need to insert your tab manually during your module installation:
 <?php
 use Language;
 
-class example_module_mailtheme extends Module
+class Example_module_mailtheme extends Module
 {
     public function install()
     {
