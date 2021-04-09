@@ -327,7 +327,7 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-class Mycustompdfgen extends Module
+class MyCustomPdfGenerator extends Module
 {
     public function __construct()
     {
@@ -454,4 +454,3 @@ class Mycustompdfgen extends Module
     'id_order'=>666
   ]);
 ```
-
