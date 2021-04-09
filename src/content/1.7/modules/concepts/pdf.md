@@ -306,7 +306,7 @@ Assume that the `.tpl` files in the `pdf` folder have been copied from the Core
 
 
 ```
-mycustompdfgen
+mycustompdfgenerator
 ├── pdf
     ├── delivery-slip.addresses-tab.tpl
     ├── delivery-slip.product-tab.tpl
@@ -314,7 +314,7 @@ mycustompdfgen
     ├── delivery-slip.tpl
     ├── footer.tpl
     ├── header.tpl
-├── mycustompdfgen.php
+├── mycustompdfgenerator.php
 ├── logo.png
 
 ```
