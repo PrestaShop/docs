@@ -291,3 +291,159 @@ public function hookActionGetExtraMailTemplateVars($hookArgs)
     $hookArgs['extra_template_vars']['{password}'] = '*******'; 
 }
 ```
+
+
+### Code exemple : 
+
+{{% notice tip %}}
+You can override the core PDF templates in your module.
+{{% /notice %}}
+
+
+* Module files architecture
+
+Assume that the `.tpl` files in the `pdf` folder have been copied from the Core
+
+
+```
+mycustompdfgenerator
+├── pdf
+    ├── delivery-slip.addresses-tab.tpl
+    ├── delivery-slip.product-tab.tpl
+    ├── delivery-slip.style-tab.tpl
+    ├── delivery-slip.tpl
+    ├── footer.tpl
+    ├── header.tpl
+├── mycustompdfgenerator.php
+├── logo.png
+
+```
+* PHP Code 
+
+```php
+   
+<?php
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+class MyCustomPdfGenerator extends Module
+{
+    public function __construct()
+    {
+        $this->name = 'mycustompdfgenerator';
+        $this->tab = 'front_office_features';
+        $this->version = '1.0.0';
+        $this->author = 'Firstname Lastname';
+        $this->need_instance = 0;
+        $this->ps_versions_compliancy = [
+            'min' => '1.7',
+            'max' => _PS_VERSION_
+        ];
+        $this->bootstrap = true;
+        parent::__construct();
+        $this->displayName = $this->l('My module');
+        $this->description = $this->l('Description of my module.');
+        $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
+    }
+    
+   
+    public function generatePDF(array $params): void
+    {
+        $myOrderObject = new Order((int) $params['id_order']);
+       
+        $myCustomSlipVarsForPdfContent = $this->myContentDatasPresenter($myOrderObject);
+        $myCustomSlipVarsForPdfFooter  = $this->myFooterDatasPresenter($myOrderObject);
+        $myCustomSlipVarsForPdfHeader  = $this->myHeaderDatasPresenter($myOrderObject);
+        $pdfGen = new PDFGenerator(false, 'P');
+        $pdfGen->setFontForLang(Context::getContext()->language->iso_code);
+        $pdfGen->startPageGroup();
+        $pdfGen->createHeader($this->getHeader($myCustomSlipVarsForPdfHeader));
+        $pdfGen->createFooter($this->getFooter($myCustomSlipVarsForPdfHeader));
+        $pdfGen->createContent($this->getPdfContent($myCustomSlipVarsForPdfHeader));
+        $pdfGen->writePage();
+        $pdfGen->render('my_custom_pdf.pdf', 'D');
+   }
+   
+   /**
+     * Returns the template's HTML content.
+     *
+     * @return string HTML content
+     */
+    public function getPdfContent(array $myCustomSlipVarsForPdfContent): string
+    {
+        $this->context->smarty->assign($myCustomSlipVarsForPdfContent);
+
+        $tpls = array(
+            'style_tab'     => $this->context->smarty->fetch(__DIR__.'/pdf/delivery-slip.style-tab.tpl'),
+            'addresses_tab' => $this->context->smarty->fetch(__DIR__.'/pdf/delivery-slip.addresses-tab.tpl'),
+            'product_tab'   => $this->context->smarty->fetch(__DIR__.'/pdf/delivery-slip.product-tab.tpl'),
+        );
+        $this->context->smarty->assign($tpls);
+
+        return $this->context->smarty->fetch(__DIR__.'/pdf/delivery-slip.tpl');
+    }
+
+   /**
+     * Returns the template's HTML footer.
+     *
+     * @return string HTML footer
+     */
+    public function getFooter(array $myCustomSlipVarsForPdfFooter): string
+    {
+        $this->context->smarty->assign($myCustomSlipVarsForPdfFooter);
+        return $this->context->smarty->fetch(__DIR__.'/pdf/footer.tpl');
+    }
+
+    /**
+     * Returns the template's HTML header.
+     *
+     * @return string HTML header
+     */
+    public function getHeader(array $myCustomSlipVarsForPdfHeader): string
+    {
+        $this->context->smarty->assign($myCustomSlipVarsForPdfHeader);
+        return $this->context->smarty->fetch(__DIR__.'/pdf/header.tpl');
+    }
+   
+   
+   /**
+   * Format your order data here for pdf content : ['tpl_var_name'=>'tpl_value']
+   *
+   * @return array
+   */
+   public function myContentDatasPresenter(Order $myOrderObject): array
+   {
+     // TODO : implement it 
+   }
+   
+   /**
+   * Format your order data here for pdf footer : ['tpl_var_name'=>'tpl_value']
+   *
+   * @return array
+   */
+   public function myFooterDatasPresenter(Order $myOrderObject): array
+   {
+     // TODO : implement it 
+   }
+   
+   /**
+   * Format your order data here for pdf header : ['tpl_var_name'=>'tpl_value']
+   *
+   * @return array
+   */
+   public function myHeaderDatasPresenter(Order $myOrderObject): array
+   {
+     // TODO : implement it 
+   }
+}
+```
+
+* Usage 
+
+```php
+ $myModuleOrderPdfGenerator = Module::getInstanceByName('mycustompdfgenerator');
+ $myModuleOrderPdfGenerator->generatePDF([
+    'id_order'=>666
+  ]);
+```
