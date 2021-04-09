@@ -348,7 +348,7 @@ class MyCustomPdfGenerator extends Module
     }
     
    
-    public function genPDF(array $params)
+    public function generatePDF(array $params): void
     {
         $myOrderObject = new Order((int) $params['id_order']);
        
