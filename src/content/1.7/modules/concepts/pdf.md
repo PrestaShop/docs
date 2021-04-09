@@ -370,7 +370,7 @@ class MyCustomPdfGenerator extends Module
      *
      * @return string HTML content
      */
-    public function getPdfContent(array $myCustomSlipVarsForPdfContent)
+    public function getPdfContent(array $myCustomSlipVarsForPdfContent): string
     {
         $this->context->smarty->assign($myCustomSlipVarsForPdfContent);
 
