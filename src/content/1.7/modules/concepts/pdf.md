@@ -432,8 +432,9 @@ class MyCustomPdfGenerator extends Module
    *
    * @return array
    */
-   public function myHeaderDatasPresenter(Order $myOrderObject): array{
-     // TODO : impletent 
+   public function myHeaderDatasPresenter(Order $myOrderObject): array
+   {
+     // TODO : implement it 
    }
 }
 ```
