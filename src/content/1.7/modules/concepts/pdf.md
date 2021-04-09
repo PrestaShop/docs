@@ -356,13 +356,13 @@ class MyCustomPdfGenerator extends Module
         $myCustomSlipVarsForPdfFooter  = $this->myFooterDatasPresenter($myOrderObject);
         $myCustomSlipVarsForPdfHeader  = $this->myHeaderDatasPresenter($myOrderObject);
         $pdfGen = new PDFGenerator(false, 'P');
-		$pdfGen->setFontForLang(Context::getContext()->language->iso_code);
-		$pdfGen->startPageGroup();
-		$pdfGen->createHeader($this->getHeader($myCustomSlipVarsForPdfHeader));
-		$pdfGen->createFooter($this->getFooter($myCustomSlipVarsForPdfHeader));
-		$pdfGen->createContent($this->getPdfContent($myCustomSlipVarsForPdfHeader));
-		$pdfGen->writePage();
-		$pdfGen->render('my_custom_pdf.pdf', 'D');
+        $pdfGen->setFontForLang(Context::getContext()->language->iso_code);
+        $pdfGen->startPageGroup();
+        $pdfGen->createHeader($this->getHeader($myCustomSlipVarsForPdfHeader));
+        $pdfGen->createFooter($this->getFooter($myCustomSlipVarsForPdfHeader));
+        $pdfGen->createContent($this->getPdfContent($myCustomSlipVarsForPdfHeader));
+        $pdfGen->writePage();
+        $pdfGen->render('my_custom_pdf.pdf', 'D');
    }
    
    /**
