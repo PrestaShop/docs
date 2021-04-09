@@ -400,7 +400,7 @@ class MyCustomPdfGenerator extends Module
      *
      * @return string HTML header
      */
-    public function getHeader(array $myCustomSlipVarsForPdfHeader)
+    public function getHeader(array $myCustomSlipVarsForPdfHeader): string
     {
         $this->context->smarty->assign($myCustomSlipVarsForPdfHeader);
         return $this->context->smarty->fetch(__DIR__.'/pdf/header.tpl');
