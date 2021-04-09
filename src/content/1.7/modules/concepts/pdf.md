@@ -296,7 +296,7 @@ public function hookActionGetExtraMailTemplateVars($hookArgs)
 ### Code exemple : 
 
 {{% notice tip %}}
-You can override the core pdf tpls in your module.
+You can override the core PDF templates in your module.
 {{% /notice %}}
 
 
@@ -454,5 +454,4 @@ class Mycustompdfgen extends Module
     'id_order'=>666
   ]);
 ```
-
 
