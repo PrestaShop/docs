@@ -331,7 +331,7 @@ class MyCustomPdfGenerator extends Module
 {
     public function __construct()
     {
-        $this->name = 'mycustompdfgen';
+        $this->name = 'mycustompdfgenerator';
         $this->tab = 'front_office_features';
         $this->version = '1.0.0';
         $this->author = 'Firstname Lastname';
