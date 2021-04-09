@@ -443,7 +443,7 @@ class MyCustomPdfGenerator extends Module
 
 ```php
  $myModuleOrderPdfGen = Module::getInstanceByName('mycustompdfgen');
- $myModuleOrderPdfGen->genPDF([
+ $myModuleOrderPdfGenerator->generatePDF([
     'id_order'=>666
   ]);
 ```
