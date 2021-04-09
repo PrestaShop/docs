@@ -347,14 +347,6 @@ class MyCustomPdfGenerator extends Module
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
     }
     
-    public function install()
-    {
-        return parent::install();
-    }
-    public function uninstall()
-    {
-       return parent::uninstall();
-    }
    
     public function genPDF(array $params)
     {
