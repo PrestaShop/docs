@@ -389,7 +389,7 @@ class MyCustomPdfGenerator extends Module
      *
      * @return string HTML footer
      */
-    public function getFooter(array $myCustomSlipVarsForPdfFooter)
+    public function getFooter(array $myCustomSlipVarsForPdfFooter): string
     {
         $this->context->smarty->assign($myCustomSlipVarsForPdfFooter);
         return $this->context->smarty->fetch(__DIR__.'/pdf/footer.tpl');
