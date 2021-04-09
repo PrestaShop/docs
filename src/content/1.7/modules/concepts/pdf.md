@@ -442,7 +442,7 @@ class MyCustomPdfGenerator extends Module
 * Usage 
 
 ```php
- $myModuleOrderPdfGen = Module::getInstanceByName('mycustompdfgen');
+ $myModuleOrderPdfGenerator = Module::getInstanceByName('mycustompdfgenerator');
  $myModuleOrderPdfGenerator->generatePDF([
     'id_order'=>666
   ]);
