@@ -355,8 +355,6 @@ class MyCustomPdfGenerator extends Module
         $myCustomSlipVarsForPdfContent = $this->myContentDatasPresenter($myOrderObject);
         $myCustomSlipVarsForPdfFooter  = $this->myFooterDatasPresenter($myOrderObject);
         $myCustomSlipVarsForPdfHeader  = $this->myHeaderDatasPresenter($myOrderObject);
-
-       
         $pdfGen = new PDFGenerator(false, 'P');
 		$pdfGen->setFontForLang(Context::getContext()->language->iso_code);
 		$pdfGen->startPageGroup();
