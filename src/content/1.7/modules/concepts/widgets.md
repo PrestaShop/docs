@@ -141,17 +141,7 @@ class MyModule extends Module implements WidgetInterface
 
         $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
     }
-    
-    public function install()
-    {
-        return parent::install();
-    }
 
-    public function uninstall()
-    {
-       return parent::uninstall();
-    }
-    
     public function renderWidget($hookName = null, array $configuration = []) 
     {
         $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
