@@ -117,8 +117,6 @@ if (!defined('_PS_VERSION_')) {
 }
 
 use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
-
-
 class MyModule extends Module implements WidgetInterface
 {
     public function __construct()
