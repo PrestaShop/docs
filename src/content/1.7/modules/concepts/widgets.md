@@ -104,7 +104,7 @@ The function `renderWidget()` of a specific module can be called directly:
 Hook::coreRenderWidget(Module $module, $hook_name, $params);
 ```
 
-## Code exemple
+## Code example
 
 * From a PHP class
 
