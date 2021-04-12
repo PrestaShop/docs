@@ -147,7 +147,7 @@ class MyModule extends Module implements WidgetInterface
         return $this->display(__FILE__, 'views/templates/widget/mymodule.tpl');
     }
  
-    public function getWidgetVariables($hookName = null , array $configuration = [] )
+    public function getWidgetVariables($hookName , array $configuration)
     {
         $myParamKey = $configuration['my_param_key'] ?? null;
         
