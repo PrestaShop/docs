@@ -13,7 +13,7 @@ These modules are bundled into PrestaShop through composer at build time.
 
 Module | Name | Native since | Description 
 ------ | ---- | ------------ | -----------
-[blockreassurance](https://github.com/PrestaShop/blockreassurance)                 | Customer reassurance block     | 1.7.0 | Adds an information block aimed at offering helpful information to reassure customers that your store is trustworthy. 
+[blockreassurance](https://github.com/PrestaShop/blockreassurance)                 | Customer reassurance block     | 1.6.0 | Adds an information block aimed at offering helpful information to reassure customers that your store is trustworthy. 
 [contactform](https://github.com/PrestaShop/contactform)                           | Contact form                   | 1.7.0 | Adds a contact form to the "Contact us" page.
 [dashactivity](https://github.com/PrestaShop/dashactivity)                         | Activity dashboard widget      | 1.6.0 | Displays an activity widget in the Back office dashboard.
 [dashgoals](https://github.com/PrestaShop/dashgoals)                               | Dashboard goals                | 1.6.0 | Adds a block with your store's forecast.
