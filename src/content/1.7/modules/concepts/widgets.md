@@ -159,7 +159,7 @@ class MyModule extends Module implements WidgetInterface
         ];
     }
     
-    public function getMyDynamicVarByParamKey($paramKey)
+    public function getMyDynamicVarByParamKey(string $paramKey)
     {
         if($paramKey === 'my_param_value') {
            return 'my_dynamic_var_by_my_param_value';
