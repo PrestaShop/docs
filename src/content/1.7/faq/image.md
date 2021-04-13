@@ -6,7 +6,7 @@ title: Image FAQ
 
 **Q:** Why can I not use more than 9 999 999 images?
 
-**A:** The limitation of the .htaccess file prevents the use of more than 9 999 999 images because there is a limit of 9 back references ($1, $2, $3,... $9) in mod_rewrite.
+**A:** The limitation of the [.htaccess](https://httpd.apache.org/docs/2.4/howto/htaccess.html) file prevents the use of more than 9 999 999 images because there is a limit of 9 back references ($1, $2, $3,... $9) in mod_rewrite.
 The $10 $11 etc back references are being interpreted as just $1.
 
 You can exceed this limitation by adding the needed rules in your .htacces file:
