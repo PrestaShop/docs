@@ -104,4 +104,78 @@ The function `renderWidget()` of a specific module can be called directly:
 Hook::coreRenderWidget(Module $module, $hook_name, $params);
 ```
 
+## Code example
+
+* From a PHP class
+
+
+```php
+<?php
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
+class MyModule extends Module implements WidgetInterface
+{
+    public function __construct()
+    {
+        $this->name = 'mymodule';
+        $this->tab = 'front_office_features';
+        $this->version = '1.0.0';
+        $this->author = 'Firstname Lastname';
+        $this->need_instance = 0;
+        $this->ps_versions_compliancy = [
+            'min' => '1.7',
+            'max' => _PS_VERSION_
+        ];
+        $this->bootstrap = true;
+
+        parent::__construct();
+
+        $this->displayName = $this->l('My module');
+        $this->description = $this->l('Description of my module.');
+
+        $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
+    }
+
+    public function renderWidget($hookName, array $configuration) 
+    {
+        $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
+
+        return $this->fetch('module:'.$this->name.'/views/templates/widget/mymodule.tpl');
+    }
+ 
+    public function getWidgetVariables($hookName , array $configuration)
+    {
+        $myParamKey = $configuration['my_param_key'] ?? null;
+        
+        return [
+            'my_var1' => 'my_var1_value',
+            'my_var2' => 'my_var2_value',
+            'my_var_n' => 'my_var_n_value',
+            'my_dynamic_var_by_param' => $this->getMyDynamicVarByParamKey($myParamKey),
+        ];
+    }
+    
+    public function getMyDynamicVarByParamKey(string $paramKey)
+    {
+        if($paramKey === 'my_param_value') {
+           return 'my_dynamic_var_by_my_param_value';
+        }
+
+        return null;
+    }
+}
+
+```
+
+* From a Smarty template
+
+```smarty
+{widget name='mymodule' my_param_key='my_param_value'}
+```
+
+
 The hook name sent to `renderWidget` will depend on the value provided to the optional `hook` parameter.
