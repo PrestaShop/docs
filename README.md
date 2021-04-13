@@ -36,7 +36,7 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 #### Prerequisites
 
-##### [Hugo](https://gohugo.io/) v82+
+##### [Hugo](https://gohugo.io/) v0.82+
 
 TL;DR:
 
