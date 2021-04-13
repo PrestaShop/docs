@@ -144,7 +144,7 @@ class MyModule extends Module implements WidgetInterface
     {
         $this->smarty->assign($this->getWidgetVariables($hookName, $configuration));
 
-        return $this->display(__FILE__, 'views/templates/widget/mymodule.tpl');
+        return $this->fetch('module:'.$this->name.'/views/templates/widget/mymodule.tpl');
     }
  
     public function getWidgetVariables($hookName , array $configuration)
