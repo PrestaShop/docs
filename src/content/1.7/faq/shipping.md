@@ -5,7 +5,7 @@ title: Shipping FAQ
 # Shipping FAQ
 
 - [Shipping information](#shipping-information)
-- [How do I add a service fee to an order?](#how-do-i-add-a-service-fee-to-an-order?)
+- [How do I add a service fee to an order?](#how-do-i-add-a-service-fee-to-an-order)
 
 
 ## Shipping information
