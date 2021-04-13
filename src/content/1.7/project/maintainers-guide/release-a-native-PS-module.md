@@ -1,8 +1,9 @@
 ---
 title: Release a native PrestaShop module
-weight: 3
+weight: 80
 aliases:
 - /1.7/release/release-a-native-PS-module/
+- /1.7/project/release/release-a-new-version-of-prestashop/
 ---
 
 # Release a new version of a native PrestaShop module
