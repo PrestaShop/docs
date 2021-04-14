@@ -584,9 +584,10 @@ actionFrontControllerSetVariables
     ```php
       <?php
       array(
-        'templateVars' => &(array)
+        'templateVars' => &(array) template variables
       );
     ```
+    There was no parameter before 1.7.7
     
     Example usage:
     
