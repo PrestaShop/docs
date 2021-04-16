@@ -100,7 +100,7 @@ _Who adds issues to this column?_ It is the core product team members once they 
 
 #### Backlog
 
-**All issues that are considered _ready_** by the Product Managers and the lead dev. Issues in this column will be discussed with the core maintainers.
+**All issues that are considered _ready_** by the Product Managers and the Lead Developer. Issues in this column will be discussed with the core maintainers.
 
 _Who adds issues to this column?_ It is the Product Managers.
 
