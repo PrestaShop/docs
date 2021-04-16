@@ -61,7 +61,7 @@ Both the product and the maintainers teams use it to prepare and plan the next d
 
 ### Patches versions
 
-There should only have regressions issues in the kanban of a patch version. For example, 1.7.7.1 and 1.7.7.2 (and so on...) kanbans only includes the regressions of the 1.7.7.0 version.
+There should only have regressions, critical or security issues in the kanban of a patch version. For example, 1.7.7.1 and 1.7.7.2 (and so on...) kanbans only includes the regressions of the 1.7.7.0 version.
 
 ### Minor versions
 
