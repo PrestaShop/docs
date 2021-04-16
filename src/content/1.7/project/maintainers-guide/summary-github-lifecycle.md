@@ -77,7 +77,7 @@ Only "must-have" issues are included in the kanban, as it must reflect the progr
 Community contributions that fix a feature request or an improvement, must be approved by the Core product team if they bring a change in the functional behavior and by the Core developer team if they bring a change in the technical behavior. Ideally before being reviewed, at least before being merged. Here is why:
 
 It is a bug? The specifications must be completed only when it's not complete or when there's a behavior change.
-It is a feature request or an improvement? It must be validated, prioritized, and specified. Specification can be written by a contributor or by the Core Product team. The Core Product team has the final word in whether the specification is valid or not.
+It is a feature request or an improvement? It must be validated, prioritized, and specified. Specification can be written by a contributor or by the Core Product team. The Core Product team decides whether the specification is valid or not.
 
 A pull request that shows no activity for more than three months must be closed. If it is fixing a major bug or any topwatcher issue, it will be back in the to do column again to be completed by a developer.
 
