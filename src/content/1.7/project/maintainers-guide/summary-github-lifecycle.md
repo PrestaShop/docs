@@ -65,7 +65,7 @@ There should only have regressions issues in the kanban of a patch version. For 
 
 ### Minor versions
 
-There should only have "must-have" issues in the kanban of a minor/major version and it always have an owner, be it a product manager or a developer.
+There should only have "must-have" issues in the kanban of a minor/major version and it always has an owner, be it a product manager or a developer in charge of the issue.
 Only "must-have" issues are included in the kanban, as it must reflect the progress of the version. For example, if a GitHub issue reports a must-have bug prioritized for version 1.7.8.0, it must appear in the 1.7.8 kanban while the linked pull request is milestoned for 1.7.8.0.
 
 ### Nice to have
