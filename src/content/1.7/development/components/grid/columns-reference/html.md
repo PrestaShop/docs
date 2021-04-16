@@ -14,7 +14,6 @@ Using this column could open you to XSS attacks, if you are using this column ta
 If you are using form together with grid, safe way is to use [FormattedTextareaType ]({{< ref "/1.7/development/components/form/types-reference/formatted-textarea/" >}}).
 {{% /notice %}}
 
-
 ## Available options
 
 | Properties | Type   | Expected value                                               |
