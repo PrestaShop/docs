@@ -32,7 +32,7 @@ You, on the other hand, need this information in order to correct any potential 
 define('_PS_MODE_DEV_', true);
 ```
 
-You can also enable developer mode directly from your back-office, go to the “Performance” page under the “Advanced parameters” menu and change the following setting: "Debug mode" to "Yes". Don't forget to disable developer mode as soon as you've done debugging your code.
+You can also enable developer mode directly from your back-office, go to the “Performance” page under the “Advanced parameters” menu and change the following setting: "Debug mode" to "Yes". Don't forget to disable developer mode as soon as you have finished debugging your code.
 
 ## Using the dump() function
 
