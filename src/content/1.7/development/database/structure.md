@@ -17,7 +17,7 @@ modified, this the file you should open.
 
 ### Table in DB but not in db_structure.sql
 
-With PrestaShop 1.7, some tables have been migrated to doctrine entities
+With PrestaShop 1.7, some tables are now linked to [Doctrine](https://www.doctrine-project.org/) entities
 (i.e stocks). If their `ObjectModel` (= legacy) equivalent does not exist,
 the entity is probably only managed by Doctrine.
 
@@ -27,9 +27,11 @@ stored in `src/PrestaShopBundle/Entity/`.
 ## Database content
 
 The default database content is stored in XML files in `install/data/xml/`.
-There is one file per entity (= table).
+There is one file per entity (= table). XML files are structured following ObjectModel structure.
 
 These files are used during the PrestaShop installation as well.
+
+Another file is being used to load data during the install process: `install/data/db_data.sql`. Some versions of PrestaShop do not use it so you might not always find it in the ZIP archive.
 
 ## Structure and content upgrades
 
@@ -44,7 +46,7 @@ file will be stored in the folder `/install/upgrade/sql/`.
 
 Its name is the PS version on which the change will be applied.
 
-For instance, here is the file *[1.7.3.0.sql](https://github.com/PrestaShop/PrestaShop/blob/1.7.3.x/install-dev/upgrade/sql/1.7.3.0.sql)*,
+For instance, here is the file *[1.7.3.0.sql](https://github.com/PrestaShop/PrestaShop/blob/1.7.3.0/install-dev/upgrade/sql/1.7.3.0.sql)*,
 used by shops upgrading to 1.7.3.0 or later:
 
 ```sql
@@ -80,7 +82,7 @@ function ps_1730_add_quick_access_evaluation_catalog()
 ```
 
 PrestaShop does not expect these functions to return anything. It will always
-consider it went well.
+consider it was run without failure.
 
 ### Applying changes
 
@@ -94,7 +96,7 @@ PrestaShop lists the upgrade files waiting to be applied, by selecting the names
 fitting between the configuration property `PS_VERSION_DB` and the constant
 `_PS_INSTALL_VERSION_` defined in `install/install_version.php`.
 
-In the first part of this article, we talked about entities being managed only by
+In the top of this page, we talked about entities being managed only by
 Doctrine. Applying the changes on the database is done with the following command:
 
 ```
