@@ -17,7 +17,7 @@ modified, this the file you should open.
 
 ### Table in DB but not in db_structure.sql
 
-With PrestaShop 1.7, some tables are now [Doctrine](https://www.doctrine-project.org/) entities
+With PrestaShop 1.7, some tables are now linked to [Doctrine](https://www.doctrine-project.org/) entities
 (i.e stocks). If their `ObjectModel` (= legacy) equivalent does not exist,
 the entity is probably only managed by Doctrine.
 
