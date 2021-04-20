@@ -7,15 +7,16 @@ weight: 5
 
 PrestaShop was conceived so that third-party modules could easily build upon its foundations, making it an extremely customizable e-commerce software.
 
-PrestaShop’s customization is based on three possibilities:
+PrestaShop’s customization is based on four possibilities:
 
 * Themes,
 * Modules,
+* Hooks,
 * Overriding.
 
-Themes are explored in full in the Designer Guide.
+Themes are explored in full in the [Themes]({{< ref "/1.7/themes" >}}) section.
 
-Modules and the override system are explored in this Developer Guide, starting with the “Concepts” section below. You can learn more about each in the following chapters:
+Modules, hooks and the override system are explored in this page and in the [Modules]({{< ref "/1.7/modules" >}}) section.
 
 {{% notice note %}}
 By default, PrestaShop is provided with more than 100 modules, enabling you to launch your online business quickly and for free.
@@ -43,7 +44,11 @@ A module is an extension to PrestaShop that enables any developer to add the fol
 * View additional items on the site (product selection, etc.).
 * Communicate with other e-commerce services (buying guides, payment platforms, logistics, etc.).
 
-Overriding is a system in itself. PrestaShop uses completely object-oriented code. One of the advantages of this is that, with the right code architecture, you can easily replace or extend parts of the core code with your own custom code, without having to touch the core code. Your code thus overrides the core code, making PrestaShop behave as you prefer it to. It is not recommended to use an override in a module that you intend to distribute (for instance through the PrestaShop Addons marketplace), and they are forbidden in partner modules. Keep them for your own shop.
+Overriding is a system in itself. PrestaShop uses completely object-oriented code. One of the advantages of this is that, with the right code architecture, you can easily replace or extend parts of the core code with your own custom code, without having to touch the core code.
+
+Your code thus overrides the core code, making PrestaShop behave as you prefer it to.
+
+It is however not recommended to use an override in a module that you intend to distribute (for instance through the PrestaShop Addons marketplace), and they are forbidden in partner modules. Keep them for your own shop.
 
 ## PrestaShop’s technical architecture
 
@@ -61,7 +66,7 @@ A 3-tier architecture has many advantages:
 
 * It’s easier to read the software’s code.
 * Developers can add and edit code faster.
-* Graphic designer and HTML integrators can work with the confines of the /themes folder without having to understand or even read a single line of PHP code.
+* Graphic designer and HTML integrators can work with the confines of the `/themes` folder without having to understand or even read a single line of PHP code.
 * Developers can work on additional data and modules that the HTML integrators can make use of.
 
 #### Model
