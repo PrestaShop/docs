@@ -13,30 +13,18 @@ When you submit a new Pull Request to the [project repository](https://github.co
 
 ### Continuous Integration
 
-Four automatic code checker tools are active on the project.
-
 #### GitHub Actions
 
-The first tool is a [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) [GitHub Action](https://github.com/features/actions). This tool will look at your Pull Request and check whether the php syntax and code-style is correct. If not, it will block the PR from being merged and tell you what is wrong.
+The project relies on [GitHub Action](https://github.com/features/actions) to perform multiple checks against submitted Pull Requests.
 
-It is a lot easier to work on a big codebase like PrestaShop if all code is written following the same conventions: snake_case or camelCase, how to write the phpDoc, when to use white spaces ... it makes the code look like if it was written by a single developer.
-Just like reading a book with two different styles in it, having a codebase with a unified style is making it easier to browse. A unified code-style also makes the pull requests easier to review.
+Checks being performed include:
+- [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to validate php syntax and code-style
+- Multiple linters, including [ESLint](https://eslint.org/) and [stylelint](https://stylelint.io/) to validate syntax and code-style for JavaScript, SCSS, YAML, Twig...
+- PHP unit tests
+- PHP integration tests
+- UI tests
 
-If the Github Action states that your pull request has issues, you need to fix the issues by looking at the Github Action output to understand what needs to be fixed.
-
-The second tool is a [ESLint](https://eslint.org/) GitHub Action. This one checks whether the Javascript syntax and code-style is correct. Likewise, it will block the PR from being merged if there is a syntax or code-style issue.
-
-The third tool is a [stylelint](https://stylelint.io/) GitHub Action. This one checks whether the CSS syntax and code-style is correct. It will block the PR from being merged as well if there is a syntax or code-style issue.
-
-These GitHub Actions are executed automatically for every Pull Request.
-
-#### Test runner
-
-The fourth tool is [Travis](https://travis-ci.org/). Travis is a Continous Integration system that will look at the Pull Request and run several checks, be it code-style checkers, format checkers or automated tests, and provide you the result in the Pull Request. If something is wrong it will block the PR from being merged. This is a standard approach to ensure that new contributions in a codebase do not break existing features and behaviors.
-
-If Travis states that your pull request has issues, you need to fix the issues by looking at Travis output to understand what needs to be fixed.
-
-Travis runs automatically for every Pull Request.
+The results of these checks is displayed at the bottom of the Pull Request. Some of these tools provide a short output, others mention the faulty lines.
 
 ### Prestonbot and Issuebot
 
@@ -70,6 +58,35 @@ The review process is quite thorough in order to make sure that PrestaShop codeb
 Some Pull Requests are very hard to review because they are related to a complex topic, a complex area of the code or have a huge global impact on the software that is very hard to estimate and assess. Reviews can take hours or days in order to make sure every contribution merged in the project meets the level of quality we want for it.
 
 Most of the time, if an issue is found during the review, the Core maintainer will provide feedback about the issue and requests the author to modify the parts of the Pull Request that cannot be accepted as they are. After the author of the Pull Request has implemented the requested changes, then the Pull Request can be approved and move forward to the next step.
+
+### It is not only about code
+
+For some Pull Requests, some more people of PrestaShop might be involved in the review:
+
+- UX design team will review changes that have a significant UX impact 
+- Product team will review changes that introduce a significant behavior modification (either an existing feature or a new feature)
+- Content team will review Pull Requests that introduce wording changes (labels, titles, error and information messages)
+
+Once the Pull Request has been validated by all of the relevant people, it is finally verified by the QA team. The QA team will then make sure that the behavior of the proposed change is correct and that it does not produce any regressions (new errors).
+
+After the Pull Request has finally passed the QA validation, it is merged in the project and the author becomes (if they weren't already) a contributor to this great open source project !
+
+### Graphical summary
+
+(click on it to see full size)
+
+![Pull Request process summary](../../img/pull-request-process.png)
+
+
+## Other useful resources
+
+- [What it means to rebase a Pull Request submitted on GitHub](https://dev.to/mathieuks/what-it-means-to-rebase-a-pull-request-submitted-on-github-5717) on dev.to, by Mathieu Ferment
+- [How to resolve a git merge conflict](https://opensource.com/article/20/4/git-merge-conflict) on opensource.com by Brian Breniser
+
+---
+
+_(This article was originally published on our blog: [What Happens To Pull Requests After They Are Submitted](https://build.prestashop.com/news/the-review-process/))_
+d to the next step.
 
 ### It is not only about code
 
