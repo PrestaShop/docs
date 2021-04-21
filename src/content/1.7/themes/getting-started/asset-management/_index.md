@@ -215,6 +215,12 @@ assets:
         path: assets/js/external-lib.js
         priority: 30
         position: bottom
+    all:
+      - id: external-cdn
+        path: //cdn-url.com/external-lib.js
+        priority: 100
+        position: bottom
+        server: remote
     product:
       - id: product-custom-lib
         path: assets/js/product.js
