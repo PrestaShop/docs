@@ -44,7 +44,7 @@ For legacy pages, the views and the Javascript can be found in `admin-dev/themes
 The Symfony backend relies on controller you can find in `src/PrestaShopBundle/Controller/Admin` and PrestaShop logic that mostly come from `src` folder, and also some `classes` files.
 
 For migrated pages, the views can be found in `src/PrestaShopBundle/Resources/views`.
-The Javascript ccan be found in `admin-dev/themes/new-theme/js`.
+The Javascript can be found in `admin-dev/themes/new-theme/js`.
 
 ### Visit a legacy Back Office controller
 
