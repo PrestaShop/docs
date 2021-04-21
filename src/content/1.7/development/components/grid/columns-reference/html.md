@@ -11,7 +11,7 @@ Displays raw data without any escaping. Can be used to display HTML in grid.
 
 {{% notice warning %}}
 Using this column could open you to XSS attacks, if you are using this column take steps to make sure that data displayed by this column is secure.
-If you are using form together with grid, safe way is to use [FormattedTextareaType ]({{< ref "/1.7/development/components/form/types-reference/formatted-textarea/" >}}).
+If you are using form together with grid, safe way is to use [FormattedTextareaType ]({{< ref "/1.7/development/components/form/types-reference/formatted-textarea" >}}).
 {{% /notice %}}
 
 ## Available options
