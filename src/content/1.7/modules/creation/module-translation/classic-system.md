@@ -6,17 +6,13 @@ weight: 2
 
 # Classic module translation system
 
-The classic translation system is a heritage from previous versions of PrestaShop and provides retrocompatibility with PrestaShop 1.6. If you plan on supporting only versions 1.7.6 and up, consider using the [New translation system][new-translation-system].
+The classic translation system is a heritage from previous versions of PrestaShop and provides retrocompatibility with PrestaShop 1.6. 
 
-{{% notice note %}}
-**Native modules work differently**
+{{% notice tip %}}
+**Do you need this?**
 
-In PrestaShop 1.7, native modules (the ones bundled with PrestaShop) use a different system.
-Read more about it here: [Native module translation]({{< ref "1.7/development/internationalization/translation/native-module-translation" >}}).
-{{% /notice %}}
-
-{{% notice info %}}
-Modern (symfony-based) modules can only be translated using the [New translation system]({{< ref "new-system" >}}).
+- If you plan on supporting only versions 1.7.6 and up, consider using the [New translation system]({{< ref "new-system" >}}).
+- Modern (symfony-based) modules and native modules only support the new system.
 {{% /notice %}}
 
 ## How it works

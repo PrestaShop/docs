@@ -1,6 +1,6 @@
 ---
 title: Translation Domains
-weight: 10
+weight: 20
 ---
 
 # Translation Domains

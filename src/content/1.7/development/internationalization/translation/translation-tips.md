@@ -1,5 +1,6 @@
 ---
 title: Tips and tricks
+weight: 50
 ---
 
 # Translation tips and tricks
