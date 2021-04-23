@@ -43,7 +43,7 @@ prestashop.emit(
 );
 ```
 
-### Listening to rvents
+### Listening to events
 
 You can also react to an event emitted by `prestashop.emit`. Here is a simple example:
 
