@@ -233,8 +233,8 @@ assets:
         server: remote
   js:
     all:
-      - id: custom-cdn-css
-        path: //cdn-url.com/external-lib.css
+      - id: custom-cdn-js
+        path: //cdn-url.com/external-lib.js
         priority: 200
         server: remote
 ```
