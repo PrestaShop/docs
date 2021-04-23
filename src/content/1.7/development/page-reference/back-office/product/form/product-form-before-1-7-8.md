@@ -110,7 +110,7 @@ Here is a description of the sub forms used in the main one
 | | *label* | `TranslateType` | Customization field name (localized) |
 | | *type* | `ChoiceType` | Customization field type (text, file) |
 | | *require* | `CheckboxType` | Boolean to indicate if custom field is required |
-| **ProductSpecificPrice** | | | This Form type is used in `ProductOptions` to edit a *SpecificPrice* entity |
+| **ProductSpecificPrice** | | | This Form type is used in `ProductPrice` to edit a *SpecificPrice* entity |
 | | *sp_id_shop* | `HiddenType` or `ChoiceType` | Select Shop association (When only one Shop just use the default one) |
 | | *sp_id_currency* | `ChoiceType` | Select specific price currency |
 | | *sp_id_country* | `ChoiceType` | Select specific price country |
