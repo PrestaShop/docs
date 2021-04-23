@@ -10,7 +10,7 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 ## Rendering the site locally
 
-### By `docker-compose`
+### Using `docker-compose`
 
 1. Clone the repository somewhere on your system:
     ```
@@ -34,28 +34,19 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 ### Natively
 
-#### Prerequisites
+#### Setting up your environment
 
-##### [Hugo](https://gohugo.io/) v0.82+
+1. Install [Hugo](https://gohugo.io/). You will need v0.82+ (extended binary)
+   
+   * **Mac and Linux**: Run `./bin/installHugo.sh`
+   * **Windows**: Grab the [release binary](https://github.com/gohugoio/hugo/releases)
+   
+   Or read the [Official install guide](https://gohugo.io/getting-started/installing).
 
-TL;DR:
-
-* **Mac and Linux**: `./bin/installHugo.sh`
-* **Windows**: Grab the [release binary](https://github.com/gohugoio/hugo/releases)
-
-Or read the [Official install guide](https://gohugo.io/getting-started/installing).
-
-##### Node.js and NPM
-
-> This is only needed if you want to customize the style.
-
-[Download Node here](https://nodejs.org/en/)
-
-#### Clone the repository somewhere on your system
-
-```
-git clone https://github.com/PrestaShop/docs.git
-```
+2. Clone the repository somewhere on your system
+   ```
+   git clone https://github.com/PrestaShop/docs.git
+   ```
 
 #### Launching the site
 
@@ -79,43 +70,13 @@ git clone https://github.com/PrestaShop/docs.git
 
 ## Customizing the style
 
-We use Sass for styling and Webpack for bundling.
+We use Sass for styling, bundled by Hugo itself.
 
-Source files for the main css are in this directory:
+The source files for the main css & js are in this directory:
+
 ```
-src/themes/hugo-theme-learn/_src/sass
+src/themes/hugo-theme-learn/assets
 ```
-
-### How to build the theme
-
-#### By `docker-compose`
-
-1. Install NPM dependencies (only the first time)
-    ```
-    docker-compose run --rm npm install
-    ```
-    
-2. Launch build
-    ```
-    docker-compose run --rm npm run build
-    ```
-
-#### Natively
-
-1. Switch to the theme's `_src` folder
-    ```
-    cd src/themes/hugo-theme-learn/_src
-    ```
-
-2. Install NPM dependencies (only the first time)
-    ```
-    npm install
-    ```
-    
-3. Launch build
-    ```
-    npm run build
-    ```
 
 ## License
 
