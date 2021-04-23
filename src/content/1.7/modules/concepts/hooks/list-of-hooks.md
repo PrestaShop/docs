@@ -1168,6 +1168,22 @@ actionWatermark
     );
     ```
     
+actionProductImageDeleted
+: 
+    Called after a product image is deleted. Can be used to sync the deletion if other storage system is used.
+
+    Located in: 
+
+    -  controllers/admin/AdminProductsController.php
+
+    Parameters:
+    
+    <?php
+    array(
+      'id_image' => (int) Image ID,
+    );
+    
+    
 actionGetAdminOrderButtons
 : 
     Available since: {{< minver v="1.7.7" >}}
