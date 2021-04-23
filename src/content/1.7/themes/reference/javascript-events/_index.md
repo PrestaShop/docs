@@ -35,10 +35,10 @@ The best way to trigger an event is to use the `prestashop` object. Here is a si
 
 ```js
 prestashop.emit(
-  'product updated',
+  'myEventName',
   {
-    dataForm: someSelector.serializeArray(),
-    productOption: 3
+    myData1: 1,
+    myData2: 3
   }
 );
 ```
@@ -50,13 +50,13 @@ You can also react to an event emitted by `prestashop.emit`. Here is a simple ex
 ```js
 if (typeof prestashop !== 'undefined') {
   prestashop.on(
-    'product updated',
+    'myEventName',
     function (event) {
       var eventDatas = {};
       if (event && event.reason) {
         eventDatas = {
-          data_form: event.reason.dataForm,
-          product_option: event.reason.productOption
+          my_data_1: event.reason.myData1,
+          my_data_2: event.reason.myData2
         };
       }
     }
