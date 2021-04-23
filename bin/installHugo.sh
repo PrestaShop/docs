@@ -14,7 +14,7 @@ fi
 
 cd "$( dirname "$0" )/../" && pwd
 
-wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_${HUGO_OS}.tar.gz
+wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_${HUGO_OS}.tar.gz
 
 rm -rf hugo
 tar -xzf hugo_${HUGO_VERSION}_${HUGO_OS}.tar.gz hugo

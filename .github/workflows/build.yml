@@ -19,6 +19,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.82.0'
+          extended: true
 
       - name: Clean public directory
         run: rm -rf ./src/public
