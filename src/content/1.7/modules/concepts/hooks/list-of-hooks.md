@@ -1181,7 +1181,7 @@ actionProductImageDeleted
     array(
       'id_image' => (int) Image ID,
     );
-    
+    ```
     
 actionGetAdminOrderButtons
 : 
