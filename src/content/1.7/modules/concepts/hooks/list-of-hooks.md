@@ -1170,6 +1170,7 @@ actionWatermark
     
 actionProductImageDeleted
 : 
+    Available since: {{< minver v="1.7.8" >}}
     Called after a product image is deleted. Can be used to sync the deletion if other storage system is used.
 
     Located in: 
@@ -1177,7 +1178,7 @@ actionProductImageDeleted
     -  controllers/admin/AdminProductsController.php
 
     Parameters:
-    
+    ```php
     <?php
     array(
       'id_image' => (int) Image ID,
