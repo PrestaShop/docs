@@ -1,5 +1,3 @@
-import '../sass/main.scss';
-
 const menuItems = document.querySelectorAll('ul.topics li.isParent > a');
 
 function toggleIcon(icon) {
