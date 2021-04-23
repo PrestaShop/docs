@@ -93,26 +93,27 @@ When the extension is open-source, sharing the license is one important task.
 
 [Header-Stamp](https://github.com/PrestaShopCorp/header-stamp) is a tool that applies a header on all compatible files (PHP, JS...).
 In these headers, details can be found about the author, the license, the original year of publication.
-Everytime there is a change to make, one command would apply it to all your files.
+One command will apply the license header to all your files, or update it as necessary.
 
 This tool is part of `prestashop/php-dev-tools` available on [Packagist](https://packagist.org/packages/prestashop/php-dev-tools), which can be required via composer.
 
-As an example, the license AFL is going to be applied on a PrestaShop native module. There is a AFL template existing in the package that can be used,
-and there are a few folders to ignore while these changes are applied (`vendor` because libraries have their own license, `test` and `_dev` because they
-won't be part of the release package).
+### Example
 
-Commands to install and use the tool would be:
+In the following example, the AFL license is going to be applied on a module. 
+
+The Header-Stamp package already includes an AFL template, so we can use that one. We also have a few folders that we will want to ignore: `vendor` (because libraries have their own license), `test`, and `_dev` (because they won't be part of the release package).
+
+To install and use the tool:
 
 ```bash
-# Install dependencies
+# Install header-stamp
 composer require --dev prestashop/php-dev-tools
 
 # Apply header block
 php vendor/bin/header-stamp --license=vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,tests,_dev
 ```
 
-To return the list of files that would be updated because their header block is missing or different from the one to apply, use the
-`--dry-run` parameter.
+To return the list of files that would be updated because their header block is missing or different from the one to apply, use the `--dry-run` parameter:
 
 ```bash
 php vendor/bin/header-stamp --license=vendor/prestashop/header-stamp/assets/afl.txt --exclude=vendor,tests,_dev --dry-run
