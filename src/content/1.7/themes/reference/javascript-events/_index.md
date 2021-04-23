@@ -48,7 +48,7 @@ prestashop.emit(
 You can also react to an event emitted by `prestashop.emit`. Here is a simple example:
 
 ```js
-if(typeof prestashop !== 'undefined') {
+if (typeof prestashop !== 'undefined') {
   prestashop.on(
     'product updated',
     function (event) {
@@ -59,7 +59,7 @@ if(typeof prestashop !== 'undefined') {
           product_option: event.reason.productOption
         };
       }
-   }
+    }
   );
 }
 ```
