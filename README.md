@@ -70,12 +70,6 @@ git clone https://github.com/PrestaShop/docs.git
     ```
     > You may need to change the path to the `hugo` binary depending on where it is on your system
 
-3. Done! You can open up the site on your browser.
-
-    > It's usually available at http://localhost:1313
-    
-    Any change you perform on your data will be updated almost instantly.
-
 
 ## Customizing the style
 
@@ -117,6 +111,14 @@ src/themes/hugo-theme-learn/_src/sass
     npm run build
     ```
 
+#### Launch website
+
+You can open up the site on your browser
+
+    > It's usually available at http://localhost:1313
+    
+    Any change you perform on your data will be updated almost instantly.
+    
 ## License
 
 Content from this documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
