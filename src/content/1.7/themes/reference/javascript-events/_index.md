@@ -43,6 +43,27 @@ prestashop.emit(
 );
 ```
 
+### Listening to rvents
+
+You can also react to an event emitted by `prestashop.emit`. Here is a simple example:
+
+```js
+if(typeof prestashop !== 'undefined') {
+  prestashop.on(
+    'product updated',
+    function (event) {
+      var eventDatas = {};
+      if (event && event.reason) {
+        eventDatas = {
+          data_form: event.reason.dataForm,
+          product_option: event.reason.productOption
+        };
+      }
+   }
+  );
+}
+```
+
 ### Dispatched events
 
 PrestaShop will dispatch many events from `core.js` so your code can rely on it:
