@@ -93,6 +93,10 @@ right before allowing your customers to access it again.
 In this step, we "upgrade" the PrestaShop files by copying the new
 release content in the existing shop.
 
+### Disable cache
+
+You may have activated a caching system (eg. memcache) on your shop. In that case, make sure to disable it in "Advanced Parameters" > "Performance". You can enable it again once the upgrade process is done.
+
 **Note about `vendor` folder**: Previous upgrades of PrestaShop 1.7
 showed that conflicts may occur when merging the new vendor/ folder with
 the old one. To avoid this problem, we recommend to delete this folder
