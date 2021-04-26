@@ -35,12 +35,33 @@ The best way to trigger an event is to use the `prestashop` object. Here is a si
 
 ```js
 prestashop.emit(
-  'product updated',
+  'myEventName',
   {
-    dataForm: someSelector.serializeArray(),
-    productOption: 3
+    myData1: 1,
+    myData2: 3
   }
 );
+```
+
+### Listening to events
+
+You can also react to an event emitted by `prestashop.emit`. Here is a simple example:
+
+```js
+if (typeof prestashop !== 'undefined') {
+  prestashop.on(
+    'myEventName',
+    function (event) {
+      var eventDatas = {};
+      if (event && event.reason) {
+        eventDatas = {
+          my_data_1: event.reason.myData1,
+          my_data_2: event.reason.myData2
+        };
+      }
+    }
+  );
+}
 ```
 
 ### Dispatched events
