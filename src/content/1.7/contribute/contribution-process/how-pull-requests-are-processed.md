@@ -13,11 +13,9 @@ When you submit a new Pull Request to the [project repository](https://github.co
 
 ### Continuous Integration
 
-#### GitHub Actions
-
 The project relies on [GitHub Action](https://github.com/features/actions) to perform multiple checks against submitted Pull Requests.
 
-Checks being performed include:
+These checks include:
 - [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to validate php syntax and code-style
 - Multiple linters, including [ESLint](https://eslint.org/) and [stylelint](https://stylelint.io/) to validate syntax and code-style for JavaScript, SCSS, YAML, Twig...
 - PHP unit tests
