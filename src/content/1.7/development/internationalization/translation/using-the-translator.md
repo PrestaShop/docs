@@ -111,8 +111,15 @@ If you have have replacements to peform in your wording, then there are two opti
 In `.twig` files, you can use the `trans` filter from Twig:
 
 ```twig
-<div>{{ 'Sort by'|trans({}, 'Admin.Actions') }}</div>
+<div>{{ 'This product is no longer available.'|trans({}, 'Shop.Notifications.Error') }}</div>
 ```
 
-For information on more advanced features, head on to the [Symfony translator component documentation](https://symfony.com/doc/current/translation.html#twig-templates).
+You can also use named placeholders:
 
+```twig
+<div>{{ 'There are %products_count% items in your cart.'|trans({'%products_count%': cart.products_count}, 'Shop.Theme.Checkout') }}</div>
+```
+
+{{% notice note %}}
+For information on more advanced Twig translation features, head on to the [Symfony translator component's documentation](https://symfony.com/doc/3.4/translation.html#twig-templates).
+{{% /notice %}}
