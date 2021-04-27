@@ -13,30 +13,16 @@ When you submit a new Pull Request to the [project repository](https://github.co
 
 ### Continuous Integration
 
-Four automatic code checker tools are active on the project.
+The project relies on [GitHub Action](https://github.com/features/actions) to perform multiple checks against submitted Pull Requests.
 
-#### GitHub Actions
+These checks include:
+- [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to validate php syntax and code-style
+- Multiple linters, including [ESLint](https://eslint.org/) and [stylelint](https://stylelint.io/) to validate syntax and code-style for JavaScript, SCSS, YAML, Twig...
+- PHP unit tests
+- PHP integration tests
+- UI tests
 
-The first tool is a [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) [GitHub Action](https://github.com/features/actions). This tool will look at your Pull Request and check whether the php syntax and code-style is correct. If not, it will block the PR from being merged and tell you what is wrong.
-
-It is a lot easier to work on a big codebase like PrestaShop if all code is written following the same conventions: snake_case or camelCase, how to write the phpDoc, when to use white spaces ... it makes the code look like if it was written by a single developer.
-Just like reading a book with two different styles in it, having a codebase with a unified style is making it easier to browse. A unified code-style also makes the pull requests easier to review.
-
-If the Github Action states that your pull request has issues, you need to fix the issues by looking at the Github Action output to understand what needs to be fixed.
-
-The second tool is a [ESLint](https://eslint.org/) GitHub Action. This one checks whether the Javascript syntax and code-style is correct. Likewise, it will block the PR from being merged if there is a syntax or code-style issue.
-
-The third tool is a [stylelint](https://stylelint.io/) GitHub Action. This one checks whether the CSS syntax and code-style is correct. It will block the PR from being merged as well if there is a syntax or code-style issue.
-
-These GitHub Actions are executed automatically for every Pull Request.
-
-#### Test runner
-
-The fourth tool is [Travis](https://travis-ci.org/). Travis is a Continous Integration system that will look at the Pull Request and run several checks, be it code-style checkers, format checkers or automated tests, and provide you the result in the Pull Request. If something is wrong it will block the PR from being merged. This is a standard approach to ensure that new contributions in a codebase do not break existing features and behaviors.
-
-If Travis states that your pull request has issues, you need to fix the issues by looking at Travis output to understand what needs to be fixed.
-
-Travis runs automatically for every Pull Request.
+The results of these checks is displayed at the bottom of the Pull Request. Some of these tools provide a short output, others mention the faulty lines.
 
 ### Prestonbot and Issuebot
 
