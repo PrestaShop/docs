@@ -14,7 +14,8 @@ These services are responsible for logic such as:
 Here are couple principles of the domain services: 
 1. It MUST use the existing `ObjectModel` for writes as long as those classes exist.
 2. If it uses any legacy service or object model it MUST stay in adapter namespace.
-2. If it uses any `ObjectModel` method related to data persistence, that method MUST BE wrapped into a dedicated repository class using the [AbstractObjectModelRepository](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Adapter/AbstractObjectModelRepository.php) and validated by dedicated validator using the [AbstractObjectModelValidator](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Adapter/AbstractObjectModelValidator.php)
+3. If it uses any `ObjectModel` method related to data persistence, that method MUST be wrapped into a dedicated repository class which must ensure that no legacy exceptions are thrown (some reusable methods are present in [AbstractObjectModelRepository](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Adapter/AbstractObjectModelRepository.php))
+4. If `ObjectModel` is used for any write operation it MUST be validated by a dedicated validator class (some reusable methods are present in [AbstractObjectModelValidator](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Adapter/AbstractObjectModelValidator.php))
 
 # Code examples
 
