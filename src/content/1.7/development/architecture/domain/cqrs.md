@@ -72,7 +72,7 @@ public function handle(NameOfTheCommand $command);
  *
  * @return TypeOfReturn
  */
-public function handle(NameOfTheQuery $query);
+public function handle(NameOfTheQuery $query): TypeOfReturn;
 ```
 
 ## Command and Query buses
