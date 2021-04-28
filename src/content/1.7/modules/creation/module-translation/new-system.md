@@ -27,14 +27,14 @@ Similarly to the classic system, the new translation system works in two steps.
 
 PrestaShop provides functions that allow PHP files and Smarty/Twig templates to display translated wordings. By leveraging a list of translation sources (including dictionary files from _classic translation_), a module can use this feature display a wording in another language during runtime.
 
-{{< figure src="../img/new-translation-system.jpg" title="How wordings are translated at runtime" >}}
+{{< figure src="../img/new-translation-system.png" title="How wordings are translated at runtime" >}}
 
 
 ##### 2. Creating module dictionaries
 
 The Back Office's Translation page (_International > Translations > Modify Translations_) is used to generate module dictionaries. It extracts the module's wordings by analyzing its source code, then inspects a list of sources to compile a list of translations, and finally displays a form that allows you to customize or complete those translations in a given language. Once saved, this information is stored in the Database.
 
-{{< figure src="../img/new-translation-workflow.jpg" title="Translation workflow" >}}
+{{< figure src="../img/new-translation-workflow.png" title="Translation workflow" >}}
 
 
 {{% notice note %}}
@@ -42,7 +42,7 @@ If your module has already been translated using the [classic translation system
 {{% /notice %}}
 
 
-## Making your module translatable
+## Using translation
 
 To make your module translatable, you need to adapt your module's source code. Find any wording you want to make translatable, then wrap it using the appropriate method as explained below. Once wrapped, your wordings will be ready to be translated through the translation interface.
 
@@ -66,19 +66,18 @@ Translation Domain names are always made of three parts, separated by dots:
 
 1. The first part must always be **"Modules"**
 2. **"Nameofthemodule"** is the name of your module, with some rules:
-
-  - The first letter must be in upper case, and the rest in lower case (eg. "MyModule" becomes "Mymodule")
-  - Only word characters (A-z, 0-9) are supported.  
-     Make sure that the technical name of your module does not contain contains underscores (`_`) or any other unsupported symbol, or else translation may not work.
-  - If your module name starts with `ps_`, that part must be removed. This is an exception to the previous rule.
+   - The first letter must be in upper case, and the rest in lower case (eg. "MyModule" becomes "Mymodule")
+   - Only word characters (A-z, 0-9) are supported.  
+      Make sure that the technical name of your module does not contain contains underscores (`_`) or any other unsupported symbol, or else translation may not work.
+   - If your module name starts with `ps_`, that part must be removed. This is an exception to the previous rule.
 
 3. **"Specificpart"** allows for contextualization and can be set to whatever you like, following this rules:
-  
-  - The first letter must be in upper case, and the rest in lower case.
-  - Symbols like dots, dashes and underscores are allowed (but discouraged).
-  - If you want to use previously-generated classic translation dictionary files, you need to follow a [specific naming convention for backwards compatibility](#backwards-compatibility).  
+   - The first letter must be in upper case, and the rest in lower case.
+   - Symbols like dots, dashes and underscores are allowed (but discouraged).
+   - If you want to use previously-generated classic translation dictionary files, you need to follow a [specific naming convention for backwards compatibility](#backwards-compatibility).  
      Otherwise, consider using the [Native module conventions][native-module-conventions] (_"Admin"_ or _"Shop"_).
 
+{{% callout %}}
 #### Backwards compatibility
 
 If you want your module to be compatible with previously-generated [classic translation dictionary files]({{< ref "classic-system" >}}), then the third component of the Translation domain must be set to the name of the file where the wording is used, respecting the following rules:
@@ -86,6 +85,7 @@ If you want your module to be compatible with previously-generated [classic tran
   - The first letter must be in upper case, and the rest in lower case
   - If the file extension is `.tpl`, the extension must be removed
   - If the file name ends in "controller", that part must be removed as well.       
+{{% /callout %}}
 
 ##### Examples
  
@@ -196,6 +196,22 @@ If you really need to, you can also retrieve a new instance of your module using
 
 ### Templates
 
+#### Twig files
+
+Wordings in Twig .twig files can be translated using the `trans` filter. It works similarly as the `trans()` method described above for PHP files:
+
+```twig
+{# file: something.twig #}
+
+{{ 'Welcome to this page!'|trans({}, 'Modules.Mymodule.Admin') }}
+```
+
+The first parameter can be used to replace tokens in your wording after it's translated:
+
+```twig
+{{ 'Hello %username%!'|trans({'%username%': 'John'}, 'Modules.Mymodule.Admin') }}
+```
+
 #### Smarty files
 
 Wordings in Smarty .tpl files can be translated using the `{l}` function call, which Smarty will replace by the translation in the current language.
@@ -214,25 +230,15 @@ For instance, translating the string "Welcome to this page!" can be done like th
 {l s='Welcome to this page!' d='Modules.Mymodule.Somefile'}
 ```
 
-#### Twig files
+You can replace placeholders in your translated wordings using the `sprintf` parameter:
 
-Wordings in Twig .twig files can be translated using the `trans` filter. It works similarly as the `trans()` method described for PHP files above:
-
-```twig
-{# file: something.twig #}
-
-{{ 'Welcome to this page!'|trans({}, 'Modules.Mymodule.Admin') }}
-```
-
-The first parameter can be used to replace tokens in your wording after it's translated:
-
-```twig
-{{ 'Hello %username%!'|trans({'%username%': 'John'}, 'Modules.Mymodule.Admin') }}
+```smarty
+{l s='Hello %username%!' sprintf=['%username%' => 'John'] d='Modules.Mymodule.Somefile'} }}
 ```
 
 ## Translating your module
 
-To be translatable through the new translation interface, modules must opt-in. This can be done by declaring this function on your module's main class:
+Modules must opt-in to become translatable using the new Back Office translation interface. This can be done by declaring the following function on your module's main class:
 
 ```php
 <?php
@@ -244,29 +250,15 @@ public function isUsingNewTranslationSystem()
 
 After this:
 
-- Go to the "Translations" page under the "International" menu,
-- In the "Modify translations" section, find the "Type of translation" drop-down and select "Installed modules translations",
-- Choose the module you want to translate.
-- Choose the language you want to translate the module into. The destination language must already be installed to enable translation in it.
-- Click the "Modify" button.
+1. Go to the "Translations" page under the "International" menu,
+2. In the "Modify translations" section, find the "Type of translation" drop-down and select "Installed modules translations",
+3. Choose the module you want to translate.
+4. Choose the language you want to translate the module into. The destination language must already be installed to enable translation in it.
+5. Click the "Modify" button.
 
 You will be presented with a page that displays all the wordings for the selected module, grouped by translation domain.
 
 Once saved, translations are stored in the database in the table `ps_translations`.
-
-## Creating translation dictionary files
-
-This feature has not been implemented as of 1.7.6. 
-
-If you need to distribute translated wordings with your module, you can either [write classic dictionary files manually]({{< ref "classic-system#editing-a-dictionary-file-manually" >}}), or export your module's wordings from the database into a file, then import it during the module's install process.
-
-{{% notice tip %}}
-If you choose to export wordings from the database, you can easily extract only your module's wordings from the `ps_translation` table by filtering domains that start with `ModulesYourmodulename*`. You can disregard `id_translation`, but you will have to match the original `lang_id` to the shop's one (see `ps_lang`) when you re-import them.
-{{% /notice %}}
-
-Automatic export of classic dictionary files and XLIFF catalogues for the new translation system is [due to be implemented in 1.7.8](https://github.com/PrestaShop/PrestaShop/issues/14968).
-
-## Limitations and caveats
 
 ### Making your wordings appear in the translation interface
 
@@ -307,6 +299,46 @@ In Twig files, you can use `trans_default_domain` to set up your default domain.
 {{ 'Hello world'|trans }}
 {{ 'Something else'|trans }}
 ``` 
+
+## Distributing your translations
+
+### Exporting translations
+{{< minver v="1.7.8" title="true" >}}
+
+Since PrestaShop 1.7.8, you can export all the module's translations into XLF files that you can distribute with your module.
+
+To export the translation files:
+
+1. Go to the "Translations" page under the "International" menu,
+
+2. In the "Export translations" section:
+   - Choose a language,
+   - Select "Installed modules translations", then the module you want to export,
+   - Click on "Export"
+
+You can distribute the downloaded dictionaries by placing the extracted files in your module's `translations` folder, like this:
+
+```
+.
+└── mymodule/
+    └── translations/
+        ├── fr_FR/
+        │   ├── ModulesMymoduleFoo.fr_FR.xlf
+        │   └── ModulesMymoduleBar.fr_FR.xlf
+        └── en_US/
+            ├── ModulesMymoduleFoo.en_US.xlf
+            └── ModulesMymoduleBar.en_US.xlf
+```
+
+{{% notice warning %}}
+Note that these files will only work with PrestaShop 1.7.8 and over. If you need to ensure compatibility with previous versions, read below.
+{{% /notice %}}
+
+### Before 1.7.8
+
+If you need to distribute backward-compatible translations, you can either [write classic dictionary files manually]({{< ref "classic-system#editing-a-dictionary-file-manually" >}}), or export your module's wordings from the database into a file, then import it during the module's install process.
+
+If you choose to export wordings from the database, you can easily extract your module's wordings from the `ps_translation` table by filtering domains that start with `ModulesYourmodulename*`. When inserting the translations in the destination shop, remember to set the appropriate value for `id_lang` according to the destination shop's language configuration (see table `ps_lang`) .
 
 [contextualization]: {{< ref "new-system.md#contextualization" >}}
 [native-module-conventions]: {{< ref "/1.7/development/internationalization/translation/translation-domains.md#modules" >}}
