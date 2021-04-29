@@ -75,3 +75,11 @@ array(
   'UNKNOWN_KEY' => null,
 )
 ```
+#### Delete a key
+
+```php
+<?php
+Configuration::deleteByName(string $key);
+```
+`$key` is the name of the configuration data to delete. The method returns `true`
+if the key is removed, `false` otherwise.
