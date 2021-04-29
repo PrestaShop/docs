@@ -363,7 +363,7 @@ As you can see, there are three parameters:
 3. `$md5` – MD5 hash of the original wording you intend to translate.
 
 {{% notice tip %}}
-If you are manually building a translation file to use with the [New translation system]({{< ref "new-system" >}}), keep in mind the [Backward compatibility constraints]({{< ref "new-system.md#backwards-compatibility" >}}).
+If you are manually building a translation file to use with the [New translation system]({{< ref "new-system" >}}), keep in mind the [Backward compatibility constraints]({{< ref "new-system/#backwards-compatibility" >}}).
 {{% /notice %}}
 
 ## Limitations and caveats
