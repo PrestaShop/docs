@@ -9,6 +9,13 @@ weight: 30
 
 By default, PrestaShop’s database tables start with the `ps_` prefix. This can be customized during installation
 
+{{% notice warning %}}
+**Important**
+
+We strongly recommend to customize your database prefix instead of using the default one.
+
+{{% /notice %}}
+
 All table names are in lowercase, and words are separated with an underscore character (“_”):
 
 * ps_employee
