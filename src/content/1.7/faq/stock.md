@@ -29,7 +29,7 @@ OutOfStockType::OUT_OF_STOCK_NOT_AVAILABLE = 0; // Not available when out of sto
 OutOfStockType::OUT_OF_STOCK_AVAILABLE = 1; // Available when out of stock
 OutOfStockType::OUT_OF_STOCK_DEFAULT = 2; // Use default configuration
 {{< /highlight >}} |
-| `location`          | The location where the product is stored, to help merchant handle their storage and prepare their packages. |
+| `location`          | The location where the product is stored, to help the merchant handle their storage and prepare their packages. |
 | `depends_on_stock`  | **Deprecated** It was used for advanced stock management in previous versions, but is no longer used. |
 
 {{% notice tip %}}
