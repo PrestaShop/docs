@@ -53,10 +53,6 @@ For this, you need a Form Handler. You can either implement it yourself as a cla
 
 As an example, here's how the Administration page's Form Handler service is declared:
 
-{{% notice note %}}
-The class `PrestaShop\PrestaShop\Core\Form\Handler` has been added in 1.7.8.0.
-{{% /notice %}}
-
 ```yaml
 # /src/PrestaShopBundle/Resources/config/services/form/form_handler.yml
 
@@ -70,6 +66,10 @@ prestashop.adapter.administration.general.form_handler:
         - 'AdministrationPageGeneral'
         - 'general'
 ```
+
+{{% notice note %}}
+The class `PrestaShop\PrestaShop\Core\Form\Handler` has been added in 1.7.8.0. Previously, `PrestaShop\PrestaShop\Core\Form\FormHandler` was used.
+{{% /notice %}}
 
 Let's look at the arguments one by one:
 
