@@ -75,5 +75,3 @@ array(
   'UNKNOWN_KEY' => null,
 )
 ```
-
-### Use widgets
