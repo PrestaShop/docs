@@ -12,7 +12,8 @@ By default, PrestaShop’s database tables start with the `ps_` prefix. This can
 {{% notice warning %}}
 **Important**
 
-We strongly recommend to customize your database prefix instead of using the default one.
+For security reasons We strongly recommend to customize your database prefix instead of using the default one.
+Changing it will help protect your shop against any attacks (some SQL injection for example) targeting the default table names
 
 {{% /notice %}}
 
