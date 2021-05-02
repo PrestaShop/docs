@@ -43,7 +43,7 @@ Like most traditional web applications, PrestaShop is heavily **Database**-drive
 In the figure above, the database has been placed a little outside the diagram to point out to the fact that it's a system of its own that could be on a separate server, in a cluster, etc.
 {{% /notice %}}
 
-The purple cloud depicted above the Database is what we call the **Core Business**. It's the big ensemble of code that manages what makes PrestaShop PrestaShop, also referred as "business logic". It includes models, controllers, helper classes, and the like.
+The purple cloud depicted above the Database is what we call the **Core Business**. It's the big ensemble of code that manages what makes PrestaShop, also referred as "business logic". It includes models, controllers, helper classes, and the like.
 
 PrestaShop controllers will generally output HTML pages, but on some cases they can output JSON or even XML. The structure of those pages is defined by **Themes** (depicted as pink blocks overlapping both the front-end and the back-end), which transform controller-provided data into HTML. This is true both for the FO and BO.
 
