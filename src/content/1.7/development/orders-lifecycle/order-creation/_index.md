@@ -22,3 +22,15 @@ To create the order you will have to fill the cart with the following informatio
    available carriers (carriers are searched by delivery address and can be modified by shop admin in Improve ->
    Shipping -> Carriers page). Note - carrier will not be available if selected country or zone is disabled (in BO
    International -> Locations) or carrier shipping and locations settings are not configured.
+3. Payment - select payment method. Shop admin can configure payment methods in BO Payment -> Payment methods. All
+   payments are handled by modules. Prestashop comes with 2 payment modules by default:
+
+    * ps_checkpayment - allows check payments.
+    * ps_wirepayment - allows wire payments (bank transfers).
+
+   Depending on selected payment method the initial order status will differ when creating order in FO. For example -
+   if "Payment by check" is selected, then order will be created with the "Awaiting check payment" status or if "Bank
+   transfer" is selected, the status will be "Awaiting wire payment". However, if you are creating order from BO, you
+   must select any order status manually. There are some settings of order statuses in BO Shop parameters -> Order
+   settings -> Statuses & some configuration in the module. Shop admin can also configure payment restriction settings
+   like currency, country, group or carrier restrictions in BO Improve -> Payment -> Preferences page.
