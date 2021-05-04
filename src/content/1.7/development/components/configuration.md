@@ -13,7 +13,7 @@ Secondly, modules might sometimes need a simple storage system, and they should 
 
 To address these needs, the Configuration storage of PrestaShop uses a SQL table `ps_configuration` and allows simple fetch, update and deletion of values in it.
 
-{{< figure src="img/configuration_sql_structure.png" title="Configuration SQL structure" >}}
+{{< figure src="/1.7/development/components/img/configuration_sql_structure.png" title="Configuration SQL structure" >}}
 
 Each value stored in the Configuration component can be controlled through given key, is compatible with Multishop (as it can be overriden for a shop or a group of shop) and has timestamps.
 
@@ -27,7 +27,7 @@ $b = Configuration::updateValue('MY_MODULE_CONFIGURATION_ITEM', 1778);
 Configuration::deleteByName('MY_MODULE_CONFIGURATION_ITEM');
 ```
 
-{{% notice success %}}
+{{% notice note %}}
 See [Extension concepts > Configuration](/1.7/modules/concepts/configuration/) page for 
 detailed usage of the Configuration class
 {{% /notice %}}
