@@ -37,7 +37,7 @@ You will probably notice that usually ```physical_quantity = available_quantity 
 {{% /notice %}}
 
 {{% notice note %}}
-To avoid confusion when referring to `StockAvailable::quantity` below we will use the **virtual quantity** expression.
+To avoid confusion, from now on we will refer to `StockAvailable::quantity` as **virtual quantity**.
 {{% /notice %}}
 
 **Q:** When is the StockAvailable object/table updated?
@@ -60,9 +60,9 @@ To avoid confusion when referring to `StockAvailable::quantity` below we will us
 
 **A:** Avoid doing this! These two fields should be considered read-only and exist for performance reasons. They are automatically recomputed every time the stock is synchronized:
 
-- **reserved_quantity** is the sum of each quantity in pending orders:
+- **reserved_quantity** is the sum of each quantity in pending orders:  
   `reserved_quantity_per_order = SUM(order_detail.product_quantity - order_detail.product_quantity_refunded)`
-- **physical_quantity** is recalculated after the reserved quantity is updated:
+- **physical_quantity** is recalculated after the reserved quantity is updated:  
   `physical_quantity = virtual_quantity + reserved_quantity`
 
 So in the end the only important field is the virtual quantity (`StockAvailable::quantity`), the other two fields are handled by the core. You should avoid modifying them.
