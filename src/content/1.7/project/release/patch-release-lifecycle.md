@@ -27,7 +27,9 @@ During this phase, no new items can be added to the version's scope, unless they
 
 Feature freeze means that all features of this version have been done and no new ones may be accepted in its scope. The project enters a phase of _stabilization_ whose aim is to identify and fix all regressions) before it's released.
 
-Once this phase is started, Core maintainers create a git branch from `develop` branch which will carry the work to be done until the release (for 1.7.7.0, the branch name was `1.7.7.x`). From this moment on, only bug fixes can be merged into this branch. Incidentally, this is also the branch where all future patch versions for this minor version will be developed on (hence the `.x` at the end).
+Once this phase is started, Core maintainers create a git branch from `develop` branch which will carry the work to be done until the release (for 1.7.7.0, the branch name was `1.7.7.x`). From this moment on, **only changes that fix regressions introduced in that same branch can be merged into this branch**.
+
+Incidentally, this is also the branch where all future patch versions for this minor version will be developed on (hence the `.x` at the end).
 
 Also, since stabilization is performed in a separate branch (`1.7.7.x` in our example), development for the next minor release (1.7.8 in our example) can start on the `develop` branch. This means that the development of any given minor version development actually starts (albeit slowly) precisely the moment the previous version enters feature freeze.
 
