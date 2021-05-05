@@ -42,7 +42,7 @@ Fortunately, by implementing CQRS it allows PrestaShop to quickly build new API,
 2. A `Command` describes a __single__ action. It DOES NOT perform it.
 3. A `Command` receives only primitive types on input (int, float, string, bool and array).
 4. For every `Command` there MUST be at least one `CommandHandler` whose role is to execute that `Command`.
-5. A `CommandHandler` acts as a port to a Core, therefore it SHOULD NOT handle the domain logic itself, but orchestrate the necessary [services]({{< relref "domain-services" >}}) instead.
+5. A `CommandHandler` acts as a port to a Core, therefore it SHOULD NOT handle the domain logic itself, but orchestrate the necessary [services]({{< relref "/domain-services" >}}) instead.
 6. A `CommandHandler` MUST be placed in the `Adapter` namespace as long as it has legacy dependencies.
 7. A `CommandHandler` SHOULD NOT return anything on success, and SHOULD throw a typed `Exception` on failure. The "no return on success" rule can be broken only when creating entities.
 8. A `CommandHandler` MUST implement an interface containing a single public method like this:
