@@ -1,6 +1,6 @@
 ---
 title: Order Page
-menuTitle: Order Detail
+menuTitle: Order
 weight: 1
 chapter: true
 ---
