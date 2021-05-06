@@ -63,27 +63,32 @@ When pressing `Add new customer`, modal opens containing the same form from `Cus
 {{% /notice %}}
 
 Once the customer is loaded, a new cart is created behind the scenes and the following information is shown:
-**@todo: add links # to each of these items**
-- [Customer orders list]({{< relref "#customer-orders-list" >}})
 - [Customer carts list]({{< relref "#customer-carts-list" >}})
+- [Customer orders list]({{< relref "#customer-orders-list" >}})
 - [Cart block]({{< relref "#cart-block" >}})
 - [Customer addresses block]({{< relref "#customer-addresses-block" >}})
 - Once you fill all required information, you will finally see the [Summary block]({{< relref "#summary-block" >}}).
-  
-#### Customer orders list
-**todo**
 
 #### Customer carts list
-**todo**
+{{< figure src="./img/customer-orders-block.png" title="Customer carts" >}} 
+
+Details of each cart that was used by the customer can be checked by clicking on `Details` button - The `Sell -> Orders -> Shopping Carts -> View cart` page will be opened in a modal window.
+Existing `Cart` can be also used to create a new one - press `Use` and the selected `Cart` will be loaded and available for modifications.
+This block is loaded using `ajax` by calling [CustomerController::getCartsAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Related `javascript` code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js)
+
+#### Customer orders list
+{{< figure src="./img/customer-carts-block.png" title="Customer orders" >}}
+
+Details of each order used by the customer can be checked by clicking on `Details` button - The `Sell -> Orders -> Carts -> View order` page will be opened in a modal window.
+Existing `Order` can be also used to create a new one - press `Use` and a new `Cart` will be created with all the information duplicated from the selected `Order`.
+This block is loaded using `ajax` by calling [CustomerController::getOrdersAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Related `javascript` code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js)
 
 #### Cart block
-**todo**
-
+{{< figure src="./img/cart-block.png" title="Cart" >}}
+**todo**: finish up
 #### Customer addresses block
-**todo**
-
-#### Cart block
-**todo**
+{{< figure src="./img/customer-addresses-block.png" title="Addresses" >}}
+**todo**: finish up
 
 #### Summary block
-**todo**
+**todo**: add screenshot and finish up
