@@ -32,6 +32,10 @@ $shipping_cost = $module->getPackageShippingCost($cart, $shipping_cost, $product
 One module can be used to create more than one carrier.
 {{% /notice %}}
 
+{{% notice tip %}}
+When a carrier is edited the id_carrier changed, but the id_reference stay this will be uselfull for your module development.
+{{% /notice %}}
+
 ## Installing and uninstalling the module
 
 The module must handle:
