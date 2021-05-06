@@ -5,7 +5,7 @@ weight: 10
 
 # Domain services
 
-As mentioned in [CQRS principles]({{< relref "/cqrs" >}}), a `Command` is a representation of a single domain use case. To prevent `Command Handlers` from duplicating code and depending on each other, it is usually best to **avoid implementing the actual logic in the `Command Handler`** itself, and delegate it to `Domain Services` instead. These services are responsible for logic such as:
+As mentioned in [CQRS principles]({{< relref "./cqrs" >}}), a `Command` is a representation of a single domain use case. To prevent `Command Handlers` from duplicating code and depending on each other, it is usually best to **avoid implementing the actual logic in the `Command Handler`** itself, and delegate it to `Domain Services` instead. These services are responsible for logic such as:
 
 1. Persisting the entities (a.k.a ObjectModel in current prestashop architecture) data into database
 2. Validating the entities
