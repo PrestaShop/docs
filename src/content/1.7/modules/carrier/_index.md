@@ -33,7 +33,7 @@ One module can be used to create more than one carrier.
 {{% /notice %}}
 
 {{% notice tip %}}
-When a carrier is edited the id_carrier changed, but the id_reference stay this will be uselfull for your module development.
+When a carrier is edited the id_carrier is changed but the id_reference not. This will be useful for your module development.
 {{% /notice %}}
 
 ## Installing and uninstalling the module
