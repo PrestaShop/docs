@@ -48,3 +48,42 @@ User can modify the price for selected product in cart. This is similar behavior
 #### Free shipping cart rule in cart
 
 User can select the "Free shipping" option, to have the order shipped for free. Behind the scenes, it is achieved by creating a new temporary [CartRule](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/CartRule.php) with `$free_shipping = true` and assigned to customer. See [UpdateCartDeliverySettingsHandler::handleFreeShippingOption](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/Adapter/Cart/CommandHandler/UpdateCartDeliverySettingsHandler.php).
+
+## Flow
+
+#### Customer
+
+When you enter the page, first thing you will notice is the `Customer` block:
+{{< figure src="./img/customer-search-block.png" title="Customer search block" >}}
+
+Use the search to find desired customer by `email` or `name` or `create a new one` by pressing `Add new customer`. Customer search is performed using `ajax` by calling [CustomerController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Javascript code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js) 
+
+{{% notice %}}
+When pressing `Add new customer`, modal opens containing the same form from `Customers -> Customers -> Add new customer` loaded in an iframe.
+{{% /notice %}}
+
+Once the customer is loaded, a new cart is created behind the scenes and the following information is shown:
+**@todo: add links # to each of these items**
+- [Customer orders list]({{< relref "#customer-orders-list" >}})
+- [Customer carts list]({{< relref "#customer-carts-list" >}})
+- [Cart block]({{< relref "#cart-block" >}})
+- [Customer addresses block]({{< relref "#customer-addresses-block" >}})
+- Once you fill all required information, you will finally see the [Summary block]({{< relref "#summary-block" >}}).
+  
+#### Customer orders list
+**todo**
+
+#### Customer carts list
+**todo**
+
+#### Cart block
+**todo**
+
+#### Customer addresses block
+**todo**
+
+#### Cart block
+**todo**
+
+#### Summary block
+**todo**
