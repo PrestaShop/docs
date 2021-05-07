@@ -32,6 +32,10 @@ $shipping_cost = $module->getPackageShippingCost($cart, $shipping_cost, $product
 One module can be used to create more than one carrier.
 {{% /notice %}}
 
+{{% notice tip %}}
+Watch out! Every time a Back Office user edits a carrier, what actually happens is that the carrier is duplicated, the copy is edited and the original is edited. Consequently, the field `id_carrier` of the new entry is different from the original . If you want to create a module related to a specific carrier, make sure to use the `id_reference` field which does not change upon edition. If you need to monitor the changes of the id of this carrier, make sure to read "Controlling the change of the carrier's ID" section.
+{{% /notice %}}
+
 ## Installing and uninstalling the module
 
 The module must handle:
