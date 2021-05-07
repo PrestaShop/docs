@@ -33,7 +33,7 @@ One module can be used to create more than one carrier.
 {{% /notice %}}
 
 {{% notice tip %}}
-Watch out! Every time merchant edits carrier, field `id_carrier` has a new value. If you want to create module related to specific carrier, make sure to use its `id_reference` field which is always the same. If for some reason you need the newest id of the carrier, make sure to read "Controlling the change of the carrier's ID" section.
+Watch out! Every time a Back Office user edits a carrier, what actually happens is that the carrier is duplicated, the copy is edited and the original is edited. Consequently, the field `id_carrier` of the new entry is different from the original . If you want to create a module related to a specific carrier, make sure to use the `id_reference` field which does not change upon edition. If you need to monitor the changes of the id of this carrier, make sure to read "Controlling the change of the carrier's ID" section.
 {{% /notice %}}
 
 ## Installing and uninstalling the module
