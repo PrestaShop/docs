@@ -100,4 +100,10 @@ When `Free shipping` is checked, behind the scenes, it is achieved by creating a
 {{% /notice %}}
 
 #### Summary block
-**todo**: add screenshot and finish up
+{{< figure src="./img/summary-block.png" title="Order summary block" >}}
+
+This is the final block that requires selecting `payment method`, `order status` and allows submitting the whole form. Prior to that it also allows adding `a message for the customer` or `sending the email with the pre-filled order to the customer`. Once `Create the order` is clicked it uses the [OrderController::placeAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php) to create the order.
+
+{{% notice %}}
+You can also click `More actions -> Proceed to checkout in the front office` to finish up the order in the Front office of your shop.
+{{% /notice %}}
