@@ -28,7 +28,7 @@ There are some benefits comparing to Front Office (FO) order creation:
 
 ## Page specifics
 
-This page is very specific compared to other BO pages - **big part of it depends on javascript**.
+This page is very specific compared to other BO pages, it has kind of a flow - each block depends on previous block selections, that's why **most of it depends on javascript**.  Unfortunately it also has limited extension capabilities - there are no common services as form or grid builders, therefore no hooks that could help module developers to modify the display.
 
 {{% notice %}}
 
@@ -38,18 +38,7 @@ more information.
 
 {{% /notice %}}
 
-This way the page is very dynamic and more user-friendly, but it is not so easy to extend it.
-
-### Behind the scenes
-#### Specific price for product in cart
-
-User can modify the price for selected product in cart. This is similar behavior to the one in the `Order view page`, however behind the scenes it is different. Unlike in the `Order view page`, we don't have any `OrderDetail` yet, because at this point we are still modifying the `Cart`, so it is achieved by creating a new temporary [SpecificPrice](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/SpecificPrice.php) and assigning specifically to that certain `Cart`, `Product`, `Customer` and `Shop`. See [CartController::editProductPriceAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php).
-
-#### Free shipping cart rule in cart
-
-User can select the "Free shipping" option, to have the order shipped for free. Behind the scenes, it is achieved by creating a new temporary [CartRule](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/CartRule.php) with `$free_shipping = true` and assigned to customer. See [UpdateCartDeliverySettingsHandler::handleFreeShippingOption](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/Adapter/Cart/CommandHandler/UpdateCartDeliverySettingsHandler.php).
-
-## Flow
+## The flow
 
 #### Customer
 
@@ -67,7 +56,7 @@ Once the customer is loaded, a new cart is created behind the scenes and the fol
 - [Customer orders list]({{< relref "#customer-orders-list" >}})
 - [Cart block]({{< relref "#cart-block" >}})
 - [Customer addresses block]({{< relref "#customer-addresses-block" >}})
-- Once you fill all required information, you will finally see the [Summary block]({{< relref "#summary-block" >}}).
+- Once you fill all the required information, you will finally see the [Summary block]({{< relref "#summary-block" >}}).
 
 #### Customer carts list
 {{< figure src="./img/customer-orders-block.png" title="Customer carts" >}} 
@@ -89,9 +78,26 @@ This block is loaded using `ajax` by calling [CustomerController::getOrdersActio
 Cart block contains cart `products`, `currency` and `language` selection. Products can be searched and added to a cart. A list of products and a new block of `Cart rules` will appear after a product is added. Listed products quantity and price can be modified as well as any cart rule can be added by searching it in `Cart rule` block.
 {{< figure src="./img/products-list-and-vouchers.png" title="Products list and vouchers" >}}
 
+{{% notice %}}
+Product price can be modified. This is similar behavior to the one in the `Order view page`, however behind the scenes it is different. Unlike in the `Order view page`, we don't have any `OrderDetail` yet, because at this point we are still modifying the `Cart`, so it is achieved by creating a new temporary [SpecificPrice](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/SpecificPrice.php) and assigning specifically to that certain `Cart`, `Product`, `Customer` and `Shop`. See [CartController::editProductPriceAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php).
+{{% /notice %}}
+
 #### Customer addresses block
 {{< figure src="./img/customer-addresses-block.png" title="Addresses" >}}
-**todo**: finish up
+
+This block allows selecting the `delivery` and `invoice` addresses for the customer. New address can be created by clicking `Add new address` - the modal window with the creation form will appear. It is also possible to `edit` the addresses in same manner, by clicking `Edit` on selected address.
+
+{{% notice %}}
+The form in the modal is actually the same form from `Customer -> addresses` page rendered using `iframe`.
+{{% /notice %}}
+
+#### Shipping block
+{{< figure src="./img/shipping-block.png" title="Shipping" >}}
+Shipping block will appear only if at least one carrier is available for selected delivery address. This block allows selecting a carrier for the order, shows the shipping price and allows to mark the order as `Free shipping`.
+
+{{% notice %}}
+When `Free shipping` is checked, behind the scenes, it is achieved by creating a new temporary [CartRule](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/CartRule.php) with `$free_shipping = true` and assigned to customer. See [UpdateCartDeliverySettingsHandler::handleFreeShippingOption](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/Adapter/Cart/CommandHandler/UpdateCartDeliverySettingsHandler.php).
+{{% /notice %}}
 
 #### Summary block
 **todo**: add screenshot and finish up
