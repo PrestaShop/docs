@@ -76,9 +76,9 @@ window.prestashop.component.initComponents(
 
 Doing this will have several effects:
 
-- Each field implementing the `multistore_configuration_key` will have a multistore checkbox before them.
-- The checkboxes will automatically be checked or not depending on the configuration for the current shop context.
-- When the configuration value is inherited, the checkbox will be unchecked, and the field disabled and greyed out.
+- Each field implementing the `multistore_configuration_key` will have a multistore checkbox before them ;
+- Checkboxes will automatically be checked or not depending on the configuration for the current shop context ;
+- When the configuration value is inherited, the checkbox will be unchecked, and the field will be disabled and greyed out ;
 - Thanks to the javascript component, checking or unchecking a checkbox will enable/disable the field for the current shop context.
 
 
@@ -135,5 +135,4 @@ class MaintenanceConfiguration extends AbstractMultistoreConfiguration
 ```
 
 As you can see, by using these two helper methods you can easily store your configuration values in a multistore context.
-
 
