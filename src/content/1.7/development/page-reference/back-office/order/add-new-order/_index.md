@@ -48,7 +48,7 @@ When you enter the page, first thing you will notice is the `Customer` block:
 Use the search to find desired customer by `email` or `name` or `create a new one` by pressing `Add new customer`. Customer search is performed using `ajax` by calling [CustomerController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Javascript code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js) 
 
 {{% notice %}}
-When pressing `Add new customer`, modal opens containing the same form from `Customers -> Customers -> Add new customer` loaded in an iframe.
+`Add new customer` button opens the same form from `Customers -> Customers -> Add new customer` loaded in an iframe.
 {{% /notice %}}
 
 Once the customer is loaded, a new cart is created behind the scenes and the following information is shown:
@@ -75,11 +75,20 @@ This block is loaded using `ajax` by calling [CustomerController::getOrdersActio
 #### Cart block
 {{< figure src="./img/cart-block.png" title="Cart" >}}
 
-Cart block contains cart `products`, `currency` and `language` selection. Products can be searched and added to a cart. A list of products and a new block of `Cart rules` will appear after a product is added. Listed products quantity and price can be modified as well as any cart rule can be added by searching it in `Cart rule` block.
-{{< figure src="./img/products-list-and-vouchers.png" title="Products list and vouchers" >}}
+Cart block contains cart `products`, `currency` and `language` selection. Products can be searched and added to a cart. A list of products and a new block of [Cart rules]({{< relref "#cart-rules-block" >}}) will appear after a product is added. Listed products quantity and price can be modified. Related actions `addProductAction`, `editProductPriceAction` and `editProductQuantityAction` can be found in [CartController](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php)
+{{< figure src="./img/products-list.png" title="Products list" >}}
 
 {{% notice %}}
 Product price can be modified. This is similar behavior to the one in the `Order view page`, however behind the scenes it is different. Unlike in the `Order view page`, we don't have any `OrderDetail` yet, because at this point we are still modifying the `Cart`, so it is achieved by creating a new temporary [SpecificPrice](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/SpecificPrice.php) and assigning specifically to that certain `Cart`, `Product`, `Customer` and `Shop`. See [CartController::editProductPriceAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php).
+{{% /notice %}}
+
+#### Cart rules block
+{{< figure src="./img/cart-rule-block.png" title="Vouchers" >}}
+
+This block allows searching cart rules by name or code and adding them to the cart. Related actions can be found in [CartRuleController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Catalog/CartRuleController.php) and [CartController::addCartRuleAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php) It is also possible to create a new `Cart rule` by clicking the `Add new voucher` button.
+
+{{% notice %}}
+`Add new voucher` button opens the same form from `Sell -> Catalog -> Discounts -> Add new cart rule` loaded in an iframe.
 {{% /notice %}}
 
 #### Customer addresses block
