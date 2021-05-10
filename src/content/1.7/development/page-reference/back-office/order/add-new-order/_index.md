@@ -85,7 +85,10 @@ This block is loaded using `ajax` by calling [CustomerController::getOrdersActio
 
 #### Cart block
 {{< figure src="./img/cart-block.png" title="Cart" >}}
-**todo**: finish up
+
+Cart block contains cart `products`, `currency` and `language` selection. Products can be searched and added to a cart. A list of products and a new block of `Cart rules` will appear after a product is added. Listed products quantity and price can be modified as well as any cart rule can be added by searching it in `Cart rule` block.
+{{< figure src="./img/products-list-and-vouchers.png" title="Products list and vouchers" >}}
+
 #### Customer addresses block
 {{< figure src="./img/customer-addresses-block.png" title="Addresses" >}}
 **todo**: finish up
