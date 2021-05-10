@@ -15,7 +15,7 @@ Page can be reached by going to `Sell -> Orders -> Orders -> View (grid row acti
 Once opened, the page will show following blocks:
 
 - [Actions block]({{< relref "#actions-block" >}})
-- Customer block
+- [Customer block]({{< relref "#customer-block" >}})
 - Products block
 - Message block
 - Details block
@@ -24,12 +24,16 @@ Once opened, the page will show following blocks:
 #### Actions block
 {{< figure src="./img/actions-block.png" title="Order actions block" >}}
 
-This block contains actions such as 
+This block contains following actions:
 - Status update - new order status can be selected from a dropdown. See [OrderController::updateStatusAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
 - View invoice - generates invoice PDF. See [OrderController::generateInvoicePdfAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
 - Print order - prepares and shows modified page layout for printing. This action is performed by javascript in [admin-dev/themes/new-theme/js/pages/order/view](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/view)
-- Refund - read about refunds [here]({{< relref "./refunds" >}})).
+- Refund - read about refunds [here]({{< relref "./refunds" >}}).
 - Next/Previous - allows to quickly jump to next or previous order in the list (simple `href` buttons redirecting to another `View order` page).
 
 #### Customer block
+{{< figure src="./img/customer-block.png" title="Order customer block" >}}
 
+Contains information like customer `email`, `addresses`, `orders count`, `total spent sum`. Click the `View full details` link to see more information about the customer (it redirects to `Customers -> Customers -> View customer` page). This block also allows following actions:
+- Editing and selecting new customer shipping and/or invoice addresses (both of these actions opens a modal with a `Customers -> Addresses -> Edit` page inside an `iframe` using the `Lite display` mode of the Back Office). See [OrderController::changeCustomerAddressAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Adding a private note (`Order->note`). See [OrderController::setInternalNoteAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
