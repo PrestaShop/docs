@@ -5,7 +5,7 @@ menuTitle: Order view
 
 # Order View Page
 
-Page can be reached by going to `Sell -> Orders -> Orders -> View (grid row action)`. It allows the Back Office user to view the details of selected order and edit it. The **related code can be found in following locations**:
+Page can be reached by visiting `Sell -> Orders -> Orders -> View (grid row action)`. It allows the Back Office user to view the details of selected order and edit it. The **related code can be found in following locations**:
 - Main **twig template** [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig).
 - **Javascript** ([pre-compiled]({{< relref "compile-assets" >}})) [admin-dev/themes/new-theme/js/pages/order/view](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/view).
 - **OrderController** [src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php) (other domain controllers are used as well, those will be mentioned in related block references bellow) 
@@ -18,7 +18,7 @@ Once opened, the page will show following blocks:
 - [Customer block]({{< relref "#customer-block" >}})
 - [Products block]({{< relref "#products-block" >}})
 - [Messages block]({{< relref "#messages-block" >}})
-- Details block
+- [History/Details block]({{< relref "#historydetails-block" >}})
 - Payment block
 
 #### Actions block
@@ -36,7 +36,7 @@ This block contains following actions:
 
 Contains information like customer `email`, `addresses`, `orders count`, `total spent sum`. Click the `View full details` link to see more information about the customer (it redirects to `Customers -> Customers -> View customer` page). This block also allows following actions:
 - Editing and selecting new customer shipping and/or invoice addresses (both of these actions opens a modal with a `Customers -> Addresses -> Edit` page inside an `iframe` using the `Lite display` mode of the Back Office). See [OrderController::changeCustomerAddressAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
-- Adding a private note (`Order->note`). See [OrderController::setInternalNoteAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Adding a private note (`Customer->note`). See [OrderController::setInternalNoteAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
 
 #### Products block
 {{< figure src="./img/products-block.png" title="Order products block" >}}
@@ -65,3 +65,12 @@ It is possible to have multiple invoices related to same order, therefore when e
 This block shows order messages. These messages can be visible for the customer in Front Office order details or can stay hidden - that depends on the checkbox `Display to customer`.
 {{< figure src="./img/order-messages-fo.png" title="Order messages in Front Office" >}}
 Predefined message can be chosen in a dropdown which contains a list of message templates from `Sell -> Customer service -> Order messages`. This page can be quickly reached by clicking a shortcut link `Configure predefined messages`. Message sending is handled by [OrderController::sendMessageAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php), while the related javascript code is located in [order-view-page-messages-handler.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/message/order-view-page-messages-handler.js).
+
+#### History/Details block
+{{< figure src="./img/historydetails-block.png" title="Order history/details block" >}}
+
+This block doesn't have a title like others, but it's the one containing following tabs:
+- Status - there you can see transitions of this order statuses.
+- Documents - this tab contains invoices list.
+- Carriers - contains carriers information. You can change the current carrier and add a tracking number. See [OrderController::updateShippingAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Merchandise returns - information about refunds history.
