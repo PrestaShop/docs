@@ -17,7 +17,7 @@ Once opened, the page will show following blocks:
 - [Actions block]({{< relref "#actions-block" >}})
 - [Customer block]({{< relref "#customer-block" >}})
 - [Products block]({{< relref "#products-block" >}})
-- Message block
+- [Messages block]({{< relref "#messages-block" >}})
 - Details block
 - Payment block
 
@@ -58,3 +58,10 @@ Following actions can be done in this block (most of these actions are related t
 It is possible to have multiple invoices related to same order, therefore when editing a product or adding a discount you can select which invoice to use.
 {{< figure src="./img/order-invoice-select.png" title="Order invoice select" >}}
 {{% /notice %}}
+
+#### Messages block
+{{< figure src="./img/order-messages-bo.png" title="Order messages in Back Office" >}}
+
+This block shows order messages. These messages can be visible for the customer in Front Office order details or can stay hidden - that depends on the checkbox `Display to customer`.
+{{< figure src="./img/order-messages-fo.png" title="Order messages in Front Office" >}}
+Predefined message can be chosen in a dropdown which contains a list of message templates from `Sell -> Customer service -> Order messages`. This page can be quickly reached by clicking a shortcut link `Configure predefined messages`. Message sending is handled by [OrderController::sendMessageAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php), while the related javascript code is located in [order-view-page-messages-handler.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/message/order-view-page-messages-handler.js).
