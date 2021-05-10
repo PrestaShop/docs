@@ -6,7 +6,7 @@ menuTitle: Add new order
 
 # Add new order
 
-Page can be reached by going to `Sell -> Orders -> Orders -> Add new order`. It allows to create a new order for a
+Page can be reached by going to `Sell -> Orders -> Orders -> Add new order`. It allows the Back Office user to create a new order for a
 selected customer.
 
 {{% notice %}}
@@ -48,7 +48,7 @@ When you enter the page, first thing you will notice is the `Customer` block:
 Use the search to find desired customer by `email` or `name` or `create a new one` by pressing `Add new customer`. Customer search is performed using `ajax` by calling [CustomerController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Javascript code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js) 
 
 {{% notice %}}
-`Add new customer` button opens the same form from `Customers -> Customers -> Add new customer` loaded in an iframe.
+`Add new customer` button opens the same form from `Customers -> Customers -> Add new customer` loaded in an iframe. The `iframe` content is rendered using the `Lite Display` mode of the Back Office.
 {{% /notice %}}
 
 Once the customer is loaded, a new cart is created behind the scenes and the following information is shown:
@@ -88,7 +88,7 @@ Product price can be modified. This is similar behavior to the one in the `Order
 This block allows searching cart rules by name or code and adding them to the cart. Related actions can be found in [CartRuleController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Catalog/CartRuleController.php) and [CartController::addCartRuleAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php) It is also possible to create a new `Cart rule` by clicking the `Add new voucher` button.
 
 {{% notice %}}
-`Add new voucher` button opens the same form from `Sell -> Catalog -> Discounts -> Add new cart rule` loaded in an iframe.
+`Add new voucher` button opens the same form from `Sell -> Catalog -> Discounts -> Add new cart rule` loaded in an `iframe`.
 {{% /notice %}}
 
 #### Customer addresses block
@@ -97,7 +97,7 @@ This block allows searching cart rules by name or code and adding them to the ca
 This block allows selecting the `delivery` and `invoice` addresses for the customer. New address can be created by clicking `Add new address` - the modal window with the creation form will appear. It is also possible to `edit` the addresses in same manner, by clicking `Edit` on selected address.
 
 {{% notice %}}
-The form in the modal is actually the same form from `Customer -> addresses` page rendered using `iframe`.
+The form in the modal is actually the same form from `Customers -> Addresses` page rendered using an `iframe`.
 {{% /notice %}}
 
 #### Shipping block
