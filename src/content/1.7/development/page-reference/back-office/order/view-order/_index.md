@@ -16,7 +16,7 @@ Once opened, the page will show following blocks:
 
 - [Actions block]({{< relref "#actions-block" >}})
 - [Customer block]({{< relref "#customer-block" >}})
-- Products block
+- [Products block]({{< relref "#products-block" >}})
 - Message block
 - Details block
 - Payment block
@@ -37,3 +37,24 @@ This block contains following actions:
 Contains information like customer `email`, `addresses`, `orders count`, `total spent sum`. Click the `View full details` link to see more information about the customer (it redirects to `Customers -> Customers -> View customer` page). This block also allows following actions:
 - Editing and selecting new customer shipping and/or invoice addresses (both of these actions opens a modal with a `Customers -> Addresses -> Edit` page inside an `iframe` using the `Lite display` mode of the Back Office). See [OrderController::changeCustomerAddressAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
 - Adding a private note (`Order->note`). See [OrderController::setInternalNoteAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+
+#### Products block
+{{< figure src="./img/products-block.png" title="Order products block" >}}
+
+Contains a list of ordered products and prices summary.
+
+{{% notice %}}
+The products list has a pagination feature, but it is only a front-end pagination (not the database level) - all the products are loaded into the memory and handled by javascript. See [admin-dev/themes/new-theme/js/pages/order/view/order-product-renderer.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/view/order-product-renderer.js).
+{{% /notice %}}
+
+Following actions can be done in this block (most of these actions are related to [OrderDetail](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/order/OrderDetail.php) - one `OrderDetail` is equivalent to one row in a products list):
+- Add a product - create additional `OrderDetail` for the `Order`. See [OrderController::addProductAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Remove product - remove the `OrderDetail` related to the selected product. See [OrderController::deleteProductAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Edit product price - modify the base price of the `OrderDetail` related to the selected product. See [OrderController::updateProductAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Edit product quantity - modify the quantity of the `OrderDetail` related to the selected product. See [OrderController::updateProductAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Add discount - create a new `CartRule` and assign it to this order. See [OrderController::addCartRuleAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+
+{{% notice %}}
+It is possible to have multiple invoices related to same order, therefore when editing a product or adding a discount you can select which invoice to use.
+{{< figure src="./img/order-invoice-select.png" title="Order invoice select" >}}
+{{% /notice %}}
