@@ -18,8 +18,8 @@ Once opened, the page will show following blocks:
 - [Customer block]({{< relref "#customer-block" >}})
 - [Products block]({{< relref "#products-block" >}})
 - [Messages block]({{< relref "#messages-block" >}})
-- [History/Details block]({{< relref "#historydetails-block" >}})
-- Payment block
+- [History block]({{< relref "#history-block" >}})
+- [Payments block]({{< relref "#payments-block" >}})
 
 #### Actions block
 {{< figure src="./img/actions-block.png" title="Order actions block" >}}
@@ -36,7 +36,7 @@ This block contains following actions:
 
 Contains information like customer `email`, `addresses`, `orders count`, `total spent sum`. Click the `View full details` link to see more information about the customer (it redirects to `Customers -> Customers -> View customer` page). This block also allows following actions:
 - Editing and selecting new customer shipping and/or invoice addresses (both of these actions opens a modal with a `Customers -> Addresses -> Edit` page inside an `iframe` using the `Lite display` mode of the Back Office). See [OrderController::changeCustomerAddressAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
-- Adding a private note (`Customer->note`). See [OrderController::setInternalNoteAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+- Adding a private note (`Customer->note`). See [CustomerController::setPrivateNoteAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php).
 
 #### Products block
 {{< figure src="./img/products-block.png" title="Order products block" >}}
@@ -66,11 +66,21 @@ This block shows order messages. These messages can be visible for the customer 
 {{< figure src="./img/order-messages-fo.png" title="Order messages in Front Office" >}}
 Predefined message can be chosen in a dropdown which contains a list of message templates from `Sell -> Customer service -> Order messages`. This page can be quickly reached by clicking a shortcut link `Configure predefined messages`. Message sending is handled by [OrderController::sendMessageAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php), while the related javascript code is located in [order-view-page-messages-handler.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/message/order-view-page-messages-handler.js).
 
-#### History/Details block
-{{< figure src="./img/historydetails-block.png" title="Order history/details block" >}}
+#### History block
+{{< figure src="./img/history-block.png" title="Order history block" >}}
 
-This block doesn't have a title like others, but it's the one containing following tabs:
-- Status - there you can see transitions of this order statuses.
+This block doesn't have an actual title like others, but let's just call it "History block" for now - it's the one containing following tabs:
+- Status - you can see transitions of this order statuses and update the status, you can also add an Order note in this tab. (`Order->note`). See [OrderController::setInternalNoteAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
 - Documents - this tab contains invoices list.
 - Carriers - contains carriers information. You can change the current carrier and add a tracking number. See [OrderController::updateShippingAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
 - Merchandise returns - information about refunds history.
+
+#### Payments block
+{{< figure src="./img/payments-block.png" title="Order payments block" >}}
+
+Shows a list of payments done for this order and allows manually adding a payment. See [OrderController::addPaymentAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php).
+
+{{% notice %}}
+If order total and payments amount sum differs, then a warning in this block will notify the Back Office user about the difference.
+{{< figure src="./img/payment-diff-warning.png" title="Payment difference warning" >}}
+{{% /notice %}}
