@@ -27,7 +27,7 @@ Example:
     ]);
 ```
 
-### How to send data from Symfony modern controllers to Vue.js?
+### How to send data from Symfony controller to Vue.js?
 
 PHP controller:
 
