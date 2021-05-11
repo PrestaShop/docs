@@ -32,7 +32,7 @@ Example:
 PHP controller:
 
 ```php
-namespace Moduel\YorModule\Controller\Admin;
+namespace Module\YourModule\Controller\Admin;
 
 use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
 
