@@ -5,6 +5,10 @@ menuTitle: Order view
 
 # Order View Page
 
+{{% notice tip %}}
+**New hooks** are available for this page. Check it out [here](./../../../../../modules/sample-modules/order-pages-new-hooks) {{< minver v="1.7.7.0" >}}
+{{% /notice %}}
+
 Page can be reached by visiting `Sell -> Orders -> Orders -> View (grid row action)`. It allows the Back Office user to view the details of selected order and edit it. The **related code can be found in following locations**:
 - Main **twig template** [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig).
 - **Javascript** ([pre-compiled]({{< relref "compile-assets" >}})) [admin-dev/themes/new-theme/js/pages/order/view](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/view).
@@ -62,7 +66,7 @@ It is possible to have multiple invoices related to same order, therefore when e
 #### Messages block
 {{< figure src="./img/order-messages-bo.png" title="Order messages in Back Office" >}}
 
-This block shows order messages. These messages can be visible for the customer in Front Office order details or can stay hidden - that depends on the checkbox `Display to customer`.
+This block shows order messages (relies on [OrderMessage](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/order/OrderMessage.php)). These messages can be visible for the customer in Front Office order details or can stay hidden - that depends on the checkbox `Display to customer`.
 {{< figure src="./img/order-messages-fo.png" title="Order messages in Front Office" >}}
 Predefined message can be chosen in a dropdown which contains a list of message templates from `Sell -> Customer service -> Order messages`. This page can be quickly reached by clicking a shortcut link `Configure predefined messages`. Message sending is handled by [OrderController::sendMessageAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php), while the related javascript code is located in [order-view-page-messages-handler.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/message/order-view-page-messages-handler.js).
 
