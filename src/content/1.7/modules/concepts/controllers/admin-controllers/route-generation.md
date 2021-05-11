@@ -6,7 +6,7 @@ title: Generate a Symfony route
 
 ### Manual generation
 
-If the module uses a symfony controller then the best way to generate a route is descried in [symfony docs](https://symfony.com/doc/3.4/routing.html). However, module, especially if using legacy controllers, don't always have access to the symfony container or router. The `Link` object offers some helpers to help generate urls related to Symfony controllers and routes.
+If the module uses a symfony controller then the best way of route generation is described in [symfony docs](https://symfony.com/doc/3.4/routing.html). However, module, especially if using legacy controllers, don't always have access to the symfony container or router. The `Link` object offers some helpers to help generate urls related to Symfony controllers and routes.
 
 #### Using router via Link::getUrlSmarty
 {{< minver v="1.7.0" title="true" >}}

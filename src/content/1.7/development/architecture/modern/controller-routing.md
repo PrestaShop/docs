@@ -46,11 +46,6 @@ You can take a look at [PerformanceController](https://github.com/PrestaShop/Pre
 {{% /notice %}}
 
 Controllers are responsible for performing "Actions". Actions are methods of Controllers which mapped to a route, and that return a `Response`.
-
-{{% notice tip %}}
-**Try to avoid creating helper methods in your controller.** If you find yourself needing them, it could be a symptom of your Controller becoming too complex. This can be solved by extracting code into external classes as needed.
-{{% /notice %}}
-
 Regarding the rendering of a Response, there is some data specific to PrestaShop (in Back Office) that we must set for every action:
 
 | Attribute                   |  Type                          |  Description                                            |
@@ -239,7 +234,7 @@ The routing is organized as follows:
 Property `_legacy_controller` contains the old name of the related controller. The `_legacy_link` keeps a link between legacy urls and new ones (when going to a page using old link it will redirect to the new one instead).
 
 {{% notice tip %}}
-Property `_legacy_controller` is used to handle [Security Restrictions](#security).
+Property `_legacy_controller` allows to map a Symfony controller name to a legacy controller name. Many components in PrestaShop rely on a legacy controller name. Examples: [Security restrictions](#security), menu items management, or the collapsable help right sidebar.
 {{% /notice %}}
 
 For example, this is how the "Configure > Advanced Parameters -> System Information" page route configuration looks like:
