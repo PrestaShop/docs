@@ -6,7 +6,7 @@ weight: 42
 # Order creation
 
 Orders can be created from a cart either in Front Office (FO) by the customer or in Back Office (
-BO) `Sell -> Orders -> "Add new order"` by the shop admin.
+BO) `Sell -> Orders -> "Add new order"` by the shop admin. See [Add new order page]({{< relref "../page-reference/back-office/order/add-new-order" >}}).
 
 ## Cart
 
