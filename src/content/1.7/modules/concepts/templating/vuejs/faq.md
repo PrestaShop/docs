@@ -40,7 +40,7 @@ class YourControllerNameController extends FrameworkBundleAdminController
 {
     public function demoAction()
     {
-        return $this->render('@Modules/your-module/views/templates/admin/demo.html.twig', [
+        return $this->render('@Modules/yourmodule/views/templates/admin/demo.html.twig', [
             'yourModule' => [
                 'keyA' => 'valueA',
                 'keyB' => 'valueB',
