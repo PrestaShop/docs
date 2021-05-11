@@ -54,7 +54,7 @@ Twig template:
 
 ```twig
 {% extends '@PrestaShop/Admin/layout.html.twig' %}
-{% trans_default_domain "Module.YourModule.Admin.YourControllerName" %}
+{% trans_default_domain "Module.YourModule.Admin" %}
 
 {% block stylesheets %}
   <link rel="stylesheet" href="https://ui-kit.prestashop.com/backoffice/latest/css/bootstrap-prestashop-ui-kit.css" type="text/css" media="all">
