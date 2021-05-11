@@ -58,7 +58,7 @@ Twig template:
 
 {% block stylesheets %}
   <link rel="stylesheet" href="https://ui-kit.prestashop.com/backoffice/latest/css/bootstrap-prestashop-ui-kit.css" type="text/css" media="all">
-  <link rel="stylesheet" href="{{ asset('../modules/your-module/views/css/app.css') }}" type="text/css" media="all">
+  <link rel="stylesheet" href="{{ asset('../modules/yourmodule/views/css/app.css') }}" type="text/css" media="all">
 {% endblock %}
 
 {% block content %}
