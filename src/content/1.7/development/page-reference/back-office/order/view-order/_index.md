@@ -1,12 +1,11 @@
 ---
 title: Order view
-menuTitle: Order view
 ---
 
 # Order View Page
 
 {{% notice tip %}}
-**New hooks** are available for this page. Check it out [here](./../../../../../modules/sample-modules/order-pages-new-hooks) {{< minver v="1.7.7.0" >}}
+**New hooks** are available for this page. Check it out [here](/1.7/modules/sample-modules/order-pages-new-hooks) {{< minver v="1.7.7.0" >}}
 {{% /notice %}}
 
 Page can be reached by visiting `Sell -> Orders -> Orders -> View (grid row action)`. It allows the Back Office user to view the details of selected order and edit it. The **related code can be found in following locations**:
