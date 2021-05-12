@@ -60,4 +60,32 @@ Behat related files are located in [tests/Integration/Behaviour/](https://github
 
 ### Features
 
-todo
+{{% notice tip %}}
+Before continuing, **please read the official `behat` documentation** about the [features and scenarios](https://docs.behat.org/en/latest/user_guide/features_scenarios.html).
+{{% /notice %}}
+
+In PrestaShop all `*.feature` files are placed in [.tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Scenario), each feature is placed in a dedicated directory organized by `domain` (or even a `subdomain` if necessary). These feature files contains text that describes the testing scenarios in a user-friendly manner, each of them must start with a keyword `Feature` and have a one or multiple scenarios starting with a keyword `Scenario`. For example:
+```
+Feature: Update product status from BO (Back Office)
+  As an employee I must be able to update product status (enable/disable)
+
+  Scenario: I update standard product status
+    Given I add product "product1" with following information:
+      | name[en-US] | Values list poster nr. 1 (paper) |
+      | type        | standard                         |
+    And product product1 type should be standard
+    And product "product1" should be disabled
+    When I enable product "product1"
+    Then product "product1" should be enabled
+    When I disable product "product1"
+    Then product "product1" should be disabled
+```
+As you can see, we state the `given` information, then we describe the action and finally the assertion. These scenarios should be easy to understand even for non-technical people. So when writing one, try to avoid technical keywords and make it as user-friendly as possible.
+
+{{% notice tip %}}
+There is also a keyword `Background`, which allows running certain code before each scenario. See more [here](https://docs.behat.org/en/latest/user_guide/writing_scenarios.html#user-guide-writing-scenarios-backgrounds).
+{{% /notice %}}
+
+Every line in scenario has a related method defined in a [Context]({{< relref "#context">}}).
+
+### Context
