@@ -61,7 +61,7 @@ Every line in scenario has a related method defined in a [Context]({{< relref "#
 The behat `Context` files are classes that contains the implementations of the features. In PrestaShop all `Context` files are placed in [tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context).
 
 {{% notice tip %}}
-The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and are might not be implemented well).
+The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and might not be implemented well).
 {{% /notice%}}
 
 When creating a new Context class, it should extend the [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php).
