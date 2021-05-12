@@ -46,10 +46,10 @@ Contains information like customer `email`, `addresses`, `orders count`, `total 
 ### Products block
 {{< figure src="./img/products-block.png" title="Order products block" >}}
 
-Contains a list of ordered products and prices summary.
+Contains a list of ordered products and prices summary. The list is rendered using javascript `ajax` by calling [OrderController::getProductsListAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php) in [order-view-page.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/view/order-view-page.js). **The response of this action is not a `json`, but a rendered template**.
 
 {{% notice %}}
-The products list has a pagination feature, but it is only a front-end pagination (not the database level) - all the products are loaded into the memory and handled by javascript. See [admin-dev/themes/new-theme/js/pages/order/view/order-product-renderer.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/view/order-product-renderer.js).
+The product list has a pagination feature, but it is **only a front-end pagination** (not the database level) - all the products are loaded into the memory and handled by javascript. See [admin-dev/themes/new-theme/js/pages/order/view/order-product-renderer.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/pages/order/view/order-product-renderer.js).
 {{% /notice %}}
 
 The following actions can be done in this block (most of these actions are related to [OrderDetail](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/order/OrderDetail.php) - one `OrderDetail` is equivalent to one row in a products list):
