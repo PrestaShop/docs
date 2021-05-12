@@ -1,47 +1,10 @@
 ---
-title: Testing
-weight: 70
+title: Behat testing
+menuTitle: Behat testing
+weight: 20
 ---
 
-# Testing
-
-You are encouraged to add both unit and functional tests for every new class
-you have created.
-
-You **must** add a smoke test (also called "survival") for every new page you migrate.
-
-## Smoke testing
-
-A smoke test is a really simple and basic test that ensure the page will load with 
-the right HTTP code. This won't ensure the page will works as expected **but** if the test fails, this ensure the page is not functional.
-
-To add a new test, you need to add a new entry in the Data Provider of SurvivalTest class:
-
-```php
-<?php
-
-namespace LegacyTests\Integration\PrestaShopBundle\Controller\Admin;
-// ...
-/**
- * @group demo
- *
- * To execute these tests: use "./vendor/bin/phpunit -c tests-legacy/phpunit-admin.xml --filter=SurvivalTest" command.
- */
-class SurvivalTest extends WebTestCase
-{
-    // [...]
-
-    public function getDataProvider()
-    {
-        return [
-            'symfony_route_of_page' => ['Page title', 'symfony_route_of_page'],
-            // ...
-        ];
-    }
-}
-```
-
-## Behavioural testing
+# Behat testing
 
 {{% notice tip %}}
 It is important that you get familiar with the `Behats` principles before reading further. You can find the official behat documentation [here](https://docs.behat.org/en/latest/guides.html).
@@ -49,21 +12,21 @@ It is important that you get familiar with the `Behats` principles before readin
 
 A behaviour (`behat`) tests are a part of integration tests. They allow testing how multiple components are working together. In PrestaShop, behats are used to test the `Application` and `Domain` layer integration - basically all the [CQRS](/1.7/development/architecture/domain/cqrs) commands and queries.
 
-### Database
+## Database
 During behat tests the actual database queries are executed, therefore before testing you need to run a command `composer create-test-db` to create a test database.
 
 {{% notice %}}
 The `create-test-db` script installs a fresh prestashop with a fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump.sql`. That `ps_dump.sql` is later used to reset the database. You can check the actual script for more information - [/tests-legacy/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests-legacy/create-test-db.php).
 {{% /notice %}}
 
-### Behats structure in PrestaShop
+## Behats structure in PrestaShop
 
 Behat related files are located in [tests/Integration/Behaviour/](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour). This directory contains following files:
 - [behat.yml]({{< relref "#behatyml">}}) - this is the test suites configuration file which describes feature paths and contexts for every test suite. It can be passed as an argument when running the tests like this `./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml`.
 - bootstrap.php - this file loads the `Kernel` for a behat tests environment.
 - Features - this directory contains all the [Scenarios](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Scenario) and [Contexts](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context). More about it [bellow]({{< relref "#features" >}}).
 
-### Features
+## Features
 
 {{% notice tip %}}
 Before continuing, **please read the official `behat` documentation** about the [features and scenarios](https://docs.behat.org/en/latest/user_guide/features_scenarios.html).
@@ -93,9 +56,9 @@ There is also a keyword `Background`, which allows running certain code before e
 
 Every line in scenario has a related method defined in a [Context]({{< relref "#context">}}).
 
-### Context
+## Context
 
-The behat `Context` files are actual classes that contains the implementations of the features. In PrestaShop all `Context` files are placed in [tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context).
+The behat `Context` files are classes that contains the implementations of the features. In PrestaShop all `Context` files are placed in [tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context).
 
 {{% notice tip %}}
 The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and are might not be implemented well).
@@ -144,7 +107,7 @@ class OrderFeatureContext extends AbstractDomainFeatureContext
 
 As you can see in example, the string `@Given I add order :orderReference with the following details:` maps this method to related line in `*.feature` file. The `:orderReference` acts as a variable which actually is the `id` of the order, that is saved into the [`SharedStorage`]({{< relref "#shared-storage" >}}).
 
-### Shared storage
+## Shared storage
 
 The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common example is the `id` reference - we specify a certain keyword e.g. `prouduct1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
 ```php
@@ -158,7 +121,7 @@ The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/
     }
 ```
 
-### Hooks
+## Hooks
 
 Behats allow you to use [hooks](https://docs.behat.org/en/v2.5/guides/3.hooks.html#hooks). You can find some usages in [CommonFeatureContext](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/CommonFeatureContext.php). You can use these hooked methods by tagging them before the `Feature` (or before `Scenario` depending on the hook type), like this ([add_product.feature](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain/Product/AddProductFeatureContext.php)
 ):
@@ -186,7 +149,7 @@ Then you can run only this feature by following command `./vendor/bin/behat -c t
 {{% /notice %}}
 
 
-### behat.yml
+## behat.yml
 
 When you have already created features and contexts it is time to map them with the test suite. The mapping is done in the behat.yml configuration file. It looks like this:
 ```yml
