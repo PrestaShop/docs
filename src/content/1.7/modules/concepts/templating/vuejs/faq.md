@@ -57,7 +57,9 @@ Twig template:
 {% trans_default_domain "Module.YourModule.Admin" %}
 
 {% block stylesheets %}
-  <link rel="stylesheet" href="https://ui-kit.prestashop.com/backoffice/latest/css/bootstrap-prestashop-ui-kit.css" type="text/css" media="all">
+  {# include some external stylesheets #}
+  <link rel="stylesheet" href="https:/static.example.com/dummy/an-external-stylesheet-example.css" type="text/css" media="all">
+  {# include some local stylesheets #}
   <link rel="stylesheet" href="{{ asset('../modules/yourmodule/views/css/app.css') }}" type="text/css" media="all">
 {% endblock %}
 
@@ -72,7 +74,10 @@ Twig template:
       var yourModule = {{ yourModule|json_encode|raw }}
     </script>
 
-    <script src="https://ui-kit.prestashop.com/backoffice/latest/js/prestashop-ui-kit.js"></script>
+    {# include some external JavaScript #}
+    <script src="https:/static.example.com/dummy/an-external-javascript-example.js"></script>
+    
+    {# include some local JavaScript #}
     <script src="{{ asset('../modules/your-module/views/js/chunk-vendors.js') }}" async defer></script>
     <script src="{{ asset('../modules/your-module/views/js/app.js') }}" async defer></script>
 {% endblock %}
