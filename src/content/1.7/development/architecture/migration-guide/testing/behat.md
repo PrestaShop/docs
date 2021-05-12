@@ -105,7 +105,7 @@ class OrderFeatureContext extends AbstractDomainFeatureContext
 
 ```
 
-As you can see in example, the string `@Given I add order :orderReference with the following details:` maps this method to related line in `*.feature` file. The `:orderReference` acts as a variable which actually is the `id` of the order, that is saved into the [`SharedStorage`]({{< relref "#shared-storage" >}}).
+As you can see in example, the string `@Given I add order :orderReference with the following details:` maps this method to related line in `*.feature` file. The `:orderReference` acts as a variable which actually is the `id` of the order, that is saved into the [`SharedStorage`]({{< relref "#shared-storage" >}}). The `TableNode $table` is a specific argument, you can read about it [here](https://behat.org/en/latest/user_guide/writing_scenarios.html#tables).
 
 ## Shared storage
 
