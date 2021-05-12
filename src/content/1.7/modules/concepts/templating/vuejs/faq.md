@@ -82,7 +82,7 @@ Use it in JavaScript, i.e. in your Vue Store:
 
 ```js
 const { yourModule } = window;
-const { keyA, keyB } = window.yourModule;
+const { keyA, keyB } = yourModule;
 
 export default {
     state: {
