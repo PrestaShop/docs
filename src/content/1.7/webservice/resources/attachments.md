@@ -4,6 +4,8 @@ title: Attachments
 
 # Resources for Attachments
 
+{{< minver v="1.7.8" title="true" >}}
+
 ### Attachment
 
 |       Name       |    Format     | Required | Max size | Description |
