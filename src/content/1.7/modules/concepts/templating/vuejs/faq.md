@@ -75,7 +75,7 @@ Twig template:
     </script>
 
     {# include some external JavaScript #}
-    <script src="https:/static.example.com/dummy/an-external-javascript-example.js"></script>
+    <script src="https://static.example.com/dummy/an-external-javascript-example.js"></script>
     
     {# include some local JavaScript #}
     <script src="{{ asset('../modules/your-module/views/js/chunk-vendors.js') }}" async defer></script>
