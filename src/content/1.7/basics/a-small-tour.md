@@ -16,7 +16,7 @@ The Front Office is a small application being powered by PHP and Smarty.
 The backend relies on controllers you can find in directory `controllers/front`
 and PrestaShop classes that contain the business logic, mainly from `classes` folder.
 
-The views and the Javascript come from the installed theme that you will find in `themes/`. You can have multiple themes available on a shop but only one is enabled and in use.
+The views and the Javascript comes from the installed theme that you will find in `themes/`. You can have multiple themes available on a shop but only one is enabled and in use.
 
 ### Visit a Front controller
 
@@ -25,7 +25,7 @@ When you visit `/` on your shop you are being returned the Homepage.
 What happened behind the scenes is that
 
 1. Your HTTP request hit the `index.php` main routing file that relies on the _Dispatcher_
-2. The Dispatcher found the right Front controller ; the `IndexController`
+2. The Dispatcher found the right Front controller - the `IndexController`
 3. The `IndexController` calls the `index` Smarty view to be rendered, populated with PHP objects
 
 If you send another HTTP request, the same sequence will happen
@@ -48,7 +48,7 @@ The Javascript can be found in `admin-dev/themes/new-theme/js`.
 
 ### Visit a legacy Back Office controller
 
-When you visit `/admin-{xxx}/index.php?controller=AdminCarriers&token={yyy}` on your shop you are being returned the Carriers Back Office page.
+When you visit `/admin{x}/index.php?controller=AdminCarriers&token={y}` on your shop you are being returned the Carriers Back Office page.
 
 What happened behind the scenes is that
 
