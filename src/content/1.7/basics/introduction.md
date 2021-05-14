@@ -90,3 +90,60 @@ The driving idea is that we want our code to be more robust, more modular, and f
 Using a proven and popular open-source framework will allow us to focus on our core business code (managing a cart, handling orders, calculating prices and taxes, generating invoices, etc.) with greater efficiency, while enjoying the stability of a globally recognized framework.
 
 In the documentation, we will refer to the 1.6 framework as the "legacy" framework, as this is a popular [designation](https://en.wikipedia.org/wiki/Legacy_system) used in the software world.
+
+## How it is built inside
+
+Here is a small guide to help you navigate in the software.
+
+Note that a live demo is available on [demo.prestashop.com](https://demo.prestashop.com/).
+
+### Front office MVC
+
+The Front Office is a small application being powered by PHP and Smarty.
+
+The backend relies on controllers you can find in directory `controllers/front`
+and PrestaShop classes that contain the business logic, mainly from `classes` folder.
+
+The views and the Javascript comes from the installed theme that you will find in `themes/`. You can have multiple themes available on a shop but only one is enabled and in use.
+
+### Visit a Front controller
+
+When you visit `/` on your shop you are being returned the Homepage.
+
+The HTTP request you sent was received by the _Dispatcher_ which found the right Front controller (the `IndexController` for Homepage).
+
+This `IndexController` returned a HTTP response containing a HTML document rendered by Smarty.
+
+## Back office MVC
+
+The Back Office is a large application being powered by PHP and Smarty for the legacy part and by PHP, Symfony and Twig for the migrated part.
+
+The legacy backend relies on controllers which you can find in directory `controllers/admin`. It also relies on PrestaShop classes that contain the business logic, mainly from `classes` folder.
+
+For legacy pages, the views and the Javascript can be found in `admin-dev/themes/default`.
+
+The Symfony backend relies on controller you can find in `src/PrestaShopBundle/Controller/Admin` and PrestaShop logic that mostly come from `src` folder, and also some `classes` files.
+
+For migrated pages, the views can be found in `src/PrestaShopBundle/Resources/views`.
+The Javascript can be found in `admin-dev/themes/new-theme/js`.
+
+### Visit a legacy Back Office controller
+
+When you visit `/admin{x}/index.php?controller=AdminCarriers&token={y}` on your shop you are being returned the Carriers Back Office page.
+
+The HTTP request you sent was received by the Back Office _Dispatcher_ which found the right Admin controller (the `AdminCarriersController`).
+
+This `AdminCarriersController` returned a HTTP response containing a HTML document rendered by Smarty.
+
+The Admin controllers use a generic system to choose what Smarty template use. Generic templates to display forms and listings are available and the controller provides the structure configuration (for example it controls what columns and rows are displayed).
+
+### Visit a migrated Back Office controller
+
+When you visit `/admin-{xxx}/index.php/configure/shop/preferences/preferences?_token={yyy}` on your shop you are being returned the Preferences Back Office page.
+
+The HTTP request you sent was received by the Symfony the kernel that handled your request.
+
+Symfony found the right Back controller, matching your URL, the `PreferencesController`.
+
+The `PreferencesController` returned a HTTP response containing a HTML document rendered by Twig.
+
