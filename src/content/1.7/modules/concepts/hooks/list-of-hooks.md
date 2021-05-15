@@ -825,7 +825,35 @@ WARNING: only invoked when a product is actually removed from an order.
     The order of IDs and quantities is important!
     ```
     
-actionOrderStatusPostUpdate
+actionPDFDeliverySlipGenerate
+: 
+    This hook is executed before the common delivery slips is generated. If true is return by the handler, the system will interpreter that the slip is processed elsewhere and the common delivery slip will not be generated.
+
+    Located in: /src/Adapter/PDF/DeliverySlipPdfGenerator.php
+
+    Parameters:
+    ```php
+    <?php
+    array(
+      'order' => Order
+    );
+    ```
+    
+actionPDFDeliverySlipRender
+: 
+    This hook is executed before the common delivery slips is generated. It is similar to the hook actionPDFInvoiceRender. If true is return by the handler, the system will interpreter that the slip is proccessed elsewhere and the common delivery slip will not be generated.
+
+    Located in: /src/Adapter/PDF/DeliverySlipPdfGenerator.php
+
+    Parameters:
+    ```php
+    <?php
+    array(
+      'order_invoice_list' => PrestaShopCollection<OrderInvoice>
+    );
+    ```
+    
+ actionOrderStatusPostUpdate
 : 
     Called after the status of an order changes.
     {{% notice tip %}}
