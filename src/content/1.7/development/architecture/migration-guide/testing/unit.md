@@ -1,14 +1,9 @@
 ---
-title: Testing
-weight: 70
+title: Unit testing
+menuTitle: Unit testing
+weight: 10
 ---
-
-# Testing
-
-You are encouraged to add both unit and functional tests for every new class
-you have created.
-
-You **must** add a smoke test (also called "survival") for every new page you migrate.
+# Unit testing
 
 ## Smoke testing
 
