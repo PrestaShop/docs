@@ -5,6 +5,6 @@ menuTitle: Console
 
 # The Console component
 
-This sections aims to become the source of console commands :
+PrestaShop uses the [Symfony Console](https://symfony.com/doc/current/components/console.html) component and provides its own set of commands.
 
 {{% children %}}
