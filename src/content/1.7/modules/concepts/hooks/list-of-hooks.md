@@ -2547,7 +2547,7 @@ action&lt;HookName>Form
     
     This hook allows to modify options form content
     
-    Located in: /src/Core/Form/FormHandler.php
+    Located in: /src/Core/Form/Handler.php
 
     Parameters:
     ```php
@@ -2563,7 +2563,7 @@ action&lt;HookName>Save
     
     This hook allows to modify data of options form after it was saved
     
-    Located in: /src/Core/Form/FormHandler.php
+    Located in: /src/Core/Form/Handler.php
 
     Parameters:
     ```php

@@ -56,22 +56,24 @@ As an example, here's how the Administration page's Form Handler service is decl
 ```yaml
 # /src/PrestaShopBundle/Resources/config/services/form/form_handler.yml
 
-prestashop.adapter.administration.form_handler:
-  class: 'PrestaShop\PrestaShop\Core\Form\FormHandler'
-  arguments:
-    - '@=service("form.factory").createBuilder()'
-    - '@prestashop.core.hook.dispatcher'
-    - '@prestashop.adapter.administration.form_provider'
-    -
-      'general': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\GeneralType'
-      'upload_quota': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\UploadQuotaType'
-      'notifications': 'PrestaShopBundle\Form\Admin\AdvancedParameters\Administration\NotificationsType'
-    - 'AdministrationPage'
+prestashop.adapter.administration.general.form_handler:
+    class: 'PrestaShop\PrestaShop\Core\Form\Handler'
+    arguments:
+        - '@form.factory'
+        - '@prestashop.core.hook.dispatcher'
+        - '@prestashop.adapter.administration.general.form_provider'
+        - 'PrestaShopBundle\Form\Admin\Configure\AdvancedParameters\Administration\GeneralType'
+        - 'AdministrationPageGeneral'
+        - 'general'
 ```
+
+{{% notice note %}}
+The class `PrestaShop\PrestaShop\Core\Form\Handler` has been added in 1.7.8.0. Previously, `PrestaShop\PrestaShop\Core\Form\FormHandler` was used.
+{{% /notice %}}
 
 Let's look at the arguments one by one:
 
-- `'@=service("form.factory").createBuilder()'`
+- `'@form.factory'`
     
     This is used to render the form. You can keep the default value.
     
@@ -83,13 +85,15 @@ Let's look at the arguments one by one:
  
     Here you need to specify your form's Data Provider.
  
-- The fourth argument is an associative array containing the names and FQCN of the form types you want to render in your form.
+- `'PrestaShopBundle\Form\Admin\Configure\AdvancedParameters\Administration\GeneralType'`is the FQCN of the form type you want to render in your form.
 
-    **Important:** The names correspond to the data fields that will be loaded/saved to your Data Providers. 
+- `'AdministrationPageGeneral'`
 
-- `'AdministrationPage'` 
+    This argument is the name used to generate the hooks.
 
-    The last argument is the name used to generate the hooks.
+- `'general'`
+
+    The last argument is the name of the form.
 
 
 ## Form request handling in Controllers
