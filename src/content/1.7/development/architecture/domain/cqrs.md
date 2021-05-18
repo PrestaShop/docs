@@ -30,6 +30,20 @@ Fortunately, by implementing CQRS it allows PrestaShop to quickly build new API,
 
 {{< figure src="../img/new_architecture.png" title="New architecture using CQRS" >}}
 
+## Validation
+
+### Commands validity
+
+An ideal `Command` should be built in such way, that it is impossible to construct it invalid, but that does not mean it has to handle the validation logic itself. As you may know, the `Domain` layer is responsible for all the domain related logic & validation, so the most practical approach is to use the `Domain` classes in a constructor of a command. For example, take a look at [ProductCondition](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/Core/Domain/Product/ValueObject/ProductCondition.php) - this is a Value object of `Product` domain. It allows constructing specific values and throws `ProductConstraintException` if invalid one is provided. It is currently used in [UpdateProductOptionsCommand](https://github.com/PrestaShop/PrestaShop/1.7.8.x/develop/src/Core/Domain/Product/Command/UpdateProductOptionsCommand.php) and helps to maintain the command validity. However, most of the time we need much more than simple type validation, so when it is required to check something more complicated (e.g. need to perform a database query to find certain records), we can do it at a [next level]({{< relref "#command-handler-validation" >}}).   
+
+### Command Handler validation
+
+As you may find [below]({{< relref "#command-and-commandhandler-principles" >}}), the `CommandHandlers` are not supposed to validate the `Domain` themself, but only combine certain `domain services` which takes care of that validation. So, unless the validation is related to some integrational, technical checks specific to this use-case only, the `CommandHandler` should just leave this responsibility to the `Domain`.
+
+{{% notice %}}
+`Query` and `QueryHandlers` can only perform `read` operations, therefore they don't need any `domain related validation`.
+{{% /notice %}}
+
 ## CQRS Principles in PrestaShop
 
 1. All input validation SHOULD be done during the object construction.
