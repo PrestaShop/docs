@@ -1,19 +1,16 @@
 version: "3.8"
 
 services:
-
   hugo:
-    build: https://github.com/gohugoio/hugo.git
+    build:
+      # To build from github, you need to install docker-compose version=1.27.1 (Does not work with the last versions)
+      context: https://github.com/gohugoio/hugo.git
+      args:
+        - HUGO_BUILD_TAGS=extended
+
     volumes:
       - ./:/site
     working_dir: /site/src
     ports:
       - ${HUGO_SERVER_PORT}:${HUGO_SERVER_PORT}
     command: server --bind 0.0.0.0 --port ${HUGO_SERVER_PORT}
-
-  npm:
-    image: node:14.8
-    volumes:
-      - ./:/site
-    working_dir: /site/src/themes/hugo-theme-learn/_src
-    entrypoint: npm
