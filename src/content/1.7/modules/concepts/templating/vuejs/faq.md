@@ -27,6 +27,82 @@ Example:
     ]);
 ```
 
+### How to send data from Symfony controller to Vue.js?
+
+PHP controller:
+
+```php
+namespace Module\YourModule\Controller\Admin;
+
+use PrestaShopBundle\Controller\Admin\FrameworkBundleAdminController;
+
+class YourControllerNameController extends FrameworkBundleAdminController
+{
+    public function demoAction()
+    {
+        return $this->render('@Modules/yourmodule/views/templates/admin/demo.html.twig', [
+            'yourModule' => [
+                'keyA' => 'valueA',
+                'keyB' => 'valueB',
+            ]
+        ]);
+    }
+}
+```
+
+Twig template:
+
+```twig
+{% extends '@PrestaShop/Admin/layout.html.twig' %}
+{% trans_default_domain "Module.YourModule.Admin" %}
+
+{% block stylesheets %}
+  {# include some external stylesheets #}
+  <link rel="stylesheet" href="https:/static.example.com/dummy/an-external-stylesheet-example.css" type="text/css" media="all">
+  {# include some local stylesheets #}
+  <link rel="stylesheet" href="{{ asset('../modules/yourmodule/views/css/app.css') }}" type="text/css" media="all">
+{% endblock %}
+
+{% block content %}
+  <div id="app"></div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+      var yourModule = {{ yourModule|json_encode|raw }}
+    </script>
+
+    {# include some external JavaScript #}
+    <script src="https://static.example.com/dummy/an-external-javascript-example.js"></script>
+    
+    {# include some local JavaScript #}
+    <script src="{{ asset('../modules/your-module/views/js/chunk-vendors.js') }}" async defer></script>
+    <script src="{{ asset('../modules/your-module/views/js/app.js') }}" async defer></script>
+{% endblock %}
+```
+
+Use it in JavaScript, i.e. in your Vue Store:
+
+```js
+const { yourModule } = window;
+const { keyA, keyB } = yourModule;
+
+export default {
+    state: {
+        keyA,
+        keyB,
+        yourModule
+    },
+    getters: {
+        keyA: (state) => state.keyA,
+        keyB: (state) => state.keyB,
+        yourModule: (state) => state.yourModule,
+    }
+}
+```
+
 ### How to run several Vue.js applications on the same page
 
 The only thing to consider is the div ID you want to hook your application on.
