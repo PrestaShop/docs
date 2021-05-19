@@ -84,7 +84,7 @@ $this->adv_img = Tools::getMediaServer($this->name)
     . Configuration::get('BLOCKADVERT_IMG_EXT');
 ```
 
-## Creating database tables
+## Building database tables that support multistore
 
 There can be several scenarios:
 
@@ -94,7 +94,7 @@ There can be several scenarios:
 
 ### Object in some stores only
 
-The method to use is `Shop::addSqlRestriction($share = false, $alias = null)`.
+When building SQL queries that manage module data, the method to use is `Shop::addSqlRestriction($share = false, $alias = null)`.
 
 It makes it possible to add restrictions to a SQL query, in order to retrieve information on a shop or a shop group.
 
@@ -146,4 +146,3 @@ For instance, this query automatically associates the` _DB_PREFIX_ . 'product_la
 ```
 
 This way, the joint between the language information of the product and the current store language is applied.
-
