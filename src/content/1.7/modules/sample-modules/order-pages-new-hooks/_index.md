@@ -55,7 +55,7 @@ And on the listing page:
  
 These hooks are visualized in the picture below:
 
- {{< figure src="../img/view-order-hooks-demo/ps-view-order-page-hooks.jpg" title="Order view page hooks locations" >}}
+ {{< figure src="../../core-updates/img/order-view-page-hooks.jpg" title="Order view page hooks locations" >}}
  
  {{< figure src="../img/view-order-hooks-demo/ps-listing-order-page-hook.png" title="Order listing page hooks locations" >}}
 
