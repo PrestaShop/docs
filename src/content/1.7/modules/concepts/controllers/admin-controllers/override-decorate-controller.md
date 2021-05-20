@@ -159,6 +159,20 @@ However we could modify the input request or the output given by decorated contr
     }
 ```
 
+In order for the DemoController to work, we also need to implement all the other Action methods we don't interfere with of the decorated controller and simply return the decorated controller method. Example:
+
+```php
+<?php
+ public function anAction($id, Request $request)
+        {
+            return $this->decoratedController->anAction($id, $request);
+        }
+
+```
+
+On some edge cases we might need to perform an Ajax call from our Javascript file (or the Twig template) to our decorating DemoController.
+Curently this will not work though, what we need to do in such a case is to create a regular admincontroller e.g. mymodule/src/Controller/Admin/DemoAjaxController.php with a method, create a route for that method in our mymodule/src/config/routes.yml, generate the URL as described here, [symfony docs](https://devdocs.prestashop.com/1.7/modules/concepts/controllers/admin-controllers/route-generation/) and perform our ajax call using the resulting Symfony route.
+
 
 {{% notice tip %}}
 If you have trouble writing the right service configuration for your decoration, you can use Symfony debugger to dump the routes with `php bin/console debug:container`. It can also be helpful to find the service ID of the controller.
