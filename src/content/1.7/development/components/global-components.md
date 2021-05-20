@@ -61,3 +61,23 @@ EventEmitter.on('PSComponentsInitiated', () => {
   window.prestashop.component.instance.myCustomComponent = new window.prestashop.component.MyCustomComponent();
 });
 ```
+
+## List of available components 
+
+Component | Version 
+-------- | ---- 
+  TranslatableField          | 1.7.8   
+TranslatableField            | 1.7.8
+TinyMCEEditor                | 1.7.8
+TranslatableInput            | 1.7.8
+TaggableField                | 1.7.8
+ChoiceTable                  | 1.7.8
+EventEmitter                 | 1.7.8
+ChoiceTree                   | 1.7.8
+MultipleChoiceTable          | 1.7.8
+GeneratableInput             | 1.7.8
+CountryStateSelectionToggler | 1.7.8
+CountryDniRequiredToggler    | 1.7.8
+TextWithLengthCounter        | 1.7.8
+MultistoreConfigField        | 1.7.8
+PreviewOpener                | 1.7.8
