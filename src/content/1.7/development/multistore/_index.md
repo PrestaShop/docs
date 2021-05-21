@@ -11,6 +11,8 @@ aliases:
 
 PrestaShop allows you to manage multiple stores in a single PrestaShop instance: this feature is called multistore.
 
+When shop administrator turns on the Multistore option, he can configure the different shops powered by the software.
+Moreover the Back Office interface is modified to allow Back Office users to manage the shop settings and content, either for all shops, for a group of shop or for a single shop.
 
 ## Topics
 
