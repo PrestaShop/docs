@@ -64,7 +64,7 @@ class MyFormType extends TranslatorAwareType
 
 ```
 
-Last but not least, you must make the frontend aware of these state modifications, you just need to add the `MultistoreConfigField` in your javascript:
+Last but not least, you must make the frontend aware of these state modifications, you need to add the `MultistoreConfigField` in your javascript:
 
 ```js
 window.prestashop.component.initComponents(
