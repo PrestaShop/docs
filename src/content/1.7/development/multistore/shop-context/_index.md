@@ -48,7 +48,7 @@ $multistoreFeature->enable();
 **Service identifier:** `prestashop.adapter.shop.context` <br>
 **Class:** `PrestaShop\PrestaShop\Adapter\Shop\Context`
 
-When the multistore feature is enabled, at the top of all back office pages, a dropdown appears, it allows selecting the shop context we want (all shops, a group shop, a single shop). The shop context adapter will tell you in what context your code is operating.
+When the multistore feature is enabled, at the top of all Back Office pages, a dropdown is displayed. It allows selecting the shop context we want (all shops, a group shop, a single shop). The shop context adapter will tell you in what context your code is operating.
 
 Here are some examples of commonly used functions in the shop context adapter:
 
