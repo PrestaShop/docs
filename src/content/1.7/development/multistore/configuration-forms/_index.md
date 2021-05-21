@@ -16,7 +16,7 @@ If you're developing a configuration form and you want it to take into account t
 
 ## Creating a multistore compatible configuration form
 
-A Symfony form extension called MultistoreConfigurationTypeExtension has been created in order to make it easy to add multistore checkboxes to a configuration form.
+A Symfony form extension called `MultistoreConfigurationTypeExtension` has been created in order to make it easy to add multistore checkboxes to a configuration form.
 
 In order to extend this form extension, your Symfony form type must implement a `getParent()` method returning `MultistoreConfigurationType::class`.
 
@@ -135,4 +135,3 @@ class MaintenanceConfiguration extends AbstractMultistoreConfiguration
 ```
 
 As you can see, by using these two helper methods you can easily store your configuration values in a multistore context.
-
