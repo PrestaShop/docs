@@ -104,7 +104,7 @@ public function getShopConstraint(): ?ShopConstraint
 public function updateConfigurationValue(string $configurationKey, string $fieldName, array $input, ?ShopConstraint $shopConstraint, array $options = []): void
 ```
 
-As an example, see how it's used in the `MaintenanceConfiguration` class
+As an example, see how it is used in the `MaintenanceConfiguration` class
 
 ```php
 <?php
