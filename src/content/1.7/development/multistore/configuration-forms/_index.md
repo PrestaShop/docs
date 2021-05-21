@@ -18,6 +18,10 @@ If you are building a configuration form and you want the form to be aware of th
 
 ## Creating a multistore compatible configuration form
 
+{{% notice note %}}
+You will find a concrete example of how a configuration form is made multistore-compatible [on this github pull-request](https://github.com/PrestaShop/PrestaShop/pull/24393).
+{{% /notice %}}
+
 A Symfony form extension called `MultistoreConfigurationTypeExtension` has been created in order to make it easy to add multistore checkboxes to a configuration form.
 
 In order to extend this form extension, your Symfony form type must implement a `getParent()` method returning `MultistoreConfigurationType::class`.
