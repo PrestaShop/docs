@@ -93,7 +93,7 @@ When your configuration form is multistore compatible, your configuration class 
 
 The two helper methods are
 
-- **`getShopConstraint()`:** this will give you a ShopConstraint object reflecting the current context
+- **`getShopConstraint()`:** this will give you a ShopConstraint object reflecting the current context or null
 ```php
 public function getShopConstraint(): ?ShopConstraint
 ```
