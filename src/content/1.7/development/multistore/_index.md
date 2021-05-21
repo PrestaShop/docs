@@ -1,5 +1,5 @@
 ---
-title: PrestaShop multistore
+title: Multistore
 menuTitle: Multistore
 chapter: true
 aliases:
