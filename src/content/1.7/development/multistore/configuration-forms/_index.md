@@ -99,7 +99,7 @@ The two helper methods are
 ```php
 public function getShopConstraint(): ?ShopConstraint
 ```
-- **`updateConfigurationValue()`:** this will save or delete the configuration value for the given configuration key, taking into account the state of the multistore checkbox and the current shop context. Note that this helper method is totally compatible with non multistore fields.
+- **`updateConfigurationValue()`:** this will save or delete the configuration value for the given configuration key, and is aware of the multistore checkbox and the current shop context. Note that this helper method is fully compatible with not-multistore fields.
 ```php
 public function updateConfigurationValue(string $configurationKey, string $fieldName, array $input, ?ShopConstraint $shopConstraint, array $options = []): void
 ```
