@@ -8,6 +8,8 @@ weight: 50
 # Configuration forms in multistore context
 {{< minver v="1.7.8" title="true" >}}
 
+The Back Office contains multiple configuration forms that control settings of the shop. When multistore is enabled, Back Office user must be able to modify these settings either for all shops, for a group of shop or for a single shop.
+
 Since Prestashop 1.7.8, when multistore is enabled, migrated configuration forms can display a checkbox before fields in order to specify if the configuration value is set for the current context shop/group, or if it is a value inherited from all contexts, or from a shop group.
 
 If you are building a configuration form and you want the form to be aware of the current multistore context, then you must make your form compatible with multistore checkboxes. This is made possible thanks to [Symfony's form extensions mechanism](https://symfony.com/doc/3.4/form/create_form_type_extension.html).
