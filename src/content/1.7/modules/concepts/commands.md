@@ -23,7 +23,7 @@ Let's see an example of a really common task when we usually use CRON scripts: y
 
 You could rely on the webservices, but they are not really easy to configure. This is how you can do it using a PrestaShop command.
 
-## Create a command into the module
+## Create a command in the module
 
 You need to create the file and register it as a "command".
 
@@ -90,3 +90,4 @@ To sum up, there is a list of useful links:
 * [Manage the Command output](https://symfony.com/doc/3.4/console/style.html);
 * [How to inject dependencies](https://symfony.com/doc/3.4/console.html#getting-services-from-the-service-container) in a Command;
 * [How to test a Command](https://symfony.com/doc/3.4/console.html#testing-commands);
+* [Example module how to create console command](https://github.com/PrestaShop/example-modules/tree/master/democonsolecommand);
