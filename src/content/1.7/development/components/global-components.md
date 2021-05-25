@@ -15,7 +15,7 @@ This object contains two attributes:
 - `component` which contain some components you can instantiate;
 - `instance` which contains every instances of initiated components.
 
-It allows module developers to avoid importing path such as `../../../../admin-dev/themes/new-module/js/components/translatable-field` because it was making hard to add a CI in order to build the module.
+It allows module developers to avoid importing path such as `../../../../admin-dev/themes/new-theme/js/components/translatable-field` because it was making hard to add a CI in order to build the module.
 
 ## How to use
 
