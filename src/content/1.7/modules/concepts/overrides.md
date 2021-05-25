@@ -109,6 +109,12 @@ The file should be placed in this module location:
 
 It will be copied in `/override/classes/Product.php` during the module installation, and removed automatically on uninstall.
 
+{{% notice %}}
+
+There is an example module that overrides `Manufacturer` and adds a field to database. See [DemoOverrideObjectModel](https://github.com/PrestaShop/example-modules/tree/master/demooverrideobjectmodel). Note that **it is always recommended creating custom table and use custom ObjectModel instead of override**.
+
+{{% /notice %}}
+
 ### Overriding a controller
 
 In order to override the ProductController class, your file needs to be called ProductController.php and must feature a ProductController class that then extends ProductControllerCore class.
