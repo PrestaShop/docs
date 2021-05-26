@@ -352,7 +352,7 @@ Make sure to select `dont install demo data` when installing the shop
 
 If you are selling in several countries, additional languages have to be reinstalled on the new shop. This can be done in International > Localization > Import a localization pack.
 
-Also, make sure the IDs of your langs match on the source shop.
+Also, make sure the IDs of your langs matches on the source shop.
 
 {{< figure src="/images/1.7/upgrade-migration/migration-update-langs.png" title="Checking IDs of installed languages on a shop" >}}
 
