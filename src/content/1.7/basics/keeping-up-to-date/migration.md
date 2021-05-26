@@ -591,7 +591,7 @@ missing product to the index”.
 
 ## Other migration options for developers
 
-The manual process explained to export and import data with CSV files
+The manual process explained how to export and import data with CSV files
 from database. If you are a developer and you are willing to build your
 own tools for migrations, other ways exist to get the business data.
 
