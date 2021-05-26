@@ -455,7 +455,7 @@ by your server configuration. If uploading a single CSV file is
 impossible, split it in half and try again.
 
 You have to go through the configuration for each import, which can be
-tedious in some cases. For instance, if the provided columns do not
+tedious in some cases. For instance, if the provided columns does not
 match the default schema.
 
 **Note**: Like for the export, each data category must be imported
