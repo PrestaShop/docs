@@ -180,7 +180,7 @@ This tool can be run anywhere, as long as you can access both servers & database
 mysqldiff --server1=user:pass@host:port:socket --server2=user:pass@host:port:socket db3:db4
 ```
 
-You need to provide the credentials to your MySQL servers. Ifthe source and the destination databases are on the same server, the `--server2` parameter can be omitted. `db3` and `db4` are respectively the source and the destination databases of your data.
+You need to provide the credentials to your MySQL servers. If the source and the destination databases are on the same server, the `--server2` parameter can be omitted. `db3` and `db4` are respectively the source and the destination databases of your data.
 
 Getting the structure diff will require additional options, as provided in this example:
 ```bash
