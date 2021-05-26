@@ -1,5 +1,5 @@
 ---
-title: Installating a local environment
+title: Installing a local environment
 menuTitle: Development environment
 weight: 15
 ---
