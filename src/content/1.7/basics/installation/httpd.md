@@ -46,7 +46,7 @@ It may be incomplete, and remember you must adapt it for your own server's needs
 You first have to ensure you have the `php-fpm` binary and Apache's FastCGI installed.
 On a Debian based, packages are `libapache2-mod-fcgid` and `php7.1-fpm`.
 
-After installating these packages, fpm service will automatically be started.
+After installing these packages, fpm service will automatically be started.
 PHP-FPM uses so-called pools to handle incoming FastCGI requests. 
 
 Here's an example:
