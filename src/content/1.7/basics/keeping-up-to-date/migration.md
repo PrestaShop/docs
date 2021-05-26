@@ -593,7 +593,7 @@ missing product to the index”.
 
 The manual process explained to export and import data with CSV files
 from database. If you are a developer and you are willing to build your
-own tools for migrations, other ways exist to get the business data.
+own tools for migrations, other ways exists to get the business data.
 
 The following interfaces will make your tools more efficient and stable
 than a simple CSV extraction. You can add values stored elsewhere than
