@@ -90,7 +90,7 @@ To get the same file content as the `mysqldump` method, the following options sh
 * Use LOCK TABLES statement
 * Add DROP TABLE / VIEW / PROCEDURE / FUNCTION / EVENT / TRIGGER statement
 
-Click of “Go”, wait for the dump to be generated, then download it.
+Click on “Go”, wait for the dump to be generated, then download it.
 
 ## Other MySQL clients
 
