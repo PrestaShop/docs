@@ -406,7 +406,7 @@ to change as shown on the screenshot.
 * Start by selecting your CSV file.
 * The second option to modify will be the format. Choose “CSV” or “CSV for MS Excel”.
 * Skip the first line of your file. We had the column names in the first line to make our file edition easier, but we do not want to import it in the database.
-* Disable the foreign key checks. We know some relations don’t exist yet, because they won’t be imported at the same time.
+* Disable the foreign key checks. We know some relations doesn’t exist yet, because they won’t be imported at the same time.
 * Double check the CSV settings (separators). A wrong value will make your CSV file unparsable.
 
 Finally, click on “Go”. If everything goes well, you will get a
