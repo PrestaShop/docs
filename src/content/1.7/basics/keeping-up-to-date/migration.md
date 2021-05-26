@@ -566,7 +566,7 @@ regenerate all the missing sizes.
 
 ### Attachments
 
-Like the images, these folders need to be copied on the new server:
+Like the images, these folders needs to be copied on the new server:
 
 -   /download (Contains product attachments)
 
