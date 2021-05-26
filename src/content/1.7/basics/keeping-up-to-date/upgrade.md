@@ -213,7 +213,7 @@ Modules page, under the tab “Notifications”:
 
 ## 1-click upgrade module
 
-If the manual process seems too tedious, other solutions exist to complete an upgrade.
+If the manual process seems too tedious, other solutions exists to complete an upgrade.
 
 PrestaShop provides the module 1-click upgrade for free on the marketplace and your shop administration panel. It executes the previously given process automatically, and is available for almost all versions of PrestaShop.
 
