@@ -118,7 +118,7 @@ Typical layout files look like the following snippet. This one is a full one
   Remember to define as many blocks as possible.
 {{% /notice %}}
 
-```html+smarty
+```smarty
     <!doctype html>
     <html lang="{$language.iso_code}">
 
