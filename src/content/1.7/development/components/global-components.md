@@ -66,7 +66,6 @@ EventEmitter.on('PSComponentsInitiated', () => {
 
 Component | Version 
 -------- | ---- 
-  TranslatableField          | 1.7.8   
 TranslatableField            | 1.7.8
 TinyMCEEditor                | 1.7.8
 TranslatableInput            | 1.7.8
