@@ -77,7 +77,7 @@ Here are some examples:
 
 If you need to escape quotes in the _translated_ text, do it like this:
 
-```html+smarty
+```smarty
 <script type="text/javascript">
   var thisIsAString = '{l|escape:"javascript" s="Don't do this at home" d="Modules.Mymodule"}';
 </script>
@@ -89,7 +89,7 @@ This function renders the specified template. Some variables coming from the con
 
 So far, it is only used for forms (customer information and checkout).
 
-```html+smarty
+```smarty
   {render file="customer/_partials/login-form.tpl" ui=$login_form}
 ```
 
@@ -110,7 +110,7 @@ This will take care of SSL, domain name, virtual and physical base URI, paramete
 
 Here is a few examples:
 
-```html+smarty
+```smarty
   {url entity=address id=$id_address}
   {url entity=address params=['id_address' => $id_address]}
   {url entity=address id=$id_address params=['delete' => 1]}
@@ -142,7 +142,7 @@ This function lets you display content from the module in your template.
 
 Here is an example from classic theme, it displays the shop contact details wherever you want.
 
-```html+smarty
+```smarty
   <div id="sidebar">
     {widget name="ps_contactinfo"}
   </div>
@@ -151,7 +151,7 @@ Here is an example from classic theme, it displays the shop contact details wher
 Since the module may have a different behavior depending on which hook they are hooked on, you can pass the
 hook name.
 
-```html+smarty
+```smarty
   <div id="footer">
     {widget name="ps_contactinfo" hook="displayFooter"}
   </div>
@@ -165,7 +165,7 @@ the template file.
 Taking the Link list module as an example.
 Instead of redefining `ps_linklist/views/templates/hook/linkblock.tpl` ([source](https://github.com/PrestaShop/ps_linklist/blob/v2.1.6/views/templates/hook/linkblock.tpl)), you can override it this way:
 
-```html+smarty
+```smarty
   {widget_block name="ps_linklist"}
     {foreach $linkBlocks as $linkBlock}
       <ul>
@@ -228,7 +228,7 @@ Note that each class name is passed through the `classname` modifier.
 
 This way, this Smarty code:
 
-```html+smarty
+```smarty
   <body class="{$page.body_classes|classnames}">
 ```
 

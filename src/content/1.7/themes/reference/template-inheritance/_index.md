@@ -40,7 +40,7 @@ In a PrestaShop theme, many pages are very similar, for example template listing
 new products, search results, and so on. All of them display a list of products so in PS 1.7 they all
 extend `catalog/listing/product-list.tpl` (which extends the main layout).
 
-```html+smarty
+```smarty
   {extends file=$layout}
 
   {block name='content'}
@@ -61,7 +61,7 @@ extend `catalog/listing/product-list.tpl` (which extends the main layout).
 The template will show a title and a list of products underneath. For category page, we want a nice
 description with an cover image. So we can simply override the *product_list_header*
 
-```html+smarty
+```smarty
   {extends file='catalog/listing/product-list.tpl'}
 
   {block name='product_list_header'}

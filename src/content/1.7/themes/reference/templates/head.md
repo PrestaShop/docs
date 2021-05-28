@@ -29,7 +29,7 @@ loading for javascript or automatic inline for CSS.
   The `_partials/javascript.tpl` has to be included at the bottom of your page as well.
 {{% /notice %}}
 
-```html+smarty
+```smarty
   {block name='stylesheets'}
     {include file="_partials/stylesheets.tpl" stylesheets=$stylesheets}
   {/block}
@@ -48,7 +48,7 @@ A lot of meta and SEO information belong here, there is a special block for it
 so template which extend this layout can easily redefine the page title or
 description.
 
-```html+smarty
+```smarty
   {block name='head_seo'}
 
     <title>{block name='head_seo_title'}{$page.meta.title}{/block}</title>

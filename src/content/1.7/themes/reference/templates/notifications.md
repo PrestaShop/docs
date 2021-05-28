@@ -37,7 +37,7 @@ An array of notification is passed to the templates, containing at least one of 
 
 In the "Classic" Theme, [notifications are implemented as a partial template file](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/themes/classic/templates/_partials/notifications.tpl):
 
-```html+smarty
+```smarty
 <aside id="notifications">
 
   {if $notifications.error}
