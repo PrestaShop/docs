@@ -10,10 +10,11 @@ weight: 50
 
 The Back Office contains multiple configuration forms that control settings of the shop. When multistore is enabled, Back Office user must be able to modify these settings either for all shops, for a group of shop or for a single shop.
 
-Since Prestashop 1.7.8, when multistore is enabled, migrated configuration forms can display a checkbox before fields in order to specify if the configuration value is set for the current context shop/group, or if it is a value inherited from all contexts, or from a shop group.
+Since Prestashop 1.7.8, when multistore is enabled, migrated configuration forms can display a checkbox before fields in order to specify if the configuration value is set for the current context shop/group, or if it is a value inherited from all contexts, or from a shop group. It will also display a dropdown at the right of the field, telling you wether this field is customized or inherits its value from its parent context. Here is how it looks like:
+
+{{< figure src="../../img/multistore-field-dropdown.png" title="Multistore context dropdown" >}}
 
 If you are building a configuration form and you want the form to be aware of the current multistore context, then you must make your form compatible with multistore checkboxes. This is made possible thanks to [Symfony's form extensions mechanism](https://symfony.com/doc/3.4/form/create_form_type_extension.html).
-
 
 
 ## Creating a multistore compatible configuration form
@@ -82,7 +83,7 @@ window.prestashop.component.initComponents(
 
 Doing this will have several effects:
 
-- Each field implementing the `multistore_configuration_key` will have a multistore checkbox before them;
+- Each field implementing the `multistore_configuration_key` will have a multistore checkbox on its left and a multistore dropdown on its right;
 - Checkboxes will automatically be checked or not depending on the configuration for the current shop context;
 - When the configuration value is inherited, the checkbox will be unchecked, and the field will be disabled and greyed out;
 - Thanks to the javascript component, checking or unchecking a checkbox will enable/disable the field for the current shop context.
