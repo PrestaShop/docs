@@ -12,7 +12,7 @@ The Back Office contains multiple configuration forms that control settings of t
 
 Since Prestashop 1.7.8, when multistore is enabled, migrated configuration forms can display a checkbox before fields in order to specify if the configuration value is set for the current context shop/group, or if it is a value inherited from all contexts, or from a shop group. It will also display a dropdown at the right of the field, telling you wether this field is customized or inherits its value from its parent context. Here is how it looks like:
 
-{{< figure src="../../img/multistore-field-dropdown.png" title="Multistore context dropdown" >}}
+{{< figure src="../../img/multistore-field-dropdown.png" title="Multistore configuration form dropdown" >}}
 
 If you are building a configuration form and you want the form to be aware of the current multistore context, then you must make your form compatible with multistore checkboxes. This is made possible thanks to [Symfony's form extensions mechanism](https://symfony.com/doc/3.4/form/create_form_type_extension.html).
 
