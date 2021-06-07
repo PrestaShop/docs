@@ -132,7 +132,7 @@ To do it: you declare your new service using the 'decorates' keyword. So if you 
     decorates: 'prestashop.core.b2b.b2b_feature'
 ```
 
-That's done. The service registered under the name `prestashop.core.b2b.b2b_feature` is now your service. The previous `prestashop.core.b2b.b2b_feature` implementation is still available under the name `mymodule.my_own_b2b_feature_service.inner`.
+That's done. The service registered under the name `mymodule.my_own_b2b_feature_service` is now your service. The previous `prestashop.core.b2b.b2b_feature` implementation is still available under the name `mymodule.my_own_b2b_feature_service.inner`.
 
 This means that in your container you can access 3 services now:
 
