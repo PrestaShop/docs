@@ -37,7 +37,7 @@ The Back Offie routing match a given HTTP request with a Controller.
 
 ### Legacy Back Office routing
 
-When you visit `/admin{x}/index.php?controller=AdminCarriers&token={y}` on your shop you are being returned the Carriers Back Office page.
+When you visit `/admin{x}/index.php?controller=AdminCarriers&token={y}` on your shop, PrestaShop returns the Carriers Back Office HTML page.
 
 What happened behind the scenes is that:
 
@@ -47,7 +47,7 @@ What happened behind the scenes is that:
 
 ### Migrated Back Office routing
 
-When you visit `/admin-{xxx}/index.php/configure/shop/preferences/preferences?_token={yyy}` on your shop you are being returned the Preferences Back Office page.
+When you visit `/admin-{xxx}/index.php/configure/shop/preferences/preferences?_token={yyy}` on your shop PrestaShop returns the Preferences Back Office HTML page.
 
 What happened behind the scenes is that:
 
