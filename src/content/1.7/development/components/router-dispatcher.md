@@ -9,13 +9,13 @@ The legacy Dispatcher and the Symfony Router are in charge of parsing incoming H
 
 ### Front office routing
 
-The Front office controllers lie in directory `controllers/front`.
+The Front office controllers lie in the `controllers/front` directory.
 
 The Dispatcher match a given HTTP request with a Front Office controller.
 
-When you visit `/` on your shop you are being returned the Homepage.
+When you visit `/` on your shop you are being returned the Homepage, unless you have your shop installed in a subdirectory, then `/your_subdirectory` is your Homepage.
 
-What happened behind the scenes is that
+What happened behind the scenes is that:
 
 1. Your HTTP request hit the `index.php` main routing file that relies on the _Dispatcher_
 2. The Dispatcher found the right Front controller - the `IndexController`
@@ -29,7 +29,7 @@ If you send another HTTP request, the same sequence will happen
 
 The Back Office is split between the legacy part and the migrated part.
 
-The legacy backend relies on controllers you can find in directory `controllers/admin`.
+The legacy backend relies on controllers you can find in the `controllers/admin` directory.
 
 The Symfony backend relies on controllers you can find in `src/PrestaShopBundle/Controller/Admin`.
 
@@ -39,7 +39,7 @@ The Back Offie routing match a given HTTP request with a Controller.
 
 When you visit `/admin{x}/index.php?controller=AdminCarriers&token={y}` on your shop you are being returned the Carriers Back Office page.
 
-What happened behind the scenes is that
+What happened behind the scenes is that:
 
 1. Your HTTP request hit the `/admin-{xxx}/index.php` Back Office routing file. This file detected no Symfony route matches your request so it relied on the _Dispatcher_ to handle your query.
 2. The Dispatcher found the right Back Office controller ; the `AdminCarriersController`
@@ -49,14 +49,14 @@ What happened behind the scenes is that
 
 When you visit `/admin-{xxx}/index.php/configure/shop/preferences/preferences?_token={yyy}` on your shop you are being returned the Preferences Back Office page.
 
-What happened behind the scenes is that
+What happened behind the scenes is that:
 
-1. Your HTTP request hit the `/admin-{xxx}/index.php` Back Office routing file. This file booted the Symfony the kernel to handle your request.
-2. Symfony found the right Back controller, matching your URL ; the `PreferencesController`
+1. Your HTTP request hit the `/admin-{xxx}/index.php` Back Office routing file. This file booted the Symfony kernel to handle your request.
+2. Symfony found the right Back Office controller, matching your URL, the `PreferencesController`
 3. The PreferencesController calls the `@PrestaShop/Admin/Configure/ShopParameters/preferences.html.twig` Twig view to be rendered, populated with PHP objects
 
 If you send another HTTP request, the same sequence will happen
-- Symfony finds the right Back controller
+- Symfony finds the right Back Office controller
 - Symfony controller builds the right response using a Twig template and relying on PrestaShop business logic, organized either as Symfony services or using PrestaShop singleton
 
 ## Module routing
