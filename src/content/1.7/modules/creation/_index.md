@@ -51,7 +51,7 @@ describe its structure. We will name it "My module".
 
 First, create the module's folder, in the `/modules` folder. It should
 have the same name as the module, with no space, only alphanumerical
-characters, the hyphen and the underscore, all in lowercase:
+characters, the hyphen and the underscore (note: underscores will not pass the [module validation](https://validator.prestashop.com/)), all in lowercase:
 `/mymodule`.
 
 This folder must contain the main file, a PHP file of the same name as
