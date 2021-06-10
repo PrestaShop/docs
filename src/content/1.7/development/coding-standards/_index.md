@@ -106,6 +106,14 @@ class MyClass
 }
 ```
 
+If you need to deprecate services, you can use the `deprecated` key for the service:
+```yml
+    awesome.path.myclass:
+        class: 'PrestaShop\Awesome\Path\MyClass'
+        deprecated: 'The "%service_id%" service is deprecated since 1.7.8.0 and will be removed in next major.'
+        public: true
+```
+
 ## Javascript code conventions
 
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
