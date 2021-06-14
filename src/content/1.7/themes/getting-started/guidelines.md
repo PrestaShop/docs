@@ -13,11 +13,7 @@ weight: 1
 
 ##### PHP Code
 
-Your PHP code should be compatible with the following versions:
-
-- **PrestaShop** {{< minver v="1.7.0" >}} ~ {{< minver v="1.7.3" >}}: at least PHP 5.4
-- **PrestaShop** {{< minver v="1.7.4" >}}: at least PHP 5.6
-- **PrestaShop** {{< minver v="1.7.7" >}}: at least PHP 7.1
+Your PHP code should be compatible with [PHP compatibility chart](https://devdocs.prestashop.com/1.7/basics/installation/system-requirements/#php-compatibility-chart)
 
 ##### HTML / CSS / Javascript
 
