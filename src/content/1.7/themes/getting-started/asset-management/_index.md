@@ -67,12 +67,8 @@ For example:
 </tr>
 <tr class="even">
 <td align="left">media</td>
-<td align="left"><dl>
-<dt>all|braille|embossed|handheld|</dt>
-<dd><p>print|projection|screen|speech| tty|tv (default: all)</p>
-</dd>
-</dl></td>
-<td align="left">no comment.</td>
+<td align="left">all | braille | embossed | handheld | print | projection | screen | speech | tty | tv (default: all)</td>
+<td align="left">-</td>
 </tr>
 <tr class="odd">
 <td align="left">priority</td>
@@ -81,7 +77,7 @@ For example:
 </tr>
 <tr class="even">
 <td align="left">inline</td>
-<td align="left">true|false (default: false)</td>
+<td align="left">true | false (default: false)</td>
 <td align="left">If true, your style will be printed inside the <code>&lt;style&gt;</code> tag in your HTML <code>&lt;head&gt;</code>. Use with caution.</td>
 </tr>
 </tbody>
@@ -101,7 +97,7 @@ For example:
 </tr>
 <tr class="even">
 <td align="left">position</td>
-<td align="left">head|bottom (default: bottom)</td>
+<td align="left">head | bottom (default: bottom)</td>
 <td align="left">JavaScript files should be loaded in the bottom as much as possible. Remember: core.js is loaded first thing in the bottom so jQuery won't be loaded in the &lt;head&gt; part.</td>
 </tr>
 <tr class="odd">
@@ -111,17 +107,17 @@ For example:
 </tr>
 <tr class="even">
 <td align="left">inline</td>
-<td align="left">true|false (default: false)</td>
+<td align="left">true | false (default: false)</td>
 <td align="left">If true, your JavaScript will be printed inside <code>&lt;script type=&quot;text/javascript&quot;&gt;</code> tags inside your HTML. Use with caution.</td>
 </tr>
 <tr class="odd">
 <td align="left">attributes</td>
-<td align="left">async|defer|none (default: none)</td>
+<td align="left">async | defer | none (default: none)</td>
 <td align="left">Load JavaScript file with the corresponding attribute (Read more: <a href="https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html">Async vs Defer attributes</a>)</td>
 </tr>
 <tr class="even">
 <td align="left">server</td>
-<td align="left">local|remote (default: local)</td>
+<td align="left">local | remote (default: local)</td>
 <td align="left">Define if the JS resource is a local or remote path</td>
 </tr>
 </tbody>
