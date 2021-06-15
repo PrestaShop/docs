@@ -1117,7 +1117,25 @@ Doesn't necessarily have to be paid.
       'orderStatus' => (object) OrderState
     );
     ```
-    
+
+actionValidateOrderAfter
+:
+This hook is called after validating an order by core
+
+    Located in: /classes/PaymentModule.php
+
+    Parameters:
+    ```php
+    <?php
+    array(
+      'cart' => (object) Cart,
+      'order' => (object) Order,
+      'customer' => (object) Customer,
+      'currency' => (object) Currency,
+      'orderStatus' => (object) OrderState
+    );
+    ```
+
 actionValidateStepComplete
 : 
     This hook is called on checkout page, when confirming delivery section. Carrier modules that display extra content to the customer can hook here and prevent him from advancing further, if he didn't enter required information. 
