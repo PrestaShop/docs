@@ -26,3 +26,5 @@ Which one will you use?
 - [New translation system]({{< ref "new-system" >}}) {{< minver v="1.7.6" >}}
 - [Classic translation system]({{< ref "classic-system" >}})
 
+If you're unsure of what's the best system for you, read this [comparison]({{< ref "comparison" >}}).
+
