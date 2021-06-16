@@ -74,18 +74,17 @@ Translation Domain names are always made of three parts, separated by dots:
 3. **"Specificpart"** allows for contextualization and can be set to whatever you like, following this rules:
    - The first letter must be in upper case, and the rest in lower case.
    - Symbols like dots, dashes and underscores are allowed (but discouraged).
-   - If you want to use previously-generated classic translation dictionary files, you need to follow a [specific naming convention for backwards compatibility](#backwards-compatibility).  
-     Otherwise, consider using the [Native module conventions][native-module-conventions] (_"Admin"_ or _"Shop"_).
+   - If you target 1.7.8 and over, consider using the [Native module conventions][native-module-conventions] (_"Admin"_ or _"Shop"_).
+   - If you want to use previously-generated classic translation dictionary files for backward compatibility, you need to follow a specific naming convention (explained below).
 
 {{% callout %}}
-#### Backwards compatibility
+#### Backward compatibility
 
-If you want your module to be compatible with previously-generated [classic translation dictionary files]({{< ref "classic-system" >}}), then the third component of the Translation domain must be set to the name of the file where the wording is used, respecting the following rules:
+If you want your module to be compatible with previously-generated [classic translation dictionary files]({{< ref "classic-system" >}}), then the third component of the Translation domain **must** be set to the name of the file where the wording is used, respecting the following rules:
   
   - The first letter must be in upper case, and the rest in lower case
   - If the file extension is `.tpl`, the extension must be removed
   - If the file name ends in "controller", that part must be removed as well.       
-{{% /callout %}}
 
 ##### Examples
  
@@ -99,7 +98,8 @@ a_certain_template.tpl | Modules.Mymodule.A_certain_template
 ps_somefile.tpl | Modules.Mymodule.Ps_somefile
 another-template.html.twig | Modules.Mymodule.Another-template.html.twig
 
-You can find more examples in the [test fixtures for DomainHelper][domainhelper].
+You can find more examples in the [test fixtures for DomainHelper](https://github.com/PrestaShop/TranslationToolsBundle/blob/master/Tests/Translation/Helper/DomainHelperTest.php#L61).
+{{% /callout %}}
 
 ### PHP files
 
@@ -343,4 +343,3 @@ If you choose to export wordings from the database, you can easily extract your 
 [contextualization]: {{< ref "new-system.md#contextualization" >}}
 [native-module-conventions]: {{< ref "/1.7/development/internationalization/translation/translation-domains.md#modules" >}}
 [core-translation-domains]: {{< ref "/1.7/development/internationalization/translation/translation-domains.md#understanding-the-domains-structure" >}}
-[domainhelper]: https://github.com/PrestaShop/TranslationToolsBundle/blob/master/Tests/Translation/Helper/DomainHelperTest.php#L61
