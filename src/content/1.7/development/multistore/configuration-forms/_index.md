@@ -41,7 +41,7 @@ In order to extend this form extension, your Symfony form type must implement a 
     }
 ```
 
-Then for each form elements that should have its multistore checkbox, you must add a `multistore_configuration_key` attribute, with the configuration key to which it should be attached as a value:
+Then for each form elements that should have its multistore checkbox, you must add a `multistore_configuration_key` option, with the configuration key to which it should be attached as a value:
 
 ```php
 <?php
@@ -58,15 +58,12 @@ class MyFormType extends TranslatorAwareType
                 SwitchType::class,
                 [
                     'required' => true,
-                    // Here we add the multistore_configuration_key attribute with the configuration key it is linked to.
-                    'attr' => [
-                        'multistore_configuration_key' => 'THE_CONFIGURATION_KEY',
-                    ],
+                    // Here we add the multistore_configuration_key option with the configuration key it is linked to.
+                    'multistore_configuration_key' => 'THE_CONFIGURATION_KEY',
                     // ...
                 ]
             )
         // ...
-
 ```
 
 Last but not least, you must make the frontend aware of these state modifications, you need to add the `MultistoreConfigField` in your javascript:
@@ -83,7 +80,7 @@ window.prestashop.component.initComponents(
 
 Doing this will have several effects:
 
-- Each field implementing the `multistore_configuration_key` will have a multistore checkbox on its left and a multistore dropdown on its right;
+- Each field having the `multistore_configuration_key` option will have a multistore checkbox on its left and a multistore dropdown on its right;
 - Checkboxes will automatically be checked or not depending on the configuration for the current shop context;
 - When the configuration value is inherited, the checkbox will be unchecked, and the field will be disabled and greyed out;
 - Thanks to the javascript component, checking or unchecking a checkbox will enable/disable the field for the current shop context.
