@@ -552,7 +552,7 @@ actionFeatureValueSave
 actionFrontControllerAfterInit
 :
     **(Deprecated in 1.7.7 in favor of)**
-    → `actionFrontControllerInitAfter` (Hook removed but an alias is still there to avoid BC break)
+    → `actionFrontControllerInitAfter`
     
 actionFrontControllerInitAfter
 : 
