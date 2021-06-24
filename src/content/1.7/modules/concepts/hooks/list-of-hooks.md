@@ -549,7 +549,24 @@ actionFeatureValueSave
 
     Located in: /classes/FeatureValue.php
 
+actionFrontControllerAfterInit
+:
+    **(Deprecated in 1.7.7 in favor of)**
+    → `actionFrontControllerInitAfter`
     
+actionFrontControllerInitAfter
+: 
+    Available since: {{< minver v="1.7.7" >}}
+    
+    Located in: /classes/controller/FrontController.php
+
+actionFrontControllerInitBefore
+: 
+    Available since: {{< minver v="1.7.7" >}}
+    
+    Located in: /classes/controller/FrontController.php
+
+
 actionFrontControllerSetMedia
 : 
     Located in: /classes/controller/FrontController.php
