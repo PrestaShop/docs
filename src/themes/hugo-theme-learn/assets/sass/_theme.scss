@@ -126,7 +126,7 @@ select[multiple='multiple'] {
   }
 }
 
-.searchbox {
+.searchbox-extended {
   margin-top: 1rem;
   position: relative;
   border: 1px solid #915eae;
@@ -140,11 +140,10 @@ select[multiple='multiple'] {
     top: 3px;
   }
 
-  span {
+  > span {
     color: rgba(255, 255, 255, 0.6);
     position: absolute;
     right: 10px;
-    top: 3px;
     cursor: pointer;
 
     &:hover {
