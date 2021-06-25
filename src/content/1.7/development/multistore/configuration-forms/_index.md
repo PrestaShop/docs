@@ -41,7 +41,7 @@ In order to extend this form extension, your Symfony form type must implement a 
     }
 ```
 
-Then for each form elements that should have its multistore checkbox, you must add a `multistore_configuration_key` option, with the configuration key to which it should be attached as a value:
+Then for each form element that should have its multistore checkbox, you must add a `multistore_configuration_key` option, with the configuration key to which it should be attached as a value:
 
 ```php
 <?php
