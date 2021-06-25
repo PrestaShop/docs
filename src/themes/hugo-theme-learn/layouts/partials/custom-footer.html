@@ -1,6 +1,10 @@
-<!-- Partial intended to be overwritten with tags loaded at the end of the page loading (usually for Javascript)
-<script>
-    console.log("running some javascript");
-</script>
--->
 {{ template "_internal/google_analytics.html" . }}
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script type="text/javascript"> docsearch({
+apiKey: 'e5a3a32dad46a5aaaa771b2b37d7084a',
+indexName: 'prestashop',
+inputSelector: '#search-by',
+debug: false
+});
+</script>
