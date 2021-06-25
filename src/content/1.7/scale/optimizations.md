@@ -176,7 +176,7 @@ As always, these values should be adjusted to your own environment, you probably
 query_cache_limit = 128K 
 query_cache_size = 32M
 query_cache_type = ON
-table_open_cache = 1000
+table_open_cache = 4000
 thread_cache_size = 80
 host_cache_size=1000
 ```
