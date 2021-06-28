@@ -104,11 +104,11 @@ In the first Symfony pages of PrestaShop, the Form Theme was used in a minimalis
 </div>
 ```
 
-This was counter productive as any change done in the Form Theme would not be applied to forms rendered in this way.
+This was counterproductive as any change done in the Form Theme would not be applied to forms rendered in this way.
 
-This is why a [refactoring project][form-theme-simplification-project] was launched in end of 2019 to rework all the Symfony forms of the Back-Office to be rendered, as much as possible, by the Form Theme only.
+This is why a [refactoring project][form-theme-simplification-project] was launched at the end of 2019 to rework all the Symfony forms of the Back-Office to be rendered, as much as possible, by the Form Theme only.
 
-Which means ideally all forms in the Back-office are now rendered with a single statement:
+This means ideally all forms in the Back-office are now rendered with a single statement:
 
 ```
 {{ form_widget(form) }}
