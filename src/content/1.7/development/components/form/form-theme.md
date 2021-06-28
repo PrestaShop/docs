@@ -68,7 +68,7 @@ Twig templates that render forms can use this Form Theme when they use this stat
 
 Starting from 1.7.7 [a new Form Theme][pr-begin-ui-kit-form-theme] `prestashop_ui_kit_base.html.twig` was built from scratch. It extends Symfony Bootstrap 4 form theme as a base and aims to provide a cleaner and better integrated rendering.
 
-`prestashop_ui_kit.html.twig` is a child Form theme of the above and also rely on `bootstrap_4_horizontal_layout`, in order to render forms horizontally.
+`prestashop_ui_kit.html.twig` is a child Form theme of the above and also relies on `bootstrap_4_horizontal_layout`, in order to render forms horizontally.
 
 ```
 {% form_theme form 'PrestaShopBundle:Admin/TwigTemplateForm:prestashop_ui_kit_base.html.twig' %}
