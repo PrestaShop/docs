@@ -9,7 +9,9 @@ Some components in PrestaShop, like Javascript or SCSS files, need to be compile
 
 ## Requirements
 
-We use [Webpack](https://webpack.js.org/) to compile assets. You only need NodeJS from 8.x to 12.x ([get it here](https://nodejs.org/)), NPM will take care of it all.
+PrestaShop development is following tools version, such as webpack which could be incompatible with some NodeJS versions. This means that at the time we developed one version of PrestaShop, we may used an older version of NodeJS. We strongly recommend you ton install a package such as ['n'](https://www.npmjs.com/package/n?activeTab=versions) or [nvm](https://github.com/nvm-sh/nvm) to switch between versions.
+
+We use [Webpack](https://webpack.js.org/) to compile assets. Currently, you only need NodeJS 12.x ([get it here](https://nodejs.org/)), NPM will take care of it all.
 
 ## Assets that need to be compiled
 
