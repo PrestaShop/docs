@@ -18,7 +18,7 @@ Symfony uses a FormRenderer to output the HTML document that contains the HTML f
 
 The above code aims to render different parts of the form using Twig.
 
-PrestaShop rely on Twig FormRenderer and this renderer requires a **Form Theme** to function. A popular Form Theme being used is the [Bootstrap 4 Form Theme][sf-bootstrap4-form-theme].
+PrestaShop relies on Twig FormRenderer and this renderer requires a **Form Theme** to function. A popular Form Theme being used is the [Bootstrap 4 Form Theme][sf-bootstrap4-form-theme].
 
 The Form Theme is a set of Twig macros and functions that provide a way to render the different parts of a form: all possible inputs, labels, specific fields, specific options...
 
