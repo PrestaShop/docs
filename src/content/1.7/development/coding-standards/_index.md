@@ -118,6 +118,19 @@ If you need to deprecate services, you can use the `deprecated` key for the serv
 
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
 
+Starting on {{< minver v="1.7.8" >}}, you can run the linter like this:
+
+```bash
+npm run lint-fix
+```
+
+## TypeScript
+Starting on {{< minver v="1.7.9" >}}, most of `admin-dev/themes/new-theme/js` files have been migrated to TypeScript. This provide a better maintainability by using types on most of our classes and functions. 
+
+You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
+
+The `tsconfig.json` and `webpack` configuration files are adding a `@PSTypes` relative path to the `admin-dev/themes/new-theme/js/types` folder, because `@types` is a reserved folder.
+
 ## HTML, CSS (Sass), Twig & Smarty code conventions
 
 HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](https://codeguide.co/).
