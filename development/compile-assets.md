@@ -13,6 +13,8 @@ PrestaShop development is following tools version, such as webpack which could b
 
 We use [Webpack](https://webpack.js.org/) to compile assets. Currently, you only need NodeJS 12.x ([get it here](https://nodejs.org/)), NPM will take care of it all.
 
+On Windows, you'll probably need to install `windows-build-tools` using `npm i --global windows-build-tools` in order to make [node-gyp](https://github.com/nodejs/node-gyp#on-windows) working.
+
 ## Assets that need to be compiled
 
 - Back Office
