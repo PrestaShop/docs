@@ -414,7 +414,7 @@ and `uninstall()`) all make use of a new object, `Configuration`.
 
 This is a PrestaShop-specific object, built to help developers manage
 their module settings. It stores these settings in PrestaShop's database
-without require to use SQL queries. Specifically, this object handles
+without requiring the use of SQL queries. Specifically, this object handles
 data from the `ps_configuration` database table.
 
 ### The main methods
