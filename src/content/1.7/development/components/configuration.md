@@ -19,9 +19,11 @@ To address these needs, the Configuration storage of PrestaShop uses a SQL table
 
 Each value stored in the Configuration component can be controlled through a given key, is compatible with Multishop (as it can be overridden for a shop or a group of shops) and has timestamps.
 
-The storage is performed in `Configuration` class.
+The storage is managed by the `Configuration` class.
 
-We recommend to access it through service `prestashop.adapter.legacy.configuration` (class `PrestaShop\PrestaShop\Adapter`), this is the interface allowing each developer to get or store configuration data.
+{{% notice tip %}}
+Although you can access `Configuration` statically from any class, we recommend injecting the `prestashop.adapter.legacy.configuration` service instead.
+{{% /notice %}}
 
 ## Usage
 
