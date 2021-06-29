@@ -35,7 +35,6 @@ Configuration::updateValue(string $key, mixed $value);
 `$value` can be any scalar type (int, float, string, bool) or an array.
 
 {{% notice tip %}}
-
 **Multi language**.
 
 By convention, multilanguage values are stored in arrays indexed by language id, like this:
