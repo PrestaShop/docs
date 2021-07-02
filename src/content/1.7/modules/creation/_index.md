@@ -9,53 +9,30 @@ aliases:
 
 ## Quick start
 
-Modules must follow some guidelines to work on PrestaShop.
+If you want to get started quickly with a ready-to-use module template, you can use [PrestaShop Validator's Module Generator](https://validator.prestashop.com/generator). It provides an easy way to generate a module, including the basic structure, customized default properties, and most common use cases covered (hook, upgrade...).
 
-If you want to get started quickly, with a ready-to-use module template, you can use the module
-generator available on the [PrestaShop Validator](https://validator.prestashop.com/generator).
+Other skeletons have been created to help you create specific modules:
 
-It provides an easy way to generate a payment (for PS 1.6 and below) or shipping module, with the basic
-structure, the default properties customized and the most common use cases covered (hook, upgrade...).
-
-Other skeletons have been created to help you creating specific modules, as given in the following
-references list.
-
-**References:**
-
-* [Generate a module on PrestaShop Validator](https://validator.prestashop.com/generator)
 * [Skeleton of a Payment module for PrestaShop 1.7](https://github.com/PrestaShop/paymentexample)
 * [Skeleton of a module using CQRS feature](https://github.com/friends-of-presta/demo-cqrs-hooks-usage-module) ([More details about CQRS]({{< ref "1.7/development/architecture/domain/_index.md" >}}))
-
 
 ## Tutorial: Understanding your first module
 
 {{% notice note %}}
-Before you start writing code for your PrestaShop module, you should be
-aware that the PrestaShop team uses a specific set of coding conventions
-(or coding standards, coding norm, etc.).
-
-As Wikipedia puts it, "[Coding conventions](https://en.wikipedia.org/wiki/Coding_conventions) are a set of guidelines for a
-specific programming language that recommend programming style,
-practices and methods for each aspect of a piece program written in this
-language", and "Good procedures, good methodology and good coding
-standards can be used to drive a project such that the quality is
-maximized and the overall development time and development and
-maintenance cost is minimized.".
-
-PrestaShop's own standards are available at this page: [Coding standards]({{< ref "/1.7/development/coding-standards" >}}). You should read it in order to make sure that the code you produce fits correctly with the overall code of the PrestaShop project. Configuring your IDE hints or using automated tools like PHPCodeSniffer can help you make sure you follow the standards properly.
+Before you start writing code for your PrestaShop module, we recommend reading PrestaShop's [Coding standards]({{< ref "/1.7/development/coding-standards" >}}). Configuring your IDE hints or using [automated tools](https://github.com/PrestaShop/php-dev-tools) can help you make sure you follow the project's standards properly.
 {{% /notice %}}
 
+Let's create a simple first module; this will enable us to better describe its structure. We will name it **"My module"**.
 
-Let's create a simple first module; this will enable us to better
-describe its structure. We will name it "My module".
+First, create the module's folder, in PrestaShop's `/modules` folder. Let's call it `mymodule`. This will be the module's "technical" name.
 
-First, create the module's folder, in the `/modules` folder. It should have the same name as the module, with no spaces, only lowercase alphanumerical characters and the underscore (note: underscores will not pass the [module validation](https://validator.prestashop.com/)): `/mymodule`.
+{{% notice tip %}}
+Technical names can only accept lower case alphanumeric characters (`[a-z0-9]`). Although accepted, we strongly discourage using underscores because they don't work with translation domains.
+{{% /notice %}}
 
-This folder must contain the main file, a PHP file of the same name as
-the folder, which will handle most of the processing: `mymodule.php`.
+This folder must contain the main file, a PHP file of the same name as the folder, which will handle most of the processing: `mymodule.php`.
 
-That is enough for a very basic module, but obviously more files and
-folders can be added later.
+That is enough for a very basic module. Obviously, more files and folders can be added later, if needed.
 
 ### The constant test
 
@@ -68,24 +45,19 @@ if (!defined('_PS_VERSION_')) {
 }
 ```
 
-This checks for the existence of an always-existing PrestaShop constant
-(its version number), and if it does not exist, it stops the module from
-loading. The sole purpose of this is to prevent malicious visitors to
-load this file directly.
+This checks for the presence of an always-existing PrestaShop constant (its version number), and if it does not exist, it stops the module from loading. The sole purpose of this is to prevent malicious visitors to load this file directly.
 
-Note that, as required by the PrestaShop Coding Standards (see above),
-we do not use a PHP closing tag.
+Note that, as required by PrestaShop's Coding Standards (see above), we do not use a closing PHP tag.
 
 ### The main class
 
-The main file must contain the module's main class (along with other
-classes if needed). PrestaShop uses Object-Oriented programming, and so
-do its modules.
+The main file must contain the module's main class. 
 
-That class must bear the same name as the module and its folder, in
-CamelCase (see <https://en.wikipedia.org/wiki/CamelCase>). In our
-example: `MyModule`. Furthermore, that class must extend the `Module`
-class, in order to inherit all its methods and attributes.
+{{% notice tip %}}
+If you need to add more classes later, we suggest writing one single class per file.
+{{% /notice %}}
+
+That main class must bear the same name as the module and its folder, in [CamelCase](https://en.wikipedia.org/wiki/CamelCase). In our example: `MyModule`. Furthermore, that class must extend the `Module` class, in order to inherit all its methods and attributes.
 
 ```php
 <?php
@@ -98,21 +70,13 @@ class MyModule extends Module
 }
 ```
 
-It can just as well extend any class derived from Module, for specific
-needs: `PaymentModule`, `ModuleGridEngine`, `ModuleGraph`, etc.
+It can just as well extend any class derived from Module, for specific needs: `PaymentModule`, `ModuleGridEngine`, `ModuleGraph`, etc.
 
-At this stage, if you place the module's folder on the /modules folder,
-the module can already be seen in the "Modules" page in the back office,
-in the "Other modules" section – albeit with no real name nor thumbnail.
+At this stage, if you place the module's folder on the `/modules` folder, the module can already be seen in the "Module Catalog" page in the back office, in the "Other modules" section – albeit with no real name nor thumbnail.
 
 ### The constructor method
 
-Now, let's fill the class' code block with the essential constructor
-lines. A constructor is a function in a class that is automatically
-called when you create a new instance of a class with new. In the case
-of a PrestaShop, the constructor class is the first method to be called
-when the module is loaded by PrestaShop. This is therefore the best
-place to set most of its details.
+Now, let's fill the class' code block with the essential constructor lines. Since the constructor is the first method to be called when the module is loaded by PrestaShop, this is the best place to set its details.
 
 ```php
 <?php
@@ -131,7 +95,7 @@ class MyModule extends Module
         $this->need_instance = 0;
         $this->ps_versions_compliancy = [
             'min' => '1.6',
-            'max' => _PS_VERSION_
+            'max' => '1.7.99',
         ];
         $this->bootstrap = true;
 
@@ -149,117 +113,52 @@ class MyModule extends Module
 }
 ```
 
-Let's examine each line from this first version of the `MyModule`
-class...
+Let's examine each line...
 
 ```php
-<?php
-// This line defines the class constructor function.
 $this->name = 'mymodule';
 $this->tab = 'front_office_features';
 $this->version = '1.0';
 $this->author = 'Firstname Lastname';
 ```
 
-This section assigns a handful of attributes to the class instance
-(`this`):
+This section assigns a handful of attributes to the class instance (`$this`):
 
--   'name' attribute. This attributes serves as an internal identifier.
-    The value MUST be the name of the module's folder. Do not use
-    special characters or spaces, and keep it lower-case.
--   'tab' attribute. The title for the section that shall contain this
-    module in PrestaShop's back office modules list. You may use an
-    existing name, such as seo, `front_office_features` or
-    `analytics_stats`, or a custom one. In this last case, a new section
-    will be created with your identifier. We choose
-    "`front_office_features`" because this first module will mostly have
-    an impact on the front-end.
--   'version' attribute. The version number for the module, displayed in
-    the modules list. You can use as many level of version as you need
-    (i.e '1', '1.0', '1.0.3', '0.97.5.2') but keep in mind to follow the 
-    [Semantic Versioning Specification](https://semver.org/#semantic-versioning-specification-semver).
--   'author' attribute. This is displayed as-is in the PrestaShop
-    modules list.
-
-Here is the list of available "Tab" attributes, and their corresponding
-section in the "Modules" page:
-
-  **"Tab" attribute**           | **Module section**
-  ------------------------------|------------------------
-  `administration`              | Administration
-  `advertising_marketing`       | Advertising & Marketing
-  `analytics_stats`             | Analytics & Stats
-  `billing_invoicing`           | Billing & Invoices
-  `checkout`                    | Checkout
-  `content_management`          | Content Management
-  `dashboard`                   | Dashboard
-  `emailing`                    | E-mailing
-  `export`                      | Export
-  `front_office_features`       | Front Office Features
-  `i18n_localization`           | I18n & Localization
-  `market_place`                | Market Place
-  `merchandizing`               | Merchandizing
-  `migration_tools`             | Migration Tools
-  `mobile`                      | Mobile
-  `others`                      | Other Modules
-  `payments_gateways`           | Payments & Gateways
-  `payment_security`            | Payment Security
-  `pricing_promotion`           | Pricing & Promotion
-  `quick_bulk_update`           | Quick / Bulk update
-  `search_filter`               | Search & Filter
-  `seo`                         | SEO
-  `shipping_logistics`          | Shipping & Logistics
-  `slideshows`                  | Slideshows
-  `smart_shopping`              | Smart Shopping
-  `social_networks`             | Social Networks
+- The `name` attribute serves as an internal identifier (technical name). The value MUST be the same as the module's folder and main class file. Only lower case letters and numbers are accepted.
+- The `tab` attribute contains the section that shall contain this module in the Module Manager section in the Back office (see [list of available sections][existing-tab-sections]). We choose `front_office_features` because our module will mostly have an impact on the front-end.
+- The `version` attribute contains the version number for the module, displayed in the modules list. We recommend following the [Semantic Versioning specification](https://semver.org/).
+- The `author` attribute, as you can imagine contains the author's name. It is displayed as-is in the PrestaShop modules list.
 
 Let's continue with the next line in this block of code:
 
 ```php
-<?php
 $this->need_instance = 0;
 $this->ps_versions_compliancy = [
-    'min' => '1.5',
-    'max' => '1.6'
+    'min' => '1.6',
+    'max' => '1.7.99'
 ];
 $this->bootstrap = true;
 ```
 
-This section handles the relationship with the module and its
-environment (namely, PrestaShop):
+This section handles the relationship with the module and its environment (namely, PrestaShop):
 
--   *need\_instance*. Indicates whether to load the module's class when
-    displaying the "Modules" page in the back office. If set at 0, the
-    module will not be loaded, and therefore will spend less resources
-    to generate the "Modules" page. If your module needs to display a
-    warning message in the "Modules" page, then you must set this
-    attribute to 1.
--   *ps\_versions\_compliancy*. Indicates which version of PrestaShop
-    this module is compatible with. In the example above, we explicitly
-    write that this module will only work with PrestaShop 1.5.x, and no
-    other major version.
--   *bootstrap*. Indicates that the module's template files have been
-    built with PrestaShop 1.6's bootstrap tools in mind – and therefore,
-    that PrestaShop should not try to wrap the template code for the
-    configuration screen (if there is one) with helper tags.
+- The `need_instance` attribute Indicates whether to load the module's class when displaying the "Modules" page in the back office. If set at 0, the module will not be loaded, and therefore will spend less resources to generate the "Modules" page. If your module needs to display a warning message in the "Modules" page, then you must set this attribute to `1`.
+- The `ps_versions_compliancy` attribute indicates which version of PrestaShop this module is compatible with. In the example above, we are defining the compatibility range between `1.6.0.0` and `1.7.99.0`.
+- The `bootstrap` attribute indicates that the module's template files have been built with PrestaShop 1.6's bootstrap tools in mind.
 
 Next, we call the constructor method from the parent PHP class:
 
 ```php
-<?php
 parent::__construct();
 ```
 
-This will trigger a lot of actions from PrestaShop that you do not need
-to know about at this point. Calling the parent constructor method must
-be done after the creation of the `this->name variable` and before any
-use of the `this->l()` translation method.
+This will trigger a lot of actions from PrestaShop that you do not need to know about at this point.
 
-The next section deals with text strings, which are encapsulated in
-PrestaShop's translation method, `l()`:
+This method call must be placed after the definition of `$this->name` variable and before any use of translation.
+
+The next section deals with text strings, which are encapsulated in PrestaShop's translation method, `l()`:
 
 ```php
-<?php
 $this->displayName = $this->l('My module');
 $this->description = $this->l('Description of my module.');
 
@@ -272,303 +171,176 @@ if (!Configuration::get('MYMODULE_NAME')) {
 
 These lines respectively assign:
 
--   A name for the module, which will be displayed in the back office's
-    modules list.
--   A description for the module, which will be displayed in the back
-    office's modules list.
--   A message, asking the administrator if he really does want to
-    uninstall the module. To be used in the installation code.
--   A warning that the module doesn't have its `MYMODULE_NAME` database
-    value set yet (this last point being specific to our example, as we
-    will see later).
+- A name for the module, which will be displayed in the back office's modules list.
+- A description for the module, which will be displayed in the back office's modules list.
+- A message, asking the administrator if they really wants to uninstall the module. This is used in the uninstallation process.
+- A warning that the module doesn't have its `MYMODULE_NAME` database value set yet (this last point being specific to our example, as we will see later).
 
-The constructor method is now complete. You are free to add more to it
-later if necessary, but this the bare minimum for a working module.
+The constructor method is now complete. You are free to add more to it later if necessary, but this the bare minimum for a working module.
 
-Now go to your back office, then in the Modules page (found at "Modules" > 
-"Modules & Services") choose the Selection tab. The module is visible in
-the modules list, with its information displayed – and no icon for now.
+Now go to your back office's Module Catalog page (found at _"Modules" > "Module Catalog"_) and search "mymodule". The module is visible in the list, with its information displayed – and no icon for now.
 
 You can install the module, but it does not do anything yet.
 
-When you click on the "Install" button for your module, it will display
-a module window saying that your module is Untrusted.
+## Building the install() and uninstall() methods
 
-The only way to make your module Trusted is to distribute it through the
-PrestaShop Addons marketplace (with a unique identifying key), or to
-become a PrestaShop partner. Other trusted modules are the native ones.
+Some modules have more needs than just using PrestaShop's features in special ways. Your module might need to perform actions on installation, such as checking PrestaShop's settings or to registering its own settings in the database. Likewise, if you changed things in the database on installation, it is highly recommended to change them back (or remove them) when uninstalling the module.
 
-To install the module, click the "Proceed with installation" on this
-screen.
-
-Building the install() and uninstall() methods
-----------------------------------------------
-
-Some modules have more needs than just using PrestaShop's features in
-special ways. Your module might need to perform actions on installation,
-such as checking PrestaShop's settings or to registering its own
-settings in the database. Likewise, if you changed things in the
-database on installation, it is highly recommended to change them back
-(or remove them) when uninstalling the module.
-
-The `install()` and `uninstall()` methods make it possible to control
-what happens when the store administrator installs or uninstalls the
-module. They must be included in the main class' block of code (in our
-example, the `MyModule` class) – at the same level as the constructor
-method.
+The `install()` and `uninstall()` methods make it possible to control what happens when the store administrator installs or uninstalls the module. They must be included in the main class' block of code (in our example, the `MyModule` class) – at the same level as the constructor method.
 
 ### The install() method
 
 Here is the bare minimum for the `install()` method:
 
 ```php
-<?php
 public function install()
 {
     return parent::install();
 }
 ```
 
-In this first and extremely simplistic incarnation, this method does the
-minimum needed: return true returned by the Module class' `install()`
-method, which returns either `true` if the module is correctly
-installed, or `false` otherwise. As it is, if we had not created that
-method, the superclass' method would have been called instead anyway,
-making the end result identical. Nevertheless, we must mention this
-method, because it will be very useful once we have to perform checks
-and actions during the module's installation process: creating SQL
-tables, copying files, creation configuration variables, etc.
+In this first and extremely simplistic incarnation, this method does the minimum needed: return what's returned by the Module class' `install()` method, which returns either `true` if the module is correctly installed, or `false` otherwise. As it is, if we had not created that method, the superclass' method would have been called instead anyway, making the end result identical. Nevertheless, we must mention this method, because it will be very useful once we have to perform checks and actions during the module's installation process: creating SQL tables, copying files, creating configuration variables, etc.
 
-So for example how you can expand the `install()` method to perform
-installation checks. In the following example, we perform the following
-tasks during installation:
+There are many things you can do to expand the `install()` method to perform installation checks. In the following example, we perform the following tasks during installation:
 
--   Check that the Multistore feature is enabled, and if so, set the
-    current context to all shops on this installation of PrestaShop.
--   Check that the module parent class is installed.
--   Check that the module can be attached to the `leftColumn` hook.
--   Check that the module can be attached to the `header` hook.
--   Create the `MYMODULE_NAME` configuration setting, setting its value
-    to "my friend".
+- Check that the [Multistore feature][multistore] is enabled, and if so, set the current context to all shops on this installation of PrestaShop.
+- Ensure that the base install process is successful.
+- Ensure that the module can be attached to the `leftColumn` hook.
+- Ensure that the module can be attached to the `header` hook.
+- Ensure the value of the `MYMODULE_NAME` configuration setting can be set to "my friend".
 
 
 ```php
-<?php
 public function install()
 {
     if (Shop::isFeatureActive()) {
         Shop::setContext(Shop::CONTEXT_ALL);
     }
 
-    if (!parent::install() ||
-        !$this->registerHook('leftColumn') ||
-        !$this->registerHook('header') ||
-        !Configuration::updateValue('MYMODULE_NAME', 'my friend')
-    ) {
-        return false;
-    }
-
-    return true;
+   return (
+        parent::install() 
+        && $this->registerHook('leftColumn')
+        && $this->registerHook('header')
+        && Configuration::updateValue('MYMODULE_NAME', 'my friend')
+    ); 
 }
 ```
 
-If any of the lines in the testing block fails, the method returns
-`false` and the installation does not happen.
+If any of the lines in the testing block fails, the method returns `false` and the installation is aborted.
 
 ### The uninstall() method
 
-Here is the bare minimum for the uninstall() method:
+The `uninstall()` method follow the same logic as `install()`. Here is the bare minimum implementation:
 
 ```php
-<?php
 public function uninstall()
 {
     return parent::uninstall();
 }
 ```
 
-Building on this foundation, we want an uninstall() method that would
-delete the data added to the database during the installation (
-`MYMODULE_NAME` configuration setting). This method would look like
-this:
+Building on this foundation, we want an `uninstall()` method that would delete the data added to the database during the installation (`MYMODULE_NAME` configuration setting). This method would look like this:
 
 ```php
-<?php
 public function uninstall()
 {
-    if (!parent::uninstall() ||
-        !Configuration::deleteByName('MYMODULE_NAME')
-    ) {
-        return false;
-    }
-
-    return true;
+    return (
+        parent::uninstall() 
+        && Configuration::deleteByName('MYMODULE_NAME')
+    );
 }
 ```
 
-The Configuration object
-------------------------
+## The Configuration object
 
-As you can see, our three blocks of code (`__construct()`, `install()`
-and `uninstall()`) all make use of a new object, `Configuration`.
+As you can see, our three blocks of code (`__construct()`, `install()` and `uninstall()`) all make use of a new object, `Configuration`.
 
-This is a PrestaShop-specific object, built to help developers manage
-their module settings. It stores these settings in PrestaShop's database
-without requiring the use of SQL queries. Specifically, this object handles
-data from the `ps_configuration` database table.
+This is a PrestaShop-specific object that allows to easily manage all the shop's settings. It stores its data on the `ps_configuration` database table.
 
 ### The main methods
 
-So far, we've used three methods, to which we'll add a fourth one in the
-list below:
+This component has three main methods, allowing you to perform basic CRUD operations:
 
--   `Configuration::get('myVariable')`: retrieves a specific value from
-    the database.
--   `Configuration::getMultiple(array('myFirstVariable', 'mySecondVariable', 'myThirdVariable'))`:
-    retrieves several values from the database, and returns a PHP array.
--   `Configuration::updateValue('myVariable', $value)`: updates an
-    existing database variable with a new value. If the variable does
-    not yet exist, it creates it with that value.
--   `Configuration::deleteByName('myVariable')`: deletes the
-    database variable.
+`Configuration::get('myVariable')`
+: Retrieves a specific value from the database.
 
-There are many more, such as `getInt()` or `hasContext()`, but these
-four are the ones you will use the most.
+`Configuration::updateValue('myVariable', $value)`
+: Updates an existing setting with a new value. If the setting does not yet exist, it creates it with that value.
 
-Note that when using `updateValue()`, the content of \$value can be
-anything, be it a string, a number, a serialized PHP array or a JSON
-object. As long as you properly code the data handling function,
-anything goes. For instance, here is how to handle a PHP array using the
-`Configuration` object:
+`Configuration::deleteByName('myVariable')`
+: Deletes the setting.
+
+
+Note that when using `updateValue()`, the content of `$value` can be anything, be it a string, a number, a serialized PHP array or a JSON object. As long as you properly code the data handling function, anything goes. For instance, here is how to handle a PHP array using the `Configuration` object:
 
 ```php
 <?php
 // Storing a serialized array.
-Configuration::updateValue('MYMODULE_SETTINGS', serialize(array(true, true, false)));
+Configuration::updateValue('MYMODULE_SETTINGS', serialize([true, true, false]));
 
 // Retrieving the array.
-$configuration_array = unserialize(Configuration::get('MYMODULE_SETTINGS'));
+$mySettings = unserialize(Configuration::get('MYMODULE_SETTINGS'));
 ```
 
-As you can see, this in a very useful and easy-to-use object, and you
-will certainly use it in many situations. Most native modules use it too
-for their own settings.
+As you can see, this in a very useful and easy-to-use object, and you will certainly use it in many situations. Most native modules use it too for their own settings.
 
-### Handling the multistore feature
+{{% notice note %}}
+You can read more about this component in [Configuration storage]({{< ref "/1.7/development/components/configuration" >}}).
+{{% /notice %}}
 
-What is a module compatible with the multistore feature?
-It is a module that can be configured differently from one store to another.
-Also the same module can have a shared configuration between all shops.
-Finally, the module must be able to be activated on one shop and deactivated on another.
+### Retrieving external values from the ps_configuration data table
 
-By default, all these methods work within the confines of the current
-store context, whether PrestaShop is using the multistore feature or
-not.
+You are not limited to your own variables: PrestaShop stores all its own configuration settings in the `ps_configuration` database table. There are literally hundreds of settings, and you can access them just as easily as you would access your own. For instance:
 
-However, it is possible to work outside of the current context and
-impact other known stores. This is done using three optional parameters,
-which are not presented in the list above:
+- `Configuration::get('PS_LANG_DEFAULT')`: retrieves the ID for the default language.
+- `Configuration::get('PS_TIMEZONE')`: retrieves the name of the current timezone, in standard TZ format (see: [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)).
+- `Configuration::get('PS_DISTANCE_UNIT')`: retrieves the default distance unit ("km" for kilometers, etc.).
+- `Configuration::get('PS_SHOP_EMAIL')`: retrieves the main contact e-mail address.
+- `Configuration::get('PS_NB_DAYS_NEW_PRODUCT')`: retrieves the number of days during which a newly-added product is considered "New" by PrestaShop.
 
--   `id_lang`: enables you to force the language with which you want
-    to work.
--   `id_shop_group`: enables you to indicate the shop group of the
-    target store.
--   `id_shop`: enables you to indicate the id of the target store.
+Dive into the `ps_configuration` table to discover many other settings!
 
-By default, these three parameters use the values of the current
-context, but you can use them to target other stores.
+## The Shop object
 
-Note that it is not recommended to change the default values of these
-variables, even more so if the module you are writing is to be used on
-other stores than your own. They should only be used if the module is
-for your own store, and you know the id and shop group of all of your
-shops.
-
-### Retrieving external values from the ps\_configuration data table
-
-You are not limited to your own variables: PrestaShop stores all its own
-configuration settings in the ps\_configuration table. There are
-literally hundreds of settings, and you can access them just as easily
-as you would access your own. For instance:
-
--   `Configuration::get('PS_LANG_DEFAULT')`: retrieves the ID for the
-    default language.
--   `Configuration::get('PS_TIMEZONE')`: retrieves the name of the
-    current timezone, in standard TZ format (see:
-    [https://en.wikipedia.org/wiki/List_of_tz_database_time_zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)).
--   `Configuration::get('PS_DISTANCE_UNIT')`: retrieves the default
-    distance unit ("km" for kilometers, etc.).
--   `Configuration::get('PS_SHOP_EMAIL')`: retrieves the main contact
-    e-mail address.
--   `Configuration::get('PS_NB_DAYS_NEW_PRODUCT')`: retrieves the number
-    of days during which a newly-added product is considered "New"
-    by PrestaShop.
-
-Dive into the `ps_configuration` table in order to discover many other
-settings!
-
-The Shop object
----------------
-
-Another of install()'s lines is this:
+The `install()` method also references this:
 
 ```php
-<?php
 if (Shop::isFeatureActive()) {
     Shop::setContext(Shop::CONTEXT_ALL);
 }
 ```
 
-As said earlier, here we check that the Multistore feature is enabled,
-and if so, set the current context to all shops on this installation of
-PrestaShop.
+As said earlier, here we check if the Multistore feature is enabled, and if so, set the current execution context to "all shops".
 
-The Shop object helps you manage the multistore feature. We will not
-dive in the specifics here, but will simply present the two methods that
-are used in this sample code:
+The Shop object helps you work with multistore. We will not dive in the specifics here, but will simply present the two methods that are used in this sample code:
 
--   `Shop::isFeatureActive()`: This simply checks whether the multistore
-    feature is active or not, and if at least two stores are
-    presently activated.
--   `Shop::setContext(Shop::CONTEXT_ALL)`: This changes the context in
-    order to apply coming changes to all existing stores instead of only
-    the current store.
+- `Shop::isFeatureActive()`: This simply checks whether the multistore feature is active or not, and if at least two stores are presently activated.
+- `Shop::setContext(Shop::CONTEXT_ALL)`: This changes the context in order to apply coming changes to all existing stores instead of only the current store.
 
-The Context is explained in more details in the "Using the Context
-Object" chapter of this Developer Guide.
+The Shop Context is explained in more details in the [Multistore documentation][multistore].
 
-The icon file
--------------
+## The icon file
 
-To put the finishing touch to this basic module, you should add an icon,
-which will be displayed next to the module's name in the back office
-modules list. In case your module is made for a prominent service,
-having that service's logo visible brings trust. Make sure you do not
-use a logo already used by one of the native modules, or without
-authorization from the owner of the logo/service.
+To put the finishing touch to this basic module, you should add an icon, which will be displayed next to the module's name in the back office modules list. In case your module has been built for a prominent service, having that service's logo visible brings trust. Make sure you do not use an icon already in use by one of the native modules, or without authorization from the owner of the logo/service.
 
 The icon file must respect these requirements:
 
--   It must be placed on the module's main folder.
--   32\*32 PNG image.
--   Named `logo.png`.
--   Tip: There are many free 32\*32 icon libraries available. Here are a
-    few: <https://www.fatcow.com/free-icons> (very close to the
-    FamFamFam one) or
-    <http://www.iconarchive.com/show/danish-royalty-free-icons-by-jonas-rask.html>
-    (Danish Royalty Free)
+- It must be placed on the module's main folder.
+- PNG format, 32 by 32 pixels in size.
+- Named `logo.png`.
 
-Installing the module
----------------------
+{{% notice tip %}}
+There are many free icon libraries available on the web. Here are a few: 
 
-Now that all basics are in place, reload the back office's "Modules"
-pages, in the "Front office features" section, you should find your
-module. Install it (or reset it if it is already installed).
+- [Facow's Farm Fresh Web Icons](https://www.fatcow.com/free-icons)
+- [Danish Royalty Free](https://iconarchive.com/show/danish-royalty-free-icons-by-jonas-rask.html)
+{{% /notice %}}
 
-During the module's installation, PrestaShop automatically creates a
-small `config.xml` file in the module's folder, which stores the
-configuration information. You should be very careful when editing by
-hand.
+## Installing the module
+
+Now that all basics are in place, reload the back office's "Module Catalog" page, in the "Front office features" section, you should find your module. Install it (or reset it if it is already installed).
+
+During the module's installation, PrestaShop automatically creates a small `config.xml` file in the module's folder, which stores the module's information. You should be very careful when editing this file by hand.
 
 ## Keeping things secure
 
@@ -586,3 +358,10 @@ header('Pragma: no-cache');
 header('Location: ../');
 exit;
 ```
+
+## Further reading
+
+{{< children />}}
+
+[existing-tab-sections]: {{< ref "/1.7/modules/concepts/module-class/#tab" >}}
+[multistore]: {{< ref "/1.7/development/multistore/" >}}
