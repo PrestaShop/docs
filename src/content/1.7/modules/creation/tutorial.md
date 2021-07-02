@@ -1,21 +1,12 @@
 ---
-title: "Creating your first module"
+title: "Tutorial: Creating your first module"
+menuTitle: "Tutorial"
+weight: 1
 aliases:
   - /module/05-CreatingAPrestaShop17Module/02-CreatingAFirstModule.html
 ---
 
-# Getting started
-
-## Quick start
-
-If you want to get started quickly with a ready-to-use module template, you can use [PrestaShop Validator's Module Generator](https://validator.prestashop.com/generator). It provides an easy way to generate a module, including the basic structure, customized default properties, and most common use cases covered (hook, upgrade...).
-
-Other skeletons have been created to help you create specific modules:
-
-* [Skeleton of a Payment module for PrestaShop 1.7](https://github.com/PrestaShop/paymentexample)
-* [Skeleton of a module using CQRS feature](https://github.com/friends-of-presta/demo-cqrs-hooks-usage-module) ([More details about CQRS]({{< ref "1.7/development/architecture/domain/_index.md" >}}))
-
-## Tutorial: Understanding your first module
+# Tutorial: Creating your first module
 
 {{% notice note %}}
 Before you start writing code for your PrestaShop module, we recommend reading PrestaShop's [Coding standards]({{< ref "/1.7/development/coding-standards" >}}). Configuring your IDE hints or using [automated tools](https://github.com/PrestaShop/php-dev-tools) can help you make sure you follow the project's standards properly.
@@ -33,7 +24,7 @@ This folder must contain the main file, a PHP file of the same name as the folde
 
 That is enough for a very basic module. Obviously, more files and folders can be added later, if needed.
 
-### The constant test
+## The constant test
 
 The main mymodule.php file must start with the following test:
 
@@ -48,7 +39,7 @@ This checks for the presence of an always-existing PrestaShop constant (its vers
 
 Note that, as required by PrestaShop's Coding Standards (see above), we do not use a closing PHP tag.
 
-### The main class
+## The main class
 
 The main file must contain the module's main class. 
 
@@ -73,7 +64,7 @@ It can just as well extend any class derived from Module, for specific needs: `P
 
 At this stage, if you place the module's folder on the `/modules` folder, the module can already be seen in the "Module Catalog" page in the back office, in the "Other modules" section – albeit with no real name nor thumbnail.
 
-### The constructor method
+## The constructor method
 
 Now, let's fill the class' code block with the essential constructor lines. Since the constructor is the first method to be called when the module is loaded by PrestaShop, this is the best place to set its details.
 
