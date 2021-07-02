@@ -36,3 +36,9 @@ There is also a couple of standard practices for data rows within a table:
 
 * Use the `id_lang` field to store the language associated with a record.
 * Use the `id_shop` field to store the store associated with a record.
+
+## Accessing the database
+
+The preferred way to access the database is through the [Db component][db-component].
+
+[db-component]: {{< ref "../components/database/db" >}}

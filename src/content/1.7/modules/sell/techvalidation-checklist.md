@@ -70,8 +70,8 @@ We examine every SQL request to make sure you did cast your variables. Use `(int
 
 More details:
 
-* [Using the DBQuery class]({{< ref "1.7/development/database/dbquery" >}})
-* [Executing your SQL requests]({{< ref "1.7/development/database/db" >}})
+* [Using the DBQuery class]({{< ref "1.7/development/components/database/dbquery" >}})
+* [Executing your SQL requests]({{< ref "1.7/development/components/database/db" >}})
 
 #### Calls from external services are secured
 
