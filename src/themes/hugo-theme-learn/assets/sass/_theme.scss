@@ -1186,3 +1186,25 @@ ol ol {
     list-style-type: lower-roman;
   }
 }
+
+// definition lists
+
+dt {
+  font-weight: bold;
+
+  code {
+    font-weight: normal;
+    font-size: 90%;
+  }
+}
+
+dd {
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+  // for some reason, the first paragraph in definitions is not wrapped by a <p>
+  // so there's a margin missing between the first paragraph and one following
+  > p:first-child {
+    margin-top: 1rem;
+  }
+}
