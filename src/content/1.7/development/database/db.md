@@ -8,7 +8,6 @@ weight: 1
 ## Initialize connection to database
 
 ```php
-<?php
 /**
  * @var \Db $db
  */
@@ -23,7 +22,6 @@ The first call to this method initializes the link to the database, and return t
 ### Execute a raw SQL request (SELECT only)
 
 ```php
-<?php
 $request = 'SELECT `id_table` FROM `' . _DB_PREFIX_ . 'some_table` ...';
 
 /** @var array $result */
@@ -38,7 +36,6 @@ It should only be used for read only queries: SELECT, SHOW, etc.
 ### Execute a raw SQL request (SELECT only) and get the first row
 
 ```php
-<?php
 $request = "SELECT `id_table` FROM `' . _DB_PREFIX_ . 'some_table` ...";
 
 /** @var array $result */
@@ -53,7 +50,6 @@ This function automatically adds "LIMIT 1" to the query.
 ### Execute a SELECT request with only one column and one row
 
 ```php
-<?php
 $request = "SELECT `count('sales')` FROM `' . _DB_PREFIX_ . 'some_table` ...";
 
 /** @var string|false $salesCount */
@@ -83,7 +79,6 @@ Returns the number of rows impacted by the latest `INSERT`, `UPDATE`, `REPLACE` 
 ### Execute a raw SQL request (UPDATE, INSERT...)
 
 ```php
-<?php
 $request = "INSERT INTO `' . _DB_PREFIX_ . 'some_table` (`id_table`) VALUES (10)";
 
 /** @var bool $result */
@@ -95,7 +90,6 @@ Return true if the request was properly executed, false otherwise.
 ### Insert a row in the database
 
 ```php
-<?php
 /** @var bool $result */
 $result = $db->insert('db_table', array(
     'id_lang' => (int) $lang,
@@ -111,7 +105,6 @@ The result is a boolean whose state indicates if the request was properly execut
 ### Insert multiple rows in the database (batch insert)
 
 ```php
-<?php
 $now = date('Y-m-d H:i:s');
 /** @var bool $result */
 $result = $db->insert(
@@ -140,7 +133,6 @@ The result is a boolean whose state indicates if the request was properly execut
 ### Update row(s) in the database
 
 ```php
-<?php
 /** @var bool $result */
 $result = $db->update('db_table', array(
     'value' => pSQL($value),
@@ -156,7 +148,6 @@ The result is boolean saying if the request was properly executed or not.
 ### Delete rows in the database
 
 ```php
-<?php
 /** @var bool $result */
 $result = $db->delete('db_table', 'id_table = 10');
 ```
