@@ -82,6 +82,7 @@ MultistoreConfigField        | 1.7.8
 PreviewOpener                | 1.7.8
 Router                       | 1.7.8
 Grid                         | 1.7.8
+ColorPicker                  | 1.7.9
 
 ## Grid component
 
