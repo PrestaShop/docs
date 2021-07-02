@@ -1,6 +1,5 @@
 ---
-title: Getting started
-weight: 10
+title: "Creating your first module"
 aliases:
   - /module/05-CreatingAPrestaShop17Module/02-CreatingAFirstModule.html
 ---
