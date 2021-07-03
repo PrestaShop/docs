@@ -268,11 +268,19 @@ Add the one of the following headers to your HTTP request:
 - `Io-Format: JSON`
 - `Output-Format: JSON`
 
+{{% notice note %}}
+According to the step of [using an authorization header]({{< relref "tutorials/testing-access/#using-an-authorization-header-recommended" >}}), you must encode your API Key using `base64_encode` for direct use in header.
+
+| API Key                             | base64_encode string                           |
+|-------------------------------------|------------------------------------------------|
+| `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX:` | `VUNDTExROU4yQVJTSFdDWExUNzRLVUtTU0szNEJGS1g6` |
+{{% /notice %}}
+
 Example:
 
 ```http
 GET /api/ HTTP/1.1
 Host: example.com
 Output-Format: JSON
-Authorization: Basic UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX
+Authorization: Basic VUNDTExROU4yQVJTSFdDWExUNzRLVUtTU0szNEJGS1g6
 ```
