@@ -9,7 +9,7 @@ aliases:
 # How to import core js files
 {{< minver v="1.7.8" title="true">}}
 
-Most of times, you want to use the [global JavaScript components][global JavaScript components] object but in some cases, you may wants to import a component using a static path such as `admin-dev/themes/new-theme/js/components/auto-complete-search.ts`.
+Most of the time, you want to use the [global JavaScript components][global JavaScript components] object but in some cases, you may want to import a component using a static path such as `admin-dev/themes/new-theme/js/components/auto-complete-search.ts`.
 
 **We do not recommend to do this**, but in case you absolutly need it be careful to import the file without any extensions:
 
