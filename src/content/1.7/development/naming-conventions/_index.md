@@ -3,29 +3,31 @@ title: Naming conventions
 weight: 12
 ---
 
-# Conventions
+# Naming Conventions
 
-As with [Coding standards][coding-standards] naming consistency is very important in PrestaShop, thus there are conventions that every PrestaShop contributor should follow.
-
-## Naming conventions
+As with [Coding standards][coding-standards], naming consistency is very important in PrestaShop, thus there are conventions that every PrestaShop contributor should follow.
 
 {{% notice note %}}
-At the moment naming conventions strictly applies for Back Office migration only.
+At the moment naming conventions are enforced for new code only.
 {{% /notice %}}
 
-### Controllers & actions
+## Controllers & actions
 
 PrestaShop controllers follow these naming conventions:
 
-- Prefix controller with resource name in singular form (e.g. `CustomerController`, `ProductController`);
-- Prefix index action with `index`. For `Object` controllers (e.g. `CustomerController`) it's normally page with list of objects (e.g. Customers, Products) and for `Configuration` controllers (e.g. `PerformanceController`) it's page with configuration form (e.g. Caching configuration, CCC configuration).
-- Action name should be clear and concise (e.g. `editAction()`, `savePrivateNoteAction()` are good examples, but `formAction()` or `processAction()` is not and thus should be avoided).
+- Controller names start with an upper case letter and end in _"Controller"_ (e.g. `SomethingController`).
+- Prefix controller names with the name of the related resource in singular form (e.g. `CustomerController`, `ProductController`).
 
-We have some standard action names:
-- `indexAction` : display the listing
-- `createAction` : show Customer creation form page and handle its submit
-- `editAction` : show Customer edit form page and handle its submit
-- `deleteAction` : delete an item
+Actions follow these conventions:
+
+- Action names names start with a lower case letter and end in _"Action"_ (e.g. `deleteAction`).
+- Action names should be clear and concise: `editAction()`, `savePrivateNoteAction()` are good examples, but `formAction()` or `processAction()` are not clear enough.
+- The main controller action should be named `indexAction`.
+- Some actions names are standardized:
+    - `indexAction`: displays the listing (in Object-type controllers like `CustomerController`) or a form in configuration controllers.
+    - `createAction`: shows the object's creation form page and handles the form submit
+    - `editAction`: shows the object's edit form page and handles its submit
+    - `deleteAction`: deletes an item
 
 For a complete example see code below.
 
@@ -79,11 +81,11 @@ class CustomerController
 }
 ```
 
-### Templates
+## Templates
 
 PrestaShop templates follow these naming conventions:
 
-- Template name should match controller's action name without `action` suffix. For example, if you have `CustomerController:viewAction()` action, then your template name should be `view.html.twig`.
+- A template's name should match its controller's action name without the "action" suffix. For example, if you have `CustomerController:viewAction()` action, then your template name should be `view.html.twig`.
 
 ```php
 <?php
@@ -104,29 +106,29 @@ class CustomerController extends AbstractAdminController
 }
 ```
 
-For a default page, you should be following our standard action names. Applying this rule means that you should have matching template names:
+For a typical CRUD page, you should have these template names:
 - `index.html.twig`
 - `create.html.twig`
 - `edit.html.twig`
 - `delete.html.twig`
 
-### Routes and paths
+## Routes and paths
 
-PrestaShop routes follow `admin_{resources}_{action}` naming structure and rules for it are:
+PrestaShop routes follow `admin_{resource}_{action}` naming structure.
 
-- `{resources}` (object) name should be in plural form (e.g. `customers`, `products`, `orders`).
-- `{action}` name should match controller's action name.
-- Route should define methods that it responds to (e.g. `GET`, `POST`).
-- Suffix route's URL path with `{resources}` (e.g. `customers`, `products`, `orders`) name.
-- When route is defined for single resource (e.g. Customer, Product) then URL path should follow `/{resources}/{id}/{action}` naming (e.g. `/customers/23/edit`).
-- When resource identifier (ID) is used in URL path then it should be prefixed with object name (e.g. `/{customerId}/edit` instead of `/{id}/edit`).
+- `{resource}` is the object's name in plural form (e.g. `customers`, `products`, `orders`).
+- `{action}` name should match the controller's action name (without the "Action" suffix).
+- The route should define all HTTP methods that it responds to (e.g. `GET`, `POST`).
+- Use `{resource}` as prefix (root) of the controller's routes  (e.g. `/customers/foo`, `/customers/bar`).
+- When the route points to an action to be performed on an individual resource then URL path should follow `/{resource}/{resourceId}/{action}` naming (e.g. `/customers/23/edit`).
+- When resource identifier (ID) is used in URL path then its placeholder should be prefixed with the object's name (e.g. `/customers/{customerId}/` instead of `/customers/{id}/`).
 
 If we were to create CRUD routes for Customer, this is how it would look like:
 
-- Index route `admin_customers_index` with URL `/customers` and responds to `GET` method.
-- Create route `admin_customers_create` with URL `/customers/new` and responds to `GET` and `POST` methods.
-- Edit route `admin_customers_edit` with URL `/customers/{customerId}/edit ` and responds to `GET` and `POST` methods.
-- Delete route `admin_customers_delete` with URL `/customers/{customerId}/delete` and responds to `POST` method.
+- Index route is `admin_customers_index`, with URL `/customers` and responds to `GET` method.
+- Create route is `admin_customers_create`, with URL `/customers/new` and responds to `GET` and `POST` methods.
+- Edit route is `admin_customers_edit`, with URL `/customers/{customerId}/edit ` and responds to `GET` and `POST` methods.
+- Delete route is `admin_customers_delete`, with URL `/customers/{customerId}/delete` and responds to `POST` method.
 
 Example of implementation for Customer routes:
 
@@ -165,9 +167,9 @@ admin_customers_transform_guest_to_customer:
     customerId: \d+
 ```
 
-### Service ids
+## Service ids
 
-When registering service in YAML, its id should follow Fully-qualified class name. See example below.
+Service ids should follow the fully-qualified class name of the registered class. See example below.
 
 ```php
 <?php
@@ -188,9 +190,9 @@ services:
     class: 'PrestaShop\PrestaShop\Core\Payment\PaymentOptionFormDecorator'
 ```
 
-#### Named arguments
+### Named arguments
 
-Using the "named argument" syntax when declaring or updating services is forbidden.
+**Do NOT** use "named argument" syntax in service declaration:
 
 
 ```yaml
@@ -207,10 +209,17 @@ services:
         - $baz: 'baz'
 ```
 
-### Grid
+## Grid
 
 PrestaShop comes with a lot of Grids (Products, Customers, Orders & etc) and keeping consistency between them is very important, thats why it follows these naming conventions:
 
-- Grid id should be in lowercase and written in `snake_case`
+- Grid ids should be in lowercase and written in `snake_case`
 
+## Modules
+
+- Module names should contain only lower case and numbers. 
+- [Native modules][native-modules]' names must be prefixed with "ps_" (e.g. `ps_linklist`).  
+
+[native-modules]: {{< relref "../native-modules/" >}}
 [coding-standards]: {{< ref "/1.7/development/coding-standards/" >}}
+
