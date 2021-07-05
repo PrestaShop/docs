@@ -521,6 +521,19 @@ code {
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
+
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  a &,
+  {
+    background: transparent;
+    font-size: inherit;
+    padding: initial;
+    color: inherit;
+  }
 }
 
 pre {
