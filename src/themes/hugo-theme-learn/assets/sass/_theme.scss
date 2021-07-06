@@ -521,15 +521,28 @@ code {
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
+
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  a &,
+  {
+    background: transparent;
+    font-size: inherit;
+    padding: initial;
+    color: inherit;
+  }
 }
 
 pre {
   padding: 1rem;
-  margin: $paragraphSpacing * 1.5 0;
-  background: #f7f7f8;
+  margin: 0;
   border: 0;
   border-radius: 2px;
   line-height: 1.15;
+
 
   code {
     display: block;
@@ -541,6 +554,11 @@ pre {
     font-size: 14px;
     line-height: 1.45;
   }
+}
+
+div.highlight {
+  margin: $paragraphSpacing * 1.5 0;
+  background: $codeBlockBgColor;
 }
 
 hr {
