@@ -34,7 +34,7 @@ a:hover {
   color: $menuVisitedColor;
 }
 
-#body a.highlight:after {
+#body a:after {
   display: block;
   content: '';
   height: 1px;

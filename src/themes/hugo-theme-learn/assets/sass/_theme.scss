@@ -1014,15 +1014,15 @@ pre {
 }
 
 #body {
-  a.highlight,
-  a.highlight:hover,
-  a.highlight:focus {
+  a,
+  a:hover,
+  a:focus {
     text-decoration: none;
     outline: none;
     outline: 0;
   }
 
-  a.highlight {
+  a {
     line-height: 1.1;
     display: inline-block;
 
@@ -1074,6 +1074,11 @@ pre {
   -webkit-transition: all 0.15s !important;
   -moz-transition: all 0.15s !important;
   transition: all 0.15s !important;
+
+  &:after {
+    // remove underline effect inherited from a
+    content: none !important;
+  }
 
   &:focus {
     outline: none !important;
