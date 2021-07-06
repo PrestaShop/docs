@@ -143,6 +143,11 @@ a[data-featherlight] {
     right: 3rem;
   }
 
+  &:after {
+    // remove underline effect
+    content: none !important;
+  }
+
   > img {
     max-height: 350px;
   }
