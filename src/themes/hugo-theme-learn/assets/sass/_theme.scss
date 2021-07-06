@@ -27,11 +27,6 @@ a {
   }
 }
 
-pre {
-  position: relative;
-  color: #ffffff;
-}
-
 .bg {
   background: #fff;
   border: 1px solid #eaeaea;
@@ -559,6 +554,8 @@ pre {
 div.highlight {
   margin: $paragraphSpacing * 1.5 0;
   background: $codeBlockBgColor;
+  overflow-x: auto;
+  position: relative; // needed for the copy code button
 }
 
 hr {
