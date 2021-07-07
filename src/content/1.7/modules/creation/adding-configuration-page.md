@@ -371,8 +371,7 @@ $this->fields_options = array(
   'another fieldset' => ...
 );
 ```
-
-textLang is the multilang version of text field.
+For multilang configuration fields you can use `Lang` version i.e. `textLang` is the multilang version of `text` field.
 
 ### Radio button example
 
