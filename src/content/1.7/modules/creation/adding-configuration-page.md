@@ -402,7 +402,7 @@ textLang is the multilang version of text field.
 ],
 ```
 
-### select example
+### Select example
 
 ```php
 'MY_CONFIG_KEY' => [
