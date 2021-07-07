@@ -388,7 +388,7 @@ textLang is the multilang version of text field.
 ],
 ```
 
-### checkbox example
+### Checkbox example
 
 ```php
 'MY_CONFIG_KEY' => [
