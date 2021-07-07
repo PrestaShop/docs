@@ -347,6 +347,7 @@ $this->fields_options = array(
         ['cast'] => 'intval',                                      // Using this option, you can cast the variable's content
                                                                    // into a known value. You can use boolval, floatval, intval
                                                                    // or strval depending on value type you want to receive.
+        ['validation'] => 'isInt',                                 // Validate the field with method of Validate class
         'type' => {'text', 'hidden', 'select', 'bool', 'radio',    // The kind of input field you want to use.
           'checkbox', 'password', 'textarea', 'file', 'textLang',
           'textareaLang', 'selectLang'},
