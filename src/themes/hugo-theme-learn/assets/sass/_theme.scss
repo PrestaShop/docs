@@ -27,11 +27,6 @@ a {
   }
 }
 
-pre {
-  position: relative;
-  color: #ffffff;
-}
-
 .bg {
   background: #fff;
   border: 1px solid #eaeaea;
@@ -521,15 +516,28 @@ code {
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
+
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  a &,
+  {
+    background: transparent;
+    font-size: inherit;
+    padding: initial;
+    color: inherit;
+  }
 }
 
 pre {
   padding: 1rem;
-  margin: $paragraphSpacing * 1.5 0;
-  background: #f7f7f8;
+  margin: 0;
   border: 0;
   border-radius: 2px;
   line-height: 1.15;
+
 
   code {
     display: block;
@@ -541,6 +549,13 @@ pre {
     font-size: 14px;
     line-height: 1.45;
   }
+}
+
+div.highlight {
+  margin: $paragraphSpacing * 1.5 0;
+  background: $codeBlockBgColor;
+  overflow-x: auto;
+  position: relative; // needed for the copy code button
 }
 
 hr {
@@ -1014,15 +1029,15 @@ pre {
 }
 
 #body {
-  a.highlight,
-  a.highlight:hover,
-  a.highlight:focus {
+  a,
+  a:hover,
+  a:focus {
     text-decoration: none;
     outline: none;
     outline: 0;
   }
 
-  a.highlight {
+  a {
     line-height: 1.1;
     display: inline-block;
 
@@ -1074,6 +1089,11 @@ pre {
   -webkit-transition: all 0.15s !important;
   -moz-transition: all 0.15s !important;
   transition: all 0.15s !important;
+
+  &:after {
+    // remove underline effect inherited from a
+    content: none !important;
+  }
 
   &:focus {
     outline: none !important;

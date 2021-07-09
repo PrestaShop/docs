@@ -175,7 +175,7 @@ jQuery(document).ready(function() {
 
     // clipboard
     var clipInit = false;
-    $('code').each(function() {
+    $('pre > code').each(function() {
         var code = $(this),
             text = code.text();
 
@@ -247,7 +247,7 @@ jQuery(document).ready(function() {
       '#body-inner a:not(:has(img)):not(.btn):not(a[rel="footnote"])',
       '#toc a'
     ];
-    $(highlightables.join(', ')).addClass('highlight');
+    $(highlightables.join(', ')).addClass('highlight-words');
 
     /*var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
     if (!touchsupport){ // browser doesn't support touch
@@ -378,7 +378,7 @@ jQuery.extend({
             var match = node.data.match(re);
             if (match) {
                 var highlight = document.createElement(nodeName || 'span');
-                highlight.className = className || 'highlight';
+                highlight.className = className || 'highlight-words';
                 var wordNode = node.splitText(match.index);
                 wordNode.splitText(match[0].length);
                 var wordClone = wordNode.cloneNode(true);
@@ -399,7 +399,7 @@ jQuery.extend({
 
 jQuery.fn.unhighlight = function(options) {
     var settings = {
-        className: 'highlight',
+        className: 'highlight-words',
         element: 'span'
     };
     jQuery.extend(settings, options);
@@ -413,7 +413,7 @@ jQuery.fn.unhighlight = function(options) {
 
 jQuery.fn.highlight = function(words, options) {
     var settings = {
-        className: 'highlight',
+        className: 'highlight-words',
         element: 'span',
         caseSensitive: false,
         wordsOnly: false

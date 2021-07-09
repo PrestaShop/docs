@@ -34,7 +34,7 @@ a:hover {
   color: $menuVisitedColor;
 }
 
-#body a.highlight:after {
+#body a:after {
   display: block;
   content: '';
   height: 1px;
@@ -141,6 +141,11 @@ a[data-featherlight] {
   margin: {
     left: 3rem;
     right: 3rem;
+  }
+
+  &::after {
+    // remove underline effect
+    content: none !important;
   }
 
   > img {
