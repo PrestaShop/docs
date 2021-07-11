@@ -7,116 +7,120 @@ aliases:
 
 # Module file structure
 
-A module is made of a lot of files, all stored in a folder that bears
-the same name as the module, that folder being in turn stored in the
-`/modules` folder at the root of the main PrestaShop folder:
-`/modules/<name_of_the_module>/`. A module published in an archive file
-must be in a same subfolder. 
-
-Here are the possible files and folders for a PrestaShop 1.7 module:
-
-```
-➜  module tree -L 3
-.
-├── config
-│   ├── services.yml
-│   ├── admin
-│   │    └── services.yml
-│   └── front
-│       └── services.yml
-├── config.xml
-├── controllers
-├── logo.png
-├── module_name.php
-├── override
-├── src
-│   └── Entity
-├── themes
-│   └── theme_name
-│       └── modules
-├── translations
-├── upgrade
-└── views
-    ├── css
-    ├── img
-    ├── js
-    └── templates
-
-13 directories, 4 files
-```
-
-#### Main file: `module_name.php`
-
-The main PHP file should have the same name as the module’s root folder. For instance, for the BlockCMS module:
-
-* Folder name: /modules/blockcms
-* Main file name: /modules/blockcms/blockcms.php
-
-#### Icon files: `logo.png` && `logo.gif`
-
-This needs to be a 32*32 pixels PNG file.
-
-#### Templating: the `views` folder
-
-This folder contains your module’s template files (.tpl or .html.twig files).
-
-Depending on your needs, your files are located in differents subfolders:
-
-* `/views/templates/admin`: For template files used by the module’s administration *legacy* controllers.
-* `/views/templates/front`: For template files used by the module’s front office controllers.
-* `/views/templates/hook`: For template files used by the module’s hooks.
-
-If you want to override a Twig template file from Back Office, declare your own following the same path in
-`/views/PrestaShop` subfolder. For instance, if you want to override `product.html.twig` template located in `Admin/Product/ProductPage`, create your own file in `/views/PrestaShop/Admin/Product/ProductPage/product.html.twig`.
-
-Every asset you need to use in the module (css, js or image files) must be located in their folders: `/views/{js, css, img, fonts}`.
-
-#### Make actions and pages: the `controllers` folder
-
-This folder contains the Controller files. You can use the same sub-folder paths as for the View files.
-
-For instance, `/modules/<module_name>/controllers/front/payment.php` is a valid path to share an action with your Front Office.
-
-#### Override Core classes of PrestaShop: the `override` folder
+A module is made of a lot of files, all stored in a folder that bears the same name as the module, that folder being in turn stored in the
+`/modules` folder at the root of the main PrestaShop folder: `/modules/<modulename>/`. 
 
 {{% notice tip %}}
-Try to avoid the overriding Core classes, this make the upgrade of your application risky.
+Your module can be called anything, as long as it only contains lowercase letters and numbers (`/[a-z0-9]/`).
 {{% /notice %}}
 
-You need to follow the same path as the PrestaShop application in your module. For instance:
+A module distributed in a zip archive file must also be placed in a subfolder within the zip file.
 
-* Shop class
-  * PrestaShop class => `classes/shop/Shop.php`
-  * Module override => `modules/<module_name>/override/classes/shop/Shop.php`
+## Main files and directories
 
-If `/modules/<module_name>/override/classes/Shop.php` exists in your module and is not overriden by any more module later, this class will be used instead of the native `ShopCore` class everywhere in your application.
+Here are an example of files and folders for a PrestaShop 1.7 module:
 
-#### Translate your strings: the `translations` folder
+```
+mymodule
+├── config
+│   ├── admin
+│   │    └── services.yml
+│   ├── front
+│   │   └── services.yml
+│   └── services.yml
+├── controllers
+├── override
+├── src
+│   ├── Controller
+│   └── Entity
+├── translations
+├── upgrade
+├── vendor
+├── views
+│   ├── css
+│   ├── img
+│   ├── js
+│   └── templates
+├── config.xml
+├── logo.png
+└── mymodule.php
+```
 
-This folder contains a php file for each locale: `fr.php`, `es.php`.
-Translating your module can be done within your shop administration panel, in *International* > *Translations* > *Installed modules translations*.
+Let's go through each one of the above.
 
-#### Adapt behavior of others modules: the `themes/<theme_name>/modules` folder
+### `config/` folder
+{{< minver v="1.7.5" title="true" >}}
 
-This folder is essential during modifications of an existing module, so that you can adapt it without having to touch its original files. Notably, it enables you to handle the module’s template files in various ways, depending on the current theme.
+The `config` folder is the place where configuration files are stored. In particular, [Routes][sf-routes] and [Services][sf-services].
 
-#### Manage the upgrade: the `upgrade` folder
+### `controllers/` folder
 
-When releasing a new version of the module, the older might need an upgrade of its data or files. This can be done using this folder.
+The `controllers` folder contains the legacy-style Controller files.
 
-#### Configuration file: `services.yml`
+Depending on where the controller belongs to, it is located in a different subfolder:
 
-In `services.yml` file, you can register your own classes as a Symfony service and alter the ones provided by PrestaShop.
+* `/controllers/admin`: module's back office controllers.
+* `/controllers/front`: module's front office controllers.
 
-#### Cache file: `config.xml`
+{{% notice note %}}
+Symfony-based controllers go in the ["`src`" folder](#src-folder), described below.
+{{% /notice %}}
 
-If it does not exist yet, `config.xml` file is automatically generated by PrestaShop when the module is installed.
+[Read more about Controllers →][controllers]
 
-It contains some properties on the main module class and optimizes the loading of the
-module list in the back office.
+### `override/` folder
+
+PHP files placed in the `override` folder will replace the ones from the Core. 
+
+{{% notice warning %}}
+Overrides is a powerful, yet risky feature. Avoid using it if you can.
+{{% /notice %}}
+
+[Read more about Overrides →][class-overrides]
+
+### `src/` folder
+
+The `src` folder is the recommended folder to place all of your module's PHP classes–like Grids, Entities, Forms, and so on.
+
+Symfony-based controllers go in the `src/Controller` folder.
+
+### `translations/` folder
+
+The `translations` folder contains translation files allowing to display the module's wording in different languages.
+
+[Read more about Translation →][module-translation]
+
+### `upgrade/` folder
+
+The `upgrade` folder contains upgrade scripts to be executed when updating the module from a previous version.
+
+[Read more about the Upgrade feature →][module-upgrade]
+
+### `vendor/` folder
+
+The `vendor` folder usually contains libraries imported through [Composer][composer] as well as its autoloader. This folder is optional.
+
+### `views/` folder
+
+The `views` folder contains your module's template files (`.tpl` for Smarty or `.html.twig` for Twig) as well as static assets used by the module (css, js or image files). Each type must be located in their own folders: `/views/{js, css, img, fonts}`.
+
+Depending on your needs, template files are located in different subfolders:
+
+* `/views/templates/admin`: Smarty or Twig template files used by the module's back office controllers.
+* `/views/templates/front`: Smarty template files used by the module's front office controllers.
+* `/views/templates/hook`: Smarty template files used by the module's hooks.
+
+Since {{< minver v="1.7.3" >}} you can redefine back office views by placing files in this folder. This is covered in [Overriding back office views][override-bo-views].
+
+[Read more about Templating →][templating]
+
+### `config.xml` file
+
+The `config.xml` file contains a cached copy of properties from main module class in order to optimize performance of module listings.
+
+This file is automatically generated by PrestaShop when the module is installed, if it doesn't exist yet.
 
 It can be useful to provide it in your release, as it will allow your upgrade scripts (in `upgrade/`) to be executed immediately after the zip is downloaded.
-Otherwise it must be regenerated by PrestaShop before the upgrade file application is suggested.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -125,7 +129,7 @@ Otherwise it must be regenerated by PrestaShop before the upgrade file applicati
     <displayName><![CDATA[My module]]></displayName>
     <version><![CDATA[1.0]]></version>
     <description><![CDATA[Description of my module.]]></description>
-    <author><![CDATA[Firstname Lastname]]></author>
+    <author><![CDATA[Author name]]></author>
     <tab><![CDATA[front_office_features]]></tab>
     <confirmUninstall>Are you sure you want to uninstall?</confirmUninstall>
     <is_configurable>0</is_configurable>
@@ -136,24 +140,37 @@ Otherwise it must be regenerated by PrestaShop before the upgrade file applicati
 
 A few details:
 
--   `is_configurable` indicates whether the module has a configuration
-    page or not.
--   `need_instance` indicates whether an instance of the module must be
-    created when it is displayed in the module list. This can be useful
-    if the module has to perform checks on the PrestaShop configuration,
-    and display warning message accordingly.
--   `limited_countries` is used to indicate the countries to which the
-    module is limited. For instance, if the module must be limited to
-    France and Spain, use
-    `<limited_countries>fr,es</limited_countries>`.
+- `is_configurable` indicates whether the module has a configuration page or not.
+- `need_instance` indicates whether an instance of the module must be created when it is displayed in the module list. This can be useful if the module has to perform checks on the PrestaShop configuration, and display warning message accordingly.
+- `limited_countries` is used to indicate the countries to which the module is limited. For instance, if the module must be limited to France and Spain, use `<limited_countries>fr,es</limited_countries>`.
 
-### External libraries
+### `logo.png` file
 
-All external library you'd use should be put in a dedicated folder.
+This icon file will be displayed in module listings if present. It needs to be a 32x32 pixel PNG file.
 
-That folder can use one of these names: 'lib', 'libs', 'libraries',
-'sdk', 'vendor', 'vendors'.
+### `mymodule.php` file (main file)
 
-Choose the most appropriate one for your library (indeed, 'libraries'
-doesn't not have the same meaning as 'sdk'). You can have more than one
-such folder, for instance `/sdk` and `/vendor`.
+The module's main PHP file should be named the same as the module’s root folder. 
+
+Example for the BlockCMS module:
+
+* Folder name: `/modules/blockcms`
+* Main file name: `/modules/blockcms/blockcms.php`
+
+## External libraries
+
+All external libraries should be put in a dedicated folder.
+
+That folder can use one of these names: `lib`, `libs`, `libraries`, `sdk`, `vendor`, `vendors`.
+
+Choose the most appropriate one for your library (indeed, `libraries` doesn't have the same meaning as `sdk`). You can have more than one such folder, for instance `/sdk` and `/vendor`.
+
+[override-bo-views]: {{< ref "../concepts/templating/admin-views" >}}
+[sf-routes]: {{< relref "../concepts/controllers/admin-controllers/#how-to-map-an-action-of-your-controller-to-a-uri" >}}
+[sf-services]: {{< ref "../concepts/services/" >}}
+[controllers]: {{< ref "../concepts/controllers/" >}}
+[class-overrides]: {{< ref "../concepts/overrides/" >}}
+[module-translation]: {{< ref "../creation/module-translation/" >}}
+[module-upgrade]: {{< ref "../creation/enabling-auto-update/" >}}
+[composer]: {{< ref "../concepts/composer/" >}}
+[templating]: {{< ref "../concepts/templating/" >}}
