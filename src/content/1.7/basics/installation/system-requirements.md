@@ -185,6 +185,24 @@ You'll get a web page detailing requirements and recommendations, and how your s
       </td>
       <td class="support-no"><span class="sr-only">No</span></td>
     </tr>
+    <tr>
+      <td>1.7.9</td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-no"><span class="sr-only">No</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
+      <td class="support-yes"><span class="sr-only">Yes</span></td>
+      <td class="support-yes">
+        <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
+        <span class="sr-only">Recommended version</span>
+      </td>
+    </tr>  
 </tbody>
 </table>
 
