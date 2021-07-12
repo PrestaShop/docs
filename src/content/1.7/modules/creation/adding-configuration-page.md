@@ -324,7 +324,7 @@ string!
 Using HelperOptions
 ----------------
 
-THe `HelperOptions` helper is the recommanded one for managing configurations i.e. values stored in the configuration table.
+THe `HelperOptions` helper is the recommanded way for managing configurations for legacy part, i.e. values stored in the configuration table.
 
 ### Options declaration
 Fields inside [brackets] are optional.
