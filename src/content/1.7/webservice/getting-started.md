@@ -274,5 +274,9 @@ Example:
 GET /api/ HTTP/1.1
 Host: example.com
 Output-Format: JSON
-Authorization: Basic UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX
+Authorization: Basic VUNDTExROU4yQVJTSFdDWExUNzRLVUtTU0szNEJGS1g6
 ```
+
+{{% notice note %}}
+Note that the API key has been encoded in Base64 for use in headers, as explained in [Using an authorization header]({{< relref "tutorials/testing-access/#using-an-authorization-header-recommended" >}}).
+{{% /notice %}}
