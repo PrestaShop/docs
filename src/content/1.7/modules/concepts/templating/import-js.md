@@ -1,12 +1,12 @@
 ---
-title: How to import core js files 
+title: How to import Core JavaScript files 
 menuTitle: Import core js files
 weight: 4
 aliases:
 - 1.7/modules/templating/
 ---
 
-# How to import core js files
+# How to import Core JavaScript files
 {{< minver v="1.7.8" title="true">}}
 
 Most of the time, you want to use the [global JavaScript components][global JavaScript components] object but in some cases, you may want to import a component using a static path such as `admin-dev/themes/new-theme/js/components/auto-complete-search.ts`.
