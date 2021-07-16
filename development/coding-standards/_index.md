@@ -171,6 +171,14 @@ You can fix auto-fixable errors using this command:
 npm run scss-fix
 ```
 
+## TypeScript
+Starting on {{< minver v="1.7.9" >}}, most of `admin-dev/themes/new-theme/js` files have been migrated to TypeScript. This provide a better maintainability by using types on most of our classes and functions. 
+
+You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
+
+The `tsconfig.json` and `webpack` configuration files are adding a `@PSTypes` relative path to the `admin-dev/themes/new-theme/js/types` folder, because `@types` is a reserved folder.
+
+
 ## License information
 
 All PrestaShop files MUST start with the PrestaShop license block:
