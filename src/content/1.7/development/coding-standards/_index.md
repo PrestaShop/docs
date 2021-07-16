@@ -148,6 +148,11 @@ If you need to deprecate services, you can use the `deprecated` key for the serv
 
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
 
+Starting on {{< minver v="1.7.8" >}}, you can run the linter to help you comply with these coding standards:
+
+```bash
+npm run lint-fix
+```
 ## HTML, CSS (Sass), Twig & Smarty code conventions
 
 HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](https://codeguide.co/).
