@@ -7,9 +7,9 @@ weight: 4
 # How to import Core JavaScript files
 {{< minver v="1.7.8" title="true">}}
 
-Most of the time, you want to use the [global JavaScript components][global JavaScript components] object but in some cases, you may want to import a component using a static path such as `admin-dev/themes/new-theme/js/components/auto-complete-search.ts`.
+Most of the time, you will use the [global JavaScript components][global JavaScript components] object. However, in some cases, you might want to import a Core component using a static path, such as `admin-dev/themes/new-theme/js/components/auto-complete-search.ts`.
 
-**We do not recommend to do this**, but in case you absolutely need it, be careful to import the file without any extensions:
+**We don't recommend doing this.** If you absolutely need it, make sure to remove the file extension from the import path:
 
 ```javascript
 // Incorrect
