@@ -33,7 +33,7 @@ Example of a TypeScript loader:
 },
 ```
 
-Example of a TypeScript config file:
+Example of a TypeScript configuration file:
 ```javascript
 {
   "compilerOptions": {
