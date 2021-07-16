@@ -2,8 +2,6 @@
 title: How to import Core JavaScript files 
 menuTitle: Import Core JavaScript files
 weight: 4
-aliases:
-- 1.7/modules/templating/
 ---
 
 # How to import Core JavaScript files
