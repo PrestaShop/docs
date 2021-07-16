@@ -20,7 +20,7 @@ import AutoCompletSearch from '../../../../admin-dev/themes/new-theme/js/compone
 import AutoCompletSearch from '../../../../admin-dev/themes/new-theme/js/components/auto-complete-search'
 ```
 
-If you need to carry out the above import, it is likely you use a bundler such as Webpack or Parcel. If the file you are trying to import is a TypeScript file, you need to add the TypeScript loader to your project and a `tsconfig` file.
+If you need to carry out the above import, it is likely you will be using a bundler such as Webpack or Parcel. If the file you are trying to import is a TypeScript file, you need to add the TypeScript loader to your project and a `tsconfig` file.
 
 Example of a TypeScript loader:
 ```javascript
