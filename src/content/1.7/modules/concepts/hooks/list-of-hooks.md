@@ -550,7 +550,7 @@ actionFeatureValueSave
     Located in: /classes/FeatureValue.php
 
 actionFrontControllerAfterInit
-:
+:  
     **(Deprecated in 1.7.7 in favor of)**
     → `actionFrontControllerInitAfter`
     
@@ -843,12 +843,11 @@ WARNING: only invoked when a product is actually removed from an order.
     ```
     
 actionOrderStatusPostUpdate
-: 
+:   
     Called after the status of an order changes.
-    {{% notice tip %}}
-	This hook is fired BEFORE the new OrderStatus is saved into the database.
+        
+    **Note:** This hook is fired BEFORE the new OrderStatus is saved into the database.  
 	If you need to register after this insertion, use `actionOrderHistoryAddAfter` or `actionObjectOrderHistoryAddAfter` instead.
-    {{% /notice %}}
 
     Located in: /classes/order/OrderHistory.php
 
@@ -1119,7 +1118,7 @@ actionValidateCustomerAddressForm
 actionValidateOrder
 : 
     After an order has been validated.
-Doesn't necessarily have to be paid.
+    Doesn't necessarily have to be paid.
 
     Located in: /classes/PaymentModule.php
 
@@ -1136,8 +1135,8 @@ Doesn't necessarily have to be paid.
     ```
 
 actionValidateOrderAfter
-:
-This hook is called after validating an order by core
+:   
+    This hook is called after validating an order by core
 
     Located in: /classes/PaymentModule.php
 
