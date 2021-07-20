@@ -78,52 +78,6 @@ Once all forms have been updated to work with the UI Kit Form Theme, it will bec
 
 {{< figure src="../../img/ui-kit-form-theme.png" title="UI Kit Form Theme example of rendering" >}}
 
-
-## Refactoring our forms to rely fully on the UI Kit Form Theme
-
-In the first Symfony pages of PrestaShop, the Form Theme was used in a minimalist way, a lot of the HTML structure was hardcoded
-```
-<div class="form-group row">
-  {{ ps.label_with_help('Enable invoices'|trans, 'If enabled, ...'|trans({}, 'Admin.Orderscustomers.Help')) }}
-  <div class="col-sm">
-    {{ form_errors(invoiceOptionsForm.enable_invoices) }}
-    {{ form_widget(invoiceOptionsForm.enable_invoices) }}
-  </div>
-</div>
-<div class="form-group row">
-  {{ ps.label_with_help('Enable tax breakdown'|trans, 'If required, show the total amount per rate of the corresponding tax.'|trans({}, 'Admin.Orderscustomers.Help')) }}
-  <div class="col-sm">
-    {{ form_errors(invoiceOptionsForm.enable_tax_breakdown) }}
-    {{ form_widget(invoiceOptionsForm.enable_tax_breakdown) }}
-  </div>
-</div>
-<div class="form-group row">
-  {{ ps.label_with_help('Enable product image'|trans, 'Adds a ...'|trans({}, 'Admin.Orderscustomers.Help')) }}
-  <div class="col-sm">
-    {{ form_errors(invoiceOptionsForm.enable_product_images) }}
-    {{ form_widget(invoiceOptionsForm.enable_product_images) }}
-  </div>
-</div>
-```
-
-This was counterproductive as any change done in the Form Theme would not be applied to forms rendered in this way.
-
-This is why a [refactoring project][form-theme-simplification-project] was launched at the end of 2019 to rework all the Symfony forms of the Back-Office to be rendered, as much as possible, by the Form Theme only.
-
-This means ideally all forms in the Back-office are now rendered with a single statement:
-
-```
-{{ form_widget(form) }}
-```
-
-See the example of the [database settings form rework][example-pr-database-settings-form].
-
-While working on this project, this allowed us to improve a lot the Form Theme capabilities, which becomes an asset for module developers that use it to render forms inside their modules.
-
-Not only the Form Theme allows module developers to avoid writing forms manually, it also makes sure their forms fit with PrestaShop visual identity.
-
-Finally, when the Form Theme fully controls the rendering, it is possible to greatly modify how the form is built and rendered by modifying the FormType properties. This allows module developers to modify PrestaShop built-in forms without having to override the templates.
-
 ### Project status
 
 In PrestaShop 1.7.8.0, **85%** of the forms have been refactored to rely fully on the UI Kit Form Theme.
