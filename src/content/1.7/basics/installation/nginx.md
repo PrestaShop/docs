@@ -216,3 +216,4 @@ server {
     }
 }
 ```
+Follow this guide for [installing a free SSL certificate on NGINX](https://www.armanism.com/blog/install-free-ssl-on-nginx).
