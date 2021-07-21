@@ -19,7 +19,7 @@ PrestaShop relies on Twig's FormRenderer, which requires a **Form Theme** to fun
 
 The Form Theme is a set of Twig macros and functions that provide a way to render the different parts of a form: every label, input type, and specific option has its own macro.
 
-Example for the date widget::
+Example for the date widget:
 
 ```twig
 {%- block date_widget -%}
