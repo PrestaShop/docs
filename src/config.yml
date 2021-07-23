@@ -3,7 +3,7 @@ languageCode: "en-us"
 defaultContentLanguage: "en"
 title: "PrestaShop Developer Documentation"
 
-theme: "hugo-theme-learn"
+theme: "ps-docs-theme"
 enableGitInfo: true
 enableRobotsTXT: true
 googleAnalytics: "UA-2753771-44"

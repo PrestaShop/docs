@@ -72,11 +72,7 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 We use Sass for styling, bundled by Hugo itself.
 
-The source files for the main css & js are in this directory:
-
-```
-src/themes/hugo-theme-learn/assets
-```
+The source files for the main css & js are in this directory: https://github.com/PrestaShop/ps-docs-theme/tree/main/assets
 
 ## License
 

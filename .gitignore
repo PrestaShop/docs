@@ -1,8 +1,8 @@
 .env
 .idea/
 /src/public/
-/src/themes/hugo-theme-learn/static/js/main.js
-/src/themes/hugo-theme-learn/static/js/main.js.map
+/src/themes/ps-docs-theme/static/js/main.js
+/src/themes/ps-docs-theme/static/js/main.js.map
 hugo
 node_modules/
 resources/
