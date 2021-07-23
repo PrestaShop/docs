@@ -22,6 +22,7 @@ params:
     reportBug: "https://github.com/PrestaShop/PrestaShop/issues"
     slack: "https://www.prestashop-project.org/slack/readme/"
   coverImage: "images/social-cover.jpg"
+  logoTitle: "PrestaShop DevDocs"
 
 # For search functionality
 outputs:
