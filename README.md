@@ -14,7 +14,7 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 1. Clone the repository somewhere on your system:
     ```
-    git clone https://github.com/PrestaShop/docs.git
+    git clone --recurse-submodules https://github.com/PrestaShop/docs.git
     ```
 
 2. Switch to the `docs` directory:
@@ -72,11 +72,7 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 We use Sass for styling, bundled by Hugo itself.
 
-The source files for the main css & js are in this directory:
-
-```
-src/themes/hugo-theme-learn/assets
-```
+The source files for the main css & js are in [the `assets` directory of the theme's repository](https://github.com/PrestaShop/ps-docs-theme/tree/main/assets).
 
 ## License
 
