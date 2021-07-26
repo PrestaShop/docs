@@ -202,7 +202,7 @@ server {
 
         # [REQUIRED EDIT] Connection to PHP-FPM - choose one
         # fastcgi_pass 127.0.0.1:9000;
-        fastcgi_pass unix:/run/php/php7.1-fpm.sock;
+        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
 
         fastcgi_keep_conn on;
         fastcgi_read_timeout 30s;
