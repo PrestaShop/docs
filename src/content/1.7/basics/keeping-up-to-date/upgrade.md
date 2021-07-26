@@ -36,10 +36,10 @@ If you upgrade to another version of PrestaShop 1.6, the release files
 can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).
 
 Download can also be done in command line, as done here with the version
-1.7.3.2:
+1.7.7.5:
 
 ```bash
-wget -O prestashop-upgrade.zip https://www.prestashop.com/download/old/prestashop_1.7.3.2.zip
+wget -O prestashop-upgrade.zip https://www.prestashop.com/download/old/prestashop_1.7.7.5.zip
 ```
 
 ### Archive extraction
