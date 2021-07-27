@@ -33,7 +33,7 @@ This page is very specific compared to other BO pages, it has kind of a flow - e
 {{% notice %}}
 
 All the javascript code related to this page can be found at `admin-dev/themes/new-theme/js/pages/order/create.js`.
-These `.js` files are the `develop` version prior compiling. See ["How to compile assets"]({{< relref "compile-assets" >}}) for
+These `.js` files are the `develop` version prior compiling. See ["How to compile assets"]({{< relref "/1.7/development/compile-assets" >}}) for
 more information.
 
 {{% /notice %}}
