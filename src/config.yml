@@ -24,6 +24,10 @@ params:
   coverImage: "images/social-cover.jpg"
   logoTitle: "PrestaShop DevDocs"
 
+  # Default documentation version
+  versions:
+    current: "1.7"
+
 # For search functionality
 outputs:
   home: ["HTML", "RSS", "JSON"]
