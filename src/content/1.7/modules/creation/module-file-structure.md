@@ -12,6 +12,7 @@ A module is made of a lot of files, all stored in a folder that bears the same n
 
 {{% notice tip %}}
 Your module can be called anything, as long as it only contains lowercase letters and numbers (`/[a-z0-9]/`).
+Although accepted, we strongly discourage using underscores (`_`) because they don't work with translation domains.
 {{% /notice %}}
 
 A module distributed in a zip archive file must also be placed in a subfolder within the zip file.
