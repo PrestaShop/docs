@@ -20,7 +20,7 @@ change the data, and in turn the Model will notify the View that the data has
 been changed, so that the View can update itself. Module controllers will
 behave like the core ones thanks the class inheritance:
 
-{{< figure src="/images/1.7/module-controllers.png" title="Controller classes inheritance" >}}
+{{< figure src="img/module-controllers.png" title="Controller classes inheritance" >}}
 
 The core classes can be found in the `/classes/controller` folder.
 

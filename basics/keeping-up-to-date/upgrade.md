@@ -204,12 +204,12 @@ module page to reach your catalog.
 On PrestaShop 1.6, this page can be found in “Module & Services”. Click
 on “Update all” at the top of the page to run all available upgrades:
 
-{{< figure src="/images/1.7/upgrade-migration/image63.png" >}}
+{{< figure src="../img/image63.png" >}}
 
 On PrestaShop 1.7, the same feature can be found in the Improve &gt;&gt;
 Modules page, under the tab “Notifications”:
 
-{{< figure src="/images/1.7/upgrade-migration/image38.png" >}}
+{{< figure src="../img/image38.png" >}}
 
 ## 1-click upgrade module
 

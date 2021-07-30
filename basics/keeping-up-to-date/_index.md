@@ -23,7 +23,7 @@ Keeping PrestaShop up-to-date can be done via different methods. Choose the best
 
 ### In-place Upgrade
 
-![Upgrade schema](/images/1.7/upgrade-migration/upgrade-schema.png)
+![Upgrade schema](img/upgrade-schema.png)
 
 Upgrading a shop is the recommended method when you want to get your shop up-to-date without switching to the next major version.
 
@@ -48,7 +48,7 @@ This could be enough for completing an upgrade, but additional tasks like cleanu
 
 ### Migration
 
-![Migration schema](/images/1.7/upgrade-migration/migration-schema.png)
+![Migration schema](img/migration-schema.png)
 
 Upgrading is not the only way to update your shop to the latest version of PrestaShop. In some cases, migrating your data is a better option.
 

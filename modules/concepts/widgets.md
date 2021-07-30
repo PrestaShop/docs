@@ -81,7 +81,7 @@ Hook::exec($hook_name)
 
 The method called with be different regarding the module content:
 
-{{< figure src="/images/1.7/widget-example-hooks.png" title="Using widget from hooks" >}}
+{{< figure src="../img/widget-example-hooks.png" title="Using widget from hooks" >}}
 
 ## With widget
 

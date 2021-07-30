@@ -82,7 +82,7 @@ PhpMyAdmin, provided by several hosting providers, offers another way to get a c
 
 Log on your PhpMyAdmin interface, select the database where PrestaShop is installed and chose the “export” tab.
 
-{{< figure src="/images/1.7/upgrade-migration/backup-phpmyadmin-export-database.png" title="Exporting a database in SQL format" >}}
+{{< figure src="../img/backup-phpmyadmin-export-database.png" title="Exporting a database in SQL format" >}}
 
 We advise to select the “custom” method, as it offers more options to customize your dump. Make sure all your tables, views, etc are selected for backup.
 To get the same file content as the `mysqldump` method, the following options should be checked as well:

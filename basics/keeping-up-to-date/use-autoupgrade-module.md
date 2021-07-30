@@ -33,41 +33,41 @@ Then, import your module archive on the modules page. To do so, you can find the
 
 On PrestaShop 1.7:
 
-{{< figure src="/images/1.7/upgrade-migration/image70.png" >}}
+{{< figure src="../img/image70.png" >}}
 
 On PrestaShop 1.6:
 
-{{< figure src="/images/1.7/upgrade-migration/image79.png" >}}
+{{< figure src="../img/image79.png" >}}
 
 - From the administration panel
 
 On PrestaShop 1.7:
 
-{{< figure src="/images/1.7/upgrade-migration/image33.png" >}}
+{{< figure src="../img/image33.png" >}}
 
 On PrestaShop 1.6:
 
-{{< figure src="/images/1.7/upgrade-migration/image66.png" >}}
+{{< figure src="../img/image66.png" >}}
 
 ## Usage
 
 The configuration page of the module displays some checks and the options available for an upgrade.
 
-{{< figure src="/images/1.7/upgrade-migration/image61.png" >}}
+{{< figure src="../img/image61.png" >}}
 
 The first configuration lets you choose what kind of upgrade you want to run. It is always recommended to stick with the minor / major branches of the options, as they use some additional information provided by PrestaShop (md5 checksum, core files to delete...).
 
-{{< figure src="/images/1.7/upgrade-migration/image30.png" >}}
+{{< figure src="../img/image30.png" >}}
 
 It is always recommended to let the module make its own backup, because it will allow it to immediately run a rollback if something goes wrong during the upgrade.
 
 However, if you are confident in the backup you have made and are ready to rollback manually in case of trouble, you can disable the backup step.
 
-{{< figure src="/images/1.7/upgrade-migration/image26.png" >}}
+{{< figure src="../img/image26.png" >}}
 
 Finally, the last options customizing the upgrade process let you keep any changes you have done to the default theme, mails etc.
 
-{{< figure src="/images/1.7/upgrade-migration/image62.png" >}}
+{{< figure src="../img/image62.png" >}}
 
 If the configuration chosen and the self-checks are valid, a button “Upgrade Now” will be available. Clicking immediately start the upgrade.
 

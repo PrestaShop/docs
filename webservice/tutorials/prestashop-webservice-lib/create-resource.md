@@ -17,7 +17,7 @@ As we explained in a previous tutorial the webservice provides two [resource sch
 {{< figure src="../../../img/create-resource.svg" title="Create Resource via Webservice" >}}
 
 {{% notice note %}}
-You can update this schema using the [source XML file](/schemas/1.7/create-resource.xml) importable in services like [draw.io](https://draw.io).
+You can update this schema using the [source XML file](/1.7/schemas/create-resource.xml) importable in services like [draw.io](https://draw.io).
 {{% /notice %}}
 
 ## Retrieve the blank schema

@@ -37,10 +37,10 @@ Depending on the way you export your data, you won’t get the same amount of da
 
 Exporting data is quite straightforward. On each controller dedicated to the data you want to export, you will find action buttons at the top right of the page:
 
-{{< figure src="/images/1.7/upgrade-migration/migration-export-bo-zoom.png" title="Export button in action bar" >}}
+{{< figure src="../img/migration-export-bo-zoom.png" title="Export button in action bar" >}}
 
 For instance for your products on PrestaShop 1.7:
-{{< figure src="/images/1.7/upgrade-migration/migration-export-bo.png" title="Action bar localization" >}}
+{{< figure src="../img/migration-export-bo.png" title="Action bar localization" >}}
 
 Clicking on the “Export” button will make your browser download a CSV file, which contains the complete product list with the columns displayed on the page.
 
@@ -77,17 +77,17 @@ On phpMyAdmin, exporting in CSV can be done on the same page as the classic SQL 
 
 This step can be completed straightforwardly by exporting all tables in a single call. Click on your database, then the “Export” button to start:
 
-{{< figure src="/images/1.7/upgrade-migration/migration-phpmyadmin-export-database-header.png" >}}
+{{< figure src="../img/migration-phpmyadmin-export-database-header.png" >}}
 
 Note the breadcrumb in the header will tell you if you are in a database or a table context. If you clicked on this button by mistake while being on a table, you will end on the export of a specific table as titled on this screenshot:
 
-{{< figure src="/images/1.7/upgrade-migration/migration-phpmyadmin-export-table-csv.png" >}}
+{{< figure src="../img/migration-phpmyadmin-export-table-csv.png" >}}
 
 Whatever you choose between exporting the whole database in a single call or exporting your tables one by one, you must choose to export in “CSV” or “CSV for MS Excel”.
 
 The available options will be updated:
 
-{{< figure src="/images/1.7/upgrade-migration/migration-phpmyadmin-export-database-header.png" >}}
+{{< figure src="../img/migration-phpmyadmin-export-database-header.png" >}}
 
 If you want to export several tables at the same time, this can be done by selecting them from the list. The tables running with your shop start with the prefix given in your shop configuration (by default `ps_`). If one of them does not start with this prefix, it is unlikely concerned by the migration and can be ignored.
 
@@ -119,7 +119,7 @@ SELECT p.*, pl.* FROM `ps_product` p JOIN `ps_product_lang` pl ON p.id_product =
 
 If the result fits your needs, you can export it with the “export” button available at the bottom of the page.
 
-{{< figure src="/images/1.7/upgrade-migration/migration-phpmyadmin-export-custom-sql.png" >}}
+{{< figure src="../img/migration-phpmyadmin-export-custom-sql.png" >}}
 
 ##### mysqldump
 If you used `mysqldump` for your backups, there is also an option for extracting your data in CSV files, as described in the [documentation](https://dev.mysql.com/doc/refman/8.0/en/mysqldump-delimited-text.html). However, our tests have shown that method is far from being easy.
@@ -136,7 +136,7 @@ Several notes about `mysqldump` with CSV files:
 
 Here is an extract of the product table, with demonstration data. Only the data is present and we need to add the column names.
 
-{{< figure src="/images/1.7/upgrade-migration/migration-mysqldump-export-raw-csv.png" title="CSV from mysqldump without header" >}}
+{{< figure src="../img/migration-mysqldump-export-raw-csv.png" title="CSV from mysqldump without header" >}}
 
 Look at the SQL file provided with the TXT file, or run a DESCRIBE of the table.
 
@@ -146,7 +146,7 @@ mysql> DESCRIBE prestashop16.ps_product;
 
 You should expect the following result before proceeding to the next table:
 
-{{< figure src="/images/1.7/upgrade-migration/migration-mysqldump-export-with-header-csv.png" title="CSV from mysqldump with header" >}}
+{{< figure src="../img/migration-mysqldump-export-with-header-csv.png" title="CSV from mysqldump with header" >}}
 
 * You can rename the generated .txt files with the .csv extension to avoid confusion.
 * If you are connected to a remote MySQL server: switching on CSV export will write on the remote filesystem and not on the client one. That’s why writing on a nonexistent or disallowed folder may trigger this error:
@@ -226,10 +226,10 @@ Example with the table cart:
 ```
 
 **Before:**
-{{< figure src="/images/1.7/upgrade-migration/migration-update-new-header-before.png" title="CSV before column addition" >}}
+{{< figure src="../img/migration-update-new-header-before.png" title="CSV before column addition" >}}
 
 **After:**
-{{< figure src="/images/1.7/upgrade-migration/migration-update-new-header-then.png" title="CSV with new column" >}}
+{{< figure src="../img/migration-update-new-header-then.png" title="CSV with new column" >}}
 
 In this example the new column `checkout_session_data` has no default value and the existing data on our PrestaShop displays an empty column. As the column allows null values, we keep all rows empty.
 
@@ -319,10 +319,10 @@ If you exported your data in CSV, doing this change will be easy with a spreadsh
 Here is an example before and after the requested update (changes appear in green).
 
 **Before (Original state):**
-{{< figure src="/images/1.7/upgrade-migration/migration-update-product-table-before.png" >}}
+{{< figure src="../img/migration-update-product-table-before.png" >}}
 
 **After:**
-{{< figure src="/images/1.7/upgrade-migration/migration-update-product-table-then.png" >}}
+{{< figure src="../img/migration-update-product-table-then.png" >}}
 
 
 ##### Shop details
@@ -331,10 +331,10 @@ You will notice that in the shop table the column `id_theme` has been replaced b
 As migrating to PrestaShop 1.7 implies losing the theme used on the shop in production, just write “classic” in this column for each shop.
 
 **Before:**
-{{< figure src="/images/1.7/upgrade-migration/migration-update-shop-table-before.png" >}}
+{{< figure src="../img/migration-update-shop-table-before.png" >}}
 
 **After:**
-{{< figure src="/images/1.7/upgrade-migration/migration-update-shop-table-then.png" >}}
+{{< figure src="../img/migration-update-shop-table-then.png" >}}
 
 #### IDs in CSV files
 
@@ -346,7 +346,7 @@ If you want to add the extracted data without overriding the existing records on
 
 Make sure to select `dont install demo data` when installing the shop
 
-{{< figure src="/images/1.7/upgrade-migration/install-without-data-min.png" title="Dont install demo data" >}}
+{{< figure src="../img/install-without-data-min.png" title="Dont install demo data" >}}
 
 #### Install languages
 
@@ -354,7 +354,7 @@ If you are selling in several countries, additional languages have to be reinsta
 
 Also, make sure the IDs of your langs match on the source shop.
 
-{{< figure src="/images/1.7/upgrade-migration/migration-update-langs.png" title="Checking IDs of installed languages on a shop" >}}
+{{< figure src="../img/migration-update-langs.png" title="Checking IDs of installed languages on a shop" >}}
 
 This is an example of shop waiting to be migrated. As we can see, there is a discontinuity on the languages IDs. To reproduce these gaps, you can add unneeded languages you will remove in a second time.
 
@@ -378,13 +378,13 @@ We assume you want to get rid of the demonstration data of the destination shop,
 First, clean the table from its content with a TRUNCATE action. As PHPMyAdmin does not allow this step before importing your data, you have to execute it manually.
 Go to the operations panel of your table.
 
-{{< figure src="/images/1.7/upgrade-migration/image25.png" >}}
+{{< figure src="../img/image25.png" >}}
 
 At the bottom of the page, you will find the critical operations
 available. As they are destructive for the existing data, they can’t be
 easily found and are written in red.
 
-{{< figure src="/images/1.7/upgrade-migration/image51.png" >}}
+{{< figure src="../img/image51.png" >}}
 
 If PHPMyAdmin suggests to check the foreign keys, you can disable it. As
 you won’t import all your tables in a single call, you obviously cannot
@@ -395,13 +395,13 @@ ensure that your relations will be fine during the process.
 Now the table has been cleaned from demonstration content, you can
 import the data from the old shop. Go to the Import tab from your table.
 
-{{< figure src="/images/1.7/upgrade-migration/image71.png" >}}
+{{< figure src="../img/image71.png" >}}
 
 A form will appear to let you customize your import. The default
 configuration expects a SQL file to run, so we will have several options
 to change as shown on the screenshot.
 
-{{< figure src="/images/1.7/upgrade-migration/image80.png" >}}
+{{< figure src="../img/image80.png" >}}
 
 * Start by selecting your CSV file.
 * The second option to modify will be the format. Choose “CSV” or “CSV for MS Excel”.
@@ -412,7 +412,7 @@ to change as shown on the screenshot.
 Finally, click on “Go”. If everything goes well, you will get a
 confirmation page like this:
 
-{{< figure src="/images/1.7/upgrade-migration/image52.png" >}}
+{{< figure src="../img/image52.png" >}}
 
 If not, check the error message. An error about the CSV content could be
 fixed by other import settings, while an SQL error will require you to
@@ -435,7 +435,7 @@ missing information.
 
 On the new shop, reach the controller Advanced parameters &gt; Import.
 
-{{< figure src="/images/1.7/upgrade-migration/image39.png" >}}
+{{< figure src="../img/image39.png" >}}
 
 This controller will allow you to import the following data:
 
@@ -470,14 +470,14 @@ automatically when you select your file from the filesystem.
 
 Before CSV selection or upload:
 
-{{< figure src="/images/1.7/upgrade-migration/image65.png" >}}
+{{< figure src="../img/image65.png" >}}
 
 Some warnings may be displayed depending on the type of data to import.
 They can provide useful advice about forbidden or allowed rules.
 
 Once a CSV is selected:
 
-{{< figure src="/images/1.7/upgrade-migration/image81.png" >}}
+{{< figure src="../img/image81.png" >}}
 
 Double check the field & multiple-value options for your CSV structure.
 Default values should work in most of case, but incorrect values will
@@ -493,7 +493,7 @@ the second and following files.
 
 The second step allows you to link the old columns with the new ones.
 
-{{< figure src="/images/1.7/upgrade-migration/image77.png" >}}
+{{< figure src="../img/image77.png" >}}
 
 In case a column from the CSV should not be taken in account, you can
 ask PrestaShop to bypass it by choosing the first option of the list:
@@ -507,7 +507,7 @@ From that moment, you can just wait for the process to complete. The
 time it will take depends on the number of lines to import, and the
 chosen options.
 
-{{< figure src="/images/1.7/upgrade-migration/image32.png" >}}
+{{< figure src="../img/image32.png" >}}
 
 To avoid reaching the maximum execution time of a request, the process
 will divide your data in several chunks which will be processed in

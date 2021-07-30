@@ -404,7 +404,7 @@ It is possible to include the provided template and modify some parts of it, or 
 {{< figure src="../img/grid_workflow.svg" title="Main workflow of the Grid Component" >}}
 
 {{% notice note %}}
-You can update this schema using the [source XML file](/schemas/1.7/grid_workflow.xml) importable in services like [draw.io](https://draw.io).
+You can update this schema using the [source XML file](/1.7/schemas/grid_workflow.xml) importable in services like [draw.io](https://draw.io).
 {{% /notice %}}
 
 ### Hooks
@@ -412,7 +412,7 @@ You can update this schema using the [source XML file](/schemas/1.7/grid_workflo
 {{< figure src="../img/grid_workflow_hooks.svg" title="Available hooks when creating a Grid" >}}
 
 {{% notice note %}}
-You can update this schema using the [source XML file](/schemas/1.7/grid_workflow_hooks.xml) importable in services like [draw.io](https://draw.io).
+You can update this schema using the [source XML file](/1.7/schemas/grid_workflow_hooks.xml) importable in services like [draw.io](https://draw.io).
 {{% /notice %}}
 
 ## Learn more

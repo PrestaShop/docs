@@ -45,7 +45,7 @@ Follow this steps to generate RTL stylesheets for your theme:
 * Toggle "Generate RTL stylesheet" to "Yes".
 * Press "Save".
 
-{{< figure src="/images/1.7/RTL-generation-screen.png" title="RTL generation in the back office" >}}
+{{< figure src="../img/RTL-generation-screen.png" title="RTL generation in the back office" >}}
 
 This process will generate `_rtl.css` files for every `.css` file in the theme.
 
