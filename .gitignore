@@ -1,8 +1,1 @@
-.env
 .idea/
-/src/public/
-/src/themes/ps-docs-theme/static/js/main.js
-/src/themes/ps-docs-theme/static/js/main.js.map
-hugo
-node_modules/
-resources/
