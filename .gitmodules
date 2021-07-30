@@ -1,4 +1,0 @@
-[submodule "src/themes/ps-docs-theme"]
-	path = src/themes/ps-docs-theme
-	url = https://github.com/PrestaShop/ps-docs-theme.git
-	branch = main
