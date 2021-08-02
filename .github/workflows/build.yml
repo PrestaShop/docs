@@ -1,0 +1,40 @@
+name: Test Build
+
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      TARGET_BRANCH: ${{ github.ref }}
+
+    steps:
+      - name: Checkout Hugo Site
+        uses: actions/checkout@v2
+        with:
+          repository: prestashop/devdocs-site
+          submodules: true
+
+      - name: Checkout PR
+        uses: actions/checkout@v2
+        with:
+          path: _current/
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.82.0'
+          extended: true
+
+      - name: Find version from branch name
+        run: |
+          echo "VERSION=`echo $TARGET_BRANCH | perl -pe 's|^.+/([^/]+)\.x$|\1|'`" >> $GITHUB_ENV
+          echo $VERSION
+
+      - name: Move content into the appropriate directory
+        run: |
+          rm -rf "src/content/$VERSION"
+          mv _current "src/content/$VERSION"
+
+      - name: Build
+        run: cd src/ && hugo
