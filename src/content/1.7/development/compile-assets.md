@@ -90,3 +90,11 @@ How we manage to work with this, as well as working on previous PrestaShop versi
 
 There are a lot of tools able to do this. At PrestaShop, we mainly use the ['n' package](https://www.npmjs.com/package/n?activeTab=versions) or [nvm](https://github.com/nvm-sh/nvm).
 This is pretty easy to use, when you are working on a directory which need an older or newer node version, use one of these tools to switch and then `npm install && npm run build`.
+
+If you working with PrestaShop's production release for an actual shop instead of development, new-theme directory will not have a package.json, this means that the dependencies will be incorrect and the `npm run build` will display an error message like this:
+
+```
+Module build failed: Error: Couldn't find preset "env" relative to directory
+```
+
+You can solve this by changing to a release for development or by copy the necessary json file to your new-theme folder, navigate there and run `npm install`.
