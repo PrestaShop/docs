@@ -40,11 +40,11 @@ So for example, if you want that people browsing the Back Office on URL `/sell/o
 ```yaml
 # modules/your-module/config/routes.yml
 admin_orders_index:
-    path: /sell/orders/orders/
-    methods: [GET]
-    defaults:
-      _controller: 'MyModule\Controller\DemoController::demoAction'
-      _disable_module_prefix: true
+  path: /sell/orders/orders/
+  methods: [GET]
+  defaults:
+    _controller: 'MyModule\Controller\DemoController::demoAction'
+    _disable_module_prefix: true
 ```
 
 {{% notice tip %}}
@@ -77,8 +77,8 @@ For example, the controller responsible for the page "Improve > Design > CMS Pag
 With the following configuration item, we can override this configuration to make it target our custom module:
 ```yaml
 # modules/your-module/config/services.yml
-  'PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController':
-    class: MyModule\Controller\DemoController
+'PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController':
+  class: MyModule\Controller\DemoController
 
 ```
 
@@ -159,10 +159,28 @@ However we could modify the input request or the output given by decorated contr
     }
 ```
 
+In order for the DemoController to work, we also need to implement all the other Action methods we don't interfere with of the decorated controller and simply return the decorated controller method. Example:
+
+```php
+<?php
+ public function anAction($id, Request $request)
+        {
+            return $this->decoratedController->anAction($id, $request);
+        }
+
+```
+
+On some edge cases we might need to perform an Ajax call from our Javascript file (or the Twig template) to our decorating DemoController.
+Curently this will not work though, what we need to do in such a case is to create a regular admincontroller e.g. mymodule/src/Controller/Admin/DemoAjaxController.php with a method, create a route for that method in our mymodule/src/config/routes.yml, generate the URL as described here, [symfony docs](https://devdocs.prestashop.com/1.7/modules/concepts/controllers/admin-controllers/route-generation/) and perform our ajax call using the resulting Symfony route.
+<<<<<<< HEAD
+=======
+
+>>>>>>> e13410a98aa0aebf79f50e7ceb01a5dd4de3b64c
 
 {{% notice tip %}}
 If you have trouble writing the right service configuration for your decoration, you can use Symfony debugger to dump the routes with `php bin/console debug:container`. It can also be helpful to find the service ID of the controller.
 {{% /notice %}}
+
 
 [hooks]: {{< ref "/1.7/modules/concepts/hooks" >}}
 [template-override]: {{< ref "/1.7/modules/concepts/templating/admin-views" >}}
