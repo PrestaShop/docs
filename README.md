@@ -9,8 +9,6 @@ This repository contains the content of [DevDocs - PrestaShop's technical docume
 
 ## Contributing
 
-## Contributing
-
 Contributions to the documentation content are more than welcome! [Find out how to contribute](https://devdocs.prestashop.com/1.7/contribute/documentation/how/).
 
 - To contribute to sources: Submit your Pull Request to the [Sources repository](https://github.com/PrestaShop/devdocs-site/).
