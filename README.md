@@ -4,9 +4,17 @@
 
 This documentation is available at https://devdocs.prestashop.com/
 
+This repository contains the content of [DevDocs - PrestaShop's technical documentation site](https://devdocs.prestashop.com/).
+
+
 ## Contributing
 
-Contributions are more than welcome! [Find out how](https://devdocs.prestashop.com/1.7/contribute/documentation/how/).
+## Contributing
+
+Contributions to the documentation content are more than welcome! [Find out how](https://devdocs.prestashop.com/1.7/contribute/documentation/how/).
+
+- To contribute to the sources, Submit your Pull Request to the [Sources repository](https://github.com/PrestaShop/devdocs-site/).
+- To update the theme: Submit your Pull Request to the [Theme repository](https://github.com/PrestaShop/ps-docs-theme/).
 
 ## Rendering the site locally
 
