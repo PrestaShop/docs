@@ -12,6 +12,10 @@ Contributions are more than welcome! [Find out how](https://devdocs.prestashop.c
 
 See https://github.com/PrestaShop/devdocs-site/
 
+## Deployment
+
+The deployment pipeline is documented on the [sources repository for DevDocs](https://github.com/PrestaShop/devdocs-site).
+
 ## License
 
 Content from this documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
