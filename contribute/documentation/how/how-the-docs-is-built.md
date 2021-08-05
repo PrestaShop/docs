@@ -9,11 +9,11 @@ weight: 40
 
 This site is built using the wonderful [Hugo static site generator](https://gohugo.io/).
 
-The **sources** of this site are hosted on devdocs-site, the [Sources repository](https://github.com/PrestaShop/devdocs-site/).
-The **Hugo theme** of this site is hosted on ps-docs-theme, the [Theme repository](https://github.com/PrestaShop/ps-docs-theme/).
-The **content** of this site is hosted on docs, the [Content Repository](https://github.com/PrestaShop/docs).
+- The **sources** of this site are hosted on devdocs-site, the [Sources repository](https://github.com/PrestaShop/devdocs-site/).
+- The **Hugo theme** of this site is hosted on ps-docs-theme, the [Theme repository](https://github.com/PrestaShop/ps-docs-theme/).
+- The **content** of this site is hosted on docs, the [Content Repository](https://github.com/PrestaShop/docs).
 
-Every time a contributions is merged inside one of the docs branches, a first GitHub workflow will notify the Sources repository.
+Every time a contribution is merged inside one of the docs branches, a first GitHub workflow will notify the Sources repository.
 
 Upon being notified, a second GitHub workflow is triggered in devdocs-site, which updates its submodules and commits them.
 
@@ -29,4 +29,4 @@ For content contributions, such as adding a new page, updating or fixing some ex
 
 If you want to update the 1.7 documentation, submit your Pull Request against the `1.7.x` branch.
 
-If you want to update the 8.0 documentation, submit your Pull Request against the `8.0.x` branch.
+If you want to update the 8.x documentation, submit your Pull Request against the `8.x` branch.
