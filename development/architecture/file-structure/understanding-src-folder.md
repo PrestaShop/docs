@@ -52,7 +52,7 @@ Context or specific constants but on the configuration files of PrestaShop legac
 Bundle classes belong to the `PrestaShopBundle` namespace. This folder contains the code composing the application layer, meaning:
 
 - Classes wrapping PrestaShop business logic into a Symfony application
-- Classes relying heavily on Symfony such as Controllers, Twig templates, Form Types, etc.
+- Classes relying heavily on Symfony such as Controllers, Form Types, etc.
 
 Code in this namespace should follow these rules:
 
@@ -66,7 +66,7 @@ Here are some examples of subsystems belonging to PrestaShopBundle:
 - Commands: Commands available using "bin/console"
 - DataCollector: Specific collectors for the Symfony profiler (eg. hooks)
 - Form: Symfony forms and extensions
-- Resources: Contains services definition and Twig templates
+- Resources: Contains services definition files
 - Security: Glue between Security Bundle and PrestaShop autorization/authentification
 - Twig: Contains PrestaShop-specific Twig extensions
 
@@ -81,4 +81,4 @@ Adapter | `PrestaShop\PrestaShop\Adapter` | Yes | Yes | Yes
 PrestaShopBundle | `PrestaShopBundle` | Yes | Yes | No
 Legacy  | (None) | Yes | Yes | Yes
 
-[^1]: Core classes SHOULD NOT depend directly on Adapter classes (it SHOULD depend on interfaces instead).
+[^1]: Core classes SHOULD NOT depend directly on Adapter classes (they SHOULD depend on interfaces instead).
