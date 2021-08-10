@@ -117,9 +117,9 @@ As stated above, if you decide to work on PrestaShop itself, it's best to clone 
 
 * The [develop branch](https://github.com/PrestaShop/PrestaShop/tree/develop) contains the current work in progress for the next minor or major version.
     - **This is the right branch to contribute new features, refactors, small bug fixes, etc.**
-* The maintenance branches (_1.6.1.x, 1.7.0.x, 1.7.1.x, 1.7.2.x, ..._) contains all patches made for each minor version.
-    - For example, the _1.7.2.x_ branch contains all patches from 1.7.2.0 to 1.7.2.5.
-    - Whenever a new minor or major version is ready for release, a new maintenance branch is created. For example, _1.7.0.x_ for version 1.7.0.0, _1.7.1.x_ for 1.7.1.0, _1.7.2.x_ for 1.7.2.0, and so forth.
+* The maintenance branches (_8.0.x, ..._) contains all patches made for each minor version.
+    - For example, the _8.0.x_ branch contains all patches from 8.0.0 to 8.0.99.
+    - Whenever a new minor or major version is ready for release, a new maintenance branch is created. For example, _8.0.x_ for version 8.0.0, _8.1.x_ for 8.1.0, 8.2.x_ for 8.2.0, and so forth.
     - **Only the most recent maintenance branch accepts new contributions**
     
 {{% /callout %}}
@@ -144,7 +144,7 @@ Use [composer][composer] to download the project's dependencies:
 ```bash
 cd /path/to/prestashop
 composer install
-# or alternatively, since 1.7.8:
+# or alternatively:
 make composer
 ```
 ### JavaScript and CSS dependencies
