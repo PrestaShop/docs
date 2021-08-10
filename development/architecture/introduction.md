@@ -15,7 +15,7 @@ Part of this article was originally published in 2019 as a [blog post](https://b
 
 ## Overview
 
-{{< figure src="../img/architecture-overview.png" title="Basic overview of PrestaShop 1.7's architecture" >}}
+{{< figure src="../img/architecture-overview.png" title="Basic overview of PrestaShop 8's architecture" >}}
 
 PrestaShop's architecture can be separated in two main logical sections, represented as blue columns in the figure above:
 
@@ -47,7 +47,7 @@ The purple cloud depicted above the Database is what we call the **Core Business
 
 PrestaShop controllers will generally output HTML pages, but on some cases they can output JSON or even XML. The structure of those pages is defined by **Themes** (depicted as pink blocks overlapping both the front-end and the back-end), which transform controller-provided data into HTML. This is true both for the FO and BO.
 
-Although PrestaShop 1.7 is bundled with default themes for FO and BO, only the FO supports third-party themes.
+Although PrestaShop 8 is bundled with default themes for FO and BO, only the FO supports third-party themes.
 
 PrestaShop provides two API interfaces:
 
@@ -91,7 +91,7 @@ In the following figure, we can appreciate the four subsystems described above:
 
 While this separation may seem excessively complex, it belongs to a transition phase that is necessary to allow the project to move forward progressively. Here's how.
 
-Notice the dotted yellow zone labeled _temporary code_. It means that code within that zone will sooner or later be moved to the Core or PrestaShop Bundle stack. Once the zone it's empty, it will be deleted. Of course, such a change won't be done in a minor version, so you can expect these four stacks to be present for the whole lifetime of 1.7.
+Notice the dotted yellow zone labeled _temporary code_. It means that code within that zone will sooner or later be moved to the Core or PrestaShop Bundle stack. Once the zone it's empty, it will be deleted. Of course, such a change won't be done in a minor version, so you can expect these four stacks to be present for the whole lifetime of PrestaShop 8.
 
 If you look closely at the relationships between each stack, you'll see that code outside the _temporary code zone_ does not interact directly with legacy classes. As explained before, the Adapter layer sits between the Legacy and the "new" code to ease up the transition of code from the Legacy stack to the Core stack.
 
@@ -200,7 +200,7 @@ FO themes define the appearance of the Front Office.
 
 PrestaShop comes bundled with a default FO theme, called "Classic", but merchant can choose to use a different theme. Hundreds of them are [available for download on the Addons Marketplace][addons-themes].
 
-Since FO themes work on top of legacy controllers, they are based on the [Smarty templating engine][smarty]. They all integrate a shared core javascript library which is called `core.js`, which has jQuery 3 bundled in (or jQuery 2 before {{< minver v="1.7.7" >}}).
+Since FO themes work on top of legacy controllers, they are based on the [Smarty templating engine][smarty]. They all integrate a shared core javascript library which is called `core.js`, which has jQuery 3 bundled in.
 
 _Classic_ is based on [Bootstrap][bootstrap] 4 alpha 5. A great number of themes are based on it using the [Child theme feature][child-theme].
 
@@ -218,11 +218,7 @@ Even though BO themes are not interchangeable, PrestaShop comes bundled with two
 
 So why are there two? Legacy controllers are based on Smarty, like FO controller. Symfony controllers, conversely, are based on the [Twig templating engine][twig]. As a result, there's a theme for each one: legacy controllers use the **default** theme, while Symfony ones use the **new theme**. As controllers are progressively being migrated to Symfony, templates are moved from the **default** to the **new theme** and converted from Smarty to Twig.
 
-In addition, the **default** theme is based on Bootstrap 3, while the **new theme** is based on [PrestaShop's UI kit][uikit] (available on [GitHub][github]), which itself is based on Bootstrap 4. They both integrate jQuery 3 since {{< minver v="1.7.7" >}}.
-
-{{% notice tip %}}
-On previous 1.7 versions, the default theme was based on jQuery 1.
-{{% /notice %}}
+In addition, the **default** theme is based on Bootstrap 3, while the **new theme** is based on [PrestaShop's UI kit][uikit] (available on [GitHub][github]), which itself is based on Bootstrap 4. They both integrate jQuery 3.
 
 {{% callout %}}
 ##### Mixed Smarty and Twig
@@ -240,7 +236,7 @@ Rest assured, this is a _temporary issue_ which will be solved when everything h
 
 Finally, there's [Vue pages][introducing-vue]. Vue pages are hybrid: half-Symfony, half-API based BO pages. In those pages, the page's skeleton is first rendered by a Symfony controller (therefore, based on the **new theme**), and then a VueJS application takes over in the browser and draws its content based on data sent by the BO API.
 
-As stated before, currently only the Stock management and Translation pages are built on this technology. Even though we think that this is [the way of the future][future-architecture], we find that going down this path in minor version releases would produce too many major extensibility and backwards incompatibility issues. Therefore, there will probably be no new Vue/BO API pages in 1.7.
+As stated before, currently only the Stock management and Translation pages are built on this technology. Even though we think that this is [the way of the future][future-architecture], we find that going down this path in minor version releases would produce too many major extensibility and backwards incompatibility issues. Therefore, there will probably be no new Vue/BO API pages in PrestaShop 8.
 
 
 ## Modules
@@ -260,13 +256,13 @@ The module system provides several other features:
 
 - Module controllers – Modules can add new routes and custom pages in the FO or BO.
 - Payment options – Payment modules can add payment options in the checkout process.
-- Declaring and sharing services – Since 1.7.4, modules can use and declare Symfony services.
+- Declaring and sharing services – Modules can use and declare Symfony services.
 
 Modules can also be used to customize PrestaShop:
 
 - Class override system – This system allows a module to replace any class in the Legacy stack.
 - BO template overrides – Allows to replace templates from the **new theme** in the BO.
-- Service overrides – Since 1.7.4, modules can replace Core services with their own.
+- Service overrides – Modules can replace Core services with their own.
 - CSS and JS injection – Modules can also inject style and javascript code into a page.
 
 In addition, modules can be customized by Themes. Themes supporting a given module can override the module's own FO templates in order to improve their integration.
