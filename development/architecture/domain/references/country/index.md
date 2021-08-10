@@ -11,4 +11,4 @@ title: Country domain
 
 #### GetCountryRequiredFields {id="GetCountryRequiredFields"}
 
-{{%  include-md "content/1.7/development/architecture/domain/references/country/_partials/get-country-required-fields.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/country/_partials/get-country-required-fields.md" %}}

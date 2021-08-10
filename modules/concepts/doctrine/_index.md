@@ -25,7 +25,7 @@ modules.
 To work correctly you will need to define a namespace for your entity classes using Composer, you can find more details
 about namespace setup in [Setup composer][setup-composer] page.
 
-[setup-composer]: {{< ref "/1.7/modules/concepts/services/_index.md#setup-composer" >}}
+[setup-composer]: {{< ref "/8/modules/concepts/services/_index.md#setup-composer" >}}
 
 ## Define an Entity
 

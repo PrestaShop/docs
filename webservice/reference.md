@@ -1,8 +1,6 @@
 ---
 title: Reference
 weight: 30
-aliases:
-  - /1.7/development/webservice/reference/
 ---
 
 # Web service reference

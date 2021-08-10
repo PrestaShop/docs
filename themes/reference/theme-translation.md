@@ -1,7 +1,5 @@
 ---
 title: Theme translation
-aliases:
-  - /themes/smarty/translation.html
 ---
 
 # How to translate your theme

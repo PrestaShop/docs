@@ -2,8 +2,6 @@
 title: Testing access to the Webservice
 menuTitle: 2 - Testing access
 weight: 2
-aliases:
-  - /1.7/development/webservice/tutorials/testing-access/
 ---
 
 # Testing access to the Webservice

@@ -341,5 +341,5 @@ If you need to distribute backward-compatible translations, you can either [writ
 If you choose to export wordings from the database, you can easily extract your module's wordings from the `ps_translation` table by filtering domains that start with `ModulesYourmodulename*`. When inserting the translations in the destination shop, remember to set the appropriate value for `id_lang` according to the destination shop's language configuration (see table `ps_lang`) .
 
 [contextualization]: {{< ref "new-system.md#contextualization" >}}
-[native-module-conventions]: {{< ref "/1.7/development/internationalization/translation/translation-domains.md#modules" >}}
-[core-translation-domains]: {{< ref "/1.7/development/internationalization/translation/translation-domains.md#understanding-the-domains-structure" >}}
+[native-module-conventions]: {{< ref "/8/development/internationalization/translation/translation-domains.md#modules" >}}
+[core-translation-domains]: {{< ref "/8/development/internationalization/translation/translation-domains.md#understanding-the-domains-structure" >}}

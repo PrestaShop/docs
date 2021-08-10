@@ -1,7 +1,5 @@
 ---
 title: DBQuery class
-aliases:
-  - /1.7/development/database/dbquery/
 ---
 
 # The DBQuery class

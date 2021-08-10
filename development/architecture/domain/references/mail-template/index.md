@@ -8,7 +8,7 @@ title: MailTemplate domain
 
 #### GenerateThemeMailTemplatesCommand {id="GenerateThemeMailTemplatesCommand"}
 
-{{%  include-md "content/1.7/development/architecture/domain/references/mail-template/_partials/generate-theme-mail-templates-command.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/mail-template/_partials/generate-theme-mail-templates-command.md" %}}
 
 ### MailTemplate Queries
 

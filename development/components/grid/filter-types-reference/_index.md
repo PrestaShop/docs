@@ -153,5 +153,5 @@ class MyGridDefinitionFactory extends AbstractGridDefinition
 ```
 
 {{% notice note %}}
-If you need more information about filtering grid you can read [how to work with search form]({{< ref "/1.7/development/components/grid/tutorials/work-with-search-form/" >}}).
+If you need more information about filtering grid you can read [how to work with search form]({{< ref "/8/development/components/grid/tutorials/work-with-search-form/" >}}).
 {{% /notice %}}

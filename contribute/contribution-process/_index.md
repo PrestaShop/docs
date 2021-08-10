@@ -3,9 +3,6 @@ title: What happens after you submit a contribution
 title: How contributions are handled
 chapter: true
 weight: 60
-aliases:
-  - /1.7/contribute/how-issues-are-sorted/
-  - /1.7/contribute/how-pull-requests-are-processed/
 ---
 
 # What happens after you submit an issue or Pull Request

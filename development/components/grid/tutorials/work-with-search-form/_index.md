@@ -81,7 +81,7 @@ final class ManufacturerGridDefinitionFactory extends AbstractGridDefinitionFact
 ### The filters types
 
 The filters collection allows you to define all the available filters (which will match your grid columns). You can define a specific type depending on the column.
-You can basically use any Symfony form type (including your custom ones) and PrestaShop provides a few [filter types]({{< ref "/1.7/development/components/grid/filter-types-reference/" >}}) that might be useful to you.
+You can basically use any Symfony form type (including your custom ones) and PrestaShop provides a few [filter types]({{< ref "/8/development/components/grid/filter-types-reference/" >}}) that might be useful to you.
 
 ### Filterable grid definition
 {{< minver v="1.7.7" title="true" >}}
@@ -152,7 +152,7 @@ In this tutorial we assume the search and list actions have the same url, thus w
 {{% /notice %}}
 
 {{% notice note %}}
-Most of the time you will use the default form factory when you [configure your grid factory]({{< ref "/1.7/development/components/grid/_index.md#configuring-grid-factory" >}}) which is usually enough. However if you need to change the form action route or perform any other advanced management you might need to create your [custom form factory]({{< ref "/1.7/development/components/grid/tutorials/work-with-search-form/custom-form-factory" >}}).
+Most of the time you will use the default form factory when you [configure your grid factory]({{< ref "/8/development/components/grid/_index.md#configuring-grid-factory" >}}) which is usually enough. However if you need to change the form action route or perform any other advanced management you might need to create your [custom form factory]({{< ref "/8/development/components/grid/tutorials/work-with-search-form/custom-form-factory" >}}).
 {{% /notice %}}
 
 ### Search action
@@ -275,7 +275,7 @@ class ManufacturerController extends FrameworkBundleAdminController
 
 This action resets the persisted filters and your grid filtering/sorting. This action is the same for nearly all grids so PrestaShop provides a common controller to manage it, and you actually already set it via the grid definition.
 
-It is defined in the [`SearchAndResetType` options]({{< ref "/1.7/development/components/grid/filter-types-reference#searchandresettype" >}}), it uses `admin_common_reset_search_by_filter_id` and only needs the filter id to identify the filters to clear, and a redirection route.
+It is defined in the [`SearchAndResetType` options]({{< ref "/8/development/components/grid/filter-types-reference#searchandresettype" >}}), it uses `admin_common_reset_search_by_filter_id` and only needs the filter id to identify the filters to clear, and a redirection route.
 
 ```php
 <?php
@@ -295,4 +295,4 @@ It is defined in the [`SearchAndResetType` options]({{< ref "/1.7/development/co
 
 ## Search form in 1.7.5
 
-In the 1.7.5 version, first one that integrated the grid component, the system was a bit different and used controller/action to identify the filters. It had a few drawbacks and was abandoned in favor of a unique id but in case you need it here is [how to work with search form in 1.7.5]({{< ref "/1.7/development/components/grid/tutorials/work-with-search-form/in-1-7-5" >}}).
+In the 1.7.5 version, first one that integrated the grid component, the system was a bit different and used controller/action to identify the filters. It had a few drawbacks and was abandoned in favor of a unique id but in case you need it here is [how to work with search form in 1.7.5]({{< ref "/8/development/components/grid/tutorials/work-with-search-form/in-1-7-5" >}}).

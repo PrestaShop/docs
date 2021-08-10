@@ -1,9 +1,6 @@
 ---
 title: Contribution guidelines
 weight: 20
-aliases:
-  - /1.7/development/coding_standards/commits_and_pull_requests
-  - /1.7/development/coding-standards/commits-and-pull-requests
 ---
 
 # Contribution guidelines

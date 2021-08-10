@@ -2,8 +2,6 @@
 title: Listing resources
 menuTitle: 2 - Listing resources
 weight: 2
-aliases:
-  - /1.7/development/webservice/tutorials/prestashop-webservice-lib/listing-resources/
 ---
 
 # Listing resources

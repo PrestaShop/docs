@@ -2,8 +2,6 @@
 title: How to edit a page on GitHub
 menuTitle: Edit on GitHub
 weight: 10
-aliases:
-    - /1.7/documentation/how/edit-on-github/
 ---
 
 # How to edit a page on GitHub

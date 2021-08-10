@@ -1,7 +1,5 @@
 ---
 title: Overriding selectors
-aliases:
-  - /1.7/themes/overriding_selectors/
 ---
 
 # Overriding selectors

@@ -2,9 +2,6 @@
 title: Module translation
 weight: 7
 chapter: true
-aliases:
-  - /1.7/modules/creation/module_translation
-  - /module/05-CreatingAPrestaShop17Module/06-ModuleTranslation.html
 ---
 
 # Module translation

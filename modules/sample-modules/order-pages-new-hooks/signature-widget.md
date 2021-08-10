@@ -1,8 +1,6 @@
 ---
 title: Signature card 
 weight: 2
-aliases:
-    - /1.7/modules/sample_modules/order_view_page_new_hooks/signature-widget/
 ---
 
 # Signature card 
@@ -63,8 +61,7 @@ table created and the repository starts with the same wording `OrderSignatureRep
 {{% /notice %}}
 
 Let's create `OrderSignature` entity class inside `demovieworderhooks/src/Entity` folder and use 
-Doctrine Object Relational Mapping (ORM) annotations: 
-https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#define-an-entity.
+[Doctrine Object Relational Mapping (ORM) annotations]({{ relref "/8/modules/concepts/doctrine/#define-an-entity" }}).
 Also we map this entity with the repository with 
 `repositoryClass="PrestaShop\Module\DemoViewOrderHooks\Repository\OrderSignatureRepository"`.
 This mapping allows to use functions of `SignatureRepository` instead of only the `EntityRepository`.
@@ -448,9 +445,8 @@ class OrderSignaturePresenter
 ```
 Then lets use Symfony Dependency Injection 
 (https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/).
-and create services configuration for the above 
-classes in `demovieworderhooks/config/services.yml`. For more information: 
-https://devdocs.prestashop.com/1.7/modules/concepts/services/#symfony-services.
+and [create services configuration]({{ relref "/8/modules/concepts/services/#symfony-services" }}) for the above 
+classes in `demovieworderhooks/config/services.yml`.
 The intention behind dependency injection is to achieve Separation of Concerns of construction and use of objects. 
 This can increase readability and code reuse, reduce dependencies, lead to more testable code.
 It also reduces memory consumption as services are, by default, created once and shared 
@@ -558,7 +554,7 @@ Render a twig template method:
 For each registered hook, you must create a non-static public method, 
 starting with the “hook” keyword followed by the name of the hook you want to use 
 (starting with either “display” or “action”). In our case: `hookDisplayBackOfficeOrderActions`
-For more information see: https://devdocs.prestashop.com/1.7/modules/concepts/hooks/#execution
+([read this article for more information]({{ relref "/8//modules/concepts/hooks/#execution" }})).
 We add this code at the bottom of the main module class `demovieworderhooks.php`
 and also add the missing `use` statements for new classes.
 

@@ -34,19 +34,19 @@ The most important part of a Grid definition is defining columns. PrestaShop alr
 
 * [SeverityLevelColumn][severity-column-reference]
 
-[data-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/data" >}}
-[datetime-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/datetime" >}}
-[image-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/image" >}}
-[toggle-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/toggle" >}}
-[badge-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/badge" >}}
-[link-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/link" >}}
+[data-column-reference]: {{< ref "/8/development/components/grid/columns-reference/data" >}}
+[datetime-column-reference]: {{< ref "/8/development/components/grid/columns-reference/datetime" >}}
+[image-column-reference]: {{< ref "/8/development/components/grid/columns-reference/image" >}}
+[toggle-column-reference]: {{< ref "/8/development/components/grid/columns-reference/toggle" >}}
+[badge-column-reference]: {{< ref "/8/development/components/grid/columns-reference/badge" >}}
+[link-column-reference]: {{< ref "/8/development/components/grid/columns-reference/link" >}}
 
-[action-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/action" >}}
-[bulk-action-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/bulk-action" >}}
-[position-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/position" >}}
+[action-column-reference]: {{< ref "/8/development/components/grid/columns-reference/action" >}}
+[bulk-action-column-reference]: {{< ref "/8/development/components/grid/columns-reference/bulk-action" >}}
+[position-column-reference]: {{< ref "/8/development/components/grid/columns-reference/position" >}}
 
-[employee-name-wit-avatar-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/employee-name-with-avatar" >}}
-[severity-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/severity-level" >}}
+[employee-name-wit-avatar-column-reference]: {{< ref "/8/development/components/grid/columns-reference/employee-name-with-avatar" >}}
+[severity-column-reference]: {{< ref "/8/development/components/grid/columns-reference/severity-level" >}}
 
 ## Use case example
 

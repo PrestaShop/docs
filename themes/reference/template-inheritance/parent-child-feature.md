@@ -1,11 +1,5 @@
 ---
 title: Parent/child theme
-aliases:
-  - /1.7/themes/smarty/parent-child-feature.html
-  - /themes/smarty/parent-child-feature.html
-  - /themes/parent_child_feature
-  - /1.7/themes/parent_child_feature
-  - /1.7/themes/reference/template_inheritance/parent_child_feature/
 ---
 
 # Parent/child theme

@@ -8,10 +8,10 @@ title: Notification domain
 
 #### UpdateEmployeeNotificationLastElementCommand {id="UpdateEmployeeNotificationLastElementCommand"}
 
-{{%  include-md "content/1.7/development/architecture/domain/references/notification/_partials/update-employee-notification-last-element-command.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/notification/_partials/update-employee-notification-last-element-command.md" %}}
 
 ### Notification Queries
 
 #### GetNotificationLastElements {id="GetNotificationLastElements"}
 
-{{%  include-md "content/1.7/development/architecture/domain/references/notification/_partials/get-notification-last-elements.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/notification/_partials/get-notification-last-elements.md" %}}

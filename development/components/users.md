@@ -42,4 +42,4 @@ This `secure_key` property is stored in the User SQL table and in the user Carts
 If your module needs to be able to authenticate users without using login and password, please do not use the secure_key but your own identification token. The secure_key must remain a data internal to PrestaShop. Consider it a private key, not to be shared, but that can be used to validate a public key.
 {{% /notice %}}
 
-[webservice-key]: {{< ref "/1.7/webservice/tutorials/creating-access.md" >}}
+[webservice-key]: {{< ref "/8/webservice/tutorials/creating-access.md" >}}

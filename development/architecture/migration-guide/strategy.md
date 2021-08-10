@@ -155,13 +155,13 @@ Finally, Themes are a particular kind of extension that sits on top of the front
 
 Our Handlers started as "place where we put the legacy code we dont have the time to migrate now". They must now become interfaces for the Core domain, defining the future API endpoints. You could think of them as Controllers for the Domain, and consequently they will become empty of business logic, only focused on validating incoming Commands and Queries and formatting the data in both directions.
 
-[form-pages]: {{< ref "/1.7/development/architecture/migration-guide/forms/settings-forms.md" >}}
-[grid-pages]: {{< ref "/1.7/development/components/grid/" >}}
-[identifiable-form-pages]: {{< ref "/1.7/development/architecture/migration-guide/forms/crud-forms.md" >}}
-[legacy-mvc]: {{< ref "/1.7/basics/introduction.md" >}}
+[form-pages]: {{< ref "/8/development/architecture/migration-guide/forms/settings-forms.md" >}}
+[grid-pages]: {{< ref "/8/development/components/grid/" >}}
+[identifiable-form-pages]: {{< ref "/8/development/architecture/migration-guide/forms/crud-forms.md" >}}
+[legacy-mvc]: {{< ref "/8/basics/introduction.md" >}}
 [thin-ctrlers]: https://symfony.com/doc/4.0/best_practices/controllers.html
-[adapter-namespace]: {{< ref "/1.7/development/architecture/file-structure/understanding-src-folder.md" >}}
-[cqrs]: {{< ref "/1.7/development/architecture/domain/cqrs.md" >}}
+[adapter-namespace]: {{< ref "/8/development/architecture/file-structure/understanding-src-folder.md" >}}
+[cqrs]: {{< ref "/8/development/architecture/domain/cqrs.md" >}}
 [domain]: https://en.wikipedia.org/wiki/Domain-driven_design
 [future-architecture]: https://build.prestashop.com/news/prestashop-in-2019-and-beyond-part-3-the-future-architecture/#our-proposal-for-a-future-architecture
 [ubiquitous-langage]: https://enterprisecraftsmanship.com/posts/ubiquitous-language-naming/

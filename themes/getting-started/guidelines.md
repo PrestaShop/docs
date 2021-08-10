@@ -1,9 +1,6 @@
 ---
 title: Guidelines and coding standards
 menuTitle: Guidelines
-aliases:
-  - /1.7/themes/guidelines/
-  - /themes/prologue/index.html
 weight: 1
 ---
 
@@ -13,7 +10,7 @@ weight: 1
 
 ##### PHP Code
 
-Your PHP code should be compatible with [PHP compatibility chart](https://devdocs.prestashop.com/1.7/basics/installation/system-requirements/#php-compatibility-chart)
+Your PHP code should be compatible with [PHP compatibility chart]({{ relref "8/basics/installation/system-requirements/#php-compatibility-chart" }})
 
 ##### HTML / CSS / Javascript
 

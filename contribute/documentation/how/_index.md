@@ -1,8 +1,6 @@
 ---
 title: How to contribute
 weight: 2
-aliases:
-    - /1.7/documentation/how/
 ---
 
 # How to contribute to PrestaShop's Developer Documentation

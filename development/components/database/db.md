@@ -1,7 +1,5 @@
 ---
 title: Db class
-aliases:
-  - /1.7/development/database/db/
 ---
 
 # Using the database with the Db component

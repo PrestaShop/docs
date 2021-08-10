@@ -1,8 +1,6 @@
 ---
 title: Minor release lifecycle
 weight: 2
-aliases:
-- /1.7/release/minor-release-lifecycle/
 ---
 
 # Minor release lifecycle
@@ -58,8 +56,8 @@ For example, if you are a payment module developer, just installing your module 
 
 If however you find a problem, you can
 
- - [Report this as a bug on GitHub](https://github.com/PrestaShop/PrestaShop/issues) (read [how to report issues](https://devdocs.prestashop.com/1.7/contribute/contribute-reporting-issues/))
- - Submit a bug fix by creating a [pull request](https://github.com/PrestaShop/PrestaShop/compare) (read the [contribution guidelines](https://devdocs.prestashop.com/1.7/contribute/contribution-guidelines/))
+ - [Report this as a bug on GitHub](https://github.com/PrestaShop/PrestaShop/issues) (read [how to report issues]({{ relref "/8/contribute/contribute-reporting-issues/" }}))
+ - Submit a bug fix by creating a [pull request](https://github.com/PrestaShop/PrestaShop/compare) (read the [contribution guidelines]({{ relref "/8/contribute/contribution-guidelines/" }}))
 
 ## Release Candidate
 

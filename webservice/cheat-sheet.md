@@ -1,8 +1,6 @@
 ---
 title: Cheat sheet
 weight: 40
-aliases:
-  - /1.7/development/webservice/cheat-sheet/
 ---
 
 # Cheat sheet for Webservice

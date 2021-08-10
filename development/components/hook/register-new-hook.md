@@ -1,8 +1,6 @@
 ---
 title: Register a new hook
 weight: 10
-aliases:
-  - /1.7/development/register-new-hook/
 ---
 
 # How to register a new Hook in PrestaShop
@@ -79,7 +77,7 @@ Always add new hooks at the bottom of the list, as hooks are registered sequenti
 The last step is to describe the update process for the auto upgrade module – essentially, the insertion of new hooks in *hooks* table. Locate the X.Y.Z.sql file that refers to the PrestaShop version that will include your change: for instance, if the release expected to include this change is `1.7.5.0`, locate that file in `install-dev/upgrade/sql` folder.
 
 {{% notice tip %}}
-This process is explained here: [Structure and content upgrades]({{< ref "/1.7/development/database/structure.md#structure-and-content-upgrades" >}})
+This process is explained here: [Structure and content upgrades]({{< ref "/8/development/database/structure.md#structure-and-content-upgrades" >}})
 {{% /notice %}}
 
 Then add the corresponding SQL commands to add new hooks:

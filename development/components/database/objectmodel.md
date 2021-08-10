@@ -1,7 +1,5 @@
 ---
 title: ObjectModel class
-aliases:
- - /1.7/development/database/objectmodel/
 ---
 
 # The ObjectModel class

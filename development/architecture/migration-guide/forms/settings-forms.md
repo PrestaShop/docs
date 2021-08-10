@@ -1,8 +1,6 @@
 ---
 title: Settings Forms
 weight: 20
-aliases:
-  - /1.7/development/architecture/migration-guide/forms/settings-form.md
 
 ---
 
@@ -142,7 +140,7 @@ The following schemas sums up how Form Handlers, Form Builders, Controllers and 
 {{< figure src="../img/form-display.svg" title="Display Form schema" >}}
 
 {{% notice note %}}
-You can update this schema using the [source XML file](/1.7/schemas/form-display.xml) importable in services like [draw.io](https://draw.io).
+You can update this schema using the [source XML file](/8/schemas/form-display.xml) importable in services like [draw.io](https://draw.io).
 {{% /notice %}}
 
 ###### Submit Form schema
@@ -150,7 +148,7 @@ You can update this schema using the [source XML file](/1.7/schemas/form-display
 {{< figure src="../img/form-submit.svg" title="Submit Form schema" >}}
 
 {{% notice note %}}
-You can update this schema using the [source XML file](/1.7/schemas/form-submit.xml) importable in services like [draw.io](https://draw.io).
+You can update this schema using the [source XML file](/8/schemas/form-submit.xml) importable in services like [draw.io](https://draw.io).
 {{% /notice %}}
 
 {{% /callout %}}

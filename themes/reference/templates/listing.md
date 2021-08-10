@@ -1,8 +1,6 @@
 ---
 title: Listing pages
 weight: 40
-aliases:
-  - /themes/templates/100-listing.html
 ---
 
 # Listing pages

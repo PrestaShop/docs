@@ -132,13 +132,13 @@ It is also recommended to :
 
 Pull Requests may be closed after 30 days of inactivity following a request for modifications.
 
-[contribution-guidelines]: {{< ref "/1.7/contribute/contribution-guidelines/_index.md" >}}
+[contribution-guidelines]: {{< ref "/8/contribute/contribution-guidelines/_index.md" >}}
 [prestashop-core-repository]: https://github.com/PrestaShop/PrestaShop/
 [bc-break]: https://stackoverflow.com/questions/8891005/what-does-bc-break-mean
 [slack]: {{< param ProjectUrls.Slack >}}
 [adr]: https://github.com/prestashop/ADR
-[prestonbot]: {{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}
+[prestonbot]: {{< ref "/8/contribute/contribution-process/how-pull-requests-are-processed.md" >}}
 [solid]: https://en.wikipedia.org/wiki/SOLID
-[RTL]: {{< ref "/1.7/themes/reference/rtl.md" >}}
-[pull-request-process]: {{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}
+[RTL]: {{< ref "/8/themes/reference/rtl.md" >}}
+[pull-request-process]: {{< ref "/8/contribute/contribution-process/how-pull-requests-are-processed.md" >}}
 [semver]: https://semver.org/

@@ -66,7 +66,7 @@ Supposing that the Vue.js workspace is the `_dev` folder:
 
 ## 3- Customization of the application for a PrestaShop context
 
-In [the module structure]({{< ref "/1.7/modules/creation/module-file-structure.md" >}}), JavaScript
+In [the module structure]({{< ref "/8/modules/creation/module-file-structure.md" >}}), JavaScript
 files must be stored in `views/js/`. We will ask the compiler to write the distributable files in there.
 
 Create or edit `_dev/vue.config.js` with:

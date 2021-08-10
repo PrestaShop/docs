@@ -3,8 +3,6 @@ menuTitle: Upgrade
 title: How to upgrade PrestaShop
 description: Everything you need to know to upgrade your PrestaShop to the latest version
 weight: 30
-aliases:
-  - /1.7/basics/keeping_up-to-date/upgrade
 ---
 
 # How to upgrade PrestaShop
@@ -18,7 +16,7 @@ Do not go further if you haven’t made a backup of your shop.
 Rollback will be the only way to go back if something does not go well,
 and this requires a backup.
 
-Learn [how to backup your shop]({{< ref "/1.7/basics/keeping-up-to-date/backup" >}})
+Learn [how to backup your shop]({{< ref "/8/basics/keeping-up-to-date/backup" >}})
 {{% /notice %}}
 
 This chapter describes several ways to complete an upgrade of
@@ -217,7 +215,7 @@ If the manual process seems too tedious, other solutions exist to complete an up
 
 PrestaShop provides the module 1-click upgrade for free on the marketplace and your shop administration panel. It executes the previously given process automatically, and is available for almost all versions of PrestaShop.
 
-You can read more about it [here]({{< ref "/1.7/basics/keeping-up-to-date/use-autoupgrade-module" >}}).
+You can read more about it [here]({{< ref "/8/basics/keeping-up-to-date/use-autoupgrade-module" >}}).
 
 ## Support service
 

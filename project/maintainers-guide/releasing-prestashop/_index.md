@@ -3,8 +3,6 @@ title: How to release a new PrestaShop version
 menuTitle: Releasing a new PS version
 chapter: true
 weight: 40
-aliases:
-    - /1.7/project/release/release-a-new-version-of-prestashop/
 ---
 
 # How to release a new PrestaShop version
@@ -77,10 +75,10 @@ Some of steps will require special tools or access rights which are currently no
 [git-scm]: https://git-scm.com/
 [github-repository]: https://github.com/prestashop/prestashop
 [php]: https://www.php.net/
-[compatible-php-versions]: {{< ref "/1.7/basics/installation/system-requirements.md#php-requirements" >}}
+[compatible-php-versions]: {{< ref "/8/basics/installation/system-requirements.md#php-requirements" >}}
 [get-composer]: https://getcomposer.org/
 [nodejs]: https://nodejs.org/
-[nodejs-requirements]: {{< ref "/1.7/development/compile-assets.md#requirements" >}}
+[nodejs-requirements]: {{< ref "/8/development/compile-assets.md#requirements" >}}
 
 [preliminary-tasks]: {{< ref "preliminary-tasks.md" >}}
 [create-build]: {{< ref "create-build.md" >}}

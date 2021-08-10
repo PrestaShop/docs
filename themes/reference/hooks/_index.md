@@ -1,9 +1,6 @@
 ---
 title: Theme Hooks
 weight: 3
-aliases:
-  - /1.7/themes/hooks/
-  - /themes/hooks/index.html
 ---
 
 # Create hooks available in Front Office

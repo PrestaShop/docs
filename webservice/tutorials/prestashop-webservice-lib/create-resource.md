@@ -2,8 +2,6 @@
 title: Create a resource
 menuTitle: 4 - Create a resource
 weight: 4
-aliases:
-  - /1.7/development/webservice/tutorials/prestashop-webservice-lib/create-resource/
 ---
 
 # Create a resource
@@ -17,7 +15,7 @@ As we explained in a previous tutorial the webservice provides two [resource sch
 {{< figure src="../../../img/create-resource.svg" title="Create Resource via Webservice" >}}
 
 {{% notice note %}}
-You can update this schema using the [source XML file](/1.7/schemas/create-resource.xml) importable in services like [draw.io](https://draw.io).
+You can update this schema using the [source XML file](/8/schemas/create-resource.xml) importable in services like [draw.io](https://draw.io).
 {{% /notice %}}
 
 ## Retrieve the blank schema

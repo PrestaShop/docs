@@ -2,8 +2,6 @@
 title: How to contribute code changes
 chapter: true
 weight: 20
-aliases:
-  - /1.7/contribute/contribute_using_docker/
 menuTitle: Submitting code changes
 ---
 

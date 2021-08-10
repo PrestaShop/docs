@@ -52,7 +52,7 @@ In the above example, the `path` has not been changed, but you can change it to 
 {{% /notice %}}
 
 {{% notice warning %}}
-Keep the item `_legacy_controller` if your controller relies on it to configure a [AdminSecurity annotation](/1.7/development/architecture/migration-guide/controller-routing/#access-rules-convention) such as `@AdminSecurity("is_granted('read', request.get('_legacy_controller'))")`
+Keep the item `_legacy_controller` if your controller relies on it to configure a [AdminSecurity annotation]({{ relref "/8/development/architecture/migration-guide/controller-routing/#access-rules-convention" }}) such as `@AdminSecurity("is_granted('read', request.get('_legacy_controller'))")`
 
 Keep the items `_legacy_controller` and `_legacy_link` if you want to reroute internal links and legacy URLs like `index.php?controller=AdminOrders` as well.
 {{% /notice %}}
@@ -164,6 +164,6 @@ However we could modify the input request or the output given by decorated contr
 If you have trouble writing the right service configuration for your decoration, you can use Symfony debugger to dump the routes with `php bin/console debug:container`. It can also be helpful to find the service ID of the controller.
 {{% /notice %}}
 
-[hooks]: {{< ref "/1.7/modules/concepts/hooks" >}}
-[template-override]: {{< ref "/1.7/modules/concepts/templating/admin-views" >}}
-[override-services]: {{< ref "/1.7/modules/concepts/services" >}}
+[hooks]: {{< ref "/8/modules/concepts/hooks" >}}
+[template-override]: {{< ref "/8/modules/concepts/templating/admin-views" >}}
+[override-services]: {{< ref "/8/modules/concepts/services" >}}
