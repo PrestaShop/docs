@@ -1,8 +1,5 @@
 ---
 title: Overriding modules
-aliases:
-  - /1.7/themes/overriding_modules/
-  - /themes/modules/index.html
 ---
 
 # Overriding modules

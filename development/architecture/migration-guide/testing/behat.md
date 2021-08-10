@@ -10,7 +10,7 @@ weight: 20
 It is important that you get familiar with the `Behats` principles before reading further. You can find the official behat documentation [here](https://docs.behat.org/en/latest/guides.html).
 {{% /notice %}}
 
-A behaviour (`behat`) tests are a part of integration tests. They allow testing how multiple components are working together. In PrestaShop, behats are used to test the `Application` and `Domain` layer integration - basically all the [CQRS](/1.7/development/architecture/domain/cqrs) commands and queries.
+A behaviour (`behat`) tests are a part of integration tests. They allow testing how multiple components are working together. In PrestaShop, behats are used to test the `Application` and `Domain` layer integration - basically all the [CQRS]({{ relref "/8/development/architecture/domain/cqrs" }}) commands and queries.
 
 ## Database
 During behat tests the actual database queries are executed, therefore before testing you need to run a command `composer create-test-db` to create a test database.

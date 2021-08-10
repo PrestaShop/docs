@@ -2,8 +2,6 @@
 title: How to override Back Office views
 menuTitle: Overriding Back office views
 weight: 4
-aliases:
-- 1.7/modules/templating/
 ---
 
 # How to override Back Office views

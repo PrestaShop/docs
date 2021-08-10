@@ -1,7 +1,5 @@
 ---
 title: Note block
-aliases:
-    - /1.7/documentation/shortcodes/notice/
 ---
 
 ### Notes / tip block

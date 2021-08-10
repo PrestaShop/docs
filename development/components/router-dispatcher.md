@@ -61,4 +61,4 @@ If you send another HTTP request, the same sequence will happen
 
 ## Module routing
 
-See [the Module Controllers page section]({{< ref "/1.7/modules/concepts/controllers/" >}})
+See [the Module Controllers page section]({{< ref "/8/modules/concepts/controllers/" >}})

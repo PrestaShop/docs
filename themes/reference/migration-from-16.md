@@ -1,8 +1,6 @@
 ---
 title: Migrating from PrestaShop 1.6
 menuTitle: Migrating from 1.6
-aliases:
-  - /1.7/themes/migration_from_16/
 ---
 
 # Migrating from PrestaShop 1.6

@@ -1,8 +1,6 @@
 ---
 title: Internal and cross links
 weight: 1
-aliases:
-    - /1.7/documentation/shortcodes/ref/
 ---
 
 # Internal and cross links

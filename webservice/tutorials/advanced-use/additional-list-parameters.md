@@ -1,8 +1,6 @@
 ---
 title: Additional list parameters
 weight: 1
-aliases:
-  - /1.7/development/webservice/tutorials/advanced-use/additional-list-parameters/
 ---
 
 # Additional list parameters

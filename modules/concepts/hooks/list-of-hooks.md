@@ -1,8 +1,6 @@
 ---
 title: List of hooks
 weight: 2
-aliases:
-  - /1.7/modules/concepts/hooks/list_of_hooks
 ---
 
 # List of hooks in PrestaShop 1.7

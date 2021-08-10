@@ -2,8 +2,6 @@
 title: Manage Multishop
 menuTitle: Multishop
 weight: 5
-aliases:
-  - /1.7/development/webservice/tutorials/advanced-use/manage-multishop/
 ---
 
 # Manage Multishop

@@ -1,8 +1,6 @@
 ---
 title: Head
 weight: 20
-aliases:
-  - /themes/templates/015-head.html
 ---
 
 # Head

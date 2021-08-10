@@ -1,7 +1,5 @@
 ---
 title: Right-To-Left languages
-aliases:
-  - /1.7/development/rtl
 ---
 
 # Right-to-Left languages
@@ -34,4 +32,4 @@ If you changed something in your Back Office theme and you want your change to b
 
 {{< figure src="../img/rtl-edit-language.png" title="Toggling RTL for a language" >}}  
 
-[rtl-support]: {{< ref "/1.7/themes/reference/rtl" >}}
+[rtl-support]: {{< ref "/8/themes/reference/rtl" >}}

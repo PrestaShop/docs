@@ -2,8 +2,6 @@
 title: Delete a resource
 menuTitle: 6 - Delete a resource
 weight: 6
-aliases:
-  - /1.7/development/webservice/tutorials/prestashop-webservice-lib/delete-resource/
 ---
 
 # Delete a resource

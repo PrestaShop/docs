@@ -8,7 +8,7 @@ weight: 2
 Have you ever wondered how the PrestaShop Addons Team proceeds with the validation ?
 
 We are going to show you how to spare time so that you can pretty much "validate" your own module before submitting it to the Addons Marketplace.
-First you might want to read the [Technical Tools]({{< ref "technical-tools.md" >}}) and the [Good Practices]({{< ref "/1.7/modules/creation/good-practices" >}}). 
+First you might want to read the [Technical Tools]({{< ref "technical-tools.md" >}}) and the [Good Practices]({{< ref "/8/modules/creation/good-practices" >}}). 
 
 ### 1. The Basics
 

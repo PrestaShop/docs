@@ -1,8 +1,6 @@
 ---
 title: Release
 chapter: true
-aliases:
-- /1.7/release/
 ---
 
 # Releasing PrestaShop software

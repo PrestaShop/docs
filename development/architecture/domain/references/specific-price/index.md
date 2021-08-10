@@ -8,10 +8,10 @@ title: SpecificPrice domain
 
 #### AddSpecificPriceCommand {id="AddSpecificPriceCommand"}
 
-{{%  include-md "content/1.7/development/architecture/domain/references/specific-price/_partials/add-specific-price-command.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/specific-price/_partials/add-specific-price-command.md" %}}
 #### DeleteSpecificPriceByCartProductCommand {id="DeleteSpecificPriceByCartProductCommand"}
 
-{{%  include-md "content/1.7/development/architecture/domain/references/specific-price/_partials/delete-specific-price-by-cart-product-command.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/specific-price/_partials/delete-specific-price-by-cart-product-command.md" %}}
 
 ### SpecificPrice Queries
 

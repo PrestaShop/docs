@@ -8,7 +8,7 @@ title: CustomerMessage domain
 
 #### AddOrderCustomerMessageCommand {id="AddOrderCustomerMessageCommand"}
 
-{{%  include-md "content/1.7/development/architecture/domain/references/customer-message/_partials/add-order-customer-message-command.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/customer-message/_partials/add-order-customer-message-command.md" %}}
 
 ### CustomerMessage Queries
 

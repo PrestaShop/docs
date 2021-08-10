@@ -1,8 +1,6 @@
 ---
 title: Notifications
 weight: 30
-aliases:
-  - /themes/templates/050-notifications.html
 ---
 
 # Notifications

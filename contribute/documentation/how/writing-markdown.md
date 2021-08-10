@@ -1,8 +1,6 @@
 ---
 title: Writing Markdown
 weight: 30
-aliases:
-    - /1.7/documentation/how/writing-markdown/
 ---
 
 # Writing Markdown

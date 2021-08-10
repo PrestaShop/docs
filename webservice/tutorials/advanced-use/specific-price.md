@@ -1,8 +1,6 @@
 ---
 title: Specific prices
 weight: 3
-aliases:
-  - /1.7/development/webservice/tutorials/advanced-use/specific-price/
 ---
 
 # Specific prices

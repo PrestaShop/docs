@@ -2,14 +2,12 @@
 title: "Tutorial: Creating your first module"
 menuTitle: "Tutorial"
 weight: 1
-aliases:
-  - /module/05-CreatingAPrestaShop17Module/02-CreatingAFirstModule.html
 ---
 
 # Tutorial: Creating your first module
 
 {{% notice note %}}
-Before you start writing code for your PrestaShop module, we recommend reading PrestaShop's [Coding standards]({{< ref "/1.7/development/coding-standards" >}}). Configuring your IDE hints or using [automated tools](https://github.com/PrestaShop/php-dev-tools) can help you make sure you follow the project's standards properly.
+Before you start writing code for your PrestaShop module, we recommend reading PrestaShop's [Coding standards]({{< ref "/8/development/coding-standards" >}}). Configuring your IDE hints or using [automated tools](https://github.com/PrestaShop/php-dev-tools) can help you make sure you follow the project's standards properly.
 {{% /notice %}}
 
 Let's create a simple first module; this will enable us to better describe its structure. We will name it **"My module"**.
@@ -275,7 +273,7 @@ $mySettings = unserialize(Configuration::get('MYMODULE_SETTINGS'));
 As you can see, this in a very useful and easy-to-use object, and you will certainly use it in many situations. Most native modules use it too for their own settings.
 
 {{% notice note %}}
-You can read more about this component in [Configuration storage]({{< ref "/1.7/development/components/configuration" >}}).
+You can read more about this component in [Configuration storage]({{< ref "/8/development/components/configuration" >}}).
 {{% /notice %}}
 
 ### Retrieving external values from the ps_configuration data table
@@ -353,5 +351,5 @@ exit;
 
 {{< children />}}
 
-[existing-tab-sections]: {{< ref "/1.7/modules/concepts/module-class/#tab" >}}
-[multistore]: {{< ref "/1.7/development/multistore/" >}}
+[existing-tab-sections]: {{< ref "/8/modules/concepts/module-class/#tab" >}}
+[multistore]: {{< ref "/8/development/multistore/" >}}

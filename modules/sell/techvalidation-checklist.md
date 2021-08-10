@@ -92,7 +92,7 @@ Each module has to be uploaded on the marketplace separately, even if they only 
 
 To prevent someone to reach the content of a repository without, a file `index.php` has to be found in each folder.
 
-As we deal with [a security risk]({{< ref "/1.7/modules/creation#keeping-things-secure" >}}) on some environments, we strongly recommend you comply with this rule. [An "autoindex" tool](https://github.com/jmcollin/autoindex) allows you to add in each folder.
+As we deal with [a security risk]({{< ref "/8/modules/creation#keeping-things-secure" >}}) on some environments, we strongly recommend you comply with this rule. [An "autoindex" tool](https://github.com/jmcollin/autoindex) allows you to add in each folder.
 
 #### HTML code is written in templates
 

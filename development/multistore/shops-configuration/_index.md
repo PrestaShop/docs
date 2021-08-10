@@ -13,7 +13,7 @@ When multistore is disabled and you fetch a configuration value, you are in a **
 But what if you want to fetch a configuration value with more than one activated shop? This is where the **ShopConstraint** value object (VO) comes in handy, this is what you will use in order to specify which store(s) configuration value you are targeting.
 
 {{% notice note %}}
-If you don't know what is a value object, you will find out about it and its use in the [value objects]({{< ref "/1.7/development/architecture/domain/value_objects" >}}) documentation.
+If you don't know what is a value object, you will find out about it and its use in the [value objects]({{< ref "/8/development/architecture/domain/value_objects" >}}) documentation.
 {{% /notice %}}
 
 ## Usage

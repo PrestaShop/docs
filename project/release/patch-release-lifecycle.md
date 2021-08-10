@@ -1,8 +1,6 @@
 ---
 title: Patch release lifecycle
 weight: 1
-aliases:
-- /1.7/release/patch-release-lifecycle/
 ---
 
 # Patch release lifecycle

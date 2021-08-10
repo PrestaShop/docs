@@ -6,7 +6,7 @@ title: Multistore
 
 ## Usage of configuration variables
 
-As indicated in the [Configuration]({{< ref "/1.7/development/components/configuration" >}}) section, some of the methods from the Configuration object have three optional parameters, which make it possible to target any other existing store on the current PrestaShop installation: `id_shop`, `id_shop_group` and `id_lang`.
+As indicated in the [Configuration]({{< ref "/8/development/components/configuration" >}}) section, some of the methods from the Configuration object have three optional parameters, which make it possible to target any other existing store on the current PrestaShop installation: `id_shop`, `id_shop_group` and `id_lang`.
 
 While these parameters can prove useful when having to handle multiple specific and known stores from one of the presented Configuration method, they are not recommended for general usage. Your configuration code should only target the current store using the current Context, which every `Configuration` method does automatically.
 

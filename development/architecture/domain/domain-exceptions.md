@@ -1,8 +1,6 @@
 ---
 title: Domain exceptions
 weight: 30
-aliases:
-- /1.7/development/architecture/domain-exceptions/
 ---
 
 # Domain exceptions

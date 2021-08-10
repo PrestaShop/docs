@@ -1,9 +1,6 @@
 ---
 title: Templates & layouts
 weight: 10
-aliases:
-  - /1.7/themes/reference/templtes/templates_layouts
-  - /themes/templates/010-templates-layouts.html
 ---
 
 # Templates & layouts

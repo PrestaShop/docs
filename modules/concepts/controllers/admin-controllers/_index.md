@@ -175,4 +175,4 @@ your_route_name:
 
 {{< minver v="1.7.5" title="true" >}}
 
-It is safer to define permissions required to use your controller, this can be configured using the `@AdminSecurity` annotation and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#security" >}}).
+It is safer to define permissions required to use your controller, this can be configured using the `@AdminSecurity` annotation and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/8/development/architecture/migration-guide/controller-routing.md#security" >}}).

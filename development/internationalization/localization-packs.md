@@ -1,9 +1,5 @@
 ---
 title: Localization packs
-aliases:
-  - /1.7/development/activate_a_language_in_prestashop
-  - /1.7/development/activate-a-language-in-prestashop
-  - /1.7/development/internationalization/activate-a-language-in-prestashop
 ---
 
 # Localization packs

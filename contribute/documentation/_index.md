@@ -3,8 +3,6 @@ title: How to improve the documentation
 menuTitle: Improve the documentation
 weight: 40
 chapter: true
-aliases:
-    - /1.7/documentation/
 ---
 
 # Hot to improve the documentation

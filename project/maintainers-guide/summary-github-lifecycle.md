@@ -78,11 +78,11 @@ If the Pull Request is eligible, maintainers can evaluate if the changes brought
 
 If one "Waiting for ..." label has been applied, the team in charge will process the Pull Request and then add a "... approved" label. For example if Product team validates the new behavior implemented in a Pull Request, they will remove the "Waiting for PM" label and add the "PM approved" label instead.
 
-There are some automated bots running on GitHub that will help maintainers to label the Pull Requests. For example Prestonbot is able to extract the new wordings and add the "Waiting for wording" label. You can read more about them [here]({{< ref "/1.7/contribute/contribution-process/how-pull-requests-are-processed.md" >}}).
+There are some automated bots running on GitHub that will help maintainers to label the Pull Requests. For example Prestonbot is able to extract the new wordings and add the "Waiting for wording" label. You can read more about them [here]({{< ref "/8/contribute/contribution-process/how-pull-requests-are-processed.md" >}}).
 
 ### About the code
 
-If the Pull Request is validated and there are no more "Waiting for ..." labels, then it awaits a [code review]({{< ref "/1.7/project/maintainers-guide/reviewing-pull-requests.md" >}}). Maintainers provide this code review.
+If the Pull Request is validated and there are no more "Waiting for ..." labels, then it awaits a [code review]({{< ref "/8/project/maintainers-guide/reviewing-pull-requests.md" >}}). Maintainers provide this code review.
 
 A maintainer can choose to
 - Ask for changes in the Pull Request (which blocks merging)

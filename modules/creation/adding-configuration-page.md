@@ -1,9 +1,6 @@
 ---
 title: Adding a configuration page
 weight: 4
-aliases:
-  - /1.7/modules/creation/adding_configuration_page
-  - /module/05-CreatingAPrestaShop17Module/04-AddingAConfigurationPage.html
 ---
 
 # Adding a configuration page

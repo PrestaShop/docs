@@ -97,7 +97,7 @@ If any of above verifications fails, it MUST be addressed in a Pull Requests and
 {{% /notice %}}
 
 [security-checker]: https://github.com/fabpot/local-php-security-checker
-[register-new-hook]: {{< ref "/1.7/development/components/hook/register-new-hook.md" >}}
+[register-new-hook]: {{< ref "/8/development/components/hook/register-new-hook.md" >}}
 [fos-js-routing]: https://github.com/FriendsOfSymfony/FOSJsRoutingBundle
-[how-to-build-assets]: {{< ref "/1.7/development/compile-assets.md" >}}
+[how-to-build-assets]: {{< ref "/8/development/compile-assets.md" >}}
 [nightly-build-board]: https://nightly.prestashop.com/

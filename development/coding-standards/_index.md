@@ -1,8 +1,6 @@
 ---
 title: Coding standards
 weight: 10
-aliases:
-  - /1.7/development/coding_standards
 ---
 
 # Coding standards
@@ -71,9 +69,8 @@ Particular attention should be paid to documenting arrays and array structures:
 - If the array is actually a struct (i.e. an associative array whose schema is known), then it MUST be described it using the [array shape annotation](https://phpstan.org/writing-php-code/phpdoc-types#array-shapes), like `array{'foo': int, "bar": string}`.
 
 ### Strict typing
-{{< minver v="1.7.7" title="true" >}}
 
-Starting on 1.7.7, all new PHP code should be strictly typed.
+All new PHP code should be strictly typed.
 
 This means that all new methods **must** specify a type for all parameters as well as the return type. Similarly, all new classes except interfaces must enforce type strictness via `declare`:
 
@@ -108,25 +105,25 @@ namespace PrestaShop\Awesome\Path;
 
 @trigger_error(
     sprintf(
-        '%s is deprecated since version 1.7.8.0 and will be removed in the next major version.',
+        '%s is deprecated since version 8.0 and will be removed in the next major version.',
         MyClass::class
     ),
     E_USER_DEPRECATED
 );
 
 /**
- * @deprecated Since 1.7.8.0 and will be removed in the next major.
+ * @deprecated Since 8.0 and will be removed in the next major.
  */
 class MyClass
 {
     /**
-     * @deprecated Since 1.7.6.0, use AnotherClass::someNewMethod() instead.
+     * @deprecated Since 8.0, use AnotherClass::someNewMethod() instead.
      */
     public function someOldMethod()
     {
         @trigger_error(
             sprintf(
-                '%s is deprecated since version 1.7.6.0. Use %s instead.',
+                '%s is deprecated since version 8.0. Use %s instead.',
                 __METHOD__,
                 AnotherClass::class . '::someNewMethod()'
             ),
@@ -140,7 +137,7 @@ If you need to deprecate services, you can use the `deprecated` key for the serv
 ```yml
     awesome.path.myclass:
         class: 'PrestaShop\Awesome\Path\MyClass'
-        deprecated: 'The "%service_id%" service is deprecated since 1.7.8.0 and will be removed in next major.'
+        deprecated: 'The "%service_id%" service is deprecated since 8.0 and will be removed in next major.'
         public: true
 ```
 
@@ -148,7 +145,7 @@ If you need to deprecate services, you can use the `deprecated` key for the serv
 
 Javascript files MUST follow the [Airbnb Javascript style guide](https://github.com/airbnb/javascript).
 
-Starting on {{< minver v="1.7.8" >}}, you can run the linter to help you comply with these coding standards:
+You can run the linter to help you comply with these coding standards:
 
 ```bash
 npm run lint-fix
@@ -160,9 +157,9 @@ Mark is the creator of the [Bootstrap framework](https://getbootstrap.com/).
 
 To help developers to comply with these conventions, [Stylelint](https://stylelint.io/), a stylesheet linter, has been configured in the PrestaShop project. You can find the configuration file [on this repository](https://github.com/PrestaShop/stylelint-config).
 
-Same as if you want to [compile assets]({{< ref "/1.7/development/compile-assets" >}}), you need NodeJS and NPM to run Stylelint.
+Same as if you want to [compile assets]({{< relref "/8/development/compile-assets" >}}), you need NodeJS and NPM to run Stylelint.
 
-Starting on {{< minver v="1.7.8" >}}, you can run the linter like this:
+You can run the linter like this:
 
 ```bash
 npm run scss-lint

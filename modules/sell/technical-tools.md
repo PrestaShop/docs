@@ -84,7 +84,7 @@ What this means for any shop upgrade is that in order for a PS 1.6 to migrate to
 - Details on every changes concerning modules on [this article of the Build devblog](https://build.prestashop.com/news/module-development-changes-in-17/);
 - The [Theme Developer documentation]({{< ref "1.7/themes" >}}) is being written in the open. Don't hesitate to contribute or ask questions!
 - Payment modules:
-  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](https://devdocs.prestashop.com/1.7/modules/payment/)!
+  - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation]({{ relref "/8/modules/payment/" }})!
 
 And of course [our 1.7 Project FAQ](https://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
 

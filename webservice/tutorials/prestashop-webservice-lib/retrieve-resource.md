@@ -2,8 +2,6 @@
 title: Retrieve a resource
 menuTitle: 3 - Retrieve a resource
 weight: 3
-aliases:
-  - /1.7/development/webservice/tutorials/prestashop-webservice-lib/retrieve-resource/
 ---
 
 # Retrieve a resource

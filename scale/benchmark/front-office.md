@@ -1,9 +1,6 @@
 ---
 title: Front-Office Benchmark
 weight: 2
-aliases:
-  - /1.7/benchmark/front_office
-  - /1.7/benchmark/front-office
 ---
 
 How to benchmark your PrestaShop Shop (Front-office)
@@ -11,7 +8,7 @@ How to benchmark your PrestaShop Shop (Front-office)
 
 ## Automatically benchmark with `Gatling` (recommended)
 
-Follow instruction on **[Back-Office benchmark page](https://devdocs.prestashop.com/1.7/scale/benchmark/back-office/)** to get a pre-populated shop and to run Gatling scenarios on it.
+Follow instruction on **[Back-Office benchmark page]({{ relref "/8/scale/benchmark/back-office/" }})** to get a pre-populated shop and to run Gatling scenarios on it.
 
 **[PrestaShop performance project](https://github.com/PrestaShop/performance-project)** on Github includes Front-Office scenarios you can edit to get your own scenarios running.
 

@@ -15,7 +15,7 @@ add or remove grid feature while loading only necessary javascript code. In this
 
 ## Getting started
 To start we will need to have a plain grid already created in php side
-(you can find more docs about grid in [The Grid component page]({{< ref "/1.7/development/components/grid/" >}}).
+(you can find more docs about grid in [The Grid component page]({{< ref "/8/development/components/grid/" >}}).
 After following the Grid documentation directions you should now have a fully working php grid.
 As an example we will use a grid that display taxes items.
 
@@ -155,7 +155,7 @@ $(() => {
   taxGrid.addExtension(new BulkActionCheckboxExtension());
 });
 ```
-The last thing to do is to run the compiler. More about compiler and npm commands here: https://devdocs.prestashop.com/1.7/development/compile-assets/.
+The last thing to do is to run the compiler. [More about compiler and npm commands here]({{ relref "/8/development/compile-assets" }}).
 
 In our example we open command line, cd to `{{Our prestashop root directory}}/admin-dev/themes/new-theme` and type the following command: 
 

@@ -1,8 +1,6 @@
 ---
 title: Shortcodes
 menuTitle: Hugo functions (Shortcodes)
-aliases:
-    - /1.7/documentation/shortcodes/
 ---
 
 # Shortcodes

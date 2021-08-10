@@ -1,9 +1,6 @@
 ---
 title: Image management
 weight: 2
-aliases:
-  - /1.7/development/webservice/tutorials/advanced-use/image-management/
-  - /1.7/development/webservice/tutorials/change_product_image/
 ---
 
 # Image management

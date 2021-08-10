@@ -1,9 +1,6 @@
 ---
 title: Displaying content on the front office
 weight: 5
-aliases:
-  - /1.7/modules/creation/displaying_content_in_front_office
-  - /module/05-CreatingAPrestaShop17Module/05-DisplayingContentOnTheFrontOffice.html
 ---
 
 Displaying content on the front office

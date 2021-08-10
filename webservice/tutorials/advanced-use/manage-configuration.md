@@ -2,8 +2,6 @@
 title: Manage Configuration
 menuTitle: Configuration
 weight: 4
-aliases:
-  - /1.7/development/webservice/tutorials/advanced-use/manage-configuration/
 ---
 
 # Manage Configuration

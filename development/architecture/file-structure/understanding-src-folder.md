@@ -1,8 +1,6 @@
 ---
 title: Understanding the "src" folder
 weight: 30
-aliases:
-- /1.7/development/architecture/understanding-src-folder/
 ---
 
 # Understanding the "src" folder

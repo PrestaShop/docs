@@ -1,9 +1,6 @@
 ---
 title: Release a native PrestaShop module
 weight: 80
-aliases:
-- /1.7/release/release-a-native-PS-module/
-- /1.7/project/release/release-a-new-version-of-prestashop/
 ---
 
 # Release a new version of a native PrestaShop module
@@ -92,4 +89,4 @@ PrestaShop instances are able to download new versions of modules through the Ad
 When a `master` branch of one of these modules receives an update, Addons API will update the ZIP it delivers with the new content within 24 hours.
 
 
-[contribution-guidelines]: {{< ref "/1.7/contribute/contribution-guidelines/project-modules" >}}
+[contribution-guidelines]: {{< ref "/8/contribute/contribution-guidelines/project-modules" >}}
