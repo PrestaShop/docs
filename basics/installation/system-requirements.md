@@ -1,5 +1,5 @@
 ---
-title: System requirements for PrestaShop 1.7
+title: System requirements for PrestaShop 8
 menuTitle: System requirements
 weight: 10
 ---
@@ -24,13 +24,13 @@ weight: 10
 }
 </style>
 
-# System requirements for PrestaShop 1.7
+# System requirements for PrestaShop 8
 
 PrestaShop needs the following server configuration in order to run:
 
 * **System:** Unix, Linux or Windows.
 * **Web server:** Apache Web Server 2.2 or any later version.
-* **PHP:** We recommend PHP 7.1 or later. See the compatibility chart below for more details. 
+* **PHP:** We recommend PHP 7.2.5 or later. See the compatibility chart below for more details. 
 * **MySQL:** 5.6 minimum, a recent version is recommended.
 * **Server RAM:** The more the merrier. We recommend setting the memory allocation per script (`memory_limit`) to a minimum of `256M`.
 
@@ -62,81 +62,17 @@ You'll get a web page detailing requirements and recommendations, and how your s
     </tr>
     <tr class="h-version-titles">
       <th>PrestaShop Version</th>
-      <th>&le;&nbsp;5.1</th>
-      <th>5.2</th>
-      <th>5.3</th>
-      <th>5.4</th>
-      <th>5.5</th>
-      <th>5.6</th>
-      <th>7.0</th>
-      <th>7.1</th>
+      <th>&le;&nbsp;7.1</th>
       <th>7.2</th>
       <th>7.3</th>
       <th>7.4</th>
-      <th>&ge;&nbsp;8.0</th>
+      <th>8.0</th>
+      <th>&ge;&nbsp;8.1</th>
     </tr>
   </thead>
 <tbody>
   <tr>
-    <td>1.6.1.x</td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes">
-      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
-      <span class="sr-only">Recommended version</span>
-    </td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-  </tr>
-  <tr>
-    <td>1.7.0 ~ 1.7.3</td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes">
-      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
-      <span class="sr-only">Recommended version</span>
-    </td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-  </tr>
-  <tr>
-    <td>1.7.4</td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes"><span class="sr-only">Yes</span></td>
-    <td class="support-yes">
-      <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
-      <span class="sr-only">Recommended version</span>
-    </td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-  </tr>
-  <tr>
-    <td>1.7.5 ~ 1.7.6</td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
+    <td>8.0</td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
@@ -146,45 +82,7 @@ You'll get a web page detailing requirements and recommendations, and how your s
       <span class="sr-only">Recommended version</span>
     </td>
     <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
-    <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
-  <tr>
-      <td>1.7.7</td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-yes"><span class="sr-only">Yes</span></td>
-      <td class="support-yes"><span class="sr-only">Yes</span></td>
-      <td class="support-yes">
-        <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
-        <span class="sr-only">Recommended version</span>
-      </td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-    </tr>
-  <tr>
-      <td>1.7.8</td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-      <td class="support-yes"><span class="sr-only">Yes</span></td>
-      <td class="support-yes"><span class="sr-only">Yes</span></td>
-      <td class="support-yes"><span class="sr-only">Yes</span></td>
-      <td class="support-yes">
-        <i class="fa fa-check" aria-hidden="true" title="Recommended version"></i>
-        <span class="sr-only">Recommended version</span>
-      </td>
-      <td class="support-no"><span class="sr-only">No</span></td>
-    </tr>
 </tbody>
 </table>
 
