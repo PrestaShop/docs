@@ -5,7 +5,7 @@ name: 'Update DevDocs Site'
 on:
     push:
         branches:
-            - 1.7.x
+            - 8.x
 
     # Allows you to run this workflow manually from the Actions tab
     workflow_dispatch:
