@@ -29,6 +29,7 @@ Here's the typical directory structure of a PrestaShop install:
 ├── override
 ├── pdf
 ├── src
+├── templates
 ├── tests
 ├── tests-legacy
 ├── themes
@@ -70,7 +71,7 @@ It contains the following subdirectories:
 
 - `/config`: configuration files for database, parameters, services, etc.
 - `/logs`: execution logs
-- `/Resources`: different resources for the software, most notably the `/translations` subdirectory which contains translation resources for all the installed languages.
+- `/Resources`: different resources for the software.
 - `/test`: reserved
 
 This directory also includes the `AppKernel.php` file, which configures the Symfony application.
@@ -190,6 +191,10 @@ Contains all the template files (`.tpl`) related to PDF file generation (invoice
 
 Contains the new architecture files (**Core**, **Adapter** and **PrestaShop Bundle**). To learn more, see [Understanding the "src" folder]({{< relref "understanding-src-folder" >}}). 
 
+### /templates
+
+Contains Twig templates for the Symfony bundles.
+
 ### /tests
 
 Contains automated tests. This directory is not included in release packages.
@@ -223,7 +228,7 @@ It contains the following subdirectories:
 
 ### /translations
 
-Contains zip packages for the translation packs you downloaded.
+Contains translation resources for all the installed languages, including zip packages for any translation packs you have downloaded.
 
 ### /travis-scripts
 
