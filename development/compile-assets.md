@@ -15,8 +15,7 @@ Here is a list of compatibility:
 |---------------------|-----------------|
 | > 1.7.7             | 8.x and older   |
 | 1.7.7               | 10.x            |
-| 1.7.8               | 12.x            |
-| 8.x                 | 14.x            |
+| 1.7.8               | 12.x and 14.x   |
 
 We use [Webpack](https://webpack.js.org/) to compile assets. PrestaShop is using NodeJS ([get it here](https://nodejs.org/)), NPM will take care of it all.
 
