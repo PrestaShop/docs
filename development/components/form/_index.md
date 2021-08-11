@@ -1,8 +1,7 @@
 ---
-title: Form component and Form theme
-menuTitle: Form component and Form theme
+title: The Form component
 ---
 
-# Form component and Form theme
+# The Form component
 
 {{% children %}}
