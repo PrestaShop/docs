@@ -1,12 +1,8 @@
 ---
 title: Form Theme
-menuTitle: Form Theme
-weight: 10
 ---
 
 # Form Theme
-
-## Form Theme
 
 Symfony's [Form feature][sf-form-component] leverages Form Types to detail how your forms are supposed to behave in your application, handle validation, and mapping the forms to your data structures. In addition to that, Symfony forms can also render themselves to HTML using a FormRenderer and Twig.
 
@@ -22,6 +18,5 @@ The code below renders a whole form using Twig:
 
 ## Read more
 
-{{% children %}}
-
+{{% children /%}}
 
