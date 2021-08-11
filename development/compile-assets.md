@@ -13,7 +13,7 @@ Here is a list of compatibility:
 
 | PrestaShop Versions | NodeJS Versions |
 |---------------------|-----------------|
-| > 1.7.7             | 8.x and older   |
+| under 1.7.7         | 8.x and older   |
 | 1.7.7               | 10.x            |
 | 1.7.8               | 12.x and 14.x   |
 
