@@ -19,7 +19,7 @@ Themes are explored in full in the [Themes]({{< ref "/8/themes" >}}) section.
 Modules, hooks and the override system are explored in this page and in the [Modules]({{< ref "/8/modules" >}}) section.
 
 {{% notice note %}}
-By default, PrestaShop is provided with more than 100 modules, enabling you to launch your online business quickly and for free.
+By default, PrestaShop is provided with more than 50 modules, enabling you to launch your online business quickly and for free.
 
 More than 3000 modules are also available [on the Addons marketplace](https://addons.prestashop.com/en/2-modules-prestashop). These additional modules were built by the PrestaShop company or members of the PrestaShop community, and are sold at affordable prices. As a developer, you can also share your modules on this site, and receive 70% of the amounts associated with the sale of your creations. [Sign up now!](https://auth.prestashop.com/en/register?lang=en)
 {{% /notice %}}
