@@ -1330,7 +1330,7 @@ displayAdminGridTableBefore
 
     This hook adds new blocks before Grid component table.
 
-    Located in: src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
+    Located in: templates/bundles/PrestaShopBundle/views/Admin/Common/Grid/Blocks/table.html.twig
 
     Parameters:
     ```php
@@ -1348,7 +1348,7 @@ displayAdminGridTableAfter
     
     This hook adds new blocks after Grid component table.
 
-    Located in: src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
+    Located in: templates/bundles/PrestaShopBundle/views/Admin/Common/Grid/Blocks/table.html.twig
 
     Parameters:
     ```php
@@ -1407,7 +1407,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
     Located in:
 
         - admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
-        - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+        - templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -1445,7 +1445,7 @@ displayAdminOrderTabContent
 
     This hook displays new tab contents on the order view page
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
 
     Parameters:
     ```php
@@ -1470,7 +1470,7 @@ displayAdminOrderMain
 
     This hook displays content in the order view page in the main column under the details view
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -1487,7 +1487,7 @@ displayAdminOrderMainBottom
 
     This hook displays content in the order view page at the bottom of the main column
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -1512,7 +1512,7 @@ displayAdminOrderSide
 
     This hook displays content in the order view page in the side column under the customer view
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -1529,7 +1529,7 @@ displayAdminOrderSideBottom
 
     This hook displays content in the order view page at the bottom of the side column
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -1567,7 +1567,7 @@ displayAdminOrderTabLink
 
     This hook displays new tab links on the order view page
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
 
     Parameters:
     ```php
@@ -1583,7 +1583,7 @@ displayAdminProductsExtra
     
 displayAdminProductsCombinationBottom
 : 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/Include/form_combination.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/Include/form_combination.html.twig
 
     
 displayAdminProductsMainStepLeftColumnBottom
@@ -1591,7 +1591,7 @@ displayAdminProductsMainStepLeftColumnBottom
     Display new elements in back office product page, left column of
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/form.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 
     
 displayAdminProductsMainStepLeftColumnMiddle
@@ -1599,7 +1599,7 @@ displayAdminProductsMainStepLeftColumnMiddle
     Display new elements in back office product page, left column of
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/form.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 
     
 displayAdminProductsMainStepRightColumnBottom
@@ -1607,7 +1607,7 @@ displayAdminProductsMainStepRightColumnBottom
     Display new elements in back office product page, right column of
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/form.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 
     
 displayAdminProductsOptionsStepBottom
@@ -1615,7 +1615,7 @@ displayAdminProductsOptionsStepBottom
     Display new elements in back office product page, Options tab
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/form.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
     
 displayAdminProductsOptionsStepTop
@@ -1623,7 +1623,7 @@ displayAdminProductsOptionsStepTop
     Display new elements in back office product page, Options tab
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/form.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
     
 displayAdminProductsPriceStepBottom
@@ -1631,7 +1631,7 @@ displayAdminProductsPriceStepBottom
     Display new elements in back office product page, Price tab
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/form.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
     
 displayAdminProductsQuantitiesStepBottom
@@ -1639,7 +1639,7 @@ displayAdminProductsQuantitiesStepBottom
     Display new elements in back office product page, Quantities/Com
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/form.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
     
 displayAdminProductsSeoStepBottom
@@ -1647,7 +1647,7 @@ displayAdminProductsSeoStepBottom
     Display new elements in back office product page, SEO tab
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/Include/form_seo.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/Include/form_seo.html.twig
 
     
 displayAdminProductsShippingStepBottom
@@ -1655,7 +1655,7 @@ displayAdminProductsShippingStepBottom
     Display new elements in back office product page, Shipping tab
 This hook launches modules when the back office product page is displayed
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/Include/form_shipping.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/Include/form_shipping.html.twig
 
     
 displayAdminStatsModules
@@ -1977,8 +1977,8 @@ displayDashboardToolbarIcons
 This hook launches modules when the back office with dashboard is displayed
 
     Located in: 
-	- /src/PrestaShopBundle/Resources/views/Admin/Configure/AdvancedParameters/LogsPage/Blocks/actions.html.twig
-	- /src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
+	- /templates/bundles/PrestaShopBundle/views/Admin/Configure/AdvancedParameters/LogsPage/Blocks/actions.html.twig
+	- /templates/bundles/PrestaShopBundle/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
 
 
 displayDashboardToolbarTopMenu
@@ -2092,7 +2092,7 @@ displayAdminOrderTop
 
     This hook displays content at the top of the order view page
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/view.html.twig
 
     Parameters:
     ```php
@@ -2219,7 +2219,7 @@ displayOrderPreview
 
     Displayed at the bottom of the order's preview on the order's listing page in Back Office
 
-    Located in: /src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig
+    Located in: /templates/bundles/PrestaShopBundle/views/Admin/Sell/Order/Order/preview.html.twig
     
     Parameters:
     ```php
