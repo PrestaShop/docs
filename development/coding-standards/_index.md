@@ -172,7 +172,7 @@ npm run scss-fix
 ```
 
 ## TypeScript
-Starting on {{< minver v="1.7.9" >}}, most of `admin-dev/themes/new-theme/js` files have been migrated to TypeScript. This provide a better maintainability by using types on most of our classes and functions. 
+Most of `admin-dev/themes/new-theme/js` files are using TypeScript. This provide a better maintainability by using types on most of our classes and functions. 
 
 You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
 
