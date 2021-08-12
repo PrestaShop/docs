@@ -1,6 +1,5 @@
 ---
 title: Global JavaScript components
-weight: 70
 ---
 
 # Global JavaScript components
