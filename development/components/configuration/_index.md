@@ -1,6 +1,5 @@
 ---
 title: "Configuration storage"
-weight: 80
 ---
 
 # Configuration storage service
