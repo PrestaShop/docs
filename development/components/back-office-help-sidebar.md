@@ -1,6 +1,5 @@
 ---
 title: Back Office Help sidebar
-menuTitle: Back Office help sidebar
 ---
 
 # The Back Office Help sidebar

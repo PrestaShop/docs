@@ -1,6 +1,5 @@
 ---
 title: "Configuration storage"
-weight: 80
 aliases:
   - /1.7/modules/concepts/configuration/
 ---
