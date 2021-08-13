@@ -145,7 +145,7 @@ validateFields($die = true, $errorReturn = false)
 
 Thanks to the hooks, you can alter the Object Model or execute functions during the lifecycle of your models. Every hook receive an instance of the manipulated object model:
 
-{{< figure src="../../img/object-model-lifecycle.png" title="ObjectModel lifecycle" >}}
+{{< figure src="../../../img/object-model-lifecycle.png" title="ObjectModel lifecycle" >}}
 
 As an example, this is how you can retrieve information about a product when we delete it from the database:
 
