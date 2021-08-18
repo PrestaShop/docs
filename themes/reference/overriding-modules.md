@@ -11,7 +11,8 @@ When you write a theme, you often need to override the templates and assets comi
 Themes can override modules' assets (CSS and JavaScript only) by placing the corresponding file at a specific location.
 
 With PrestaShop 1.7, all module overriding code goes to the `modules` directory (in your module's own directory).
-Every PS 1.7 module developer should be aware of this change (introduced with PR 5020: https://github.com/PrestaShop/PrestaShop/pull/5020).
+
+This change was introduced with Pull Request [#5020](https://github.com/PrestaShop/PrestaShop/pull/5020).
 
 {{% notice note %}}
   If your asset override is empty, PrestaShop will load nothing (neither the module one nor your override). This is useful
@@ -97,7 +98,7 @@ The issue goes both ways: if you want to modify the `included-template.tpl` file
 {include file='./included-template.tpl'}
 ```
 
-PrestaShop 1.7 introduces a new cool way to include files in module templates. By using this method, all the expected rules will be followed:
+PrestaShop 1.7 introduces a new way to include files in module templates. By using this method, all the expected rules will be followed:
 
 ```smarty
 {include file='module:MODULE_NAME/views/templates/front/included-template.tpl'}
