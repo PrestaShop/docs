@@ -37,7 +37,7 @@ This document presents each tool, and how they can get you to become a more prod
 ## Before we get started: using the command line
 
 Many of the tools cited above are to be used through the command line -- launching commands in a text-based environment, line after line.
-While it has the advantage of being very powerful and easy to automate, it is also not intuitive and can be hard to grasp. Luckily, it only take a handful of commands to understand the power of the command line, and to adopt it for your everyday processes.
+While it has the advantage of being very powerful and easy to automate, it is also not intuitive and can be hard to grasp. Luckily, it only takes a handful of commands to understand the power of the command line, and to adopt it for your everyday processes.
 
 Now, as a web-designer, you might be more used to work with graphical interfaces, such as Dreamweaver (for the more WYSIWYG-inclined), or a full-featured text editor, such as Sublime Text, Atom or Brackets (among many other possibilities). Using the command line can supplement this.
 
