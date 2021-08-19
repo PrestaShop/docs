@@ -38,7 +38,9 @@ You can do this step using Git or directly on GitHub on the next step.
 - [Tag][git-tag] the new version:
     ```shell
     git tag 1.7.2.0 # replace by your version
-    git push --tags
+    git push 1.7.2.0 # replace by your version
+    # Alternatively (mainly to solve tag/branch name clashes), you could use
+    git push origin refs/tags/1.7.7.2
     ```
 
 ### Publish the release on GitHub
