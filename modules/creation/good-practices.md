@@ -69,7 +69,7 @@ menuTitle: Good practices
 - A merchant is likely to have a shop running on a different shop than yours. In case a module is using PHP extensions not installed by default by PHP,
 add a preliminary check before using them (I.e with `extension_loaded`). This prevents fatal errors to be thrown on shops on which these extensions aren’t enabled.
 
-- About files, we also recommend you to save them inside a `/var/modules/YOUR_MODULE/` directory. Putting them outside the `/modules` directory will help for scallable applications, and also to keep data if needed in case of you uninstall the module.
+- About files, we also recommend you to save them inside a `/var/modules/YOUR_MODULE/` directory. Putting them outside the `/modules` directory will help for scalable applications, and also to keep data if needed in case of you uninstall the module.
 
 ## A few recommendations for your themes
 
