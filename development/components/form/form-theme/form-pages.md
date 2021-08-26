@@ -1,9 +1,9 @@
 ---
-title: Form pages
-weight: 40
+title: List of forms
+weight: 20
 ---
 
-# Form pages
+# List of forms
 
 This section states when a page that contains a Symfony form has been migrated to Symfony, and when the form has been simplified to rely on the PrestaShop UI Kit Form theme.
 
@@ -66,4 +66,4 @@ International > Localization > Currencies > Add new / edit currency   | 1.7.6 | 
 International > Taxes > Taxes                                         | 1.7.6 | 1.7.8
 International > Taxes > Taxes > Add new / edit tax                    | 1.7.6 | 1.7.8
 
-**85%** of the forms have been refactored to rely fully on the UI Kit Form Theme in PrestaShop 1.7.8
+As of PrestaShop 1.7.8, **85%** of the forms have been refactored to rely fully on the UI Kit Form Theme.
