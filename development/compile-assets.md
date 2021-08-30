@@ -22,7 +22,7 @@ Here is a list of compatibility:
 
 If you are struggling to compile assets, you might be using the wrong NodeJs version. We strongly recommend you to use a version manager such as ['n'](https://www.npmjs.com/package/n) or [nvm](https://github.com/nvm-sh/nvm) so you can easily switch between NodeJS versions.
 
-On Windows, you'll probably need to install `windows-build-tools` using `npm i --global windows-build-tools` in order to make [node-gyp](https://github.com/nodejs/node-gyp#on-windows) working.
+On Windows, you'll probably need to install `windows-build-tools` using `npm i --global windows-build-tools` in order to [make node-gyp work](https://github.com/nodejs/node-gyp#on-windows).
 
 ## Assets that need to be compiled
 
