@@ -151,9 +151,7 @@ You can run the linter to help you comply with these coding standards:
 
 Most of `admin-dev/themes/new-theme/js` files are coded in TypeScript. Classes and functions in .ts files must be strictly typed. 
 
-You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
-
-The `tsconfig.json` and `webpack` configuration files are adding a `@PSTypes` relative path to the `admin-dev/themes/new-theme/js/types` folder, because `@types` is a reserved folder.
+You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder using the `@PSTypes` relative path and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
 
 ```bash
 npm run lint-fix
