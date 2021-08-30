@@ -147,6 +147,14 @@ Javascript files MUST follow the [Airbnb Javascript style guide](https://github.
 
 You can run the linter to help you comply with these coding standards:
 
+## TypeScript
+
+Most of `admin-dev/themes/new-theme/js` files are coded in TypeScript. Classes and functions in .ts files must be strictly typed. 
+
+You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
+
+The `tsconfig.json` and `webpack` configuration files are adding a `@PSTypes` relative path to the `admin-dev/themes/new-theme/js/types` folder, because `@types` is a reserved folder.
+
 ```bash
 npm run lint-fix
 ```
@@ -170,15 +178,6 @@ You can fix auto-fixable errors using this command:
 ```bash
 npm run scss-fix
 ```
-
-## TypeScript
-
-Most of `admin-dev/themes/new-theme/js` files are coded in TypeScript. Classes and functions in .ts files must be strictly typed. 
-
-You are able to get global types in the `admin-dev/themes/new-theme/js/types` folder and some types library are imported from npm using the `@types` namespace and automatically imported by TypeScript.
-
-The `tsconfig.json` and `webpack` configuration files are adding a `@PSTypes` relative path to the `admin-dev/themes/new-theme/js/types` folder, because `@types` is a reserved folder.
-
 
 ## License information
 
