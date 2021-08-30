@@ -20,7 +20,7 @@ Here is a list of compatibility:
 | 1.7.8               | 12.x and 14.x   |
 
 
-If you can't manage to compile assets, you may be using an older version of PrestaShop. We strongly recommend you ton install a package such as ['n'](https://www.npmjs.com/package/n?activeTab=versions) or [nvm](https://github.com/nvm-sh/nvm) to try with an older version of NodeJS.
+If you are struggling to compile assets, you might be using the wrong NodeJs version. We strongly recommend you to use a version manager such as ['n'](https://www.npmjs.com/package/n) or [nvm](https://github.com/nvm-sh/nvm) so you can easily switch between NodeJS versions.
 
 On Windows, you'll probably need to install `windows-build-tools` using `npm i --global windows-build-tools` in order to make [node-gyp](https://github.com/nodejs/node-gyp#on-windows) working.
 
