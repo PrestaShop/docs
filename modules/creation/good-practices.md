@@ -69,6 +69,8 @@ menuTitle: Good practices
 - A merchant is likely to have a shop running on a different shop than yours. In case a module is using PHP extensions not installed by default by PHP,
 add a preliminary check before using them (I.e with `extension_loaded`). This prevents fatal errors to be thrown on shops on which these extensions aren’t enabled.
 
+- If you need to store static files: we recommend putting temporary or cache files in prestashop's `/var/cache/<env>/modules/YOUR_MODULE/` directory, and static or shared files in prestashop's  `/var/modules/YOUR_MODULE/` directory. Writing in the `/modules` directory is not recommended, because doing so will make it harder to use your module in distributed environments. In addition, by storing files outside your module's directory, they are kept even if the module is uninstalled.
+
 ## A few recommendations for your themes
 
 - PrestaShop does not yet feature a "theme validator". However, each of the modules present in your theme must be tested via our [Validator](https://validator.prestashop.com).
