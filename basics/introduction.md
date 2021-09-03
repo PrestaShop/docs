@@ -105,7 +105,7 @@ Here is a small guide to help you navigate the software.
 
 The Front Office is an application being powered by PHP and Smarty.
 
-The backend relies on controllers you can find in directory `controllers/front`
+The backend relies on controllers you can find in the directory `controllers/front`
 and PrestaShop classes that contain the business logic, mainly from the `classes` folder.
 
 The views and the Javascript come from the installed theme that you will find in `themes/`. You can have multiple themes available on a shop but only one is enabled and in use.
@@ -141,7 +141,7 @@ The HTTP request you sent was received by the Back Office _Dispatcher_ which fou
 
 This `AdminCarriersController` returned an HTTP response containing an HTML document rendered by Smarty.
 
-The Admin controllers use a generic system to choose what Smarty template use. Generic templates to display forms and listings are available and the controller provides the structure configuration (for example it controls what columns and rows are displayed).
+The Admin controllers use a generic system to choose what Smarty template to use. Generic templates to display forms and listings are available and the controller provides the structure configuration (for example it controls what columns and rows are displayed).
 
 ### Visit a Symfony Back Office controller
 
