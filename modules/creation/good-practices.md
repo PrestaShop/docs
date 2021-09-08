@@ -26,6 +26,7 @@ menuTitle: Good practices
 - Don't go through directories using code and variables like: `dirname(__FILE__).'/../../config/config.inc.php'`
 - Don't edit the SQL structure of PrestaShop tables.
 - Don't obfuscate your code, making it not human readable.
+- Don’t use global variables to avoid any conflict. Also global variables are usually considered a bad practice.
 
 ## A few recommendations for your modules
 
