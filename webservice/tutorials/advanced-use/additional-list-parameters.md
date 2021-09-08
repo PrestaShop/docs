@@ -82,6 +82,10 @@ You can sort the expected result with the `sort` parameter
     'sort'  => '[lastname_ASC,id_DESC]'
 ];{{< /code >}} |
 
+{{% notice note %}}
+If you need to sort by the date field you need to add `&date=1` in your request.<br>Final request will be: `/api/customers/?sort=[date_add_DESC]&date=1`
+{{% /notice %}}
+
 ## Limit parameter
 
 You can define a limit to the expected result with the `limit` parameter (which may allow you to perform pagination)
