@@ -21,7 +21,7 @@ Users will be able to choose the layout for each page from the theme's settings 
   author:
     name: "John Doe"
     email: "pub@prestashop.com"
-    url: "https://www.prestashop.com"
+    url: "https://www.prestashop.com" # Avoided by PrestaShop Addons, don't add it if you want to distribute the theme on Addons Platform
   meta:
     compatibility:
         from: 1.7.0.0
