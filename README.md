@@ -7,6 +7,8 @@ This documentation is available at https://devdocs.prestashop.com/
 
 ## Contributing
 
+Test
+
 Contributions are more than welcome! [Find out how](https://devdocs.prestashop.com/8/contribute/documentation/how/).
 
 ## Rendering the site locally
