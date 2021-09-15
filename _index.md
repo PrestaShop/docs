@@ -10,3 +10,5 @@ chapter: true
 # PrestaShop 8 Documentation
 
 {{% children %}}
+
+Test
