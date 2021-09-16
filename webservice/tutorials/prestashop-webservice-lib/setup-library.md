@@ -39,7 +39,7 @@ The library is not PSR compliant and has no namespace therefore you need to upda
     },
     "autoload": {
         "files": [
-            "vendor/prestaShop/prestaShop-webservice-lib/PSWebServiceLibrary.php"
+            "vendor/prestashop/prestashop-webservice-lib/PSWebServiceLibrary.php"
         ]
     }
 }
