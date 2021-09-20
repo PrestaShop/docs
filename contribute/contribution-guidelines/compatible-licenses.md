@@ -9,7 +9,7 @@ The PrestaShop open source project is distributed under the [OSL 3.0 license][os
 
 ## Software dependencies
 
-Below is a list of the known compatible licenses that can accepted for software dependencies:
+Below is a list of the known compatible licenses that can be accepted for software dependencies:
 
 - AFL
 - Apache
@@ -32,7 +32,7 @@ Artwork (including but not limited to: icons, pictures and fonts) is usually dis
 - CC-by-sa
 - Unlicense
 
-In general, public domain is not acceptable, as it doesn't exist in all jurisdictions or countries.
+In general, public domain is not acceptable, as it does not exist in all jurisdictions or countries.
 
 ## Special clauses
 
