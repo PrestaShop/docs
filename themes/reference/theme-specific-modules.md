@@ -7,7 +7,7 @@ aliases:
 
 # Theme-specific modules
 
-When you write a theme, you may need to extend Prestashop features. You can do that by adding modules that will be tied to your theme and shipped with it.
+When you write a theme, you may need to extend PrestaShop features. You can do that by adding modules that will be tied to your theme and shipped with it.
 
 ## Adding a module
 
