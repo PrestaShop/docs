@@ -96,7 +96,7 @@ which generates the correct `<script>` tag.
 Save your file, and already you can hook your module's template into the
 theme, move it around and transplant it (even though there is not
 template file for the moment): go to the "Positions" page from the
-"Modules" menu in the back office, then click on the "Transplant a
+"Design" menu in the back office, then click on the "Transplant a
 module" button (top right of the page).
 
 In the transplantation form:
