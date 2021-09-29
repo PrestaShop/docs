@@ -13,11 +13,11 @@ PrestaShop uses [Webpack](https://webpack.js.org/) to compile assets, which requ
 
 You will need a different NodeJS version depending on the PrestaShop version you're working with:
 
-| PrestaShop Versions | NodeJS Versions |
-|---------------------|-----------------|
-| 1.7.0~1.7.6          | 8.x   |
-| 1.7.7               | 10.x            |
-| 1.7.8               | 12.x and 14.x   |
+| PrestaShop Versions | NodeJS Versions | NPM Versions |
+|---------------------|-----------------|--------------|
+| 1.7.0~1.7.6         | 8.x             | 5.x          |
+| 1.7.7               | 10.x            | 6.x          |
+| 1.7.8               | 12.x and 14.x   | 6.x          |
 
 
 If you are struggling to compile assets, you might be using the wrong NodeJs version. We strongly recommend you to use a version manager such as ['n'](https://www.npmjs.com/package/n) or [nvm](https://github.com/nvm-sh/nvm) so you can easily switch between NodeJS versions.
