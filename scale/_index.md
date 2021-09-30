@@ -17,7 +17,7 @@ Hopefully, there are plenty of advices in these pages that will help.
 
 Before doing anything to your PrestaShop setup, there are several things you need to know.
 
-First, be aware that there are several ways to scale any application, PrestaShop incuded.
+First, be aware that there are several ways to scale any application, PrestaShop included.
 
 ### Vertical scaling
 
