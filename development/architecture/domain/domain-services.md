@@ -7,7 +7,7 @@ weight: 10
 
 As mentioned in [CQRS principles]({{< relref "./cqrs" >}}), a `Command` is a representation of a single domain use case. To prevent `Command Handlers` from duplicating code and depending on each other, it is usually best to **avoid implementing the actual logic in the `Command Handler`** itself, and delegate it to `Domain Services` instead. These services are responsible for logic such as:
 
-1. Persisting the entities (a.k.a ObjectModel in current prestashop architecture) data into database
+1. Persisting the entities (a.k.a. ObjectModel in current prestashop architecture) data into database
 2. Validating the entities
 3. Performing various modifications of related data structures etc.
 
@@ -19,7 +19,7 @@ Here are some principles for implementing a Domain Service:
 {{% notice %}}
    Some reusable methods are present in [AbstractObjectModelRepository](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/Adapter/AbstractObjectModelRepository.php).
 {{% /notice %}}
-4. If `ObjectModel` contains fields validation, it MUST be validated by a dedicated validator class before persisting to database (e.g. when using `add`/`update`/`save` methods). It ensures that lagacy [PrestashopException](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/exception/PrestaShopException.php) is not bubbling up and each validation error can be identified by a dedicated exception or exception code.
+4. If `ObjectModel` contains fields validation, it MUST be validated by a dedicated validator class before persisting to database (e.g. when using `add`/`update`/`save` methods). It ensures that legacy [PrestashopException](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/exception/PrestaShopException.php) is not bubbling up and each validation error can be identified by a dedicated exception or exception code.
 {{% notice %}}
    Some reusable methods are present in [AbstractObjectModelValidator](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/Adapter/AbstractObjectModelValidator.php).
 {{% /notice %}}
