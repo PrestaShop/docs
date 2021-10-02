@@ -103,7 +103,7 @@ The folders are used this way:
 : Contains theme-specific modules. *This folder isn't present in the Classic Theme because it has no theme-specific modules.*
 
 **/modules/**
-: Contains the theme's version of native modules' template files.  
+: Contains the theme's version of native or third-parties modules' template files.  
   For instance, the `themes/classic/modules/ps_categorytree/views/templates/front/ps_categorytree.tpl` file replaces the Category module's own `modules/ps_categorytree/views/templates/front/ps_categorytree.tpl`.
 
 **/plugins/**
