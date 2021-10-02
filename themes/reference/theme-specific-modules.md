@@ -34,7 +34,7 @@ global_settings:
       - mymodule
 ```
 
-This will let Prestashop know to:
-- copy the module to the `/modules` folder when installing the theme from a ZIP file
+This will let PrestaShop know to:
+- copy the module to the `/modules` folder when installing the theme
 - install the module the first time the theme is enabled
-- enable / disable the module along your theme
+- enable/disable the module along your theme
