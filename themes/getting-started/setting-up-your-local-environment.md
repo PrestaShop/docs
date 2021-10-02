@@ -20,7 +20,7 @@ Open a command line on your (empty) working directory, then:
 
 1. Clone PrestaShop
     ```bash
-    git clone https://github.com/PrestaShop/PrestaShop.git
+    git clone --depth 1 https://github.com/PrestaShop/PrestaShop.git
     ```
     
 2. Install dependencies
