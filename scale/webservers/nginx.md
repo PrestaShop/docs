@@ -32,7 +32,7 @@ Each browser has its own mechanics about this but the web server can provide cac
 Again, this allows to both speed up the page loads and avoid unnecessary traffic:
 
 ```
-location ~* \.(?:jpg|jpeg|gif|png|ico|css|woff2)$ {
+location ~* \.(?:css|gif|ico|jpe?g|png|woff2)$ {
     expires 1M;
     add_header Cache-Control "public";
 }
