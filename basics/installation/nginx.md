@@ -24,14 +24,6 @@ server {
     ssl_certificate /etc/ssl/fullchain.pem;
     ssl_certificate_key /etc/ssl/privkey.pem;
 
-    # ssl_session_timeout 24h;
-    # ssl_session_cache shared:SSL:10m;
-    # ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    # ssl_ciphers ECDH+AESGCM:ECDH+AES256:ECDH+AES128:DH+3DES:RSA+3DES:AES128-SHA:!ADH:!AECDH:!MD5;
-    # ssl_prefer_server_ciphers on;
-    # Do not forget to create this file before with OpenSSL : "openssl dhparam -out /etc/nginx/ssl/dhparam.pem 2048"
-    # ssl_dhparam /etc/nginx/ssl/dhparam.pem;
-
     # [REQUIRED EDIT] Your domain name goes here
     server_name server_name example.com www.example.com;
 
