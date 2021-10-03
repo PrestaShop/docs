@@ -23,6 +23,10 @@ server {
     # [EDIT] Your domain name(s) go here.
     server_name example.com www.example.com;
 
+    # [EDIT] Path to your domain Nginx logs.
+    access_log /var/log/nginx/example.com-access.log;
+    error_log /var/log/nginx/example.com-error.log;
+
     # [EDIT] Path to your SSL certificates (take a look at Certbot https://certbot.eff.org).
     ssl_certificate /etc/ssl/fullchain.pem;
     ssl_certificate_key /etc/ssl/privkey.pem;
