@@ -6,8 +6,9 @@ weight: 25
 
 # Configure Nginx
 
-The following file is provided as an example configuration for your Nginx server.
-It may be incomplete, and remember you must adapt it for your own server's needs!
+The following file is provided as an example configuration for your Nginx server. It may be incomplete, and remember you must adapt it for your own server's needs!
+
+Once you are comfortable with your setup make sure to review our guide on how to [optimize your Nginx configuration][nginx-scale] to better suit your requirements.
 
 ```nginx
 server {
@@ -43,43 +44,6 @@ server {
 
     # Redirect 404 errors to prestashop
     error_page 404 /index.php?controller=404;
-
-    # Gzip Settings, convert all types.
-    gzip on;
-    gzip_vary on;
-    gzip_proxied any;
-
-    # Can be enhance to 5, but it can slow you server
-    # gzip_comp_level    5;
-    # gzip_min_length    256;
-
-    gzip_types
-        application/atom+xml
-        application/javascript
-        application/json
-        application/ld+json
-        application/manifest+json
-        application/rss+xml
-        application/vnd.geo+json
-        application/vnd.ms-fontobject
-        application/x-font-ttf
-        application/x-web-app-manifest+json
-        application/xhtml+xml
-        application/xml
-        font/opentype
-        image/bmp
-        image/svg+xml
-        image/x-icon
-        text/cache-manifest
-        text/css
-        text/plain
-        text/vcard
-        text/vnd.rim.location.xloc
-        text/vtt
-        text/x-component
-        text/x-cross-domain-policy;
-
-    gzip_disable "MSIE [1-6]\.(?!.*SV1)";
 
     # HSTS (Force clients to interact with your website using HTTPS only)
     # For enhanced security, register your site here: https://hstspreload.org/
@@ -216,3 +180,5 @@ server {
     }
 }
 ```
+
+[nginx-scale]: {{< ref "1.7/scale/webservers/nginx" >}}
