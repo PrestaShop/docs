@@ -12,19 +12,17 @@ Once you are comfortable with your setup make sure to review our guide on how to
 
 ```nginx
 server {
-    # Ipv4
+    # IPv4.
     listen 80;
+    listen 443 ssl http2;
 
-    # IPv6
+    # IPv6.
     # listen [::]:80;
+    # listen [::]:443 ssl http2;
 
-    # SSL Ipv4 & v6
-    # listen 443 ssl http2;
-    # listen [::]:443 ssl;
-
-    # Your SSL Certificates, don't forget to take a look at Certbot (https://certbot.eff.org)
-    # ssl_certificate /etc/ssl/fullchain.pem;
-    # ssl_certificate_key /etc/ssl/privkey.pem;
+    # [EDIT] Path to your SSL certificates (take a look at Certbot https://certbot.eff.org).
+    ssl_certificate /etc/ssl/fullchain.pem;
+    ssl_certificate_key /etc/ssl/privkey.pem;
 
     # ssl_session_timeout 24h;
     # ssl_session_cache shared:SSL:10m;
