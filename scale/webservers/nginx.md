@@ -14,7 +14,7 @@ And text files are the most efficient to compress. Though disabled by default, e
 
 Here is the way to enable gzip compression to your Nginx configuration:
 
-```
+```nginx
 server {
     ...
 
@@ -58,7 +58,7 @@ Each browser has its own mechanics about this but the web server can provide cac
 
 Again, this allows to both speed up the page loads and avoid unnecessary traffic:
 
-```
+```nginx
 location ~* \.(?:css|gif|ico|jpe?g|png|woff2)$ {
     expires 1M;
     add_header Cache-Control "public";
