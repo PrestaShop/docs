@@ -20,12 +20,12 @@ server {
     # listen [::]:80;
     # listen [::]:443 ssl http2;
 
+    # [EDIT] Your domain name(s) go here.
+    server_name example.com www.example.com;
+
     # [EDIT] Path to your SSL certificates (take a look at Certbot https://certbot.eff.org).
     ssl_certificate /etc/ssl/fullchain.pem;
     ssl_certificate_key /etc/ssl/privkey.pem;
-
-    # [REQUIRED EDIT] Your domain name goes here
-    server_name server_name example.com www.example.com;
 
     # [REQUIRED EDIT] Absolute path to your website root on the filesystem
     root /path/to/prestashop;
