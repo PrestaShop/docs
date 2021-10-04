@@ -93,7 +93,7 @@ server {
     rewrite ^/c/([a-zA-Z_-]+)(-[0-9]+)?/.+.jpg$ /img/c/$1$2.jpg last;
 
     # AlphaImageLoader for IE and FancyBox.
-    rewrite ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 last;
+    rewrite ^images_ie/?([^/]+)\.(gif|jpe?g|png)$ js/jquery/plugins/fancybox/images/$1.$2 last;
 
     # Web service API.
     rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
