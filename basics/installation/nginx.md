@@ -117,8 +117,9 @@ server {
     location ~ /\. {
         deny all;
     }
-    # Source code directories
-    location ~ ^/(app|bin|cache|classes|config|controllers|docs|localization|override|src|tests|tests-legacy|tools|translations|travis-scripts|vendor|var)/ {
+
+    # Source code directories.
+    location ~ ^/(app|bin|cache|classes|config|controllers|docs|localization|override|src|tests|tools|translations|travis-scripts|var|vendor)/ {
         deny all;
     }
     # vendor in modules directory
