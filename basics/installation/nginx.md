@@ -101,8 +101,9 @@ server {
     # Installation sandbox.
     rewrite ^(/install(?:-dev)?/sandbox)/(.*) /$1/test.php last;
 
-    # without this line nginx seo url not working.
-    try_files $uri $uri/ /index.php?$args;
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
 
     # [EDIT] Replace 'admin-dev' in this block with the name of your admin directory.
     location /admin-dev/ {
