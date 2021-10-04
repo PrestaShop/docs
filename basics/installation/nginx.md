@@ -44,8 +44,8 @@ server {
     # WARNING: Don't use this if your site is not fully on HTTPS!
     # add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" preload; always;
 
-    # Cloudflare / Max CDN fix
-    location ~* \.(eot|otf|ttf|woff(?:2)?)$ {
+    # Cloudflare / Max CDN fix.
+    location ~* \.(eot|otf|ttf|woff|woff2)$ {
         add_header Access-Control-Allow-Origin *;
     }
 
@@ -125,8 +125,9 @@ server {
     location ~ ^/modules/.*/vendor/ {
         deny all;
     }
-    # Prevent exposing other sensitive files
-    location ~ \.(yml|log|tpl|twig|sass)$ {
+
+    # Prevent exposing other sensitive files.
+    location ~ \.(log|tpl|twig|sass|yml)$ {
         deny all;
     }
 
