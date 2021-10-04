@@ -31,16 +31,16 @@ server {
     ssl_certificate /etc/ssl/fullchain.pem;
     ssl_certificate_key /etc/ssl/privkey.pem;
 
-    # [REQUIRED EDIT] Absolute path to your website root on the filesystem
+    # [EDIT] Path to your PrestaShop directory.
     root /path/to/prestashop;
 
     index index.php;
 
-    # Redirect 404 errors to prestashop
+    # Redirect 404 errors to PrestaShop.
     error_page 404 /index.php?controller=404;
 
-    # HSTS (Force clients to interact with your website using HTTPS only)
-    # For enhanced security, register your site here: https://hstspreload.org/
+    # HSTS (Force clients to interact with your website using HTTPS only).
+    # For enhanced security, register your site here: https://hstspreload.org/.
     # WARNING: Don't use this if your site is not fully on HTTPS!
     # add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" preload; always;
 
@@ -49,38 +49,38 @@ server {
         add_header Access-Control-Allow-Origin *;
     }
 
-    # Force pdf files to be downloaded
+    # Force download of PDF files.
     location ~* \.pdf$ {
         add_header Content-Disposition Attachment;
         add_header X-Content-Type-Options nosniff;
     }
 
-    # Force files in upload directory to be downloaded
+    # Force download of files in the upload directory.
     location ~ ^/upload/ {
         add_header Content-Disposition Attachment;
         add_header X-Content-Type-Options nosniff;
     }
 
-    # Do not save logs for these
+    # Do not save logs for these.
     location = /favicon.ico {
-        auth_basic off;
-        allow all;
-        log_not_found off;
         access_log off;
+        allow all;
+        auth_basic off;
+        log_not_found off;
     }
 
     location = /robots.txt {
-        auth_basic off;
-        allow all;
-        log_not_found off;
         access_log off;
+        allow all;
+        auth_basic off;
+        log_not_found off;
     }
 
-    # [REQUIRED EDIT] if you are using multiple languages
+    # [EDIT] If you are using multiple languages.
     # rewrite ^/fr$ /fr/ redirect;
     # rewrite ^/fr/(.*) /$1;
 
-    # Images
+    # Images.
     rewrite ^/([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$1$2$3.jpg last;
     rewrite ^/([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$1$2$3$4.jpg last;
     rewrite ^/([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$1$2$3$4$5.jpg last;
@@ -92,28 +92,26 @@ server {
     rewrite ^/c/([0-9]+)(-[.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+.jpg$ /img/c/$1$2$3.jpg last;
     rewrite ^/c/([a-zA-Z_-]+)(-[0-9]+)?/.+.jpg$ /img/c/$1$2.jpg last;
 
-    # AlphaImageLoader for IE and fancybox
+    # AlphaImageLoader for IE and FancyBox.
     rewrite ^images_ie/?([^/]+)\.(jpe?g|png|gif)$ js/jquery/plugins/fancybox/images/$1.$2 last;
 
-    # Web service API
+    # Web service API.
     rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
 
-    # Installation sandbox
+    # Installation sandbox.
     rewrite ^(/install(?:-dev)?/sandbox)/(.*) /$1/test.php last;
-    
+
     # without this line nginx seo url not working.
     try_files $uri $uri/ /index.php?$args;
-     
-    # [REQUIRED EDIT] Change this block to your admin folder
+
+    # [EDIT] Replace 'admin-dev' in this block with the name of your admin directory.
     location /admin-dev/ {
         if (!-e $request_filename) {
             rewrite ^/.*$ /admin-dev/index.php last;
         }
     }
 
-
-    # File security
-    # .htaccess .DS_Store .htpasswd etc
+    # .htaccess, .DS_Store, .htpasswd, etc.
     location ~ /\. {
         deny all;
     }
@@ -122,7 +120,8 @@ server {
     location ~ ^/(app|bin|cache|classes|config|controllers|docs|localization|override|src|tests|tools|translations|travis-scripts|var|vendor)/ {
         deny all;
     }
-    # vendor in modules directory
+
+    # vendor in modules directory.
     location ~ ^/modules/.*/vendor/ {
         deny all;
     }
@@ -131,16 +130,13 @@ server {
         deny all;
     }
 
-    # Prevent injection of php files
-    location /upload {
-        location ~ \.php$ {
-            deny all;
-        }
-    }
+    # Prevent injection of PHP files.
     location /img {
-        location ~ \.php$ {
-            deny all;
-        }
+        location ~ \.php$ { deny all; }
+    }
+
+    location /upload {
+        location ~ \.php$ { deny all; }
     }
 
     # PHP FPM part
