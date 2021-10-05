@@ -44,11 +44,6 @@ server {
     # WARNING: Don't use this if your site is not fully on HTTPS!
     # add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" preload; always;
 
-    # Cloudflare / Max CDN fix.
-    location ~* \.(eot|otf|ttf|woff2?)$ {
-        add_header Access-Control-Allow-Origin *;
-    }
-
     # Force download of PDF files.
     location ~* \.pdf$ {
         add_header Content-Disposition Attachment;
