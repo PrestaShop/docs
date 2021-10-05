@@ -61,21 +61,6 @@ server {
         add_header X-Content-Type-Options nosniff;
     }
 
-    # Do not save logs for these.
-    location = /favicon.ico {
-        access_log off;
-        allow all;
-        auth_basic off;
-        log_not_found off;
-    }
-
-    location = /robots.txt {
-        access_log off;
-        allow all;
-        auth_basic off;
-        log_not_found off;
-    }
-
     # [EDIT] If you are using multiple languages.
     # rewrite ^/fr$ /fr/ redirect;
     # rewrite ^/fr/(.*) /$1;

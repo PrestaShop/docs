@@ -64,3 +64,45 @@ location ~* \.(?:css|eot|gif|ico|jpe?g|otf|png|ttf|woff2?)$ {
     add_header Cache-Control "public";
 }
 ```
+
+## Access logging
+
+Logging every request consumes both CPU and I/O cycles, and there are several ways to reduce the impact of access logging.
+
+Make sure to review the documentation of the [ngx_http_log_module](http://nginx.org/en/docs/http/ngx_http_log_module.html) when modifying this directive.
+
+### Enable access‑log buffering
+
+With buffering, instead of performing a separate write operation for each log entry, Nginx buffers a series of entries and writes them to the file together in a single operation.
+
+This is comprehensively explained in the *Access Logging* section of the [Tuning NGINX for Performance](https://www.nginx.com/blog/tuning-nginx/) article in the Nginx blog.
+
+### Disable access logging for specific locations
+
+You can also disable access logging for specific locations such as `favicon.ico` and `robots.txt`.
+
+```nginx
+location = /favicon.ico {
+    access_log off;
+    log_not_found off;
+}
+
+location = /robots.txt {
+    access_log off;
+    log_not_found off;
+}
+```
+
+Notice we are using the exact match modifier `=` to speed up the processing of these requests.
+
+### Turn off access logging
+
+If your PrestaShop installation does not require access logging, you can use the special value `off` in the `access_log` directive to completely disable access logging.
+
+```nginx
+server {
+    ...
+    access_log off
+    ...
+}
+```
