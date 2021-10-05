@@ -44,18 +44,6 @@ server {
     # WARNING: Don't use this if your site is not fully on HTTPS!
     # add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" preload; always;
 
-    # Force download of PDF files.
-    location ~* \.pdf$ {
-        add_header Content-Disposition Attachment;
-        add_header X-Content-Type-Options nosniff;
-    }
-
-    # Force download of files in the upload directory.
-    location ~ ^/upload/ {
-        add_header Content-Disposition Attachment;
-        add_header X-Content-Type-Options nosniff;
-    }
-
     # [EDIT] If you are using multiple languages.
     # rewrite ^/fr$ /fr/ redirect;
     # rewrite ^/fr/(.*) /$1;
