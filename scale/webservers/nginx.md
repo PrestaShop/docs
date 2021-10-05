@@ -59,7 +59,7 @@ Each browser has its own mechanics about this but the web server can provide cac
 Again, this allows to both speed up the page loads and avoid unnecessary traffic:
 
 ```nginx
-location ~* \.(?:css|gif|ico|jpe?g|png|woff2)$ {
+location ~* \.(?:css|eot|gif|ico|jpe?g|otf|png|ttf|woff2?)$ {
     expires 1M;
     add_header Cache-Control "public";
 }
