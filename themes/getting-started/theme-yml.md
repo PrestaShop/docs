@@ -24,7 +24,7 @@ Users will be able to choose the layout for each page from the theme's settings 
     url: "https://www.prestashop.com"
   meta:
     compatibility:
-        from: 1.7.0.0
+        from: 8.0
         to: ~
     available_layouts:
       layout-full-width:

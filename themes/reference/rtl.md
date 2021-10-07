@@ -15,7 +15,6 @@ There are two ways of customizing your theme for RTL: either by adding an overri
 PrestaShop will try to load a css file named `rtl.css` after your theme's ones when displayed in an RTL language. You can use this file to place any style override you need for RTL.
 
 ### RTL version
-{{< minver title="true" v="1.7.3" >}}
 
 When the shop is displayed in an RTL language, PrestaShop will automatically try and load RTL versions of the theme's stylesheets if they are available, instead of the "normal" ones.
 
@@ -29,7 +28,6 @@ Example:
 |`theme-custom.css` | `theme-custom_rtl.css`
 
 #### Stylesheet generation
-{{< minver title="true" v="1.7.3" >}}
 
 PrestaShop can also automagically generate an RTL version of your theme's stylesheets based on the original CSS files.
 

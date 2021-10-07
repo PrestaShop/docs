@@ -98,15 +98,15 @@ The layout is the organisation of the page, the way in which the parts of your d
 The typical example is the sidebar: is there a sidebar on your category page or is your product listing
 is taking the whole space.
 
-With PrestaShop 1.7, user are given the ability to change the layout of each page
-independantly. As a template developer, it's your role to ensure your theme is
+In PrestaShop, users are given the ability to change the layout of each page
+independently. As a template developer, it's your role to ensure your theme is
 compatible.
 
 ![Configure layout](../img/configure-layout.png)
 
 ### What's in a layout file
 
-The layout is the very top level of the [template inheritance]({{< ref "1.7/themes/reference/template-inheritance/" >}})
+The layout is the very top level of the [template inheritance]({{< relref "/8/themes/reference/template-inheritance/" >}})
 tree. Basically it hold the opening and closing `<html>` tags.
 
 Typical layout files look like the following snippet. This one is a full one

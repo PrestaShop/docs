@@ -7,8 +7,7 @@ title: Overriding modules
 When you write a theme, you often need to override the templates and assets coming from a module so that they match your theme's specific markup needs.
 Themes can override modules' assets (CSS and JavaScript only) by placing the corresponding file at a specific location.
 
-With PrestaShop 1.7, all module overriding code goes to the `modules` directory (in your module's own directory).
-Every PS 1.7 module developer should be aware of this change (introduced with PR 5020: https://github.com/PrestaShop/PrestaShop/pull/5020).
+All module overriding code goes to the `modules` directory (in your module's own directory).
 
 {{% notice note %}}
   If your asset override is empty, PrestaShop will load nothing (neither the module one nor your override). This is useful
@@ -36,7 +35,7 @@ Examples in this page are based on this sample module directory structure:
 
 ## Overriding templates and assets
 
-With PrestaShop 1.7, here are the folder paths to create in order to override templates and assets:
+Here are the folder paths to create in order to override templates and assets:
 
 ```
 .
@@ -94,7 +93,7 @@ The issue goes both ways: if you want to modify the `included-template.tpl` file
 {include file='./included-template.tpl'}
 ```
 
-PrestaShop 1.7 introduces a new cool way to include files in module templates. By using this method, all the expected rules will be followed:
+PrestaShop 1.7 introduced a way to include files in module templates. By using this method, all the expected rules will be followed:
 
 ```smarty
 {include file='module:MODULE_NAME/views/templates/front/included-template.tpl'}
@@ -102,7 +101,7 @@ PrestaShop 1.7 introduces a new cool way to include files in module templates. B
 
 ## SmartyDev helps you debug!
 
-PrestaShop 1.7 also introduces our own SmartyDev tool, an Smarty extension which allows you to see the template's name within your generated HTML markup. This will help debugging a lot, especially because of template override.
+PrestaShop 1.7 also introduced our own SmartyDev tool, a Smarty extension which allows you to see the template's name within your generated HTML markup. This will help debugging a lot, especially because of template override.
 
 Here an example of generated markup with SmartyDev activated:
 

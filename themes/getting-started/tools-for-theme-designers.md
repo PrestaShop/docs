@@ -22,7 +22,7 @@ The PrestaShop developers chose to rely on these tools for the development of th
 * npm
 * Webpack
 
-Along with these tools, PrestaShop 1.7 introduces frameworks and design tools that are must-know:
+Along with these tools, PrestaShop 1.7 introduced frameworks and design tools that are must-know:
 
 * Bootstrap 4
 * Symfony and its Twig template engine

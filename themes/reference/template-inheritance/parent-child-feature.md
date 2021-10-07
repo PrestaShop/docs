@@ -4,11 +4,9 @@ title: Parent/child theme
 
 # Parent/child theme
 
-PrestaShop 1.7 relies a lot on template inheritance in order to create
-the most consistent theme possible while heavily reducing the amount of duplicated code.
+PrestaShop relies a lot on template inheritance in order to create the most consistent theme possible, while heavily reducing the amount of duplicated code.
 
-We took it even further introducing the Parent Child theme feature. The point to is to avoid
-modifying the main theme so you can update it!
+We took it even further introducing the Parent Child theme feature. The point to is to avoid modifying the main theme, so you can update it!
 
 {{% notice note %}}
   This feature is only useful if you want to slightly modify a theme (to add a block for example).
@@ -17,11 +15,10 @@ modifying the main theme so you can update it!
 
 ## The principle
 
-So far we talked about extending template within the same theme. In PrestaShop 1.7 you can now extend templates
-from another theme.
+So far we talked about extending template within the same theme. But you can also extend templates from another theme.
 
 {{% notice tip %}}
-  As a theme developer, you want to create as many block as possible so your user can
+  As a theme developer, you want to create as many blocks as possible so your user can
   override the minimum amount of code.
 {{% /notice %}}
 

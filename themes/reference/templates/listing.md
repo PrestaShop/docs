@@ -19,7 +19,7 @@ In order to reduce code duplication, the only necessary template is the file
 We already covered [how PrestaShop chooses the right template to use]({{< ref "templates-layouts" >}})
 so we know that the category template extends the product-list template.
 
-We already covered how the [template inheritance]({{< ref "1.7/themes/reference/template-inheritance/" >}}) allows you to redefine only a
+We already covered how the [template inheritance]({{< relref "/8/themes/reference/template-inheritance/" >}}) allows you to redefine only a
 small part of bigger template.
 
 So basically you are all set to create a category template or a search result template
@@ -31,7 +31,7 @@ that make much more than the product-list template!
 Your product list will change as the customer filters the result with
 faceted navigation or sorting options for instance.
 
-One of the golden rule of PrestaShop 1.7 is: **No presentation code duplication**.
+One of the golden rules is: **No presentation code duplication**.
 Hence we didn't want to return json data about the result and let javascript
 reconstitute the page.
 
