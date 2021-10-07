@@ -5,7 +5,6 @@ weight: 30
 ---
 
 # How to create your own Behat tests or add tests to PrestaShop
-{{< minver v="1.7.6" title="true" >}}
 
 Behat tests are great if you want to validate the behavior of a component of the code and/or follow a user-oriented scenario.
 

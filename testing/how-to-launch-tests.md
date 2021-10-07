@@ -12,8 +12,8 @@ At least four test suites are available, testing different parts of PrestaShop:
 
 * `Legacy tests`: heritage from PrestaShop 1.6: mix of unit, integration and functional tests;
 * `Legacy controllers`: added to help with the Symfony migration, ensures that old Back Office controllers are still runnable;
-* `Admin tests`: specific to PrestaShop 1.7, tests `src/Core` and `src/Adapter` classes;
-* `Symfony specific tests`: specific to PrestaShop 1.7, test classes from `src/PrestaShopBundle`
+* `Admin tests`: tests `src/Core` and `src/Adapter` classes;
+* `Symfony specific tests`: test classes from `src/PrestaShopBundle`
 
 Each suite needs a specific PHPUnit configuration. This is why each test suite has a specific composer command:
 

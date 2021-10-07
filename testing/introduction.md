@@ -4,7 +4,6 @@ weight: 1
 ---
 
 # How testing works in PrestaShop
-{{< minver v="1.7.3" title="true" >}}
 
 PrestaShop is a complex software and uses automated testing to ensure that the new additions to the codebase do not break existing behaviors.
 

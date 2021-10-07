@@ -2,8 +2,6 @@
 title: Optimize your webserver
 menuTitle: Optimize your webserver
 weight: 1
-alias:
-- 1.7/optimizations/webservers
 ---
 
 # Optimize your webserver
