@@ -5,7 +5,6 @@ weight: 70
 ---
 
 # SeverityLevelColumn Type
-{{< minver v="1.7.5" title="true" >}}
 
 Use this column to display severity level in your Grid.
 

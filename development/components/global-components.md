@@ -3,9 +3,8 @@ title: Global JavaScript components
 ---
 
 # Global JavaScript components
-{{< minver v="1.7.8" title="true" >}}
 
-It's a [new system](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/app/utils/init-components.js) available since the 1.7.8 version mainly created for module developers, which allow you to use components we already use in the core without importing it. [Here is the ADR](https://github.com/PrestaShop/ADR/blob/master/0009-expose-js-components-using-window-variable.md) where we decided what we should do to avoid this problem.
+Tailored for module developers, this system allows you to use components we already use in the core without importing them. [Here is the ADR](https://github.com/PrestaShop/ADR/blob/master/0009-expose-js-components-using-window-variable.md) where we decided what we should do to avoid this problem.
 
 You are now able to use components we expose to the `window.prestashop.component` object without importing anything.
 
@@ -85,7 +84,7 @@ ColorPicker                  | 1.7.9
 
 ## Grid component
 
-From version 1.7.8 you can access both, Grid component and its extensions, this should make working with modern controllers in your modules much easier.
+From version 1.7.8 you can access both Grid component and its extensions, this should make working with modern controllers in your modules much easier.
 
 Component | Version 
 -------- | ---- 

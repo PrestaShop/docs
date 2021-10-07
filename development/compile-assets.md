@@ -67,13 +67,11 @@ On Windows, you will probably need to install `windows-build-tools` using `npm i
 
 ### Build all assets at once
 
-{{< minver v="1.7.6" title="true" >}}
-
 You can rebuild all the assets at once by executing this command from the project root:
 
 ```bash
 ./tools/assets/build.sh
-# or alternatively, since 1.7.8:
+# or alternatively
 make assets
 ```
 
@@ -95,7 +93,7 @@ The "watch" build will optimize your assets for development. Please remember to 
 
 If `npm install` fails with error: `Failed at the ... postinstall script.`:
 
-You may be using an old version or one we don't support yet. Currently on 1.7.8, every folders containing a package.json is compatible with node 12.
+You may be using an old version or one we don't support yet. As of 8.0, every folder containing a package.json is compatible with node 12.
 How we manage to work with this, as well as working on previous PrestaShop version, is that we use a tool to easily swap between node version.
 
 There are a lot of tools able to do this. At PrestaShop, we mainly use the ['n' package](https://www.npmjs.com/package/n?activeTab=versions) or [nvm](https://github.com/nvm-sh/nvm).

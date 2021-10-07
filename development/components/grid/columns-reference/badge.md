@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # BadgeColumn Type
-{{< minver v="1.7.6" title="true" >}}
 
 This basic BadgeColumn displays a raw field data in Grid, associated with a badge.
 

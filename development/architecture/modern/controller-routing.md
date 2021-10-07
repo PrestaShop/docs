@@ -8,7 +8,7 @@ title: Symfony controllers & routing
 Read the Symfony documentation on [Controllers](https://symfony.com/doc/3.4/controller.html) and [Routing](https://symfony.com/doc/3.4/routing.html).
 {{% /notice %}}
 
-Controllers are located in `src/PrestaShopBundle/Controller/Admin` folder. Starting on 1.7.3, controllers are being progressively organized in sub-folders following the Back Office menu. For instance, the [TaxController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Improve/International/TaxController.php) is located in `src/PrestaShop/Controller/Admin/Improve/International`.
+Controllers are located in `src/PrestaShopBundle/Controller/Admin` folder. They are organized in sub-folders following the Back Office menu. For instance, the [TaxController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Improve/International/TaxController.php) is located in `src/PrestaShop/Controller/Admin/Improve/International`.
 Same applies to **Improve**,  **Sell** sections etc.
 
 This is how the directory tree of controllers should look like:

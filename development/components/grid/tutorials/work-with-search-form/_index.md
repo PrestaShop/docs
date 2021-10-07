@@ -5,7 +5,6 @@ weight: 3
 ---
 
 # How to work with the Search Form
-{{< minver v="1.7.6" title="true" >}}
 
 The grid component allows to filter its content, to manage the filtering you will need to define the following elements:
 
@@ -84,9 +83,8 @@ The filters collection allows you to define all the available filters (which wil
 You can basically use any Symfony form type (including your custom ones) and PrestaShop provides a few [filter types]({{< ref "/8/development/components/grid/filter-types-reference/" >}}) that might be useful to you.
 
 ### Filterable grid definition
-{{< minver v="1.7.7" title="true" >}}
 
-Starting the 1.7.7 we made it even easier, you can use the `AbstractFilterableGridDefinitionFactory`. This will allow you use the [common search controller](#common-search-controller).
+This can be made even easier by using the `AbstractFilterableGridDefinitionFactory`. This will allow you use the [common search controller](#common-search-controller).
 
 ```php
 <?php
@@ -214,9 +212,8 @@ admin_manufacturers_search:
 ```
 
 #### Common search controller
-{{< minver v="1.7.7" title="true" >}}
 
-As this controller is almost always the same, starting 1.7.7, we introduced a common controller. So all you need to do is define the routing:
+As this controller is almost always the same, we introduced a common controller. So all you need to do is define the routing:
 
 ```yaml
 # your-module/config/routes.yml
@@ -292,7 +289,3 @@ It is defined in the [`SearchAndResetType` options]({{< ref "/8/development/comp
             )
     ...
 ```
-
-## Search form in 1.7.5
-
-In the 1.7.5 version, first one that integrated the grid component, the system was a bit different and used controller/action to identify the filters. It had a few drawbacks and was abandoned in favor of a unique id but in case you need it here is [how to work with search form in 1.7.5]({{< ref "/8/development/components/grid/tutorials/work-with-search-form/in-1-7-5" >}}).

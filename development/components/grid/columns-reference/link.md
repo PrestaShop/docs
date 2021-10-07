@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # LinkColumn Type
-{{< minver v="1.7.6" title="true" >}}
 
 This LinkColumn displays a raw field data encapsulated in a link (very useful for adding an edition link on a name, for example).
 

@@ -65,11 +65,11 @@ To learn more about the `$form` array structure, read the [Form declaration sect
 
 `$allow_employee_form_lang: int`
 :  
-   _This defaults to `0` and has no effect in PrestaShop 1.7._
+   _This defaults to `0` and has no effect since PrestaShop 1.7._
 
 `$back_url: string`
 :  
-   _This defaults to `#` and has no effect in PrestaShop 1.7._
+   _This defaults to `#` and has no effect since PrestaShop 1.7._
 
 `$currentIndex: string`
 :  
@@ -121,7 +121,7 @@ To learn more about the `$form` array structure, read the [Form declaration sect
 
 `$show_toolbar: bool`
 :  
-   _This defaults to `false` and has no effect in PrestaShop 1.7._
+   _This defaults to `false` and has no effect since PrestaShop 1.7._
 
 `$submit_action: string`
 :  
@@ -139,7 +139,7 @@ To learn more about the `$form` array structure, read the [Form declaration sect
    
 `$title: string`
 :  
-   _This default to `null` and has no effect in PrestaShop 1.7._
+   _This default to `null` and has no effect since PrestaShop 1.7._
 
 `$token: string`
 :  
@@ -147,7 +147,7 @@ To learn more about the `$form` array structure, read the [Form declaration sect
 
 `$toolbar_scroll: bool`
 :  
-   _This defaults to `false` and has no effect in PrestaShop 1.7._
+   _This defaults to `false` and has no effect since PrestaShop 1.7._
 
 `$tpl_vars: array`
 :  

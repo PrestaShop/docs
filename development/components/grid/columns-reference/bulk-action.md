@@ -5,7 +5,6 @@ weight: 20
 ---
 
 # BulkActionColumn Type
-{{< minver v="1.7.5" title="true" >}}
 
 This column type allows adding bulk action checkboxes to your Grid. This only adds the checkbox in the grid, you can then manage bulk actions via javascript.
 

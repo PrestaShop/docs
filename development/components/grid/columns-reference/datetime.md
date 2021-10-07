@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # DateTimeColumn Type
-{{< minver v="1.7.5" title="true" >}}
 
 You can use this column type in your Grid to format datetime values.
 It is common to get datetime values (e.g. Created at, Updated at & etc.) from the database and format them before displaying.

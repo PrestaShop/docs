@@ -4,7 +4,6 @@ menuTitle: Position Updater
 ---
 
 # The Position updater component
-{{< minver v="1.7.5" title="true" >}}
 
 ## Introduction
 

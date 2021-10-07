@@ -21,7 +21,7 @@ In this tutorial, we will learn how to customize the rendering of every part of 
 
 ## Templating architecture in Twig
 
-The templating of the component Grid is using Twig in PrestaShop 1.7. As the component enforces a strict separation between the data and the rendering you never define template names or UI elements when defining a new Grid.
+The templating of the Grid component uses Twig. As the component enforces a strict separation between the data and the rendering you never define template names or UI elements when defining a new Grid.
 
 We have created a Twig layer that is able to render Grid using the information from Grid that is formatted in Grid presenter.
 
@@ -64,7 +64,7 @@ Grid actions templates are responsible of the rendering of all the Grid actions:
 * The **Grid** actions;
 * The **Row** actions;
 
-Structure of grid blocks in PrestaShop 1.7.6 version:
+Structure of grid blocks:
 
 ```
 Actions
@@ -99,7 +99,7 @@ your-module/
 
 In this folder, you will retrieve most of the reusable blocks of the Grid component.
 
-Structure of grid actions in PrestaShop 1.7.6 version:
+Structure of grid actions:
 
 ```
 Blocks

@@ -5,7 +5,7 @@ weight: 20
 
 # Symfony bridge for hooks
 
-In Back-Office, migrated pages are powered by Symfony. The powerful [Symfony Event Dispatcher][sf-event-dispatcher] has been chosen to replace, in the long term, hooks. However, in order to preserve backward compatibility, both systems coexist in 1.7.
+In Back-Office, migrated pages are powered by Symfony. The powerful [Symfony Event Dispatcher][sf-event-dispatcher] has been chosen to replace, in the long term, hooks. However, in order to preserve backward compatibility, both systems coexist.
 
 It is important that modules which subscribe to a hook are correctly notified no matter where the hook is dispatched from, be it in legacy code or modern code.
 

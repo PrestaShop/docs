@@ -6,7 +6,6 @@ weight: 30
 ---
 
 # Fetching shop configuration values in multistore context
-{{< minver v="1.7.7" title="true" >}}
 
 When multistore is disabled and you fetch a configuration value, you are in a **single store context**, so you are fetching configuration values of your only store. All you have to do is use the **legacy configuration adapter** (more on that later).
 

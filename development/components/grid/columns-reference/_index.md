@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # Column Types reference
-{{< minver v="1.7.5" title="true" >}}
 
 The most important part of a Grid definition is defining columns. PrestaShop already comes with a list of predefined column types that you can use in your own Grids.
 
@@ -17,8 +16,8 @@ The most important part of a Grid definition is defining columns. PrestaShop alr
 * [DateTimeColumn][datetime-column-reference]
 * [ImageColumn][image-column-reference]
 * [ToggleColumn][toggle-column-reference]
-* [BadgeColumn][badge-column-reference] {{< minver v="1.7.6" >}}
-* [LinkColumn][link-column-reference] {{< minver v="1.7.6" >}}
+* [BadgeColumn][badge-column-reference]
+* [LinkColumn][link-column-reference]
 
 ### Action columns
 

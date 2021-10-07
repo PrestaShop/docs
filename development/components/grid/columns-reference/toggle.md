@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # ToggleColumn Type
-{{< minver v="1.7.5" title="true" >}}
 
 This ToggleColumn is used to display booleans, it will display an icon instead of the value. If the user clicks on it, this triggers a toggle of the boolean value.
 

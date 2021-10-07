@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # ImageColumn Type
-{{< minver v="1.7.6" title="true" >}}
 
 This column is used to display an image from a row. You need to specify which field of the row contains the image source.
 

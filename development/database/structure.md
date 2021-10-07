@@ -17,7 +17,7 @@ modified, this the file you should open.
 
 ### Table in DB but not in db_structure.sql
 
-With PrestaShop 1.7, some tables are now linked to [Doctrine](https://www.doctrine-project.org/) entities
+Some tables are now linked to [Doctrine](https://www.doctrine-project.org/) entities
 (i.e stocks). If their `ObjectModel` (= legacy) equivalent does not exist,
 the entity is probably only managed by Doctrine.
 
@@ -102,7 +102,3 @@ Doctrine. Applying the changes on the database is done with the following comman
 ```
 php bin/console prestashop:schema:update-without-foreign
 ```
-
-{{% notice note %}}
-Use `php app/console` instead of `php bin/console` for versions prior to {{< minver v="1.7.4" >}}
-{{% /notice %}}

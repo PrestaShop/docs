@@ -95,7 +95,7 @@ So far, it is only used for forms (customer information and checkout).
 
 ### {url}
 
-PrestaShop 1.7 introduces a new Smarty helper to generate URLs.
+This helper is used to generate URLs.
 This will take care of SSL, domain name, virtual and physical base URI, parameters concatenation, and of course URL rewriting.
 
 `{url}` uses the Link class internally.

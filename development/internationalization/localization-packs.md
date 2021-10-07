@@ -36,7 +36,7 @@ In PrestaShop, processing of languages is controlled by JSON configuration:
   
 The first one is used for listing languages supported by PrestaShop in back office.
 
-The second one is used for migrating locales from old versions to 1.7.
+The second one is used to match the legacy 2-letter codes used for locales to the standard IETF language tags.
 
 #### How to update `app/Resources/all_languages.json`?
 

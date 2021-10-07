@@ -4,15 +4,13 @@ menuTitle: Modify an existing Grid in a module
 weight: 5
 ---
 
-{{< minver v="1.7.5.1" title="true" >}}
-
 # How to modify an existing Grid in a module
 
 If you need to modify an existing Grid, like inverting two columns for instance, this is really easy to do it in a module thanks to the available hooks.
 
 ## Business use case
 
-In this tutorial, we will try to improve the user experience of the Customers listing Grid (this page will be available in 1.7.6).
+In this tutorial, we will try to improve the user experience of the Customers listing Grid.
 
 Thinking about it, we could improve the current grid to highlight business-driven information:
 

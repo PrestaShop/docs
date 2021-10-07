@@ -124,7 +124,6 @@ final class CategoryFilterFormFactory implements GridFilterFormFactoryInterface
 ```
 
 ## Simply change the action
-{{< minver v="1.7.7" title="true" >}}
 
 If you just need to change the form action PrestaShop provides a `FilterFormFactoryFormActionDecorator` class that sets the action you need to use. All you need to do is define the services properly:
 

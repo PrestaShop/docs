@@ -45,8 +45,8 @@ This component is initialized for the configured language by loading five Catalo
 * **Customized translations database** - Located in the `ps_translations` table.
 * **Active theme** – XLF files in `themes/<themename>/translations`.
 * **Core** – XLF files in `app/Resources/translations`.
-* **Active modules** {{< minver v="1.7.8" >}} – XLF files in `modules/<modulename>/translations`.
-* **Active modules (legacy)** {{< minver v="1.7.6" >}} – PHP files in `modules/<modulename>/translations`.
+* **Active modules** – XLF files in `modules/<modulename>/translations`.
+* **Active modules (legacy)** – PHP files in `modules/<modulename>/translations`.
 
 {{% notice tip %}}
 **The catalogue resources above are listed by precedence.** 
