@@ -24,7 +24,7 @@ Each time you want to work on a contribution, create a local dedicated branch ba
 Contributions should be based on the appropriate branch, depending on the nature of your change:
 
 * **Develop**. New features, bug fixes, improvements. Contributions merged here will be released in the next minor or major release.
-* **Patch version branch** (eg. 1.7.4.x). For critical bug fixes and regressions only. Contributions merged here will be released in a patch version. 
+* **Patch version branch** (eg. 8.0.x). For critical bug fixes and regressions only. Contributions merged here will be released in a patch version. 
 
 {{% notice note %}}
 **Maintainers will only accept contributions to branches that are subject to new releases.**
@@ -56,27 +56,6 @@ Atomic commits make it easier to review, cherry-pick or revert changes (hopefull
 - Write [meaningful commit messages]({{< ref "writing-a-good-commit-message" >}}).
 - Use [interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) when you have made several changes in the same file but not all those changes are meant to be in a single commit.
 - **Avoid merge commits in your Pull Request.** They make the commit history more difficult to understand, and they can lead to hidden changes which are not visible by reviewers. If you need to resolve conflicts with the base branch, [rebase your branch](https://anavarre.net/how-to-rebase-a-github-pull-request/) instead.
-
-
-## Compiled assets
-
-Some source files like SCSS and JavaScript need to be compiled to work on a PrestaShop shop. 
-
-{{% notice note %}}
-We used to require these compiled files to be committed and included in the same Pull Request as the source changes.
-
-- In the `1.7.7.x` branch, compiled assets are still required and should be committed.
-- In the `develop` branch, assets are no longer versioned and should no longer be committed. 
-
-More information in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/).
-{{% /notice %}}
-
-Make sure to follow these guidelines:
-
-- **Compile assets for production.** Check that the assets you are compiled were built using the "prod" setting instead of the "dev" one. To find out more, read [How to compile assets][how-to-compile-assets].
-- **Commit assets and sources separately.** Submit your compiled assets in a separate commit from your source changes. This will be especially helpful when rebasing, because you can just drop the commit and avoid merge conflicts.
-- **One asset commit per Pull Request**. Try to avoid recompiling and committing the assets more than once. If you need to make changes and you have already committed a previous build, use interactive rebase to remove the previous commit, _then_ compile the assets. 
-
 
 ## Pull Requests
 
@@ -113,11 +92,11 @@ Before proposing to add a new dependency, make sure you do this:
 
 ## Related topics
 
-- [What happens after you submit a contribution]({{< ref "1.7/contribute/contribution-process/how-pull-requests-are-processed" >}})
+- [What happens after you submit a contribution]({{< relref "/8/contribute/contribution-process/how-pull-requests-are-processed" >}})
 
 ## Read more
 
 {{% children /%}}
 
-[how-to-compile-assets]: {{% ref "1.7/development/compile-assets.md" %}}
-[compatible-licenses]: {{% ref "compatible-licenses" %}}
+[how-to-compile-assets]: {{% relref "/8/development/compile-assets.md" %}}
+[compatible-licenses]: {{% relref "compatible-licenses" %}}

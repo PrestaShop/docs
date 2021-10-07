@@ -6,9 +6,7 @@ weight: 3
 # How to become a Core Contributor using Docker
 
 If you're reading this, thank you! This means you're interested in contributing to PrestaShop.
-You probably are a PrestaShop developer, and your use of the project is slightly different from
-ours. For instance, there are few differences between PrestaShop 1.7 (the release) and the branch 1.7
-of PrestaShop in the GitHub repository. This is because we create a release usable by everyone from our sources.
+You probably are a PrestaShop developer, and your use of the project is slightly different from ours. For instance, there are few differences between a PrestaShop zip release package and the GitHub repository. This is because the release package is a build, whereas the GitHub repository contains the sources.
 
 To be able to contribute you need:
 
@@ -98,7 +96,7 @@ A good practice is to write meaningful commits messages: it's better to have "co
 ### Launch the test suite
 
 Your changes now sounds ok, and you're almost ready to share your changes with the community.
-Before all, you may ensure your changes don't break everything: this is why we have multiple test suites you can use. Want to read more about tests in PrestaShop? Head to [this]({{< ref "1.7/testing/introduction.md" >}}) page.
+Before all, you may ensure your changes don't break everything: this is why we have multiple test suites you can use. Want to read more about tests in PrestaShop? Head to [this]({{< relref "/8/testing/introduction.md" >}}) page.
 
 You can execute it in your dockerized PrestaShop application without altering your website (it uses a specific database).
 
@@ -108,4 +106,4 @@ docker exec prestashop-git sh tests/check_unit.sh
 
 ### Publish your work
 
-See [Submit a Pull Request]({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}}).
+See [Submit a Pull Request]({{< relref "/8/contribute/contribute-pull-requests/create-pull-request" >}}).
