@@ -70,7 +70,7 @@ mysqldump -h <IP_or_hostname> -u <user> --single-transaction --create-options -e
 If you do not remember your database name or credentials, you can find them in your configuration files:
 
 * PrestaShop 1.6: `config/settings.inc.php`
-* PrestaShop 1.7: `app/config/parameters.php`
+* Since PrestaShop 1.7: `app/config/parameters.php`
 
 More details about backup & recoveries with MySQL binaries can be found on the [official documentation](https://dev.mysql.com/doc/refman/5.7/en/backup-and-recovery.html).
 
