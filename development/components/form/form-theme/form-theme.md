@@ -52,7 +52,7 @@ Its base theme is `bootstrap_4_layout.html.twig`. Used to render Symfony forms v
 
 By default, PrestaShop's Twig templates will use `bootstrap_4_horizontal_layout.html.twig` (as configured in PrestaShop's `/app/config/config.yml` file). This child of the above theme render forms horizontally instead of vertically.
 
-{{< figure src="../../../img/old-form-theme-17.png" title="Original Form Theme example of rendering" >}}
+{{< figure src="../img/old-form-theme-17.png" title="Original Form Theme example of rendering" >}}
 
 ### PrestaShop UI Kit Form theme
 {{< minver v="1.7.7" title="true" >}}
@@ -69,7 +69,7 @@ Once all forms have been updated to work with the UI Kit Form Theme, it will bec
 {% form_theme form 'PrestaShopBundle:Admin/TwigTemplateForm:prestashop_ui_kit_base.html.twig' %}
 ```
 
-{{< figure src="../../../img/ui-kit-form-theme.png" title="UI Kit Form Theme example of rendering" >}}
+{{< figure src="../img/ui-kit-form-theme.png" title="UI Kit Form Theme example of rendering" >}}
 
 
 
