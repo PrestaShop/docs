@@ -36,7 +36,7 @@ Before you begin working with translations, you should get familiarized with the
 
 ## How it works
 
-PrestaShop uses Symfony's [Translator Component](https://symfony.com/doc/3.4/translation.html) to translate wordings. 
+PrestaShop uses Symfony's [Translator Component](https://symfony.com/doc/4.4/translation.html) to translate wordings. 
 
 ### Initialization
 

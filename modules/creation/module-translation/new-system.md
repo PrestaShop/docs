@@ -108,7 +108,7 @@ In PHP files, translation is performed using the module's `trans()` method.
 This method takes four parameters:
      
 1. `$id` – The wording you want to translate.
-2. `$parameters` – An array of replacements, if any. ([Learn more about translation placeholders](https://symfony.com/doc/3.4/components/translation/usage.html#component-translation-placeholders)).
+2. `$parameters` – An array of replacements, if any. ([Learn more about translation placeholders](https://symfony.com/doc/4.4/components/translation/usage.html#component-translation-placeholders)).
 3. `$domain` – The translation domain for that wording, as explained above.
 4. `$locale` – (optional) The locale identifier (eg. "en-US") if you want to translate in a different language than the current one.
 

@@ -22,7 +22,7 @@ If the Back Office page you want to modify is powered by Symfony, you have 3 opt
 
 ## Remap the route
 
-In Symfony, [routes](https://symfony.com/doc/3.4/routing.html) such as `/sell/orders/orders` are mapped to controllers by YAML configuration files such as this one:
+In Symfony, [routes](https://symfony.com/doc/4.4/routing.html) such as `/sell/orders/orders` are mapped to controllers by YAML configuration files such as this one:
 ```yaml
 # src/PrestaShopBundle/Resources/config/routing/admin/sell/orders/orders.yml
 admin_orders_index:
@@ -94,7 +94,7 @@ If you have trouble writing the right service configuration for your controller,
 
 ## Decorate the controller
 
-Instead of replacing the whole controller, we recommend _extending_ its behavior using [service decoration](https://symfony.com/doc/3.4/service_container/service_decoration.html). By implementing the [decorator pattern](https://refactoring.guru/design-patterns/decorator), you can keep most or all of the original behavior of the decorated controller, and only customize the parts you want.
+Instead of replacing the whole controller, we recommend _extending_ its behavior using [service decoration](https://symfony.com/doc/4.4/service_container/service_decoration.html). By implementing the [decorator pattern](https://refactoring.guru/design-patterns/decorator), you can keep most or all of the original behavior of the decorated controller, and only customize the parts you want.
 
 {{% notice note %}}
 While you could achieve a similar end with an override (by making your controller extend the original one), the decorator pattern provides a greater degree of freedom, while leaving all complexity of initialization and dependency management to the service container.

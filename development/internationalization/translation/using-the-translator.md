@@ -7,7 +7,7 @@ weight: 30
 # Using the Translator to translate wordings
 
 {{% notice note %}}
-This section provides an quick reference on how to use the Translator. For more information, read Symfony's documentation on [Using the Translator](https://symfony.com/doc/3.4/components/translation/usage.html).
+This section provides an quick reference on how to use the Translator. For more information, read Symfony's documentation on [Using the Translator](https://symfony.com/doc/4.4/components/translation/usage.html).
 {{% /notice %}}
 
 ## PHP files
@@ -22,7 +22,7 @@ echo $translator->trans('This product is no longer available.', [], 'Shop.Notifi
 The `trans()` method takes three arguments:
 
 1. `$id` – The wording you want to translate. Keep in mind that it has to be _exactly_ the same as the one in the default catalogue, or the translation won't work.
-2. `$parameters` – An array of replacements, if any. ([Learn more about translation placeholders](https://symfony.com/doc/3.4/components/translation/usage.html#component-translation-placeholders)).
+2. `$parameters` – An array of replacements, if any. ([Learn more about translation placeholders](https://symfony.com/doc/4.4/components/translation/usage.html#component-translation-placeholders)).
 3. `$domain` – The [translation domain][translation-domains] for that wording.
 
 {{% notice warning %}}
@@ -121,5 +121,5 @@ You can also use named placeholders:
 ```
 
 {{% notice note %}}
-For information on more advanced Twig translation features, head on to the [Symfony translator component's documentation](https://symfony.com/doc/3.4/translation.html#twig-templates).
+For information on more advanced Twig translation features, head on to the [Symfony translator component's documentation](https://symfony.com/doc/4.4/translation.html#twig-templates).
 {{% /notice %}}

@@ -96,7 +96,7 @@ class DemoController extends FrameworkBundleAdminController
 
 {{% notice tip %}}
 If you need more details about dependency injection and how services work in the Symfony environment we recommend you to read
-their documentation about the [Service Container](https://symfony.com/doc/3.4/service_container.html).
+their documentation about the [Service Container](https://symfony.com/doc/4.4/service_container.html).
 {{% /notice %}}
 
 ### Override an existing Symfony service

@@ -44,7 +44,7 @@ Let's see how this is done in modern pages.
 In modern pages, form management is decoupled from Controllers. You need to create your forms, validate them, map them to the current HTTP request and persist data yourself. You also need to create your form templates too, but we have a nice form theme which will help you a lot.
 
 {{% notice tip %}}
-Modern pages use Symfony forms. To learn the basics of Symfony forms, read their [official documentation](https://symfony.com/doc/3.4/forms.html).
+Modern pages use Symfony forms. To learn the basics of Symfony forms, read their [official documentation](https://symfony.com/doc/4.4/forms.html).
 {{% /notice %}}
 
 ### Form types
@@ -65,7 +65,7 @@ Most of the components from the PrestaShop UI Kit are implemented as Form Types.
 Before creating a new form type, check this folder first to see if the type already exists.
 {{% /notice %}}
 
-Forms are created and declared [as services](https://symfony.com/doc/3.4/form/form_dependencies.html#define-your-form-as-a-service) that you can use inside your Controllers – this is covered in the [Controllers/Routing section][controllers-and-routing] of this guide.
+Forms are created and declared [as services](https://symfony.com/doc/4.4/form/form_dependencies.html#define-your-form-as-a-service) that you can use inside your Controllers – this is covered in the [Controllers/Routing section][controllers-and-routing] of this guide.
 
 ## Learn more
 

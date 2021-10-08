@@ -6,7 +6,7 @@ weight: 20
 
 # Types reference
 
-Developers can already use large list of field types (see [Symfony types](https://symfony.com/doc/3.4/reference/forms/types.html)) that comes from Symfony framework. In addition to that, PrestaShop adds more reusable field types that developers can use.
+Developers can already use large list of field types (see [Symfony types](https://symfony.com/doc/4.4/reference/forms/types.html)) that comes from Symfony framework. In addition to that, PrestaShop adds more reusable field types that developers can use.
 
 #### Text fields
 
