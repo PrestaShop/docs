@@ -21,6 +21,6 @@ If you have questions about a PrestaShop module or theme you have downloaded or 
 
 Finally, you can also ask for help from other PrestaShop users:
 
-- [on the Community chat](https://github.com/PrestaShop/open-source/blob/master/slack/readme.md) (Slack)
+- [on the Community chat]({{< param "projectUrls.slack" >}}) (Slack)
 - [on the Community forums](https://www.prestashop.com/forums/)
 - [on Stack Overflow](https://stackoverflow.com/questions/tagged/prestashop)
