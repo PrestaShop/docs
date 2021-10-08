@@ -358,7 +358,7 @@ As you can see, there are three parameters:
         - The second argument to that function, if provided.
         - Your module's technical name, in lowercase, if not provided.
     - If the translation is performed in a `.tpl` file via `{l}` smarty tag:
-        - The file name, in lowercase, without the extension removed (eg. `foo.tpl` → `foo`)
+        - The file name, in lowercase, with the extension removed (eg. `foo.tpl` → `foo`)
     
 3. `$md5` – MD5 hash of the original wording you intend to translate.
 
