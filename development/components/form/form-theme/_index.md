@@ -14,7 +14,7 @@ The code below renders a whole form using Twig:
 {{ form_widget(form) }}
 {{ form_end(form) }}
 ```
-[sf-form-component]: https://symfony.com/doc/3.4/forms.html
+[sf-form-component]: https://symfony.com/doc/4.4/forms.html
 
 ## Read more
 

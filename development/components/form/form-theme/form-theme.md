@@ -73,7 +73,7 @@ Once all forms have been updated to work with the UI Kit Form Theme, it will bec
 
 
 
-[sf-bootstrap4-form-theme]: https://symfony.com/doc/3.4/form/bootstrap4.html
+[sf-bootstrap4-form-theme]: https://symfony.com/doc/4.4/form/bootstrap4.html
 [ui-kit]: {{< ref "/1.7/development/uikit.md" >}}
 [pr-begin-ui-kit-form-theme]: https://github.com/PrestaShop/PrestaShop/pull/16964
 [example-pr-database-settings-form]: https://github.com/PrestaShop/PrestaShop/pull/21652
