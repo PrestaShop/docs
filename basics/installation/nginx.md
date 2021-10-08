@@ -67,7 +67,7 @@ server {
     rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
 
     # Installation sandbox.
-    rewrite ^(/install(?:-dev)?/sandbox)/(.*) /$1/test.php last;
+    rewrite ^(/install(?:-dev)?/sandbox)/.* /$1/test.php last;
 
     location / {
         try_files $uri $uri/ /index.php$is_args$args;
