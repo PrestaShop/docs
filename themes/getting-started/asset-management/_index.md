@@ -4,18 +4,16 @@ title: Asset management
 
 # Asset Management
 
-PrestaShop 1.7 has significantly improved the way assets (CSS, JavaScript and image files) are managed.
-
 We advise theme developers to compile most of their style and JavaScript code into a single concatenated/minified file (see the Webpack section below).
 
 If you need to add special assets, for example an extra JavaScript library on the home page or the product page, there are a few ways to do so.
 
 Your theme have to print assets correctly in the smarty template, and it's explained
-in the [template section]({{< ref "1.7/themes/reference/templates/head" >}}).
+in the [template section]({{< relref "/8/themes/reference/templates/head" >}}).
 
 ## Registering assets
 
-In PrestaShop 1.7+, it's easy to register custom assets on each pages. The major improvement is that you can easily manage them from your theme, without any modules.
+In PrestaShop 1.7+, it's easy to register custom assets on each page. The major improvement is that you can easily manage them from your theme, without any modules.
 
 We introduced new methods to register assets, and especially new cool options.
 

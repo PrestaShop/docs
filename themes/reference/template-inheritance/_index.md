@@ -4,8 +4,7 @@ title: Template inheritance
 
 # Template inheritance
 
-PrestaShop 1.7 relies a lot on template inheritance in order to create the most consistant
-theme possible while heavily reducing the amount of duplicated code.
+PrestaShop relies a lot on template inheritance in order to create the most consistent theme possible, while heavily reducing the amount of duplicated code.
 
 
 ## The principle
@@ -34,9 +33,7 @@ The [official Smarty documentation](https://www.smarty.net/inheritance) has a ni
 
 ## PrestaShop real life example
 
-In a PrestaShop theme, many pages are very similar, for example template listing products: categories,
-new products, search results, and so on. All of them display a list of products so in PS 1.7 they all
-extend `catalog/listing/product-list.tpl` (which extends the main layout).
+In a PrestaShop theme, many pages are very similar, for example template listing products: categories, new products, search results, and so on. All of them display a list of products, so they all extend `catalog/listing/product-list.tpl` (which extends the main layout).
 
 ```smarty
   {extends file=$layout}

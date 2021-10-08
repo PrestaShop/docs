@@ -5,7 +5,7 @@ weight: 3
 
 # Create hooks available in Front Office
 
-This section of the documentation is only about front office hooks: [display and action]({{< ref "1.7/development/components/hook/_index.md" >}}).
+This section of the documentation is only about front office hooks: [display and action]({{< relref "/8/development/components/hook/_index.md" >}}).
 
 ## Creating a dynamic hook
 
@@ -33,7 +33,7 @@ This will enable Back Office user to:
 - be able to plug some modules on it (in Position page)
 - allow other modules to listen to this hook being called and add some extra behavior
 
-You can register your hook from your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-yml" >}}):
+You can register your hook from your theme's [theme.yml file]({{< relref "/8/themes/getting-started/theme-yml" >}}):
 
 ```yaml
 global_settings:

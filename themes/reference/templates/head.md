@@ -5,22 +5,22 @@ weight: 20
 
 # Head
 
-The head part is very important in term of SEO and performances.
+The head part is very important in terms of SEO and performance.
 
 Have look at Classic's head part to see real life examples.
 
 
 ## Assets
 
-PrestaShop 1.7 changed the way asset works and it means the way to it's added
+PrestaShop 1.7 changed the way asset work, and it means the way they are added
 inside the `<head>` tag of your page changed a bit too.
 
-There are 2 importants files to use:
+There are 2 important files to use:
 
 * `_partials/stylesheets.tpl`
 * `_partials/javascript.tpl`
 
-These 2 files are used to take full advantage of the new features of 1.7, like async
+These 2 files are used to take full advantage of the features like async
 loading for javascript or automatic inline for CSS.
 
 {{% notice warning %}}

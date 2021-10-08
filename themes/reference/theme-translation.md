@@ -4,11 +4,7 @@ title: Theme translation
 
 # How to translate your theme
 
-PrestaShop 1.7 comes with a new translation system for themes.
-
-{{% notice note %}}
-The following instructions only apply to PrestaShop 1.7.2 and later. In previous versions, exported themes didn't include the selected and included translations.
-{{% /notice %}}
+PrestaShop provides a way to translate your theme to any language.
 
 ## 1. Add new or customize existing wordings in a theme
 

@@ -30,7 +30,7 @@ Open a command line on your (empty) working directory, then:
     
 Using git you can choose your PrestaShop version:
 ```bash
-git checkout 1.7.2.0
+git checkout 8.0
 ```
 
 Also we would warn you to test your final result with a zip release, just for safety (since vendor version might be slightly different).
@@ -82,6 +82,6 @@ author:
  
 meta:
   compatibility:
-      from: 1.7.3.0
+      from: 8.0
       to: ~
 ```
