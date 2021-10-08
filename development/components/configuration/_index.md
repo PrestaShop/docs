@@ -62,7 +62,7 @@ This method returns `true` if the operation is successful, `false` otherwise.
   Note that this is the **only supported use of arrays**.
   {{% /notice %}}
 
-`$shopConstraint` {{< minver v="1.7.7" >}}
+`$shopConstraint`
 : 
   This optional parameter lets you specify the shop context for the operation (read the "Multistore" section below for more). 
   
@@ -82,7 +82,7 @@ This method returns `true` if the data exists, `false` otherwise.
 : 
   Identifier to check.
 
-`$shopConstraint` {{< minver v="1.7.7" >}}
+`$shopConstraint`
 : 
   This optional parameter lets you specify the shop context for the operation (read the "Multistore" section below for more). 
   
@@ -104,7 +104,7 @@ If the data is stored as multi language, this will return an array of values ind
 : 
   Identifier to retrieve.
 
-`$default` {{< minver v="1.7.4" >}}
+`$default`
 : 
   This optional parameter lets you define the value to return if the identifier is not found.
 
@@ -124,7 +124,6 @@ This method returns nothing, and throws an Exception on error.
 
 
 ## Multistore
-{{< minver v="1.7.7" title="true" >}}
 
 By default, and unless otherwise specified, the methods described above work within the confines of the current store context, whether PrestaShop is using the multistore feature or not.
 

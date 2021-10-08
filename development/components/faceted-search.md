@@ -5,7 +5,7 @@ menuTitle: Faceted Search
 
 # The Faceted Search Architecture
 
-This document describes the faceted search architecture that is being implemented in PrestaShop 1.7.
+This document describes the faceted search architecture that is implemented in PrestaShop 1.7 and over.
 
 **Please also read the extensive comments in `classes/controller/ProductListingFrontControllerCore`, as this document is only a high-level explanation.**
 

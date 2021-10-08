@@ -4,7 +4,6 @@ menuTitle: Grid
 ---
 
 # The Grid component
-{{< minver v="1.7.5" title="true" >}}
 
 ## Introduction
 
@@ -159,10 +158,6 @@ $searchCriteria->getOrderWay(); // "asc"
 $searchCriteria->getOffset();   // 0
 $searchCriteria->getLimit();    // 10
 ```
-
-{{% notice note %}}
-The class `PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteria` is only available since {{< minver v="1.7.6" >}}
-{{% /notice %}}
 
 When creating Search Criteria you can skip some or all of its data. If you set both `orderWay` and `orderBy` to `null`
 it will disable sorting. If you set both `offset` and `limit` to `null` it will disable pagination.

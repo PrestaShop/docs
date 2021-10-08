@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # DataColumn Type
-{{< minver v="1.7.5" title="true" >}}
 
 The most basic column is DataColumn. It is used to display raw field data in Grid.
 

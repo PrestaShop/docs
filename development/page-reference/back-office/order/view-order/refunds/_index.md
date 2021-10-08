@@ -4,7 +4,6 @@ menuTitle: Refunds
 ---
 
 # Cancellations and refunds
-{{< minver v="1.7.7" title="true" >}}
 
 {{% notice info %}}
 For a full specification of how these features work, you can read [the functional specifications](https://github.com/PrestaShop/prestashop-specs/blob/master/content/1.7/back-office/orders/orders/Order%20Page%20View.md#merchandise-return-has-to-be-enabled-if-the-merchant-want-to-use-the-standard-refund-partial-refund-and-return-product-feature)
@@ -31,7 +30,7 @@ The **Partial refund** button is available once a payment was made on the order,
 
 ### Introduction
 
-Since Prestashop 1.7.7, cancellation actions (that is to say **cancel product**, **return product**, **standard refund** and **partial refund**) are implemented following the CQRS design pattern.
+Cancellation actions (that is to say **cancel product**, **return product**, **standard refund** and **partial refund**) are implemented following the CQRS design pattern.
 
 {{% notice info %}}
 You will find more informations about Prestashop's CQRS implementation [on this page]({{ relref "/8/development/architecture/domain/cqrs" }}).
@@ -98,20 +97,11 @@ Note that all those commands are in this namespace: `PrestaShop\PrestaShop\Core\
 
 ### The **actionProductCancel** hook
 
-Since Prestashop 1.7.7, the `actionProductCancel` hook is triggered by all refund actions, it was not the case in 1.7.6, see the differences in the table below:
-
-|Does this action trigger the `actionProductCancel` hook ?| 1.7.6 | 1.7.7
-|:-------|:-------|:-----------------------|
-**Cancel product**| yes | yes |
-**Standard refund** | yes | yes |
-**Partial refund** | no | yes |
-**Return product** | yes | yes |
+The `actionProductCancel` hook is triggered by all refund actions.
 
 #### How to know which action triggered the `actionProductCancel` hook ?
 
-##### In Prestashop 1.7.7
-
-Since Prestashop 1.7.7, the `actionProductCancel` hook has an `action` parameter indicating which action was performed. Its value is one of the attributes of the `CancellationActionType` class. 
+The `actionProductCancel` hook has an `action` parameter indicating which action was performed. Its value is one of the attributes of the `CancellationActionType` class. 
 
 ```php
 <?php
@@ -127,23 +117,6 @@ public function hookActionProductCancel($params)
 	 // the hook was triggered by a "return product"
 
 	}
-}
-
-```
-
-##### In Prestashop 1.7.6
-
-In Prestashop 1.7.6 there's no 'action' parameter, but you can still guess what action was being performed given the order's history, here's how it looks like in the code:
-
-```php
-<?php
-
-if ($order->hasBeenShipped()) {
-  // this is a 'return product' action
-} else if ($order->hasBeenPaid()) {
-  // this is a 'standard refund'
-} else {
-  // this is a 'cancel product'
 }
 
 ```

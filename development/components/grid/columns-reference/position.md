@@ -5,7 +5,6 @@ weight: 20
 ---
 
 # PositionColumn Type
-{{< minver v="1.7.5" title="true" >}}
 
 This column type allows you to define rows position using a drag and drop feature. Besides this column definition
 you need to use our javascript `PositionExtension` and prepare a route to manage the positions update. To help you create

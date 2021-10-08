@@ -5,8 +5,6 @@ weight: 30
 
 # Understanding the "src" folder
 
-The main idea when doing the 1.7 release was to use Symfony as a replacement for our own PrestaShop framework.
-
 In the `/src` folder you'll find 3 main folders with different purposes:
 
 - **Core**: contains business logic classes

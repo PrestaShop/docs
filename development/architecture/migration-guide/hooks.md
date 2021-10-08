@@ -8,7 +8,7 @@ weight: 40
 [Hooks][hooks-component] are the most important feature for the PrestaShop developers because they allow them to improve PrestaShop by adding code or content in multiple points of the application. For Symfony developers, you can see that as Events on steroids.
 To keep some degree of compatibility with 1.6 or 1.7 (pre-Symfony migration) modules, we need to ensure that hooks are still available, invoked and/or rendered at the right place.
 
-Getting the list of available Hooks in modern pages is really easy. Thanks to the hook profiler introduced in `1.7.3`, the Symfony debug bar displays the list of available hooks (alongside some useful information) on a given page. Sadly, this is only available on Symfony pages, since the legacy system doesn't have any way to get the list of hooks dispatched for a page.
+Getting the list of available Hooks in modern pages is really easy. Thanks to the hook profiler, the Symfony debug bar displays the list of available hooks (alongside some useful information) on a given page. Sadly, this is only available on Symfony pages, since the legacy system doesn't have any way to get the list of hooks dispatched for a page.
 
 ## Getting the list of hooks on a legacy page
 

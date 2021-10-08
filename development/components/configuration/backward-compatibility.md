@@ -5,7 +5,7 @@ menuTitle: Backward compatibility
 
 # Backward compatible configuration storage
 
-PrestaShop 1.7 keeps the 1.6 configuration class for backward compatibility. 
+PrestaShop 8 maintains the 1.6 configuration class for backward compatibility. 
 
 If you don't need compatibility with 1.6 shops, we suggest using the [Configuration service]({{< ref "../configuration/" >}}) instead.
 

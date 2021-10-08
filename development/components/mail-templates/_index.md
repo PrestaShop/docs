@@ -4,7 +4,6 @@ menuTitle: Mail Templates
 ---
 
 # The Mail Template component
-{{< minver v="1.7.6" title="true" >}}
 
 ## Introduction
 
@@ -13,7 +12,7 @@ PrestaShop's email notification system is based on static template files, one fo
 This system has a few drawbacks. Shops need to download email packs every time a new language is installed,
 and if a template had not been translated to that language, you ended up with emails in English. This gets even more complicated when you use an email theme (from Addons or a freelance designer) which is therefore limited to the languages the authors translated by themselves. Also, any customization performed in a template has to be replicated for every installed language.
 
-Starting on 1.7.6, this feature has been significantly revamped. To avoid introducing breaking changes, the system still relies on static email templates, which are used by the `Mail::send` method. However, instead of downloading translated copies of each template, these files are now dynamically generated whenever you install a new language, using base templates, or _layouts_. 
+This feature was significantly revamped in PrestaShop 1.7. To avoid introducing breaking changes, the system still relies on static email templates, which are used by the `Mail::send` method. However, instead of downloading translated copies of each template, these files are now dynamically generated whenever you install a new language, using base templates, or _layouts_. 
 
 This is the first step to improving the email system in PrestaShop. As the feature gets further improved we will add more advanced customization for email templates.
 
@@ -37,7 +36,7 @@ Terms like "layouts", "templates" and "themes" can be confusing, so let's clarif
 
 ### Folder structure
 
-The new email themes layout files are stored in the `mails/themes/` folder. PrestaShop 1.7.6 is bundled with two email themes:
+The new email themes layout files are stored in the `mails/themes/` folder. PrestaShop is bundled with two email themes:
 
 * **classic** – The default email theme that was bundled with PrestaShop up until the 1.7.5 version.
 * **modern** – A new email theme with a modern, responsive design.
@@ -197,7 +196,7 @@ Of course sometimes you still want to manually generate your emails (new theme i
 Your shop can only use one theme at a time, so if you go to the "Design > Email Theme" page you will be able to choose your default email theme.
 This default theme will be used each time the generation process is launched automatically (language installation, upgrade, ...).
 
-The default theme starting from `1.7.6` will be the **modern** theme, the *classic* theme was provided for backward compatibility and as an example.
+The **modern** theme is active by default. The *classic* theme was provided for backward compatibility and as an example.
 
 ### Troubleshooting
 
@@ -247,8 +246,8 @@ Be aware this operation will **permanently modify** your shop theme's files!
 
 ### Module Tutorials
 
-* [How to extend a layout in a theme from a module]({{< ref "1.7/modules/concepts/mail-templates/extend-a-layout-from-module" >}})
-* [How to add a layout in a theme from a module]({{< ref "1.7/modules/concepts/mail-templates/add-a-layout-from-module" >}})
-* [How to add an email theme from a module]({{< ref "1.7/modules/concepts/mail-templates/add-a-theme-from-module" >}})
-* [How to add layout variables from a module]({{< ref "1.7/modules/concepts/mail-templates/add-layout-variables-from-module" >}})
-* [How to apply a transformation from a module]({{< ref "1.7/modules/concepts/mail-templates/apply-transformation-from-module" >}})
+* [How to extend a layout in a theme from a module]({{< relref "/8/modules/concepts/mail-templates/extend-a-layout-from-module" >}})
+* [How to add a layout in a theme from a module]({{< relref "/8/modules/concepts/mail-templates/add-a-layout-from-module" >}})
+* [How to add an email theme from a module]({{< relref "/8/modules/concepts/mail-templates/add-a-theme-from-module" >}})
+* [How to add layout variables from a module]({{< relref "/8/modules/concepts/mail-templates/add-layout-variables-from-module" >}})
+* [How to apply a transformation from a module]({{< relref "/8/modules/concepts/mail-templates/apply-transformation-from-module" >}})

@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # How to create an Empty state
-{{< minver v="1.7.6" title="true" >}}
 
 Grid component allows developer to configure Empty state to make empty grid look more appealing for user.
 

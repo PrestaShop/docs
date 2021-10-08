@@ -5,7 +5,6 @@ weight: 10
 ---
 
 # HtmlColumn Type
-{{< minver v="1.7.8" title="true" >}}
 
 Displays raw data without any escaping. Can be used to display HTML in grid.
 

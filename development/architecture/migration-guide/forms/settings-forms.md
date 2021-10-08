@@ -65,10 +65,6 @@ prestashop.adapter.administration.general.form_handler:
         - 'general'
 ```
 
-{{% notice note %}}
-The class `PrestaShop\PrestaShop\Core\Form\Handler` has been added in 1.7.8.0. Previously, `PrestaShop\PrestaShop\Core\Form\FormHandler` was used.
-{{% /notice %}}
-
 Let's look at the arguments one by one:
 
 - `'@form.factory'`

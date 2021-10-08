@@ -5,7 +5,6 @@ weight: 60
 ---
 
 # EmployeeNameWithAvatarColumn Type
-{{< minver v="1.7.5" title="true" >}}
 
 This is a special type that allows you to add a column with the employee name and its avatar to your Grid.
 You can see how it looks by default:

@@ -4,12 +4,11 @@ menuTitle: Product Form
 ---
 
 # The New Product Form
-{{< minver v="1.7.8" title="true" >}}
 
-In most recent Product page, which was remade in 1.7.8, the form is divided into multiple sub forms. Each form has dedicated CQRS commands to manage its content.
+In the PrestaShop 8 the Product page has been remade, and its form is divided into multiple sub forms. Each form has dedicated CQRS commands to manage its content.
 
 {{% notice info %}}
-For previous versions you can read this documentation about [product form before 1.7.8]({{< ref "1.7/development/page-reference/back-office/product/form/product-form-before-1-7-8" >}}).
+For previous versions, read this documentation about [product form before 1.7.8]({{< relref "/1.7/development/page-reference/back-office/product/form/product-form-before-1-7-8" >}}).
 {{% /notice %}}
 
 ## Creation / Update commands

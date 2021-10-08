@@ -8,7 +8,7 @@ The legacy framework of PrestaShop was not built to be run from a Command Line.
 
 The consequence is that many of its functions require specific data to be properly initialized, and these parts are being initialized when an HTTP request is handled by the framework.
 
-In order to use legacy classes and components in Console, you need to initialize these parts. To make it easy, a [LegacyContextLoader helper class](https://github.com/PrestaShop/PrestaShop/pull/21125) was introduced in version `1.7.8.0`.
+In order to use legacy classes and components in Console, you need to initialize these parts. To make it easy, you can use the [LegacyContextLoader helper class](https://github.com/PrestaShop/PrestaShop/pull/21125).
 
 It loads the needed property in `Context` using, when needed, a fake Employee or Controller instance.
 
