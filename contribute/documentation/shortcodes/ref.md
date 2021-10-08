@@ -9,13 +9,13 @@ weight: 1
 
 To link to another page in the documentation, use `ref`:
 
-    [This is a link to Configuration]({{</* ref "1.7/basics/configuration.md" */>}})
+    [This is a link to Configuration]({{</* ref "/8/basics/configuration.md" */>}})
 
 
 Rendered result:
 
 {{% callout %}}
-[This is a link to Configuration]({{< ref "1.7/basics/installation/configuration" >}})
+[This is a link to Configuration]({{< ref "/8/basics/installation/configuration" >}})
 {{% /callout %}}
 
 {{% notice tip %}}

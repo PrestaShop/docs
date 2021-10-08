@@ -6,9 +6,7 @@ weight: 2
 # How to become a Core Contributor
 
 If you're reading this, thank you! This means you're interested in contributing to PrestaShop.
-You probably are a PrestaShop developer, and your use of the project is slightly different from
-ours. For instance, there are few differences between PrestaShop 1.7 (the release) and the branch 1.7
-of PrestaShop in the GitHub repository. This is because we create a release usable by everyone from our sources.
+You probably are a PrestaShop developer, and your use of the project is slightly different from ours. For instance, there are few differences between a PrestaShop zip release package and the GitHub repository. This is because the release package is a build, whereas the GitHub repository contains the sources.
 
 To be able to contribute you need:
 
@@ -83,9 +81,8 @@ composer install
 ```
 
 ### Compile assets
-{{< minver v="1.7.8" title="true" >}}
 
-From the 1.7.8 version the assets are no longer present in the repository and need to be compiled (we explained with more details why in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/)).
+Static assets are not present in the repository and need to be compiled (we explained why in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/)).
 You will need `npm` installed on your environment (here is the documentation about [how to compile assets][compile-assets]), then you can simply run:
 
 ```bash
@@ -145,8 +142,8 @@ A good practice is to write meaningful commits labels: it's better to have "Corr
 
 ### Publish your work
 
-See [Submit a Pull Request]({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}}).
+See [Submit a Pull Request]({{< relref "create-pull-request" >}}).
 
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
-[system-requirements]: {{< ref "1.7/basics/installation/system-requirements" >}}
-[compile-assets]: {{< ref "1.7/development/compile-assets" >}}
+[system-requirements]: {{< relref "/8/basics/installation/system-requirements" >}}
+[compile-assets]: {{< relref "/8/development/compile-assets" >}}
