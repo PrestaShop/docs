@@ -9,11 +9,6 @@ How to benchmark your PrestaShop Shop (Back-office)
 ## Benchmark methodology
 In order to benchmark the performances of the backoffice of your shop, you will use the **[Gatling](https://gatling.io/)** testing tool.
 
-><b>Note:
->Backoffice benchmark is only possible starting with PrestaShop 1.7.4.0!</b>
-
->If you want still want to run the test for version < 1.7.4.0, take a look at this PR: https://github.com/PrestaShop/PrestaShop/pull/8876
-
 ## What is Gatling?
 **[Gatling](https://gatling.io/)** is a stress tool. Development is currently focusing on HTTP support. We won’t explain here the fundamentals of Gatling, but for more details I suggest you to have a look at **[the Gatling project](https://github.com/gatling/gatling)**.
 

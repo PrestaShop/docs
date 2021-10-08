@@ -1,7 +1,5 @@
 ---
 title: Optimize your PrestaShop
-alias:
-- 1.7/optimizations/
 ---
 
 # Optimize your PrestaShop performance

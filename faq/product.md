@@ -7,7 +7,6 @@ title: Product FAQ
 - [Product cover](#product-cover)
 
 ## Product cover
-{{< minver v="1.7.7" title="true" >}}
 
 **Q:** How can I override the cover image of my products?
 
