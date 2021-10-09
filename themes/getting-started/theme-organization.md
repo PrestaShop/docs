@@ -100,7 +100,7 @@ The folders are used this way:
 : Contains configuration file. By default, it only has the theme.yml file.
 
 **/dependencies/modules/**
-: Contains theme-specific modules. *This folder isn't present in the Classic Theme because it has no theme-specific modules.*
+: Contains [theme-specific modules]({{< ref "1.7/themes/reference/theme-specific-modules" >}}). *This folder isn't present in the Classic Theme because it has no theme-specific modules.*
 
 **/modules/**
 : Contains the theme's version of native or third-parties modules' template files.  
