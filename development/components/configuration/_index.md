@@ -147,7 +147,7 @@ $configuration->set(
 );
 ```
 ## Console command
-{{< minver v="1.8.1" title="true" >}}
+{{< minver v="1.7.8.2" title="true" >}}
 
 You can also use console command to get, set and remove config values from command line.
 
