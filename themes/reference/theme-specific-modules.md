@@ -21,7 +21,7 @@ Theme-specific modules should be placed in your theme's `dependencies/modules` d
 
 ## Declaring the module
 
-You can declare the module in your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-yml" >}}):
+You can declare the module in your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-organization" >}}):
 
 ```yaml
 dependencies:
