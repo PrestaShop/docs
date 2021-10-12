@@ -13,7 +13,7 @@ Migrated configuration forms can display a checkbox before fields in order to sp
 
 {{< figure src="../../img/multistore-field-dropdown.png" title="Multistore configuration form dropdown" >}}
 
-If you are building a configuration form and you want the form to be aware of the current multistore context, then you must make your form compatible with multistore checkboxes. This is made possible thanks to [Symfony's form extensions mechanism](https://symfony.com/doc/3.4/form/create_form_type_extension.html).
+If you are building a configuration form and you want the form to be aware of the current multistore context, then you must make your form compatible with multistore checkboxes. This is made possible thanks to [Symfony's form extensions mechanism](https://symfony.com/doc/4.4/form/create_form_type_extension.html).
 
 
 ## Creating a multistore compatible configuration form

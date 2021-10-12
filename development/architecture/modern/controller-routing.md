@@ -5,7 +5,7 @@ title: Symfony controllers & routing
 # Symfony controllers & routing
 
 {{% notice tip %}}
-Read the Symfony documentation on [Controllers](https://symfony.com/doc/3.4/controller.html) and [Routing](https://symfony.com/doc/3.4/routing.html).
+Read the Symfony documentation on [Controllers](https://symfony.com/doc/4.4/controller.html) and [Routing](https://symfony.com/doc/4.4/routing.html).
 {{% /notice %}}
 
 Controllers are located in `src/PrestaShopBundle/Controller/Admin` folder. They are organized in sub-folders following the Back Office menu. For instance, the [TaxController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Improve/International/TaxController.php) is located in `src/PrestaShop/Controller/Admin/Improve/International`.
@@ -184,7 +184,7 @@ In this case, you can use the [Controllers helper functions](#controller-helpers
 
 ## Routing in PrestaShop
 
-Routes are responsible for mapping a controller action to an url, you can read more about routing in [symfony docs](https://symfony.com/doc/3.4/routing.html).
+Routes are responsible for mapping a controller action to an url, you can read more about routing in [symfony docs](https://symfony.com/doc/4.4/routing.html).
 
 {{% notice info %}}
 PrestaShop uses YAML files for service declaration and routing (NOT ANNOTATIONS).

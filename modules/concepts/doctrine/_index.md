@@ -13,11 +13,11 @@ specific data via left join, add conditions and so on...
 
 Doctrine is the default ORM integrated with Symfony which is why we added it for modules in legacy context. If you want
 more details about Doctrine and its features you can check [their documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.5/index.html)
-or the [Symfony documentation](https://symfony.com/doc/3.4/doctrine.html). PrestaShop is currently using Doctrine version 2.5.
+or the [Symfony documentation](https://symfony.com/doc/4.4/doctrine.html). PrestaShop is currently using Doctrine version 2.5.
 
 ## Module integration
 
-We meant to make the Doctrine integration the simplest possible, which is why we favored the [annotation mapping](https://symfony.com/doc/3.4/doctrine.html#add-mapping-information)
+We meant to make the Doctrine integration the simplest possible, which is why we favored the [annotation mapping](https://symfony.com/doc/4.4/doctrine.html#add-mapping-information)
 which allows you to specify your database structure directly in your entity classes. We also used a simple convention, you simply
 need to put your entities in the `src/Entity` folder of your module and PrestaShop will automatically scan them for all **installed**
 modules.
@@ -331,14 +331,14 @@ class YourModuleListCommentsModuleFrontController extends ModuleFrontController
 }
 ```
 
-If you need more information about how to use an entity repository you can read the [Symfony documentation](https://symfony.com/doc/3.4/doctrine.html#fetching-objects-from-the-database)
+If you need more information about how to use an entity repository you can read the [Symfony documentation](https://symfony.com/doc/4.4/doctrine.html#fetching-objects-from-the-database)
 where you will also find examples for more advanced queries (with more conditions, joins, ...).
 
 ## Example
 
 If you want a more advanced example you can have a look at the [ProductComments module](https://github.com/PrestaShop/productcomments/),
 additionally to what you read here it also defines custom repositories which use the Doctrine query builder to fetch array
-data directly (without using Entities). As well as some examples of [associations](https://symfony.com/doc/3.4/doctrine/associations.html)
+data directly (without using Entities). As well as some examples of [associations](https://symfony.com/doc/4.4/doctrine/associations.html)
 between Entities.
 
 You can also have a look at our dedicated [Example module](https://github.com/PrestaShop/example-modules/tree/master/demodoctrine) which contains a full example, including form handling, multi languages, repositories, ...

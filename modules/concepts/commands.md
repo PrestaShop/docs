@@ -81,13 +81,13 @@ The command should be now available using `./bin/console your-module:export`.
 
 We use the Symfony Console with nothing specific to PrestaShop.
 
-You can learn everything about this component in [their documentation](https://symfony.com/doc/3.4/console.html) in version 3.4.
+You can learn everything about this component in [their documentation](https://symfony.com/doc/4.4/console.html) in version 3.4.
 
 To sum up, there is a list of useful links:
 
-* [Create a new command](https://symfony.com/doc/3.4/console.html#creating-a-command);
-* [Manage the Command arguments](https://symfony.com/doc/3.4/console/input.html);
-* [Manage the Command output](https://symfony.com/doc/3.4/console/style.html);
-* [How to inject dependencies](https://symfony.com/doc/3.4/console.html#getting-services-from-the-service-container) in a Command;
-* [How to test a Command](https://symfony.com/doc/3.4/console.html#testing-commands);
+* [Create a new command](https://symfony.com/doc/4.4/console.html#creating-a-command);
+* [Manage the Command arguments](https://symfony.com/doc/4.4/console/input.html);
+* [Manage the Command output](https://symfony.com/doc/4.4/console/style.html);
+* [How to inject dependencies](https://symfony.com/doc/4.4/console.html#getting-services-from-the-service-container) in a Command;
+* [How to test a Command](https://symfony.com/doc/4.4/console.html#testing-commands);
 * [Example module how to create console command](https://github.com/PrestaShop/example-modules/tree/master/democonsolecommand);

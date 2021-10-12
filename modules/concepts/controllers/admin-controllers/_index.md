@@ -127,7 +127,7 @@ Now we have created and loaded your controller, you need to declare a route. A r
 
 {{< minver v="1.7.5" title="true" >}}
 
-This is really simple (and very well documented in Symfony's [Routing component documentation](https://symfony.com/doc/3.4/routing.html)):
+This is really simple (and very well documented in Symfony's [Routing component documentation](https://symfony.com/doc/4.4/routing.html)):
 
 For instance:
 

@@ -49,7 +49,7 @@ This example will be based on an example of quotes from various authors that nee
 This is the base entity, it contains:
 - the author name (no need to translate it)
 - a collection of `QuoteLang` which contains all the translatable fields using a [OneToMany Bidirectional relation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/association-mapping.html#one-to-many-bidirectional)
-- the dates of creation and updates (which rely on [Doctrine lifecycle callbacks](https://symfony.com/doc/3.4/doctrine/lifecycle_callbacks.html) to be filled automatically)
+- the dates of creation and updates (which rely on [Doctrine lifecycle callbacks](https://symfony.com/doc/4.4/doctrine/lifecycle_callbacks.html) to be filled automatically)
 - the definition of the associated repository `PrestaShop\Module\DemoDoctrine\Repository\QuoteRepository`
 
 ```php
@@ -391,7 +391,7 @@ class QuoteLang
 
 {{% notice tip %}}
 **More about Doctrine relations**
-If you need more info about how to setup and handle Doctrine relations, you can read the [Symfony documentation](https://symfony.com/doc/3.4/doctrine/associations.html) about it.
+If you need more info about how to setup and handle Doctrine relations, you can read the [Symfony documentation](https://symfony.com/doc/4.4/doctrine/associations.html) about it.
 Focus on the `Annotation` sections since PrestaShop only handles this kind of configuration from modules' Entities. Here are some additional link that might be useful:
 - [Doctrine Association mapping](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/association-mapping.html)
 - [Mastering Doctrine Relationships in Symfony 3 (video tutorial)](https://symfonycasts.com/screencast/symfony3-doctrine-relations)

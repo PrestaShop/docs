@@ -151,7 +151,7 @@ You can update this schema using the [source XML file](/8/schemas/form-submit.xm
 
 ## Render the form using Twig
 
-The rendering of forms in Twig is already described by the [Symfony documentation](https://symfony.com/doc/3.4/form/rendering.html). PrestaShop uses its own [Form theme](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Resources/views/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig) that contains specific markup for the PrestaShop UI Kit. You can see it as a customized version of Symfony's Bootstrap 4 form theme, even though it's not directly based on it.
+The rendering of forms in Twig is already described by the [Symfony documentation](https://symfony.com/doc/4.4/form/rendering.html). PrestaShop uses its own [Form theme](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Resources/views/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig) that contains specific markup for the PrestaShop UI Kit. You can see it as a customized version of Symfony's Bootstrap 4 form theme, even though it's not directly based on it.
 
 To sum up how it works, the controller sends an instance of `FormView` to Twig and Twig uses form helpers to render the right markup for every field type (the Form theme defines a specific markup for each Form Type).
 
