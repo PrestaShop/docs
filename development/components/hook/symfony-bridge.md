@@ -1,6 +1,6 @@
 ---
 title: Symfony bridge for hooks
-weight: 20
+weight: 40
 ---
 
 # Symfony bridge for hooks

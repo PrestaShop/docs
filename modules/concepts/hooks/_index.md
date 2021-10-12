@@ -124,6 +124,6 @@ You can check if hook exists before this with Hook::getIdByName('hook_name')
 $this->registerHook('displayAtSpecificPlace');
 ```
 
-If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you but be carefull : this will also plug the current module to the hook.
+If the hook "displayAtSpecificPlace" doesn't exist, PrestaShop will create it for you but be careful: this will also plug the current module to the hook.
 
 [hooks-component]: {{< ref "/8/development/components/hook/" >}}

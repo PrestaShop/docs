@@ -1,46 +1,23 @@
 ---
-title: Register a new hook
-weight: 10
+title: Adding a new Core hook
+weight: 30
 ---
 
-# How to register a new Hook in PrestaShop
+# How to add a new Core Hook
 
-This is basically three steps:
+Although hooks are automatically created the first time they are subscribed to, new hooks is added to the Core itself need to be properly registered and documented.
 
-* dispatch the hook in the code (in templates or PHP classes/files);
-* update the hooks xml definition of Installer;
-* update the hooks table for "Auto Upgrade" system;
+Here are the steps you need to follow.
 
-## Dispatching hooks
+## 1. Dispatch the new hook
 
-Most of the time, you will dispatch the hook using an instance of `HookDispatcher`. It can be retrieved from the service container and/or injected, as it's done for example in Form Handlers:
+The very fisrt step is just to dispatch the new hook wherever you need it, as explained in [Dispatching a Hook]({{< relref "dispatching-hook" >}}).
 
-```php
-<?php
-final class FormHandler extends AbstractFormHandler
-{
-    /* [...] */
-    public function getForm()
-    {
-        $formBuilder = $this->formFactory->createBuilder()
-            ->add('general', GeneralType::class)
-            ->add('upload_quota', UploadQuotaType::class)
-            ->add('notifications', NotificationsType::class)
-            ->setData($this->formDataProvider->getData())
-        ;
-        $this->hookDispatcher->dispatchWithParameters(
-            'displayAdministrationPageForm',
-            ['form_builder' => &$formBuilder]
-        );
-        return $formBuilder->setData($formBuilder->getData())->getForm();
-    }
-    /* [...] */
-}
-```
+## 2. Update the Hooks definition file
 
-## Hooks definition file
+All known hooks are registered in the `ps_hook` database table. This table is populated with Core hooks during the installation, by reading the `install-dev/data/xml/hook.xml` file, then during runtime every time a new hook is used.
 
-During the installation, hooks listed in the `install-dev/data/xml/hook.xml` file are stored on database and made available in PrestaShop. Even if this step is not a requirement – hooks can be declared from templates or generated dynamically – it's a good practice to do it. Also, every hook registered in Database will be displayed in the Hook debugger, so it will help the developer figure out which hooks are available.
+Having Core hooks registered is important for two main reasons. First, every hook registered in database will be displayed in the Hook debugger, so it will help developers figure out which hooks are available on a given page. Second, known hooks are displayed in the Positions page, allowing to transplant modules from one hook into another (this is especially useful for display hooks). 
 
 Each hook has a name, a title and a definition. They are identified by an additional id attribute in XML, which is the same as its name.
 
@@ -53,38 +30,35 @@ Each hook has a name, a title and a definition. They are identified by an additi
     <field name="description"/>
   </fields>
   <entities>
-    <hook id="...">
-      <name>...</name>
-      <title>...</title>
-      <description>...</description>
-    </hook>
     <hook id="actionMaintenancePageFormSave">
       <name>actionMaintenancePageFormSave</name>
       <title>Processing Maintenance page form</title>
       <description>This hook is called when the Maintenance Page form is processed</description>
+    </hook>
+    <hook id="...">
+      ...
     </hook>
   </entities>
 </entity_hook>
 </xml>
 ```
 
-{{% notice tip %}}
-Always add new hooks at the bottom of the list, as hooks are registered sequentially.
-{{% /notice %}}
+Add new hooks at the bottom of the list, as hooks are registered sequentially.
 
-## Prepare database update for auto upgrades
+## 3. Prepare database update for shop upgrades
 
-The last step is to describe the update process for the auto upgrade module – essentially, the insertion of new hooks in *hooks* table. 
-Locate the X.Y.Z.sql file that refers to the PrestaShop version that will include your change: for instance, if the release expected to include this change is `1.7.5.0`, locate that file in `upgrade/sql` folder in the [autoupgrade](https://github.com/PrestaShop/autoupgrade) module.
+The previous step only adds the hook to _new_ shops. We also need to register the hook to shops that upgrade from a previous version.
+
+The last step is to insert the new hooks in the `ps_hooks` table using the upgrade system. Locate the X.Y.Z.sql file that refers to the PrestaShop version that will include your change: for instance, if the release expected to include this change is `1.7.5.0`, locate that file in the `upgrade/sql` folder from the [autoupgrade](https://github.com/PrestaShop/autoupgrade) module.
 
 {{% notice tip %}}
 This process is explained here: [Structure and content upgrades]({{< ref "/8/development/database/structure.md#structure-and-content-upgrades" >}})
 {{% /notice %}}
 
-Then add the corresponding SQL commands to add new hooks:
+Once you have located the file, add the corresponding SQL commands to add new hooks:
 
 ```sql
-INSERT IGNORE INTO `PREFIX_hook` (`id_hook`, `name`, `title`, `description`, `position`) VALUES
-  (NULL, 'displayAdministrationPageForm', 'Manage Administration Page form fields', 'This hook adds, update or remove fields of the Administration Page form', '1'),
-  (NULL, 'actionMaintenancePageFormSave', 'Processing Maintenance page form', 'This hook is called when the Maintenance Page form is processed', '1');
+INSERT IGNORE INTO `PREFIX_hook` (`name`, `title`, `description`) VALUES
+  ('displayAdministrationPageForm', 'Manage Administration Page form fields', 'This hook adds, update or remove fields of the Administration Page form'),
+  ('actionMaintenancePageFormSave', 'Processing Maintenance page form', 'This hook is called when the Maintenance Page form is processed');
 ```
