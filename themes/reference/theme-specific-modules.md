@@ -21,7 +21,7 @@ Theme-specific modules should be placed in your theme's `dependencies/modules` d
 
 ## Declaring the module
 
-You can declare the module in your theme's [theme.yml file]({{< ref "1.7/themes/getting-started/theme-organization" >}}):
+You can declare the module in your theme's [theme.yml file]({{< relref "/1.7/themes/getting-started/theme-organization" >}}):
 
 ```yaml
 dependencies:
@@ -34,7 +34,7 @@ global_settings:
       - mymodule
 ```
 
-This will let PrestaShop know to:
+This will make PrestaShop:
 - copy the module to the `/modules` folder when installing the theme
 - install the module the first time the theme is enabled
-- enable/disable the module along your theme
+- enable/disable the module along with your theme
