@@ -13,7 +13,7 @@ You can find the detailed status of the project on the [GitHub tracking issue][f
 
 
 Page                      | Migrated in version       | Form simplified in version
---------------------------|---------------------------|-------------------------------
+--------------------------|:-------------------------:|:-----------------------------:
 **Advanced Parameters** | |
 Advanced Parameters > Performance                                      | 1.7.3 | 1.7.8
 Advanced Parameters > Administration                                   | 1.7.4 | 1.7.8
@@ -25,9 +25,9 @@ Advanced Parameters > Webservice                                       | 1.7.5 |
 Advanced Parameters > Webservice > Add new webservice key              | 1.7.6 | 1.7.8
 Advanced Parameters > Email                                            | 1.7.5 | 1.7.8
 Advanced Parameters > Database > SQL Manager                           | 1.7.5 | 1.7.8
-Advanced Parameters > Team > Employees                                 | 1.7.6 | 8.0.0
-Advanced Parameters > Team > Employees > Add new employee              | 1.7.6 | 8.0.0
-Advanced Parameters > Team > Employees > Profiles > Add new profile    | 1.7.6 | 8.0.0
+Advanced Parameters > Team > Employees                                 | 1.7.6 | 8.0
+Advanced Parameters > Team > Employees > Add new employee              | 1.7.6 | 8.0
+Advanced Parameters > Team > Employees > Profiles > Add new profile    | 1.7.6 | 8.0
 Advanced Parameters > Team > Employees > Permissions                   |       |
 Advanced Parameters > Multistore > Add new / edit shop group           |       |
 Advanced Parameters > Multistore > Add a new shop                      |       |
@@ -38,7 +38,7 @@ Advanced Parameters > Multistore > Arbo (shop URLs) > Shop URL listing > edit sh
 **Shop parameters** | |
 Shop parameters > General > General                                   | 1.7.4 | 1.7.8
 Shop parameters > General > Maintenance                               | 1.7.4 | 1.7.8
-Shop parameters > Product settings                                    | 1.7.4 | 8.0.0
+Shop parameters > Product settings                                    | 1.7.4 | 8.0
 Shop parameters > Customer settings > Customers                       | 1.7.4 | 1.7.8
 Shop parameters > Customer settings > Groups                          |       |
 Shop parameters > Customer settings > Groups > Add new / edit         |       |
@@ -48,7 +48,7 @@ Shop parameters > Order settings > Statuses                           |       |
 Shop parameters > Order settings > Statuses > Add new / edit order return status | |
 Shop parameters > Traffic & SEO > SEO & URLs                          | 1.7.5 | 1.7.8
 Shop parameters > Traffic & SEO > SEO & URL > Add new / edit page     | 1.7.6 | 1.7.8
-Shop parameters > Traffic & SEO > Search Engines > Add new / edit search engine | 8.0.0 | 8.0.0
+Shop parameters > Traffic & SEO > Search Engines > Add new / edit search engine | 8.0 | 8.0
 Shop parameters > Contact > Contacts > Add new / edit contact         | 1.7.6 | 1.7.8
 Shop parameters > Contact > Stores                                    |       |
 Shop parameters > Contact > Stores > Add new / edit store             |       |
@@ -59,11 +59,11 @@ Shop parameters > Search > Search > Add new / edit alias              |       |
 Shop parameters > Search > Tags > Add new / edit tag                  |       |
  | |
 **Catalog** | |
-Orders > Invoices                                                     | 1.7.5 | 8.0.0
-Orders > Delivery Slips                                               | 1.7.5 | 8.0.0
+Orders > Invoices                                                     | 1.7.5 | 8.0
+Orders > Delivery Slips                                               | 1.7.5 | 8.0
 Orders > Credit Slips                                                 | 1.7.7 | 1.7.8
 Shipping > Preferences                                                | 1.7.5 | 1.7.8
-Catalog > Categories > Add new / edit category                        | 1.7.6 | 8.0.0
+Catalog > Categories > Add new / edit category                        | 1.7.6 | 8.0
 Catalog > Brand & Suppliers > Brands > Add new brand                  | 1.7.6 | 1.7.8
 Catalog > Brand & Suppliers > Brands > Add new brand address          | 1.7.6 | 1.7.8
 Catalog > Brand & Suppliers > Add new / edit supplier                 | 1.7.7 | 1.7.8
@@ -74,7 +74,7 @@ Catalog > Attributes & Features > Add new / edit attribute            |       |
 Catalog > Attributes & Features > Add new / edit attribute value      |       |
 Catalog > Discounts > Cart rules > Add new / edit catalog price rule  |       |
 Catalog > Discounts > Cart rules > Add new / edit cart rule           |       |
-Payment > Preferences                                                 | 1.7.5 | 8.0.0
+Payment > Preferences                                                 | 1.7.5 | 8.0
 Customers > Addresses                                                 | 1.7.7 | 1.7.8
 Customers > Addresses > Add new / edit address                        | 1.7.7 | 1.7.8
 Customers > Customers                                                 | 1.7.6 | 1.7.8
@@ -82,7 +82,7 @@ Customers > Customers > View customer                                 | 1.7.6 | 
 Customers > Customers > Add new / edit customer                       | 1.7.6 | 1.7.8
 Customer Service > Order Messages > Add new / edit order message      | 1.7.7 | 1.7.8
 Customer Service > Customer Service                                   |       |
-Customer Service > Merchandise Returns > Edit                         | 8.0.0 | 8.0.0
+Customer Service > Merchandise Returns > Edit                         | 8.0   | 8.0
  | |
 **Improve** | |
 Design > Theme & Logo > Add new theme                                 | 1.7.6 | 1.7.8
