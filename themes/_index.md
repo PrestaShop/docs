@@ -11,7 +11,7 @@ chapter: true
 
 The default PrestaShop install offers the neutral "Classic theme", enabling sellers to quickly and freely start their activity, whatever their business line.
 
-Several marketplaces are availables to buy prestashop themes.
+Several marketplaces are available to buy PrestaShop themes.
 
 As a graphic designer/web developer, you too can put your themes up for sale on marketplaces.
 
