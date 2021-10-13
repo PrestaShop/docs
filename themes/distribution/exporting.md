@@ -29,12 +29,3 @@ Exporting your theme using the button or the command line will export the follow
 * All theme files in directory
 * Dependencies specified in `theme.yml` ([See theme.yml doc]({{< relref "/8/themes/getting-started/theme-yml" >}}))
 * Theme translations
-
-## Distributing on Addons
-
-Please note that if you want to sell your theme on the PrestaShop Addons, there are a few rules to follow:
-
-**LIST OF REQUIREMENTS**
-
-* Use BootStrap 4 alpha 4 -- [follow the appropriate doc](https://github.com/twbs/bootstrap/tree/v4.0.0-alpha.4/docs).
-* Add your key -- [follow the appropriate doc]({{< relref "/8/themes/getting-started/theme-yml" >}}).
