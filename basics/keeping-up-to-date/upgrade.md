@@ -128,14 +128,14 @@ Some web hosting providers gives you two user accounts to access your database. 
 All the changes to apply have been defined in the `install` folder,
 running them can be done with a specific PHP script.
 
-When you’re ready, run the file `install/upgrade/upgrade.php`.
+When you’re ready, run the file `upgrade/upgrade.php` from the `autoupgrade` module.
 
 This can be done with a browser, by reaching the address
-`http://<shop_domain>/install/upgrade/upgrade.php`, or from your
+`http://<shop_domain>/modules/autoupgrade/upgrade/upgrade.php`, or from your
 server's command line:
 
 ```bash
-php install/upgrade/upgrade.php
+php modules/autoupgrade/upgrade/upgrade.php
 ```
 
 In both cases, an XML log will be displayed. The result can be found in
