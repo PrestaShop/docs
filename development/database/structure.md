@@ -41,12 +41,12 @@ Once PrestaShop is installed, the default structure and content files we saw
 are not used anymore.
 
 If a new release of PrestaShop must bring changes to the existing database, an
-upgrade file must be created along the `db_structure.sql` update. This SQL
-file will be stored in the folder `/install/upgrade/sql/`.
+upgrade file must be created along the `db_structure.sql` update. 
+This SQL file will be stored in the [auto upgrade](https://github.com/PrestaShop/autoupgrade/tree/dev/upgrade/sql) module in the folder `/upgrade/sql/`.
 
-Its name is the PS version on which the change will be applied.
+Its name is the PrestaShop version on which the change will be applied.
 
-For instance, here is the file *[1.7.3.0.sql](https://github.com/PrestaShop/PrestaShop/blob/1.7.3.0/install-dev/upgrade/sql/1.7.3.0.sql)*,
+For instance, here is the file *[1.7.3.0.sql](https://github.com/PrestaShop/autoupgrade/tree/dev/upgrade/sql/1.7.3.0.sql)*,
 used by shops upgrading to 1.7.3.0 or later:
 
 ```sql
@@ -67,10 +67,10 @@ In case you have complex algorithms to run, you can call PHP code with the
 `PHP:` keyword.
 
 To make the code callable, a dedicated file has to be created in
-`/install/upgrade/php/` with a function in it. This file and function must have
+`/upgrade/php/` with a function in it. This file and function must have
 the same name as we saw in the SQL upgrade file.
 
-If we reuse the previous example, we will find the corresponding file *[/install/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php](https://github.com/PrestaShop/PrestaShop/blob/1.7.3.x/install-dev/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php)*:
+If we reuse the previous example, we will find the corresponding file *[/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php](https://github.com/PrestaShop/autoupgrade/blob/dev/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php)*:
 
 ```php
 <?php
@@ -90,7 +90,7 @@ Applying the changes on your database can be done:
 
 * by reinstalling the shop
 * from a previous version of PrestaShop, by copying the new files and calling
-the PHP script `install/upgrade/upgrade.php`
+the PHP script [/upgrade/upgrade.php](https://github.com/PrestaShop/autoupgrade/blob/dev/upgrade/upgrade.php)
 
 PrestaShop lists the upgrade files waiting to be applied, by selecting the names
 fitting between the configuration property `PS_VERSION_DB` and the constant

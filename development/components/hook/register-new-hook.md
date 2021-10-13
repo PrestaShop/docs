@@ -74,7 +74,8 @@ Always add new hooks at the bottom of the list, as hooks are registered sequenti
 
 ## Prepare database update for auto upgrades
 
-The last step is to describe the update process for the auto upgrade module – essentially, the insertion of new hooks in *hooks* table. Locate the X.Y.Z.sql file that refers to the PrestaShop version that will include your change: for instance, if the release expected to include this change is `1.7.5.0`, locate that file in `install-dev/upgrade/sql` folder.
+The last step is to describe the update process for the auto upgrade module – essentially, the insertion of new hooks in *hooks* table. 
+Locate the X.Y.Z.sql file that refers to the PrestaShop version that will include your change: for instance, if the release expected to include this change is `1.7.5.0`, locate that file in `upgrade/sql` folder in the [autoupgrade](https://github.com/PrestaShop/autoupgrade) module.
 
 {{% notice tip %}}
 This process is explained here: [Structure and content upgrades]({{< ref "/8/development/database/structure.md#structure-and-content-upgrades" >}})
