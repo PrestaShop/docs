@@ -29,41 +29,17 @@ Example for the date widget:
 {%- endblock date_widget -%}
 ```
 
-## PrestaShop form themes
+## PrestaShop UI Kit Form theme
 
-PrestaShop Form themes are located in the `src/PrestaShopBundle/Resources/views/Admin/TwigTemplateForm/` directory.
+PrestaShop Form theme is located in the `src/PrestaShopBundle/Resources/views/Admin/TwigTemplateForm/` directory.
 
-### Original PrestaShop Form theme
+PrestaShop UI Kit Form theme aim is to allow developers to be able to render full forms using a single `form_widget(form)` statement. This allows developers to customize the rendering by customizing the Form Theme, not the form. The changes performed on the Form Theme are done globally rather than on a single page.
 
-{{% notice warning %}}
-**This theme is limited and deprecated.**
-{{% /notice %}}
-
-Originally, Symfony forms in PrestaShop were developed using the field-by-field rendering technique, where each field is rendered individually ([see example](https://github.com/PrestaShop/PrestaShop/blob/1.7.7.0/src/PrestaShopBundle/Resources/views/Admin/Configure/AdvancedParameters/Employee/Blocks/employee_options.html.twig)). This method allows a fine-grained control of the rendering, but limits the extension capacities, which is why
-it is progressively being replaced by a new one (read below).
-
-This form theme is a copy of Symfony's original Bootstrap 4 form theme, with customizations made for PrestaShop.
-
-Its base theme is `bootstrap_4_layout.html.twig`. Used to render Symfony forms vertically, it relies on multiple files:
-
-- form_div_layout
-- typeahead
-- material
-
-By default, PrestaShop's Twig templates will use `bootstrap_4_horizontal_layout.html.twig` (as configured in PrestaShop's `/app/config/config.yml` file). This child of the above theme render forms horizontally instead of vertically.
-
-{{< figure src="../img/old-form-theme-17.png" title="Original Form Theme example of rendering" >}}
-
-### PrestaShop UI Kit Form theme
-{{< minver v="1.7.7" title="true" >}}
-
-Starting on 1.7.7 [a new Form Theme][pr-begin-ui-kit-form-theme] has been built from scratch to support the simplified form rendering technique. This means that the full form is rendered using a single `form_widget(form)` statement. This allows developers to customize the rendering by customizing the Form Theme, not the form. The changes performed on the Form Theme are done globally rather than on a single page.
-
-Contrary to the original form theme, this theme _extends_ Symfony's Bootstrap 4 form theme, allowing it to inherit all improvements done to Symfony's own form theme since the original release of PrestaShop 1.7.0.
+This theme extends Symfony's Bootstrap 4 form theme, allowing it to inherit all improvements done to Symfony's own form theme.
 
 `prestashop_ui_kit.html.twig` extends `prestashop_ui_kit_base.html.twig` and also relies on `bootstrap_4_horizontal_layout`, in order to render forms horizontally.
 
-Once all forms have been updated to work with the UI Kit Form Theme, it will become the default. Until then, Twig templates that need to rely on this theme need to activate it using the following statement:
+Until it becomes the default Form Theme, Twig templates that need to rely on this theme need to activate it using the following statement:
 
 ```
 {% form_theme form 'PrestaShopBundle:Admin/TwigTemplateForm:prestashop_ui_kit_base.html.twig' %}
@@ -71,9 +47,4 @@ Once all forms have been updated to work with the UI Kit Form Theme, it will bec
 
 {{< figure src="../img/ui-kit-form-theme.png" title="UI Kit Form Theme example of rendering" >}}
 
-
-
 [sf-bootstrap4-form-theme]: https://symfony.com/doc/4.4/form/bootstrap4.html
-[ui-kit]: {{< ref "/1.7/development/uikit.md" >}}
-[pr-begin-ui-kit-form-theme]: https://github.com/PrestaShop/PrestaShop/pull/16964
-[example-pr-database-settings-form]: https://github.com/PrestaShop/PrestaShop/pull/21652
