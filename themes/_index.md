@@ -9,10 +9,10 @@ chapter: true
 
 # Themes
 
-The default PrestaShop install offers the neutral "Classic theme", enabling sellers to quickly and freely start their activity, whatever their business line.
+The default PrestaShop installation offers the neutral "Classic theme", enabling merchants to quickly start their activity, whatever their business line.
 
-Several marketplaces are available to buy PrestaShop themes.
+Several marketplaces are available to get PrestaShop themes. The [PrestaShop Addons marketplace](https://addons.prestashop.com/) edited by Prestashop company offers many themes created either by members of the community or the PrestaShop company. Themes are technically validated to guarantee a good level of quality and security.
 
-As a graphic designer/web developer, you too can put your themes up for sale on marketplaces.
+As a graphic designer/front developer, you can put your themes up for sale on marketplaces.
 
 {{% children %}}
