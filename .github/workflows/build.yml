@@ -5,9 +5,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      TARGET_BRANCH: ${{ github.ref }}
-
     steps:
       - name: Checkout Hugo Site
         uses: actions/checkout@v2
@@ -26,11 +23,31 @@ jobs:
           hugo-version: '0.82.0'
           extended: true
 
-      - name: Find version from branch name
+      - name: Find version from branch name (pull request)
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          TARGET_BRANCH: ${{ github.base_ref }}
+        # transform "1.7.x" in "1.7"
+        run: |
+          echo "VERSION=`echo $TARGET_BRANCH | perl -pe 's|^([\d.]+)(?:\.x)?$|\1|'`" >> $GITHUB_ENV;
+
+      - name: Find version from branch name (push)
+        if: ${{ github.event_name != 'pull_request' }}
+        env:
+          TARGET_BRANCH: ${{ github.ref }}
         # transform "refs/heads/1.7.x" in "1.7"
         run: |
           echo "VERSION=`echo $TARGET_BRANCH | perl -pe 's|^.+/([^/]+?)(?:\.x)?$|\1|'`" >> $GITHUB_ENV;
-          echo $VERSION
+
+      - name: Ensure the version is coherent
+        run: |
+          VERSION_FORMAT='^([0-9]+\.)*[0-9]+$'
+          if [[ ! $VERSION =~ $VERSION_FORMAT ]]; then
+            echo "::error::Version '$VERSION' is not a valid version!"
+            exit 1
+          else
+            echo "Version: '$VERSION'"
+          fi
 
       - name: Move content into the appropriate directory
         run: |
