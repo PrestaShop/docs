@@ -36,6 +36,10 @@ server {
 
     index index.php;
 
+    # This should match the `post_max_size` and/or `upload_max_filesize` settings
+    # in your php.ini.
+    client_max_body_size 16M;
+
     # Redirect 404 errors to PrestaShop.
     error_page 404 /index.php?controller=404;
 
@@ -133,8 +137,6 @@ server {
 
         # [EDIT] Connection to PHP-FPM unix domain socket.
         fastcgi_pass unix:/var/run/php/php-fpm.sock;
-
-        client_max_body_size 10M;
     }
 }
 ```
