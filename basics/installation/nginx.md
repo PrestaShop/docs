@@ -49,16 +49,15 @@ server {
     # rewrite ^/fr/(.*) /$1;
 
     # Images.
-    rewrite ^/([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$1$2$3.jpg last;
-    rewrite ^/([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$1$2$3$4.jpg last;
-    rewrite ^/([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$1$2$3$4$5.jpg last;
-    rewrite ^/([0-9])([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$4/$1$2$3$4$5$6.jpg last;
-    rewrite ^/([0-9])([0-9])([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6$7.jpg last;
-    rewrite ^/([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7$8.jpg last;
-    rewrite ^/([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8$9.jpg last;
-    rewrite ^/([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])(-[_a-zA-Z0-9-]*)?(-[0-9]+)?/.+.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9$10.jpg last;
-    rewrite ^/c/([0-9]+)(-[.*_a-zA-Z0-9-]*)(-[0-9]+)?/.+.jpg$ /img/c/$1$2$3.jpg last;
-    rewrite ^/c/([a-zA-Z_-]+)(-[0-9]+)?/.+.jpg$ /img/c/$1$2.jpg last;
+    rewrite ^/(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$1$2.jpg last;
+    rewrite ^/(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$1$2$3.jpg last;
+    rewrite ^/(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$1$2$3$4.jpg last;
+    rewrite ^/(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$1$2$3$4$5.jpg last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6.jpg last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7.jpg last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8.jpg last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9.jpg last;
+    rewrite ^/c/([\w.-]+)/.+\.jpg$ /img/c/$1.jpg last;
 
     # AlphaImageLoader for IE and FancyBox.
     rewrite ^images_ie/?([^/]+)\.(gif|jpe?g|png)$ js/jquery/plugins/fancybox/images/$1.$2 last;
@@ -67,7 +66,7 @@ server {
     rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
 
     # Installation sandbox.
-    rewrite ^(/install(?:-dev)?/sandbox)/(.*) /$1/test.php last;
+    rewrite ^(/install(?:-dev)?/sandbox)/.* /$1/test.php last;
 
     location / {
         try_files $uri $uri/ /index.php$is_args$args;
@@ -76,7 +75,7 @@ server {
     # [EDIT] Replace 'admin-dev' in this block with the name of your admin directory.
     location /admin-dev/ {
         if (!-e $request_filename) {
-            rewrite ^/.*$ /admin-dev/index.php last;
+            rewrite ^ /admin-dev/index.php last;
         }
     }
 
