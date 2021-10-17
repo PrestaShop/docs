@@ -121,7 +121,7 @@ So "migrating a legacy Add/Edit page" means to "move the legacy logic into a Han
 
 ## Form Theme
 
-We dont want to render manually Form inputs, so we now rely on a [Twig Form Theme][twig-form-theme] allowing us to render all of our Symfony forms with a single block
+We don't want to render Form inputs manually, so we now rely on a [Twig Form Theme][twig-form-theme] allowing us to render all of our Symfony forms with a single block
 
 ```
 {{ form_widget(form) }}
