@@ -41,6 +41,9 @@ Here is its organization, which is explained further below.
   ├── composer.json
   ├── config
   │   └── theme.yml
+  ├── dependencies
+      └── modules
+          └── ...
   ├── modules
   │   └── ...
   ├── plugins
@@ -96,12 +99,15 @@ The folders are used this way:
 **/config/**
 : Contains configuration file. By default, it only has the theme.yml file.
 
+**/dependencies/modules/**
+: Contains [theme-specific modules]({{< relref "/1.7/themes/reference/theme-specific-modules" >}}). *This folder isn't present in the Classic Theme because it has no theme-specific modules.*
+
 **/modules/**
-: Contains either theme-specific modules, or the theme's version of native modules' template files.  
-  For instance, the `themes/classic/modules/ps_categorytree/views/templates/front/ps_categorytree.tpl` file replaces the Category module's own `modules/ps_categorytree/views/templates/front/ps_categorytree.tpl`
+: Contains the theme's version of native or third-parties modules' template files.  
+  For instance, the `themes/classic/modules/ps_categorytree/views/templates/front/ps_categorytree.tpl` file replaces the Category module's own `modules/ps_categorytree/views/templates/front/ps_categorytree.tpl`.
 
 **/plugins/**
-: Your custom smarty plugins
+: Your custom smarty plugins.
 
 **/templates/**
 : Contains the template files themselves (.tpl), mostly in contextual subfolders (catalog, checkout, cms, etc.).  
