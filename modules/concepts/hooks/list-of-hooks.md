@@ -610,7 +610,7 @@ actionFrontControllerSetVariables
     with smarty
     
     ```smarty
-    {$modules.your_module_name.your_variable_name};
+    {$modules.your_module_name.your_variable_name}
     ```    
     
     
