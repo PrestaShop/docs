@@ -36,6 +36,10 @@ server {
 
     index index.php;
 
+    # This should match the `post_max_size` and/or `upload_max_filesize` settings
+    # in your php.ini.
+    client_max_body_size 16M;
+
     # Redirect 404 errors to PrestaShop.
     error_page 404 /index.php?controller=404;
 
@@ -108,35 +112,31 @@ server {
         location ~ \.php$ { deny all; }
     }
 
-    # PHP FPM part
-    location ~ \.php$ {
-        # Verify that the file exists, redirect to index if not
-        try_files $fastcgi_script_name /index.php$uri&$args =404;
+    location ~ [^/]\.php(/|$) {
+        # Split $uri to $fastcgi_script_name and $fastcgi_path_info.
+        fastcgi_split_path_info ^(.+?\.php)(/.*)$;
 
-        fastcgi_index  index.php;
+        # Ensure that the requested PHP script exists before passing it
+        # to the PHP-FPM.
+        try_files $fastcgi_script_name =404;
 
-        # Environment variables for PHP
-        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        # Environment variables for PHP.
+        include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
 
-        include       fastcgi_params;
-
-        fastcgi_param PATH_INFO       $fastcgi_path_info;
-        fastcgi_param PATH_TRANSLATED $document_root$fastcgi_path_info;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-
-        # [REQUIRED EDIT] Connection to PHP-FPM - choose one
-        # fastcgi_pass 127.0.0.1:9000;
-        fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+        fastcgi_index index.php;
 
         fastcgi_keep_conn on;
         fastcgi_read_timeout 30s;
         fastcgi_send_timeout 30s;
 
-        # In case of long loading or 502 / 504 errors
+        # Uncomment these in case of long loading or 502/504 errors.
         # fastcgi_buffer_size 256k;
         # fastcgi_buffers 256 16k;
         # fastcgi_busy_buffers_size 256k;
-        client_max_body_size 10M;
+
+        # [EDIT] Connection to PHP-FPM unix domain socket.
+        fastcgi_pass unix:/var/run/php/php-fpm.sock;
     }
 }
 ```
