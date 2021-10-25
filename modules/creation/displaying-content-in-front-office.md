@@ -41,7 +41,7 @@ Attaching code to a hook requires a specific method for each:
 -   `hookActionFrontControllerSetMedia()`: will add a link to the module's CSS file,
     `/views/css/mymodule.css` and module's JS file, `/views/js/mymodule.js`.
     
-    Add the following to your mymodule.php file:
+Add the following to your mymodule.php file:
 
 ```php
 <?php
