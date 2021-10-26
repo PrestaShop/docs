@@ -1348,7 +1348,6 @@ actionPresentProduct
 
     Parameters:
     ```php
-    <?php
     array(
        'presentedProduct' => (array) &$productLazyArray
     );
