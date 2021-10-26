@@ -1289,7 +1289,7 @@ actionPresentCart
             'summary_string' => (string) Number of products Text,
             'labels' => array(
                 'tax_short' => Tax short label (incl. or excl.),
-                'tax_long' => Tax long label (include or exclude),
+                'tax_long' => Tax long label (included or excluded),
             ),
             'id_address_delivery' => (int) Delivery address ID,
             'id_address_invoice' => (int) Invoice address ID,
