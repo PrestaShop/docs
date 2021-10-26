@@ -1332,7 +1332,6 @@ actionPresentOrderReturn
 
     Parameters:
     ```php
-    <?php
     array(
        'presentedOrderReturn' => (array) &$orderReturnLazyArray
     );
