@@ -1285,7 +1285,7 @@ actionPresentCart
                     'value' => Price formatted
 		),
 	    ),
-            'products_count' => (int) Number of products,
+            'products_count' => (int) Number of products in cart,
             'summary_string' => (string) Number of products Text,
             'labels' => array(
                 'tax_short' => Tax short label (incl. or excl.),
