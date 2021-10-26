@@ -3,9 +3,11 @@ title: Migration project and strategy
 weight: 10
 ---
 
+# Migration project and strategy
+
 This is a summary of the current Migration Strategy. It provides an overview of our current vision, in the end of this year 2020, of the Symfony Migration project.
 
-# Different kind of pages
+## Different kind of pages
 
 Back-Office pages can be classified in four categories:
 
@@ -27,7 +29,7 @@ There are some pages that are unique: Carriers Edit page, Dashboard, Customer Se
 
 Sometimes a page will have mixed content. For example there are pages that provide two listings or one listing and one configuration form.
 
-# Where we started from
+## Where we started from
 
 In legacy pages, most of the time, these Back-office pages were structured following standard [MVC PrestaShop model][legacy-mvc]:
 
@@ -38,7 +40,7 @@ In legacy pages, most of the time, these Back-office pages were structured follo
 
 We believe PrestaShop project has grown too big to follow this 3-layers model, rather fitted for small applications. We have chosen to introduce more architecture layers.
 
-# The beginning of the Migration project: Configuration Form
+## The beginning of the Migration project: Configuration Form
 
 The Migration project started by migrating [Configuration Form pages][form-pages].
 
@@ -51,7 +53,7 @@ The chosen structure to handle such pages was the following:
 
 Since the DataProvider interacts with ObjectModel, it belongs to [Adapter namespace][adapter-namespace].
 
-# Phase 2: listings
+## Phase 2: listings
 
 For migrating Listing pages, the [Grid component][grid-pages] was built.
 
@@ -72,7 +74,7 @@ However the Grid Actions use ObjectModel, for example to enable/disable a Catego
 
 This is when we decided to introduce [CQRS][cqrs].
 
-# Phase 3: [CQRS][cqrs]
+## Phase 3: [CQRS][cqrs]
 
 We wanted to build a strong frontier between migrated code and legacy code. Since re-writing all the code would be too long, we needed to continue relying on the business logic legacy code to power PrestaShop.
 
@@ -99,7 +101,7 @@ So the structure for a Grid action, using CQRS, is the following:
 
 So "migrating a Grid action" means to "move the legacy logic into a Handler and building a Symfony layer on top of it"
 
-# Phase 4 : Add/Edit Form pages
+## Phase 4 : Add/Edit Form pages
 
 These pages are form leveraging the concepts of CQRS.
 
@@ -117,15 +119,15 @@ These pages are form leveraging the concepts of CQRS.
 
 So "migrating a legacy Add/Edit page" means to "move the legacy logic into a Handler and building a Symfony Form on top of it with its management logic".
 
-# Form Theme
+## Form Theme
 
-We dont want to render manually Form inputs, so we now aim to build a Twig Form Theme allowing us to render all of our Symfony forms with a single block
+We don't want to render Form inputs manually, so we now rely on a [Twig Form Theme][twig-form-theme] allowing us to render all of our Symfony forms with a single block
 
 ```
 {{ form_widget(form) }}
 ```
 
-# Towards a Core domain
+## Towards a Core domain
 
 Between phase 1 and phase 4, two years passed. Two years where we experimented, explored, struggled and we got the hang of what was needed for PrestaShop to move forward.
 
@@ -151,7 +153,7 @@ Of course, the future architecture supports **Extensions**, which can be placed 
 
 Finally, Themes are a particular kind of extension that sits on top of the front-end application and that defines the _layout_ and _style_ for components provided by the application, FO SDK, and any installed Modules.
 
-## Migration as an introduction to the Core
+### Migration as an introduction to the Core
 
 Our Handlers started as "place where we put the legacy code we dont have the time to migrate now". They must now become interfaces for the Core domain, defining the future API endpoints. You could think of them as Controllers for the Domain, and consequently they will become empty of business logic, only focused on validating incoming Commands and Queries and formatting the data in both directions.
 
@@ -166,3 +168,5 @@ Our Handlers started as "place where we put the legacy code we dont have the tim
 [future-architecture]: https://build.prestashop.com/news/prestashop-in-2019-and-beyond-part-3-the-future-architecture/#our-proposal-for-a-future-architecture
 [ubiquitous-langage]: https://enterprisecraftsmanship.com/posts/ubiquitous-language-naming/
 [vue-js]: https://vuejs.org/
+[twig-form-theme]: {{< ref "/8/development/components/form/form-theme/" >}}
+
