@@ -1316,7 +1316,6 @@ actionPresentOrder
 
     Parameters:
     ```php
-    <?php
     array(
        'presentedOrder' => (array) &$orderLazyArray
     );
