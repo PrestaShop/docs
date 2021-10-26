@@ -1288,7 +1288,7 @@ actionPresentCart
             'products_count' => (int) Number of products,
             'summary_string' => (string) Number of products Text,
             'labels' => array(
-                'tax_short' => Tax short label (incl or excl),
+                'tax_short' => Tax short label (incl. or excl.),
                 'tax_long' => Tax long label (include or exclude),
             ),
             'id_address_delivery' => (int) Delivery address ID,
