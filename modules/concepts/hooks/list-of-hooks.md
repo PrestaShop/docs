@@ -1293,7 +1293,7 @@ actionPresentCart
             ),
             'id_address_delivery' => (int) Delivery address ID,
             'id_address_invoice' => (int) Invoice address ID,
-            'is_virtual' => (bool) If cart contains virtual product,
+            'is_virtual' => (bool) true if cart contains at least one virtual product,
             'vouchers' => array(
                 'allowed' => (int) are CartRule's allowed?
                 'added' => (array) List of vouchers,
