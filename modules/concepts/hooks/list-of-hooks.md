@@ -1230,7 +1230,6 @@ actionPresentCart
 
     Parameters:
     ```php
-    <?php
     array(
        'presentedCart' => array(
             'products' => (ProductLazyArray|ProductListingLazyArray) $products,
