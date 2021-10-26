@@ -1233,19 +1233,75 @@ actionPresentCart
     <?php
     array(
        'presentedCart' => array(
-            'products' => $products,
-            'totals' => $totals,
-            'subtotals' => $subtotals,
-            'products_count' => $products_count,
-            'summary_string' => $summary_string,
-            'labels' => $labels,
-            'id_address_delivery' => $cart->id_address_delivery,
-            'id_address_invoice' => $cart->id_address_invoice,
-            'is_virtual' => $cart->isVirtualCart(),
-            'vouchers' => $vouchers,
-            'discounts' => $discounts,
-            'minimalPurchase' => $minimalPurchase,
-            'minimalPurchaseRequired' => Text minimal Purchase
+            'products' => (ProductLazyArray|ProductListingLazyArray) $products,
+            'totals' => array(
+	        'total' => array(
+		    'type' => 'total'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'total_including_tax' => array(
+		    'type' => 'total_including_tax'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'total_excluding_tax' => array(
+		    'type' => 'total_excluding_tax'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+	    ),
+            'subtotals' => array(
+	        'products' => array(
+		    'type' => 'products'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'discounts' => array(
+		    'type' => 'discounts'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'gift_wrapping' => array(
+		    'type' => 'gift_wrapping'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'shipping' => array(
+		    'type' => 'shipping'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'tax' => array(
+		    'type' => 'tax'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+	    ),
+            'products_count' => (int) Number of products,
+            'summary_string' => (string) Number of products Text,
+            'labels' => array(
+                'tax_short' => Tax short label (incl or excl),
+                'tax_long' => Tax long label (include or exclude),
+            ),
+            'id_address_delivery' => (int) Delivery address ID,
+            'id_address_invoice' => (int) Invoice address ID,
+            'is_virtual' => (bool) If cart contains virtual product,
+            'vouchers' => array(
+                'allowed' => (int) If feature cart rule is active,
+                'added' => (array) List of vouchers,
+            ),
+            'discounts' => (array) List of highlighted discounts,
+            'minimalPurchase' => (string) Formatted price of configuration PS_PURCHASE_MINIMUM (and filter by hook overrideMinimalPurchasePrice),
+            'minimalPurchaseRequired' => Text minimal purchase if PS_PURCHASE_MINIMUM > Total products price without taxes
         )
     );
     ```
