@@ -21,7 +21,7 @@ Users will be able to choose the layout for each page from the theme's settings 
   author:
     name: "John Doe"
     email: "pub@prestashop.com"
-    url: "https://www.your-url.com"
+    url: "https://www.your-url.com" # Be aware that some marketplaces don't allow this parameter
   meta:
     compatibility:
         from: 1.7.0.0
