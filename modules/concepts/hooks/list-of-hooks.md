@@ -1295,7 +1295,7 @@ actionPresentCart
             'id_address_invoice' => (int) Invoice address ID,
             'is_virtual' => (bool) If cart contains virtual product,
             'vouchers' => array(
-                'allowed' => (int) If feature cart rule is active,
+                'allowed' => (int) are CartRule's allowed?
                 'added' => (array) List of vouchers,
             ),
             'discounts' => (array) List of highlighted discounts,
