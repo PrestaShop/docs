@@ -1,11 +1,6 @@
 ---
+# this page is redirected so it has no content
 title: Maintainer's guide
-chapter: true
+layout: redirect
+redirect: https://www.prestashop-project.org/maintainers-guide/
 ---
-
-# Maintainer's guide
-
-This section describes processes and guidelines for project maintainers.
-
-{{% children /%}}
-
