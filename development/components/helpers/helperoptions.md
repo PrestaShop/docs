@@ -21,8 +21,8 @@ $this->fields_options = [
     'image' => 'url to icon',                                    // If missing, will use the default icon for the tab.
     'description' => $this->l('Display as description'),         // Displays an informational box above the fields.
     'info' => $this->l('Display as info'),                       // Displays an unstyled text above the fields.
-    'fields' => [                                           // The various option fields.
-      'PS_CARRIER_DEFAULT' => [                             // The array is named after the option's ID. It must be the
+    'fields' => [                                                // The various option fields.
+      'PS_CARRIER_DEFAULT' => [                                  // The array is named after the option's ID. It must be the
                                                                  // same name as the value stored in the ps_configuration table.
         'title' => $this->l('Default carrier:'),                 // The name of the option.
         'desc' => $this->l('The default carrier used in shop'),  // The description of the option.
