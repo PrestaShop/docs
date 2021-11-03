@@ -10,9 +10,9 @@ weight: 10
 Docker isolate your application in containers, making their isolation and deployment easier.
 If you're confident with using it, we created several images for easier deployment of PrestaShop:
 
-* https://hub.docker.com/r/prestashop/prestashop/, in which all PrestaShop releases between 1.4 and 1.7 can be found. Covers most needs and is perfect for a quick start.
-* https://hub.docker.com/r/prestashop/prestashop-git/, containing the git repository content with different PHP version. For advanced users.
-* https://hub.docker.com/r/prestashop/base/, containing the required stack to run PrestaShop, without the core files. Recommended if you already have the shop files on your disk.
+* https://hub.docker.com/r/prestashop/prestashop/ , in which all PrestaShop releases between 1.4 and 1.7 can be found. Covers most needs and is perfect for a quick start.
+* https://hub.docker.com/r/prestashop/prestashop-git/ , containing the git repository content with different PHP version. For advanced users.
+* https://hub.docker.com/r/prestashop/base/ , containing the required stack to run PrestaShop, without the core files. Recommended if you already have the shop files on your disk.
 
 Please note we try to follow best practices, and MySQL service is NOT provided with these images. You have to deploy your own server in a dedicated container.
 
