@@ -9,8 +9,7 @@ weight: 10
 
 This ToggleColumn is used to display booleans, it will display an icon instead of the value. If the user clicks on it, this triggers a toggle of the boolean value.
 
-**Warning:** **Notice** that the ajax call trigger is subordinated to the loading of the relative js extension (**window.prestashop.component.GridExtensions.ColumnTogglingExtension()**). That is not automatic but have to be done manually if the grid does not have any other Toggle Column by default. In prestashop >1.7.8 you can use the **global component**) to load the extension.
-https://devdocs.prestashop.com/1.7/development/components/global-components/#global-javascript-components
+**Warning:** the ajax call trigger is subordinated to the loading of the relative js extension (**ColumnTogglingExtension**). That is not automatic but have to be done manually if the grid does not have any other Toggle Column by default. In prestashop >1.7.8 you can use the [**global component**](https://devdocs.prestashop.com/1.7/development/components/global-components/#global-javascript-components)) to load the extension.
 
 ## Available options
 
