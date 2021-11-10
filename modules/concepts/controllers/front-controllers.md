@@ -43,7 +43,7 @@ automatically.
 
 ## Available properties
 
-The controllers added in a module extend [`ModuleFrontController`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/controller/ModuleFrontController.php), itself extending [`FrontController`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/controller/FrontController.php) & [`Controller`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/controller/Controller.php).
+The controllers added in a module extend [`ModuleFrontController`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/classes/controller/ModuleFrontController.php), itself extending [`FrontController`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/classes/controller/FrontController.php) & [`Controller`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/classes/controller/Controller.php).
 They provide access to the environment in which they run.
 
 * `$this->module` is the instance of the module responsible of the controller.
