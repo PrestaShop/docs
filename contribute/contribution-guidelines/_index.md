@@ -29,6 +29,10 @@ Contributions should be based on the appropriate branch, depending on the nature
 * **Develop**. New features, bug fixes, improvements. Contributions merged here will be released in the next minor or major release.
 * **Patch version branch** (eg. 1.7.4.x). For critical bug fixes and regressions only. Contributions merged here will be released in a patch version. 
 
+    {{% notice tip %}}
+    The regression is a bug that breaks a feature that previously worked. We fix in patch version only the regressions of the last minor version. For example, a feature worked correctly in `1.7.7.x` and a bug appears in `1.7.8.x`: it’s a regression of the `1.7.8` and we fix it in `1.7.8.x`.
+    {{% /notice %}}
+
 {{% notice note %}}
 **Maintainers will only accept contributions to branches that are subject to new releases.**
 
