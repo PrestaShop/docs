@@ -75,6 +75,16 @@ For example:
 <td align="left">true | false (default: false)</td>
 <td align="left">If true, your style will be printed inside the <code>&lt;style&gt;</code> tag in your HTML <code>&lt;head&gt;</code>. Use with caution.</td>
 </tr>
+<tr class="odd">
+  <td align="left">version</td>
+  <td align="left">version number (default: null)</td>
+  <td align="left">You can provide the version number, which will be added as a query string to the asset's URL</td>
+</tr>
+<tr class="even">
+  <td align="left">needRtl</td>
+  <td align="left">true | false (default: false)</td>
+  <td align="left">If true, the rtl version of the stylesheet will be loaded</td>
+</tr>
 </tbody>
 </table>
 
@@ -114,6 +124,11 @@ For example:
 <td align="left">server</td>
 <td align="left">local | remote (default: local)</td>
 <td align="left">Define if the JS resource is a local or remote path</td>
+</tr>
+<tr class="odd">
+  <td align="left">version</td>
+  <td align="left">version number (default: null)</td>
+  <td align="left">You can provide the version number, which will be added as a query string to the asset's URL</td>
 </tr>
 </tbody>
 </table>
@@ -254,6 +269,7 @@ public function setMedia()
             [
               'media' => 'all',
               'priority' => 200,
+              'version' => 'release-2021-11'
             ]
         );
 
@@ -263,6 +279,7 @@ public function setMedia()
             [
               'priority' => 200,
               'attribute' => 'async',
+              'version' => 'release-2021-11'
             ]
         );
     }
@@ -278,7 +295,7 @@ If you only have your module's class, register your code on the actionFrontContr
 public function hookActionFrontControllerSetMedia($params)
 {
     // Only on product page
-    if ('product' === $this->context->controller->php_self) {
+    if (ProductController instanceof $this->context->controller) {
         $this->context->controller->registerStylesheet(
             'module-modulename-style',
             'modules/'.$this->name.'/css/modulename.css',
@@ -306,6 +323,7 @@ public function hookActionFrontControllerSetMedia($params)
           'position' => 'head',
           'inline' => true,
           'priority' => 10,
+          'version' => 'release-2021-10'
         ]
     );
 }
