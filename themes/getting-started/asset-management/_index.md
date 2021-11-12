@@ -257,7 +257,6 @@ When developing a PrestaShop module, you may want to add specific styles for you
 If you develop a front controller, simply extend the `setMedia()` method. For instance:
 
 ```php
-<?php
 public function setMedia()
 {
     parent::setMedia();
@@ -288,16 +287,15 @@ public function setMedia()
 
 #### Without a front controller module
 
-If you only have your module's class, register your code on the actionFrontControllerSetMedia hook, and add your asset on the go inside the hook:
+If you only have your module's class, register your code on the `actionFrontControllerSetMedia` hook, and add your asset on the go inside the hook:
 
 ```php
-<?php
 public function hookActionFrontControllerSetMedia($params)
 {
     // Only on product page
     if (ProductController instanceof $this->context->controller) {
         $this->context->controller->registerStylesheet(
-            'module-modulename-style',
+            'module-'.$this->name.'-style',
             'modules/'.$this->name.'/css/modulename.css',
             [
               'media' => 'all',
@@ -306,7 +304,7 @@ public function hookActionFrontControllerSetMedia($params)
         );
 
         $this->context->controller->registerJavascript(
-            'module-modulename-simple-lib',
+            'module-'.$this->name.'-simple-lib',
             'modules/'.$this->name.'/js/lib/simple-lib.js',
             [
               'priority' => 200,
@@ -317,7 +315,7 @@ public function hookActionFrontControllerSetMedia($params)
 
     // On every pages
     $this->context->controller->registerJavascript(
-        'google-analytics',
+        'module-'.$this->name.'-js',
         'modules/'.$this->name.'/ga.js',
         [
           'position' => 'head',
