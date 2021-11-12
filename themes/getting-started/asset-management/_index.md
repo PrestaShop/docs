@@ -29,7 +29,7 @@ Here is a list of options, and what they do.
 
 ### Options
 
-PrestaShop's FrontController class provides 2 new methods to easily register new assets: `registerStylesheet()` and `registerJavascript()`.
+PrestaShop's `FrontController` class provides 2 new methods to easily register new assets: `registerStylesheet()` and `registerJavascript()`.
 
 In order to have the most extensible signatures, these 2 methods take 3 arguments. The first one is the unique ID of the asset, the second one is the relative path, and the third one is an array of all other optional parameters, as described below.
 
@@ -48,7 +48,7 @@ For example:
 -   'assets/css/example.css' for something in your theme.
 -   'modules/modulename/css/example.css' for something in your module.
 
-**Extra parameters for stylesheet**
+**Extra parameters for stylesheet registration**
 
 <table>
 <col width="10%" />
@@ -88,7 +88,7 @@ For example:
 </tbody>
 </table>
 
-**Extra parameters for JavaScript**
+**Extra parameters for JavaScript registration**
 
 <table>
 <col width="10%" />
@@ -103,7 +103,7 @@ For example:
 <tr class="even">
 <td align="left">position</td>
 <td align="left">head | bottom (default: bottom)</td>
-<td align="left">JavaScript files should be loaded in the bottom as much as possible. Remember: core.js is loaded first thing in the bottom so jQuery won't be loaded in the &lt;head&gt; part.</td>
+<td align="left">JavaScript files should be loaded in the bottom as much as possible. Remember: core.js is loaded as a first thing in the bottom so jQuery won't be loaded in the &lt;head&gt; part.</td>
 </tr>
 <tr class="odd">
 <td align="left">priority</td>
@@ -194,7 +194,7 @@ Every page of every theme loads the following files:
 <td align="left">custom.js</td>
 <td align="left">theme-custom</td>
 <td align="left">1000</td>
-<td align="left">Empty file loaded at the very end, to allow user to override behavior or add simple script.</td>
+<td align="left">Empty file loaded at the very end, to allow users to use their own custom JavaScript without modifying core files.</td>
 </tr>
 </tbody>
 </table>
@@ -292,8 +292,9 @@ If you only have your module's class, register your code on the `actionFrontCont
 ```php
 public function hookActionFrontControllerSetMedia($params)
 {
-    // Only on product page
-    if (ProductController instanceof $this->context->controller) {
+    // Only on the product page
+    // You could also check if the current controller is an instance of the one you want to target
+    if ('product' instanceof $this->context->controller->php_self) {
         $this->context->controller->registerStylesheet(
             'module-'.$this->name.'-style',
             'modules/'.$this->name.'/css/modulename.css',
@@ -313,7 +314,7 @@ public function hookActionFrontControllerSetMedia($params)
         );
     }
 
-    // On every pages
+    // On every page
     $this->context->controller->registerJavascript(
         'module-'.$this->name.'-js',
         'modules/'.$this->name.'/ga.js',
