@@ -29,7 +29,7 @@ Here is a list of options, and what they do.
 
 ### Options
 
-PrestaShop's FrontController class provides 2 new methods to easily register new assets: `registerStylesheet()` and `registerJavascript()`.
+PrestaShop's `FrontController` class provides 2 new methods to easily register new assets: `registerStylesheet()` and `registerJavascript()`.
 
 In order to have the most extensible signatures, these 2 methods take 3 arguments. The first one is the unique ID of the asset, the second one is the relative path, and the third one is an array of all other optional parameters, as described below.
 
@@ -48,7 +48,7 @@ For example:
 -   'assets/css/example.css' for something in your theme.
 -   'modules/modulename/css/example.css' for something in your module.
 
-**Extra parameters for stylesheet**
+**Extra parameters for stylesheet registration**
 
 <table>
 <col width="10%" />
@@ -75,10 +75,20 @@ For example:
 <td align="left">true | false (default: false)</td>
 <td align="left">If true, your style will be printed inside the <code>&lt;style&gt;</code> tag in your HTML <code>&lt;head&gt;</code>. Use with caution.</td>
 </tr>
+<tr class="odd">
+  <td align="left">version</td>
+  <td align="left">version number (default: null)</td>
+  <td align="left">You can provide the version number, which will be added as a query string to the asset's URL</td>
+</tr>
+<tr class="even">
+  <td align="left">needRtl</td>
+  <td align="left">true | false (default: false)</td>
+  <td align="left">If true, the rtl version of the stylesheet will be loaded</td>
+</tr>
 </tbody>
 </table>
 
-**Extra parameters for JavaScript**
+**Extra parameters for JavaScript registration**
 
 <table>
 <col width="10%" />
@@ -93,7 +103,7 @@ For example:
 <tr class="even">
 <td align="left">position</td>
 <td align="left">head | bottom (default: bottom)</td>
-<td align="left">JavaScript files should be loaded in the bottom as much as possible. Remember: core.js is loaded first thing in the bottom so jQuery won't be loaded in the &lt;head&gt; part.</td>
+<td align="left">JavaScript files should be loaded in the bottom as much as possible. Remember: core.js is loaded as a first thing in the bottom so jQuery won't be loaded in the &lt;head&gt; part.</td>
 </tr>
 <tr class="odd">
 <td align="left">priority</td>
@@ -114,6 +124,11 @@ For example:
 <td align="left">server</td>
 <td align="left">local | remote (default: local)</td>
 <td align="left">Define if the JS resource is a local or remote path</td>
+</tr>
+<tr class="odd">
+  <td align="left">version</td>
+  <td align="left">version number (default: null)</td>
+  <td align="left">You can provide the version number, which will be added as a query string to the asset's URL</td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +194,7 @@ Every page of every theme loads the following files:
 <td align="left">custom.js</td>
 <td align="left">theme-custom</td>
 <td align="left">1000</td>
-<td align="left">Empty file loaded at the very end, to allow user to override behavior or add simple script.</td>
+<td align="left">Empty file loaded at the very end, to allow users to use their own custom JavaScript without modifying core files.</td>
 </tr>
 </tbody>
 </table>
@@ -242,7 +257,6 @@ When developing a PrestaShop module, you may want to add specific styles for you
 If you develop a front controller, simply extend the `setMedia()` method. For instance:
 
 ```php
-<?php
 public function setMedia()
 {
     parent::setMedia();
@@ -254,6 +268,7 @@ public function setMedia()
             [
               'media' => 'all',
               'priority' => 200,
+              'version' => 'release-2021-11'
             ]
         );
 
@@ -263,6 +278,7 @@ public function setMedia()
             [
               'priority' => 200,
               'attribute' => 'async',
+              'version' => 'release-2021-11'
             ]
         );
     }
@@ -271,16 +287,16 @@ public function setMedia()
 
 #### Without a front controller module
 
-If you only have your module's class, register your code on the actionFrontControllerSetMedia hook, and add your asset on the go inside the hook:
+If you only have your module's class, register your code on the `actionFrontControllerSetMedia` hook, and add your asset on the go inside the hook:
 
 ```php
-<?php
 public function hookActionFrontControllerSetMedia($params)
 {
-    // Only on product page
-    if ('product' === $this->context->controller->php_self) {
+    // Only on the product page
+    // You could also check if the current controller is an instance of the one you want to target
+    if ('product' instanceof $this->context->controller->php_self) {
         $this->context->controller->registerStylesheet(
-            'module-modulename-style',
+            'module-'.$this->name.'-style',
             'modules/'.$this->name.'/css/modulename.css',
             [
               'media' => 'all',
@@ -289,7 +305,7 @@ public function hookActionFrontControllerSetMedia($params)
         );
 
         $this->context->controller->registerJavascript(
-            'module-modulename-simple-lib',
+            'module-'.$this->name.'-simple-lib',
             'modules/'.$this->name.'/js/lib/simple-lib.js',
             [
               'priority' => 200,
@@ -298,14 +314,15 @@ public function hookActionFrontControllerSetMedia($params)
         );
     }
 
-    // On every pages
+    // On every page
     $this->context->controller->registerJavascript(
-        'google-analytics',
+        'module-'.$this->name.'-js',
         'modules/'.$this->name.'/ga.js',
         [
           'position' => 'head',
           'inline' => true,
           'priority' => 10,
+          'version' => 'release-2021-10'
         ]
     );
 }
