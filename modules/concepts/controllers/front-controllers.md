@@ -236,14 +236,14 @@ class ExampleModuleCronModuleFrontController extends ModuleFrontController
         $this->ajax = 1;
 
         if (php_sapi_name() !== 'cli') {
-            $this->ajaxDie('Forbidden call.');
+            $this->ajaxRender('Forbidden call.');
         }
 
         // Additional token checks
 
         // ...
 
-        $this->ajaxDie("hello\n");
+        $this->ajaxRender("hello\n");
     }
 }
 ```
