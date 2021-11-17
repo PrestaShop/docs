@@ -412,7 +412,7 @@ $container = $this->getContainer();
 
 // Get all languages vie the Lang repository
 $langRepository = $container->get('prestashop.core.admin.lang.repository');
-$languages = $this->langRepository->findAll();
+$languages = $langRepository->findAll();
 
 // The entity manager will allow us to persist the Doctrine entities
 $entityManager = $container->get('doctrine.orm.default_entity_manager');
