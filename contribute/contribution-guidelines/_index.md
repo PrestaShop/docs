@@ -24,7 +24,7 @@ Each time you want to work on a contribution, create a local dedicated branch ba
 Contributions should be based on the appropriate branch, depending on the nature of your change:
 
 * **Develop**. New features, bug fixes, improvements. Contributions merged here will be released in the next minor or major release.
-* **Patch version branch** (eg. 8.0.x). For critical bug fixes and regressions only. Contributions merged here will be released in a patch version. 
+* **Patch version branch** (eg. 8.0.x). Only for critical bug fixes and [regression](https://en.wikipedia.org/wiki/Software_regression) fixes. Contributions merged here will be released in a patch version.
 
 {{% notice note %}}
 **Maintainers will only accept contributions to branches that are subject to new releases.**
