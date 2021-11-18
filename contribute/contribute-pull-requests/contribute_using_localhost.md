@@ -80,6 +80,8 @@ cd /path/to/prestashop
 composer install
 ```
 
+You may need to edit `PHP.ini` to add or uncomment PHP extensions `extension=gd` and `extension=intl`.
+
 ### Compile assets
 
 Static assets are not present in the repository and need to be compiled (we explained why in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/)).
