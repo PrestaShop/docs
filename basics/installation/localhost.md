@@ -150,7 +150,7 @@ make composer
 ### JavaScript and CSS dependencies
 
 PrestaShop uses NPM to manage dependencies and [Webpack][webpack] to compile them into static assets. 
-You only need NodeJS 8.x (12.x maximum [get it here][nodejs]), NPM will take care of it all.
+You only need NodeJS 8.x (14.x recommended [get it here][nodejs]), NPM will take care of it all.
 
 ```bash
 cd /path/to/prestashop
