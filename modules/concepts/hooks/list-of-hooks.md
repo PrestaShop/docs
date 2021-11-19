@@ -1326,7 +1326,7 @@ displayAdminForm
 
 displayAdminGridTableBefore
 : 
-    Available since: {{< minver v="1.7.8" >}}
+    Available since: {{< minver v="1.7.7.2" >}}
 
     This hook adds new blocks before Grid component table.
 
@@ -1344,7 +1344,7 @@ displayAdminGridTableBefore
 
 displayAdminGridTableAfter
 : 
-    Available since: {{< minver v="1.7.8" >}}
+    Available since: {{< minver v="1.7.7.2" >}}
     
     This hook adds new blocks after Grid component table.
 
