@@ -47,3 +47,25 @@ vendor/bin/phpunit --debug -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle
 {{% notice tip %}}
 Hint: `--debug` without `--filter` gives a nice list to filter with.
 {{% /notice %}}
+
+# Checking for code coverage in phpunit tests
+
+To check if you covered everything in your tests cases its best to run the tests with coverage report.
+
+First you have to enable xdebug. For the docker dev environment run
+
+```
+docker-php-ext-enable xdebug
+```
+
+And after that you can run your test again but now specify that you want to check for coverage also
+
+```
+XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle/Command/ConfigCommandTest.php
+```
+
+This will give you a nice report of how much of your code was covered by the tests and you can extend your tests to get closer to a perfect score of 100%
+
+{{% notice tip %}}
+Running the coverage check does take a bit of time, be patient
+{{% /notice %}}
