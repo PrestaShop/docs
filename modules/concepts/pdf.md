@@ -359,7 +359,7 @@ class MyCustomPdfGenerator extends Module
         $pdfGen->setFontForLang(Context::getContext()->language->iso_code);
         $pdfGen->startPageGroup();
         $pdfGen->createHeader($this->getHeader($myCustomSlipVarsForPdfHeader));
-        $pdfGen->createFooter($this->getFooter($myCustomSlipVarsForPdfHeader));
+        $pdfGen->createFooter($this->getFooter($myCustomSlipVarsForPdfFooter));
         $pdfGen->createContent($this->getPdfContent($myCustomSlipVarsForPdfHeader));
         $pdfGen->writePage();
         $pdfGen->render('my_custom_pdf.pdf', 'D');
