@@ -144,6 +144,33 @@ class FrontController extends FrontControllerCore {
 }
 ```
 
+## Override a module
+
+Since version 1.6.0.11 of PrestaShop, a new feature is available that allows developers to override some parts of the modules.
+Despite a module having different files, the main one, additional classes, etc., you can override the main file, and ModuleFrontController (note: this is available since 1.7.2.0) based files.
+
+### Override module's main class by extending it
+
+To override a module's instance class, you have to extend it, giving the extended class the same name and adding the `Override` suffix:
+
+```php
+
+class BlockUserInfoOverride extends BlockUserInfo
+{
+	public function hookDisplayNav($params)
+	{
+                 // This is only an example, please do not use HTML here :-)
+		return '<div class="header_user_info"><a>Test</a></div>';
+	}
+}
+```
+You must put the file in `/override/modules/blockuserinfo/blockuserinfo.php`
+
+After adding an override, don't forget to clean the cache. You can do it from the back office or by CLI using the Symfony console.
+
+You may even create a module that overrides other modules! For instance:
+`/modules/mymodule/override/modules/blockuserinfo/blockuserinfo.php` will be copied to `/override/modules/blockuserinfo/blockuserinfo.php` during the installation of the `mymodule` module. However, this is not recommended, since the exact usage of a module to be overridden is unknown and may be different in a particular shop.
+
 ## Theme template override
 
 Overriding a theme from a module is **NOT** possible, and never will.
