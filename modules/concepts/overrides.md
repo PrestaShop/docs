@@ -155,9 +155,6 @@ To override a module's instance class, you have to extend it, giving the extende
 
 ```php
 
-if (!defined('_PS_VERSION_')) {
-	exit;
-}
 class BlockUserInfoOverride extends BlockUserInfo
 {
 	public function hookDisplayNav($params)
