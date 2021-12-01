@@ -58,10 +58,6 @@ While Web services can output XML or JSON data, the BO API is JSON-only.
 
 Finally, **Modules** are independent, optional packages that can extend and customize PrestaShop in many ways. They interact with the Core either by _hooking_ into extension points which are placed throughout the code, or by _replacing_ core components with their own.
 
-{{% notice note %}}
-While in this diagram we have placed Modules on the Back-end side, they can actually have an impact on Front-end as well.
-{{% /notice %}}
-
 ### Front-end
 
 On the front side, implementations can vary a lot depending on the theme. Some themes are HTML-based and rely on little amount of scripting. Other themes are more advanced and Javascript-heavy.
