@@ -101,7 +101,7 @@ Before all, you may ensure your changes don't break everything: this is why we h
 You can execute it in your dockerized PrestaShop application without altering your website (it uses a specific database).
 
 ```
-docker exec prestashop_prestashop-git_1 composer test-all
+docker-compose exec prestashop-git composer test-all
 ```
 
 ### Publish your work
