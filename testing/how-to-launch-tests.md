@@ -48,19 +48,27 @@ vendor/bin/phpunit --debug -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle
 Hint: `--debug` without `--filter` gives a nice list to filter with.
 {{% /notice %}}
 
-# Checking for code coverage in phpunit tests
+## Checking for code coverage in phpunit tests
 
-To check if you covered everything in your tests cases its best to run the tests with coverage report.
+To check if you covered everything in your tests cases its best to run the tests with [phpunit coverage report](https://phpunit.readthedocs.io/en/9.5/code-coverage-analysis.html).
 
-First you have to enable xdebug. For the docker dev environment run
+First get your [docker dev environment up and running]({{< relref "/8/contribute/contribute-pull-requests/contribute_using_docker#install-prestashop-core" >}})
 
+After that is up and running you need to enable xdebug inside the container and run your tests with coverage
+
+```bash
+docker exec -it `docker-compose ps -q prestashop-git` bash
 ```
+
+And inside your container first enable xdebug
+
+```bash
 docker-php-ext-enable xdebug
 ```
 
-And after that you can run your test again but now specify that you want to check for coverage also
+and then run your tests with coverage
 
-```
+```bash
 XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle/Command/ConfigCommandTest.php
 ```
 
