@@ -196,14 +196,14 @@ class AdminBlockListingControllerOverride extends AdminBlockListingController
 	}
 }
 ```
-You must put the file in `/override/modules/blockuserinfo/controllers/admin/AdminBlockListingController.php`
+You must put the file in `/override/modules/blockreassurance/controllers/admin/AdminBlockListingController.php`
 
 After adding an override, don't forget to clean the cache. You can do it from the back office or by CLI using the Symfony console.
 
 The previous example is applied to an admin controller, but the same process can be used for front controllers too.
 
 You may even create a module that overrides other modules! For instance:
-`/modules/mymodule/override/modules/blockuserinfo/controllers/admin/AdminBlockListingController.php` will be copied to `/override/modules/blockuserinfo/controllers/admin/AdminBlockListingController.php` during the installation of the `mymodule` module. However, this is not recommended, since the exact usage of a module to be overridden is unknown and may be different in a particular shop.
+`/modules/mymodule/override/modules/blockreassurance/controllers/admin/AdminBlockListingController.php` will be copied to `/override/modules/blockreassurance/controllers/admin/AdminBlockListingController.php` during the installation of the `mymodule` module. However, this is not recommended, since the exact usage of a module to be overridden is unknown and may be different in a particular shop.
 
 ## Theme template override
 
