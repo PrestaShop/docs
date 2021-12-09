@@ -16,7 +16,7 @@ A behaviour (`behat`) tests are a part of integration tests. They allow testing 
 During behat tests the actual database queries are executed, therefore before testing you need to run a command `composer create-test-db` to create a test database.
 
 {{% notice %}}
-The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump.sql`. That `ps_dump.sql` is later used to reset the database. You can check the actual script for more information - [/tests-legacy/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests-legacy/create-test-db.php).
+The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump.sql`. That `ps_dump.sql` is later used to reset the database. You can check the actual script for more information - [/tests/bin/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/bin/create-test-db.php).
 {{% /notice %}}
 
 ## Behats structure in PrestaShop
