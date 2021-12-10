@@ -1220,6 +1220,155 @@ actionGetAdminOrderButtons
     );
     ```
 
+actionPresentCart
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    This hook is called before a cart is presented
+
+    Located in: /src/Adapter/Presenter/Cart/CartPresenter.php
+
+    Parameters:
+    ```php
+    array(
+       'presentedCart' => array(
+            'products' => (ProductLazyArray|ProductListingLazyArray) $products,
+            'totals' => array(
+	        'total' => array(
+		    'type' => 'total'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'total_including_tax' => array(
+		    'type' => 'total_including_tax'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'total_excluding_tax' => array(
+		    'type' => 'total_excluding_tax'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+	    ),
+            'subtotals' => array(
+	        'products' => array(
+		    'type' => 'products'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'discounts' => array(
+		    'type' => 'discounts'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'gift_wrapping' => array(
+		    'type' => 'gift_wrapping'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'shipping' => array(
+		    'type' => 'shipping'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+		'tax' => array(
+		    'type' => 'tax'
+                    'label' => Price label
+                    'amount' => Price amount
+                    'value' => Price formatted
+		),
+	    ),
+            'products_count' => (int) Number of products in cart,
+            'summary_string' => (string) Descriptive number of products,
+            'labels' => array(
+                'tax_short' => Tax short label (incl. or excl.),
+                'tax_long' => Tax long label (included or excluded),
+            ),
+            'id_address_delivery' => (int) Delivery address ID,
+            'id_address_invoice' => (int) Invoice address ID,
+            'is_virtual' => (bool) true if cart contains at least one virtual product,
+            'vouchers' => array(
+                'allowed' => (int) are CartRule's allowed?
+                'added' => (array) List of vouchers,
+            ),
+            'discounts' => (array) List of highlighted discounts,
+            'minimalPurchase' => (string) Formatted price of configuration PS_PURCHASE_MINIMUM (and filter by hook overrideMinimalPurchasePrice),
+            'minimalPurchaseRequired' => Text minimal purchase if PS_PURCHASE_MINIMUM > Total products price without taxes
+        )
+    );
+    ```
+
+
+actionPresentOrder
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    This hook is called before an order is presented
+
+    Located in: /src/Adapter/Presenter/Order/OrderPresenter.php
+
+    Parameters:
+    ```php
+    array(
+       'presentedOrder' => (array) &$orderLazyArray
+    );
+    ```
+
+
+actionPresentOrderReturn
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    This hook is called before an order return is presented
+
+    Located in: /src/Adapter/Presenter/Order/OrderReturnPresenter.php
+
+    Parameters:
+    ```php
+    array(
+       'presentedOrderReturn' => (array) &$orderReturnLazyArray
+    );
+    ```
+
+
+actionPresentProduct
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    This hook is called before a product is presented
+
+    Located in: /src/Adapter/Presenter/Product/ProductPresenter.php
+
+    Parameters:
+    ```php
+    array(
+       'presentedProduct' => (array) &$productLazyArray
+    );
+    ```
+
+
+actionPresentProductListing
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    This hook is called before a product listing is presented
+
+    Located in: /src/Adapter/Presenter/Product/ProductListingPresenter.php
+
+    Parameters:
+    ```php
+    array(
+       'presentedProduct' => (array) &$productListingLazyArray
+    );
+    ```
+
 
 actionAdminAdminPreferencesControllerPostProcessBefore
 : 
