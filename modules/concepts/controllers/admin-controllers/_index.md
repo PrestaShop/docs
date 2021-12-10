@@ -170,6 +170,29 @@ your_route_name:
       _disable_module_prefix: true
 ```
 
+### Generating the URI of a back-office controller inside a module
+
+Valid URIs required a security token.
+
+In order to generate the valid URI of a controller you created from inside the main module class, you need to get the Symfony router. The router will build the URI using `generate` with the route name, as in the below example.
+
+```php
+    <?php
+    # modules/my-module/my-module.php
+
+    use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
+
+    class MyModule extends Module
+    {
+        protected function generateControllerURI()
+        {
+               $router = SymfonyContainer::getInstance()->get('router');
+
+               return $router->generate('my_route_name');
+        }
+    }
+```
+
 
 ## Secure your controller
 
