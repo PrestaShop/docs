@@ -171,6 +171,40 @@ After adding an override, don't forget to clean the cache. You can do it from th
 You may even create a module that overrides other modules! For instance:
 `/modules/mymodule/override/modules/blockuserinfo/blockuserinfo.php` will be copied to `/override/modules/blockuserinfo/blockuserinfo.php` during the installation of the `mymodule` module. However, this is not recommended, since the exact usage of a module to be overridden is unknown and may be different in a particular shop.
 
+### Override module front/admin controllers classes by extending them
+
+To override a module's front/admin controller class, you have to extend it, giving the extended class the same name and adding the `Override` suffix:
+
+```php
+
+class AdminBlockListingControllerOverride extends AdminBlockListingController
+{
+	public function displayAjaxSaveColor()
+	{
+		//This is just an example
+                $color1 = "red";
+        	$color2 = Tools::getValue('color2');
+        	$result = false;
+
+        	if (!empty($color1) && !empty($color2)) {
+           	 $result = Configuration::updateValue('PSR_ICON_COLOR', $color1)
+                	&& Configuration::updateValue('PSR_TEXT_COLOR', $color2);
+        	}
+
+        	// Response
+        	$this->ajaxRenderJson($result ? 'success' : 'error');
+	}
+}
+```
+You must put the file in `/override/modules/blockreassurance/controllers/admin/AdminBlockListingController.php`
+
+After adding an override, don't forget to clean the cache. You can do it from the back office or by CLI using the Symfony console.
+
+The previous example is applied to an admin controller, but the same process can be used for front controllers too.
+
+You may even create a module that overrides other modules! For instance:
+`/modules/mymodule/override/modules/blockreassurance/controllers/admin/AdminBlockListingController.php` will be copied to `/override/modules/blockreassurance/controllers/admin/AdminBlockListingController.php` during the installation of the `mymodule` module. However, this is not recommended, since the exact usage of a module to be overridden is unknown and may be different in a particular shop.
+
 ## Theme template override
 
 Overriding a theme from a module is **NOT** possible, and never will.
