@@ -169,24 +169,31 @@ your_route_name:
       _controller: 'MyModule\Controller\DemoController::demoAction'
       _disable_module_prefix: true
 ```
-## Generating URI of admin controller inside a module
-If you need to get the URI and security token of the controller you created inside the main module class, you need to get the router instance. Through that, you can get the URI with the function generate with the pathname as a parameter.
-Code example
-```
-# modules/your-module/your-module.php
-use PrestaShop\PrestaShop\Adapter\SymfonyContainer; // add this to top of your file
 
+### Generating the URI of a back-office controller inside a module
 
-class YourModuleName extends Module 
-{
-    protected function generateControllerURI()
+Valid URIs required a security token.
+
+In order to generate the valid URI of a controller you created from inside the main module class, you need to get the Symfony router. The router will build the URI using `generate` with the route name, as in the below example.
+
+```php
+    <?php
+    # modules/my-module/my-module.php
+
+    use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
+
+    class MyModule extends Module
     {
-           $router = SymfonyContainer::getInstance()->get('router');
-           return $router->generate("your_route_name")
-    }
-}
+        protected function generateControllerURI()
+        {
+               $router = SymfonyContainer::getInstance()->get('router');
 
+               return $router->generate('my_route_name');
+        }
+    }
 ```
+
+
 ## Secure your controller
 
 {{< minver v="1.7.5" title="true" >}}
