@@ -628,7 +628,7 @@ actionGetIDZoneByAddressID
     
 actionGetProductPropertiesAfter
 : 
-    **(deprecated since 1.7.8)**
+    **(deprecated since 1.7.8 in favor of)**
     → `actionGetProductPropertiesAfterUnitPrice`
 
     Located in: /classes/Product.php
