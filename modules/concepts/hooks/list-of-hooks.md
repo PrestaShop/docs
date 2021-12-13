@@ -1133,7 +1133,9 @@ actionValidateOrder
     ```
 
 actionValidateOrderAfter
-:   
+: 
+    Available since: {{< minver v="8.0.0" >}}
+
     This hook is called after validating an order by core
 
     Located in: /classes/PaymentModule.php
@@ -1144,6 +1146,7 @@ actionValidateOrderAfter
     array(
       'cart' => (object) Cart,
       'order' => (object) Order,
+      'orders' => (array) $order_list,
       'customer' => (object) Customer,
       'currency' => (object) Currency,
       'orderStatus' => (object) OrderState
