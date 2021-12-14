@@ -4,20 +4,10 @@ weight: 3
 ---
 
 # Create Admin module controllers
-{{< minver v="1.7.5" title="true" >}}
-
-* Since 1.7.3 you create and override templates and services in your modules.
-* Since 1.7.4, you can create and override forms and console commands.
-* Since 1.7.5, you can create your own "modern" controllers!
-* Since 1.7.7, you can decorate Core controllers
-
-Starting on PrestaShop 1.7.5, you can rely on the modern environment to add new entry points to your applications.
 
 Using modern pages, you will have access to the PrestaShop debug toolbar, the service container, Twig and Doctrine, among others. For your views, the PrestaShop UI Kit is available, built on top of Bootstrap 4 and ensuring your views are consistent with the PrestaShop Back Office.
 
 ## How to declare a new Controller 
-
-{{< minver v="1.7.5" title="true" >}}
 
 Somewhere in your module declare a new class that will act as a Controller:
 ```php
@@ -125,8 +115,6 @@ Now we have created and loaded your controller, you need to declare a route. A r
 
 ## How to map an action of your controller to a URI
 
-{{< minver v="1.7.5" title="true" >}}
-
 This is really simple (and very well documented in Symfony's [Routing component documentation](https://symfony.com/doc/4.4/routing.html)):
 
 For instance:
@@ -156,9 +144,7 @@ This is because all module routes are, by default, prefixed with `/modules`.
 
 ### Disabling the prefix
 
-{{% minver v="1.7.7" title="true" %}}
-
-If however you need or wish your route not to be prefixed, you can use the `_disable_module_prefix` route option to disable the prefix introduced in [PrestaShop 1.7.7.0](https://github.com/PrestaShop/PrestaShop/pull/19782).
+If however you need or wish your route not to be prefixed, you can use the `_disable_module_prefix` route option to disable the prefix.
 
 ```yaml
 # modules/your-module/config/routes.yml
@@ -171,8 +157,30 @@ your_route_name:
 ```
 
 
+### Generating the URI of a back-office controller inside a module
+
+Valid URIs required a security token.
+
+In order to generate the valid URI of a controller you created from inside the main module class, you need to get the Symfony router. The router will build the URI using `generate` with the route name, as in the below example.
+
+```php
+    <?php
+    # modules/my-module/my-module.php
+
+    use PrestaShop\PrestaShop\Adapter\SymfonyContainer;
+
+    class MyModule extends Module
+    {
+        protected function generateControllerURI()
+        {
+               $router = SymfonyContainer::getInstance()->get('router');
+
+               return $router->generate('my_route_name');
+        }
+    }
+```
+
+
 ## Secure your controller
 
-{{< minver v="1.7.5" title="true" >}}
-
-It is safer to define permissions required to use your controller, this can be configured using the `@AdminSecurity` annotation and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/8/development/architecture/migration-guide/controller-routing.md#security" >}}).
+It is safer to define permissions required to use your controller, this can be configured using the `@AdminSecurity` annotation and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/1.7/development/architecture/migration-guide/controller-routing.md#security" >}}).
