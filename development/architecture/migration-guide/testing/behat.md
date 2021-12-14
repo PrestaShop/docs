@@ -10,21 +10,45 @@ weight: 20
 It is important that you get familiar with the `Behats` principles before reading further. You can find the official behat documentation [here](https://docs.behat.org/en/latest/guides.html).
 {{% /notice %}}
 
-A behaviour (`behat`) tests are a part of integration tests. They allow testing how multiple components are working together. In PrestaShop, behats are used to test the `Application` and `Domain` layer integration - basically all the [CQRS]({{ relref "/8/development/architecture/domain/cqrs" }}) commands and queries.
+A behaviour (`behat`) tests are a part of integration tests. They allow testing how multiple components are working together. In PrestaShop, behats are used to test the `Application` and `Domain` layer integration - basically all the [CQRS]({{< relref "/8/development/architecture/domain/cqrs.md" >}}) commands and queries.
 
 ## Database
+
+### Global dump
 During behat tests the actual database queries are executed, therefore before testing you need to run a command `composer create-test-db` to create a test database.
 
 {{% notice %}}
-The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump.sql`. That `ps_dump.sql` is later used to reset the database. You can check the actual script for more information - [/tests/bin/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/bin/create-test-db.php).
+The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump_database_name_8.0.0.sql`. That `ps_dump_database_name_8.0.0.sql` is later used to reset the database. You can check the actual script for more information - [/tests/bin/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/bin/create-test-db.php).
+{{% /notice %}}
+
+### Tables dump
+During the test database creation a global dump is created, but some dumps for each table are also created, and a checksum of each table is also performed for each table. So for `product` table, for example, you will get two files in your `/tmp` folder:
+- `ps_dump_database_name_8.0.0_ps_product.sql`: contains the dump that allows to clean and restore all the data in `product` table
+- `ps_dump_database_name_8.0.0_ps_product.md5`: the Checksum value (returned by MySQL function) after the test database has been installed with fixtures data
+
+With those two files it is possible to:
+- restore a specific table independently instead of restoring the whole database
+- compare the current checksum with the saved one to pre-check if a restore is needed
+
+This allows restoring the DB fixtures more efficiently and more quickly.
+
+### Restore commands
+When testing behat scenarios it might be useful to sometimes restore the initial database content (because some scenarios messed with the current content or any other reason).
+In those case two composer commands are available:
+- `composer restore-test-db`: drop the whole database and restore its whole content with a single dump (safer but longer)
+- `composer restore-test-tables`: check for each table if it was modified, when necessary drop the table and restore the table content (faster, recommended)
+
+{{% notice %}}
+These composer methods are useful when testing a feature only during development. But in the end each scenario is responsible for setting the database correctly and, most of all, cleaning it after it is over. **ALWAYS leave the database in the state it was previously**.
+So each feature must handle database restoration dedicated steps or custom hooks (see below).
 {{% /notice %}}
 
 ## Behats structure in PrestaShop
 
-Behat related files are located in [tests/Integration/Behaviour/](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour). This directory contains following files:
+Behat related files are located in [tests/Integration/Behaviour/](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour). This directory contains following files:
 - [behat.yml]({{< relref "#behatyml">}}) - this is the test suites configuration file which describes feature paths and contexts for every test suite. It can be passed as an argument when running the tests like this `./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml`.
 - bootstrap.php - this file loads the `Kernel` for a behat tests environment.
-- Features - this directory contains all the [Scenarios](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Scenario) and [Contexts](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context). More about it [below]({{< relref "#features" >}}).
+- Features - this directory contains all the [Scenarios](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Scenario) and [Contexts](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Context). More about it [below]({{< relref "#features" >}}).
 
 ## Features
 
@@ -32,8 +56,8 @@ Behat related files are located in [tests/Integration/Behaviour/](https://github
 Before continuing, **please read the official `behat` documentation** about the [features and scenarios](https://docs.behat.org/en/latest/user_guide/features_scenarios.html).
 {{% /notice %}}
 
-In PrestaShop all `*.feature` files are placed in [.tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Scenario). Each feature is placed in a dedicated directory organized by `domain` (or even a `subdomain` if necessary). These feature files contains text that describes the testing scenarios in a user-friendly manner, each of them must start with a keyword `Feature` and have a one or multiple scenarios starting with a keyword `Scenario`. For example:
-```
+In PrestaShop all `*.feature` files are placed in [.tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Scenario). Each feature is placed in a dedicated directory organized by `domain` (or even a `subdomain` if necessary). These feature files contains text that describes the testing scenarios in a user-friendly manner, each of them must start with a keyword `Feature` and have a one or multiple scenarios starting with a keyword `Scenario`. For example:
+```feature
 Feature: Update product status from BO (Back Office)
   As an employee I must be able to update product status (enable/disable)
 
@@ -58,16 +82,16 @@ Every line in scenario has a related method defined in a [Context]({{< relref "#
 
 ## Context
 
-The behat `Context` files are classes that contains the implementations of the features. In PrestaShop all `Context` files are placed in [tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context).
+The behat `Context` files are classes that contains the implementations of the features. In PrestaShop all `Context` files are placed in [tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Context).
 
 {{% notice tip %}}
-The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and might not be implemented well).
+The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and might not be implemented well).
 {{% /notice%}}
 
-When creating a new Context class, it should extend the [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php).
+When creating a new Context class, it should extend the [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php).
 
 {{% notice %}}
-The [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php) contains some commonly used helper methods, and it implements the `Behat\Behat\Context` which is necessary for these tests to work.
+The [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php) contains some commonly used helper methods, and it implements the `Behat\Behat\Context` which is necessary for these tests to work.
 {{% /notice %}}
 
 This is how the context looks like:
@@ -109,7 +133,7 @@ As you can see in example, the string `@Given I add order :orderReference with t
 
 ## Shared storage
 
-The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common usage example is the `id` reference - we specify a certain keyword e.g. `product1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
+The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common usage example is the `id` reference - we specify a certain keyword e.g. `product1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
 ```php
     protected function getProductForEditing(string $reference): ProductForEditing
     {
@@ -123,10 +147,10 @@ The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/
 
 ## Hooks
 
-Behats allow you to use [hooks](https://docs.behat.org/en/v2.5/guides/3.hooks.html#hooks). You can find some usages in [CommonFeatureContext](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/CommonFeatureContext.php). You can use these hooked methods by tagging them before the `Feature` (or before `Scenario` depending on the hook type), like this ([add_product.feature](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/tests/Integration/Behaviour/Features/Context/Domain/Product/AddProductFeatureContext.php)
+Behats allow you to use [hooks](https://docs.behat.org/en/v2.5/guides/3.hooks.html#hooks). You can find some usages in [CommonFeatureContext](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/CommonFeatureContext.php). You can use these hooked methods by tagging them before the `Feature` (or before `Scenario` depending on the hook type), like this ([add_product.feature](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/Product/AddProductFeatureContext.php)
 ):
 
-```
+```feature
 @clear-cache-before-feature
 @clear-cache-after-feature
 Feature: Add basic product from Back Office (BO)
@@ -137,7 +161,7 @@ Feature: Add basic product from Back Office (BO)
 
 {{% notice tip %}}
 You can also tag specific `features` if you want to run only them with a `--tags` filter. For example, if you add following tag in your Feature:
-```
+```feature
 @add
 Feature: Add basic product from Back Office (BO)
   As a BO user
@@ -148,6 +172,219 @@ Then you can run only this feature by following command `./vendor/bin/behat -c t
 
 {{% /notice %}}
 
+## Restore and clear
+
+Each feature is responsible for handling its own data and the database state, on startup you should assume that the database is in the same state as when it was created with fixtures.
+To assume that you need to take responsibility for cleaning it after the feature or the suite is over. There are several ways of restoring/cleaning the database.
+Sometimes clearing the cache of the software is also needed since all the behat suites are run in a single process.
+
+### Restore step by step
+
+```feature
+@add
+Feature: Add basic product from Back Office (BO)
+  As a BO user
+  I need to be able to add new product with basic information from the BO
+
+  Scenario: I modify stuff in product tables I clean them afterwards
+     ...
+     # You don't need to specify the database prefix, tables are separated by a comma
+     Then I restore tables "product,product_attributes"
+```
+
+```php
+// Class Tests\Integration\Behaviour\Features\Context\CommonFeatureContext
+class CommonFeatureContext extends AbstractPrestaShopFeatureContext {
+    /**
+     * @Given I restore tables :tableNames
+     *
+     * @param string $tableNames
+     */
+    public function restoreTables(string $tableNames): void
+    {
+        $tables = explode(',', $tableNames);
+        DatabaseDump::restoreTables($tables);
+    }
+}
+```
+
+### Restore all tables with generic tag
+
+```feature
+@restore-all-tables-before-feature
+@add
+Feature: Add basic product from Back Office (BO)
+  As a BO user
+  I need to be able to add new product with basic information from the BO
+```
+
+```php
+// Class Tests\Integration\Behaviour\Features\Context\CommonFeatureContext
+class CommonFeatureContext extends AbstractPrestaShopFeatureContext {
+    /**
+     * This hook can be used to flag a feature for database hard reset
+     *
+     * @BeforeFeature @restore-all-tables-before-feature
+     */
+    public static function restoreAllTablesBeforeFeature()
+    {
+        DatabaseDump::restoreAllTables();
+        require_once _PS_ROOT_DIR_ . '/config/config.inc.php';
+    }
+}
+```
+
+### Restore a domain with specific tag
+
+```feature
+@restore-products-before-feature
+@add
+Feature: Add basic product from Back Office (BO)
+  As a BO user
+  I need to be able to add new product with basic information from the BO
+```
+
+```php
+// Class Tests\Integration\Behaviour\Features\Context\Domain\Product\CommonProductFeatureContext
+class CommonProductFeatureContext extends AbstractPrestaShopFeatureContext {
+    /**
+     * @BeforeFeature @restore-products-before-feature
+     */
+    public static function restoreProductTablesBeforeFeature(): void
+    {
+        static::restoreProductTables();
+    }
+
+    private static function restoreProductTables(): void
+    {
+        DatabaseDump::restoreTables([
+            'product',
+            'product_attachment',
+            'product_attribute',
+            // And many more but it's not the point here
+        ]);
+    }
+}
+```
+
+### Restore a whole suite
+
+This hook is triggered just by associating the context class to your suite (see behat configuration below).
+
+```php
+// Class Tests\Integration\Behaviour\Features\Context\Domain\Product\CommonProductFeatureContext
+class CommonProductFeatureContext extends AbstractPrestaShopFeatureContext {
+    /**
+     * @BeforeSuite
+     */
+    public static function restoreAllTablesBeforeSuite(): void
+    {
+        DatabaseDump::restoreAllTables();
+    }
+
+    /**
+     * @AfterSuite
+     */
+    public static function restoreProductTablesAfterSuite(): void
+    {
+        static::restoreProductTables();
+        LanguageFeatureContext::restoreLanguagesTablesAfterFeature();
+    }
+}
+```
+
+### Clear cache
+
+```feature
+@clear-cache-before-feature
+@clear-cache-after-feature
+@add
+Feature: Add basic product from Back Office (BO)
+  As a BO user
+  I need to be able to add new product with basic information from the BO
+
+  @clear-cache-before-scenario
+  Scenario: I test something but I make sure cache is cleared before startying this scenario
+```
+
+```php
+// Class Tests\Integration\Behaviour\Features\Context\CommonFeatureContext
+class CommonFeatureContext extends AbstractPrestaShopFeatureContext {
+    /**
+     * @AfterFeature @clear-cache-after-feature
+     */
+    public static function clearCacheAfterFeature()
+    {
+        self::clearCache();
+    }
+
+    /**
+     * @BeforeFeature @clear-cache-before-feature
+     */
+    public static function clearCacheBeforeFeature()
+    {
+        self::clearCache();
+    }
+
+    /**
+     * @BeforeScenario @clear-cache-before-scenario
+     */
+    public static function clearCacheBeforeScenario()
+    {
+        self::clearCache();
+    }
+
+    /**
+     * Clears cache
+     */
+    private static function clearCache(): void
+    {
+        Address::resetStaticCache();
+        Cache::clear();
+        Carrier::resetStaticCache();
+        Cart::resetStaticCache();
+        // And many more but it's not the point here
+    }
+}
+```
+
+### Reboot kernel
+
+```feature
+@reboot-kernel-after-feature
+@add
+Feature: Add basic product from Back Office (BO)
+  As a BO user
+  I perform many modification is Symfony services so I reboot the kernel to reset everything for the following features
+
+  Scenario: I test something that impacts CLDR, make a modification and test again I need to reset the service by resetting the whole kernel
+    ...
+    When I reboot kernel
+    ...
+```
+
+```php
+// Class Tests\Integration\Behaviour\Features\Context\CommonFeatureContext
+class CommonFeatureContext extends AbstractPrestaShopFeatureContext {
+    /**
+     * This hook can be used to flag a feature for kernel reboot
+     *
+     * @AfterFeature @reboot-kernel-after-feature
+     */
+    public static function rebootKernelAfterFeature()
+    {
+        self::rebootKernel();
+    }
+
+    /**
+     * @Given I reboot kernel
+     */
+    public function rebootKernelOnDemand()
+    {
+        self::rebootKernel();
+    }
+}
+```
 
 ## behat.yml
 

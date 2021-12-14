@@ -12,6 +12,10 @@ By "component" we usually mean a group of classes being called together, sometim
 
 By "user-oriented scenario" we mean a scenario that is a series of steps, each step is an action, and at the end of the series there is an expected result
 
+{{% notice tip %}}
+This tutorial guides you to create your first scenario step by step, if you need more details please read the [behat testing]({{< relref "/8/development/architecture/migration-guide/testing/behat.md" >}}) page.
+{{% /notice %}}
+
 ## What is Behat
 
 [Behat][1] is a [Behavior-Driven Development](https://en.wikipedia.org/wiki/Behavior-driven_development) framework for PHP. 
