@@ -628,6 +628,9 @@ actionGetIDZoneByAddressID
     
 actionGetProductPropertiesAfter
 : 
+    **(deprecated since 1.7.8 in favor of)**
+    → `actionGetProductPropertiesAfterUnitPrice`
+
     Located in: /classes/Product.php
 
     
@@ -2874,5 +2877,11 @@ actionAfterCreate&lt;FormName>FormHandler
         'id' => $id,
     ]
     ```
+
+actionGetProductPropertiesAfterUnitPrice
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    Located in: /classes/Product.php
 
 {{% /funcdef %}}
