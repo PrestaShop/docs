@@ -143,3 +143,23 @@ $configuration->set(
     ShopConstraint::shopId(12)
 );
 ```
+
+## Console command
+{{< minver v="8.0" title="true" >}}
+
+You can also use console command to get, set and remove config values from command line.
+
+### Set smtp settings to use mailcatcher for developing
+
+```bash
+$ bin/console prestashop:config set PS_MAIL_SERVER --value "my-mailcatcher-container-name"
+PS_MAIL_SERVER="my-mailcatcher-container-name"
+$ bin/console prestashop:config set PS_MAIL_SMTP_PORT --value 1025
+PS_MAIL_SMTP_PORT="1025"
+```
+
+To see all the available actions use:
+
+```bash
+$ bin/console prestashop:config --help
+```
