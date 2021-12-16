@@ -58,16 +58,14 @@ UI tests rely on [Playwright][4].
 
 ## What are legacy tests in `tests-legacy` folder?
 
-We are currently refactoring how the test folder is structured. As this is a huge work that is going to take months, we have chosen the following strategy:
+Currently, the `tests-legacy` folder only contains tests targeting these endpoints: 
+* `admin-dev/ajax_products_list.php`
+* `admin-dev/displayImage.php`
+* `admin-dev/drawer.php`
+* `admin-dev/grider.php`
+* `admin-dev/drawer.php`
 
-Tests that we are not satisfied by remain in the `tests-legacy` folder and will be, one by one, replaced by tests of a higher quality inside the `tests` folder.
-
-We keep the legacy tests as they have value (they can detect mistakes in the modifications we bring to the codebase) but they are not being updated anymore as we want to replace them.
-
-#### What was wrong with these legacy tests?
-
-Theses tests were powered by PHPUnit but were not unit tests: they were integration tests, which means they would test several classes together and would run additional services such as a database. This has made this test quite complex and sometimes lead to random failures.
-
+These endpoints have not been migrated to `tests` folder due to their complexity.
 
 [1]: https://phpunit.de/
 [2]: https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs
