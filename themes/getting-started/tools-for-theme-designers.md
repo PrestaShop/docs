@@ -168,7 +168,7 @@ All the source files are located in the theme's `_dev` folder. The generated fil
 
 npm cannot be directly downloaded and installed. It is an integral part of the Node.js tool, therefore you need to download and install Node.js, which in turn will install npm for you.
 
-To download Node.js, please refer to the [NodeJS versions table]({{< ref "/development/compile-assets/" >}})
+To download Node.js, please refer to the [NodeJS versions table]({{< ref "/8/development/compile-assets/" >}})
 
 So, install Node.js on your machine, then test that npm is available:
 
