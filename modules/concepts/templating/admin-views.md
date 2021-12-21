@@ -30,15 +30,17 @@ In a module called `foo` let's create the related template. As the template is l
 
 So Let's create a file named `catalog.html.twig` in the `modules/foo/views/PrestaShop/Admin/Product/CatalogPage/catalog.html.twig` folder: we could re-use the one in the `src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage` folder, but let's start with a very simple override.
 
-Note that we use `PrestaShopBundle` instead of `@PrestaShop` to be sure we extend the original file.
+Note that we use `@!PrestaShop` instead of `@PrestaShop` to be sure we extend the original file.
 
 ```twig
-{% extends 'PrestaShopBundle:Admin/Product/CatalogPage:catalog.html.twig' %}
+{% extends '@!PrestaShop/Admin/Product/CatalogPage/catalog.html.twig' %}
 
 {% block product_catalog_filters %}
   Hello world!
 {% endblock %}
 ```
+
+If your module is compatible with PrestaShop 8.0 or above, you can use the new namespace `@PrestaShopCore` instead of `@!PrestaShop` to make it even clearer that you're extending the original file.
 
 ![Override all the things](../img/bo-override-1.png)
 
