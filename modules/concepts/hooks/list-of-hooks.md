@@ -205,7 +205,15 @@ actionAdminOrdersTrackingNumberUpdate
       'carrier' => (Carrier)
     );
     ```
+
+displayAdminOrderCreateExtraButtons
+: 
+    Available since: {{< minver v="1.7.8" >}}
     
+    Add buttons on the create order page dropdown
+    
+    Located in: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/Create/summary.html.twig
+
 actionAdminProductsListingFieldsModifier
 : 
     Located in: /src/Adapter/Product/AdminProductDataProvider.php
