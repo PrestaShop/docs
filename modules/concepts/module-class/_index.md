@@ -47,6 +47,18 @@ $this->confirmUninstall = "Are you sure? Deleting this module will make kittens 
 
 This attribute contains a confirmation message to be displayed when a user attempts to uninstall this module.
 
+### dependencies
+
+```php
+$this->dependencies = ['ps_googleanalytics', 'productcomments'];
+```
+
+- **Type:** array
+- **Default:** (empty)
+- **Required:** No
+
+This attribute contains the module's dependencies that PrestaShop checks when installing the module. If one of the dependant modules is unavailable, the installation will fail, and PrestaShop will display a warning.
+
 ### description
 
 ```php
