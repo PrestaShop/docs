@@ -39,18 +39,18 @@ This method returns `true` if the operation is successful, `false` otherwise.
 ##### Parameters
 
 `$key`
-: 
+:
   Identifier to your data to reuse later. You can use any valid string, but by convention, identifiers are usually in `ALL_CAPS_WITH_UNDERSCORES`.
-  
+
 `$value`
-: 
-  Value to store. It can be any scalar type (int, float, string, bool). 
+:
+  Value to store. It can be any scalar type (int, float, string, bool).
 
   Note: All values are stored as strings in database, so you might encounter type conversion issues if you save anything other than a string.
 
   {{% notice note %}}
   **Use of arrays to store multi language values.**
-  
+
   To store a value in multiple languages, You can provide an array indexed by language id:
   ```php
   [
@@ -58,14 +58,14 @@ This method returns `true` if the operation is successful, `false` otherwise.
       456 => 'Value in some other language',
   ]
   ```
-  
+
   Note that this is the **only supported use of arrays**.
   {{% /notice %}}
 
 `$shopConstraint`
-: 
-  This optional parameter lets you specify the shop context for the operation (read the "Multistore" section below for more). 
-  
+:
+  This optional parameter lets you specify the shop context for the operation (read the "Multistore" section below for more).
+
   If not provided, the behavior will depend on the global shop context. To avoid unpredictable behavior in Multistore contexts, we recommend setting this parameter.
 
 ### Check if a configuration data set exists
@@ -79,13 +79,13 @@ This method returns `true` if the data exists, `false` otherwise.
 ##### Parameters
 
 `$key`
-: 
+:
   Identifier to check.
 
 `$shopConstraint`
-: 
-  This optional parameter lets you specify the shop context for the operation (read the "Multistore" section below for more). 
-  
+:
+  This optional parameter lets you specify the shop context for the operation (read the "Multistore" section below for more).
+
   If not provided or set to "all shops", this method to checks if the identifier exists for _any_ shop.
 
 ### Retrieve configuration data
@@ -101,11 +101,11 @@ If the data is stored as multi language, this will return an array of values ind
 **Parameters:**
 
 `$key`
-: 
+:
   Identifier to retrieve.
 
 `$default`
-: 
+:
   This optional parameter lets you define the value to return if the identifier is not found.
 
 ### Delete configuration
@@ -119,7 +119,7 @@ This method returns nothing, and throws an Exception on error.
 **Parameters:**
 
 `$key`
-: 
+:
   Identifier to delete. Note that this method deletes the value for **all shops**.
 
 
@@ -143,3 +143,7 @@ $configuration->set(
     ShopConstraint::shopId(12)
 );
 ```
+
+{{% notice note %}}
+Check the [config console command]({{< relref "/8/development/components/console/prestashop-config" >}}) for setting values from CLI
+
