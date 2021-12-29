@@ -94,8 +94,8 @@ GridExtensions | 1.7.8
 ### Extensions
 
 ```js
-const Grid = window.prestashop.component.Grid(gridId);
-const ChoiceExtension = window.prestashop.component.GridExtensions.ChoiceExtension();
+const grid = new window.prestashop.component.Grid(gridId);
+grid.addExtension(new window.prestashop.component.GridExtensions.ColumnTogglingExtension());
 ```
 
 Extension | Version 
