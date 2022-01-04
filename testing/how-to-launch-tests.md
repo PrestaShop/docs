@@ -54,13 +54,14 @@ To check if you covered everything in your tests cases its best to run the tests
 
 First get your [docker dev environment up and running]({{< relref "/8/contribute/contribute-pull-requests/contribute_using_docker#install-prestashop-core" >}})
 
-After that is up and running you need to enable xdebug:
+After that is up and running you need to compile and enable xdebug:
 
 ```bash
+docker-compose exec prestashop-git pecl install xdebug
 docker-compose exec prestashop-git docker-php-ext-enable xdebug
 ```
 
-and then run your tests with coverage
+and then run your tests with coverage enabled
 
 ```bash
 docker-compose exec -e XDEBUG_MODE=coverage prestashop-git vendor/bin/phpunit --coverage-text -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle/Command/ConfigCommandTest.php
