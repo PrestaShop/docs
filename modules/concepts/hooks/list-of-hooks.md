@@ -1811,7 +1811,18 @@ displayAdminView
 : 
     Located in: admin-dev/themes/default/template/helpers/view/view.tpl
 
-    
+displayAfterTitleTag
+: 
+    Available since: {{< minver v="1.7.8" >}}
+
+    In html header
+Use this hook to add content after title tag
+
+    Located in: 
+
+    - /themes/classic/templates/_partials/head.tpl
+
+
 displayAfterBodyOpeningTag
 : 
     Very top of pages
