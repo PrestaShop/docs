@@ -7,4 +7,6 @@ aliases:
 
 # Sample modules
 
-{{% children %}} 
+{{% children %}}
+
+* [See all our example modules (GitHub)](https://github.com/PrestaShop/example-modules)
