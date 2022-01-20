@@ -9,7 +9,7 @@ weight: 4
 
 ### Global definition
 
-The database structure of PrestaShop can be found in `install/data/db_structure.sql` ([1.7.3.x releases example](https://github.com/PrestaShop/PrestaShop/blob/1.7.3.x/install-dev/data/db_structure.sql)).
+The database structure of PrestaShop can be found in `install/data/db_structure.sql` ([1.7.8.x releases example](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/install-dev/data/db_structure.sql)).
 
 It is used one time, during the installation of PrestaShop.
 It contains the structure of almost all tables. If a table needs to be added or
