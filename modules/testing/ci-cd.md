@@ -6,7 +6,7 @@ weight: 3
 
 # Continuous Integration / Continuous Deployment
 
-In the previous page we detailed some testing tools and how to execute them. Thay may be run locally, in order to check the code is fine before pushing it to a remote git repository, but they can also be automatically run by a dedicated test environment after each push. This can be useful to prevent code being pushed to production if one of your tools reports an issue you missed.
+In the previous page we detailed some testing tools and how to execute them. They may be run locally, in order to check that the code is fine before pushing it to a remote git repository, but they can also be automatically run by a dedicated test environment after each push. This can be useful to prevent code being pushed to production if one of your tools reports an issue you missed.
 
 Our modules are hosted on GitHub and GitLab repositories and each of them provide a solution for running these tests automatically. The following files allow the tools to run on both environments.
 
@@ -20,7 +20,7 @@ This example is taken from the module `ps_checkout`. The latest version and more
 name: PHP tests
 on: [push, pull_request]
 jobs:
-  # Check there is no syntax errors in the project
+  # Check that there are no syntax errors in the project
   php-linter:
     name: PHP Syntax check 5.6|7.2|7.3
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
       - name: PHP syntax checker 7.3
         uses: prestashop/github-action-php-lint/7.3@master
 
-  # Check the PHP code follow the coding standards
+  # Check that the PHP code follows the coding standards
   php-cs-fixer:
     name: PHP-CS-Fixer
     runs-on: ubuntu-latest
