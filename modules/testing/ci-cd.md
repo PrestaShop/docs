@@ -6,7 +6,7 @@ weight: 3
 
 # Continuous Integration / Continuous Deployment
 
-In the previous page we detailed some testing tools and how to execute them. Thay may be run locally, in order to check the code is fine before pushing it to a remote git repository, but they can also be automatically run by a dedicated test environment after each push. This can be useful to prevent code being pushed to production if one of your tools reports an issue you missed.
+In the previous page we detailed some testing tools and how to execute them. They may be run locally, in order to check that the code is fine before pushing it to a remote git repository, but they can also be automatically run by a dedicated test environment after each push. This can be useful to prevent code being pushed to production if one of your tools reports an issue you missed.
 
 Our modules are hosted on GitHub and GitLab repositories and each of them provide a solution for running these tests automatically. The following files allow the tools to run on both environments.
 
