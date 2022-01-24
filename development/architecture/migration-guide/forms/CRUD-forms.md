@@ -53,6 +53,7 @@ In the example below, you can see a `ContactFormDataProvider` that queries the d
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
 
 use Contact;
+use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface;
 
 final class ContactFormDataProvider implements FormDataProviderInterface
 {
@@ -216,6 +217,8 @@ In the example below, you can see a `ConctactFormDataHandler` that uses `ObjectM
 ```php
 <?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
+
+use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\FormDataHandlerInterface;
 
 final class ContactFormDataHandler implements FormDataHandlerInterface
 {
