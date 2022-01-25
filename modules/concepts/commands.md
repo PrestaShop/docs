@@ -77,6 +77,66 @@ services:
 
 The command should be now available using `./bin/console your-module:export`.
 
+
+### Autoloading
+
+The instructions above are assuming the module is installed via composer. In case you follow the same procedure but wish to add the command in your already existing module in `modules/<module_directory>` then the procedure requires an extra step. 
+
+For example with a structure like this 
+
+```tree
+modules/module_directory/
+├── config
+│   └── services.yml
+├── config.xml
+├── module_directory.php
+├── src
+│   └── Command
+│       └── SyncCommand.php
+```
+
+You would also need to namespace your src directory in `docroot/composer.json`
+
+By appending the following 
+
+```
+    "autoload": {
+        "psr-4": {
+            "PrestaShop\\PrestaShop\\": "src/",
+            "PrestaShopBundle\\": "src/PrestaShopBundle/",
+            "Vendor\\Module\\": "modules/module_directory/src/"
+        },
+        "classmap": [
+            "app/AppKernel.php",
+            "app/AppCache.php"
+        ]
+    },
+```
+
+And follow through using the correct namespaces throught your module commands. 
+
+### Predefined Constants
+
+If you would like to use existing PS constants like `_DB_PREFIX_` you also need to require the file `config/config.inc.php` 
+
+e.g. 
+
+```php
+$basePath = realpath(__DIR__ . '/../../../../');
+require_once $basePath . '/config/config.inc.php';
+```
+
+### Loading Module Classes 
+
+Commands by default won't have module classes loaded. You need to explicitly require the modules before you can use their classes
+
+e.g. 
+
+```php
+require_once $basePath . '/modules/<module_directory>/<module_directory>.php';
+```        
+        
+
 ## Learn more about the PrestaShop Console
 
 We use the Symfony Console with nothing specific to PrestaShop.
