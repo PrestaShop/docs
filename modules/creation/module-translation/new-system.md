@@ -322,12 +322,12 @@ You can distribute the downloaded dictionaries by placing the extracted files in
 .
 └── mymodule/
     └── translations/
-        ├── fr_FR/
-        │   ├── ModulesMymoduleFoo.fr_FR.xlf
-        │   └── ModulesMymoduleBar.fr_FR.xlf
-        └── en_US/
-            ├── ModulesMymoduleFoo.en_US.xlf
-            └── ModulesMymoduleBar.en_US.xlf
+        ├── fr-FR/
+        │   ├── ModulesMymoduleFoo.fr-FR.xlf
+        │   └── ModulesMymoduleBar.fr-FR.xlf
+        └── en-US/
+            ├── ModulesMymoduleFoo.en-US.xlf
+            └── ModulesMymoduleBar.en-US.xlf
 ```
 
 {{% notice warning %}}
