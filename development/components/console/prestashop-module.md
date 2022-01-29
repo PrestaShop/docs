@@ -8,7 +8,7 @@ title: prestashop:module
 
 * Path: `src/PrestaShopBundle/Command/ModuleCommand.php`
 * Arguments:
-  * `action`: Action to execute, must be one of: install, uninstall, enable, disable, enable_mobile, disable_mobile, reset, upgrade, configure
+  * `action`: Action to execute, must be one of: install, uninstall, enable, disable, enableMobile, disableMobile, reset, upgrade, configure
   * `module name`: Module on which the action will be executed
   * `file path`: YML file path for configuration __(optional)__
 
