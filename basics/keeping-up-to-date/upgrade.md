@@ -28,16 +28,15 @@ This guide gives you the full control on the process. This one has been applied 
 
 ### Release download
 
-The first step is to download the latest version on https://www.prestashop.com/.
+The first step is to download the latest version on https://github.com/PrestaShop/PrestaShop/releases.
 
-If you upgrade to another version of PrestaShop 1.6, the release files
-can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).
+If you upgrade to another version of PrestaShop 1.6, the release files can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).
 
 Download can also be done in command line, as done here with the version
 1.7.7.5:
 
 ```bash
-wget -O prestashop-upgrade.zip https://www.prestashop.com/download/old/prestashop_1.7.7.5.zip
+wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases/download/1.7.7.5/prestashop_1.7.7.5.zip
 ```
 
 ### Archive extraction
@@ -227,8 +226,6 @@ handle the backup and the upgrade to the last **minor** version for you
 Basically, the process and the result will be the same. The existing
 data on the shop will be kept, as well as your module and your current
 theme.
-
-You can [subscribe for the upgrade service on the marketplace](https://addons.prestashop.com/en/support/18689-upgrade-pack-prestashop.html).
 
 Many agencies and freelancers in your area may also provide this kind of
 service.
