@@ -45,16 +45,10 @@ For more information, see [Supported branches]({{< ref "supported-branches" >}})
     git config --global user.name "Your Name"
     git config --global user.email yourname@yourcompany.com
     ```
-
-- **Make your commits atomic**. This means including only one complete fix or change per commit.  
-    Typically, ask yourself if what you are doing is one or several tasks. 
-
-    {{% notice tip %}}
-Atomic commits make it easier to review, cherry-pick or revert changes (hopefully we'll never have to do that!).
-    {{% /notice %}}
-
-- Write [meaningful commit messages]({{< ref "writing-a-good-commit-message" >}}).
-- Use [interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) when you have made several changes in the same file but not all those changes are meant to be in a single commit.
+- **Make your commits atomic**. Ask yourself if what you are doing is one or several tasks: there should be only one complete fix or change per commit. Doing this makes it easier to review, cherry-pick and revert changes.
+  - Write [meaningful commit messages]({{< ref "writing-a-good-commit-message" >}}).
+  - Use [interactive staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging) when you have made several changes in the same file but not all those changes are meant to be in a single commit.
+  - Consider [squashing your commits](https://www.atlassian.com/git/tutorials/rewriting-history#git-rebase-i) as necessary, especially when you have performed many changes following code review.
 - **Avoid merge commits in your Pull Request.** They make the commit history more difficult to understand, and they can lead to hidden changes which are not visible by reviewers. If you need to resolve conflicts with the base branch, [rebase your branch](https://anavarre.net/how-to-rebase-a-github-pull-request/) instead.
 
 ## Pull Requests
