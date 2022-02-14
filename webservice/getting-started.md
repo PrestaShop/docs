@@ -186,10 +186,6 @@ The `display` parameter can be used to return all fields when used with the **fu
 You can also ask for certain fields if you use a list of fields names in brackets: `http://example.com/api/addresses/?display=[id,lastname,firstname,phone_mobile]`
 
 {{% notice note %}}
-This parameter can only be used for listings, not for individual records. If you want individual record with specific fields, you need to use both `display` and `filter` parameters.
-{{% /notice %}}
-
-{{% notice note %}}
 A response obtained with "display" other than "full" can't be used in a **PUT** (update) request, because the `WebserviceRequest` class validation for fields is the same for **POST** (create) and **PUT** (update).
 
 This should be fixed in a near future with a *yet-to-come-pull-request* introducing the PATCH method!
