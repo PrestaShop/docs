@@ -201,7 +201,7 @@ The **EQUAL** operator is used when you need to get specific items. For exemple,
 
 The **LIKE** operator is used when you need to search for items. For exemple, if you want the addresses with cities starting with "SAINT": `http://example.com/api/addresses?filter[city]=[saint]%`
 
-The **AND** operator is used when you need to get items matching several criteria: `http://example.com/api/addresses?filter[city]=[paris|lyon]`
+The **OR** operator is used when you need to get items matching several criteria: `http://example.com/api/addresses?filter[city]=[paris|lyon]`
 
 Other operators can be used, such as: 
 
