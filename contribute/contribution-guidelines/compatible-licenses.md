@@ -31,6 +31,7 @@ Artwork (including but not limited to: icons, pictures and fonts) is usually dis
 - CC-by
 - CC-by-sa
 - Unlicense
+- OFL (mainly used for text fonts)
 
 In general, public domain is not acceptable, as it does not exist in all jurisdictions or countries.
 
