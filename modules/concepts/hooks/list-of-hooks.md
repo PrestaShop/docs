@@ -1227,57 +1227,57 @@ actionPresentCart
        'presentedCart' => array(
             'products' => (ProductLazyArray|ProductListingLazyArray) $products,
             'totals' => array(
-	        'total' => array(
-		    'type' => 'total'
+                'total' => array(
+		            'type' => 'total'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-		'total_including_tax' => array(
-		    'type' => 'total_including_tax'
+		        ),
+		        'total_including_tax' => array(
+		            'type' => 'total_including_tax'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-		'total_excluding_tax' => array(
-		    'type' => 'total_excluding_tax'
+		        ),
+		        'total_excluding_tax' => array(
+		            'type' => 'total_excluding_tax'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-	    ),
+		        ),
+	        ),
             'subtotals' => array(
-	        'products' => array(
-		    'type' => 'products'
+	            'products' => array(
+		            'type' => 'products'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-		'discounts' => array(
-		    'type' => 'discounts'
+		        ),
+		        'discounts' => array(
+		            'type' => 'discounts'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-		'gift_wrapping' => array(
-		    'type' => 'gift_wrapping'
+		        ),
+		        'gift_wrapping' => array(
+		            'type' => 'gift_wrapping'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-		'shipping' => array(
-		    'type' => 'shipping'
+		        ),
+		        'shipping' => array(
+		            'type' => 'shipping'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-		'tax' => array(
-		    'type' => 'tax'
+		        ),
+		        'tax' => array(
+		            'type' => 'tax'
                     'label' => Price label
                     'amount' => Price amount
                     'value' => Price formatted
-		),
-	    ),
+		        ),
+	        ),
             'products_count' => (int) Number of products in cart,
             'summary_string' => (string) Descriptive number of products,
             'labels' => array(
