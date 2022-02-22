@@ -1227,7 +1227,7 @@ actionPresentCart
        'presentedCart' => array(
             'products' => (ProductLazyArray|ProductListingLazyArray) $products,
             'totals' => array(
-	            'total' => array(
+                'total' => array(
 		            'type' => 'total'
                     'label' => Price label
                     'amount' => Price amount
