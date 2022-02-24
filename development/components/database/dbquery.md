@@ -58,7 +58,7 @@ leftOuterJoin(string $table, string $alias = null, string $on = null)
 : 
     Add a LEFT OUTER JOIN clause.
 
-limit(string $limit, mixed $offset = 0)
+limit(int $limit, int $offset = 0)
 : 
     Limit results in query.
 
