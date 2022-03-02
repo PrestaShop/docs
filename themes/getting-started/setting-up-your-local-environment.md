@@ -78,7 +78,7 @@ version: 1.0.0
 author:
   name: "PrestaShop Team"
   email: "pub@prestashop.com"
-  url: "https://www.prestashop.com"
+  url: "https://www.prestashop-project.org"
  
 meta:
   compatibility:

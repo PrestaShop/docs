@@ -34,7 +34,7 @@ Let's add hook related code to main module class `demovieworderhooks`:
         );
         $bar->add(
             new \PrestaShopBundle\Controller\Admin\Sell\Order\ActionsBarButton(
-                'btn-info', ['href' => 'https://www.prestashop.com/'], 'Go to prestashop'
+                'btn-info', ['href' => 'https://www.prestashop-project.org/'], 'Go to prestashop'
             )
         );
         $bar->add(

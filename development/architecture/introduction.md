@@ -198,7 +198,7 @@ There are two kinds of themes in PrestaShop: **FO themes** and **BO themes**.
 
 FO themes define the appearance of the Front Office. 
 
-PrestaShop comes bundled with a default FO theme, called "Classic", but merchant can choose to use a different theme. Hundreds of them are [available for download on the Addons Marketplace][addons-themes].
+PrestaShop comes bundled with a default FO theme, called "Classic", but merchant can choose to use a different theme.
 
 Since FO themes work on top of legacy controllers, they are based on the [Smarty templating engine][smarty]. They all integrate a shared core javascript library which is called `core.js`, which has jQuery 3 bundled in.
 
@@ -267,7 +267,7 @@ Modules can also be used to customize PrestaShop:
 
 In addition, modules can be customized by Themes. Themes supporting a given module can override the module's own FO templates in order to improve their integration.
 
-As you can see, the module system has many features, making modules very powerful. Modules have full access to the Core system, and even if modules submitted to the [Addons Marketplace][addons-marketplace] go through a quality and security review process, integration can go very deep into the Core. This power comes with a cost: the deeper the integration and customization, the more risk of upgrade and interoperability issues there is.
+As you can see, the module system has many features, making modules very powerful. Modules have full access to the Core system, and the integration can go very deep into the Core. This power comes with a cost: the deeper the integration and customization, the more risk of upgrade and interoperability issues there is.
 
 ## Detailed diagram
 
@@ -293,12 +293,10 @@ Remember the overview at the top of the article? Have a look at this more detail
 [SRP]: https://en.wikipedia.org/wiki/Single_responsibility_principle
 [OCP]: https://en.wikipedia.org/wiki/Open/closed_principle
 [MVC]: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
-[addons-themes]: https://addons.prestashop.com/en/3-templates-prestashop
 [smarty]: https://www.smarty.net/
 [bootstrap]: https://getbootstrap.com/
 [child-theme]: {{< ref "/8/themes/reference/template-inheritance/parent-child-feature" >}}
 [theme-module-override]: {{< ref "/8/themes/reference/overriding-modules" >}}
 [twig]: https://twig.symfony.com/
 [github]: https://github.com/PrestaShop/prestashop-ui-kit/
-[addons-marketplace]: https://addons.prestashop.com/
 [autoupgrade]: https://github.com/PrestaShop/autoupgrade/

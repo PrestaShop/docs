@@ -28,4 +28,4 @@ New loggers have been created:
 
 ## How to download it
 
-You can download it from [Addons marketplace](https://addons.prestashop.com/en/data-migration-backup/5496-1-click-upgrade.html) or from your shop administration panel. It is also available on the module GitHub repository, in the [Releases](https://github.com/PrestaShop/autoupgrade/releases) section.
+You can download it from [the module GitHub repository](https://github.com/PrestaShop/autoupgrade/releases) or from your shop administration panel.

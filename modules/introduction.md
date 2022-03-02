@@ -20,10 +20,6 @@ the cart or the product sheet, when displaying the current stock, etc.).
 Specifically, a hook is a shortcut to the various methods available from
 the `Module` object, as assigned to that hook.
 
-{{% notice note %}}
-Injecting executable code via third party API or services is considered a security threat and is therefore forbidden for modules sold in the Addons Marketplace.
-{{% /notice %}}
-
 ## Modules' operating principles
 
 Modules are the ideal way to let your talent and imagination as a
