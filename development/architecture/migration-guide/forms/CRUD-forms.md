@@ -53,7 +53,6 @@ In the example below, you can see a `ContactFormDataProvider` that queries the d
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider;
 
 use Contact;
-use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface;
 
 final class ContactFormDataProvider implements FormDataProviderInterface
 {
@@ -105,6 +104,13 @@ Don't forget to register your class as a service, you will need it to use it wit
 
   prestashop.core.form.identifiable_object.data_provider.contact_form_data_provider:
     class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\ContactFormDataProvider'
+```
+
+Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider`, like a module, you need to import the classes that come from this namespace.
+
+Example
+```php
+use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface;
 ```
 
 ## Form Builder
@@ -218,8 +224,6 @@ In the example below, you can see a `ConctactFormDataHandler` that uses `ObjectM
 <?php
 namespace PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler;
 
-use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\FormDataHandlerInterface;
-
 final class ContactFormDataHandler implements FormDataHandlerInterface
 {
     /**
@@ -268,6 +272,13 @@ Don't forget to register your Form Data Handler as a service, you will need it t
 
 prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
   class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
+```
+
+Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider`, like a module, you need to import the classes that come from this namespace.
+
+Example
+```php
+use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface;
 ```
 
 ## Form Handler
