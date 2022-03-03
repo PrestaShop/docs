@@ -106,6 +106,13 @@ Don't forget to register your class as a service, you will need it to use it wit
     class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\ContactFormDataProvider'
 ```
 
+Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider`, like a module, you need to import the classes that come from this namespace.
+
+Example
+```php
+use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface;
+```
+
 ## Form Builder
 
 The _Form Builder_ is used by controllers to build the form that will be shown to users.
@@ -265,6 +272,13 @@ Don't forget to register your Form Data Handler as a service, you will need it t
 
 prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
   class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
+```
+
+Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider`, like a module, you need to import the classes that come from this namespace.
+
+Example
+```php
+use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface;
 ```
 
 ## Form Handler
