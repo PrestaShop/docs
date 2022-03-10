@@ -45,30 +45,17 @@ That’s the easiest one, there’s only one domain: if the wording is present i
 
 The strings that appear in the front office (default theme) and the content aimed at customers go to the `Shop` domain.
 
-This domain is then broken down into **sub-categories**. Deploy the mindmap below to display them. You can also check the legend below the mindmap to see what type of string each domain and subdomain contains.
+This domain is then broken down into **sub-categories**. You can also check [the legend][Shop-legend] to see what type of string each domain and subdomain contains.
 
-<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/XHbGRCKs7fd9JCcxasZAmw"></iframe>
-
-Download full mindmap:
-
-
-<iframe src="https://drive.google.com/file/d/1DDK_n7uQsHuPbEJ5bcpcNab_V8vWRFNg/preview" width="640" height="480" allow="autoplay"></iframe>
-
-Download legend: 
+{{< figure src="../img/Shop_mindmap.png" title="Shop domain mindmap" >}}
 
 ## Admin
 
 The strings that appear in the back office and the content aimed at merchants go to the `Admin` domain.
 
-This domain is then broken down into **sub-categories**. Deploy the mindmap below to display them. You can also check the legend below the mindmap to see what type of string each domain and subdomain contains.
+This domain is then broken down into **sub-categories**. You can also check [the legend][Admin-legend] to see what type of string each domain and subdomain contains.
 
-<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/RMLMzSvFzpXV4NafgjRhe2"></iframe>
-
-Download full mindmap:
-
-<iframe src="https://drive.google.com/file/d/1xx9hVLrAEgUVw9PNSOw3DkI5tUdeH6wK/preview" width="640" height="480" allow="autoplay"></iframe>
-
-Download legend:
+{{< figure src="../img/Admin_mindmap.png" title="Admin domain mindmap" >}}
 
 ## Modules
 
@@ -78,10 +65,17 @@ This domain is then broken down into **sub-categories**. The second level indica
 
 👀 Some strings might be rather generic (like “Search” or “Settings updated”) and can be shared with other modules or pages. In that case, it's better to use the _Admin._ or _Shop._ domains to avoid unnecessary duplicates.
 
-<iframe style="border:none" width="800" height="450" src="https://whimsical.com/embed/tJrNFcB632iozEvtz6ncj"></iframe>
+{{< figure src="../img/Modules_mindmap.png" title="Emails domain mindmap" >}}
+
 
 ## Emails
 
 The strings that appear in the emails sent from the store to customers go to the `Emails` domain. This domain has only one sub-domain, to indicate whether the string appears in the email's subject or body.
 
-That's it! Now you know what type of string each domain contains. 
+That's it! Now you know what type of string each domain contains.
+
+{{< figure src="../img/Emails_mindmap.png" title="Modules domain mindmap" >}}
+
+
+[Shop-legend]: ../pdf/Shop_legend.pdf
+[Admin-legend]: ../pdf/Admin_legend.pdf
