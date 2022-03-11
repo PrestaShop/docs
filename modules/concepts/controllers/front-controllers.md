@@ -56,12 +56,14 @@ There are basically two kinds of HTTP calls possible for a controller:
 * Calls with GET, used to only retrieve data,
 * Calls with POST, used as soon as some data is modified on the shop.
 
+For an advanced use, others HTTP methods can also be called ( such as PUT, PATCH, DELETE ).
+
 Depending of the request made to the controller, a different method will be
 called by the core.
 
-### Display content (GET)
+### Display content
 
-Handling GET requests can be done by implementing the method `initContent()` in
+Handling requests can be done by implementing the method `initContent()` in
 the front controller. Note the parent class also implements it, do not forget
 to call it as well.
 
