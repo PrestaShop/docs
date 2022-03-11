@@ -3,121 +3,79 @@ title: Translation Domains
 weight: 20
 ---
 
-# Translation Domains
+Each string created for the PrestaShop project must be associated with a translation domain, to be later translated on Crowdin by the community of translators. 
 
-Sometimes wordings may seem vague when seen out of context. For example, "Delete". Just like that, we can imagine what is it used for, but we don't really have much information about it. What are we deleting? From a translator standpoint, this is very hard, because not only do we not know where it's supposed to be used, but it could be used in several places, with different meanings. 
+When a minor or major version of PrestaShop is released, all the new strings associated with this version are added to Crowdin to be translated.
 
-Depending on the language, it will be more or less easy to translate it just vaguely enough so that the phrase makes sense in every one of those different contexts.
+[Crowdin](https://crowdin.com/project/prestashop-official) is a localization management platform on which a community of volunteer translators works on no less than 80 translation projects.
 
-Translation Domains bring an answer to this problem. By allowing to separate wordings in contextual groups, if the same wording appears in more than one domain, then it can be have a different translation in each one of them. This way, translators are better able to adapt the meaning of each wording to the specific context in which they appear.
+# Why organize strings into domains?
 
-{{% notice note %}}
-This feature was originally described in this [blog post](https://build.prestashop.com/news/new-translation-system-prestashop-17/) and has been updated here.
-{{% /notice %}}
+Sometimes, a string may appear a bit unclear to translators because of the lack of context. 
 
-## Understanding the Domains' structure
+**Translation domains aim to give more context to translators, by indicating where the string appears on PrestaShop software.**
 
-Domains have been organized in 5 major sections: **Shop**, **Admin**, **Modules**, **Email** and **Install**. All the PrestaShop translatable strings are spread across these 5 domains, according to the following definition:
+And it happens that a word has several translations depending on the context. So, by allowing strings to be separated into contextual groups, if the same string appears in more than one domain, it can have a different translation in each. This way, translators can adapt the meaning of each string to the specific context in which it appears.
 
-| Domain | Description
-| --- | ---
-| Admin | Back office and content aimed at merchants
-| Email | Emails sent from the shop
-| Install | Content from the installation wizard
-| Modules | Native modules
-| Shop | Default theme, front office and content aimed at customers
+# Understanding the structure of domains
 
-These are called "first-level" domains. Domains are further broken down in **at least two** and **up to three** levels or "subdomains", for example:
+Strings are easily recognizable in PrestaShop's code because it is always introduced by `trans(` and followed by a translation domain.
 
-```text
-Shop.Theme.Checkout
-```
+Strings have been organized into **5 main domains** depending on where they appear on PrestaShop software.
 
-**There are two exceptions to this rule:** `Installer` and `messages` have only one level. The latter contains all wordings that did not have any domain assigned at the time of release of 1.7.0 and thus have been kept for backwards compatibility.
+| Domain | Description |
+| ----------- | ----------- |
+| Install | The strings that appear in the installation wizard. |
+| Shop   | The strings that appear in the front office (default theme) and the content aimed at customers. | 
+| Admin | The strings that appear in the back office and the content aimed at merchants. |
+| Modules | The strings that appear in built-in modules. |
+| Emails | The strings that appear in emails sent from the store to customers. |
 
-In the end a domain like `Shop.Theme.Checkout` corresponds to a specific folder in [Crowdin](https://crowdin.com/project/prestashop-official), where you'll find all the strings from the default theme, related to the checkout process (funnel, shopping cart, etc.).
+These domains are then broken down into **subdomains**, more or less according to the complexity of their content.
 
-{{% notice tip %}}
-Domains are stored as XLIFF files in PrestaShop, with one file per subdomain. [See the full list here](https://github.com/PrestaShop/PrestaShop/tree/develop/app/Resources/translations/default).
-{{% /notice %}} 
+👀 If a domain has subdomains, you must necessarily put the string in the **deepest** subdomain.
 
-Read below for more details on how we organized domains and what they contain.
+For example, the domain `Admin.Actions` doesn't have subdomains, so all the strings of this category would go to the first-level domain. However, `Admin.Notifications` has 3 levels, so you would have to choose a third-level domain depending on whether your string is an error, information, warning, or success message.
 
-### Install
+## Install
 
-This is the easiest one, there's only one domain: `Install`. It's the content from the installation wizard.
+That’s the easiest one, there’s only one domain: if the wording is present in the installation wizard, then it goes to the `Install` domain.
 
-### Modules
+## Shop
 
-For modules, it's rather simple. We still have a "Modules" folder (first-level), which contains either a file or folder for each module: this the second level.
-The third level is here to say whether the string appears in the front office (`Shop`) or the back office (`Admin`).
+The strings that appear in the front office (default theme) and the content aimed at customers go to the `Shop` domain.
 
-![Modules Translation Domain](../img/domains-modules.png)
+This domain is then broken down into **sub-categories**. You can also check [the legend][Shop-legend] to see what type of string each domain and subdomain contains.
 
-###  Shop
+{{< figure src="../img/Shop_mindmap.png" title="Shop domain mindmap" >}}
 
-For the front office, it's a little bit more complex. Any string related to the front office goes into the `Shop` domain. That's the first level. Then it's split in various sections, mostly functional. Here's how it works for the second level:
+## Admin
 
-| Domain | Strings
-| ---------- | --------
-| Emails | The emails sent from the shop to a customer (order confirmation, account creation, etc.)
-| PDF | The PDFs sent to a customer (invoice, delivery slip, credit slip, etc.)
-| Theme | The strings attached to the default theme "Classic".
-| Demo | The content from the demo products and demo pages ("About us", "Terms and conditions of use", etc.). If you remove the de content, you shouldn't need any of these strings. |
-| Navigation | Most of the meta titles and page names from the default theme.
-| Notifications | The warning, error or success messages that can appear in the shop.
-| Forms | The forms available in the shop ("Contact us" page, addresses, etc.)
+The strings that appear in the back office and the content aimed at merchants go to the `Admin` domain.
 
-Each of this domain can be further divided to provide even more context.
+This domain is then broken down into **sub-categories**. You can also check [the legend][Admin-legend] to see what type of string each domain and subdomain contains.
 
-##### Shop.Theme
+{{< figure src="../img/Admin_mindmap.png" title="Admin domain mindmap" >}}
 
-| Domain | Strings
-| --- | ---
-| Catalog | All the strings needed to display your catalog (product page, categories, etc.).
-| Customer Account | Anything related to the management of a customer account and the orders.
-| Checkout | Everything related to the act of buying - i.e. if you're in catalog mode, you shouldn't need these strings.
-| Actions | All the call-to-actions, buttons or links that you find on the shop and that aren't specific to a page or context.
+## Modules
 
-##### Shop.Demo
+The strings that appear in a built-in module go the Modules domain.
 
-| Domain | Strings
-| --- | ---
-| Catalog | Content for demo product and categories (descriptions).
-| Pages | Content inside the demo pages (formerly known as CMS pages).
+This domain is then broken down into **sub-categories**. The second level indicates the module's name, and the third level indicates whether the string appears in the front office or the back office.
 
-##### Shop.Notifications
+👀 Some strings might be rather generic (like “Search” or “Settings updated”) and can be shared with other modules or pages. In that case, it's better to use the _Admin._ or _Shop._ domains to avoid unnecessary duplicates.
 
-Notifications are split according to their level of alert: `Info`, `Error`, `Warning` or `Success`. They are the messages showing up on your shop.
+{{< figure src="../img/Modules_mindmap.png" title="Emails domain mindmap" >}}
 
-##### Shop.Forms
 
-| Domain | Strings
-| --- | ---
-| Labels | The form labels
-| Errors | Its corresponding errors (distinct from the theme errors, these one are specific to the form and will display inline)
-| Help | Hints to help users fill in the form (special characters, etc.).
+## Emails
 
-###  Admin
+The strings that appear in the emails sent from the store to customers go to the `Emails` domain. This domain has only one sub-domain, to indicate whether the string appears in the email's subject or body.
 
-Now, let's see how things are organized for the strings from the back office.
+That's it! Now you know what type of string each domain contains.
 
-| Domain | Strings
-| ---------- | --------
-| Actions | All the call-to-actions, buttons or links that you find on the back office, and that are quite generic ("Save", "Add "Delete", etc.). Again, if it applies to one page and one functional domain only, then this is not the domain to use.
-| Advanced Parameters | Content from the "Advanced Settings" section. Note the lower case "p" in `Admin.Advparameters`
-| Catalog | Strings from the "Catalog" section.
-| Dashboard | Strings from the Dashboard page.
-| Design | Strings from the "Design" section.
-| Global | Anything which doesn't fall in the below categories, but is still related to the back office, that can be found in a lot  occurrences ("Max", "Settings", "Enabled", etc.) AND in different parts of the software too. <br/>If a string is specific to a given page, then it shouldn't be in the global domain.
-| International | Strings form the "International" section.
-| Login | Strings from the Login screen.
-| Modules | Strings from the Modules page.
-| Navigation | The structure shared by all pages of the back office.
-| Notifications | All the warning, error or success messages that can appear in the back office.They must be general notification applying to any part of the software (e.g. "Settings updated").<br/> In case you have a specific notification ("Friendly URLs are currently disabled"), then it should fall under the notification subdomain for its functional domain (here `Admin.Catalog.Notification`).
-| Orders & Customers | Strings for the "Orders", "Customers" and "Customer Service" sections from the back office. Note the lower case "c" in `Admin.Orderscustomers`.
-| Payment | Strings from the "Payment" section.
-| Shipping | Strings from the "Shipping" section.
-| Shop Parameters | Content from the "Shop Parameters" section. Note the lower case "p" in `Admin.Shopparameters`.
-| Stats | Content from the "Stats" section.
+{{< figure src="../img/Emails_mindmap.png" title="Modules domain mindmap" >}}
 
+
+[Shop-legend]: ../pdf/Shop_legend.pdf
+[Admin-legend]: ../pdf/Admin_legend.pdf
