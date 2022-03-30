@@ -261,19 +261,7 @@ if (!defined('_PS_DEBUG_PROFILING_')) {
 
 ### 8) PrestaShop database cleaning
 
-Some SQL tables of PrestaShop can grow very big in time. Some of the data being stored there is sometimes not relevant anymore or not needed anymore.
-
-Some notable examples:
-
-#### Logs table
-
-You can regularly clean your _log_ database table from old logs.
-
-#### Configuration table
-
-The _configuration_ database table can grow as you install more and more modules and a lot of them do store data inside it. Some of them do remove this data when they are being uninstalled and other do not. This can result in a _configuration_ database table quite big and that can be cleaned up.
-
-Note that _configuration_ table content is being loaded _for every request_ PrestaShop handles so it can really slow your shop down.
+See [the Taking Care of PrestaShop page section]({{< ref "/8/scale/taking-care" >}}).
 
 ### 9) Modules optimization
 
