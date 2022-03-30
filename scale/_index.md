@@ -49,3 +49,7 @@ Another way to scale your shop is to introduce other systems to improve your per
 4. Use a Content Delivery Network (CDN) for static files
 
 Note: services like a CDN or HTTP accelerator are useful in a production environment, not in a development environment.
+
+## In this section
+
+{{% children /%}}
