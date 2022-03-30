@@ -72,7 +72,7 @@ services:
       - "My custom message"
 ```
 
-NOTE : Since 8.x it is possible to load PHP / XML files for modules services
+{{% notice tip %}} It is possible to load PHP / XML files for modules services{{% /notice %}}
 
 ```yml
 # yourmodule/config/services.yml
