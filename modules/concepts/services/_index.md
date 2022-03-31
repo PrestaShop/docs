@@ -124,7 +124,7 @@ That's done. The service registered under the name `prestashop.core.b2b.b2b_feat
 
 When you choose to decorate a service, this means that you _make everybody use your service but you keep the old service available_. The previous service has been given a new name and can still be used. Every other part of the code where this service was used will use the new version.
 
-To do it: you declare your new service using the 'decorates' keyword. So if you want to decorates the service `prestashop.core.b2b.b2b_feature` with my own implementation, you write in `config/services.yml` :
+To do it: you declare your new service using the 'decorates' keyword. So if you want to decorate the service `prestashop.core.b2b.b2b_feature` with your own implementation, you write in `config/services.yml` :
 
 ```yml
  mymodule.my_own_b2b_feature_service:
