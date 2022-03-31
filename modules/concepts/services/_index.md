@@ -72,6 +72,24 @@ services:
       - "My custom message"
 ```
 
+{{% notice tip %}} It is possible to load PHP / XML files for modules services{{% /notice %}}
+
+```yml
+# yourmodule/config/services.yml
+imports:
+    - { resource: services.php }
+```
+
+```php
+<?php
+// yourmodule/config/services.php
+namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+
+return function(ContainerConfigurator $configurator) {
+
+};
+```
+
 This will then allow you to get your service from the Symfony container, like in your modern controllers:
 
 ```php
