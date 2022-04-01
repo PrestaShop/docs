@@ -862,6 +862,7 @@ actionOrderStatusPostUpdate
     <?php
     array(
       'newOrderStatus' => (object) OrderState,
+      'oldOrderStatus' => (object) OrderState,
       'id_order' => (int) Order ID
     );
     ```
@@ -877,6 +878,7 @@ actionOrderStatusUpdate
     <?php
     array(
       'newOrderStatus' => (object) OrderState,
+      'oldOrderStatus' => (object) OrderState,
       'id_order' => (int) Order ID
     );
     ```
