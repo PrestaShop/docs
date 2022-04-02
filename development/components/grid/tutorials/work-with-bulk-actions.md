@@ -99,6 +99,7 @@ First, you need to create Bulk action itself:
 // modules/mymodule/src/Grid/Action/Bulk
 
 use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\AbstractBulkAction;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 // It extends AbstractBulkAction,
 // but you can also implement \PrestaShop\PrestaShop\Core\Grid\Action\Bulk\BulkActionInterface 

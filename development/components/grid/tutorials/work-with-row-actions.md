@@ -25,7 +25,7 @@ See code example from the Core below:
 ```php
 <?php // src/Core/Grid/Definition/Factory/CategoryGridDefinitionFactory.php
 
-final class CategoryGridDefinitionFactory extends AbstractGridDefinitionFactory
+final class CategoryGridDefinitionFactory extends AbstractFilterableGridDefinitionFactory
 {
     // ...
 
