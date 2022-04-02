@@ -131,6 +131,7 @@ First, you need to create a Grid action itself:
 // modules/mymodule/src/Grid/Action/Type/
 
 use PrestaShop\PrestaShop\Core\Grid\Action\AbstractGridAction;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * It extends AbstractGridAction,

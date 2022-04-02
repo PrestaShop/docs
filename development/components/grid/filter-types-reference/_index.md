@@ -95,7 +95,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
  * You can adapt this example or look at the existing ones
  * in PrestaShop Core.
  */
-class MyGridDefinitionFactory extends AbstractGridDefinition
+class MyGridDefinitionFactory extends AbstractGridDefinitionFactory
 {
         /**
          * {@inheritdoc}
