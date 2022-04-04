@@ -58,7 +58,7 @@ use PrestaShop\PrestaShop\Core\Grid\Action\Bulk\BulkActionCollection;
  * You can adapt this example or look at the existing ones
  * in PrestaShop's Core.
  */
-class MyGridDefinitionFactory extends AbstractGridDefinition
+class MyGridDefinitionFactory extends AbstractGridDefinitionFactory
 {
     /**
      * {@inheritdoc}

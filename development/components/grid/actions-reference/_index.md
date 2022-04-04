@@ -171,13 +171,14 @@ use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ActionColumn;
 use PrestaShop\PrestaShop\Core\Grid\Action\Row\RowActionCollection;
 use PrestaShop\PrestaShop\Core\Grid\Action\Row\Type\LinkRowAction;
 use PrestaShop\PrestaShop\Core\Grid\Action\Row\Type\SubmitRowAction;
+use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 
 /**
  * How to define the Grid's actions?
  * You can adapt this example or look at the existing ones
  * in PrestaShop's Core.
  */
-class MyGridDefinitionFactory extends AbstractGridDefinition
+class MyGridDefinitionFactory extends AbstractGridDefinitionFactory
 {
     /**
      * {@inheritdoc}
