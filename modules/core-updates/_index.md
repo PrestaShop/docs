@@ -12,4 +12,4 @@ In this section you can find important changes in the core that may impact your 
 
 For changes introduced in versions 1.7, please [visit this page][1-7-core-changes].
 
-[1-7-core-changes]: https://devdocs.prestashop.com/1.7/modules/core-updates/
+[1-7-core-changes]: {{< relref "/1.7/modules/core-updates/" >}}
