@@ -106,6 +106,13 @@ If you have have replacements to peform in your wording, then there are two opti
     <div>{l s='There are %products_count% items in your cart.' sprintf=['%products_count%' => $cart.products_count] d='Shop.Theme.Checkout'}</div>
     ```
 
+**Note:** The `l` macro does not support escaping the strings for javascript. Instead you can assign the translation to a variable and escape it afterwards:
+
+```html
+{assign var='translatedString' value={l s='Text containing single quote' d='Modules.Mymodule.Shop'}}
+<script>var text='{$translatedString|escape:'javascript'}';</script>
+```
+
 ## Twig templates
 
 In `.twig` files, you can use the `trans` filter from Twig:
