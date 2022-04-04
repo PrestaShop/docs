@@ -108,10 +108,10 @@ If you have have replacements to peform in your wording, then there are two opti
 
 **Note:** The `l` macro does not support escaping the strings for javascript. Instead you can assign the translation to a variable and escape it afterwards:
 
-    ```html
-    {assign var='translatedString' value={l s='Text containing single quote' d='Modules.Mymodule.Shop'}}
-    <script>var text='{$translatedString|escape:'javascript'}';</script>
-    ```
+```html
+{assign var='translatedString' value={l s='Text containing single quote' d='Modules.Mymodule.Shop'}}
+<script>var text='{$translatedString|escape:'javascript'}';</script>
+```
 
 ## Twig templates
 
