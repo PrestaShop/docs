@@ -130,10 +130,10 @@ If no issue is linked to your Pull Request, maintainers might ask you to create 
 
 ### Related PRs
 
-If your PR requires additional PRs to function properly, link them into this field. Examples:
+If your Pull Request is linked to another contribution and they should be reviewed or tested together, please provide the other Pull Request links into this field. Examples:
 
-* Link to related theme changes, if your PR changes something both in the core and a theme.
-* Link to autoupgrade module PR, if a database or configuration change is needed for PR to function properly on existing installs.
+* Please provide the URL of Pull Request that submit theme changes, if your PR requires modifications both in the core and a supported theme.
+* Please provide the URL of Pull Request that submit changes to the Upgrade process (such as database or configuration changes), if your PR requires modifications both in the core and the upgrade process
 
 ### How to test
 
