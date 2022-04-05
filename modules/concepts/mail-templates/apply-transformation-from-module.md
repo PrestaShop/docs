@@ -146,7 +146,7 @@ use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\Transformation\TransformationCollectionInterface;
 use PrestaShop\Module\MyEmailThemeModule\MailTemplate\Transformation\CustomMessageColorTransformation;
 
-class my_email_theme_module {
+class My_email_theme_module extends Module {
     public function install() {
         return parent::install()
             // This class constant contains 'actionGetMailLayoutTransformations'

@@ -48,7 +48,7 @@ the `actionBuildMailLayoutVariables` hook.
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutVariablesBuilderInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutInterface;
 
-class my_email_theme_module {
+class My_email_theme_module extends Module {
     public function install() {
         return parent::install()
             // This class constant contains 'actionBuildMailLayoutVariables'
