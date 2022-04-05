@@ -5,13 +5,13 @@ weight: 30
 
 # How to add a new Core Hook
 
-Although hooks are automatically created the first time they are subscribed to, new hooks is added to the Core itself need to be properly registered and documented.
+Although hooks are automatically created the first time they are subscribed to, new hooks added to the Core itself need to be properly registered and documented.
 
 Here are the steps you need to follow.
 
 ## 1. Dispatch the new hook
 
-The very fisrt step is just to dispatch the new hook wherever you need it, as explained in [Dispatching a Hook]({{< relref "dispatching-hook" >}}).
+The very first step is just to dispatch the new hook wherever you need it, as explained in [Dispatching a Hook]({{< relref "dispatching-hook" >}}).
 
 ## 2. Update the Hooks definition file
 
