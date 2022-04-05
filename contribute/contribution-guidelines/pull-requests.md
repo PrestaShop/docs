@@ -128,6 +128,13 @@ Using the appropriate syntax will link your Pull Request to that issue, and will
 
 If no issue is linked to your Pull Request, maintainers might ask you to create one. This helps the team track what goes in a release and the status of each individual change. 
 
+### Related PRs
+
+If your Pull Request is linked to another contribution and they should be reviewed or tested together, please provide the other Pull Request links into this field. Examples:
+
+* Please provide the URL of Pull Request that submit theme changes, if your PR requires modifications both in the core and a supported theme.
+* Please provide the URL of Pull Request that submit changes to the Upgrade process (such as database or configuration changes), if your PR requires modifications both in the core and the upgrade process
+
 ### How to test
 
 In addition to being code reviewed, each individual contribution is manually verified by PrestaShop's QA team. In order to effectively confirm that your change doesn't introduce new errors, please describe how to best verify that your change does what you expect it to do. Feel free to write as much details as you can outside the table if needed.
