@@ -15,7 +15,17 @@ Enables TinyMCE text editor on TextareaType.
 
 ## Required Javascript components
     
-None.
+In order to use TinyMCE editor in the PrestaShop UI Kit, you need to initialize its javascript component once the page is loaded:
+```js
+document.addEventListener('DOMContentLoaded', function () {
+    window.prestashop.component.initComponents(
+        [
+            "TinyMCEEditor"
+        ],
+    );
+});
+```
+
 
 ## Code example
 
