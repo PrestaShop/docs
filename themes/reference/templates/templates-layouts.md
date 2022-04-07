@@ -23,7 +23,7 @@ Templates are then split between various subfolders.
 : Product page, product/brand/supplier listing, search result and such.
 
 **/checkout/**
-: Cart, delivery options, payement options, order confirmations and such.
+: Cart, delivery options, payment options, order confirmations and such.
 
 **/cms/**
 : All the static content: contact, sitemap, CMS pages and such.
@@ -46,11 +46,11 @@ of this documentation).
 
 We make a **clear difference between templates and layout**.
 
-* A template extends a layout.
-* The layout hold the global organization of the page
+* A template extends a layout
+* The layout holds the global organization of the page
 * A template a specify to a feature: the product page for example
 
-There are many templates is a PrestaShop theme, the main ones includes:
+There are many templates in a PrestaShop theme, the main ones includes:
 
 * **index.tpl** for the home page
 * **catalog/product.tpl** for the product page
