@@ -61,7 +61,7 @@ We recommend that you follow the [RSCSS structure](https://rscss.io/)
 
 ##### Javascript
 
-Make sure your linter tool follows our .eslint file: https://github.com/PrestaShop/PrestaShop/blob/develop/.eslintrc
+Make sure your linter tool follows our .eslint file: https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/js/.eslintrc.js
 
 If you wish to write ECMAScript 2015 (ES6) code, we recommend using the [Babel compiler](https://babeljs.io/) to maximize compatibility.
 
