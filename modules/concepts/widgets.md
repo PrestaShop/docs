@@ -79,7 +79,7 @@ Hook::exec($hook_name)
 {hook h='<hook_name>'}
 ```
 
-The method called with be different regarding the module content:
+The called method will be different regarding the module content:
 
 {{< figure src="../img/widget-example-hooks.png" title="Using widget from hooks" >}}
 
