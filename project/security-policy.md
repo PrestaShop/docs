@@ -42,7 +42,7 @@ Here is a short summary of the steps followed by the primary handler:
 3) For both minor and critical issues, a [GitHub Security Advisory](https://help.github.com/en/github/managing-security-vulnerabilities/creating-a-security-advisory
 ) will be created to register the issue in GitHub CVE database.
 
-4) A [Private Security Forks](https://docs.github.com/en/github/managing-security-vulnerabilities/collaborating-in-a-temporary-private-fork-to-resolve-a-security-vulnerability) is used to prepare a patch Pull Request for the advisory. The Pull Request then reviewed and tested by QA.
+4) A [Private Security Fork](https://docs.github.com/en/github/managing-security-vulnerabilities/collaborating-in-a-temporary-private-fork-to-resolve-a-security-vulnerability) is used to prepare a patch Pull Request for the advisory. The Pull Request then reviewed and tested by QA.
 
 5) When all patch Pull Requests are ready (in the event that multiple issues are reported), they are all merged and a new [Patch Release](../release/patch-release-lifecycle) is built and delivered. Security Advisories are published and the vulnerabilities are disclosed in a Release Note, urging all PrestaShop users to upgrade in order to protect their shops.
 
