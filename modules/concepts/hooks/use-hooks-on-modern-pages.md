@@ -153,6 +153,25 @@ Prestashop automatically checks if modules have a `config/services.yml` file and
 ```
 ./bin/console cache:clear --no-warmup
 ```
+In case Prestashop failed to autoload automatically, make autoload with composer manually:
+
+- Install composer if you don't have https://getcomposer.org/
+
+- Create inside the module's folder the file named composer.json and insert the below code
+```
+{
+  "autoload": {
+    "psr-4": {
+      "Foo\\": "classes/"
+    }
+  }
+}
+```
+- Open your terminal then go to your module folder and launch this command: 
+``` 
+php composer.phar dump-autoload -a
+```
+This will generate a vendor folder, with inside composer folder and autoload.php file.
 
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
 
