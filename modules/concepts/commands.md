@@ -31,7 +31,7 @@ You need to create the file and register it as a "command".
 
 First you need to setup your composer file, you will find more info about it in [Setup composer][setup-composer]
 
-[setup-composer]: {{< ref "/1.7/modules/concepts/services/_index.md#setup-composer" >}}
+[setup-composer]: {{< ref "/1.7/modules/concepts/composer/_index.md" >}}
 
 ### Creation of the command
 
