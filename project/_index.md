@@ -1,7 +1,7 @@
 ---
 title: The PrestaShop Project
-weight: 9
-pre: "<b>9. </b>"
+weight: 10
+pre: "<b>10. </b>"
 chapter: true
 ---
 
