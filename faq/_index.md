@@ -1,8 +1,8 @@
 ---
 title: Frequently Asked Questions
 menuTitle: FAQ
-weight: 10
-pre: "<b>10. </b>"
+weight: 11
+pre: "<b>11. </b>"
 chapter: true
 ---
 

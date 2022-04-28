@@ -1,8 +1,8 @@
 ---
 title: The PrestaShop Webservice API
 menuTitle: Webservice API
-weight: 6
-pre: "<b>6. </b>"
+weight: 7
+pre: "<b>7. </b>"
 chapter: true
 aliases:
   - /1.7/development/webservice/
