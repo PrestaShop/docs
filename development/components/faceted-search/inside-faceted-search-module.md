@@ -11,9 +11,9 @@ This page should be useful for someone willing to contribute to the module. To d
 
 The module
 
-- is accessible from the front-office on dedicated pages, using hooks
+- is accessible from the front-office on dedicated pages, using hooks or widgets
 - has a back-office configuration page
-- provides 3 endpoints to be regularly visited (by a cron for example) in order to reindex the products
+- provides 3 endpoints to be regularly visited (by a cron for example) in order to reindex the products attributes, prices and also clear the cache
 
 The 3 exposed endpoints are in the root folder of the module.
 
