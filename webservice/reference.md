@@ -158,7 +158,7 @@ When displaying a resource schema in synopsis mode, the API gives some useful in
 
 | Format | Description | Expected format |
 |--------|-------------|-----------------|
-| isAnything | No validation | n/a |
+| isAnything | No validation. | n/a |
 | isApe | A valid APE code. | {{< code >}}/^[0-9]{3,4}[a-zA-Z]{1}$/s{{< /code >}} |
 | isBirthDate | A valid date, in YYYY-MM-DD format. | n/a |
 | isCleanHtml | Must not contain invalid HTML tags, nor XSS. | n/a |
@@ -167,16 +167,16 @@ When displaying a resource schema in synopsis mode, the API gives some useful in
 | isDateFormat | A valid date format. | n/a |
 | isEmail | A valid e-mail address. | n/a |
 | isImageSize | A valid image size, between 0 and 9999. | {{< code >}}/^[0-9]{1,4}$/{{< /code >}} |
-| isIp2Long | A valid IP for customer messages | {{< code >}}#^-?[0-9]+$#{{< /code >}} |
+| isIp2Long | A valid IP for customer messages. | {{< code >}}#^-?[0-9]+$#{{< /code >}} |
 | isLanguageCode | A valid language code, in XX or XX-XX format. | {{< code >}}/^[a-zA-Z]{2}(-[a-zA-Z]{2})?$/{{< /code >}} |
 | isLanguageIsoCode | A valid ISO language code, in XX or XXX format. | {{< code >}}/^[a-zA-Z]{2,3}$/{{< /code >}} |
 | isLinkRewrite | A valid link rewrite. | {{< code >}}/^[_a-zA-Z0-9\-]+$/{{< /code >}} |
-| isLocale | A valid locale code, in xx-XX format | {{< code >}}/^[a-z]{2}-[A-Z]{2}$/{{< /code >}} |
+| isLocale | A valid locale code, in xx-XX format. | {{< code >}}/^[a-z]{2}-[A-Z]{2}$/{{< /code >}} |
 | isMd5 | A valid MD5 string: 32 characters, mixing lowercase, uppercase and numerals. | {{< code >}}/^[a-f0-9A-F]{32}$/{{< /code >}} |
 | isNumericIsoCode | A valid ISO code, in 000 format. | {{< code >}}/^[0-9]{3}$/{{< /code >}} |
 | isPasswd | A valid password, in. between 5 and 72 characters long. | {{< code >}}/^[.a-zA-Z_0-9-!@#$%\^&*()]{5,72}$/{{< /code >}} |
 | isPasswdAdmin | A valid password, between 8 and 72 characters long. | {{< code >}}/^[.a-zA-Z_0-9-!@#$%\^&*()]{8,22}$/{{< /code >}} |
-| isPercentage | A valid percentage: float between 0 and 100 | n/a |
+| isPercentage | A valid percentage: float between 0 and 100. | n/a |
 | isPhpDateFormat | A valid PHP date – in fact, a string without '<' nor '>'. | {{< code >}}/^[^<>]+$/{{< /code >}} |
 | isPriceDisplayMethod | A valid price display method, meaning the value be equals to constants `PS_TAX_EXC` or `PS_TAX_INC`. | {{< code >}}0|1{{< /code >}} |
 | isReductionType | A valid reduction type. | {{< code >}}amount|percentage{{< /code >}} |
@@ -225,7 +225,7 @@ When displaying a resource schema in synopsis mode, the API gives some useful in
 | isLinkRewrite | A valid friendly URL. | {{< code >}}/^[_a-zA-Z0-9\-]+$/{{< /code >}} |
 |  | A valid friendly URL (with `PS_ALLOW_ACCENTED_CHARS_URL` enabled). | {{< code >}}/^[_a-zA-Z0-9\x{0600}-\x{06FF}\pL\pS-]+$/u{{< /code >}} |
 | isMpn | A valid mpn (Manufacturer Part Number) 40 characters max. | n/a |
-| isNegativePrice | A valid price value (including negative price) | {{< code >}}/^[-]?[0-9]{1,10}(\.[0-9]{1,9})?$/{{< /code >}} |
+| isNegativePrice | A valid price value (including negative price). | {{< code >}}/^[-]?[0-9]{1,10}(\.[0-9]{1,9})?$/{{< /code >}} |
 | isPrice | A valid price value. | {{< code >}}/^[0-9]{1,10}(\.[0-9]{1,9})?$/{{< /code >}} |
 | isProductVisibility | A valid product visibility. | {{< code >}}/^both|catalog|search|none$/i{{< /code >}} |
 | isUpc | A valid barcode (UPC). | {{< code >}}/^[0-9]{0,12}$/{{< /code >}} |
