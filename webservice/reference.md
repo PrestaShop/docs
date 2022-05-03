@@ -226,6 +226,6 @@ When displaying a resource schema in synopsis mode, the API gives some useful in
 |  | A valid friendly URL (with `PS_ALLOW_ACCENTED_CHARS_URL` enabled). | {{< code >}}/^[_a-zA-Z0-9\x{0600}-\x{06FF}\pL\pS-]+$/u{{< /code >}} |
 | isMpn | A valid mpn (Manufacturer Part Number) 40 characters max. | n/a |
 | isNegativePrice | A valid price value (including negative price) | {{< code >}}/^[-]?[0-9]{1,10}(\.[0-9]{1,9})?$/{{< /code >}} |
-| isPrice | A valid price display method (either PS_TAX_EXC or PS_TAX_INC). | {{< code >}}0|1{{< /code >}} |
+| isPrice | A valid price value. | {{< code >}}/^[0-9]{1,10}(\.[0-9]{1,9})?$/{{< /code >}} |
 | isProductVisibility | A valid product visibility. | {{< code >}}/^both|catalog|search|none$/i{{< /code >}} |
 | isUpc | A valid barcode (UPC). | {{< code >}}/^[0-9]{0,12}$/{{< /code >}} |
