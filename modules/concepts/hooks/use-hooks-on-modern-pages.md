@@ -154,6 +154,10 @@ Prestashop automatically checks if modules have a `config/services.yml` file and
 ./bin/console cache:clear --no-warmup
 ```
 
+In case Prestashop failed to autoload automatically, [you can generate the autoload files][setup-composer] with composer manually.
+
+This will generate a vendor folder, with inside composer folder and autoload.php file.
+
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
 
 ```php
@@ -276,3 +280,6 @@ We have used a key for translation, making our own translations available in bac
 ![Export XML action button](https://i.imgur.com/5HExjcC.png)
 
 And "voila!", the module could be of course improved with so many features, adding filters on export for instance, using the `request` hook parameter and updating the Product repository.
+
+[setup-composer]: {{< ref "/1.7/modules/concepts/composer/_index.md" >}}
+
