@@ -247,7 +247,7 @@ public function hookDisplayDashboardToolbarIcons($params)
 
         $this->writeFile($productsXml, $filepath);
 
-        return $this->get('twig')->render('@Modules/Foo/download_link.twig', [
+        return $this->get('twig')->render('@Modules/Foo/views/download_link.twig', [
             'filepath' => _PS_BASE_URL_.'/products.xml',
         ]);
     }
