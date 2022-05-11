@@ -54,6 +54,13 @@ By default, PrestaShop's Twig templates will use `bootstrap_4_horizontal_layout.
 
 {{< figure src="../img/old-form-theme-17.png" title="Original Form Theme example of rendering" >}}
 
+
+#### Files mapping
+
+If you use `bootstrap_4_layout.html.twig` Form Theme, you will have the Original PrestaShop Form theme and the fields will be rendered vertically, one under the other.
+
+If you use `bootstrap_4_horizontal_layout.html.twig` Form Theme, you will have the Original PrestaShop Form theme and the fields will be rendered horizontally, one next to the other, on the same row.
+
 ### PrestaShop UI Kit Form theme
 {{< minver v="1.7.7" title="true" >}}
 
@@ -71,6 +78,11 @@ Once all forms have been updated to work with the UI Kit Form Theme, it will bec
 
 {{< figure src="../img/ui-kit-form-theme.png" title="UI Kit Form Theme example of rendering" >}}
 
+#### Files mapping
+
+If you use `prestashop_ui_kit_base.html.twig` Form Theme, you will have the PrestaShop UI Kit Form theme and the fields will be rendered vertically, one under the other.
+
+If you use `prestashop_ui_kit.html.twig` Form Theme, you will have the Original PrestaShop Form theme and the fields will be rendered horizontally, one next to the other, on the same row.
 
 
 [sf-bootstrap4-form-theme]: https://symfony.com/doc/3.4/form/bootstrap4.html
