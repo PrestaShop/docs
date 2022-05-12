@@ -23,8 +23,8 @@ use PrestaShop\PrestaShop\Core\Grid\Column\Type\ColorColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
 
 $colorColumn = new ColorColumn('color');
-$dataColumn->setName('color');
-$dataColumn->setOptions([
+$colorColumn->setName('color');
+$colorColumn->setOptions([
      'field' => 'color',
      'color_field' => 'color'
 ]);
