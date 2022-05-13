@@ -93,7 +93,7 @@ Let's see what they look like for the `address` resource.
 
 ### Blank schema
 
-`/api/adresses?schema=blank`
+`/api/addresses?schema=blank`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -128,7 +128,7 @@ Let's see what they look like for the `address` resource.
 
 ### Synopsis schema
 
-`/api/adresses?schema=synopsis`
+`/api/addresses?schema=synopsis`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
