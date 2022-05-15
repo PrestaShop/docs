@@ -6,7 +6,7 @@ title: HelperOptions
 
 This helper is used to generate a configuration form, the values of which are stored in the configuration table. Example: the "Preferences" page.
 
-The `HelperOptions` helper is the recommanded way for managing configurations for legacy part.
+The `HelperOptions` helper is the recommended way for managing configurations for legacy part.
 
 ## Options declaration
 
