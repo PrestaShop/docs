@@ -218,7 +218,7 @@ It contains the following subdirectories:
 
 - `/assets`: Script that allow building all static assets from sources.
 - `/build`: Used to create release packages.
-- `/foreignkeyGenerator`: Creates forign keys for all tables (for educational purposes only)
+- `/foreignkeyGenerator`: Creates foreign keys for all tables (for educational purposes only)
 - `/profiling`: Profiling tools for legacy classes
 
 ### /translations
