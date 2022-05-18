@@ -59,14 +59,14 @@ Once the customer is loaded, a new cart is created behind the scenes and the fol
 - Once you fill all the required information, you will finally see the [Summary block]({{< relref "#summary-block" >}}).
 
 #### Customer carts list
-{{< figure src="./img/customer-orders-block.png" title="Customer carts" >}} 
+{{< figure src="./img/customer-carts-block.png" title="Customer carts" >}} 
 
 Details of each cart that was used by the customer can be checked by clicking on `Details` button - The `Sell -> Orders -> Shopping Carts -> View cart` page will be opened in a modal window.
 Existing `Cart` can be also used to create a new one - press `Use` and the selected `Cart` will be loaded and available for modifications.
 This block is loaded using `ajax` by calling [CustomerController::getCartsAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Related `javascript` code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js)
 
 #### Customer orders list
-{{< figure src="./img/customer-carts-block.png" title="Customer orders" >}}
+{{< figure src="./img/customer-orders-block.png" title="Customer orders" >}}
 
 Details of each order used by the customer can be checked by clicking on `Details` button - The `Sell -> Orders -> Carts -> View order` page will be opened in a modal window.
 Existing `Order` can be also used to create a new one - press `Use` and a new `Cart` will be created with all the information duplicated from the selected `Order`.
