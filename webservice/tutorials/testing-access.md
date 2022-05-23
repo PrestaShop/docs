@@ -60,18 +60,18 @@ The `/api/` URL gives you the root of all the resources, in the form of an XML f
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
     <api shopName="Prestashop">
-        <addresses xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" delete="true" head="true">
-            <description xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" delete="true" head="true">
+        <addresses xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" patch="true" delete="true" head="true">
+            <description xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" patch="true" delete="true" head="true">
             The Customer, Brand and Customer addresses</description>
             <schema xlink:href="http://example.com/api/addresses?schema=blank" type="blank"/>
             <schema xlink:href="http://example.com/api/addresses?schema=synopsis" type="synopsis"/>
         </addresses>
-        <images xlink:href="http://example.com/api/images" get="true" put="true" post="true" delete="true" head="true">
-            <description xlink:href="http://example.com/api/images" get="true" put="true" post="true" delete="true" head="true">
+        <images xlink:href="http://example.com/api/images" get="true" put="true" post="true" patch="true" delete="true" head="true">
+            <description xlink:href="http://example.com/api/images" get="true" put="true" post="true" patch="true" delete="true" head="true">
             The images</description>
         </images>
-        <products xlink:href="http://example.com/api/products" get="true" put="true" post="true" delete="true" head="true">
-            <description xlink:href="http://example.com/api/products" get="true" put="true" post="true" delete="true" head="true">
+        <products xlink:href="http://example.com/api/products" get="true" put="true" post="true" patch="true" delete="true" head="true">
+            <description xlink:href="http://example.com/api/products" get="true" put="true" patch="true" post="true" delete="true" head="true">
             The products</description>
             <schema xlink:href="http://example.com/api/products?schema=blank" type="blank"/>
             <schema xlink:href="http://example.com/api/products?schema=synopsis" type="synopsis"/>
