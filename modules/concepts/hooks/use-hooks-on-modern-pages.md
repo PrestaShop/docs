@@ -38,7 +38,7 @@ Accessing the Product Catalog page in *debug mode* we can access the list of ava
 * actionAdminControllerSetMedia
 * displayDashboardToolbarTopMenu
 * displayDashboardTop
-* hookdisplayDashboardToolbarIcons
+* displayDashboardToolbarIcons
 * displayBackOfficeFooter
 * displayAdminNavBarBeforeEnd
 * displayAdminAfterHeader
@@ -265,7 +265,7 @@ We have extracted business logic into specific functions.
 And now, the template:
 
 ```twig
-{# in views/Foo/download_link.twig #}
+{# in Foo/views/download_link.twig #}
 <a id="desc-product-export" class="list-toolbar-btn" href="{{ filepath }}" download>
   <b data-toggle="pstooltip" class="label-tooltip" data-original-title="{{ "Export XML"|trans({}, 'Module.Foo') }}" data-html="true" data-placement="top">
     <i class="material-icons">cloud_upload</i>
