@@ -217,7 +217,7 @@ This problem may arise in case-insensitive file systems like MacOS due to a misc
 
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements" >}}
-[installing-prestashop]: {{< ref "1.7/themes/getting-started/setting-up-your-local-environment/#installing-prestashop" >}}
+[installing-prestashop]: {{< ref "1.7/themes/getting-started/setting-up-your-local-environment/" >}}
 [compile-assets]: {{< ref "1.7/development/compile-assets" >}}
 [webpack]: https://webpack.js.org/
 [composer]: https://getcomposer.org/download/
