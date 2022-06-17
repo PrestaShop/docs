@@ -67,13 +67,15 @@ You'll get a web page detailing requirements and recommendations, and how your s
       <th>7.3</th>
       <th>7.4</th>
       <th>8.0</th>
-      <th>&ge;&nbsp;8.1</th>
+      <th>8.1</th>
+      <th>&ge;&nbsp;8.2</th>
     </tr>
   </thead>
 <tbody>
   <tr>
     <td>8.0</td>
     <td class="support-no"><span class="sr-only">No</span></td>
+    <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
