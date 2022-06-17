@@ -46,7 +46,7 @@ When you enter the page, first thing you will notice is the `Customer` block:
 {{< figure src="./img/customer-search-block.png" title="Customer search block" >}}
 
 Use the search to find desired customer by `email` or `name` or `create a new one` by pressing `Add new customer`. Customer search is performed using `ajax` by calling [CustomerController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Javascript code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js) 
-<!-- the link doesn't work for customer-manager.js, 404 not found-->
+
 {{% notice %}}
 `Add new customer` button opens the same form from `Customers -> Customers -> Add new customer` loaded in an iframe. The `iframe` content is rendered using the `Lite Display` mode of the Back Office.
 {{% /notice %}}
