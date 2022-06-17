@@ -131,12 +131,12 @@ Here is the default structure of the side-menu from PrestaShop at the moment thi
         * AdminCarts
     * AdminCatalog
         * AdminProducts
-            * AdminCategories
-            * AdminTracking
-            * AdminParentAttributesGroups
-            * AdminParentManufacturers
-            * AdminAttachments
-            * AdminParentCartRules
+        * AdminCategories
+        * AdminTracking
+        * AdminParentAttributesGroups
+        * AdminParentManufacturers
+        * AdminAttachments
+        * AdminParentCartRules
     * AdminParentCustomer
          * AdminCustomers
          * AdminAddresses
