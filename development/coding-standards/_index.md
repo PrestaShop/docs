@@ -40,7 +40,7 @@ Although [Yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions) are su
 
 ### Making your code follow our coding standards
 
-[PHP CS Fixer](https://cs.sensiolabs.org/) has been configured for the PrestaShop project to help developers to comply with these conventions.
+[PHP CS Fixer](https://cs.symfony.com/) has been configured for the PrestaShop project to help developers to comply with these conventions.
 
 You can run it using the following command:
 ```bash
