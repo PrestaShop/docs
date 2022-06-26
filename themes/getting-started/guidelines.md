@@ -57,7 +57,7 @@ All open tags must be closed in the same file (a `<div>` should not be opened in
 
 Use CSS3.
 
-We recommend that you follow the [RSCSS structure](https://rscss.io/)
+We recommend that you follow the [RSCSS structure](https://github.com/rstacruz/rscss/tree/main/docs)
 
 ##### Javascript
 
