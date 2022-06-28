@@ -13,10 +13,6 @@ A carrier module is a regular PrestaShop module, except that it extends the Carr
 class MyOwnCarrier extends CarrierModule
 ```
 
-It can be attached to the following hooks:
-
-* `extraCarrier`: to display the shipping price depending on the ranges that were set in the back office.
-
 A carrier module must use the following methods:
 
 * `getOrderShippingCost()`: to compute the shipping price depending on the ranges that were set in the back office.
