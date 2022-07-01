@@ -14,7 +14,7 @@ form we will add switch which will also manage the same state. By following this
 how to:
 
 - extend modern grids. [Grid component]({{< relref "/8/development/components/grid/" >}}) 
-- extend identifiable object form. [identifiable object form]({{< relref "/8/development/architecture/migration-guide/forms/CRUD-forms" >}}) 
+- extend identifiable object form. [identifiable object form]({{< relref "/8/development/architecture/migration-guide/vertical-migration/forms/CRUD-forms" >}}) 
 
 The module created within this tutorial can be found [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module)
 
