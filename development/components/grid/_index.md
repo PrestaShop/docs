@@ -207,6 +207,8 @@ as it provides access to the Doctrine `Connection` and database tables prefix.
 ```php
 <?php
 use PrestaShop\PrestaShop\Core\Grid\Query\AbstractDoctrineQueryBuilder;
+use Doctrine\DBAL\Connection;
+use PrestaShop\PrestaShop\Core\Grid\Search\SearchCriteriaInterface;
 
 final class ProductQueryBuilder extends AbstractDoctrineQueryBuilder
 {
