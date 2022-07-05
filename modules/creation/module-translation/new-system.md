@@ -233,7 +233,7 @@ For instance, translating the string "Welcome to this page!" can be done like th
 You can replace placeholders in your translated wordings using the `sprintf` parameter:
 
 ```smarty
-{l s='Hello %username%!' sprintf=['%username%' => 'John'] d='Modules.Mymodule.Somefile'} }}
+{l s='Hello %username%!' sprintf=['%username%' => 'John'] d='Modules.Mymodule.Somefile'}
 ```
 
 ## Translating your module
