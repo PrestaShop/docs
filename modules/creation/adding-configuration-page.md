@@ -137,7 +137,7 @@ Let's run down this method:
     ```html
     <div class="form-group">
         <label class="control-label col-lg-4 required">Configuration value</label>
-        <div class="col-log-8">
+        <div class="col-lg-8">
             <input type="text" name="MYMODULE_CONFIG" id="MYMODULE_CONFIG" class="" size="20" value="my friend" required="required">
         </div>
     </div>
