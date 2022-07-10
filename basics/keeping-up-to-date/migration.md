@@ -636,4 +636,3 @@ automatic, because:
 Useful links:
 
 -   [Learning how-to use the webservice API](https://doc.prestashop.com/display/PS16/Using+the+PrestaShop+Web+Service)
--   [Getting a list of all available ressources, ready for import/export](https://doc.prestashop.com/display/PS16/Web+service+one-page+documentation#Webserviceone-pagedocumentation-Availableresources)
