@@ -59,14 +59,14 @@ class Article extends ObjectModel
 }
 ```
 
-The `$webserviceParameters` is mandatory to define how and which fields to expose.
+The `$webserviceParameters` array is mandatory to define how and which fields to expose.
 
-The name to access to all the elements:
+The key to access all the elements:
 ```php
 'objectsNodeName' => 'articles'
 ```
 
-The name to access to the single element:
+The key to access a single element:
 ```php
 'objectNodeName' => 'articles'
 ```
@@ -94,7 +94,7 @@ public function hookAddWebserviceResources($params)
 ### Composer configuration to use namespaces in your ObjectModel entity
 
 To correctly load your class (Entity) you need to configure correctly your composer.json
-The follow is an example of correct configuration to load your entities in whatever folder you want.
+The following is an example of a correct configuration to load your entities in whatever folder you want.
 
 ```php
 // modules/yourmodule/composer.json
