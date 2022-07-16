@@ -127,6 +127,6 @@ add a comment indicating where the code related to products can be found ;)
 
 #### Required libraries
 
-jQuery v3.4 is loaded by the core (bundled in `core.js`) file.
+jQuery v3.5 is loaded by the core (bundled in `core.js`) file.
 
 Read more about [assets management]({{< relref "/8/themes/getting-started/asset-management/" >}}).
