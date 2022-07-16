@@ -13,7 +13,8 @@ These modules are bundled into PrestaShop through composer at build time.
 
 Module | Name | Native since | Description 
 ------ | ---- | ------------ | -----------
-[blockreassurance](https://github.com/PrestaShop/blockreassurance)                 | Customer reassurance block     | 1.7.0 | Adds an information block aimed at offering helpful information to reassure customers that your store is trustworthy. 
+[blockreassurance](https://github.com/PrestaShop/blockreassurance)                 | Customer reassurance block     | 1.7.0 | Adds an information block aimed at offering helpful information to reassure customers that your store is trustworthy.
+[blockwishlist](https://github.com/PrestaShop/blockwishlist)                       | Wishlist                       | 1.7.6 | Allow customers to create wishlists to save their favorite products for later.
 [contactform](https://github.com/PrestaShop/contactform)                           | Contact form                   | 1.7.0 | Adds a contact form to the "Contact us" page.
 [dashactivity](https://github.com/PrestaShop/dashactivity)                         | Activity dashboard widget      | 1.6.0 | Displays an activity widget in the Back office dashboard.
 [dashgoals](https://github.com/PrestaShop/dashgoals)                               | Dashboard goals                | 1.6.0 | Adds a block with your store's forecast.
@@ -70,7 +71,6 @@ Module | Name | Native since | Description
 [statssearch](https://github.com/PrestaShop/statssearch)                           | Shop search                    | 1.4.0 | Adds a tab to the Stats dashboard, showing which keywords have been searched by your store's visitors.
 [statsstock](https://github.com/PrestaShop/statsstock)                             | Available quantities           | 1.4.0 | Adds a tab showing the quantity of available products for sale to the Stats dashboard.
 [statsvisits](https://github.com/PrestaShop/statsvisits)                           | Visits and Visitors            | 1.4.0 | Adds statistics about your visits and visitors to the Stats dashboard.
-[welcome](https://github.com/PrestaShop/welcome)                                   | OnBoarding                     | 1.7.0 | This module helps merchants create their first product and discover their new shop's main features.
 
 ## Module name changes since 1.6
 
