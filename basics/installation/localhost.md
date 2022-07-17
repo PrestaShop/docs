@@ -28,9 +28,9 @@ Here is a selection of free AMP installers:
 
 To install LAMP on your computer follow these steps (tested on Debian Buster).
 - Update your system
-```bash
-apt update
-```
+  ```bash
+  apt update
+  ```
 - Install MySQL
   ```bash
   apt install default-mysql-server default-mysql-client
