@@ -7,7 +7,7 @@ menuTitle: Refunds
 {{< minver v="1.7.7" title="true" >}}
 
 {{% notice info %}}
-For a full specification of how these features work, you can read [the functional specifications](https://github.com/PrestaShop/prestashop-specs/blob/master/content/1.7/back-office/orders/orders/Order%20Page%20View.md#merchandise-return-has-to-be-enabled-if-the-merchant-want-to-use-the-standard-refund-partial-refund-and-return-product-feature)
+For a full specification of how these features work, you can read [the functional specifications](https://build.prestashop.com/prestashop-specs/1.7/back-office/orders/orders/view-page.html#merchandise-return-has-to-be-enabled-if-the-merchant-wants-to-use-the-standard-refund-partial-refund-and-return-product-feature)
 {{% /notice %}}
 
 ## Order history and corresponding cancellation types
