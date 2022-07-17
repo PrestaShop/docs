@@ -6,7 +6,7 @@ menuTitle: Refunds
 # Cancellations and refunds
 
 {{% notice info %}}
-For a full specification of how these features work, you can read [the functional specifications](https://github.com/PrestaShop/prestashop-specs/blob/master/content/1.7/back-office/orders/orders/Order%20Page%20View.md#merchandise-return-has-to-be-enabled-if-the-merchant-want-to-use-the-standard-refund-partial-refund-and-return-product-feature)
+For a full specification of how these features work, you can read [the functional specifications](https://build.prestashop.com/prestashop-specs/1.7/back-office/orders/orders/view-page.html#merchandise-return-has-to-be-enabled-if-the-merchant-wants-to-use-the-standard-refund-partial-refund-and-return-product-feature)
 {{% /notice %}}
 
 ## Order history and corresponding cancellation types
@@ -33,7 +33,7 @@ The **Partial refund** button is available once a payment was made on the order,
 Cancellation actions (that is to say **cancel product**, **return product**, **standard refund** and **partial refund**) are implemented following the CQRS design pattern.
 
 {{% notice info %}}
-You will find more informations about Prestashop's CQRS implementation [on this page]({{ relref "/8/development/architecture/domain/cqrs" }}).
+You will find more informations about Prestashop's CQRS implementation [on this page]({{< relref "/8/development/architecture/domain/cqrs" >}}).
 {{% /notice %}}
 
 Performing these actions is always a two step process:
