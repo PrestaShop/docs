@@ -28,13 +28,21 @@ Here is a selection of free AMP installers:
 
 To install LAMP on your computer follow these steps (tested on Debian Buster).
 - Update your system
-  - `apt update`
+```bash
+apt update
+```
 - Install MySQL
-  - `apt install default-mysql-server default-mysql-client`
+  ```bash
+  apt install default-mysql-server default-mysql-client
+  ```
 - Install Apache server
-  - `apt install apache2`
+  ```bash
+  apt install apache2
+  ```
 - Install PHP
-  - `apt install libapache2-mod-php7.3 php7.3 php7.3-common php7.3-curl php7.3-gd php7.3-imagick php7.3-mbstring php7.3-mysql php7.3-json php7.3-xsl php7.3-intl php7.3-zip`
+  ```bash
+  apt install libapache2-mod-php7.3 php7.3 php7.3-common php7.3-curl php7.3-gd php7.3-imagick php7.3-mbstring php7.3-mysql php7.3-json php7.3-xsl php7.3-intl php7.3-zip
+  ```
 
 ## Creating a database for your shop
 
