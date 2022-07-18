@@ -45,7 +45,7 @@ more information.
 When you enter the page, first thing you will notice is the `Customer` block:
 {{< figure src="./img/customer-search-block.png" title="Customer search block" >}}
 
-Use the search to find desired customer by `email` or `name` or `create a new one` by pressing `Add new customer`. Customer search is performed using `ajax` by calling [CustomerController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Javascript code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js) 
+Use the search to find desired customer by `email` or `name` or `create a new one` by pressing `Add new customer`. Customer search is performed using `ajax` by calling [CustomerController::searchAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Javascript code can be found in [customer-manager.ts](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.ts) 
 
 {{% notice %}}
 `Add new customer` button opens the same form from `Customers -> Customers -> Add new customer` loaded in an iframe. The `iframe` content is rendered using the `Lite Display` mode of the Back Office.
@@ -63,14 +63,14 @@ Once the customer is loaded, a new cart is created behind the scenes and the fol
 
 Details of each cart that was used by the customer can be checked by clicking on `Details` button - The `Sell -> Orders -> Shopping Carts -> View cart` page will be opened in a modal window.
 Existing `Cart` can be also used to create a new one - press `Use` and the selected `Cart` will be loaded and available for modifications.
-This block is loaded using `ajax` by calling [CustomerController::getCartsAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Related `javascript` code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js)
+This block is loaded using `ajax` by calling [CustomerController::getCartsAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Related `javascript` code can be found in [customer-manager.ts](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.ts)
 
 #### Customer orders list
 {{< figure src="./img/customer-carts-block.png" title="Customer orders" >}}
 
 Details of each order used by the customer can be checked by clicking on `Details` button - The `Sell -> Orders -> Carts -> View order` page will be opened in a modal window.
 Existing `Order` can be also used to create a new one - press `Use` and a new `Cart` will be created with all the information duplicated from the selected `Order`.
-This block is loaded using `ajax` by calling [CustomerController::getOrdersAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Related `javascript` code can be found in [customer-manager.js](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.js)
+This block is loaded using `ajax` by calling [CustomerController::getOrdersAction](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Sell/Customer/CustomerController.php). Related `javascript` code can be found in [customer-manager.ts](https://github.com/PrestaShop/PrestaShop/blob/develop/admin-dev/themes/new-theme/js/pages/order/create/customer-manager.ts)
 
 #### Cart block
 {{< figure src="./img/cart-block.png" title="Cart" >}}
