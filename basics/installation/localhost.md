@@ -20,7 +20,7 @@ This is called an *AMP package: Apache+MySQL+PHP and the operating system, givin
 
 Here is a selection of free AMP installers:
 
-* [XAMPP](https://www.apachefriends.org/en/xampp.html) (Windows, Mac OS X, Linux, Solaris)
+* [XAMPP](https://www.apachefriends.org/download.html) (Windows, Mac OS X, Linux, Solaris)
 * [WampServer](http://www.wampserver.com/) (Windows)
 * [EasyPHP](https://www.easyphp.org/) (Windows)
 * [MAMP](https://www.mamp.info/en/mamp/) (Windows, Mac OS X)
