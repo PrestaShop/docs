@@ -84,7 +84,7 @@ The view does not do any processing; it only displays the result of the processi
 #### Controller
 The Controller manages synchronization events between the Model and the View, and updates both as needed. It receives all the user events and triggers the actions to perform.
 
-If an action needs data to be changed, the Controller will “ask” the Model to change the data, and in return the Model will notify the View that the data has been changed, so that the View can update itself.
+If an action requires the modification of data, the Controller “asks” the Model to modify the data and, in return, the Model informs the View that the data has been changed, so that the View can update itself.
 
 ## Moving forward with Symfony
 
