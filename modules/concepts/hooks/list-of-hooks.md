@@ -1675,6 +1675,18 @@ displayAdminStatsModules
 : 
     Located in: /controllers/admin/AdminStatsTabController.php
 
+displayAdminThemesListAfter
+: 
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig
+
+    Parameters:
+    ```php
+    <?php
+    array(
+    'current_theme_name' => (string) Name of the currently used theme
+    );
+    ```
+
     
 displayAdminView
 : 
