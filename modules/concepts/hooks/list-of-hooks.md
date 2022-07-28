@@ -1749,6 +1749,21 @@ This hook launches modules when the AdminCategories tab is displayed in the Back
 
     Located in: /controllers/admin/AdminCategoriesController.php
 
+
+displayBackOfficeEmployeeMenu
+: 
+    Displays new elements in the Back Office employee menu
+
+    Located in: /classes/controller/AdminController.php  
+
+    Parameters:
+    ```php
+    <?php
+    array(
+    'links' => (ActionsBarButtonsCollection) Collection of ActionsBarButtonInterface
+    );
+    ```
+
     
 displayBackOfficeFooter
 : 
