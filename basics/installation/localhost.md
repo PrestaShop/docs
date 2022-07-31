@@ -85,7 +85,7 @@ Grant privileges to that database to a new user (the one that PrestaShop will us
 In the example above,
 
 - `prestashop` is the name of the new database
-- `hostname` is usually localhost (`127.0.0.1` or `localhost`), if you don't know the value, check with a system adminitrator
+- `hostname` is usually localhost (`127.0.0.1` or `localhost`), if you don't know the value, check with a system administrator
 - `somepassword` must be a strong password and of course, only known by you
 
 Finally, flush privileges:
@@ -109,7 +109,7 @@ PrestaShop comes in two "flavors":
 - **Release package**. A zip package, tuned for production environments.
 - **Development version**. The raw source code as it is on the GitHub repository, including automated test suites, build scripts and source codes for assets that are otherwise compiled (like javascript and css files).
 
-![Download files](../img/download-links.png)
+![Download files](https://user-images.githubusercontent.com/3759923/182030932-c9a26441-41b1-4558-a397-5a936ede216b.png)
 
 {{% notice tip %}}
 **Prefer cloning the repository using git for the development version.**
