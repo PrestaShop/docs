@@ -226,7 +226,7 @@ This problem may arise in case-insensitive file systems like MacOS due to a misc
 
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< relref "system-requirements" >}}
-[clone-the-repository]: {{< relref "/8/themes/getting-started/setting-up-your-local-environment/" >}}
+[clone-the-repository]: {{< relref "themes/getting-started/setting-up-your-local-environment.md" >}}
 [compile-assets]: {{< relref "/8/development/compile-assets" >}}
 [webpack]: https://webpack.js.org/
 [composer]: https://getcomposer.org/download/
