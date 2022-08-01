@@ -77,7 +77,7 @@ Grant privileges to that database to a new user (the one that PrestaShop will us
 In the example above,
 
 - `prestashop` is the name of the new database
-- `hostname` is usually localhost (`127.0.0.1` or `localhost`), if you don't know the value, check with a system adminitrator
+- `hostname` is usually localhost (`127.0.0.1` or `localhost`), if you don't know the value, check with a system administrator
 - `somepassword` must be a strong password and of course, only known by you
 
 Finally, flush privileges:
@@ -217,7 +217,7 @@ This problem may arise in case-insensitive file systems like MacOS due to a misc
 
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements" >}}
-[installing-prestashop]: {{< ref "1.7/themes/getting-started/setting-up-your-local-environment/" >}}
+[installing-prestashop]: {{< relref "/1.7/themes/getting-started/setting-up-your-local-environment" >}}
 [compile-assets]: {{< ref "1.7/development/compile-assets" >}}
 [webpack]: https://webpack.js.org/
 [composer]: https://getcomposer.org/download/
