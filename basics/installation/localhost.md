@@ -132,7 +132,7 @@ As stated above, if you decide to work on PrestaShop itself, it's best to clone 
     
 {{% /callout %}}
 
-Clone the repository using Git or extract the zip package in a `prestashop` folder inside the document folder of the AMP installer you chose:
+[Clone the repository using Git][clone-the-repository] or extract the zip package in a `prestashop` folder inside the document folder of the AMP installer you chose:
 
 * XAMPP: `C:\xampp\htdocs` or `/Applications/xampp/htdocs`
 * WampServer: `C:\wamp\www`
@@ -226,6 +226,7 @@ This problem may arise in case-insensitive file systems like MacOS due to a misc
 
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< relref "system-requirements" >}}
+[clone-the-repository]: {{< relref "/8/themes/getting-started/setting-up-your-local-environment/" >}}
 [compile-assets]: {{< relref "/8/development/compile-assets" >}}
 [webpack]: https://webpack.js.org/
 [composer]: https://getcomposer.org/download/
