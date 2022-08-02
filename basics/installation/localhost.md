@@ -85,7 +85,7 @@ Grant privileges to that database to a new user (the one that PrestaShop will us
 In the example above,
 
 - `prestashop` is the name of the new database
-- `hostname` is usually localhost (`127.0.0.1` or `localhost`), if you don't know the value, check with a system adminitrator
+- `hostname` is usually localhost (`127.0.0.1` or `localhost`), if you don't know the value, check with a system administrator
 - `somepassword` must be a strong password and of course, only known by you
 
 Finally, flush privileges:
@@ -109,7 +109,7 @@ PrestaShop comes in two "flavors":
 - **Release package**. A zip package, tuned for production environments.
 - **Development version**. The raw source code as it is on the GitHub repository, including automated test suites, build scripts and source codes for assets that are otherwise compiled (like javascript and css files).
 
-![Download files](../img/download-links.png)
+![Download files](img/Prestashop_1.7.8.6_release.png)
 
 {{% notice tip %}}
 **Prefer cloning the repository using git for the development version.**
@@ -132,7 +132,7 @@ As stated above, if you decide to work on PrestaShop itself, it's best to clone 
     
 {{% /callout %}}
 
-Clone the repository using Git or extract the zip package in a `prestashop` folder inside the document folder of the AMP installer you chose:
+[Clone the repository using Git][clone-the-repository] or extract the zip package in a `prestashop` folder inside the document folder of the AMP installer you chose:
 
 * XAMPP: `C:\xampp\htdocs` or `/Applications/xampp/htdocs`
 * WampServer: `C:\wamp\www`
@@ -226,6 +226,7 @@ This problem may arise in case-insensitive file systems like MacOS due to a misc
 
 [getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
 [system-requirements]: {{< relref "system-requirements" >}}
+[clone-the-repository]: {{< relref "/8/themes/getting-started/setting-up-your-local-environment" >}}
 [compile-assets]: {{< relref "/8/development/compile-assets" >}}
 [webpack]: https://webpack.js.org/
 [composer]: https://getcomposer.org/download/
