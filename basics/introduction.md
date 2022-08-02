@@ -82,7 +82,7 @@ The view does not do any processing; it only displays the result of the processi
 #### Controller
 The Controller manages synchronization events between the Model and the View, and updates both as needed. It receives all the user events and triggers the actions to perform.
 
-If an action needs data to be changed, the Controller will “ask” the Model to change the data, and in turn the Model will notify the View that the data has been changed, so that the View can update itself.
+If an action requires the modification of data, the Controller “asks” the Model to modify the data and, in return, the Model informs the View that the data has been changed, so that the View can update itself.
 
 ## Moving forward with Symfony
 
@@ -103,7 +103,7 @@ Here is a small guide to help you navigate the software.
 
 The Front Office is an application being powered by PHP and Smarty.
 
-The backend relies on controllers you can find in the directory `controllers/front`
+The frontend relies on controllers you can find in the directory `controllers/front`
 and PrestaShop classes that contain the business logic, mainly from the `classes` folder.
 
 The views and the Javascript come from the installed theme that you will find in `themes/`. You can have multiple themes available on a shop but only one is enabled and in use.
