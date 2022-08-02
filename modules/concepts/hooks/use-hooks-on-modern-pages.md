@@ -175,7 +175,7 @@ public function hookDisplayDashboardToolbarIcons($hookParams)
 
 In Product Catalog Page you should see the list of Products in debug toolbar in "Dump" section:
 
-![Get products in Dump section](https://i.imgur.com/un7NcIL.png)
+![Get products in Dump section](../img/Catalog_Products_dump.png)
 
 #### Using the Symfony components to create an XML export file
 
@@ -262,10 +262,8 @@ And now, the template:
 
 ```twig
 {# in Foo/views/download_link.twig #}
-<a id="desc-product-export" class="list-toolbar-btn" href="{{ filepath }}" download>
-  <b data-toggle="pstooltip" class="label-tooltip" data-original-title="{{ "Export XML"|trans({}, 'Module.Foo') }}" data-html="true" data-placement="top">
-    <i class="material-icons">cloud_upload</i>
-  </b>
+<a id="desc-product-export" class="dropdown-item" href="{{filepath}}">
+    <i class="material-icons">cloud</i>Export XML
 </a>
 ```
 
@@ -273,6 +271,6 @@ And now, the template:
 We have used a key for translation, making our own translations available in back office when using Twig.
 {{% /notice %}}
 
-![Export XML action button](https://i.imgur.com/5HExjcC.png)
+![Export XML action button](../img/Catalog_Products_2xml.png)
 
 And "voila!", the module could be of course improved with so many features, adding filters on export for instance, using the `request` hook parameter and updating the Product repository.
