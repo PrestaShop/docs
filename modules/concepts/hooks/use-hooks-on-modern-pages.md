@@ -262,8 +262,8 @@ And now, the template:
 
 ```twig
 {# in Foo/views/download_link.twig #}
-<a id="desc-product-export" class="dropdown-item" href="{{filepath}}">
-    <i class="material-icons">cloud</i>Export XML
+<a id="desc-product-export" class="dropdown-item" href="{{ filepath }}">
+    <i class="material-icons">cloud</i>{{ "Export XML"|trans({}, 'Module.Foo') }}
 </a>
 ```
 
