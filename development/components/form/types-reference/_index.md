@@ -63,5 +63,5 @@ Developers can already use large list of field types (see [Symfony types](https:
 
 #### Extensions
 
-* [UnitTypeExtension](unit-type-extension.md)
+* [UnitTypeExtension](unit-type-extension)
 Add `unit` option for NumberType and IntegerType
