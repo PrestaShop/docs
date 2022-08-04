@@ -620,7 +620,20 @@ actionFrontControllerSetVariables
     ```smarty
     {$modules.your_module_name.your_variable_name}
     ```    
-    
+
+actionGetAlternativeSearchPanels
+: 
+    This hook allows to add an additional search panel for external providers in PrestaShop back office
+
+    ```php
+      <?php
+      array(
+        'previous_search_panels' => (array) Existing search panels,
+        'bo_query' => (array) Searched expression,
+      );
+    ```
+
+    Located in: /controllers/admin/AdminSearchController.php
     
 actionGetExtraMailTemplateVars
 : 
