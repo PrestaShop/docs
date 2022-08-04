@@ -20,8 +20,6 @@ Developers can already use large list of field types (see [Symfony types](https:
     
 * [TextWithLengthCounterType](text-with-length-counter)
 
-* [TextWithUnitType](text-with-unit)
-
 * [TranslatableType](translatable)
 
 * TranslateType
@@ -62,3 +60,8 @@ Developers can already use large list of field types (see [Symfony types](https:
 
 * [IntegerMinMaxFilterType](integer-min-max-filter)
 * [NumberMinMaxFilterType](number-min-max-filter)
+
+#### Extensions
+
+* [UnitTypeExtension](unit-type-extension.md)
+Add `unit` option for NumberType and IntegerType
