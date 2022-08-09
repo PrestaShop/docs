@@ -6,7 +6,7 @@ title: Cache
 
 ## Classes in the root namespace and overrides
 
-The `/var/cache/<ENV>/class_index.php` file contains the link between the class and the declaration file. If there is a caching issue, this file can safely be deleted.
+The `/var/cache/<ENV>/class_index.php` file contains the link between the class and the declaration file. If there is a caching issue, this file can be safely deleted.
 
 ## Smarty
 
