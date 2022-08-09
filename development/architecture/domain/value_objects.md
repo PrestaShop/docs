@@ -33,15 +33,15 @@ use PrestaShop\PrestaShop\Core\Domain\Currency\ValueObject\ExchangeRate;
 // If we were to create ExchangeRate with value of -1,
 // then CurrencyConstraintException would be thrown.
 
-$exchangeRate = new ExchangeRate(-1); // throws exception, because exhange rate value is not within boundaries
+$exchangeRate = new ExchangeRate(-1); // throws exception, because exchange rate value is not within boundaries
 
 // However, if ExchangeRate value is within allowed boundaries,
 // then it will successfully produce us new instance of ExchangeRate.
 
-$exhangeRate = new ExchangeRate(1.25); // this would work, since 1.25 is a valid exhange rate value
+$exchangeRate = new ExchangeRate(1.25); // this would work, since 1.25 is a valid exchange rate value
 ```
 
-Another good side effect of using value objects in your code is that it helps you avoid unnesecery assertions.
+Another good side effect of using value objects in your code is that it helps you avoid unnecesarry assertions.
 
 ```php
 <?php
