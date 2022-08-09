@@ -1,10 +1,12 @@
 ---
 title: UnitTypeExtension
+aliases:
+  - /8/development/components/form/types-reference/text-with-unit/
 ---
 
 # UnitTypeExtension
 
-The `UnitTypeExtension` used with `NumberType` or `IntegerType` represents number input with unit value (e.g. Kg, Cm & etc.).
+The `UnitTypeExtension` used with `NumberType` or `IntegerType` represents a number input with unit value (e.g. Kg, Cm & etc.).
 
 ## Type options
 
@@ -42,4 +44,4 @@ class SomeType extends AbstractType
 
 ## Preview example
 
-{{< figure src="../img/text_with_unit.png" title="UnitTypeExtension rendered in form" >}}
+{{< figure src="../img/unit-type-extention.png" title="UnitTypeExtension rendered in form" >}}
