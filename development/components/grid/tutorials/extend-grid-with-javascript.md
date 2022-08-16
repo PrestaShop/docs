@@ -46,7 +46,7 @@ Although the grid looks complete, none of the actions are working yet because th
 ## Enabling javascript
 
 1. Create javascript file for your page.
- In our example we create index.js in `admin-dev/themes/new-theme/js/pages/tax/index.js`.
+ In our example we create index.js in `admin-dev/themes/new-theme/js/pages/tax/index.ts`.
  
 
 2. Add an entry point in webpack.config.js. In our example we add an entry point in `admin-dev/themes/new-theme/.webpack/common.js`.
@@ -85,10 +85,10 @@ Although the grid looks complete, none of the actions are working yet because th
 * Import and initialize Grid component
 
     ```  
-    ### admin-dev/themes/new-theme/js/pages/tax/index.js
+    ### admin-dev/themes/new-theme/js/pages/tax/index.ts
     
     ### 1. import the grid component
-    import Grid from '../../components/grid/grid';
+    import Grid from '@components/grid/grid';
     
     const $ = window.$;
     
@@ -98,7 +98,7 @@ Although the grid looks complete, none of the actions are working yet because th
     });
     ```
 
-As you can see in example above we are importing Grid component from `admin-dev/themes/new-theme/js/components/grid/grid.js`
+As you can see in example above we are importing Grid component from `admin-dev/themes/new-theme/js/components/grid/grid.ts`
 (note that the `admin-dev` part might differ, as it depends on PrestaShop installation).
 Next - initiating the grid component by declaring `const taxGrid = new Grid('tax');`. In this case the argument `'tax'` represents the id of our grid.
 
@@ -110,11 +110,11 @@ In case you need more than one list per page, you can just declare another varia
 
 
 ```
-### admin-dev/themes/new-theme/js/pages/tax/index.js
+### admin-dev/themes/new-theme/js/pages/tax/index.ts
 
-import Grid from '../../components/grid/grid';
+import Grid from '@components/grid/grid';
 ### import extension
-import SortingExtension from '../../components/grid/extension/sorting-extension';
+import SortingExtension from '@components/grid/extension/sorting-extension';
 
 const $ = window.$;
 
@@ -128,19 +128,19 @@ $(() => {
 After adding all needed extensions, our index.js should look like this:
 
 ```
-### admin-dev/themes/new-theme/js/pages/tax/index.js
+### admin-dev/themes/new-theme/js/pages/tax/index.ts
 
-import Grid from '../../components/grid/grid';
-import SortingExtension from '../../components/grid/extension/sorting-extension';
-import FiltersResetExtension from '../../components/grid/extension/filters-reset-extension';
-import ReloadListActionExtension from '../../components/grid/extension/reload-list-extension';
-import ColumnTogglingExtension from '../../components/grid/extension/column-toggling-extension';
-import SubmitRowActionExtension from '../../components/grid/extension/action/row/submit-row-action-extension';
-import SubmitBulkExtension from '../../components/grid/extension/submit-bulk-action-extension';
-import BulkActionCheckboxExtension from '../../components/grid/extension/bulk-action-checkbox-extension';
-import ExportToSqlManagerExtension from '../../components/grid/extension/export-to-sql-manager-extension';
+import Grid from '@components/grid/grid';
+import SortingExtension from '@components/grid/extension/sorting-extension';
+import FiltersResetExtension from '@components/grid/extension/filters-reset-extension';
+import ReloadListActionExtension from '@components/grid/extension/reload-list-extension';
+import ColumnTogglingExtension from '@components/grid/extension/column-toggling-extension';
+import SubmitRowActionExtension from '@components/grid/extension/action/row/submit-row-action-extension';
+import SubmitBulkExtension from '@components/grid/extension/submit-bulk-action-extension';
+import BulkActionCheckboxExtension from '@components/grid/extension/bulk-action-checkbox-extension';
+import ExportToSqlManagerExtension from '@components/grid/extension/export-to-sql-manager-extension';
 
-const $ = window.$;
+const {$} = window;
 
 $(() => {
   const taxGrid = new Grid('tax');
@@ -155,7 +155,7 @@ $(() => {
   taxGrid.addExtension(new BulkActionCheckboxExtension());
 });
 ```
-The last thing to do is to run the compiler. [More about compiler and npm commands here]({{ relref "/8/development/compile-assets" }}).
+The last thing to do is to run the compiler. [More about compiler and npm commands here]({{< ref "/8/development/compile-assets/" >}}).
 
 In our example we open command line, cd to `{{Our prestashop root directory}}/admin-dev/themes/new-theme` and type the following command: 
 
