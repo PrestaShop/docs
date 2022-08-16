@@ -193,7 +193,7 @@ This parameter can only be used for listings, not for individual records. If you
 {{% notice note %}}
 A response obtained with "display" other than "full" can't be used in a **PUT** (update) request, because the `WebserviceRequest` class validation for fields is the same for **POST** (create) and **PUT** (update).
 
-**PATCH** method allow you to use a partial display !
+The **PATCH** method allows using a partial display.
 {{% /notice %}}
 
 ##### Control returned items with "filter"
