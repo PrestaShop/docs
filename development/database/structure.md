@@ -9,7 +9,7 @@ weight: 4
 
 ### Global definition
 
-The database structure of PrestaShop can be found in `install/data/db_structure.sql` ([1.7.3.x releases example](https://github.com/PrestaShop/PrestaShop/blob/1.7.3.x/install-dev/data/db_structure.sql)).
+The database structure of PrestaShop can be found in `install/data/db_structure.sql` ([8.0.x releases example](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/install-dev/data/db_structure.sql)).
 
 It is used one time, during the installation of PrestaShop.
 It contains the structure of almost all tables. If a table needs to be added or
@@ -46,22 +46,22 @@ This SQL file will be stored in the [auto upgrade](https://github.com/PrestaShop
 
 Its name is the PrestaShop version on which the change will be applied.
 
-For instance, here is the file *[1.7.3.0.sql](https://github.com/PrestaShop/autoupgrade/tree/dev/upgrade/sql/1.7.3.0.sql)*,
-used by shops upgrading to 1.7.3.0 or later:
+For instance, here is the file *[1.7.8.0.sql](https://github.com/PrestaShop/autoupgrade/tree/dev/upgrade/sql/1.7.8.0.sql)*,
+used by shops upgrading to 1.7.8.0 or later:
 
 ```sql
 [...]
-UPDATE `PREFIX_tab` SET `position` = 0 WHERE `class_name` = 'AdminZones' AND `position` = '1';
-UPDATE `PREFIX_tab` SET `position` = 1 WHERE `class_name` = 'AdminCountries' AND `position` = '0';
+/* First set all products to standard type, then update them based on cached columns that identify the type */
+UPDATE `PREFIX_product` SET `product_type` = "standard";
+UPDATE `PREFIX_product` SET `product_type` = "combinations" WHERE `cache_default_attribute` != 0;
+UPDATE `PREFIX_product` SET `product_type` = "pack" WHERE `cache_is_pack` = 1;
+UPDATE `PREFIX_product` SET `product_type` = "virtual" WHERE `is_virtual` = 1;
 
-/* PHP:ps_1730_add_quick_access_evaluation_catalog(); */;
-/* PHP:ps_1730_move_some_aeuc_configuration_to_core(); */;
-
-ALTER TABLE `PREFIX_product` ADD `low_stock_threshold` INT(10) NULL DEFAULT NULL AFTER `minimal_quantity`;
+/* PHP:ps_1780_add_feature_flag_tab(); */;
 [...]
 ```
 
-In there we can read the SQL queries to execute when upgrading to 1.7.3.0.
+In there we can read the SQL queries to execute when upgrading to 1.7.8.0.
 Each of them alters the structure and/or modify the existing data.
 In case you have complex algorithms to run, you can call PHP code with the
 `PHP:` keyword.
@@ -70,11 +70,11 @@ To make the code callable, a dedicated file has to be created in
 `/upgrade/php/` with a function in it. This file and function must have
 the same name as we saw in the SQL upgrade file.
 
-If we reuse the previous example, we will find the corresponding file *[/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php](https://github.com/PrestaShop/autoupgrade/blob/dev/upgrade/php/ps_1730_add_quick_access_evaluation_catalog.php)*:
+If we reuse the previous example, we will find the corresponding file *[/upgrade/php/ps_1780_add_feature_flag_tab.php](https://github.com/PrestaShop/autoupgrade/blob/dev/upgrade/php/ps_1780_add_feature_flag_tab.php)*:
 
 ```php
 <?php
-function ps_1730_add_quick_access_evaluation_catalog()
+function ps_1780_add_feature_flag_tab()
 {
   // Code inserting values in database
   [...]
