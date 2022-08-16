@@ -247,7 +247,7 @@ To edit an existing resource: **GET** the full XML file for the resource you wan
 
 ### Partially update a resource
 
-To partially edit an existing resource: **GET** a part of the XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PATCH HTTP request** with the partial XML file as a body content to the same URL again.
+To partially edit an existing resource: **GET** a part of the XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PATCH HTTP request** with the partial XML file as the body content to the same URL again.
 
 ### Using JSON instead of XML
 
