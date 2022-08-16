@@ -90,7 +90,7 @@ Although the grid looks complete, none of the actions are working yet because th
     ### 1. import the grid component
     import Grid from '@components/grid/grid';
     
-    const $ = window.$;
+    const {$} = window;
     
     $(() => {
     ### 2. initialize the grid component by providing grid id
@@ -116,7 +116,7 @@ import Grid from '@components/grid/grid';
 ### import extension
 import SortingExtension from '@components/grid/extension/sorting-extension';
 
-const $ = window.$;
+const {$} = window;
 
 $(() => {
   const taxGrid = new Grid('tax');
