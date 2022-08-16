@@ -98,7 +98,7 @@ Once the instance is created you can access the following methods:
 | delete() | DELETE            | DELETE |
 
 {{% notice note %}}
-**PATCH** method is not yet managed with this library.
+**PATCH** method is not available in this library.
 {{% /notice %}}
 
 ### Handling errors
