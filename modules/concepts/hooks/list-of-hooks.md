@@ -620,7 +620,20 @@ actionFrontControllerSetVariables
     ```smarty
     {$modules.your_module_name.your_variable_name}
     ```    
-    
+
+actionGetAlternativeSearchPanels
+: 
+    This hook allows to add an additional search panel for external providers in PrestaShop back office
+
+    ```php
+      <?php
+      array(
+        'previous_search_panels' => (array) Existing search panels,
+        'bo_query' => (array) Searched expression,
+      );
+    ```
+
+    Located in: /controllers/admin/AdminSearchController.php
     
 actionGetExtraMailTemplateVars
 : 
@@ -1675,6 +1688,18 @@ displayAdminStatsModules
 : 
     Located in: /controllers/admin/AdminStatsTabController.php
 
+displayAdminThemesListAfter
+: 
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig
+
+    Parameters:
+    ```php
+    <?php
+    array(
+    'current_theme_name' => (string) Name of the currently used theme
+    );
+    ```
+
     
 displayAdminView
 : 
@@ -1748,6 +1773,21 @@ displayBackOfficeCategory
 This hook launches modules when the AdminCategories tab is displayed in the Back Office
 
     Located in: /controllers/admin/AdminCategoriesController.php
+
+
+displayBackOfficeEmployeeMenu
+: 
+    Displays new elements in the Back Office employee menu
+
+    Located in: /classes/controller/AdminController.php  
+
+    Parameters:
+    ```php
+    <?php
+    array(
+    'links' => (ActionsBarButtonsCollection) Collection of ActionsBarButtonInterface
+    );
+    ```
 
     
 displayBackOfficeFooter
