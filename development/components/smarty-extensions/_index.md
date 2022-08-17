@@ -205,7 +205,7 @@ It will:
 ...will output:
 
 ```
-  here-is-a-classname
+  here-is_a-classname
 ```
 
 #### classnames
