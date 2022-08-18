@@ -81,6 +81,12 @@ PreviewOpener                | 1.7.8
 Router                       | 1.7.8
 Grid                         | 1.7.8
 ColorPicker                  | 8.0.0
+DateRange                    | 8.0.0
+DeltaQuantityInput           | 8.0.0
+DisablingSwitch              | 8.0.0
+FormFieldToggler             | 8.0.0
+IframeClient                 | 8.0.0
+ModifyAllShopsCheckbox       | 8.0.0
 
 ## Grid component
 
