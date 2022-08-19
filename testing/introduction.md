@@ -7,7 +7,7 @@ weight: 1
 
 PrestaShop is a complex software and uses automated testing to ensure that the new additions to the codebase do not break existing behaviors.
 
-Automated tests are located in `tests` and `tests-legacy` folders.
+Automated tests are located in `tests` folders
 
 ## What kind of tests do PrestaShop use?
 
@@ -55,17 +55,6 @@ Finally, we have some user interface tests (also sometimes referred to as web ac
 These tests can be found in `UI` folders.
 
 UI tests rely on [Playwright][4].
-
-## What are legacy tests in `tests-legacy` folder?
-
-Currently, the `tests-legacy` folder only contains tests targeting these endpoints: 
-* `admin-dev/ajax_products_list.php`
-* `admin-dev/displayImage.php`
-* `admin-dev/drawer.php`
-* `admin-dev/grider.php`
-* `admin-dev/drawer.php`
-
-These endpoints have not been migrated to `tests` folder due to their complexity.
 
 [1]: https://phpunit.de/
 [2]: https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs
