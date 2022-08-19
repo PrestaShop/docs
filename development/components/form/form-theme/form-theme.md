@@ -42,7 +42,7 @@ This theme extends Symfony's Bootstrap 4 form theme, allowing it to inherit all 
 Until it becomes the default Form Theme, Twig templates that need to rely on this theme need to activate it using the following statement:
 
 ```
-{% form_theme form 'PrestaShopBundle:Admin/TwigTemplateForm:prestashop_ui_kit_base.html.twig' %}
+{% form_theme form '@PrestaShop/Admin/TwigTemplateForm:prestashop_ui_kit_base.html.twig' %}
 ```
 
 {{< figure src="../img/ui-kit-form-theme.png" title="UI Kit Form Theme example of rendering" >}}
