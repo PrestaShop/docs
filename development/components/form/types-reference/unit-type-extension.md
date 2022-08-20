@@ -26,7 +26,7 @@ Add `NumberType` or `IntegerType` to your form and optionally you can configure 
 <?php
 
 use Symfony\Component\Form\AbstractType;
-use PrestaShopBundle\Form\Admin\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 class SomeType extends AbstractType
 {
