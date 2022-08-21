@@ -9,7 +9,7 @@ weight: 50
 
 The Back Office contains multiple configuration forms that control settings of the shop. When multistore is enabled, Back Office user must be able to modify these settings either for all shops, for a group of shop or for a single shop.
 
-Migrated configuration forms can display a checkbox before fields in order to specify if the configuration value is set for the current context shop/group, or if it is a value inherited from all contexts, or from a shop group. It will also display a dropdown at the right of the field, telling you wether this field is customized or inherits its value from its parent context. Here is how it looks like:
+Migrated configuration forms can display a checkbox before fields in order to specify if the configuration value is set for the current context shop/group, or if it is a value inherited from all contexts, or from a shop group. It will also display a dropdown at the right of the field, telling you whether this field is customized or inherits its value from its parent context. Here is how it looks like:
 
 {{< figure src="../../img/multistore-field-dropdown.png" title="Multistore configuration form dropdown" >}}
 
