@@ -35,7 +35,7 @@ The following steps will be executed during the upgrade:
 
 ## Other
 
-These steps don't follow any process and are independant between each others.
+These steps don't follow any process and are independent between each others.
 
 - CheckFilesVersion: This task is responsible to detect all local files has been modified by the merchant / developer. This is an important pre-requisite which warn about the potential loss of changes.
 - Error: This task can be called from any other one, and will display a specific message saying the upgrade / restore process failed. In case of upgrade, a restore will be suggested.
