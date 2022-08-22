@@ -8,7 +8,7 @@ weight: 70
 ## Using the `Mail::send()` method
 
 {{% notice note %}}
-The `Mail` core class extends [ObjectModel]({{ relref "/8/development/database/objectmodel" }})
+The `Mail` core class extends [ObjectModel]({{< relref "/8/development/components/database/objectmodel" >}})
 {{% /notice %}}
 
 {{% notice note %}}
