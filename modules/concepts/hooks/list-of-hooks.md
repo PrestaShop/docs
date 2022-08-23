@@ -1281,16 +1281,44 @@ dashboardData
 : 
     Located in: /controllers/admin/AdminDashboardController.php
 
-    
+
 dashboardZoneOne
 : 
     Located in: /controllers/admin/AdminDashboardController.php
 
+    Parameters:
+    ```php
+    <?php
+    [
+        'date_from' => (string|null) $statsDateFrom,
+        'date_to' => (string|null) $statsDateTo,
+    ]
     
 dashboardZoneTwo
 : 
     Located in: /controllers/admin/AdminDashboardController.php
 
+    Parameters:
+    ```php
+    <?php
+    [
+        'date_from' => (string|null) $statsDateFrom,
+        'date_to' => (string|null) $statsDateTo,
+    ]
+
+dashboardZoneThree
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /controllers/admin/AdminDashboardController.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'date_from' => (string|null) $statsDateFrom,
+        'date_to' => (string|null) $statsDateTo,
+    ]
+    ```
     
 displayAdminAfterHeader
 : 
@@ -2753,6 +2781,35 @@ action&lt;FormName>FormBuilderModifier
     ]
     ```
 
+action&lt;FormName>FormDataProviderDefaultData,
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'data' => (array) &$data,
+        'options' => (array) &$options,
+    ]
+    ```
+
+action&lt;FormName>FormDataProviderData,
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'data' => (array) &$data,
+        'id' => (int) $id,
+        'options' => (array) &$options,
+    ]
+    ```
+
 actionBeforeUpdate&lt;FormName>FormHandler
 : 
     Available since: {{< minver v="1.7.6" >}}
@@ -2804,6 +2861,135 @@ actionAfterCreate&lt;FormName>FormHandler
     [
         'id' => $id,
     ]
+    ```
+
+{{% /funcdef %}}
+
+actionFilterDeliveryOptionList
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /classes/Cart.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'delivery_option_list' => (array) &$delivery_option_list,
+    ]
+    ```
+
+actionValidateOrderAfter
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /classes/PaymentModule.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'cart' => (Cart|null) $contextCart,
+        'order' => (Order|null) $order,
+        'orders' => (array) $orderList,
+        'customer' => (Customer) $contextCustomer,
+        'currency' => (Currency) $contextCurrency,
+        'orderStatus' => (OrderState) $orderState,
+    ]
+    ```
+
+actionOrderStatusUpdate
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /classes/order/OrderHistory.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'newOrderStatus' => (OrderState) $newOrderStatus,
+        'oldOrderStatus' => (OrderState) $oldOrderStatus,
+        'id_order' => (int) $orderId,
+    ]
+    ```
+
+actionOrderStatusPostUpdate
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /classes/order/OrderHistory.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'newOrderStatus' => (OrderState) $newOrderStatus,
+        'oldOrderStatus' => (OrderState) $oldOrderStatus,
+        'id_order' => (int) $orderId,
+    ]
+    ```
+
+actionPresentPaymentOptions
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /classes/checkout/PaymentOptionsFinder.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'paymentOptions' => (array) &$paymentOptions,
+    ]
+    ```
+
+actionGetAdminToolbarButtons
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /classes/controller/AdminController.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'controller' => (AdminController) $currentController,
+        'toolbar_extra_buttons_collection' => (ActionsBarButtonsCollection) $toolbarButtonsCollection,
+    ]
+    ```
+
+actionGetAlternativeSearchPanels
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /controllers/admin/AdminSearchController.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'previous_search_panels' => (array) $searchPanels,
+        'bo_query' => (string) $searchedExpression,
+    ]
+    ```
+
+displayBackOfficeEmployeeMenu
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
+
+    Parameters:
+    ```php
+    <?php
+    [
+        'links' => (ActionsBarButtonsCollection) $menuLinksCollections,
+    ]
+    ```
+
+displayEmptyModuleCategoryExtraMessage
+: 
+Available since: {{< minver v="8.0.0" >}}
+Located in: /src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
+
+    Parameters:
+    ```html.twig
+    {
+        'category_name': (string) categoryName
+    }
     ```
 
 {{% /funcdef %}}
