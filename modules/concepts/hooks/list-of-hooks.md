@@ -1361,7 +1361,6 @@ This hook launches modules when the Addresses list into the AdminCustomers tab i
 	)
     ```
 
-
 displayAdminEndContent
 : 
     Available since: {{< minver v="1.7.4" >}}
