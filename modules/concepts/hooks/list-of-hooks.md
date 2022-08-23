@@ -2862,8 +2862,6 @@ actionAfterCreate&lt;FormName>FormHandler
     ]
     ```
 
-{{% /funcdef %}}
-
 actionFilterDeliveryOptionList
 : 
 Available since: {{< minver v="8.0.0" >}}
