@@ -84,8 +84,8 @@ class MyModule extends Module
         $this->author = 'Firstname Lastname';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = [
-            'min' => '1.7.0.0',
-            'max' => '8.99.99',
+            'min' => '1.6.0',
+            'max' => '1.7.99',
         ];
         $this->bootstrap = true;
 
