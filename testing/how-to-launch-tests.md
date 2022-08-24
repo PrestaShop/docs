@@ -13,14 +13,12 @@ At least four test suites are available, testing different parts of PrestaShop:
 * Unit tests
 * Integrations tests
 * Functional tests
-* Legacy endpoints
 
 Each suite needs a specific PHPUnit configuration. This is why each test suite has a specific composer command:
 
 * `composer unit-tests`
 * `composer integration-tests`
 * `composer integration-behaviour-tests`
-* `composer phpunit-endpoints`
 
 {{% notice tip %}}
 You can execute the entire PHPUnit test suites using the `composer test-all` command.
