@@ -2893,36 +2893,6 @@ Located in: /classes/PaymentModule.php
     ]
     ```
 
-actionOrderStatusUpdate
-: 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /classes/order/OrderHistory.php
-
-    Parameters:
-    ```php
-    <?php
-    [
-        'newOrderStatus' => (OrderState) $newOrderStatus,
-        'oldOrderStatus' => (OrderState) $oldOrderStatus,
-        'id_order' => (int) $orderId,
-    ]
-    ```
-
-actionOrderStatusPostUpdate
-: 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /classes/order/OrderHistory.php
-
-    Parameters:
-    ```php
-    <?php
-    [
-        'newOrderStatus' => (OrderState) $newOrderStatus,
-        'oldOrderStatus' => (OrderState) $oldOrderStatus,
-        'id_order' => (int) $orderId,
-    ]
-    ```
-
 actionPresentPaymentOptions
 : 
 Available since: {{< minver v="8.0.0" >}}
