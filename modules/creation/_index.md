@@ -10,7 +10,7 @@ If you want to get started quickly with a ready-to-use module template, you can 
 Other skeletons have been created to help you create specific modules:
 
 * [Skeleton of a Payment module for PrestaShop 1.7](https://github.com/PrestaShop/paymentexample)
-* [Skeleton of a module using CQRS feature](https://github.com/friends-of-presta/demo-cqrs-hooks-usage-module) ([More details about CQRS]({{< ref "1.7/development/architecture/domain/_index.md" >}}))
+* [Skeleton of a module using CQRS feature](https://github.com/friends-of-presta/demo-cqrs-hooks-usage-module) ([More details about CQRS]({{< ref "8/development/architecture/domain/_index.md" >}}))
 
 ## In this section 
 
