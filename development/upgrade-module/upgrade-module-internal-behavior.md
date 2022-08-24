@@ -49,7 +49,7 @@ Aim is to help as many merchants as possible to upgrade from 1.6 to 1.7. This re
 
 - **Twig as template engine**
 
-Even if Smarty is still provided by the core, it was decided to use an independant engine template.
+Even if Smarty is still provided by the core, it was decided to use an independent engine template.
 
 This makes sure than replacing the core template engine won't break the module later.
 
@@ -73,7 +73,7 @@ So far the main objective has been to make the PHP code easier to understand and
 
 ## New module structure
 
-Most of the PHP classes in `classes` folder are mainly logic extracted from AdminSelfUpgrade, the class that was responsible of everything in previous versions. It has been splitted in smaller parts.
+Most of the PHP classes in `classes` folder are mainly logic extracted from AdminSelfUpgrade, the class that was responsible of everything in previous versions. It has been split in smaller parts.
 
 Classes are gathered by responsibilities:
 
