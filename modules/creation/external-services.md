@@ -22,8 +22,8 @@ It uses Basic access authentication to allow requests.
 
 **Resources:**
 
-* [About the webservice]({{< ref "1.7/webservice" >}})
-* [Enable & add users to the webservice]({{< ref "1.7/webservice/tutorials/creating-access" >}})
+* [About the webservice]({{< ref "8/webservice" >}})
+* [Enable & add users to the webservice]({{< ref "8/webservice/tutorials/creating-access" >}})
 
 **Adding a module ObjectModel to the list of resources available**
 
@@ -63,7 +63,7 @@ This can be done by generating your own token and checking it everytime the cont
 
 **Resources:**
 
-* [About the controllers]({{< ref "1.7/modules/concepts/controllers/front-controllers" >}})
+* [About the controllers]({{< ref "8/modules/concepts/controllers/front-controllers" >}})
 * [Example with Faceted Search module (Outside a controller)](https://github.com/PrestaShop/ps_facetedsearch/blob/6f7b97e77b0fca30c0acf74316996cfc82a263a9/ps_facetedsearch-clear-cache.php#L6-L8)
 
 
