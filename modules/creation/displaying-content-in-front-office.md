@@ -20,15 +20,15 @@ public function install()
     }
 
     return parent::install() &&
-        $this->registerHook('leftColumn') &&
+        $this->registerHook('displayLeftColumn') &&
         $this->registerHook('actionFrontControllerSetMedia') &&
         Configuration::updateValue('MYMODULE_NAME', 'my friend');
 }
 ```
 
 As you can see, we make it so that the module is hooked to the
-"`leftColumn`" and "`actionFrontControllerSetMedia`" hooks. In addition to this, we will add
-code for the "`rightColumn`" hook.
+"`displayLeftColumn`" and "`actionFrontControllerSetMedia`" hooks. In addition to this, we will add
+code for the "`displayRightColumn`" hook.
 
 Attaching code to a hook requires a specific method for each:
 
@@ -104,21 +104,20 @@ module" button (top right of the page).
 In the transplantation form:
 
 -   Find "My module" in the "Module" drop-down list.
--   Choose "(displayLeftColumn) Left column blocks" in the "Hook into"
-    drop-down list.
+-   Choose "displayLeftColumn (This hook displays new elements in the left-hand column)" in the "Transplant into" drop-down list.
 -   Click "Save".
 
 It is useless to try to attach a module to a hook for which it has no
 implemented method.
 
 The "Positions" page should reload, with the following message: "Module
-transplanted successfully to hook" (or maybe "This module has already
+transplanted successfully to the hook" (or maybe "This module has already
 been transplanted to this hook. "). Congratulations! Scroll down the
 "Positions" page, and you should indeed see your module among the other
-modules in the "Left column blocks" list. Move it to the top of the list
+modules in the "displayLeftColumn" block. Move it to the top of the list
 by drag'n'dropping the module's row.
 
-The module is now attached to the left column... but without any
+The module is now attached to the left column ... but without any
 template to display, it falls short of doing anything useful: if you
 reload the homepage, the left column simply displays a message where the
 module should be, saying "No template found for module mymodule".
