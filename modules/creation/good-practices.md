@@ -89,6 +89,6 @@ add a preliminary check before using them (I.e with `extension_loaded`). This pr
 - Make sure to submit on Addons a valid zip, built with the SDK.
 - Test your emails with the [official module](https://github.com/PrestaShop/email-templates-sdk).
 
-[coding-standards]: {{< ref "1.7/development/coding-standards" >}}
-[display-content-front-office]: {{< ref "1.7/modules/creation/displaying-content-in-front-office" >}}
-[adding-configuration-page]: {{< ref "1.7/modules/creation/adding-configuration-page" >}}
+[coding-standards]: {{< ref "8/development/coding-standards" >}}
+[display-content-front-office]: {{< ref "8/modules/creation/displaying-content-in-front-office" >}}
+[adding-configuration-page]: {{< ref "8/modules/creation/adding-configuration-page" >}}
