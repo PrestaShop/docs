@@ -245,8 +245,16 @@ We could (of course) use Smarty to render a template, but it's a chance to disco
 public function hookDisplayDashboardToolbarIcons($params)
 {
     if ($this->isSymfonyContext() && $params['route'] === 'admin_product_catalog') {
-        $products = $this->getProducts(1);
-        $productsXml = $this->serializeProducts($products);
+        $products = $this->get('product_repository')->findAllByLangId(1);
+
+        $productsXml = $this->get('serializer')->serialize(
+            $products,
+            'xml',
+            [
+                'xml_root_node_name' => 'products',
+                'xml_format_output' => true,
+            ]
+        );
         $filepath = _PS_ROOT_DIR_.'/products.xml';
 
         $this->writeFile($productsXml, $filepath);
