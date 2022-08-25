@@ -84,8 +84,8 @@ class MyModule extends Module
         $this->author = 'Firstname Lastname';
         $this->need_instance = 0;
         $this->ps_versions_compliancy = [
-            'min' => '1.6',
-            'max' => '1.7.99',
+            'min' => '1.6.0',
+            'max' => '1.7.9',
         ];
         $this->bootstrap = true;
 
@@ -124,8 +124,8 @@ Let's continue with the next line in this block of code:
 ```php
 $this->need_instance = 0;
 $this->ps_versions_compliancy = [
-    'min' => '1.6',
-    'max' => '1.7.99'
+    'min' => '1.6.0',
+    'max' => '1.7.9'
 ];
 $this->bootstrap = true;
 ```
@@ -133,8 +133,8 @@ $this->bootstrap = true;
 This section handles the relationship with the module and its environment (namely, PrestaShop):
 
 - The `need_instance` attribute Indicates whether to load the module's class when displaying the "Modules" page in the back office. If set at 0, the module will not be loaded, and therefore will spend less resources to generate the "Modules" page. If your module needs to display a warning message in the "Modules" page, then you must set this attribute to `1`.
-- The `ps_versions_compliancy` attribute indicates which version of PrestaShop this module is compatible with. In the example above, we are defining the compatibility range between `1.6.0.0` and `1.7.99.0`.
-- The `bootstrap` attribute indicates that the module's template files have been built with PrestaShop 1.6's bootstrap tools in mind.
+- The `ps_versions_compliancy` attribute indicates which version of PrestaShop this module is compatible with. In the example above, we are defining the compatibility range between `1.6.0.0` and `1.7.9.99`.
+- The `bootstrap` attribute indicates that the module's template files have been built with PrestaShop's bootstrap tools in mind.
 
 Next, we call the constructor method from the parent PHP class:
 
@@ -195,8 +195,8 @@ There are many things you can do to expand the `install()` method to perform ins
 
 - Check that the [Multistore feature][multistore] is enabled, and if so, set the current context to all shops on this installation of PrestaShop.
 - Ensure that the base install process is successful.
-- Ensure that the module can be attached to the `leftColumn` hook.
-- Ensure that the module can be attached to the `header` hook.
+- Ensure that the module can be attached to the `displayLeftColumn` hook.
+- Ensure that the module can be attached to the `displayHeader` hook.
 - Ensure the value of the `MYMODULE_NAME` configuration setting can be set to "my friend".
 
 
@@ -209,8 +209,8 @@ public function install()
 
    return (
         parent::install() 
-        && $this->registerHook('leftColumn')
-        && $this->registerHook('header')
+        && $this->registerHook('displayLeftColumn')
+        && $this->registerHook('displayHeader')
         && Configuration::updateValue('MYMODULE_NAME', 'my friend')
     ); 
 }
