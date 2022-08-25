@@ -117,7 +117,7 @@ been transplanted to this hook. "). Congratulations! Scroll down the
 modules in the "displayLeftColumn" block. Move it to the top of the list
 by drag'n'dropping the module's row.
 
-The module is now attached to the left column ... but without any
+The module is now attached to the left column, but without any
 template to display, it falls short of doing anything useful: if you
 reload the homepage, the left column simply displays a message where the
 module should be, saying "No template found for module mymodule".
