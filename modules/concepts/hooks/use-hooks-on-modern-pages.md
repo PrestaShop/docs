@@ -12,14 +12,14 @@ Starting from PrestaShop 1.7.3, you can access the modern Services Container int
 * [Twig](https://twig.symfony.com/), the most popular templating engine;
 * [Swiftmailer](https://swiftmailer.symfony.com/), a feature-rich mailer;
 * [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html) and [Doctrine DBAL](https://www.doctrine-project.org/projects/dbal.html) to manage your database;
-* [Filesystem](https://symfony.com/doc/3.3/components/filesystem.html) and [Finder](https://symfony.com/doc/3.3/components/finder.html) libraries to manage all filesystem operations;
+* [Filesystem](https://symfony.com/doc/4.4/components/filesystem.html) and [Finder](https://symfony.com/doc/4.4/components/finder.html) libraries to manage all filesystem operations;
 * [Monolog](https://seldaek.github.io/monolog/) for every logging operations;
-* [Serializer](https://symfony.com/doc/3.3/components/serializer.html) library for whom who need to manipulate Json and Xml formats...
+* [Serializer](https://symfony.com/doc/4.4/components/serializer.html) library for whom who need to manipulate Json and Xml formats...
 
 Of course, you also have access to every service used by the Core of PrestaShop. This means that you can rely on all services defined in `PrestaShopBundle/config/` folder, except from the ones declared in `adapter` folder: they will be removed at some point.
 
 {{% notice tip %}}
-If you don't know what a service is, have a look at the Symfony documentation about the [service container](https://symfony.com/doc/3.3/service_container.html).
+If you don't know what a service is, have a look at the Symfony documentation about the [service container](https://symfony.com/doc/4.4/service_container.html).
 {{% /notice %}}
 
 ## Better modules on modern pages
@@ -49,7 +49,7 @@ As we need to act on Dashboard but after the header, in the icons toolbar (with 
 
 ### Second step: create and register the Hook
 
-Create a [new module](https://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
+Create a [new module](https://devdocs.prestashop.com/8/modules/creation/tutorial) called `foo` and register the hook. You should end up with this kind of code in your module:
 
 ```php
 <?php
@@ -146,7 +146,11 @@ services:
     product_repository:
         class: Foo\Repository\ProductRepository
         arguments: ['@doctrine.dbal.default_connection', '%database_prefix%']
+        public: true
 ```
+{{% notice info %}}
+Note: Since Symfony 4.4, services that are not dependency injected and that are not declared as “public” are removed from the container.
+{{% /notice %}}
 
 Prestashop automatically checks if modules have a `config/services.yml` file and will autoload it for you. In order to force Prestashop to parse the file, you need to clear the cache:
 
