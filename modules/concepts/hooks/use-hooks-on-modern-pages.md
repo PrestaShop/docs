@@ -209,7 +209,7 @@ public function hookDisplayDashboardToolbarIcons($hookParams)
                 'xml_format_output' => true,
             ]
         );
-        $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_.'products.xml', $productsXml);
+        $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_ . 'products.xml', $productsXml);
     }
 }
 ```
@@ -255,12 +255,10 @@ public function hookDisplayDashboardToolbarIcons($params)
                 'xml_format_output' => true,
             ]
         );
-        $filepath = _PS_ROOT_DIR_.'/products.xml';
-
-        $this->writeFile($productsXml, $filepath);
+        $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_ . 'products.xml', $productsXml);
 
         return $this->get('twig')->render('@Modules/Foo/views/download_link.twig', [
-            'filepath' => _PS_BASE_URL_.'/products.xml',
+            'filepath' => _PS_BASE_URL_ . '/upload/' . 'products.xml',
         ]);
     }
 }
