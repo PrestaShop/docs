@@ -10,7 +10,7 @@ weight: 1
 
 ##### PHP Code
 
-Your PHP code should be compatible with [PHP compatibility chart]({{< relref "/8/basics/installation/system-requirements/#php-compatibility-chart" >}})
+Your PHP code should be compatible with [PHP compatibility chart]({{< relref "/8/basics/installation/system-requirements" >}})
 
 ##### HTML / CSS / Javascript
 
