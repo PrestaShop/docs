@@ -2620,14 +2620,14 @@ validateCustomerFormFields
 : 
     Located in: /classes/form/CustomerForm.php
 
-action<KpiIdentifier>KpiRowModifier
+action&lt;KpiIdentifier>KpiRowModifier
 : 
     Available since: {{< minver v="1.7.6" >}}
 
     This hook allow to alter the list of Kpis used in a Kpi row.
     This hook is called just before the validation and the  building of the KpiRow.
 
-    Located in: /controllers/front/listing/CategoryController.php
+    Located in: /src/Core/Kpi/Row/HookableKpiRowFactory.php
 
     Parameters:
     ```php
