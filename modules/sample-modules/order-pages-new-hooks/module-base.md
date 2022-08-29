@@ -122,7 +122,7 @@ class FixturesInstaller
 Lets create `Installer` class inside `/demovieworderhooks/src/Install` folder structure. 
 It is responsible only for module installation (hook registration, database creation, 
 population database data). When it comes to database creation we use PrestaShop `DbCore` class 
-functions because doctrine is [not fully supported for modules installation]({{ relref "/8/modules/concepts/doctrine/#creating-the-database" }}) at 1.7.7.0 release.
+functions because doctrine is [not fully supported for modules installation]({{< relref "/8/modules/concepts/doctrine/#creating-the-database" >}}) at 1.7.7.0 release.
 ```php
 <?php
 /**
