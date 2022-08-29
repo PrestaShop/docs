@@ -554,7 +554,7 @@ Render a twig template method:
 For each registered hook, you must create a non-static public method, 
 starting with the “hook” keyword followed by the name of the hook you want to use 
 (starting with either “display” or “action”). In our case: `hookDisplayBackOfficeOrderActions`
-([read this article for more information]({{< relref "/8//modules/concepts/hooks/#execution" >}})).
+([read this article for more information]({{< relref "/8/modules/concepts/hooks#execution" >}})).
 We add this code at the bottom of the main module class `demovieworderhooks.php`
 and also add the missing `use` statements for new classes.
 
