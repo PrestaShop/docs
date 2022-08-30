@@ -26,7 +26,7 @@ Property            | Required | Type | Description | Example
 `name`              | No  | String\|String[] | Label displayed in the menu. If not provided, the class name is shown instead. | `"Merchant Expertise"`
 `parent_class_name` | No  | String | The parent menu, if you want to display it in a subcategory. Go farther in this document to see available values. |
 `icon`              | No  | String | Icon name to use, if any | `"shopping_basket"`
-`visible`           | No  | Boolean | Whether you want to display the tab or not. Hidden tabs are used when you don't need a menu item but you still need to handle access rights. | `true`
+`active`           | No  | Boolean | Whether you want to display the tab or not. Hidden tabs are used when you don't need a menu item but you still need to handle access rights. | `true`
 `wording `          | No  | String | {{< minver v="1.7.8" >}} The translation key to use to translate the menu label. | `"Merchant Expertise"`
 `wording_domain`    | No  | String | {{< minver v="1.7.8" >}} The translation domain to use to translate the menu label. | `"Modules.Gamification.Admin"`
 
