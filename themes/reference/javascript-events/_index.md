@@ -19,7 +19,7 @@ A default store loads two important files on every page:
   `theme.js`| Bundles all theme specific code and libraries
 
 {{% notice tip %}}
-  jQuery is loaded by the core, so each theme will have jQuery v2 available. Do not redefine it.
+  jQuery is loaded by the core, so each theme will have jQuery v3 available. Do not redefine it.
 {{% /notice %}}
 
 ## Events
