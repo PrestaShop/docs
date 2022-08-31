@@ -20,11 +20,11 @@ A default store loads a lot less files in 1.7 compared to 1.6, there are no spec
 
   File      | Content
   ----------| ------------------------------------------------------------------------------
-  `core.js` | Loads jQuery3, makes ajax calls, defines core methods that all frontend should use
+  `core.js` | Loads jQuery2 or jQuery3, makes ajax calls, defines core methods that all frontend should use
   `theme.js`| Bundles all theme specific code and libraries
 
 {{% notice tip %}}
-  jQuery is loaded by the core, so each theme will have jQuery v2 available. Do not redefine it.
+  jQuery is loaded by the core, so each theme will have jQuery v2 or v3 (since `1.7.7.0`) available. Do not redefine it.
 {{% /notice %}}
 
 ## Events
