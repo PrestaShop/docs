@@ -89,8 +89,8 @@ module.exports = [{
     './css/theme.scss'
   ],
   output: {
-    path: '../assets/js',
-    filename: 'theme.js'
+    path: '../assets/css',
+    filename: 'theme.css'
   },
   module: {
     loaders: [{
