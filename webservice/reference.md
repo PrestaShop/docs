@@ -16,7 +16,7 @@ Most resources can be accessed in a REST manner, with the 5 main HTTP request me
 | Key                            | GET | POST | PUT | DELETE | HEAD |
 |--------------------------------|:---:|:----:|:---:|:------:|:----:|
 | search                         | ✅  |      |     |        | ✅   |
-| stock_availables               | ✅  | ✅   |     |        | ✅   |
+| stock_availables               | ✅  |      | ✅  |        | ✅   |
 | stock_movements                | ✅  |      |     |        | ✅   |
 | stocks                         | ✅  |      |     |        | ✅   |
 | supply_order_details           | ✅  |      |     |        | ✅   |
