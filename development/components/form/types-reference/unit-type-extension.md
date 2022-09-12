@@ -1,10 +1,12 @@
 ---
-title: TextWithUnitType
+title: UnitTypeExtension
+aliases:
+  - /8/development/components/form/types-reference/text-with-unit/
 ---
 
-# TextWithUnitType
+# UnitTypeExtension
 
-The `TextWithUnitType` represents text input with unit value (e.g. Kg, Cm & etc.).
+The `UnitTypeExtension` used with `NumberType` or `IntegerType` represents a number input with unit value (e.g. Kg, Cm & etc.).
 
 ## Type options
 
@@ -18,19 +20,19 @@ None.
 
 ## Code example
 
-Add `TextWithUnitType` to your form and optionally you can configure `unit` for it.
+Add `NumberType` or `IntegerType` to your form and optionally you can configure `unit` for it.
 
 ```php
 <?php
 
 use Symfony\Component\Form\AbstractType;
-use PrestaShopBundle\Form\Admin\Type\TextWithUnitType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
 
 class SomeType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('weight', TextWithUnitType::class, [
+        $builder->add('weight', NumberType::class, [
                 'unit' => 'kg',
                 'required' => false,
                 'empty_data' => '0',
@@ -42,4 +44,4 @@ class SomeType extends AbstractType
 
 ## Preview example
 
-{{< figure src="../img/text_with_unit.png" title="TextWithUnitType rendered in form" >}}
+{{< figure src="../img/unit-type-extention.png" title="UnitTypeExtension rendered in form" >}}
