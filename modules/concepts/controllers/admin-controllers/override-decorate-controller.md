@@ -112,6 +112,20 @@ With the following configuration item, we can decorate it with a custom controll
     arguments: ['@custom_controller.inner']
 ```
 
+or if you are using [autowiring](https://symfony.com/doc/4.4/service_container/autowiring.html):
+```yaml
+# modules/your-module/config/services.yml
+  custom_controller:
+    autowire: true
+    class: MyModule\Controller\DemoController
+    decorates: PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController
+```
+
+{{% notice warning %}}
+You don't need to define custom routing for your decorated controller. Symfony will take care of it and use your controller instead of the original one,
+just make sure you clear symfony cache after these changes (using command `bin/console cache:clear`). If (for some reason) you still need to modify the routing of your decorated controller, then you will need to add `public: true` to your decorated controller definition in module services.yml, or else you will get error complaining about your controller being private.
+{{% /notice %}}
+
 Thanks to this, whenever Symfony forwards a request to the Core controller `PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController` it will be forwarded to `DemoController` instead. But what is different with overriding is that the decorated CmsPageController is injected into the constructor of DemoController, and we can use it:
 ```php
 <?php
