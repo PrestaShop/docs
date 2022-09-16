@@ -270,7 +270,7 @@ Configuration::updateValue('MYMODULE_SETTINGS', serialize([true, true, false]));
 $mySettings = unserialize(Configuration::get('MYMODULE_SETTINGS'));
 ```
 
-As you can see, this in a very useful and easy-to-use object, and you will certainly use it in many situations. Most native modules use it too for their own settings.
+As you can see, this is a very useful and easy-to-use object, and you will certainly use it in many situations. Most native modules use it too for their own settings.
 
 {{% notice note %}}
 You can read more about this component in [Configuration storage]({{< ref "/8/development/components/configuration" >}}).
