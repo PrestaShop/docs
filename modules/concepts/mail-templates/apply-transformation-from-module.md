@@ -146,27 +146,32 @@ use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\Transformation\TransformationCollectionInterface;
 use PrestaShop\Module\MyEmailThemeModule\MailTemplate\Transformation\CustomMessageColorTransformation;
 
-class My_email_theme_module extends Module {
-    public function install() {
+class MyEmailThemeModule extends Module 
+{
+   public function install() 
+   {
         return parent::install()
             // This class constant contains 'actionGetMailLayoutTransformations'
             && $this->registerHook(MailTemplateRendererInterface::GET_MAIL_LAYOUT_TRANSFORMATIONS)
         ;
     }
     
-    public function uninstall() {
+    public function uninstall() 
+    {
         return parent::uninstall()
             && $this->unregisterHook(MailTemplateRendererInterface::GET_MAIL_LAYOUT_TRANSFORMATIONS)
         ;        
     }
     
-    public function enable() {
+    public function enable() 
+    {
         return parent::enable()
             && $this->registerHook(MailTemplateRendererInterface::GET_MAIL_LAYOUT_TRANSFORMATIONS)
         ;
     }
     
-    public function disable() {
+    public function disable() 
+    {
         return parent::disable()
             && $this->unregisterHook(MailTemplateRendererInterface::GET_MAIL_LAYOUT_TRANSFORMATIONS)
         ;        
