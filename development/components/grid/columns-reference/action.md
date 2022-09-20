@@ -21,6 +21,7 @@ For more info about possible actions see [Actions reference][actions-reference].
 <?php
 use PrestaShop\PrestaShop\Core\Grid\Column\Type\Common\ActionColumn;
 use PrestaShop\PrestaShop\Core\Grid\Column\ColumnCollection;
+use PrestaShop\PrestaShop\Core\Grid\Action\Row\Type\LinkRowAction;
 
 $actionColumn = new ActionColumn('actions');
 $actionColumn->setName('Actions');
