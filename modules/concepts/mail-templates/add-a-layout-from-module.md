@@ -68,7 +68,7 @@ use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCatalogInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollectionInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeInterface;
 
-class my_email_theme_module {
+class My_email_theme_module extends Module {
     public function install() {
         return parent::install()
             // This class constant contains 'actionListMailThemes'
