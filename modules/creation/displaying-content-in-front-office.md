@@ -410,6 +410,9 @@ simple names, such as `{$products}`, and to prefix it with your module's
 name, or even your own name or initials, such as:
 `{$henryb_mymodule_products}`.
 
+List of Smarty variables
+---------------------------------
+
 Here is a list of Smarty variables that are common to all template pages:
 
 
