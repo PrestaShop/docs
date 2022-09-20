@@ -40,27 +40,32 @@ use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCatalogInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeCollectionInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\ThemeInterface;
 
-class My_email_theme_module extends Module {
-    public function install() {
+class MyEmailThemeModule extends Module 
+{
+    public function install() 
+    {
         return parent::install()
             // This class constant contains 'actionListMailThemes'
             && $this->registerHook(ThemeCatalogInterface::LIST_MAIL_THEMES_HOOK)
         ;
     }
 
-    public function uninstall() {
+    public function uninstall() 
+    {
         return parent::uninstall()
             && $this->unregisterHook(ThemeCatalogInterface::LIST_MAIL_THEMES_HOOK)
         ;
     }
 
-    public function enable() {
+    public function enable() 
+    {
         return parent::enable()
             && $this->registerHook(ThemeCatalogInterface::LIST_MAIL_THEMES_HOOK)
         ;
     }
 
-    public function disable() {
+    public function disable() 
+    {
         return parent::disable()
             && $this->unregisterHook(ThemeCatalogInterface::LIST_MAIL_THEMES_HOOK)
         ;
