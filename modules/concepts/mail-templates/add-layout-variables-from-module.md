@@ -48,27 +48,32 @@ the `actionBuildMailLayoutVariables` hook.
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutVariablesBuilderInterface;
 use PrestaShop\PrestaShop\Core\MailTemplate\Layout\LayoutInterface;
 
-class My_email_theme_module extends Module {
-    public function install() {
+class MyEmailThemeModule extends Module 
+{
+    public function install() 
+    {
         return parent::install()
             // This class constant contains 'actionBuildMailLayoutVariables'
             && $this->registerHook(LayoutVariablesBuilderInterface::BUILD_MAIL_LAYOUT_VARIABLES_HOOK)
         ;
     }
     
-    public function uninstall() {
+    public function uninstall() 
+    {
         return parent::uninstall()
             && $this->unregisterHook(LayoutVariablesBuilderInterface::BUILD_MAIL_LAYOUT_VARIABLES_HOOK)
         ;        
     }
     
-    public function enable() {
+    public function enable() 
+    {
         return parent::enable()
             && $this->registerHook(LayoutVariablesBuilderInterface::BUILD_MAIL_LAYOUT_VARIABLES_HOOK)
         ;
     }
     
-    public function disable() {
+    public function disable() 
+    {
         return parent::disable()
             && $this->unregisterHook(LayoutVariablesBuilderInterface::BUILD_MAIL_LAYOUT_VARIABLES_HOOK)
         ;        
