@@ -35,7 +35,7 @@ In order to be widget-compliant, a module needs to follow two steps:
 Before calling a module for widgets, the core must be sure your module has
 this feature available. This can be done by implementing the interface
 `PrestaShop\PrestaShop\Core\Module\WidgetInterface`
-([Source code](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Core/Module/WidgetInterface.php)).
+([Source code](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Module/WidgetInterface.php)).
 
 ### Declare mandatory methods
 

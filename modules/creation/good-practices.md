@@ -52,7 +52,7 @@ menuTitle: Good practices
 
 - When your module has forms, you should:
   - show a confirmation message if everything went fine or an error message if it did not.
-  - make sure information entered by customers are correct. If you ask a sum, it has to be only numbers. More information about the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Validate.php).
+  - make sure information entered by customers are correct. If you ask a sum, it has to be only numbers. More information about the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Validate.php).
 
 - Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read [Best Practices of the Db Class](https://doc.prestashop.com/display/PS16/Best+Practices+of+the+Db+Class)). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result, you are required to use a token!
 

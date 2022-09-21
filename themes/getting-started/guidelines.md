@@ -31,7 +31,7 @@ Mobile-wise:
 
 Use spaces for indentation in every language (PHP, HTML, CSS, etc.):<br>4 spaces for PHP files, 2 spaces for all other file types.
 
-Use our [.editorconfig](https://editorconfig.org/) file in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/develop/.editorconfig
+Use our [.editorconfig](https://editorconfig.org/) file in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/8.0.x/.editorconfig
 
 ##### PHP files
 
@@ -58,7 +58,7 @@ We recommend that you follow the [RSCSS structure](https://github.com/rstacruz/r
 
 ##### Javascript
 
-Make sure your linter tool follows our .eslint file: https://github.com/PrestaShop/PrestaShop/blob/develop/js/.eslintrc.js
+Make sure your linter tool follows our .eslint file: https://github.com/PrestaShop/PrestaShop/blob/8.0.x/js/.eslintrc.js
 
 If you wish to write ECMAScript 2015 (ES6) code, we recommend using the [Babel compiler](https://babeljs.io/) to maximize compatibility.
 
