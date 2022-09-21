@@ -154,7 +154,7 @@ Prestashop automatically checks if modules have a `config/services.yml` file and
 ./bin/console cache:clear --no-warmup
 ```
 
-In case Prestashop failed to autoload automatically, [you can generate the autoload files][setup-composer] with composer manually.
+If PrestaShop fails to load files automatically, [you can generate the autoloader][setup-composer] with Composer. This will create a `vendor` directory with a Composer-based autoloader inside.
 
 
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
