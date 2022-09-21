@@ -92,7 +92,7 @@ release content in the existing shop.
 
 ### Disable cache
 
-You may have activated a caching system (eg. memcache) on your shop. In that case, make sure to disable it in "Advanced Parameters" > "Performance". You can enable it again once the upgrade process is done.
+You may have activated a caching system (e.g. Memcache) on your shop. In that case, make sure to disable it in "Advanced Parameters" > "Performance". You can enable it again once the upgrade process is done. You might want to also delete the `var/cache/prod` and `var/cache/dev` folders.
 
 **Note about `vendor` folder**: Previous upgrades of PrestaShop 1.7
 showed that conflicts may occur when merging the new vendor/ folder with
