@@ -39,7 +39,7 @@ Symfony Controllers should be thin by default and have only one responsibility: 
 * Validation
 * etc...
 
-You can take a look at [PerformanceController](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php) for an example of good implementation, and [ProductController](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/ProductController.php) for something you should avoid at all costs.
+You can take a look at [PerformanceController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php) for an example of good implementation, and [ProductController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/src/PrestaShopBundle/Controller/Admin/ProductController.php) for something you should avoid at all costs.
 
 {{% notice warning %}}
 **Never, ever call the legacy controller inside the new controller**. It's a no go, no matter the reason!

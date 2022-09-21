@@ -95,7 +95,7 @@ Remember, this is only needed for the Pull Request form, not for your commit mes
 {{% notice note %}}
 **Why is this important?**
 
-We use type & category to group changes in the [changelog](https://github.com/PrestaShop/PrestaShop/blob/develop/docs/CHANGELOG.txt).
+We use type & category to group changes in the [changelog](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/docs/CHANGELOG.txt).
 {{% /notice %}}
 
 ### BC breaks
