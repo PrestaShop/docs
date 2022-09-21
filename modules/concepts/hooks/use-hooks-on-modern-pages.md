@@ -281,5 +281,5 @@ We have used a key for translation, making our own translations available in bac
 
 And "voila!", the module could be of course improved with so many features, adding filters on export for instance, using the `request` hook parameter and updating the Product repository.
 
-[setup-composer]: {{< ref "/1.7/modules/concepts/composer.md" >}}
+[setup-composer]: {{< ref "/8/modules/concepts/composer.md" >}}
 
