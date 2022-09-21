@@ -18,7 +18,7 @@ A behaviour (`behat`) tests are a part of integration tests. They allow testing 
 During behat tests the actual database queries are executed, therefore before testing you need to run a command `composer create-test-db` to create a test database.
 
 {{% notice %}}
-The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump_database_name_8.0.0.sql`. That `ps_dump_database_name_8.0.0.sql` is later used to reset the database. You can check the actual script for more information - [/tests/bin/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/bin/create-test-db.php).
+The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump_database_name_8.0.0.sql`. That `ps_dump_database_name_8.0.0.sql` is later used to reset the database. You can check the actual script for more information - [/tests/bin/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/bin/create-test-db.php).
 {{% /notice %}}
 
 ### Tables dump
@@ -88,10 +88,10 @@ The behat `Context` files are classes that contains the implementations of the f
 The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and might not be implemented well).
 {{% /notice%}}
 
-When creating a new Context class, it should extend the [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php).
+When creating a new Context class, it should extend the [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php).
 
 {{% notice %}}
-The [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php) contains some commonly used helper methods, and it implements the `Behat\Behat\Context` which is necessary for these tests to work.
+The [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php) contains some commonly used helper methods, and it implements the `Behat\Behat\Context` which is necessary for these tests to work.
 {{% /notice %}}
 
 This is how the context looks like:
@@ -133,7 +133,7 @@ As you can see in example, the string `@Given I add order :orderReference with t
 
 ## Shared storage
 
-The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common usage example is the `id` reference - we specify a certain keyword e.g. `product1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
+The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common usage example is the `id` reference - we specify a certain keyword e.g. `product1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
 ```php
     protected function getProductForEditing(string $reference): ProductForEditing
     {
@@ -147,7 +147,7 @@ The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/
 
 ## Hooks
 
-Behats allow you to use [hooks](https://docs.behat.org/en/v2.5/guides/3.hooks.html#hooks). You can find some usages in [CommonFeatureContext](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/CommonFeatureContext.php). You can use these hooked methods by tagging them before the `Feature` (or before `Scenario` depending on the hook type), like this ([add_product.feature](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/Product/AddProductFeatureContext.php)
+Behats allow you to use [hooks](https://docs.behat.org/en/v2.5/guides/3.hooks.html#hooks). You can find some usages in [CommonFeatureContext](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/CommonFeatureContext.php). You can use these hooked methods by tagging them before the `Feature` (or before `Scenario` depending on the hook type), like this ([add_product.feature](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/Domain/Product/AddProductFeatureContext.php)
 ):
 
 ```feature

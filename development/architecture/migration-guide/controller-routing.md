@@ -21,5 +21,5 @@ Controllers are responsible for performing "Actions". Actions are methods of Con
 5. **Try to avoid creating helper methods in your controller.** If you find yourself needing them, that might mean the Controller is becoming too complex. This can be solved by extracting the code into dedicated services.
 
 {{% notice %}}
-You can take a look at [PerformanceController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php) for an example of good implementation, and [ProductController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/ProductController.php) for something you should avoid at all costs.
+You can take a look at [PerformanceController](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php) for an example of good implementation, and [ProductController](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/ProductController.php) for something you should avoid at all costs.
 {{% /notice %}}
