@@ -94,7 +94,7 @@ Filter results are cached inside SQL in order to improve performance. Same query
 
 There were so many hooks used in the module that the hook actions have been moved outside of the main file, unlike many other modules. A hook dispatcher is in charge of linking the main module file and calling the right hooks. Hook actions will be found in `src/Hook`
 
-### MysQL adapter
+### MySQL adapter
 
 Inside `src/Adapter` is the code responsible for mapping faceted search queries to MySQL queries
 
