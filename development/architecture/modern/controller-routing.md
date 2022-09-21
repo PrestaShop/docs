@@ -8,7 +8,7 @@ title: Symfony controllers & routing
 Read the Symfony documentation on [Controllers](https://symfony.com/doc/4.4/controller.html) and [Routing](https://symfony.com/doc/4.4/routing.html).
 {{% /notice %}}
 
-Controllers are located in `src/PrestaShopBundle/Controller/Admin` folder. They are organized in sub-folders following the Back Office menu. For instance, the [TaxController](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Improve/International/TaxController.php) is located in `src/PrestaShop/Controller/Admin/Improve/International`.
+Controllers are located in `src/PrestaShopBundle/Controller/Admin` folder. They are organized in sub-folders following the Back Office menu. For instance, the [TaxController](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/TaxController.php) is located in `src/PrestaShop/Controller/Admin/Improve/International`.
 Same applies to **Improve**,  **Sell** sections etc.
 
 This is how the directory tree of controllers should look like:
@@ -39,7 +39,7 @@ Symfony Controllers should be thin by default and have only one responsibility: 
 * Validation
 * etc...
 
-You can take a look at [PerformanceController](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php) for an example of good implementation, and [ProductController](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/ProductController.php) for something you should avoid at all costs.
+You can take a look at [PerformanceController](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php) for an example of good implementation, and [ProductController](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/ProductController.php) for something you should avoid at all costs.
 
 {{% notice warning %}}
 **Never, ever call the legacy controller inside the new controller**. It's a no go, no matter the reason!
@@ -306,4 +306,4 @@ redirected to the new migrated url.
 
 ### Javascript generation
 
-In order to avoid hardcoded links in JavaScript, Prestashop uses the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/admin-dev/themes/new-theme/js/components/router.js).
+In order to avoid hardcoded links in JavaScript, Prestashop uses the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/js/components/router.js).

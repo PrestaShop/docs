@@ -101,7 +101,7 @@ The utils directory contain files that are necessary to run tests.
 #### Globals
 This file contains all global variables that can be used in test files, pages and common tests.
 
-The description of each variable in this file can be found in [README.md](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/UI/README.md).
+The description of each variable in this file can be found in [README.md](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/UI/README.md).
 
 #### Setup
 [Mocha](https://mochajs.org/) gives us the possibility to load and run files before test files (with [\--file option](https://mochajs.org/#-file-filedirectoryglob)).

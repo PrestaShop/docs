@@ -77,4 +77,4 @@ $shopList = $shopContext->getContextListShopID();
 $currentIdShop = $shopContext->getContextShopID();
 ```
 
-The shop context adapter class has many functions with self-explanatory naming and helpful comments, feel free to [explore it by yourself](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Adapter/Shop/Context.php).
+The shop context adapter class has many functions with self-explanatory naming and helpful comments, feel free to [explore it by yourself](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Shop/Context.php).
