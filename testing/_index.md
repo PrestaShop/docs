@@ -9,7 +9,17 @@ chapter: true
 
 # Testing
 
-This section describes how PrestaShop Core is covered by automatic tests.
+# How testing works in PrestaShop
 
-{{% children %}}
+PrestaShop is a complex software and uses automated testing to ensure that the new additions to the codebase do not break existing behaviors.
+
+Automated tests are located in `tests` folders
+
+## What kind of tests do PrestaShop use?
+
+In the `tests` folder, you will find:
+
+- [Integration tests](/8/testing/integration-tests/)
+- [Unit tests](/8/testing/unit-tests/)
+- [User interface tests](/8/testing/ui-tests/)
 
