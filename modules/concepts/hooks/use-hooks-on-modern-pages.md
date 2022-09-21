@@ -156,7 +156,6 @@ Prestashop automatically checks if modules have a `config/services.yml` file and
 
 In case Prestashop failed to autoload automatically, [you can generate the autoload files][setup-composer] with composer manually.
 
-This will generate a vendor folder, with inside composer folder and autoload.php file.
 
 You can now use it in your module (and everywhere in PrestaShop modern pages!):
 
