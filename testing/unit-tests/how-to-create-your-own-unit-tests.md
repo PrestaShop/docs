@@ -1,7 +1,9 @@
 ---
 title: How to create your own unit tests
 menuTitle: Creating your own unit tests
-weight: 10
+weight: 20
+aliases:
+  - /8/testing/how-to-create-your-own-unit-tests/
 ---
 
 # How to create your own unit tests or add tests to PrestaShop
