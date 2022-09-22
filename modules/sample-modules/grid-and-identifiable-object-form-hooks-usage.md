@@ -175,7 +175,7 @@ Route name `ps_democqrshooksusage_toggle_is_allowed_for_review` matches the one 
 ### Extending grid query builder
 
 By just extending grid definition we won't be able to display any data since we need to fetch it first. Luckily, we can add additional sql
-conditions by extending [doctrine's query builder](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/query-builder.html).
+conditions by extending [doctrine's query builder](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/query-builder.html).
 
 ```php
 <?php
