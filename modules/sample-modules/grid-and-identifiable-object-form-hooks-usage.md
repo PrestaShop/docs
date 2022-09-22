@@ -175,7 +175,7 @@ Route name `ps_democqrshooksusage_toggle_is_allowed_for_review` matches the one 
 ### Extending grid query builder
 
 By just extending grid definition we won't be able to display any data since we need to fetch it first. Luckily, we can add additional sql
-conditions by extending [doctrine's query builder](https://www.doctrine-project.org/projects/doctrine-orm/en/2.6/reference/query-builder.html).
+conditions by extending [doctrine's query builder](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/query-builder.html).
 
 ```php
 <?php
@@ -341,6 +341,3 @@ private function updateCustomerReviewStatus(array $params)
 when we created the switch type form we named it `is_allowed_for_review`. By using the same name we can get the state (on or off).
 This hook receives from `$params` the form data, that you can retrieve like this: `$params['form_data']`.
 All the form data is available here, including `is_allowed_for_review` data which comes from the switch.
-
-You can find example module here: 
-https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform2
