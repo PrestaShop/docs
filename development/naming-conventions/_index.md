@@ -20,7 +20,7 @@ PrestaShop controllers follow these naming conventions:
 
 Actions follow these conventions:
 
-- Action names names start with a lower case letter and end in _"Action"_ (e.g. `deleteAction`).
+- Action names start with a lowercase letter and end in _"Action"_ (e.g. `deleteAction`).
 - Action names should be clear and concise: `editAction()`, `savePrivateNoteAction()` are good examples, but `formAction()` or `processAction()` are not clear enough.
 - The main controller action should be named `indexAction`.
 - Some actions names are standardized:
