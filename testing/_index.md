@@ -15,7 +15,7 @@ PrestaShop is a complex software and uses automated testing to ensure that the n
 
 Automated tests are located in `tests` folders
 
-## What kind of tests do PrestaShop use?
+## What kind of tests does PrestaShop use?
 
 In the `tests` folder, you will find:
 

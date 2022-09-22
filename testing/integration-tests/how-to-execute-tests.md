@@ -1,17 +1,17 @@
 ---
-title: How to execute Integrations Tests
-menuTitle: Executing integrations tests
+title: How to execute Integration Tests
+menuTitle: Executing integration tests
 weight: 10
 ---
 
-# How to execute Integrations Tests
+# How to execute Integration Tests
 
-There are two integrations tests suite : 
+There are two integration tests suites : 
 
-* one for behat tests
-* one for phpunit tests
+* one using Behat
+* one for PHPUnit tests
 
-Each suite needs a specific PHPUnit configuration. This is why each test suite has a specific composer command:
+Each suite needs a specific PHPUnit configuration. This is why each test suite has a specific Composer command:
 
 * `composer integration-tests`
 * `composer integration-behaviour-tests`

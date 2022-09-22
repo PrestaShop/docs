@@ -6,7 +6,7 @@ weight: 10
 
 # How to execute Unit Tests
 
-You can execute test suite with specific composer command:
+You can execute the test suite with specific Composer command:
 
 * `composer unit-tests`
 
