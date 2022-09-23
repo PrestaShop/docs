@@ -12,14 +12,14 @@ Starting from PrestaShop 1.7.3, you can access the modern Services Container int
 * [Twig](https://twig.symfony.com/), the most popular templating engine;
 * [Swiftmailer](https://swiftmailer.symfony.com/), a feature-rich mailer;
 * [Doctrine ORM](https://www.doctrine-project.org/projects/orm.html) and [Doctrine DBAL](https://www.doctrine-project.org/projects/dbal.html) to manage your database;
-* [Filesystem](https://symfony.com/doc/3.3/components/filesystem.html) and [Finder](https://symfony.com/doc/3.3/components/finder.html) libraries to manage all filesystem operations;
+* [Filesystem](https://symfony.com/doc/4.4/components/filesystem.html) and [Finder](https://symfony.com/doc/4.4/components/finder.html) libraries to manage all filesystem operations;
 * [Monolog](https://seldaek.github.io/monolog/) for every logging operations;
-* [Serializer](https://symfony.com/doc/3.3/components/serializer.html) library for whom who need to manipulate Json and Xml formats...
+* [Serializer](https://symfony.com/doc/4.4/components/serializer.html) library for whom who need to manipulate Json and Xml formats...
 
 Of course, you also have access to every service used by the Core of PrestaShop. This means that you can rely on all services defined in `PrestaShopBundle/config/` folder, except from the ones declared in `adapter` folder: they will be removed at some point.
 
 {{% notice tip %}}
-If you don't know what a service is, have a look at the Symfony documentation about the [service container](https://symfony.com/doc/3.3/service_container.html).
+If you don't know what a service is, have a look at the Symfony documentation about the [service container](https://symfony.com/doc/4.4/service_container.html).
 {{% /notice %}}
 
 ## Better modules on modern pages
@@ -49,7 +49,7 @@ As we need to act on Dashboard but after the header, in the icons toolbar (with 
 
 ### Second step: create and register the Hook
 
-Create a [new module](https://doc.prestashop.com/display/PS17/Creating+a+first+module) called `foo` and register the hook. You should end up with this kind of code in your module:
+Create a [new module](https://devdocs.prestashop.com/8/modules/creation/tutorial) called `foo` and register the hook. You should end up with this kind of code in your module:
 
 ```php
 <?php
@@ -146,7 +146,11 @@ services:
     product_repository:
         class: Foo\Repository\ProductRepository
         arguments: ['@doctrine.dbal.default_connection', '%database_prefix%']
+        public: true
 ```
+{{% notice info %}}
+Note: Since Symfony 4.4, services that are not dependency injected and that are not declared as “public” are removed from the container.
+{{% /notice %}}
 
 Prestashop automatically checks if modules have a `config/services.yml` file and will autoload it for you. In order to force Prestashop to parse the file, you need to clear the cache:
 
@@ -178,7 +182,7 @@ public function hookDisplayDashboardToolbarIcons($hookParams)
 
 In Product Catalog Page you should see the list of Products in debug toolbar in "Dump" section:
 
-![Get products in Dump section](https://i.imgur.com/un7NcIL.png)
+![Get products in Dump section](./Catalog_Products_dump.png)
 
 #### Using the Symfony components to create an XML export file
 
@@ -208,7 +212,7 @@ public function hookDisplayDashboardToolbarIcons($hookParams)
                 'xml_format_output' => true,
             ]
         );
-        $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_.'products.xml', $productsXml);
+        $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_ . 'products.xml', $productsXml);
     }
 }
 ```
@@ -244,14 +248,20 @@ We could (of course) use Smarty to render a template, but it's a chance to disco
 public function hookDisplayDashboardToolbarIcons($params)
 {
     if ($this->isSymfonyContext() && $params['route'] === 'admin_product_catalog') {
-        $products = $this->getProducts(1);
-        $productsXml = $this->serializeProducts($products);
-        $filepath = _PS_ROOT_DIR_.'/products.xml';
+        $products = $this->get('product_repository')->findAllByLangId(1);
 
-        $this->writeFile($productsXml, $filepath);
+        $productsXml = $this->get('serializer')->serialize(
+            $products,
+            'xml',
+            [
+                'xml_root_node_name' => 'products',
+                'xml_format_output' => true,
+            ]
+        );
+        $this->get('filesystem')->dumpFile(_PS_UPLOAD_DIR_ . 'products.xml', $productsXml);
 
         return $this->get('twig')->render('@Modules/Foo/views/download_link.twig', [
-            'filepath' => _PS_BASE_URL_.'/products.xml',
+            'filepath' => _PS_BASE_URL_ . '/upload/' . 'products.xml',
         ]);
     }
 }
@@ -265,10 +275,8 @@ And now, the template:
 
 ```twig
 {# in Foo/views/download_link.twig #}
-<a id="desc-product-export" class="list-toolbar-btn" href="{{ filepath }}" download>
-  <b data-toggle="pstooltip" class="label-tooltip" data-original-title="{{ "Export XML"|trans({}, 'Module.Foo') }}" data-html="true" data-placement="top">
-    <i class="material-icons">cloud_upload</i>
-  </b>
+<a id="desc-product-export" class="dropdown-item" href="{{ filepath }}" target="_blank">
+    <i class="material-icons">cloud</i>{{ "Export XML"|trans({}, 'Module.Foo') }}
 </a>
 ```
 
@@ -276,7 +284,7 @@ And now, the template:
 We have used a key for translation, making our own translations available in back office when using Twig.
 {{% /notice %}}
 
-![Export XML action button](https://i.imgur.com/5HExjcC.png)
+![Export XML action button](./Catalog_Products_2xml.png)
 
 And "voila!", the module could be of course improved with so many features, adding filters on export for instance, using the `request` hook parameter and updating the Product repository.
 
