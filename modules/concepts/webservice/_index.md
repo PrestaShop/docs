@@ -14,13 +14,10 @@ Since 1.7 version, developers can extend the resources available through the Pre
 
 The following example is about an entity that can manage blog articles, the folder where you create your Entity is not relevant.
 
-PS: Remember to create the respective table(s) in the database, usually created during the module installation. Don't forget to set your [composer.json](#composer-configuration-to-use-namespaces-in-your-objectmodel-entity) correctly to use namespaces and autoload of your classes in the PrestaShop environment.
+PS: Remember to create the respective table(s) in the database, usually created during the module installation.
 ```php
 <?php
-// modules/yourmodule/src/Models/Article.php
-namespace Acme\MyModule\Models;
-
-Use PrestaShop\PrestaShop\Adapter\Entity\ObjectModel;
+// modules/yourmodule/src/Entity/Article.php
 
 class Article extends ObjectModel
 {
@@ -37,10 +34,12 @@ class Article extends ObjectModel
         'primary' => 'id_article',
         'multilang' => true,
         'fields' => array(
-            'title' => array('type' => self::TYPE_STRING, 'validate' => 'isCleanHtml', 'required' => true, 'size' => 255),
             'type' => array('type' => self::TYPE_STRING, 'validate' => 'isCleanHtml', 'required' => true, 'size' => 255),
+            'date_add' => ['type' => self::TYPE_DATE, 'validate' => 'isDate'],
+            'date_upd' => ['type' => self::TYPE_DATE, 'validate' => 'isDate'],
 
             // Lang fields
+            'title' => array('type' => self::TYPE_STRING, 'validate' => 'isCleanHtml', 'required' => true, 'size' => 255),
             'content' => array('type' => self::TYPE_HTML, 'lang' => true, 'validate' => 'isCleanHtml', 'size' => 4000),
             'meta_title' => array('type' => self::TYPE_STRING, 'lang' => true, 'validate' => 'isCleanHtml', 'size' => 255)
         )
@@ -83,41 +82,110 @@ public function hookAddWebserviceResources($params)
 {
   return [
     'articles' => array(
-        'description' => 'Blog articles', 
-        'class' => 'Acme\MyModule\Models\Article',
-        'forbidden_method' => array('DELETE') // optional
+        'description' => 'Blog articles', // The description for who access to this resource through WS
+        'class' => 'Article', // The classname of your Entity
+        'forbidden_method' => array('DELETE') // optional if you want to forbid some methods
     )
   ];
 }
 ```
 
-### Composer configuration to use namespaces in your ObjectModel entity
-
-To correctly load your class (Entity) you need to configure correctly your composer.json
+### Load your entity
+Don't forget to include the class file of your entity (i.e. Article.php) at the top of your main module file.
 The following is an example of a correct configuration to load your entities in whatever folder you want.
 
 ```php
-// modules/yourmodule/composer.json
+include_once dirname(__FILE__).'/src/Entity/Article.php';
 ```
-```json
+
+### Complete example of a main module file
+
+```php
+<?php
+
+if (!defined('_PS_VERSION_')) {
+    exit;
+}
+
+include_once dirname(__FILE__).'/src/Entity/Article.php';
+
+class WsArticle extends Module
 {
-    "name": "yourname/yourmodule",
-    "autoload" : {
-        "psr-4" : {
-            "Acme\\MyModule\\" : "src/"
+    public function __construct()
+    {
+        $this->name = 'wsarticle';
+        $this->tab = 'front_office_features';
+        $this->version = '1.0.0';
+        $this->author = 'PrestaShop';
+        $this->need_instance = 0;
+        $this->secure_key = Tools::encrypt($this->name);
+        $this->bootstrap = true;
+
+        parent::__construct();
+
+        $this->displayName = $this->getTranslator()->trans('Extend WS demo module', array(), 'Modules.Wsarticle.Admin');
+    }
+
+    public function install()
+    {
+        return parent::install() &&
+            $this->installDB() && // Create tables in the DB
+            $this->registerHook('addWebserviceResources'); // Register the module to the hook
+    }
+
+    public function installDB()
+    {
+        $sql = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.Article::$definition['table'].'` (
+            `id_article` int(10) unsigned NOT NULL AUTO_INCREMENT,
+            `type` varchar(255),
+            `date_add` datetime NOT NULL,
+            `date_upd` datetime NOT NULL,
+            PRIMARY KEY  (`id_article`)
+        ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci';
+
+        $sql_lang = 'CREATE TABLE IF NOT EXISTS `'._DB_PREFIX_.Article::$definition['table'].'_lang` (
+            `id_article` int(10) unsigned NOT NULL,
+            `id_lang` int(10) unsigned NOT NULL,
+            `title` varchar(255),
+            `content` text NOT NULL,
+            `meta-title` varchar(255) NOT NULL,
+            PRIMARY KEY  (`id_article`, `id_lang`)
+        ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci';
+
+        if (Db::getInstance()->execute($sql) && Db::getInstance()->execute($sql_lang)) {
+            return true;
         }
-    },
-    "type" : "prestashop-module"
+        
+        return false;
+    }
+
+    public function hookAddWebserviceResources($params)
+    {
+        return [
+            'articles' => array(
+                'description' => 'Blog articles', // The description for who access to this resource through WS
+                'class' => 'Article', // The classname of your Entity
+                'forbidden_method' => array('DELETE') // optional if you want to forbid some methods
+            )
+        ];
+    }
 }
 ```
 
-Don't forget to load the `autoload.php` in your module
-```php
-// modules/yourmodule/mymodule.php
-<?php
-// ...
+### Final notes
 
-require_once __DIR__.'/vendor/autoload.php';
+Following the example above, the new resource will be available in the webservices resources list:
 
-// ...
-```
+{{< figure src="../img/new-ws-resource.png" title="New Webservice resource" >}}
+
+And will be accessible through your api url, plus the name that you've decided in `objectsNodeName`, for instance:
+
+`https://mywebsite.shop/api/articles`
+
+will give you something similar(in browser):
+
+{{< figure src="../img/empty-articles.png" title="Webservice articles list (empty)" >}}
+
+And something similar when you have articles in database:
+
+{{< figure src="../img/articles-list.png" title="Webservice articles list (one article)" >}}
