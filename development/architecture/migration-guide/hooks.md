@@ -14,7 +14,7 @@ Getting the list of available Hooks in modern pages is really easy. Thanks to th
 
 Use this trick to find out which hooks are called on a legacy page.
 
-In ``classes/Hook``, find the [exec() function](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Hook.php#L733) and add the following code:
+In ``classes/Hook``, find the [exec() function](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Hook.php#L735) and add the following code:
 
 ```php
 <?php
