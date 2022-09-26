@@ -99,7 +99,7 @@ In the "Classic" Theme, [notifications are implemented as a partial template fil
 
 ## Add your own message in your front controller
 
-Your front controller holds [the 4 following variables](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php#L616-L621):
+Your front controller holds [the 4 following variables](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php#L637-L640):
 
 * ``$this->errors``
 * ``$this->success``
