@@ -306,4 +306,4 @@ redirected to the new migrated url.
 
 ### Javascript generation
 
-In order to avoid hardcoded links in JavaScript, Prestashop uses the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/js/components/router.js).
+In order to avoid hardcoded links in JavaScript, Prestashop uses the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/js/components/router.ts).
