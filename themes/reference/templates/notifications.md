@@ -108,7 +108,7 @@ Your front controller holds [the 4 following variables](https://github.com/Prest
 
 They are PHP arrays, and they hold messages as a string.
 
-Here is how you can [redirect the customer AND display a message after an action](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php#L614-L633):
+Here is how you can [redirect the customer AND display a message after an action](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php#L634-L653):
 
 ```php
 $this->success[] = $this->l('Information successfully updated.');

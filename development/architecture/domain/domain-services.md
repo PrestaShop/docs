@@ -17,7 +17,7 @@ Here are some principles for implementing a Domain Service:
 2. If it uses any legacy service or object model, then it MUST be placed in the `Adapter` namespace.
 3. If it needs to perform a sql query and related `ObjectModel` exists, then this query MUST be delegated to the appropriate repository class which must ensure that no legacy exceptions are thrown. If the related `ObjectModel` already implements such method, then the repository must delegate its implementation to the `ObjectModel`.
 {{% notice %}}
-   Some reusable methods are present in [AbstractObjectModelRepository](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/AbstractObjectModelRepository.php).
+   Some reusable methods are present in [AbstractObjectModelRepository](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Repository/AbstractObjectModelRepository.php).
 {{% /notice %}}
 4. If `ObjectModel` contains fields validation, it MUST be validated by a dedicated validator class before persisting to database (e.g. when using `add`/`update`/`save` methods). It ensures that legacy [PrestashopException](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/exception/PrestaShopException.php) is not bubbling up and each validation error can be identified by a dedicated exception or exception code.
 {{% notice %}}
@@ -42,13 +42,13 @@ Here are some principles for implementing a Domain Service:
 
 ## Product domain services
 
-1. [Product update services](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/Update)
+1. [Product update services](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/Update)
 2. [Virtual product update services](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/VirtualProduct/Update)
 2. [Combination update services](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Combination/Update)
 2. [Combination create services](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Combination/Create)
 
 ## Service usage in `CommandHandler` examples
 
-1. [Combination command handlers](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/Combination/CommandHandler)
-2. [Virtual product command handlers](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/VirtualProduct/CommandHandler)
-2. [Product stock command handlers](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/Stock/CommandHandler)
+1. [Combination command handlers](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/Combination/CommandHandler)
+2. [Virtual product command handlers](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/VirtualProduct/CommandHandler)
+2. [Product stock command handlers](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/Stock/CommandHandler)
