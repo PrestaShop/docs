@@ -56,6 +56,8 @@ DROP TABLE IF EXISTS `PREFIX_referrer`;
 DROP TABLE IF EXISTS `PREFIX_referrer_cache`;
 DROP TABLE IF EXISTS `PREFIX_referrer_shop`;
 [...]
+/* PHP:ps_800_add_security_tab(); */;
+[...]
 ```
 
 In there we can read the SQL queries to execute when upgrading to 8.0.0.
