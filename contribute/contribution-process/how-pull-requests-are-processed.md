@@ -26,7 +26,7 @@ The results of these checks is displayed at the bottom of the Pull Request. Some
 
 ### Prestonbot and Issuebot
 
-[Prestonbot](https://github.com/PrestaShop/prestonbot) (based on [Carsonbot](https://github.com/carsonbot/carsonbot)) is a custom bot that looks at all Pull Requests and tries to help us manage the project. He has multiple capabilities.
+[Prestonbot](https://github.com/PrestaShop/prestonbot) (based on [Carsonbot](https://github.com/symfony-tools/carsonbot)) is a custom bot that looks at all Pull Requests and tries to help us manage the project. He has multiple capabilities.
 
 For example he detects mistakes in the pull request description, he add some labels to classify the pull requests, he welcomes new contributors to the project ...
 
