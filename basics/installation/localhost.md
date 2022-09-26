@@ -123,7 +123,7 @@ If you intend to work on PrestaShop itself, we suggest using Git to clone the so
 
 As stated above, if you decide to work on PrestaShop itself, it's best to clone the PrestaShop repository and work using git. Depending on the version of PrestaShop you want to work on, you will need to choose the right branch:
 
-* The [develop branch](https://github.com/PrestaShop/PrestaShop/tree/develop) contains the current work in progress for the next minor or major version.
+* The [develop branch](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.0) contains the current work in progress for the next minor or major version.
     - **This is the right branch to contribute new features, refactors, small bug fixes, etc.**
 * The maintenance branches (_1.6.1.x, 1.7.0.x, 1.7.1.x, 1.7.2.x, ..._) contains all patches made for each minor version.
     - For example, the _1.7.2.x_ branch contains all patches from 1.7.2.0 to 1.7.2.5.
