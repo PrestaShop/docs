@@ -13,7 +13,7 @@ We use the following stack:
 * [Playwright](https://github.com/microsoft/playwright/) as automation tool
 * [Mocha](https://mochajs.org/) as test framework
 * [Chai](https://www.chaijs.com/) as assertion library 
-* [Faker](https://github.com/marak/Faker.js/) as fake data generator
+* [Faker](https://github.com/faker-js/faker) as fake data generator
 
 ## Running web acceptance tests
 
