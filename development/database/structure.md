@@ -46,8 +46,8 @@ This SQL file will be stored in the [auto upgrade](https://github.com/PrestaShop
 
 Its name is the PrestaShop version on which the change will be applied.
 
-For instance, here is the file *[1.7.8.0.sql](https://github.com/PrestaShop/autoupgrade/tree/dev/upgrade/sql/1.7.8.0.sql)*,
-used by shops upgrading to 1.7.8.0 or later:
+For instance, here is the file *[8.0.0.sql](https://github.com/PrestaShop/autoupgrade/blob/dev/upgrade/sql/8.0.0.sql)*,
+used by shops upgrading to 8.0.0 or later:
 
 ```sql
 [...]
