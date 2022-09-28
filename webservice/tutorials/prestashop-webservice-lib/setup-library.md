@@ -20,7 +20,7 @@ Now that your webservice is configured and accessible you might want to use it. 
 If you are starting a new project you can init your composer project along with the dependency:
 
 ```bash
-composer init --require="prestashop/prestashop-webservice-lib:dev-master" -n  
+composer init --require="prestashop/prestashop-webservice-lib:dev-master" -n
 composer install
 ```
 
@@ -97,6 +97,10 @@ Once the instance is created you can access the following methods:
 | edit()   | PUT               | UPDATE |
 | delete() | DELETE            | DELETE |
 
+{{% notice note %}}
+**PATCH** method is not available in this library.
+{{% /notice %}}
+
 ### Handling errors
 
 It is essential that you understand how to handle errors with the webservice library. By implementing error-catch method early, you will more easily detect issues, and be able to correct them on the go.
@@ -110,7 +114,7 @@ The error handling is done within a `try...catch` block, with the webservice ins
 try {
     // creating webservice access
     $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
- 
+
     // call to retrieve all customers
     $xml = $webService->get(['resource' => 'customers']);
 } catch (PrestaShopWebserviceException $ex) {

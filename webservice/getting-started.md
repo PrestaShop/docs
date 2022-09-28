@@ -16,13 +16,14 @@ The PrestaShop web service uses the REST architecture in order to be available o
 [REST](https://en.wikipedia.org/wiki/REST) defines roughly a style of software architecture, which promotes the use of HTTP methods when building web application, instead of custom methods or protocols such as SOAP or WSDL. It defines several rules, including one that is similar to CRUD, which is described below.
 {{% /notice %}}
 
-HTTP has several methods that can perform processing on data as defined in the REST architecture, among which are [4 main methods](https://en.wikipedia.org/wiki/HTTP#Request_methods):
+HTTP has several methods that can perform processing on data as defined in the REST architecture, among which are [5 main methods](https://en.wikipedia.org/wiki/HTTP#Request_methods):
 
 | HTTP/REST | CRUD   | SQL    |
 |-----------|--------|--------|
 | POST      | Create | INSERT |
 | GET       | Read   | SELECT |
 | PUT       | Update | UPDATE |
+| PATCH     | Update | UPDATE |
 | DELETE    | Delete | DELETE |
 
 ## Enabling & Creating an access to the webservice
@@ -67,8 +68,8 @@ When you call the root `/api` url you will get a summary of the available APIs y
 <?xml version="1.0" encoding="UTF-8"?>
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
     <api shopName="Prestashop">
-        <addresses xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" delete="true" head="true">
-            <description xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" delete="true" head="true">
+        <addresses xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" patch="true" delete="true" head="true">
+            <description xlink:href="http://example.com/api/addresses" get="true" put="true" post="true" patch="true" delete="true" head="true">
             The Customer, Brand and Customer addresses</description>
             <schema xlink:href="http://example.com/api/addresses?schema=blank" type="blank"/>
             <schema xlink:href="http://example.com/api/addresses?schema=synopsis" type="synopsis"/>
@@ -192,7 +193,7 @@ This parameter can only be used for listings, not for individual records. If you
 {{% notice note %}}
 A response obtained with "display" other than "full" can't be used in a **PUT** (update) request, because the `WebserviceRequest` class validation for fields is the same for **POST** (create) and **PUT** (update).
 
-This should be fixed in a near future with a *yet-to-come-pull-request* introducing the PATCH method!
+The **PATCH** method allows using a partial display.
 {{% /notice %}}
 
 ##### Control returned items with "filter"
@@ -246,6 +247,10 @@ PrestaShop will take care of adding everything in the database, and will return 
 ### Update a resource
 
 To edit an existing resource: **GET** the full XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PUT HTTP request** with the whole XML file as a body content to the same URL again.
+
+### Partially update a resource
+
+To partially edit an existing resource: **GET** a part of the XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PATCH HTTP request** with the partial XML file as the body content to the same URL again.
 
 ### Using JSON instead of XML
 
