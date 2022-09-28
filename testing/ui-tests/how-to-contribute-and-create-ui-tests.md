@@ -105,7 +105,7 @@ The description of each variable in this file can be found in [README.md](https:
 
 #### Setup
 [Mocha](https://mochajs.org/) gives us the possibility to load and run files before test files (with [\--file option](https://mochajs.org/#-file-filedirectoryglob)).
-We use that option to run our `setup.js` file. This file opens only one browser for the whole campaign (and not one browser per test), since we're then running each test file in its [own context](https://github.com/microsoft/playwright/blob/master/docs/api.md#class-browsercontext).
+We use that option to run our `setup.js` file. This file opens only one browser for the whole campaign (and not one browser per test), since we're then running each test file in its [own context](https://github.com/microsoft/playwright/blob/main/docs/src/api/class-browsercontext.md).
 
 #### Browser helper
 This helper file is used to centralize the browser and tab functions called in all tests. 
@@ -190,5 +190,5 @@ The only assumption we have to make is the presence of certain items like Orders
 If you need to rely on the fixtures too, make sure to use the description of the objects you’re looking for in the `data` folder. If it’s not complete, you can expand it and make a Pull Request, we’ll be happy to improve our datasets !
 
 ### Faker
-When we need to create new items, we rely on [Faker](https://github.com/marak/Faker.js/) to create random data.  
+When we need to create new items, we rely on [Faker](https://github.com/faker-js/faker) to create random data.  
 This helps us make sure we’re testing with randomized sets of data and covering a lot of cases. It’s very important to check the specifications before to make sure you’re properly setting up your faker : input length, authorized characters, range of dates/values, etc.

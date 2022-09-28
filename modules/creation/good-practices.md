@@ -85,9 +85,9 @@ add a preliminary check before using them (I.e with `extension_loaded`). This pr
 
 **A few recommendations for your email templates**
 
-- Use our [official SDK](https://github.com/PrestaShop/email-templates-sdk) to develop your emails: 
+- Use our [official SDK](https://github.com/PrestaShopCorp/email-templates-sdk) to develop your emails: 
 - Make sure to submit on Addons a valid zip, built with the SDK.
-- Test your emails with the [official module](https://github.com/PrestaShop/email-templates-sdk).
+- Test your emails with the [official module](https://github.com/PrestaShopCorp/email-templates-sdk).
 
 [coding-standards]: {{< ref "8/development/coding-standards" >}}
 [display-content-front-office]: {{< ref "8/modules/creation/displaying-content-in-front-office" >}}
