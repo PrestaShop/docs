@@ -45,16 +45,16 @@ class Article extends ObjectModel
         )
     );
 
-  protected $webserviceParameters = array(
-    'objectNodeName' => 'article',
-    'objectsNodeName' => 'articles',
-    'fields' => array(
-      'title' => array('required' => true),
-      'type' => array('required' => true),
-      'content' => array(),
-      'meta_title' => array(),
-    )
-  );
+    protected $webserviceParameters = array(
+      'objectNodeName' => 'article',
+      'objectsNodeName' => 'articles',
+      'fields' => array(
+          'title' => array('required' => true),
+          'type' => array('required' => true),
+          'content' => array(),
+          'meta_title' => array(),
+        )
+    );
 }
 ```
 
@@ -75,27 +75,27 @@ The parameter to set which fields to expose through the webservice and settings 
 'fields' => array()
 ```
 
-### Register it through the addWebserviceResources hook
-The hook `addWebserviceResources` must be registered by your module, usually done during the module installation.
+### Registration with a hook
+The hook `addWebserviceResources` must be registered and implemented by your module.
 ```php
 public function hookAddWebserviceResources($params)
 {
-  return [
-    'articles' => array(
-        'description' => 'Blog articles', // The description for who access to this resource through WS
-        'class' => 'Article', // The classname of your Entity
-        'forbidden_method' => array('DELETE') // optional if you want to forbid some methods
-    )
-  ];
+    return [
+      'articles' => [
+          'description' => 'Blog articles', // The description for those who access to this resource through WS
+          'class' => 'Article', // The classname of your Entity
+          'forbidden_method' => array('DELETE') // Optional, if you want to forbid some methods
+      ]
+    ];
 }
 ```
 
 ### Load your entity
 Don't forget to include the class file of your entity (i.e. Article.php) at the top of your main module file.
-The following is an example of a correct configuration to load your entities in whatever folder you want.
+The following is an example of a correct configuration to load your example entity to your module.
 
 ```php
-include_once dirname(__FILE__).'/src/Entity/Article.php';
+include_once _PS_MODULE_DIR_ . 'wsarticle/src/Entity/Article.php';
 ```
 
 ### Complete example of a main module file
@@ -107,7 +107,7 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-include_once dirname(__FILE__).'/src/Entity/Article.php';
+include_once _PS_MODULE_DIR_ . 'wsarticle/src/Entity/Article.php';
 
 class WsArticle extends Module
 {
@@ -148,7 +148,7 @@ class WsArticle extends Module
             `id_lang` int(10) unsigned NOT NULL,
             `title` varchar(255),
             `content` text NOT NULL,
-            `meta-title` varchar(255) NOT NULL,
+            `meta_title` varchar(255) NOT NULL,
             PRIMARY KEY  (`id_article`, `id_lang`)
         ) ENGINE='._MYSQL_ENGINE_.' DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci';
 
@@ -163,9 +163,9 @@ class WsArticle extends Module
     {
         return [
             'articles' => array(
-                'description' => 'Blog articles', // The description for who access to this resource through WS
+                'description' => 'Blog articles', // The description for those who access to this resource through WS
                 'class' => 'Article', // The classname of your Entity
-                'forbidden_method' => array('DELETE') // optional if you want to forbid some methods
+                'forbidden_method' => array('DELETE') // Optional, if you want to forbid some methods
             )
         ];
     }
@@ -174,18 +174,18 @@ class WsArticle extends Module
 
 ### Final notes
 
-Following the example above, the new resource will be available in the webservices resources list:
+Following the example above, the new resource will be available in the webservice resources list:
 
 {{< figure src="../img/new-ws-resource.png" title="New Webservice resource" >}}
 
-And will be accessible through your api url, plus the name that you've decided in `objectsNodeName`, for instance:
+This new resource will be accessible through your API endpoint behind the name that you set in `objectsNodeName`, for instance:
 
 `https://mywebsite.shop/api/articles`
 
-will give you something similar(in browser):
+will return something similar to what you can see on the screenshot below (it is the XML response previewed in the browser):
 
 {{< figure src="../img/empty-articles.png" title="Webservice articles list (empty)" >}}
 
-And something similar when you have articles in database:
+And something like on the next screenshot, if you have articles in the database:
 
 {{< figure src="../img/articles-list.png" title="Webservice articles list (one article)" >}}
