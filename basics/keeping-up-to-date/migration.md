@@ -635,6 +635,6 @@ automatic, because:
 
 Useful links:
 
--   [Learning how to use the webservice API][web-service]
+-   [How to use the webservice API][web-service]
 
 [web-service]: {{< ref "8/webservice" >}}
