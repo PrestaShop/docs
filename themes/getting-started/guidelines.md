@@ -34,7 +34,7 @@ Mobile-wise:
 
 Use spaces for indentation in every language (PHP, HTML, CSS, etc.):<br>4 spaces for PHP files, 2 spaces for all other file types.
 
-Use our [.editorconfig](https://editorconfig.org/) file in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/develop/.editorconfig
+Use our [.editorconfig](https://editorconfig.org/) file in order to easily configure your editor: https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/.editorconfig
 
 ##### PHP files
 
