@@ -79,7 +79,7 @@ Cart block contains cart `products`, `currency` and `language` selection. Produc
 {{< figure src="./img/products-list.png" title="Products list" >}}
 
 {{% notice %}}
-Product price can be modified. This is similar behavior to the one in the `Order view page`, however behind the scenes it is different. Unlike in the `Order view page`, we don't have any `OrderDetail` yet, because at this point we are still modifying the `Cart`, so it is achieved by creating a new temporary [SpecificPrice](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/SpecificPrice.php) and assigning specifically to that certain `Cart`, `Product`, `Customer` and `Shop`. See [CartController::editProductPriceAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php).
+Product price can be modified. This is similar behavior to the one in the `Order view page`, however behind the scenes it is different. Unlike in the `Order view page`, we don't have any `OrderDetail` yet, because at this point we are still modifying the `Cart`, so it is achieved by creating a new temporary [SpecificPrice](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/classes/SpecificPrice.php) and assigning specifically to that certain `Cart`, `Product`, `Customer` and `Shop`. See [CartController::editProductPriceAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/src/PrestaShopBundle/Controller/Admin/Sell/Order/CartController.php).
 {{% /notice %}}
 
 #### Cart rules block
@@ -105,13 +105,13 @@ The form in the modal is actually the same form from `Customers -> Addresses` pa
 Shipping block will appear only if at least one carrier is available for selected delivery address. This block allows selecting a carrier for the order, shows the shipping price and allows to mark the order as `Free shipping`.
 
 {{% notice %}}
-When `Free shipping` is checked, behind the scenes, it is achieved by creating a new temporary [CartRule](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/classes/CartRule.php) with `$free_shipping = true` and assigned to customer. See [UpdateCartDeliverySettingsHandler::handleFreeShippingOption](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/Adapter/Cart/CommandHandler/UpdateCartDeliverySettingsHandler.php).
+When `Free shipping` is checked, behind the scenes, it is achieved by creating a new temporary [CartRule](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/classes/CartRule.php) with `$free_shipping = true` and assigned to customer. See [UpdateCartDeliverySettingsHandler::handleFreeShippingOption](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/src/Adapter/Cart/CommandHandler/UpdateCartDeliverySettingsHandler.php).
 {{% /notice %}}
 
 #### Summary block
 {{< figure src="./img/summary-block.png" title="Order summary block" >}}
 
-This is the final block that requires selecting `payment method`, `order status` and allows submitting the whole form. Prior to that it also allows adding `a message for the customer` or `sending the email with the pre-filled order to the customer`. Once `Create the order` is clicked it uses the [OrderController::placeAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php) to create the order.
+This is the final block that requires selecting `payment method`, `order status` and allows submitting the whole form. Prior to that it also allows adding `a message for the customer` or `sending the email with the pre-filled order to the customer`. Once `Create the order` is clicked it uses the [OrderController::placeAction](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php) to create the order.
 
 {{% notice %}}
 You can also click `More actions -> Proceed to checkout in the front office` to finish up the order in the Front office of your shop.
