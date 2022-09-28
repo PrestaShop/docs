@@ -52,7 +52,7 @@ In the above example, the `path` has not been changed, but you can change it to 
 {{% /notice %}}
 
 {{% notice warning %}}
-Keep the item `_legacy_controller` if your controller relies on it to configure a [AdminSecurity annotation]({{ relref "/8/development/architecture/migration-guide/controller-routing/#access-rules-convention" }}) such as `@AdminSecurity("is_granted('read', request.get('_legacy_controller'))")`
+Keep the item `_legacy_controller` if your controller relies on it to configure a [AdminSecurity annotation]({{< relref "8/development/architecture/migration-guide/controller-routing#access-rules-convention" >}}) such as `@AdminSecurity("is_granted('read', request.get('_legacy_controller'))")`
 
 Keep the items `_legacy_controller` and `_legacy_link` if you want to reroute internal links and legacy URLs like `index.php?controller=AdminOrders` as well.
 {{% /notice %}}

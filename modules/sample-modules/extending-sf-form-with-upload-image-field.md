@@ -222,7 +222,7 @@ below to `DemoExtendSymfonyForm2` class.
 ```
 
 Let's create `SupplierExtraImage` entity class. We use [Doctrine]
- ({{ relref "/8/modules/concepts/doctrine/" }}) 
+ ({{< relref "/8/modules/concepts/doctrine/" >}}) 
  which is available for PrestaShop modules since version 1.7.6.
 
 ```php
@@ -364,7 +364,7 @@ class SupplierExtraImageRepository extends EntityRepository
 
 Let's create hook `hookActionSupplierFormBuilderModifier` 
 function inside Main module class. This is a hook available for [CRUD forms]
-({{ relref "/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage/" }}) in
+({{< relref "/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage" >}}) in
 PrestaShop Symfony pages.
 
 ```php
@@ -607,6 +607,3 @@ Let's add `UploadImage` function to main class:
 You can find the ready solution in PrestaShop example-modules github repository:
 https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform2
 {{% /notice %}}
-
-
-
