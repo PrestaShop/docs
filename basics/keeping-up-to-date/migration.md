@@ -637,4 +637,4 @@ Useful links:
 
 -   [Learning how to use the webservice API][web-service]
 
-[web-service]: {{< ref "1.7/webservice" >}}
+[web-service]: {{< ref "8/webservice" >}}
