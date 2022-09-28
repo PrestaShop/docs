@@ -42,10 +42,10 @@ Here are some principles for implementing a Domain Service:
 
 ## Product domain services
 
-1. [Product update services](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/Update)
-2. [Virtual product update services](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/VirtualProduct/Update)
-2. [Combination update services](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/Combination/Update)
-2. [Combination create services](https://github.com/PrestaShop/PrestaShop/tree/1.7.8.x/src/Adapter/Product/Combination/Create)
+1. [Product update services](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/Update)
+2. [Virtual product update services](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/VirtualProduct/Update)
+2. [Combination update services](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/Combination/Update)
+2. [Combination create services](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/src/Adapter/Product/Combination/Create)
 
 ## Service usage in `CommandHandler` examples
 
