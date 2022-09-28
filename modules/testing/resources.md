@@ -140,7 +140,7 @@ php:
 
 ## Core Functional tests
 
-PrestaShop provides its own test suite, running with puppeteer. It covers the features of PrestaShop and grows each time a bug is resolved or a feature is added.
+PrestaShop provides its own test suite, running with [Playwright](https://playwright.dev). It covers the features of PrestaShop and grows each time a bug is resolved or a feature is added.
 
 These tests are launched every time a change is suggested to the core, but you can also run them with your module installed. This will ensure your module code does not break a critical feature of the core.
 

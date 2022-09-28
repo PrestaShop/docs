@@ -1,32 +1,19 @@
 ---
-title: How to execute tests
-menuTitle: Executing tests
+title: How to execute Unit Tests
+menuTitle: Executing unit tests
 weight: 10
 ---
 
-# How to execute the PrestaShop automatic test suite
+# How to execute Unit Tests
 
-## Executing Unit/integration test suites
-
-At least four test suites are available, testing different parts of PrestaShop:
-
-* Unit tests
-* Integrations tests
-* Functional tests
-
-Each suite needs a specific PHPUnit configuration. This is why each test suite has a specific composer command:
+You can execute the test suite with specific Composer command:
 
 * `composer unit-tests`
-* `composer integration-tests`
-* `composer integration-behaviour-tests`
 
 {{% notice tip %}}
 You can execute the entire PHPUnit test suites using the `composer test-all` command.
 {{% /notice %}}
 
-## Executing the Functional test suites
-
-This is thoroughly explained in the [Puppeteer tests Readme file](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/UI/README.md).
 
 ## Executing only part of phpunit tests
 
