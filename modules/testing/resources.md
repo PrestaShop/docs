@@ -144,4 +144,4 @@ PrestaShop provides its own test suite, running with puppeteer. It covers the fe
 
 These tests are launched every time a change is suggested to the core, but you can also run them with your module installed. This will ensure your module code does not break a critical feature of the core.
 
-This section will be completed when these tests will be available on a dedicated repository. In the meantime you can already reach them on GitHub, in the [tests/UI](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/UI) of PrestaShop files.
+This section will be completed when these tests are available on a dedicated repository. In the meantime, you can already reach them on GitHub, in the [tests/UI](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/UI) of PrestaShop files.

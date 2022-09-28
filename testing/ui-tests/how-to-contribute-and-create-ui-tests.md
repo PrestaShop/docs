@@ -105,7 +105,7 @@ The description of each variable in this file can be found in [README.md](https:
 
 #### Setup
 [Mocha](https://mochajs.org/) gives us the possibility to load and run files before test files (with [\--file option](https://mochajs.org/#-file-filedirectoryglob)).
-We use that option to run our `setup.js` file. This file opens only one browser for the whole campaign (and not one browser per test), since we're then running each test file in its [own context](https://github.com/microsoft/playwright/blob/main/docs/src/api/class-browsercontext.md).
+We use that option to run our `setup.js` file. This file opens only one browser for the whole campaign (and not one browser per test), since we're then running each test file in its [own context](https://playwright.dev/docs/api/class-browsercontext).
 
 #### Browser helper
 This helper file is used to centralize the browser and tab functions called in all tests. 
