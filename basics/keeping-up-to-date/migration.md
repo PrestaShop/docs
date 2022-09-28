@@ -635,4 +635,6 @@ automatic, because:
 
 Useful links:
 
--   [Learning how-to use the webservice API](https://doc.prestashop.com/display/PS16/Using+the+PrestaShop+Web+Service)
+-   [Learning how to use the webservice API]([web-service])
+
+[web-service]: {{< ref "1.7/webservice" >}}
