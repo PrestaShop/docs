@@ -18,11 +18,13 @@ UI tests work by controlling a browser and using the web interface like a real u
 We use the following stack:
 
 * [Playwright](https://github.com/microsoft/playwright/) as automation tool
-* [Mocha](https://mochajs.org) as test framework
-* [Chai](https://www.chaijs.com) as assertion library 
-* [Faker](https://github.com/marak/Faker.js/) as fake data generator
+* [Mocha](https://mochajs.org/) as test framework
+* [Chai](https://www.chaijs.com/) as assertion library 
+* [Faker](https://github.com/faker-js/faker) as fake data generator
 
 ## Execute & Create tests
 
 {{% children %}}
 
+Everything is explained in [README](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/UI/README.md) in the `tests/UI` folder. 
+You'll need a working installation of PrestaShop in order to run the tests.

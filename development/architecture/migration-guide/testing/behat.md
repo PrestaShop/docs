@@ -18,7 +18,7 @@ A behaviour (`behat`) tests are a part of integration tests. They allow testing 
 During behat tests the actual database queries are executed, therefore before testing you need to run a command `composer create-test-db` to create a test database.
 
 {{% notice %}}
-The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump_database_name_8.0.0.sql`. That `ps_dump_database_name_8.0.0.sql` is later used to reset the database. You can check the actual script for more information - [/tests/bin/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/bin/create-test-db.php).
+The `create-test-db` script installs a fresh prestashop with fixtures in a new database called `test_{your database name}` and dumps the database in your machine `/tmp` directory named `ps_dump_database_name_8.0.0.sql`. That `ps_dump_database_name_8.0.0.sql` is later used to reset the database. You can check the actual script for more information - [/tests/bin/create-test-db.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/bin/create-test-db.php).
 {{% /notice %}}
 
 ### Tables dump
@@ -45,10 +45,10 @@ So each feature must handle database restoration dedicated steps or custom hooks
 
 ## Behats structure in PrestaShop
 
-Behat related files are located in [tests/Integration/Behaviour/](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour). This directory contains following files:
+Behat related files are located in [tests/Integration/Behaviour/](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/Integration/Behaviour). This directory contains following files:
 - [behat.yml]({{< relref "#behatyml">}}) - this is the test suites configuration file which describes feature paths and contexts for every test suite. It can be passed as an argument when running the tests like this `./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml`.
 - bootstrap.php - this file loads the `Kernel` for a behat tests environment.
-- Features - this directory contains all the [Scenarios](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Scenario) and [Contexts](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Context). More about it [below]({{< relref "#features" >}}).
+- Features - this directory contains all the [Scenarios](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/Integration/Behaviour/Features/Scenario) and [Contexts](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/Integration/Behaviour/Features/Context). More about it [below]({{< relref "#features" >}}).
 
 ## Features
 
@@ -56,7 +56,7 @@ Behat related files are located in [tests/Integration/Behaviour/](https://github
 Before continuing, **please read the official `behat` documentation** about the [features and scenarios](https://docs.behat.org/en/latest/user_guide/features_scenarios.html).
 {{% /notice %}}
 
-In PrestaShop all `*.feature` files are placed in [.tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Scenario). Each feature is placed in a dedicated directory organized by `domain` (or even a `subdomain` if necessary). These feature files contains text that describes the testing scenarios in a user-friendly manner, each of them must start with a keyword `Feature` and have a one or multiple scenarios starting with a keyword `Scenario`. For example:
+In PrestaShop all `*.feature` files are placed in [.tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/Integration/Behaviour/Features/Scenario). Each feature is placed in a dedicated directory organized by `domain` (or even a `subdomain` if necessary). These feature files contains text that describes the testing scenarios in a user-friendly manner, each of them must start with a keyword `Feature` and have a one or multiple scenarios starting with a keyword `Scenario`. For example:
 ```feature
 Feature: Update product status from BO (Back Office)
   As an employee I must be able to update product status (enable/disable)
@@ -82,16 +82,16 @@ Every line in scenario has a related method defined in a [Context]({{< relref "#
 
 ## Context
 
-The behat `Context` files are classes that contains the implementations of the features. In PrestaShop all `Context` files are placed in [tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Context).
+The behat `Context` files are classes that contains the implementations of the features. In PrestaShop all `Context` files are placed in [tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/Integration/Behaviour/Features/Context).
 
 {{% notice tip %}}
-The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and might not be implemented well).
+The most recent `Context` files are located in [`Tests/Integration/Behaviour/Features/Context/Domain`](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/Integration/Behaviour/Features/Context/Domain) namespace, so try to use these and avoid the ones from the `Tests/Integration/Behaviour/Features/Context/*` namespace (those are old and might not be implemented well).
 {{% /notice%}}
 
-When creating a new Context class, it should extend the [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php).
+When creating a new Context class, it should extend the [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php).
 
 {{% notice %}}
-The [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php) contains some commonly used helper methods, and it implements the `Behat\Behat\Context` which is necessary for these tests to work.
+The [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/Domain/AbstractDomainFeatureContext.php) contains some commonly used helper methods, and it implements the `Behat\Behat\Context` which is necessary for these tests to work.
 {{% /notice %}}
 
 This is how the context looks like:
@@ -133,7 +133,7 @@ As you can see in example, the string `@Given I add order :orderReference with t
 
 ## Shared storage
 
-The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common usage example is the `id` reference - we specify a certain keyword e.g. `product1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
+The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common usage example is the `id` reference - we specify a certain keyword e.g. `product1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
 ```php
     protected function getProductForEditing(string $reference): ProductForEditing
     {
@@ -147,7 +147,7 @@ The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/
 
 ## Hooks
 
-Behats allow you to use [hooks](https://docs.behat.org/en/v2.5/guides/3.hooks.html#hooks). You can find some usages in [CommonFeatureContext](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/CommonFeatureContext.php). You can use these hooked methods by tagging them before the `Feature` (or before `Scenario` depending on the hook type), like this ([add_product.feature](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/Integration/Behaviour/Features/Context/Domain/Product/AddProductFeatureContext.php)
+Behats allow you to use [hooks](https://docs.behat.org/en/v2.5/guides/3.hooks.html#hooks). You can find some usages in [CommonFeatureContext](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/CommonFeatureContext.php). You can use these hooked methods by tagging them before the `Feature` (or before `Scenario` depending on the hook type), like this ([add_product.feature](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/Domain/Product/AddProductFeatureContext.php)
 ):
 
 ```feature

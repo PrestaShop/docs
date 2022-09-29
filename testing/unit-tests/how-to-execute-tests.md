@@ -14,6 +14,9 @@ You can execute the test suite with specific Composer command:
 You can execute the entire PHPUnit test suites using the `composer test-all` command.
 {{% /notice %}}
 
+## Executing the Functional test suites
+
+This is thoroughly explained in the [Puppeteer tests Readme file](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/UI/README.md).
 
 ## Executing only part of phpunit tests
 

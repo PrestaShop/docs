@@ -14,7 +14,7 @@ Getting the list of available Hooks in modern pages is really easy. Thanks to th
 
 Use this trick to find out which hooks are called on a legacy page.
 
-In ``classes/Hook``, find the [exec() function](https://github.com/PrestaShop/PrestaShop/blob/develop/classes/Hook.php#L733) and add the following code:
+In ``classes/Hook``, find the [exec() function](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Hook.php#L735) and add the following code:
 
 ```php
 <?php
@@ -46,7 +46,7 @@ $this->dispatchHook('actionAdminPerformanceControllerPostProcessBefore', array('
 
 ## Dispatching hooks using the Hook dispatcher
 
-If you need to dispatch a hook from a non-controller class, you'll need to inject the [HookDispatcher](https://github.com/PrestaShop/PrestaShop/blob/develop/src/Core/Hook/HookDispatcher.php) class.
+If you need to dispatch a hook from a non-controller class, you'll need to inject the [HookDispatcher](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Hook/HookDispatcher.php) class.
  
 If your class is defined as a Symfony service, the HookDispatcher is available as a service called `prestashop.core.hook.dispatcher`.
 

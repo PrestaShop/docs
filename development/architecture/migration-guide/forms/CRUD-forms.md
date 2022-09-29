@@ -460,7 +460,7 @@ and
 
 The core actually uses CQRS to handle data persistence, which raises a `DomainException` in case of a constraint error (for example, if the identifiable object you are trying to edit doesn't exist). This is handled in the controller by wrapping the code in a try-catch block, then flashing an error message accordingly.
 
-For more details, check out the [ContactsController source code on GitHub](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/ContactsController.php).
+For more details, check out the [ContactsController source code on GitHub](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/ContactsController.php).
 {{% /notice %}}
 
 

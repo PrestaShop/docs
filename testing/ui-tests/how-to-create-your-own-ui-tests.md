@@ -81,10 +81,10 @@ Each selector must belong to a certain type. Here is a non-exhaustive list:
 ## Tests
 
 ### Campaigns
-We currently have 2 [campaigns](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/UI/campaigns) implemented:
+We currently have 2 [campaigns](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/UI/campaigns) implemented:
 
-- **Sanity**: its purpose is to validate a Pull Request. Executed on [Travis CI](https://travis-ci.com/), [this campaign](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/UI/campaigns/sanity) must fully pass before merging the PR (one failed test blocks the merge). It consists of a few tests of the core features of PrestaShop: shop installation, orders/products pages in BO, and catalog/cart/checkout process in FO.
-- **Functional**: it is the biggest and most important [campaign](https://github.com/PrestaShop/PrestaShop/tree/develop/tests/UI/campaigns/functional). Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) items (orders, customers, products…), setting changes, etc.
+- **Sanity**: its purpose is to validate a Pull Request. Executed on [Travis CI](https://travis-ci.com/), [this campaign](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/UI/campaigns/sanity) must fully pass before merging the PR (one failed test blocks the merge). It consists of a few tests of the core features of PrestaShop: shop installation, orders/products pages in BO, and catalog/cart/checkout process in FO.
+- **Functional**: it is the biggest and most important [campaign](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/UI/campaigns/functional). Its purpose is to validate that every feature of PrestaShop works, by testing them one by one. It goes on every page and tests whatever it can: table (filtering, ordering, quick edits, etc), [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) items (orders, customers, products…), setting changes, etc.
 
 We plan on implementing 2 more campaigns:
 
@@ -103,11 +103,11 @@ The utils directory contain files that are necessary to run tests.
 #### Globals
 This file contains all global variables that can be used in test files, pages and common tests.
 
-The description of each variable in this file can be found in [README.md](https://github.com/PrestaShop/PrestaShop/blob/develop/tests/UI/README.md).
+The description of each variable in this file can be found in [README.md](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/UI/README.md).
 
 #### Setup
 [Mocha](https://mochajs.org/) gives us the possibility to load and run files before test files (with [\--file option](https://mochajs.org/#-file-filedirectoryglob)).
-We use that option to run our `setup.js` file. This file opens only one browser for the whole campaign (and not one browser per test), since we're then running each test file in its [own context](https://github.com/microsoft/playwright/blob/master/docs/api.md#class-browsercontext).
+We use that option to run our `setup.js` file. This file opens only one browser for the whole campaign (and not one browser per test), since we're then running each test file in its [own context](https://playwright.dev/docs/api/class-browsercontext).
 
 #### Browser helper
 This helper file is used to centralize the browser and tab functions called in all tests. 
@@ -192,5 +192,5 @@ The only assumption we have to make is the presence of certain items like Orders
 If you need to rely on the fixtures too, make sure to use the description of the objects you’re looking for in the `data` folder. If it’s not complete, you can expand it and make a Pull Request, we’ll be happy to improve our datasets !
 
 ### Faker
-When we need to create new items, we rely on [Faker](https://github.com/marak/Faker.js/) to create random data.  
+When we need to create new items, we rely on [Faker](https://github.com/faker-js/faker) to create random data.  
 This helps us make sure we’re testing with randomized sets of data and covering a lot of cases. It’s very important to check the specifications before to make sure you’re properly setting up your faker : input length, authorized characters, range of dates/values, etc.
