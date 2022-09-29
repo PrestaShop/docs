@@ -55,16 +55,31 @@ Remember that each resource has its own validation rules (required fields, field
 
 ```php
 <?php
-$customerFields = $blankXml->customer->children();
-$customerFields->firstname = 'John';
-$customerFields->lastname = 'DOE';
-$customerFields->email = 'john.doe@unknown.com';
-$customerFields->passwd = 'password1234';
+try {
+    // creating webservice access
+    $webService = new PrestaShopWebservice('http://example.com/', 'ZR92FNY5UFRERNI3O9Z5QDHWKTP3YIIT', false);
 
-$createdXml = $webService->add([
-   'resource' => 'customers',
-   'postXml' => $blankXml->asXML(),
-]);
-$newCustomerFields = $createdXml->customer->children();
-echo 'Customer created with ID ' . $newCustomerFields->id . PHP_EOL;
+    // call to retrieve the blank schema
+    $blankXml = $webService->get(['url' => 'http://example.com/api/customers?schema=blank']);
+    
+    // get the entity
+    $customerFields = $blankXml->customer->children();
+    
+    // edit entity fields
+    $customerFields->firstname = 'John';
+    $customerFields->lastname = 'DOE';
+    $customerFields->email = 'john.doe@unknown.com';
+    $customerFields->passwd = 'password1234';
+
+    // send entity to webservice
+    $createdXml = $webService->add([
+        'resource' => 'customers',
+        'postXml' => $blankXml->asXML(),
+    ]);
+    $newCustomerFields = $createdXml->customer->children();
+    echo 'Customer created with ID ' . $newCustomerFields->id . PHP_EOL;
+} catch (PrestaShopWebserviceException $ex) {
+    // Shows a message related to the error
+    echo 'Other error: <br />' . $ex->getMessage();
+}
 ```
