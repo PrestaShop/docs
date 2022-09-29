@@ -7,10 +7,10 @@ weight: 2
 
 ## displayAdminOrderSide hook
 
-We use this hook to display scanned customer signature.
+We use this hook to display a scanned customer signature.
 
-Lets create custom repository `OrderSignatureRepository` class inside `demovieworderhooks/src/Repository` folder.
-Symfony Repository classes (https://symfony.com/doc/3.3/doctrine/repository.html) help to interact with the database by providing frequently used functions
+Let's create custom repository `OrderSignatureRepository` class inside `demovieworderhooks/src/Repository` folder.
+Symfony Repository classes (https://symfony.com/doc/4.4/doctrine/repository.html) help to interact with the database by providing frequently used functions
 like `findOneBy` to get the data (for example filtered data by a certain criteria - `orderId` 
 field from `OrderSignature` entity).
 
@@ -443,7 +443,7 @@ class OrderSignaturePresenter
     }
 }
 ```
-Then lets use Symfony Dependency Injection 
+Then let's use Symfony Dependency Injection 
 (https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/).
 and [create services configuration]({{< relref "/8/modules/concepts/services/#symfony-services" >}}) for the above 
 classes in `demovieworderhooks/config/services.yml`.
@@ -521,8 +521,8 @@ card.html.twig
 {% endblock %}
 ```
 
-Lets add several methods to `DemoViewOrderHooks` class.
-`getModuleTemplatePath` - get's the path of the templates folder.
+Let's add several methods to `DemoViewOrderHooks` class.
+`getModuleTemplatePath` - get the path of the templates folder.
 
 ```php
 <?php
