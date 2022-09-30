@@ -106,7 +106,7 @@ Don't forget to register your class as a service, you will need it to use it wit
     class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\ContactFormDataProvider'
 ```
 
-Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider`, like a module, you need to import the classes that come from this namespace.
+Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider` namespace, like in a module, you need to import the classes that come from this namespace.
 
 Example
 ```php
@@ -218,7 +218,7 @@ When creating your Form Data Handler you must implement the following interface:
 
     \PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\FormDataHandlerInterface
 
-In the example below, you can see a `ConctactFormDataHandler` that uses `ObjectModel` to create and update an instance of `Contact`:
+In the example below, you can see a `ContactFormDataHandler` that uses `ObjectModel` to create and update an instance of `Contact`:
 
 ```php
 <?php
@@ -274,7 +274,7 @@ prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
   class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
 ```
 
-Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider`, like a module, you need to import the classes that come from this namespace.
+Note: if you use the above snippet of code outside of the `\PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler` namespace, like in a module, you need to import the classes that come from this namespace.
 
 Example
 ```php
