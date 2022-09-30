@@ -274,7 +274,7 @@ prestashop.core.form.identifiable_object.data_handler.contact_form_data_handler:
   class: 'PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\ContactFormDataHandler'
 ```
 
-Note: if you use the above snippet of code outside of the `\PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler` namespace, like in a module, you need to import the classes that come from this namespace.
+Note: if you use the above snippet of code outside of the `PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler` namespace, like in a module, you need to import the classes that come from this namespace.
 
 Example
 ```php
