@@ -56,7 +56,7 @@ Example:
 ```js
    /**
    * Get order status
-   * @param page
+   * @param page {Page} Browser tab
    * @return {Promise<string>}
    */
   async getOrderStatus(page) {
