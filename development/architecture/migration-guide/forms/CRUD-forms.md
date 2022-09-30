@@ -278,7 +278,7 @@ Note: if you use the above snippet of code outside of the `\PrestaShop\PrestaSho
 
 Example
 ```php
-use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataProvider\FormDataProviderInterface;
+use PrestaShop\PrestaShop\Core\Form\IdentifiableObject\DataHandler\FormDataHandlerInterface;
 ```
 
 ## Form Handler
