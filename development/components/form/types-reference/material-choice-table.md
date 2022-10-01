@@ -38,9 +38,10 @@ class CustomType extends AbstractType
     }
 }
 ```
+
 Then in Javascript you have to enable `ChoiceTable` component.
 
-```javascript
+```js
 import ChoiceTable from 'admin-dev/themes/new-theme/js/components/choice-table';
 
 // initiate the component.

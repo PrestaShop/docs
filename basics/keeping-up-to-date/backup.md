@@ -41,6 +41,7 @@ tar -czf <file_name>.tar <folder_to_save>
 ```
 
 For instance:
+
 ```
 tar -czf backup.tar /var/www/html
 ```
@@ -60,9 +61,11 @@ In a Windows or Linux terminal, run the following command to create a file `dump
 ```
 mysqldump yourdbname > dump.sql
 ```
+
 With `yourdbname` an example name for the PrestaShop database.
 
 Your server is likely to require credentials. These details can also be provided as parameters:
+
 ```
 mysqldump -h <IP_or_hostname> -u <user> --single-transaction --create-options -ecqQ -p db1 > dump.sql
 ```

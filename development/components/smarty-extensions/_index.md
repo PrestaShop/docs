@@ -81,7 +81,7 @@ If you need to escape quotes in the _translated_ text, do it like this:
 <script type="text/javascript">
   var thisIsAString = '{l|escape:"javascript" s="Don't do this at home" d="Modules.Mymodule"}';
 </script>
-``` 
+```
 
 ### {render}
 

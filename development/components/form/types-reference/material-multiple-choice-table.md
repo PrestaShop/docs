@@ -74,9 +74,10 @@ class CustomType extends AbstractType
     }
 }
 ```
+
 Then in Javascript you have to enable `MultipleChoiceTable` component.
 
-```javascript
+```js
 import MultipleChoiceTable from 'admin-dev/themes/new-theme/js/components/multiple-choice-table';
 
 // enable the component

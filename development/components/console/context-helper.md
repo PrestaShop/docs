@@ -14,7 +14,8 @@ It loads the needed property in `Context` using, when needed, a fake Employee or
 
 It is available as a Symfony service `prestashop.adapter.legacy_context_loader`.
 
-Example
+Example:
+
 ```
 MyCustomCommand extends ContainerAwareCommand
 {

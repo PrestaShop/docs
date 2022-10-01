@@ -191,7 +191,7 @@ And choose the simulation you want to run
 
 ![Gatling](https://i.imgur.com/HQ5eCfZ.png)
 
-In my example I run "[1] basic.BasicExempleSimulation"
+In my example I run "[1] basic.BasicExampleSimulation"
 ![Gatling](https://i.imgur.com/nJdOPsB.png)
 
 ##### Well done! Our Gatling installation is ready!
@@ -223,10 +223,13 @@ For example if you site is setup in
 /etc/apache2/sites-enabled/000-default.conf
 
 add the value  
+
 ```bash
 SetEnv _TOKEN_ disabled
 ```
+
 before
+
 ```
 < /VirtualHost >
 ```

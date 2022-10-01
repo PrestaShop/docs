@@ -200,7 +200,7 @@ $formDeclaration = [
     'succcess'    => $this->l('Form saved!'),
     'error'       => $this->l('Oops, something went wrong.'),
 ];
-``` 
+```
 
 ### Buttons
 

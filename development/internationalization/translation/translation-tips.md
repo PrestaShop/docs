@@ -61,7 +61,7 @@ In Twig files, you can use `trans_default_domain` to set up your default domain.
 {% trans_default_domain 'Admin.Catalog.Feature' %}
 {{ 'Hello world'|trans }}
 {{ 'Something else'|trans }}
-``` 
+```
 
 #### Form ChoiceTypes
 
@@ -115,6 +115,7 @@ You can declare wordings as arrays as well. This obviously won't translate the w
     'parameters' => [],
 ];
 ```
+
 ## Translate core wordings
 
 You can translate core wordings (mainly present in PHP files) via Classic theme translation interface.

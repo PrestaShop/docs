@@ -73,9 +73,7 @@ window.prestashop.component.initComponents(
         'MultistoreConfigField',
     ],
 );
-````
-
-
+```
 
 Doing this will have several effects:
 

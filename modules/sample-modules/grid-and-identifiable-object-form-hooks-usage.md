@@ -110,6 +110,7 @@ class Ps_DemoCQRSHooksUsage extends Module
     // ...
 }
 ```
+
 This hook, through `$params` array, received `GridDefinition` that defines how the grid is rendered. See [Grid definition]({{< relref "/8/development/components/grid/#grid-definition" >}}) for more information.  
 In this sample a new toggable column which determines if the customer is eligible to review products is added just after another column which has id `optin`. The sample code also demonstrates how add new filter.
 
@@ -159,7 +160,6 @@ class CustomerReviewController extends FrameworkBundleAdminController
 - As this is a Symfony controller, we must configure the related routing (read more about [symfony routing](https://symfony.com/doc/current/routing.html)), which means create a route in `ps_democqrshooksusage/config/routes.yml` file:
 
 ```yml
-
 ps_democqrshooksusage_toggle_is_allowed_for_review:
   path: demo-cqrs-hook-usage/{customerId}/toggle-is-allowed-for-review
   methods: [POST]

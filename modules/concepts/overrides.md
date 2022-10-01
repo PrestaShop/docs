@@ -154,7 +154,6 @@ Despite a module having different files, the main one, additional classes, etc.,
 To override a module's instance class, you have to extend it, giving the extended class the same name and adding the `Override` suffix:
 
 ```php
-
 class BlockUserInfoOverride extends BlockUserInfo
 {
 	public function hookDisplayNav($params)
@@ -164,6 +163,7 @@ class BlockUserInfoOverride extends BlockUserInfo
 	}
 }
 ```
+
 You must put the file in `/override/modules/blockuserinfo/blockuserinfo.php`
 
 After adding an override, don't forget to clean the cache. You can do it from the back office or by CLI using the Symfony console.
@@ -176,7 +176,6 @@ You may even create a module that overrides other modules! For instance:
 To override a module's front/admin controller class, you have to extend it, giving the extended class the same name and adding the `Override` suffix:
 
 ```php
-
 class AdminBlockListingControllerOverride extends AdminBlockListingController
 {
 	public function displayAjaxSaveColor()
@@ -196,6 +195,7 @@ class AdminBlockListingControllerOverride extends AdminBlockListingController
 	}
 }
 ```
+
 You must put the file in `/override/modules/blockreassurance/controllers/admin/AdminBlockListingController.php`
 
 After adding an override, don't forget to clean the cache. You can do it from the back office or by CLI using the Symfony console.

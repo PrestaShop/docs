@@ -34,6 +34,7 @@ Then you can create a very minimal theme, containing only the following files:
   │   └── theme.yml
   └── preview.png
 ```
+
 {{% notice tip %}}
   It's recommended to copy these files from the Parent theme.
 {{% /notice %}}

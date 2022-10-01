@@ -128,4 +128,5 @@ Here an example of generated markup with SmartyDev activated:
 
 [...]
 ```
+
 To use it, simply set the `_PS_MODE_DEV_` constant to `true` in your installation's `/config/defines.inc.php` file: add the `define('_PS_MODE_DEV_', true);` line to that file in order to turn the PrestaShop Developer Mode on, which features SmartyDev.

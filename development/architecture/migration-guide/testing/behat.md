@@ -57,6 +57,7 @@ Before continuing, **please read the official `behat` documentation** about the 
 {{% /notice %}}
 
 In PrestaShop all `*.feature` files are placed in [.tests/Integration/Behaviour/Features/Scenario](https://github.com/PrestaShop/PrestaShop/tree/8.0.x/tests/Integration/Behaviour/Features/Scenario). Each feature is placed in a dedicated directory organized by `domain` (or even a `subdomain` if necessary). These feature files contains text that describes the testing scenarios in a user-friendly manner, each of them must start with a keyword `Feature` and have a one or multiple scenarios starting with a keyword `Scenario`. For example:
+
 ```feature
 Feature: Update product status from BO (Back Office)
   As an employee I must be able to update product status (enable/disable)
@@ -72,6 +73,7 @@ Feature: Update product status from BO (Back Office)
     When I disable product "product1"
     Then product "product1" should be disabled
 ```
+
 As you can see, we state the `given` information, then we describe the action and finally the assertion. These scenarios should be easy to understand even for non-technical people. So when writing one, try to avoid the technical keywords and make it as user-friendly as possible.
 
 {{% notice tip %}}
@@ -95,6 +97,7 @@ The [`AbstractDomainFeatureContext`](https://github.com/PrestaShop/PrestaShop/bl
 {{% /notice %}}
 
 This is how the context looks like:
+
 ```php
 class OrderFeatureContext extends AbstractDomainFeatureContext
 {
@@ -126,7 +129,6 @@ class OrderFeatureContext extends AbstractDomainFeatureContext
     }
     
 //    ...
-
 ```
 
 As you can see in example, the string `@Given I add order :orderReference with the following details:` maps this method to related line in `*.feature` file. The `:orderReference` acts as a variable which actually is the `id` of the order, that is saved into the [`SharedStorage`]({{< relref "#shared-storage" >}}). The `TableNode $table` is a specific argument, you can read about it [here](https://behat.org/en/latest/user_guide/writing_scenarios.html#tables).
@@ -134,6 +136,7 @@ As you can see in example, the string `@Given I add order :orderReference with t
 ## Shared storage
 
 The [SharedStorage](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/tests/Integration/Behaviour/Features/Context/SharedStorage.php) is responsible for holding certain values in memory which are shared across the feature. The most common usage example is the `id` reference - we specify a certain keyword e.g. `product1` before creating it, and once the command returns the auto-incremented value, we set it in shared storage like this `SharedStorage::getStorage()->set($orderReference, $orderId->getValue());`. In upcoming scenarios we can reuse this reference to get the record, something like this:
+
 ```php
     protected function getProductForEditing(string $reference): ProductForEditing
     {
@@ -161,6 +164,7 @@ Feature: Add basic product from Back Office (BO)
 
 {{% notice tip %}}
 You can also tag specific `features` if you want to run only them with a `--tags` filter. For example, if you add following tag in your Feature:
+
 ```feature
 @add
 Feature: Add basic product from Back Office (BO)
@@ -168,6 +172,7 @@ Feature: Add basic product from Back Office (BO)
   I need to be able to add new product with basic information from the BO
     ...
 ```
+
 Then you can run only this feature by following command `./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml -s product --tags add`
 
 {{% /notice %}}
@@ -389,6 +394,7 @@ class CommonFeatureContext extends AbstractPrestaShopFeatureContext {
 ## behat.yml
 
 When you have already created features and contexts it is time to map them with the test suite. The mapping is done in the behat.yml configuration file. It looks like this:
+
 ```yml
 default:
     suites:
@@ -410,4 +416,5 @@ default:
                 - Tests\Integration\Behaviour\Features\Context\CategoryFeatureContext
                 - Tests\Integration\Behaviour\Features\Context\Domain\CategoryFeatureContext
 ```
+
 As you can see, you have to define the `suite`, the `path` to features, and all the necessary `contexts`. According to the example, when you run the following: `./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml -s customer` - all the `*.feature` files from `tests/Integration/Behaviour/Features/Scenario/Customer` directory will be used to execute the related methods in all the provided contexts.

@@ -227,6 +227,7 @@ assets:
         priority: 200
         attribute: async
 ```
+
 In addition, if you want to include a library hosted in a different server you can use the following syntax:
 ```yaml
 assets:
@@ -244,6 +245,7 @@ assets:
         priority: 200
         server: remote
 ```
+
 ### Registering in modules
 
 When developing a PrestaShop module, you may want to add specific styles for your templates. The best way is to use the `registerStylesheet` and `registerJavascript` methods provided by the parent `FrontController` class.

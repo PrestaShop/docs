@@ -22,12 +22,12 @@ Open a command line on your (empty) working directory, then:
     ```bash
     git clone https://github.com/PrestaShop/PrestaShop.git
     ```
-    
+
 2. Install dependencies
     ```bash
     composer install
     ```
-    
+
 Using git you can choose your PrestaShop version:
 ```bash
 git checkout 8.0

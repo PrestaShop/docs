@@ -31,7 +31,6 @@ Once you have forked the project, you need to download it to your computer.
 
 For instance, if your GitHub nickname is `preston`, this is what you should do in your terminal:
 
-
 ```
 git clone https://github.com/preston/PrestaShop.git
 ```

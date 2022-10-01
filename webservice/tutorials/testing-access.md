@@ -173,7 +173,7 @@ Example:
 
 ```text
 https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/?output_format=JSON
-``` 
+```
 
 ### HTTP header
 

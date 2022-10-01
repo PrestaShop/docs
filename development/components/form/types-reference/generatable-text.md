@@ -42,8 +42,7 @@ class CustomType
 
 Then in Javascript you have to enable `GeneratableInput` component.
 
-```javascript
-
+```js
 import GeneratableInput from "admin-dev/themes/new-theme/js/components/generatable-input";
 
 // initiate the component

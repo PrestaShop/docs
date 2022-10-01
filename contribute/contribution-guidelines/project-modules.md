@@ -14,7 +14,7 @@ Contributors wishing to edit a module's files should follow the following proces
 
 1. Create your GitHub account, if you do not have one already.
 2. Fork the project to your GitHub account.
-3. Clone your fork to your local machine in the ```/modules``` directory of your PrestaShop installation.
+3. Clone your fork to your local machine in the `/modules` directory of your PrestaShop installation.
 4. Create a branch in your local clone of the module for your changes.
 5. Change the files in your branch.
     
@@ -68,12 +68,14 @@ Submitted Pull Requests must comply with the full defined scope.
 For example if the module compatibility scope includes PS 1.7 and PS 8, it is not possible to merge a Pull Request that can only be used with PS 1.7.
 
 If the module uses an extended scope such as:
+
 ```
 $this->ps_versions_compliancy = array(
     'min' => '1.7.0.0',
     'max' => _PS_VERSION_,
 );
 ```
+
 Because the `max` value will always use the latest PrestaShop version, it means the module must remain compatible with upcoming (not released) PrestaShop versions too.
 
 [report-issue]: https://github.com/PrestaShop/PrestaShop/issues/new/choose

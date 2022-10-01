@@ -138,6 +138,7 @@ This will only work for **one route/one controller** the association by action d
 In order to generate a symfony route in javascript, you can use the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/js/components/router.ts).
 
 You can use it like this:
+
 ```
 import Router from '@components/router';
 
@@ -148,9 +149,11 @@ const route = this.router.generate('my_route', {parameters});
 It however uses a computed file that you might need to recompute if you modified some route settings.
 
 You can recompute it using this:
+
 ```
 php bin/console fos:js-routing:dump --format=json
 ```
+
 And put it in `admin-dev/themes/new-theme/js/fos_js_routes.json`
 
 {{% notice %}}

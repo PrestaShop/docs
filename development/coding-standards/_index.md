@@ -156,6 +156,7 @@ You are able to get global types in the `admin-dev/themes/new-theme/js/types` fo
 ```bash
 npm run lint-fix
 ```
+
 ## HTML, CSS (Sass), Twig & Smarty code conventions
 
 HTML, CSS (Sass), Twig and Smarty files MUST follow the [Mark Otto's coding standards](https://codeguide.co/).

@@ -18,6 +18,7 @@ Let's see how domain exceptions look like in the code.
 For this example, let's look at `Category` domain: 
 
 ##### src/Core/Domain/Category/
+
 ```
 .
 ├── Command

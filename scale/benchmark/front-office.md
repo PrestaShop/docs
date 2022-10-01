@@ -20,7 +20,7 @@ Try to always use the latest available version <a href="http://download.joedog.o
  
 ### Setup siege configuration
 
-Create a txt file ```url.txt``` with various urls from your shop: (prepend with the domain of your shop)
+Create a txt file `url.txt` with various urls from your shop: (prepend with the domain of your shop)
 
 ```text
 http://localhost:8080/

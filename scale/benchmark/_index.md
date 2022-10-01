@@ -80,9 +80,9 @@ stock_availables (1):
 langs ([fr_FR, en_US]): 
 ```
 
-If you want to customize later the number of entities, just modify the file ```app/config/config.yml```
+If you want to customize later the number of entities, just modify the file `app/config/config.yml`
 
-Then run the following command to generate your initial dataset, which will be stored in the ```generated_data``` 
+Then run the following command to generate your initial dataset, which will be stored in the `generated_data``
 directory
 
 ```
@@ -91,18 +91,20 @@ php app/console.php
 
 #### How to use this dataset during PrestaShop install?
 
-Actually it's quite simple. Just copy the content of the ```generated_data``` folders (three folders should be 
-there: data, img and langs) in the PrestaShop ```install/fixtures/fashion``` folders (overwrite the folders already 
+Actually it's quite simple. Just copy the content of the `generated_data` folders (three folders should be 
+there: data, img and langs) in the PrestaShop `install/fixtures/fashion` folders (overwrite the folders already 
 there).
 
 Then launch a standard PrestaShop install.
 
 ### Prepare your shop
 
-Make sure you're not in debug mode! In ```config/defines.inc.php``` you should have:
+Make sure you're not in debug mode! In `config/defines.inc.php` you should have:
+
 ```text
 define('_PS_MODE_DEV_', false);
 ```
+
 The smarty cache should be enabled, but the multi-front synchronisation should be disabled for best performances.
 (those are the default settings).
 

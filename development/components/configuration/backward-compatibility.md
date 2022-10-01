@@ -76,6 +76,7 @@ This method returns the data for `$key` if it data exists, or `NULL` otherwise.
 ```php
 Configuration::deleteByName(string $key)
 ```
+
 This method returns `true` if the key is removed, `false` otherwise.
 
 **Parameters:**

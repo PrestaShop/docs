@@ -17,7 +17,7 @@ To translate wordings in PHP files, you first need an instance of the `Translato
 ```php
 <?php
 echo $translator->trans('This product is no longer available.', [], 'Shop.Notifications.Error');
-``` 
+```
 
 The `trans()` method takes three arguments:
 

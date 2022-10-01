@@ -293,7 +293,7 @@ public function hookActionGetExtraMailTemplateVars($hookArgs)
 ```
 
 
-### Code exemple : 
+### Code example: 
 
 {{% notice tip %}}
 You can override the core PDF templates in your module.
@@ -318,6 +318,7 @@ mycustompdfgenerator
 ├── logo.png
 
 ```
+
 * PHP Code 
 
 ```php
