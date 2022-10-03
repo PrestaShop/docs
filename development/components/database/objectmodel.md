@@ -15,17 +15,19 @@ Read more about Object relation mapping (ORM), Database abstraction layer (DBAL)
 - [Data access layer (DAL)](https://en.wikipedia.org/wiki/Data_access_layer)
 - [Active record pattern](https://en.wikipedia.org/wiki/Active_record_pattern)
 
-A class extending ObjectModel class is tied to a database table. A static attribute (`$definition`) is representing the model. 
+A class extending ObjectModel class is tied to a database table. Its static attribute (`$definition`) is representing the model. 
 
 Its instances are tied to database records. The ObjectModel class provides accessors for each attribute. 
 
-When instancied with an id passed to the class constructor, the attributes are set with the related database record content (using the id as a primary key). 
+When instancied with an `$id` passed to the class constructor, the attributes are set with the related database record content (using the `$id` as a primary key). 
 
-When the `save()` method is called, ObjectModel will ask the DBAL to insert or update the object to database, depending if the id (reflection of the primary key in database), is known or not in the ObjectModel.
+When the `save()` method is called, ObjectModel will ask the DBAL to **insert** or **update** the object to database, depending if the `$id` is known or not in the ObjectModel.
 
 ObjectModel is also in charge of deleting an object in database (with its `delete()` method).
 
+{{% notice info %}}
 An ObjectModel extended class can be overriden, but with extreme precaution : defining a wrong `$definition` model for example, can break the entire system, or can lead to data loss. 
+{{% /notice %}}
 
 ## Create a new entity managed by ObjectModel
 
@@ -34,7 +36,7 @@ You can create a new entity (in a module for example), with its own database tab
 To do this, extend you class with "ObjectModel" :
 
 ```php
-use PrestaShop\PrestaShop\Adapter\Entity\ObjectModel; // not sure if i should namespace/use the adapter in this example or just use ObjectModel; ?
+use PrestaShop\PrestaShop\Adapter\Entity\ObjectModel;
 
 class Cms extends ObjectModel {
 
@@ -111,7 +113,7 @@ public static $definition = [
 
 - `table` is the related database table name (without the database table `PREFIX`, usually `ps_`), 
 - `primary` is the name of the `PRIMARY KEY` field in the database table, which will be used as `$id` in the ObjectModel
-- `multilang` is a boolean value indicating that the entity is available in multiple langages, see [Multiple stores and/or languages]({{< ref "#multiple-stores-languages" >}})
+- `multilang` is a boolean value indicating that the entity is available in multiple langages, see [Multiple languages]({{< ref "#multiple-languages" >}})
 - `fields` is an array containing all other of the fields from the database table.
 
 ### Fields description
@@ -131,7 +133,7 @@ In this example :
 
 - `meta_description` is the field's name
 - `self::TYPE_STRING` is its type
-- `lang` is a boolean related to multilang features ([Multiple stores and/or languages]({{< ref "#multiple-stores-languages" >}}))
+- `lang` is a boolean related to multilang features ([Multiple languages]({{< ref "#multiple-languages" >}}))
 - `validate` is a validation rule (optional)
 - `size` is the max size of the field. It should match the database definition to avoid data cropping or overflow when inserting/updating objects.
 
@@ -185,7 +187,7 @@ Field type is an important setting, it determines how ObjectModel will format yo
 #### Validation rules reference
 
 Several validation rules are available for your ObjectModel fields. 
-Please refer to the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Validate.php) for a complete list.
+[Please refer to the Validate class of PrestaShop](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Validate.php) for a complete list.
 
 ## Basic usage of an ObjectModel managed entity
 
@@ -207,7 +209,7 @@ If the insert was successful, the ObjectModel class will set the id of the entit
 ### Load an object
 
 ```php
-$id = 2; // id of the entity in database
+$id = 2; // id of the object in database
 $cms = new Cms($id); 
 $cms->meta_title = "My awesome CMS title with an update";
 [...]
@@ -216,59 +218,123 @@ $cms->save();
 
 In this example, we retrieve an entity from the database, with its id. Then, we change its `meta_title` attribute, and we call the same `save()` method. The `save()` method will trigger the `update()` method and not the `add()` method since its `id` attribute is known. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L750-L868).
 
-### Delete an object
+### Hard or soft delete an object
+
+Two delete mecanisms are available with ObjectModel : hard delete and soft delete. 
+Hard-delete deletes the record from the database, while soft-delete sets a flag to database indicating that this record is deleted.
+
+{{% notice info %}}
+**Soft delete is not always available.**
+
+If the model object has no `deleted` property or no `deleted` definition field, a `PrestaShopException` will be thrown
+{{% /notice %}}
+
+{{% notice info %}}
+**Soft delete does not trigger DeleteHooks.**
+
+Soft deleting an object does not trigger **Delete** related hooks, but will trigger **Update** related hooks. [ObjectModel lifecycle hooks]({{< ref "#lifecycle-hooks" >}})
+{{% /notice %}}
+
+```php
+$id = 2; // id of the object in database
+$cms = new Cms($id); 
+$cms->softDelete(); // sets the deleted property to true, and triggers an update() call
+[...]
+$cms->delete(); // triggers a DELETE statement to the DBAL
+```
+
+## Advanced usage 
+
+### Multiple languages objects{#multiple-languages}
+
+{{% notice %}}
+todo
+{{% /notice %}}
+
+### Multiple stores objects{#multiple-stores}
+
+{{% notice %}}
+todo
+{{% /notice %}}
+
+### Duplicate an object
+
+{{% notice %}}
+todo
+{{% /notice %}}
+
+### Partial update of an object
+
+Since {{< minver v="8.x" >}}, a partial update mecanism is available in ObjectModel. This mecanism allows you to choose which attributes you want to update during the `update()` method call. 
+
+On previous versions ({{< minver v="1.7.x" >}}, {{< minver v="1.6.x" >}}, ...), this method was already available but was not properly working.
+
+Example :
+
+```php
+$cms = new Cms(2); 
+$cms->meta_title = "My awesome CMS title with an update";
+$cms->meta_description = "My updated description";
+$cms->setFieldsToUpdate(["meta_title" => true]);
+$cms->save();
+```
+
+In this example, only the `meta_title` will be updated. `meta_description` (and all other fields) will not be updated in database.
+
+### Toggle status
+
+A mecanism of state is available with ObjectModel : active / inactive state. 
+When triggered, this mecanism allows your entities to be enabled / disabled. 
+
+{{% notice info %}}
+**Status is not always available.**
+
+If the model object has no `active` property or no `active` definition field, a `PrestaShopException` will be thrown
+{{% /notice %}}
 
 ```php
 $id = 2; // id of the entity in database
 $cms = new Cms($id); 
-$cms->delete();
+$cms->toggleStatus(); // sets the active property to true or false (depending on its current value), and triggers an update() call
 ```
-
-In this example, we retrieve an entity from the database, with its id. Then, we trigger the `delete()` method, and the object will be removed from the database. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L877-L919).
-
-## Advanced usage 
-
-### Partial update of an entity
-
-todo
-
-### Toggle status
-
-todo
 
 ### Delete multiple entities
 
-todo
+You can delete multiple object at once with the `deleteSelection` method. Pass an array of IDs to delete to this method, and they will be deleted. 
 
-### Associate an entity to a context
-
-todo
-
-## Multiple stores and/or languages {#multiple-stores-languages}
-
-In order to retrieve an object in many languages:
+Usage : 
 
 ```php
-'multilang' => true
+$cmsIdsToDelete = [1, 2, 3, 8, 10];
+(new Cms())->deleteSelection($cmsIdsToDelete);
 ```
 
-In order to retrieve an object depending on the current store:
+### Associate an object to a store (context)
+
+When working with multi-store ObjectModels, you can associate an object to one or several stores with the `associateTo` method :
 
 ```php
-'multishop' => true
+$cms->associateTo(1); // associates the object to the store #1
+[...]
+$cms->associateTo([1, 2, 4]); // associates the object to the stores #1, #2 and #4
 ```
 
-In order to retrieve an object which depends on the current store, and in many languages:
-
-```php
-'multilang_shop' => true
-```
-
-## ObjectModel lifecycle and hooks
+## ObjectModel lifecycle and hooks{#lifecycle-hooks}
 
 Thanks to the hooks, you can alter the Object Model or execute functions during the lifecycle of your models. Every hook receive an instance of the manipulated object model:
 
-{{< figure src="../../../img/object-model-lifecycle.png" title="ObjectModel lifecycle" >}}
+{{% mermaid %}}
+graph TD
+   subgraph "DELETE"
+        deleteA(actionObject<strong>DeleteBefore</strong>) --> deleteB(actionObject<i>Classname</i><strong>DeleteBefore</strong>) --> deleteC(actionObject<strong>DeleteAfter</strong>) --> deleteD(actionObject<i>Classname</i><strong>DeleteAfter</strong>)
+    end
+    subgraph "UPDATE"
+        updateA(actionObject<strong>UpdateBefore</strong>) --> updateB(actionObject<i>Classname</i><strong>UpdateBefore</strong>) --> updateC(actionObject<strong>UpdateAfter</strong>) --> updateD(actionObject<i>Classname</i><strong>UpdateAfter</strong>)
+    end
+     subgraph "CREATE"
+        createA(actionObject<strong>AddBefore</strong>) --> createB(actionObject<i>Classname</i><strong>AddBefore</strong>) --> createC(actionObject<strong>AddAfter</strong>) --> createD(actionObject<i>Classname</i><strong>AddAfter</strong>)
+    end
+{{% /mermaid %}}
 
 As an example, this is how you can retrieve information about a product when we delete it from the database:
 
