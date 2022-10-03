@@ -1,5 +1,6 @@
 ---
 title: ObjectModel class
+useMermaid: true
 ---
 
 # The ObjectModel class
