@@ -116,20 +116,23 @@ Here an example of generated markup with SmartyDev activated:
     </li>
   </ul>
 </div>
-<!-- end /Users/julien/Sites/PrestaShop/themes/classic/modules/blocklanguages/blocklanguages.tpl -->
+<!-- end /var/www/html/PrestaShop/themes/classic/modules/ps_languageselector/ps_languageselector.tpl -->
 
-<!-- begin /Users/julien/Sites/PrestaShop/themes/classic/modules/blockuserinfo/blockuserinfo.tpl -->
-<div class="user-info">
-  <i class="material-icons _gray-darker">&#xE7FF;</i>
-    <a class="logout"  href="http://prestashop.ps/fr/?mylogout=" rel="nofollow" title="Me déconnecter">Déconnexion</a>
-    <a class="account" href="http://prestashop.ps/fr/mon-compte" title="Voir mon compte client" rel="nofollow"><span>Julien Bourdeau</span></a>
-  </div>
-<!-- end /Users/julien/Sites/PrestaShop/themes/classic/modules/blockuserinfo/blockuserinfo.tpl -->
+<!-- begin /var/www/html/PrestaShop/themes/classic/modules/ps_customersignin/ps_customersignin.tpl -->
+  <a class="logout hidden-sm-down" href="http://prestashop.ps/en/?mylogout=" rel="nofollow">
+    <i class="material-icons">&#xE7FF;</i>
+    Sign out
+  </a>
+  <a class="account" href="http://prestashop.ps/en/my-account" title="View my customer account" rel="nofollow" >
+    <i class="material-icons hidden-md-up logged">&#xE7FF;</i>
+    <span class="hidden-sm-down">Julien Bourdeau</span>
+  </a>
+<!-- end /var/www/html/PrestaShop/themes/classic/modules/ps_customersignin/ps_customersignin.tpl -->
 
-<!-- begin /Users/julien/Sites/PrestaShop/themes/classic/modules/blockcart/blockcart.tpl -->
-<div class="blockcart cart-preview " data-refresh-url="http://prestashop.ps/fr/module/blockcart/ajax">
+<!-- begin /var/www/html/PrestaShop/themes/classic/modules/ps_shoppingcart/ps_shoppingcart.tpl -->
+<div class="blockcart cart-preview " data-refresh-url="http://prestashop.ps/en/module/ps_shoppingcart/ajax">
   <div class="header">
-    <a rel="nofollow" href="#" title="cart">
+    <i class="material-icons shopping-cart">shopping_cart</i>
 
 [...]
 ```
