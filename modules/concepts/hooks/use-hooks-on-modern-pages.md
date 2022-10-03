@@ -49,7 +49,7 @@ As we need to act on Dashboard but after the header, in the icons toolbar (with 
 
 ### Second step: create and register the Hook
 
-Create a [new module](https://devdocs.prestashop.com/8/modules/creation/tutorial) called `foo` and register the hook. You should end up with this kind of code in your module:
+Create a [new module](https://devdocs.prestashop-project.org/8/modules/creation/tutorial) called `foo` and register the hook. You should end up with this kind of code in your module:
 
 ```php
 <?php

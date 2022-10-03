@@ -3,11 +3,11 @@
 [![Build](https://github.com/PrestaShop/docs/actions/workflows/build.yml/badge.svg)](https://github.com/PrestaShop/docs/actions/workflows/build.yml)
 [![DevDocs Site update](https://github.com/PrestaShop/docs/actions/workflows/update-site.yml/badge.svg)](https://github.com/PrestaShop/docs/actions/workflows/update-site.yml)
 
-This documentation is available at https://devdocs.prestashop.com/
+This documentation is available at [https://devdocs.prestashop-project.org/](https://devdocs.prestashop-project.org/)
 
 ## Contributing
 
-Contributions are more than welcome! [Find out how](https://devdocs.prestashop.com/8/contribute/documentation/how/).
+Contributions are more than welcome! [Find out how](https://devdocs.prestashop-project.org/8/contribute/documentation/how/).
 
 ## Rendering the site locally
 
