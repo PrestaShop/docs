@@ -4,7 +4,7 @@ Thank you for contributing to the PrestaShop developer documentation!
 Please take the time to edit the "Answers" rows below with the necessary information.
 
 Check out our contribution guidelines on how to contribute:
-https://devdocs.prestashop.com/8/contribute/documentation/how/
+https://devdocs.prestashop-project.org/8/contribute/documentation/how/
 ------------------------------------------------------------------------------>
 
 | Questions     | Answers
