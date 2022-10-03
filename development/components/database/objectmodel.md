@@ -214,7 +214,7 @@ $cms->meta_title = "My awesome CMS title with an update";
 $cms->save();
 ```
 
-In this example, we retrieve an entity from the database, with its id. Then, we change its `meta_title` attribute, and we call the same `save()` method. The `save()` method will trigger the `update()` method and not the `add()` method since its `id` attribute is known.
+In this example, we retrieve an entity from the database, with its id. Then, we change its `meta_title` attribute, and we call the same `save()` method. The `save()` method will trigger the `update()` method and not the `add()` method since its `id` attribute is known. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L750-L868).
 
 ### Delete an object
 
@@ -224,7 +224,25 @@ $cms = new Cms($id);
 $cms->delete();
 ```
 
-In this example, we retrieve an entity from the database, with its id. Then, we trigger the `delete()` method. 
+In this example, we retrieve an entity from the database, with its id. Then, we trigger the `delete()` method, and the object will be removed from the database. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L877-L919).
+
+## Advanced usage 
+
+### Partial update of an entity
+
+todo
+
+### Toggle status
+
+todo
+
+### Delete multiple entities
+
+todo
+
+### Associate an entity to a context
+
+todo
 
 ## Multiple stores and/or languages {#multiple-stores-languages}
 
