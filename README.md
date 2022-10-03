@@ -2,11 +2,11 @@
 
 [![Build](https://github.com/PrestaShop/docs/actions/workflows/build.yml/badge.svg)](https://github.com/PrestaShop/docs/actions/workflows/build.yml)
 
-This documentation is available at https://devdocs.prestashop.com/
+This documentation is available at [https://devdocs.prestashop-project.org/](https://devdocs.prestashop-project.org/)
 
 ## Contributing
 
-Contributions are more than welcome! [Find out how](https://devdocs.prestashop.com/1.7/contribute/documentation/how/).
+Contributions are more than welcome! [Find out how](https://devdocs.prestashop-project.org/1.7/contribute/documentation/how/).
 
 ## Rendering the site locally
 

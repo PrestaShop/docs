@@ -13,7 +13,7 @@ weight: 1
 
 ##### PHP Code
 
-Your PHP code should be compatible with [PHP compatibility chart](https://devdocs.prestashop.com/1.7/basics/installation/system-requirements/#php-compatibility-chart)
+Your PHP code should be compatible with [PHP compatibility chart](https://devdocs.prestashop-project.org/1.7/basics/installation/system-requirements/#php-compatibility-chart)
 
 ##### HTML / CSS / Javascript
 
