@@ -125,7 +125,7 @@ Lets create `Installer` class inside `/demovieworderhooks/src/Install` folder st
 It is responsible only for module installation (hook registration, database creation, 
 population database data). When it comes to database creation we use PrestaShop `DbCore` class 
 functions because doctrine is not fully supported for modules installation at 1.7.7.0 release
- (https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/#creating-the-database).
+ (https://devdocs.prestashop-project.org/1.7/modules/concepts/doctrine/#creating-the-database).
 ```php
 <?php
 /**

@@ -224,7 +224,7 @@ below to `DemoExtendSymfonyForm2` class.
 ```
 
 Let's create `SupplierExtraImage` entity class. We use [Doctrine]
- (https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/) 
+ (https://devdocs.prestashop-project.org/1.7/modules/concepts/doctrine/) 
  which is available for PrestaShop modules since version 1.7.6.
 
 ```php
@@ -365,8 +365,7 @@ class SupplierExtraImageRepository extends EntityRepository
 ```
 
 Let's create hook `hookActionSupplierFormBuilderModifier` 
-function inside Main module class. This is a hook available for [CRUD forms]
-(https://devdocs.prestashop.com/1.7/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage/) in
+function inside Main module class. This is a hook available for [CRUD forms](https://devdocs.prestashop-project.org/1.7/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage/) in
 PrestaShop Symfony pages.
 
 ```php

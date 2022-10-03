@@ -20,10 +20,10 @@ The module will add the following components:
 While creating this component you will learn how to:
 
  - Create a module with namespace thanks to composer
- - Use Doctrine (https://devdocs.prestashop.com/1.7/modules/concepts/doctrine/)
+ - Use Doctrine (https://devdocs.prestashop-project.org/1.7/modules/concepts/doctrine/)
  - Use Repository classes extending Symfony EntityRepository (https://symfony.com/doc/3.4/doctrine/repository.html)
- - Use Symfony services (https://devdocs.prestashop.com/1.7/modules/concepts/services/)
- - Use Twig templates to render HTML (https://devdocs.prestashop.com/1.7/development/architecture/migration-guide/templating-with-twig/)
+ - Use Symfony services (https://devdocs.prestashop-project.org/1.7/modules/concepts/services/)
+ - Use Twig templates to render HTML (https://devdocs.prestashop-project.org/1.7/development/architecture/migration-guide/templating-with-twig/)
  - Various design patterns: Repository, Factory, Presenter
  
 {{% notice note %}}
@@ -35,7 +35,7 @@ project needs and don't hesitate to write a note to PrestaShop Core developers i
 ## Prerequisites
 
 - To be familiar with basic module creation.
-- To be familiar how Composer autoloads classes (https://devdocs.prestashop.com/1.7/modules/concepts/composer/)
+- To be familiar how Composer autoloads classes (https://devdocs.prestashop-project.org/1.7/modules/concepts/composer/)
 
 ### Available hooks
 

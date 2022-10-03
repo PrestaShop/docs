@@ -155,7 +155,7 @@ $(() => {
   taxGrid.addExtension(new BulkActionCheckboxExtension());
 });
 ```
-The last thing to do is to run the compiler. More about compiler and npm commands here: https://devdocs.prestashop.com/1.7/development/compile-assets/.
+The last thing to do is to run the compiler. More about compiler and npm commands here: https://devdocs.prestashop-project.org/1.7/development/compile-assets/.
 
 In our example we open command line, cd to `{{Our prestashop root directory}}/admin-dev/themes/new-theme` and type the following command: 
 
