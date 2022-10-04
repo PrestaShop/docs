@@ -120,13 +120,21 @@ If your code introduces deprecations, please note them here.
 
 ### Fixed ticket
 
-If your Pull Request resolves an existing issue, please note it using the _magic word_ "Fixes", followed by the issue number, like this: `Fixes #12314`.
+If your Pull Request resolves an existing issue, please note it using the _magic word_ "Fixes", followed by the issue number, like this: `Fixes #12314`. If your Pull Request fixes multiple issues, use following syntax: `Resolves #12314, Resolves #56789`.
 
 {{% notice tip %}}
 Using the appropriate syntax will link your Pull Request to that issue, and will automatically close it once your Pull Request is merged.
 {{% /notice %}}
 
 If no issue is linked to your Pull Request, maintainers might ask you to create one. This helps the team track what goes in a release and the status of each individual change. 
+
+### Related PRs
+
+This field should contain links to related PRs in other repositories.
+
+If your Pull Request modifies database structure or adds new configuration fields, you should also provide a PR for [autoupgrade module](https://github.com/PrestaShop/autoupgrade).
+
+If your Pull Request needs a theme change to work, you should provide [hummingbird](https://github.com/PrestaShop/hummingbird) and [classic-theme](https://github.com/PrestaShop/classic-theme) PR.
 
 ### How to test
 
