@@ -194,4 +194,5 @@ Then you need to create template so it can render nicely in your grid.
     {{ action.name }}
 </a>
 ```
+
 Last thing is to add your newly created Row action to Grid's `RowActionCollection` and then it should be available in your Grid!

@@ -48,6 +48,7 @@ You can have the theme change the configuration of PrestaShop when the theme is 
       NEW_PRODUCTS_NBR: 4
       PS_PNG_QUALITY: 8
 ```
+
 You can also add custom configuration variables here (to use on modules/themes).
 
 ### Modules

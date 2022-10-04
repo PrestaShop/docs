@@ -54,9 +54,10 @@ class CustomType extends AbstractType
     }
 }
 ```
+
 Then in Javascript you have to enable `ChoiceTree` component.
 
-```javascript
+```js
 import ChoiceTree from 'admin-dev/themes/new-theme/js/components/form/choice-tree';
 
 // initiate the component by providing your tree selector

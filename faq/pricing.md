@@ -31,7 +31,8 @@ In order to obtain this secure key, you need 2 items:
 - your shop name
 
 The secure key is computed like this:
-```
+
+```php
 $secureKey = md5(_COOKIE_KEY_ . Configuration::get('PS_SHOP_NAME'));
 ```
 

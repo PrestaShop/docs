@@ -110,6 +110,7 @@ We explained how to export all your tables to make sure you keep as much data as
 If you get your data from another CMS or prefer to proceed with your own method, you can run a custom SQL query to get all the information you need. This option is useful if you plan to import your data with the import feature of PrestaShop.
 
 As an example here is a SQL request to get the main product details, along with the texts corresponding to the first language of the first shop:
+
 ```sql
 SELECT p.*, pl.* FROM `ps_product` p JOIN `ps_product_lang` pl ON p.id_product = pl.id_product AND pl.id_lang = 1 AND pl.id_shop = 1 GROUP BY pl.id_product
 ```
@@ -122,6 +123,7 @@ If the result fits your needs, you can export it with the “export” button av
 If you used `mysqldump` for your backups, there is also an option for extracting your data in CSV files, as described in the [documentation](https://dev.mysql.com/doc/refman/8.0/en/mysqldump-delimited-text.html). However, our tests have shown that method is far from being easy.
 
 Example for exporting the table ps_product:
+
 ```bash
 mysqldump -h127.0.0.1 -P3307 -uroot -p -T/var/lib/mysql-files --fields-enclosed-by=\" --fields-terminated-by=\; prestashop16 ps_product
 ```
@@ -180,6 +182,7 @@ mysqldiff --server1=user:pass@host:port:socket --server2=user:pass@host:port:soc
 You need to provide the credentials to your MySQL servers. If the source and the destination databases are on the same server, the `--server2` parameter can be omitted. `db3` and `db4` are respectively the source and the destination databases of your data.
 
 Getting the structure diff will require additional options, as provided in this example:
+
 ```bash
 mysqldiff --server1=root:xxxx@127.0.0.1:3307 --changes-for=server1 --skip-table-options --force prestashop16:prestashop
 ```
@@ -246,6 +249,7 @@ You will probably notice the same change on your table keys:
 - `id_attribute_group` int(10) unsigned NOT NULL,
 + `id_attribute_group` int(11) NOT NULL,
 ```
+
 This change does not imply anything on your side. This is a preliminary work for building relations between our tables.
 
 ##### Column removed

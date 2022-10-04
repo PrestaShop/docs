@@ -50,6 +50,7 @@ After installing these packages, fpm service will automatically be started.
 PHP-FPM uses so-called pools to handle incoming FastCGI requests. 
 
 Here's an example:
+
 ```ini
 ; a pool called www
 [www]

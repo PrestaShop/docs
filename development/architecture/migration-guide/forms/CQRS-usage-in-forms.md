@@ -129,7 +129,7 @@ public function create(array $data)
     return $contactId->getValue();
 }
 ```
- 
+
 In this example, the Command Handler for `AddContactCommand` returns a `ContactId` value object that contains the contact ID.
 
 ### Using Queries

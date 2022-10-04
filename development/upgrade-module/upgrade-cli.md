@@ -20,7 +20,8 @@ The following parameters are mandatory:
 
 If you use default `action` parameter, it will run the full upgrade process.
 
-Exemple
+Example:
+
 ```
 $ php cli-upgrade.php --dir=admin-dev --channel=major
 ```
@@ -38,7 +39,8 @@ The following parameters are mandatory:
 * **--dir**: Tells where the admin directory is.
 * **--backup**: Select the backup to restore (this can be found in your folder `<admin directory>/autoupgrade/backup/`)
 
-Exemple
+Example:
+
 ```
 $ php cli-rollback.php  --dir=admin-dev --backup=V1.7.5.1_20190502-191341-22e883bd
 ```

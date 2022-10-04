@@ -107,6 +107,7 @@ You must enable the autoloading for this Controller. For example using a `compos
       "type": "prestashop-module"
     }
     ```
+
 You should run `composer dumpautoload` console command from where your module's composer.json file is located.
 
 If you do not have "composer" you can search for it. Composer is available on [any operating system](https://getcomposer.org/doc/00-intro.md).

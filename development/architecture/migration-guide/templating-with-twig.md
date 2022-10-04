@@ -86,12 +86,15 @@ Be careful when copying translatable wordings, you must use the exact same strin
 {{% /notice %}}
 
 Example:
+
 ```php
 <?php
 // legacy controller
 $this->trans('Before activating the webservice, you must be sure to: ', array(), 'Admin.Advparameters.Help');
 ```
+
 ... must become:
+
 ```twig
 {{ 'Before activating the webservice, you must be sure to: '|trans({}, 'Admin.Advparameters.Help') }}
 ```

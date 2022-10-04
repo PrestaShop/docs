@@ -298,7 +298,7 @@ In Twig files, you can use `trans_default_domain` to set up your default domain.
 {% trans_default_domain 'Modules.Mymodule.Foo' %}
 {{ 'Hello world'|trans }}
 {{ 'Something else'|trans }}
-``` 
+```
 
 ## Distributing your translations
 

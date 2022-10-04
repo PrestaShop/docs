@@ -47,7 +47,7 @@ action&lt;AdminControllerClassName>&lt;Action>After
       'return' => (mixed)
     );
     ```
-    
+
 action&lt;AdminControllerClassName>&lt;Action>Before
 : 
     Called before performing &lt;Action> in any &lt;AdminController>
@@ -61,7 +61,7 @@ action&lt;AdminControllerClassName>&lt;Action>Before
       'controller' => (AdminController)
     );
     ```
-    
+
 action&lt;AdminControllerClassName>FormModifier
 : 
     Called when rendering a form in any &lt;AdminController>
@@ -78,7 +78,7 @@ action&lt;AdminControllerClassName>FormModifier
       'form_vars' => &(array),
     );
     ```
-    
+
 action&lt;AdminControllerClassName>ListingFieldsModifier
 : 
     Located in: /classes/controller/AdminController.php
@@ -95,7 +95,7 @@ action&lt;AdminControllerClassName>ListingFieldsModifier
       'fields' => &(array)
     );
     ```
-    
+
 action&lt;AdminControllerClassName>OptionsModifier
 : 
     Located in: /classes/controller/AdminController.php
@@ -108,7 +108,7 @@ action&lt;AdminControllerClassName>OptionsModifier
       'option_vars' => &(array),
     );
     ```
-    
+
 actionAdmin&lt;Action>After
 : 
     Called after performing &lt;Action> in any admin controller
@@ -123,7 +123,7 @@ actionAdmin&lt;Action>After
       'return' => (mixed)
     );
     ```
-    
+
 actionAdmin&lt;Action>Before
 : 
     Called before performing &lt;Action> in any admin controller
@@ -137,7 +137,7 @@ actionAdmin&lt;Action>Before
       'controller' => (AdminController)
     );
     ```
-    
+
 actionAdminControllerSetMedia
 : 
     Located in: /classes/controller/AdminController.php
@@ -166,7 +166,7 @@ actionAdminMetaAfterWriteRobotsFile
       'write_fd' => &(resource) File handle
     );
     ```
-    
+
 actionAdminMetaBeforeWriteRobotsFile
 : 
     Called before generating the robots.txt file
@@ -180,7 +180,7 @@ actionAdminMetaBeforeWriteRobotsFile
       'rb_data' => &(array) File data
     );
     ```
-    
+
 actionAdminMetaSave
 : 
     Called after saving the configuration in AdminMeta
@@ -230,7 +230,7 @@ actionAdminProductsListingFieldsModifier
       'sql_limit' => &(string),
     );
     ```
-    
+
 actionAdminProductsListingResultsModifier
 : 
     Located in: /src/Adapter/Product/AdminProductDataProvider.php
@@ -244,7 +244,7 @@ actionAdminProductsListingResultsModifier
       'total' => (int),
     );
     ```
-    
+
 actionAdminThemesControllerUpdate_optionsAfter
 : 
     Located in: /controllers/admin/AdminThemesController.php for PrestaShop < 1.7.6
@@ -264,7 +264,7 @@ actionAjaxDie&lt;ControllerName>&lt;Method>Before
       'value' => (string)
     );
     ```
-    
+
 actionAjaxDieBefore
 : 
     **(deprecated since 1.6.1.1)**
@@ -438,7 +438,7 @@ actionCustomerAccountAdd
       'newCustomer' => (object) Customer object
     );
     ```
-    
+
 actionCustomerAccountUpdate
 : 
     Invoked when a customer updates its account successfully
@@ -593,7 +593,7 @@ actionFrontControllerSetVariables
         'templateVars' => &(array)
       );
     ```
-    
+
     Example usage:
     
     Your hook implementation should return array of values that will be added to `prestashop` object in `javascript` and `$modules` object in `smarty`.
@@ -607,19 +607,19 @@ actionFrontControllerSetVariables
         ];
     }
     ```
-    
+
     In Front Office you can access it globally using:
     
-    ```javascript
+    ```js
     console.log(prestashop.modules.your_module_name.your_variable_name);
     "Hello world"
     ```
-    
+
     with smarty
     
     ```smarty
     {$modules.your_module_name.your_variable_name}
-    ```    
+    ```
 
 actionGetAlternativeSearchPanels
 : 
@@ -811,7 +811,7 @@ actionOrderEdited
         array( 'order' => (object) Order
       );
     ```
-    
+
 actionOrderHistoryAddAfter
 : 
     This hook is displayed when a customer returns a product
@@ -832,7 +832,7 @@ actionOrderReturn
       'orderReturn' => (object) OrderReturn
     );
     ```
-    
+
 actionOrderSlipAdd
 : 
     Called when the quantity of a product changes in an order.
@@ -860,7 +860,7 @@ WARNING: only invoked when a product is actually removed from an order.
     );
     The order of IDs and quantities is important!
     ```
-    
+
 actionOrderStatusPostUpdate
 :   
     Called after the status of an order changes.
@@ -879,7 +879,7 @@ actionOrderStatusPostUpdate
       'id_order' => (int) Order ID
     );
     ```
-    
+
 actionOrderStatusUpdate
 : 
     Called before the status of an order changes.
@@ -895,7 +895,7 @@ actionOrderStatusUpdate
       'id_order' => (int) Order ID
     );
     ```
-    
+
 actionOutputHTMLBefore
 : 
     Available since: {{< minver v="1.7.1" >}}
@@ -924,7 +924,7 @@ actionPaymentCCAdd
       'paymentCC' => (object) OrderPayment object
     );
     ```
-    
+
 actionPaymentConfirmation
 : 
     Called after a payment has been validated
@@ -938,7 +938,7 @@ actionPaymentConfirmation
       'id_order' => (int) Order ID
     );
     ```
-    
+
 actionPDFInvoiceRender
 : 
     Located in: 
@@ -1041,7 +1041,7 @@ actionProductFlagsModifier
         'product' => (Product) $product,
     ),
     ```
-    
+
     
 actionSearch
 : 
@@ -1059,7 +1059,7 @@ actionSearch
       'total' => (int) Amount of search results
     );
     ```
-    
+
 actionSetInvoice
 : 
     Located in: /classes/order/Order.php
@@ -1088,7 +1088,7 @@ actionShopDataDuplication
       'new_id_shop' => (int) New shop ID
     );
     ```
-    
+
 actionSubmitAccountBefore
 : 
     Available since: {{< minver v="1.7.1" >}}
@@ -1121,7 +1121,7 @@ Quantity is updated only when a customer effectively places their order
       'quantity' => (int) New product quantity
     );
     ```
-    
+
 actionValidateCustomerAddressForm
 : 
     This hook is called when a customer submit its address form
@@ -1135,7 +1135,7 @@ actionValidateCustomerAddressForm
       'form' => (object) CustomerAddressForm
     );
     ```
-    
+
 actionValidateOrder
 : 
     After an order has been validated.
@@ -1193,7 +1193,7 @@ actionValidateStepComplete
       'completed' => &$isComplete,
     );
     ```
-    
+
     Usage:
     ```php
     <?php
@@ -1205,7 +1205,7 @@ actionValidateStepComplete
         }
     }
     ```
-    
+
 actionWatermark
 : 
     After a watermark has been added to an image.
@@ -1225,7 +1225,7 @@ actionWatermark
       'id_product' => (int) Product ID
     );
     ```
-    
+
 actionGetAdminOrderButtons
 : 
     Available since: {{< minver v="1.7.7" >}}
@@ -1319,7 +1319,7 @@ Located in: /controllers/admin/AdminDashboardController.php
         'date_to' => (string|null) $statsDateTo,
     ]
     ```
-    
+
 displayAdminAfterHeader
 : 
     Located in: 
@@ -1342,7 +1342,6 @@ This hook launches modules when the AdminCustomers tab is displayed in the Back 
       'id_customer' = (int) Customer ID
     );
     ```
-    
 
 displayAdminCustomersAddressesItemAction
 : 
@@ -1469,7 +1468,7 @@ This hook launches modules when the AdminOrder tab is displayed in the Back Offi
      'id_order' = (int) Order ID
     );
     ```
-    
+
 displayAdminOrderContentOrder
 : 
     **(removed in 1.7.7 in favor of)**
@@ -1924,6 +1923,7 @@ displayBeforeCarrier
          )
     );
     ```
+    
     NOTE: intified means an array of integers 'intified' by Cart::intifier
     
 displayCarrierExtraContent
@@ -1948,7 +1948,7 @@ displayCarrierList
       'address' => (object) Address object
     );
     ```
-    
+
 displayCartExtraProductActions
 : 
     Extra buttons in shopping cart
@@ -2276,7 +2276,7 @@ displayOrderConfirmation
       'order' => (object) Order
     );
     ```
-    
+
 displayOrderConfirmation1
 : 
     Located in: /themes/classic/templates/checkout/order-confirmation.tpl
@@ -2303,7 +2303,7 @@ displayOrderDetail
       'order' => (object) Order object
     );
     ```
-    
+
 displayOrderPreview
 : 
     Available since: {{< minver v="1.7.7" >}}
@@ -2319,7 +2319,6 @@ displayOrderPreview
       'order_id' => (integer) Order Id
     );
     ```
-    
 
 displayPaymentByBinaries
 : 
@@ -2455,6 +2454,7 @@ displayRightColumn
       'cart' => (object) Cart object
     );
     ```
+
     Note that the Cart object can also be retrieved from the current Context.
     
 displayRightColumnProduct
@@ -2663,7 +2663,7 @@ action&lt;KpiIdentifier>KpiRowModifier
         'kpis' => KpiInterface[] $kpis
     ),
     ```
-            
+
 action&lt;HookName>Form
 : 
     Available since: {{< minver v="1.7.4" >}}
@@ -2678,7 +2678,7 @@ action&lt;HookName>Form
     [
         'form_builder' => (FormBuilderInterface) $this->formBuilder,
     ]
-    ```  
+    ```
 
 action&lt;HookName>Save
 : 
@@ -2710,7 +2710,7 @@ action&lt;GridDefinitionId>GridDefinitionModifier
         'definition' => (GridDefinition) $definition,
     ]
     ```
-    
+
 action&lt;GridDefinitionId>GridQueryBuilderModifier
 : 
     Available since: {{< minver v="1.7.5" >}}
@@ -2725,7 +2725,7 @@ action&lt;GridDefinitionId>GridQueryBuilderModifier
         'search_criteria' => (SearchCriteriaInterface) $searchCriteria,
     ]
     ```
-    
+
 action&lt;GridDefinitionId>GridDataModifier
 : 
     Available since: {{< minver v="1.7.5" >}}
@@ -2738,7 +2738,7 @@ action&lt;GridDefinitionId>GridDataModifier
         'data' => (GridData) $data,
     ]
     ```
-    
+
 action&lt;GridDefinitionId>GridFilterFormModifier
 : 
     Available since: {{< minver v="1.7.5" >}}
@@ -2751,7 +2751,7 @@ action&lt;GridDefinitionId>GridFilterFormModifier
         'filter_form_builder' => (FormBuilderInterface) $formBuilder,
     ]
     ```
-    
+
 action&lt;GridDefinitionId>GridPresenterModifier
 : 
     Available since: {{< minver v="1.7.5" >}}
@@ -2822,7 +2822,7 @@ actionBeforeUpdate&lt;FormName>FormHandler
         'id' => (int) $id,
     ]
     ```
-    
+
 actionAfterUpdate&lt;FormName>FormHandler
 : 
     Available since: {{< minver v="1.7.6" >}}
@@ -2835,7 +2835,7 @@ actionAfterUpdate&lt;FormName>FormHandler
         'id' => (int) $id,
     ]
     ```
-    
+
 actionBeforeCreate&lt;FormName>FormHandler
 : 
     Available since: {{< minver v="1.7.6" >}}

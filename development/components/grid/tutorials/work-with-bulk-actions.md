@@ -139,4 +139,5 @@ Then you need to create template so it can render nicely in your grid.
   {{ action.name }}
 </button>
 ```
+
 Last thing is to add your newly created Bulk action to Grid's `BulkActionCollection` and then it should be available in your Grid!

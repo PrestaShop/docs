@@ -32,6 +32,7 @@ Controller/
         ├── Orders
         └── Stats
 ```
+
 Symfony Controllers should be thin by default and have only one responsibility: getting the HTTP Request from the client and returning an HTTP Response. This means that every business logic should be placed in dedicated classes outside the Controller:
 
 * Form management

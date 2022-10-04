@@ -40,7 +40,9 @@ if ('admin_orders_create' === $currentRoute) {
 ```
 
 Other methods are available. For example, thanks to `LegacyParametersConverter` which was introduced in 1.7.7.0, you can get controller action parameter using following approach:
+
 ```php
 $action = Tools::getValue('action');
 ```
+
 The configuration `legacy_params` for migrated page allows to link legacy parameters with new Symfony routes. If they are configured correctly, above mentioned code snippet should return 'addorder'. So you can use the legacy parameters to check a Symfony page identity.

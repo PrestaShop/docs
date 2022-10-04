@@ -94,7 +94,6 @@ For this tutorial, we'll add the new scenario to the `tests/Integration/Behaviou
 The scenario we want to test is the following:
 
 ```yml
-
   On my shop, there is only 1 carrier which can ship my products
   And his shipping fees of 5.0 euros in zone "US" for product whose price ranges between 0 and 150 euros
 
@@ -108,7 +107,6 @@ The scenario we want to test is the following:
 Then I convert it to use [Gherkin][2] syntax. This means each step must start with `Given`, `When` or `Then`. We can also use `And` which is an alias for the latest prefix used.
 
 ```yml
-
   Scenario: With free shipping voucher, there is no shipping fees
     Given On my shop, there is only 1 carrier which can ship my products
     And his shipping fees of 5.0 euros in zone "US" for product whose price ranges between 0 and 150 euros
@@ -141,6 +139,7 @@ php ./vendor/bin/behat -c tests/Integration/Behaviour/behat.yml --name="free shi
 (I use the `--name` filter to allow Behat to target my specific file, and not all the available tests)
 
 We can see that Behat detects that some steps are not defined yet and suggests to create them for me:
+
 ```
  >> cart suite has undefined steps. Please choose the context to generate snippets:
 ```

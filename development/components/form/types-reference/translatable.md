@@ -51,7 +51,7 @@ class SomeType extends AbstractType
 
 Then in Javascript you have to enable `TranslatableInput` component.
 
-```javascript
+```js
     import TranslatableInput from "admin-dev/themes/new-theme/js/components/translatable-input";
 
     // enable togging of different locales

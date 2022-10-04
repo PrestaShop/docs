@@ -41,8 +41,7 @@ class CustomType
 
 Then in Javascript you have to enable `IpInput` component.
 
-```javascript
-
+```js
 import IpInput from 'admin-dev/themes/new-theme/js/maintenance-page/ip-input';
 
 // initialize the component

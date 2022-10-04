@@ -243,7 +243,6 @@ sprintf=['[foo]' => 'some replacement, '%bar%' => 'something else']
 {{% /notice %}}
 
 
-
 #### Interpolating HTML
 
 You may need to add HTML content in your translated string. Writing it directly in the string (original or translated) won't work, as the special characters would be escaped to avoid XSS security issues.
@@ -401,7 +400,7 @@ $this->l('Some '. $var . ' wording');
 public function translate($wording) {
    $this->l($wording);
 }
-``` 
+```
 
 ### Language codes
 

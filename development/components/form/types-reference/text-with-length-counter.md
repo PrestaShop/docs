@@ -43,7 +43,7 @@ class SomeType extends AbstractType
 
 Then in Javascript you have to enable `TextWithLengthCounter` component.
 
-```javascript
+```js
     import TextWithLengthCounter from "admin-dev/themes/new-theme/js/components/form/text-with-length-counter";
 
     // enables length counter for all TextWithLengthCounterType inputs on the page

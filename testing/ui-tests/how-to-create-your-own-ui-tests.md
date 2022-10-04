@@ -63,6 +63,7 @@ Example:
     return this.getTextContent(page, `${this.orderStatusesSelect} option[selected='selected']`, false);
   }
 ```
+
 This method returns the text content of the selected option in the Status `select` element in the Orders page.
 
 ### Selectors
@@ -138,7 +139,7 @@ Example:
 const dashboardPage = require('@pages/BO/dashboard');
 const customersPage = require('@pages/BO/customers');
 ```
-  
+
 ### Expect
 We use the `expect` keyword from the [Chai library](https://www.chaijs.com/api/bdd/). This allows us to write assertions in a much more readable way. You can use whatever way to assert you want/need. Don’t forget that you can use the second argument of `expect` to log out a better error message when your assertion fails.
 
@@ -147,7 +148,7 @@ Example :
 ```js
 Const isCustomerConnected = await foLoginPage.isCustomerConnected(page);
 await expect(isCustomerConnected, 'Customer is disconnected in FO').to.be.true;
-```  
+```
 
 ### Test identifier
 Our team thinks it’s very important to be able to follow how tests results evolve, so it’s been decided to add a unique identifier to every step in the test.

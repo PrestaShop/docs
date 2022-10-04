@@ -8,7 +8,7 @@ When highlighting a new feature, you may want to highlight the version on which 
 
 ```markdown
 Everything's better on {{</* minver v="1.7.4" */>}}
-``` 
+```
 
 Which renders to:
 
@@ -21,7 +21,7 @@ To align a pill with a title, use the parameter `title="true"`:
 ```markdown
 #### Example title
 {{</* minver v="1.7.4" title="true"*/>}}
-``` 
+```
 
 Which is rendered like this:
 

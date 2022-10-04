@@ -11,7 +11,7 @@ Most of the time, you will use the [global JavaScript components][global JavaScr
 
 **We don't recommend doing this.** If you absolutely need it, make sure to remove the file extension from the import path:
 
-```javascript
+```js
 // Incorrect
 import AutoCompletSearch from '../../../../admin-dev/themes/new-theme/js/components/auto-complete-search.js'
 import AutoCompletSearch from '../../../../admin-dev/themes/new-theme/js/components/auto-complete-search.ts'
@@ -23,7 +23,7 @@ import AutoCompletSearch from '../../../../admin-dev/themes/new-theme/js/compone
 If you need to carry out the above import, it is likely you will be using a bundler such as Webpack or Parcel. If the file you are trying to import is a TypeScript file, you need to add the TypeScript loader to your project and a `tsconfig` file.
 
 Example of a TypeScript loader:
-```javascript
+```js
 {
   test: /\.ts?$/,
   use: 'ts-loader',
@@ -32,7 +32,7 @@ Example of a TypeScript loader:
 ```
 
 Example of a TypeScript configuration file:
-```javascript
+```js
 {
   "compilerOptions": {
     "outDir": "./public/",

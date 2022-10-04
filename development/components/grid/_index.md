@@ -100,7 +100,7 @@ prestashop.core.grid.definition.factory.product_grid_definition_factory:
     class: 'PrestaShop\PrestaShop\Core\Grid\Definition\Factory\ProductGridDefinitionFactory'
     parent: 'prestashop.core.grid.definition.factory.abstract_grid_definition'
     public: true
-``` 
+```
 
 Most of the time you won't be creating Grid Definitions by yourself but delegating this task to other services,
 but in case you need to create a Grid Definition by hand, here's how you can do that.
@@ -114,7 +114,7 @@ $productsGridDefinition = $productsGridDefinitionFactory->getDefinition();
 $productsGridDefinition->getColumns(); // collection of defined columns
 $productsGridDefinition->getName(); // "Products"
 $productsGridDefinition->getId(); // "products"
-``` 
+```
 
 ## Search Criteria
 

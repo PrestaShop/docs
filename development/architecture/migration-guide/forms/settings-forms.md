@@ -182,6 +182,7 @@ To sum up how it works, the controller sends an instance of `FormView` to Twig a
 </div>
 {{ form_end(logsByEmailForm) }}
 ```
+
 All these helpers are documented and help you generate an HTML form from your `FormView` object, using the right markup to be rendered by the PrestaShop UI Kit. Currently, several forms have already been migrated, so you can use them as base for your own work.
 
 All the templates for modern pages can be found in the `src/PrestaShopBundle/Resources/views/Admin` folder. Twig templates for a page are split in subfolders: Forms, Blocks, Lists, Panels. This helps to keep track the role of each template.

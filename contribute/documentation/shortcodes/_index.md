@@ -14,10 +14,10 @@ Shortcodes are a special tags that you can use when writing your content that ar
 There are two kinds of shortcodes:
 
 1. **Tag style** (surrounds your content)  
-    ```go
-    {{%/* ExampleShortcode */%}} My custom content goes here {{%/* /ExampleShortcode */%}}
-    ``` 
-    
+   ```go
+   {{%/* ExampleShortcode */%}} My custom content goes here {{%/* /ExampleShortcode */%}}
+   ``` 
+
 2. **Placeholder style** (self-closing, adds some content)  
    ```go
    {{%/* ExampleShortcode */%}}

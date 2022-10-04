@@ -30,9 +30,10 @@ class CustomType extends AbstractType
     }
 }
 ```
+
 Then in Javascript you have to enable `ChangePasswordControl` component.
 
-```javascript
+```js
 import ChangePasswordControl from 'admin-dev/themes/new-theme/js/components/form/change-password-control';
 
 // This component requires many css selectors for targeting.

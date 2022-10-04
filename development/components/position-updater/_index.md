@@ -121,6 +121,7 @@ The format of the input data is not random nor fixed, it actually matches the de
       - 'newPosition'
       - 'parentId'
 ```
+
 If you need this component to match another input format you can instanciate your own factory with the appropriate settings.
 {{% /notice %}}
 
