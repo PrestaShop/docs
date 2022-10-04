@@ -7,7 +7,9 @@ useMermaid: true
 
 ## Introduction
 
-ObjectModel class is one of the main pillar of Prestashop's core. ObjectModel is the Data Access Layer for PrestaShop, implemented following the Active Record pattern. The Data Access Layer (DAL) is a part (with the Database Abstraction Layer - DBAL) of the Object Relational Mapping (ORM) system for PrestaShop.
+ObjectModel class is one of the main pillar of PrestaShop's legacy core. While a complete migration to Symfony/Doctrine entities is planned in the roadmap, ObjectModel will still remain present and available in our software for a while.
+
+ObjectModel is the Data Access Layer for PrestaShop, implemented following the Active Record pattern. The Data Access Layer (DAL) is a part (with the Database Abstraction Layer - DBAL) of the Object Relational Mapping (ORM) legacy system for PrestaShop.
 
 Read more about Object relation mapping (ORM), Database abstraction layer (DBAL), Data access layer (DAL), and Active Record :
 
@@ -18,9 +20,9 @@ Read more about Object relation mapping (ORM), Database abstraction layer (DBAL)
 
 A class extending ObjectModel class is tied to a database table. Its static attribute (`$definition`) is representing the model. 
 
-Its instances are tied to database records. The ObjectModel class provides accessors for each attribute. 
+Its instances are tied to database records. The ObjectModel class provides accessors for each attribute defined in `$definition`. 
 
-When instancied with an `$id` passed to the class constructor, the attributes are set with the related database record content (using the `$id` as a primary key). 
+When instancied with an `$id` passed to the class constructor, the attributes are retrieved in the related database (using the `$id` as the primary key to find the table record). 
 
 When the `save()` method is called, ObjectModel will ask the DBAL to **insert** or **update** the object to database, depending if the `$id` is known or not in the ObjectModel.
 
@@ -44,9 +46,9 @@ class Cms extends ObjectModel {
 }
 ```
 
-Next step is to define your model.
+Next step is to define your model. [Defining the model]({{< ref "#defining-model" >}}).
 
-## Defining the model
+## Defining the model{#defining-model}
 
 To define your model (reflection of the database table structure, fields, type, ...), you must use the `$definition` static variable.
 
@@ -192,32 +194,31 @@ Several validation rules are available for your ObjectModel fields.
 
 ## Basic usage of an ObjectModel managed entity
 
-### Create a new object
+### Create and save a new object
 
 ```php
 $cms = new Cms();
 $cms->position = 2;
-$cms->meta_title = "My awesome CMS title";
-[...]
+...
 $cms->save();
 ```
 
-In this example, we create an entity from scratch. Then, we set its `position` and `meta_title` attribute, and we call the `save()` method. The `save()` method will trigger the `add()` method since its `id` attribute is not yet known (because the entity is not created in database).
+In this example, we create an entity from scratch. Then, we set its `position` attribute, and we call the `save()` method. The `save()` method will trigger the `add()` method since its `id` attribute is not yet known (because the entity is not created in database).
 
 If the insert was successful, the ObjectModel class will set the id of the entity (retrieved from database). [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L572-L658).
 
 
-### Load an object
+### Load and save an object
 
 ```php
 $id = 2; // id of the object in database
 $cms = new Cms($id); 
-$cms->meta_title = "My awesome CMS title with an update";
-[...]
+$cms->position = 3;
+...
 $cms->save();
 ```
 
-In this example, we retrieve an entity from the database, with its id. Then, we change its `meta_title` attribute, and we call the same `save()` method. The `save()` method will trigger the `update()` method and not the `add()` method since its `id` attribute is known. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L750-L868).
+In this example, we retrieve an entity from the database, with its id. Then, we change its `position` attribute, and we call the same `save()` method. The `save()` method will trigger the `update()` method and not the `add()` method since its `id` attribute is known. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L750-L868).
 
 ### Hard or soft delete an object
 
@@ -240,7 +241,7 @@ Soft deleting an object does not trigger **Delete** related hooks, but will trig
 $id = 2; // id of the object in database
 $cms = new Cms($id); 
 $cms->softDelete(); // sets the deleted property to true, and triggers an update() call
-[...]
+...
 $cms->delete(); // triggers a DELETE statement to the DBAL
 ```
 
@@ -248,20 +249,211 @@ $cms->delete(); // triggers a DELETE statement to the DBAL
 
 ### Multiple languages objects{#multiple-languages}
 
-{{% notice %}}
-todo
-{{% /notice %}}
+PrestaShop's ObjectModel can handle translations (also called internationalization, or i18n) of your objects.
 
-### Multiple stores objects{#multiple-stores}
+#### Under the hood : how does it work ?
 
-{{% notice %}}
-todo
-{{% /notice %}}
+When declaring a multi-language ObjectModel, PrestaShop will fetch another database table named like your base database table, with a suffix `_lang`
+This table references the id of the base Object (`id_cms`), the id of the language (`id_lang`), and each translatable field. 
+
+In our previous example, for `Cms` ObjectModel :
+
+<div class='mermaid'>
+classDiagram
+    ps_cms <|-- ps_cms_lang
+    ps_cms : id_cms
+    ps_cms : id_cms_category
+    ps_cms : position
+    ps_cms : active
+    ps_cms : ...
+    class ps_cms_lang {
+        id_cms
+        id_lang
+        meta_title
+        meta_description
+        meta_keywords
+        link_rewrite
+        content
+        ...
+    }
+</div>
+
+#### Translate your ObjectModel entity
+
+To do so, you must declare the `multilang` setting of your model definition to `true` :
+
+```php
+public static $definition = [
+    ...
+    'multilang' => true,
+    ...
+```
+
+And then, you must declare which ones of your fields are translated :
+
+```php
+'fields' => array(
+    ...
+    'meta_description' => [
+        ...
+        'lang' => true,
+        ...
+    ],
+    ...
+)
+```
+
+#### Accessors for Translatable ObjectModels{#multiple-language-accessors}
+
+Translatable fields are available in your ObjectModel as `array`. 
+In our example, to update the attributes `meta_title` for languages EN (`$lang_id=1`) and FR (`$lang_id=2`), use the following method :
+
+```php
+$cms->meta_title[1] = "My awesome title";
+$cms->meta_title[2] = "Mon fabuleux titre";
+$cms->save();
+```
+
+### Multiple stores/shops objects{#multiple-stores}
+
+PrestaShop's ObjectModel can handle multiple stores (or multi shop) ObjectModels.
+
+#### Under the hood : how does it work ?
+
+When declaring a multi-store ObjectModel, PrestaShop will fetch another database table named like your base database table, with a suffix `_shop`
+This table is a pivot table referencing at least the id of the base Object (`id_cms`) and the id of the shop (`id_shop`). 
+
+In our previous example, for `Cms` ObjectModel :
+
+<div class='mermaid'>
+classDiagram
+    ps_cms <|-- ps_cms_shop
+    ps_cms : id_cms
+    ps_cms : id_cms_category
+    ps_cms : position
+    ps_cms : active
+    ps_cms : ...
+    class ps_cms_shop {
+        id_cms
+        id_shop
+    }
+</div>
+
+#### Enable multi-shop for your entity
+
+To do so, you must declare the `multishop` setting of your model definition to `true` :
+
+```php
+public static $definition = [
+    ...
+    'multishop' => true,
+    ...
+```
+
+#### Associate an object to a store
+
+You can associate an object to one or several stores with the `associateTo` method :
+
+```php
+$cms->associateTo(1); // associates the object to the store #1
+...
+$cms->associateTo([1, 2, 4]); // associates the object to the stores #1, #2 and #4
+```
+
+### Multiple stores/shops and languages objects{#multiple-stores-languages}
+
+PrestaShop's ObjectModel can handle both multiple languages and multiple shops entities. The entity `Category` is a good example of this case :
+
+- we need to translate a Category name for each language
+- we may need to change the name of a Category for different shops
+
+#### Under the hood : how does it work ?
+
+When declaring a multi-store ObjectModel, PrestaShop will fetch another database table named like your base database table, with a suffix `_shop`
+This table is a pivot table referencing at least the id of the base Object (`id_cms`) and the id of the shop (`id_shop`). 
+
+In our previous example, for `Category` ObjectModel :
+
+<div class='mermaid'>
+classDiagram
+    ps_category <|-- ps_category_lang
+    ps_category <|-- ps_category_shop
+    ps_category : id_category
+    ps_category : position
+    ps_category : active
+    ps_category : ...
+    class ps_category_lang {
+        id_category
+        id_shop
+        id_lang
+        additional_description
+        ...
+    }
+    class ps_category_shop {
+        id_category
+        id_shop
+    }
+</div>
+
+#### Enable multi language + multi shop for your entity
+
+To do so, you must declare the `multishop_lang` setting of your model definition to `true` :
+
+```php
+public static $definition = [
+    ...
+    'multishop_lang' => true,
+    ...
+```
+
+And then, you must declare which ones of your fields are translated :
+
+```php
+'fields' => array(
+    ...
+    'additional_description' => [
+        ...
+        'lang' => true,
+        ...
+    ],
+    ...
+)
+```
+
+#### Loading or save a multishop_lang object
+
+While languages are [accessible with accessors]({{< ref "#multiple-language-accessors" >}}), if you need to programatically retrieve an ObjectModel related to a particular shop (not the selected / current shop from Context), you need to change the method used to load an object :
+
+```php
+$targetShopId = 2;
+$category = new Category(1, null, $targetShopId); // 1 is the id of the object
+```
+
+If you need to update a translatable field on your entity, you need to add a `Shop::setContext()` call before you save your object :
+
+```php
+$targetShopId = 2;
+Shop::setContext(Shop::CONTEXT_SHOP, $targetShopId);
+
+$category = new Category(1, null, $targetShopId);
+$category->additional_description[1] = "Additional description for shop #2"; // language id #1, english
+$category->additional_description[2] = "Description additionelle pour le shop #2"; // language id #2, french
+$category->save();
+```
 
 ### Duplicate an object
 
-{{% notice %}}
-todo
+To duplicate an object, use the following method : `duplicateObject()`
+
+```php
+$cms = new Cms(2); 
+$duplicatedCms = $cms->duplicateObject();
+```
+
+{{% notice info %}}
+**duplicateObject will save the object to database.**
+
+Please note that `duplicateObject()` will instantly save the duplicated object to database
 {{% /notice %}}
 
 ### Partial update of an object
@@ -274,13 +466,32 @@ Example :
 
 ```php
 $cms = new Cms(2); 
-$cms->meta_title = "My awesome CMS title with an update";
-$cms->meta_description = "My updated description";
-$cms->setFieldsToUpdate(["meta_title" => true]);
+$cms->position = 4;
+$cms->active = 0;
+$cms->setFieldsToUpdate(["position" => true]);
 $cms->save();
 ```
 
-In this example, only the `meta_title` will be updated. `meta_description` (and all other fields) will not be updated in database.
+In this example, only the `position` will be updated. `active` (and all other fields) will not be updated in database.
+
+#### Partial update of a multi language field
+
+You need to specify the language Ids you want to update, as an array :
+
+```php
+$cms = new Cms(2); 
+$cms->meta_title[1] = "My awesome title"; // language id #1
+$cms->meta_title[2] = "Mon fabuleux titre"; // language id #2
+$cms->setFieldsToUpdate(
+    [
+        "meta_title" => [
+            1 => true,
+            2 => false
+        ]
+    ]
+);
+$cms->save(); // only meta_title for language id #1 will be updated
+```
 
 ### Toggle status
 
@@ -310,21 +521,15 @@ $cmsIdsToDelete = [1, 2, 3, 8, 10];
 (new Cms())->deleteSelection($cmsIdsToDelete);
 ```
 
-### Associate an object to a store (context)
-
-When working with multi-store ObjectModels, you can associate an object to one or several stores with the `associateTo` method :
-
-```php
-$cms->associateTo(1); // associates the object to the store #1
-[...]
-$cms->associateTo([1, 2, 4]); // associates the object to the stores #1, #2 and #4
-```
+{{% notice info %}}
+**This method only does Hard deletes**
+{{% /notice %}}
 
 ## ObjectModel lifecycle and hooks{#lifecycle-hooks}
 
 Thanks to the hooks, you can alter the Object Model or execute functions during the lifecycle of your models. Every hook receive an instance of the manipulated object model:
 
-{{% mermaid %}}
+<div class="mermaid">
 graph TD
    subgraph "DELETE"
         deleteA(actionObject<strong>DeleteBefore</strong>) --> deleteB(actionObject<i>Classname</i><strong>DeleteBefore</strong>) --> deleteC(actionObject<strong>DeleteAfter</strong>) --> deleteD(actionObject<i>Classname</i><strong>DeleteAfter</strong>)
@@ -332,10 +537,10 @@ graph TD
     subgraph "UPDATE"
         updateA(actionObject<strong>UpdateBefore</strong>) --> updateB(actionObject<i>Classname</i><strong>UpdateBefore</strong>) --> updateC(actionObject<strong>UpdateAfter</strong>) --> updateD(actionObject<i>Classname</i><strong>UpdateAfter</strong>)
     end
-     subgraph "CREATE"
+    subgraph "CREATE"
         createA(actionObject<strong>AddBefore</strong>) --> createB(actionObject<i>Classname</i><strong>AddBefore</strong>) --> createC(actionObject<strong>AddAfter</strong>) --> createD(actionObject<i>Classname</i><strong>AddAfter</strong>)
     end
-{{% /mermaid %}}
+</div>
 
 As an example, this is how you can retrieve information about a product when we delete it from the database:
 
