@@ -89,7 +89,7 @@ In the "Classic" Theme, [notifications are implemented as a partial template fil
 </aside>
 ```
 
-...and are then [included in the template file](https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/page.tpl#L32-L34):
+...and are then [included in the template file](https://github.com/PrestaShop/classic-theme/blob/2.0.1/templates/customer/page.tpl#L32-L34):
 
 ```smarty
 {block name='notifications'}
