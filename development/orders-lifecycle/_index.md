@@ -1,30 +1,47 @@
 ---
 title: Orders lifecycle
 weight: 42
+useMermaid: true
 ---
 
-# Order creation
+# Order lifecycle : from Cart to Order
 
-Orders can be created from a cart either in Front Office (FO) by the customer or in Back Office (
-BO) `Sell -> Orders -> "Add new order"` by the shop admin. See [Add new order page]({{< relref "../page-reference/back-office/order/add-new-order" >}}).
+{{% notice note %}}
+Orders can be created from a cart either in Front Office (FO) by the customer or in Back Office (BO) `Sell -> Orders -> "Add new order"` by the shop admin. See [Add new order page]({{< relref "../page-reference/back-office/order/add-new-order" >}}).
+{{% /notice %}}
 
-## Cart
+## Carts
+
+### Cart in Front Office (FO)
 
 In FO by default, a new empty cart is created everytime a customer signs in - this behavior can be adjusted in BO
 `Configure -> Shop parameters -> Customer settings`. If customer is not signed in (guest) - the cart is created once
 first product is being added into it. If guest already has a cart and signs in, the cart is assigned to him instead of
 creating a new one.
 
-When creating an order in the BO, a new empty cart is created once the customer is selected. An existing cart can also
-be selected, or existing order can be used to create a new cart.
+<div class='mermaid'>
+flowchart LR
+   A(Guest with empty cart)-->|Action : Add item to Cart|B{{Cart creation}}-->C(Cart)-->|Action : Login|D{{Associate cart to customer}}-->F
+   A-->|Action : Login|G{{Cart creation}}-->E{{Associate cart to customer}}-->F(Associated Cart)
+</div>
 
 {{% notice note %}}
-
 In FO, browser cookies are used to determine if current guest has a cart. This way guest can still see his previous cart
 if he is visiting the shop from the same browser in a short period of time (the time depends on cookie settings, which
 can be adjusted in BO `Configure -> Administration -> General "lifetime of front office cookies"`).
-
 {{% /notice %}}
+
+### Cart in Back Office (BO)
+
+When creating an order in the BO, a new empty cart is created once the customer is selected. An existing cart can also
+be selected, or existing order can be used to create a new cart.
+
+<div class='mermaid'>
+flowchart LR
+   A{{Select Customer}}-->|New cart|E{{Cart creation}}-->G
+   A-->|From existing cart|B{{Select existing Cart}}-->F
+   A-->|From order|C{{Select existing Order}}-->D{{Cart creation from Order content}}-->G{{Associate cart to customer}}-->F(Associated Cart)
+</div>
 
 ## Filling the cart and creating the order
 
