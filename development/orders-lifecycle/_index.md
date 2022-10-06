@@ -43,35 +43,40 @@ flowchart LR
    A-->|From order|C{{Select existing Order}}-->D{{Cart creation from Order content}}-->G{{Associate cart to customer}}-->F(Associated Cart)
 </div>
 
-## Filling the cart and creating the order
+## Convert a Cart to an Order
 
-To create the order, the cart has to be filled with the following information:
+For a Cart to be able to convert to an Order, we need the following steps :
 
-1. Personal information - details like name, email, birthday etc. In FO you can either fill this information manually as
-   guest (and optionally create new customer account) or login with existing customer. In BO
-   order creation you will be asked to select an existing customer before you can modify the existing cart or create a
-   new one.
-2. Addresses - provide the shipping and invoice addresses information. Shipping (a.k.a. delivery) address is where the
+<div class='mermaid' style="text-align : center">
+flowchart TB
+   A(Cart)-->|Associate to customer|B(Cart associated)
+   B-->|Select shipping and invoice addresses|C(Cart addressed)
+   C-->|Select shipping method and carrier|D(Cart shipping configured)
+   D-->|Select payment method|E(Cart payment configured)
+   E-->|Submit order|F(Order)
+</div>
+
+
+1. **Associate to customer** : details like name, email, birthday etc. In FO you can either fill this information manually as
+   guest (and optionally create new customer account) or login with existing customer. 
+   In BO order creation you will be asked to select an existing customer before you can modify the existing cart or create a new one.
+2. **Select shipping and invoice addresses** : provide the shipping and invoice addresses information. Shipping (a.k.a. delivery) address is where the
    ordered products should be sent while the invoice address is where the invoice is sent. In FO, you can provide one
    address to be used as both - shipping and invoice. In BO, you must select shipping and invoice addresses (the same
-   address can also be selected for both - shipping and invoices). After this step is complete you will need to select
-   available carriers (carriers are searched by delivery address and can be modified by shop admin in Improve ->
-   Shipping -> Carriers page). Note - carrier will not be available if selected country or zone is disabled (in BO
-   International -> Locations) or carrier shipping and locations settings are not configured.
-3. Payment - choose how to pay for the order. Shop admin can configure payment methods in BO Payment -> Payment methods.
+   address can also be selected for both - shipping and invoices). 
+3. **Select shipping method and carrier** : after this step is complete you will need to select available carriers
+   (carriers are searched by delivery address and can be modified by shop admin in Improve -> Shipping -> Carriers page). Note - carrier will not be available if selected country or zone is disabled (in BO International -> Locations) or carrier shipping and locations settings are not configured.
+3. **Select payment method** : choose how to pay for the order. Shop admin can configure payment methods in BO Payment -> Payment methods.
    All payments are handled by payment modules. Prestashop comes with 2 payment modules by default:
 
     * ps_checkpayment - allows check payments.
     * ps_wirepayment - allows wire payments (bank transfers).
 
    {{% notice note %}}
-
-   Payment restrictions for currency, country, group and carrier can be configured in
-   BO `Improve -> Payment -> Preferences`.
-
+   Payment restrictions for currency, country, group and carrier can be configured in BO `Improve -> Payment -> Preferences`.
    {{% /notice %}}
 
-4. Once the order is submitted, a unique order reference is generated and certain records from a cart and related
+4. **Submit Order** : Once the order is submitted, a unique order reference is generated and certain records from a cart and related
    entities are added into following database tables:
     * orders
     * order_history
