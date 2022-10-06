@@ -2,6 +2,8 @@
 title: "Tutorial: Creating your first module"
 menuTitle: "Tutorial"
 weight: 1
+useMermaid: true
+
 ---
 
 # Tutorial: Creating your first module
@@ -10,7 +12,7 @@ weight: 1
 Before you start writing code for your PrestaShop module, we recommend reading PrestaShop's [Coding standards]({{< ref "/8/development/coding-standards" >}}). Configuring your IDE hints or using [automated tools](https://github.com/PrestaShop/php-dev-tools) can help you make sure you follow the project's standards properly.
 {{% /notice %}}
 
-Let's create a simple first module; this will enable us to better describe its structure. We will name it **"My module"**.
+Let's create a first simple module, this will allow us to better describe its structure. We will name it **"My module"**.
 
 First, create the module's folder, in PrestaShop's `/modules` folder. Let's call it `mymodule`. This will be the module's "technical" name.
 
@@ -64,7 +66,7 @@ At this stage, if you place the module's folder on the `/modules` folder, the mo
 
 ## The constructor method
 
-Now, let's fill the class' code block with the essential constructor lines. Since the constructor is the first method to be called when the module is loaded by PrestaShop, this is the best place to set its details.
+Now, let's create the constructor method of the module. Since the constructor is the first method to be called when the module is loaded by PrestaShop, this is the best place to set its details.
 
 ```php
 <?php
@@ -101,7 +103,7 @@ class MyModule extends Module
 }
 ```
 
-Let's examine each line...
+Let's examine each line :
 
 ```php
 $this->name = 'mymodule';
@@ -245,48 +247,11 @@ As you can see, our three blocks of code (`__construct()`, `install()` and `unin
 
 This is a PrestaShop-specific object that allows to easily manage all the shop's settings. It stores its data on the `ps_configuration` database table.
 
-### The main methods
-
-This component has three main methods, allowing you to perform basic CRUD operations:
-
-`Configuration::get('myVariable')`
-: Retrieves a specific value from the database.
-
-`Configuration::updateValue('myVariable', $value)`
-: Updates an existing setting with a new value. If the setting does not yet exist, it creates it with that value.
-
-`Configuration::deleteByName('myVariable')`
-: Deletes the setting.
-
-
-Note that when using `updateValue()`, the content of `$value` can be anything, be it a string, a number, a serialized PHP array or a JSON object. As long as you properly code the data handling function, anything goes. For instance, here is how to handle a PHP array using the `Configuration` object:
-
-```php
-<?php
-// Storing a serialized array.
-Configuration::updateValue('MYMODULE_SETTINGS', serialize([true, true, false]));
-
-// Retrieving the array.
-$mySettings = unserialize(Configuration::get('MYMODULE_SETTINGS'));
-```
-
-As you can see, this is a very useful and easy-to-use object, and you will certainly use it in many situations. Most native modules use it too for their own settings.
+This is a very useful and easy-to-use object, and you will certainly use it in many situations. Most native modules use it too for their own settings.
 
 {{% notice note %}}
-You can read more about this component in [Configuration storage]({{< ref "/8/development/components/configuration" >}}).
+You can read more about this component in [Legacy Configuration object]({{< ref "/8/development/components/configuration/backward-compatibility" >}}) and [Configuration storage]({{< ref "/8/development/components/configuration" >}}).
 {{% /notice %}}
-
-### Retrieving external values from the ps_configuration data table
-
-You are not limited to your own variables: PrestaShop stores all its own configuration settings in the `ps_configuration` database table. There are literally hundreds of settings, and you can access them just as easily as you would access your own. For instance:
-
-- `Configuration::get('PS_LANG_DEFAULT')`: retrieves the ID for the default language.
-- `Configuration::get('PS_TIMEZONE')`: retrieves the name of the current timezone, in standard TZ format (see: [List of tz database time zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)).
-- `Configuration::get('PS_DISTANCE_UNIT')`: retrieves the default distance unit ("km" for kilometers, etc.).
-- `Configuration::get('PS_SHOP_EMAIL')`: retrieves the main contact e-mail address.
-- `Configuration::get('PS_NB_DAYS_NEW_PRODUCT')`: retrieves the number of days during which a newly-added product is considered "New" by PrestaShop.
-
-Dive into the `ps_configuration` table to discover many other settings!
 
 ## The Shop object
 
@@ -326,7 +291,31 @@ There are many free icon libraries available on the web. Here are a few:
 
 ## Installing the module
 
+You have two options to install a module : via back office interface, or via Symfony Console
+
+### Install module via back office interface
+
 Now that all basics are in place, reload the back office's "Module Catalog" page, in the "Front office features" section, you should find your module. Install it (or reset it if it is already installed).
+
+### Install module via Symfony Console
+
+Access your project's directory with a CLI, and run :
+
+```shell
+php bin/console prestashop:module install mymodule
+```
+
+Where `mymodule` is your module's name.
+
+To uninstall module, run :
+
+```shell
+php bin/console prestashop:module uninstall mymodule
+```
+
+For more informations, please read [the reference of the ModuleCommand]({{< ref "/8/development/components/console/prestashop-module" >}})
+
+### The config.xml file
 
 During the module's installation, PrestaShop automatically creates a small `config.xml` file in the module's folder, which stores the module's information. You should be very careful when editing this file by hand.
 
@@ -346,10 +335,6 @@ header('Pragma: no-cache');
 header('Location: ../');
 exit;
 ```
-
-## Further reading
-
-{{< children />}}
 
 [existing-tab-sections]: {{< ref "/8/modules/concepts/module-class/#tab" >}}
 [multistore]: {{< ref "/8/development/multistore/" >}}
