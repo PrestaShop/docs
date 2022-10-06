@@ -2,8 +2,6 @@
 title: "Tutorial: Creating your first module"
 menuTitle: "Tutorial"
 weight: 1
-useMermaid: true
-
 ---
 
 # Tutorial: Creating your first module
