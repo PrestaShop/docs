@@ -243,7 +243,7 @@ public function uninstall()
 
 As you can see, our three blocks of code (`__construct()`, `install()` and `uninstall()`) all make use of a new object, `Configuration`.
 
-This is a PrestaShop-specific object that allows to easily manage all the shop's settings. It stores its data on the `ps_configuration` database table.
+This PrestaShop-specific object allows you to easily manage all the shop's settings. It stores its data on the `PREFIX_configuration` database table.
 
 This is a very useful and easy-to-use object, and you will certainly use it in many situations. Most native modules use it too for their own settings.
 
