@@ -33,7 +33,7 @@ An array of notification is passed to the templates, containing at least one of 
 
 ## How to display notifications
 
-In the "Classic" Theme, [notifications are implemented as a partial template file](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/themes/classic/templates/_partials/notifications.tpl):
+In the "Classic" Theme, [notifications are implemented as a partial template file](https://github.com/PrestaShop/classic-theme/blob/2.0.1/templates/_partials/notifications.tpl):
 
 ```smarty
 <aside id="notifications">
@@ -89,7 +89,7 @@ In the "Classic" Theme, [notifications are implemented as a partial template fil
 </aside>
 ```
 
-...and are then [included in the template file](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/themes/classic/templates/checkout/checkout.tpl#L46-L48):
+...and are then [included in the template file](https://github.com/PrestaShop/classic-theme/blob/2.0.1/templates/customer/page.tpl#L32-L34):
 
 ```smarty
 {block name='notifications'}
