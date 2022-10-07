@@ -101,7 +101,7 @@ class MyModule extends Module
 }
 ```
 
-Let's examine each line :
+Let's examine each line:
 
 ```php
 $this->name = 'mymodule';
