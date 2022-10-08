@@ -20,7 +20,7 @@ While creating this component you will learn how to:
  - [Use Doctrine]({{< relref "/8/modules/concepts/doctrine/" >}})
  - [Use Repository classes extending Symfony EntityRepository](https://symfony.com/doc/4.4/doctrine/repository.html)
  - [Use Symfony services]({{< relref "/8/modules/concepts/services" >}})
- - [Use Twig templates to render HTML]({{< relref "/8/development/architecture/migration-guide/templating-with-twig" >}})
+ - [Use Twig templates to render HTML]({{< relref "/8/development/architecture/migration-guide/vertical-migration/templating-with-twig" >}})
  - Various design patterns: Repository, Factory, Presenter
  
 {{% notice note %}}

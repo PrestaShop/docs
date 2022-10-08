@@ -6,7 +6,7 @@ weight: 40
 # Controller and Routing
 
 {{% notice warning %}}
-Before creating a new symfony controller please **read and follow principles** described in [Symfony controllers & routing]({{< relref "../modern/controller-routing" >}}).
+Before creating a new symfony controller please **read and follow principles** described in [Symfony controllers & routing]({{< relref "../../modern/controller-routing" >}}).
 {{% /notice %}}
 
 {{% notice %}}

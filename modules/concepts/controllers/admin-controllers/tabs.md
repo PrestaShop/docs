@@ -211,7 +211,7 @@ When you create a new `Tab` it automatically creates the appropriate roles in `T
 - `ROLE_MOD_TAB_ADMINLINKWIDGET_READ`
 - `ROLE_MOD_TAB_ADMINLINKWIDGET_UPDATE`
 
-These roles will allow you to manage detailed permission in your controllers, you can read this documentation if you need more details about [Controller Security]({{< ref "/8/development/architecture/migration-guide/controller-routing.md#security" >}}).
+These roles will allow you to manage detailed permission in your controllers, you can read this documentation if you need more details about [Controller Security]({{< ref "/8/development/architecture/migration-guide/vertical-migration/controller-routing.md#security" >}}).
 They are automatically added to the `SUPER_ADMIN` group, and the group of the Employee installing the module, but you can then edit privileges for other Employee groups.
 
 {{% notice note %}}
@@ -426,4 +426,4 @@ Since 1.7.7, when you create a Symfony route with the `_legacy_controller` if no
 {{% /notice %}}
 
 
-[controller-routing]: {{< ref "/8/development/architecture/migration-guide/controller-routing.md#the-legacy-link-property" >}}
+[controller-routing]: {{< ref "/8/development/architecture/migration-guide/vertical-migration/controller-routing.md#the-legacy-link-property" >}}

@@ -30,7 +30,7 @@ Fortunately, by implementing CQRS it allows PrestaShop to quickly build new API,
 
 ## CQRS Principles in PrestaShop
 
-1. All input validation SHOULD be done during the object construction (see [Validation]({{< relref "/8/development/architecture/migration-guide/validation">}})).
+1. All input validation SHOULD be done during the object construction (see [Validation]({{< relref "/8/development/architecture/migration-guide/vertical-migration/validation">}})).
 2. All objects SHOULD be immutable unless it's impractical to do so.
 3. The `Core\Domain` namespace _describes_ business objects, actions and messages. It DOES NOT contain behavior (at least for now).
 
