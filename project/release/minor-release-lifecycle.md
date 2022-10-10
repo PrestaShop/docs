@@ -100,4 +100,4 @@ The global duration for all the process is about 6 months. This is why we expect
 
 
 _(This article was originally published on our blog: [PrestaShop 1.7 Minor Release Lifecycle
-](https://build.prestashop.com/news/ps17-minor-release-lifecycle/))_
+](https://build.prestashop-project.org/news/ps17-minor-release-lifecycle/))_

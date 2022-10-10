@@ -18,7 +18,7 @@ The Validator then automatically creates a detailed report explaining what needs
 
 {{% notice info %}}
 **Important!**  
-Since version 1.6.1.0, PrestaShop uses the PSR-2 norm. We recommend using this norm but note that it is not mandatory and that it won’t be a reason to decline your module. Here are more details in [this blog article](https://build.prestashop.com/news/prestashop-moves-to-psr-2/).
+Since version 1.6.1.0, PrestaShop uses the PSR-2 norm. We recommend using this norm but note that it is not mandatory and that it won’t be a reason to decline your module. Here are more details in [this blog article](https://build.prestashop-project.org/news/prestashop-moves-to-psr-2/).
 {{% /notice %}}
 
 ### 2. Method search engine
@@ -47,7 +47,7 @@ define('_PS_MODE_DEV_', true);
 ```
 
 **Important:** stores which are up and running must not be used in Dev Mode!
-https://build.prestashop.com/news/module-development-changes-in-17/
+https://build.prestashop-project.org/news/module-development-changes-in-17/
 ### 2. Follow our good practices
 
 Read our article: [Good practices for developing modules]({{<ref "1.7/modules/creation/good-practices" >}}).
@@ -81,12 +81,12 @@ What this means for any shop upgrade is that in order for a PS 1.6 to migrate to
 
 **Everything you should know is gathered in the following pages:**
 
-- Details on every changes concerning modules on [this article of the Build devblog](https://build.prestashop.com/news/module-development-changes-in-17/);
+- Details on every changes concerning modules on [this article of the Build devblog](https://build.prestashop-project.org/news/module-development-changes-in-17/);
 - The [Theme Developer documentation]({{< ref "1.7/themes" >}}) is being written in the open. Don't hesitate to contribute or ask questions!
 - Payment modules:
   - Get inspired by [our payment module demo](https://github.com/PrestaShop/paymentexample) to develop yours and use [our dedicated documentation](https://devdocs.prestashop-project.org/1.7/modules/payment/)!
 
-And of course [our 1.7 Project FAQ](https://build.prestashop.com/news/prestashop-1-7-faq/) that should already be your bedtime reading!
+And of course [our 1.7 Project FAQ](https://build.prestashop-project.org/news/prestashop-1-7-faq/) that should already be your bedtime reading!
 
 ## How to submit a product to the Addons marketplace
 
