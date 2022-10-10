@@ -6,7 +6,7 @@ weight: 15
 
 # Installing PrestaShop from CLI
 
-Since version 1.5.4, PrestaShop has had a command-line installer.
+Since version 1.5.4, PrestaShop has a command-line installer.
 
 This special installer makes it possible to install PrestaShop without the need to use a web browser: simply put the content of the zip archive on your web server or pull code from an official PrestaShop repository, and you can install PrestaShop through your command-line interface (CLI). 
 
