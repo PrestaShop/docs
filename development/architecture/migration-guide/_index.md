@@ -17,7 +17,7 @@ It helps following better practices and reduces the urge for developers to learn
 Migrating a legacy page in PrestaShop requires working on three parts of the application: `templates`, `forms` and `controllers`.
 
 Since 2015 (PrestaShop 1.7) the Back Office pages were migrated `vertically`, meaning that all the parts fo the application must have been fully migrated together `page by page`.
-In 2022 (PresaShop 8.0) a new idea was born and a new `horizontal` migration approach was introduced, which should allow migrating `layer by layer` (e.g. migrate all the controllers, then all the forms, and then all the templates). For more information about the `horizontal` migration you can refer to the [ADR](https://github.com/PrestaShop/ADR/blob/master/0018-horizontal-migration.md) and the [blog post](https://build.prestashop-project.org/news/introducing-horizontal-migration/).
+In 2022 (PresaShop 8.0) a new idea was born and a new `horizontal` migration approach was introduced, which should allow migrating `layer by layer` (e.g. migrate all the controllers, then all the forms, and then all the templates).
 
 {{% notice note %}}
 Consult with PrestaShop core developers to decide which method is more suitable for certain page before migrating it.
