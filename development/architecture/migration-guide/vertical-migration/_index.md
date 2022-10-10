@@ -6,9 +6,9 @@ weight: 40
 summary: "The guide we use to migrate pages to Symfony vertically"
 ---
 
-# How to migrate Back Office pages to Symfony
+# How to migrate Back Office pages to Symfony vertically
 
-Migrating a legacy page in PrestaShop requires working on three parts of the application: templates, forms and controllers which contain the business logic.
+_Pick up a legacy page in Back Office, refactor controllers, forms and templates to follow Symfony framework standards, delete all the legacy code which is not used anymore_.
 
 ## Strategy / To-do List
 
