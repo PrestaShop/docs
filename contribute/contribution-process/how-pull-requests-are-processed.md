@@ -30,7 +30,7 @@ The results of these checks is displayed at the bottom of the Pull Request. Some
 
 For example he detects mistakes in the pull request description, he add some labels to classify the pull requests, he welcomes new contributors to the project ...
 
-[Read his article for the full details.](https://build.prestashop.com/news/prestonbot-reaches-stable-version/)
+[Read his article for the full details.](https://build.prestashop-project.org/news/prestonbot-reaches-stable-version/)
 
 If something is wrong, Prestonbot will write a comment in the pull request to tell you what to fix.
 
@@ -83,4 +83,4 @@ After the Pull Request has finally passed the QA validation, it is merged in the
 
 ---
 
-_(This article was originally published on our blog: [What Happens To Pull Requests After They Are Submitted](https://build.prestashop.com/news/the-review-process/))_
+_(This article was originally published on our blog: [What Happens To Pull Requests After They Are Submitted](https://build.prestashop-project.org/news/the-review-process/))_

@@ -82,7 +82,7 @@ composer install
 
 ### Compile assets
 
-Static assets are not present in the repository and need to be compiled (we explained why in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/)).
+Static assets are not present in the repository and need to be compiled (we explained why in [this article](https://build.prestashop-project.org/news/open-question-not-commiting-assets-anymore/)).
 You will need `npm` installed on your environment (here is the documentation about [how to compile assets][compile-assets]), then you can simply run:
 
 ```bash
