@@ -50,4 +50,4 @@ If the campaign reports that no bugs are found, the new patch release is validat
 
 
 _(This article was originally published on our blog: [PrestaShop 1.7 Patch Release Lifecycle
-](https://build.prestashop.com/news/ps17-minor-release-lifecycle/))_
+](https://build.prestashop-project.org/news/ps17-patch-release-lifecycle/))_

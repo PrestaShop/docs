@@ -10,7 +10,7 @@ summary: "Learn how PrestaShop is structured: back-end, front-end, business stac
 PrestaShop is a big project, with several moving parts. In this article you will learn how they are structured and how they work together.
  
 {{% notice note %}}
-Part of this article was originally published in 2019 as a [blog post](https://build.prestashop.com/news/prestashop-in-2019-and-beyond-part-1-current-architecture/). It has been updated and adapted for documentation purposes here.
+Part of this article was originally published in 2019 as a [blog post](https://build.prestashop-project.org/news/prestashop-in-2019-and-beyond-part-1-current-architecture/). It has been updated and adapted for documentation purposes here.
 {{% /notice %}}
 
 ## Overview
@@ -231,7 +231,7 @@ This means that the global interface is handled by the **default** theme, _even 
 
 Rest assured, this is a _temporary issue_ which will be solved when everything has been migrated to Twig and Symfony.
 
-[introducing-symfony]: http://build.prestashop.com/news/prestashop-1-7-and-symfony/
+[introducing-symfony]: http://build.prestashop-project.org/news/prestashop-1-7-and-symfony/
 {{% /callout %}}
 
 Finally, there's [Vue pages][introducing-vue]. Vue pages are hybrid: half-Symfony, half-API based BO pages. In those pages, the page's skeleton is first rendered by a Symfony controller (therefore, based on the **new theme**), and then a VueJS application takes over in the browser and draws its content based on data sent by the BO API.
@@ -281,12 +281,12 @@ Remember the overview at the top of the article? Have a look at this more detail
 
 [SSOT]: https://en.wikipedia.org/wiki/Single_source_of_truth
 [vuejs]: https://vuejs.org/
-[introduction]: https://build.prestashop.com/news/prestashop-in-2019-and-beyond-introduction/
-[architecture-1610]: https://build.prestashop.com/news/new-architecture-1-6-1-0/
-[child-themes]: https://build.prestashop.com/news/Child-Themes-Feature/
-[uikit]: https://build.prestashop.com/news/PrestaShop-UI-Kit/
-[introducing-vue]: https://build.prestashop.com/news/introducing-vuejs-symfony-api/
-[future-architecture]: https://build.prestashop.com/news/prestashop-in-2019-and-beyond-part-3-the-future-architecture/
+[introduction]: https://build.prestashop-project.org/news/prestashop-in-2019-and-beyond-introduction/
+[architecture-1610]: https://build.prestashop-project.org/news/new-architecture-1-6-1-0/
+[child-themes]: https://build.prestashop-project.org/news/Child-Themes-Feature/
+[uikit]: https://build.prestashop-project.org/news/PrestaShop-UI-Kit/
+[introducing-vue]: https://build.prestashop-project.org/news/introducing-vuejs-symfony-api/
+[future-architecture]: https://build.prestashop-project.org/news/prestashop-in-2019-and-beyond-part-3-the-future-architecture/
 [SOLID]: https://en.wikipedia.org/wiki/SOLID
 [adapter-pattern]: https://sourcemaking.com/design_patterns/adapter
 [dependency-inversion]: https://en.wikipedia.org/wiki/Dependency_inversion_principle

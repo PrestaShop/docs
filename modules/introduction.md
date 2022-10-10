@@ -39,7 +39,7 @@ Modules can:
 
 PrestaShop 1.7 was built so that modules that were written for PS 1.6 can work almost as-is — save for minor changes and a cosmetic update, the template files being in need of adapting to the 1.7 default theme.
 
-The major module development changes in PrestaShop 1.7 are explained in details [in this Build article](https://build.prestashop.com/news/module-development-changes-in-17/), and are integrated into this updated documentation. If you already know how to create a module that works with PS 1.6, we strongly advise you to read that article from top to bottom in order to get up to speed with 1.7 development.
+The major module development changes in PrestaShop 1.7 are explained in details [in this Build article](https://build.prestashop-project.org/news/module-development-changes-in-17/), and are integrated into this updated documentation. If you already know how to create a module that works with PS 1.6, we strongly advise you to read that article from top to bottom in order to get up to speed with 1.7 development.
 
 Some native modules have had their names changed in PrestaShop 1.7. [See the full list here]({{< ref "/8/development/native-modules/_index.md#module-name-changes-since-16" >}}).
 

@@ -165,7 +165,7 @@ Our Handlers started as "place where we put the legacy code we dont have the tim
 [adapter-namespace]: {{< ref "/8/development/architecture/file-structure/understanding-src-folder.md" >}}
 [cqrs]: {{< ref "/8/development/architecture/domain/cqrs.md" >}}
 [domain]: https://en.wikipedia.org/wiki/Domain-driven_design
-[future-architecture]: https://build.prestashop.com/news/prestashop-in-2019-and-beyond-part-3-the-future-architecture/#our-proposal-for-a-future-architecture
+[future-architecture]: https://build.prestashop-project.org/news/prestashop-in-2019-and-beyond-part-3-the-future-architecture/#our-proposal-for-a-future-architecture
 [ubiquitous-langage]: https://enterprisecraftsmanship.com/posts/ubiquitous-language-naming/
 [vue-js]: https://vuejs.org/
 [twig-form-theme]: {{< ref "/8/development/components/form/form-theme/" >}}
