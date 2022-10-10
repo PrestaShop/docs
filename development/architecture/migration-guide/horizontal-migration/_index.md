@@ -1,12 +1,12 @@
 ---
-title: How to migrate Back Office pages to Symfony using Horizontal migration approach
+title: How to migrate Back Office pages to Symfony horizontally
 menuTitle: Horizontal migration guide
 chapter: true
 weight: 40
-summary: "The guide we use to migrate pages to Symfony"
+summary: "The guide we use to migrate pages to Symfony horizontally"
 ---
 
-# How to migrate Back Office pages to Symfony
+# How to migrate Back Office pages to Symfony horizontally
 
 @todo: this page is work in progress
 

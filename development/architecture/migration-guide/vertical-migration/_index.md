@@ -1,9 +1,9 @@
 ---
-title: How to migrate Back Office pages to Symfony with Vertical migration
+title: How to migrate Back Office pages to Symfony vertically
 menuTitle: Vertical migration guide
 chapter: true
 weight: 40
-summary: "The guide we use to migrate pages to Symfony"
+summary: "The guide we use to migrate pages to Symfony vertically"
 ---
 
 # How to migrate Back Office pages to Symfony
