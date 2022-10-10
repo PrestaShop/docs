@@ -14,8 +14,8 @@ Orders can be created from a cart either in Front Office (FO) by the customer or
 
 ### Cart in Front Office (FO)
 
-In FO by default, a new empty cart is created everytime a customer signs in - this behavior can be adjusted in BO
-`Configure -> Shop parameters -> Customer settings`. If customer is not signed in (guest) - the cart is created once
+In FO by default, a new empty cart is created in database everytime a customer signs in - this behavior can be adjusted in BO
+`Configure -> Shop parameters -> Customer settings`. If customer is not signed in (guest) - the cart is created in database once
 first product is being added into it. If guest already has a cart and signs in, the cart is assigned to him instead of
 creating a new one.
 
