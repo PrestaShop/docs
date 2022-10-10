@@ -31,7 +31,7 @@ If you have trouble using this flow, you can find out more at [GitHub help](http
 While it may seem complex, this flow is the standard way most open source projects use to handle contributions. [This article](https://dev.to/mathieuks/introduction-to-github-fork-workflow-why-is-it-so-complex-3ac8) about the flow can help you understand the reasons for each part of the process.
 
 {{% notice tip %}}
-If you wish to start contributing smoothly, have a look at [issues labelled "good first issue"](https://github.com/PrestaShop/PrestaShop/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and pick one to work with. This label lists all beginner-friendly bugs and improvements. Read more about this label on [Build](https://build.prestashop.com/news/a-definition-of-the-good-first-issue-label).
+If you wish to start contributing smoothly, have a look at [issues labelled "good first issue"](https://github.com/PrestaShop/PrestaShop/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) and pick one to work with. This label lists all beginner-friendly bugs and improvements. Read more about this label on [Build](https://build.prestashop-project.org/news/a-definition-of-the-good-first-issue-label).
 {{% /notice %}}
 
 ## In this section

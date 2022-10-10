@@ -85,7 +85,7 @@ composer install
 ### Compile assets
 {{< minver v="1.7.8" title="true" >}}
 
-From the 1.7.8 version the assets are no longer present in the repository and need to be compiled (we explained with more details why in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/)).
+From the 1.7.8 version the assets are no longer present in the repository and need to be compiled (we explained with more details why in [this article](https://build.prestashop-project.org/news/open-question-not-commiting-assets-anymore/)).
 You will need `npm` installed on your environment (here is the documentation about [how to compile assets][compile-assets]), then you can simply run:
 
 ```bash

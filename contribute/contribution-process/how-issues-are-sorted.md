@@ -32,7 +32,7 @@ Examples:
 - Difficulty to globally manage categories, products or customers
 - Difficulty to globally place and manage orders
 
-A critical issue should result in a patch version that should be released as soon as possible. [PrestaShop 1.7.2.5](https://build.prestashop.com/news/prestashop-1-7-2-5-maintenance-release/) is a good example: this patch release fixes two vulnerabilities affecting the Back Office.
+A critical issue should result in a patch version that should be released as soon as possible. [PrestaShop 1.7.2.5](https://build.prestashop-project.org/news/prestashop-1-7-2-5-maintenance-release/) is a good example: this patch release fixes two vulnerabilities affecting the Back Office.
 
 
 ### Major
@@ -98,4 +98,4 @@ In the end, handling bugs requires two points of view: micro and macro. Severity
 
 ---
 
-_(This article was originally published on our blog: [Introducing A New Bug Severity Classification](https://build.prestashop.com/news/severity-classification/))_
+_(This article was originally published on our blog: [Introducing A New Bug Severity Classification](https://build.prestashop-project.org/news/severity-classification/))_

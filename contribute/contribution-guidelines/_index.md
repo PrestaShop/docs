@@ -65,7 +65,7 @@ We used to require these compiled files to be committed and included in the same
 - In the `1.7.7.x` branch, compiled assets are still required and should be committed.
 - In the `develop` branch, assets are no longer versioned and should no longer be committed. 
 
-More information in [this article](https://build.prestashop.com/news/open-question-not-commiting-assets-anymore/).
+More information in [this article](https://build.prestashop-project.org/news/open-question-not-commiting-assets-anymore/).
 {{% /notice %}}
 
 Make sure to follow these guidelines:
