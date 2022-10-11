@@ -5,40 +5,11 @@ weight: 10
 
 # Migration project and strategy
 
-This is a summary of the current Migration Strategy. It provides an overview of our current vision, in the end of this year 2020, of the Symfony Migration project.
+This is a summary of the vertical Migration Strategy.
 
-## Different kind of pages
-
-Back-Office pages can be classified in four categories:
-
-1. [Configuration / Settings Form pages][form-pages]
-
-These pages allow the user to modify configuration settings in PrestaShop.
-
-2. [Listing pages][grid-pages]
-
-These pages allow the user to browse PrestaShop content using listings. These listings usually provide some actions the user can trigger, such as "enable/disable", "delete", "bulk delete".
-
-3. [Add/Edit Form pages][identifiable-form-pages]
-
-These pages allow the user to create or edit records from PrestaShop data model (example: create/edit customers).
-
-4. Other pages
-
-There are some pages that are unique: Carriers Edit page, Dashboard, Customer Service page ...
-
-Sometimes a page will have mixed content. For example there are pages that provide two listings or one listing and one configuration form.
-
-## Where we started from
-
-In legacy pages, most of the time, these Back-office pages were structured following standard [MVC PrestaShop model][legacy-mvc]:
-
-- smarty templates (View)
-- a Controller with sometimes a lot of logic in it (Controller)
-- some business logic classes (Model)
-- ObjectModel classes with lot of logic in it (Model)
-
-We believe PrestaShop project has grown too big to follow this 3-layers model, rather fitted for small applications. We have chosen to introduce more architecture layers.
+{{% notice note %}}
+The `vertical` migration was originally the only migration method available before the introduction of `horizontal` migration, so some concepts explained in these docs should be considered as a common migration practices and may be applied when migrating both `vertically and horizontally` (until the docs are cleaned up and split correctly).
+{{% /notice %}}
 
 ## The beginning of the Migration project: Configuration Form
 
@@ -157,10 +128,6 @@ Finally, Themes are a particular kind of extension that sits on top of the front
 
 Our Handlers started as "place where we put the legacy code we dont have the time to migrate now". They must now become interfaces for the Core domain, defining the future API endpoints. You could think of them as Controllers for the Domain, and consequently they will become empty of business logic, only focused on validating incoming Commands and Queries and formatting the data in both directions.
 
-[form-pages]: {{< ref "/8/development/architecture/migration-guide/vertical-migration/forms/settings-forms.md" >}}
-[grid-pages]: {{< ref "/8/development/components/grid/" >}}
-[identifiable-form-pages]: {{< ref "/8/development/architecture/migration-guide/vertical-migration/forms/crud-forms.md" >}}
-[legacy-mvc]: {{< ref "/8/basics/introduction.md" >}}
 [thin-ctrlers]: https://symfony.com/doc/4.0/best_practices/controllers.html
 [adapter-namespace]: {{< ref "/8/development/architecture/file-structure/understanding-src-folder.md" >}}
 [cqrs]: {{< ref "/8/development/architecture/domain/cqrs.md" >}}

@@ -8,7 +8,7 @@ summary: "The guide we use to migrate pages to Symfony vertically"
 
 # How to migrate Back Office pages to Symfony vertically
 
-_Pick up a legacy page in Back Office, refactor controllers, forms and templates to follow Symfony framework standards, delete all the legacy code which is not used anymore_.
+_Pick up a legacy page, refactor model, view and the controller (basically everything related to that page) to follow Symfony framework standards, delete the legacy code which is not used anymore_.
 
 ## Strategy / To-do List
 
