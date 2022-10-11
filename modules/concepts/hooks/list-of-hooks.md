@@ -1217,7 +1217,7 @@ actionValidateOrder
 
             protected function createCustomerReward(Customer $customer, Order $order): ?CartRule
             {
-               //TODO: generate customer cart rule (according the order amount for example)
+               //TODO: generate customer cart rule (according to the order amount for example)
             }
 
             protected function notifyCustomer(Customer $customer, CartRule $cartRule): bool
