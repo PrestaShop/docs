@@ -1212,7 +1212,7 @@ actionValidateOrder
 
             protected function getRequiredNbrOfTheOrderToReward(): int
             {
-               //TODO : return configured requored number of the order to reward the customer
+               //TODO : return configured number of orders required to reward the customer
             }
 
             protected function createCustomerReward(Customer $customer, Order $order): ?CartRule
