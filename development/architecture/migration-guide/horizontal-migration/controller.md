@@ -3,13 +3,6 @@ title: Migrating controller horizontally
 weight: 40
 ---
 
-## The Bridge
-A new namespace was introduced for the horizontal migration - `PrestaShopBundle\Bridge`. All the classes inside acts as bridges between the Symfony and the legacy code.
-
-- `PrestaShopBundle/Bridge/AdminController/` contains classes which helps to build the Symfony controller with the encapsulated legacy code under the hood.
-- `PrestaShopBundle/Bridge/Helper/` contains bridges for List and Form helpers which encapsulates the legacy `HelperList` and `HelperForm` classes.
-- `PrestaShopBundle/Bridge/Smarty/` contains a bridge for converting Smarty template to a Symfony controller response.
-
 ### Creating the Controller
 To start migrating a page horizontally you need to create a new Symfony controller under `PrestaShopBundle/Controller/<path>/<Your>Controller`, extend the `FrameworkBundleAdminController` and declare the routing in `PrestaShopBundle/Resources/config/routing/admin/{path-following-menu}/*.yml` file (e.g. `PrestaShopBundle/Resources/config/routing/admin/sell/catalog/features.yml`) (same as with vertical migration). The controller must implement a `PrestaShopBundle\Bridge\AdminController\FrameworkBridgeControllerInterface` which requires 2 methods to be implemented:
  - `getLegacyControllerBridge(): LegacyControllerBridgeInterface` - You don't need to worry about this method, just use the `FrameworkBridgeControllerTrait` - the method is already implemented there.
