@@ -289,15 +289,15 @@ There are many free icon libraries available on the web. Here are a few:
 
 ## Installing the module
 
-You have two options to install a module : via back office interface, or via Symfony Console
+You have two options to install a module: from the back office interface or using the Symfony Console component (CLI-base installation)
 
-### Install module via back office interface
+### Install module from the back office interface
 
 Now that all basics are in place, reload the back office's "Module Catalog" page, in the "Front office features" section, you should find your module. Install it (or reset it if it is already installed).
 
-### Install module via Symfony Console
+### Install module from CLI using the Symfony Console component
 
-Access your project's directory with a CLI, and run :
+Access your project's directory with a CLI, and run:
 
 ```shell
 php bin/console prestashop:module install mymodule
@@ -305,7 +305,7 @@ php bin/console prestashop:module install mymodule
 
 Where `mymodule` is your module's name.
 
-To uninstall module, run :
+To uninstall the module, run the following:
 
 ```shell
 php bin/console prestashop:module uninstall mymodule
