@@ -55,7 +55,7 @@ This command, by default, will display the various available options:
 | `ssl`           | Enable SSL (from PS 1.7.4)                 | 0                            | 0, 1                                                                                                  |
 | `rewrite`       | Enable rewrite engine                      | 1                            | 0, 1                                                                                                  |
 | `fixtures`      | Install fixtures                           | 1                            | 0, 1                                                                                                  |
-| `modules`       | Modules to install, separated by comma     | []                           | _array_ of module names (located in `/modules`)                                                       |
+| `modules`       | Modules to install, separated by comma     | [] (all)                     | _array_ of module names (located in `/modules`)                                                       |
 
 - All the options from the regular in-browser installer are available, with their default values listed above.
 - Almost all default option values can be left as is because you can edit them all from the PrestaShop Back Office once the installation is complete. 
