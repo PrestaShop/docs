@@ -27,56 +27,66 @@ php index_cli.php
 
 This command, by default, will display the various available options:
 
-```
-Arguments available:
---step	all / database,fixtures,theme,modules,postInstall	(Default: all)
---language	language iso code	(Default: en)
---all_languages	install all available languages	(Default: 0)
---timezone		(Default: Europe/Paris)
---base_uri		(Default: /)
---domain		(Default: localhost)
---db_server		(Default: localhost)
---db_user		(Default: root)
---db_password		(Default: )
---db_name		(Default: prestashop)
---db_clear	Drop existing tables	(Default: 1)
---db_create	Create the database if not exist	(Default: 0)
---prefix		(Default: ps_)
---engine	InnoDB/MyISAM	(Default: InnoDB)
---name		(Default: PrestaShop)
---activity		(Default: 0)
---country		(Default: fr)
---firstname		(Default: John)
---lastname		(Default: Doe)
---password		(Default: Correct Horse Battery Staple)
---email		(Default: pub@prestashop.com)
---license	show PrestaShop license	(Default: 0)
---theme		(Default: )
---ssl	enable SSL for PrestaShop	(Default: 0)
---rewrite	enable rewrite engine for PrestaShop	(Default: 1)
---fixtures	enable fixtures installation	(Default: 1)
---modules	Modules to install, separated by comma	(Default: [])
-```
+|Argument|Description|Default value|Allowed values|
+|:----|:----|:----|:----|
+|`step`|Installation steps to execute|all|all, database, fixtures, theme, modules, postInstall|
+|`language`|Language ISO code to install|en|2 letters ISO 639-1 code ([ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) with available translation files in `/translations`|
+|`all_languages`|Installs all available languages|0|0, 1|
+|`timezone`|Set timezone of instance|Europe/Paris|Valid timezone ([TZ Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))|
+|`base_uri`|Base URI (appended after domain name)|/|Any URI|
+|`domain`|Domain name for the shop (without http/s)|localhost|Any domain name or IP address|
+|`db_server`|Database server hostname|localhost|Any valid MySQL valid server name or IP address|
+|`db_user`|Database server user|root|Any valid MySQL user name|
+|`db_password`|Database server password|""|The valid password for `db_user`|
+|`db_name`|Database name|prestashop|_string_|
+|`db_clear`|Drop existing tables|1|0, 1|
+|`db_create`|Create the database if not exists|0|0, 1|
+|`prefix`|Prefix of table names|ps_|_string_|
+|`engine`|Engine for MySQL|InnoDB|InnoDB, MyISAM|
+|`name`|Name of the shop|PrestaShop|_string_|
+|`activity`|Default activity of the shop|0|Id of an activity ([Complete list of activities](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/General/PreferencesType.php#L211-L230))|
+|`country`|Country of the shop|fr|2 letters Alpha-2 code of ISO-3166 list([ISO-3166](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes))|
+|`firstname`|Admin user firstname|John|_string_|
+|`lastname`|Admin user lastname|Doe|_string_|
+|`password`|Admin user password|Correct Horse Battery Staple|_string_|
+|`email`|Admin user email|pub@prestashop.com|_string_|
+|`license`|Show PrestaShop license after installation|0|0, 1|
+|`theme`|Theme name to install|"" (classic)|Theme name (located in `/themes`)|
+|`ssl`|Enable SSL (from PS 1.7.4)|0|0, 1|
+|`rewrite`|Enable rewrite engine|1|0, 1|
+|`fixtures`|Install fixtures|1|0, 1|
+|`modules`|Modules to install, separated by comma|[]|_array_ of module names (located in `/modules`)|
 
 - All the options from the regular in-browser installer are available, with their default values listed above.
-- Almost all default option values can be left as is because you can edit them all from the PrestaShop back office once the installation is complete. 
+- Almost all default option values can be left as is because you can edit them all from the PrestaShop Back Office once the installation is complete. 
 
 {{% notice info %}}
-Note that the e-mail and password are used to create the administrator's back office account.
+Note that the e-mail and password are used to create the administrator's Back Office account.
 {{% /notice %}}
 
-To start the installation, you only need to provide one argument. In reality, you need to provide more:
+To start the installation, we recommend that you provide at least these arguments :
 
-- `domain`. The location where you want your store to appear.
+- `domain`. The domain name where your shop will be available.
 - `db_server`. The database server address.
-- `db_name`. The name of the database you want to use.
+- `db_name`. The name of the database you want to use. **We strongly recommend that you change the default `prestashop` value**
 - `db_user`. The username for the database you want to use.
 - `db_password`. The password for the database username above.
+- `prefix`. **We strongly recommend that you change the default `ps_` value.**
+- `email`. Your email to connect to the Back Office. 
+- `password`. The password to connect to the Back Office.
 
 Example:
 
 ```shell
-php install_cli.php --domain=example.com --db_server=sql.example.com --db_name=prestashop --db_user=root --db_password=123456789
+php install_cli.php 
+    --domain=example.com 
+    --db_server=sql.example.com 
+    --db_name=myshop
+    --db_user=root 
+    --db_password=123456789 
+    --prefix=myshop_
+    --email=me@example.com
+    --password=mystrongpassword
 ```
 
 If the installation completes without any errors, you should see the following confirmation:
@@ -87,5 +97,10 @@ If the installation completes without any errors, you should see the following c
 
 {{% notice info %}}
 Before running this command, please note that your database must be created with a `CREATE DATABASE xxx;` statement. 
-The in-browser installer has an option to attempt to create the database automatically **but not the CLI**.
+If the database is not created, please use argument `--db_create=1` to create the database.
+{{% /notice %}}
+
+{{% notice info %}}
+If your MySQL server is configured on a different port than `3306`, please specify it in the `db_server` argument like this :
+`--db_server=sql.example.com:3307`
 {{% /notice %}}
