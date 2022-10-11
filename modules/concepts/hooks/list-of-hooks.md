@@ -1184,7 +1184,7 @@ actionValidateOrder
                              $this->setAlreadyRewarded($customerObject);
                              $this->notifyCustomer($customerObject, $customerReward);
 			     
-			     //TODO : of course don't forget to log if something fail here :)
+			     //TODO : of course don't forget to log if something fails here :)
                        }
                    }
                 }
