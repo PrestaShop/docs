@@ -15,17 +15,17 @@ If deploying from sources (PrestaShop repository), you must first install Compos
 Install them with `composer install` from project's root directory.
 {{% /notice %}}
 
-The point of having a CLI installer in addition to the regular in-browser installer is to give this option to cater for some advanced users, who often prefer command-line interfaces as they tend to provide a more concise and powerful means to control a program or operating system.
+The point of having a CLI installer in addition to the regular in-browser installer is to provide a solution to some advanced users, who often prefer command-line interfaces as they tend to give a more concise and powerful means to control a program or operating system. We can see the advantage of CLI installer in Continuous Integration processes.
 
 ## How to use it
 
-The CLI installer is easy to use: from your terminal, go to the /install (or /install-dev) folder, and start the script with this command:
+To use the CLI installer, use your terminal, go to the `/install` (or `/install-dev`) folder, and start the script with this command:
 
 ```shell
 php index_cli.php
 ```
 
-This will display the various available options:
+This command, by default, will display the various available options:
 
 ```
 Arguments available:
@@ -58,11 +58,11 @@ Arguments available:
 --modules	Modules to install, separated by comma	(Default: [])
 ```
 
-- All the options from the regular in-browser installer are available, with their default value listed. 
-- Almost all default values value can be left as is, because you can edit them all from the PrestaShop back-office once the installation is done. 
+- All the options from the regular in-browser installer are available, with their default values listed above.
+- Almost all default option values can be left as is because you can edit them all from the PrestaShop back office once the installation is complete. 
 
 {{% notice info %}}
-Note that the e-mail and password are the ones used to create the administrator's back-office account.
+Note that the e-mail and password are used to create the administrator's back office account.
 {{% /notice %}}
 
 To start the installation, you only need to provide one argument. In reality, you need to provide more:
@@ -73,19 +73,19 @@ To start the installation, you only need to provide one argument. In reality, yo
 - `db_user`. The username for the database you want to use.
 - `db_password`. The password for the database username above.
 
-For instance:
+Example:
 
 ```shell
 php install_cli.php --domain=example.com --db_server=sql.example.com --db_name=prestashop --db_user=root --db_password=123456789
 ```
 
-And if your database credentials were good, you should see :
+If the installation completes without any errors, you should see the following confirmation:
 
 ```shell
 -- Installation successful! --
 ```
 
 {{% notice info %}}
-Please note that your database must be created with a `CREATE DATABASE xxx;` statement before running this command. 
-The Web GUI has an option to **Attempt to create the database automatically** but not the CLI.
+Before running this command, please note that your database must be created with a `CREATE DATABASE xxx;` statement. 
+The in-browser installer has an option to attempt to create the database automatically **but not the CLI**.
 {{% /notice %}}
