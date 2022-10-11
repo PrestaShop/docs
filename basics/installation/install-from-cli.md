@@ -27,35 +27,35 @@ php index_cli.php
 
 This command, by default, will display the various available options:
 
-|Argument|Description|Default value|Allowed values|
-|:----|:----|:----|:----|
-|`step`|Installation steps to execute|all|all, database, fixtures, theme, modules, postInstall|
-|`language`|Language ISO code to install|en|2 letters ISO 639-1 code ([ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)) with available translation files in `/translations`|
-|`all_languages`|Installs all available languages|0|0, 1|
-|`timezone`|Set timezone of instance|Europe/Paris|Valid timezone ([TZ Database](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones))|
-|`base_uri`|Base URI (appended after domain name)|/|Any URI|
-|`domain`|Domain name for the shop (without http/s)|localhost|Any domain name or IP address|
-|`db_server`|Database server hostname|localhost|Any valid MySQL valid server name or IP address|
-|`db_user`|Database server user|root|Any valid MySQL user name|
-|`db_password`|Database server password|""|The valid password for `db_user`|
-|`db_name`|Database name|prestashop|_string_|
-|`db_clear`|Drop existing tables|1|0, 1|
-|`db_create`|Create the database if not exists|0|0, 1|
-|`prefix`|Prefix of table names|ps_|_string_|
-|`engine`|Engine for MySQL|InnoDB|InnoDB, MyISAM|
-|`name`|Name of the shop|PrestaShop|_string_|
-|`activity`|Default activity of the shop|0|Id of an activity ([Complete list of activities](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/General/PreferencesType.php#L211-L230))|
-|`country`|Country of the shop|fr|2 letters Alpha-2 code of ISO-3166 list([ISO-3166](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes))|
-|`firstname`|Admin user firstname|John|_string_|
-|`lastname`|Admin user lastname|Doe|_string_|
-|`password`|Admin user password|Correct Horse Battery Staple|_string_|
-|`email`|Admin user email|pub@prestashop.com|_string_|
-|`license`|Show PrestaShop license after installation|0|0, 1|
-|`theme`|Theme name to install|"" (classic)|Theme name (located in `/themes`)|
-|`ssl`|Enable SSL (from PS 1.7.4)|0|0, 1|
-|`rewrite`|Enable rewrite engine|1|0, 1|
-|`fixtures`|Install fixtures|1|0, 1|
-|`modules`|Modules to install, separated by comma|[]|_array_ of module names (located in `/modules`)|
+| Argument        | Description                                | Default value                | Allowed values                                                                                        |
+| :-------------- | :----------------------------------------- | :--------------------------- | :---------------------------------------------------------------------------------------------------- |
+| `step`          | Installation steps to execute              | all                          | all, database, fixtures, theme, modules, postInstall                                                  |
+| `language`      | Language ISO code to install               | en                           | 2 letters ISO 639-1 code ([ISO 639-1][iso-639-1]) with available translation files in `/translations` |
+| `all_languages` | Installs all available languages           | 0                            | 0, 1                                                                                                  |
+| `timezone`      | Set timezone of instance                   | Europe/Paris                 | Valid timezone ([TZ Database][tz-database])                                                           |
+| `base_uri`      | Base URI (appended after domain name)      | /                            | Any URI                                                                                               |
+| `domain`        | Domain name for the shop (without http/s)  | localhost                    | Any domain name or IP address                                                                         |
+| `db_server`     | Database server hostname                   | localhost                    | Any valid MySQL valid server name or IP address                                                       |
+| `db_user`       | Database server user                       | root                         | Any valid MySQL user name                                                                             |
+| `db_password`   | Database server password                   | ""                           | The valid password for `db_user`                                                                      |
+| `db_name`       | Database name                              | prestashop                   | _string_                                                                                              |
+| `db_clear`      | Drop existing tables                       | 1                            | 0, 1                                                                                                  |
+| `db_create`     | Create the database if not exists          | 0                            | 0, 1                                                                                                  |
+| `prefix`        | Prefix of table names                      | ps\_                         | _string_                                                                                              |
+| `engine`        | Engine for MySQL                           | InnoDB                       | InnoDB, MyISAM                                                                                        |
+| `name`          | Name of the shop                           | PrestaShop                   | _string_                                                                                              |
+| `activity`      | Default activity of the shop               | 0                            | Id of an activity ([Complete list of activities][activities])                                         |
+| `country`       | Country of the shop                        | fr                           | 2 letters Alpha-2 code of ISO-3166 list([ISO-3166][iso-3166])                                         |
+| `firstname`     | Admin user firstname                       | John                         | _string_                                                                                              |
+| `lastname`      | Admin user lastname                        | Doe                          | _string_                                                                                              |
+| `password`      | Admin user password                        | Correct Horse Battery Staple | _string_                                                                                              |
+| `email`         | Admin user email                           | pub@prestashop.com           | _string_                                                                                              |
+| `license`       | Show PrestaShop license after installation | 0                            | 0, 1                                                                                                  |
+| `theme`         | Theme name to install                      | "" (classic)                 | Theme name (located in `/themes`)                                                                     |
+| `ssl`           | Enable SSL (from PS 1.7.4)                 | 0                            | 0, 1                                                                                                  |
+| `rewrite`       | Enable rewrite engine                      | 1                            | 0, 1                                                                                                  |
+| `fixtures`      | Install fixtures                           | 1                            | 0, 1                                                                                                  |
+| `modules`       | Modules to install, separated by comma     | []                           | _array_ of module names (located in `/modules`)                                                       |
 
 - All the options from the regular in-browser installer are available, with their default values listed above.
 - Almost all default option values can be left as is because you can edit them all from the PrestaShop Back Office once the installation is complete. 
@@ -104,3 +104,8 @@ If the database is not created, please use argument `--db_create=1` to create th
 If your MySQL server is configured on a different port than `3306`, please specify it in the `db_server` argument like this :
 `--db_server=sql.example.com:3307`
 {{% /notice %}}
+
+[iso-639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+[tz-database]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+[activities]: https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/General/PreferencesType.php#L211-L230
+[iso-3166]: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes
