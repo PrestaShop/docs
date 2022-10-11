@@ -1,7 +1,7 @@
 ---
 menuTitle: Staying up-to-date
 title: Keep PrestaShop up-to-date
-weight: 20
+weight: 50
 ---
 
 # Keep PrestaShop up-to-date
