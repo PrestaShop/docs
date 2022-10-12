@@ -22,6 +22,7 @@ A new namespace was introduced for the horizontal migration - `PrestaShopBundle\
 - `PrestaShopBundle/Bridge/AdminController/` contains classes which helps to build the Symfony controller with the encapsulated legacy code under the hood.
 - `PrestaShopBundle/Bridge/Helper/` contains bridges for List and Form helpers which encapsulates the legacy `HelperList` and `HelperForm` classes.
 - `PrestaShopBundle/Bridge/Smarty/` contains a bridge for converting Smarty template to a Symfony controller response.
+- `PrestaShopBundle/Bridge/Exception/` contains all the exceptions related to the bridge.
 
 ### The legacy context and the ControllerConfiguration
 

@@ -4,12 +4,14 @@ weight: 40
 ---
 
 ### Creating the Controller
-To start migrating a page horizontally you need to create a new Symfony controller under `PrestaShopBundle/Controller/<path>/<Your>Controller`, extend the `FrameworkBundleAdminController` and declare the routing in `PrestaShopBundle/Resources/config/routing/admin/{path-following-menu}/*.yml` file (e.g. `PrestaShopBundle/Resources/config/routing/admin/sell/catalog/features.yml`) (same as with vertical migration). The controller must implement a `PrestaShopBundle\Bridge\AdminController\FrameworkBridgeControllerInterface` which requires 2 methods to be implemented:
+The beginning is the same as in vertical migration - _create a controller under `PrestaShopBundle/Controller/<path>/<Your>Controller`, extend the `FrameworkBundleAdminController`, declare the routing in `PrestaShopBundle/Resources/config/routing/admin/{path}/*.yml` file (e.g. `PrestaShopBundle/Resources/config/routing/admin/sell/catalog/features.yml`)._
+
+The horizontally migrated controller **must implement** a `PrestaShopBundle\Bridge\AdminController\FrameworkBridgeControllerInterface` which requires 2 methods to be implemented:
  - `getLegacyControllerBridge(): LegacyControllerBridgeInterface` - You don't need to worry about this method, just use the `FrameworkBridgeControllerTrait` - the method is already implemented there.
  - `getControllerConfiguration(): ControllerConfiguration` - This is the main method which defines your controller, you can use another method from `FrameworkBridgeControllerTrait` to help you build the configuration, which requires only couple parameters:
-   - $tableName - the database table name used by the controller. This parameter is equivalent to legacy AdminController::$table. E.g. for FeatureController it is "feature".
-   - $objectModelClassName - the class name of related object model. This parameter is equivalent to legacy AdminController::$className. E.g for FeatureController it is "Feature".
-   - $legacyControllerName - the name of related legacy controller without the "controller" suffix. E.g. for FeatureController it is "AdminFeatures"
+   - `$tableName` - the database table name used by the controller. This parameter is equivalent to legacy AdminController::$table. E.g. for FeatureController it is "feature".
+   - `$objectModelClassName` - the class name of related object model. This parameter is equivalent to legacy AdminController::$className. E.g for FeatureController it is "Feature".
+   - `$legacyControllerName` - the name of related legacy controller without the "controller" suffix. E.g. for FeatureController it is "AdminFeatures"
 
 It should look something like this (FeatureController used as an example):
 ```php
