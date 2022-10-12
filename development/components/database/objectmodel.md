@@ -20,13 +20,9 @@ Read more about Object relation mapping (ORM), Database abstraction layer (DBAL)
 
 A class extending the ObjectModel class is tied to a database table. Its static attribute (`$definition`) represents the model. 
 
-Its instances are tied to database records. The ObjectModel class provides accessors for each attribute defined in `$definition`. 
+Its instances are tied to database records. 
 
 When instantiated with an `$id` in the class constructor, the attributes are retrieved from the related database record (using the `$id` as the primary key to find the table record). 
-
-When the `save()` method is called, ObjectModel will ask the DBAL to **insert** or **update** the object to database, depending if the `$id` is known or not in the ObjectModel.
-
-ObjectModel is also in charge of deleting an object in database (with its `delete()` method).
 
 {{% notice info %}}
 You can override classes that extend ObjectModel, but with extreme precaution, e.g., defining a wrong `$definition` model can break the entire system or lead to data loss. 
@@ -39,10 +35,22 @@ You can create a new entity (in a module for example), with its own database tab
 To do this, create class extending the ObjectModel:
 
 ```php
-
 class Cms extends ObjectModel
 {
 
+}
+```
+
+Next, define the properties of your entity :
+
+```php
+class Cms extends ObjectModel
+{
+    public $id_cms;
+    public $id_cms_category;
+    public $position;
+    public $active;
+    [...]
 }
 ```
 
@@ -144,48 +152,16 @@ In this example:
 
 Field type is an important setting, it determines how ObjectModel will format your data.
 
-<table>
-    <thead>
-        <tr>
-            <th>Type in ObjectModel</th>
-            <th>Related type in MySQL</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>TYPE_INT</td>
-            <td>INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT, ...</td>
-        </tr>
-        <tr>
-            <td>TYPE_BOOL</td>
-            <td>SMALLINT</td>
-        </tr>
-        <tr>
-            <td>TYPE_STRING</td>
-            <td>VARCHAR</td>
-        </tr>
-        <tr>
-            <td>TYPE_FLOAT</td>
-            <td>FLOAT, DOUBLE</td>
-        </tr>
-        <tr>
-            <td>TYPE_DATE</td>
-            <td>DATE</td>
-        </tr>
-        <tr>
-            <td>TYPE_HTML</td>
-            <td>BLOB, TEXT</td>
-        </tr>
-        <tr>
-            <td>TYPE_NOTHING</td>
-            <td>Should not be used (avoids ObjectModel formating)</td>
-        </tr>
-        <tr>
-            <td>TYPE_SQL</td>
-            <td>Should not be used</td>
-        </tr>
-    </tbody>
-</table>
+| Type in ObjectModel | Related type in MySQL                                   | Formating                                             |
+|---------------------|---------------------------------------------------------|-------------------------------------------------------|
+| TYPE_INT            | INTEGER, INT, SMALLINT, TINYINT, MEDIUMINT, BIGINT, ... | Cast to int                                           |
+| TYPE_BOOL           | SMALLINT                                                | Cast to int                                           |
+| TYPE_STRING         | VARCHAR                                                 | Return string, escape value, remove php and html tags |
+| TYPE_FLOAT          | FLOAT, DOUBLE                                           | Cast to float                                         |
+| TYPE_DATE           | DATE                                                    | Return string, escape value, remove php and html tags |
+| TYPE_HTML           | BLOB, TEXT                                              | Return string, escape value, keep safe html tags      |
+| TYPE_NOTHING        |                                                         | Use with caution, not secure, does no formating       |
+| TYPE_SQL            | BLOB, TEXT                                              | Return string, escape value, keep safe html tag       |
 
 #### Validation rules reference
 
@@ -311,6 +287,15 @@ In our example, to update the attributes `meta_title` for languages EN (`$lang_i
 ```php
 $cms->meta_title[1] = "My awesome title";
 $cms->meta_title[2] = "Mon fabuleux titre";
+$cms->save();
+```
+
+But... what if i want to retrieve my object only for a specific language, and update its `meta_title` ?
+In this case, you can load your object with the `$id_lang` parameter in constructor, and you will have a non-array accessor :
+
+```php
+$cms = new Cms($cms_id, $lang_id);
+$cms->meta_title = "Mon fabuleux titre";
 $cms->save();
 ```
 
@@ -553,5 +538,111 @@ public function hookActionObjectProductDeleteAfter(Product $product)
     PrestaShopLogger::addLog(
         sprintf('Product with id %s was deleted with success', $product->id_product)
     );    
+}
+```
+
+## Class reference
+
+Here is the reference of the methods described on this page. Many other methods that we don't described here are available.
+
+See complete implementation here : [ObjectModel.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php)
+
+```php
+/**
+ * Builds the object.
+ *
+ * @param int|null $id if specified, loads and existing object from DB (optional)
+ * @param int|null $id_lang required if object is multilingual (optional)
+ * @param int|null $id_shop ID shop for objects with multishop tables
+ * @param TranslatorComponent|null $translator
+ *
+ * @throws PrestaShopDatabaseException
+ * @throws PrestaShopException
+ */
+public function __construct($id = null, $id_lang = null, $id_shop = null, $translator = null)
+
+/**
+ * Saves current object to database (add or update).
+ *
+ * @param bool $null_values
+ * @param bool $auto_date
+ *
+ * @return bool Insertion result
+ *
+ * @throws PrestaShopException
+ */
+public function save($null_values = false, $auto_date = true)
+
+/**
+ * Takes current object ID, gets its values from database,
+ * saves them in a new row and loads newly saved values as a new object.
+ *
+ * @return ObjectModel|false
+ *
+ * @throws PrestaShopDatabaseException
+ */
+public function duplicateObject()
+
+/**
+ * Deletes current object from database.
+ *
+ * @return bool True if delete was successful
+ *
+ * @throws PrestaShopException
+ */
+public function delete()
+
+/**
+ * Deletes multiple objects from the database at once.
+ *
+ * @param array $ids array of objects IDs
+ *
+ * @return bool
+ */
+public function deleteSelection($ids)
+
+/**
+ * Does a soft delete on current object, using the "deleted" field in DB
+ * If the model object has no "deleted" property or no "deleted" definition field it will throw an exception
+ *
+ * @return bool
+ *
+ * @throws PrestaShopDatabaseException
+ * @throws PrestaShopException
+ */
+public function softDelete()
+
+/**
+ * Toggles object status in database.
+ *
+ * @return bool Update result
+ *
+ * @throws PrestaShopException
+ */
+public function toggleStatus()
+
+/**
+ * This function associate an item to its context.
+ *
+ * @param int|array $id_shops
+ *
+ * @return bool|void
+ *
+ * @throws PrestaShopDatabaseException
+ */
+public function associateTo($id_shops)
+
+/**
+ * Set a list of specific fields to update
+ * array(field1 => true, field2 => false,
+ * langfield1 => array(1 => true, 2 => false)).
+ *
+ * @since 1.5.0.1
+ *
+ * @param array<string, bool|array<int, bool>>|null $fields
+ */
+public function setFieldsToUpdate(?array $fields)
+{
+    $this->update_fields = $fields;
 }
 ```
