@@ -45,7 +45,7 @@ When in production mode, `$smarty->force_compile` must be kept to `false`, as it
 
 On the other hand, when editing a `.tpl` file, you must delete the `/var/cache/(dev|prod)/smarty/compile` folder (except the `index.php` file) in order to see your changes applied or clear cache directly from Back-Office.
 
-Note that this setting can be made directly from the back office, in the “Performance” page under the “Advanced parameters” menu.
+Note that this configuration can be set up directly from the back office, in the “Performance” page under the “Advanced parameters” menu.
 
 ### parameters.php
 
@@ -55,7 +55,7 @@ This file contains some of important settings such as database connection detail
 
 PrestaShop’s default settings prevent customers from seeing any server error message or debugging code.
 
-You, on the other hand, might need this information in order to correct any potential problem. To that end, you can activate the Debug mode.
+You, on the other hand, might need this information in order to correct any potential problem. For this purpose, you can activate the Debug mode.
 
 Open the `/config/defines.inc.php` file, and edit it to set `_PS_MODE_DEV_` to `true`:
 
@@ -75,7 +75,7 @@ You can use Symfony's powerful [`dump()`](https://symfony.com/doc/current/compon
 
 ## Disabling the cache and forcing Smarty compilation
 
-When your development has an impact on the front office, whether you are building a theme or simply a module which displays information to the customer, you should force the template file compilation and disable the cache, so as to always see the result of your changes directly.
+When your development has an impact on the front office, whether you are building a theme or simply a module which displays information to the customer, you should force the template file compilation and disable the cache, in order to always see the result of your changes directly.
 
 Go to the “Performance” page under the “Advanced parameters” menu to change the following Smarty settings:
 
