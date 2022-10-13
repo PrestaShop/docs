@@ -234,8 +234,7 @@ The `language=1` or `language=[1|2]` parameter can be used to return only these 
 
 The `sendemail=1` parameter can be used if you need to change the state of an order AND you want the emails to be sent to the customer: you will have to do a **POST** on `http://example.com/api/order_histories?sendemail=1`
 
-The `sendemail=1` parameter can be used on the `order_carriers` endpoint to send the _in-transit_ email with the tracking number. Example: `http://example.com/api/order_carriers/12345?sendemail=1`
-12345 is the order carrier id.
+The `sendemail=1` parameter can be used on the `order_carriers` endpoint to send the _in-transit_ email with the tracking number. Example: `http://example.com/api/order_carriers/12345?sendemail=1` (`12345` is the order carrier id.)
 
 ### Create a resource
 
