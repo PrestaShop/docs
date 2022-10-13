@@ -120,7 +120,7 @@ If your code introduces deprecations, please note them here.
 
 ### Fixed ticket
 
-If your Pull Request resolves an existing issue, please note it using the _magic word_ "Fixes", followed by the issue number, like this: `Fixes #12314`.
+If your Pull Request resolves an existing issue, please note it using the _magic word_ "Fixes", followed by the issue number, like this: `Fixes #12314`. If your Pull Request fixes multiple issues, use following syntax: `Resolves #12314, Resolves #56789`.
 
 {{% notice tip %}}
 Using the appropriate syntax will link your Pull Request to that issue, and will automatically close it once your Pull Request is merged.
@@ -130,10 +130,11 @@ If no issue is linked to your Pull Request, maintainers might ask you to create 
 
 ### Related PRs
 
-If your Pull Request is linked to another contribution and they should be reviewed or tested together, please provide the other Pull Request links into this field. Examples:
+This field should contain links to related PRs in other repositories.
 
-* Please provide the URL of Pull Request that submit theme changes, if your PR requires modifications both in the core and a supported theme.
-* Please provide the URL of Pull Request that submit changes to the Upgrade process (such as database or configuration changes), if your PR requires modifications both in the core and the upgrade process
+If your Pull Request modifies database structure or adds new configuration fields, you should also provide a PR for [autoupgrade module](https://github.com/PrestaShop/autoupgrade).
+
+If your Pull Request needs a theme change to work, you should provide [hummingbird](https://github.com/PrestaShop/hummingbird) and [classic-theme](https://github.com/PrestaShop/classic-theme) PR.
 
 ### How to test
 
