@@ -1,18 +1,21 @@
 ---
 title: Templates & layouts
 weight: 10
+useMermaid: true
 ---
 
 # Templates & layouts
 
-PrestaShop template file are based on the [Smarty 3 template engine](https://www.smarty.net/v3_overview).
+PrestaShop template files are based on the [Smarty 4 template engine](https://smarty-php.github.io/smarty/).
+
+{{% notice note %}}
+On PrestaShop `1.7.x`, template files were based on [Smarty 3 template engine](https://www.smarty.net/v3_overview).
+{{% /notice %}}
 
 All template files must be stored in the theme's `templates/` subfolder. For instance, the default theme
 has its template files in the following folder: `/themes/classic/templates`.
 
-
-Directory structure
-------------------------------------
+## Directory structure
 
 Templates are then split between various subfolders.
 
@@ -41,14 +44,13 @@ Template files should be written so that a single .tpl can generate a whole HTML
 inside a `_partials` folder or subfolder (see our coding standard, linked from the Prologue chapter
 of this documentation).
 
-
 ## Templates
 
 We make a **clear difference between templates and layout**.
 
 * A template extends a layout
 * The layout holds the global organization of the page
-* A template a specify to a feature: the product page for example
+* A template is specific to a feature: the product page for example
 
 There are many templates in a PrestaShop theme, the main ones includes:
 
@@ -71,17 +73,42 @@ When searching for a template, PrestaShop will check many location to determine
 which file should be used. It make it very easy to have different template for a
 given locale or a specific entity id.
 
+More details in [TemplateFinder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Smarty/TemplateFinder.php#L71-L117).
+
+#### Product page example
+
 With the product page, the core will check the following locations (in order) and
 return the first template found:
 
-Example with a product with ID = 3 and locale = en-US
+<div class="mermaid">
+graph TD;
+    A(Lookup for template catalog/product with : locale + entity id)
+    A-->B(Lookup for template catalog/product with : entity id);
+    B-->C(Lookup for template catalog/product with : locale);
+    C-->D(Lookup for template catalog/product);
+</div>
+
+Example for the product with ID = 3 and locale = en-US:
 
 1. `en-US/catalog/product-3.tpl`
 2. `catalog/product-3.tpl`
 3. `en-US/catalog/product.tpl`
 4. `catalog/product.tpl`
 
-Another example with category template for the category with ID = 9 and locale = en-US.
+#### Category page example
+
+<div class="mermaid">
+graph TD;
+    A(Lookup for template catalog/listing/category with : locale + entity id)
+    A-->B(Lookup for template catalog/listing/category with : entity id);
+    B-->C(Lookup for template catalog/listing/category with : locale);
+    C-->D(Lookup for template catalog/listing/category);
+    D-->E(Lookup for template catalog/listing/product-list with locale);
+    E-->F(Lookup for template catalog/listing/product-list);
+    
+</div>
+
+Example for the category with ID = 9 and locale = en-US:
 
 1. `en-US/catalog/listing/category-9.tpl`
 2. `catalog/listing/category-9.tpl`
@@ -94,13 +121,12 @@ This feature is mostly made for developer working on a custom template for a cus
 
 ## Layouts
 
-The layout is the organisation of the page, the way in which the parts of your design are arranged.
-The typical example is the sidebar: is there a sidebar on your category page or is your product listing
-is taking the whole space.
+The layout is the organisation of the page: how the parts of your design are arranged.
 
-In PrestaShop, users are given the ability to change the layout of each page
-independently. As a template developer, it's your role to ensure your theme is
-compatible.
+The typical example is the sidebar: is there a sidebar on your category page or is your product listing taking the whole space?
+
+In PrestaShop, users are given the ability to change the layout of each page independently. 
+As a template developer, it's your role to ensure your theme is compatible.
 
 ![Configure layout](../img/configure-layout.png)
 
@@ -109,7 +135,7 @@ compatible.
 The layout is the very top level of the [template inheritance]({{< relref "/8/themes/reference/template-inheritance/" >}})
 tree. Basically it hold the opening and closing `<html>` tags.
 
-Typical layout files look like the following snippet. This one is a full one
+Typical layout files look like the following snippet. This one is a full one:
 
 {{% notice note %}}
   Remember to define as many blocks as possible.
