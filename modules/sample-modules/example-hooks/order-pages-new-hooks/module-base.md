@@ -1,6 +1,7 @@
 ---
 title: Module base creation 
 weight: 1
+aliases: ["/8/modules/sample-modules/order-pages-new-hooks/module-base"]
 ---
 
 # Module base creation

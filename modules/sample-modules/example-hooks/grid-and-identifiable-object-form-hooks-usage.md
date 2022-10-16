@@ -1,6 +1,7 @@
 ---
 title: Grid and identifiable object form hooks usage example
 weight: 1
+aliases: ["/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage/"]
 ---
 
 # Grid and identifiable object form hooks usage example

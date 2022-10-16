@@ -1,6 +1,7 @@
 ---
 title: Additional action buttons
 weight: 3
+aliases: ["/8/modules/sample-modules/order-pages-new-hooks/additional-action-buttons"]
 ---
 
 # Additional buttons in the main buttons bar
