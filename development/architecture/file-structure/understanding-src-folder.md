@@ -65,7 +65,7 @@ Here are some examples of subsystems belonging to PrestaShopBundle:
 - DataCollector: Specific collectors for the Symfony profiler (eg. hooks)
 - Form: Symfony forms and extensions
 - Resources: Contains services definition files
-- Security: Glue between Security Bundle and PrestaShop autorization/authentification
+- Security: Glue between Security Bundle and PrestaShop authorization/authentication
 - Twig: Contains PrestaShop-specific Twig extensions
 
 ## Dependency rules

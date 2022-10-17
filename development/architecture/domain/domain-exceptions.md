@@ -118,7 +118,7 @@ Having many different exception classes means that developers can easily recogni
 Just as we recognized category editing failure in our example, we can catch any particular exception and it will tell us what exactly failed in the runtime.
 
 For example, catching a `CategoryNotFoundException` lets us know when category is not found,
-or catching `CannotAddCategoryException` means that a category cannot be added. These exceptions carry an accurate information that makes it easier to debug the issue or to handle the usecase gracefully by displaying the right error message for example.
+or catching `CannotAddCategoryException` means that a category cannot be added. These exceptions carry accurate information that makes it easier to debug the issue or to handle the use case gracefully by displaying the right error message for example.
 
 If we expand our previous example with a better overview with different exception types:
 
