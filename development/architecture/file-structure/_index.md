@@ -90,7 +90,7 @@ Contains all the legacy classes, including:
  
 - Object models 
 - Utility classes (like `Db`, `Helper`, `Tools`...)
-- Base controlllers (like `FrontController`, `AdminController`...)
+- Base controllers (like `FrontController`, `AdminController`...)
 
 ### /config
 

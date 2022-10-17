@@ -100,7 +100,7 @@ We use type & category to group changes in the [changelog](https://github.com/Pr
 
 ### BC breaks
 
-It is very important to note if your change introduces backwards incompatible changes (also referred to as "backward compatiblity breaks" or "BC breaks").
+It is very important to note if your change introduces backwards incompatible changes (also referred to as "backward compatibility breaks" or "BC breaks").
 
 Here are some examples of changes that can be considered breaking changes:
 
