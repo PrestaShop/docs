@@ -28,6 +28,17 @@ You need to create a configuration file, with the `yaml` [format](https://symfon
 Please note that the third argument `<configfilepath>` is optional. If not set, PrestaShop will try to find a file named `self_config.yml` in the module's folder (and sub-folders).
 {{% /notice %}}
 
+## Apply configuration file on a specific shop or group
+
+The Prestashop `prestashop:module` command allows you to restrict its actions on a specific shop (or group).
+
+To do so, add an `--id_shop` or an `--id_shop_group` argument to the command:
+
+```bash
+php bin/console prestashop:module configure <modulename> <configfilepath> --id_shop=<id>
+php bin/console prestashop:module configure <modulename> <configfilepath> --id_shop_group=<id>
+```
+
 ## Configuration file reference
 
 ### Change values in the Configuration table
