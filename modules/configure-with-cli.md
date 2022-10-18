@@ -11,12 +11,12 @@ Self Configurator is a feature that allows module configuration management from 
 
 From a configuration file, the command is able to do some configuration on a specific module, e.g.:
 
-- change values in the Configuration table
+- change values in the `Configuration` table
 - execute SQL statements from a `.sql` file
 - copy files
 - execute `php` scripts
 
-Complete reference of Self Configurator : [ModuleSelfConfigurator.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Module/Configuration/ModuleSelfConfigurator.php)
+Complete reference of Self Configurator: [ModuleSelfConfigurator.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Module/Configuration/ModuleSelfConfigurator.php)
 
 ## How to use it
 
@@ -49,7 +49,7 @@ configuration:
 ```
 
 {{% notice info %}}
-Please note that you can only `update` or `delete` values : `create` values are only done when installing the module.
+Please note that you can only `update` or `delete` values: `create` values are only done when installing the module.
 {{% /notice %}}
 
 ### Execute SQL statements from a `.sql` file
@@ -103,11 +103,11 @@ For complex actions, you can execute `php` code from your configuration file.
 
 Your file must contain a class implementing the interface `PrestaShop\PrestaShop\Adapter\Module\Configuration\ModuleComplexConfigurationInterface`: [see reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Module/Configuration/ModuleComplexConfigurationInterface.php).
 
-**The class name needs to match the file name..**
+**The class name needs to match the file name.**
 
-You have to declare a method : `public function run(ModuleInterface $module, array $params);`
+You have to declare a method: `public function run(ModuleInterface $module, array $params);`
 
-Create a file named `ConfigurationScript.php` with this content :
+Create a file named `ConfigurationScript.php` with this content:
 
 ```php
 use PrestaShop\PrestaShop\Adapter\Module\Configuration\ModuleComplexConfigurationInterface;
