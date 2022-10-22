@@ -47,12 +47,12 @@ Note about deletion:
 
 ## Controlling the change of the carrier's ID
 
-To control the change of the carrier's ID (id_carrier), the module must use the `updateCarrier` hook.
+To control the change of the carrier's ID (id_carrier), the module must use the `actionCarrierUpdate` hook.
 
 For instance:
 
 ```php
-public function hookUpdateCarrier($params)
+public function hookActionCarrierUpdate($params)
 {
     $id_carrier_old = (int) $params['id_carrier'];
     $id_carrier_new = (int) $params['carrier']->id;
