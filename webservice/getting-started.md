@@ -197,9 +197,9 @@ This should be fixed in a near future with a *yet-to-come-pull-request* introduc
 
 ##### Control returned items with "filter"
 
-The **EQUAL** operator is used when you need to get specific items. For exemple, if you want the addresses for customer #1, you can filter your **GET** request with the `filter` parameter: `http://example.com/api/addresses?filter[id_customer]=1`
+The **EQUAL** operator is used when you need to get specific items. For example, if you want the addresses for customer #1, you can filter your **GET** request with the `filter` parameter: `http://example.com/api/addresses?filter[id_customer]=1`
 
-The **LIKE** operator is used when you need to search for items. For exemple, if you want the addresses with cities starting with "SAINT": `http://example.com/api/addresses?filter[city]=[saint]%`
+The **LIKE** operator is used when you need to search for items. For example, if you want the addresses with cities starting with "SAINT": `http://example.com/api/addresses?filter[city]=[saint]%`
 
 The **OR** operator is used when you need to get items matching several criteria: `http://example.com/api/addresses?filter[city]=[paris|lyon]`
 
@@ -212,7 +212,7 @@ Other operators can be used, such as:
 
 This can be used in combination with the `display` parameter! Let's say you want to get the mobile phone numbers of customers #1, #7 and #42: `http://example.com/api/addresses?filter[id_customer]=[1|7|42]&display=[phone_mobile]`
 
-You can also filter by dates! A typical example would be a routine in an ERP fetching the orders since the last call: `http://example.com/api/orders?display=full&date=1&filter[date_add]=[2019-11-14%2013:00:00,2019-11-14%2014:00:00]`. In this exemple, we request the orders created on 2019-11-14 between 1pm and 2pm.
+You can also filter by dates! A typical example would be a routine in an ERP fetching the orders since the last call: `http://example.com/api/orders?display=full&date=1&filter[date_add]=[2019-11-14%2013:00:00,2019-11-14%2014:00:00]`. In this example, we request the orders created on 2019-11-14 between 1pm and 2pm.
 
 {{% notice note %}}
 Pay attention to: 
@@ -224,7 +224,7 @@ Pay attention to:
 
 ##### Special parameters
 
-The `date=1` parameter must be used to allow date filtering (see exemple above).
+The `date=1` parameter must be used to allow date filtering (see example above).
 
 The `limit=0,100` parameter can be used to limit the number of returned items (similar to MySQL's LIMIT clause).
 
