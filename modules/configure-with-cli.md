@@ -60,7 +60,7 @@ configuration:
 ```
 
 {{% notice info %}}
-Please note that you can only `update` or `delete` values: `create` values are only done when installing the module.
+Please note that you can `create` values by specifying them in the `update` section.
 {{% /notice %}}
 
 ### Execute SQL statements from a `.sql` file
