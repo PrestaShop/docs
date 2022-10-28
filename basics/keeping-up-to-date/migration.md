@@ -618,7 +618,7 @@ PrestaShop.
 
 It must be enabled from the administration panel before being accessible.
 See the doc for more details:
-https://doc.prestashop.com/display/PS17/Webservice
+https://docs.prestashop-project.org/1.7-documentation/user-guide/configuring-shop/advanced-parameters/webservice
 
 Once ready, an API will be available for all the resources enabled for
 your key. Basically, the web-service in another interface for object
