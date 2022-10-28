@@ -147,6 +147,6 @@ A good practice is to write meaningful commits labels: it's better to have "Corr
 
 See [Submit a Pull Request]({{< ref "1.7/contribute/contribute-pull-requests/create-pull-request" >}}).
 
-[getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
-[system-requirements]: {{< ref "1.7/basics/installation/system-requirements" >}}
-[compile-assets]: {{< ref "1.7/development/compile-assets" >}}
+[getting-started-guide]: https://docs.prestashop-project.org/1.7-documentation/user-guide
+[system-requirements]: {{< relref "/1.7/basics/installation/system-requirements" >}}
+[compile-assets]: {{< relref "/1.7/development/compile-assets" >}}
