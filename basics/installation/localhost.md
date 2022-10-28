@@ -223,7 +223,7 @@ You may find this error message the first time you open up the Back Office.
 
 This problem may arise in case-insensitive file systems like MacOS due to a misconfiguration. Check your Apache configuration and make sure that the root directory path to your PrestaShop matches the capitalization of the actual system path exactly. A typical error is for example having a folder named `/path/to/PrestaShop` (capital P, capital S) and then configuring it in Apache as `/path/to/Prestashop` (missing the capital S).
 
-[getting-started-guide]: https://doc.prestashop.com/display/PS17/Getting+Started
+[getting-started-guide]: https://docs.prestashop-project.org/1.7-documentation/getting-started
 [system-requirements]: {{< ref "1.7/basics/installation/system-requirements" >}}
 [installing-prestashop]: {{< relref "/1.7/themes/getting-started/setting-up-your-local-environment" >}}
 [compile-assets]: {{< ref "1.7/development/compile-assets" >}}
