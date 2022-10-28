@@ -9,7 +9,7 @@ If you have questions or need help, please do not open a GitHub issue as we use 
 The very best place to start looking for an answer is:
 
 - Here (the Developer documentation), if you are a developer
-- The [User's guide](https://doc.prestashop.com/display/PS17/User+Guide) if you are a user
+- The [User's guide](https://docs.prestashop-project.org/1.7-documentation/user-guide) if you are a user
 
 {{% notice tip %}}
 If you are a developer and you think there is a missing item in the Developer documentation, consider [creating an issue on the Documentation Repository](https://github.com/PrestaShop/docs/issues). This will help us discuss what to do to improve it.
