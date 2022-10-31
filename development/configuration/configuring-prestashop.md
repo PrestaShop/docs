@@ -39,7 +39,7 @@ The Smarty cache system should always be disabled, as it is not compatible with 
 
 `$smarty->compile_check` should be left to `false` in development mode.
 
-`$smarty->debugging` gives access to Smarty debug information when displaying a page. That setting is more easily modified in the “Performance” page of the advanced parameters menu : the “Debug console” option enables you to choose between never displaying Smarty’s debug information, always displaying it, or only displaying it when you add `?SMARTY_DEBUG` to the URL of the page you want to test, which can be very useful.
+`$smarty->debugging` gives access to Smarty debug information when displaying a page. That setting is more easily modified in the “Performance” page of the advanced parameters menu: the “Debug console” option enables you to choose between never displaying Smarty’s debug information, always displaying it, or only displaying it when you add `?SMARTY_DEBUG` to the URL of the page you want to test, which can be very useful.
 
 When in production mode, `$smarty->force_compile` must be kept to `false`, as it will give a 30% boost to your page load time.
 
@@ -85,9 +85,9 @@ Go to the “Performance” page under the “Advanced parameters” menu to cha
 Forcing the compilation of Smarty will always slow down the loading time of the page. Make sure that your production store is set to only recompile templates if there are updated files, and that its cache is enabled.
 
 
-## Disable the Back-Office token protection
+## Disable the Back office token protection
 
-Back-Office pages require the use of a token. If needed, this protection can be disabled using an environment variable:
+Back office pages require the use of a token. If needed, this protection can be disabled using an environment variable:
 
 ### Apache with mod_headers
 
