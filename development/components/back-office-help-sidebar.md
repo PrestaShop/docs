@@ -16,7 +16,7 @@ Most of these Back Office pages have a common HTML structure:
 
 When the BO user clicks on the 'Help' button, the sidebar opens and displays the related Documentation page for the Back Office page that the user browses.
 
-This documentation page comes from help.prestashop.com which is a gateway that returns the content of doc.prestashop.com in the right format to be inserted into the Back Office.
+This documentation page comes from help.prestashop.com which is a gateway that returns the content of docs.prestashop-project.org in the right format to be inserted into the Back Office.
 
 ## How it is built for modern controllers
 

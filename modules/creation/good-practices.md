@@ -54,7 +54,7 @@ menuTitle: Good practices
   - show a confirmation message if everything went fine or an error message if it did not.
   - make sure information entered by customers are correct. If you ask a sum, it has to be only numbers. More information about the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/classes/Validate.php).
 
-- Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read [Best Practices of the Db Class](https://doc.prestashop.com/display/PS16/Best+Practices+of+the+Db+Class)). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result, you are required to use a token!
+- Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read [Best Practices of the Db Class](https://docs.prestashop-project.org/1-6-documentation/developer-guide/developer-tutorials/best-practices-of-the-db-class)). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result, you are required to use a token!
 
 - The use of overrides is permitted, however if we decide that too many (2 / 3 max) have been used and/or the modifications are too dangerous, we will refuse your module. If you're unsure, don't hesitate to get in touch.
 
