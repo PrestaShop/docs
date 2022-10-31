@@ -3,17 +3,7 @@ title: List of hooks
 weight: 2
 ---
 
-# List of hooks in PrestaShop 1.7
-
-## Update notes
-
-A couple of hooks were modified between 1.7.0.x and 1.7.1.x.
-
-* `actionDeleteProductInCartAfter` has been divided into two hooks:
-    * `actionObjectProductInCartDeleteBefore`.
-    * `actionObjectProductInCartDeleteAfter`.
-* `displayProductButtons` has been renamed into `displayProductAdditionalInfo`.<br>
-  Don’t worry, we kept an alias :)
+# List of hooks in PrestaShop 8
 
 ## Full list
 
