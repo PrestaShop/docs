@@ -29,7 +29,6 @@ Hook names are prefixed with "action" or "display". This prefix indicates if a h
 Every hook you want to use must be registered first. This is usually done during the installation of your module, by calling the method `Module::registerHook($hookName)`.
 
 ```php
-<?php
 public function install()
 {
     // [...]
@@ -50,7 +49,6 @@ For each registered hook, you must create a non-static public method, starting w
 This method receives one (and only one) argument: an array of the contextual information sent to the hook.
 
 ```php
-<?php
 public function hookDisplayHeader(array $params)
 {
     // Your code.
@@ -71,34 +69,51 @@ Remember, in order for a module to respond to a hook call, it must be registered
 
 ## Triggering a hook
 
-#### In a controller
+### In a controller (legacy)
 
 It is easy to call a hook from within a controller: you simply have to use its name with the `Hook::exec($hook_name, $hook_args = array())` method. Some parameters can be sent as well.
 
 For instance:
 ```php
-<?php
 $this->context->smarty->assign(
     'HOOK_LEFT_COLUMN',
     Hook::exec('displayLeftColumn')
 );
 ```
 
+### In a controller (Symfony)
 
-#### In a theme
+In a Symfony controller, please use the dispatchHook method of the inherited `FrameworkBundleAdminController` class:
+
+```php
+protected function dispatchHook($hookName, array $parameters);
+```
+
+
+### In a theme, with Smarty
 
 It is easy to call a hook from within a template file (`.tpl`): you simply have to use its name with the hook function. You can add the name of a module that you want the hook execute.
 
 Basic call of a hook:
 
 ```
-{hook h='displayLeftColumn'}
+{hook h='hookName'}
 ```
 
 Call of a hook for a specific module:
 
 ```
-{hook h='displayLeftColumn' mod='blockcart'}
+{hook h='hookName' mod='modulename'}
+```
+
+### In a theme, with Twig
+
+It is easy to call a hook from within a twig template file (`.html.twig`): you simply have to use its name with the renderHook twig function. You can add params as a second argument.
+
+Basic call of a hook:
+
+```
+{{ renderHook('hookName', { params }) }}
 ```
 
 ## Going further: Creating your own hook
@@ -106,7 +121,6 @@ Call of a hook for a specific module:
 You can create new PrestaShop hooks by adding a new record in the Hook table. This can be done with the Hook class, which inherit ObjectModel features:
 
 ```php
-<?php
 $hook = new Hook();
 $hook->name = 'displayAtSpecificPlace';
 $hook->title = 'The name of your hook';
@@ -120,7 +134,6 @@ You can check if hook exists before this with Hook::getIdByName('hook_name')
 ...but PrestaShop enables you to do it the easy way:
 
 ```php
-<?php
 $this->registerHook('displayAtSpecificPlace');
 ```
 
