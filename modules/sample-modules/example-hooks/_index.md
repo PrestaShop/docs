@@ -1,12 +1,12 @@
 ---
-title: Hooks examples
+title: Hook examples
 weight: 2
 ---
 
-# Hooks implementation examples
+# Hook implementation examples
 
-Hooks is one of the most powerful tools to extend or modify PrestaShop with modules. 
+Hooks are one of the most powerful tools to extend or modify PrestaShop using modules. 
 
-For a complete introduction about hooks, please read [Hooks]({{< relref "/8/modules/concepts/hooks/" >}})
+For a complete introduction to hooks, please read [Hooks]({{< relref "/8/modules/concepts/hooks/" >}})
 
 {{% children %}} 

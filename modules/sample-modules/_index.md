@@ -5,20 +5,20 @@ weight: 80
 
 # Sample modules and how to guides
 
-The PrestaShop Community made some example modules and how to guides to help you understand how to implement hooks, admin grids, manage entities... and a lot more.
+The PrestaShop Community has made example modules and how-to guides to help you understand how to implement hooks, admin grids, manage entities... and a lot more.
 
 {{% children %}} 
 
-## Our example modules repository
+## Example modules repository
 
 * [See all our example modules (GitHub)](https://github.com/PrestaShop/example-modules)
 
-This repository hosts example modules built and maintained by PrestaShop.
-These modules demonstrate useful usecases for developers willing to customize the software.
+This repository hosts example modules built and maintained by project members and the community.
+These modules demonstrate good use cases for developers willing to customize the software.
 
 ### Extending Symfony pages
 
-- [Demo Extending a Symfony Form - 1](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform1) - how to insert an input inside a Symfony form
+- [Extending a Symfony form - how to insert a field inside an existing form](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform1)
 - [Demo Extending a Symfony Form - 2](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform2) - how to insert an input inside a Symfony form - 2
 - [Demo Extending a Symfony Form - 3](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform3) - how to use CQRS in a module
 - [Demo View Order Hooks](https://github.com/PrestaShop/example-modules/tree/master/demovieworderhooks)
