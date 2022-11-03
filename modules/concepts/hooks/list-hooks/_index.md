@@ -21,6 +21,4 @@ For example, `actionAdminCustomersFormModifier` is documented as `action<AdminCo
 
 <script src="/js/hookFilter.js"></script>
 
-<div id="hookList">
-{{% children showhidden="true" %}}
-</div>
+{{<hookList>}}
