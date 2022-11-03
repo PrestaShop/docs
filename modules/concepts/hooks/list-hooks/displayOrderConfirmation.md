@@ -1,6 +1,6 @@
 ---
-menuTitle: displayPaymentReturn
-title: displayPaymentReturn
+menuTitle: displayOrderConfirmation
+title: displayOrderConfirmation
 hidden: true
 files:
   - controllers/front/OrderConfirmationController.php
@@ -10,7 +10,7 @@ hookTypes:
   - legacy
 ---
 
-# Hook : displayPaymentReturn
+# Hook : displayOrderConfirmation
 
 Located in :
 
@@ -19,5 +19,5 @@ Located in :
 ## Parameters
 
 ```php
-Hook::exec('displayPaymentReturn', ['order' => $order], $this->id_module);
+Hook::exec('displayOrderConfirmation', ['order' => $order]);
 ```
