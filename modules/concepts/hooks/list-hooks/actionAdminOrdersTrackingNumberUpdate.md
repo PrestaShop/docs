@@ -24,7 +24,4 @@ Hook::exec('actionAdminOrdersTrackingNumberUpdate', [
                     'customer' => $customer,
                     'carrier' => $carrier,
                 ], null, false, true, false, $order->id_shop);
-            }
-        } finally {
-            $this->contextStateManager->restorePreviousContext();
 ```
