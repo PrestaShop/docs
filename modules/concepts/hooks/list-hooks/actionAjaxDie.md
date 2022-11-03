@@ -1,6 +1,6 @@
 ---
-menuTitle: actionBeforeAjaxDie
-title: actionBeforeAjaxDie
+menuTitle: actionAjaxDie
+title: actionAjaxDie
 hidden: true
 files:
   - classes/controller/Controller.php
@@ -10,7 +10,7 @@ hookTypes:
   - legacy
 ---
 
-# Hook : actionBeforeAjaxDie
+# Hook : actionAjaxDie
 
 Located in :
 
@@ -19,5 +19,5 @@ Located in :
 ## Parameters
 
 ```php
-Hook::exec('actionBeforeAjaxDie' . $controller . $method, ['value' => $value]);
+Hook::exec('actionAjaxDie' . $controller . $method . 'Before', ['value' => $value]);
 ```
