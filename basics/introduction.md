@@ -1,6 +1,6 @@
 ---
 title: Introduction
-weight: 5
+weight: 10
 ---
 
 # Fundamentals of PrestaShop Development
