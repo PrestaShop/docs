@@ -2145,7 +2145,7 @@ displayFooterProduct
     
 displayHeader
 : 
-    Added in the header of every page
+    Added in the header of every Front Office page
 
     Located in: /classes/controller/FrontController.php
 
