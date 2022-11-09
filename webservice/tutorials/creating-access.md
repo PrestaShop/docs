@@ -19,7 +19,7 @@ Go in the PrestaShop back office, open the "Web service" page under the "Advance
 
 {{< figure src="../../img/enable_webservice.png" title="Enabling Webservice" >}}
 
-### Programatically
+### Programmatically
 
 The Webservice switch is stored in the configuration table of PrestaShop.
 
