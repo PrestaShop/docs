@@ -497,7 +497,7 @@ actionDownloadAttachment
 actionEmailAddAfterContent
 : 
     Add extra content after mail content
-This hook is called just after fetching mail template
+    This hook is called just after fetching mail template
 
     Located in: /classes/Mail.php
 
@@ -505,7 +505,7 @@ This hook is called just after fetching mail template
 actionEmailAddBeforeContent
 : 
     Add extra content before mail content
-This hook is called just before fetching mail template
+    This hook is called just before fetching mail template
 
     Located in: /classes/Mail.php
 
@@ -513,7 +513,7 @@ This hook is called just before fetching mail template
 actionEmailSendBefore
 : 
     Before sending an email
-This hook is used to filter the content or the metadata of an email before sending it or even prevent its sending
+    This hook is used to filter the content or the metadata of an email before sending it or even prevent its sending
 
     Located in: /classes/Mail.php
 
@@ -826,7 +826,7 @@ actionOrderReturn
 actionOrderSlipAdd
 : 
     Called when the quantity of a product changes in an order.
-WARNING: only invoked when a product is actually removed from an order.
+    WARNING: only invoked when a product is actually removed from an order.
 
     Located in: /controllers/admin/AdminOrdersController.php
 
@@ -856,7 +856,7 @@ actionOrderStatusPostUpdate
     Called after the status of an order changes.
         
     **Note:** This hook is fired BEFORE the new OrderStatus is saved into the database.  
-	If you need to register after this insertion, use `actionOrderHistoryAddAfter` or `actionObjectOrderHistoryAddAfter` instead.
+    If you need to register after this insertion, use `actionOrderHistoryAddAfter` or `actionObjectOrderHistoryAddAfter` instead.
 
     Located in: /classes/order/OrderHistory.php
 
@@ -891,7 +891,7 @@ actionOutputHTMLBefore
     Available since: {{< minver v="1.7.1" >}}
 
     Before HTML output
-This hook is used to filter the whole HTML page before it is rendered (only front)
+    This hook is used to filter the whole HTML page before it is rendered (only front)
 
     Located in: /classes/controller/FrontController.php
 
@@ -1098,7 +1098,7 @@ actionUpdateLangAfter
 actionUpdateQuantity
 : 
     After updating the quantity of a product.
-Quantity is updated only when a customer effectively places their order
+    Quantity is updated only when a customer effectively places their order
 
     Located in: /classes/stock/StockAvailable.php
 
@@ -1255,7 +1255,7 @@ actionAdminAdminPreferencesControllerPostProcessBefore
 additionalCustomerFormFields
 : 
     Add fields to the Customer form
-This hook returns an array of FormFields to add them to the customer registration form
+    This hook returns an array of FormFields to add them to the customer registration form
 
     Located in: /classes/form/CustomerFormatter.php
 
@@ -1298,8 +1298,8 @@ dashboardZoneTwo
 
 dashboardZoneThree
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /controllers/admin/AdminDashboardController.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /controllers/admin/AdminDashboardController.php
 
     Parameters:
     ```php
@@ -1321,7 +1321,7 @@ displayAdminAfterHeader
 displayAdminCustomers
 : 
     Display new elements in the Back Office, tab AdminCustomers
-This hook launches modules when the AdminCustomers tab is displayed in the Back Office
+    This hook launches modules when the AdminCustomers tab is displayed in the Back Office
 
     Located in: admin-dev/themes/default/template/controllers/customers/helpers/view/view.tpl
 
@@ -1338,16 +1338,16 @@ displayAdminCustomersAddressesItemAction
     Available since: {{< minver v="1.7.3" >}}
 
     Display new elements in the Back Office, tab AdminCustomers, Addresses actions.
-This hook launches modules when the Addresses list into the AdminCustomers tab is displayed in the Back Office
+    This hook launches modules when the Addresses list into the AdminCustomers tab is displayed in the Back Office
 
     Located in: /admin-dev/themes/default/template/controllers/customers/helpers/view/view.tpl
 
     Parameters:
     ```php
     <?php
-	array(
-	  'id_address' => (int) Address ID
-	)
+    array(
+      'id_address' => (int) Address ID
+    )
     ```
 
 displayAdminEndContent
@@ -1355,13 +1355,13 @@ displayAdminEndContent
     Available since: {{< minver v="1.7.4" >}}
 
     Administration end of content.
-This hook is displayed at the end of the main content, before the footer
+    This hook is displayed at the end of the main content, before the footer
 
     Located in: 
-	- /admin-dev/themes/default/template/footer.tpl
-	- /admin-dev/themes/new-theme/template/layout.tpl
+    - /admin-dev/themes/default/template/footer.tpl
+    - /admin-dev/themes/new-theme/template/layout.tpl
 
-	
+    
 displayAdminForm
 : 
     Located in: admin-dev/themes/default/template/helpers/form/form.tpl
@@ -1428,7 +1428,7 @@ displayAdminLogin
 displayAdminNavBarBeforeEnd
 : 
     Display new elements in the Back Office, tab AdminCustomers
-This hook launches modules when the AdminCustomers tab is displayed in the Back Office
+    This hook launches modules when the AdminCustomers tab is displayed in the Back Office
 
     Located in: 
 
@@ -1444,7 +1444,7 @@ displayAdminOptions
 displayAdminOrder
 : 
     Display new elements in the Back Office, tab AdminOrder
-This hook launches modules when the AdminOrder tab is displayed in the Back Office
+    This hook launches modules when the AdminOrder tab is displayed in the Back Office
 
     Located in:
 
@@ -1465,7 +1465,7 @@ displayAdminOrderContentOrder
     → `displayAdminOrderTabContent`
 
     Display new elements in Back Office, AdminOrder, panel Order
-This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel content
+    This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel content
 
     Located in: /controllers/admin/AdminOrdersController.php
 
@@ -1476,7 +1476,7 @@ displayAdminOrderContentShip
     → `displayAdminOrderTabContent`
 
     Display new elements in Back Office, AdminOrder, panel Shipping
-This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel content
+    This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel content
 
     Located in: /controllers/admin/AdminOrdersController.php
 
@@ -1588,7 +1588,7 @@ displayAdminOrderTabOrder
     → `displayAdminOrderTabLink`
 
     Display new elements in Back Office, AdminOrder, panel Order
-This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel tabs
+    This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Order panel tabs
 
     Located in: /controllers/admin/AdminOrdersController.php
 
@@ -1599,7 +1599,7 @@ displayAdminOrderTabShip
     → `displayAdminOrderTabLink`
 
     Display new elements in Back Office, AdminOrder, panel Shipping
-This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel tabs
+    This hook launches modules when the AdminOrder tab is displayed in the Back Office and extends / override Shipping panel tabs
 
     Located in: /controllers/admin/AdminOrdersController.php
 
@@ -1622,7 +1622,9 @@ displayAdminOrderTabLink
     
 displayAdminProductsExtra
 : 
-    
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/product.html.twig
+
+
 displayAdminProductsCombinationBottom
 : 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/Include/form_combination.html.twig
@@ -1631,7 +1633,7 @@ displayAdminProductsCombinationBottom
 displayAdminProductsMainStepLeftColumnBottom
 : 
     Display new elements in back office product page, left column of
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 
@@ -1639,7 +1641,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsMainStepLeftColumnMiddle
 : 
     Display new elements in back office product page, left column of
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 
@@ -1647,7 +1649,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsMainStepRightColumnBottom
 : 
     Display new elements in back office product page, right column of
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 
@@ -1655,7 +1657,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsOptionsStepBottom
 : 
     Display new elements in back office product page, Options tab
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
@@ -1663,7 +1665,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsOptionsStepTop
 : 
     Display new elements in back office product page, Options tab
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
@@ -1671,7 +1673,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsPriceStepBottom
 : 
     Display new elements in back office product page, Price tab
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
@@ -1679,7 +1681,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsQuantitiesStepBottom
 : 
     Display new elements in back office product page, Quantities/Com
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/form.html.twig
 
@@ -1687,7 +1689,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsSeoStepBottom
 : 
     Display new elements in back office product page, SEO tab
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/Include/form_seo.html.twig
 
@@ -1695,7 +1697,7 @@ This hook launches modules when the back office product page is displayed
 displayAdminProductsShippingStepBottom
 : 
     Display new elements in back office product page, Shipping tab
-This hook launches modules when the back office product page is displayed
+    This hook launches modules when the back office product page is displayed
 
     Located in: /templates/bundles/PrestaShopBundle/views/Admin/Product/Include/form_shipping.html.twig
 
@@ -1726,7 +1728,7 @@ displayAfterTitleTag
     Available since: {{< minver v="1.7.8" >}}
 
     In html header
-Use this hook to add content after title tag
+    Use this hook to add content after title tag
 
     Located in: 
 
@@ -1736,7 +1738,7 @@ Use this hook to add content after title tag
 displayAfterBodyOpeningTag
 : 
     Very top of pages
-Use this hook for advertisement or modals you want to load first
+    Use this hook for advertisement or modals you want to load first
 
     Located in: 
 
@@ -1747,7 +1749,7 @@ Use this hook for advertisement or modals you want to load first
 displayAfterCarrier
 : 
     After carriers list
-This hook is displayed after the carrier list in Front Office
+    This hook is displayed after the carrier list in Front Office
 
     Located in: /classes/checkout/CheckoutDeliveryStep.php
 
@@ -1757,7 +1759,7 @@ displayAfterProductThumbs
     Available since: {{< minver v="1.7.1" >}}
 
     Display extra content below product thumbs
-This hook displays new elements below product images ex. additional media
+    This hook displays new elements below product images ex. additional media
 
     Located in: /themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl
 
@@ -1770,7 +1772,7 @@ displayAfterThemeInstallation
 displayAttributeForm
 : 
     Add fields to the form 'attribute value'
-This hook adds fields to the form 'attribute value'
+    This hook adds fields to the form 'attribute value'
 
     Located in: admin-dev/themes/default/template/controllers/attributes/helpers/form/form.tpl
 
@@ -1778,7 +1780,7 @@ This hook adds fields to the form 'attribute value'
 displayAttributeGroupForm
 : 
     Add fields to the form 'attribute group'
-This hook adds fields to the form 'attribute group'
+    This hook adds fields to the form 'attribute group'
 
     Located in: admin-dev/themes/default/template/controllers/attributes_groups/helpers/form/form.tpl
 
@@ -1786,7 +1788,7 @@ This hook adds fields to the form 'attribute group'
 displayBackOfficeCategory
 : 
     Display new elements in the Back Office, tab AdminCategories
-This hook launches modules when the AdminCategories tab is displayed in the Back Office
+    This hook launches modules when the AdminCategories tab is displayed in the Back Office
 
     Located in: /controllers/admin/AdminCategoriesController.php
 
@@ -1854,7 +1856,7 @@ displayBanner
 displayBeforeBodyClosingTag
 : 
     Very bottom of pages
-Use this hook for your modals or any content you want to load at the very end
+    Use this hook for your modals or any content you want to load at the very end
 
     Located in: 
 
@@ -1942,7 +1944,7 @@ displayCarrierList
 displayCartExtraProductActions
 : 
     Extra buttons in shopping cart
-This hook adds extra buttons to the product lines, in the shopping cart
+    This hook adds extra buttons to the product lines, in the shopping cart
 
     Located in: /themes/classic/templates/checkout/_partials/cart-detailed-product-line.tpl
 
@@ -1951,7 +1953,7 @@ displayCartModalContent
     Available since: {{< minver v="1.7.8" >}}
     
     Content of Add-to-cart modal
-This hook displays content in the middle of the window that appears after adding product to cart
+    This hook displays content in the middle of the window that appears after adding product to cart
 
     Located in: /themes/classic/modules/ps_shoppingcart/modal.tpl
 
@@ -1960,7 +1962,7 @@ displayCartModalFooter
     Available since: {{< minver v="1.7.8" >}}
     
     Bottom of Add-to-cart modal 
-This hook displays content in the bottom of window that appears after adding product to cart
+    This hook displays content in the bottom of window that appears after adding product to cart
 
     Located in: /themes/classic/modules/ps_shoppingcart/modal.tpl
 
@@ -1987,7 +1989,7 @@ displayCMSPrintButton
 displayContentWrapperBottom
 : 
     Content wrapper section (bottom)
-This hook displays new elements in the bottom of the content wrapper
+    This hook displays new elements in the bottom of the content wrapper
 
     Located in: 
 
@@ -2001,7 +2003,7 @@ This hook displays new elements in the bottom of the content wrapper
 displayContentWrapperTop
 : 
     Content wrapper section (top)
-This hook displays new elements in the top of the content wrapper
+    This hook displays new elements in the top of the content wrapper
 
     Located in: 
 
@@ -2055,11 +2057,11 @@ displayDashboardToolbarIcons
     Available since: {{< minver v="1.7.3" >}}
 
     Display new elements in back office page with dashboard, on icons list.
-This hook launches modules when the back office with dashboard is displayed
+    This hook launches modules when the back office with dashboard is displayed
 
     Located in: 
-	- /templates/bundles/PrestaShopBundle/views/Admin/Configure/AdvancedParameters/LogsPage/Blocks/actions.html.twig
-	- /templates/bundles/PrestaShopBundle/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
+    - /templates/bundles/PrestaShopBundle/views/Admin/Configure/AdvancedParameters/LogsPage/Blocks/actions.html.twig
+    - /templates/bundles/PrestaShopBundle/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
 
 
 displayDashboardToolbarTopMenu
@@ -2067,17 +2069,17 @@ displayDashboardToolbarTopMenu
     Available since: {{< minver v="1.7.3" >}}
 
     Display new elements in back office page with a dashboard, on top Menu.
-This hook launches modules when a page with a dashboard is displayed
+    This hook launches modules when a page with a dashboard is displayed
 
     Located in: 
-	- /admin-dev/themes/default/template/page_header_toolbar.tpl
-	- /admin-dev/themes/new-theme/template/page_header_toolbar.tpl
+    - /admin-dev/themes/default/template/page_header_toolbar.tpl
+    - /admin-dev/themes/new-theme/template/page_header_toolbar.tpl
 
     
 displayDashboardTop
 : 
     Dashboard Top
-Displays the content in the dashboard's top area
+    Displays the content in the dashboard's top area
 
     Located in: admin-dev/themes/default/template/page_header_toolbar.tpl
 
@@ -2090,7 +2092,7 @@ displayExpressCheckout
 displayFeatureForm
 : 
     Add fields to the form 'feature'
-This hook adds fields to the form 'feature'
+    This hook adds fields to the form 'feature'
 
     Located in: admin-dev/themes/default/template/controllers/features/helpers/form/form.tpl
 
@@ -2098,7 +2100,7 @@ This hook adds fields to the form 'feature'
 displayFeaturePostProcess
 : 
     On post-process in admin feature
-This hook is called on post-process in admin feature
+    This hook is called on post-process in admin feature
 
     Located in: /controllers/admin/AdminFeaturesController.php
 
@@ -2106,7 +2108,7 @@ This hook is called on post-process in admin feature
 displayFeatureValueForm
 : 
     Add fields to the form 'feature value'
-This hook adds fields to the form 'feature value'
+    This hook adds fields to the form 'feature value'
 
     Located in: admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl
 
@@ -2114,7 +2116,7 @@ This hook adds fields to the form 'feature value'
 displayFeatureValuePostProcess
 : 
     On post-process in admin feature value
-This hook is called on post-process in admin feature value
+    This hook is called on post-process in admin feature value
 
     Located in: /controllers/admin/AdminFeaturesController.php
 
@@ -2163,9 +2165,10 @@ displayInvoice
     → `displayAdminOrderTop`
 
     Invoice
-This hook displays new blocks on the invoice (order)
+    This hook displays new blocks on the invoice (order)
 
     Located in: admin-dev/themes/default/template/controllers/orders/helpers/view/view.tpl
+
 
 displayAdminOrderTop
 : 
@@ -2187,7 +2190,7 @@ displayAdminOrderTop
 displayInvoiceLegalFreeText
 : 
     PDF Invoice - Legal Free Text
-This hook allows you to modify the legal free text on PDF invoices
+    This hook allows you to modify the legal free text on PDF invoices
 
     Located in: /classes/pdf/HTMLTemplateInvoice.php
 
@@ -2209,7 +2212,7 @@ displayLeftColumnProduct
 displayMaintenance
 : 
     Maintenance Page
-This hook displays new elements on the maintenance page
+    This hook displays new elements on the maintenance page
 
     Located in: /classes/controller/FrontController.php
 
@@ -2240,7 +2243,7 @@ displayNav2
 displayNavFullWidth
 : 
     Navigation
-This hook displays full width navigation menu at the top of your pages
+    This hook displays full width navigation menu at the top of your pages
 
     Located in: 
 
@@ -2266,6 +2269,7 @@ displayOrderConfirmation
       'order' => (object) Order
     );
     ```
+
 
 displayOrderConfirmation1
 : 
@@ -2294,6 +2298,7 @@ displayOrderDetail
     );
     ```
 
+
 displayOrderPreview
 : 
     Available since: {{< minver v="1.7.7" >}}
@@ -2310,10 +2315,11 @@ displayOrderPreview
     );
     ```
 
+
 displayPaymentByBinaries
 : 
     Payment form generated by binaries
-This hook displays form generated by binaries during the checkout
+    This hook displays form generated by binaries during the checkout
 
     Located in: /themes/classic/templates/checkout/_partials/steps/payment.tpl
 
@@ -2333,7 +2339,7 @@ displayPaymentReturn
 displayPaymentTop
 : 
     Top of payment page
-This hook is displayed at the top of the payment page
+    This hook is displayed at the top of the payment page
 
     Located in: /themes/classic/templates/checkout/_partials/steps/payment.tpl
 
@@ -2361,7 +2367,7 @@ displayProductAdditionalInfo
     Available since: {{< minver v="1.7.1" >}}
 
     Product page additional info
-This hook adds additional information on the product page
+    This hook adds additional information on the product page
 
     Located in: 
 
@@ -2374,11 +2380,11 @@ displayProductExtraContent
     Available since: {{< minver v="1.7.0" >}}
 
     Display extra content on the product page.
-This hook expects ProductExtraContent instances, which will be properly displayed by the template on the product page
+    This hook expects ProductExtraContent instances, which will be properly displayed by the template on the product page
 
     Located in: /controllers/front/ProductController.php
-	
-	Parameters:
+    
+    Parameters:
     ```php
     <?php
     array(
@@ -2399,7 +2405,7 @@ displayProductPageDrawer
     Available since: {{< minver v="1.7.1" >}}
 
     Product Page Drawer.
-This hook displays content in the right sidebar of the product page
+    This hook displays content in the right sidebar of the product page
 
     Located in: /src/PrestaShopBundle/Controller/Admin/ProductController.php
 
@@ -2469,7 +2475,7 @@ displayShoppingCart
 displayShoppingCartFooter
 : 
     Shopping cart footer
-This hook displays some specific information on the shopping cart's page
+    This hook displays some specific information on the shopping cart's page
 
     Located in: /themes/classic/templates/checkout/cart.tpl
 
@@ -2477,7 +2483,7 @@ This hook displays some specific information on the shopping cart's page
 displayTop
 : 
     Top of pages
-This hook displays additional elements at the top of your pages
+    This hook displays additional elements at the top of your pages
 
     Located in: 
 
@@ -2488,7 +2494,7 @@ This hook displays additional elements at the top of your pages
 displayWrapperBottom
 : 
     Main wrapper section (bottom)
-This hook displays new elements in the bottom of the main wrapper
+    This hook displays new elements in the bottom of the main wrapper
 
     Located in: 
 
@@ -2499,12 +2505,13 @@ This hook displays new elements in the bottom of the main wrapper
 displayWrapperTop
 : 
     Main wrapper section (top)
-This hook displays new elements in the top of the main wrapper
+    This hook displays new elements in the top of the main wrapper
 
     Located in: 
 
     - themes/classic/templates/checkout/checkout.tpl
     - themes/classic/templates/layouts/layout-both-columns.tpl
+
 
 displayAdditionalCustomerAddressFields
 : 
@@ -2513,6 +2520,7 @@ displayAdditionalCustomerAddressFields
     This hook allows to display extra field values added in an address form using hook 'additionalCustomerAddressFields'
 
     Located in: /themes/classic/templates/customer/_partials/block-address.tpl
+
 
 displayFooterCategory
 : 
@@ -2537,7 +2545,7 @@ filterCategoryContent
     Available since: {{< minver v="1.7.1" >}}
 
     Filter the content page category.
-This hook is called just before fetching content page category
+    This hook is called just before fetching content page category
 
     Located in: /controllers/front/listing/CategoryController.php
 
@@ -2553,7 +2561,7 @@ This hook is called just before fetching content page category
 filterCmsCategoryContent
 : 
     Filter the content page category
-This hook is called just before fetching content page category
+    This hook is called just before fetching content page category
 
     Located in: /controllers/front/CmsController.php
 
@@ -2561,7 +2569,7 @@ This hook is called just before fetching content page category
 filterCmsContent
 : 
     Filter the content page
-This hook is called just before fetching content page
+    This hook is called just before fetching content page
 
     Located in: /controllers/front/CmsController.php
 
@@ -2569,7 +2577,7 @@ This hook is called just before fetching content page
 filterHtmlContent
 : 
     Filter HTML field before rending a page
-This hook is called just before fetching a page on HTML field
+    This hook is called just before fetching a page on HTML field
 
     Located in: /src/Adapter/ObjectPresenter.php
 
@@ -2577,7 +2585,7 @@ This hook is called just before fetching a page on HTML field
 filterManufacturerContent
 : 
     Filter the content page manufacturer
-This hook is called just before fetching content page manufacturer
+    This hook is called just before fetching content page manufacturer
 
     Located in: /controllers/front/listing/ManufacturerController.php
 
@@ -2585,7 +2593,7 @@ This hook is called just before fetching content page manufacturer
 filterProductContent
 : 
     Filter the content page product
-This hook is called just before fetching content page product
+    This hook is called just before fetching content page product
 
     Located in: /controllers/front/ProductController.php
     
@@ -2637,6 +2645,7 @@ validateCustomerFormFields
 : 
     Located in: /classes/form/CustomerForm.php
 
+
 action&lt;KpiIdentifier>KpiRowModifier
 : 
     Available since: {{< minver v="1.7.6" >}}
@@ -2654,6 +2663,7 @@ action&lt;KpiIdentifier>KpiRowModifier
     ),
     ```
 
+
 action&lt;HookName>Form
 : 
     Available since: {{< minver v="1.7.4" >}}
@@ -2669,6 +2679,7 @@ action&lt;HookName>Form
         'form_builder' => (FormBuilderInterface) $this->formBuilder,
     ]
     ```
+
 
 action&lt;HookName>Save
 : 
@@ -2701,6 +2712,7 @@ action&lt;GridDefinitionId>GridDefinitionModifier
     ]
     ```
 
+
 action&lt;GridDefinitionId>GridQueryBuilderModifier
 : 
     Available since: {{< minver v="1.7.5" >}}
@@ -2716,6 +2728,7 @@ action&lt;GridDefinitionId>GridQueryBuilderModifier
     ]
     ```
 
+
 action&lt;GridDefinitionId>GridDataModifier
 : 
     Available since: {{< minver v="1.7.5" >}}
@@ -2728,6 +2741,7 @@ action&lt;GridDefinitionId>GridDataModifier
         'data' => (GridData) $data,
     ]
     ```
+
 
 action&lt;GridDefinitionId>GridFilterFormModifier
 : 
@@ -2742,6 +2756,7 @@ action&lt;GridDefinitionId>GridFilterFormModifier
     ]
     ```
 
+
 action&lt;GridDefinitionId>GridPresenterModifier
 : 
     Available since: {{< minver v="1.7.5" >}}
@@ -2754,6 +2769,7 @@ action&lt;GridDefinitionId>GridPresenterModifier
         'presented_grid' => (array) &$presentedGrid,
     ]
     ```
+
 
 action&lt;FormName>FormBuilderModifier
 : 
@@ -2770,10 +2786,11 @@ action&lt;FormName>FormBuilderModifier
     ]
     ```
 
+
 action&lt;FormName>FormDataProviderDefaultData,
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
 
     Parameters:
     ```php
@@ -2784,10 +2801,11 @@ Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
     ]
     ```
 
+
 action&lt;FormName>FormDataProviderData,
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
 
     Parameters:
     ```php
@@ -2798,6 +2816,7 @@ Located in: /src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
         'options' => (array) &$options,
     ]
     ```
+
 
 actionBeforeUpdate&lt;FormName>FormHandler
 : 
@@ -2813,6 +2832,7 @@ actionBeforeUpdate&lt;FormName>FormHandler
     ]
     ```
 
+
 actionAfterUpdate&lt;FormName>FormHandler
 : 
     Available since: {{< minver v="1.7.6" >}}
@@ -2825,6 +2845,7 @@ actionAfterUpdate&lt;FormName>FormHandler
         'id' => (int) $id,
     ]
     ```
+
 
 actionBeforeCreate&lt;FormName>FormHandler
 : 
@@ -2839,6 +2860,7 @@ actionBeforeCreate&lt;FormName>FormHandler
     ]
     ```
 
+
 actionAfterCreate&lt;FormName>FormHandler
 : 
     Available since: {{< minver v="1.7.6" >}}
@@ -2852,10 +2874,11 @@ actionAfterCreate&lt;FormName>FormHandler
     ]
     ```
 
+
 actionFilterDeliveryOptionList
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /classes/Cart.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /classes/Cart.php
 
     Parameters:
     ```php
@@ -2865,10 +2888,11 @@ Located in: /classes/Cart.php
     ]
     ```
 
+
 actionValidateOrderAfter
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /classes/PaymentModule.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /classes/PaymentModule.php
 
     Parameters:
     ```php
@@ -2883,10 +2907,11 @@ Located in: /classes/PaymentModule.php
     ]
     ```
 
+
 actionPresentPaymentOptions
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /classes/checkout/PaymentOptionsFinder.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /classes/checkout/PaymentOptionsFinder.php
 
     Parameters:
     ```php
@@ -2896,10 +2921,11 @@ Located in: /classes/checkout/PaymentOptionsFinder.php
     ]
     ```
 
+
 actionGetAdminToolbarButtons
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /classes/controller/AdminController.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /classes/controller/AdminController.php
 
     Parameters:
     ```php
@@ -2910,10 +2936,11 @@ Located in: /classes/controller/AdminController.php
     ]
     ```
 
+
 actionGetAlternativeSearchPanels
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /controllers/admin/AdminSearchController.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /controllers/admin/AdminSearchController.php
 
     Parameters:
     ```php
@@ -2924,10 +2951,11 @@ Located in: /controllers/admin/AdminSearchController.php
     ]
     ```
 
+
 displayBackOfficeEmployeeMenu
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
 
     Parameters:
     ```php
@@ -2937,10 +2965,11 @@ Located in: /src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
     ]
     ```
 
+
 displayEmptyModuleCategoryExtraMessage
 : 
-Available since: {{< minver v="8.0.0" >}}
-Located in: /src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
+    Available since: {{< minver v="8.0.0" >}}
+    Located in: /src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
 
     Parameters:
     ```html.twig
@@ -2948,5 +2977,6 @@ Located in: /src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_man
         'category_name': (string) categoryName
     }
     ```
+
 
 {{% /funcdef %}}
