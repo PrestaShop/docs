@@ -12,7 +12,7 @@ title: Pricing FAQ
 
 **A:** In PrestaShop, all currencies is associated with the exchange rate for Euro.
 
-These exchange rates are updated every day by authorities in charge of these currencies.
+These exchange rates are updated every day (at 2:00AM) by authorities in charge of these currencies. The API used to get those rates is [https://fixer.io/](https://fixer.io/)
 
 The PrestaShop company gathers these rates and expose them through API endpoint https://api.prestashop.com/xml/currencies.xml (URL available in the code through constant `_PS_CURRENCY_FEED_URL_`).
 
