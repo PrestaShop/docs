@@ -22,7 +22,7 @@ graph TB
     C -- true --> G("setMedia()<br><i><small>Sets controller's CSS and JS files</small></i>")
     G:::notAlwaysRun --> H("postProcess()<br><i><small>Used to process user input</small></i>")
     H:::importantStep --> I{"has redirect_after"}
-    I:::decision -- true --> J("redirect()<br><i><small>If there is no error, redirects after the process to the &quot;redirect_after&quot;</small></i>")
+    I:::decision -- true --> J("redirect()<br><i><small>If there is no error, redirects after the process to the #quot;redirect_after#quot;</small></i>")
     I -- false --> K("initHeader()<br><i><small>Assigns Smarty variables<br>for the page header</small></i>")
     J --> K
     K:::notAlwaysRun --> L{"viewAccess()<br><i><small>Checks if the current user/visitor<br>has valid view permissions</small></i>"}
