@@ -15,19 +15,19 @@ Legacy controllers work best when a Controller performs a single action, for exa
 %%{ init: { 'flowchart': { 'curve': 'stepAfter' } } }%%
 graph TB
     A(("Controller::run()")) --> B("init()<br><i><small>Initializes the controller</small></i>")    
-    B:::importantStep --> C{"checkAccess()<br><i><small>Check if the controller<br>is available for the<br> current user/viistor</small></i>"}
+    B:::importantStep --> C{"checkAccess()<br><i><small>Check if the controller<br>is available for the<br> current user/visitor</small></i>"}
     C:::decision -- false --> D("initCursedPage()<br><i><small>Assigns Smarty variables when access is forbidden</small></i>")
-    D --> E("smartyOutputContent()<br><i><small>Display page content</small></i>")
+    D --> E("smartyOutputContent()<br><i><small>Displays the page content</small></i>")
     E:::importantStep
-    C -- true --> G("setMedia()<br><i><small>Sets controller CSS and JS files</small></i>")
+    C -- true --> G("setMedia()<br><i><small>Sets controller's CSS and JS files</small></i>")
     G:::notAlwaysRun --> H("postProcess()<br><i><small>Used to process user input</small></i>")
     H:::importantStep --> I{"has redirect_after"}
-    I:::decision -- true --> J("redirect()<br><i><small>Redirects to redirect_after after<br>the process if there is no error</small></i>")
+    I:::decision -- true --> J("redirect()<br><i><small>If there is no error, redirects after the process to the &quot;redirect_after&quot;</small></i>")
     I -- false --> K("initHeader()<br><i><small>Assigns Smarty variables<br>for the page header</small></i>")
     J --> K
-    K:::notAlwaysRun --> L{"viewAccess()<br><i><small>Check if the current user/visiter<br>has valid view permissions</small></i>"}
+    K:::notAlwaysRun --> L{"viewAccess()<br><i><small>Checks if the current user/visitor<br>has valid view permissions</small></i>"}
     L:::decision -- false --> M("Add access denied error message<br><i><small>Added to errors property</small></i>")
-    L -- true --> N("initContent()<br><i><small>Assigns Smarty variables<br>for the page main content</small></i>")
+    L -- true --> N("initContent()<br><i><small>Assigns Smarty variables<br>for the main content of the page</small></i>")
     M --> O("initFooter()<br><i><small>Assigns Smarty variables for the page footer</small></i>")
     N:::importantStep --> O
     O:::notAlwaysRun --> P{"is ajax"}
