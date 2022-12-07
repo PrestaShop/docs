@@ -19,9 +19,6 @@ hookAliases:
 Hook locations: 
   - frontoffice
 
-Hook type: 
-  - 
-
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/ConditionsToApproveFinder.php](classes/checkout/ConditionsToApproveFinder.php)
 

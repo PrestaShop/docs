@@ -19,9 +19,6 @@ hookAliases:
 Hook locations: 
   - frontoffice
 
-Hook type: 
-  - 
-
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/gsitemap/gsitemap.php](modules/gsitemap/gsitemap.php)
 
