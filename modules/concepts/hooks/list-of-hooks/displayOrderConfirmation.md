@@ -7,13 +7,20 @@ files:
   - controllers/front/OrderConfirmationController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
+ - orderConfirmation
 ---
 
-# Hook : displayOrderConfirmation
+# Hook displayOrderConfirmation
 
-## Informations
+Aliases: 
+ - orderConfirmation
+
+
+
+## Information
 
 {{% notice tip %}}
 **Order confirmation page:** 
@@ -24,14 +31,23 @@ This hook is called within an order's confirmation page
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - controllers/front/OrderConfirmationController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderConfirmationController.php](controllers/front/OrderConfirmationController.php)
 
-## Hook call with parameters
+## Parameters details
 
 ```php
-Hook::exec('displayOrderConfirmation', ['order' => $order]);
+    <?php
+    array(
+      'order' => (object) Order
+    );
+```
+
+## Hook call in codebase
+
+```php
+Hook::exec('displayOrderConfirmation', ['order' => $order])
 ```

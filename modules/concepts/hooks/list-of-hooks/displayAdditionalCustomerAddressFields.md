@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/customer/_partials/block-address.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdditionalCustomerAddressFields
+# Hook displayAdditionalCustomerAddressFields
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Display additional customer address fields:** 
@@ -24,13 +25,13 @@ This hook allows to display extra field values added in an address form using ho
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/customer/_partials/block-address.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/customer/_partials/block-address.tpl](themes/classic/templates/customer/_partials/block-address.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAdditionalCustomerAddressFields' address=$address}

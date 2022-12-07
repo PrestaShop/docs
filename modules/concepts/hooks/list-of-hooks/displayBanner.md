@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/_partials/header.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayBanner
+# Hook displayBanner
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Very top of pages:** 
@@ -24,13 +25,13 @@ Use this hook for banners on top of every pages
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/_partials/header.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/_partials/header.tpl](themes/classic/templates/_partials/header.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayBanner'}

@@ -7,13 +7,14 @@ files:
   - src/Adapter/Cache/Clearer/SymfonyCacheClearer.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionClearSf2Cache
+# Hook actionClearSf2Cache
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Clear Sf2 cache:** 
@@ -24,14 +25,14 @@ This hook is called when the Symfony cache is cleared
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - src/Adapter/Cache/Clearer/SymfonyCacheClearer.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Cache/Clearer/SymfonyCacheClearer.php](src/Adapter/Cache/Clearer/SymfonyCacheClearer.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionClearSf2Cache');
+Hook::exec('actionClearSf2Cache')
 ```

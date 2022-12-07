@@ -7,13 +7,22 @@ files:
   - themes/classic/templates/catalog/_partials/quickview.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - productActions
+ - displayProductButtons
 ---
 
-# Hook : displayProductAdditionalInfo
+# Hook displayProductAdditionalInfo
 
-## Informations
+Aliases: 
+ - productActions
+ - displayProductButtons
+
+
+
+## Information
 
 {{% notice tip %}}
 **Product page additional info:** 
@@ -24,13 +33,13 @@ This hook adds additional information on the product page
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/catalog/_partials/quickview.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/quickview.tpl](themes/classic/templates/catalog/_partials/quickview.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayProductAdditionalInfo' product=$product}

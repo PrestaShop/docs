@@ -8,26 +8,27 @@ files:
 locations:
   - backoffice
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionObjectAttributeAddBefore
+# Hook actionObjectAttributeAddBefore
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/admin/AdminAttributesGroupsController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminAttributesGroupsController.php](controllers/admin/AdminAttributesGroupsController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionObjectAttributeAddBefore');
+Hook::exec('actionObjectAttributeAddBefore')
 ```

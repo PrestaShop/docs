@@ -7,13 +7,14 @@ files:
   - admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl
 locations:
   - backoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminEndContent
+# Hook displayAdminEndContent
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Administration end of content:** 
@@ -24,13 +25,13 @@ This hook is displayed at the end of the main content, before the footer
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl](admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAdminEndContent'}

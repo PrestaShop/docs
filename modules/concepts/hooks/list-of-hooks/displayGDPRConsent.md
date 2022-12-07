@@ -7,24 +7,25 @@ files:
   - themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayGDPRConsent
+# Hook displayGDPRConsent
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl](themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayGDPRConsent' id_module=$id_module}

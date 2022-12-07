@@ -7,13 +7,20 @@ files:
   - themes/classic/templates/checkout/_partials/header.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - top
 ---
 
-# Hook : displayTop
+# Hook displayTop
 
-## Informations
+Aliases: 
+ - top
+
+
+
+## Information
 
 {{% notice tip %}}
 **Top of pages:** 
@@ -24,13 +31,13 @@ This hook displays additional elements at the top of your pages
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/checkout/_partials/header.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/header.tpl](themes/classic/templates/checkout/_partials/header.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayTop'}

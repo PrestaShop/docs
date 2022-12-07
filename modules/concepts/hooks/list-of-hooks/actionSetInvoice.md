@@ -7,29 +7,41 @@ files:
   - classes/order/Order.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionSetInvoice
+# Hook actionSetInvoice
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/order/Order.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/Order.php](classes/order/Order.php)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      'Order' => order object,
+      'OrderInvoice' => order invoice object,
+      'use_existing_payment' => (bool)
+    );
+```
+
+## Hook call in codebase
 
 ```php
 Hook::exec('actionSetInvoice', [
                     get_class($this) => $this,
                     get_class($order_invoice) => $order_invoice,
                     'use_existing_payment' => (bool) $use_existing_payment,
-                ]);
+                ])
 ```

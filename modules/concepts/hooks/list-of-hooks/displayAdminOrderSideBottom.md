@@ -7,24 +7,34 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminOrderSideBottom
+# Hook displayAdminOrderSideBottom
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      'id_order' => (int) Order ID
+    );
+```
+
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayAdminOrderSideBottom', {'id_order': orderForViewing.id}) }}

@@ -7,13 +7,20 @@ files:
   - controllers/admin/AdminProductsController.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - categoryUpdate
 ---
 
-# Hook : actionCategoryUpdate
+# Hook actionCategoryUpdate
 
-## Informations
+Aliases: 
+ - categoryUpdate
+
+
+
+## Information
 
 {{% notice tip %}}
 **Category modification:** 
@@ -24,14 +31,14 @@ This hook is displayed when a category is modified
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/admin/AdminProductsController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminProductsController.php](controllers/admin/AdminProductsController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionCategoryUpdate', ['category' => $category]);
+Hook::exec('actionCategoryUpdate', ['category' => $category])
 ```

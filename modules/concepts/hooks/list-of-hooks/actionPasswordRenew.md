@@ -7,25 +7,26 @@ files:
   - controllers/front/PasswordController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionPasswordRenew
+# Hook actionPasswordRenew
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/front/PasswordController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/PasswordController.php](controllers/front/PasswordController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionPasswordRenew', ['customer' => $customer, 'password' => $password]);
+Hook::exec('actionPasswordRenew', ['customer' => $customer, 'password' => $password])
 ```

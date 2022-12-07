@@ -7,13 +7,20 @@ files:
   - classes/form/CustomerPersister.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - createAccount
 ---
 
-# Hook : actionCustomerAccountAdd
+# Hook actionCustomerAccountAdd
 
-## Informations
+Aliases: 
+ - createAccount
+
+
+
+## Information
 
 {{% notice tip %}}
 **Successful customer account creation:** 
@@ -24,16 +31,25 @@ This hook is called when a new customer creates an account successfully
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/form/CustomerPersister.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php](classes/form/CustomerPersister.php)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      'newCustomer' => (object) Customer object
+    );
+```
+
+## Hook call in codebase
 
 ```php
 Hook::exec('actionCustomerAccountAdd', [
                 'newCustomer' => $customer,
-            ]);
+            ])
 ```

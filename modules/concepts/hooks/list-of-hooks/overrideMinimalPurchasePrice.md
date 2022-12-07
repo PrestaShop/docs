@@ -7,27 +7,28 @@ files:
   - src/Adapter/Presenter/Cart/CartPresenter.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : overrideMinimalPurchasePrice
+# Hook overrideMinimalPurchasePrice
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - src/Adapter/Presenter/Cart/CartPresenter.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Cart/CartPresenter.php](src/Adapter/Presenter/Cart/CartPresenter.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('overrideMinimalPurchasePrice', [
             'minimalPurchase' => &$minimalPurchase,
-        ]);
+        ])
 ```

@@ -7,13 +7,14 @@ files:
   - classes/controller/FrontController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayMaintenance
+# Hook displayMaintenance
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Maintenance Page:** 
@@ -24,14 +25,14 @@ This hook displays new elements on the maintenance page
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - classes/controller/FrontController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php](classes/controller/FrontController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('displayMaintenance', []),
+Hook::exec('displayMaintenance', [])
 ```

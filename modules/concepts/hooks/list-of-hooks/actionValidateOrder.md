@@ -7,13 +7,20 @@ files:
   - classes/PaymentModule.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - newOrder
 ---
 
-# Hook : actionValidateOrder
+# Hook actionValidateOrder
 
-## Informations
+Aliases: 
+ - newOrder
+
+
+
+## Information
 
 {{% notice tip %}}
 **New orders:** 
@@ -24,13 +31,26 @@ types:
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/PaymentModule.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/PaymentModule.php](classes/PaymentModule.php)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      'cart' => (object) Cart,
+      'order' => (object) Order,
+      'customer' => (object) Customer,
+      'currency' => (object) Currency,
+      'orderStatus' => (object) OrderState
+    );
+```
+
+## Hook call in codebase
 
 ```php
 Hook::exec('actionValidateOrder', [
@@ -39,5 +59,5 @@ Hook::exec('actionValidateOrder', [
                 'customer' => $this->context->customer,
                 'currency' => $this->context->currency,
                 'orderStatus' => $order_status,
-            ]);
+            ])
 ```

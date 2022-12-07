@@ -7,13 +7,14 @@ files:
   - modules/blockwishlist/controllers/front/view.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : filterProductSearch
+# Hook filterProductSearch
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Filter search products result:** 
@@ -24,14 +25,14 @@ This hook is called in order to allow to modify search product result
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - modules/blockwishlist/controllers/front/view.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/view.php](modules/blockwishlist/controllers/front/view.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('filterProductSearch', ['searchVariables' => &$searchVariables]);
+Hook::exec('filterProductSearch', ['searchVariables' => &$searchVariables])
 ```

@@ -7,13 +7,14 @@ files:
   - controllers/front/OrderController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionCheckoutRender
+# Hook actionCheckoutRender
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Modify checkout process:** 
@@ -24,14 +25,14 @@ This hook is called when constructing the checkout process
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/front/OrderController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderController.php](controllers/front/OrderController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionCheckoutRender', ['checkoutProcess' => &$this->checkoutProcess]);
+Hook::exec('actionCheckoutRender', ['checkoutProcess' => &$this->checkoutProcess])
 ```

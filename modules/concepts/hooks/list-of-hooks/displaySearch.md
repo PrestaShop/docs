@@ -7,24 +7,25 @@ files:
   - themes/classic/templates/errors/not-found.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displaySearch
+# Hook displaySearch
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/errors/not-found.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/errors/not-found.tpl](themes/classic/templates/errors/not-found.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displaySearch'}

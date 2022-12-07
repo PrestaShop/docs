@@ -7,13 +7,20 @@ files:
   - themes/classic/templates/customer/my-account.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - customerAccount
 ---
 
-# Hook : displayCustomerAccount
+# Hook displayCustomerAccount
 
-## Informations
+Aliases: 
+ - customerAccount
+
+
+
+## Information
 
 {{% notice tip %}}
 **Customer account displayed in Front Office:** 
@@ -24,13 +31,13 @@ This hook displays new elements on the customer account page
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/customer/my-account.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/customer/my-account.tpl](themes/classic/templates/customer/my-account.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCustomerAccount'}

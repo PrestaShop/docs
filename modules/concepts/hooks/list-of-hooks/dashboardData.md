@@ -7,25 +7,28 @@ files:
   - controllers/admin/AdminDashboardController.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : dashboardData
+# Hook dashboardData
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - controllers/admin/AdminDashboardController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php](controllers/admin/AdminDashboardController.php)
 
-## Hook call with parameters
+This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+## Hook call in codebase
 
 ```php
-Hook::exec('dashboardData', $params, $id_module, true)));
+Hook::exec('dashboardData', $params, $id_module, true)
 ```

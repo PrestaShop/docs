@@ -7,25 +7,26 @@ files:
   - classes/form/CustomerAddressForm.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionSubmitCustomerAddressForm
+# Hook actionSubmitCustomerAddressForm
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/form/CustomerAddressForm.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressForm.php](classes/form/CustomerAddressForm.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionSubmitCustomerAddressForm', ['address' => &$address]);
+Hook::exec('actionSubmitCustomerAddressForm', ['address' => &$address])
 ```

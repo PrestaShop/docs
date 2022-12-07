@@ -7,25 +7,26 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminMaintenanceControllerPostProcessBefore
+# Hook actionAdminMaintenanceControllerPostProcessBefore
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php](src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminMaintenanceControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminMaintenanceControllerPostProcessBefore', ['controller' => $this])
 ```

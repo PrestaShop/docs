@@ -7,24 +7,25 @@ files:
   - admin784x07v4swfhm9fgvc0/themes/default/template/helpers/list/list_footer.tpl
 locations:
   - backoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminListAfter
+# Hook displayAdminListAfter
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - admin784x07v4swfhm9fgvc0/themes/default/template/helpers/list/list_footer.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin784x07v4swfhm9fgvc0/themes/default/template/helpers/list/list_footer.tpl](admin784x07v4swfhm9fgvc0/themes/default/template/helpers/list/list_footer.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAdminListAfter'}

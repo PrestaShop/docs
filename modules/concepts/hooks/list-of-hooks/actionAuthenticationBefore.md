@@ -7,25 +7,32 @@ files:
   - classes/form/CustomerLoginForm.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - actionBeforeAuthentication
 ---
 
-# Hook : actionAuthenticationBefore
+# Hook actionAuthenticationBefore
 
-## Informations
+Aliases: 
+ - actionBeforeAuthentication
+
+
+
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/form/CustomerLoginForm.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php](classes/form/CustomerLoginForm.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionAuthenticationBefore');
+Hook::exec('actionAuthenticationBefore')
 ```

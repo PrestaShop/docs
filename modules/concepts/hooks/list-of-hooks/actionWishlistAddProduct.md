@@ -7,24 +7,25 @@ files:
   - modules/blockwishlist/controllers/front/action.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionWishlistAddProduct
+# Hook actionWishlistAddProduct
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - modules/blockwishlist/controllers/front/action.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/action.php](modules/blockwishlist/controllers/front/action.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionWishlistAddProduct', [
@@ -32,5 +33,5 @@ Hook::exec('actionWishlistAddProduct', [
             'customerId' => $this->context->customer->id,
             'idProduct' => $id_product,
             'idProductAttribute' => $id_product_attribute,
-        ]);
+        ])
 ```

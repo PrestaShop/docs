@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Improve/International/GeolocationController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminInternationalGeolocationControllerPostProcessBefore
+# Hook actionAdminInternationalGeolocationControllerPostProcessBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **On post-process in Admin Improve International Geolocation Controller:** 
@@ -24,14 +25,14 @@ This hook is called on Admin Improve International Geolocation post-process befo
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Improve/International/GeolocationController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/GeolocationController.php](src/PrestaShopBundle/Controller/Admin/Improve/International/GeolocationController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminInternationalGeolocationControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminInternationalGeolocationControllerPostProcessBefore', ['controller' => $this])
 ```

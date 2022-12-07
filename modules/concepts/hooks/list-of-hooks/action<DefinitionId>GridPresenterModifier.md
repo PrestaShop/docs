@@ -7,27 +7,28 @@ files:
   - src/Core/Grid/Presenter/GridPresenter.php
 locations:
   - frontoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : action<DefinitionId>GridPresenterModifier
+# Hook action<DefinitionId>GridPresenterModifier
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/Core/Grid/Presenter/GridPresenter.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Presenter/GridPresenter.php](src/Core/Grid/Presenter/GridPresenter.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 dispatchWithParameters('action' . Container::camelize($definition->getId()) . 'GridPresenterModifier', [
             'presented_grid' => &$presentedGrid,
-        ]);
+        ])
 ```

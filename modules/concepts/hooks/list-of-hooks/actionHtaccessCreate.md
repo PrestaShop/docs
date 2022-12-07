@@ -7,13 +7,20 @@ files:
   - classes/Tools.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - afterCreateHtaccess
 ---
 
-# Hook : actionHtaccessCreate
+# Hook actionHtaccessCreate
 
-## Informations
+Aliases: 
+ - afterCreateHtaccess
+
+
+
+## Information
 
 {{% notice tip %}}
 **After htaccess creation:** 
@@ -24,14 +31,14 @@ This hook is displayed after the htaccess creation
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Tools.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php](classes/Tools.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionHtaccessCreate');
+Hook::exec('actionHtaccessCreate')
 ```

@@ -7,13 +7,14 @@ files:
   - classes/controller/FrontController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionOutputHTMLBefore
+# Hook actionOutputHTMLBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Before HTML output:** 
@@ -24,14 +25,14 @@ This hook is used to filter the whole HTML page before it is rendered (only fron
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/controller/FrontController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php](classes/controller/FrontController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionOutputHTMLBefore', ['html' => &$html]);
+Hook::exec('actionOutputHTMLBefore', ['html' => &$html])
 ```

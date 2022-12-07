@@ -8,26 +8,27 @@ files:
 locations:
   - backoffice
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionObjectProductCommentValidateAfter
+# Hook actionObjectProductCommentValidateAfter
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - modules/productcomments/ProductComment.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/productcomments/ProductComment.php](modules/productcomments/ProductComment.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionObjectProductCommentValidateAfter', ['object' => $this]);
+Hook::exec('actionObjectProductCommentValidateAfter', ['object' => $this])
 ```

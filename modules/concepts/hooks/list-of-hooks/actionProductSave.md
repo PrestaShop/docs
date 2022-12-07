@@ -7,13 +7,20 @@ files:
   - classes/Product.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - afterSaveProduct
 ---
 
-# Hook : actionProductSave
+# Hook actionProductSave
 
-## Informations
+Aliases: 
+ - afterSaveProduct
+
+
+
+## Information
 
 {{% notice tip %}}
 **Saving products:** 
@@ -24,14 +31,14 @@ This hook is called while saving products
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Product.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php](classes/Product.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionProductSave', ['id_product' => (int) $this->id, 'product' => $this]);
+Hook::exec('actionProductSave', ['id_product' => (int) $this->id, 'product' => $this])
 ```

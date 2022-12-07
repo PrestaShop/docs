@@ -7,13 +7,14 @@ files:
   - classes/checkout/DeliveryOptionsFinder.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCarrierExtraContent
+# Hook displayCarrierExtraContent
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Display additional content for a carrier (e.g pickup points):** 
@@ -24,14 +25,14 @@ This hook calls only the module related to the carrier, in order to add options 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - classes/checkout/DeliveryOptionsFinder.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/DeliveryOptionsFinder.php](classes/checkout/DeliveryOptionsFinder.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('displayCarrierExtraContent', ['carrier' => $carrier], $moduleId);
+Hook::exec('displayCarrierExtraContent', ['carrier' => $carrier], $moduleId)
 ```

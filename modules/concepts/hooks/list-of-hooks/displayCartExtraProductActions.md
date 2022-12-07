@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/checkout/_partials/cart-detailed-product-line.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : displayCartExtraProductActions
+# Hook displayCartExtraProductActions
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Extra buttons in shopping cart:** 
@@ -24,13 +25,13 @@ This hook adds extra buttons to the product lines, in the shopping cart
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - action
 
 Located in: 
-  - themes/classic/templates/checkout/_partials/cart-detailed-product-line.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/cart-detailed-product-line.tpl](themes/classic/templates/checkout/_partials/cart-detailed-product-line.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCartExtraProductActions' product=$product}

@@ -7,13 +7,14 @@ files:
   - classes/pdf/HTMLTemplateInvoice.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayInvoiceLegalFreeText
+# Hook displayInvoiceLegalFreeText
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **PDF Invoice - Legal Free Text:** 
@@ -24,14 +25,14 @@ This hook allows you to modify the legal free text on PDF invoices
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - classes/pdf/HTMLTemplateInvoice.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/pdf/HTMLTemplateInvoice.php](classes/pdf/HTMLTemplateInvoice.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('displayInvoiceLegalFreeText', ['order' => $this->order]);
+Hook::exec('displayInvoiceLegalFreeText', ['order' => $this->order])
 ```

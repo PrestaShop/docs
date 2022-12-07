@@ -4,16 +4,17 @@ Title: actionDispatcherBefore
 hidden: true
 hookTitle: Before dispatch
 files:
-  - classes/Dispatcher.php
+  - src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionDispatcherBefore
+# Hook actionDispatcherBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Before dispatch:** 
@@ -24,14 +25,16 @@ This hook is called at the beginning of the dispatch method of the Dispatcher
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Dispatcher.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php](src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionDispatcherBefore', ['controller_type' => $this->front_controller]);
+dispatchWithParameters(self::DISPATCHER_BEFORE_ACTION, [
+            'controller_type' => $controllerType,
+        ])
 ```

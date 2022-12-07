@@ -7,24 +7,25 @@ files:
   - classes/order/OrderInvoice.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionInvoiceNumberFormatted
+# Hook actionInvoiceNumberFormatted
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/order/OrderInvoice.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderInvoice.php](classes/order/OrderInvoice.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionInvoiceNumberFormatted', [
@@ -32,5 +33,5 @@ Hook::exec('actionInvoiceNumberFormatted', [
             'id_lang' => (int) $id_lang,
             'id_shop' => (int) $id_shop,
             'number' => (int) $this->number,
-        ]);
+        ])
 ```

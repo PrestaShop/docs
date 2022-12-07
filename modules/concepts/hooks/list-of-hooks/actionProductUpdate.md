@@ -7,13 +7,20 @@ files:
   - src/Adapter/Product/AdminProductWrapper.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - updateproduct
 ---
 
-# Hook : actionProductUpdate
+# Hook actionProductUpdate
 
-## Informations
+Aliases: 
+ - updateproduct
+
+
+
+## Information
 
 {{% notice tip %}}
 **Product update:** 
@@ -24,14 +31,14 @@ This hook is displayed after a product has been updated
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - src/Adapter/Product/AdminProductWrapper.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductWrapper.php](src/Adapter/Product/AdminProductWrapper.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionProductUpdate', ['id_product' => (int) $product->id, 'product' => $product]);
+Hook::exec('actionProductUpdate', ['id_product' => (int) $product->id, 'product' => $product])
 ```

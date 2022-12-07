@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayEmptyModuleCategoryExtraMessage
+# Hook displayEmptyModuleCategoryExtraMessage
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Extra message to display for an empty modules category:** 
@@ -24,13 +25,21 @@ This hook allows to add an extra message to display in the Module manager page w
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig](src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig)
 
-## Hook call with parameters
+## Parameters details
+
+```html.twig
+    {
+        'category_name': (string) categoryName
+    }
+```
+
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayEmptyModuleCategoryExtraMessage', {'category_name': category.name}) }}
