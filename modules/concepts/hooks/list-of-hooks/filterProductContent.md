@@ -25,9 +25,6 @@ This hook is called just before fetching content page product
 Hook locations: 
   - frontoffice
 
-Hook type: 
-  - 
-
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/ProductController.php](controllers/front/ProductController.php)
 

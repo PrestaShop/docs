@@ -25,9 +25,6 @@ This hook is called when Mail::send() is called
 Hook locations: 
   - frontoffice
 
-Hook type: 
-  - 
-
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php](classes/Mail.php)
 

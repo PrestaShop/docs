@@ -25,9 +25,6 @@ This hook is called just before fetching a page on HTML field
 Hook locations: 
   - frontoffice
 
-Hook type: 
-  - 
-
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Object/ObjectPresenter.php](src/Adapter/Presenter/Object/ObjectPresenter.php)
 
