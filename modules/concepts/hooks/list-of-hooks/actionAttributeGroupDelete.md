@@ -7,13 +7,20 @@ files:
   - classes/AttributeGroup.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - afterDeleteAttributeGroup
 ---
 
-# Hook : actionAttributeGroupDelete
+# Hook actionAttributeGroupDelete
 
-## Informations
+Aliases: 
+ - afterDeleteAttributeGroup
+
+
+
+## Information
 
 {{% notice tip %}}
 **Deleting attribute group:** 
@@ -24,14 +31,14 @@ This hook is called while deleting an attributes  group
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/AttributeGroup.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/AttributeGroup.php](classes/AttributeGroup.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionAttributeGroupDelete', ['id_attribute_group' => $this->id]);
+Hook::exec('actionAttributeGroupDelete', ['id_attribute_group' => $this->id])
 ```

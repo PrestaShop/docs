@@ -7,13 +7,20 @@ files:
   - controllers/front/OrderConfirmationController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
+ - paymentReturn
 ---
 
-# Hook : displayPaymentReturn
+# Hook displayPaymentReturn
 
-## Informations
+Aliases: 
+ - paymentReturn
+
+
+
+## Information
 
 {{% notice tip %}}
 **Payment return:** 
@@ -24,14 +31,14 @@ types:
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - controllers/front/OrderConfirmationController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderConfirmationController.php](controllers/front/OrderConfirmationController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('displayPaymentReturn', ['order' => $order], $this->id_module);
+Hook::exec('displayPaymentReturn', ['order' => $order], $this->id_module)
 ```

@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/_partials/head.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAfterTitleTag
+# Hook displayAfterTitleTag
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **After title tag:** 
@@ -24,13 +25,13 @@ Use this hook to add content after title tag
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/_partials/head.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/_partials/head.tpl](themes/classic/templates/_partials/head.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAfterTitleTag'}

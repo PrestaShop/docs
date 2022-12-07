@@ -7,25 +7,26 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/WebserviceController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminAdminWebserviceControllerPostProcessBefore
+# Hook actionAdminAdminWebserviceControllerPostProcessBefore
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/WebserviceController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/WebserviceController.php](src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/WebserviceController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminAdminWebserviceControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminAdminWebserviceControllerPostProcessBefore', ['controller' => $this])
 ```

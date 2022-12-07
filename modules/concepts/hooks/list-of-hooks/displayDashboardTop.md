@@ -7,13 +7,14 @@ files:
   - admin784x07v4swfhm9fgvc0/themes/new-theme/template/page_header_toolbar.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayDashboardTop
+# Hook displayDashboardTop
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Dashboard Top:** 
@@ -24,13 +25,13 @@ Displays the content in the dashboard's top area
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - admin784x07v4swfhm9fgvc0/themes/new-theme/template/page_header_toolbar.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin784x07v4swfhm9fgvc0/themes/new-theme/template/page_header_toolbar.tpl](admin784x07v4swfhm9fgvc0/themes/new-theme/template/page_header_toolbar.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayDashboardTop'}

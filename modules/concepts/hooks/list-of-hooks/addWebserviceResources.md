@@ -7,13 +7,14 @@ files:
   - classes/webservice/WebserviceRequest.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : addWebserviceResources
+# Hook addWebserviceResources
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Add extra webservice resource:** 
@@ -24,14 +25,18 @@ This hook is called when webservice resources list in webservice controller
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - classes/webservice/WebserviceRequest.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/webservice/WebserviceRequest.php](classes/webservice/WebserviceRequest.php)
 
-## Hook call with parameters
+This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+This hook has a `$check_exceptions` parameter set to `false` (check permission exceptions, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+## Hook call in codebase
 
 ```php
-Hook::exec('addWebserviceResources', ['resources' => $resources], null, true, false);
+Hook::exec('addWebserviceResources', ['resources' => $resources], null, true, false)
 ```

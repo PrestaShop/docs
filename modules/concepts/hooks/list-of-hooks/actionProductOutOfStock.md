@@ -7,13 +7,20 @@ files:
   - themes/classic/templates/catalog/_partials/product-details.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - action
+hookAliases:
+ - productOutOfStock
 ---
 
-# Hook : actionProductOutOfStock
+# Hook actionProductOutOfStock
 
-## Informations
+Aliases: 
+ - productOutOfStock
+
+
+
+## Information
 
 {{% notice tip %}}
 **Out-of-stock product:** 
@@ -24,13 +31,13 @@ This hook displays new action buttons if a product is out of stock
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - action
 
 Located in: 
-  - themes/classic/templates/catalog/_partials/product-details.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-details.tpl](themes/classic/templates/catalog/_partials/product-details.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='actionProductOutOfStock' product=$product}

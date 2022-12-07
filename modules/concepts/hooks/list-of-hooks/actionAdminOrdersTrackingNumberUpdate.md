@@ -7,13 +7,14 @@ files:
   - src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminOrdersTrackingNumberUpdate
+# Hook actionAdminOrdersTrackingNumberUpdate
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **After setting the tracking number for the order:** 
@@ -24,21 +25,29 @@ This hook allows you to execute code after the unique tracking number for the or
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php](src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      'order' => (Order),
+      'customer' => (Customer),
+      'carrier' => (Carrier)
+    );
+```
+
+## Hook call in codebase
 
 ```php
 Hook::exec('actionAdminOrdersTrackingNumberUpdate', [
                     'order' => $order,
                     'customer' => $customer,
                     'carrier' => $carrier,
-                ], null, false, true, false, $order->id_shop);
-            }
-        } finally {
-            $this->contextStateManager->restorePreviousContext();
+                ], null, false, true, false, $order->id_shop)
 ```

@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/checkout/_partials/steps/payment.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCheckoutBeforeConfirmation
+# Hook displayCheckoutBeforeConfirmation
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Show custom content before checkout confirmation:** 
@@ -24,13 +25,13 @@ This hook allows you to display custom content at the end of checkout process
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/checkout/_partials/steps/payment.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/steps/payment.tpl](themes/classic/templates/checkout/_partials/steps/payment.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCheckoutBeforeConfirmation'}

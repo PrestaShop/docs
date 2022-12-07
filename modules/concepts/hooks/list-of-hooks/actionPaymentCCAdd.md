@@ -7,13 +7,20 @@ files:
   - classes/order/OrderPayment.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - paymentCCAdded
 ---
 
-# Hook : actionPaymentCCAdd
+# Hook actionPaymentCCAdd
 
-## Informations
+Aliases: 
+ - paymentCCAdded
+
+
+
+## Information
 
 {{% notice tip %}}
 **Payment CC added:** 
@@ -24,14 +31,23 @@ types:
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/order/OrderPayment.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderPayment.php](classes/order/OrderPayment.php)
 
-## Hook call with parameters
+## Parameters details
 
 ```php
-Hook::exec('actionPaymentCCAdd', ['paymentCC' => $this]);
+    <?php
+    array(
+      'paymentCC' => (object) OrderPayment object
+    );
+```
+
+## Hook call in codebase
+
+```php
+Hook::exec('actionPaymentCCAdd', ['paymentCC' => $this])
 ```

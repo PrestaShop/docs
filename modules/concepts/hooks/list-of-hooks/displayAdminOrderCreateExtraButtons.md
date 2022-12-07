@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/Create/summary.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminOrderCreateExtraButtons
+# Hook displayAdminOrderCreateExtraButtons
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Add buttons on the create order page dropdown:** 
@@ -24,13 +25,13 @@ Add buttons on the create order page dropdown
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/Create/summary.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/Create/summary.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/Create/summary.html.twig)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayAdminOrderCreateExtraButtons') }}

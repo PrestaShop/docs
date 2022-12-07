@@ -7,24 +7,25 @@ files:
   - themes/classic/templates/catalog/_partials/miniatures/product.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayProductListReviews
+# Hook displayProductListReviews
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/catalog/_partials/miniatures/product.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/miniatures/product.tpl](themes/classic/templates/catalog/_partials/miniatures/product.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayProductListReviews' product=$product}

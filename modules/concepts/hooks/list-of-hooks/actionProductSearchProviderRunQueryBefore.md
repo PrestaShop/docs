@@ -7,13 +7,14 @@ files:
   - classes/controller/ProductListingFrontController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionProductSearchProviderRunQueryBefore
+# Hook actionProductSearchProviderRunQueryBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Runs an action before ProductSearchProviderInterface::RunQuery():** 
@@ -24,16 +25,16 @@ Required to modify an SQL query before executing it
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/controller/ProductListingFrontController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/ProductListingFrontController.php](classes/controller/ProductListingFrontController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionProductSearchProviderRunQueryBefore', [
             'query' => $query,
-        ]);
+        ])
 ```

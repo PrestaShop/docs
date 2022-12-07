@@ -7,24 +7,25 @@ files:
   - themes/classic/templates/checkout/cart.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCrossSellingShoppingCart
+# Hook displayCrossSellingShoppingCart
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/checkout/cart.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/cart.tpl](themes/classic/templates/checkout/cart.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCrossSellingShoppingCart'}

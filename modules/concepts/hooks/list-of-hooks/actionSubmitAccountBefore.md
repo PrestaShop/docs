@@ -7,25 +7,32 @@ files:
   - controllers/front/RegistrationController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - actionBeforeSubmitAccount
 ---
 
-# Hook : actionSubmitAccountBefore
+# Hook actionSubmitAccountBefore
 
-## Informations
+Aliases: 
+ - actionBeforeSubmitAccount
+
+
+
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/front/RegistrationController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/RegistrationController.php](controllers/front/RegistrationController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionSubmitAccountBefore', [], null, true),
+Hook::exec('actionSubmitAccountBefore', [], null, true)
 ```

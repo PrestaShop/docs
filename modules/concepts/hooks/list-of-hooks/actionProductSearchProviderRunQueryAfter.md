@@ -7,13 +7,14 @@ files:
   - classes/controller/ProductListingFrontController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionProductSearchProviderRunQueryAfter
+# Hook actionProductSearchProviderRunQueryAfter
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Runs an action after ProductSearchProviderInterface::RunQuery():** 
@@ -24,17 +25,17 @@ Required to return a previous state of an SQL query or/and to change a result of
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/controller/ProductListingFrontController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/ProductListingFrontController.php](classes/controller/ProductListingFrontController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionProductSearchProviderRunQueryAfter', [
             'query' => $query,
             'result' => $result,
-        ]);
+        ])
 ```

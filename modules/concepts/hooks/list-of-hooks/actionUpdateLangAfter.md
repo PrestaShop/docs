@@ -7,13 +7,14 @@ files:
   - classes/Language.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionUpdateLangAfter
+# Hook actionUpdateLangAfter
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Update "lang" tables:** 
@@ -24,14 +25,14 @@ Update "lang" tables after adding or updating a language
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Language.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Language.php](classes/Language.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionUpdateLangAfter', ['lang' => $language]);
+Hook::exec('actionUpdateLangAfter', ['lang' => $language])
 ```

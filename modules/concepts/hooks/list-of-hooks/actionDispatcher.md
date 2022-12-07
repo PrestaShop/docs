@@ -7,25 +7,26 @@ files:
   - classes/Dispatcher.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionDispatcher
+# Hook actionDispatcher
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Dispatcher.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php](classes/Dispatcher.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionDispatcher', $params_hook_action_dispatcher);
+Hook::exec('actionDispatcher', $params_hook_action_dispatcher)
 ```

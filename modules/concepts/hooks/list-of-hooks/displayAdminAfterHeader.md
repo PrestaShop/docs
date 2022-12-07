@@ -7,24 +7,25 @@ files:
   - admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl
 locations:
   - backoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminAfterHeader
+# Hook displayAdminAfterHeader
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl](admin784x07v4swfhm9fgvc0/themes/new-theme/template/light_display_layout.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAdminAfterHeader'}

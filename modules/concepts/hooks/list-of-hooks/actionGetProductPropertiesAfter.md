@@ -7,29 +7,34 @@ files:
   - classes/Product.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionGetProductPropertiesAfter
+# Hook actionGetProductPropertiesAfter
 
-## Informations
+## Information
+
+{{% notice warning %}}
+**Deprecated:** Since 1.7.8.0
+{{% /notice %}}
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Product.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php](classes/Product.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionGetProductPropertiesAfter', [
             'id_lang' => $id_lang,
             'product' => &$row,
             'context' => $context,
-        ]);
+        ])
 ```

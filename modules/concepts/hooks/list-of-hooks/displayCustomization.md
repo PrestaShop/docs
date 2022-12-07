@@ -7,25 +7,26 @@ files:
   - classes/Product.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCustomization
+# Hook displayCustomization
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - classes/Product.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php](classes/Product.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('displayCustomization', ['customization' => $row], (int) $row['id_module']);
+Hook::exec('displayCustomization', ['customization' => $row], (int) $row['id_module'])
 ```

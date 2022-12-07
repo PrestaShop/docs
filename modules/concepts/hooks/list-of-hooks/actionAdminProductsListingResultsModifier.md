@@ -7,29 +7,41 @@ files:
   - src/Adapter/Product/AdminProductDataProvider.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminProductsListingResultsModifier
+# Hook actionAdminProductsListingResultsModifier
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - src/Adapter/Product/AdminProductDataProvider.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataProvider.php](src/Adapter/Product/AdminProductDataProvider.php)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      '_ps_version' => (string) PrestaShop version,
+      'products' => &(PDOStatement),
+      'total' => (int),
+    );
+```
+
+## Hook call in codebase
 
 ```php
 Hook::exec('actionAdminProductsListingResultsModifier', [
             '_ps_version' => AppKernel::VERSION,
             'products' => &$products,
             'total' => $total,
-        ]);
+        ])
 ```

@@ -7,13 +7,14 @@ files:
   - classes/module/Module.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionModuleInstallBefore
+# Hook actionModuleInstallBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **actionModuleInstallBefore:** 
@@ -24,14 +25,14 @@ types:
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/module/Module.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/module/Module.php](classes/module/Module.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionModuleInstallBefore', ['object' => $this]);
+Hook::exec('actionModuleInstallBefore', ['object' => $this])
 ```

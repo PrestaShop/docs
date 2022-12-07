@@ -7,13 +7,14 @@ files:
   - classes/Tools.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionClearCompileCache
+# Hook actionClearCompileCache
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Clear smarty compile cache:** 
@@ -24,14 +25,14 @@ This hook is called when smarty's compile cache is cleared
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Tools.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php](classes/Tools.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionClearCompileCache');
+Hook::exec('actionClearCompileCache')
 ```

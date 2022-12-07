@@ -7,13 +7,20 @@ files:
   - themes/classic/templates/_partials/footer.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - footer
 ---
 
-# Hook : displayFooter
+# Hook displayFooter
 
-## Informations
+Aliases: 
+ - footer
+
+
+
+## Information
 
 {{% notice tip %}}
 **Footer:** 
@@ -24,13 +31,13 @@ This hook displays new blocks in the footer
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/_partials/footer.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/_partials/footer.tpl](themes/classic/templates/_partials/footer.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayFooter'}

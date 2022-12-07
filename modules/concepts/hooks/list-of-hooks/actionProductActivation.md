@@ -7,25 +7,26 @@ files:
   - src/Adapter/Product/AdminProductDataUpdater.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionProductActivation
+# Hook actionProductActivation
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/Adapter/Product/AdminProductDataUpdater.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataUpdater.php](src/Adapter/Product/AdminProductDataUpdater.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchWithParameters('actionProductActivation', ['id_product' => (int) $product->id, 'product' => $product, 'activated' => $activate]);
+dispatchWithParameters('actionProductActivation', ['id_product' => (int) $product->id, 'product' => $product, 'activated' => $activate])
 ```

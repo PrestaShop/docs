@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminProductsMainStepLeftColumnBottom
+# Hook displayAdminProductsMainStepLeftColumnBottom
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Display new elements in back office product page, left column of the Basic settings tab:** 
@@ -24,13 +25,13 @@ This hook launches modules when the back office product page is displayed
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig](src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayAdminProductsMainStepLeftColumnBottom', { 'id_product': productId }) }}

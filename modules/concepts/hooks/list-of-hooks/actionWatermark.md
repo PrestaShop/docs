@@ -4,16 +4,23 @@ Title: actionWatermark
 hidden: true
 hookTitle: Watermark
 files:
-  - controllers/admin/AdminProductsController.php
+  - src/Adapter/Product/Image/Uploader/ProductImageUploader.php
 locations:
-  - backoffice
-types:
-  - legacy
+  - frontoffice
+type:
+  - action
+hookAliases:
+ - watermark
 ---
 
-# Hook : actionWatermark
+# Hook actionWatermark
 
-## Informations
+Aliases: 
+ - watermark
+
+
+
+## Information
 
 {{% notice tip %}}
 **Watermark:** 
@@ -22,16 +29,29 @@ types:
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/admin/AdminProductsController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Image/Uploader/ProductImageUploader.php](src/Adapter/Product/Image/Uploader/ProductImageUploader.php)
 
-## Hook call with parameters
+## Parameters details
 
 ```php
-Hook::exec('actionWatermark', ['id_image' => $id_image, 'id_product' => $id_product]);
+    <?php
+    array(
+      'id_image' => (int) Image ID,
+      'id_product' => (int) Product ID
+    );
+```
+
+## Hook call in codebase
+
+```php
+dispatchWithParameters(
+            'actionWatermark',
+            ['id_image' => $imageId->getValue(), 'id_product' => $productId]
+        )
 ```

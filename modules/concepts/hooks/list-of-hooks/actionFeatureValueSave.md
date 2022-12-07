@@ -7,13 +7,20 @@ files:
   - classes/FeatureValue.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - afterSaveFeatureValue
 ---
 
-# Hook : actionFeatureValueSave
+# Hook actionFeatureValueSave
 
-## Informations
+Aliases: 
+ - afterSaveFeatureValue
+
+
+
+## Information
 
 {{% notice tip %}}
 **Saving an attributes features value:** 
@@ -24,14 +31,14 @@ This hook is called while saving an attributes features value
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/FeatureValue.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/FeatureValue.php](classes/FeatureValue.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionFeatureValueSave', ['id_feature_value' => $this->id]);
+Hook::exec('actionFeatureValueSave', ['id_feature_value' => $this->id])
 ```

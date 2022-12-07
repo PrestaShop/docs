@@ -7,25 +7,30 @@ files:
   - classes/Dispatcher.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : moduleRoutes
+# Hook moduleRoutes
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - classes/Dispatcher.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php](classes/Dispatcher.php)
 
-## Hook call with parameters
+This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+This hook has a `$check_exception` parameter set to `false` (check permission exception, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+## Hook call in codebase
 
 ```php
-Hook::exec('moduleRoutes', ['id_shop' => $id_shop], null, true, false);
+Hook::exec('moduleRoutes', ['id_shop' => $id_shop], null, true, false)
 ```

@@ -7,25 +7,26 @@ files:
   - controllers/admin/AdminDashboardController.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : dashboardZoneOne
+# Hook dashboardZoneOne
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - controllers/admin/AdminDashboardController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php](controllers/admin/AdminDashboardController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('dashboardZoneOne', $params),
+Hook::exec('dashboardZoneOne', $params)
 ```

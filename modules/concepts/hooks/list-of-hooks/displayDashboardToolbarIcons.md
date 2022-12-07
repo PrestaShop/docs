@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayDashboardToolbarIcons
+# Hook displayDashboardToolbarIcons
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Display new elements in back office page with dashboard, on icons list:** 
@@ -24,13 +25,13 @@ This hook launches modules when the back office with dashboard is displayed
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig](src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayDashboardToolbarIcons', {}) }}

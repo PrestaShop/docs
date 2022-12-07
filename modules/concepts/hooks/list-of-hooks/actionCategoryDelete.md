@@ -7,13 +7,20 @@ files:
   - classes/Category.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - categoryDeletion
 ---
 
-# Hook : actionCategoryDelete
+# Hook actionCategoryDelete
 
-## Informations
+Aliases: 
+ - categoryDeletion
+
+
+
+## Information
 
 {{% notice tip %}}
 **Category deletion:** 
@@ -24,14 +31,14 @@ This hook is displayed when a category is deleted
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Category.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php](classes/Category.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionCategoryDelete', ['category' => $this, 'deleted_children' => $deletedChildren]);
+Hook::exec('actionCategoryDelete', ['category' => $this, 'deleted_children' => $deletedChildren])
 ```

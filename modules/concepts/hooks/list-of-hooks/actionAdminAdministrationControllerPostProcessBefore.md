@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminAdministrationControllerPostProcessBefore
+# Hook actionAdminAdministrationControllerPostProcessBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **On post-process in Admin Configure Advanced Parameters Administration Controller:** 
@@ -24,14 +25,14 @@ This hook is called on Admin Configure Advanced Parameters Administration post-p
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php](src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminAdministrationControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminAdministrationControllerPostProcessBefore', ['controller' => $this])
 ```

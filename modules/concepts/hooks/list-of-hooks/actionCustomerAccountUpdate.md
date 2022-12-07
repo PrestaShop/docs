@@ -7,13 +7,14 @@ files:
   - classes/form/CustomerPersister.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionCustomerAccountUpdate
+# Hook actionCustomerAccountUpdate
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Successful customer account update:** 
@@ -24,16 +25,16 @@ This hook is called when a customer updates its account successfully
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/form/CustomerPersister.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php](classes/form/CustomerPersister.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionCustomerAccountUpdate', [
                 'customer' => $customer,
-            ]);
+            ])
 ```

@@ -7,13 +7,20 @@ files:
   - controllers/admin/AdminCarriersController.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - updateCarrier
 ---
 
-# Hook : actionCarrierUpdate
+# Hook actionCarrierUpdate
 
-## Informations
+Aliases: 
+ - updateCarrier
+
+
+
+## Information
 
 {{% notice tip %}}
 **Carrier Update:** 
@@ -24,17 +31,17 @@ This hook is called when a carrier is updated
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/admin/AdminCarriersController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminCarriersController.php](controllers/admin/AdminCarriersController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionCarrierUpdate', [
                                     'id_carrier' => (int) $current_carrier->id,
                                     'carrier' => $new_carrier,
-                                ]);
+                                ])
 ```

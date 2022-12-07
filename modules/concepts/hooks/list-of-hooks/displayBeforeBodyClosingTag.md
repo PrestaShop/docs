@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/layouts/layout-both-columns.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayBeforeBodyClosingTag
+# Hook displayBeforeBodyClosingTag
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Very bottom of pages:** 
@@ -24,13 +25,13 @@ Use this hook for your modals or any content you want to load at the very end
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/layouts/layout-both-columns.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/layouts/layout-both-columns.tpl](themes/classic/templates/layouts/layout-both-columns.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayBeforeBodyClosingTag'}

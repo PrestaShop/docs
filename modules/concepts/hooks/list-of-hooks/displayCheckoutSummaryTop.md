@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/checkout/_partials/cart-summary-top.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCheckoutSummaryTop
+# Hook displayCheckoutSummaryTop
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Cart summary top:** 
@@ -24,13 +25,13 @@ This hook allows you to display new elements in top of cart summary
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/checkout/_partials/cart-summary-top.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/cart-summary-top.tpl](themes/classic/templates/checkout/_partials/cart-summary-top.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCheckoutSummaryTop'}

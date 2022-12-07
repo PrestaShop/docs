@@ -7,25 +7,26 @@ files:
   - classes/Customer.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionCustomerAddGroups
+# Hook actionCustomerAddGroups
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Customer.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Customer.php](classes/Customer.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionCustomerAddGroups', ['id_customer' => $this->id, 'groups' => $groups]);
+Hook::exec('actionCustomerAddGroups', ['id_customer' => $this->id, 'groups' => $groups])
 ```

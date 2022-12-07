@@ -7,13 +7,14 @@ files:
   - controllers/admin/AdminDashboardController.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : dashboardZoneThree
+# Hook dashboardZoneThree
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Dashboard column three:** 
@@ -24,14 +25,24 @@ This hook is displayed in the third column of the dashboard
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - controllers/admin/AdminDashboardController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php](controllers/admin/AdminDashboardController.php)
 
-## Hook call with parameters
+## Parameters details
 
 ```php
-Hook::exec('dashboardZoneThree', $params),
+    <?php
+    [
+        'date_from' => (string|null) $statsDateFrom,
+        'date_to' => (string|null) $statsDateTo,
+    ]
+```
+
+## Hook call in codebase
+
+```php
+Hook::exec('dashboardZoneThree', $params)
 ```

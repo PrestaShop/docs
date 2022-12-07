@@ -7,25 +7,26 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/ProductPreferencesController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminShopParametersProductPreferencesControllerPostProcessBefore
+# Hook actionAdminShopParametersProductPreferencesControllerPostProcessBefore
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/ProductPreferencesController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/ProductPreferencesController.php](src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/ProductPreferencesController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminShopParametersProductPreferencesControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminShopParametersProductPreferencesControllerPostProcessBefore', ['controller' => $this])
 ```

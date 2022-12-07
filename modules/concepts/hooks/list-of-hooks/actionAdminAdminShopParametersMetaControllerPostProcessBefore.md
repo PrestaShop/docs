@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MetaController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminAdminShopParametersMetaControllerPostProcessBefore
+# Hook actionAdminAdminShopParametersMetaControllerPostProcessBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **On post-process in Admin Configure Shop Parameters Meta Controller:** 
@@ -24,14 +25,14 @@ This hook is called on Admin Configure Shop Parameters Meta post-process before 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MetaController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MetaController.php](src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MetaController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminAdminShopParametersMetaControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminAdminShopParametersMetaControllerPostProcessBefore', ['controller' => $this])
 ```

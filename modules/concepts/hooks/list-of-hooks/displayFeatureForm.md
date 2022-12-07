@@ -7,13 +7,20 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
+ - featureForm
 ---
 
-# Hook : displayFeatureForm
+# Hook displayFeatureForm
 
-## Informations
+Aliases: 
+ - featureForm
+
+
+
+## Information
 
 {{% notice tip %}}
 **Add fields to the form 'feature':** 
@@ -24,13 +31,13 @@ This hook adds fields to the form 'feature'
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayFeatureForm', {'id_feature': featureId}) }}

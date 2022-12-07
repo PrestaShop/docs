@@ -7,13 +7,14 @@ files:
   - modules/blockwishlist/controllers/front/view.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionProductSearchAfter
+# Hook actionProductSearchAfter
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Event triggered after search product completed:** 
@@ -24,14 +25,14 @@ This hook is called after the product search. Parameters are already filter
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - modules/blockwishlist/controllers/front/view.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/view.php](modules/blockwishlist/controllers/front/view.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionProductSearchAfter', $searchVariables);
+Hook::exec('actionProductSearchAfter', $searchVariables)
 ```

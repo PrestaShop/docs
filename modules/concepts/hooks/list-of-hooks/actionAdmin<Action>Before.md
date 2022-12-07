@@ -7,24 +7,25 @@ files:
   - classes/controller/AdminController.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdmin<Action>Before
+# Hook actionAdmin<Action>Before
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/controller/AdminController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php](classes/controller/AdminController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionAdmin' . ucfirst($this->action) . 'Before', ['controller' => $this]);

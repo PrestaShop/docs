@@ -7,13 +7,20 @@ files:
   - classes/form/CustomerLoginForm.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - authentication
 ---
 
-# Hook : actionAuthentication
+# Hook actionAuthentication
 
-## Informations
+Aliases: 
+ - authentication
+
+
+
+## Information
 
 {{% notice tip %}}
 **Successful customer authentication:** 
@@ -24,14 +31,14 @@ This hook is displayed after a customer successfully signs in
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/form/CustomerLoginForm.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php](classes/form/CustomerLoginForm.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionAuthentication', ['customer' => $this->context->customer]);
+Hook::exec('actionAuthentication', ['customer' => $this->context->customer])
 ```
