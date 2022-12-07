@@ -6,11 +6,11 @@ title: Modules FAQ
 
 [module-commands]: {{< ref "/1.7/modules/concepts/commands" >}}
 
-**Q:** How do i add a command to an existing module, with autoloading?
+**Q:** How do I add a command to an existing module with autoloading?
 
-**A:** [In the modules section of the documentation, about module commands][module-commands], the instructions are assuming the module is installed via composer. In case you follow the same procedure but wish to add the command in your already existing module in `modules/<module_directory>` then the procedure requires an extra step. 
+**A:** [In the modules section of the documentation, about module commands][module-commands], the instructions assume the module is installed via Composer. If you follow the same procedure but wish to add the command in your existing module in `modules/<module_directory>`, then the procedure requires an extra step. 
 
-For example with a structure like this:
+For example, with a structure like this:
 
 ```tree
 modules/module_directory/
@@ -23,7 +23,7 @@ modules/module_directory/
 │       └── SyncCommand.php
 ```
 
-You would also need to namespace your src directory in `composer.json` located in the base directory of your project, by appending the following:
+You would also need to namespace your `src` directory in `composer.json` located in the base directory of your project, by appending the following:
 
 ```
     "autoload": {
@@ -39,9 +39,9 @@ You would also need to namespace your src directory in `composer.json` located i
     },
 ```
 
-And follow through using the correct namespaces throught your module commands. 
+And follow through using the correct namespaces throughout your module commands. 
 
-**Predefined Constants**: If you would like to use existing PS constants like `_DB_PREFIX_` you also need to require the file `config/config.inc.php` 
+**Predefined Constants**: If you would like to use existing PS constants like `_DB_PREFIX_`, you also need to require the file `config/config.inc.php`. 
 
 e.g. 
 
@@ -50,7 +50,7 @@ $basePath = realpath(__DIR__ . '/../../../../');
 require_once $basePath . '/config/config.inc.php';
 ```
 
-**Loading Module Classes**: Commands by default won't have module classes loaded. You need to explicitly require the modules before you can use their classes
+**Loading Module Classes**: Commands, by default, won't have module classes loaded. You must require the module's main file before using their classes.
 
 e.g. 
 
