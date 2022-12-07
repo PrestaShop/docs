@@ -19,9 +19,6 @@ hookAliases:
 Hook locations: 
   - backoffice
 
-Hook type: 
-  - 
-
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig](src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig)
 
