@@ -28,7 +28,7 @@ Hook locations:
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Object/ObjectPresenter.php](src/Adapter/Presenter/Object/ObjectPresenter.php)
 
-This hook has a `$chain` parameter set to `true` (hook will chain the return of hook module, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+This hook has a `$chain` parameter set to `true` (hook will chain the return of hook module, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
 
 ## Hook call in codebase
 
