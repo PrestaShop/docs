@@ -7,13 +7,20 @@ files:
   - controllers/front/OrderFollowController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - orderReturn
 ---
 
-# Hook : actionOrderReturn
+# Hook actionOrderReturn
 
-## Informations
+Aliases: 
+ - orderReturn
+
+
+
+## Information
 
 {{% notice tip %}}
 **Returned product:** 
@@ -24,14 +31,23 @@ This hook is displayed when a customer returns a product
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/front/OrderFollowController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderFollowController.php](controllers/front/OrderFollowController.php)
 
-## Hook call with parameters
+## Parameters details
 
 ```php
-Hook::exec('actionOrderReturn', ['orderReturn' => $orderReturn]);
+    <?php
+    array(
+      'orderReturn' => (object) OrderReturn
+    );
+```
+
+## Hook call in codebase
+
+```php
+Hook::exec('actionOrderReturn', ['orderReturn' => $orderReturn])
 ```

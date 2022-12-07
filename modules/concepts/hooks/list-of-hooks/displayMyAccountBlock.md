@@ -7,13 +7,20 @@ files:
   - themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - myAccountBlock
 ---
 
-# Hook : displayMyAccountBlock
+# Hook displayMyAccountBlock
 
-## Informations
+Aliases: 
+ - myAccountBlock
+
+
+
+## Information
 
 {{% notice tip %}}
 **My account block:** 
@@ -24,13 +31,13 @@ This hook displays extra information within the 'my account' block"
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl](themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayMyAccountBlock'}

@@ -7,24 +7,25 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : legacyblockkpi
+# Hook legacyblockkpi
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - 
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig](src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {{ renderhook('legacy_block_kpi', {'kpi_controller': 'AdminProductsController'}) }}

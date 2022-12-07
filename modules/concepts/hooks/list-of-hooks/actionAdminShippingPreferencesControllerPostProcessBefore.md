@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminShippingPreferencesControllerPostProcessBefore
+# Hook actionAdminShippingPreferencesControllerPostProcessBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **On post-process in Admin Improve Shipping Preferences Controller:** 
@@ -24,14 +25,14 @@ This hook is called on Admin Improve Shipping Preferences post-process before pr
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php](src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminShippingPreferencesControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminShippingPreferencesControllerPostProcessBefore', ['controller' => $this])
 ```

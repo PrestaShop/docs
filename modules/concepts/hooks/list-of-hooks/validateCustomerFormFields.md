@@ -7,13 +7,14 @@ files:
   - classes/form/CustomerForm.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : validateCustomerFormFields
+# Hook validateCustomerFormFields
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Customer registration form validation:** 
@@ -24,14 +25,16 @@ This hook is called to a module when it has sent additional fields with addition
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - classes/form/CustomerForm.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerForm.php](classes/form/CustomerForm.php)
 
-## Hook call with parameters
+This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+## Hook call in codebase
 
 ```php
-Hook::exec('validateCustomerFormFields', ['fields' => $formFields], $moduleId, true);
+Hook::exec('validateCustomerFormFields', ['fields' => $formFields], $moduleId, true)
 ```

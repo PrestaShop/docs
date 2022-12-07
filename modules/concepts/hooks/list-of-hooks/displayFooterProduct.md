@@ -7,13 +7,20 @@ files:
   - themes/classic/templates/catalog/product.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - productfooter
 ---
 
-# Hook : displayFooterProduct
+# Hook displayFooterProduct
 
-## Informations
+Aliases: 
+ - productfooter
+
+
+
+## Information
 
 {{% notice tip %}}
 **Product footer:** 
@@ -24,13 +31,13 @@ This hook adds new blocks under the product's description
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/catalog/product.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/product.tpl](themes/classic/templates/catalog/product.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayFooterProduct' product=$product category=$category}

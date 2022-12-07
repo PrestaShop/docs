@@ -7,25 +7,26 @@ files:
   - modules/psgdpr/psgdpr.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionExportGDPRData
+# Hook actionExportGDPRData
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - modules/psgdpr/psgdpr.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php](modules/psgdpr/psgdpr.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionExportGDPRData', $customer, $module['id_module']);
+Hook::exec('actionExportGDPRData', $customer, $module['id_module'])
 ```

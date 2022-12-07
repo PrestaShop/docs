@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminInternationalLocalizationControllerPostProcessBefore
+# Hook actionAdminInternationalLocalizationControllerPostProcessBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **On post-process in Admin Improve International Localization Controller:** 
@@ -24,14 +25,14 @@ This hook is called on Admin Improve International Localization post-process bef
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php](src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminInternationalLocalizationControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminInternationalLocalizationControllerPostProcessBefore', ['controller' => $this])
 ```

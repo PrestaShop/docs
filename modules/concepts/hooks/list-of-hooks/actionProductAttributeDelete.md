@@ -7,13 +7,20 @@ files:
   - classes/Product.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - deleteProductAttribute
 ---
 
-# Hook : actionProductAttributeDelete
+# Hook actionProductAttributeDelete
 
-## Informations
+Aliases: 
+ - deleteProductAttribute
+
+
+
+## Information
 
 {{% notice tip %}}
 **Product attribute deletion:** 
@@ -24,14 +31,14 @@ This hook is displayed when a product's attribute is deleted
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Product.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php](classes/Product.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionProductAttributeDelete', ['id_product_attribute' => 0, 'id_product' => (int) $this->id, 'deleteAllAttributes' => true]);
+Hook::exec('actionProductAttributeDelete', ['id_product_attribute' => 0, 'id_product' => (int) $this->id, 'deleteAllAttributes' => true])
 ```

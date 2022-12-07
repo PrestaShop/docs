@@ -7,13 +7,14 @@ files:
   - classes/checkout/CheckoutDeliveryStep.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAfterCarrier
+# Hook displayAfterCarrier
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **After carriers list:** 
@@ -24,14 +25,14 @@ This hook is displayed after the carrier list in Front Office
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - classes/checkout/CheckoutDeliveryStep.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php](classes/checkout/CheckoutDeliveryStep.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('displayAfterCarrier', ['cart' => $this->getCheckoutSession()->getCart()]),
+Hook::exec('displayAfterCarrier', ['cart' => $this->getCheckoutSession()->getCart()])
 ```

@@ -7,13 +7,20 @@ files:
   - classes/ProductAttribute.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - afterDeleteAttribute
 ---
 
-# Hook : actionAttributeDelete
+# Hook actionAttributeDelete
 
-## Informations
+Aliases: 
+ - afterDeleteAttribute
+
+
+
+## Information
 
 {{% notice tip %}}
 **Deleting an attributes features value:** 
@@ -24,14 +31,14 @@ This hook is called while deleting an attributes features value
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/ProductAttribute.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ProductAttribute.php](classes/ProductAttribute.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionAttributeDelete', ['id_attribute' => $this->id]);
+Hook::exec('actionAttributeDelete', ['id_attribute' => $this->id])
 ```

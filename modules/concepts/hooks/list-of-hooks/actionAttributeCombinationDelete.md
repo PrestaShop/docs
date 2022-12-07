@@ -7,25 +7,26 @@ files:
   - classes/Combination.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAttributeCombinationDelete
+# Hook actionAttributeCombinationDelete
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Combination.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Combination.php](classes/Combination.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionAttributeCombinationDelete', ['id_product_attribute' => (int) $this->id]);
+Hook::exec('actionAttributeCombinationDelete', ['id_product_attribute' => (int) $this->id])
 ```

@@ -7,13 +7,14 @@ files:
   - classes/form/CustomerFormatter.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : additionalCustomerFormFields
+# Hook additionalCustomerFormFields
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Add fields to the Customer form:** 
@@ -24,14 +25,16 @@ This hook returns an array of FormFields to add them to the customer registratio
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - classes/form/CustomerFormatter.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerFormatter.php](classes/form/CustomerFormatter.php)
 
-## Hook call with parameters
+This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+## Hook call in codebase
 
 ```php
-Hook::exec('additionalCustomerFormFields', ['fields' => &$format], null, true);
+Hook::exec('additionalCustomerFormFields', ['fields' => &$format], null, true)
 ```

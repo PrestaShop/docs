@@ -7,25 +7,28 @@ files:
   - classes/checkout/ConditionsToApproveFinder.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - 
+hookAliases:
 ---
 
-# Hook : termsAndConditions
+# Hook termsAndConditions
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - 
 
 Located in: 
-  - classes/checkout/ConditionsToApproveFinder.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/ConditionsToApproveFinder.php](classes/checkout/ConditionsToApproveFinder.php)
 
-## Hook call with parameters
+This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/modules/concepts/hooks">}})).
+
+## Hook call in codebase
 
 ```php
-Hook::exec('termsAndConditions', [], null, true);
+Hook::exec('termsAndConditions', [], null, true)
 ```

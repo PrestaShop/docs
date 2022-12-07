@@ -7,25 +7,26 @@ files:
   - classes/Address.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionGetIDZoneByAddressID
+# Hook actionGetIDZoneByAddressID
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Address.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Address.php](classes/Address.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionGetIDZoneByAddressID', ['id_address' => $id_address]);
+Hook::exec('actionGetIDZoneByAddressID', ['id_address' => $id_address])
 ```

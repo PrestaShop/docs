@@ -7,13 +7,20 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
+ - displayAdminListBefore
 ---
 
-# Hook : displayAdminGridTableBefore
+# Hook displayAdminGridTableBefore
 
-## Informations
+Aliases: 
+ - displayAdminListBefore
+
+
+
+## Information
 
 {{% notice tip %}}
 **Display before Grid table:** 
@@ -24,13 +31,24 @@ This hook adds new blocks before Grid component table
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig](src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      'grid' = Grid $grid,
+      'controller' => (string) $controller
+      'legacy_controller' => (string) $legacyController
+    );
+```
+
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayAdminGridTableBefore', {

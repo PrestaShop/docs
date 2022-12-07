@@ -7,24 +7,25 @@ files:
   - themes/classic/templates/checkout/order-confirmation.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayOrderConfirmation1
+# Hook displayOrderConfirmation1
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/checkout/order-confirmation.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/order-confirmation.tpl](themes/classic/templates/checkout/order-confirmation.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayOrderConfirmation1'}

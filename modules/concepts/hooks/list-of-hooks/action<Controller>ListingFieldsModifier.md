@@ -7,27 +7,28 @@ files:
   - classes/controller/AdminController.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : action<Controller>ListingFieldsModifier
+# Hook action<Controller>ListingFieldsModifier
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/controller/AdminController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php](classes/controller/AdminController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('action' . $this->controller_name . 'ListingFieldsModifier', [
             'fields' => &$this->fields_list,
-        ]);
+        ])
 ```

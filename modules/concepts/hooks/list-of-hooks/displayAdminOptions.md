@@ -7,24 +7,25 @@ files:
   - admin784x07v4swfhm9fgvc0/themes/default/template/helpers/options/options.tpl
 locations:
   - backoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminOptions
+# Hook displayAdminOptions
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - admin784x07v4swfhm9fgvc0/themes/default/template/helpers/options/options.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin784x07v4swfhm9fgvc0/themes/default/template/helpers/options/options.tpl](admin784x07v4swfhm9fgvc0/themes/default/template/helpers/options/options.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAdminOptions'}

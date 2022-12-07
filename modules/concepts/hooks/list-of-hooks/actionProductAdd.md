@@ -4,16 +4,23 @@ Title: actionProductAdd
 hidden: true
 hookTitle: Product creation
 files:
-  - src/Adapter/Product/AdminProductDataUpdater.php
+  - src/Adapter/Product/ProductDuplicator.php
 locations:
-  - backoffice
-types:
-  - symfony
+  - frontoffice
+type:
+  - action
+hookAliases:
+ - addproduct
 ---
 
-# Hook : actionProductAdd
+# Hook actionProductAdd
 
-## Informations
+Aliases: 
+ - addproduct
+
+
+
+## Information
 
 {{% notice tip %}}
 **Product creation:** 
@@ -22,16 +29,19 @@ This hook is displayed after a product is created
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - frontoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/Adapter/Product/AdminProductDataUpdater.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/ProductDuplicator.php](src/Adapter/Product/ProductDuplicator.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchWithParameters('actionProductAdd', ['id_product_old' => $id_product_old, 'id_product' => (int) $product->id, 'product' => $product]);
+dispatchWithParameters(
+            'actionProductAdd',
+            ['id_product_old' => $oldProductId, 'id_product' => $newProductId, 'product' => $newProduct]
+        )
 ```

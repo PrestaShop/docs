@@ -7,13 +7,20 @@ files:
   - themes/classic/templates/checkout/_partials/steps/payment.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - paymentTop
 ---
 
-# Hook : displayPaymentTop
+# Hook displayPaymentTop
 
-## Informations
+Aliases: 
+ - paymentTop
+
+
+
+## Information
 
 {{% notice tip %}}
 **Top of payment page:** 
@@ -24,13 +31,13 @@ This hook is displayed at the top of the payment page
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/checkout/_partials/steps/payment.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/steps/payment.tpl](themes/classic/templates/checkout/_partials/steps/payment.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayPaymentTop'}

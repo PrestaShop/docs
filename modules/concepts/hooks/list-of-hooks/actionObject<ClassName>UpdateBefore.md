@@ -8,25 +8,26 @@ files:
 locations:
   - backoffice
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionObject<ClassName>UpdateBefore
+# Hook actionObject<ClassName>UpdateBefore
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/ObjectModel.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php](classes/ObjectModel.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 Hook::exec('actionObject' . $this->getFullyQualifiedName() . 'UpdateBefore', ['object' => $this]);

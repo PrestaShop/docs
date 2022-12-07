@@ -4,35 +4,29 @@ Title: actionAdminControllerSetMedia
 hidden: true
 hookTitle: 
 files:
-  - classes/controller/AdminController.php
   - src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php
 locations:
   - backoffice
-types:
-  - legacy
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminControllerSetMedia
+# Hook actionAdminControllerSetMedia
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/controller/AdminController.php
-  - src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php](src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php)
 
-## Hook call with parameters
-
-```php
-Hook::exec('actionAdminControllerSetMedia');
-```
+## Hook call in codebase
 
 ```php
-dispatchWithParameters('actionAdminControllerSetMedia');
+dispatchWithParameters('actionAdminControllerSetMedia')
 ```

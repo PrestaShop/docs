@@ -7,25 +7,26 @@ files:
   - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php
 locations:
   - backoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminLogsControllerPostProcessBefore
+# Hook actionAdminLogsControllerPostProcessBefore
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php](src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-dispatchHook('actionAdminLogsControllerPostProcessBefore', ['controller' => $this]);
+dispatchHook('actionAdminLogsControllerPostProcessBefore', ['controller' => $this])
 ```

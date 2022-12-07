@@ -7,24 +7,39 @@ files:
   - src/Adapter/Product/AdminProductDataProvider.php
 locations:
   - backoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAdminProductsListingFieldsModifier
+# Hook actionAdminProductsListingFieldsModifier
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - src/Adapter/Product/AdminProductDataProvider.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataProvider.php](src/Adapter/Product/AdminProductDataProvider.php)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      '_ps_version' => (string) PrestaShop version,
+      'sql_select' => &(array),
+      'sql_table' => &(array),
+      'sql_where' => &(array),
+      'sql_order' => &(array),
+      'sql_limit' => &(string),
+    );
+```
+
+## Hook call in codebase
 
 ```php
 Hook::exec('actionAdminProductsListingFieldsModifier', [
@@ -35,5 +50,5 @@ Hook::exec('actionAdminProductsListingFieldsModifier', [
             'sql_group_by' => &$sqlGroupBy,
             'sql_order' => &$sqlOrder,
             'sql_limit' => &$sqlLimit,
-        ]);
+        ])
 ```

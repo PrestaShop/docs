@@ -7,24 +7,25 @@ files:
   - themes/classic/templates/cms/page.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCMSDisputeInformation
+# Hook displayCMSDisputeInformation
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/cms/page.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/cms/page.tpl](themes/classic/templates/cms/page.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCMSDisputeInformation'}

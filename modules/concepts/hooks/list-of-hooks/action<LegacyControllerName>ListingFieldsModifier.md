@@ -7,24 +7,25 @@ files:
   - src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php
 locations:
   - frontoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : action<LegacyControllerName>ListingFieldsModifier
+# Hook action<LegacyControllerName>ListingFieldsModifier
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php](src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 dispatchWithParameters('action' . $helperListConfiguration->legacyControllerName . 'ListingFieldsModifier', [
@@ -35,5 +36,5 @@ dispatchWithParameters('action' . $helperListConfiguration->legacyControllerName
             'order_by' => &$helperListConfiguration->orderBy,
             'order_way' => &$helperListConfiguration->orderWay,
             'fields' => &$helperListConfiguration->fieldsList,
-        ]);
+        ])
 ```

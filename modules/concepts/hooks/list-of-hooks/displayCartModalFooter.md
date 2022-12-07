@@ -7,13 +7,14 @@ files:
   - themes/classic/modules/ps_shoppingcart/modal.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCartModalFooter
+# Hook displayCartModalFooter
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Bottom of Add-to-cart modal:** 
@@ -24,13 +25,13 @@ This hook displays content in the bottom of window that appears after adding pro
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/modules/ps_shoppingcart/modal.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_shoppingcart/modal.tpl](themes/classic/modules/ps_shoppingcart/modal.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCartModalFooter' product=$product}

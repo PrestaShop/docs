@@ -8,13 +8,14 @@ files:
 locations:
   - backoffice
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionObjectProductInCartDeleteAfter
+# Hook actionObjectProductInCartDeleteAfter
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Cart product removal:** 
@@ -26,14 +27,14 @@ Hook locations:
   - backoffice
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - controllers/front/CartController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php](controllers/front/CartController.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionObjectProductInCartDeleteAfter', $data);
+Hook::exec('actionObjectProductInCartDeleteAfter', $data)
 ```

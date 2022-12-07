@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAdminThemesListAfter
+# Hook displayAdminThemesListAfter
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **BO themes list extra content:** 
@@ -24,13 +25,22 @@ This hook displays content after the themes list in the back office
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig](src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+    'current_theme_name' => (string) Name of the currently used theme
+    );
+```
+
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayAdminThemesListAfter', { 'current_theme_name': currentlyUsedTheme.get('name') }) }}

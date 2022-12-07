@@ -7,28 +7,29 @@ files:
   - src/Core/Form/IdentifiableObject/Handler/FormHandler.php
 locations:
   - frontoffice
-types:
-  - symfony
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionAfterUpdate<FormName>FormHandler
+# Hook actionAfterUpdate<FormName>FormHandler
 
-## Informations
+## Information
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - symfony
+Hook type: 
+  - action
 
 Located in: 
-  - src/Core/Form/IdentifiableObject/Handler/FormHandler.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Handler/FormHandler.php](src/Core/Form/IdentifiableObject/Handler/FormHandler.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 dispatchWithParameters('actionAfterUpdate' . Container::camelize($form->getName()) . 'FormHandler', [
             'id' => $id,
             'form_data' => &$data,
-        ]);
+        ])
 ```

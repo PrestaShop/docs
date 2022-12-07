@@ -7,13 +7,14 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayBackOfficeCategory
+# Hook displayBackOfficeCategory
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Display new elements in the Back Office, tab AdminCategories:** 
@@ -24,13 +25,13 @@ This hook launches modules when the AdminCategories tab is displayed in the Back
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayBackOfficeCategory') }}

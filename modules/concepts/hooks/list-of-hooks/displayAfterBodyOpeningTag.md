@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/layouts/layout-both-columns.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAfterBodyOpeningTag
+# Hook displayAfterBodyOpeningTag
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Very top of pages:** 
@@ -24,13 +25,13 @@ Use this hook for advertisement or modals you want to load first
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/layouts/layout-both-columns.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/layouts/layout-both-columns.tpl](themes/classic/templates/layouts/layout-both-columns.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAfterBodyOpeningTag'}

@@ -7,25 +7,36 @@ files:
   - classes/controller/Controller.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - actionBeforeAjaxDie
 ---
 
-# Hook : actionAjaxDieBefore
+# Hook actionAjaxDieBefore
 
-## Informations
+Aliases: 
+ - actionBeforeAjaxDie
+
+
+
+## Information
+
+{{% notice warning %}}
+**Deprecated:** Since 1.6.1.1
+{{% /notice %}}
 
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/controller/Controller.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/Controller.php](classes/controller/Controller.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionAjaxDieBefore', ['controller' => $controller, 'method' => $method, 'value' => $value]);
+Hook::exec('actionAjaxDieBefore', ['controller' => $controller, 'method' => $method, 'value' => $value])
 ```

@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/customer/authentication.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayCustomerLoginFormAfter
+# Hook displayCustomerLoginFormAfter
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Display elements after login form:** 
@@ -24,13 +25,13 @@ This hook displays new elements after the login form
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/customer/authentication.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/customer/authentication.tpl](themes/classic/templates/customer/authentication.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayCustomerLoginFormAfter'}

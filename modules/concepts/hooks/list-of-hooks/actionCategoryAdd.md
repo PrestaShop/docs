@@ -7,13 +7,20 @@ files:
   - classes/Category.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - categoryAddition
 ---
 
-# Hook : actionCategoryAdd
+# Hook actionCategoryAdd
 
-## Informations
+Aliases: 
+ - categoryAddition
+
+
+
+## Information
 
 {{% notice tip %}}
 **Category creation:** 
@@ -24,14 +31,14 @@ This hook is displayed when a category is created
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Category.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php](classes/Category.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionCategoryAdd', ['category' => $this]);
+Hook::exec('actionCategoryAdd', ['category' => $this])
 ```

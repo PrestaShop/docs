@@ -7,13 +7,20 @@ files:
   - themes/classic/templates/layouts/layout-both-columns.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
+ - extraLeft
 ---
 
-# Hook : displayLeftColumnProduct
+# Hook displayLeftColumnProduct
 
-## Informations
+Aliases: 
+ - extraLeft
+
+
+
+## Information
 
 {{% notice tip %}}
 **New elements on the product page (left column):** 
@@ -24,13 +31,13 @@ This hook displays new elements in the left-hand column of the product page
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/layouts/layout-both-columns.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/layouts/layout-both-columns.tpl](themes/classic/templates/layouts/layout-both-columns.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayLeftColumnProduct' product=$product category=$category}

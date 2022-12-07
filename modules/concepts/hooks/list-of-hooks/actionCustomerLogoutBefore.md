@@ -7,13 +7,14 @@ files:
   - classes/Customer.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
 ---
 
-# Hook : actionCustomerLogoutBefore
+# Hook actionCustomerLogoutBefore
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Before customer logout:** 
@@ -24,14 +25,14 @@ This hook allows you to execute code before customer logout
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Customer.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Customer.php](classes/Customer.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionCustomerLogoutBefore', ['customer' => $this]);
+Hook::exec('actionCustomerLogoutBefore', ['customer' => $this])
 ```

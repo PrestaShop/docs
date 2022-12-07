@@ -7,24 +7,34 @@ files:
   - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig
 locations:
   - backoffice
-types:
-  - twig
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayOrderPreview
+# Hook displayOrderPreview
 
-## Informations
+## Information
 
 Hook locations: 
   - backoffice
 
-Hook types: 
-  - twig
+Hook type: 
+  - display
 
 Located in: 
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig)
 
-## Hook call with parameters
+## Parameters details
+
+```php
+    <?php
+    array(
+      'order_id' => (integer) Order Id
+    );
+```
+
+## Hook call in codebase
 
 ```php
 {{ renderhook('displayOrderPreview', {'order_id': orderId}) }}

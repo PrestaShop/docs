@@ -7,13 +7,20 @@ files:
   - classes/Feature.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - afterDeleteFeature
 ---
 
-# Hook : actionFeatureDelete
+# Hook actionFeatureDelete
 
-## Informations
+Aliases: 
+ - afterDeleteFeature
+
+
+
+## Information
 
 {{% notice tip %}}
 **Deleting attributes' features:** 
@@ -24,14 +31,14 @@ This hook is called while deleting an attributes features
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Feature.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Feature.php](classes/Feature.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionFeatureDelete', ['id_feature' => $this->id]);
+Hook::exec('actionFeatureDelete', ['id_feature' => $this->id])
 ```

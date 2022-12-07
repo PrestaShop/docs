@@ -7,13 +7,20 @@ files:
   - classes/Product.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - action
+hookAliases:
+ - updateProductAttribute
 ---
 
-# Hook : actionProductAttributeUpdate
+# Hook actionProductAttributeUpdate
 
-## Informations
+Aliases: 
+ - updateProductAttribute
+
+
+
+## Information
 
 {{% notice tip %}}
 **Product attribute update:** 
@@ -24,14 +31,14 @@ This hook is displayed when a product's attribute is updated
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - action
 
 Located in: 
-  - classes/Product.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php](classes/Product.php)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
-Hook::exec('actionProductAttributeUpdate', ['id_product_attribute' => (int) $id_product_attribute]);
+Hook::exec('actionProductAttributeUpdate', ['id_product_attribute' => (int) $id_product_attribute])
 ```

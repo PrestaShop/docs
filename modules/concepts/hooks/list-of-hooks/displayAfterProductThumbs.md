@@ -7,13 +7,14 @@ files:
   - themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl
 locations:
   - frontoffice
-types:
-  - smarty
+type:
+  - display
+hookAliases:
 ---
 
-# Hook : displayAfterProductThumbs
+# Hook displayAfterProductThumbs
 
-## Informations
+## Information
 
 {{% notice tip %}}
 **Display extra content below product thumbs:** 
@@ -24,13 +25,13 @@ This hook displays new elements below product images ex. additional media
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - smarty
+Hook type: 
+  - display
 
 Located in: 
-  - themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl](themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl)
 
-## Hook call with parameters
+## Hook call in codebase
 
 ```php
 {hook h='displayAfterProductThumbs' product=$product}

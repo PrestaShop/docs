@@ -7,13 +7,20 @@ files:
   - controllers/front/OrderDetailController.php
 locations:
   - frontoffice
-types:
-  - legacy
+type:
+  - display
+hookAliases:
+ - orderDetailDisplayed
 ---
 
-# Hook : displayOrderDetail
+# Hook displayOrderDetail
 
-## Informations
+Aliases: 
+ - orderDetailDisplayed
+
+
+
+## Information
 
 {{% notice tip %}}
 **Order detail:** 
@@ -24,14 +31,23 @@ This hook is displayed within the order's details in Front Office
 Hook locations: 
   - frontoffice
 
-Hook types: 
-  - legacy
+Hook type: 
+  - display
 
 Located in: 
-  - controllers/front/OrderDetailController.php
+  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderDetailController.php](controllers/front/OrderDetailController.php)
 
-## Hook call with parameters
+## Parameters details
 
 ```php
-Hook::exec('displayOrderDetail', ['order' => $order]),
+    <?php
+    array(
+      'order' => (object) Order object
+    );
+```
+
+## Hook call in codebase
+
+```php
+Hook::exec('displayOrderDetail', ['order' => $order])
 ```
