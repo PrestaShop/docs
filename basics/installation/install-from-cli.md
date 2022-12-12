@@ -77,7 +77,7 @@ To start the installation, we recommend that you provide at least these argument
 Example:
 
 ```shell
-php install_cli.php 
+php index_cli.php 
     --domain=example.com 
     --db_server=sql.example.com 
     --db_name=myshop
