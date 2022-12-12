@@ -317,7 +317,7 @@ class yourmodule {
 ### Environments
 
 Keep in mind that the legacy container is a light version of the full Symfony container so you won't have access to all the
-Symfony components. But you will be able to use the **Doctrine** service as well as a few few core services from PrestaShop.
+Symfony components. But you will be able to use the **Doctrine** service as well as a few core services from PrestaShop.
 
 For more details about available services you can check in `<PS_ROOT_DIR>/config/services/` folder which services are available
 in admin or front. Be careful and always keep in mind in which context/environment you are calling your service.
