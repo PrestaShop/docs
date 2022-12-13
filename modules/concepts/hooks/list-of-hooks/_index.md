@@ -10,7 +10,8 @@ chapter: false
 {{% notice tip %}}
 **Search tip:** Some hooks are generated dynamically, so their names are documented in a generic way.
 
-For example, `actionAdminCustomersFormModifier` is documented as `action<AdminControllerClassName>FormModifier`, so you won't find it if you search for the exact name. When you see a controller name or action in the hook name and you can't find it, try searching for a part of the hook name, like `FormModifier`.
+For example, `actionAdminCustomersFormModifier` is documented as `action<AdminControllerClassName>FormModifier`. 
+A regex based search has been implemented, and generic hooks should be matched. However, when you see a controller name or action in the hook name and you can't find it, try searching for a part of the hook name, like `FormModifier`.
 {{% /notice %}}
 
 <div id="hookFilter" class="quickfilter">
