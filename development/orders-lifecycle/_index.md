@@ -14,7 +14,7 @@ Orders can be created from a Cart, either in Front Office (FO) by the Customer o
 
 ### Cart in Front Office (FO)
 
-In FO by default, a new empty Cart is created in database everytime a Customer signs in - this behavior can be adjusted in BO
+In Front Office by default, a new empty Cart is created in database everytime a Customer signs in - this behavior can be adjusted in BO
 `Configure -> Shop parameters -> Customer settings`. If Customer is not signed in (guest) - the Cart is created in database once
 first Product is being added into it. If guest already has a Cart and signs in, the Cart is assigned to him instead of
 creating a new one.
@@ -28,7 +28,7 @@ flowchart LR
 {{% notice note %}}
 In FO, browser cookies are used to determine if current guest has a Cart. This way guest can still see his previous Cart
 if he is visiting the Shop from the same browser in a short period of time (the time depends on cookie settings, which
-can be adjusted in BO `Configure -> Administration -> General "lifetime of front office cookies"`).
+can be adjusted in Back Office `Configure -> Administration -> General "lifetime of front office cookies"`).
 {{% /notice %}}
 
 ### Cart in Back Office (BO)
@@ -59,7 +59,7 @@ flowchart TB
 Please note that if a Cart contains only Virtual Products, there is no `checkout-addresses-step` and `checkout-delivery-step`. It goes directly from `checkout-personal-information-step` to `checkout-payment-step`.
 {{% /notice %}}
 
-1. **Associate to Customer** (checkout-personal-information-step): details like name, email, birthday, etc. In FO you can either fill 
+1. **Associate to Customer** (checkout-personal-information-step): details like name, email, birthday, etc. In Front Office you can either fill 
    this information manually as a guest (and optionally create a new Customer account) or log in as an existing Customer. 
    If you create an Order from BO, you will be asked to select an existing Customer before modifying the existing Cart or creating a new one.
 2. **Select shipping and invoice addresses** (checkout-addresses-step): provide the shipping and invoice addresses information. 
@@ -68,9 +68,9 @@ Please note that if a Cart contains only Virtual Products, there is no `checkout
    (the same address can also be selected for both - shipping and invoices). 
 3. **Select a shipping method** (checkout-delivery-step): after this step is complete, you will need to select one of the available Carriers
    (Carriers are searched by delivery address, sometimes the total weight of the Products, their prices, and information about the Customer (a group to which the Customer belongs) and can be modified by Shop Employees on Improve -> Shipping -> Carriers page). 
-   Note that the Carrier will not be available if a selected country or zone is disabled (in BO International -> Locations) or Carrier shipping and locations settings are not configured.
+   Note that the Carrier will not be available if a selected country or zone is disabled (in Back Office International -> Locations) or Carrier shipping and locations settings are not configured.
 3. **Select payment method** (checkout-payment-step): choose how to pay for the Order. Shop Employees can configure payment methods in 
-   BO Payment -> Payment methods.
+   Back Office `Payment -> Payment methods`.
    All payments are handled by payment modules. PrestaShop comes with 3 [payment modules]({{< relref "/8/modules/payment" >}}) by default:
 
     * ps_checkpayment - allows check payments.
@@ -78,7 +78,7 @@ Please note that if a Cart contains only Virtual Products, there is no `checkout
     * ps_cashondelivery - allows for cash on delivery payments.
 
    {{% notice note %}}
-You can restrict the availability of the payment methods in FO by currencies, countries, and groups and map them to Carriers (ship2pay). You can do that in BO `Improve -> Payment -> Preferences`.
+You can restrict the availability of the payment methods in Front Office by currencies, countries, and groups and map them to Carriers (ship2pay). You can do that in Back Office `Improve -> Payment -> Preferences`.
    {{% /notice %}}
 
 4. **Submit Order**: Once the Order is submitted, a unique Order reference is generated, and certain records from a Cart and related
@@ -97,7 +97,7 @@ At this step, some important data is duplicated (in `Order_detail`) to ensure Pr
 5. After Order is successfully created, an email with the Order information is sent to the Customer.
 
 {{% notice note %}}
-Email sending settings can be found in BO `Configure -> Advanced parameters -> E-mail`. Email translations and templates
+Email sending settings can be found in Back Office `Configure -> Advanced parameters -> E-mail`. Email translations and templates
 in `Improve -> International -> Translations`.
 
 When Order is being created in BO, email with the link to a prefilled Cart can be sent before creating the Order (so the
@@ -122,11 +122,11 @@ if "Payment by check" is selected, then Order will be created with the "Awaiting
 transfer" is selected, the status will be "Awaiting wire payment".
 
 Order status changing cycle depends on payment module. Some modules (like the default ones provided above) will require
-Shop admin to control the Order status manually, which can be done in BO `Sell -> Orders -> Orders`. Other more
+Shop admin to control the Order status manually, which can be done in Back Office `Sell -> Orders -> Orders`. Other more
 complicated payment modules, which integrates online payments in checkout process, will control the Order status
 automatically (e.g. when payment is done, the Order status automatically changes to "Payment accepted").
 
-Order statuses can be configured in BO `Shop parameters -> Order settings -> Statuses`.
+Order statuses can be configured in Back Office `Shop parameters -> Order settings -> Statuses`.
 
 {{% notice note %}}
 
