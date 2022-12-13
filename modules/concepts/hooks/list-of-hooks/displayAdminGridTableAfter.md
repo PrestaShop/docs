@@ -6,9 +6,8 @@ hookTitle: Display after Grid table
 files:
   - src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
 locations:
-  - backoffice
-type:
-  - display
+  - back office
+type: display
 hookAliases:
  - displayAdminListAfter
 ---
@@ -29,10 +28,9 @@ This hook adds new blocks after Grid component table
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig](src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig)
@@ -48,7 +46,7 @@ Located in:
     );
 ```
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {{ renderhook('displayAdminGridTableAfter', {

@@ -6,9 +6,8 @@ hookTitle:
 files:
   - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 locations:
-  - backoffice
-type:
-  - display
+  - back office
+type: display
 hookAliases:
 ---
 
@@ -17,10 +16,9 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig)
@@ -34,7 +32,7 @@ Located in:
     );
 ```
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {{ renderhook('displayAdminOrderSideBottom', {'id_order': orderForViewing.id}) }}

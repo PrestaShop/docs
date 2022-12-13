@@ -6,9 +6,8 @@ hookTitle:
 files:
   - classes/controller/Controller.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
  - actionBeforeAjaxDie
 ---
@@ -27,15 +26,14 @@ Aliases:
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/Controller.php](classes/controller/Controller.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionAjaxDieBefore', ['controller' => $controller, 'method' => $method, 'value' => $value])

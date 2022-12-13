@@ -6,9 +6,8 @@ hookTitle:
 files:
   - themes/classic/templates/errors/not-found.tpl
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
 ---
 
@@ -17,15 +16,14 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/errors/not-found.tpl](themes/classic/templates/errors/not-found.tpl)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {hook h='displayNotFound'}

@@ -6,9 +6,8 @@ hookTitle: Build the variables used in email layout rendering
 files:
   - src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook allows to change the variables used when an email layout is rendered
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php](src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 dispatchWithParameters(

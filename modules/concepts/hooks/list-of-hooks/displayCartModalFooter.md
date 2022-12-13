@@ -6,9 +6,8 @@ hookTitle: Bottom of Add-to-cart modal
 files:
   - themes/classic/modules/ps_shoppingcart/modal.tpl
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook displays content in the bottom of window that appears after adding pro
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_shoppingcart/modal.tpl](themes/classic/modules/ps_shoppingcart/modal.tpl)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {hook h='displayCartModalFooter' product=$product}

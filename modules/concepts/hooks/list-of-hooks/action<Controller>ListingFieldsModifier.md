@@ -6,26 +6,24 @@ hookTitle:
 files:
   - classes/controller/AdminController.php
 locations:
-  - backoffice
-type:
-  - action
+  - back office
+type: action
 hookAliases:
 ---
 
-# Hook action<Controller>ListingFieldsModifier
+# Hook action&lt;Controller>ListingFieldsModifier
 
 ## Information
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php](classes/controller/AdminController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('action' . $this->controller_name . 'ListingFieldsModifier', [

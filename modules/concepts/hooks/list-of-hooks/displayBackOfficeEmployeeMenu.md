@@ -1,18 +1,17 @@
 ---
-menuTitle: displayBackOfficeEmployeeMenu
-Title: displayBackOfficeEmployeeMenu
+menuTitle: displayback officeEmployeeMenu
+Title: displayback officeEmployeeMenu
 hidden: true
 hookTitle: Administration Employee menu
 files:
   - src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
 ---
 
-# Hook displayBackOfficeEmployeeMenu
+# Hook displayback officeEmployeeMenu
 
 ## Information
 
@@ -23,10 +22,9 @@ This hook is displayed in the employee menu
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php](src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php)
@@ -40,11 +38,11 @@ Located in:
     ]
 ```
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 dispatchWithParameters(
-            'displayBackOfficeEmployeeMenu',
+            'displayback officeEmployeeMenu',
             [
                 'links' => $menuLinksCollections,
             ]

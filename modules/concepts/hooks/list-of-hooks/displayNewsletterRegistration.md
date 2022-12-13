@@ -6,9 +6,8 @@ hookTitle:
 files:
   - themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
 ---
 
@@ -17,15 +16,14 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl](themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {hook h='displayNewsletterRegistration'}

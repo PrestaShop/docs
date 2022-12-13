@@ -6,9 +6,8 @@ hookTitle:
 files:
   - classes/order/Order.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
 ---
 
@@ -17,10 +16,9 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/Order.php](classes/order/Order.php)
@@ -36,7 +34,7 @@ Located in:
     );
 ```
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionSetInvoice', [

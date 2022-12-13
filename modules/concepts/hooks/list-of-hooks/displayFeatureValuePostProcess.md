@@ -6,9 +6,8 @@ hookTitle: On post-process in admin feature value
 files:
   - controllers/admin/AdminFeaturesController.php
 locations:
-  - backoffice
-type:
-  - display
+  - back office
+type: display
 hookAliases:
  - postProcessFeatureValue
 ---
@@ -29,15 +28,14 @@ This hook is called on post-process in admin feature value
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminFeaturesController.php](controllers/admin/AdminFeaturesController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec(

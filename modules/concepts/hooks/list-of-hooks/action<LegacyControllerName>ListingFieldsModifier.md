@@ -6,26 +6,24 @@ hookTitle:
 files:
   - src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
 ---
 
-# Hook action<LegacyControllerName>ListingFieldsModifier
+# Hook action&lt;LegacyControllerName>ListingFieldsModifier
 
 ## Information
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php](src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 dispatchWithParameters('action' . $helperListConfiguration->legacyControllerName . 'ListingFieldsModifier', [

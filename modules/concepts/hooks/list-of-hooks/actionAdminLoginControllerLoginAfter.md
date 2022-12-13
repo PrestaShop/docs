@@ -6,9 +6,8 @@ hookTitle: Perform actions after admin login controller login action initializat
 files:
   - controllers/admin/AdminLoginController.php
 locations:
-  - backoffice
-type:
-  - action
+  - back office
+type: action
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook is launched after the initialization of the login action in login cont
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminLoginController.php](controllers/admin/AdminLoginController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec(

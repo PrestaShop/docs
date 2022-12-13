@@ -6,9 +6,8 @@ hookTitle: Add fields to the Customer address form
 files:
   - classes/form/CustomerAddressFormatter.php
 locations:
-  - frontoffice
-type:
-  - 
+  - front office
+type: 
 hookAliases:
 ---
 
@@ -23,17 +22,16 @@ This hook returns an array of FormFields to add them to the customer address reg
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
 Hook type: 
-  - 
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressFormatter.php](classes/form/CustomerAddressFormatter.php)
 
 This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('additionalCustomerAddressFields', ['fields' => &$format], null, true)

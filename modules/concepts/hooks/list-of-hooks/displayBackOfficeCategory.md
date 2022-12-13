@@ -1,18 +1,17 @@
 ---
-menuTitle: displayBackOfficeCategory
-Title: displayBackOfficeCategory
+menuTitle: displayback officeCategory
+Title: displayback officeCategory
 hidden: true
 hookTitle: Display new elements in the Back Office, tab AdminCategories
 files:
   - src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig
 locations:
-  - backoffice
-type:
-  - display
+  - back office
+type: display
 hookAliases:
 ---
 
-# Hook displayBackOfficeCategory
+# Hook displayback officeCategory
 
 ## Information
 
@@ -23,16 +22,15 @@ This hook launches modules when the AdminCategories tab is displayed in the Back
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Categories/Blocks/form.html.twig)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayBackOfficeCategory') }}
+{{ renderhook('displayback officeCategory') }}
 ```

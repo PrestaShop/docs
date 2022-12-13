@@ -6,9 +6,8 @@ hookTitle:
 files:
   - themes/classic/templates/checkout/_partials/cart-detailed-totals.tpl
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
 ---
 
@@ -17,15 +16,14 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/cart-detailed-totals.tpl](themes/classic/templates/checkout/_partials/cart-detailed-totals.tpl)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}

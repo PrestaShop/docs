@@ -6,9 +6,8 @@ hookTitle: On post-process in Admin Configure Advanced Parameters Performance Co
 files:
   - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php
 locations:
-  - backoffice
-type:
-  - action
+  - back office
+type: action
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook is called on Admin Configure Advanced Parameters Performance post-proc
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php](src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 dispatchHook('actionAdminAdvancedParametersPerformanceControllerPostProcessBefore', ['controller' => $this])

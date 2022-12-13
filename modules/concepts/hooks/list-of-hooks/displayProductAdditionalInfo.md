@@ -6,9 +6,8 @@ hookTitle: Product page additional info
 files:
   - themes/classic/templates/catalog/_partials/quickview.tpl
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
  - productActions
  - displayProductButtons
@@ -31,15 +30,14 @@ This hook adds additional information on the product page
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/quickview.tpl](themes/classic/templates/catalog/_partials/quickview.tpl)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {hook h='displayProductAdditionalInfo' product=$product}

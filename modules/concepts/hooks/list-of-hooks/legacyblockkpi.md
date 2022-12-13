@@ -6,9 +6,8 @@ hookTitle:
 files:
   - src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig
 locations:
-  - backoffice
-type:
-  - 
+  - back office
+type: 
 hookAliases:
 ---
 
@@ -17,12 +16,12 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - backoffice
+  - back office
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig](src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {{ renderhook('legacy_block_kpi', {'kpi_controller': 'AdminProductsController'}) }}

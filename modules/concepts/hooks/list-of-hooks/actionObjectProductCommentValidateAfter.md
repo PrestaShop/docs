@@ -6,10 +6,9 @@ hookTitle:
 files:
   - modules/productcomments/ProductComment.php
 locations:
-  - backoffice
-  - frontoffice
-type:
-  - action
+  - back office
+  - front office
+type: action
 hookAliases:
 ---
 
@@ -18,16 +17,15 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - backoffice
-  - frontoffice
+  - back office
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/productcomments/ProductComment.php](modules/productcomments/ProductComment.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionObjectProductCommentValidateAfter', ['object' => $this])

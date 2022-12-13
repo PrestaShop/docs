@@ -6,9 +6,8 @@ hookTitle: Before sending an email
 files:
   - classes/Mail.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
 ---
 
@@ -23,17 +22,16 @@ This hook is used to filter the content or the metadata of an email before sendi
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php](classes/Mail.php)
 
 This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec(

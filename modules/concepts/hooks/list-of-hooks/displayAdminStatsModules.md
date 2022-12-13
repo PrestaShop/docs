@@ -6,9 +6,8 @@ hookTitle: Stats - Modules
 files:
   - controllers/admin/AdminStatsTabController.php
 locations:
-  - backoffice
-type:
-  - display
+  - back office
+type: display
 hookAliases:
  - AdminStatsModules
 ---
@@ -29,15 +28,14 @@ Aliases:
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminStatsTabController.php](controllers/admin/AdminStatsTabController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('displayAdminStatsModules', [], $module_instance->id)

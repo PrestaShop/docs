@@ -6,9 +6,8 @@ hookTitle: Carrier process
 files:
   - classes/checkout/CheckoutDeliveryStep.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
  - processCarrier
 ---
@@ -29,15 +28,14 @@ Aliases:
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php](classes/checkout/CheckoutDeliveryStep.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionCarrierProcess', ['cart' => $this->getCheckoutSession()->getCart()])

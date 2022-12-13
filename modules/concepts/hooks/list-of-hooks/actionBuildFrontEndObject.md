@@ -6,9 +6,8 @@ hookTitle: Manage elements added to the "prestashop" javascript object
 files:
   - classes/controller/FrontController.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook allows you to customize the "prestashop" javascript object that is inc
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php](classes/controller/FrontController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionBuildFrontEndObject', [

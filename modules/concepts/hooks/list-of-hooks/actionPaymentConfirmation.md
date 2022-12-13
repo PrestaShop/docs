@@ -6,9 +6,8 @@ hookTitle: Payment confirmation
 files:
   - classes/order/OrderHistory.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
  - paymentConfirm
 ---
@@ -29,10 +28,9 @@ This hook displays new elements after the payment is validated
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php](classes/order/OrderHistory.php)
@@ -46,7 +44,7 @@ Located in:
     );
 ```
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionPaymentConfirmation', ['id_order' => (int) $order->id], null, false, true, false, $order->id_shop)

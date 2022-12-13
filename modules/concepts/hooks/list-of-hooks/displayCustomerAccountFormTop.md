@@ -6,9 +6,8 @@ hookTitle: Block above the form for create an account
 files:
   - controllers/front/RegistrationController.php
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
  - createAccountTop
 ---
@@ -29,15 +28,14 @@ This hook is displayed above the customer's account creation form
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/RegistrationController.php](controllers/front/RegistrationController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('displayCustomerAccountFormTop')

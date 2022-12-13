@@ -6,9 +6,8 @@ hookTitle: Order Presenter
 files:
   - src/Adapter/Presenter/Order/OrderPresenter.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook is called before an order is presented
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Order/OrderPresenter.php](src/Adapter/Presenter/Order/OrderPresenter.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionPresentOrder',

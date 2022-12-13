@@ -6,9 +6,8 @@ hookTitle: List the available email themes and layouts
 files:
   - src/Core/MailTemplate/FolderThemeCatalog.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook allows to add/remove available email themes (ThemeInterface) and/or to
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/MailTemplate/FolderThemeCatalog.php](src/Core/MailTemplate/FolderThemeCatalog.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 dispatchWithParameters(

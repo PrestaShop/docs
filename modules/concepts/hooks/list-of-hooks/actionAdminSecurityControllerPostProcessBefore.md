@@ -6,9 +6,8 @@ hookTitle: On post-process in Admin Security Controller
 files:
   - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php
 locations:
-  - backoffice
-type:
-  - action
+  - back office
+type: action
 hookAliases:
 ---
 
@@ -23,15 +22,14 @@ This hook is called on Admin Security Controller post-process before processing 
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php](src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 dispatchHook('actionAdminSecurityControllerPostProcessBefore', ['controller' => $this])

@@ -6,9 +6,8 @@ hookTitle:
 files:
   - classes/controller/FrontController.php
 locations:
-  - frontoffice
-type:
-  - 
+  - front office
+type: 
 hookAliases:
 ---
 
@@ -17,12 +16,12 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - frontoffice
+  - front office
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php](classes/controller/FrontController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec(

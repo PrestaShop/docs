@@ -6,9 +6,8 @@ hookTitle: After setting the tracking number for the order
 files:
   - src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php
 locations:
-  - backoffice
-type:
-  - action
+  - back office
+type: action
 hookAliases:
 ---
 
@@ -23,10 +22,9 @@ This hook allows you to execute code after the unique tracking number for the or
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php](src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php)
@@ -42,7 +40,7 @@ Located in:
     );
 ```
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionAdminOrdersTrackingNumberUpdate', [

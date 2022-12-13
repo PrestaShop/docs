@@ -6,9 +6,8 @@ hookTitle: Cart creation and update
 files:
   - classes/Cart.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
  - cart
 ---
@@ -29,15 +28,14 @@ This hook is displayed when a product is added to the cart or if the cart's cont
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Cart.php](classes/Cart.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionCartSave', ['cart' => $this])

@@ -6,9 +6,8 @@ hookTitle: My account block
 files:
   - themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
  - myAccountBlock
 ---
@@ -29,15 +28,14 @@ This hook displays extra information within the 'my account' block"
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl](themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {hook h='displayMyAccountBlock'}

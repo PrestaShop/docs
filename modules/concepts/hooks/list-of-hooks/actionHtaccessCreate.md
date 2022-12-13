@@ -6,9 +6,8 @@ hookTitle: After htaccess creation
 files:
   - classes/Tools.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
  - afterCreateHtaccess
 ---
@@ -29,15 +28,14 @@ This hook is displayed after the htaccess creation
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php](classes/Tools.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionHtaccessCreate')

@@ -6,9 +6,8 @@ hookTitle: Additional search panel
 files:
   - controllers/admin/AdminSearchController.php
 locations:
-  - backoffice
-type:
-  - action
+  - back office
+type: action
 hookAliases:
 ---
 
@@ -23,10 +22,9 @@ This hook allows to add an additional search panel for external providers in Pre
 {{% /notice %}}
 
 Hook locations: 
-  - backoffice
+  - back office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminSearchController.php](controllers/admin/AdminSearchController.php)
@@ -43,7 +41,7 @@ This hook has an `$array_return` parameter set to `true` (module output will be 
     ]
 ```
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec(

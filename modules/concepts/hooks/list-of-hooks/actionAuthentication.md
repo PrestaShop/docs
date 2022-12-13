@@ -6,9 +6,8 @@ hookTitle: Successful customer authentication
 files:
   - classes/form/CustomerLoginForm.php
 locations:
-  - frontoffice
-type:
-  - action
+  - front office
+type: action
 hookAliases:
  - authentication
 ---
@@ -29,15 +28,14 @@ This hook is displayed after a customer successfully signs in
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - action
+Hook type: action
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php](classes/form/CustomerLoginForm.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('actionAuthentication', ['customer' => $this->context->customer])

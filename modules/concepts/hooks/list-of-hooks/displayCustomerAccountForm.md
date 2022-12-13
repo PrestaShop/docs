@@ -6,9 +6,8 @@ hookTitle: Customer account creation form
 files:
   - classes/form/CustomerForm.php
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
  - createAccountForm
 ---
@@ -29,15 +28,14 @@ This hook displays some information on the form to create a customer account
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerForm.php](classes/form/CustomerForm.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('displayCustomerAccountForm')

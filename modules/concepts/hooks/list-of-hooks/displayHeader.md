@@ -6,9 +6,8 @@ hookTitle: Pages html head section
 files:
   - classes/controller/FrontController.php
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
  - Header
 ---
@@ -29,15 +28,14 @@ This hook adds additional elements in the head section of your pages (head secti
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php](classes/controller/FrontController.php)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('displayHeader')

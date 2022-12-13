@@ -6,9 +6,8 @@ hookTitle: Shopping cart - Additional button
 files:
   - themes/classic/templates/checkout/cart.tpl
 locations:
-  - frontoffice
-type:
-  - display
+  - front office
+type: display
 hookAliases:
  - shoppingCartExtra
 ---
@@ -29,15 +28,14 @@ This hook displays new action buttons within the shopping cart
 {{% /notice %}}
 
 Hook locations: 
-  - frontoffice
+  - front office
 
-Hook type: 
-  - display
+Hook type: display
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/cart.tpl](themes/classic/templates/checkout/cart.tpl)
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 {hook h='displayShoppingCart'}

@@ -6,9 +6,8 @@ hookTitle:
 files:
   - classes/checkout/ConditionsToApproveFinder.php
 locations:
-  - frontoffice
-type:
-  - 
+  - front office
+type: 
 hookAliases:
 ---
 
@@ -17,14 +16,14 @@ hookAliases:
 ## Information
 
 Hook locations: 
-  - frontoffice
+  - front office
 
 Located in: 
   - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/ConditionsToApproveFinder.php](classes/checkout/ConditionsToApproveFinder.php)
 
 This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
 
-## Hook call in codebase
+## Call of the Hook in the origin file
 
 ```php
 Hook::exec('termsAndConditions', [], null, true)
