@@ -12,9 +12,9 @@ Orders can be created from a Cart, either in Front Office (FO) by the Customer o
 
 ## Carts
 
-### Cart in Front Office (FO)
+### Cart in Front Office
 
-In Front Office by default, a new empty Cart is created in database everytime a Customer signs in - this behavior can be adjusted in BO
+In Front Office by default, a new empty Cart is created in database everytime a Customer signs in - this behavior can be adjusted in Back Office 
 `Configure -> Shop parameters -> Customer settings`. If Customer is not signed in (guest) - the Cart is created in database once
 first Product is being added into it. If guest already has a Cart and signs in, the Cart is assigned to him instead of
 creating a new one.
@@ -26,20 +26,20 @@ flowchart LR
 </div>
 
 {{% notice note %}}
-In FO, browser cookies are used to determine if current guest has a Cart. This way guest can still see his previous Cart
+In Front Office , browser cookies are used to determine if current guest has a Cart. This way guest can still see his previous Cart
 if he is visiting the Shop from the same browser in a short period of time (the time depends on cookie settings, which
 can be adjusted in Back Office `Configure -> Administration -> General "lifetime of front office cookies"`).
 {{% /notice %}}
 
-### Cart in Back Office (BO)
+### Cart in Back Office
 
-When creating an Order in the BO, a new empty Cart is created once the Customer is selected. You can also choose an existing Cart (already associated with the Customer) or an existing Order on which the new Cart will base.
+When creating an Order in the Back Office , a new empty Cart is created once the Customer is selected. You can also choose an existing Cart (already associated with the Customer) or an existing Order on which the new Cart will base.
 
 <div class='mermaid'>
 flowchart LR
-   A{{Select Customer}}-->|Create new Cart|E{{Cart creation}}-->G
+   A{{Select Customer}}-->|Create new Cart|E{{Cart: creation}}-->G
    A-->|Use existing Cart|B{{Select existing Cart}}-->F
-   A-->|Create new Cart from Order|C{{Select existing Order}}-->D{{Cart creation from Order content}}-->G{{Associate Cart to Customer}}-->F(Associated Cart)
+   A-->|Create new Cart from Order|C{{Select existing Order}}-->D{{Cart: creation from Order content}}-->G{{Associate Cart to Customer}}-->F(Cart: associated to Customer)
 </div>
 
 ## The Checkout: from Cart to Order
@@ -48,10 +48,10 @@ For a Cart to convert to an Order, the following steps need to be completed:
 
 <div class='mermaid' style="text-align: center">
 flowchart TB
-   A(Cart)-->|checkout-personal-information-step|B(Cart associated)
-   B-->|checkout-addresses-step|C(Cart addressed)
-   C-->|checkout-delivery-step|D(Cart shipping configured)
-   D-->|checkout-payment-step|E(Cart payment configured)
+   A(Cart)-->|checkout-personal-information-step|B(Cart: associated to Customer)
+   B-->|checkout-addresses-step|C(Cart: address added)
+   C-->|checkout-delivery-step|D(Cart: shipping method selected)
+   D-->|checkout-payment-step|E(Cart: payment method selected)
    E-->|Submit Order|F(Order)
 </div>
 
@@ -61,10 +61,10 @@ Please note that if a Cart contains only Virtual Products, there is no `checkout
 
 1. **Associate to Customer** (checkout-personal-information-step): details like name, email, birthday, etc. In Front Office you can either fill 
    this information manually as a guest (and optionally create a new Customer account) or log in as an existing Customer. 
-   If you create an Order from BO, you will be asked to select an existing Customer before modifying the existing Cart or creating a new one.
+   If you create an Order from Back Office , you will be asked to select an existing Customer before modifying the existing Cart or creating a new one.
 2. **Select shipping and invoice addresses** (checkout-addresses-step): provide the shipping and invoice addresses information. 
    The shipping (a.k.a. delivery) address is where the Ordered Products should be sent, while the invoice address is used as a document billing address.
-   In FO, you can provide one address to be used as both - shipping and invoice. In BO, you must select shipping and invoice addresses 
+   In Front Office , you can provide one address to be used as both - shipping and invoice. In Back Office , you must select shipping and invoice addresses 
    (the same address can also be selected for both - shipping and invoices). 
 3. **Select a shipping method** (checkout-delivery-step): after this step is complete, you will need to select one of the available Carriers
    (Carriers are searched by delivery address, sometimes the total weight of the Products, their prices, and information about the Customer (a group to which the Customer belongs) and can be modified by Shop Employees on Improve -> Shipping -> Carriers page). 
@@ -100,7 +100,7 @@ At this step, some important data is duplicated (in `Order_detail`) to ensure Pr
 Email sending settings can be found in Back Office `Configure -> Advanced parameters -> E-mail`. Email translations and templates
 in `Improve -> International -> Translations`.
 
-When Order is being created in BO, email with the link to a prefilled Cart can be sent before creating the Order (so the
+When Order is being created in Back Office , email with the link to a prefilled Cart can be sent before creating the Order (so the
 Customer can finish up the checkout process). To do that
 click `More actions -> Send pre-filled Order to the Customer by email` in summary block.
 {{% /notice %}}
@@ -117,7 +117,7 @@ Learn how it works under the hood by looking at:
 
 ## Order status
 
-When creating Order from the FO, the initial Order status will differ depending on selected payment method. For example,
+When creating Order from the Front Office , the initial Order status will differ depending on selected payment method. For example,
 if "Payment by check" is selected, then Order will be created with the "Awaiting check payment" status, or if "Bank
 transfer" is selected, the status will be "Awaiting wire payment".
 
@@ -130,6 +130,6 @@ Order statuses can be configured in Back Office `Shop parameters -> Order settin
 
 {{% notice note %}}
 
-When creating Order from the BO, the initial Order status must be selected manually.
+When creating Order from the Back Office , the initial Order status must be selected manually.
 
 {{% /notice %}}
