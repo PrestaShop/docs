@@ -29,7 +29,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php](controllers/front/CartController.php)
+  - [controllers/front/CartController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php)
 
 This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
 

@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/shop/Shop.php](classes/shop/Shop.php)
+  - [classes/shop/Shop.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/shop/Shop.php)
 
 ## Parameters details
 

@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php](classes/controller/FrontController.php)
+  - [classes/controller/FrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php)
 
 ## Call of the Hook in the origin file
 

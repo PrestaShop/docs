@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/PasswordController.php](controllers/front/PasswordController.php)
+  - [controllers/front/PasswordController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/PasswordController.php)
 
 ## Call of the Hook in the origin file
 

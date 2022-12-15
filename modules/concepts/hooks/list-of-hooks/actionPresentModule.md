@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Module/ModulePresenter.php](src/Adapter/Presenter/Module/ModulePresenter.php)
+  - [src/Adapter/Presenter/Module/ModulePresenter.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Module/ModulePresenter.php)
 
 ## Call of the Hook in the origin file
 

@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/order-confirmation.tpl](themes/classic/templates/checkout/order-confirmation.tpl)
+  - [themes/classic/templates/checkout/order-confirmation.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/order-confirmation.tpl)
 
 ## Call of the Hook in the origin file
 

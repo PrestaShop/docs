@@ -27,7 +27,7 @@ Hook locations:
 Hook type: 
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php](controllers/admin/AdminDashboardController.php)
+  - [controllers/admin/AdminDashboardController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php)
 
 ## Parameters details
 

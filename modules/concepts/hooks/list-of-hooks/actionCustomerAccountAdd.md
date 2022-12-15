@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php](classes/form/CustomerPersister.php)
+  - [classes/form/CustomerPersister.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php)
 
 ## Parameters details
 

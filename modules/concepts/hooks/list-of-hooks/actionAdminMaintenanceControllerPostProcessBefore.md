@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php](src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php)
+  - [src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/MaintenanceController.php)
 
 ## Call of the Hook in the origin file
 

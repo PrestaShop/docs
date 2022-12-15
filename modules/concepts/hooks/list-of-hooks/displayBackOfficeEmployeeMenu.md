@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php](src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php)
+  - [src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php)
 
 ## Parameters details
 

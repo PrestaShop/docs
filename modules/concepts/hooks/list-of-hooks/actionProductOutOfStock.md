@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-details.tpl](themes/classic/templates/catalog/_partials/product-details.tpl)
+  - [themes/classic/templates/catalog/_partials/product-details.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-details.tpl)
 
 ## Call of the Hook in the origin file
 

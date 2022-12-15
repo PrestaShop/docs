@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/view.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/view.html.twig)
+  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/view.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/view.html.twig)
 
 ## Parameters details
 

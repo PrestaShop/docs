@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Shop/CommandHandler/UploadLogosHandler.php](src/Adapter/Shop/CommandHandler/UploadLogosHandler.php)
+  - [src/Adapter/Shop/CommandHandler/UploadLogosHandler.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Shop/CommandHandler/UploadLogosHandler.php)
 
 ## Call of the Hook in the origin file
 

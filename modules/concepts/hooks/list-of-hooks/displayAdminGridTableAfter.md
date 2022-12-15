@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig](src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig)
+  - [src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig)
 
 ## Parameters details
 

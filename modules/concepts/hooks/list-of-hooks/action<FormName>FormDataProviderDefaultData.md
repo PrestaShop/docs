@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Builder/FormBuilder.php](src/Core/Form/IdentifiableObject/Builder/FormBuilder.php)
+  - [src/Core/Form/IdentifiableObject/Builder/FormBuilder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Builder/FormBuilder.php)
 
 ## Call of the Hook in the origin file
 

@@ -25,7 +25,7 @@ Hook locations:
   - front office
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php](classes/Mail.php)
+  - [classes/Mail.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php)
 
 ## Call of the Hook in the origin file
 

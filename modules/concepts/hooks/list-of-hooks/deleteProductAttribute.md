@@ -21,7 +21,7 @@ Hook locations:
 Hook type: 
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php](classes/Product.php)
+  - [classes/Product.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php)
 
 ## Call of the Hook in the origin file
 

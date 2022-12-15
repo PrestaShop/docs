@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig](src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig)
+  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig)
 
 ## Parameters details
 

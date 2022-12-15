@@ -27,7 +27,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/PaymentOptionsFinder.php](classes/checkout/PaymentOptionsFinder.php)
+  - [classes/checkout/PaymentOptionsFinder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/PaymentOptionsFinder.php)
 
 ## Parameters details
 

@@ -27,7 +27,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Language.php](classes/Language.php)
+  - [classes/Language.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Language.php)
 
 ## Call of the Hook in the origin file
 
