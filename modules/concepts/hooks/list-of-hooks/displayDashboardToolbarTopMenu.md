@@ -4,7 +4,7 @@ Title: displayDashboardToolbarTopMenu
 hidden: true
 hookTitle: Display new elements in back office page with a dashboard, on top Menu
 files:
-  - admin784x07v4swfhm9fgvc0/themes/new-theme/template/page_header_toolbar.tpl
+  - admin-dev/themes/new-theme/template/page_header_toolbar.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [admin784x07v4swfhm9fgvc0/themes/new-theme/template/page_header_toolbar.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin784x07v4swfhm9fgvc0/themes/new-theme/template/page_header_toolbar.tpl)
+  - [admin-dev/themes/new-theme/template/page_header_toolbar.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/page_header_toolbar.tpl)
 
 ## Call of the Hook in the origin file
 
