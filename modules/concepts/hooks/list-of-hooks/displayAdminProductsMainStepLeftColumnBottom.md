@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig](src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig)
+  - [src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig)
 
 ## Call of the Hook in the origin file
 

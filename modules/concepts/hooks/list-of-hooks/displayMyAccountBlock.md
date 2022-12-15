@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl](themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl)
+  - [themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl)
 
 ## Call of the Hook in the origin file
 

@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderInvoice.php](classes/order/OrderInvoice.php)
+  - [classes/order/OrderInvoice.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderInvoice.php)
 
 ## Call of the Hook in the origin file
 

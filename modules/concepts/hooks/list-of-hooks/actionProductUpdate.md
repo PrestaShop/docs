@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductWrapper.php](src/Adapter/Product/AdminProductWrapper.php)
+  - [src/Adapter/Product/AdminProductWrapper.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductWrapper.php)
 
 ## Call of the Hook in the origin file
 

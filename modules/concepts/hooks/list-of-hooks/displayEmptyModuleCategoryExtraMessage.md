@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig](src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig)
+  - [src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig)
 
 ## Parameters details
 

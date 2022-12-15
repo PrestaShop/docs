@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/DeliveryOptionsFinder.php](classes/checkout/DeliveryOptionsFinder.php)
+  - [classes/checkout/DeliveryOptionsFinder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/DeliveryOptionsFinder.php)
 
 ## Call of the Hook in the origin file
 

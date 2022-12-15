@@ -27,7 +27,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php](src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php)
+  - [src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php)
 
 ## Parameters details
 

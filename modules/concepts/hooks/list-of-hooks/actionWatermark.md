@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Image/Uploader/ProductImageUploader.php](src/Adapter/Product/Image/Uploader/ProductImageUploader.php)
+  - [src/Adapter/Product/Image/Uploader/ProductImageUploader.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Image/Uploader/ProductImageUploader.php)
 
 ## Parameters details
 

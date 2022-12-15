@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Search/SearchProductSearchProvider.php](src/Adapter/Search/SearchProductSearchProvider.php)
+  - [src/Adapter/Search/SearchProductSearchProvider.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Search/SearchProductSearchProvider.php)
 
 ## Parameters details
 

@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl](themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl)
+  - [themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl)
 
 ## Call of the Hook in the origin file
 

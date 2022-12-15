@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockAvailable.php](classes/stock/StockAvailable.php)
+  - [classes/stock/StockAvailable.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockAvailable.php)
 
 ## Parameters details
 

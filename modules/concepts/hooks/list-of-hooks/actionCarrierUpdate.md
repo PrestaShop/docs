@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminCarriersController.php](controllers/admin/AdminCarriersController.php)
+  - [controllers/admin/AdminCarriersController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminCarriersController.php)
 
 ## Call of the Hook in the origin file
 

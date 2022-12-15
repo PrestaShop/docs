@@ -21,7 +21,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Combination.php](classes/Combination.php)
+  - [classes/Combination.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Combination.php)
 
 ## Call of the Hook in the origin file
 

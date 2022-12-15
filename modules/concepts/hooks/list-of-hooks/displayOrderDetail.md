@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderDetailController.php](controllers/front/OrderDetailController.php)
+  - [controllers/front/OrderDetailController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderDetailController.php)
 
 ## Parameters details
 

@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderFollowController.php](controllers/front/OrderFollowController.php)
+  - [controllers/front/OrderFollowController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderFollowController.php)
 
 ## Parameters details
 

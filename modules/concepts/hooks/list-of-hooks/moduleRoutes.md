@@ -19,7 +19,7 @@ Hook locations:
   - front office
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php](classes/Dispatcher.php)
+  - [classes/Dispatcher.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php)
 
 This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
 

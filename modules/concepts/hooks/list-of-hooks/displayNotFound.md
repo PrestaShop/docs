@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/errors/not-found.tpl](themes/classic/templates/errors/not-found.tpl)
+  - [themes/classic/templates/errors/not-found.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/errors/not-found.tpl)
 
 ## Call of the Hook in the origin file
 

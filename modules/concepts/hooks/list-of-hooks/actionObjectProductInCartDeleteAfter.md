@@ -29,7 +29,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php](controllers/front/CartController.php)
+  - [controllers/front/CartController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php)
 
 ## Call of the Hook in the origin file
 

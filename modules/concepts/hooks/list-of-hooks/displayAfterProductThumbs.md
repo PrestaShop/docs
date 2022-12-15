@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl](themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl)
+  - [themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl)
 
 ## Call of the Hook in the origin file
 
