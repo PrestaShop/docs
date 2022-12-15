@@ -9,11 +9,11 @@ weight: 5
 From the 1.7.6 version of PrestaShop we integrate support of Doctrine services and entities for modules. Doctrine is
 a powerful ORM allowing you to manage your database data via objects. It offers an abstract layer allowing you to perform
 insert/update actions via a simple `$entity->setData('update')` call. But you can also create your own repositories to fetch
-specific data via left join, add conditions and so on...
+specific data via left join, add conditions and so on ...
 
 Doctrine is the default ORM integrated with Symfony which is why we added it for modules in legacy context. If you want
-more details about Doctrine and its features you can check [their documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.5/index.html)
-or the [Symfony documentation](https://symfony.com/doc/4.4/doctrine.html). PrestaShop is currently using Doctrine version 2.5.
+more details about Doctrine and its features you can check [their documentation](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/index.html)
+or the [Symfony documentation](https://symfony.com/doc/4.4/doctrine.html). PrestaShop is currently using Doctrine version 2.7.
 
 ## Module integration
 

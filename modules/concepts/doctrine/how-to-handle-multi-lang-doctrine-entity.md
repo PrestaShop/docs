@@ -25,7 +25,7 @@ There are several Doctrine plugins which allows to handle multi lang fields easi
 
 {{% notice note %}}
 **Namespace and autoload**
-The content of this documentation relies on **namespaces** which need to be defined in your module's autoload, we won't cover this part here if you need more information please read [how to setup composer in a module]({{< ref "1.7/modules/concepts/composer#setup-composer-in-a-module" >}})
+The content of this documentation relies on **namespaces** which need to be defined in your module's autoload, we won't cover this part here if you need more information please read [how to setup composer in a module]({{< ref "8/modules/concepts/composer#setup-composer-in-a-module" >}})
 {{% /notice %}}
 
 {{% notice tip %}}
