@@ -55,4 +55,6 @@ jobs:
           mv _current "src/content/$VERSION"
 
       - name: Build
+        env:
+          DEVDOCS_GITHUB_READ_TOKEN: ${{ secrets.DEVDOCS_GITHUB_READ_TOKEN }}
         run: cd src/ && hugo
