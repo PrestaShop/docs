@@ -12,6 +12,7 @@ hookAliases:
  - newOrder
 aliases:
  - /8/modules/sample-modules/example-hooks/actionValidateOrder
+hasExample: true
 ---
 
 # Hook actionValidateOrder
