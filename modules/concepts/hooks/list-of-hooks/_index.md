@@ -3,6 +3,8 @@ menuTitle: List of hooks
 title: List of hooks
 type: 
 chapter: false
+aliases:
+ - /8/modules/sample-modules/example-hooks
 ---
 
 # List of hooks
