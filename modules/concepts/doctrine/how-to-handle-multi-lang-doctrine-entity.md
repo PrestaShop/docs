@@ -394,7 +394,7 @@ class QuoteLang
 If you need more info about how to setup and handle Doctrine relations, you can read the [Symfony documentation](https://symfony.com/doc/4.4/doctrine/associations.html) about it.
 Focus on the `Annotation` sections since PrestaShop only handles this kind of configuration from modules' Entities. Here are some additional link that might be useful:
 - [Doctrine Association mapping](https://www.doctrine-project.org/projects/doctrine-orm/en/2.7/reference/association-mapping.html)
-- [Mastering Doctrine Relationships in Symfony 3 (video tutorial)](https://symfonycasts.com/screencast/symfony3-doctrine-relations)
+- [Mastering Doctrine Relationships in Symfony 4 (video tutorial)](https://symfonycasts.com/screencast/symfony4-doctrine-relations)
 {{% /notice %}}
 
 ## Create a translated entity
