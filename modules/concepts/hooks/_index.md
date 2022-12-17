@@ -40,7 +40,7 @@ public function install()
 }
 ```
 
-If you do not know where you can register, [a list of available hooks]({{< ref "1.7/modules/concepts/hooks/list-of-hooks" >}}) is available.
+If you do not know where you can register, [a list of available hooks]({{< ref "8/modules/concepts/hooks/list-of-hooks" >}}) is available.
 
 ### Execution
 
@@ -131,7 +131,7 @@ $hook->add(); // return true on success
 You can check if hook exists before this with Hook::getIdByName('hook_name')
 ```
 
-...but PrestaShop enables you to do it the easy way:
+... but PrestaShop enables you to do it the easy way:
 
 ```php
 $this->registerHook('displayAtSpecificPlace');
