@@ -28,7 +28,7 @@ Before creating an override, check the existing features can help you:
 There are many events triggered on each controller of PrestaShop. They can be used
 for displaying additional content or executing module actions.
 
-See [the hooks chapter]({{< ref "1.7/modules/concepts/hooks/" >}}) for more details.
+See [the hooks chapter]({{< ref "8/modules/concepts/hooks/" >}}) for more details.
 
 ### Classes
 
@@ -65,13 +65,13 @@ Core controllers can be reused in a module as well, without being erased, thanks
 
 This allows a controller to be maintained easily, with its own identity but with the parent features.
 
-See [the controllers chapter]({{< ref "1.7/modules/concepts/controllers/" >}}) for more details.
+See [the controllers chapter]({{< ref "8/modules/concepts/controllers/" >}}) for more details.
 
 ### Service overrides
 
 PrestaShop is migrating to Symfony, and the parts migrated rely on Symfony container which enables service overrides and decorations. This is similar to overrides but avoids class erasing.
 
-See [the Symfony services chapter]({{< ref "1.7/modules/concepts/services/" >}}) for more details.
+See [the Symfony services chapter]({{< ref "8/modules/concepts/services/" >}}) for more details.
 
 ### Contributing
 
