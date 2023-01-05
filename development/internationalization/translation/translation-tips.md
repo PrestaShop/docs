@@ -9,7 +9,7 @@ weight: 50
 
 Wordings for the Core and Native modules can only be translated if they are declared in PrestaShop's default translation catalogue. Therefore, whenever a new wording is added to the core or to a native module, it must be added to the default catalogue as well. 
 
-Normally you would have to manually add each wording the appropriate default catalogue files (located in the `app/Resources/translations/default` folder). Thankfully, this task has been automated by the Core team!
+Normally you would have to manually add each wording the appropriate default catalogue files (located in the `./translations/default` folder). Thankfully, this task has been automated by the Core team!
  
 Before every minor release, the whole source code for PrestaShop and Native Modules is analyzed using [TranslationToolsBundle](https://github.com/PrestaShop/TranslationToolsBundle), and all newly discovered wordings are automatically added to the default catalogue.
 

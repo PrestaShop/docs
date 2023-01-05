@@ -43,10 +43,10 @@ PrestaShop uses Symfony's [Translator Component](https://symfony.com/doc/4.4/tra
 This component is initialized for the configured language by loading five Catalogue Resources:
 
 * **Customized translations database** - Located in the `ps_translations` table.
-* **Active theme** – XLF files in `themes/<themename>/translations`.
-* **Core** – XLF files in `app/Resources/translations`.
-* **Active modules** – XLF files in `modules/<modulename>/translations`.
-* **Active modules (legacy)** – PHP files in `modules/<modulename>/translations`.
+* **Active theme** – XLF files in `./themes/<themename>/translations`.
+* **Core** – XLF files in `./translations`.
+* **Active modules** – XLF files in `./modules/<modulename>/translations`.
+* **Active modules (legacy)** – PHP files in `./modules/<modulename>/translations`.
 
 {{% notice tip %}}
 **The catalogue resources above are listed by precedence.** 

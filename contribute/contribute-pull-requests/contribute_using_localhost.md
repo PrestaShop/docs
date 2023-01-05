@@ -96,7 +96,6 @@ PrestaShop needs recursive write permissions on several directories:
 
 - /admin-dev/autoupgrade/
 - /app/logs
-- /app/Resources/translations
 - /cache
 - /config/themes
 - /download
