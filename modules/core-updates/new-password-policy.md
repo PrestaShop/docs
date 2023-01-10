@@ -23,7 +23,7 @@ When creating / updating a `Customer` account, or an `Employee` account, the `Zx
 
 ![Password policy in front office for Customers](../img/password-policy-fo.png)
 
-## What impacts does this new policy have ?
+## Changes introduced in PrestaShop by this new policy
 
 This new password policy introduced some backward compatibility breaks:
 
@@ -44,11 +44,17 @@ And some deprecations:
 * `Validate::isPlaintextPassword` is deprecated
 * `Validate::isPasswdAdmin` is deprecated
 
-## How to update your code for backend development
+{{% notice note %}}
+Please note that the library is loaded asyncronously in `core.js` because of its size. 
+{{% /notice %}}
+
+## Upgrade guide for your module / theme
+
+### How to update your code for backend development
 
 If your module is creating / updating `Customers` or `Employees`, make sure to update your code according to the BC breaks and deprecations indicated above.
 
-## How to update your frontend theme
+### How to update your frontend theme
 
 If your theme is creating / updating `Customers` or `Employees`, make sure to update your code according to the BC breaks related to themes (`jquery-passy.js` no longer available, and form field `change-password` no longer working). 
 
