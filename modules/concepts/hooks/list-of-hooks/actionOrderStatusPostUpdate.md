@@ -23,7 +23,7 @@ Aliases:
 
 {{% notice tip %}}
 **Post update of order status:** 
-Allows to be notified after an order status is changed.
+Allows to be notified after order status is changed.
 {{% /notice %}}
 
 Hook locations: 
