@@ -132,7 +132,7 @@ Search Criteria is immutable. This means that once a Search Criteria object is c
 
 ### Creating Search Criteria
 
-Even though most of the time Search Criteria will be created using the [Filters component](#), you can still
+Even though most of the time Search Criteria will be created using the [Filters component](/8/development/components/grid/tutorials/work-with-search-form/), you can still
 create it manually. Grid provides a simple implementation for it.
 
 ```php
