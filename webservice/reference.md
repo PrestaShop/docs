@@ -11,19 +11,19 @@ All webservice APIs are accessible through the `/api/` gateway. For instance, `h
 
 Most resources can be accessed in a REST manner, with the 5 main HTTP request methods: GET, POST, PUT, DELETE, HEAD. The only exceptions are:
 
-| Key                            | GET | POST | PUT | DELETE | HEAD |
-|--------------------------------|:---:|:----:|:---:|:------:|:----:|
-| search                         | ✅  |      |     |        | ✅   |
-| stock_availables               | ✅  |      | ✅  |        | ✅   |
-| stock_movements                | ✅  |      |     |        | ✅   |
-| stocks                         | ✅  |      |     |        | ✅   |
-| supply_order_details           | ✅  |      |     |        | ✅   |
-| supply_order_histories         | ✅  |      |     |        | ✅   |
-| supply_order_receipt_histories | ✅  |      |     |        | ✅   |
-| supply_order_states            | ✅  |      |     |        | ✅   |
-| supply_orders                  | ✅  |      |     |        | ✅   |
-| warehouse_product_locations    | ✅  |      |     |        | ✅   |
-| warehouses                     | ✅  | ✅   | ✅  |        | ✅   |
+| Key                            | GET | POST | PUT | PATCH | DELETE | HEAD |
+|--------------------------------|:---:|:----:|:---:|:-----:|:------:|:----:|
+| search                         | ✅  |      |     |       |        | ✅   |
+| stock_availables               | ✅  |      | ✅  | ✅     |        | ✅   |
+| stock_movements                | ✅  |      |     |       |        | ✅   |
+| stocks                         | ✅  |      |     |       |        | ✅   |
+| supply_order_details           | ✅  |      |     |       |        | ✅   |
+| supply_order_histories         | ✅  |      |     |       |        | ✅   |
+| supply_order_receipt_histories | ✅  |      |     |       |        | ✅   |
+| supply_order_states            | ✅  |      |     |       |        | ✅   |
+| supply_orders                  | ✅  |      |     |       |        | ✅   |
+| warehouse_product_locations    | ✅  |      |     |       |        | ✅   |
+| warehouses                     | ✅  | ✅   | ✅  | ✅     |       | ✅   |
 
 All resources have two schemas that are accessible via a parameter:
 

@@ -238,6 +238,22 @@ The `sendemail=1` parameter can be used if you need to change the state of an or
 The `sendemail=1` parameter can be used on the `order_carriers` endpoint to send the _in-transit_ email with the tracking number. Example: `http://example.com/api/order_carriers/12345?sendemail=1`
 12345 is the order carrier id.
 
+##### Cache handling
+
+A cache mechanism has been introduced and bug fixed in {{< minver v="8.0" >}}, it allows to detect if the content changed or not between your previous API call and the current one. 
+
+To use it:
+
+1) in your first API call, retrieve the header `Content-Sha1` and store it on your side.
+2) in your second API call, add a `Local-Content-Sha1` header, with the previously stored `Content-Sha1` value. 
+
+If the content has not changed, the API will return a `304 Not Modified` response code.
+If the content has changed, the API will return a `200 Ok` response code. 
+
+{{% notice note %}}
+It can be used to avoid un-necessary updates if the resource didn't changed since last API call. 
+{{% /notice %}}
+
 ### Create a resource
 
 To create a resource, you simply need to **GET** the XML blank data for the resource (example `/api/addresses?schema=blank`), fill it with your changes, and send **POST HTTP request** with the whole XML as body content to the `/api/addresses/` URL.
@@ -251,6 +267,20 @@ To edit an existing resource: **GET** the full XML file for the resource you wan
 ### Partially update a resource
 
 To partially edit an existing resource: **GET** a part of the XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PATCH HTTP request** with the partial XML file as the body content to the same URL again.
+
+When partially updating a resource, the only required parameter is the `id` of the resource. Then, add the changed `parameters`, and **PATCH** method will handle that partial update. 
+
+Example: update the company name for the address of `id=1` : `PATCH /api/addresses/1`
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <address>
+        <id><![CDATA[1]]></id>
+        <company><![CDATA[Acme Limited]]></company>
+    </address>
+</prestashop>
+```
 
 ### Using JSON instead of XML
 
