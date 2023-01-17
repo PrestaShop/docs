@@ -49,7 +49,9 @@ final class HtmlColumn extends AbstractColumn
     }
 }
 ```
+
 ## Step 2. Use & call the new type
+
 Go to
 ```/modules/your_cool_module/src/Core/Grid/Definition/Factory/YourCoolGridDefinitionFactory.php```.
 
