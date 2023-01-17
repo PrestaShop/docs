@@ -240,7 +240,7 @@ The `sendemail=1` parameter can be used on the `order_carriers` endpoint to send
 
 ##### Cache handling
 
-A cache mechanism has been introduced and bug fixed in {{< minver v="8.0" >}}, it allows to detect if the content changed or not between your previous API call and the current one. 
+A cache mechanism has been introduced and bug fixed in {{< minver v="8.0" >}}, it allows you to detect if the content changed between your API calls. 
 
 To use it:
 
@@ -251,7 +251,7 @@ If the content has not changed, the API will return a `304 Not Modified` respons
 If the content has changed, the API will return a `200 Ok` response code. 
 
 {{% notice note %}}
-It can be used to avoid un-necessary updates if the resource didn't changed since last API call. 
+It can be used to avoid unnecessary updates if the resource didn't change since the last API call. 
 {{% /notice %}}
 
 ### Create a resource
