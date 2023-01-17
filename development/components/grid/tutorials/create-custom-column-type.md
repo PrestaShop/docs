@@ -8,7 +8,9 @@ weight: 9
 
 You may need to display some kind of data in a specific format. This is how to do it: 
 
+
 ## Step 1. Define the new column type
+
 Let's assume that we need to make an html column to display an object's ID within a `&lta>` html tag: 
 Create the following file:
 ```/modules/your_cool_module/src/Core/Grid/Column/Type/HtmlColumn.php```
