@@ -68,6 +68,7 @@ Then inside the getColumns function among other columns, you are welcome to use 
         ])
 )
 ```
+
 ## Step 3. Define the respective .html.twig
 Let's assume that we need to make an html column to fire some js script. Create the following file:
 
