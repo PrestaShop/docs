@@ -13,6 +13,7 @@ You may need to display some kind of data in a specific format. This is how to d
 
 Let's assume that we need to make an html column to display an object's ID within a `&lta>` html tag: 
 Create the following file:
+
 ```/modules/your_cool_module/src/Core/Grid/Column/Type/HtmlColumn.php```
 ```
 <?php
