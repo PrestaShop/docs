@@ -5,7 +5,8 @@ weight: 9
 ---
 
 # How to create a custom Column Type
-It is highly likely that you are struggling to develop a module based on the new standards. You want to display some kind of data in a way not already predicted by the core team. No worries. Let's have a look.
+
+You may need to display some kind of data in a specific format. This is how to do it: 
 
 ## Step 1. Define the new column type
 Let's assume that we need to make an html column to fire some js script.
