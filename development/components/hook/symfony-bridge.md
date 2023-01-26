@@ -41,5 +41,5 @@ Using a dedicated magic method `__call()`, the `LegacyHookSubscriber` will parse
 When a hook is dispatched inside Symfony-powered controllers, `HookDispatcher` dispatches the hook similarly to a regular Symfony event; this event is being listened to by `LegacyHookSubscriber` who will then trigger the related `Hook::exec()` call.
 
 [sf-event-dispatcher]: https://symfony.com/doc/current/components/event_dispatcher.html
-[sf-hook-dispatcher-class]: https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/src/Core/Hook/HookDispatcher.php
-[legacy-hook-subscriber]: https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/src/Adapter/LegacyHookSubscriber.php
+[sf-hook-dispatcher-class]: https://github.com/PrestaShop/PrestaShop/blob/develop/src/Core/Hook/HookDispatcher.php
+[legacy-hook-subscriber]: https://github.com/PrestaShop/PrestaShop/blob/develop/src/Adapter/LegacyHookSubscriber.php
