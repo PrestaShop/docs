@@ -33,98 +33,13 @@ If you want to compile your assets using Webpack (and we advise you to), follow 
   - To build your assets once, type `npm run build`.
   - To rebuild your assets every time you change a file in the _dev folder, type `npm run watch`.
 
-
 ## Webpack configuration
 
-The [Webpack configuration file for Classic Theme](https://github.com/PrestaShop/PrestaShop/blob/1.7.6.0/themes/classic/_dev/webpack.config.js) is thus:
+The [Webpack configuration file for Classic Theme](https://github.com/PrestaShop/classic-theme/blob/develop/_dev/webpack.config.js) is thus:
 
 1. All CSS rules go to the `assets/css/theme.css` file.
 2. All JavaScript code go to the `assets/js/theme.js` file.
 
-It provides proper configuration for compile your Sass, Less, Stylus or CSS files into a single CSS file.
+It provides proper configuration for compile your Sass or CSS files into a single CSS file.
 
-JavaScript code is written in ES6, and compiled to ES5 with Babel.
-
-If you want to use Stylus or Less, simply edit the command line under the "scripts" section.
-
-```js
-var webpack = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-
-var plugins = [];
-
-plugins.push(
-  new ExtractTextPlugin('../css/theme.css')
-);
-
-module.exports = [{
-  // JavaScript
-  entry: [
-    './js/theme.js'
-  ],
-  output: {
-    path: '../assets/js',
-    filename: 'theme.js'
-  },
-  module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loaders: ['babel-loader']
-    }]
-  },
-  externals: {
-    prestashop: 'prestashop'
-  },
-  plugins: plugins,
-  resolve: {
-    extensions: ['', '.js']
-  }
-}, {
-  // CSS
-  entry: [
-    './css/normalize.css',
-    './css/example.less',
-    './css/st/dev.styl',
-    './css/theme.scss'
-  ],
-  output: {
-    path: '../assets/css',
-    filename: 'theme.css'
-  },
-  module: {
-    loaders: [{
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!sass-loader?sourceMap"
-      )
-    }, {
-      test: /\.styl$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!stylus-loader?sourceMap"
-      )
-    }, {
-      test: /\.less$/,
-      loader: ExtractTextPlugin.extract(
-        "style",
-        "css-loader?sourceMap!postcss!less-loader?sourceMap"
-      )
-    }, {
-      test: /\.css$/,
-      loader: ExtractTextPlugin.extract(
-        'style',
-        'css-loader?sourceMap!postcss-loader'
-      )
-    }, {
-      test: /.(png|woff(2)?|eot|ttf|svg)(\?[a-z0-9=\.]+)?$/,
-      loader: 'file-loader?name=../css/[hash].[ext]'
-    }]
-  },
-  plugins: plugins,
-  resolve: {
-    extensions: ['', '.scss', '.styl', '.less', '.css']
-  }
-}];
-```
+JavaScript code is written in ES6, and compiled to ES5 with [esbuild](https://github.com/privatenumber/esbuild-loader).

@@ -15,9 +15,7 @@ Let's assume that we need to make an html column to display an object's ID withi
 Create the following file:
 
 ```/modules/your_cool_module/src/Core/Grid/Column/Type/HtmlColumn.php```
-```
-<?php
-
+```php
 namespace PrestaShop\Module\Yourcoolmodule\Core\Grid\Column\Type;
 
 use PrestaShop\PrestaShop\Core\Grid\Column\AbstractColumn;
@@ -64,7 +62,7 @@ In the space above "final class" add the line below:
 
 Then inside the getColumns function among other columns, you are welcome to use the following code snippet:
 
-```
+```php
 ->add(
     (new HtmlColumn('some_column'))
         ->setName($this->trans('Print voucher', [], 'Modules.Yourcoolmodule.Admin'))
