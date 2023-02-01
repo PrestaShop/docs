@@ -14,6 +14,10 @@ Let's create a first simple module, this will allow us to better describe its st
 
 First, create the module's folder, in PrestaShop's `/modules` folder. Let's call it `mymodule`. This will be the module's "technical" name.
 
+**Rules for "technical" name:**
+* Only word characters (A-z, 0-9) are supported.
+* Technical name of your module does not contain contains underscores "_" or any other unsupported symbol
+
 {{% notice tip %}}
 Technical names can only accept lower case alphanumeric characters (`[a-z0-9]`). Although accepted, we strongly discourage using underscores because they don't work with translation domains.
 {{% /notice %}}
