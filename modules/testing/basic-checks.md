@@ -48,7 +48,7 @@ If some errors are reported by this tool, this gives you the opportunity :
 
 ## Coding standards
 
-Modules follows the same rules as the core. The [coding standards chapter]({{< ref "1.7/development/coding-standards" >}}) of this project provides more details about it.
+Modules follows the same rules as the core. The [coding standards chapter]({{< ref "8/development/coding-standards" >}}) of this project provides more details about it.
 
 Following the same rules as the core requires the configuration file to be available in your project. These rules are distributed and maintained on a repository 
 `prestashop/php-dev-tools` available on [Packagist](https://packagist.org/packages/prestashop/php-dev-tools) which can be required via composer.
@@ -61,7 +61,7 @@ composer require --dev prestashop/php-dev-tools
 php vendor/bin/prestashop-coding-standards cs-fixer:init
 ```
 
-These commands install and prepare your projet for php-cs-fixer and the core standards. The commands have run successfully if a file `.php_cs.dist` exists in the root folder.
+These commands install and prepare your project for php-cs-fixer and the core standards. The commands have run successfully if a file `.php_cs.dist` exists in the root folder.
 
 [PHP-CS-Fixer](https://packagist.org/packages/friendsofphp/php-cs-fixer) is used to check the code style, and is automatically included in your project if you required `prestashop/php-dev-tools` by following the commands above.
 
