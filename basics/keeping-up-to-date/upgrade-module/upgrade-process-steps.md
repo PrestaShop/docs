@@ -1,6 +1,8 @@
 ---
 title: Upgrade Process Steps
 weight: 30
+aliases:
+  - /8/development/upgrade-module/
 ---
 
 # Upgrade process stems

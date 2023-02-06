@@ -33,10 +33,10 @@ The first step is to download the latest version on https://github.com/PrestaSho
 If you upgrade to another version of PrestaShop 1.6, the release files can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).
 
 Download can also be done in command line, as done here with the version
-1.7.7.5:
+8.0.1:
 
 ```bash
-wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases/download/1.7.7.5/prestashop_1.7.7.5.zip
+wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases/download/8.0.1/prestashop_8.0.1.zip
 ```
 
 ### Archive extraction
@@ -63,13 +63,12 @@ default data. These folders can be removed from the new release:
 - img/
 - override/
 
-All the other files present in the new release will overwrite the
-existing files. All changes you made on the original source code will be
-lost (by the way, this is not recommended, you should never modify the
-core files).
+{{% notice warning %}}
+All the other files present in the new release will overwrite the existing files. 
+All changes you made on the original source code will be lost (this is not recommended, you should never modify the core files).
+{{% /notice %}}
 
-Also, rename the “admin” folder to match your shop’s admin folder name.
-This will prevent an unwanted duplication of the administration content.
+Also, rename the “admin” folder to match your shop’s admin folder name. This will prevent an unwanted duplication of the administration content.
 
 ### Turning on maintenance mode
 
@@ -78,30 +77,32 @@ turn on maintenance mode during the upgrade.
 
 This can be done in your administration panel:
 
-- On PrestaShop 1.7, in Shop parameters > General > Maintenance tab
+- On PrestaShop >= 1.7, in Shop parameters > General > Maintenance tab
 - On PrestaShop 1.6, in Shop parameters > Maintenance
 
-Adding your IP address will allow you to access your shop while it’s in
-maintenance mode. That way, you can make sure everything is working
-right before allowing your customers to access it again.
+Adding your IP address will allow you to access your shop while it’s in maintenance mode. 
+That way, you can make sure everything is working right before allowing your customers to access it again.
 
 ### File copy
 
-In this step, we "upgrade" the PrestaShop files by copying the new
-release content in the existing shop.
+In this step, we "upgrade" the PrestaShop files by copying the new release content in the existing shop.
 
 ### Disable cache
 
 You may have activated a caching system (e.g. Memcache) on your shop. In that case, make sure to disable it in "Advanced Parameters" > "Performance". You can enable it again once the upgrade process is done. You might want to also delete the `var/cache/prod` and `var/cache/dev` folders.
 
-**Note about `vendor` folder**: Previous upgrades of PrestaShop 1.7
-showed that conflicts may occur when merging the new vendor/ folder with
-the old one. To avoid this problem, we recommend to delete this folder
-in the existing shop before copying the new one.
+{{% notice warning %}}
+**Note about `vendor` folder**: Previous upgrades of PrestaShop 1.7 showed that conflicts may occur when merging the new vendor/ folder with the old one. 
+To avoid this problem, we recommend to delete this folder in the existing shop before copying the new one.
 
-On Windows, copy the new folder content and paste it in your shop
-folder. You will get warnings that files already exists in the
-destination folder. Choose “overwrite” to continue.
+```bash
+rm -rf vendor/
+```
+
+{{% /notice %}}
+
+On Windows, copy the new folder content and paste it in your shop folder. 
+You will get warnings that files already exists in the destination folder. Choose “overwrite” to continue.
 
 On linux, the copy can be done in your terminal:
 
@@ -117,15 +118,13 @@ cp -R ~/Downloads/prestashop/* /var/www/html/
 
 ### Database upgrade
 
-Once the files have been copied, your shop database is ready to be
-upgraded.
+Once the files have been copied, your shop database is ready to be upgraded.
 
 {{% notice note %}}
 Some web hosting providers gives you two user accounts to access your database. One with full privileges the other for using in scripts with limited rights. To be able to use this Database upgrade script you have to use the account with full privileges.
 {{% /notice %}}
 
-All the changes to apply have been defined in the `install` folder,
-running them can be done with a specific PHP script.
+All the changes to apply have been defined in the `install` folder, running them can be done with a specific PHP script.
 
 When you’re ready, run the file `upgrade/upgrade.php` from the `autoupgrade` module.
 
@@ -165,8 +164,7 @@ some cases, you may need to restore your database backup and start over.
 
 #### Error codes
 
-An error code can also be displayed. Each code is related to a message
-described here:
+An error code can also be displayed. Each code is related to a message described here:
 
 * Error #27: The shop is running a newer version than the content provided by the install folder.
 * Error #28: The shop is already at the version you try to upgrade to.
@@ -203,8 +201,7 @@ on “Update all” at the top of the page to run all available upgrades:
 
 {{< figure src="../img/image63.png" >}}
 
-On PrestaShop 1.7, the same feature can be found in the Improve &gt;&gt;
-Modules page, under the tab “Notifications”:
+On PrestaShop >= 1.7, the same feature can be found in the Improve &gt;&gt; Modules page, under the tab "Updates":
 
 {{< figure src="../img/image38.png" >}}
 
@@ -229,3 +226,5 @@ theme.
 
 Many agencies and freelancers in your area may also provide this kind of
 service.
+
+More information about support: [PrestaShop project support page](https://www.prestashop-project.org/support/)

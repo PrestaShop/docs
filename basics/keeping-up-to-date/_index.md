@@ -29,7 +29,7 @@ It does not require any additional tools to run if you follow the manual process
 
 #### Impact on existing data
 
-As long as you stay on the same major version (ex. 1.6.0 >> 1.6.1 or 1.7.1 >> 1.7.2 upgrade), we make sure that the available features remain the same.
+As long as you stay on the same major version (ex. 1.7.1 >> 1.7.2, 8.0 >> 8.1 upgrade), we make sure that the available features remain the same.
 This means that your current theme and all your modules should continue to work as before, and no functionality or data will be lost during the upgrade, even if the database structure may change.
 
 This can be explained by the [semantic versioning](https://semver.org/) we follow, that forbids any compatibility-breaking change in the core, such as removing a feature or modifying our APIs.
@@ -42,7 +42,6 @@ Note that once an upgrade has started, there is no way to rollback the changes. 
 - Apply the new files by copy-pasting them in the production folder.
 - Run the database upgrade.
 This could be enough for completing an upgrade, but additional tasks like cleanup and modules upgrade will bring you stability and security.
-
 
 ### Migration
 
@@ -62,7 +61,7 @@ The main advantage of this option is it does not require the shop in production 
 
 The impact on the existing data is very different from an upgrade, as it depends on what you transfer to the new shop.
 
-When switching to another major version (i.e 1.6.x >> 1.7.x), this will imply that some resources will be lost:
+When switching to another major version (i.e 1.7.x >> 8.x), this will imply that some resources will be lost:
 
 * **Permissions**
 

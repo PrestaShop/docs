@@ -1,6 +1,8 @@
 ---
 title: Upgrade Module
 weight: 80
+aliases:
+  - /8/development/upgrade-module/
 ---
 
 # Upgrade module

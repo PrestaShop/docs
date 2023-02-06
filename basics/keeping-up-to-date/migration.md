@@ -1,11 +1,11 @@
 ---
 menuTitle: Migration
-title: How to migrate to PrestaShop 1.7
-description: Learn how to migrate your current shop (1.6 or previous version) to PrestaShop 1.7
+title: How to migrate to PrestaShop 8
+description: Learn how to migrate your current shop (1.7.x) to PrestaShop 8.0
 weight: 20
 ---
 
-# How to migrate to PrestaShop 1.7
+# How to migrate to PrestaShop 8
 
 ## Manual migration - Process details
 
@@ -125,7 +125,7 @@ If you used `mysqldump` for your backups, there is also an option for extracting
 Example for exporting the table ps_product:
 
 ```bash
-mysqldump -h 127.0.0.1 -P 3307 -u root -p -T /var/lib/mysql-files --fields-enclosed-by=\" --fields-terminated-by=\; prestashop16 ps_product
+mysqldump --host=dbhost --port=3307 --user=root --password --tab=/var/lib/mysql-files --fields-enclosed-by=\" --fields-terminated-by=\; dbname ps_product
 ```
 
 Several notes about `mysqldump` with CSV files:
@@ -140,7 +140,7 @@ Here is an extract of the product table, with demonstration data. Only the data 
 Look at the SQL file provided with the TXT file, or run a DESCRIBE of the table.
 
 ```sql
-mysql> DESCRIBE prestashop16.ps_product;
+mysql> DESCRIBE dbname.ps_product;
 ```
 
 You should expect the following result before proceeding to the next table:

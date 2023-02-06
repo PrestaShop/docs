@@ -25,6 +25,18 @@ The first elements to backup are the files on the web server where you have depl
 
 To complete this step, your shop folder must be copied somewhere else. Although it can be simply copied on another folder on your server, making an additional copy of your files on another computer is a nice additional security measure. To do so, connect to your server using an FTP, SSH or RDP connection (depending on your server and hosting provider), copy the files in another location, then download them on your computer.
 
+With SSH, you may use `scp` or `rsync` command to backup your shop folder from a server to another. For example, backup from a remote server to your local machine (or the one you are connected on) with `scp` ([scp man page](https://linuxcommand.org/lc3_man_pages/scp1.html)):
+
+```
+scp -r user@host:/var/www/prestashop_folder_path /local_path_for_backup/
+```
+
+Or with `rsync` ([rsync man page](https://linux.die.net/man/1/rsync)):
+
+```
+rsync -avz user@host:/var/www/prestashop_folder_path /local_path_for_backup/
+```
+
 Note that depending on the number of files and your internet connection, this may take a few hours to complete. But if you’re an advanced user and have a complete access to your server, the next part may help you go faster.
 
 #### Bonus: Compress your files before download
@@ -32,9 +44,9 @@ Note that depending on the number of files and your internet connection, this ma
 As said before, downloading the whole PrestaShop folder one file at a time will take a long time to complete.
 If you can run commands on your server, you can make a backup faster by compressing the whole content in a single archive file, then downloading this file locally.
 
-* On Windows-based servers, this requires a remote desktop access. Once logged on your remote environment, use the Windows explorer to reach your www folder and compress all its content into a ZIP file.
+* On Windows-based servers, this requires a remote desktop access. Once logged on your remote environment, use the Windows explorer to reach your www folder and compress all its content into a `ZIP` file.
 
-* On Linux-based servers, you need to access your server terminal using SSH. Once logged in, reach your folder and use the following command to create a TAR file:
+* On Linux-based servers, you need to access your server terminal using SSH. Once logged in, reach your folder and use the following command to create a `TAR` file:
 
 ```
 tar -czf <file_name>.tar <folder_to_save>
@@ -46,8 +58,7 @@ For instance:
 tar -czf backup.tar /var/www/html
 ```
 
-When your archive is ready, you may copy it on your computer.
-
+When your archive is ready, you may copy it on your computer or to any other safe location.
 
 ## Database backup
 
@@ -67,7 +78,7 @@ With `yourdbname` an example name for the PrestaShop database.
 Your server is likely to require credentials. These details can also be provided as parameters:
 
 ```
-mysqldump -h <IP_or_hostname> -u <user> --single-transaction --create-options -ecqQ -p db1 > dump.sql
+mysqldump --host=<IP_or_hostname> --user=<user> --password --single-transaction --create-options --extended-insert --complete-insert yourdbname > dump.sql
 ```
 
 If you do not remember your database name or credentials, you can find them in your configuration files:
@@ -101,4 +112,3 @@ There are a lot of ways to connect to a MySQL server. Many different softwares a
 * Navicat MySQL: https://www.navicat.com/manual/online_manual/en/navicat/win_manual/#/dump_execute_sql
 * Adminer, a very easy to use and complete MySQL client in php: https://www.adminer.org/
 * Sequel Pro (Mac): https://www.sequelpro.com/
-* ...

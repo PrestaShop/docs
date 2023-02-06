@@ -1,6 +1,8 @@
 ---
 title: Upgrade Module internal behavior
 weight: 20
+aliases:
+  - /8/development/upgrade-module/upgrade-module-internal-behavior
 ---
 
 # Upgrade module internal behavior

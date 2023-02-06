@@ -1,6 +1,8 @@
 ---
 title: Upgrade CLI
 weight: 40
+aliases:
+  - /8/development/upgrade-module/upgrade-cli
 ---
 
 # Module CLI
