@@ -12,7 +12,7 @@ type: display
 hookAliases:
 ---
 
-# Hook displayContactContent
+# Hook displayContactContent {{< minver v="8.1" >}}
 
 ## Information
 

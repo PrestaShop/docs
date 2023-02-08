@@ -11,7 +11,7 @@ type: action
 hookAliases:
 ---
 
-# Hook actionGenerateDocumentReference
+# Hook actionGenerateDocumentReference {{< minver v="8.1" >}}
 
 ## Information
 

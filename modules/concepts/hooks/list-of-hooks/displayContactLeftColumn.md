@@ -12,7 +12,7 @@ type: display
 hookAliases:
 ---
 
-# Hook displayContactLeftColumn
+# Hook displayContactLeftColumn {{< minver v="8.1" >}}
 
 ## Information
 
