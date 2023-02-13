@@ -11,7 +11,7 @@ type: action
 hookAliases:
 ---
 
-# Hook actionModifyFrontendSitemap
+# Hook actionModifyFrontendSitemap {{< minver v="8.1" >}}
 
 ## Information
 
