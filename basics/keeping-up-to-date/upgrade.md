@@ -36,7 +36,7 @@ Download can also be done in command line, as done here with the version
 1.7.7.5:
 
 ```bash
-wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases/download/1.7.7.5/prestashop_1.7.7.5.zip
+wget -O prestashop_8.0.1.zip https://github.com/PrestaShop/PrestaShop/releases/tag/8.0.1
 ```
 
 ### Archive extraction
@@ -49,7 +49,7 @@ zip file itself, which must be extracted as well.
 On a Linux terminal, you can use the command \`unzip\`:
 
 ```bash
-unzip prestashop-upgrade.zip && unzip prestashop.zip
+unzip prestashop_8.0.1.zip
 ```
 
 Once you have the folders like `classes/`, `modules/`, `themes/`, etc. you may
