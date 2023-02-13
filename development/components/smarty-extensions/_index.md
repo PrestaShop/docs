@@ -96,7 +96,7 @@ So far, it is only used for forms (customer information and checkout).
 ### {url}
 
 This helper is used to generate URLs.
-This will take care of http scheme (`http` or `https`), domain name, virtual and physical base URI, parameters concatenation, and of course URL rewriting.
+This will take care of the HTTP scheme (`http` or `https`), domain name, virtual and physical base URI, parameters concatenation, and URL rewriting.
 
 [`{url}` uses the `Link` class internally](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L1446-L1611).
 
