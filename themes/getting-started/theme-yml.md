@@ -180,7 +180,7 @@ When the configuration is changed through the back office interface, only the se
 
 #### Disable `core.js` loading on custom theme
 
-It may be needed to disable `core.js` loading and provide a custom implementation of whole logic initally contained in `core.js`.
+You can disable `core.js` loading and provide a custom implementation of the whole logic initially contained in `core.js`.
 To do this, use the `core_scripts` option, set to false, in `theme_settings` like in this example:
 
 ```yaml
