@@ -49,7 +49,7 @@ zip file itself, which must be extracted as well.
 On a Linux terminal, you can use the command \`unzip\`:
 
 ```bash
-unzip prestashop_8.0.1.zip
+unzip prestashop_8.0.1.zip && unzip prestashop_8.0.1.zip
 ```
 
 Once you have the folders like `classes/`, `modules/`, `themes/`, etc. you may
