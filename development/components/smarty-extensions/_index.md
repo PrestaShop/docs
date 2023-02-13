@@ -128,7 +128,7 @@ and all other `ObjectModel` based entities (`address`, ...).
 
 `id` is almost always required to generate URLs, except for the `sf` helper, where `route` is the required parameter. 
 
-Other parameters have default values and can be overidden, eg.:
+Other parameters have default values and can be overridden, e.g.:
 
 ```php
 $default = [
