@@ -126,7 +126,7 @@ This will take care of http scheme (`http` or `https`), domain name, virtual and
 
 and all other `ObjectModel` based entities (`address`, ...).
 
-`id` is almost always required to generate urls, except for the `sf` helper, where `route` is the required parameter. 
+`id` is almost always required to generate URLs, except for the `sf` helper, where `route` is the required parameter. 
 
 Other parameters have default values and can be overidden, eg.:
 
