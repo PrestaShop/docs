@@ -7,20 +7,15 @@ weight: 30
 
 # How to upgrade PrestaShop
 
-
 {{% notice warning %}}
 **Important**
 
 Do not go further if you haven’t made a backup of your shop.
-
-Rollback will be the only way to go back if something does not go well,
-and this requires a backup.
-
+Rollback will be the only way to go back if something does not go well, and this requires a backup.
 Learn [how to backup your shop]({{< ref "/8/basics/keeping-up-to-date/backup" >}})
 {{% /notice %}}
 
-This chapter describes several ways to complete an upgrade of
-PrestaShop.
+This chapter describes several ways to complete an upgrade of PrestaShop.
 
 ## Manual upgrade – Process details
 
@@ -30,10 +25,7 @@ This guide gives you the full control on the process. This one has been applied 
 
 The first step is to download the latest version on https://github.com/PrestaShop/PrestaShop/releases.
 
-If you upgrade to another version of PrestaShop 1.6, the release files can be found in a [dedicated archives list](https://www.prestashop.com/en/previous-versions?version=1.6).
-
-Download can also be done in command line, as done here with the version
-8.0.1:
+Download can also be done in command line, as done here with the version 8.0.1:
 
 ```bash
 wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases/download/8.0.1/prestashop_8.0.1.zip
@@ -43,8 +35,7 @@ wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases
 
 Extract the files from the archive with a tool like 7zip
 
-Note starting from PrestaShop 1.7.0.0, the release package contains a
-zip file itself, which must be extracted as well.
+Note starting from PrestaShop 1.7.0.0, the release package contains a zip file itself, which must be extracted as well.
 
 On a Linux terminal, you can use the command \`unzip\`:
 
@@ -52,13 +43,11 @@ On a Linux terminal, you can use the command \`unzip\`:
 unzip prestashop-upgrade.zip && unzip prestashop.zip
 ```
 
-Once you have the folders like `classes/`, `modules/`, `themes/`, etc. you may
-go on the next step.
+Once you have the folders like `classes/`, `modules/`, `themes/`, etc. you may go on the next step.
 
 ### Sample files cleanup
 
-Avoid overwrite the production resources (images, conf ...) with the
-default data. These folders can be removed from the new release:
+Avoid overwrite the production resources (images, conf ...) with the default data. These folders can be removed from the new release:
 
 - img/
 - override/
@@ -72,13 +61,11 @@ Also, rename the “admin” folder to match your shop’s admin folder name. Th
 
 ### Turning on maintenance mode
 
-The shop will now be modified. As it may cause unexpected behavior for you and your customers during the upgrade, we highly recommend you to
-turn on maintenance mode during the upgrade.
+The shop will now be modified. As it may cause unexpected behavior for you and your customers during the upgrade, we highly recommend you to turn on maintenance mode during the upgrade.
 
 This can be done in your administration panel:
 
 - On PrestaShop >= 1.7, in Shop parameters > General > Maintenance tab
-- On PrestaShop 1.6, in Shop parameters > Maintenance
 
 Adding your IP address will allow you to access your shop while it’s in maintenance mode. 
 That way, you can make sure everything is working right before allowing your customers to access it again.
@@ -128,16 +115,13 @@ All the changes to apply have been defined in the `install` folder, running them
 
 When you’re ready, run the file `upgrade/upgrade.php` from the `autoupgrade` module.
 
-This can be done with a browser, by reaching the address
-`http://<shop_domain>/modules/autoupgrade/upgrade/upgrade.php`, or from your
-server's command line:
+This can be done with a browser, by reaching the address `http://<shop_domain>/modules/autoupgrade/upgrade/upgrade.php`, or from your `CLI`:
 
 ```bash
 php modules/autoupgrade/upgrade/upgrade.php
 ```
 
-In both cases, an XML log will be displayed. The result can be found in
-the attribute `result` of the first tag `<action>`:
+In both cases, an XML log will be displayed. The result can be found in the attribute `result` of the first tag `<action>`:
 
 * `ok` if updates have been found and executed
 * `error` if something went wrong
@@ -145,8 +129,7 @@ the attribute `result` of the first tag `<action>`:
 
 #### Execution log
 
-When the upgrade script found some upgrades to apply, the SQL queries
-run will be listed along their respective result.
+When the upgrade script found some upgrades to apply, the SQL queries run will be listed along their respective result.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?><action result="ok" id="">
@@ -157,10 +140,7 @@ run will be listed along their respective result.
 [...]
 ```
 
-You can double check that each action is marked as “OK”. If not,
-additional details will be shown after the request, which can help you
-fix the issue and re-execute the request manually on your database. In
-some cases, you may need to restore your database backup and start over.
+You can double check that each action is marked as “OK”. If not, additional details will be shown after the request, which can help you fix the issue and re-execute the request manually on your database. In some cases, you may need to restore your database backup and start over.
 
 #### Error codes
 
@@ -183,25 +163,16 @@ Before going further, a few things should now be cleaned.
 
 -   The `install` folder, used to run the database upgrades, is not needed anymore and can be safely deleted.
 -   When opening your shop (in the front or back office) on your browser, you may see some visual issues. This can be due to your old assets being still served by a cache.
+
 Reload them by force-refreshing the page (press ctrl+R on Windows / Linux or cmd+R on Mac OS) or clearing your browser’s cache.
 
 ### Modules upgrade
 
-Your modules files have been upgraded during the file copy, however many
-of them may require additional changes on the database. Please check the
-module page in your Back Office to see if upgrades are waiting to be
-run.
+Your modules files have been upgraded during the file copy, however many of them may require additional changes on the database. Please check the module page in your Back Office to see if upgrades are waiting to be run.
 
-Go to your administration panel and login. You will notice the version
-displayed has changed on the login page. Then in the menu, click on the
-module page to reach your catalog.
+Go to your administration panel and login. You will notice the version displayed has changed on the login page. Then in the menu, click on the module page to reach your catalog.
 
-On PrestaShop 1.6, this page can be found in “Module & Services”. Click
-on “Update all” at the top of the page to run all available upgrades:
-
-{{< figure src="../img/image63.png" >}}
-
-On PrestaShop >= 1.7, the same feature can be found in the Improve &gt;&gt; Modules page, under the tab "Updates":
+On PrestaShop >= 1.7, this page can be found in the Improve &gt;&gt; Modules page, under the tab "Updates":
 
 {{< figure src="../img/image38.png" >}}
 
@@ -215,16 +186,10 @@ You can read more about it [here]({{< ref "/8/basics/keeping-up-to-date/use-auto
 
 ## Support service
 
-Doing an upgrade by yourself can be risky. If you feel uncomfortable
-with doing it on your own, you can leave it to our support team who will
-handle the backup and the upgrade to the last **minor** version for you
-(1.6 → 1.6, 1.7 → 1.7 etc.).
+Doing an upgrade by yourself can be risky. If you feel uncomfortable with doing it on your own, you can leave it to our support team who will handle the backup and the upgrade to the last **minor** version for you (8.0 → 8.1).
 
-Basically, the process and the result will be the same. The existing
-data on the shop will be kept, as well as your module and your current
-theme.
+Basically, the process and the result will be the same. The existing data on the shop will be kept, as well as your module and your current theme.
 
-Many agencies and freelancers in your area may also provide this kind of
-service.
+Many agencies and freelancers in your area may also provide this kind of service.
 
 More information about support: [PrestaShop project support page](https://www.prestashop-project.org/support/)
