@@ -15,7 +15,13 @@ Rollback will be the only way to go back if something does not go well, and this
 Learn [how to backup your shop]({{< ref "/8/basics/keeping-up-to-date/backup" >}})
 {{% /notice %}}
 
-This chapter describes several ways to complete an upgrade of PrestaShop.
+This chapter describes several ways to complete an upgrade of PrestaShop: 1-click upgrade module or manual upgrade.
+
+## Upgrade module (1-click upgrade module)
+
+PrestaShop provides the module 1-click upgrade for free on the marketplace and your shop administration panel.
+
+You can read more about it [here]({{< ref "/8/basics/keeping-up-to-date/use-autoupgrade-module" >}}).
 
 ## Manual upgrade – Process details
 
@@ -175,14 +181,6 @@ Go to your administration panel and login. You will notice the version displayed
 On PrestaShop >= 1.7, this page can be found in the Improve &gt;&gt; Modules page, under the tab "Updates":
 
 {{< figure src="../img/image38.png" >}}
-
-## 1-click upgrade module
-
-If the manual process seems too tedious, other solutions exist to complete an upgrade.
-
-PrestaShop provides the module 1-click upgrade for free on the marketplace and your shop administration panel. It executes the previously given process automatically, and is available for almost all versions of PrestaShop.
-
-You can read more about it [here]({{< ref "/8/basics/keeping-up-to-date/use-autoupgrade-module" >}}).
 
 ## Support service
 
