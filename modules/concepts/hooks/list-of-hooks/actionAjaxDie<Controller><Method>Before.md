@@ -25,6 +25,18 @@ Located in:
 
 ## Call of the Hook in the origin file
 
+### Before {{< minver v="8.1" >}}
+
 ```php
 Hook::exec('actionAjaxDie' . $controller . $method . 'Before', ['value' => $value])
 ```
+
+### From {{< minver v="8.1" >}}
+
+```php
+Hook::exec('actionAjaxDie' . $controller . $method . 'Before', ['value' => &$value])
+```
+
+{{% notice note %}}
+Note that the `value` is now passed by reference
+{{% /notice %}}

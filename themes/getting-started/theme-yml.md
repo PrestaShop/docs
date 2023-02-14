@@ -36,7 +36,6 @@ Users will be able to choose the layout for each page from the theme's settings 
 
 ## Global settings
 
-
 ### Configuration
 
 You can have the theme change the configuration of PrestaShop when the theme is enabled.
@@ -177,6 +176,16 @@ When the configuration is changed through the back office interface, only the se
         # Specific layout for some pages
         identity: layout-left-side-column
         order-confirmation: layout-left-side-column
+```
+
+#### Disable loading of `core.js` file in your custom theme
+
+You can disable `core.js` loading and provide a custom implementation of the whole logic initially contained in `core.js`.
+To do this, use the `core_scripts` option, set to false, in `theme_settings` like in this example:
+
+```yaml
+theme_settings:
+    core_scripts: false
 ```
 
 ## Dependencies

@@ -96,9 +96,9 @@ So far, it is only used for forms (customer information and checkout).
 ### {url}
 
 This helper is used to generate URLs.
-This will take care of SSL, domain name, virtual and physical base URI, parameters concatenation, and of course URL rewriting.
+This will take care of the HTTP scheme (`http` or `https`), domain name, virtual and physical base URI, parameters concatenation, and URL rewriting.
 
-`{url}` uses the Link class internally.
+[`{url}` uses the `Link` class internally](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L1446-L1611).
 
 {{% notice note %}}
   Please see the `$urls` dataset to find already regenerated urls (such as home, cart, login and so on).
@@ -108,7 +108,41 @@ This will take care of SSL, domain name, virtual and physical base URI, paramete
   While an instance of the Link object is still present in templates for backward compatibility purposes, **it is strongly recommended not to use it**. Use `{url}` instead.
 {{% /notice %}}
 
-Here is a few examples:
+#### Availables helpers
+
+| Entity            | Required parameters             | Optional parameters                                  |
+|-------------------|---------------------------------|------------------------------------------------------|
+| supplier          | ['id' => int]                   |                                                      |
+| language          | ['id' => int]                   |                                                      |
+| product           | ['id' => int]                   | ['category' => int, 'ean13' => string, 'ipa' => int] |
+| category          | ['id' => int]                   | ['selected_filters' => array]                        |
+| categoryImage     | ['id' => int]                   | ['selected_filters' => array, 'type' => int]         |
+| manufacturer      | ['id' => int]                   |                                                      |
+| manufacturerImage | ['id' => int]                   |                                                      |
+| supplierImage     | ['id' => int]                   |                                                      |
+| cms               | ['id' => int]                   |                                                      |
+| module            | ['id' => int, 'name' => string] | ['controller' => string, 'params' => array]          |
+| sf                | ['route' => string]             | ['sf-params' => array]                               |
+
+and all other `ObjectModel` based entities (`address`, ...).
+
+`id` is almost always required to generate URLs, except for the `sf` helper, where `route` is the required parameter. 
+
+Other parameters have default values and can be overridden, e.g.:
+
+```php
+$default = [
+    'id_lang' => $context->language->id,
+    'id_shop' => null,
+    'alias' => null,
+    'ssl' => null,
+    'relative_protocol' => true,
+    'with_id_in_anchor' => false,
+    'extra_params' => [],
+    'add_anchor' => true,
+];
+```
+Examples:
 
 ```smarty
   {url entity=address id=$id_address}
@@ -117,7 +151,7 @@ Here is a few examples:
   {url entity='sf' route='admin_module_manage' sf-params=['foo' => 'bar']}
 ```
 
-...will respectively output:
+Will respectively output:
 
 ```html
   http://prestashop.ps/it/address?id_address=3
@@ -193,7 +227,7 @@ The `classname` data modifier will ensure that your string is a valid class name
 It will:
 
 1. Put it in lowercase.
-2. Replace any non-ASCII characters (such as accented characters) with their ASCII equivalent ([see the code here ](https://github.com/PrestaShop/PrestaShop/blob/1.7.2.0/classes/Tools.php#L1248-L1350)).
+2. Replace any non-ASCII characters (such as accented characters) [with their ASCII equivalent with Transliterator](https://github.com/PrestaShop/PrestaShop/blob/8.0.0/classes/Tools.php#L1431-L1440). 
 3. Replace all non-alphanumerical characters with a single dash.
 4. Ensure only one consecutive dash is used.
 
