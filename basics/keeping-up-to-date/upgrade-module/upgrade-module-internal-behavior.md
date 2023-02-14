@@ -7,32 +7,28 @@ aliases:
 
 # Upgrade module internal behavior
 
-This is how the module is built, for version 4 and higher.
-
-Most of the information is however valid with the previous versions too.
-
 ## Entrypoints
 
 The upgrade module aims to be a PrestaShop module AND be as independent as possible. Which means its content can be reached from several way:
 
 - **autoupgrade.php**
 
-Every module developer will recognize its content. This file is used to manage the module part of the project: installation, uninstallation, then automatic redirection to the next file.
+This file is used to manage the module part of the project: installation, uninstallation, then automatic redirection to the next file.
 
 - **AdminSelfUpgrade.php**
 
 This controller uses the AdminController features from PrestaShop. It allows the upgrade configuration to be displayed in the back office. The merchant will see the configuration options.
 
-In previous versions it was used to handle everything, displaying answers, handle and dispatching requests... In the latest version, its responsibilities were restricted, which should be displaying the configuration page.
+In previous versions it was used to handle everything, displaying answers, handle and dispatching requests... 
+In the latest version, its responsibilities were restricted, which should be displaying the configuration page.
 
 - **ajax-upgradetab.php**
 
-This file is called from ajax requests. This is the only file responsible of the initialization and upgrade / rollback steps. This file is not a PrestaShop controller for a simple but important reason, we do not want to rely on the core during an upgrade or a rollback, this would increase the risk of crashes.
+This file is called from ajax requests. This is the only file responsible of the initialization and upgrade / rollback steps. This file is not a PrestaShop controller for stability reasons during upgrade/rollback processes.
 
 - **cli-upgrade.php**
 
 This is the equivalent of `ajax-upgradetab.php` file for CLI calls. It will instantiate some specific features to the CLI, like a logger displaying informations on the fly. This entrypoint is also useful for testing, or for a user who does not want to use the web version.
-
 
 ## What version to use
 
@@ -90,7 +86,7 @@ In order to work properly, the upgrade module needs to write some files to your 
 
 ### Folders
 
-- backup: Folder in which the current state of the shop will be saved before upgrade. It contains files archive, DB structure & data.
-- download: Destination folder of the downloaded PrestaShop archive, before unzip.
-- latest: Working directory of the autoupgrade. This is where the "lastest" version of PrestaShop will be unziped, before copy.
-- tmp: Temporary resources not specifically used for upgrade. For instance, logs will be stored in that folder.
+- `backup`: Folder in which the current state of the shop will be saved before upgrade. It contains files archive, DB structure & data.
+- `download`: Destination folder of the downloaded PrestaShop archive, before unzip.
+- `latest`: Working directory of the autoupgrade. This is where the "lastest" version of PrestaShop will be unziped, before copy.
+- `tmp`: Temporary resources not specifically used for upgrade. For instance, logs will be stored in that folder.

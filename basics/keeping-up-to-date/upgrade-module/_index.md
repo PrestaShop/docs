@@ -13,12 +13,7 @@ Details on how to use the web interface are documented in [Keep up-to-date: Upgr
 
 {{% children %}}
 
-## New features of v4
-
-Although v4 of the module was scoped to be a refactoring, some features were added at the same time to improve the support.
-
-
-### New loggers
+## New loggers
 
 Reporting is now using [PSR-3](https://www.php-fig.org/psr/psr-3/), allowing incomers in the module code to recognize some common code in PHP.
 

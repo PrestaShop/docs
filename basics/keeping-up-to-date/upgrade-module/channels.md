@@ -11,7 +11,6 @@ Different channels are available for upgrade.
 
 Depending on the channel, the archive that will be used to upgrade the shop will be different.
 
-
 ### Major
 
 This channel will look at the latest version, even if it is a different major version.

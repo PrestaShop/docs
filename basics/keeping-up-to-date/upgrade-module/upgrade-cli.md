@@ -7,6 +7,9 @@ aliases:
 
 # Module CLI
 
+The Autoupgrade module is accessible via `cli`. Its advantages is to be used in conjunction with a CI/CD pipeline to automate your upgrade process. 
+It can be aswell used manually via regular `cli` to avoid regular configuration limits on Apache or Nginx (`php-cgi`, `php-fpm` limitations such as `memory_limit`, `max_execution_time`, ...). 
+
 ## Upgrade CLI
 
 Upgrade module can be used as a Command Line Interface.
@@ -16,9 +19,9 @@ Upgrade module can be used as a Command Line Interface.
 Entry point is *cli-upgrade.php*.
 The following parameters are mandatory:
 
-* **--dir**: Tells where the admin directory is
-* **--channel**: Selects what upgrade to run (minor, major etc.)
-* **--action**: Sets the step you want to start from (Default: `UpgradeNow`)
+* **--dir**: Specify the admin directory name
+* **--channel**: Specify the [channel to use]({{< ref "/8/basics/keeping-up-to-date/upgrade-module/channels.md" >}})
+* **--action**: Specify the [step you want to start from]({{< ref "/8/basics/keeping-up-to-date/upgrade-module/upgrade-process-steps.md" >}}) (Default: `UpgradeNow`)
 
 If you use default `action` parameter, it will run the full upgrade process.
 
@@ -38,11 +41,11 @@ In case you lost the page from your backoffice, note it can be triggered via CLI
 Entry point is *cli-rollback.php*.
 The following parameters are mandatory:
 
-* **--dir**: Tells where the admin directory is.
-* **--backup**: Select the backup to restore (this can be found in your folder `<admin directory>/autoupgrade/backup/`)
+* **--dir**: Specify the admin directory name
+* **--backup**: Specify the backup name to restore (this can be found in your folder `<admin directory>/autoupgrade/backup/`)
 
 Example:
 
 ```
-$ php cli-rollback.php  --dir=admin-dev --backup=V1.7.5.1_20190502-191341-22e883bd
+$ php cli-rollback.php --dir=admin-dev --backup=V1.7.5.1_20190502-191341-22e883bd
 ```

@@ -23,7 +23,7 @@ If you upgrade from a version older than 1.7, please use a previous version of t
 
 This module has been reworked internally for PrestaShop 1.6 & 1.7.
 
-Documentation about this major version is documented in [Upgrade module pages]({{< ref "/8/development/upgrade-module/_index.md" >}}).
+Documentation about this major version is documented in [Upgrade module pages]({{< ref "/8/basics/keeping-up-to-date/upgrade-module/_index.md" >}}).
 
 ## Download / Installation
 
