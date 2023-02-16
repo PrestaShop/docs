@@ -36,7 +36,7 @@ Download can also be done in command line, as done here with the version
 1.7.7.5:
 
 ```bash
-wget -O prestashop_8.0.1.zip https://github.com/PrestaShop/PrestaShop/releases/tag/8.0.1
+wget -O prestashop_8.0.1.zip https://github.com/PrestaShop/PrestaShop/releases/download/8.0.1/prestashop_8.0.1.zip
 ```
 
 ### Archive extraction
