@@ -43,13 +43,13 @@ wget -O prestashop_8.0.1.zip https://github.com/PrestaShop/PrestaShop/releases/d
 
 Extract the files from the archive with a tool like 7zip
 
-Note starting from PrestaShop 1.7.0.0, the release package contains a
-zip file itself, which must be extracted as well.
+Note starting from PrestaShop 1.7.0.0, the release package (zip) contains another
+zip file itself called prestashop.zip, which must be extracted as well.
 
 On a Linux terminal, you can use the command \`unzip\`:
 
 ```bash
-unzip prestashop_8.0.1.zip && unzip prestashop_8.0.1.zip
+unzip prestashop_8.0.1.zip && unzip prestashop.zip
 ```
 
 Once you have the folders like `classes/`, `modules/`, `themes/`, etc. you may
