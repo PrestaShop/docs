@@ -1,6 +1,6 @@
 ---
-menuTitle: displayback officeEmployeeMenu
-Title: displayback officeEmployeeMenu
+menuTitle: displaybackOfficeEmployeeMenu
+Title: displaybackOfficeEmployeeMenu
 hidden: true
 hookTitle: Administration Employee menu
 files:
@@ -11,7 +11,7 @@ type: display
 hookAliases:
 ---
 
-# Hook displayback officeEmployeeMenu
+# Hook displaybackOfficeEmployeeMenu
 
 ## Information
 
@@ -42,7 +42,7 @@ Located in:
 
 ```php
 dispatchWithParameters(
-            'displayback officeEmployeeMenu',
+            'displaybackOfficeEmployeeMenu',
             [
                 'links' => $menuLinksCollections,
             ]
