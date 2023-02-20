@@ -1,6 +1,6 @@
 ---
-menuTitle: displayback officeHeader
-Title: displayback officeHeader
+menuTitle: displaybackOfficeHeader
+Title: displaybackOfficeHeader
 hidden: true
 hookTitle: Administration panel header
 files:
@@ -9,13 +9,13 @@ locations:
   - back office
 type: display
 hookAliases:
- - back officeHeader
+ - backOfficeHeader
 ---
 
 # Hook displayback officeHeader
 
 Aliases: 
- - back officeHeader
+ - backOfficeHeader
 
 
 
@@ -38,5 +38,5 @@ Located in:
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayback officeHeader')
+Hook::exec('displaybackOfficeHeader')
 ```
