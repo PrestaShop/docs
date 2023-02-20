@@ -9,10 +9,10 @@ locations:
   - back office
 type: display
 hookAliases:
- - back officeTop
+ - backOfficeTop
 ---
 
-# Hook displayback officeTop
+# Hook displaybackOfficeTop
 
 Aliases: 
  - backOfficeTop
