@@ -12,7 +12,7 @@ hookAliases:
  - backOfficeHeader
 ---
 
-# Hook displayback officeHeader
+# Hook displaybackOfficeHeader
 
 Aliases: 
  - backOfficeHeader
