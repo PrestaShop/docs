@@ -1,6 +1,6 @@
 ---
-menuTitle: displayback officeTop
-Title: displayback officeTop
+menuTitle: displaybackOfficeTop
+Title: displaybackOfficeTop
 hidden: true
 hookTitle: Administration panel hover the tabs
 files:
@@ -15,7 +15,7 @@ hookAliases:
 # Hook displayback officeTop
 
 Aliases: 
- - back officeTop
+ - backOfficeTop
 
 
 
@@ -38,5 +38,5 @@ Located in:
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayback officeTop')
+Hook::exec('displaybackOfficeTop')
 ```
