@@ -1,6 +1,6 @@
 ---
-menuTitle: displayback officeCategory
-Title: displayback officeCategory
+menuTitle: displaybackOfficeCategory
+Title: displaybackOfficeCategory
 hidden: true
 hookTitle: Display new elements in the Back Office, tab AdminCategories
 files:
@@ -11,7 +11,7 @@ type: display
 hookAliases:
 ---
 
-# Hook displayback officeCategory
+# Hook displaybackOfficeCategory
 
 ## Information
 
@@ -32,5 +32,5 @@ Located in:
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayback officeCategory') }}
+{{ renderhook('displaybackOfficeCategory') }}
 ```
