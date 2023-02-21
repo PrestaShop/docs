@@ -44,7 +44,7 @@ It may be incomplete, and remember you must adapt it for your own server's needs
 ## With PHP-FPM
 
 You first have to ensure you have the `php-fpm` binary and Apache's FastCGI installed.
-On a Debian based, packages are `libapache2-mod-fcgid` and `php7.1-fpm`.
+On a Debian based, packages are `libapache2-mod-fcgid` and `php7.2-fpm`.
 
 After installing these packages, fpm service will automatically be started.
 PHP-FPM uses so-called pools to handle incoming FastCGI requests. 
@@ -58,7 +58,7 @@ user = www-data
 group = www-data
 
 ; use a unix domain socket
-listen = /var/run/php/php7.1-fpm.sock
+listen = /var/run/php/php7.2-fpm.sock
 ; or listen on a TCP socket
 ; listen = 127.0.0.1:9000
 
@@ -93,7 +93,7 @@ Don't forget to edit this configuration to make it works.
     # with mod_rewrite or mod_autoindex
     <FilesMatch \.php$>
         # SetHandler proxy:fcgi://127.0.0.1:9000
-        SetHandler proxy:unix:/var/run/php/php7.1-fpm.sock|fcgi://dummy
+        SetHandler proxy:unix:/var/run/php/php7.2-fpm.sock|fcgi://dummy
     </FilesMatch>
 
     DocumentRoot /path/to/prestashop
