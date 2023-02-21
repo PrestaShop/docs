@@ -141,4 +141,4 @@ server {
 }
 ```
 
-[nginx-scale]: {{< ref "1.7/scale/webservers/nginx" >}}
+[nginx-scale]: {{< ref "8/scale/webservers/nginx" >}}
