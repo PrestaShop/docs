@@ -9,15 +9,13 @@ locations:
   - back office
 type: display
 hookAliases:
- - displayback officeOrderActions
+ - displayBackofficeOrderActions
 ---
 
 # Hook displayAdminOrderSide
 
 Aliases: 
- - displayback officeOrderActions
-
-
+ - displayBackofficeOrderActions
 
 ## Information
 

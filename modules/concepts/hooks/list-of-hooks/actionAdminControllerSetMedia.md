@@ -9,6 +9,7 @@ locations:
   - back office
 type: action
 hookAliases:
+hasExample: true
 ---
 
 # Hook actionAdminControllerSetMedia
@@ -28,3 +29,7 @@ Located in:
 ```php
 dispatchWithParameters('actionAdminControllerSetMedia')
 ```
+
+## Example implementation
+
+This hook has been implemented as an example in our [modules examples repository - demoextendgrid](https://github.com/PrestaShop/example-modules/tree/master/demoextendgrid).

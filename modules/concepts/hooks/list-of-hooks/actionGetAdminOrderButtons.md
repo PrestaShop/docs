@@ -9,6 +9,7 @@ locations:
   - back office
 type: action
 hookAliases:
+hasExample: true
 ---
 
 # Hook actionGetAdminOrderButtons
@@ -52,3 +53,7 @@ dispatchHook(
                 ]
             )
 ```
+
+## Example implementation
+
+This hook has been implemented as an example in our [modules examples repository - demovieworderhooks](https://github.com/PrestaShop/example-modules/tree/master/demovieworderhooks).

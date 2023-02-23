@@ -9,6 +9,7 @@ locations:
   - front office
 type: display
 hookAliases:
+hasExample: true
 ---
 
 # Hook displayFooterBefore
@@ -28,3 +29,7 @@ Located in:
 ```php
 {hook h='displayFooterBefore'}
 ```
+
+## Example implementation
+
+This hook has been implemented as an example in our [modules examples repository - demomultistoreform](https://github.com/PrestaShop/example-modules/tree/master/demomultistoreform).
