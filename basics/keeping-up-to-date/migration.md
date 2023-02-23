@@ -125,7 +125,7 @@ If you used `mysqldump` for your backups, there is also an option for extracting
 Example for exporting the table ps_product:
 
 ```bash
-mysqldump -h127.0.0.1 -P3307 -uroot -p -T/var/lib/mysql-files --fields-enclosed-by=\" --fields-terminated-by=\; prestashop16 ps_product
+mysqldump -h 127.0.0.1 -P 3307 -u root -p -T /var/lib/mysql-files --fields-enclosed-by=\" --fields-terminated-by=\; prestashop16 ps_product
 ```
 
 Several notes about `mysqldump` with CSV files:
