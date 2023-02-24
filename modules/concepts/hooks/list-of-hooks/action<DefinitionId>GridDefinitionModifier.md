@@ -10,6 +10,7 @@ locations:
   - back office
 type: action
 hookAliases:
+hasExample: true
 ---
 
 # Hook action&lt;DefinitionId>GridDefinitionModifier
@@ -32,3 +33,11 @@ $this->hookDispatcher->dispatchWithParameters('action' . Container::camelize($de
     'definition' => $definition,
 ]);
 ```
+
+## Example implementation
+
+This hook has been implemented as an example in our [modules examples repository - demoextendgrid](https://github.com/PrestaShop/example-modules/tree/master/demoextendgrid).
+
+This hook has been implemented as an example in our [modules examples repository - demoextendsymfonyform1](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform1).
+
+This hook has been implemented as an example in our [modules examples repository - demoextendsymfonyform3](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform3).

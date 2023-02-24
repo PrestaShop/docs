@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+hasExample: true
 ---
 
 # Hook actionListMailThemes
@@ -37,3 +38,7 @@ dispatchWithParameters(
             ['mailThemes' => $mailThemes]
         )
 ```
+
+## Example implementation
+
+This hook has been implemented as an example in our [modules examples repository - example_module_mailtheme](https://github.com/PrestaShop/example-modules/blob/master/example_module_mailtheme).
