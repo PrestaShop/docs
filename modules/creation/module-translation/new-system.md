@@ -52,7 +52,7 @@ To make your module translatable, you need to adapt your module's source code. F
 Don't worry if you don't translate everything to all languages right away. Any wording left untranslated will be shown in its original language. Because of this, we suggest writing all your wordings in English, and then translating them to other languages.
 {{% /notice %}} 
 
-### Translation domain
+### Translation domain {#translation-domain}
 
 An important part of the new translation system is **Translation Domains**, which replaces the classic system's [contextualization][contextualization]. In the new translation system, all wordings must be linked to at least one translation domain.
 
@@ -122,7 +122,7 @@ When translating wordings in the module's main class, since it extends the `Modu
 <?php
 // file: mymodule.php
 
-class mymodule extends Module
+class MyModule extends Module
 {
     public function __construct()
     {
@@ -136,25 +136,25 @@ Since the module is called MyModule, the translation domain should be `Modules.M
 
 #### Module controllers
 
-`ModuleAdminController` and `ModuleFrontController` can access the module instance via the `$this->module` property.
+`ModuleAdminController` and `ModuleFrontController` can access the module instance and translator via the `$this->module` property and `getTranslator()` public accessor.
 
 ```php
 <?php
 // file: controllers/front/something.php
 
-class MymoduleSomethingModuleFrontController extends ModuleFrontController
+class MyModuleSomethingModuleFrontController extends ModuleFrontController
 {
     public function initContent()
     {
-        $this->title = $this->module->trans('My module title', [], 'Modules.Mymodule.Something');
+        $this->title = $this->module->getTranslator()->trans('My module title', [], 'Modules.Mymodule.Something');
     }
 }
 ```
 
-Symfony controllers work exactly the same as the Core's. Just use `$this->trans` method.
+Symfony controllers work exactly the same as the Core's. Just use `$translator->trans()` method.
 
 {{% notice warning %}}
-Be aware that in symfony controllers, the second and third arguments have been swapped to make `$replacements` optional.
+Be aware that in Symfony controllers, the second and third arguments have been swapped to make `$replacements` optional.
 {{% /notice %}}
 
 ```php
