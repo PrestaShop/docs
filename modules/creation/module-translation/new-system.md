@@ -151,7 +151,7 @@ class MyModuleSomethingModuleFrontController extends ModuleFrontController
 }
 ```
 
-Symfony controllers work exactly the same as the Core's. Just use `$translator->trans()` method.
+Symfony controllers work exactly the same as the Core's. Just use `$this->trans()` method.
 
 {{% notice warning %}}
 Be aware that in Symfony controllers, the second and third arguments have been swapped to make `$replacements` optional.
