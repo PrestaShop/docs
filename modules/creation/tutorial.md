@@ -15,7 +15,7 @@ Let's create a first simple module, this will allow us to better describe its st
 First, create the module's folder, in PrestaShop's `/modules` folder. Let's call it `mymodule`. This will be the module's "technical" name.
 
 {{% notice tip %}}
-Technical names can only accept lower case alphanumeric characters (`[a-z0-9]`). Although accepted, we strongly discourage using underscores because they don't work with translation domains.
+Technical names can only accept lower case alphanumeric characters (`[a-z0-9]`). [Although accepted, we strongly discourage using underscores because they don't work with translation domains]({{< ref "/8/modules/creation/module-translation/new-system#translation-domain" >}}).
 {{% /notice %}}
 
 This folder must contain the main file, a PHP file of the same name as the folder, which will handle most of the processing: `mymodule.php`.
