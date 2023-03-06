@@ -172,27 +172,32 @@ class SomeAdminController extends FrameworkBundleAdminController
 
 #### Other classes
 
-Other classes will need to retrieve the module's instance somehow. We recommend passing it as a parameter in the constructor and storing it for later use.
+Other classes will need to retrieve the module's translator instance somehow. We recommend passing it as a parameter in the constructor and storing it for later use.
 
 ```php
 <?php
 class CustomModuleClass 
 {
-    private $module;
+    private $translator;
     
-    public function __construct(Module $module)
+    public function __construct(Translator $translator)
     {
-        $this->module = $module
+        $this->translator = $translator
     }
     
     public function foo()
     {
-        $this->text = $this->module->trans('My text to translate', [], 'Modules.Mymodule.Custommoduleclass');
+        $this->text = $this->translator->trans('My text to translate', [], 'Modules.Mymodule.Custommoduleclass');
     }
 }
+
+// from within the module: 
+$customModuleClass = new _NAMESPACE_\CustomModuleClass($this->getTranslator());
 ```
 
-If you really need to, you can also retrieve a new instance of your module using `Module::getInstanceByName('mymodulename')`. This should be avoided though, as it's not a good practice.
+{{% notice info %}}
+If you really need to, you can also retrieve a new instance of your module using `$module = Module::getInstanceByName('mymodulename')`, and then access the `translator` with `$module->getTranslator()`. This should be avoided though, as it's not a good practice.
+{{% /notice %}}
 
 ### Templates
 
