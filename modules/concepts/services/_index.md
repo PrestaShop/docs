@@ -17,7 +17,7 @@ You have the ability to modify the Symfony container configuration from a module
 
 First we strongly advise you to use
 [**namespaces**](https://www.php.net/manual/en/language.namespaces.php) & autoloading in your module, which can be done thanks to composer.
-[A dedicated chapter]({{< ref "1.7/modules/concepts/composer" >}}) is available to learn more about Composer and to set it up.
+[A dedicated chapter]({{< ref "8/modules/concepts/composer" >}}) is available to learn more about Composer and to set it up.
 
 #### Define your service
 
@@ -242,6 +242,131 @@ Your new service, which overrides or decorates the previous service, only needs 
 If however no interface was used here, you probably need to `extend` the previous class, `ASpecificClass`, instead.
 
 As you can see, interfaces lay the ground for easy extension and customization, that is why we use them more and more in the Core codebase and we recommend you use them as well !
+
+#### Advanced services parameters (_instanceof or interface binding, manual tags) {{< minver v=8.1 >}}
+
+Since {{< minver v=8.1 >}}, [modules autoloaders and service configurations loading are now registered before compiler passes](https://github.com/PrestaShop/PrestaShop/pull/30588). That means that you can now use native Symfony service configuration features in your modules. 
+
+Those features are :
+
+- [applying configuration based on the extended classes or implemented interfaces](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#interface-based-service-configuration)
+- [autoconfiguration](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#interface-based-service-configuration)
+- [an option to skip the class attribute](https://symfony.com/blog/new-in-symfony-3-3-optional-class-for-named-services)
+- [automatically registering classes found in the specified directories as services](https://symfony.com/blog/new-in-symfony-3-3-psr-4-based-service-discovery)
+
+As an example, let's consider a module with the following structure: 
+
+```
+config/
+    services.yml
+src/
+    Collection/
+        Collection.php
+        Element.php
+        ElementInterface.php
+```
+
+And this content: 
+
+File: `src/Collection/Collection.php` 
+
+```php
+<?php
+
+namespace TestModule\InstanceofConditionals\Collection;
+
+class Collection
+{
+    private $elements = [];
+
+    public function __construct(iterable $elements)
+    {
+        foreach ($elements as $element) {
+            $this->addElement($element);
+        }
+    }
+```
+
+File: `src/Collection/Element.php`
+
+```php
+<?php
+
+namespace TestModule\InstanceofConditionals\Collection;
+
+interface ElementInterface
+{
+}
+```
+
+File: `src/Collection/ElementInterface.php`
+
+```php
+<?php
+
+namespace TestModule\InstanceofConditionals\Collection;
+
+class Element implements ElementInterface
+{
+}
+```
+
+##### Example: bind a parameter by tag name and _instanceof automatic tagging (via interface)
+
+In your module's `config/common.yml`, set the following configuration:
+
+```yaml
+services:
+  _defaults:
+    autowire: true
+    bind:
+      $elements: !tagged test_module.instance_of.instance_of_tagged
+
+  _instanceof:
+    TestModule\InstanceofConditionals\Collection\ElementInterface:
+      tags: [ test_module.instance_of.instance_of_tagged ]
+```
+
+This example will tag all classes _instances of_ `TestModule\InstanceofConditionals\Collection\ElementInterface` (`TestModule\InstanceofConditionals\Collection\Element` in our example) with the tag `test_module.instance_of.instance_of_tagged`. 
+
+Then, it will bind all services with a `$element` variable in its constructor with a `test_module.instance_of.instance_of_tagged` service.
+
+##### Example: bind a parameter by tag name and tag a service manually
+
+In your module's `config/common.yml`, set the following configuration:
+
+```yaml
+services:
+  _defaults:
+    autowire: true
+    bind:
+      $elements: !tagged test_module.instance_of.manually_tagged
+
+  TestModule\InstanceofConditionals\Collection\Element:
+    class: TestModule\InstanceofConditionals\Collection\Element
+    tags: [ test_module.instance_of.manually_tagged ]
+```
+
+This example will tag the class `TestModule\InstanceofConditionals\Collection\Element` with the tag `test_module.instance_of.manually_tagged`.
+
+Then, it will bind all services with a `$element` variable in its constructor with a `test_module.instance_of.manually_tagged` service.
+
+If we wanted to bind only parameter `$element` of class `TestModule\InstanceofConditionals\Collection\Collection` with a `test_module.instance_of.manually_tagged` tag, we would had configured it this way: 
+
+```yaml
+services:
+  test_module.instance_of.manually_tagged_collection:
+    class: TestModule\InstanceofConditionals\Collection\Collection
+    public: true
+    bind:
+      $elements: !tagged test_module.instance_of.manually_tagged
+  
+  TestModule\InstanceofConditionals\Collection\Element:
+    class: TestModule\InstanceofConditionals\Collection\Element
+    tags: [ test_module.instance_of.manually_tagged ]
+```
+
+Explore more configuration features in [the official Symfony documentation](https://symfony.com/doc/4.4/service_container.html#creating-configuring-services-in-the-container).
 
 ## Services in Legacy environment
 {{< minver v="1.7.6" title="true" >}}
