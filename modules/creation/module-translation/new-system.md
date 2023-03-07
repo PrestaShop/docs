@@ -52,7 +52,7 @@ To make your module translatable, you need to adapt your module's source code. F
 Don't worry if you don't translate everything to all languages right away. Any wording left untranslated will be shown in its original language. Because of this, we suggest writing all your wordings in English, and then translating them to other languages.
 {{% /notice %}} 
 
-### Translation domain
+### Translation domain {#translation-domain}
 
 An important part of the new translation system is **Translation Domains**, which replaces the classic system's [contextualization][contextualization]. In the new translation system, all wordings must be linked to at least one translation domain.
 
@@ -122,7 +122,7 @@ When translating wordings in the module's main class, since it extends the `Modu
 <?php
 // file: mymodule.php
 
-class mymodule extends Module
+class MyModule extends Module
 {
     public function __construct()
     {
@@ -136,25 +136,25 @@ Since the module is called MyModule, the translation domain should be `Modules.M
 
 #### Module controllers
 
-`ModuleAdminController` and `ModuleFrontController` can access the module instance via the `$this->module` property.
+`ModuleAdminController` and `ModuleFrontController` can access the module instance and translator via the `$this->module` property and `getTranslator()` public accessor.
 
 ```php
 <?php
 // file: controllers/front/something.php
 
-class MymoduleSomethingModuleFrontController extends ModuleFrontController
+class MyModuleSomethingModuleFrontController extends ModuleFrontController
 {
     public function initContent()
     {
-        $this->title = $this->module->trans('My module title', [], 'Modules.Mymodule.Something');
+        $this->title = $this->module->getTranslator()->trans('My module title', [], 'Modules.Mymodule.Something');
     }
 }
 ```
 
-Symfony controllers work exactly the same as the Core's. Just use `$this->trans` method.
+Symfony controllers work exactly the same as the Core's. Just use `$this->trans()` method.
 
 {{% notice warning %}}
-Be aware that in symfony controllers, the second and third arguments have been swapped to make `$replacements` optional.
+Be aware that in Symfony controllers, the second and third arguments have been swapped to make `$replacements` optional.
 {{% /notice %}}
 
 ```php
@@ -172,27 +172,32 @@ class SomeAdminController extends FrameworkBundleAdminController
 
 #### Other classes
 
-Other classes will need to retrieve the module's instance somehow. We recommend passing it as a parameter in the constructor and storing it for later use.
+Other classes will need to retrieve the module's translator instance somehow. We recommend passing it as a parameter in the constructor and storing it for later use.
 
 ```php
 <?php
 class CustomModuleClass 
 {
-    private $module;
+    private $translator;
     
-    public function __construct(Module $module)
+    public function __construct(Translator $translator)
     {
-        $this->module = $module
+        $this->translator = $translator
     }
     
     public function foo()
     {
-        $this->text = $this->module->trans('My text to translate', [], 'Modules.Mymodule.Custommoduleclass');
+        $this->text = $this->translator->trans('My text to translate', [], 'Modules.Mymodule.Custommoduleclass');
     }
 }
+
+// from within the module: 
+$customModuleClass = new _NAMESPACE_\CustomModuleClass($this->getTranslator());
 ```
 
-If you really need to, you can also retrieve a new instance of your module using `Module::getInstanceByName('mymodulename')`. This should be avoided though, as it's not a good practice.
+{{% notice info %}}
+If you really need to, you can also retrieve a new instance of your module using `$module = Module::getInstanceByName('mymodulename')`, and then access the `translator` with `$module->getTranslator()`. This should be avoided though, as it's not a good practice.
+{{% /notice %}}
 
 ### Templates
 
