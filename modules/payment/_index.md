@@ -76,11 +76,25 @@ We have identified four cases of payment module:
 
     The minimal variables to set are `$callToActionText` and `$form`. You can check the `getEmbeddedPaymentOption()` method of *[paymentexample](https://github.com/PrestaShop/paymentexample)* to have an example.
 
-#### iFrame
+#### iframe
 
-:   The payment form is displayed on the merchant's website, but inside an iFrame.
+:   The payment form is displayed on the merchant's website, but inside an iframe.
 
     The minimal variables to set are `$callToActionText` and `$additionalInformation`. You can check the `getIframePaymentOption()` method of *[paymentexample](https://github.com/PrestaShop/paymentexample)* to have an example.
+    
+Payment modules rules
+---------------------
+
+We do have extra rules for Payment Modules as this type of modules require higher security.
+Note that there are some modules which create the Order with a pending order status during the payment processing (1), while others wait for the payment system's approval to create it (2). But none of them create an order before the customer passed the payment service (bank, PayPal...).
+
+* Make sure you double check the id_cart before creating the order.
+    * The purpose is to make sure another customer cannot validate a cart which isn't his.
+
+* if (2), make sure the amount you use to validateOrder() comes from the external payment system. Do not use Cart->getOrderTotal();
+    * For security reasons, always proceed as explained.
+
+* For (2), when receiving a call to process the payment, make sure you double check the source of the call using a signature or a token. Those values must not be known of all. 
 
 Migrating from 1.6 to 1.7
 -------------------------
