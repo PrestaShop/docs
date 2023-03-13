@@ -16,8 +16,9 @@ For example, `actionAdminCustomersFormModifier` is documented as `action<AdminCo
 A regex based search has been implemented, and generic hooks should be matched. However, when you see a controller name or action in the hook name and you can't find it, try searching for a part of the hook name, like `FormModifier`.
 {{% /notice %}}
 
+## Search for a hook
+
 <div id="hookFilter" class="quickfilter">
-  <label for="filter">Search hooks</label>
   <input type="text" name="filter" id="filter" placeholder="Type to filter">
   <p class="empty">No hooks found</p>
 </div>
