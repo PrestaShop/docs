@@ -6,8 +6,7 @@ chapter: true
 # Integration tests
 ## Introduction
 
-Unit tests can validate the behavior of a PHP class when it can be isolated.
-However, some classes cannot be validated this way. Moreover, a lot of logic from PrestaShop is written into complex SQL queries that this kind of test cannot validate. This is why we also need integration tests.
+While unit tests can effectively validate the behavior of an isolated PHP class, there are certain classes that cannot be validated in this manner. Additionally, as a significant portion of PrestaShop's logic is written in complex SQL queries, this type of test may not be sufficient to validate them. Therefore, integration tests are also necessary to ensure proper validation and coverage.
 
 ### Stack
 
