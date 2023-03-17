@@ -32,8 +32,7 @@ Reach the [dedicated page]({{< relref "tutorials/creating-access" >}}).
 
 ## Accessing the webservice
 
-Now that your access key is generated you can test your store's webservice, its endpoint is located in the `/api/` folder at the root of your installation of Prestashop.
-The quickest way to test your API is to use your browser:
+After generating your access key, you can proceed to test your store's webservice. The webservice endpoint is located in the '/api/' folder at the root of your PrestaShop installation. To test your API quickly, you can simply use your browser:
 
 * If PrestaShop is installed at the root of your server, you can access the API here: http://example.com/api/
 * If PrestaShop is installed in a subfolder of your server, you can access the API here: http://example.com/prestashop/api/
