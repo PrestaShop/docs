@@ -15,15 +15,24 @@ Rollback will be the only way to go back if something does not go well, and this
 Learn [how to backup your shop]({{< ref "/8/basics/keeping-up-to-date/backup" >}})
 {{% /notice %}}
 
-This chapter describes several ways to complete an upgrade of PrestaShop: 1-click upgrade module or manual upgrade.
+There are a few ways of upgrading the PrestaShop store. This chapter provides information about two methods of getting the software to the latest version.
 
-## Upgrade module (1-click upgrade module)
+## Upgrade assistant module (formerly 1-click upgrade module)
 
-PrestaShop provides the module 1-click upgrade for free on the marketplace and your shop administration panel.
+You can use provided `autoupgrade` module to upgrade your store to the newest version using web interface. You can read more about the module and how to use it [here]({{< ref "/8/basics/keeping-up-to-date/use-autoupgrade-module" >}}).
 
-You can read more about it [here]({{< ref "/8/basics/keeping-up-to-date/use-autoupgrade-module" >}}).
+## Upgrade assistant module - CLI method
 
-## Manual upgrade – Process details
+Upgrade assistant module (autoupgrade) is fully accessible through `cli`. You can read all the details [here]({{< ref "/8/basics/keeping-up-to-date/upgrade-module/upgrade-cli" >}}).
+
+## Manual upgrade
+
+{{% notice warning %}}
+**Important**
+
+Manual upgrade without `autoupgrade` module is not possible at the moment. We recommend using [cli]({{< ref "/8/basics/keeping-up-to-date/upgrade-module/upgrade-cli" >}})
+mechanism from the upgrade assistant module.
+{{% /notice %}} 
 
 This guide gives you the full control on the process. This one has been applied by PrestaShop for several major versions, and thus can be applied on very old shops.
 
@@ -31,10 +40,10 @@ This guide gives you the full control on the process. This one has been applied 
 
 The first step is to download the latest version on https://github.com/PrestaShop/PrestaShop/releases.
 
-Download can also be done in command line, as done here with the version 8.0.1:
+Download can also be done in command line, as done here with the version 8.0.2:
 
 ```bash
-wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases/download/8.0.1/prestashop_8.0.1.zip
+wget -O prestashop-upgrade.zip https://github.com/PrestaShop/PrestaShop/releases/download/8.0.2/prestashop_8.0.2.zip
 ```
 
 ### Archive extraction

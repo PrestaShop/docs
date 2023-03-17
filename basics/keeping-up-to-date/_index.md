@@ -8,12 +8,10 @@ weight: 50
 
 ## Introduction
 
-The purpose of this chapter is to provide the best practices and tips for keeping your PrestaShop up-to-date. Its compatibility range should cover at least shops running on versions 1.6 through 8.
+The purpose of this chapter is to provide the best practices and tips for keeping your PrestaShop up-to-date. Its compatibility range should cover at least shops running on versions 1.7 through 8.
 
 Keeping a shop updated to the latest available version ensures you have the latest changes brought by the core team and the developer community.
 Depending on the version you upgrade to, you can get new features, security or performance improvements, or simply bug fixes.
-
-Furthermore, the support of PrestaShop 1.6 [is now ended](https://build.prestashop-project.org/news/1.6.1.x-what-s-next/). We recommend using recent PrestaShop versions to get support, along with core and modules upgrades.
 
 ## Upgrade and migration, two different processes
 
@@ -32,7 +30,7 @@ It does not require any additional tools to run if you follow the manual process
 As long as you stay on the same major version (ex. 1.7.1 >> 1.7.2, 8.0 >> 8.1 upgrade), we make sure that the available features remain the same.
 This means that your current theme and all your modules should continue to work as before, and no functionality or data will be lost during the upgrade, even if the database structure may change.
 
-This can be explained by the [semantic versioning](https://semver.org/) we follow, that forbids any compatibility-breaking change in the core, such as removing a feature or modifying our APIs.
+This can be explained by the [semantic versioning](https://semver.org/) we follow, that forbids any compatibility-breaking change in the core, such as removing a feature or modifying our APIs in versions other than major.
 
 Note that once an upgrade has started, there is no way to rollback the changes. The only solution you have is restoring the backup you made before.
 
@@ -41,13 +39,14 @@ Note that once an upgrade has started, there is no way to rollback the changes. 
 - Prepare your upgrade by getting the latest release zip file, unpacking it and removing its demo content.
 - Apply the new files by copy-pasting them in the production folder.
 - Run the database upgrade.
-This could be enough for completing an upgrade, but additional tasks like cleanup and modules upgrade will bring you stability and security.
+
+This could be enough for completing an upgrade, but additional tasks like cleanup and modules upgrade will bring you stability and security. This is how the `autoupgrade` module works.
 
 ### Migration
 
 ![Migration schema](img/migration-schema.png)
 
-Upgrading is not the only way to update your shop to the latest version of PrestaShop. In some cases, migrating your data is a better option.
+Upgrading is not the only way to get your shop to the latest version of PrestaShop. In some cases, migrating your data is a better option.
 
 This option is recommended when you switch on a new major version. As it brings a lot of changes in the core with many potential incompatibilities with the current theme and modules, starting fresh is less risky for stability.
 

@@ -9,21 +9,21 @@ weight: 10
 {{% notice warning %}} 
 **Important**
 
-It is strongly recommended not to leave your backups at the root of your store or in another place where could be exposed on publicly.
+It is strongly recommended not to leave your backups at the root of your store or in another place that could be publicly exposed.
 {{% /notice %}}
 
 Before starting anything, you must think first about safety.
-Any modification made on a shop could break it, so you must make sure all your data has been backed up before going further. This basically implies saving two things: your files and your database.
+Any modification to a shop could break it, so you must ensure all your data has been backed up before going further. This implies saving two things: your files and your database.
 
-We will give you all the details you may need to run an upgrade, but we can’t be held responsible for any damage caused to your shop during the process. That’s why we strongly recommend you to follow this backup step.
+This documentation can help to run an upgrade, but we can’t be held responsible for any damage caused to your shop during the process. That’s why we strongly recommend you follow this backup step.
 
 ## File backup
 
-The first elements to backup are the files on the web server where you have deployed your PrestaShop. The PrestaShop folder not only contains the source code, but also your modules & themes, pictures, and all other resources needed to run your shop successfully.
+The first elements to backup are the files on the web server where you have deployed your PrestaShop. The PrestaShop folder contains the source code and your modules & themes, pictures, and all other resources needed to run your shop successfully.
 
 ### Copy files
 
-To complete this step, your shop folder must be copied somewhere else. Although it can be simply copied on another folder on your server, making an additional copy of your files on another computer is a nice additional security measure. To do so, connect to your server using an FTP, SSH or RDP connection (depending on your server and hosting provider), copy the files in another location, then download them on your computer.
+To complete this step, your shop folder must be copied somewhere else. Although it can be copied to another folder on your server, making an additional copy of your files on another computer is a nice additional security measure. To do so, connect to your server using an FTP, SSH, or RDP connection (depending on your server and hosting provider), copy the files to another location, then download them on your computer.
 
 With SSH, you may use `scp` or `rsync` command to backup your shop folder from a server to another. For example, backup from a remote server to your local machine (or the one you are connected on) with `scp` ([scp man page](https://linuxcommand.org/lc3_man_pages/scp1.html)):
 
@@ -37,12 +37,12 @@ Or with `rsync` ([rsync man page](https://linux.die.net/man/1/rsync)):
 rsync -avz user@host:/var/www/prestashop_folder_path /local_path_for_backup/
 ```
 
-Note that depending on the number of files and your internet connection, this may take a few hours to complete. But if you’re an advanced user and have a complete access to your server, the next part may help you go faster.
+Note that this may take a few hours to complete depending on the number of files and your internet connection. But if you’re an advanced user with complete access to your server, the next part may help you go faster.
 
 #### Bonus: Compress your files before download
 
 As said before, downloading the whole PrestaShop folder one file at a time will take a long time to complete.
-If you can run commands on your server, you can make a backup faster by compressing the whole content in a single archive file, then downloading this file locally.
+If you can run commands on your server, you can make a backup faster by compressing the entire content in a single archive file, then downloading this file locally.
 
 * On Windows-based servers, this requires a remote desktop access. Once logged on your remote environment, use the Windows explorer to reach your www folder and compress all its content into a `ZIP` file.
 
@@ -58,11 +58,11 @@ For instance:
 tar -czf backup.tar /var/www/html
 ```
 
-When your archive is ready, you may copy it on your computer or to any other safe location.
+When your archive is ready, copy it on your computer or any other safe location.
 
 ## Database backup
 
-The database on which PrestaShop runs must be saved as well. There are many ways to get a dump of the database content, and we cannot cover all of them. Feel free to use your tools, we just cover the main ones here. You can consider your dump is complete when you get a SQL file with the structure AND the content of each table in it.
+The database on which PrestaShop runs must be saved as well. There are many ways to get a dump of the database content, and we cannot cover all of them. Feel free to use your tools. We cover the main ones here. You can consider your dump complete when you get a SQL file with the structure AND the content of each table.
 
 ### Using MySQL client in command line
 
@@ -92,17 +92,17 @@ More details about backup & recoveries with MySQL binaries can be found on the [
 
 PhpMyAdmin, provided by several hosting providers, offers another way to get a complete dump of your database.
 
-Log on your PhpMyAdmin interface, select the database where PrestaShop is installed and chose the “export” tab.
+Log on to your PhpMyAdmin interface, select the database where PrestaShop is installed, and choose the “export” tab.
 
 {{< figure src="../img/backup-phpmyadmin-export-database.png" title="Exporting a database in SQL format" >}}
 
-We advise to select the “custom” method, as it offers more options to customize your dump. Make sure all your tables, views, etc are selected for backup.
+We advise selecting the “custom” method, as it offers more options to customize your dump. Ensure all your tables, views, etc., are selected for backup.
 To get the same file content as the `mysqldump` method, the following options should be checked as well:
 
 * Use LOCK TABLES statement
 * Add DROP TABLE / VIEW / PROCEDURE / FUNCTION / EVENT / TRIGGER statement
 
-Click on “Go”, wait for the dump to be generated, then download it.
+Click on the “Go” button, wait for the dump to be generated, then download it.
 
 ## Other MySQL clients
 

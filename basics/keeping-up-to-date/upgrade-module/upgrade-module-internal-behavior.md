@@ -34,16 +34,16 @@ This is the equivalent of `ajax-upgradetab.php` file for CLI calls. It will inst
 
 The objective is to have a single module version to handle these PrestaShop upgrades:
 
-- 1.6 >> to >> 1.6 / 1.7
-- 1.7 >> to >> 1.7
+- 1.7.x >> to >> 1.7.y
+- 1.7 >> to >> 8.x
 
-The other versions are not supported anymore. We recommend to use the previous versions of the module available on the PrestaShop marketplace.
+The other versions are not supported anymore. We recommend to use the previous versions of the module [available on GitHub](https://github.com/PrestaShop/autoupgrade/releases/tag/v4.12.0).
 
 ## Technical choices
 
-### Compatibility with PrestaShop 1.6 & 1.7
+### Compatibility with PrestaShop 1.7 & 8
 
-Aim is to help as many merchants as possible to upgrade from 1.6 to 1.7. This required to do the following implementation choices:
+Aim is to help as many merchants as possible to upgrade from 1.7 to 8. This required to do the following implementation choices:
 
 - **Twig as template engine**
 
