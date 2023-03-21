@@ -51,7 +51,9 @@ As the method deals with raw SQL requests, the `_DB_PREFIX_` must be used.
 The result is an array of associative arrays, containing an array for each row.
 It should only be used for read only queries: SELECT, SHOW, etc.
 
-#### Retrieving only the first row
+#### Retrieving only the first row: getRow()
+
+Using getRow() method will retrieve the first row of your query:
 
 ```php
 $request = "SELECT `id_table` FROM `' . _DB_PREFIX_ . 'some_table` ...";
