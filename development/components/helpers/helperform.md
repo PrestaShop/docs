@@ -10,6 +10,8 @@ This helper can used to generate HTML forms easily.
 Note that HelperForm is based on Smarty and Bootstrap 3, and therefore is discouraged in Symfony controllers.
 {{% /notice %}}
 
+{{< searchTags tags="FormHelper, HelperTable" >}}
+
 ## Basic usage
 
 Removing all the optional fields, this is how to build a basic HelperForm element:
@@ -442,8 +444,3 @@ Note that you have to use the "t" CSS class on your labels in order to have the 
 The type variable of the element declaration makes it possible to generate just about any kind of `<input>` element: `text`, `select`, `textarea`, `radio`, `checkbox`, `file` and many others! See the list of available types [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input). 
 
 You can also use some PrestaShop specific: `shop`, `asso_shop`, `free`, `color`. Try them out!
-
-#### Miscellaneous
-
-This helper is sometimes known as `FormHelper`.
-`HelperTable` may refer to `$helper->table`.
