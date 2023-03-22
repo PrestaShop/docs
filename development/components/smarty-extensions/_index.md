@@ -98,7 +98,7 @@ So far, it is only used for forms (customer information and checkout).
 This helper is used to generate URLs.
 This will take care of the HTTP scheme (`http` or `https`), domain name, virtual and physical base URI, parameters concatenation, and URL rewriting.
 
-[`{url}` uses the `Link` class internally](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L1446-L1611).
+[`{url}` uses the `Link` component]({{< relref "/8/development/components/link" >}}).
 
 {{% notice note %}}
   Please see the `$urls` dataset to find already regenerated urls (such as home, cart, login and so on).
