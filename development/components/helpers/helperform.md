@@ -10,6 +10,8 @@ This helper can used to generate HTML forms easily.
 Note that HelperForm is based on Smarty and Bootstrap 3, and therefore is discouraged in Symfony controllers.
 {{% /notice %}}
 
+{{< searchTags tags="FormHelper, HelperTable" >}}
+
 ## Basic usage
 
 Removing all the optional fields, this is how to build a basic HelperForm element:
