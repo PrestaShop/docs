@@ -19,7 +19,7 @@ hasExample: true
 {{% notice tip %}}
 **Adds route to the PrestaShop router** 
 
-This hook allows your module to add routes to the PrestaShop router with parameters, wildcards, ...
+This hook allows your module to extend default PrestaShop routes with custom ones and map them to your module front controllers.
 {{% /notice %}}
 
 
