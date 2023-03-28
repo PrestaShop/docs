@@ -93,7 +93,55 @@ In our example, `id` must be an integer and `slug` a string, and will be forward
 
 ### Implementation
 
-This example adds two routes for your module, one for listing items, the other one for showing one specific item: 
+This example creates two `ModuleFrontController` controllers, and extends PrestaShop routes to map 2 routes to those controllers: one for listing items, the other one for showing one specific item.
+
+Create a `list.php` `ModuleFrontController` in `mymoduleaddingroutes/controllers/front/`:
+
+```php
+class MyModuleAddingRoutesListModuleFrontController extends ModuleFrontController
+{
+    public function initContent()
+    {
+        $this->setTemplate('module:mymoduleaddingroutes/views/templates/front/list.tpl');
+    }
+}
+```
+
+and a `show.php` `ModuleFrontController` in `mymoduleaddingroutes/controllers/front/`:
+
+```php
+class MyModuleAddingRoutesShowModuleFrontController extends ModuleFrontController
+{
+    public function initContent()
+    {
+        $this->context->smarty->assign(
+            array(
+              'id' => Tools::getValue('id'),
+              'slug' => Tools::getValue('slug')
+            ));
+        
+        $this->setTemplate('module:mymoduleaddingroutes/views/templates/front/show.tpl');
+    }
+}
+```
+
+Now, create two templates in `mymoduleaddingroutes/views/templates/front/`: 
+
+`list.tpl`: 
+
+```html
+<h1>List template</h1>
+```
+
+`show.tpl`:
+
+```html
+<h1>Show template</h1>
+Id: {$id}
+Slug: {$slug}
+```
+
+Now we have 2 controllers, rendering 2 templates, we can create our routes with `moduleRoutes` hook, in `mymoduleaddingroutes/mymoduleaddingroutes.php`:
 
 ```php
 <?php
@@ -138,3 +186,5 @@ class MyModuleAddingRoutes extends Module
     }
 }
 ```
+
+The complete implementation example is available in our [example modules repository](https://github.com/PrestaShop/example-modules).
