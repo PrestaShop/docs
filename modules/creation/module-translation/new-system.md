@@ -126,8 +126,10 @@ class MyModule extends Module
 {
     public function __construct()
     {
+        $this->version = '1.0.0';
+        $this->author = 'Me';
         $this->displayName = $this->trans('My module', [], 'Modules.Mymodule.Mymodule');
-        $this->description = $this->trans('Description of my module.', [], 'Modules.Mymodule.Mymodule');
+        $this->description = $this->trans('Description of my module. Made by: %author%, Current Version: %version%', ['%version%' => $this->version ,'%author% => $this->author], 'Modules.Mymodule.Mymodule');
     }
 }
 ```
