@@ -114,11 +114,13 @@ class MyModuleAddingRoutesShowModuleFrontController extends ModuleFrontControlle
 {
     public function initContent()
     {
+        // It is just an example. Remember to always validate the input data!
         $this->context->smarty->assign(
-            array(
+            [
               'id' => Tools::getValue('id'),
               'slug' => Tools::getValue('slug')
-            ));
+            ]
+        );
         
         $this->setTemplate('module:mymoduleaddingroutes/views/templates/front/show.tpl');
     }
