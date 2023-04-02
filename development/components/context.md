@@ -24,6 +24,7 @@ These objects are always accessible through the context:
 - **Cookie.** Cookie instance.
 - **Link.** Link instance.
 - **Smarty.** Smarty instance.
+- **CurrentLocale.**  [Current Locale]({{< relref "/8/development/components/locale" >}}).
 
 These objects are only accessible for the customer Context:
 
