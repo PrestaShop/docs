@@ -213,3 +213,53 @@ The expected JSON format:
     data: '<p>My HTML content</p>'
 }
 ```
+
+## Example usage in native modules
+
+`HelperList` is implemented into several native modules, such as [`ps_emailsubscription`](https://github.com/PrestaShop/ps_emailsubscription).
+
+In this module, 
+
+- a [`renderList()` method is created](https://github.com/PrestaShop/ps_emailsubscription/blob/v2.7.1/ps_emailsubscription.php#L255), 
+- the [`$field_ist` is declared](https://github.com/PrestaShop/ps_emailsubscription/blob/v2.7.1/ps_emailsubscription.php#L257-L297), 
+- then a [`HelperList` is instantiated](https://github.com/PrestaShop/ps_emailsubscription/blob/v2.7.1/ps_emailsubscription.php#L303),
+- finally the html content is [generated and returned](https://github.com/PrestaShop/ps_emailsubscription/blob/v2.7.1/ps_emailsubscription.php#L328). 
+
+```php
+public function renderList()
+{
+    $fields_list = [
+      // ... fields list declaration, refer to https://github.com/PrestaShop/ps_emailsubscription/blob/v2.7.1/ps_emailsubscription.php#L257-L297
+      // for complete implementation
+    ];
+
+    // ...
+
+    $helper_list = new HelperList();
+    // HelperList settings, refer to https://github.com/PrestaShop/ps_emailsubscription/blob/v2.7.1/ps_emailsubscription.php#L303-L317
+    // for complete implementation
+
+    /* Retrieve list data */
+    $subscribers = $this->getSubscribers();
+
+    // paginate results, refer to https://github.com/PrestaShop/ps_emailsubscription/blob/v2.7.1/ps_emailsubscription.php#L321-L326
+    // for complete implementation
+
+    return $helper_list->generateList($subscribers, $fields_list);
+}
+```
+
+Then, in the `getContent()` method of this module, the `renderList()` method is called:
+
+```php
+/**
+ * @return string
+   */
+public function getContent()
+{
+   // ...
+   $this->_html .= $this->renderList();
+   // ...
+   return $this->_html;
+}
+```

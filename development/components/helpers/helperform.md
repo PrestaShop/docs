@@ -452,7 +452,7 @@ You can also use some PrestaShop specific: `shop`, `asso_shop`, `free`, `color`.
 In this module, 
 
 - a [`renderForm()` method is created](https://github.com/PrestaShop/contactform/blob/v4.4.1/contactform.php#L108), 
-- the [`$form` is declared with its form declaration](https://github.com/PrestaShop/contactform/blob/v4.4.1/contactform.php#L120-L189), 
+- the [`form declaration is declared](https://github.com/PrestaShop/contactform/blob/v4.4.1/contactform.php#L120-L189), 
 - then a [`HelperForm` is instantiated](https://github.com/PrestaShop/contactform/blob/v4.4.1/contactform.php#L190),
 - finally the html content is [generated and returned](https://github.com/PrestaShop/contactform/blob/v4.4.1/contactform.php#L203). 
 
