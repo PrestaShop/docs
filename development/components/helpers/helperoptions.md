@@ -33,6 +33,7 @@ $this->fields_options = [
         'type' => {'text', 'hidden', 'select', 'bool', 'radio',  // The kind of input field you want to use.
           'checkbox', 'password', 'textarea', 'file', 'textLang',
           'textareaLang', 'selectLang'},
+        'autoload_rte' => 'true'                                 // Display a TinyMCE editor for textarea field only
         'suffix' => 'kg',                                        // Display after the field (ie. currency).
                                                                  // For text fields or password fields only.
         'identifier' => 'id_carrier',                            // The unique ID for the form.
@@ -56,6 +57,8 @@ $this->fields_options = [
 ```
 
 For multilang configuration fields you can use `Lang` version i.e. `textLang` is the multilang version of `text` field.
+
+To save the HTML content of the TinyMCE editor, remember to use `'validation' => 'isCleanHtml'`.
 
 ## Basic declaration
 
