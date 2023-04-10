@@ -3,110 +3,216 @@ title: Extending the new product page form
 weight: 3
 ---
 
-# Extending the new product page form
-{{< minver v="8.0" title="true" >}}
+# Extending the new product page form {{< minver v="8.1.0" >}}
 
-To allow the new product page to be easily extendable by modules, a new feature was introduced in {{< minver v="8.1.0" title="true" >}} 
-This features allows to add new custom tabs with the `NavigationTabType`.
+The new Back Office product page introduced in {{< minver v="8.1.0" >}} removed several hooks previously available: 
 
-The goal of this How-to is to show how to customize the new product page with all this new introduced features, and older ones. 
+- `displayAdminProductsCombinationBottom`
+- `displayAdminProductsSeoStepBottom`
+- `displayAdminProductsShippingStepBottom`
+- `displayAdminProductsQuantitiesStepBottom`
+- `displayAdminProductsMainStepLeftColumnBottom`
+- `displayAdminProductsMainStepLeftColumnMiddle`
+- `displayAdminProductsMainStepRightColumnBottom`
+- `displayAdminProductsOptionsStepTop`
+- `displayAdminProductsOptionsStepBottom`
+- `displayAdminProductsPriceStepBottom`
 
-The example module we are going to create can be found [here](https://github.com/PrestaShop/example-modules/tree/master/demoproductform) in our [example modules repository](https://github.com/PrestaShop/example-modules).
+The only `displayAdminProduct*` hook that was not removed is: 
 
-## What will be achieved with this how-to ?
+- `displayAdminProductsExtra`
 
-In this how-to, we will create a new module, and add a new custom field in the native description tab. 
+In this guide, we will discover how to extend the product page by adding custom fields, in the old and new way of doing this.
 
-![custom field in product form](../img/productform-customfield.png)
+Finally, we will discover how to add a new Tab to the product page. 
 
-Then, we will create a new empty tab, and we will add a new custom field in this module created tab.
+## Add a custom field, before {{< minver v="8.1.0" >}}
 
-![custom tab in product form](../img/productform-customtab.png)
+A custom field, before {{< minver v="8.1.0" >}}, was added by hooking to one of the `displayAdminProducts<location>` hook. 
 
-Finally, we will experience how those features work in older versions of PrestaShop since they are backward compatible.
+For example, to add a custom field, in the `SEO` tab, you had to create a module with this content: 
 
-![custom field and tabs in older versions of PrestaShop](../img/productform-backward.png)
-
-## Create the module
-
-To create the module, we use the [regular module creation method]({{< ref "8/modules/creation/tutorial" >}}).
-
-Our regular module skeleton: 
-
+`demooldhooks.php`: 
 ```php
-<?php
-
 declare(strict_types=1);
 
-if (!defined('_PS_VERSION_')) {
-    exit;
-}
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
-require_once __DIR__ . '/vendor/autoload.php';
-
-class DemoProductForm extends Module
+class DemoOldHooks extends Module
 {
-    public function __construct()
-    {
-        $this->name = 'demoproductform';
-        $this->author = 'PrestaShop';
-        $this->version = '1.0.0';
-        $this->ps_versions_compliancy = ['min' => '8.1.0', 'max' => _PS_VERSION_];
+  public function __construct()
+  {
+    // [...]
+  }
 
-        parent::__construct();
+  /**
+   * @return bool
+   */
+  public function install()
+  {
+      return parent::install() && $this->registerHook(['displayAdminProductsSeoStepBottom']);
+  }
 
-        $this->displayName = $this->trans('DemoProductForm', [], 'Modules.Demoproductform.Config');
-        $this->description = $this->trans('DemoProductForm module description', [], 'Modules.Demoproductform.Config');
-    }
-}
-```
+  public function hookDisplayAdminProductsSeoStepBottom($params)
+  {
+    $productId = $params['id_product'];
+    $formFactory = $this->get('form.factory');
+    $twig = $this->get('twig');
 
-In this example module, we use the [new translation system]({{< ref "/8/modules/creation/module-translation/new-system" >}}), so we need to add this method to enable the translation system: 
+    $product = new Product($productId);
 
-```php
-    public function isUsingNewTranslationSystem(): bool
-    {
-        return true;
-    }
-```
+    $form = $formFactory
+      ->createNamedBuilder('seo_special_field', TextType::class, "")
+      ->getForm();
 
-This module is also PSR4 compliant, and namespaced, so we require the `autoload.php`, and our `composer.json` contains the following content: 
+    $template = '@Modules/demooldhooks/views/templates/seo_special_field.html.twig';
 
-```json
-{
-  "name": "prestashop/demoproductform",
-  "authors": [
-    {
-      "name": "Julius Zukauskas",
-      "email": "julius.zukauskas@invertus.eu"
-    },
-    {
-      "name": "PrestaShop Core team"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "PrestaShop\\Module\\DemoProductForm\\": "src/"
-    },
-    "config": {
-      "prepend-autoloader": false
-    },
-    "type": "prestashop-module"
-  },
-  "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.14"
+    return $twig->render($template, [
+      'seo_special_field' => $form->createView()
+    ]);
   }
 }
 ```
 
+`views/templates/seo_special_field.html.twig`: 
 
-## Create a custom field in description tab
+```php
+<h3>SEO Special field</h3>
+{{ form_widget(seo_special_field) }}
+```
 
-## Create a new tab
+Before {{< minver v="8.1.0" >}}, that would produce: 
 
-## Create a custom field in the new tab
+![custom field in SEO tab in older versions of PrestaShop](../img/old-product-form/seo-custom-field.png)
 
-## Backward compatibility of those features
+From {{< minver v="8.1.0" >}}, that would produce nothing, since this hook (`displayAdminProductsSeoStepBottom`) is no more used. 
 
+## Add a custom field, from {{< minver v="8.1.0" >}}
 
-## Next steps
+To do exactly the same, from {{< minver v="8.1.0" >}}, we will implement `actionProductFormBuilderModifier` hook and modify the Product FormBuilder.
+
+First, create a module, with a `composer.json` file, [as instructed here]({{< relref "/8/modules/concepts/composer" >}}).
+
+`demonewhooks.php`: 
+
+```php
+declare(strict_types=1);
+
+use DemoNewHooks\Form\Modifier\ProductFormModifier;
+
+class DemoNewHooks extends Module
+{
+    public function __construct()
+    {
+        // [...]
+    }
+
+    /**
+     * @return bool
+     */
+    public function install()
+    {
+        return parent::install() && $this->registerHook(['actionProductFormBuilderModifier']);
+    }
+    
+    /**
+     * Modify product form builder
+     *
+     * @param array $params
+     */
+    public function hookActionProductFormBuilderModifier(array $params): void
+    {
+        /** @var ProductFormModifier $productFormModifier */
+        $productFormModifier = $this->get(ProductFormModifier::class);
+        $productId = (int) $params['id'];
+
+        $productFormModifier->modify($productId, $params['form_builder']);
+    }
+}
+```
+
+`config/services.yml`: 
+
+```yml
+services:
+    DemoNewHooks\Form\Modifier\ProductFormModifier:
+        autowire: true
+        public: true
+        arguments:
+            $formBuilderModifier: '@form.form_builder_modifier'
+```
+
+`src/Form/Modifier/ProductFormModifier.php`
+
+```php
+declare(strict_types=1);
+
+namespace DemoNewHooks\Form\Modifier;
+
+use PrestaShopBundle\Form\FormBuilderModifier;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\FormBuilderInterface;
+
+final class ProductFormModifier
+{
+    /**
+     * @var FormBuilderModifier
+     */
+    private $formBuilderModifier;
+
+    /**
+     * @param FormBuilderModifier $formBuilderModifier
+     */
+    public function __construct(
+        FormBuilderModifier $formBuilderModifier
+    ) {
+        $this->formBuilderModifier = $formBuilderModifier;
+    }
+
+    /**
+     * @param int|null $productId
+     * @param FormBuilderInterface $productFormBuilder
+     */
+    public function modify(
+        int $productId,
+        FormBuilderInterface $productFormBuilder
+    ): void {
+     
+        $seoTabFormBuilder = $productFormBuilder->get('seo');
+        $this->formBuilderModifier->addAfter(
+            $seoTabFormBuilder,
+            'tags',
+            'demo_module_custom_field',
+            TextType::class,
+            [
+                // you can remove the label if you dont need it by passing 'label' => false
+                'label' => 'SEO Special Field',
+                // customize label by any html attribute
+                'label_attr' => [
+                    'title' => 'h2',
+                    'class' => 'text-info',
+                ],
+                'attr' => [
+                    'placeholder' => 'SEO Special field',
+                ],
+                // this is just an example, but in real case scenario you could have some data provider class to wrap more complex cases
+                'data' => "",
+                'empty_data' => '',
+                'form_theme' => '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit_base.html.twig',
+            ]
+        );
+    }
+}
+```
+
+This module is creating a Form Builder Modifier (`ProductFormModifier`), adding a `TextType` field to the `seo` tab form builder from the `ProductForm Builder`, added after the `tags` form element. 
+
+This Form Builder Modifier is hooked to the `actionProductFormBuilderModifier` hook. 
+
+This produces this form: 
+
+![custom field in SEO tab in newer versions of PrestaShop](../img/new-product-form/seo-custom-field.png)
+
+{{% notice note %}}
+This new way of adding custom fields to the product page allows you for more precise positioning, you can now position your fields/forms exactly where you want. 
+{{% /notice %}}
