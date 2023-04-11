@@ -60,7 +60,7 @@ prestashop-git | \n* Almost ! Starting web server now\n
 
 At this point, your PrestaShop installation is ready and the website is available at http://localhost:8001. 
 
-The default credentials for the back-office are `demo@prestashop.com` / `prestashop_demo`.
+The default credentials for the back-office are `demo@prestashop.com` / `Correct Horse Battery Staple`.
 
 Default MySQL credentials to connect using 3rd party programs like Sequel Pro and others:
 Username: `root`
