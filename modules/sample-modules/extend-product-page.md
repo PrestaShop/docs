@@ -37,6 +37,7 @@ A custom field, before {{< minver v="8.1.0" >}}, was added by hooking to one of 
 For example, to add a custom field, in the `SEO` tab, you had to create a module with this content: 
 
 `demooldhooks.php`: 
+
 ```php
 declare(strict_types=1);
 
@@ -490,10 +491,29 @@ class CustomTabType extends TranslatorAwareType
 }
 ```
 
+Declare your service in your `config.yml`:
+
+```yml
+services:
+    DemoNewHooks\Form\Type\CustomTabType:
+        class: DemoNewHooks\Form\Type\CustomTabType
+        parent: 'form.type.translatable.aware'
+        public: true
+        arguments:
+            - '@=service("prestashop.adapter.data_provider.currency").getDefaultCurrency()'
+        tags:
+            - { name: form.type }
+```
+
+Add a `use` statement in your `ProductFormModifier`: 
+
+```php
+use DemoNewHooks\Form\Type\CustomTabType;
+```
+
 Finally, add this `CustomTabType` to the `$productFormBuilder` variable in your `modify` method in the `ProductFormModifier`: 
 
 ```php
-
 /**
  * @param int|null $productId
  * @param FormBuilderInterface $productFormBuilder
