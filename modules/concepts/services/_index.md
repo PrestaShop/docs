@@ -247,7 +247,7 @@ As you can see, interfaces lay the ground for easy extension and customization, 
 
 Since {{< minver v=8.1 >}}, [modules autoloaders and service configurations loading are now registered before compiler passes](https://github.com/PrestaShop/PrestaShop/pull/30588). That means that you can now use native Symfony service configuration features in your modules. 
 
-Those features are :
+Those features are:
 
 - [applying configuration based on the extended classes or implemented interfaces](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#interface-based-service-configuration)
 - [autoconfiguration](https://symfony.com/blog/new-in-symfony-3-3-simpler-service-configuration#interface-based-service-configuration)
