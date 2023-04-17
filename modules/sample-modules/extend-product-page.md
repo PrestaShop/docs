@@ -23,12 +23,12 @@ The only `displayAdminProduct*` hook that was not removed is:
 - `displayAdminProductsExtra`
 
 {{% notice info %}}
-Altough conserved for Backwards compatibility, usage of this hook (`displayAdminProductsExtra`) is not recommended for new modules.
+Although kept for backward compatibility, this hook (`displayAdminProductsExtra`) is not recommended for new modules.
 {{% /notice %}}
 
-In this guide, we will discover how to extend the product page by adding custom fields, in the old and new way of doing this.
+In this guide, we will discover how to extend the product page by adding custom fields, in the old and new ways of doing this.
 
-Finally, we will discover how to add a new Tab to the product page. 
+Finally, we will discover how to add a new tab to the product page, which is possible for a new product page from PrestaShop 8.1. 
 
 ## Add a custom field, before {{< minver v="8.1.0" >}}
 
@@ -90,7 +90,7 @@ Before {{< minver v="8.1.0" >}}, that would produce:
 
 ![custom field in SEO tab in older versions of PrestaShop](../img/old-product-form/seo-custom-field.png)
 
-From {{< minver v="8.1.0" >}}, that would produce nothing, since this hook (`displayAdminProductsSeoStepBottom`) is no more used. 
+From {{< minver v="8.1.0" >}}, this field won't be displayed since this hook (`displayAdminProductsSeoStepBottom`) is no longer available.
 
 ## Add a custom field, from {{< minver v="8.1.0" >}}
 
@@ -191,14 +191,14 @@ final class ProductFormModifier
             TextType::class, // your field type
             [
                 'label' => 'SEO Special Field', // you can remove the label if you dont need it by passing 'label' => false
-                'label_attr' => [ // customize label by any html attribute
+                'label_attr' => [ // customize label with any HTML attribute
                     'title' => 'h2',
                     'class' => 'text-info',
                 ],
                 'attr' => [
                     'placeholder' => 'SEO Special field',
                 ],
-                // this is just an example, but in real case scenario you could have some data provider class to wrap more complex cases
+                // this is just an example, but in real case scenario, you could have some data provider class to handle more complex cases
                 'data' => "",
                 'empty_data' => '',
                 'form_theme' => '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit_base.html.twig',
@@ -208,7 +208,7 @@ final class ProductFormModifier
 }
 ```
 
-This module is creating a Form Builder Modifier (`ProductFormModifier`), adding a `TextType` field to the `seo` tab form builder from the `ProductForm Builder`, added after the `tags` form element. 
+This module uses a Form Builder Modifier (`FormBuilderModifier `), and adds a `TextType` field to the `SEO` tab form builder from the `ProductForm Builder`,  after the existing `tags` form element. 
 
 This Form Builder Modifier is hooked to the `actionProductFormBuilderModifier` hook. 
 
@@ -217,7 +217,7 @@ This produces this form:
 ![custom field in SEO tab in newer versions of PrestaShop](../img/new-product-form/seo-custom-field.png)
 
 {{% notice note %}}
-This new way of adding custom fields to the product page allows you for more precise positioning, you can now position your fields/forms exactly where you want. 
+This new way of adding custom fields to the product page allows you for more precise positioning. You can now position your fields/forms exactly where you want. 
 {{% /notice %}}
 
 ## Cheatsheet for old hooks / new hooks
@@ -241,9 +241,9 @@ This new way of adding custom fields to the product page allows you for more pre
 
 Form Type details: [`EditProductFormType`](https://github.com/PrestaShop/PrestaShop/blob/8.1.0-beta.1/src/PrestaShopBundle/Form/Admin/Sell/Product/EditProductFormType.php)
 
-## Extend a sub form
+## Extend a subform
 
-Sub forms can be extended aswell, for example, to add a new input on each combination of a product: 
+Subforms can be extended as well, for example, to add a new input on each combination of a product: 
 
 - Hook to actionProductCombinationFormBuilderModifier ([`action<Object>FormBuilderModifier`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/action<FormName>FormBuilderModifier" >}}))
 
@@ -320,11 +320,11 @@ A complete working example and implementation is available in our [example-modul
 
 ## Add a custom Tab to Product Page
 
-{{< minver v="8.1.0" >}} introduced a new feature : Custom tabs in product page. 
+{{< minver v="8.1.0" >}} introduced a new feature: custom tabs on the product page. 
 
-A complete working example and implementation is available in our [example-module repository](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
+A complete working example of implementation is available in our [example-module repository](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
 
-- Modify the Product Form builder with `actionProductFormBuilderModifier` hook, and create a modifier: 
+- You can extend the product form builder with `actionProductFormBuilderModifier` hook with a created modifier: 
 
 `demonewhooks.php`: 
 
@@ -541,17 +541,17 @@ public function modify(
 ```
 
 {{% notice note %}}
-Any type added directly to the `$productFormBuilder` (and not to a sub tab) will be considered as a tab.
+Any type added directly to the `$productFormBuilder` (and not to a sub-tab) will be considered as a tab.
 {{% /notice %}}
 
 ## Backwards compatibility for displayAdminProductsExtra hook
 
-A custom Form Type `ExtraModulesType` as been added to {{< minver v="8.1.0" >}}, to allow backwards compatibility for modules implementing `displayAdminProductsExtra` hook.
+A custom Form Type `ExtraModulesType` has been added to {{< minver v="8.1.0" >}}, to allow backward compatibility for modules implementing `displayAdminProductsExtra` hook.
 
-If a module has registered a hook on `displayAdminProductsExtra`, a custom tab will be added on the new product page, handled by `ExtraModulesType`. 
+If a module registers to `displayAdminProductsExtra` hook, a custom tab will be added on the new product page, handled by `ExtraModulesType`. 
 
 {{% notice info %}}
-Altough conserved for Backwards compatibility, usage of this hook (`displayAdminProductsExtra`) is not recommended for new modules.
+Although kept for backward compatibility, this hook (`displayAdminProductsExtra`) is not recommended for new modules.
 {{% /notice %}}
 
 ```php
