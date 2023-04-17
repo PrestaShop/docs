@@ -208,7 +208,7 @@ final class ProductFormModifier
 }
 ```
 
-This module uses a Form Builder Modifier (`FormBuilderModifier `), and adds a `TextType` field to the `SEO` tab form builder from the `ProductForm Builder`,  after the existing `tags` form element. 
+This module uses a Form Builder Modifier (`FormBuilderModifier`), and adds a `TextType` field to the `SEO` tab form builder from the `ProductForm Builder`,  after the existing `tags` form element. 
 
 This Form Builder Modifier is hooked to the `actionProductFormBuilderModifier` hook. 
 
@@ -570,3 +570,7 @@ public function hookDisplayAdminProductsExtra(array $params): string
 ```
 
 A complete working example and implementation is available in our [example-module repository](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
+
+## Handle data modified by FormBuilderModifier
+
+You need to implement the corresponding [`actionAfterCreate<FormName>FormHandler`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/actionAfterCreate<FormName>FormHandler" >}}) or [`actionAfterUpdate<FormName>FormHandler`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/actionAfterUpdate<FormName>FormHandler" >}}) hook, as shown in our [example-module repository](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
