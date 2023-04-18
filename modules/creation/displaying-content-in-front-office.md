@@ -308,7 +308,7 @@ class mymoduledisplayModuleFrontController extends ModuleFrontController
 
 - *display.tpl*
 
-```
+```smarty
 {extends file='page.tpl'}
 {block name='page_content'}
    Welcome to my shop!
