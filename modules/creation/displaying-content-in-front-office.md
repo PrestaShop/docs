@@ -308,8 +308,11 @@ class mymoduledisplayModuleFrontController extends ModuleFrontController
 
 - *display.tpl*
 
-```
-Welcome to my shop!
+```smarty
+{extends file='page.tpl'}
+{block name='page_content'}
+   Welcome to my shop!
+{/block}
 ```
 
 Let's explore `display.php`, our first PrestaShop front-end controller,
@@ -390,8 +393,11 @@ in our TPL file.
 
 - *mymodule.tpl*
 
-```
-{$my_module_message}
+```smarty
+{extends file='page.tpl'}
+{block name='page_content'}
+    {$my_module_message}
+{/block}
 ```
 
 PrestaShop adds its own set of variables. For instance,
