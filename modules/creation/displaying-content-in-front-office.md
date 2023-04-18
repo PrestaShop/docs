@@ -393,7 +393,7 @@ in our TPL file.
 
 - *mymodule.tpl*
 
-```
+```smarty
 {extends file='page.tpl'}
 {block name='page_content'}
     {$my_module_message}
