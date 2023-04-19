@@ -5,7 +5,7 @@ weight: 3
 
 # Extending the new product page form {{< minver v="8.1.0" >}}
 
-The new Back Office product page introduced in {{< minver v="8.1.0" >}} removed several hooks previously available: 
+The new Back Office product page introduced in {{< minver v="8.1.0" >}} removed several hooks which were previously available on the page. Complete list of removed hooks:
 
 - `displayAdminProductsCombinationBottom`
 - `displayAdminProductsSeoStepBottom`
@@ -32,7 +32,7 @@ Finally, we will discover how to add a new tab to the product page, which is pos
 
 ## Add a custom field, before {{< minver v="8.1.0" >}}
 
-A custom field, before {{< minver v="8.1.0" >}}, was added by hooking to one of the `displayAdminProducts<location>` hook. 
+A custom field, before {{< minver v="8.1.0" >}}, was added by hooking to one of the `displayAdminProducts<Location>` hooks. 
 
 For example, to add a custom field, in the `SEO` tab, you had to create a module with this content: 
 
@@ -88,13 +88,13 @@ class DemoOldHooks extends Module
 
 Before {{< minver v="8.1.0" >}}, that would produce: 
 
-![custom field in SEO tab in older versions of PrestaShop](../img/old-product-form/seo-custom-field.png)
+![Custom field in SEO tab in older versions of PrestaShop](../img/old-product-form/seo-custom-field.png)
 
-From {{< minver v="8.1.0" >}}, this field won't be displayed since this hook (`displayAdminProductsSeoStepBottom`) is no longer available.
+From {{< minver v="8.1.0" >}}, this field won't be displayed as a hook (`displayAdminProductsSeoStepBottom`) is no longer available.
 
 ## Add a custom field, from {{< minver v="8.1.0" >}}
 
-To do exactly the same, from {{< minver v="8.1.0" >}}, we will implement `actionProductFormBuilderModifier` hook and modify the Product FormBuilder.
+To do exactly the same, from {{< minver v="8.1.0" >}}, we will implement `actionProductFormBuilderModifier` hook and modify product's FormBuilder.
 
 First, create a module, with a `composer.json` file, [as instructed here]({{< relref "/8/modules/concepts/composer" >}}).
 
@@ -208,19 +208,19 @@ final class ProductFormModifier
 }
 ```
 
-This module uses a Form Builder Modifier (`FormBuilderModifier`), and adds a `TextType` field to the `SEO` tab form builder from the `ProductForm Builder`,  after the existing `tags` form element. 
+This module uses a Form Builder Modifier (`FormBuilderModifier`), and adds a `TextType` field to the `SEO` tab form,  after the existing `tags` form element. 
 
-This Form Builder Modifier is hooked to the `actionProductFormBuilderModifier` hook. 
+`FormBuilderModifier` is hooked to the `actionProductFormBuilderModifier`. 
 
-This produces this form: 
+These changes produces the below's:
 
-![custom field in SEO tab in newer versions of PrestaShop](../img/new-product-form/seo-custom-field.png)
+![Custom field in SEO tab in newer versions of PrestaShop](../img/new-product-form/seo-custom-field.png)
 
 {{% notice note %}}
 This new way of adding custom fields to the product page allows you for more precise positioning. You can now position your fields/forms exactly where you want. 
 {{% /notice %}}
 
-## Cheatsheet for old hooks / new hooks
+## Cheatsheet for old/new hooks / new hooks
 
 ### Hook: actionProductFormBuilderModifier
 
@@ -318,7 +318,7 @@ class CombinationFormModifier
 This example will add a `TextType` input on each `Combination` of a `Product`. 
 A complete working example and implementation is available in our [example-module repository](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
 
-## Add a custom Tab to Product Page
+## Add a custom tab to the product page
 
 {{< minver v="8.1.0" >}} introduced a new feature: custom tabs on the product page. 
 
