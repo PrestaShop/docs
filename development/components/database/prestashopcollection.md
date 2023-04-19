@@ -17,7 +17,7 @@ It eases fetching / filtering selections of ObjectModel objects.
 ```php
 use PrestaShopCollection;
 
-$productCollection = new PrestaShopCollection('Product')
+$productCollection = (new PrestaShopCollection('Product'))
     ->where('on_sale', '=', true)
     ->orderBy('reference', 'desc')
     ->setPageSize(100);
@@ -27,7 +27,6 @@ if(count($productCollection) > 0){
         // do something with your product
     }
 }
-
 ```
 
 ## Create a PrestaShopCollection
@@ -48,6 +47,10 @@ use PrestaShopCollection;
 $idLang=1;
 $productCollection = new PrestaShopCollection('Product', $idLang);
 ```
+
+{{% notice note %}}
+Using `$id_lang` parameter will allow to set a Lang Context when querying / filtering multilang fields. If not set, multilang fields will be returned as `array` in the Collection.
+{{% /notice %}}
 
 ## Get results, count results
 
@@ -72,37 +75,6 @@ foreach($productCollection as $product){
 
 // Or you can use the count() function (the class implements Countable):
 count($productCollection);
-```
-
-## Joining to associated entities (join)
-
-When building the Collection, you may need to join with other ObjectModel entities. 
-You can join on associations that are declared in the $definition of the ObjectModel. 
-
-```php
-public function join($association, $on = '', $type = null)
-```
-
-Join `manufacturer` to your `Product` collection: 
-
-```php
-$productCollection = new PrestaShopCollection('Product');
-$productCollection->join('manufacturer');
-```
-
-You can join on a different field by specifying the field name as a second parameter: 
-
-```php
-$productCollection = new PrestaShopCollection('Product');
-$productCollection->join('categories', 'id_category');
-```
-
-By default, a `LEFT JOIN` will be used. `INNER JOIN` or `LEFT OUTER JOIN` are also available using the third parameter:
-
-```php
-$productCollection->join('categories', 'id_category', PrestaShopCollection::LEFT_JOIN);
-$productCollection->join('categories', 'id_category', PrestaShopCollection::INNER_JOIN);
-$productCollection->join('categories', 'id_category', PrestaShopCollection::LEFT_OUTER_JOIN);
 ```
 
 ## Filtering a Collection (where, having)
@@ -156,6 +128,47 @@ Another method is available, `having()`, which calls `where()` with the paramete
 public function having($field, $operator, $value)
 ```
 
+## Joining to associated entities (join)
+
+When building the Collection, you may need to join with other ObjectModel entities. 
+You can join on associations that are declared in the $definition of the ObjectModel. 
+
+```php
+public function join($association, $on = '', $type = null)
+```
+
+Join `manufacturer` to your `Product` collection: 
+
+```php
+$productCollection = new PrestaShopCollection('Product');
+$productCollection->join('manufacturer');
+```
+
+You can join on a different field by specifying the field name as a second parameter: 
+
+```php
+$productCollection = new PrestaShopCollection('Product');
+$productCollection->join('categories', 'id_category');
+```
+
+By default, a `LEFT JOIN` will be used. `INNER JOIN` or `LEFT OUTER JOIN` are also available using the third parameter:
+
+```php
+$productCollection->join('categories', 'id_category', PrestaShopCollection::LEFT_JOIN);
+$productCollection->join('categories', 'id_category', PrestaShopCollection::INNER_JOIN);
+$productCollection->join('categories', 'id_category', PrestaShopCollection::LEFT_OUTER_JOIN);
+```
+
+### Using where with join
+
+One of the interest of joining other ObjectModel entities to your collection, is the possibility to filter on the external entity with `where()`. 
+
+```php
+$productCollection = (new PrestaShopCollection('Product'))
+    ->join('manufacturer')
+    ->where('manufacturer.name', '=', 'Manufacturer AAA');
+```
+
 ## Ordering a Collection (order by)
 
 To order your collection, use the `orderBy()` method. 
@@ -167,8 +180,8 @@ public function orderBy($field, $order = 'asc')
 Ordering can be done in ascending or descending, with `asc` or `desc` `$order` parameter.
 
 ```php
-$productCollection = new PrestaShopCollection('Product');
-$productCollection->orderBy('reference', 'desc');
+$productCollection = (new PrestaShopCollection('Product'))
+    ->orderBy('reference', 'desc');
 ```
 
 ## Grouping (group by)
@@ -180,8 +193,8 @@ public function groupBy($field)
 ```
 
 ```php
-$productCollection = new PrestaShopCollection('Product');
-$productCollection->groupBy('id_supplier');
+$productCollection = (new PrestaShopCollection('Product'))
+    ->groupBy('id_supplier');
 ```
 
 ## Paginating a Collection (offset / limit)
@@ -198,8 +211,8 @@ public function setPageSize($page_size)
 To use this feature, first, set the $page_size:
 
 ```php
-$productCollection = new PrestaShopCollection('Product');
-$productCollection->setPageSize(100); // will get only 100 items
+$productCollection = (new PrestaShopCollection('Product'))
+    ->setPageSize(100); // will get only 100 items
 ```
 
 If only `$page_size` is set, the collection will return the first `$page_size` items. 
@@ -207,9 +220,9 @@ If only `$page_size` is set, the collection will return the first `$page_size` i
 To do a pagination, and get the page 2 of the collection, use the following example: 
 
 ```php
-$productCollection = new PrestaShopCollection('Product');
-$productCollection->setPageSize(100); // will get only 100 items
-$productCollection->setPageNumber(2); // but from page 2, equivalent to offset=(pageNumber - 1) * page_size. 
+$productCollection = (new PrestaShopCollection('Product'))
+    ->setPageSize(100) // will get only 100 items
+    ->setPageNumber(2); // but from page 2, equivalent to offset=(pageNumber - 1) * page_size. 
 ```
 
 - Getting the page: `1` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement: 
