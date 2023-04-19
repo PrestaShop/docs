@@ -64,7 +64,7 @@ Add the following to your mymodule.php file:
     {
         $this->context->controller->registerStylesheet(
             'mymodule-style',
-            $this->_path.'views/css/mymodule.css',
+            'modules/' . $this->name .'/views/css/mymodule.css',
             [
                 'media' => 'all',
                 'priority' => 1000,
@@ -73,7 +73,7 @@ Add the following to your mymodule.php file:
 
         $this->context->controller->registerJavascript(
             'mymodule-javascript',
-            $this->_path.'views/js/mymodule.js',
+            'modules/' . $this->name .'/views/js/mymodule.js',
             [
                 'position' => 'bottom',
                 'priority' => 1000,
