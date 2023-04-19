@@ -58,6 +58,7 @@ When your collection is created, you may need to get its content. Several method
 
 - `getFirst()`: gets first item of the Collection
 - `getLast()`: gets last item of the Collection
+- or simply access items via index, or iterate with `foreach`
 
 ```php
 $productCollection = new PrestaShopCollection('Product');
@@ -65,7 +66,7 @@ $productCollection = new PrestaShopCollection('Product');
 $firstProduct = $productCollection->getFirst();
 $lastProduct = $productCollection->getLast();
 
-// you can access items in the collection by offset, like a regular array (the class implements ArrayAccess). Index starts at 0
+// you can access items in the collection by index, like a regular array (the class implements ArrayAccess). Index starts at 0
 $thirdProduct = $productCollection[2]; 
 
 // The collection is also iterable (the class implements Iterator): 
@@ -177,7 +178,7 @@ To order your collection, use the `orderBy()` method.
 public function orderBy($field, $order = 'asc')
 ```
 
-Ordering can be done in ascending or descending, with `asc` or `desc` `$order` parameter.
+Ordering can be done in ascending or descending direction, with `asc` or `desc` `$order` parameter.
 
 ```php
 $productCollection = (new PrestaShopCollection('Product'))
@@ -233,3 +234,7 @@ $productCollection = (new PrestaShopCollection('Product'))
 
 - Getting the page: `3` of a collection with a page_size of: `100` is the `PrestaShopCollection` equivalent of this `SQL` statement: 
     `LIMIT 100 OFFSET 200` or `LIMIT 200,100`
+
+{{% notice info %}}
+Known issue: When not using `$id_lang`, and using pagination (`setPageSize()`, `setPageNumber()`), pagination will be broken. Please use a Lang Context if the entity is multi-lang enabled. 
+{{% /notice %}}
