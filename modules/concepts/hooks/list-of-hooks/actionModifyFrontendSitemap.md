@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+hasExample: true
 ---
 
 # Hook actionModifyFrontendSitemap {{< minver v="8.1" >}}
@@ -42,4 +43,22 @@ Hook::exec(
     null,
     true
 );
+```
+
+## Example implementation
+
+```php
+public function hookActionModifyFrontendSitemap($params)
+{
+    $customUrls = [
+        [
+            'id' => 'custom-url-1',
+            'label' => 'Custom URL',
+            'url' => 'https://prestashop-project.org',
+        ]
+    ];
+
+    $params['urls']['pages']['links'] = array_merge($params['urls']['pages']['links'], $customUrls); // add custom urls to pages group
+    unset($params['urls']['categories']); // hide categories
+}
 ```
