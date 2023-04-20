@@ -15,39 +15,21 @@ The same note as above, in order to have this module working you must have set i
 {{% /notice %}}
 
 {{% notice note %}}
-The latest versions of this module allow updates from PS 1.6 to PS 1.7 only.
+The latest version (v4.15+) of this module allow updates from PS 1.7.x to PS 8.0.x versions only. 
+If you upgrade from a version older than 1.7, please use a previous version of this module (v4.14.1 and less) and refer to [previous major version upgrade guide]({{< ref "/1.7/basics/keeping-up-to-date/_index.md" >}}).
 {{% /notice %}}
-
-### Note about version +4.0.0
-
-This module has been reworked internally for PrestaShop 1.6 & 1.7.
-
-Documentation about this major version is documented in [Upgrade module pages]({{< ref "/8/development/upgrade-module/_index.md" >}}).
 
 ## Download / Installation
 
 - Download the latest release from GitHub https://github.com/PrestaShop/autoupgrade/releases
 
-Then, import your module archive on the modules page. To do so, you can find the button “Upload a module” (PrestaShop 1.7) or “Add a module”
-(PrestaShop 1.6) at the top right of the page. Clicking on it will open a form that will allow you to upload your module zip.
-
-On PrestaShop 1.7:
+Then, import your module archive on the modules page. To do so, you can find the button “Upload a module” (PrestaShop >= 1.7.x) at the top right of the page. Clicking on it will open a form that will allow you to upload your module zip.
 
 {{< figure src="../img/image70.png" >}}
 
-On PrestaShop 1.6:
-
-{{< figure src="../img/image79.png" >}}
-
 - From the administration panel
 
-On PrestaShop 1.7:
-
 {{< figure src="../img/image33.png" >}}
-
-On PrestaShop 1.6:
-
-{{< figure src="../img/image66.png" >}}
 
 ## Usage
 

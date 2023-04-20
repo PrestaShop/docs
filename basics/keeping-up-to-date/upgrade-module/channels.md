@@ -1,6 +1,8 @@
 ---
 title: Upgrade channels
 weight: 40
+aliases:
+  - /8/development/upgrade-module/channels
 ---
 
 # Upgrade channels
@@ -8,7 +10,6 @@ weight: 40
 Different channels are available for upgrade.
 
 Depending on the channel, the archive that will be used to upgrade the shop will be different.
-
 
 ### Major
 
