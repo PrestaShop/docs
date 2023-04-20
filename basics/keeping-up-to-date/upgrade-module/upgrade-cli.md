@@ -77,7 +77,7 @@ To upgrade your PrestaShop store to the latest version using the command line in
 
 1. Download the latest version of the autoupgrade module and place it in the /modules directory:
 
-`curl -L  https://github.com/PrestaShop/autoupgrade/releases/download/v4.15.0/autoupgrade.zip -o modules/autoupgrade.zip && unzip modules/autoupgrade.zip`
+`curl -L  https://github.com/PrestaShop/autoupgrade/releases/latest/download/autoupgrade.zip -o modules/autoupgrade.zip && unzip modules/autoupgrade.zip`
 
 2. Install the new version of the autoupgrade module:
 
