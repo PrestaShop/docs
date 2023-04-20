@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+hasExample: true
 ---
 
 # Hook actionModifyFrontendSitemap {{< minver v="8.1" >}}
