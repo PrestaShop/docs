@@ -82,7 +82,7 @@ Original module for PrestaShop 1.6 | Updated module for PrestaShop 1.7 | Native 
 [bankwire](https://github.com/PrestaShop/bankwire) | [ps_wirepayment](https://github.com/PrestaShop/ps_wirepayment) | ✅ Yes | ✅ Yes
 [blockadvertising](https://github.com/PrestaShop/blockadvertising) | [ps_advertising](https://github.com/PrestaShop/ps_advertising) | ❌ No | ❌ No
 [blockbanner](https://github.com/PrestaShop/blockbanner) | [ps_banner](https://github.com/PrestaShop/ps_banner) | ✅ Yes | ✅ Yes
-[blockbestsellers](https://github.com/PrestaShop/blockbestsellers) | [ps_bestsellers](https://github.com/PrestaShop/ps_bestsellers) | ❌ No | ❌ No
+[blockbestsellers](https://github.com/PrestaShop/blockbestsellers) | [ps_bestsellers](https://github.com/PrestaShop/ps_bestsellers) | ❌ No | ✅ Yes
 [blockcart](https://github.com/PrestaShop/blockcart) | [ps_shoppingcart](https://github.com/PrestaShop/ps_shoppingcart) | ✅ Yes | ✅ Yes
 [blockcategories](https://github.com/PrestaShop/blockcategories) | [ps_categorytree](https://github.com/PrestaShop/ps_categorytree) | ✅ Yes | ✅ Yes
 [blockcms](https://github.com/PrestaShop/blockcms) | [ps_linklist](https://github.com/PrestaShop/ps_linklist) | ✅ Yes | ✅ Yes
@@ -105,7 +105,7 @@ Original module for PrestaShop 1.6 | Updated module for PrestaShop 1.7 | Native 
 [blockuserinfo](https://github.com/PrestaShop/blockuserinfo) | [ps_customersignin](https://github.com/PrestaShop/ps_customersignin) | ✅ Yes | ✅ Yes
 [blockviewed](https://github.com/PrestaShop/blockviewed) | [ps_viewedproduct](https://github.com/PrestaShop/ps_viewedproduct) | ❌ No | ✅ Yes
 [carriercompare](https://github.com/PrestaShop/carriercompare) | [ps_carriercomparison](https://github.com/PrestaShop/ps_carriercomparison) | ❌ No | ❌ No
-[cashondelivery](https://github.com/PrestaShop/cashondelivery) | [ps_cashondelivery](https://github.com/PrestaShop/ps_cashondelivery) | ❌ No | ❌ No
+[cashondelivery](https://github.com/PrestaShop/cashondelivery) | [ps_cashondelivery](https://github.com/PrestaShop/ps_cashondelivery) | ❌ No | ✅ Yes
 [cheque](https://github.com/PrestaShop/cheque) | [ps_checkpayment](https://github.com/PrestaShop/ps_checkpayment) | ✅ Yes | ✅ Yes
 [crossselling](https://github.com/PrestaShop/crossselling) | [ps_crossselling](https://github.com/PrestaShop/ps_crossselling) | ✅ Yes | ✅ Yes
 [feeder](https://github.com/PrestaShop/feeder) | [ps_feeder](https://github.com/PrestaShop/ps_feeder) | ❌ No | ❌ No
