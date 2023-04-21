@@ -111,10 +111,10 @@ Original module for PrestaShop 1.6 | Updated module for PrestaShop 1.7 | Native 
 [feeder](https://github.com/PrestaShop/feeder) | [ps_feeder](https://github.com/PrestaShop/ps_feeder) | ❌ No | ❌ No
 [followup](https://github.com/PrestaShop/followup/) | [ps_reminder](https://github.com/PrestaShop/ps_reminder) | ❌ No | ❌ No
 [ganalytics](https://github.com/PrestaShop/ganalytics) | [ps_googleanalytics](https://github.com/PrestaShop/ps_googleanalytics) | ❌ No | ✅ Yes
-[homefeatured](https://github.com/PrestaShop/homefeatured) | [ps_featuredproducts](https://github.com/PrestaShop/ps_featuredproducts) | ✅ Yes
+[homefeatured](https://github.com/PrestaShop/homefeatured) | [ps_featuredproducts](https://github.com/PrestaShop/ps_featuredproducts) | ✅ Yes | ✅ Yes
 [homeslider](https://github.com/PrestaShop/homeslider) | [ps_imageslider](https://github.com/PrestaShop/ps_imageslider) | ✅ Yes | ✅ Yes
 [mailalerts](https://github.com/PrestaShop/mailalerts) | [ps_emailalerts](https://github.com/PrestaShop/ps_emailalerts) | ❌ No | ✅ Yes
-[onboarding](https://github.com/PrestaShop/onboarding) | [welcome](https://github.com/PrestaShop/welcome) | ✅ Yes
-[productscategory](https://github.com/PrestaShop/productscategory) | [ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts) | ❌ No 
+[onboarding](https://github.com/PrestaShop/onboarding) | [welcome](https://github.com/PrestaShop/welcome) | ✅ Yes | ❌ No
+[productscategory](https://github.com/PrestaShop/productscategory) | [ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts) | ❌ No | ✅ Yes
 [producttooltip](https://github.com/PrestaShop/producttooltip) | [ps_productinfo](https://github.com/PrestaShop/ps_productinfo) | ❌ No | ❌ No
 [socialsharing](https://github.com/PrestaShop/socialsharing) | [ps_sharebuttons](https://github.com/PrestaShop/ps_sharebuttons) | ✅ Yes | ✅ Yes
