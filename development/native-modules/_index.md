@@ -45,6 +45,7 @@ Module | Name | Native since | Description
 [ps_languageselector](https://github.com/PrestaShop/ps_languageselector)           | Language selector              | 1.7.0 | Adds a block allowing customers to select a language for your store's content.
 [ps_linklist](https://github.com/PrestaShop/ps_linklist)                           | Link list                      | 1.7.0 | Adds a block with several links.
 [ps_mainmenu](https://github.com/PrestaShop/ps_mainmenu)                           | Main menu                      | 1.7.0 | Adds a new horizontal menu to the top of your PrestaShop.
+[ps_newproducts](https://github.com/PrestaShop/ps_newproducts)                     | New products                   | 8.0.0 | Highlight your store's newest products, display a block on the homepage and let the visitors know about your latest news.
 [ps_searchbar](https://github.com/PrestaShop/ps_searchbar)                         | Search bar                     | 1.7.0 | Adds a quick search field to your PrestaShop.
 [ps_sharebuttons](https://github.com/PrestaShop/ps_sharebuttons)                   | Social media share buttons     | 1.7.0 | Displays social media sharing buttons (Twitter, Facebook, and Pinterest) on every product page.
 [ps_shoppingcart](https://github.com/PrestaShop/ps_shoppingcart)                   | Shopping cart                  | 1.7.0 | Adds a block containing the customer's shopping cart.
