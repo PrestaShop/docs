@@ -51,7 +51,7 @@ Module | Name | Native since | Description
 [ps_shoppingcart](https://github.com/PrestaShop/ps_shoppingcart)                   | Shopping cart                  | 1.7.0 | Adds a block containing the customer's shopping cart.
 [ps_socialfollow](https://github.com/PrestaShop/ps_socialfollow)                   | Social media follow links      | 1.7.0 | Allows you to add information about your brand's social networking accounts.
 [ps_specials](https://github.com/PrestaShop/ps_specials)                           | Specials block                 | 8.0.0 | Provide information on your special offers in a specific block displayed on your homepage.
-[ps_supplierlist](https://github.com/PrestaShop/ps_supplierlist)                    | Supplier list                 | 8.0.0 | Display your suppliers on your catalog and allow visitors to filter their search by supplier.
+[ps_supplierlist](https://github.com/PrestaShop/ps_supplierlist)                   | Supplier list                  | 8.0.0 | Display your suppliers on your catalog and allow visitors to filter their search by supplier.
 [ps_themecusto](https://github.com/PrestaShop/ps_themecusto)                       | Theme customization            | 1.7.4 | Easily configure and customize your homepage’s theme and main native modules.
 [ps_wirepayment](https://github.com/PrestaShop/ps_wirepayment)                     | Wire payment                   | 1.7.0 | Accept payments for your products via bank wire transfer.
 [sekeywords](https://github.com/PrestaShop/sekeywords)                             | Search engine keywords         | 1.4.0 | Displays which keywords have led visitors to your website.
