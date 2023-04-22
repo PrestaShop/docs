@@ -27,6 +27,7 @@ Module | Name | Native since | Description
 [ps_banner](https://github.com/PrestaShop/ps_banner)                               | Banner                         | 1.7.0 | Displays a banner on your store.
 [ps_bestsellers](https://github.com/PrestaShop/ps_bestsellers)                     | Top sellers                    | 8.0.0 | Show your visitors what are your top-selling products directly on your homepage.
 [ps_brandlist](https://github.com/PrestaShop/ps_brandlist)                         | Brand list                     | 8.0.0 | Display your brands on your catalog and allow your visitors to filter their search by brand.
+[ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts)           | Products in the same category  | 8.0.0 | Add a block on every product page that displays items from the same category.
 [ps_categorytree](https://github.com/PrestaShop/ps_categorytree)                   | Category tree links            | 1.7.0 | Adds a block featuring product categories.
 [ps_checkpayment](https://github.com/PrestaShop/ps_checkpayment)                   | Check payment                  | 1.7.0 | This module allows you to accept payments by check.
 [ps_contactinfo](https://github.com/PrestaShop/ps_contactinfo)                     | Contact information            | 1.7.0 | Allows you to display additional information about your store's customer service.
