@@ -29,6 +29,7 @@ Module | Name | Native since | Description
 [ps_brandlist](https://github.com/PrestaShop/ps_brandlist)                         | Brand list                     | 8.0.0 | Display your brands on your catalog and allow your visitors to filter their search by brand.
 [ps_categoryproducts](https://github.com/PrestaShop/ps_categoryproducts)           | Products in the same category  | 8.0.0 | Add a block on every product page that displays items from the same category.
 [ps_categorytree](https://github.com/PrestaShop/ps_categorytree)                   | Category tree links            | 1.7.0 | Adds a block featuring product categories.
+[ps_cashondelivery](https://github.com/PrestaShop/ps_cashondelivery)               | Cash on delivery (COD)         | 8.0.0 | Accept cash payments on delivery to make it easy for customers to purchase on your store.
 [ps_checkpayment](https://github.com/PrestaShop/ps_checkpayment)                   | Check payment                  | 1.7.0 | This module allows you to accept payments by check.
 [ps_contactinfo](https://github.com/PrestaShop/ps_contactinfo)                     | Contact information            | 1.7.0 | Allows you to display additional information about your store's customer service.
 [ps_crossselling](https://github.com/PrestaShop/ps_crossselling)                   | Cross selling                  | 1.7.7 | Adds a "Customers who bought this product also bought..." section to every product page.
@@ -53,6 +54,7 @@ Module | Name | Native since | Description
 [ps_specials](https://github.com/PrestaShop/ps_specials)                           | Specials block                 | 8.0.0 | Provide information on your special offers in a specific block displayed on your homepage.
 [ps_supplierlist](https://github.com/PrestaShop/ps_supplierlist)                   | Supplier list                  | 8.0.0 | Display your suppliers on your catalog and allow visitors to filter their search by supplier.
 [ps_themecusto](https://github.com/PrestaShop/ps_themecusto)                       | Theme customization            | 1.7.4 | Easily configure and customize your homepage’s theme and main native modules.
+[ps_viewedproduct](https://github.com/PrestaShop/ps_viewedproduct)                 | Viewed products block          | 8.0.0 | Display a kind of showcase on your product pages with recently viewed products.
 [ps_wirepayment](https://github.com/PrestaShop/ps_wirepayment)                     | Wire payment                   | 1.7.0 | Accept payments for your products via bank wire transfer.
 [sekeywords](https://github.com/PrestaShop/sekeywords)                             | Search engine keywords         | 1.4.0 | Displays which keywords have led visitors to your website.
 [statsbestcategories](https://github.com/PrestaShop/statsbestcategories)           | Best categories                | 1.4.0 | Adds a list of the best categories to the Stats dashboard.
