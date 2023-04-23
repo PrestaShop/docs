@@ -38,10 +38,12 @@ Module | Name | Native since | Description
 [ps_customersignin](https://github.com/PrestaShop/ps_customersignin)               | Customer "sign in" link        | 1.7.0 | Adds a block that displays information about the customer.
 [ps_customtext](https://github.com/PrestaShop/ps_customtext)                       | Custom text                    | 1.7.0 | Adds custom text in your store.
 [ps_dataprivacy](https://github.com/PrestaShop/ps_dataprivacy)                     | Customer data privacy block    | 1.7.7 | Adds a block displaying your data privacy policy for more transparency and reassurance. 
+[ps_emailalerts](https://github.com/PrestaShop/ps_emailalerts)                     | Mail alerts                    | 8.0.0 | Make your everyday life easier, handle mail alerts about stock and orders, addressed to you as well as your customers.
 [ps_emailsubscription](https://github.com/PrestaShop/ps_emailsubscription)         | Email subscription form        | 1.7.0 | Adds a block for newsletter subscription.
 [ps_facetedsearch](https://github.com/PrestaShop/ps_facetedsearch)                 | Faceted search                 | 1.7.0 | Displays a block with layered navigation filters.
 [ps_faviconnotificationbo](https://github.com/PrestaShop/ps_faviconnotificationbo) | Order Notifications on the Favicon | 1.7.5 | Displays a small icon over the favicon, only in back office, showing the number of notifications.
 [ps_featuredproducts](https://github.com/PrestaShop/ps_featuredproducts)           | Featured products              | 1.7.0 | Displays featured products in the central column of your homepage.
+[ps_googleanalytics](https://github.com/PrestaShop/ps_googleanalytics)             | Google Analytics               | 8.0.0 | Gain clear insights into important metrics about your customers, using Google Analytics.
 [ps_imageslider](https://github.com/PrestaShop/ps_imageslider)                     | Image slider                   | 1.7.0 | Adds an image slider to your PrestaShop homepage.
 [ps_languageselector](https://github.com/PrestaShop/ps_languageselector)           | Language selector              | 1.7.0 | Adds a block allowing customers to select a language for your store's content.
 [ps_linklist](https://github.com/PrestaShop/ps_linklist)                           | Link list                      | 1.7.0 | Adds a block with several links.
