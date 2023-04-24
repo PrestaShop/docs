@@ -6,7 +6,7 @@ title: PrestaShopCollection class
 
 ## Introduction
 
-The PrestaShopCollection component is a Collection of ObjectModel objects. It implements common useful `php` interfaces: 
+The PrestaShopCollection component is a Collection of ObjectModel objects. It implements common useful `PHP` interfaces: 
 
 - `Iterator`: allows for `foreach` loop on the Collection
 - `ArrayAccess`: allows for offset/index access on the Collection
@@ -22,8 +22,8 @@ $productCollection = (new PrestaShopCollection('Product'))
     ->orderBy('reference', 'desc')
     ->setPageSize(100);
 
-if(count($productCollection) > 0){
-    foreach($productCollection as $product){
+if (count($productCollection) > 0) {
+    foreach ($productCollection as $product) {
         // do something with your product
     }
 }
@@ -31,7 +31,7 @@ if(count($productCollection) > 0){
 
 ## Create a PrestaShopCollection
 
-To create a PrestaShopCollection, simply instanciate a PrestaShopCollection with the ObjectModel type as constructor parameter. 
+To create a PrestaShopCollection, simply instantiate a PrestaShopCollection with the ObjectModel type as a constructor parameter. 
 
 ```php
 use PrestaShopCollection;
@@ -39,26 +39,26 @@ use PrestaShopCollection;
 $productCollection = new PrestaShopCollection('Product');
 ```
 
-A second parameter can be used, to set the id of the lang to use (`$id_lang`), set at null by default.
+A second parameter is available to set the ID of the language to use (`$id_lang`). It is `null` by default.
 
 ```php
 use PrestaShopCollection;
 
-$idLang=1;
+$idLang = 1;
 $productCollection = new PrestaShopCollection('Product', $idLang);
 ```
 
 {{% notice note %}}
-Using `$id_lang` parameter will allow to set a Lang Context when querying / filtering multilang fields. If not set, multilang fields will be returned as `array` in the Collection.
+Using `$id_lang` parameter will allow setting a Context language when querying/filtering multi-lang fields. If not set, multi-lang fields will be returned as an `array` in the Collection.
 {{% /notice %}}
 
 ## Get results, count results
 
 When your collection is created, you may need to get its content. Several methods are available to retrieve its content:
 
-- `getFirst()`: gets first item of the Collection
-- `getLast()`: gets last item of the Collection
-- or simply access items via index, or iterate with `foreach`
+- `getFirst()`: gets the first item of the Collection
+- `getLast()`: gets the last item of the Collection
+- you can also access items via their index key, or iterate with `foreach`
 
 ```php
 $productCollection = new PrestaShopCollection('Product');
@@ -66,11 +66,11 @@ $productCollection = new PrestaShopCollection('Product');
 $firstProduct = $productCollection->getFirst();
 $lastProduct = $productCollection->getLast();
 
-// you can access items in the collection by index, like a regular array (the class implements ArrayAccess). Index starts at 0
+// you can access items in the collection by index, like in a regular array (this class implements ArrayAccess). The index starts at 0
 $thirdProduct = $productCollection[2]; 
 
 // The collection is also iterable (the class implements Iterator): 
-foreach($productCollection as $product){
+foreach ($productCollection as $product) {
 
 }
 
@@ -121,9 +121,9 @@ $productCollection = new PrestaShopCollection('Product');
 $productCollection->where('reference', 'LIKE', 'REF-%'); // find products with reference beginning by "REF-"
 ```
 
-### Having method
+### `Having` method
 
-Another method is available, `having()`, which calls `where()` with the parameter `$method` set to `having`. 
+There is also `having()` method available, which calls `where()` with the parameter `$method` set to `having`. 
 
 ```php
 public function having($field, $operator, $value)
@@ -160,7 +160,7 @@ $productCollection->join('categories', 'id_category', PrestaShopCollection::INNE
 $productCollection->join('categories', 'id_category', PrestaShopCollection::LEFT_OUTER_JOIN);
 ```
 
-### Using where with join
+### Using `where` with `join`
 
 One of the interest of joining other ObjectModel entities to your collection, is the possibility to filter on the external entity with `where()`. 
 
@@ -178,7 +178,7 @@ To order your collection, use the `orderBy()` method.
 public function orderBy($field, $order = 'asc')
 ```
 
-Ordering can be done in ascending or descending direction, with `asc` or `desc` `$order` parameter.
+Ordering can be done in ascending or descending directions, with `asc` or `desc` in the `$order` parameter.
 
 ```php
 $productCollection = (new PrestaShopCollection('Product'))
@@ -187,7 +187,7 @@ $productCollection = (new PrestaShopCollection('Product'))
 
 ## Grouping (group by)
 
-To group your collection items on a field, use the `groupBy()` method. 
+If you want to organize your collection items based on a specific field, you can make use of the `groupBy()` method.
 
 ```php
 public function groupBy($field)
@@ -200,25 +200,25 @@ $productCollection = (new PrestaShopCollection('Product'))
 
 ## Paginating a Collection (offset / limit)
 
-When fetching large quantities of items, you may need to paginate your collection, with SQL `OFFSET / LIMIT` equivalent mecanismes. 
+If you need to retrieve a large number of items, it may be necessary to use pagination techniques such as SQL's `OFFSET/LIMIT`. This will help you manage your collection more efficiently.
 
-To do so, use those two methods:
+To do so, use these two methods:
 
 ```php
 public function setPageNumber($page_number)
 public function setPageSize($page_size)
 ```
 
-To use this feature, first, set the $page_size:
+First, set the $page_size:
 
 ```php
 $productCollection = (new PrestaShopCollection('Product'))
     ->setPageSize(100); // will get only 100 items
 ```
 
-If only `$page_size` is set, the collection will return the first `$page_size` items. 
+If `$page_size` is set, the collection will return the first `$page_size` items. 
 
-To do a pagination, and get the page 2 of the collection, use the following example: 
+If you need to paginate and access the second page of a collection, you can use the following example:
 
 ```php
 $productCollection = (new PrestaShopCollection('Product'))
