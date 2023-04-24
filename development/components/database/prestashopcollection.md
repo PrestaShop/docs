@@ -236,5 +236,6 @@ $productCollection = (new PrestaShopCollection('Product'))
     `LIMIT 100 OFFSET 200` or `LIMIT 200,100`
 
 {{% notice info %}}
-Known issue: When not using `$id_lang`, and using pagination (`setPageSize()`, `setPageNumber()`), pagination will be broken. Please use a Lang Context if the entity is multi-lang enabled. 
+Known issue: If the entity has multi-lang attributes, when not using `$id_lang` in the `PrestaShopCollection` constructor, and using pagination (`setPageSize()`, `setPageNumber()`), pagination will be broken. 
+Please set an `$id_lang` in the constructor to use pagination features for entities with multi-lang attributes.
 {{% /notice %}}
