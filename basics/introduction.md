@@ -1,7 +1,7 @@
 ---
 title: Introduction
 weight: 10
-featured: true
+showOnHomepage: true
 ---
 
 # Fundamentals of PrestaShop Development

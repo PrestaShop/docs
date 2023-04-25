@@ -2,7 +2,7 @@
 title: Extension concepts
 weight: 20
 chapter: true
-featured: true
+showOnHomepage: true
 ---
 
 # Extension concepts

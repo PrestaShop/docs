@@ -1,7 +1,7 @@
 ---
 title: Distribution
 chapter: true
-featured: true
+showOnHomepage: true
 ---
 
 # Distribution

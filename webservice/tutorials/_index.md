@@ -2,7 +2,7 @@
 title: Tutorials
 weight: 20
 chapter: true
-featured: true
+showOnHomepage: true
 ---
 
 # Tutorials

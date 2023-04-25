@@ -2,7 +2,7 @@
 title: Core changes
 weight: 60
 chapter: true
-featured: true
+showOnHomepage: true
 ---
 
 # Core changes

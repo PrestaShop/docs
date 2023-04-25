@@ -4,5 +4,5 @@ layout: redirect
 redirect: https://www.prestashop-project.org/maintainers-guide/test-pr-and-branches/
 _build:
   list: never
-featured: true
+showOnHomepage: true
 ---

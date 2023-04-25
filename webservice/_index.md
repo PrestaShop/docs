@@ -4,7 +4,7 @@ menuTitle: Webservice API
 weight: 6
 pre: "<b>6. </b>"
 chapter: true
-featured: true
+showOnHomepage: true
 icon: fa-plug
 ---
 

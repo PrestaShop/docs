@@ -4,7 +4,7 @@ menuTitle: FAQ
 weight: 10
 pre: "<b>10. </b>"
 chapter: true
-featured: true
+showOnHomepage: true
 icon: fa-question-circle
 ---
 

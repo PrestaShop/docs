@@ -2,7 +2,7 @@
 title: Optimize your webserver
 menuTitle: Optimize your webserver
 weight: 1
-featured: true
+showOnHomepage: true
 ---
 
 # Optimize your webserver

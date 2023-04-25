@@ -1,7 +1,7 @@
 ---
 title: Installation
 weight: 20
-featured: true
+showOnHomepage: true
 ---
 
 # Installation
