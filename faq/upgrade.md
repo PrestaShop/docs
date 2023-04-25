@@ -1,5 +1,6 @@
 ---
 title: Upgrade FAQ
+featured: true
 ---
 
 # Upgrade FAQ

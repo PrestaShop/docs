@@ -4,6 +4,8 @@ menuTitle: "Core Reference"
 weight: 2
 pre: "<b>2. </b>"
 chapter: true
+featured: true
+icon: fa-book
 ---
 
 ### Chapter 2

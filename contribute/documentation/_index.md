@@ -3,6 +3,7 @@ title: How to improve the documentation
 menuTitle: Improve the documentation
 weight: 40
 chapter: true
+featured: true
 ---
 
 # Hot to improve the documentation

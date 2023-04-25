@@ -1,6 +1,7 @@
 ---
 title: Subscribing to a Hook
 weight: 10
+mostViewedPage: true
 ---
 
 # Subscribing to a Hook

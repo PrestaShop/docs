@@ -1,5 +1,6 @@
 ---
 title: Product FAQ
+featured: true
 ---
 
 # Product FAQ

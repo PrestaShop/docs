@@ -3,6 +3,8 @@ title: Scale
 weight: 8
 pre: "<b>8. </b>"
 chapter: true
+featured: true
+icon: fa-rocket
 ---
 
 ### Chapter 8

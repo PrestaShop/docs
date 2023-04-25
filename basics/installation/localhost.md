@@ -2,6 +2,7 @@
 title: Installing a local environment
 menuTitle: Development environment
 weight: 15
+mostViewedPage: true
 ---
 
 # Installing PrestaShop for development

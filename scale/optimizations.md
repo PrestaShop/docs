@@ -1,5 +1,6 @@
 ---
 title: Optimize your PrestaShop
+featured: true
 ---
 
 # Optimize your PrestaShop performance

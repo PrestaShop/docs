@@ -1,6 +1,7 @@
 ---
 title: Cheat sheet
 weight: 40
+featured: true
 ---
 
 # Cheat sheet for Webservice

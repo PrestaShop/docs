@@ -1,5 +1,6 @@
 ---
 title: I need help
+featured: true
 ---
 
 # I need help
