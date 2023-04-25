@@ -3,7 +3,7 @@ title: How to contribute code changes
 chapter: true
 weight: 20
 menuTitle: Submitting code changes
-featured: true
+showOnHomepage: true
 ---
 
 # How to contribute code changes

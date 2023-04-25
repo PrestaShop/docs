@@ -1,6 +1,6 @@
 ---
 title: Taking care of your PrestaShop
-featured: true
+showOnHomepage: true
 ---
 
 # Taking care of your PrestaShop

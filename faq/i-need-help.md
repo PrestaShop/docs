@@ -1,6 +1,6 @@
 ---
 title: I need help
-featured: true
+showOnHomepage: true
 ---
 
 # I need help

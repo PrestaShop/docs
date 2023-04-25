@@ -3,7 +3,7 @@ title: Contribute
 weight: 7
 pre: "<b>7. </b>"
 chapter: true
-featured: true
+showOnHomepage: true
 icon: fa-github
 ---
 

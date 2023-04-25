@@ -3,7 +3,7 @@ title: The PrestaShop architecture
 menuTitle: Architecture
 chapter: true
 weight: 20
-featured: true
+showOnHomepage: true
 ---
 
 # The PrestaShop architecture

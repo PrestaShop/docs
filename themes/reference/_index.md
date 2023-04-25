@@ -2,7 +2,7 @@
 title: Theme development reference
 menuTitle: Reference
 weight: 30
-featured: true
+showOnHomepage: true
 ---
 
 # Theme development reference

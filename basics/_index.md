@@ -3,7 +3,7 @@ title: Basics
 weight: 1
 pre: "<b>1. </b>"
 chapter: true
-featured: true
+showOnHomepage: true
 icon: fa-play
 ---
 
