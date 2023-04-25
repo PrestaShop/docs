@@ -1,6 +1,7 @@
 ---
 title: Contribution guidelines
 weight: 20
+featured: true
 ---
 
 # Contribution guidelines

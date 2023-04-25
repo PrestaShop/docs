@@ -1,6 +1,7 @@
 ---
 title: Database
 weight: 30
+featured: true
 ---
 
 # Accessing the database

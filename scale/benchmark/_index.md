@@ -2,6 +2,7 @@
 title: How to benchmark your PrestaShop
 menuTitle: How to benchmark
 weight: 1
+featured: true
 ---
 
 How to setup the benchmark of your PrestaShop shop

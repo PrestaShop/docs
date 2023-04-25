@@ -3,6 +3,7 @@ title: Testing
 weight: 3
 pre: "<b>3. </b>"
 chapter: true
+icon: fa-shield
 ---
 
 ### Chapter 3

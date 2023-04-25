@@ -1,5 +1,6 @@
 ---
 title: Taking care of your PrestaShop
+featured: true
 ---
 
 # Taking care of your PrestaShop

@@ -5,6 +5,7 @@ type:
 chapter: false
 aliases:
  - /8/modules/sample-modules/example-hooks
+mostViewedPage: true
 ---
 
 # List of hooks

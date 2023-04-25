@@ -1,6 +1,7 @@
 ---
 title: Distribution
 chapter: true
+featured: true
 ---
 
 # Distribution
