@@ -56,5 +56,5 @@ jobs:
 
       - name: Build
         env:
-          DEVDOCS_GITHUB_READ_TOKEN: ${{ secrets.GITHUB_TOKEN_____ }}
+          DEVDOCS_GITHUB_READ_TOKEN: ${{ secrets.TEST_SECRET }}
         run: cd src/ && hugo
