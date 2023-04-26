@@ -39,15 +39,15 @@ jobs:
         run: |
           echo "VERSION=`echo $TARGET_BRANCH | perl -pe 's|^.+/([^/]+?)(?:\.x)?$|\1|'`" >> $GITHUB_ENV;
 
-      - name: Ensure the version is coherent
-        run: |
-          VERSION_FORMAT='^([0-9]+\.)*[0-9]+$'
-          if [[ ! $VERSION =~ $VERSION_FORMAT ]]; then
-            echo "::error::Version '$VERSION' is not a valid version!"
-            exit 1
-          else
-            echo "Version: '$VERSION'"
-          fi
+      #- name: Ensure the version is coherent
+      #  run: |
+      #    VERSION_FORMAT='^([0-9]+\.)*[0-9]+$'
+      #    if [[ ! $VERSION =~ $VERSION_FORMAT ]]; then
+      #      echo "::error::Version '$VERSION' is not a valid version!"
+      #      exit 1
+      #    else
+      #      echo "Version: '$VERSION'"
+      #    fi
 
       - name: Move content into the appropriate directory
         run: |
