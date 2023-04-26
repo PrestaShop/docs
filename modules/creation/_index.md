@@ -1,6 +1,7 @@
 ---
 title: "Getting Started"
 weight: 10
+showOnHomepage: true
 ---
 
 # Getting Started

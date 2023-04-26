@@ -1,6 +1,7 @@
 ---
 title: Reference
 weight: 30
+showOnHomepage: true
 ---
 
 # Web service reference

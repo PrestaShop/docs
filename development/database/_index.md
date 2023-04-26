@@ -1,6 +1,7 @@
 ---
 title: Database
 weight: 30
+showOnHomepage: true
 ---
 
 # Accessing the database

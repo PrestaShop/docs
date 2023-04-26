@@ -1,6 +1,7 @@
 ---
 title: Sample modules and how to's
 weight: 80
+showOnHomepage: true
 ---
 
 # Sample modules and how to guides

@@ -1,5 +1,6 @@
 ---
 title: Upgrade FAQ
+showOnHomepage: true
 ---
 
 # Upgrade FAQ

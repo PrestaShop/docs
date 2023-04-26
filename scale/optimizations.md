@@ -1,5 +1,6 @@
 ---
 title: Optimize your PrestaShop
+showOnHomepage: true
 ---
 
 # Optimize your PrestaShop performance

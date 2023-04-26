@@ -2,6 +2,7 @@
 title: System requirements for PrestaShop 8
 menuTitle: System requirements
 weight: 10
+mostViewedPage: true
 ---
 
 <style type="text/css">

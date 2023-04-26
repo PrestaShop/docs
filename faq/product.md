@@ -1,5 +1,6 @@
 ---
 title: Product FAQ
+showOnHomepage: true
 ---
 
 # Product FAQ

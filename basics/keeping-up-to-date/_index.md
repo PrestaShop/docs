@@ -2,6 +2,7 @@
 menuTitle: Staying up-to-date
 title: Keep PrestaShop up-to-date
 weight: 50
+showOnHomepage: true
 ---
 
 # Keep PrestaShop up-to-date

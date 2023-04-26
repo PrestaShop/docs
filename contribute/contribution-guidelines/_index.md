@@ -1,6 +1,7 @@
 ---
 title: Contribution guidelines
 weight: 20
+showOnHomepage: true
 ---
 
 # Contribution guidelines

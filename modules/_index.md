@@ -4,6 +4,8 @@ menuTitle: Modules
 weight: 4
 pre: "<b>4. </b>"
 chapter: true
+showOnHomepage: true
+icon: fa-puzzle-piece
 ---
 
 ### Chapter 4

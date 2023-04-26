@@ -1,6 +1,7 @@
 ---
 title: Cheat sheet
 weight: 40
+showOnHomepage: true
 ---
 
 # Cheat sheet for Webservice

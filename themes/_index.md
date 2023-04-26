@@ -3,6 +3,8 @@ title: Themes
 weight: 5
 pre: "<b>5. </b>"
 chapter: true
+showOnHomepage: true
+icon: fa-paint-brush
 ---
 
 ### Chapter 5

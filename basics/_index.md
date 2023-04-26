@@ -3,6 +3,8 @@ title: Basics
 weight: 1
 pre: "<b>1. </b>"
 chapter: true
+showOnHomepage: true
+icon: fa-play
 ---
 
 ### Chapter 1

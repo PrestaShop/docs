@@ -1,5 +1,6 @@
 ---
 title: I need help
+showOnHomepage: true
 ---
 
 # I need help
