@@ -35,6 +35,7 @@ The most important part of a Grid definition is defining columns. PrestaShop alr
 
 * [SeverityLevelColumn][severity-column-reference]
 
+[color-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/color" >}}
 [data-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/data" >}}
 [datetime-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/datetime" >}}
 [image-column-reference]: {{< ref "/1.7/development/components/grid/columns-reference/image" >}}
