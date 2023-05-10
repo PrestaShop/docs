@@ -47,7 +47,7 @@ $templateVars = [
 * `{$cart.minimalPurchaseRequired}`: Text for a minimal amount for purchase
 
 ### Currency (actual shop currency)
-* `{$currency.id}`: Currency Id in Prestashop database
+* `{$currency.id}`: Currency ID in PrestaShop database
 * `{$currency.name}`: Name of the currency
 * `{$currency.iso_code}`: Currency ISO code
 * `{$currency.iso_code_num}`: Currency ISO code number
