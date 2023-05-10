@@ -54,11 +54,11 @@ $templateVars = [
 * `{$currency.sign}`: Currency symbol
 
 ### Customer logged-in information
-* `{$customer.lastname}`: User Lastname 
-* `{$customer.firstname}`: User Firstname 
-* `{$customer.email}`: User email
-* `{$customer.last_passwd_gen}`: Last date user password were changed 
-* `{$customer.birthday}`: User birthday
+* `{$customer.lastname}`: Customer last name 
+* `{$customer.firstname}`: Customer first name 
+* `{$customer.email}`: Customer email
+* `{$customer.last_passwd_gen}`: The last date customer password was changed 
+* `{$customer.birthday}`: Customer birthday
 * `{$customer.newsletter}`: Receives newsletter
 * `{$customer.newsletter_date_add}`: Newsletter registration date
 * `{$customer.ip_registration_newsletter}`: Newsletter ip registration
