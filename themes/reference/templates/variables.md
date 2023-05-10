@@ -164,7 +164,7 @@ Returns an array of errors indicating the fields that are required.
 Returns an array containing the description and URL of all the paths that the user has browsed from the home page.
 * `{$breadcrumb}`
 
-### lin
+### link
 Returns an array that contains the main information of the Link Class, including the URL protocol used.
 * `{$link}`
 
