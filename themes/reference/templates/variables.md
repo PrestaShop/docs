@@ -9,22 +9,22 @@ The variables are set in [`classes/FrontController.php`](https://github.com/Pres
 
 ```php
 $templateVars = [
-'cart' => $this->cart_presenter->present($cart),
-	'currency' => $this->getTemplateVarCurrency(),
-	'customer' => $this->getTemplateVarCustomer(),
-	'language' => $this->objectPresenter->present($this->context->language),
-	'page' => $this->getTemplateVarPage(),
-	'shop' => $this->getTemplateVarShop(),
-	'core_js_public_path' => $this->getCoreJsPublicPath(),
-	'urls' => $this->getTemplateVarUrls(),
-	'configuration' => $this->getTemplateVarConfiguration(),
-	'field_required' => $this->context->customer->validateFieldsRequiredDatabase(),
-	'breadcrumb' => $this->getBreadcrumb(),
-	'link' => $this->context->link,
-	'time' => time(),
-	'static_token' => Tools::getToken(false),
-	'token' => Tools::getToken(),
-	'debug' => _PS_MODE_DEV_,
+    'cart' => $this->cart_presenter->present($cart),
+    'currency' => $this->getTemplateVarCurrency(),
+    'customer' => $this->getTemplateVarCustomer(),
+    'language' => $this->objectPresenter->present($this->context->language),
+    'page' => $this->getTemplateVarPage(),
+    'shop' => $this->getTemplateVarShop(),
+    'core_js_public_path' => $this->getCoreJsPublicPath(),
+    'urls' => $this->getTemplateVarUrls(),
+    'configuration' => $this->getTemplateVarConfiguration(),
+    'field_required' => $this->context->customer->validateFieldsRequiredDatabase(),
+    'breadcrumb' => $this->getBreadcrumb(),
+    'link' => $this->context->link,
+    'time' => time(),
+    'static_token' => Tools::getToken(false),
+    'token' => Tools::getToken(),
+    'debug' => _PS_MODE_DEV_,
 ];
 ```
 *You can dig into the code to get more information about what the variables do. Here is the list with a short description:*
