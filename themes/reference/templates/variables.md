@@ -32,7 +32,7 @@ $templateVars = [
 ## List of variables
 
 ### User Cart
-* `{$cart.products}`: List of products contained
+* `{$cart.products}`: List of products from the current cart
 * `{$cart.totals}`: Array of total amounts (with taxes and without taxes)
 * `{$cart.subtotals}`: Array of sub-totals amounts (products, discounts, etc.)
 * `{$cart.products_count}`: Total of products added
