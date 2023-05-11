@@ -32,19 +32,8 @@ $templateVars = [
 ## List of variables
 
 ### User Cart
-* `{$cart.products}`: List of products from the current cart
-* `{$cart.totals}`: Array of total amounts (with taxes and without taxes)
-* `{$cart.subtotals}`: Array of sub-totals amounts (products, discounts, etc.)
-* `{$cart.products_count}`: Total of products added
-* `{$cart.summary_string}`: Text to display the number of products
-* `{$cart.labels}`:  Array of texts to show the tax information
-* `{$cart.id_address_delivery}`: Primary key ID of the Delivery Address
-* `{$cart.id_address_invoice}`: Primary key ID of the Invoice Address
-* `{$cart.is_virtual}`: Boolean value to inform if it has virtual products
-* `{$cart.vouchers}`: Array of vouchers were used
-* `{$cart.discounts}`: Array of discounts
-* `{$cart.minimalPurchase}`: Minimal amount for purchase
-* `{$cart.minimalPurchaseRequired}`: Text for a minimal amount for purchase
+An array containing useful data from the current user's cart.
+* `{$cart}`
 
 ### Currency (actual shop currency)
 * `{$currency.id}`: Currency ID in PrestaShop database
@@ -85,14 +74,8 @@ $templateVars = [
 * `{$customer.addresses}`: Addresses array information
 
 ### Language store
-* `{$language.name}`: Name of the language
-* `{$language.iso_code}`: Language ISO code
-* `{$language.locale}`: Locale language format
-* `{$language.language_code}`: Language letters code
-* `{$language.is_rtl}`: Is RTL language
-* `{$language.date_format_lite}`: Date format with the date only
-* `{$language.date_format_full}`: Date format with hours and minutes
-* `{$language.id}`: Language ID
+An array containing useful data from the current shop language.
+* `{$language}`
 
 ### Actual Page information
 * `{$page.title}`: Title information
