@@ -66,17 +66,17 @@ To obtain the URL of a module controller, with the right HTTP scheme, and URL re
 
 ```php
 // get your module's default controller URL
-$link = $context->link->getModuleLink("mymodulename");
+$link = $context->link->getModuleLink('mymodulename');
 
 // get your module's specific controller URL
-$link = $context->link->getModuleLink("mymodulename", "controllerName");
+$link = $context->link->getModuleLink('mymodulename', 'controllerName');
 
 // get your module's specific controller URL with params
 $params = [
-    "id_item" => 2,
-    "action" => "showTodo"
+    'id_item' => 2,
+    'action' => 'showTodo'
 ];
-$link = $context->link->getModuleLink("mymodulename", "controllerName", $params);
+$link = $context->link->getModuleLink('mymodulename', 'controllerName', $params);
 ```
 
 More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L670-L684).
