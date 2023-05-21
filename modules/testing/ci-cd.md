@@ -231,7 +231,7 @@ deploy-artifact-release:
     rm -f .gitlab-ci.yml
     rm -f .editorconfig
     rm -f Makefile
-    rm -f docker-compose.yml
+    rm -f docker compose.yml
     rm -rf .git
     rm -f .gitignore
     rm -rf tests
