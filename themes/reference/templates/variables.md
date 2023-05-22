@@ -182,8 +182,7 @@ The values set for shop configuration.
 
 | Variable | Description |
 | --- | --- |
-| `{$link}` | Array that contains the main information of the Link Class, including the URL protocol used.
- |
+| `{$link}` | Array that contains the main information of the Link Class, including the URL protocol used. |
 
 ### time
 
