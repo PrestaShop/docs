@@ -6,7 +6,7 @@ title: Generate a Symfony route
 
 ### Manual generation
 
-If the module uses a symfony controller then the best way of route generation is described in [symfony docs](https://symfony.com/doc/4.4/routing.html). However, module, especially if using legacy controllers, don't always have access to the symfony container or router. The `Link` object offers some helpers to help generate urls related to Symfony controllers and routes.
+If the module uses a symfony controller then the best way of route generation is described in [symfony docs](https://symfony.com/doc/4.4/routing.html). However, module, especially if using legacy controllers, don't always have access to the symfony container or router. [The `Link` component]({{< relref "/8/development/components/link" >}}) offers some helpers to help generate urls related to Symfony controllers and routes.
 
 #### Using router via Link::getUrlSmarty
 {{< minver v="1.7.0" title="true" >}}
@@ -112,7 +112,6 @@ You should be **extra careful** about these misused code and replace it accordin
 - If the controller hasn't been migrated as of your minimum supported version:
     - **For >= 1.7.5**, use `getAdminLink` method with the parameters **fully injected** in the function.
     - **For < 1.7.5**, consider creating your own Link class adapter to switch to the appropriate routing mode for each PrestaShop version ([see example](https://github.com/PrestaShopCorp/ps_checkout/blob/v1.5.2/classes/Adapter/LinkAdapter.php)).
-
 {{% /notice %}}
 
 {{% notice note %}}
@@ -131,10 +130,10 @@ class to manage routing conversion.
 ```
 
 This will only work for **one route/one controller** the association by action does not work before **1.7.5**.
-
 {{% /notice %}}
 
 #### Javascript routes
+
 In order to generate a symfony route in javascript, you can use the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/js/components/router.ts).
 
 You can use it like this:
@@ -157,5 +156,5 @@ php bin/console fos:js-routing:dump --format=json
 And put it in `admin-dev/themes/new-theme/js/fos_js_routes.json`
 
 {{% notice %}}
-It is important that route is exposed (has the option `exposed: true` in route configuration), else javascript router will not be able to reach it.
+It is important that route is exposed (has the option `exposed: true` in route configuration), else javascript router will not be able to discover and generate the route.
 {{% /notice %}}
