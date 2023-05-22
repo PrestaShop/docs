@@ -103,3 +103,7 @@ $link = $context->link->getPageLink('cart', true, null, $params,false);
 ```
 
 More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L1109-L1121).
+
+### Generate URLs to admin routes using Link
+
+You can also generate URLs for admin routes using Link, [please read the dedicated page on this topic]({{< relref "/8/modules/concepts/controllers/admin-controllers/route-generation" >}})
