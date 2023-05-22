@@ -3,8 +3,7 @@ title: Displaying content on the front office
 weight: 5
 ---
 
-Displaying content on the front office
-======================================
+# Displaying content on the front office
 
 As it is, the module does not do much. In order to display something on
 the front office, we have to add support for a few hooks. This is done
@@ -122,8 +121,7 @@ template to display, it falls short of doing anything useful: if you
 reload the homepage, the left column simply displays a message where the
 module should be, saying "No template found for module mymodule".
 
-Displaying content
-------------------
+## Displaying content
 
 Now that we have access to the left column, we should display something
 there for the customer to see.
@@ -264,8 +262,7 @@ online.
 If you still can't see the changes you made, you might have forgotten to 
 register `actionFrontControllerSetMedia` hook.
 
-Embedding a template in the theme
----------------------------------
+## Embedding a template in the theme
 
 The link that the module displays does not lead anywhere for now. Let's
 create the `display.php` file that it targets, with a minimal content,
@@ -412,48 +409,9 @@ simple names, such as `{$products}`, and to prefix it with your module's
 name, or even your own name or initials, such as:
 `{$henryb_mymodule_products}`.
 
-List of Smarty variables
----------------------------------
+## List of Smarty variables
 
-Here is a list of Smarty variables that are common to all template pages:
-
-
-| File / folder       | Description                                                   |
-| ------------------- | ------------------------------------------------------------- |
-| $urls.base\_url           | Site URL.                                                     |
-| $urls.current\_url        | Current page URL.                                             |
-| $urls.shop\_domain\_url   | Shop URL.                                                     |
-| $urls.img\_ps\_url        | URL for PrestaShop's image folder.                            |
-| $urls.img\_cat\_url       | URL for the categories images folder.                         |
-| $urls.img\_lang\_url      | URL for the languages images folder.                          |
-| $urls.img\_prod\_url      | URL for the products images folder.                           |
-| $urls.img\_manu\_url      | URL for the manufacturers images folder.                      |
-| $urls.img\_sup\_url       | URL for the suppliers images folder.                          |
-| $urls.img\_ship\_url      | URL for the carriers (shipping) images folder.                |
-| $urls.img\_url            | URL for the theme's images folder.                            |
-| $urls.css\_url            | URL for the theme's CSS folder.                               |
-| $urls.js\_url             | URL for the theme's JavaScript folder.                        |
-| $module\_template\_dir    | URL for the current theme's folder.                           |
-| $module\_dir        | URL the modules folder.                                       |
-| mail\_dir ***(deprecated)***            | URL for the mail templates folder.                            |
-| $urls.pic\_url            | URL for the pictures upload folder.                           |
-| $language.iso_code        | ISO code for the current language.                            |
-| come\_from ***(deprecated)***           | URL for the visitor's origin.                                 |
-| $shop.name          | Shop name.                                                    |
-| cart\_qties ***(deprecated)***          | Number of products in the cart.                               |
-| $cart               | The cart.                                                     |
-| currencies ***(deprecated)***           | The various available currencies.                             |
-| id\_currency\_cookie ***(deprecated)*** | ID of the current currency.                                   |
-| $currency           | Currency object (currently used currency).                    |
-| cookie ***(deprecated)***               | User cookie.                                                  |
-| $language           | The various available languages.                              |
-| $customer.is_logged       | Indicates whether the visitor is logged to a customer account.|
-| $page.page_name           | Page name.                                                    |
-| $customer.firstname       | Client firstname (if logged in).                              |
-| $customer.lastname        | Client lastname (if logged in).                              |
-| priceDisplay ***(deprecated)***        | Price display method (with or without taxes...).              |
-| roundMode ***(deprecated)***           | Rounding method in use.                                       |
-| use\_taxes ***(deprecated)***          | Indicates whether taxes are enabled or not.                   |
+You can find [a complete list of variables available in Smarty Templates on this page]({{< relref "/8/themes/reference/templates/variables" >}}).
 
 There are many other contextual hooks. If you need to display all of the
 current page's Smarty variables, add the following call:
