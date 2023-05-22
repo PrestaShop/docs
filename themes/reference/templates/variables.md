@@ -198,7 +198,7 @@ Retrieve the shop token data used to prevent CSRF (Cross-Site Request Forgery) a
 | Variable | Description |
 | --- | --- |
 | `{$static_token}` | |
-| `{$token}` (generated token, including the PHP page.) |
+| `{$token}` | (generated token, including the PHP page.) |
 
 ### debug 
 
