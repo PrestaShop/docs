@@ -35,3 +35,40 @@ vendor/bin/phpunit --debug -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle
 {{% notice tip %}}
 Hint: `--debug` without `--filter` gives a nice list to filter with.
 {{% /notice %}}
+
+## Checking for code coverage in phpunit tests
+
+To check if you covered everything in your tests cases its best to run the tests with [phpunit coverage report](https://phpunit.readthedocs.io/en/9.5/code-coverage-analysis.html).
+
+First get your [environment up and running]({{< relref "/8/basics/installation/localhost" >}}). 
+
+Then, [install and enable Xdebug](https://xdebug.org/docs/install).
+
+Finally, run your tests with coverage enabled:
+
+```bash
+XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle/Command/ConfigCommandTest.php
+```
+
+{{% notice tip %}}
+You may use a [Dockerized environment to run the project]({{< relref "/8/basics/installation/install-with-docker" >}}).
+
+After that is up and running you need to compile and enable xdebug:
+
+```bash
+docker compose exec prestashop_container pecl install xdebug #prestashop_container is the container's name
+docker compose exec prestashop_container docker-php-ext-enable xdebug #prestashop_container is the container's name
+```
+
+Then run your tests with coverage enabled:
+
+```bash
+docker compose exec -e XDEBUG_MODE=coverage prestashop_container vendor/bin/phpunit --coverage-text -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle/Command/ConfigCommandTest.php
+```
+{{% /notice %}}
+
+This will give you a nice report of how much of your code was covered by the tests and you can extend your tests to get closer to a perfect score of 100%.
+
+{{% notice tip %}}
+Running the coverage check does take a bit of time, be patient.
+{{% /notice %}}
