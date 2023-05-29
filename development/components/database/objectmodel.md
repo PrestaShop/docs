@@ -168,6 +168,33 @@ Field type is an important setting, it determines how ObjectModel will format yo
 Several validation rules are available for your ObjectModel fields. 
 [Please refer to the Validate class of PrestaShop](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Validate.php) for a complete list.
 
+### Add timestamps to your entity (date_add and date_upd)
+
+ObjectModel has a mecanism to handle creation/modification timestamps. 
+To use this feature, you have to define those two properies to your entity, and to define them in the model. 
+
+```php
+class Cms extends ObjectModel
+{
+    [...]
+    public $date_add;
+    public $date_upd;
+
+    public static $definition = [
+        [...]
+        'fields' => array(
+            [...]
+            'date_add' => ['type' => self::TYPE_DATE, 'shop' => true, 'validate' => 'isDate'],
+            'date_upd' => ['type' => self::TYPE_DATE, 'shop' => true, 'validate' => 'isDate']
+        )
+    ];
+}
+```
+
+{{% notice note %}}
+Those two fields will be automatically set on create and update actions on the entity.
+{{% /notice %}}
+
 ## Basic usage of an ObjectModel managed entity
 
 ### Create and save a new object
