@@ -52,6 +52,24 @@ To test/call your APIs we recommend you use an API client such as [Insomnia](htt
 As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with your access key rights and how (and to whom) you disclose them.
 {{% /notice %}}
 
+{{% notice warning %}}
+If you have trouble authenticating to the Webservice, please read the following information:
+
+The webserver may need the `CGIPassAuth` directive enabled to allow PrestaShop to receive the `HTTP_AUTHORIZATION` header. 
+
+Enable it in your .htaccess:
+
+```
+CGIPassAuth On
+```
+
+Or use a `SetEnv` directive in your .htaccess:
+
+```
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+```
+{{% /notice %}}
+
 ## Available resources
 
 The `/api/` URL gives you the root of all the resources, in the form of an XML file. Here is an example of what you should see if you authorized full access to `addresses`, `images` and `products` resources:
