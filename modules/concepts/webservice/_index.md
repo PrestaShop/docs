@@ -26,6 +26,9 @@ class Article extends ObjectModel
     public $content;
     public $meta_title;
 
+    public $date_add;
+    public $date_upd;
+
     /**
      * @see ObjectModel::$definition
      */
