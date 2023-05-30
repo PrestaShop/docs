@@ -175,36 +175,3 @@ Let's see what they look like for the `address` resource.
     </address>
 </prestashop>
 ```
-
-## JSON format
-
-The Webservices can also output JSON instead of XML. To enable JSON output you have two choices:
-
-### Query parameter
-
-Add one of the following parameters to your query string:
-
-- `output_format=JSON`
-- `io_format=JSON`
-
-Example:
-
-```text
-https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/?output_format=JSON
-```
-
-### HTTP header
-
-Add the one of the following headers to your HTTP request:
-
-- `Io-Format: JSON`
-- `Output-Format: JSON`
-
-Example:
-
-```http
-GET /api/ HTTP/1.1
-Host: example.com
-Output-Format: JSON
-Authorization: Basic UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX
-```

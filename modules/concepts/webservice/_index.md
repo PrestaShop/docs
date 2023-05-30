@@ -1,20 +1,22 @@
 ---
-title: Webservice
+title: Extend Webservice with a custom resource
+menuTitle: Webservice
 ---
 
-# Webservice
-{{< minver v="1.7" title="true" >}}
+# Extend Webservice with a custom resource
 
-## PrestaShop Webservice
 PrestaShop enables merchants to give third-party tools access to their shop's database through a CRUD API, otherwise called a web service.
 
 Since 1.7 version, developers can extend the resources available through the PrestaShop Webservice with a module.
 
-### Create and declare your new entity
+More informations about PrestaShop Webservice API [here]({{< relref "/8/webservice/">}}).
+
+## Create and declare the new entity
 
 The following example is about an entity that can manage blog articles, the folder where you create your Entity is not relevant.
 
 PS: Remember to create the respective table(s) in the database, usually created during the module installation.
+
 ```php
 <?php
 // modules/yourmodule/src/Entity/Article.php
@@ -78,8 +80,9 @@ The parameter to set which fields to expose through the webservice and settings 
 'fields' => array()
 ```
 
-### Registration with a hook
-The hook `addWebserviceResources` must be registered and implemented by your module.
+## Register the hook
+
+The hook `addWebserviceResources` must be registered and implemented by the module.
 ```php
 public function hookAddWebserviceResources($params)
 {
@@ -93,12 +96,13 @@ public function hookAddWebserviceResources($params)
 }
 ```
 
-### Load your entity
-Don't forget to include the class file of your entity (i.e. Article.php) at the top of your main module file.
-The following is an example of a correct configuration to load your example entity to your module.
+## Load the entity
+
+Don't forget to include the class file of the entity (i.e. Article.php) at the top of the main module file.
+The following is an example of a correct configuration to load the example entity in the module.
 
 ```php
-include_once _PS_MODULE_DIR_ . 'wsarticle/src/Entity/Article.php';
+require_once _PS_MODULE_DIR_ . 'wsarticle/src/Entity/Article.php';
 ```
 
 ### Complete example of a main module file
@@ -110,7 +114,7 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-include_once _PS_MODULE_DIR_ . 'wsarticle/src/Entity/Article.php';
+require_once _PS_MODULE_DIR_ . 'wsarticle/src/Entity/Article.php';
 
 class WsArticle extends Module
 {
@@ -175,7 +179,7 @@ class WsArticle extends Module
 }
 ```
 
-### Final notes
+## Final notes
 
 Following the example above, the new resource will be available in the webservice resources list:
 
@@ -192,3 +196,13 @@ will return something similar to what you can see on the screenshot below (it is
 And something like on the next screenshot, if you have articles in the database:
 
 {{< figure src="../img/articles-list.png" title="Webservice articles list (one article)" >}}
+
+### Download the example module directly
+
+You can find a complete version of this example module [here](https://github.com/PrestaShop/example-modules/tree/master/demowsextend).
+
+### Test CRUD actions on the entity with Postman
+
+A Postman collection for this example module [is available here](https://github.com/PrestaShop/webservice-postman-examples/blob/main/demo_custom_resource_collection.json).
+
+To use it, please refer to [this tutorial]({{< relref "/8/webservice/tutorials/testing-webservice-postman" >}})
