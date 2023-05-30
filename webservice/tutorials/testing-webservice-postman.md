@@ -61,4 +61,4 @@ This collection shows all CRUD actions on the Product resource:
 
 ## Article resource examples (demo_custom_resource_collection.json)
 
-This collection is related to the tutorial: [How to the Webservice with a custom resource]({{< relref "/8/modules/concepts/webservice/">}})
+This collection is related to the tutorial: [How to extend the Webservice with a custom resource]({{< relref "/8/modules/concepts/webservice/">}})
