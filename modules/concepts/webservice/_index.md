@@ -98,7 +98,7 @@ public function hookAddWebserviceResources($params)
 
 ## Load the entity
 
-Don't forget to include the class file of the entity (i.e. Article.php) at the top of the main module file.
+Don't forget to include the class file of the entity (e.g., Article.php) at the top of the main module file (unless you use a composer-based module with namespaces).
 The following is an example of a correct configuration to load the example entity in the module.
 
 ```php

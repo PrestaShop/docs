@@ -14,7 +14,7 @@ Some example collections of Postman requests on PrestaShop Webservice are [avail
 
 Postman is available on Linux, MacOS and Windows. Please [follow instructions here](https://learning.postman.com/docs/getting-started/installation-and-updates/).
 
-## How to use this examples
+## How to use these examples
 
 ### Clone the repository
 
@@ -26,13 +26,13 @@ git clone git@github.com:PrestaShop/webservice-postman-examples.git
 
 ### Import a collection
 
-Open Postman, and choose "File > import". Then navigate to the cloned repository, and import a `JSON` collection.
+Open Postman, and choose "File > Import". Then navigate to the cloned repository, and import a `JSON` collection.
 
 The collection will be available in the sidebar:
 
 ![Postman sidebar](../assets/postman01.png)
 
-### Set the Webservice url and authorization key
+### Set the Webservice URL and authorization key
 
 Click on the collection title (`PrestaShop Webservice Demo Resource`), and navigate in the `Variables` tab:
 

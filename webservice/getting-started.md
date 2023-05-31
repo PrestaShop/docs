@@ -269,15 +269,15 @@ PrestaShop will take care of adding everything in the database, and will return 
 To edit an existing resource: **GET** the full XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PUT HTTP request** with the whole XML file as a body content to the same URL again.
 
 {{% notice warning %}}
-Make sure your content does not includes any formating (`\n`, `\t`, ...) in the `xml` tags, otherwise it can break your resource.
+Make sure your content does not include any formatting (`\n`, `\t`, ...) in the `xml` tags, otherwise, it can break your resource.
 
-Good input: 
+Correct input: 
 
 ```
 <id>{id}</id>
 ```
 
-Wrong input: 
+Incorrect input: 
 
 ```
 <id>

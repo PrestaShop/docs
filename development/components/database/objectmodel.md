@@ -170,8 +170,8 @@ Several validation rules are available for your ObjectModel fields.
 
 ### Add timestamps to your entity (date_add and date_upd)
 
-ObjectModel has a mecanism to handle creation/modification timestamps. 
-To use this feature, you have to define those two properies to your entity, and to define them in the model. 
+ObjectModel has a mechanism to handle creation/modification timestamps. 
+To use this feature, you have to define those two properties of your entity and set them up in the model definition. 
 
 ```php
 class Cms extends ObjectModel
@@ -192,7 +192,7 @@ class Cms extends ObjectModel
 ```
 
 {{% notice note %}}
-Those two fields will be automatically set on create and update actions on the entity.
+Those two fields will be automatically populated on create and update actions on the entity.
 {{% /notice %}}
 
 ## Basic usage of an ObjectModel managed entity

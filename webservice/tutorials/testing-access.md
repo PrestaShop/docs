@@ -57,13 +57,13 @@ If you have trouble authenticating to the Webservice, please read the following 
 
 The webserver may need the `CGIPassAuth` directive enabled to allow PrestaShop to receive the `HTTP_AUTHORIZATION` header. 
 
-Enable it in your .htaccess:
+You can enable it in your .htaccess:
 
 ```
 CGIPassAuth On
 ```
 
-Or use a `SetEnv` directive in your .htaccess:
+Or, also in .htaccess, use `SetEnv`:
 
 ```
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
