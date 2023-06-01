@@ -44,7 +44,7 @@ services:
   mysql:
     container_name: some-mysql
     image: mysql:5.7
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: admin
       MYSQL_DATABASE: prestashop
@@ -53,7 +53,7 @@ services:
   prestashop:
     container_name: prestashop
     image: prestashop/prestashop:latest
-    restart: always
+    restart: unless-stopped
     depends_on:
       - mysql
     ports:
@@ -63,8 +63,6 @@ services:
       DB_NAME: prestashop
       DB_USER: root
       DB_PASSWD: admin
-      PS_FOLDER_ADMIN: admin4577
-      PS_FOLDER_INSTALL: install4577
     networks:
       - prestashop_network
 networks:
@@ -75,9 +73,63 @@ networks:
 When using a M1-chip Mac, you may add: `platform: linux/x86_64` on each container declaration. 
 {{% /notice %}}
 
+### Automatically install PrestaShop with test data
+
 {{% notice note %}}
-It is a grood practice to change install/ and admin/ directory names. In this example, we set them to `admin4577` and `install4577`. When installing PrestaShop with Docker for the first time, you need to access `https://localhost:8080/install4577`. 
+This is the easiest and quickest way to start and test PrestaShop with Docker.
 {{% /notice %}}
+
+You can automatically install PrestaShop, and add test data, without having to use the installation assistant when creating your Docker compose stack. 
+
+To achieve this, you need to set those environment variables in your PrestaShop container declaration in your  `docker-compose.yml` file:
+
+```yaml
+PS_DEMO_MODE: 1
+PS_INSTALL_AUTO: 1
+PS_DOMAIN: localhost:8080
+```
+
+Then run `docker compose up` in your terminal, wait a few minutes, and you will be able to access a PrestaShop instance on `http://localhost:8080` with demo products, and `http://localhost:8080/admin` for the administration side.
+
+Complete docker compose manifest for reference:
+
+```yaml
+version: '3'
+services:
+  mysql:
+    container_name: some-mysql
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: prestashop
+    networks:
+      - prestashop_network
+  prestashop:
+    container_name: prestashop
+    image: prestashop/prestashop:latest
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    ports:
+      - 8080:80
+    environment:
+      DB_SERVER: some-mysql
+      DB_NAME: prestashop
+      DB_USER: root
+      DB_PASSWD: admin
+      PS_DEMO_MODE: 1
+      PS_INSTALL_AUTO: 1
+      PS_DOMAIN: localhost:8080
+    networks:
+      - prestashop_network
+networks:
+    prestashop_network:
+```
+
+### Manually install PrestaShop with Installation Assistant, and begin testing
+
+To manually install PrestaShop using the Installation Assistant, don't set the environment variables `PS_DEMO_MODE` and `PS_INSTALL_AUTO`.
 
 In the directory where the docker compose.yml file is located, run: 
 
@@ -93,11 +145,39 @@ docker compose up
 docker compose up -d
 ```
 
-- Stop a background stack: 
+Access `http://localhost:8080` on your browser to begin testing PrestaShop. 
+
+You will land on the installer of PrestaShop. 
+
+- When you will be asked for MySQL server, type `some-mysql`, as declared in your yaml file.
+- When asked for MySQL user, use `root`, as declared in your yaml file.
+- When asked for MySQL password, use `admin`, as declared in your yaml file.
+
+#### Installation assistant and admin URLs
+
+{{% notice note %}}
+It is a grood practice to change `install/` and `admin/` directory names. 
+
+To achieve this, specify the two following environment variables in your PrestaShop container declaration:
 
 ```
-docker compose down
+PS_FOLDER_ADMIN: admin4577
+PS_FOLDER_INSTALL: install4577
 ```
+
+In this example, we set them to `admin4577` and `install4577`. When installing PrestaShop with Docker for the first time, you need to access `https://localhost:8080/install4577`.
+{{% /notice %}}
+
+{{% notice info %}}
+If you did not change the `install/` or `admin/` directory names, after installation, you need to manually delete the install directory in your container, and change the admin directory name. 
+To do this, please run: 
+
+```
+docker exec -i prestashop rm -rf install
+docker exec -i prestashop mv admin admin_xxx
+```
+Your admin is now located at `https://localhost:8080/admin_xxx`. 
+{{% /notice %}}
 
 ### Bind a volume for Mysql persisting
 
@@ -197,7 +277,7 @@ services:
   prestashop:
     container_name: prestashop
     image: prestashop/prestashop:latest
-    restart: always
+    restart: unless-stopped
     depends_on:
       - mysql
     ports:
@@ -243,7 +323,7 @@ services:
         PMA_HOST: some-mysql
         PMA_PORT: 3306
         PMA_ARBITRARY: 1
-      restart: always
+      restart: unless-stopped
       ports:
         - 8081:80
 ```
@@ -268,6 +348,12 @@ From there, you can:
 php bin/console prestashop:module enable xxx # enables the module xxx
 tail -f var/logs/dev.log # tail in interactive mode the dev.log file
 # all commands you may need
+```
+
+You may also directly execute commands in the container with `docker exec -i`: 
+
+```bash
+docker exec -i prestashop php bin/console list # will execute list command from Symfony's console 
 ```
 
 ## Run PrestaShop on Docker without Docker compose
@@ -314,15 +400,6 @@ Then, start the PrestaShop container:
 ```
 $ docker run -ti --name some-prestashop --network prestashop-net -p 8080:80 -d prestashop/prestashop:latest
 ```
-
-### Install PrestaShop database, and begin testing
-
-Then, access `http://localhost:8080` on your browser to begin testing PrestaShop. 
-You will land on the installer of PrestaShop. 
-
-When you will be asked for MySQL server, type `some-mysql`.
-When asked for MySQL user, use `root`.
-When asked for MySQL password, use `admin`.
 
 ## Images, architectures and tags
 
