@@ -609,7 +609,7 @@ developers to request the database.
 This can be used while developing a module responsible for the export
 and/or import of the objects from/to the database.
 
-For more details, see the page dedicated to [ObjectModels]({{< ref "1.7/development/components/database/objectmodel" >}})
+For more details, see the page dedicated to [ObjectModel]({{< relref "/8/development/components/database/objectmodel" >}})
 
 ### Web service (API)
 
@@ -617,19 +617,14 @@ The webservice API is another way to retrieve or store data in
 PrestaShop.
 
 It must be enabled from the administration panel before being accessible.
-See the doc for more details:
-https://docs.prestashop-project.org/1.7-documentation/user-guide/configuring-shop/advanced-parameters/webservice
+See the doc for more details: [How to use the webservice API][web-service]
 
-Once ready, an API will be available for all the resources enabled for
-your key. Basically, the web-service in another interface for object
-models, themselves interfacing the database.
+Once ready, an API will be available for all the resources enabled for your key. 
+Basically, the web-service in another interface for object models, themselves interfacing the database.
 
-You can use it to retrieve all your products, categories etc from the
-first shop, and re-inserting them in the other shop without many
-changes.
+You can use it to retrieve all your products, categories etc from the first shop, and re-inserting them in the other shop without many changes.
 
-This option is interesting for people looking for making the process
-automatic, because:
+This option is interesting for people looking for making the process automatic, because:
 
 -   the webservice has barely changed since PrestaShop 1.5,
 -   you get all the properties of a given object,
@@ -641,4 +636,4 @@ Useful links:
 
 -   [How to use the webservice API][web-service]
 
-[web-service]: {{< ref "8/webservice" >}}
+[web-service]: {{< relref "/8/webservice" >}}

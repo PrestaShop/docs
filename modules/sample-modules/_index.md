@@ -24,7 +24,8 @@ These modules demonstrate good use cases for developers willing to customize the
 - [Demo Extending a Symfony Form - 3](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform3) - how to use CQRS in a module
 - [Demo View Order Hooks](https://github.com/PrestaShop/example-modules/tree/master/demovieworderhooks)
 - [Demo Extend a Grid](https://github.com/PrestaShop/example-modules/tree/master/demoextendgrid)
-- [Demo Extend Product Form V2](https://github.com/PrestaShop/example-modules/tree/master/demoproductform)
+- [Demo Extend Product Page with old hooks](https://github.com/PrestaShop/example-modules/tree/master/demooldproductpagehooks)
+- [Demo Extend Product Form V2 - with new version](https://github.com/PrestaShop/example-modules/tree/master/demoproductform)
 
 ### Using a tool / concept
 
@@ -38,6 +39,10 @@ These modules demonstrate good use cases for developers willing to customize the
 
 - [Demo Using Doctrine entities](https://github.com/PrestaShop/example-modules/tree/master/demodoctrine)
 - [Demo How to override an ObjectModel](https://github.com/PrestaShop/example-modules/tree/master/demooverrideobjectmodel)
+
+#### Webservice
+
+- [Demo How to add a custom resource to the Webservice](https://github.com/PrestaShop/example-modules/tree/master/demowsextend)
 
 #### Other
 

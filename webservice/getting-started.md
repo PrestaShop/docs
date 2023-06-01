@@ -8,7 +8,7 @@ showOnHomepage: true
 
 ## About CRUD & REST
 
-The PrestaShop web service uses the REST architecture in order to be available on as many platforms as possible, since the HTTP protocol and XML files are understood by most platforms, if not all.
+The PrestaShop web service uses the REST architecture in order to be available on as many platforms as possible, since the HTTP protocol and XML / JSON formats are understood by most platforms, if not all.
 
 {{% notice note %}}
 [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete)
@@ -44,11 +44,15 @@ The endpoint `/api` is reachable if URL is correctly rewritten to use it. For ht
 
 The shop should prompt you for a username and a password to enter. The username is the authentication key you created and **there is no password to enter**.
 
-The second and more appropriate way to access the API is to include your access key in the url, this will prevent you from entering any user name.
-This is also the recommended way to call the API from a javascript client, or any application. Here is an example, assuming your access API key is `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`:
+Another way to access the API is to include your access key in the url, this will prevent you from entering any user name.
+Here is an example, assuming your access API key is `UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX`:
 
 * At the root of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/
 * In a subfolder of the server: https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/prestashop/api/
+
+{{% notice note %}}
+The recommended and safest way to access your API is to use an authorization header. More details here: [Using an authorization header]({{< relref "tutorials/testing-access/#using-an-authorization-header-recommended" >}})
+{{% /notice %}}
 
 {{% notice note %}}
 To test/call your APIs we recommend you use an API client such as [Insomnia](https://insomnia.rest/) or [Postman](https://www.getpostman.com/), it is easier to call the APIs than with a browser, especially for write actions.
@@ -264,6 +268,25 @@ PrestaShop will take care of adding everything in the database, and will return 
 
 To edit an existing resource: **GET** the full XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PUT HTTP request** with the whole XML file as a body content to the same URL again.
 
+{{% notice warning %}}
+Make sure your content does not include any formatting (`\n`, `\t`, ...) in the `xml` tags, otherwise, it can break your resource.
+
+Correct input: 
+
+```
+<id>{id}</id>
+```
+
+Incorrect input: 
+
+```
+<id>
+    {id}
+</id>
+```
+
+{{% /notice %}}
+
 ### Partially update a resource
 
 To partially edit an existing resource: **GET** a part of the XML file for the resource you want to change (example `/api/addresses/1`), edit its content as needed, then send a **PATCH HTTP request** with the partial XML file as the body content to the same URL again.
@@ -284,7 +307,13 @@ Example: update the company name for the address of `id=1` : `PATCH /api/address
 
 ### Using JSON instead of XML
 
-The Web services can also output JSON instead of XML. To enable JSON output you have two choices:
+The Web services can also output JSON instead of XML.
+
+{{% notice note %}}
+As of PrestaShop 8.1, the Webservice is only able to output JSON, it cannot read JSON inputs.
+{{% /notice %}}
+
+To enable JSON output you have two choices:
 
 ##### Query parameter
 

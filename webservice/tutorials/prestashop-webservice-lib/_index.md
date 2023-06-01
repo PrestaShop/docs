@@ -1,8 +1,8 @@
 ---
 title: PrestaShop Webservice lib
-menuTitle: 3 - PrestaShop Webservice lib
+menuTitle: 4 - PrestaShop Webservice lib
 chapter: true
-weight: 3
+weight: 4
 ---
 
 # Using the PrestaShop Webservice lib

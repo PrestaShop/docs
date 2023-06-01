@@ -52,6 +52,24 @@ To test/call your APIs we recommend you use an API client such as [Insomnia](htt
 As you noticed no password nor authentication process is required to access the APIs which is why you need to be **extra careful** with your access key rights and how (and to whom) you disclose them.
 {{% /notice %}}
 
+{{% notice warning %}}
+If you have trouble authenticating to the Webservice, please read the following information:
+
+The webserver may need the `CGIPassAuth` directive enabled to allow PrestaShop to receive the `HTTP_AUTHORIZATION` header. 
+
+You can enable it in your .htaccess:
+
+```
+CGIPassAuth On
+```
+
+Or, also in .htaccess, use `SetEnv`:
+
+```
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+```
+{{% /notice %}}
+
 ## Available resources
 
 The `/api/` URL gives you the root of all the resources, in the form of an XML file. Here is an example of what you should see if you authorized full access to `addresses`, `images` and `products` resources:
@@ -156,37 +174,4 @@ Let's see what they look like for the `address` resource.
         <date_upd format="isDate"></date_upd>
     </address>
 </prestashop>
-```
-
-## JSON format
-
-The Webservices can also output JSON instead of XML. To enable JSON output you have two choices:
-
-### Query parameter
-
-Add one of the following parameters to your query string:
-
-- `output_format=JSON`
-- `io_format=JSON`
-
-Example:
-
-```text
-https://UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX@example.com/api/?output_format=JSON
-```
-
-### HTTP header
-
-Add the one of the following headers to your HTTP request:
-
-- `Io-Format: JSON`
-- `Output-Format: JSON`
-
-Example:
-
-```http
-GET /api/ HTTP/1.1
-Host: example.com
-Output-Format: JSON
-Authorization: Basic UCCLLQ9N2ARSHWCXLT74KUKSSK34BFKX
 ```
