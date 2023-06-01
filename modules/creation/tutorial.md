@@ -45,7 +45,7 @@ The main file must contain the module's main class.
 If you need to add more classes later, we suggest writing one single class per file.
 {{% /notice %}}
 
-That main class must bear the same name as the module and its folder, in [CamelCase](https://en.wikipedia.org/wiki/CamelCase). In our example: `MyModule`. Furthermore, that class must extend the `Module` class, in order to inherit all its methods and attributes.
+That main class must bear the same name as the module and its folder, in [PascalCase](https://www.freecodecamp.org/news/snake-case-vs-camel-case-vs-pascal-case-vs-kebab-case-whats-the-difference/#pascal-case). In our example: `MyModule`. Furthermore, that class must extend the `Module` class, in order to inherit all its methods and attributes.
 
 ```php
 <?php
