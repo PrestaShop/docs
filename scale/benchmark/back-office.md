@@ -21,7 +21,7 @@ In order to benchmark the performances of the backoffice of your shop, you will 
 
 ### Clone the repository
 
-To follow these instructions, you will use the following github repository:
+To follow these instructions, you will use the following GitHub repository:
 **[PrestaShop performance project](https://github.com/PrestaShop/performance-project)**
 
 ```
