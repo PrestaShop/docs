@@ -17,7 +17,7 @@ How to setup the benchmark of your PrestaShop shop
 
 ## Dockerized installation of benchmark
 
-To get an automatically pre-populated shop, you can use the following github repository:
+To get an automatically pre-populated shop, you can use the following GitHub repository:
 **[PrestaShop performance project](https://github.com/PrestaShop/performance-project)**
 
 ## Manually prepare your benchmark
