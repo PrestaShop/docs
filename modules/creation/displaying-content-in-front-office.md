@@ -27,7 +27,7 @@ public function install()
 ```
 
 As you can see, we make it so that the module is hooked to the `displayLeftColumn` and `actionFrontControllerSetMedia` hooks. 
-In addition to this, we will add code for the "`displayRightColumn`" hook.
+In addition to this, we will add code for the `displayRightColumn` hook.
 
 Attaching code to a hook requires a specific method for each:
 
