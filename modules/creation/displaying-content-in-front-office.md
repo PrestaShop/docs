@@ -21,24 +21,19 @@ public function install()
     return parent::install() &&
         $this->registerHook('displayLeftColumn') &&
         $this->registerHook('actionFrontControllerSetMedia') &&
-        Configuration::updateValue('MYMODULE_NAME', 'my friend');
+        $this->registerHook('displayRightColumn') &&
+        Configuration::updateValue('MYMODULE_NAME', 'my module');
 }
 ```
 
-As you can see, we make it so that the module is hooked to the
-"`displayLeftColumn`" and "`actionFrontControllerSetMedia`" hooks. In addition to this, we will add
-code for the "`displayRightColumn`" hook.
+As you can see, we make it so that the module is hooked to the `displayLeftColumn` and `actionFrontControllerSetMedia` hooks. 
+In addition to this, we will add code for the "`displayRightColumn`" hook.
 
 Attaching code to a hook requires a specific method for each:
 
--   `hookDisplayLeftColumn()`: will hook code into the left column – in
-    our case, it will fetch the MYMODULE\_NAME module setting and
-    display the module's template file, `mymodule.tpl`, which must be
-    located in the `/views/templates/hook/` folder.
--   `hookDisplayRightColumn()`: will simply do the same as
-    `hookDisplayLeftColumn()`, but for the right column.
--   `hookActionFrontControllerSetMedia()`: will add a link to the module's CSS file,
-    `/views/css/mymodule.css` and module's JS file, `/views/js/mymodule.js`.
+-   `hookDisplayLeftColumn()`: will hook code into the left column – in our case, it will fetch the MYMODULE\_NAME module setting and display the module's template file, `mymodule.tpl`, which must be located in the `/views/templates/hook/` folder.
+-   `hookDisplayRightColumn()`: will simply do the same as `hookDisplayLeftColumn()`, but for the right column.
+-   `hookActionFrontControllerSetMedia()`: will add a link to the module's CSS file, `/views/css/mymodule.css` and module's JS file, `/views/js/mymodule.js`.
     
 Add the following to your mymodule.php file:
 

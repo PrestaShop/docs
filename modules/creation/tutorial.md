@@ -193,10 +193,7 @@ There are many things you can do to expand the `install()` method to perform ins
 
 - Check that the [Multistore feature][multistore] is enabled, and if so, set the current context to all shops on this installation of PrestaShop.
 - Ensure that the base install process is successful.
-- Ensure that the module can be attached to the `displayLeftColumn` hook.
-- Ensure that the module can be attached to the `displayHeader` hook.
-- Ensure the value of the `MYMODULE_NAME` configuration setting can be set to "my friend".
-
+- Ensure the value of the `MYMODULE_NAME` configuration setting can be set to "my module".
 
 ```php
 public function install()
@@ -207,9 +204,7 @@ public function install()
 
    return (
         parent::install() 
-        && $this->registerHook('displayLeftColumn')
-        && $this->registerHook('displayHeader')
-        && Configuration::updateValue('MYMODULE_NAME', 'my friend')
+        && Configuration::updateValue('MYMODULE_NAME', 'my module')
     ); 
 }
 ```
