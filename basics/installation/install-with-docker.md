@@ -6,22 +6,22 @@ weight: 15
 
 # Installing PrestaShop with Docker
 
-PrestaShop is available through Docker for testing/experimenting, and developping modules or themes. 
+PrestaShop is available through Docker for testing/experimenting and developing modules or themes. 
 
-Docker is an open-source platform that enables developers to package applications and their dependencies into lightweight, portable containers, providing an efficient and consistent way to build, ship, and run software across different environments.
+Docker is an open-source platform that enables developers to package applications and their dependencies into lightweight, portable containers. It provides an efficient and consistent way to build, ship, and run software across different environments.
 
 - [Docker's website](https://www.docker.com/)
 - [PrestaShop's Docker Github repository](https://github.com/PrestaShop/docker)
 - [PrestaShop's Docker Hub](https://hub.docker.com/r/prestashop/prestashop/)
 
-The easiest way to begin with PrestaShop on Docker is to run your stack with Docker compose. It will ease container management, networks, volume persistence, ...
+The easiest way to begin with PrestaShop on Docker is to run your stack with Docker Compose. It will ease container management, networks, and volume persistence.
 
 ## Install Docker
 
 Docker is available on each major operating system. [You will need to install Docker](https://docs.docker.com/get-docker/).
 
 {{% notice note %}}
-When using Windows (10+), it can be a good solution to [install WSL (Windows Subsystem for Linux)](https://learn.microsoft.com/en-gb/windows/wsl/install), and then install Docker on the WSL distribution. You will benefit of all the advantages of a Linux OS when using Shell / CLI.
+When using Windows (10+), it can be a good solution to [install WSL (Windows Subsystem for Linux)](https://learn.microsoft.com/en-gb/windows/wsl/install), and then install Docker on the WSL distribution. You will benefit from all the advantages of a Linux OS when using Shell / CLI.
 Note: WSL2 should be a better option when running Docker.
 {{% /notice %}}
 
@@ -29,14 +29,14 @@ Note: WSL2 should be a better option when running Docker.
 
 Docker Compose is a tool that simplifies the management of multi-container Docker applications by allowing developers to define and configure complex application stacks using a declarative YAML file, enabling easy orchestration, scaling, and networking of containers with a single command.
 
-docker compose is included in versions of Docker Desktop (Windows, Mac). If you are using Docker on Linux, [you need to install docker compose](https://docs.docker.com/compose/install/). 
+Docker Compose is included in versions of Docker Desktop (Windows, Mac). If you are using Docker on Linux, [you must install docker compose](https://docs.docker.com/compose/install/). 
 
 
-## Use docker compose to manage your stack
+## Use Docker Compose to manage your stack
 
-docker compose will help starting and stopping your PrestaShop stack, persist your database with a volume, persist your installation, and will allow you to mount local modules and/or themes in PrestaShop. 
+Docker Compose will help start and stop your PrestaShop stack, persist your database with a volume, persist your installation, and will allow you to mount local modules and/or themes in PrestaShop. 
 
-### Create the docker compose.yml manifest
+### Create the docker-compose.yml manifest
 
 ```yaml
 version: '3'
@@ -52,7 +52,7 @@ services:
       - prestashop_network
   prestashop:
     container_name: prestashop
-    image: prestashop/prestashop:latest
+    image: prestashop/prestashop:latest # Latest stable version of the PrestaShop, to see all available images go to ...
     restart: unless-stopped
     depends_on:
       - mysql
@@ -70,7 +70,7 @@ networks:
 ```
 
 {{% notice info %}}
-When using a M1-chip Mac, you may add: `platform: linux/x86_64` on each container declaration. 
+When using an M1-chip Mac, you may need to add: `platform: linux/x86_64` on each container declaration. 
 {{% /notice %}}
 
 ### Automatically install PrestaShop with test data
@@ -79,7 +79,7 @@ When using a M1-chip Mac, you may add: `platform: linux/x86_64` on each containe
 This is the easiest and quickest way to start and test PrestaShop with Docker.
 {{% /notice %}}
 
-You can automatically install PrestaShop, and add test data, without having to use the installation assistant when creating your Docker compose stack. 
+You can automatically install PrestaShop and add test data without having to use the installation assistant when creating your Docker Compose stack. 
 
 To achieve this, you need to set those environment variables in your PrestaShop container declaration in your  `docker-compose.yml` file:
 
@@ -89,9 +89,9 @@ PS_INSTALL_AUTO: 1
 PS_DOMAIN: localhost:8080
 ```
 
-Then run `docker compose up` in your terminal, wait a few minutes, and you will be able to access a PrestaShop instance on `http://localhost:8080` with demo products, and `http://localhost:8080/admin` for the administration side.
+Then run `docker compose up` in your terminal, wait a few minutes, and you will be able to access a PrestaShop instance on `http://localhost:8080` with the front office containing the demo products and `http://localhost:8080/admin` for the back office.
 
-Complete docker compose manifest for reference:
+Complete docker-compose.yml manifest for reference:
 
 ```yaml
 version: '3'
@@ -131,7 +131,7 @@ networks:
 
 To manually install PrestaShop using the Installation Assistant, don't set the environment variables `PS_DEMO_MODE` and `PS_INSTALL_AUTO`.
 
-In the directory where the docker compose.yml file is located, run: 
+In the directory where the docker compose.yml file is located, do the following: 
 
 - Start the stack: 
 
@@ -149,7 +149,7 @@ Access `http://localhost:8080` on your browser to begin testing PrestaShop.
 
 You will land on the installer of PrestaShop. 
 
-- When you will be asked for MySQL server, type `some-mysql`, as declared in your yaml file.
+- When asked for a MySQL server, type `some-mysql`, as declared in your yaml file.
 - When asked for MySQL user, use `root`, as declared in your yaml file.
 - When asked for MySQL password, use `admin`, as declared in your yaml file.
 
@@ -176,14 +176,14 @@ To do this, please run:
 docker exec -i prestashop rm -rf install
 docker exec -i prestashop mv admin admin_xxx
 ```
-Your admin is now located at `https://localhost:8080/admin_xxx`. 
+After running these scripts, your back office will be at `https://localhost:8080/admin_xxx`. 
 {{% /notice %}}
 
-### Bind a volume for Mysql persisting
+### Bind a volume for MySQL persisting
 
-If you don't bind a volume to the Mysql container, the database content will not be persisted when stopping / restarting the stack.
+If you don't bind a volume to the MySQL container, the database content will not be persisted when stopping/restarting the stack.
 
-To avoid this, add a `volume` to your Mysql container: 
+To avoid this, add a `volume` to your MySQL container: 
 
 ```yml
 ...
@@ -216,11 +216,11 @@ volumes:
 
 ### Bind a local module to your manifest
 
-Lets consider we have a `testModule` PrestaShop Module. 
+Let's consider we have a `test_module` PrestaShop Module. 
 
-Create a `modules/` directory, and drop in your `testModule` directory.
+Create a `modules/` directory, and drop in your `test_module` directory.
 
-Create a bind mount in your docker compose.yml:
+Create a bind mount in your docker-compose.yml:
 
 ```yaml
 ...
@@ -229,8 +229,8 @@ Create a bind mount in your docker compose.yml:
     ...
     volumes:
       - type: bind
-        source: ./modules/testModule # local path to the module
-        target: /var/www/html/modules/testModule # path to be mounted in the container
+        source: ./modules/test_module # local path to the module
+        target: /var/www/html/modules/test_module # path to be mounted in the container
 ...
 ```
 
@@ -238,11 +238,11 @@ And that's it: your module is available on the PrestaShop Docker instance, and c
 
 ### Bind a local theme to your manifest
 
-Lets consider we have a `myTheme` PrestaShop Theme. 
+Let's consider we have a `mytheme` PrestaShop Theme. 
 
-Create a `themes/` directory, and drop in your `myTheme` directory.
+Create a `themes/` directory, and drop your `mytheme` directory there.
 
-Create a bind mount in your docker compose.yml:
+Create a bind mount in your docker-compose.yml:
 
 ```yaml
 ...
@@ -251,14 +251,14 @@ Create a bind mount in your docker compose.yml:
     ...
     volumes:
       - type: bind
-        source: ./themes/myTheme # local path to the module
-        target: /var/www/html/themes/myTheme # path to be mounted in the container
+        source: ./themes/mytheme # local path to the module
+        target: /var/www/html/themes/mytheme # path to be mounted in the container
 ...
 ```
 
 And that's it: your theme is available on the PrestaShop Docker instance, and changes made in the local directory of the theme are automatically synchronized on the PrestaShop Docker instance. 
 
-### Complete docker compose.yml for reference
+### Complete docker-compose.yml for reference
 
 ```yaml
 version: '3'
@@ -308,7 +308,7 @@ volumes:
 
 ### Add PHPMyAdmin to your stack
 
-In the docker compose.yml, add the following service declaration:
+In the docker-compose.yml, add the following service declaration:
 
 ```yml
 version: '3'
@@ -330,11 +330,11 @@ services:
 
 And access `http://localhost:8081` to access `phpMyAdmin`.
 
-### Enter the container to get Symfony logs, execute commands, modify core files or core configuration
+### Enter the container to execute commands and interact with all its files
 
-You may need to enter the container to parse logs, execute commands, modify core files, or core configuration. 
+Sometimes, you may need to enter the container to parse logs, execute commands, modify core files, or some of the environment configurations.
 
-You can enter in a shell of the container by running in your terminal: 
+To access the container's shell, simply execute the following command in your terminal:
 
 ```bash
 docker exec -ti prestashop /bin/bash
@@ -342,42 +342,42 @@ docker exec -ti prestashop /bin/bash
 
 You will land in the container, in the PrestaShop's directory (`/var/www/html`).
 
-From there, you can:
+From there, you can use commands like:
 
 ```bash
 php bin/console prestashop:module enable xxx # enables the module xxx
 tail -f var/logs/dev.log # tail in interactive mode the dev.log file
-# all commands you may need
+# you can use all other commands you may need
 ```
 
-You may also directly execute commands in the container with `docker exec -i`: 
+You can also execute commands directly in the container with `docker exec -i`: 
 
 ```bash
 docker exec -i prestashop php bin/console list # will execute list command from Symfony's console 
 ```
 
-## Run PrestaShop on Docker without Docker compose
+## Run PrestaShop on Docker without Docker Compose
 
-PrestaShop runs on a *AMP stack (Apache - Mysql - PHP). Two containers are required to run PrestaShop: 
+PrestaShop runs on an *AMP stack (Apache - MySQL - PHP). Two containers are required to run PrestaShop: 
 
-- a Mysql container (5.7 version)
+- a MySQL container (5.7 version)
 - a PrestaShop container (packaging PHP, PHP modules, PrestaShop codebase and dependencies, and Apache)
 
 ### Create a Docker network
 
-Those two containers need to be able to communicate each other. 
+Those two containers need to be able to communicate with each other. 
 
 ```
 $ docker network create prestashop-net
 ```
 
 {{% notice note %}}
-When using docker compose, the network lives and dies when starting/stopping the stack, automatically.
+When using Docker Compose, the network lives and dies when starting/stopping the stack automatically.
 {{% /notice %}}
 
-### Start a Mysql 5.7 container
+### Start a MySQL 5.7 container
 
-Then, start a Mysql container:
+Then, start a MySQL container:
 
 - with image `mysql:5.7`, 
 - with network `prestashop-net`, 
@@ -424,8 +424,8 @@ You can also specify the version of PHP to use:
 
 You can also specify to use Apache or FPM by appending `-apache` or `-fpm` to the image. 
 
-- Use 8.0.4 image, with PHP 8.1, on apache: `prestashop/prestashop:8.0.4-8.1-apache`
-- Use 8.0.4 image, with PHP 8.1, on FPM: `prestashop/prestashop:8.0.4-8.1-fpm`
+- Use 8.0.4 image, with PHP 8.1, on Apache: `prestashop/prestashop:8.0.4-8.1-apache`
+- Use 8.0.4 image, with PHP 8.1, on Apache with PHP-FPM: `prestashop/prestashop:8.0.4-8.1-fpm`
 
 ## Environment variables reference
 
@@ -462,10 +462,10 @@ If your IP / port (or domain) change between two executions of your container, y
 
 ## Troubleshooting 
 
-If you encounter issues using PrestaShop with Docker, feel free to read our troubleshooting tips on [PrestaShop's Docker Github repository](https://github.com/PrestaShop/docker), or [open an issue](https://github.com/PrestaShop/docker/issues) if the probleme is not already addressed.
+If you encounter issues using PrestaShop with Docker, feel free to read our troubleshooting tips on [PrestaShop's Docker Github repository](https://github.com/PrestaShop/docker) or [open an issue](https://github.com/PrestaShop/docker/issues) if the problem is not already addressed.
 
 ### Allow your instance to be accessible through internet
 
-Some native PrestaShop modules needs to be accessible on the internet to work properly (`ps_accounts`, `ps_billing`, `ps_eventbus`, `ps_metrics`, ...). 
+Some native PrestaShop modules must be accessible online to work correctly (`ps_accounts`, `ps_billing`, `ps_eventbus`, `ps_metrics`, ...). 
 
-To make your instance accessible through internet, you can use solutions such as `ngrok`, [as shown here](https://github.com/PrestaShopCorp/docker compose-kickstarter).
+To make your instance accessible through the Internet, you can use solutions such as `ngrok`, [as shown here](https://github.com/PrestaShopCorp/docker-compose-kickstarter).
