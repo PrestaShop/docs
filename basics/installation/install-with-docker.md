@@ -79,12 +79,11 @@ When using an M1-chip Mac, you may need to add: `platform: linux/x86_64` on each
 This is the easiest and quickest way to start and test PrestaShop with Docker.
 {{% /notice %}}
 
-You can automatically install PrestaShop and add test data without having to use the installation assistant when creating your Docker Compose stack. 
+You can automatically install PrestaShop (and add test data) without having to use the installation assistant when creating your Docker Compose stack. 
 
 To achieve this, you need to set those environment variables in your PrestaShop container declaration in your  `docker-compose.yml` file:
 
 ```yaml
-PS_DEMO_MODE: 1
 PS_INSTALL_AUTO: 1
 PS_DOMAIN: localhost:8080
 ```
@@ -118,7 +117,6 @@ services:
       DB_NAME: prestashop
       DB_USER: root
       DB_PASSWD: admin
-      PS_DEMO_MODE: 1
       PS_INSTALL_AUTO: 1
       PS_DOMAIN: localhost:8080
     networks:
@@ -133,17 +131,7 @@ To manually install PrestaShop using the Installation Assistant, don't set the e
 
 In the directory where the docker compose.yml file is located, do the following: 
 
-- Start the stack: 
-
-```
-docker compose up
-```
-
-- Start the stack, in background: 
-
-```
-docker compose up -d
-```
+- Start the stack: `docker compose up`
 
 Access `http://localhost:8080` on your browser to begin testing PrestaShop. 
 
@@ -152,6 +140,15 @@ You will land on the installer of PrestaShop.
 - When asked for a MySQL server, type `some-mysql`, as declared in your yaml file.
 - When asked for MySQL user, use `root`, as declared in your yaml file.
 - When asked for MySQL password, use `admin`, as declared in your yaml file.
+
+
+Stop the stack by closing your terminal, or hit `ctrl + c`.
+
+{{% notice info %}}
+To keep your instance running in background, run `docker compose up -d`
+
+To stop it, run `docker compose down`
+{{% /notice %}}
 
 #### Installation assistant and admin URLs
 
@@ -196,7 +193,7 @@ volumes:
   dbdata:
 ```
 
-### Bind a volume for Installation persisting
+### Bind a volume for instance persisting
 
 If you don't bind a volume to the PrestaShop container, data will not be persisted when stopping / restarting the stack. PrestaShop will try to install itself at every restart of the stack.
 
@@ -214,7 +211,7 @@ volumes:
   psdata:
 ```
 
-### Bind a local module to your manifest
+### Bind a local module to your instance in your manifest
 
 Let's consider we have a `test_module` PrestaShop Module. 
 
@@ -234,9 +231,9 @@ Create a bind mount in your docker-compose.yml:
 ...
 ```
 
-And that's it: your module is available on the PrestaShop Docker instance, and changes made in the local directory of the module are automatically synchronized on the PrestaShop Docker instance. 
+And that's it: your module is available on the `prestashop` Docker container, and changes made in the local directory of the module are automatically synchronized on the `prestashop` Docker container. 
 
-### Bind a local theme to your manifest
+### Bind a local theme to your instance in your manifest
 
 Let's consider we have a `mytheme` PrestaShop Theme. 
 
@@ -256,7 +253,7 @@ Create a bind mount in your docker-compose.yml:
 ...
 ```
 
-And that's it: your theme is available on the PrestaShop Docker instance, and changes made in the local directory of the theme are automatically synchronized on the PrestaShop Docker instance. 
+And that's it: your theme is available on the `prestashop` Docker container, and changes made in the local directory of the theme are automatically synchronized on the `prestashop` Docker container. 
 
 ### Complete docker-compose.yml for reference
 
@@ -361,7 +358,13 @@ docker exec -i prestashop php bin/console list # will execute list command from 
 PrestaShop runs on an *AMP stack (Apache - MySQL - PHP). Two containers are required to run PrestaShop: 
 
 - a MySQL container (5.7 version)
-- a PrestaShop container (packaging PHP, PHP modules, PrestaShop codebase and dependencies, and Apache)
+- a PrestaShop container (packaging PHP, PHP modules and extensions, PrestaShop codebase and dependencies)
+
+{{% notice note %}}
+The default images (`prestashop/prestashop:latest`, `prestashop/prestashop:version` or `prestashop/prestashop:version-apache`) uses `php:phpversion-apache` as a base, which means they embed a Webserver (`Apache`). 
+
+If you use `prestashop/prestashop:version-fpm` versions, you will need to run a dedicated Webserver to expose your instance.
+{{% /notice %}}
 
 ### Create a Docker network
 
