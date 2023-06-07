@@ -428,7 +428,13 @@ You can also specify the version of PHP to use:
 You can also specify to use Apache or FPM by appending `-apache` or `-fpm` to the image. 
 
 - Use 8.0.4 image, with PHP 8.1, on Apache: `prestashop/prestashop:8.0.4-8.1-apache`
-- Use 8.0.4 image, with PHP 8.1, on Apache with PHP-FPM: `prestashop/prestashop:8.0.4-8.1-fpm`
+- Use 8.0.4 image, with PHP 8.1, with PHP-FPM: `prestashop/prestashop:8.0.4-8.1-fpm`
+
+{{% notice note %}}
+The default images (`prestashop/prestashop:latest`, `prestashop/prestashop:version` or `prestashop/prestashop:version-apache`) uses `php:phpversion-apache` as a base, which means they embed a Webserver (`Apache`). 
+
+If you use `prestashop/prestashop:version-fpm` versions, you will need to run a dedicated Webserver to expose your instance.
+{{% /notice %}}
 
 ## Environment variables reference
 
