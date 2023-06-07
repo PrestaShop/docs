@@ -9,6 +9,12 @@ title: OrderReturnState domain
 #### AddOrderReturnStateCommand {id="AddOrderReturnStateCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/order-return-state/_partials/add-order-return-state-command.md" %}}
+#### BulkDeleteOrderReturnStateCommand {id="BulkDeleteOrderReturnStateCommand"}
+
+{{%  include-md "content/8/development/architecture/domain/references/order-return-state/_partials/bulk-delete-order-return-state-command.md" %}}
+#### DeleteOrderReturnStateCommand {id="DeleteOrderReturnStateCommand"}
+
+{{%  include-md "content/8/development/architecture/domain/references/order-return-state/_partials/delete-order-return-state-command.md" %}}
 #### EditOrderReturnStateCommand {id="EditOrderReturnStateCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/order-return-state/_partials/edit-order-return-state-command.md" %}}

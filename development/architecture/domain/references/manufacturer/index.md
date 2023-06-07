@@ -18,6 +18,9 @@ title: Manufacturer domain
 #### DeleteManufacturerCommand {id="DeleteManufacturerCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/manufacturer/_partials/delete-manufacturer-command.md" %}}
+#### DeleteManufacturerLogoImageCommand {id="DeleteManufacturerLogoImageCommand"}
+
+{{%  include-md "content/8/development/architecture/domain/references/manufacturer/_partials/delete-manufacturer-logo-image-command.md" %}}
 #### EditManufacturerCommand {id="EditManufacturerCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/manufacturer/_partials/edit-manufacturer-command.md" %}}

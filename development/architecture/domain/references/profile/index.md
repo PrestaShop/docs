@@ -18,9 +18,18 @@ title: Profile domain
 #### EditProfileCommand {id="EditProfileCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/profile/_partials/edit-profile-command.md" %}}
+#### UpdateModulePermissionsCommand {id="UpdateModulePermissionsCommand"}
+
+{{%  include-md "content/8/development/architecture/domain/references/profile/_partials/update-module-permissions-command.md" %}}
+#### UpdateTabPermissionsCommand {id="UpdateTabPermissionsCommand"}
+
+{{%  include-md "content/8/development/architecture/domain/references/profile/_partials/update-tab-permissions-command.md" %}}
 
 ### Profile Queries
 
+#### GetPermissionsForConfiguration {id="GetPermissionsForConfiguration"}
+
+{{%  include-md "content/8/development/architecture/domain/references/profile/_partials/get-permissions-for-configuration.md" %}}
 #### GetProfileForEditing {id="GetProfileForEditing"}
 
 {{%  include-md "content/8/development/architecture/domain/references/profile/_partials/get-profile-for-editing.md" %}}

@@ -1,5 +1,5 @@
 `PrestaShop\PrestaShop\Core\Domain\SpecificPrice\Command\DeleteSpecificPriceByCartProductCommand`
-_Deletes specific price by cart id_
+_or_
 
 | Command details            |    |
 | -------------------------- | -- |
