@@ -125,7 +125,10 @@ You only need `NodeJS 14.x` (`16.x` recommended [get it here][nodejs]), `NPM` wi
 
 #### NVM
 
-****Add specification about NVM here****
+`NVM` is `Node Version Manager`, it allows you to quickly switch between `NodeJS` versions on your machine.
+It will help you switch between `NodeJS` versions for Back Office or Front Office developement in PrestaShop (which uses different versions of `NodeJS`).
+
+Install NVM: [Github Repository](https://github.com/nvm-sh/nvm).
 
 [webpack]: https://webpack.js.org/
 [composer]: https://getcomposer.org/download/

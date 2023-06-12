@@ -85,9 +85,8 @@ Read [System Requirements][system-requirements].
 </a>
 
 <a href="{{< relref "/8/basics/installation/environments/macos-specific" >}}" class="cta">
-  Install an AMP stack on MacOS
+  Install an *AMP stack on MacOS
 </a>
-
 
 #### Creating a database for your shop
 
