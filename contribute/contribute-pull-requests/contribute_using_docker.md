@@ -43,7 +43,7 @@ Then you can start the effective installation:
 
 ```
 cd PrestaShop
-docker-compose up
+docker compose up
 ```
 
 {{% notice tip %}}
@@ -69,7 +69,7 @@ Password: `prestashop`
 You can check MySQL port using command line
 
 ```
-docker-compose ps mysql
+docker compose ps mysql
 ```
 
 {{% notice tip %}}
@@ -100,7 +100,7 @@ Before all, you may ensure your changes don't break everything: this is why we h
 You can execute it in your dockerized PrestaShop application without altering your website (it uses a specific database).
 
 ```
-docker-compose exec prestashop-git composer test-all
+docker compose exec prestashop-git composer test-all
 ```
 
 ### Publish your work
