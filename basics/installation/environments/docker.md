@@ -1,7 +1,8 @@
 ---
 title: Installing PrestaShop with Docker
-menuTitle: Installation with Docker
-weight: 15
+menuTitle: Docker environment
+weight: 2
+useMermaid: true
 ---
 
 # Installing PrestaShop with Docker
@@ -15,6 +16,18 @@ Docker is an open-source platform that enables developers to package application
 - [PrestaShop's Docker Hub](https://hub.docker.com/r/prestashop/prestashop/)
 
 The easiest way to begin with PrestaShop on Docker is to run your stack with Docker Compose. It will ease container management, networks, and volume persistence.
+
+<div class='mermaid'>
+timeline
+  Setup environment: Install Docker
+  Prepare PrestaShop installation
+    : Create Docker Compose Manifest
+    : Start Docker Compose stack
+  Install PrestaShop
+    : Automatically installed (or manually)
+  Use PrestaShop
+    : You are ready to go
+</div>
 
 ## Install Docker
 

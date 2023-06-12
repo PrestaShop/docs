@@ -1,7 +1,9 @@
 ---
 title: Installing PrestaShop from CLI
-menuTitle: Installation from CLI
+menuTitle: Local environment with CLI
 weight: 15
+aliases:
+    - /8/basics/installation/install-from-cli
 ---
 
 # Installing PrestaShop from CLI
