@@ -107,7 +107,7 @@ We assume you have root access to `phpMyAdmin`, and you're using version 4.x.
 
 The database must be created with 4-Byte UTF-8 encoding (`utf8mb4_general_ci`).
 For information on installation and configuring MySQL see the [MySQL 5.6 documentation](https://dev.mysql.com/doc/refman/5.6/en/).
-Connect as root to your MySql server. In this example our root user is called `adminusername`:
+Connect as root to your MySQL server. In this example our root user is called `adminusername`:
 
 ```bash
 $ mysql -u adminusername -p
@@ -204,8 +204,8 @@ make composer
 
 ##### JavaScript and CSS dependencies
 
-PrestaShop uses NPM to manage dependencies and [Webpack][webpack] to compile them into static assets. 
-You only need NodeJS 14.x (16.x recommended [get it here][nodejs]), NPM will take care of it all.
+PrestaShop uses `NPM` to manage dependencies and [`Webpack`][webpack] to compile them into static assets. 
+You only need `NodeJS 14.x` (`16.x` recommended [get it here][nodejs]), NPM will take care of it all.
 
 ```bash
 cd /path/to/prestashop
