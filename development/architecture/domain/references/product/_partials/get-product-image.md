@@ -3,6 +3,6 @@ __
 
 | Query details              |    |
 | -------------------------- | -- |
-| **Constructor parameters** | <ul> <li>`$int $imageId`</li> </ul> |
+| **Constructor parameters** | <ul> <li>`$int $imageId`</li>  <li>`$PrestaShop\PrestaShop\Core\Domain\Shop\ValueObject\ShopConstraint $shopConstraint`</li> </ul> |
 | **Handler class**          | `PrestaShop\PrestaShop\Adapter\Product\Image\QueryHandler\GetProductImageHandler`  <p> Implements: </p> <ul>  <li>`PrestaShop\PrestaShop\Core\Domain\Product\Image\QueryHandler\GetProductImageHandlerInterface`</li>  |
 | **Return type** |  `PrestaShop\PrestaShop\Core\Domain\Product\Image\QueryResult\ProductImage`  |

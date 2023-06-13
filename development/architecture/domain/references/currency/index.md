@@ -33,9 +33,6 @@ title: Currency domain
 #### ToggleCurrencyStatusCommand {id="ToggleCurrencyStatusCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/currency/_partials/toggle-currency-status-command.md" %}}
-#### ToggleExchangeRateAutomatizationCommand {id="ToggleExchangeRateAutomatizationCommand"}
-
-{{%  include-md "content/8/development/architecture/domain/references/currency/_partials/toggle-exchange-rate-automatization-command.md" %}}
 
 ### Currency Queries
 

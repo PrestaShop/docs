@@ -24,3 +24,6 @@ title: CatalogPriceRule domain
 #### GetCatalogPriceRuleForEditing {id="GetCatalogPriceRuleForEditing"}
 
 {{%  include-md "content/8/development/architecture/domain/references/catalog-price-rule/_partials/get-catalog-price-rule-for-editing.md" %}}
+#### GetCatalogPriceRuleListForProduct {id="GetCatalogPriceRuleListForProduct"}
+
+{{%  include-md "content/8/development/architecture/domain/references/catalog-price-rule/_partials/get-catalog-price-rule-list-for-product.md" %}}

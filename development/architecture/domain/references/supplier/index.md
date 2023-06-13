@@ -21,6 +21,9 @@ title: Supplier domain
 #### DeleteSupplierCommand {id="DeleteSupplierCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/supplier/_partials/delete-supplier-command.md" %}}
+#### DeleteSupplierLogoImageCommand {id="DeleteSupplierLogoImageCommand"}
+
+{{%  include-md "content/8/development/architecture/domain/references/supplier/_partials/delete-supplier-logo-image-command.md" %}}
 #### EditSupplierCommand {id="EditSupplierCommand"}
 
 {{%  include-md "content/8/development/architecture/domain/references/supplier/_partials/edit-supplier-command.md" %}}

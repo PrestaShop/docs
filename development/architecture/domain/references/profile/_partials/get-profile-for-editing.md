@@ -5,4 +5,4 @@ _Get Profile data for editing_
 | -------------------------- | -- |
 | **Constructor parameters** | <ul> <li>`$int $profileId`</li> </ul> |
 | **Handler class**          | `PrestaShop\PrestaShop\Adapter\Profile\QueryHandler\GetProfileForEditingHandler`  <p> Implements: </p> <ul>  <li>`PrestaShop\PrestaShop\Core\Domain\Profile\QueryHandler\GetProfileForEditingHandlerInterface`</li>  |
-| **Return type** |  `mixed`  |
+| **Return type** |  `PrestaShop\PrestaShop\Core\Domain\Profile\QueryResult\EditableProfile`  |

@@ -27,6 +27,9 @@ title: Attachment domain
 #### GetAttachment {id="GetAttachment"}
 
 {{%  include-md "content/8/development/architecture/domain/references/attachment/_partials/get-attachment.md" %}}
-#### GetAttachmentInformationList {id="GetAttachmentInformationList"}
+#### GetAttachmentInformation {id="GetAttachmentInformation"}
 
-{{%  include-md "content/8/development/architecture/domain/references/attachment/_partials/get-attachment-information-list.md" %}}
+{{%  include-md "content/8/development/architecture/domain/references/attachment/_partials/get-attachment-information.md" %}}
+#### SearchAttachment {id="SearchAttachment"}
+
+{{%  include-md "content/8/development/architecture/domain/references/attachment/_partials/search-attachment.md" %}}
