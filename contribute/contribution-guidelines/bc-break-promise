@@ -1,0 +1,15 @@
+---
+title: Backward Compatibility Promise
+weight: 60
+---
+
+# Backward Compatibility Promise
+
+Following [Symfony](symfony-bc-break) example, PrestaShop team documented each type of Backward Compatibility Break, and which ones are allowed or not in a patch/minor/major version.
+
+You can read it on the ADR repository [here][adr-bc-break].
+
+This list will be used by reviewers to acknowledge whether a Pull Request contains BC Breaks or not, and if they are acceptable or not (given the PR target branch).
+
+[symfony-bc-break]: https://symfony.com/doc/current/contributing/code/bc.html
+[adr-bc-break]: https://github.com/PrestaShop/ADR/blob/master/0017-backward-compatibility-promise.md
