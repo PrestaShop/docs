@@ -2,6 +2,8 @@
 title: Configure Nginx
 menuTitle: Nginx
 weight: 25
+aliases:
+    - /8/basics/installation/nginx
 ---
 
 # Configure Nginx
