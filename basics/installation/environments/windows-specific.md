@@ -22,7 +22,7 @@ Several options are available, such as:
 
 Several examples in this documentation uses `CLI` (Command line interface), refered sometimes as `terminal`.
 
-You may need to replace some commands in examples, for example:
+You may need to replace some commands in examples, for instance:
 
 - When copying files, on `Unix` based operating systems (the ones we use in the docs), we use `cp`, on Windows you need to use `copy`.
 - When moving files, on `Unix` based OS, we use `mv`, you need to use `move`. 
@@ -32,7 +32,7 @@ You may need to replace some commands in examples, for example:
 
 A good option to install an AMP stack on your Windows, is to use [WSL (Windows Subsystem for Linux)](https://learn.microsoft.com/en-gb/windows/wsl/install).
 
-`WSL` allows you to install a Linux distribution on your Windows, and leverage all Linux advantages when it comes to run a server, and it will help you understand how a webserver works, making it easier when you will have to deploy your PrestaShop for production. 
+`WSL` allows you to install a Linux distribution on your Windows, and leverage all Linux advantages when it comes to running a server, and it will help you understand how a web server works, making it easier when you will have to deploy your PrestaShop for production. 
 
 When `WSL` is installed, install a distribution of your choice (`Ubuntu 22.x LTS` is a good choice since it is a Long Term Support (LTS) version, and it is widely used, so sources of support are numerous).
 

@@ -121,7 +121,7 @@ PrestaShop uses `Composer` to manage its packages. Install it [here][composer].
 ### NodeJS
 
 PrestaShop uses `NPM` to manage frontend dependencies and [`Webpack`][webpack] to compile them into static assets. 
-You only need `NodeJS 14.x` (`16.x` recommended [get it here][nodejs]), `NPM` will take care of it all.
+You only need `NodeJS 14.x` (version `16.x` is recommended, [you can get it here][nodejs]), and `NPM` will take care of it all.
 
 #### NVM
 

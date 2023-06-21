@@ -11,25 +11,25 @@ aliases:
 
 # Installing PrestaShop locally for development or testing
 
-If you want to develop or experiment on PrestaShop, you should install it locally on your machine. The main advantage is that it makes it possible for you to entirely bypass the process of uploading your file on your online server in order to test it. 
+If you want to develop or experiment with PrestaShop, you should install it locally on your machine. The main advantage is that it makes it possible for you to entirely bypass the process of uploading your files to your online server in order to test it. 
 
-Another advantage is that a local test environment enables you to test code without the risk of breaking your production store. Having a local environment is the essential first step in the path of web development.
+Another advantage is that a local test environment enables you to test code without risking breaking your production store. Having a local environment is the essential first step in the path of web development.
 
-Installing any web-application locally requires that you first install the adequate environment, namely the Apache web server, the PHP language interpreter, the MySQL database server, and ideally a MySQL admin tool such as phpMyAdmin tool. 
+Installing any web application locally requires installing an adequate environment, namely the Apache web server, the PHP language interpreter, the MySQL database server, and ideally, a MySQL admin tool such as the phpMyAdmin tool. 
 
-This is called an *AMP stack: Apache+MySQL+PHP and the operating system, giving WAMP (Windows+Apache+MySQL+PHP), MAMP (macOS…) and LAMP (Linux+…). Since all of the items packaged are open-source, these installers are most of the time free.
+This is called an *AMP stack: Apache+MySQL+PHP and the operating system, giving WAMP (Windows+Apache+MySQL+PHP), MAMP (macOS…), and LAMP (Linux+…). Since all of the items packaged are open-source, these installers are, most of the time, free.
 
-Whatever your operating system, you can install this *AMP stack on your operating system, or use `Docker`.
+Whatever your operating system, you can install this *AMP stack on your operating system or use `Docker`.
 
 ## Which installation method is best for me?
 
-You basically have three options: 
+You have three options: 
 
-- Install an `*AMP` stack locally on your operating system, and run PrestaShop locally. 
+- Install an `*AMP` stack locally on your operating system, and run PrestaShop there. 
 - Install `Docker`, and run PrestaShop in containers managed by `Docker`.
-- or Install a `Virtual Machine` software, and run a `LAMP` stack in a `Virtual Machine` (not discussed here).
+- or install a `Virtual Machine` software, and run a `LAMP` stack in a `Virtual Machine` (not discussed here).
 
-Depending on your experience, you will choose the method you are the most at ease with. 
+Depending on your experience, you will choose the method you are most at ease with. 
 
 If you have no experience, it can be easier to begin with `Docker`, since you will not need to install the `*AMP` stack and simply install `Docker`, create a `manifest` file, and start the containers with a `CLI` (Command Line Interface) command. 
 
@@ -90,7 +90,7 @@ Read [System Requirements][system-requirements].
 
 #### Creating a database for your shop
 
-If you are installing PrestaShop on a web server, then you must create the database and give access to a privileged user.
+If you install PrestaShop on a web server, you must create the database and give access to a privileged user.
 You will need this user's credentials to configure PrestaShop during the installation process.
 
 ##### Using phpMyAdmin
@@ -101,12 +101,12 @@ We assume you have root access to `phpMyAdmin`, and you're using version 4.x.
  * Click `User accounts`, and then click on `Add user account`
  * Fill the `User name` and the `Password`
  * In the `Database for user account`, select `Create database` and `Grant all privileges`
- * Create user and database and make sure the COLLATION of your database is `utf8mb4_general_ci`
+ * Create a user, database and make sure the COLLATION of your database is `utf8mb4_general_ci`
  
 ##### From the command line
 
 The database must be created with 4-Byte UTF-8 encoding (`utf8mb4_general_ci`).
-For information on installation and configuring MySQL see the [MySQL 5.6 documentation](https://dev.mysql.com/doc/refman/5.6/en/).
+For information on installation and configuring MySQL, see the [MySQL 5.6 documentation](https://dev.mysql.com/doc/refman/5.6/en/).
 Connect as root to your MySQL server. In this example our root user is called `adminusername`:
 
 ```bash
@@ -167,18 +167,18 @@ If you intend to work on PrestaShop itself, we suggest using Git to clone the so
 
 ##### Repository branches
 
-As stated above, if you decide to work on PrestaShop itself, it's best to clone the PrestaShop repository and work using git. Depending on the version of PrestaShop you want to work on, you will need to choose the right branch:
+As stated above, if you decide to work on PrestaShop itself, it's best to clone the PrestaShop repository and work using Git. Depending on the version of PrestaShop you want to work on, you will need to choose the right branch:
 
-* The [develop branch](https://github.com/PrestaShop/PrestaShop/tree/8.0.x) contains the current work in progress for the next minor or major version.
-    - **This is the right branch to contribute new features, refactors, small bug fixes, etc.**
-* The maintenance branches (_8.0.x, ..._) contains all patches made for each minor version.
+* The [develop branch](https://github.com/PrestaShop/PrestaShop/tree/develop) contains the current work in progress for the next minor or major version.
+    - **This is the right branch to contribute new features, refactors, etc.**
+* The maintenance branches (_8.0.x, ..._) contain all patches made for each minor version.
     - For example, the _8.0.x_ branch contains all patches from 8.0.0 to 8.0.99.
     - Whenever a new minor or major version is ready for release, a new maintenance branch is created. For example, _8.0.x_ for version 8.0.0, _8.1.x_ for 8.1.0, and so forth.
     - **Only the most recent maintenance branch accepts new contributions**
     
 {{% /callout %}}
 
-[Clone the repository using Git][clone-the-repository] or extract the zip package in a `prestashop` folder inside the document folder of the AMP installer you chose:
+[Clone the repository using Git][clone-the-repository] or extract the zip package in a `prestashop` folder inside the document folder of the *AMP installer you chose:
 
 * XAMPP: `C:\xampp\htdocs` or `/Applications/xampp/htdocs`
 * WampServer: `C:\wamp\www`
@@ -205,7 +205,7 @@ make composer
 ##### JavaScript and CSS dependencies
 
 PrestaShop uses `NPM` to manage dependencies and [`Webpack`][webpack] to compile them into static assets. 
-You only need `NodeJS 14.x` (`16.x` recommended [get it here][nodejs]), NPM will take care of it all.
+You only need `NodeJS 14.x` (version `16.x` is recommended, [you can get it here][nodejs]), and NPM will take care of it all.
 
 ```bash
 cd /path/to/prestashop
