@@ -8,7 +8,7 @@ weight: 3
 
 PrestaShop is an Open-Source web application running on an *AMP stack (Apache - MySQL - PHP).
 
-In order for PrestaShop to run locally on your MacOS computer, you need to install an *AMP stack. 
+In order for PrestaShop to run locally on your computer, you need to install an *AMP stack. 
 
 Basically, you need to install: 
 
