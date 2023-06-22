@@ -2,7 +2,7 @@
 menuTitle: actionListModules
 Title: actionListModules
 hidden: true
-hookTitle: Allows to add your own modules from remote source in modules list in the administration.
+hookTitle: Allows you to add your own modules from a remote source in the modules list in the back office.
 files:
  - src/Core/Module/ModuleRepository.php
 locations:
@@ -33,4 +33,4 @@ $modulesFromHook = array_values($modulesFromHook ?? []);
 
 ## Example implementation
 
-This hook has been implemented in our module [ps_distributionapiclient](https://github.com/PrestaShop/ps_distributionapiclient/tree/master)
+This hook has been implemented in the native [ps_distributionapiclient](https://github.com/PrestaShop/ps_distributionapiclient/tree/master) module
