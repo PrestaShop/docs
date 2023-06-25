@@ -29,6 +29,16 @@ public function install()
 As you can see, we make it so that the module is hooked to the `displayLeftColumn` and `actionFrontControllerSetMedia` hooks. 
 In addition to this, we will add code for the `displayRightColumn` hook.
 
+{{% notice note %}}
+Those hooks will be displayed if your theme is running a three column layout. 
+
+To enable three column layout, you need to : 
+
+- go to back office > Design > Theme & logo > Configure your page layouts > Choose layouts
+- and enable "Three Columns" layout on pages
+{{% /notice %}}
+
+
 Attaching code to a hook requires a specific method for each:
 
 -   `hookDisplayLeftColumn()`: will hook code into the left column – in our case, it will fetch the MYMODULE\_NAME module setting and display the module's template file, `mymodule.tpl`, which must be located in the `/views/templates/hook/` folder.
