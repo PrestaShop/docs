@@ -26,7 +26,7 @@ This hook displays new elements in the right-hand column of a page
 {{% /notice %}}
 
 {{% notice note %}}
-When located on a Product Page, the hook is [`displayRightColumnProduct`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayRightColumnProduct">}})
+When located on a product page, the hook is [`displayRightColumnProduct`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayRightColumnProduct">}})
 {{% /notice %}}
 
 Hook locations: 

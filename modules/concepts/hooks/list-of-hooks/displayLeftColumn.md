@@ -26,7 +26,7 @@ This hook displays new elements in the left-hand column of a page
 {{% /notice %}}
 
 {{% notice note %}}
-When located on a Product Page, the hook is [`displayLeftColumnProduct`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayLeftColumnProduct">}})
+When located on a product page, the hook is [`displayLeftColumnProduct`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayLeftColumnProduct">}})
 {{% /notice %}}
 
 Hook locations: 

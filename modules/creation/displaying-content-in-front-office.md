@@ -30,12 +30,12 @@ As you can see, we make it so that the module is hooked to the `displayLeftColum
 In addition to this, we will add code for the `displayRightColumn` hook.
 
 {{% notice note %}}
-Those hooks will be displayed if your theme is running a three column layout. 
+Those hooks will be displayed if your theme uses a three-column layout. 
 
-To enable three column layout, you need to : 
+To enable a three-column layout, you need to: 
 
 - go to back office > Design > Theme & logo > Configure your page layouts > Choose layouts
-- and enable "Three Columns" layout on pages
+- enable "Three Columns" layout on selected pages
 {{% /notice %}}
 
 
