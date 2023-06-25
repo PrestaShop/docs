@@ -40,7 +40,7 @@ Hint: `--debug` without `--filter` gives a nice list to filter with.
 
 To check if you covered everything in your tests cases its best to run the tests with [phpunit coverage report](https://phpunit.readthedocs.io/en/9.5/code-coverage-analysis.html).
 
-First get your [environment up and running]({{< relref "/8/basics/installation/localhost" >}}). 
+First get your [environment up and running]({{< relref "/8/basics/installation" >}}). 
 
 Then, [install and enable Xdebug](https://xdebug.org/docs/install).
 
@@ -50,8 +50,8 @@ Finally, run your tests with coverage enabled:
 XDEBUG_MODE=coverage vendor/bin/phpunit --coverage-text -c tests/Unit/phpunit.xml tests/Unit/PrestaShopBundle/Command/ConfigCommandTest.php
 ```
 
-{{% notice tip %}}
-You may use a [Dockerized environment to run the project]({{< relref "/8/basics/installation/install-with-docker" >}}).
+{{% notice note %}}
+You may use a [Dockerized environment to run the project]({{< relref "/8/basics/installation/environments/docker" >}}).
 
 After that is up and running you need to compile and enable xdebug:
 
