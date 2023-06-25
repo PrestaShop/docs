@@ -19,24 +19,27 @@ public function install()
     }
 
     return parent::install() &&
-        $this->registerHook('displayFooterProduct') &&
+        $this->registerHook('displayLeftColumn') &&
         $this->registerHook('actionFrontControllerSetMedia') &&
+        $this->registerHook('displayRightColumn') &&
         Configuration::updateValue('MYMODULE_NAME', 'my module');
 }
 ```
 
-As you can see, we make it so that the module is hooked to the `displayFooterProduct` and `actionFrontControllerSetMedia` hooks. 
+As you can see, we make it so that the module is hooked to the `displayLeftColumn` and `actionFrontControllerSetMedia` hooks. 
+In addition to this, we will add code for the `displayRightColumn` hook.
 
 Attaching code to a hook requires a specific method for each:
 
--   `hookDisplayFooterProduct()`: will hook code into the footer part of the product page – in our case, it will fetch the MYMODULE\_NAME module setting and display the module's template file, `mymodule.tpl`, which must be located in the `/views/templates/hook/` folder.
+-   `hookDisplayLeftColumn()`: will hook code into the left column – in our case, it will fetch the MYMODULE\_NAME module setting and display the module's template file, `mymodule.tpl`, which must be located in the `/views/templates/hook/` folder.
+-   `hookDisplayRightColumn()`: will simply do the same as `hookDisplayLeftColumn()`, but for the right column.
 -   `hookActionFrontControllerSetMedia()`: will add a link to the module's CSS file, `/views/css/mymodule.css` and module's JS file, `/views/js/mymodule.js`.
     
 Add the following to your mymodule.php file:
 
 ```php
 <?php
-    public function hookDisplayFooterProduct($params)
+    public function hookDisplayLeftColumn($params)
     {
         $this->context->smarty->assign([
             'my_module_name' => Configuration::get('MYMODULE_NAME'),
@@ -44,6 +47,11 @@ Add the following to your mymodule.php file:
         ]);
 
         return $this->display(__FILE__, 'mymodule.tpl');
+    }
+
+    public function hookDisplayRightColumn($params)
+    {
+        return $this->hookDisplayLeftColumn($params);
     }
 
     public function hookActionFrontControllerSetMedia()
@@ -90,7 +98,7 @@ module" button (top right of the page).
 In the transplantation form:
 
 -   Find "My module" in the "Module" drop-down list.
--   Choose "displayFooterProduct (This hook displays new elements in the footer part of the product page)" in the "Transplant into" drop-down list.
+-   Choose "displayLeftColumn (This hook displays new elements in the left-hand column)" in the "Transplant into" drop-down list.
 -   Click "Save".
 
 It is useless to try to attach a module to a hook for which it has no
@@ -100,17 +108,17 @@ The "Positions" page should reload, with the following message: "Module
 transplanted successfully to the hook" (or maybe "This module has already
 been transplanted to this hook. "). Congratulations! Scroll down the
 "Positions" page, and you should indeed see your module among the other
-modules in the "displayFooterProduct" block. Move it to the top of the list
+modules in the "displayLeftColumn" block. Move it to the top of the list
 by drag'n'dropping the module's row.
 
-The module is now attached to the footer, but without any
+The module is now attached to the left column, but without any
 template to display, it falls short of doing anything useful: if you
-reload the homepage, the footer simply displays a message where the
+reload the homepage, the left column simply displays a message where the
 module should be, saying "No template found for module mymodule".
 
 ## Displaying content
 
-Now that we have access to the footer, we should display something
+Now that we have access to the left column, we should display something
 there for the customer to see.
 
 The visible part of the module is defined in `.tpl` files placed in
