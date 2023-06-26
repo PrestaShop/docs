@@ -147,7 +147,7 @@ The `cookie` mechanism in browsers has some limitations about how much data you 
 
 - PrestaShop will create only one cookie, in the `$_COOKIE` array, with each key and value data appended to a string and finally encrypted for safety reasons.
 
-- Although PrestaShop has a hard limit of **1048576** characters, before encryption, please note that most browsers will ignore the `cookie` if its size is superior to `4096 bytes`, which makes a limit around **1000 characters** before encryption.
+- Please note that most browsers will ignore the `cookie` if its size is superior to `4096 bytes`, which makes a limit around **1000 characters** before encryption.
 
 {{% notice note %}}
 If you need to store more information, you should consider using server-side storage such as `session` or `database`, or use browser-side storage such as [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).
