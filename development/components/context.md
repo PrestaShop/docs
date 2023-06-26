@@ -21,8 +21,8 @@ These objects are always accessible through the context:
 - **Country.** Default country.
 - **Currency.** Set with the customer currency or the shop's default currency.
 - **Shop.** Current shop.
-- **Cookie.** Cookie instance.
-- **Link.** Link instance.
+- **Cookie.** [Cookie instance]({{< relref "/8/development/components/cookie">}}).
+- **Link.** [Link instance]({{< relref "/8/development/components/link">}}).
 - **Smarty.** Smarty instance.
 - **CurrentLocale.**  [Current Locale]({{< relref "/8/development/components/locale" >}}).
 
