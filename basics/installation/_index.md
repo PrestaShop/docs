@@ -20,7 +20,7 @@ Installing any web application locally requires installing an adequate environme
 This is called an *AMP stack: Apache+MySQL+PHP and the operating system, giving WAMP (Windows+Apache+MySQL+PHP), MAMP (macOS…), and LAMP (Linux+…). Since all of the items packaged are open-source, these installers are, most of the time, free.
 
 Whatever your operating system, you can install this *AMP stack on your operating system or use `Docker`.
-
+ 
 ## Which installation method is best for me?
 
 You have three options: 
@@ -47,9 +47,9 @@ timeline
     : You are ready to go
 </div>
 
-<a href="{{< relref "/8/basics/installation/environments/docker" >}}" class="cta cta-primary">
+{{<cta relref="/8/basics/installation/environments/docker" type="primary">}}
   Install PrestaShop locally with Docker
-</a>
+{{</cta>}}
 
 ## Install PrestaShop locally on an *AMP stack
 
@@ -76,17 +76,17 @@ Read [System Requirements][system-requirements].
 
 #### Install an *AMP stack on your operating system
 
-<a href="{{< relref "/8/basics/installation/environments/unix-specific" >}}" class="cta">
+{{<cta relref="/8/basics/installation/environments/unix-specific">}}
   Install an *AMP stack on Unix
-</a>
+{{</cta>}}
 
-<a href="{{< relref "/8/basics/installation/environments/windows-specific" >}}" class="cta">
+{{<cta relref="/8/basics/installation/environments/windows-specific">}}
   Install an *AMP stack on Windows
-</a>
+{{</cta>}}
 
-<a href="{{< relref "/8/basics/installation/environments/macos-specific" >}}" class="cta">
+{{<cta relref="/8/basics/installation/environments/macos-specific">}}
   Install an *AMP stack on MacOS
-</a>
+{{</cta>}}
 
 #### Creating a database for your shop
 

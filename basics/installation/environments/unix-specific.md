@@ -18,6 +18,6 @@ Basically, you need to install:
 
 Please [read this page](https://linuxhandbook.com/lamp-stack-ubuntu/) or [this one](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-22-04) for guides to get started on installing Apache + MySQL + PHP on Ubuntu.
 
-<a href="{{< relref "/8/basics/installation" >}}" class="cta cta-primary">
+{{<cta relref="/8/basics/installation" type="primary">}}
   Back to installation guide
-</a>
+{{</cta>}}
