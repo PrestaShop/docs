@@ -18,7 +18,6 @@ hookAliases:
 {{% notice tip %}}
 **Change the default template of current controller:** 
 
-
 {{% /notice %}}
 
 Hook locations: 
@@ -31,14 +30,31 @@ Located in:
 
 ## Call of the Hook in the origin file
 
+### Before {{< minver v="8.1">}}
+
 ```php
 Hook::exec(
-            'displayOverrideTemplate',
-            [
-                'controller' => $this,
-                'template_file' => $template,
-                'id' => $params['id'],
-                'locale' => $locale,
-            ]
-        )
+  'displayOverrideTemplate',
+  [
+    'controller' => $this,
+    'template_file' => $template,
+    'id' => $params['id'],
+    'locale' => $locale,
+  ]
+)
+```
+
+### From {{< minver v="8.1">}}
+
+```php
+Hook::exec(
+  'displayOverrideTemplate',
+  [
+    'controller' => $this,
+    'template_file' => $template,
+    'entity' => $params['entity'],
+    'id' => $params['id'],
+    'locale' => $locale,
+  ]
+)
 ```
