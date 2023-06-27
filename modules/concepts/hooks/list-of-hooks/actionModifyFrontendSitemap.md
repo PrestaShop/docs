@@ -35,7 +35,7 @@ Located in:
 ```php
 Hook::exec(
     'actionModifyFrontendSitemap',
-    ['urls' => &$urls],
+    ['urls' => &$sitemapUrls],
     null,
     false,
     true,
