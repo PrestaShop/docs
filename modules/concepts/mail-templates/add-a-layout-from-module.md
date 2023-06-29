@@ -26,7 +26,7 @@ of your module.
   <tr>
     <td align="center" class="titleblock">
       <font size="2" face="{{ languageDefaultFont }}Open-sans, sans-serif" color="#555454">
-        <span class="title">{{ 'This is an example mail template from my module for classic theme'|trans({}, 'EmailsBody', locale)|raw }}</span>
+        <span class="title">{{ 'This is an example mail template from my module for classic theme'|trans({}, 'Emails.Body', locale)|raw }}</span>
       </font>
     </td>
   </tr>
@@ -45,7 +45,7 @@ of your module.
     <tr>
       <td align="center" class="titleblock">
         <font size="2" face="{{ languageDefaultFont }}Open-sans, sans-serif" color="#555454">
-          <span class="title">{{ 'This is an example mail template from my module for modern theme'|trans({}, 'EmailsBody', locale)|raw }}</span>
+          <span class="title">{{ 'This is an example mail template from my module for modern theme'|trans({}, 'Emails.Body', locale)|raw }}</span>
         </font>
       </td>
     </tr>
