@@ -35,7 +35,7 @@ First you need to setup your composer file, you will find more info about it in 
 
 ### Creation of the command
 
-At this moment, the only requirement is that you PHP file needs to be a class that extends `Symfony\Component\Console\Command`. Let's create ExportCommand file:
+At this moment, the only requirement is that you PHP file needs to be a class that extends `Symfony\Component\Console\Command\Command`. Let's create ExportCommand file:
 
 ```php
 <?php
