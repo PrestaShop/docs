@@ -5,9 +5,11 @@ weight: 2
 
 # Minor release lifecycle
 
+Minor releases are released every 6 to 9 months and provide new features, enhancements and bug fixes.
+
 ## Kanban and scope
 
-Each minor version is defined by a feature scope, that is, a number of GitHub issues that we put in a version [Kanban](https://help.github.com/en/github/managing-your-work-on-github/about-project-boards). How these issues are picked or sorted is the responsibility of the Product Team, who spends a lot of time gathering feedback from the PrestaShop community to make sure the next minor version addresses the most important needs.
+Each minor version is defined by a feature scope, that is, a number of GitHub issues that we put in a version [Kanban](https://help.github.com/en/github/managing-your-work-on-github/about-project-boards). How these issues are picked or sorted is the responsibility of the Product Council, who spends a lot of time gathering feedback from the PrestaShop community to make sure the next minor version addresses the most important needs.
 
 For example PrestaShop 8.1.0 scope contained, but not only:
 
@@ -25,7 +27,7 @@ This is a _Feature Freeze_, not a _Code Freeze_. Some older bugs may be added to
 
 Feature freeze means all features initially planned for this version have been done. The project enters a phase of _stabilization_ whose aim is to identify and fix all regressions before it's released.
 
-Once this phase is started, project maintainers create a git branch from `develop` branch which will carry the work to be done until the release (for 8.1.0, the branch name was `8.1.x`). Starting now, the main job of this branch is to fix bugs for this version. We won't add any new features, unless they are really wanted by the community and safe to add. Any contribution that isn't about fixing bugs will be carefully checked by our project members (technical, product and quality council) to see if it can be included in the main patch branch.
+Once this phase is started, project maintainers create a git branch from `develop` branch which will carry the work to be done until the release (for 8.1.0, the branch name was `8.1.x`). Starting now, the main job of this branch is to fix bugs for this version. We won't add any new features, unless they are really wanted by the community and safe to add. Any contribution that isn't about fixing bugs will be carefully checked by our project members (technical, product and Quality Council) to see if it can be included in the main patch branch.
 
 Incidentally, this is also the branch where all future patch versions for this minor version will be developed on (hence the `.x` at the end).
 
