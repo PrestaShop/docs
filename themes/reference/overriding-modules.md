@@ -120,11 +120,11 @@ Here an example of generated markup with SmartyDev activated:
 
 <!-- begin /var/www/html/PrestaShop/themes/classic/modules/ps_customersignin/ps_customersignin.tpl -->
   <a class="logout hidden-sm-down" href="http://prestashop.ps/en/?mylogout=" rel="nofollow">
-    <i class="material-icons">&#xE7FF;</i>
+    <i class="material-icons">&#FFFFFF;</i>
     Sign out
   </a>
   <a class="account" href="http://prestashop.ps/en/my-account" title="View my customer account" rel="nofollow" >
-    <i class="material-icons hidden-md-up logged">&#xE7FF;</i>
+    <i class="material-icons hidden-md-up logged">&#FFFFFF;</i>
     <span class="hidden-sm-down">Julien Bourdeau</span>
   </a>
 <!-- end /var/www/html/PrestaShop/themes/classic/modules/ps_customersignin/ps_customersignin.tpl -->
