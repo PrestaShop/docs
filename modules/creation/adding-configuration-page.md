@@ -1,5 +1,5 @@
 ---
-title: Legacy configuration page
+title: Adding a configuration page (Legacy architecture)
 weight: 4
 ---
 

@@ -59,7 +59,7 @@ PrestaShop provides some built-in Form types that will help you integrate the sp
 * `TextWithUnitType`
 * ...
 
-An almost complete reference of existing [Back Office types can be found here]({{<relref "/8/modules/creation/adding-configuration-page-modern#other-form-types">}}). 
+Reference of existing [back office form types can be found here]({{<relref "/8/modules/creation/adding-configuration-page-modern#other-form-types">}}). 
 
 Most of the components from the PrestaShop UI Kit are implemented as Form Types.
 

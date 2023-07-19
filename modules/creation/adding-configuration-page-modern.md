@@ -7,9 +7,8 @@ weight: 4
 
 With the new Symfony architecture, [there is a much modern way of integrating settings forms]({{<relref "/8/development/architecture/migration-guide/forms/settings-forms">}}) (`Configure` action) for your modules. 
 
-In the first part of this guide, we will explain how to implement such a mecanism in a module. We will create a module, with a dedicated configuration page, with a simple configuration field. 
+In the first part of this guide, we will explain how to implement such a mechanism in a module. We will create a module with a dedicated configuration page consisting of a simple configuration field. 
 
-In the second part of this guide, we will list and illustrate the other form types (field types) availables. 
 
 **Summary:** 
 
@@ -134,7 +133,7 @@ services:
 This `services.yml` file is registering your `PrestaShop\Module\DemoSymfonyFormSimple\Form\DemoConfigurationTextType` class as `prestashop.module.demosymfonyformsimple.form.type.demo_configuration_text`. It also add a tag `name: form.type`, and declares it as `public`. 
 
 {{% notice note %}}
-More informations about services in [Symfony official documentation](https://symfony.com/doc/4.4/service_container.html)
+You can read more about services in the [official Symfony official documentation](https://symfony.com/doc/4.4/service_container.html)
 {{% /notice %}}
 
 ## Create the Data configuration
@@ -177,9 +176,7 @@ final class DemoConfigurationTextDataConfiguration implements DataConfigurationI
     {
         $return = [];
 
-        if ($textSimple = $this->configuration->get(static::DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE)) {
-            $return['config_text'] = $textSimple;
-        }
+        $return['config_text'] = $this->configuration->get(static::DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE);
 
         return $return;
     }
@@ -209,7 +206,7 @@ final class DemoConfigurationTextDataConfiguration implements DataConfigurationI
 }
 ```
 
-This Data configuration maps the `config_text` from the Form type to the `DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE` configuration data key. 
+`DemoConfigurationTextDataConfiguration` maps the `config_text` from the Form Type to the `DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE` configuration data key. 
 
 ### Register the Data configuration
 
@@ -235,7 +232,7 @@ use PrestaShop\PrestaShop\Core\Configuration\DataConfigurationInterface;
 use PrestaShop\PrestaShop\Core\Form\FormDataProviderInterface;
 
 /**
- * Provider ir responsible for providing form data, in this case it's as simple as using configuration to do that
+ * Provider is responsible for providing form data, in this case, it is returned from the configuration component
  *
  * Class DemoConfigurationTextFormDataProvider
  */
@@ -379,7 +376,7 @@ class DemoConfigurationController extends FrameworkBundleAdminController
 ```
 
 {{% notice note %}}
-More informations about controllers on [Controller & routing]({{<relref "/8/development/architecture/modern/controller-routing">}}) and [Symfony official documentation](https://symfony.com/doc/4.4/controller.html)
+You can read more about controllers in [controller & routing section]({{<relref "/8/development/architecture/modern/controller-routing">}}) and [in the official Symfony documentation](https://symfony.com/doc/4.4/controller.html)
 {{% /notice %}}
 
 ### Create a route for the configuration controller
@@ -410,14 +407,14 @@ Add this method to your module, with a redirection to the route previously regis
 ```php
   public function getContent()
   {
-      $route = SymfonyContainer::getInstance()->get('router')->generate('demo_configuration_form');
+      $route = $this->get('router')->generate('demo_configuration_form');
       Tools::redirectAdmin($route);
   }
 ```
 
 ## Install and enable your module
 
-Go to the Back Office, and in Modules, find your module, then install and enable it. 
+Go to the Back Office, and in Modules Manager, find your module and install it. 
 
 {{% notice note %}}
 You can also install it via CLI: 
@@ -448,7 +445,7 @@ Please refer to this example module for a complete implementation of those field
 
 ### Required Javascript for some types
 
-Some types requires Javascript initializations to properly work. 
+Some types require JavaScript component initialization to work correctly. 
 
 Add a JS file to your form's twig template: 
 
@@ -459,7 +456,7 @@ Add a JS file to your form's twig template:
 {% endblock %}
 ```
 
-And add the Javascript code to this JS file:
+And add the following JavaScript code to this file:
 
 ```js
 $(document).ready(function () {
@@ -481,9 +478,9 @@ $(document).ready(function () {
 ```
 
 {{% notice note %}}
-The Javascript dependencies of specific types are [described in the Field's type reference]({{<relref "/8/development/components/form/types-reference">}})
+The JavaScript dependencies of specific types are [described in the form types reference]({{<relref "/8/development/components/form/types-reference">}})
 {{% /notice %}}
 
 {{% notice note %}}
-Please refer to this example module for a complete implementation of those fields with Javascript: [DemoSymfonyForm](https://github.com/PrestaShop/example-modules/tree/master/demosymfonyform)
+You can check this module to see an example of using JavaScript components: [DemoSymfonyForm](https://github.com/PrestaShop/example-modules/tree/master/demosymfonyform)
 {{% /notice %}}
