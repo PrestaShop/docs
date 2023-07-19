@@ -155,6 +155,7 @@ use PrestaShop\PrestaShop\Core\ConfigurationInterface;
 final class DemoConfigurationTextDataConfiguration implements DataConfigurationInterface
 {
     public const DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE = 'DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE';
+    public const CONFIG_MAXLENGTH = 32;
 
     /**
      * @var ConfigurationInterface
@@ -186,10 +187,18 @@ final class DemoConfigurationTextDataConfiguration implements DataConfigurationI
      */
     public function updateConfiguration(array $configuration): array
     {
-        $this->configuration->set(static::DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE, $configuration['config_text']);
-    
+        $errors = [];
+
+        if($this->validateConfiguration($configuration)){
+            if(strlen($configuration['config_text']) <= static::CONFIG_MAXLENGTH){
+                $this->configuration->set(static::DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE, $configuration['config_text']);
+            } else {
+                $errors[] = "DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE value is too long";
+            }
+        }
+
         /* Errors are returned here. */
-        return [];
+        return $errors;
     }
 
     /**
@@ -201,7 +210,7 @@ final class DemoConfigurationTextDataConfiguration implements DataConfigurationI
      */
     public function validateConfiguration(array $configuration): bool
     {
-        return true;
+        return isset($configuration['config_text']);
     }
 }
 ```
