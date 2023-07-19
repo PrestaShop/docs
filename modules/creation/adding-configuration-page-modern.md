@@ -292,6 +292,9 @@ In `config/services.yml`, register your newly created `DemoConfigurationTextForm
 ## Create and register the form handler
 
 For this form handler, we don't need to create a new class, we can use PrestaShop native's one.
+
+By receiving an instance of `DemoConfigurationTextFormDataProvider` and `DemoConfigurationTextType`, the PrestaShop native Form Handler is able to process the data it receives.
+
 Simply register it in `config/services.yml`: 
 
 ```yml
@@ -402,10 +405,6 @@ demo_configuration_form:
     _legacy_controller: AdminDemoSymfonyFormSimple
     _legacy_link: AdminDemoSymfonyFormSimple
 ```
-
-{{% notice note %}}
-More informations about routing on [Controller & routing]({{<relref "/8/development/architecture/modern/controller-routing">}}) and [Symfony official documentation](https://symfony.com/doc/4.4/routing.html)
-{{% /notice %}}
 
 ## Add this route to the getContent() method of the module
 
