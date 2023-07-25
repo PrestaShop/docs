@@ -31,7 +31,7 @@ class DemoSymfonyFormSimple extends Module
     {
         $this->name = 'demosymfonyformsimple';
         $this->author = 'PrestaShop';
-        $this->version = '1.1.0';
+        $this->version = '1.0.0';
         $this->need_instance = 0;
 
         $this->bootstrap = true;
@@ -103,6 +103,7 @@ class DemoConfigurationFormType extends TranslatorAwareType
         $builder
             ->add('config_text', TextType::class, [
                 'label' => $this->trans('Configuration text', 'Modules.DemoSymfonyFormSimple.Admin'),
+                'help' => $this->trans('Maximum 32 characters', 'Modules.DemoSymfonyFormSimple.Admin'),
             ]);
     }
 }
@@ -359,8 +360,7 @@ class DemoConfigurationController extends FrameworkBundleAdminController
         }
 
         return $this->render('@Modules/demosymfonyformsimple/views/templates/admin/form.html.twig', [
-            'demoConfigurationForm' => $textForm->createView(),
-            'formTheme' => '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig',
+            'demoConfigurationForm' => $textForm->createView()
         ]);
     }
 }
@@ -395,7 +395,7 @@ Add this method to your module, with a redirection to the route previously regis
 ```php
   public function getContent()
   {
-      $route = $this->get('router')->generate('demo_configuration_form');
+      $route = $this->get('router')->generate('demo_configuration_form_simple');
       Tools::redirectAdmin($route);
   }
 ```
