@@ -1,7 +1,7 @@
 ---
 title: Settings Forms
 weight: 20
-
+useMermaid: true
 ---
 
 # Settings Forms
@@ -133,21 +133,34 @@ The following schemas sums up how Form Handlers, Form Builders, Controllers and 
 
 ###### Display Form schema
 
-{{< figure src="../img/form-display.svg" title="Display Form schema" >}}
-
-{{% notice note %}}
-You can update this schema using the [source XML file](/8/schemas/form-display.xml) importable in services like [draw.io](https://draw.io).
-{{% /notice %}}
+<div class='mermaid'>
+stateDiagram-v2
+  s1 : HTTP Request
+  s1 --> Controller: GET
+  Controller --> FormHandler: get form
+  FormHandler --> DataProvider: get data
+  s2: PrestaShop Configuration
+  s3: PrestaShop Database
+  DataProvider --> s2: get data from configuration
+  DataProvider --> s3: get data from database
+  DataProvider --> FormBuilder: pass data to
+  FormBuilder --> FormHandler: build form
+  FormBuilder --> FormType: get form configuration
+</div>
 
 ###### Submit Form schema
 
-{{< figure src="../img/form-submit.svg" title="Submit Form schema" >}}
-
-{{% notice note %}}
-You can update this schema using the [source XML file](/8/schemas/form-submit.xml) importable in services like [draw.io](https://draw.io).
-{{% /notice %}}
-
-{{% /callout %}}
+<div class='mermaid'>
+stateDiagram-v2
+  s1 : HTTP Request
+  s1 --> Controller: POST
+  Controller --> FormHandler: save data
+  FormHandler --> DataProvider: persist data
+  s2: PrestaShop Configuration
+  s3: PrestaShop Database
+  DataProvider --> s2: persist data
+  DataProvider --> s3: persist data
+</div>
 
 ## Render the form using Twig
 
