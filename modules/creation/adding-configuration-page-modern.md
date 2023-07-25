@@ -37,9 +37,9 @@ class DemoSymfonyFormSimple extends Module
         $this->bootstrap = true;
         parent::__construct();
 
-        $this->displayName = $this->trans('Demo symfony form configuration', [], 'Modules.DemoSymfonyFormSimple.Admin');
+        $this->displayName = $this->trans('Demo of the Symfony-based configuration form', [], 'Modules.DemoSymfonyFormSimple.Admin');
         $this->description = $this->trans(
-            'Module created for the purpose of showing existing form types within PrestaShop',
+            'Module demonstrates a simple module\'s configuration page made with Symfony.',
             [],
             'Modules.DemoSymfonyFormSimple.Admin'
         );
@@ -87,19 +87,17 @@ Create a `DemoConfigurationFormType.php` file in `src/Form`.
 
 ```php
 <?php
+
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoSymfonyFormSimple\Form;
 
+use PrestaShopBundle\Form\Admin\Type\TranslatorAwareType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use PrestaShopBundle\Form\Admin\Type\TranslatorAwareType;
 
 class DemoConfigurationFormType extends TranslatorAwareType
 {
-    /**
-     * {@inheritdoc}
-     */
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
@@ -108,6 +106,7 @@ class DemoConfigurationFormType extends TranslatorAwareType
             ]);
     }
 }
+
 ```
 
 This form has only one setting : `config_test`, of type `Symfony\Component\Form\Extension\Core\Type\TextType`. 
@@ -150,7 +149,7 @@ use PrestaShop\PrestaShop\Core\Configuration\DataConfigurationInterface;
 use PrestaShop\PrestaShop\Core\ConfigurationInterface;
 
 /**
- * Configuration is used to save data to configuration table and retrieve from it
+ * Configuration is used to save data to configuration table and retrieve from it.
  */
 final class DemoConfigurationTextDataConfiguration implements DataConfigurationInterface
 {
@@ -162,17 +161,11 @@ final class DemoConfigurationTextDataConfiguration implements DataConfigurationI
      */
     private $configuration;
 
-    /**
-     * @param ConfigurationInterface $configuration
-     */
     public function __construct(ConfigurationInterface $configuration)
     {
         $this->configuration = $configuration;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getConfiguration(): array
     {
         $return = [];
@@ -182,18 +175,15 @@ final class DemoConfigurationTextDataConfiguration implements DataConfigurationI
         return $return;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function updateConfiguration(array $configuration): array
     {
         $errors = [];
 
-        if($this->validateConfiguration($configuration)){
-            if(strlen($configuration['config_text']) <= static::CONFIG_MAXLENGTH){
+        if ($this->validateConfiguration($configuration)) {
+            if (strlen($configuration['config_text']) <= static::CONFIG_MAXLENGTH) {
                 $this->configuration->set(static::DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE, $configuration['config_text']);
             } else {
-                $errors[] = "DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE value is too long";
+                $errors[] = 'DEMO_SYMFONY_FORM_SIMPLE_TEXT_TYPE value is too long';
             }
         }
 
@@ -203,8 +193,6 @@ final class DemoConfigurationTextDataConfiguration implements DataConfigurationI
 
     /**
      * Ensure the parameters passed are valid.
-     *
-     * @param array $configuration
      *
      * @return bool Returns true if no exception are thrown
      */
@@ -233,6 +221,7 @@ Create a `DemoConfigurationTextFormDataProvider.php` file in `src/Form`.
 
 ```php
 <?php
+
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoSymfonyFormSimple\Form;
@@ -241,7 +230,7 @@ use PrestaShop\PrestaShop\Core\Configuration\DataConfigurationInterface;
 use PrestaShop\PrestaShop\Core\Form\FormDataProviderInterface;
 
 /**
- * Provider is responsible for providing form data, in this case, it is returned from the configuration component
+ * Provider is responsible for providing form data, in this case, it is returned from the configuration component.
  *
  * Class DemoConfigurationTextFormDataProvider
  */
@@ -252,30 +241,22 @@ class DemoConfigurationTextFormDataProvider implements FormDataProviderInterface
      */
     private $demoConfigurationTextDataConfiguration;
 
-    /**
-     * @param DataConfigurationInterface $demoConfigurationTextDataConfiguration
-     */
     public function __construct(DataConfigurationInterface $demoConfigurationTextDataConfiguration)
     {
         $this->demoConfigurationTextDataConfiguration = $demoConfigurationTextDataConfiguration;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getData(): array
     {
         return $this->demoConfigurationTextDataConfiguration->getConfiguration();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function setData(array $data): array
     {
         return $this->demoConfigurationTextDataConfiguration->updateConfiguration($data);
     }
 }
+
 ```
 
 ### Register the form data provider
@@ -314,9 +295,6 @@ Create a `form.html.twig` file in `views/templates/admin`.
 
 ```html
 {% extends '@PrestaShop/Admin/layout.html.twig' %}
-
-{# PrestaShop made some modifications to the way forms are displayed to work well with PrestaShop in order to benefit from those you need to use ui kit as theme#}
-{% form_theme demoConfigurationForm '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig' %}
 
 {% block content %}
   {{ form_start(demoConfigurationForm) }}
@@ -374,7 +352,7 @@ class DemoConfigurationController extends FrameworkBundleAdminController
             if (empty($errors)) {
                 $this->addFlash('success', $this->trans('Successful update.', 'Admin.Notifications.Success'));
 
-                return $this->redirectToRoute('demo_configuration_form');
+                return $this->redirectToRoute('demo_configuration_form_simple');
             }
 
             $this->flashErrors($errors);
@@ -382,9 +360,11 @@ class DemoConfigurationController extends FrameworkBundleAdminController
 
         return $this->render('@Modules/demosymfonyformsimple/views/templates/admin/form.html.twig', [
             'demoConfigurationForm' => $textForm->createView(),
+            'formTheme' => '@PrestaShop/Admin/TwigTemplateForm/prestashop_ui_kit.html.twig',
         ]);
     }
 }
+
 ```
 
 {{% notice note %}}
