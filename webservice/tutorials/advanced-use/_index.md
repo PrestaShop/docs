@@ -1,6 +1,6 @@
 ---
 title: Advanced use
-menuTitle: 5 - Advanced use
+menuTitle: Advanced use
 chapter: true
 weight: 5
 ---

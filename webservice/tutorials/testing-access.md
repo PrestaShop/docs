@@ -1,6 +1,6 @@
 ---
 title: Testing access to the Webservice
-menuTitle: 2 - Testing access
+menuTitle: Testing access
 weight: 2
 ---
 

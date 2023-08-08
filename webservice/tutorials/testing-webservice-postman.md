@@ -1,6 +1,6 @@
 ---
 title: Testing the Webservice with Postman
-menuTitle: 3 - Testing with Postman
+menuTitle: Testing with Postman
 weight: 3
 ---
 
