@@ -1,5 +1,5 @@
 ---
-title: Create aPproduct from A to Z with the Webservices
+title: Create a product from A to Z with the Webservices
 menuTitle: Product from A to Z
 weight: 6
 ---
