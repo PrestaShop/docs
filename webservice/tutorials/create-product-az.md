@@ -16,7 +16,7 @@ When the `Product` will be added, we will add some `Stocks`, upload an `Image`, 
 
 We will illustrate those examples [with a Postman Collection]({{<relref "/8/webservice/tutorials/testing-webservice-postman">}}), that you can download and run against your own's PrestaShop Webservices. 
 
-[Download the Postman Collection](https://github.com/PrestaShop/webservice-postman-examples/blob/main/demo_product_az_collection.json)
+[Download the Postman Collection](https://github.com/PrestaShop/webservice-postman-examples/blob/main/demo_product_az.json)
 
 ## Create a Supplier and Manufacturer
 
