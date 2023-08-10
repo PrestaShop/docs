@@ -80,6 +80,18 @@ Classes are gathered by responsibilities:
 - Classes interacting with PrestaShop core
 - Tasks (Can be considered as controllers for upgrade, rollback etc.)
 
+## Upgrade modules from local source
+
+During the autoupgrade process, in the "modules upgrade" step, we check for each module if there is a new version available in the PrestaShop Marketplace
+
+If there is one, we download it and then upgrade.
+
+That means, for developers, to test the autoupgrade process with your module, you must release it and push it to the Marketplace before.
+
+To ease the tests, you can put your module ZIP in `/ADMIN_DIR/autoupgrade/modules/MODULE_NAME.zip` and then use your local version to upgrade.
+
+If there is any failure in using your local archive, the new version will be pulled from the Marketplace.
+
 ## Local temporary assets
 
 In order to work properly, the upgrade module needs to write some files to your filesystem server. These files are stored in the following folders, all available in the `<admin folder>/autoupgrade` path.
@@ -89,4 +101,5 @@ In order to work properly, the upgrade module needs to write some files to your 
 - `backup`: Folder in which the current state of the shop will be saved before upgrade. It contains files archive, DB structure & data.
 - `download`: Destination folder of the downloaded PrestaShop archive, before unzip.
 - `latest`: Working directory of the autoupgrade. This is where the "lastest" version of PrestaShop will be unziped, before copy.
+- `modules`: Folder where you can put an archive of a module. This one will be used when upgrading modules.
 - `tmp`: Temporary resources not specifically used for upgrade. For instance, logs will be stored in that folder.
