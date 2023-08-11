@@ -45,7 +45,7 @@ You will use this key later in each call to the API. Open the "Webservice" page 
 
 Each access key is defined by this information:
 
-* **Key** - The API key serves as the main identifier for the webservice account you are creating. Click the "Generate" button to get an unique authentication key. You can also create your own (which must be 32 characters long), but using a generated key prevents wrong-doers from guessing your key too easily.
+* **Key** - The API key serves as the main identifier for the webservice account you are creating. Click the "Generate" button to get a unique authentication key. You can also create your own (which must be 32 characters long), but using a generated key prevents wrong-doers from guessing your key too easily.
             Using this key, you and other selected users will be able to access the webservice.
 * **Key description** - Helps you remember who you created that key for, what are the access rights assigned to it, etc. The description is not public, but make sure to put all the keywords pertaining to the user, so that you can find their key more quickly.
 * **Status** - You can disable any key at any time.
