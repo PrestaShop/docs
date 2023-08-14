@@ -4,7 +4,7 @@ Title: displayPersonalInformationTop
 hidden: true
 hookTitle: Content in the checkout funnel, on top of the personal information panel
 files:
-  - themes/classic/templates/checkout/_partials/steps/personal-information.tpl
+  - Classic Theme: templates/checkout/_partials/steps/personal-information.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/checkout/_partials/steps/personal-information.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/steps/personal-information.tpl)
+  - [Classic Theme: templates/checkout/_partials/steps/personal-information.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/personal-information.tpl)
 
 ## Call of the Hook in the origin file
 

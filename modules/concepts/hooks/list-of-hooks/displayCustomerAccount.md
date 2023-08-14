@@ -4,7 +4,7 @@ Title: displayCustomerAccount
 hidden: true
 hookTitle: Customer account displayed in Front Office
 files:
-  - themes/classic/templates/customer/my-account.tpl
+  - Classic Theme: templates/customer/my-account.tpl
 locations:
   - front office
 type: display
@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/customer/my-account.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/customer/my-account.tpl)
+  - [Classic Theme: templates/customer/my-account.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/my-account.tpl)
 
 ## Call of the Hook in the origin file
 

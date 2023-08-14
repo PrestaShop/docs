@@ -4,7 +4,7 @@ Title: displayAdditionalCustomerAddressFields
 hidden: true
 hookTitle: Display additional customer address fields
 files:
-  - themes/classic/templates/customer/_partials/block-address.tpl
+  - Classic Theme: templates/customer/_partials/block-address.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/customer/_partials/block-address.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/customer/_partials/block-address.tpl)
+  - [Classic Theme: templates/customer/_partials/block-address.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/_partials/block-address.tpl)
 
 ## Call of the Hook in the origin file
 

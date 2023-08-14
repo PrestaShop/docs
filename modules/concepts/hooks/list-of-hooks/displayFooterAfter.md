@@ -4,7 +4,7 @@ Title: displayFooterAfter
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/_partials/footer.tpl
+  - Classic Theme: templates/_partials/footer.tpl
 locations:
   - front office
 type: display
@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/_partials/footer.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/_partials/footer.tpl)
+  - [Classic Theme: templates/_partials/footer.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/footer.tpl)
 
 ## Call of the Hook in the origin file
 

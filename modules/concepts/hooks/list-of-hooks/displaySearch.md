@@ -4,7 +4,7 @@ Title: displaySearch
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/errors/not-found.tpl
+  - Classic Theme: templates/errors/not-found.tpl
 locations:
   - front office
 type: display
@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/errors/not-found.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/errors/not-found.tpl)
+  - [Classic Theme: templates/errors/not-found.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/errors/not-found.tpl)
 
 ## Call of the Hook in the origin file
 

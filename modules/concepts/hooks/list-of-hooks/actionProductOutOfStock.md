@@ -4,7 +4,7 @@ Title: actionProductOutOfStock
 hidden: true
 hookTitle: Out-of-stock product
 files:
-  - themes/classic/templates/catalog/_partials/product-details.tpl
+  - Classic Theme: templates/catalog/_partials/product-details.tpl
 locations:
   - front office
 type: action
@@ -33,7 +33,7 @@ Hook locations:
 Hook type: action
 
 Located in: 
-  - [themes/classic/templates/catalog/_partials/product-details.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-details.tpl)
+  - [Classic Theme: templates/catalog/_partials/product-details.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-details.tpl)
 
 ## Call of the Hook in the origin file
 

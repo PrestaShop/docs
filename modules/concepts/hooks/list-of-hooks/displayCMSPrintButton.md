@@ -4,7 +4,7 @@ Title: displayCMSPrintButton
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/cms/page.tpl
+  - Classic Theme: templates/cms/page.tpl
 locations:
   - front office
 type: display
@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/cms/page.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/cms/page.tpl)
+  - [Classic Theme: templates/cms/page.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/cms/page.tpl)
 
 ## Call of the Hook in the origin file
 

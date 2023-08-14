@@ -4,7 +4,7 @@ Title: displayCheckoutBeforeConfirmation
 hidden: true
 hookTitle: Show custom content before checkout confirmation
 files:
-  - themes/classic/templates/checkout/_partials/steps/payment.tpl
+  - Classic Theme: templates/checkout/_partials/steps/payment.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/checkout/_partials/steps/payment.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/steps/payment.tpl)
+  - [Classic Theme: templates/checkout/_partials/steps/payment.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl)
 
 ## Call of the Hook in the origin file
 

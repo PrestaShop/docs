@@ -4,7 +4,7 @@ Title: displayProductAdditionalInfo
 hidden: true
 hookTitle: Product page additional info
 files:
-  - themes/classic/templates/catalog/_partials/quickview.tpl
+  - Classic Theme: templates/catalog/_partials/quickview.tpl
 locations:
   - front office
 type: display
@@ -35,7 +35,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/catalog/_partials/quickview.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/quickview.tpl)
+  - [Classic Theme: templates/catalog/_partials/quickview.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/quickview.tpl)
 
 ## Call of the Hook in the origin file
 

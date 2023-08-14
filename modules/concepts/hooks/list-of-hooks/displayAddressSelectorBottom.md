@@ -4,7 +4,7 @@ Title: displayAddressSelectorBottom
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/checkout/_partials/steps/addresses.tpl
+  - Classic Theme: templates/checkout/_partials/steps/addresses.tpl
 locations:
   - front office
 type: display
@@ -28,7 +28,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - themes/classic/templates/checkout/_partials/steps/addresses.tpl
+  - Classic Theme: templates/checkout/_partials/steps/addresses.tpl
 
 ## Call of the Hook in the origin file
 
