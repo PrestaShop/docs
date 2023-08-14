@@ -84,7 +84,6 @@ Classes are gathered by responsibilities:
 
 During the upgrade process, we check for new module versions in the PrestaShop Marketplace. If there is one, we download it and then upgrade it.
 
-If there is one, we download it and then upgrade.
 
 That means, for developers, to test the autoupgrade process with your module, you must release it and push it to the Marketplace before.
 
