@@ -84,7 +84,6 @@ Classes are gathered by responsibilities:
 
 During the upgrade process, we check for new module versions in the PrestaShop Marketplace. If there is one, we download it and then upgrade it.
 
-
 Developers must release and push their module to the Marketplace in order to test the upgrade process, which is inconvenient. In order to simplify the testing process, you can place the ZIP file of your module in `/ADMIN_DIR/autoupgrade/modules/MODULE_NAME.zip`. This will allow you to use your local version for upgrading purposes.
 
 In case your local archive with a module fails to work, the latest version will be downloaded from the Marketplace.
