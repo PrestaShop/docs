@@ -82,7 +82,7 @@ Classes are gathered by responsibilities:
 
 ## Upgrade modules from local source
 
-During the autoupgrade process, in the "modules upgrade" step, we check for each module if there is a new version available in the PrestaShop Marketplace
+During the upgrade process, we check for new module versions in the PrestaShop Marketplace. If there is one, we download it and then upgrade it.
 
 If there is one, we download it and then upgrade.
 
