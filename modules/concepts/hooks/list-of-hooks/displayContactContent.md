@@ -4,7 +4,7 @@ Title: displayContactContent
 hidden: true
 hookTitle: Content wrapper section of the contact page
 files:
-  - themes/hummingbird/templates/contact.tpl
+  - Hummingbird Theme: templates/contact.tpl
   - Classic Theme: templates/contact.tpl
 locations:
   - front office
@@ -29,7 +29,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/hummingbird/templates/contact.tpl](https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl)
+  - [Hummingbird Theme: templates/contact.tpl](https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl)
   - [Classic Theme: templates/contact.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl)
 
 ## Call of the Hook in the origin file
