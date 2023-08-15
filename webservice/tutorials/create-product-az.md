@@ -1,32 +1,31 @@
 ---
-title: Create a product from A to Z with the Webservices
-menuTitle: Product from A to Z
+title: Create a product from start to finish with Webservices
+menuTitle: Creating a product - complete guide
 weight: 6
 ---
 
-# Create a product from A to Z with the Webservices
+# Create a product from start to finish with Webservices
 
-In this guide, we will show you how to handle the creation and manipulation of a `Product`, and its dependencies, from the Webservices. 
+This guide will demonstrate how to create and manipulate a `Product` and its dependencies from the Webservices.
 
-We will first create a `Supplier` and a `Manufacturer`. Secondly, we will create a `Category` to put our `Product` in. 
+Firstly, we will generate a "Supplier" and a "Manufacturer". Secondly, we will establish a "Category" to organize our "Product".
 
-From this point, we will be able to add the `Product`. 
 
-When the `Product` will be added, we will add some `Stocks`, upload an `Image`, and manage some multi-language content. 
+Once the `Product` is added, we'll include some `Stocks`, upload an `Image`, and handle multi-language content.
 
-We will illustrate those examples [with a Postman Collection]({{<relref "/8/webservice/tutorials/testing-webservice-postman">}}), that you can download and run against your own's PrestaShop Webservices. 
+We will illustrate those examples [with a Postman Collection]({{<relref "/8/webservice/tutorials/testing-webservice-postman">}}), that you can download and run against your own PrestaShop Webservices. 
 
 [Download the Postman Collection](https://github.com/PrestaShop/webservice-postman-examples/blob/main/demo_product_az.json)
 
 ## Create a Supplier and Manufacturer
 
-Altough optional, having `Manufacturer` and `Supplier` will help managing your stock and business. 
+Although optional, having both `Manufacturer` and `Supplier` information will assist in managing your stock and business efficiently.
 
 You have to send a request for each `Manufacturer` and `Supplier` to the Webservices before creating your `Product`. 
 
 ### Create a Manufacturer
 
-Send a `POST` request to `/api/manufacturers` with this body: 
+Send a `POST` request to `/api/manufacturers` with the following body: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -101,7 +100,7 @@ Related request in the Postman collection:
 
 ### Create a Supplier
 
-Send a `POST` request to `/api/suppliers` with this body: 
+Send a `POST` request to `/api/suppliers` with the following body: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -122,9 +121,9 @@ Related request in the Postman collection:
 
 ## Create a Category for our Product
 
-We will then create a `Category` to put our `Product` in. 
+Let's create a designated `Category` for our `Product`.
 
-Send a `POST` request to `/api/categories` with this body:
+Send a `POST` request to `/api/categories` with the following body:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -144,6 +143,7 @@ Send a `POST` request to `/api/categories` with this body:
 </category>
 </prestashop>
 ```
+Ensure the provided `Language` ID corresponds to your `Language` ID in your back office.
 
 Retrieve the newly created category `ID` from the Webservices's response.
 
@@ -155,9 +155,9 @@ Related request in the Postman collection:
 
 ## Create the Product
 
-Now that we have all minimum `Product` dependencies, we can create a minimum `Product`.
+Now that the required dependencies are in place, we can move forward with crafting the minimum viable product.
 
-Send a `POST` request to `/api/products` with this body: 
+Send a `POST` request to `/api/products` with the following body: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -213,7 +213,7 @@ Send a `POST` request to `/api/products` with this body:
 
 Replace `id_manufacturer`, `id_supplier`, `id_category_default`, `associations > categories > category > id` with the retrieved IDs from the previously created entities.
 
-This will create a `Product`, of type: `ProductType::TYPE_STANDARD`, associated to the shop with `id:1`.
+This will create a `Product`, of type: `ProductType::TYPE_STANDARD`, associated with the `Shop` with `id:1`.
 
 {{% notice note %}}
 Related request in the Postman collection: 
@@ -221,9 +221,9 @@ Related request in the Postman collection:
 4 - Create product
 {{% /notice %}}
 
-## Add some Stock to Product
+## Product Stock management
 
-When a `Product` entity is created, a matching `Stock_Available` entity is created. 
+Whenever a `Product` entity is formed, a corresponding `Stock_Available` record is also generated and inserted to the database.
 
 We first need to retrieve this entity, to be able to update its value.
 
@@ -279,7 +279,7 @@ Related request in the Postman collection:
 </prestashop>
 ```
 
-Then, update the available quantities by sending a `PATCH` request to `/api/stock_availables/{{id}}` (with `{{id}}` the previously retrieved stock_available entity id). 
+You can update the available quantities by sending a `PATCH` request to `/api/stock_availables/{{id}}` (with `{{id}}` the previously retrieved stock_available entity id). 
 
 In this example, the returned stock_available entity id was: `67`.
 
@@ -310,12 +310,12 @@ Related request in the Postman collection:
 {{% /notice %}}
 
 {{% notice info %}}
-Depending on your stock management strategy (`Share available quantities for sale` between shops, in `back office > Advanced Parameters > Multistore > Edit shop group`), you need to provide an `id_shop` (per shop stock) or an `id_shop_group` (shared shop stock) to the request.
+Depending on your stock management strategy (`Share available quantities for sale` between shops, in the `Back office > Advanced Parameters > Multistore > Edit shop group`), you need to provide an `id_shop` (per shop stock) or an `id_shop_group` (shared shop stock) to the request.
 {{% /notice %}}
 
-## Upload an Image on the Product
+## Product images management
 
-To upload an Image on your Product, send a `POST` request to `/api/images/products/{{product_id}}` (with `{{id}}` the newly created Product entity id). 
+To upload an `Image` to your `Product`, send a `POST` request to `/api/images/products/{{product_id}}` (with `{{id}}` of the newly created `Product` entity). 
 
 Add an `image` form-data input in the body of the request, with your image content attached. 
 
@@ -327,7 +327,7 @@ Related request in the Postman collection:
 
 ## Manage multi-lang content
 
-Considering you have 2 languages set in your PrestaShop instance, let's say: 
+If you have two languages set up in your PrestaShop instance, for example:
 
 - `id:1` - English
 - `id:2` - French
@@ -377,15 +377,15 @@ Related request in the Postman collection:
 7 - Update multi-lang fields
 {{% /notice %}}
 
-## Create a ProductType::TYPE_COMBINATIONS Product
+## Create a Product with Combinations - ProductType::TYPE_COMBINATIONS
 
-To create a Combination Product Type, you need to create your `Product` and then your `Combinations`. 
+To create a Product with Combinations, you must make your `Product` and then add your `Combinations`. 
 
 ### Create the Product
 
-Change in the xml body of the [Product creation request]({{< relref "#create-the-product" >}}), on the `<product_type>` node, the value from `standard` to `combinations`.
+Change XML body of the [Product creation request]({{< relref "#create-the-product" >}}). Modify `<product_type>` node, and replace `standard` with `combinations`.
 
-Send a `POST` request to `/api/products` with this body: 
+Send a `POST` request to `/api/products` with the following body: 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -447,7 +447,7 @@ Related request in the Postman collection:
 
 ### Create the Combinations
 
-Send two `POST` requests to `/api/combinations` to create your combinations, with `{{id_product}}` your previously created product id. 
+Send two `POST` requests to `/api/combinations` to create your combinations. Use `{{id_product}}` of your previously created `Product`. 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

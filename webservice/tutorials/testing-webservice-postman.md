@@ -59,9 +59,9 @@ This collection shows all CRUD actions on the Product resource:
 - Update Product (`PUT` and `PATCH`)
 - Delete Product (`DELETE`)
 
-## Create Product from A to Z example (demo_product_creation_AZ.json)
+## Create a product from start to finish with Webservices (demo_product_creation_AZ.json)
 
-This collection illustrates how to create a product from A to Z with all of its attachements (Brand, Category, Manufacturer, Pictures, ...)
+This collection illustrates how to create a product from A to Z with all of its relations (to Brand, Category, Manufacturer, Images, etc.)
 
 ## Article resource examples (demo_custom_resource_collection.json)
 
