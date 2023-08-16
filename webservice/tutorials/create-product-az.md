@@ -8,10 +8,11 @@ weight: 6
 
 This guide will demonstrate how to create and manipulate a `Product` and its dependencies from the Webservices.
 
-Firstly, we will generate a "Supplier" and a "Manufacturer". Secondly, we will establish a "Category" to organize our "Product".
-
+Firstly, we will generate a `Supplier` and a `Manufacturer`. Secondly, we will establish a `Category` to organize our `Product`.
 
 Once the `Product` is added, we'll include some `Stocks`, upload an `Image`, and handle multi-language content.
+
+Finally, we'll explain how to manage `Features`, `Combinations` and `Attributes`.
 
 We will illustrate those examples [with a Postman Collection]({{<relref "/8/webservice/tutorials/testing-webservice-postman">}}), that you can download and run against your own PrestaShop Webservices. 
 
@@ -377,9 +378,91 @@ Related request in the Postman collection:
 7 - Update multi-lang fields
 {{% /notice %}}
 
+## Product Features
+
+`Features` are a way to describe and filter your `Products`. [Learn the differences between `Features` and `Attributes`](https://docs.prestashop-project.org/v.8-documentation/user-guide/selling/managing-catalog/managing-product-features).
+
+### Use an existing Feature and Feature Value
+
+From the Back Office, identify the `Feature` and the `Feature Value` that you will use in your `Product`. 
+
+You need to retrieve the ID of the `Feature Value`. 
+
+### Create a Feature and a Feature Value
+
+To create a new `Feature`, send a `POST` request to `/api/product_features` with the following body: 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <product_feature>
+        <name>
+            <language id="1"><![CDATA[{{feature_name}}]]></language>
+        </name>
+    </product_feature>
+</prestashop>
+```
+
+{{% notice note %}}
+Related request in the Postman collection: 
+
+12 - Create Feature
+{{% /notice %}}
+
+Retrieve the `id` of the `Feature` created, and create your `Feature Value` by sending a `POST` request to `/api/product_feature_values`: 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <product_feature_value>
+        <id_feature><![CDATA[{{id_feature}}]]></id_feature>
+        <value>
+            <language id="1"><![CDATA[{{value}}]]></language>
+        </value>
+    </product_feature_value>
+</prestashop>
+```
+
+{{% notice note %}}
+Related request in the Postman collection: 
+
+13 - Create Feature value
+{{% /notice %}}
+
+### Associate your Feature Value to your Product
+
+When creating or updating a `Product`, fill the `associations > product_features > product_feature` node with the `ID` of the  `Feature` and the `ID` of the `Feature Value` retrieved from the Back Office or created with the webservice.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <product>
+        [...]
+	    <associations>
+            <product_features>
+                <product_feature>
+                    <id><![CDATA[{{id_feature}}]]></id>
+                    <id_feature_value><![CDATA[{{id_feature_value}}]]></id_feature_value>
+                </product_feature>
+            </product_features>
+        </associations>
+        [...]
+    </product>
+</prestashop>
+```
+
+{{% notice note %}}
+Related request in the Postman collection: 
+
+14 - Associate Feature to Product
+{{% /notice %}}
+
+
 ## Create a Product with Combinations - ProductType::TYPE_COMBINATIONS
 
-To create a Product with Combinations, you must make your `Product` and then add your `Combinations`. 
+`Combinations` (or product variations) are a way to work with different versions of a `Product` (for examples sizes, colors, ...), by varying `Attributes`. [Learn the differences between `Features` and `Attributes`](https://docs.prestashop-project.org/v.8-documentation/user-guide/selling/managing-catalog/managing-product-features).
+
+To create a Product with Combinations, you must make your `Product`, create or identify an `Attribute` to vary, and then add your `Combinations`. 
 
 ### Create the Product
 
@@ -445,9 +528,66 @@ Related request in the Postman collection:
 8 - Create Combination Product
 {{% /notice %}}
 
+### Create or identify an Attribute Value
+
+#### Use an existing Attribute and Attribute Value
+
+From the Back Office, identify the `Attribute` and the `Attribute Value` that you will declinate. 
+
+You need to retrieve the ID of the `Attribute Value`. 
+
+#### Create an Attribute and Attribute Value
+
+To create a new `Attribute`, send a `POST` request to `/api/product_options` with the following body: 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <product_option>
+        <is_color_group><![CDATA[0]]></is_color_group>
+        <group_type><![CDATA[select]]></group_type>
+        <name>
+            <language id="1"><![CDATA[{{attribute_name}}]]></language>
+        </name>
+        <public_name>
+            <language id="1"><![CDATA[{{attribute_name}}]]></language>
+        </public_name>
+    </product_option>
+</prestashop>
+```
+
+{{% notice note %}}
+Related request in the Postman collection: 
+
+9 - Create Product option 
+{{% /notice %}}
+
+For the `group_type` attribute, you can choose between `radio` (radio input type) or `select` (select / option input type). 
+You can also choose `color` for this attribute, and set `is_color_group` to `1` to make your `Attribute` a swatch to select colors.
+
+Retrieve the `id` of the `Attribute` created, and create your `Attribute Values` by sending a `POST` request to `/api/product_option_values`: 
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
+    <product_option_value>
+        <id_attribute_group><![CDATA[{{id_product_attribute}}]]></id_attribute_group>
+        <name>
+            <language id="1"><![CDATA[{{attribute_value_name}}]]></language>
+        </name>
+    </product_option_value>
+</prestashop>
+```
+
+{{% notice note %}}
+Related request in the Postman collection: 
+
+10 - Create Product option value
+{{% /notice %}}
+
 ### Create the Combinations
 
-Send two `POST` requests to `/api/combinations` to create your combinations. Use `{{id_product}}` of your previously created `Product`. 
+Send as many `POST` requests to `/api/combinations` as combinations to be created. Use `{{id_product}}` of your previously created `Product`, and `{{id_product_attribute_value}}` previously retrieved (from existing values in the Back Office or created with the webservice). 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -459,6 +599,13 @@ Send two `POST` requests to `/api/combinations` to create your combinations. Use
         <reference><![CDATA[demo_1]]></reference>
         <supplier_reference><![CDATA[mfr_1]]></supplier_reference>
         <price><![CDATA[10.000000]]></price>
+        <associations>
+            <product_option_values nodeType="product_option_value" api="product_option_values">
+                <product_option_value>
+                    <id><![CDATA[{{id_product_attribute_value}}]]></id>
+                </product_option_value>
+            </product_option_values>
+        </associations>
     </combination>
 </prestashop>
 ```
@@ -466,7 +613,7 @@ Send two `POST` requests to `/api/combinations` to create your combinations. Use
 {{% notice note %}}
 Related request in the Postman collection: 
 
-9 - Create Combinations
+11 - Create Combinations
 {{% /notice %}}
 
 {{% notice info %}}
