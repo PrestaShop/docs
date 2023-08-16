@@ -4,7 +4,7 @@ Title: displayCustomerLoginFormAfter
 hidden: true
 hookTitle: Display elements after login form
 files:
-  - themes/classic/templates/customer/authentication.tpl
+  - Classic Theme: templates/customer/authentication.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/customer/authentication.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/customer/authentication.tpl)
+  - [Classic Theme: templates/customer/authentication.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/authentication.tpl)
 
 ## Call of the Hook in the origin file
 

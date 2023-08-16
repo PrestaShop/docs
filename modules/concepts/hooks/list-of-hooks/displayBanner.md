@@ -4,7 +4,7 @@ Title: displayBanner
 hidden: true
 hookTitle: Very top of pages
 files:
-  - themes/classic/templates/_partials/header.tpl
+  - Classic Theme: templates/_partials/header.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/_partials/header.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/_partials/header.tpl)
+  - [Classic Theme: templates/_partials/header.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl)
 
 ## Call of the Hook in the origin file
 

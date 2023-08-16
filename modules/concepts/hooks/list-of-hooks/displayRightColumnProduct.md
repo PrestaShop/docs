@@ -4,7 +4,7 @@ Title: displayRightColumnProduct
 hidden: true
 hookTitle: New elements on the product page (right column)
 files:
-  - themes/classic/templates/layouts/layout-both-columns.tpl
+  - Classic Theme: templates/layouts/layout-both-columns.tpl
 locations:
   - front office
 type: display
@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/layouts/layout-both-columns.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/layouts/layout-both-columns.tpl)
+  - [Classic Theme: templates/layouts/layout-both-columns.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl)
 
 ## Call of the Hook in the origin file
 

@@ -4,7 +4,7 @@ Title: displayCheckoutSubtotalDetails
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/checkout/_partials/cart-detailed-totals.tpl
+  - Classic Theme: templates/checkout/_partials/cart-detailed-totals.tpl
 locations:
   - front office
 type: display
@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/checkout/_partials/cart-detailed-totals.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/cart-detailed-totals.tpl)
+  - [Classic Theme: templates/checkout/_partials/cart-detailed-totals.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-detailed-totals.tpl)
 
 ## Call of the Hook in the origin file
 

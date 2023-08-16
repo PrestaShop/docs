@@ -4,7 +4,7 @@ Title: displayCartModalContent
 hidden: true
 hookTitle: Content of Add-to-cart modal
 files:
-  - themes/classic/modules/ps_shoppingcart/modal.tpl
+  - Classic Theme: modules/ps_shoppingcart/modal.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/modules/ps_shoppingcart/modal.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/modules/ps_shoppingcart/modal.tpl)
+  - [Classic Theme: modules/ps_shoppingcart/modal.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_shoppingcart/modal.tpl)
 
 ## Call of the Hook in the origin file
 

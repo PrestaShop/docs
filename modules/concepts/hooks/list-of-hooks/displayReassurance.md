@@ -4,7 +4,7 @@ Title: displayReassurance
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/checkout/checkout.tpl
+  - Classic Theme: templates/checkout/checkout.tpl
 locations:
   - front office
 type: display
@@ -21,7 +21,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/checkout/checkout.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/checkout.tpl)
+  - [Classic Theme: templates/checkout/checkout.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/checkout.tpl)
 
 ## Call of the Hook in the origin file
 

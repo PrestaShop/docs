@@ -4,8 +4,8 @@ Title: displayContactRightColumn
 hidden: true
 hookTitle: Right column blocks of the contact page
 files:
-  - themes/hummingbird/templates/contact.tpl
-  - themes/classic/templates/contact.tpl
+  - Hummingbird Theme: templates/contact.tpl
+  - Classic Theme: templates/contact.tpl
 locations:
   - front office
 type: display
@@ -29,8 +29,8 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/hummingbird/templates/contact.tpl](https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl)
-  - [themes/classic/templates/contact.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl)
+  - [Hummingbird Theme: templates/contact.tpl](https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl)
+  - [Classic Theme: templates/contact.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl)
 
 ## Call of the Hook in the origin file
 

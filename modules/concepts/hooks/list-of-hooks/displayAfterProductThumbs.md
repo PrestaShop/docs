@@ -4,7 +4,7 @@ Title: displayAfterProductThumbs
 hidden: true
 hookTitle: Display extra content below product thumbs
 files:
-  - themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl
+  - Classic Theme: templates/catalog/_partials/product-cover-thumbnails.tpl
 locations:
   - front office
 type: display
@@ -27,7 +27,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl)
+  - [Classic Theme: templates/catalog/_partials/product-cover-thumbnails.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-cover-thumbnails.tpl)
 
 ## Call of the Hook in the origin file
 

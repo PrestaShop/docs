@@ -4,7 +4,7 @@ Title: displayFooterProduct
 hidden: true
 hookTitle: Product footer
 files:
-  - themes/classic/templates/catalog/product.tpl
+  - Classic Theme: templates/catalog/product.tpl
 locations:
   - front office
 type: display
@@ -33,7 +33,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - [themes/classic/templates/catalog/product.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/product.tpl)
+  - [Classic Theme: templates/catalog/product.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl)
 
 ## Call of the Hook in the origin file
 
