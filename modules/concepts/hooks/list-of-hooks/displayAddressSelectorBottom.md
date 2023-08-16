@@ -28,7 +28,7 @@ Hook locations:
 Hook type: display
 
 Located in: 
-  - Classic Theme: templates/checkout/_partials/steps/addresses.tpl
+  - [Classic Theme: templates/checkout/_partials/steps/addresses.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/addresses.tpl)
 
 ## Call of the Hook in the origin file
 
