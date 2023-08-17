@@ -17,7 +17,7 @@ of your module.
 ## Layouts
 
 ```twig
-{# modules/my_email_theme_module/mails/layout/custom_classic_layout.html.twig #}
+{# modules/my_email_theme_module/mails/layouts/custom_classic_layout.html.twig #}
 
 {# You can use the theme layout (if present) to extend it easily #}
 {% extends '@MailThemes/classic/components/layout.html.twig' %}
@@ -37,7 +37,7 @@ of your module.
 ```
 
 ```twig
-{# modules/my_email_theme_module/mails/layout/custom_modern_layout.html.twig #}
+{# modules/my_email_theme_module/mails/layouts/custom_modern_layout.html.twig #}
 {% extends '@MailThemes/modern/components/layout.html.twig' %}
 
 {% block content %}
