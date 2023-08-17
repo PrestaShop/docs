@@ -1,6 +1,6 @@
 ---
 title: Creating access to the Webservice
-menuTitle: 1 - Creating access
+menuTitle: Creating access
 weight: 1
 ---
 
