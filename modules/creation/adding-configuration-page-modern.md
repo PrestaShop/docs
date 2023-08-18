@@ -376,7 +376,7 @@ You can read more about controllers in [controller & routing section]({{<relref 
 Create a `routes.yml` file in `config/`. 
 
 ```yml
-demo_configuration_form:
+demo_configuration_form_simple:
   path: /demosymfonyformsimple/configuration
   methods: [GET, POST]
   defaults:
