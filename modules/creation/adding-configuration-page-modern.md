@@ -123,7 +123,7 @@ services:
 
   # Demo configuration text form
   prestashop.module.demosymfonyformsimple.form.type.demo_configuration_text:
-    class: 'PrestaShop\Module\DemoSymfonyFormSimple\Form\DemoConfigurationTextType'
+    class: 'PrestaShop\Module\DemoSymfonyFormSimple\Form\DemoConfigurationFormType'
     parent: 'form.type.translatable.aware'
     public: true
     tags:
@@ -286,7 +286,7 @@ Simply register it in `config/services.yml`:
       - '@form.factory'
       - '@prestashop.core.hook.dispatcher'
       - '@prestashop.module.demosymfonyformsimple.form.demo_configuration_text_form_data_provider'
-      - 'PrestaShop\Module\DemoSymfonyFormSimple\Form\DemoConfigurationTextType'
+      - 'PrestaShop\Module\DemoSymfonyFormSimple\Form\DemoConfigurationFormType'
       - 'DemoConfiguration'
 ```
 
