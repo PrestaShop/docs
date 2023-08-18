@@ -9,6 +9,8 @@ This documentation is available at [https://devdocs.prestashop-project.org/](htt
 
 Contributions are more than welcome! [Find out how](https://devdocs.prestashop-project.org/8/contribute/documentation/how/).
 
+This repository has specific contribution rules, please [read them](https://github.com/PrestaShop/docs/blob/8.x/.github/CONTRIBUTION_PROCESS.md).
+
 ## Rendering the site locally
 
 See https://github.com/PrestaShop/devdocs-site/
