@@ -130,7 +130,7 @@ services:
       - { name: form.type }
 ```
 
-This `services.yml` file is registering your `PrestaShop\Module\DemoSymfonyFormSimple\Form\DemoConfigurationTextType` class as `prestashop.module.demosymfonyformsimple.form.type.demo_configuration_text`. It also add a tag `name: form.type`, and declares it as `public`. 
+This `services.yml` file is registering your `PrestaShop\Module\DemoSymfonyFormSimple\Form\DemoConfigurationFormType` class as `prestashop.module.demosymfonyformsimple.form.type.demo_configuration_text`. It also add a tag `name: form.type`, and declares it as `public`. 
 
 {{% notice note %}}
 You can read more about services in the [official Symfony official documentation](https://symfony.com/doc/4.4/service_container.html)
@@ -275,7 +275,7 @@ In `config/services.yml`, register your newly created `DemoConfigurationTextForm
 
 For this form handler, we don't need to create a new class, we can use PrestaShop native's one.
 
-By receiving an instance of `DemoConfigurationTextFormDataProvider` and `DemoConfigurationTextType`, the PrestaShop native Form Handler is able to process the data it receives.
+By receiving an instance of `DemoConfigurationTextFormDataProvider` and `DemoConfigurationFormType`, the PrestaShop native Form Handler is able to process the data it receives.
 
 Simply register it in `config/services.yml`: 
 
