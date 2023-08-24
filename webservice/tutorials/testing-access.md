@@ -17,7 +17,7 @@ The quickest way to test your API is to use your browser:
 
 ### Browser prompt
 
-The shop should prompt you for a username and a password to enter. The username is the authentication key you created and **there is no password to enter**. If no permission has been set for the key, than the browser will keep asking you to enter the key indefinitely.
+The shop should prompt you for a username and a password to enter. The username is the authentication key you created and **there is no password to enter**. If no permission has been set for the key, then the browser will keep asking you to enter the key indefinitely.
 
 ### Include key in url (risky)
 
