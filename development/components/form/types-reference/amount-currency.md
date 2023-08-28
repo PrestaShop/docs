@@ -40,3 +40,6 @@ $builder
     ])
 ```
 
+## Preview example
+
+{{< figure src="../img/amount-currency.png" title="AmountCurrencyType rendered in form example" >}}
