@@ -11,11 +11,11 @@ Developers can already use a large list of field types (see [Symfony types](http
 | Form type name | Namespace | Description |
 | --- | --- | --- |
 | `AccordionType` | PrestaShopBundle\Form\Admin\Type | This form type is used as a container of sub forms, each sub form will be rendered as a part of an accordion. |
-| `AmountCurrencyType` | PrestaShopBundle\Form\Admin\Type | Amount with currency: combination of a `NumberType` input and a `ChoiceType` input (for currency selection). |
-| `ButtonCollectionType` | PrestaShopBundle\Form\Admin\Type | `ButtonCollectionType` is a form type used to group buttons in a common form group which is useful for forms which have multiple submit buttons. |
+| [`AmountCurrencyType`](amount-currency) | PrestaShopBundle\Form\Admin\Type | Amount with currency: combination of a `NumberType` input and a `ChoiceType` input (for currency selection). |
+| [`ButtonCollectionType`](button-collection) | PrestaShopBundle\Form\Admin\Type | `ButtonCollectionType` is a form type used to group buttons in a common form group which is useful for forms which have multiple submit buttons. |
 | [`CategoryChoiceTreeType`](category-choice-tree) | PrestaShopBundle\Form\Admin\Type | A `MaterialChoiceTreeType` for categories |
 | [`ChangePasswordType`](change-password) | PrestaShopBundle\Form\Admin\Type | `ChangePasswordType` is responsible for defining "change password" form type. |
-| `ChoiceCategoriesTreeType` | PrestaShopBundle\Form\Admin\Type | This form class is responsible to create a category selector using Nested sets |
+| [`ChoiceCategoriesTreeType`](choice-category-tree) | PrestaShopBundle\Form\Admin\Type | This form class is responsible to create a category selector using Nested sets |
 | `ColorPickerType` | PrestaShopBundle\Form\Admin\Type | This form class is responsible to create a color picker field |
 | `ConfigurableCountryChoiceType` | PrestaShopBundle\Form\Admin\Type | Class responsible for providing configurable countries list |
 | [`CountryChoiceType`](country-choice) | PrestaShopBundle\Form\Admin\Type | CountryChoiceType is responsible for providing country choices with -- symbol in front of array. |
