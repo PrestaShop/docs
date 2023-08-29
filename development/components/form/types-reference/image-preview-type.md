@@ -1,0 +1,28 @@
+---
+title: ImagePreviewType
+---
+
+# ImagePreviewType
+
+This form type is used to display an image value without providing an interactive input to edit it. It is based on a hidden input so it could be changed programmatically, or be used just to display an image in a form.
+
+- Namespace: PrestaShopBundle\Form\Admin\Type
+- Reference: [ImagePreviewType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ImagePreviewType.php)
+
+## Type options
+
+| Option       | Type   | Default value                     | Description                                                                               |
+| :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+
+## Code example
+
+- [HeaderType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product.php#L79-L81)
+
+```php
+$builder->add('cover_thumbnail', ImagePreviewType::class, [
+    'label' => false,
+])
+```
+
+## Preview example
+
