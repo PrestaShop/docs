@@ -343,7 +343,7 @@ Note that these files will only work with PrestaShop 1.7.8 and over. If you need
 
 ### Recommanded practice for creating module translations
 
-For module developpers, if you want to incorpore your final translations into your own module without creating the xlf file by hand, the recommanded practice is to :
+For module developers, if you want to incorporate your final translations into your own module without creating the xlf file by hand, the recommended practice is to :
 
 1. Prepare your translations (see "Making your wordings appear in the translation interface")
 2. Translate them manually in the back office
