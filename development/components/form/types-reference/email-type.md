@@ -32,3 +32,4 @@ $builder->add('email', EmailType::class, [
 
 ## Preview example
 
+{{< figure src="../img/email-type.png" title="EmailType rendered in form example" >}}

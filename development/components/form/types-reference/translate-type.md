@@ -16,6 +16,18 @@ This form class is responsible to create a translatable form. Language selection
 
 ## Code example
 
+- [ProductFeature](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Feature/ProductFeature.php#L98-L105)
+
+```php
+$builder->add('custom_value', TranslateType::class, [
+    'type' => FormType\TextType::class,
+    'options' => [],
+    'locales' => $this->locales,
+    'hideTabs' => true,
+    'required' => false,
+    'label' => $this->translator->trans('OR Customized value', [], 'Admin.Catalog.Feature'),
+]);
+```
 
 ## Preview example
 
