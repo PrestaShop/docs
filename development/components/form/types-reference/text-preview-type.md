@@ -16,6 +16,14 @@ This form type is used to display a text value without providing an interactive 
 
 ## Code example
 
+- [SearchedCustomerType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Customer/SearchedCustomerType.php#L50-L53)
+
+```php
+$builder->add('fullname_and_email', TextPreviewType::class, [
+    'label' => false,
+    'block_prefix' => 'searched_customer_fullname_and_email',
+])
+```
 
 ## Preview example
 

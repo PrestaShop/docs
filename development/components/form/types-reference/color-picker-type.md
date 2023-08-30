@@ -26,3 +26,4 @@ $builder->add('color', ColorPickerType::class, [
 
 ## Preview example
 
+{{< figure src="../img/color-picker-type.png" title="ColorPickerType rendered in form example" >}}

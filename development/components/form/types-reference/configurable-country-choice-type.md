@@ -32,3 +32,4 @@ $builder->add(
 
 ## Preview example
 
+{{< figure src="../img/configurable-country-choice.png" title="ConfigurableCountryChoiceType rendered in form example" >}}
