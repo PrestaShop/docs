@@ -341,7 +341,7 @@ You can distribute the downloaded dictionaries by placing the extracted files in
 Note that these files will only work with PrestaShop 1.7.8 and over. If you need to ensure compatibility with previous versions, read below.
 {{% /notice %}}
 
-### Recommanded practice for creating module translations
+### Recommended practice for creating module translations
 
 For module developers, if you want to incorporate your final translations into your own module without creating the xlf file by hand, the recommended practice is to :
 
