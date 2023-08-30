@@ -31,3 +31,4 @@ $builder->add('seo_preview', CustomContentType::class, [
 
 ## Preview example
 
+{{< figure src="../img/custom-content-type.png" title="CustomContentType rendered in form example" >}}
