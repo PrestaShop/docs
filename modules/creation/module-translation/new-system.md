@@ -341,6 +341,16 @@ You can distribute the downloaded dictionaries by placing the extracted files in
 Note that these files will only work with PrestaShop 1.7.8 and over. If you need to ensure compatibility with previous versions, read below.
 {{% /notice %}}
 
+### Recommanded practice for creating module translations
+
+For module developpers, if you want to incorpore your final translations into your own module without creating the xlf file by hand, the recommanded practice is to :
+
+1. Prepare your translations (see "Making your wordings appear in the translation interface")
+2. Translate them manually in the back office
+3. Export the translations (see "Exporting translations") and add them in your module translations folder
+
+These translations will be set up in Prestashop during the installation of the module.
+
 ### Before 1.7.8
 
 If you need to distribute backward-compatible translations, you can either [write classic dictionary files manually]({{< ref "classic-system#editing-a-dictionary-file-manually" >}}), or export your module's wordings from the database into a file, then import it during the module's install process.
