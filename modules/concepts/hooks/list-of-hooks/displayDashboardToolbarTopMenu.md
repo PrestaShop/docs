@@ -6,7 +6,7 @@ hookTitle: Display new elements in back office page with a dashboard, on top Men
 files:
   - admin-dev/themes/new-theme/template/page_header_toolbar.tpl
 locations:
-  - front office
+  - back office
 type: display
 hookAliases:
 ---
@@ -22,7 +22,7 @@ This hook launches modules when a page with a dashboard is displayed
 {{% /notice %}}
 
 Hook locations: 
-  - front office
+  - back office
 
 Hook type: display
 
