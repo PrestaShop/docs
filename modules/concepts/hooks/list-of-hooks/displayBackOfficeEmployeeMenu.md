@@ -6,7 +6,7 @@ hookTitle: Administration Employee menu
 files:
   - src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
 locations:
-  - front office
+  - back office
 type: display
 hookAliases:
 ---
@@ -22,7 +22,7 @@ This hook is displayed in the employee menu
 {{% /notice %}}
 
 Hook locations: 
-  - front office
+  - back office
 
 Hook type: display
 

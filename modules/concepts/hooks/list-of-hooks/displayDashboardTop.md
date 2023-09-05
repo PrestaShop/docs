@@ -6,7 +6,7 @@ hookTitle: Dashboard Top
 files:
   - admin-dev/themes/new-theme/template/page_header_toolbar.tpl
 locations:
-  - front office
+  - back office
 type: display
 hookAliases:
 ---
@@ -22,7 +22,7 @@ Displays the content in the dashboard's top area
 {{% /notice %}}
 
 Hook locations: 
-  - front office
+  - back office
 
 Hook type: display
 
