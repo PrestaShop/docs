@@ -13,6 +13,9 @@ Combination of a RadioType and a ChoiceType fields
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+| radio_name | `string` | | Name of the radio input |
+| radio_label | `string` | | Label of the radio input |
+| child_choice | `array` | | Choices available in the ChoiceType |
 
 ## Code example
 

@@ -31,3 +31,4 @@ return (new FilterCollection())
 
 ## Preview example
 
+{{< figure src="../img/zone-choice-type.png" title="ZoneChoiceType rendered in form using textarea" >}}
