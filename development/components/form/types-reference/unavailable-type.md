@@ -13,6 +13,3 @@ This form type is useful during development phase to show part of a form that ar
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
-
-## Preview example
-

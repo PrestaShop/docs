@@ -30,5 +30,7 @@ $builder->add('related_products', TypeaheadProductCollectionType::class, [
 ])
 ```
 
+
 ## Preview example
 
+{{< figure src="../img/typeahead-product-collection-type.png" title="TypeaheadProductCollectionType rendered in form using textarea" >}}

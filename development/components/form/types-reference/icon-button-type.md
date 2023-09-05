@@ -13,6 +13,8 @@ A form button with material icon.
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+| icon | `string` | | The icon to display |
+| type | `string` | | The button type (link, ...) |
 
 ## Code example
 

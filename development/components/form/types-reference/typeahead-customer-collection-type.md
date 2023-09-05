@@ -39,3 +39,4 @@ $builder->add(
 
 ## Preview example
 
+{{< figure src="../img/typeahead-customer-collection-type.png" title="TypeaheadCustomerCollectionType rendered in form using textarea" >}}

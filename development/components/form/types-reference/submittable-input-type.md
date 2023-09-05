@@ -14,8 +14,8 @@ Adds a button right into specified input and toggles it's availability on change
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
 
-## Code example
+## Required Javascript components
 
-
-## Preview example
-
+| Component                                                   | Description                         |
+|:------------------------------------------------------------|:------------------------------------|
+| admin-dev/themes/new-theme/js/components/form/submittable-input.ts  |  |
