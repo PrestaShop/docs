@@ -37,3 +37,4 @@ $builder->add('inputPackItems', TypeaheadProductPackCollectionType::class, [
 
 ## Preview example
 
+{{< figure src="../img/typeahead-product-pack-collection.png" title="TypeaheadProductPackCollectionType rendered in form using textarea" >}}

@@ -14,6 +14,10 @@ The `TranslatableType` allows you to configure multilanguage input. This multila
 | options | array  | Empty array                                           | Options for configured `type`            |
 | locales | array  | Enabled shop locales (languages)                      | Locales in which field can be translated |
 
+{{% notice info %}}
+If you wish to use [FormattedTextareaType]({{< relref "/8/development/components/form/types-reference/formatted-textarea" >}}) as type, your base type must be `TranslateType` instead of `TranslatableType`. Do not forget to add the option `hideTabs` at **true** if you want to display the languages list above the WYSIWYG.
+{{% /notice %}}
+
 ## Required Javascript components
     
 | Component                                                      | Description                                 |
@@ -46,10 +50,10 @@ class SomeType extends AbstractType
 Then in Javascript you have to enable `TranslatableInput` component.
 
 ```js
-    import TranslatableInput from "admin-dev/themes/new-theme/js/components/translatable-input";
+import TranslatableInput from "admin-dev/themes/new-theme/js/components/translatable-input";
 
-    // enable togging of different locales
-    new TranslatableInput();
+// enable togging of different locales
+new TranslatableInput();
 ```
 
 ## Preview example

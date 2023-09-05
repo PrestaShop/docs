@@ -13,6 +13,8 @@ This form type is used to display an image value without providing an interactiv
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+| type | `string` | hidden | |
+| image_class | `string` | img-fluid | |
 
 ## Code example
 

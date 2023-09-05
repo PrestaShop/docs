@@ -28,6 +28,3 @@ $builder->add('custom_value', TranslateType::class, [
     'label' => $this->translator->trans('OR Customized value', [], 'Admin.Catalog.Feature'),
 ]);
 ```
-
-## Preview example
-

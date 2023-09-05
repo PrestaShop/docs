@@ -13,6 +13,11 @@ This form class is responsible to create a category selector using Nested sets
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+| label | `boolean` | `false` |  |
+| choices | `array` |  |  |
+| list | `array` |  |  |
+| valid_list | `array` |  |  |
+| multiple | `boolean` | `true` | allows multi selection of categories |
 
 ## Required Javascript components
 

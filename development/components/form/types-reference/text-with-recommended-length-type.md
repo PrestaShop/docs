@@ -13,9 +13,47 @@ Is used to add field with recommended input length counter to the form.
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+| recommended_length | `int` | 
+
+## Required Javascript components
+
+| Component                                                   | Description                         |
+|:------------------------------------------------------------|:------------------------------------|
+| text-with-recommended-length-counter.js  |  |
 
 ## Code example
 
+- [CmsPageType](https://github.com/PrestaShop/PrestaShop/blob/develop/src/PrestaShopBundle/Form/Admin/Improve/Design/Pages/CmsPageType.php#L150-L177)
+
+```php
+$builder->add('meta_description', TranslatableType::class, [
+    'label' => $this->trans('Meta description', 'Admin.Global'),
+    'type' => TextWithRecommendedLengthType::class,
+    'help' => $invalidCharsText,
+    'required' => false,
+    'options' => [
+        'recommended_length' => self::RECOMMENDED_DESCRIPTION_LENGTH,
+        'attr' => [
+            'maxlength' => self::META_DESCRIPTION_MAX_CHARS,
+        ],
+        'constraints' => [
+            new TypedRegex([
+                'type' => 'generic_name',
+            ]),
+            new Length([
+                'max' => self::META_DESCRIPTION_MAX_CHARS,
+                'maxMessage' => $this->trans(
+                    'This field cannot be longer than %limit% characters',
+                    'Admin.Notifications.Error',
+                    ['%limit%' => self::META_DESCRIPTION_MAX_CHARS]
+                ),
+            ]),
+        ],
+    ],
+])
+```
 
 ## Preview example
+
+{{< figure src="../img/text-with-recommended-length-type.png" title="TextWithRecommendedLengthType rendered in form" >}}
 

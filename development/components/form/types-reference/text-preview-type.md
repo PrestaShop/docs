@@ -13,6 +13,10 @@ This form type is used to display a text value without providing an interactive 
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
+| type | `string` | hidden | Input type |
+| preview_class | `string` | text-preview | Class to apply on the input |
+| prefix | `string` | null | Prefix data to prepend to the value |
+| suffix | `string` | null | Suffix data to append to the value |
 
 ## Code example
 
