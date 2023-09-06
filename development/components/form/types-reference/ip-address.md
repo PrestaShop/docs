@@ -16,7 +16,6 @@ None.
 |:--------------------------------------------------------------|:--------------------------------------------|
 | ../admin-dev/themes/new-theme/js/maintenance-page/ip-input.js | Inserts current device ip address to input. |
 
-
 ## Code example
 
 ```php
