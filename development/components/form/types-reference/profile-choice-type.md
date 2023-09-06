@@ -30,3 +30,4 @@ Class ProfileChoiceType is choice type for selecting employee's profile.
 
 ## Preview example
 
+{{< figure src="../img/profile-choice-type.png" title="ProfileChoiceType rendered in form example" >}}

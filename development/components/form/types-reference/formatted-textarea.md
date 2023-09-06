@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 ```
 
-
 ## Code example
 
 ```php

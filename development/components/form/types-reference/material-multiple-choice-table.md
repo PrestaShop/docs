@@ -20,6 +20,7 @@ but it allows using multiple checkboxes per row. Requires Javascript component t
 
 
 ## Required Javascript components
+
 | Component                                                            | Description                         |
 |:---------------------------------------------------------------------|:------------------------------------|
 | ../admin-dev/themes/new-theme/js/components/multiple-choice-table.js | Manages selection of all checkboxes |

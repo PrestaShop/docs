@@ -31,6 +31,3 @@ FormType used in rendering of "Search and Reset" action in Grids.
         ])
 )
 ```
-
-## Preview example
-

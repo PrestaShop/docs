@@ -13,9 +13,3 @@ Default entry type used by EntitySearchInputType
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
-
-## Code example
-
-
-## Preview example
-

@@ -36,6 +36,3 @@ $builder->add('reduction', PriceReductionType::class, [
     ],
 ])
 ```
-
-## Preview example
-

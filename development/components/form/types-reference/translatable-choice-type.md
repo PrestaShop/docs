@@ -30,6 +30,3 @@ $builder->add('template', TranslatableChoiceType::class, [
     'row_attr' => $this->templateAttributes,
 ])
 ```
-
-## Preview example
-

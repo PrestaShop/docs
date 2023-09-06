@@ -28,6 +28,3 @@ $builder->add('fullname_and_email', TextPreviewType::class, [
     'block_prefix' => 'searched_customer_fullname_and_email',
 ])
 ```
-
-## Preview example
-

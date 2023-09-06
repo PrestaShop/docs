@@ -39,3 +39,4 @@ $builder->add('themes_selectors', RadioWithChoiceChildrenType::class, [
 
 ## Preview example
 
+{{< figure src="../img/radio-with-choice-children-type.png" title="RadioWithChoiceChildrenType rendered in form example" >}}
