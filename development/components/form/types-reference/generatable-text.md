@@ -16,8 +16,11 @@ Extends TextType with additional button which allows to generate random value fo
 
 | Component                                                             | Description                         |
 |:----------------------------------------------------------------------|:------------------------------------|
-| ../admin-dev/themes/new-theme/js/components/generatable-input.js | Generates a random value for input. |
+| GeneratableInput | Generates a random value for input. |
 
+{{% notice note %}}
+Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 

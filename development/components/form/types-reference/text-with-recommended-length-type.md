@@ -19,7 +19,11 @@ Is used to add field with recommended input length counter to the form.
 
 | Component                                                   | Description                         |
 |:------------------------------------------------------------|:------------------------------------|
-| text-with-recommended-length-counter.js  |  |
+| TextWithRecommendedLengthCounter  | Adds a recommended length counter to the input |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 

@@ -20,7 +20,11 @@ Javascript components.
 
 | Component                                                       | Description                                                        |
 | :-------------------------------------------------------------- | :----------------------------------------------------------------- |
-| ../admin-dev/themes/new-theme/js/components/form/choice-tree.js | Responsible for choice tree expanding and collapsing interactivity |
+| ChoiceTree | Responsible for choice tree expanding and collapsing interactivity |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 
