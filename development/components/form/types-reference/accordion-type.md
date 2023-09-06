@@ -13,9 +13,3 @@ This form type is used as a container of sub forms, each sub form will be render
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
-
-## Code example
-
-
-## Preview example
-

@@ -18,7 +18,7 @@ This form type is used to display an image value without providing an interactiv
 
 ## Code example
 
-- [HeaderType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product.php#L79-L81)
+- [HeaderType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/HeaderType.php#L79-L81)
 
 ```php
 $builder->add('cover_thumbnail', ImagePreviewType::class, [
@@ -28,3 +28,4 @@ $builder->add('cover_thumbnail', ImagePreviewType::class, [
 
 ## Preview example
 
+{{< figure src="../img/image-preview-type.png" title="ImagePreviewType rendered in form example" >}}

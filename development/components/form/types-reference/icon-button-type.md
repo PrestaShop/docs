@@ -34,3 +34,4 @@ $builder->add('catalog', IconButtonType::class, [
 
 ## Preview example
 
+{{< figure src="../img/icon-button-type.png" title="IconButtonType rendered in form example" >}}
