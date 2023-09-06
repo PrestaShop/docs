@@ -13,9 +13,3 @@ ResizableTextType adds new sizing options to TextType.
 
 | Option       | Type   | Default value                     | Description                                                                               |
 | :----------- | :----- | :-------------------------------- | :---------------------------------------------------------------------------------------- |
-
-## Code example
-
-
-## Preview example
-

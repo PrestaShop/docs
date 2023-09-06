@@ -26,6 +26,3 @@ $builder->add($form->getName() . $suffix, ShopRestrictionCheckboxType::class, [
     ],
 ]);
 ```
-
-## Preview example
-

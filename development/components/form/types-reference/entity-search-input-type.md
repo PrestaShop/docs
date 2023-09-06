@@ -38,3 +38,4 @@ $builder->add('related_products', EntitySearchInputType::class, [
 
 ## Preview example
 
+{{< figure src="../img/entity-search-input-type.png" title="EntitySearchInputType rendered in form example" >}}

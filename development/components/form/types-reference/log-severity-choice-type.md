@@ -37,3 +37,4 @@ $builder->add('logs_by_email', LogSeverityChoiceType::class, [
 
 ## Preview example
 
+{{< figure src="../img/log-severity-choice-type.png" title="LogSeverityChoiceType rendered in form example" >}}
