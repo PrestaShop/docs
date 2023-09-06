@@ -13,11 +13,15 @@ MaterialChoiceTableType renders checkbox choices using table layout. It requires
 | expanded | bool | true          | Whether the table should be expanded by default or not |
 | multiple | bool | true          | Whether to enable multiple checkboxes selection or no  |
 
-
 ## Required Javascript components
+
 | Component                                                   | Description                         |
 |:------------------------------------------------------------|:------------------------------------|
-| ../admin-dev/themes/new-theme/js/components/choice-table.js | Manages selection of all checkboxes |
+| ChoiceTable | Manages selection of all checkboxes |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 

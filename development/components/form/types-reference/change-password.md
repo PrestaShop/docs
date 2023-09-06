@@ -9,7 +9,11 @@ ChangePasswordType is used to create form for changing password and has a built-
 ## Required Javascript components
 | Component                                                                   | Description                                                                                                             |
 |:----------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
-| ../admin-dev/themes/new-theme/js/components/form/change-password-control.js | Generates random passwords, validates new password and it's confirmation, displays error messages related to validation |
+| ChangePasswordControl | Generates random passwords, validates new password and it's confirmation, displays error messages related to validation |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 

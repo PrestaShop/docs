@@ -13,7 +13,11 @@ Wraps SubmittableInput and DeltaQuantity components to work together.
 
 | Component                                                   | Description                         |
 |:------------------------------------------------------------|:------------------------------------|
-| ../admin-dev/themes/new-theme/js/components/form/submittable-delta-quantity-input.ts  | Manages delta input and quantity synchronisation |
+| SubmitableDeltaQuantityInput| Manages delta input and quantity synchronisation |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Type options
 

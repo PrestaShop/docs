@@ -22,7 +22,11 @@ If you wish to use [FormattedTextareaType]({{< relref "/8/development/components
     
 | Component                                                      | Description                                 |
 | -------------------------------------------------------------- | ------------------------------------------- |
-| admin-dev/themes/new-theme/js/components/translatable-input.js | Allows toggling input for different locales |
+| TranslatableInput | Allows toggling input for different locales |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 
