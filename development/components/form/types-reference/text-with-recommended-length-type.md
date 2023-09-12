@@ -22,7 +22,7 @@ It is used to add a field with a recommended input length counter to the form.
 | TextWithRecommendedLengthCounter  | Adds a recommended length counter to the input |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example

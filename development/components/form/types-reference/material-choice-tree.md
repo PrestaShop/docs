@@ -24,7 +24,7 @@ MaterialChoiceTreeType renders checkbox choices using choices tree layout. Requi
 | ChoiceTree | Manages UI interactions: expanding and collapsing tree, auto-checking child checkbox, enabling and disabling inputs. |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example

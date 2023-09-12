@@ -20,7 +20,7 @@ Enables TinyMCE text editor on TextareaType.
 | TinyMCEEditor | Rich text editor |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example
