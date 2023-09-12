@@ -114,9 +114,9 @@ If you need an external access to the `.well-known` directory, you can update yo
 
 ```nginx
 # .htaccess, .DS_Store, .htpasswd, etc., but keep .well-known available
- location ~* /\.(?!well-known\/) {
-   deny all;
- }
+location ~* /\.(?!well-known\/) {
+    deny all;
+}
 
 # files in .well-known should be served as plain text.
 location ~* ^/\.well-known\/ {
