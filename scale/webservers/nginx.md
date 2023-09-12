@@ -107,7 +107,7 @@ server {
 }
 ```
 
-### Allow usage of `.well-known` directory (letsencrypt/pki validation, apple pay)
+### Allow usage of `.well-known` directory (Let's Encrypt / PKI validation, Apple Pay)
 
 The `.well-known` directory is a resource documented in [RFC 8615](https://datatracker.ietf.org/doc/html/rfc8615) and used by [many services](https://en.m.wikipedia.org/wiki/Well-known_URI).
 If you need an external access to the `.well-known` directory, you can update you nginx configuration to use:
