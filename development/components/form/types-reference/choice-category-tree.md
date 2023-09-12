@@ -4,7 +4,7 @@ title: ChoiceCategoriesTreeType
 
 # ChoiceCategoriesTreeType
 
-This form class is responsible to create a category selector using Nested sets
+This form class is responsible for creating a category selector using a tree view
 
 - Namespace: `PrestaShopBundle\Form\Admin\Type`
 - Reference: [ChoiceCategoriesTreeType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ChoiceCategoriesTreeType.php)

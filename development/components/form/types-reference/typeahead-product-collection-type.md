@@ -4,7 +4,7 @@ title: TypeaheadProductCollectionType
 
 # TypeaheadProductCollectionType
 
-This form class is responsible to create a product, with or without attribute field.
+This form class allows you to select a product, with or without an attribute field.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
 - Reference: [TypeaheadProductCollectionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/TypeaheadProductCollectionType.php)

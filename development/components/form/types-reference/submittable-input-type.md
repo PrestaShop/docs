@@ -4,7 +4,7 @@ title: SubmittableInputType
 
 # SubmittableInputType
 
-Adds a button right into specified input and toggles it's availability on change
+Adds a button right into specified input and toggles its availability on change
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
 - Reference: [SubmittableInputType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/SubmittableInputType.php)

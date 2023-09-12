@@ -4,7 +4,7 @@ title: DeltaQuantityType
 
 # DeltaQuantityType
 
-Quantity field that displays the initial quantity (not editable) and allows editing with delta quantity instead (ex: +5, -8). The input data of this form type is the initial (as a plain integer) however its output on submit is the delta quantity.
+Quantity field that displays the initial quantity (not editable) and allows editing with delta quantity instead (ex: +5, -8). The input data of this form type is the initial (as a plain integer) however, its output on submit is the delta quantity.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
 - Reference: [DeltaQuantityType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/DeltaQuantityType.php)

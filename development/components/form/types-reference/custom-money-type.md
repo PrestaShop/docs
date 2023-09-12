@@ -4,7 +4,7 @@ title: CustomMoneyType
 
 # CustomMoneyType
 
-Native Symfony MoneyType customised for PrestaShop
+Native Symfony MoneyType customized for PrestaShop
 
 {{% notice note %}}
 This form type is a [Form Type Extension](https://symfony.com/doc/current/form/create_form_type_extension.html), and will not be used directly.
