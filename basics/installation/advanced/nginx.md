@@ -90,11 +90,6 @@ server {
       deny all;
     }
 
-    # files in .well-known should be served as plain text.
-    location ~* ^/\.well-known\/ {
-        default_type text/plain;
-    }
-
     # Source code directories.
     location ~ ^/(app|bin|cache|classes|config|controllers|docs|localization|override|src|tests|tools|translations|var|vendor)/ {
         deny all;
