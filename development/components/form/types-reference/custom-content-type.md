@@ -4,7 +4,7 @@ title: CustomContentType
 
 # CustomContentType
 
-Type is used to add any content in any position of the form rather than actual field.
+Type is used to add any content at any position of the form, rather than the actual field.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
 - Reference: [CustomContentType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/CustomContentType.php)

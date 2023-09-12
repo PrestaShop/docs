@@ -4,7 +4,7 @@ title: TypeaheadProductPackCollectionType
 
 # TypeaheadProductPackCollectionType
 
-This form class is responsible to create a product, with or without attribute field.
+This form class allows you to select a product to be included in a pack of products.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
 - Reference: [TypeaheadProductPackCollectionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/TypeaheadProductPackCollectionType.php)
