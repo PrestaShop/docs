@@ -18,9 +18,14 @@ MaterialChoiceTreeType renders checkbox choices using choices tree layout. Requi
 | disabled_values | array  | []            | Array of ids to disable in choices tree                                |
 
 ## Required Javascript components
+
 | Component                                                       | Description                                                                                                          |
 |:----------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|
-| ../admin-dev/themes/new-theme/js/components/form/choice-tree.js | Manages UI interactions: expanding and collapsing tree, auto-checking child checkbox, enabling and disabling inputs. |
+| ChoiceTree | Manages UI interactions: expanding and collapsing tree, auto-checking child checkbox, enabling and disabling inputs. |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 
