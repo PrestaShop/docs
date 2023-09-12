@@ -87,7 +87,7 @@ DisablingSwitch              | 8.0.0
 FormFieldToggler             | 8.0.0
 IframeClient                 | 8.0.0
 ModifyAllShopsCheckbox       | 8.0.0
-ChangePasswordControl        | 
+ChangePasswordControl        | 8.0.0
 
 
 ## Grid component

@@ -21,7 +21,7 @@ The `TextWithLengthCounterType` represents text input with value length counter.
 | TextWithLengthCounter | Calculates remaining length for input |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example

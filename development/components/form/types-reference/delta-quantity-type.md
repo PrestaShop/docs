@@ -32,3 +32,4 @@ $builder->add('delta_quantity', DeltaQuantityType::class, [
 
 ## Preview example
 
+{{< figure src="../img/delta-quantity-type.png" title="DeltaQuantityType rendered in form example" >}}

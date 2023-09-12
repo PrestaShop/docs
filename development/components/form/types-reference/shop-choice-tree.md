@@ -19,7 +19,7 @@ The `ShopChoiceTreeType` is subtype of `MaterialChoiceTreeType` which is configu
 | ChoiceTree | Manages interaction of choice tree |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example

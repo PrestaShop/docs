@@ -16,7 +16,7 @@ Wraps SubmittableInput and DeltaQuantity components to work together.
 | SubmitableDeltaQuantityInput| Manages delta input and quantity synchronisation |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Type options

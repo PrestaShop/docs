@@ -12,7 +12,7 @@ ChangePasswordType is used to create form for changing password and has a built-
 | ChangePasswordControl | Generates random passwords, validates new password and its confirmation, displays validation messages |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example

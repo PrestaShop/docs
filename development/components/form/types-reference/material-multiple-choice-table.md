@@ -26,7 +26,7 @@ but it allows using multiple checkboxes per row. Requires Javascript component t
 | MultipleChoiceTable | Manages selection of all checkboxes |
 
 {{% notice note %}}
-Learn more about [Javascript components and how to use theme]({{<relref "/8/development/components/global-components">}})
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
 {{% /notice %}}
 
 ## Code example
