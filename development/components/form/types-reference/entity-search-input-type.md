@@ -4,7 +4,7 @@ title: EntitySearchInputType
 
 # EntitySearchInputType
 
-This form type is used for a OneToMany (or ManyToMany) association, it allows to search a list of entities (based on a remote url) and associate it. It is based on the CollectionType form type which provides prototype features to display a custom template for each associated items.
+This form type is used for an OneToMany (or ManyToMany) association, it allows to search a list of entities (based on a remote URL) and associate it. It is based on the CollectionType form type which provides prototype features to display a custom template for each associated item.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
 - Reference: [EntitySearchInputType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/EntitySearchInputType.php)

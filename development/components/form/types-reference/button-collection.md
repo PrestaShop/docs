@@ -4,7 +4,7 @@ title: ButtonCollectionType
 
 # ButtonCollectionType
 
-`ButtonCollectionType` is a form type used to group buttons in a common form group which is useful for forms which have multiple submit buttons.
+`ButtonCollectionType` is a form type used to group buttons in a common form group, which is useful for forms that have multiple submit buttons.
 
 - Namespace: `PrestaShopBundle\Form\Admin\Type`
 - Reference: [ButtonCollectionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ButtonCollectionType.php)

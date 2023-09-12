@@ -4,7 +4,7 @@ title: ColorPickerType
 
 # ColorPickerType
 
-This form class is responsible to create a color picker field
+This form class is responsible for creating a color picker field
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
 - Reference: [ColorPickerType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ColorPickerType.php)
