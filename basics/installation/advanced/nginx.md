@@ -85,9 +85,9 @@ server {
         }
     }
 
-    # .htaccess, .DS_Store, .htpasswd, etc., but keep .well-known available
-    location ~* /\.(?!well-known\/) {
-      deny all;
+    # .htaccess, .DS_Store, .htpasswd, etc.
+    location ~ /\. {
+        deny all;
     }
 
     # Source code directories.
