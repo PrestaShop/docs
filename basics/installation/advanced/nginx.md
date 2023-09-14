@@ -26,8 +26,8 @@ server {
     server_name example.com www.example.com;
 
     # [EDIT] Path to your domain Nginx logs.
-    access_log /var/log/nginx/example.com-access.log;
-    error_log /var/log/nginx/example.com-error.log;
+    access_log /var/log/nginx/example.com-access.log combined;
+    error_log /var/log/nginx/example.com-error.log info;
 
     # [EDIT] Path to your SSL certificates (take a look at Certbot https://certbot.eff.org).
     ssl_certificate /etc/ssl/fullchain.pem;
@@ -49,6 +49,19 @@ server {
     # For enhanced security, register your site here: https://hstspreload.org/.
     # WARNING: Don't use this if your site is not fully on HTTPS!
     # add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" preload; always;
+
+    # XSS Protection
+    # add_header X-XSS-Protection "1; mode=block";
+
+    # Clickjacking
+    # add_header X-Frame-Options "SAMEORIGIN";
+
+    # X-Content Type Options
+    # add_header X-Content-Type-Options nosniff;
+
+    # Secure Cookie
+    # add_header Set-Cookie "Path=/; HttpOnly; Secure";
+
 
     # [EDIT] If you are using multiple languages.
     # rewrite ^/fr$ /fr/ redirect;
@@ -80,10 +93,9 @@ server {
 
     # [EDIT] Replace 'admin-dev' in this block with the name of your admin directory.
     location /admin-dev/ {
-        if (!-e $request_filename) {
-            rewrite ^ /admin-dev/index.php last;
-        }
+        try_files $uri $uri/ /admin-dev/index.php$is_args$args;
     }
+
 
     # .htaccess, .DS_Store, .htpasswd, etc.
     location ~ /\. {
