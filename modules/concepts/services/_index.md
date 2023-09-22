@@ -117,6 +117,18 @@ If you need more details about dependency injection and how services work in the
 their documentation about the [Service Container](https://symfony.com/doc/4.4/service_container.html).
 {{% /notice %}}
 
+##### Exclude index.php files when adding wildcard resource
+
+When adding resources to your module namespace, with a wildcard, exclude all `index.php` files (used for security, redirecting to FO). 
+
+```yaml
+  your_company.your_module:
+    resource: '../src/*'
+    exclude:
+      - '../src/index.php'
+      - '../src/*/index.php' 
+```
+
 ### Override an existing Symfony service
 
 The container definition can be modified by a module, which enables you to override an existing Symfony service being used in PrestaShop.
