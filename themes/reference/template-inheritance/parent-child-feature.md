@@ -51,6 +51,10 @@ assets:
   use_parent_assets: true
 ```
 
+{{% notice note %}}
+Find mode informations about [`use_parent_assets` behavior here]({{<relref "/8/themes/getting-started/theme-yml#parent--child-settings">}})
+{{% /notice %}}
+
 Go ahead, select this theme in your backoffice and you're all set.
 
 ### Overriding templates
