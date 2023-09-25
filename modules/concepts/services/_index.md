@@ -119,7 +119,7 @@ their documentation about the [Service Container](https://symfony.com/doc/4.4/se
 
 ##### Exclude index.php files when adding wildcard resource
 
-When adding resources to your module namespace, with a wildcard, exclude all `index.php` files (used for security, redirecting to FO). 
+When adding resources with a wildcard to your module namespace, make sure to exclude all `index.php` files (this file is used for security; it is redirecting to FO to prevent reading from the directory). If you don't do it, you might be redirected whenever you open your shop.
 
 ```yaml
   your_company.your_module:
