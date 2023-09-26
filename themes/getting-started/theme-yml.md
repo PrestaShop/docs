@@ -34,6 +34,43 @@ Users will be able to choose the layout for each page from the theme's settings 
         description: Great for CMS pages to show advertisements on the side
 ```
 
+## Parent / child settings
+
+{{% notice note %}}
+Find more information about [Theming inheritance - Parent/child themes]({{<relref "/8/themes/reference/template-inheritance/parent-child-feature">}})
+{{% /notice %}}
+
+To set the parent theme, set the parent key to the theme's name: 
+
+```yaml
+parent: classic
+```
+
+### use_parent_assets 
+
+Starting from {{< minver v="8.0" >}} , the setting `use_parent_assets` is now fully working and correctly loads assets from the parent theme.
+
+```yaml
+assets:
+  use_parent_assets: true
+```
+
+When set to `true`, some additional variables are changed for `Smarty` templates. 
+
+- `theme_assets` is replaced with the parent theme assets URI, 
+- `img_url`, `css_url`, `js_url` are replaced with the parent theme corresponding URIs,
+
+some other variables are available: 
+
+- `child_theme_assets` which is the child theme assets URI,
+- `child_img_url`, `child_css_url`, `child_js_url` which are the child theme corresponding URIs.
+
+When set to `false`, only `theme_assets`, `img_url`, `css_url` and `js_url` are available, and are the child theme corresponding URIs. 
+
+{{% notice note %}}
+To maintain the behavior of {{< minver v="1.7">}} and load the child theme's assets, `use_parent_assets` must be set to `false`.
+{{% /notice %}}
+
 ## Global settings
 
 ### Configuration
