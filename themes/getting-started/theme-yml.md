@@ -37,7 +37,7 @@ Users will be able to choose the layout for each page from the theme's settings 
 ## Parent / child settings
 
 {{% notice note %}}
-Find mode informations about [Theming inheritance - Parent/child themes]({{<relref "/8/themes/reference/template-inheritance/parent-child-feature">}})
+Find more information about [Theming inheritance - Parent/child themes]({{<relref "/8/themes/reference/template-inheritance/parent-child-feature">}})
 {{% /notice %}}
 
 To set the parent theme, set the parent key to the theme's name: 
@@ -48,19 +48,19 @@ parent: classic
 
 ### use_parent_assets 
 
-From {{< minver v="8.0" >}} , the setting `use_parent_assets` is functional.
+Starting from {{< minver v="8.0" >}} , the setting `use_parent_assets` is now fully working and correctly loads assets from the parent theme.
 
 ```yaml
 assets:
   use_parent_assets: true
 ```
 
-When set to `true`, some additional variables are changed through `Smarty`. 
+When set to `true`, some additional variables are changed for `Smarty` templates. 
 
 - `theme_assets` is replaced with the parent theme assets URI, 
-- `img_url`, `css_url`, `js_url` are replaced also with the parent theme corresponding URIs,
+- `img_url`, `css_url`, `js_url` are replaced with the parent theme corresponding URIs,
 
-And some other variables are created: 
+some other variables are available: 
 
 - `child_theme_assets` which is the child theme assets URI,
 - `child_img_url`, `child_css_url`, `child_js_url` which are the child theme corresponding URIs.
