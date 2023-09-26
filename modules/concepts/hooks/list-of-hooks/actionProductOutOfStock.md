@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionProductOutOfStock
 
 ## Aliases
-: 
+ 
  - productOutOfStock
 
 

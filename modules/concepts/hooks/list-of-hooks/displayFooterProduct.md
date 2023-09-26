@@ -15,7 +15,7 @@ hookAliases:
 # Hook displayFooterProduct
 
 ## Aliases
-: 
+ 
  - productfooter
 
 

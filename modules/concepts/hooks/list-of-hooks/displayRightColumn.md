@@ -15,7 +15,7 @@ hookAliases:
 # Hook displayRightColumn
 
 ## Aliases
-: 
+ 
  - extraRight
 
 ## Information

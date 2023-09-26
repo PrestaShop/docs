@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionOrderStatusPostUpdate
 
 ## Aliases
-: 
+ 
  - postUpdateOrderStatus
 
 

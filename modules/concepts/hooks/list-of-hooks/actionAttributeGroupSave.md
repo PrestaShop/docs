@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionAttributeGroupSave
 
 ## Aliases
-: 
+ 
  - afterSaveAttributeGroup
 
 

@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionProductAdd
 
 ## Aliases
-: 
+ 
  - addproduct
 
 

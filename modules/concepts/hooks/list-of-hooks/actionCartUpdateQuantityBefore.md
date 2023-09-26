@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionCartUpdateQuantityBefore
 
 ## Aliases
-: 
+ 
  - actionBeforeCartUpdateQty
 
 

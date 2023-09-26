@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionAdminMetaSave
 
 ## Aliases
-: 
+ 
  - afterSaveAdminMeta
 
 

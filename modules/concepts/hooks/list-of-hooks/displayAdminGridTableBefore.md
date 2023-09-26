@@ -15,7 +15,7 @@ hookAliases:
 # Hook displayAdminGridTableBefore
 
 ## Aliases
-: 
+ 
  - displayAdminListBefore
 
 

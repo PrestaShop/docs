@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionCustomerAccountAdd
 
 ## Aliases
-: 
+ 
  - createAccount
 
 

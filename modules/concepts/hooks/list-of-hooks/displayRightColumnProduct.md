@@ -15,7 +15,7 @@ hookAliases:
 # Hook displayRightColumnProduct
 
 ## Aliases
-: 
+ 
  - extraRight
 
 

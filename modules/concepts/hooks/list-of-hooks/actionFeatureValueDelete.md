@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionFeatureValueDelete
 
 ## Aliases
-: 
+ 
  - afterDeleteFeatureValue
 
 

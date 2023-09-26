@@ -15,7 +15,7 @@ hookAliases:
 # Hook displayCustomerAccountFormTop
 
 ## Aliases
-: 
+ 
  - createAccountTop
 
 

@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionProductSave
 
 ## Aliases
-: 
+ 
  - afterSaveProduct
 
 

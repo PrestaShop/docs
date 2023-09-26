@@ -15,7 +15,7 @@ hookAliases:
 # Hook displaybackOfficeHeader
 
 ## Aliases
-: 
+ 
  - backOfficeHeader
 
 

@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionOrderSlipAdd
 
 ## Aliases
-: 
+ 
  - orderSlip
 
 

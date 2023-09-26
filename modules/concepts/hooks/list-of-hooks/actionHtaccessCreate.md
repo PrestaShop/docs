@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionHtaccessCreate
 
 ## Aliases
-: 
+ 
  - afterCreateHtaccess
 
 

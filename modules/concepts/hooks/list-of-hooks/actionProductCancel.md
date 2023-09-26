@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionProductCancel
 
 ## Aliases
-: 
+ 
  - cancelProduct
 
 

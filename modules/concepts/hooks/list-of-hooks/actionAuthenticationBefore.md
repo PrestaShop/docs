@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionAuthenticationBefore
 
 ## Aliases
-: 
+ 
  - actionBeforeAuthentication
 
 

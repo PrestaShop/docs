@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionAuthentication
 
 ## Aliases
-: 
+ 
  - authentication
 
 

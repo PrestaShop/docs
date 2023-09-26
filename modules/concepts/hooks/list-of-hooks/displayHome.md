@@ -15,7 +15,7 @@ hookAliases:
 # Hook displayHome
 
 ## Aliases
-: 
+ 
  - home
 
 

@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionPaymentConfirmation
 
 ## Aliases
-: 
+ 
  - paymentConfirm
 
 

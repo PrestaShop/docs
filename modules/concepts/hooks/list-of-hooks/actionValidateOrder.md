@@ -18,7 +18,7 @@ hasExample: true
 # Hook actionValidateOrder
 
 ## Aliases
-: 
+ 
  - newOrder
 
 

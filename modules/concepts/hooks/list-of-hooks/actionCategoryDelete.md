@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionCategoryDelete
 
 ## Aliases
-: 
+ 
  - categoryDeletion
 
 

@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionCategoryAdd
 
 ## Aliases
-: 
+ 
  - categoryAddition
 
 

@@ -15,7 +15,7 @@ hookAliases:
 # Hook actionProductUpdate
 
 ## Aliases
-: 
+ 
  - updateproduct
 
 
