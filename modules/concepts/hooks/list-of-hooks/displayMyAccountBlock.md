@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayMyAccountBlock
 
-Aliases: 
+## Aliases
+: 
  - myAccountBlock
 
 

@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionCategoryUpdate
 
-Aliases: 
+## Aliases
+: 
  - categoryUpdate
 
 

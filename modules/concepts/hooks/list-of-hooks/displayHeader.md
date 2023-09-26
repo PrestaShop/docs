@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayHeader
 
-Aliases: 
+## Aliases
+: 
  - Header
 
 

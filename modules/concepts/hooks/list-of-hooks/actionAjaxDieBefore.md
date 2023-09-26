@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionAjaxDieBefore
 
-Aliases: 
+## Aliases
+: 
  - actionBeforeAjaxDie
 
 

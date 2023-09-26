@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayAdminStatsModules
 
-Aliases: 
+## Aliases
+: 
  - AdminStatsModules
 
 

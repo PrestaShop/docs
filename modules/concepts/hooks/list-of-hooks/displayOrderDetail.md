@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayOrderDetail
 
-Aliases: 
+## Aliases
+: 
  - orderDetailDisplayed
 
 

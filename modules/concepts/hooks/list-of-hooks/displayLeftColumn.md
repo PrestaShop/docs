@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayLeftColumn
 
-Aliases: 
+## Aliases
+: 
  - extraLeft
 
 ## Information

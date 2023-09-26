@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayCustomerAccount
 
-Aliases: 
+## Aliases
+: 
  - customerAccount
 
 

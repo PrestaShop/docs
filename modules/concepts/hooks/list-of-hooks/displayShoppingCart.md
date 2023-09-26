@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayShoppingCart
 
-Aliases: 
+## Aliases
+: 
  - shoppingCartExtra
 
 

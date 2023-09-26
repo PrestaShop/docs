@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionFrontControllerInitAfter
 
-Aliases: 
+## Aliases
+: 
  - actionFrontControllerAfterInit
 
 

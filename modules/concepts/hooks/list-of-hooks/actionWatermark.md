@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionWatermark
 
-Aliases: 
+## Aliases
+: 
  - watermark
 
 

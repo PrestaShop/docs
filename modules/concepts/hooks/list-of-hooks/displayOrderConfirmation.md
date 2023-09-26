@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayOrderConfirmation
 
-Aliases: 
+## Aliases
+: 
  - orderConfirmation
 
 

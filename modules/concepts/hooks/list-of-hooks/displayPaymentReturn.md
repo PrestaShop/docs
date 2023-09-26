@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayPaymentReturn
 
-Aliases: 
+## Aliases
+: 
  - paymentReturn
 
 

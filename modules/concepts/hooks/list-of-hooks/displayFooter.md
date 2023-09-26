@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayFooter
 
-Aliases: 
+## Aliases
+: 
  - footer
 
 

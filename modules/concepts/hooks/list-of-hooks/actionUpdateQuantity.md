@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionUpdateQuantity
 
-Aliases: 
+## Aliases
+: 
  - updateQuantity
 
 

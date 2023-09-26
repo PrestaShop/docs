@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionSubmitAccountBefore
 
-Aliases: 
+## Aliases
+: 
  - actionBeforeSubmitAccount
 
 

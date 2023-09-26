@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayCustomerAccountForm
 
-Aliases: 
+## Aliases
+: 
  - createAccountForm
 
 

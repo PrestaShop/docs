@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayAdminCustomers
 
-Aliases: 
+## Aliases
+: 
  - adminCustomers
 
 

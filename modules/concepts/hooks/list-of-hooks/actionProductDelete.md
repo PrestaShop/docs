@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionProductDelete
 
-Aliases: 
+## Aliases
+: 
  - deleteproduct
 
 

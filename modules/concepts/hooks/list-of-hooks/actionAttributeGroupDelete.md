@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionAttributeGroupDelete
 
-Aliases: 
+## Aliases
+: 
  - afterDeleteAttributeGroup
 
 

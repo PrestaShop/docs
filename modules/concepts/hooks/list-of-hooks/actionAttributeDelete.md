@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionAttributeDelete
 
-Aliases: 
+## Aliases
+: 
  - afterDeleteAttribute
 
 

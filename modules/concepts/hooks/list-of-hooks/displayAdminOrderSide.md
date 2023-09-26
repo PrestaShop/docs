@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayAdminOrderSide
 
-Aliases: 
+## Aliases
+: 
  - displayBackofficeOrderActions
 
 ## Information

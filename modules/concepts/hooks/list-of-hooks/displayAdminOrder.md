@@ -15,7 +15,8 @@ hasExample: true
 
 # Hook displayAdminOrder
 
-Aliases: 
+## Aliases
+: 
  - adminOrder
 
 ## Information

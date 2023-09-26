@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionProductAttributeUpdate
 
-Aliases: 
+## Aliases
+: 
  - updateProductAttribute
 
 

@@ -15,11 +15,10 @@ hookAliases:
 
 # Hook displayProductAdditionalInfo
 
-Aliases: 
+## Aliases
+
  - productActions
  - displayProductButtons
-
-
 
 ## Information
 

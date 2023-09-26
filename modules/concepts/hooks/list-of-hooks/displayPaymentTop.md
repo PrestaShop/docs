@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook displayPaymentTop
 
-Aliases: 
+## Aliases
+: 
  - paymentTop
 
 

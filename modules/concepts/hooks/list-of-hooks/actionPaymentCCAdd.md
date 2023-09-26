@@ -14,7 +14,8 @@ hookAliases:
 
 # Hook actionPaymentCCAdd
 
-Aliases: 
+## Aliases
+: 
  - paymentCCAdded
 
 
