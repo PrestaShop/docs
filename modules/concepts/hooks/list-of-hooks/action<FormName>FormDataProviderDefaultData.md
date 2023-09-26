@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+hasExample: true
 ---
 
 # Hook action&lt;FormName>FormDataProviderDefaultData
@@ -34,3 +35,7 @@ dispatchWithParameters(
             ]
         )
 ```
+
+## Example implementation
+
+This hook has been implemented as an example in our [modules examples repository - demoformdataproviders](https://github.com/PrestaShop/example-modules/tree/master/demoformdataproviders).

@@ -1,16 +1,15 @@
 ---
-title: List of forms
+title: List of migrated forms
 weight: 20
 ---
 
-# List of forms
+# List of migrated forms
 
 This section states when a page that contains a Symfony form has been migrated to Symfony, and when the form has been simplified to rely on the PrestaShop UI Kit Form theme.
 
 You can find the detailed status of the project on the [GitHub tracking issue][form-theme-simplification-project].
 
 [form-theme-simplification-project]: https://github.com/PrestaShop/PrestaShop/issues/16482
-
 
 Page                      | Migrated in version       | Form simplified in version
 --------------------------|:-------------------------:|:-----------------------------:
@@ -25,9 +24,9 @@ Advanced Parameters > Webservice                                       | 1.7.5 |
 Advanced Parameters > Webservice > Add new webservice key              | 1.7.6 | 1.7.8
 Advanced Parameters > Email                                            | 1.7.5 | 1.7.8
 Advanced Parameters > Database > SQL Manager                           | 1.7.5 | 1.7.8
-Advanced Parameters > Team > Employees                                 | 1.7.6 | 8.0
-Advanced Parameters > Team > Employees > Add new employee              | 1.7.6 | 8.0
-Advanced Parameters > Team > Employees > Profiles > Add new profile    | 1.7.6 | 8.0
+Advanced Parameters > Team > Employees                                 | 1.7.6 | 8.1
+Advanced Parameters > Team > Employees > Add new employee              | 1.7.6 | 8.1
+Advanced Parameters > Team > Employees > Profiles > Add new profile    | 1.7.6 | 8.1
 Advanced Parameters > Team > Employees > Permissions                   |       |
 Advanced Parameters > Multistore > Add new / edit shop group           |       |
 Advanced Parameters > Multistore > Add a new shop                      |       |
@@ -59,7 +58,7 @@ Shop parameters > Search > Search > Add new / edit alias              |       |
 Shop parameters > Search > Tags > Add new / edit tag                  |       |
  | |
 **Catalog** | |
-Orders > Invoices                                                     | 1.7.5 | 8.0
+Orders > Invoices                                                     | 1.7.5 | 
 Orders > Delivery Slips                                               | 1.7.5 | 8.0
 Orders > Credit Slips                                                 | 1.7.7 | 1.7.8
 Shipping > Preferences                                                | 1.7.5 | 1.7.8
@@ -74,7 +73,7 @@ Catalog > Attributes & Features > Add new / edit attribute            |       |
 Catalog > Attributes & Features > Add new / edit attribute value      |       |
 Catalog > Discounts > Cart rules > Add new / edit catalog price rule  |       |
 Catalog > Discounts > Cart rules > Add new / edit cart rule           |       |
-Payment > Preferences                                                 | 1.7.5 | 8.0
+Payment > Preferences                                                 | 1.7.5 | 
 Customers > Addresses                                                 | 1.7.7 | 1.7.8
 Customers > Addresses > Add new / edit address                        | 1.7.7 | 1.7.8
 Customers > Customers                                                 | 1.7.6 | 1.7.8
@@ -82,7 +81,7 @@ Customers > Customers > View customer                                 | 1.7.6 | 
 Customers > Customers > Add new / edit customer                       | 1.7.6 | 1.7.8
 Customer Service > Order Messages > Add new / edit order message      | 1.7.7 | 1.7.8
 Customer Service > Customer Service                                   |       |
-Customer Service > Merchandise Returns > Edit                         | 8.0   | 8.0
+Customer Service > Merchandise Returns > Edit                         | 8.0   | 
  | |
 **Improve** | |
 Design > Theme & Logo > Add new theme                                 | 1.7.6 | 1.7.8
@@ -106,4 +105,3 @@ International > Taxes > Taxes                                         | 1.7.6 | 
 International > Taxes > Taxes > Add new / edit tax                    | 1.7.6 | 1.7.8
 International > Taxes > Tax Rules                                     |       |
 International > Taxes > Tax Rules > Add new / edit tax rule group     |       |
-
