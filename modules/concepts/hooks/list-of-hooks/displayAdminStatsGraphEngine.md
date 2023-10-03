@@ -1,17 +1,18 @@
 ---
-menuTitle: graphEngine
-Title: graphEngine
+menuTitle: displayAdminStatsGraphEngine
+Title: displayAdminStatsGraphEngine
 hidden: true
 hookTitle: 
 files:
-  - modules/gsitemap/gsitemap.php
+  - classes/module/ModuleGraph.php
 locations:
   - back office
 type: display 
 hookAliases:
+  - GraphEngine
 ---
 
-# Hook graphEngine
+# Hook displayAdminStatsGraphEngine
 
 ## Information
 
@@ -22,7 +23,7 @@ Permits creating graph engines for the back office, you can refer to our [`Graph
 {{% /notice %}}
 
 Hook locations: 
-  - front office
+  - back office
 
 Located in: 
   - [classes/module/ModuleGraph.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/module/ModuleGraph.php)

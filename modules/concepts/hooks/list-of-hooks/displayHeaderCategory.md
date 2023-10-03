@@ -1,8 +1,8 @@
 ---
-menuTitle: displayFooterCategory
-Title: displayFooterCategory
+menuTitle: displayHeaderCategory
+Title: displayHeaderCategory
 hidden: true
-hookTitle: This hook adds new blocks under the products listing in a category/search
+hookTitle: Footer above of the product list
 files:
   - Classic Theme: templates/catalog/listing/product-list.tpl
 locations:
@@ -10,14 +10,14 @@ locations:
 type: display
 ---
 
-# Hook displayFooterCategory
+# Hook displayHeaderCategory
 
 ## Information
 
 {{% notice tip %}}
-**Category / search footer:** 
+**Category / search header:** 
 
-This hook adds new blocks under the products listing in a category/search
+This hook adds new blocks above the products listing in a category/search
 {{% /notice %}}
 
 Hook locations: 
@@ -31,5 +31,5 @@ Located in:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h="displayFooterCategory"}
+{hook h="displayHeaderCategory"}
 ```
