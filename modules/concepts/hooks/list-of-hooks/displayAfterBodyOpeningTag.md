@@ -8,6 +8,7 @@ files:
 locations:
   - front office
 type: display
+origin: theme
 hookAliases:
 ---
 
@@ -25,6 +26,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/layouts/layout-both-columns.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl)

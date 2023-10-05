@@ -10,6 +10,7 @@ locations:
 type: display
 hookAliases:
  - customerAccount
+origin: theme
 ---
 
 # Hook displayCustomerAccount
@@ -32,6 +33,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/customer/my-account.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/my-account.tpl)

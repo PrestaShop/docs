@@ -10,6 +10,7 @@ locations:
 type: display
 hookAliases:
  - shoppingCartExtra
+origin: theme
 ---
 
 # Hook displayShoppingCart
@@ -17,8 +18,6 @@ hookAliases:
 ## Aliases
  
  - shoppingCartExtra
-
-
 
 ## Information
 
@@ -32,6 +31,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/checkout/cart.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl)

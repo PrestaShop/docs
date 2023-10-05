@@ -9,6 +9,7 @@ locations:
   - front office
 type: display
 hookAliases:
+origin: theme
 ---
 
 # Hook displayOrderConfirmation2
@@ -19,6 +20,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/checkout/order-confirmation.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/order-confirmation.tpl)

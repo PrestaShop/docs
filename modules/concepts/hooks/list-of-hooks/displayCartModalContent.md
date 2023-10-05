@@ -9,6 +9,7 @@ locations:
   - front office
 type: display
 hookAliases:
+origin: theme
 ---
 
 # Hook displayCartModalContent
@@ -25,6 +26,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: modules/ps_shoppingcart/modal.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_shoppingcart/modal.tpl)

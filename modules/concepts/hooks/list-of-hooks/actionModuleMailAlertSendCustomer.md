@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+origin: module
 ---
 
 # Hook actionModuleMailAlertSendCustomer
@@ -20,6 +21,8 @@ Hook locations:
 
 Hook type: action
 
+Hook origin: module
+
 Located in: 
   - [modules/ps_emailalerts/MailAlert.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailalerts/MailAlert.php)
 
@@ -27,12 +30,12 @@ Located in:
 
 ```php
 Hook::exec(
-                'actionModuleMailAlertSendCustomer',
-                [
-                    'product' => $product_name,
-                    'link' => $product_link,
-                    'customer' => $customer,
-                    'product_obj' => $product,
-                ]
-            )
+    'actionModuleMailAlertSendCustomer',
+    [
+        'product' => $product_name,
+        'link' => $product_link,
+        'customer' => $customer,
+        'product_obj' => $product,
+    ]
+)
 ```

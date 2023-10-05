@@ -10,6 +10,7 @@ locations:
 type: display
 hookAliases:
  - productfooter
+origin: theme
 ---
 
 # Hook displayFooterProduct
@@ -17,8 +18,6 @@ hookAliases:
 ## Aliases
  
  - productfooter
-
-
 
 ## Information
 
@@ -32,6 +31,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/catalog/product.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl)

@@ -11,6 +11,7 @@ type: display
 hookAliases:
  - productActions
  - displayProductButtons
+origin: theme
 ---
 
 # Hook displayProductAdditionalInfo
@@ -32,6 +33,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/catalog/_partials/quickview.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/quickview.tpl)

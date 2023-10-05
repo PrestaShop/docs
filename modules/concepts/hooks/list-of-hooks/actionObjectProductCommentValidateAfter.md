@@ -10,6 +10,7 @@ locations:
   - front office
 type: action
 hookAliases:
+origin: module
 ---
 
 # Hook actionObjectProductCommentValidateAfter
@@ -21,6 +22,8 @@ Hook locations:
   - front office
 
 Hook type: action
+
+Hook origin: module
 
 Located in: 
   - [modules/productcomments/ProductComment.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/productcomments/ProductComment.php)

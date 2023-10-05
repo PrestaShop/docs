@@ -8,6 +8,7 @@ files:
 locations:
   - front office
 type: display
+origin: theme
 ---
 
 # Hook displayHeaderCategory
@@ -24,6 +25,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/catalog/listing/product-list.tpl](https://github.com/PrestaShop/classic-theme/blob/2.0.x/templates/catalog/listing/product-list.tpl)

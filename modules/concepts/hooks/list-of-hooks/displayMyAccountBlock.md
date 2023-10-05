@@ -10,15 +10,10 @@ locations:
 type: display
 hookAliases:
  - myAccountBlock
+origin: theme
 ---
 
 # Hook displayMyAccountBlock
-
-## Aliases
- 
- - myAccountBlock
-
-
 
 ## Information
 
@@ -28,10 +23,12 @@ hookAliases:
 This hook displays extra information within the 'my account' block"
 {{% /notice %}}
 
-Hook locations: 
-  - front office
-
-Hook type: display
+| Hook | displayMyAccountBlock |
+| --- | --- |
+| Locations | front office |
+| Type | display |
+| Origin | theme |
+| Aliases | myAccountBlock |
 
 Located in: 
   - [Classic Theme: modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl)

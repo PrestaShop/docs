@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+origin: module
 ---
 
 # Hook actionNewsletterRegistrationBefore
@@ -19,6 +20,8 @@ Hook locations:
   - front office
 
 Hook type: action
+
+Hook origin: module
 
 Located in: 
   - [modules/ps_emailsubscription/ps_emailsubscription.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailsubscription/ps_emailsubscription.php)

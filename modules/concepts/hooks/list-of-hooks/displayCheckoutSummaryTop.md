@@ -9,6 +9,7 @@ locations:
   - front office
 type: display
 hookAliases:
+origin: theme
 ---
 
 # Hook displayCheckoutSummaryTop
@@ -25,6 +26,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/checkout/_partials/cart-summary-top.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-summary-top.tpl)

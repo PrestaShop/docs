@@ -9,6 +9,7 @@ locations:
   - front office
 type: display
 hookAliases:
+origin: theme
 ---
 
 # Hook displayAdditionalCustomerAddressFields
@@ -25,6 +26,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/customer/_partials/block-address.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/_partials/block-address.tpl)

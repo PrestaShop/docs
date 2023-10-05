@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+origin: theme
 ---
 
 # Hook displayCartExtraProductActions
@@ -25,6 +26,8 @@ Hook locations:
   - front office
 
 Hook type: action
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/checkout/_partials/cart-detailed-product-line.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl)

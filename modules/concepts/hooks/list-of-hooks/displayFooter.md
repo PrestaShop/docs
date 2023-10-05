@@ -10,6 +10,7 @@ locations:
 type: display
 hookAliases:
  - footer
+origin: theme
 ---
 
 # Hook displayFooter
@@ -17,8 +18,6 @@ hookAliases:
 ## Aliases
  
  - footer
-
-
 
 ## Information
 
@@ -32,6 +31,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/_partials/footer.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/footer.tpl)

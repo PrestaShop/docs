@@ -10,6 +10,7 @@ locations:
 type: action
 hookAliases:
  - productOutOfStock
+origin: theme
 ---
 
 # Hook actionProductOutOfStock
@@ -17,8 +18,6 @@ hookAliases:
 ## Aliases
  
  - productOutOfStock
-
-
 
 ## Information
 
@@ -32,6 +31,8 @@ Hook locations:
   - front office
 
 Hook type: action
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/catalog/_partials/product-details.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-details.tpl)

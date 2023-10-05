@@ -10,6 +10,7 @@ locations:
 type: display
 hookAliases:
  - extraLeft
+origin: theme
 ---
 
 # Hook displayLeftColumnProduct
@@ -17,8 +18,6 @@ hookAliases:
 ## Aliases
  
  - extraLeft
-
-
 
 ## Information
 
@@ -32,6 +31,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/layouts/layout-both-columns.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl)

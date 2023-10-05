@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+Hook origin: module
 ---
 
 # Hook actionExportGDPRData
@@ -19,6 +20,8 @@ Hook locations:
   - front office
 
 Hook type: action
+
+Hook origin: module
 
 Located in: 
   - [modules/psgdpr/psgdpr.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php)

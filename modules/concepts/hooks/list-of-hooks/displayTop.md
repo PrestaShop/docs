@@ -10,6 +10,7 @@ locations:
 type: display
 hookAliases:
  - top
+origin: theme
 ---
 
 # Hook displayTop
@@ -17,8 +18,6 @@ hookAliases:
 ## Aliases
  
  - top
-
-
 
 ## Information
 
@@ -32,6 +31,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/checkout/_partials/header.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl)

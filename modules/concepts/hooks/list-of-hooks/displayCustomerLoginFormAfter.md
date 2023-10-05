@@ -9,6 +9,7 @@ locations:
   - front office
 type: display
 hookAliases:
+origin: theme
 ---
 
 # Hook displayCustomerLoginFormAfter
@@ -25,6 +26,8 @@ Hook locations:
   - front office
 
 Hook type: display
+
+Hook origin: theme
 
 Located in: 
   - [Classic Theme: templates/customer/authentication.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/authentication.tpl)

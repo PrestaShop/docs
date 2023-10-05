@@ -9,6 +9,7 @@ locations:
   - front office
 type: action
 hookAliases:
+origin: module
 ---
 
 # Hook actionNewsletterRegistrationAfter
@@ -20,6 +21,8 @@ Hook locations:
 
 Hook type: action
 
+Hook origin: module
+
 Located in: 
   - [modules/ps_emailsubscription/ps_emailsubscription.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailsubscription/ps_emailsubscription.php)
 
@@ -27,12 +30,12 @@ Located in:
 
 ```php
 Hook::exec(
-            'actionNewsletterRegistrationAfter',
-            [
-                'hookName' => $hookName,
-                'email' => $_POST['email'],
-                'action' => $_POST['action'],
-                'error' => &$this->error,
-            ]
-        )
+    'actionNewsletterRegistrationAfter',
+    [
+        'hookName' => $hookName,
+        'email' => $_POST['email'],
+        'action' => $_POST['action'],
+        'error' => &$this->error,
+    ]
+)
 ```
