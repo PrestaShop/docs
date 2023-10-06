@@ -2,29 +2,26 @@
 menuTitle: action<DefinitionId>GridDefinitionModifier
 Title: action<DefinitionId>GridDefinitionModifier
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php'
+        file: src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php
 locations:
-  - front office
-  - back office
+    - 'front office'
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook action&lt;DefinitionId>GridDefinitionModifier
-
-## Information
-
-Hook locations: 
-  - front office
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

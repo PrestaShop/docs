@@ -2,26 +2,24 @@
 menuTitle: actionProductActivation
 Title: actionProductActivation
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Adapter/Product/AdminProductDataUpdater.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataUpdater.php'
+        file: src/Adapter/Product/AdminProductDataUpdater.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionProductActivation
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Product/AdminProductDataUpdater.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataUpdater.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

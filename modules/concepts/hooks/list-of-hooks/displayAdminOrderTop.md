@@ -2,33 +2,25 @@
 menuTitle: displayAdminOrderTop
 Title: displayAdminOrderTop
 hidden: true
-hookTitle: Display new elements in the Back Office, top of Order page
+hookTitle: 'Display new elements in the Back Office, top of Order page'
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook launches modules when the Order is displayed in the Back Office'
+
 ---
 
-# Hook displayAdminOrderTop
-
-## Information
-
-{{% notice tip %}}
-**Display new elements in the Back Office, top of Order page:** 
-
-This hook launches modules when the Order is displayed in the Back Office
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

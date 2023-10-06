@@ -2,32 +2,24 @@
 menuTitle: actionPresentOrderReturn
 Title: actionPresentOrderReturn
 hidden: true
-hookTitle: Order Return Presenter
+hookTitle: 'Order Return Presenter'
 files:
-  - src/Adapter/Presenter/Order/OrderReturnPresenter.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Order/OrderReturnPresenter.php'
+        file: src/Adapter/Presenter/Order/OrderReturnPresenter.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called before an order return is presented'
+
 ---
 
-# Hook actionPresentOrderReturn
-
-## Information
-
-{{% notice tip %}}
-**Order Return Presenter:** 
-
-This hook is called before an order return is presented
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Presenter/Order/OrderReturnPresenter.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Order/OrderReturnPresenter.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

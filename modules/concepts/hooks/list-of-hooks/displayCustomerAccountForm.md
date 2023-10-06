@@ -2,39 +2,25 @@
 menuTitle: displayCustomerAccountForm
 Title: displayCustomerAccountForm
 hidden: true
-hookTitle: Customer account creation form
+hookTitle: 'Customer account creation form'
 files:
-  - classes/form/CustomerForm.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerForm.php'
+        file: classes/form/CustomerForm.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - createAccountForm
+    - createAccountForm
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook displays some information on the form to create a customer account'
+
 ---
 
-# Hook displayCustomerAccountForm
-
-## Aliases
- 
- - createAccountForm
-
-
-
-## Information
-
-{{% notice tip %}}
-**Customer account creation form:** 
-
-This hook displays some information on the form to create a customer account
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [classes/form/CustomerForm.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerForm.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

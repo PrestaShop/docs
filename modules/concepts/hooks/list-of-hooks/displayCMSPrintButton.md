@@ -2,29 +2,24 @@
 menuTitle: displayCMSPrintButton
 Title: displayCMSPrintButton
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - Classic Theme: templates/cms/page.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/cms/page.tpl'
+        file: 'Classic Theme: templates/cms/page.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayCMSPrintButton
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/cms/page.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/cms/page.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

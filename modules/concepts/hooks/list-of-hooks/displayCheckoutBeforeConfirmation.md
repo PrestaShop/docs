@@ -2,35 +2,24 @@
 menuTitle: displayCheckoutBeforeConfirmation
 Title: displayCheckoutBeforeConfirmation
 hidden: true
-hookTitle: Show custom content before checkout confirmation
+hookTitle: 'Show custom content before checkout confirmation'
 files:
-  - Classic Theme: templates/checkout/_partials/steps/payment.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/steps/payment.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook allows you to display custom content at the end of checkout process'
+
 ---
 
-# Hook displayCheckoutBeforeConfirmation
-
-## Information
-
-{{% notice tip %}}
-**Show custom content before checkout confirmation:** 
-
-This hook allows you to display custom content at the end of checkout process
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/checkout/_partials/steps/payment.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

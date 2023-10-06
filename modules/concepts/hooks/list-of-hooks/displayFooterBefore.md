@@ -2,30 +2,25 @@
 menuTitle: displayFooterBefore
 Title: displayFooterBefore
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - Classic Theme: templates/_partials/footer.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/footer.tpl'
+        file: 'Classic Theme: templates/_partials/footer.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 hasExample: true
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayFooterBefore
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/_partials/footer.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/footer.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

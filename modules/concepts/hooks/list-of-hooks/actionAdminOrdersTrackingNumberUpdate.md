@@ -2,32 +2,24 @@
 menuTitle: actionAdminOrdersTrackingNumberUpdate
 Title: actionAdminOrdersTrackingNumberUpdate
 hidden: true
-hookTitle: After setting the tracking number for the order
+hookTitle: 'After setting the tracking number for the order'
 files:
-  - src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php'
+        file: src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook allows you to execute code after the unique tracking number for the order was added'
+
 ---
 
-# Hook actionAdminOrdersTrackingNumberUpdate
-
-## Information
-
-{{% notice tip %}}
-**After setting the tracking number for the order:** 
-
-This hook allows you to execute code after the unique tracking number for the order was added
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

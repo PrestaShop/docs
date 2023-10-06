@@ -2,39 +2,25 @@
 menuTitle: displayFeatureValuePostProcess
 Title: displayFeatureValuePostProcess
 hidden: true
-hookTitle: On post-process in admin feature value
+hookTitle: 'On post-process in admin feature value'
 files:
-  - controllers/admin/AdminFeaturesController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminFeaturesController.php'
+        file: controllers/admin/AdminFeaturesController.php
 locations:
-  - back office
+    - 'back office'
 type: display
 hookAliases:
- - postProcessFeatureValue
+    - postProcessFeatureValue
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called on post-process in admin feature value'
+
 ---
 
-# Hook displayFeatureValuePostProcess
-
-## Aliases
- 
- - postProcessFeatureValue
-
-
-
-## Information
-
-{{% notice tip %}}
-**On post-process in admin feature value:** 
-
-This hook is called on post-process in admin feature value
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [controllers/admin/AdminFeaturesController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminFeaturesController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

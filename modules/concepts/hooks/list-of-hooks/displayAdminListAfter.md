@@ -2,26 +2,24 @@
 menuTitle: displayAdminListAfter
 Title: displayAdminListAfter
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - admin-dev/themes/default/template/helpers/list/list_footer.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/list/list_footer.tpl'
+        file: admin-dev/themes/default/template/helpers/list/list_footer.tpl
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayAdminListAfter
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [admin-dev/themes/default/template/helpers/list/list_footer.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/list/list_footer.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

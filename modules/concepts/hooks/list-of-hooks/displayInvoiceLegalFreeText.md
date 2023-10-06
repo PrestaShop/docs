@@ -2,32 +2,24 @@
 menuTitle: displayInvoiceLegalFreeText
 Title: displayInvoiceLegalFreeText
 hidden: true
-hookTitle: PDF Invoice - Legal Free Text
+hookTitle: 'PDF Invoice - Legal Free Text'
 files:
-  - classes/pdf/HTMLTemplateInvoice.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/pdf/HTMLTemplateInvoice.php'
+        file: classes/pdf/HTMLTemplateInvoice.php
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook allows you to modify the legal free text on PDF invoices'
+
 ---
 
-# Hook displayInvoiceLegalFreeText
-
-## Information
-
-{{% notice tip %}}
-**PDF Invoice - Legal Free Text:** 
-
-This hook allows you to modify the legal free text on PDF invoices
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [classes/pdf/HTMLTemplateInvoice.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/pdf/HTMLTemplateInvoice.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

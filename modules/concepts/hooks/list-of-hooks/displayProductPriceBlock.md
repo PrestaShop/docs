@@ -2,29 +2,24 @@
 menuTitle: displayProductPriceBlock
 Title: displayProductPriceBlock
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - Classic Theme: templates/checkout/_partials/order-confirmation-table.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/order-confirmation-table.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/order-confirmation-table.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayProductPriceBlock
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/checkout/_partials/order-confirmation-table.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/order-confirmation-table.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

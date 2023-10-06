@@ -2,39 +2,25 @@
 menuTitle: displayCustomerAccountFormTop
 Title: displayCustomerAccountFormTop
 hidden: true
-hookTitle: Block above the form for create an account
+hookTitle: 'Block above the form for create an account'
 files:
-  - controllers/front/RegistrationController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/RegistrationController.php'
+        file: controllers/front/RegistrationController.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - createAccountTop
+    - createAccountTop
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook is displayed above the customer's account creation form"
+
 ---
 
-# Hook displayCustomerAccountFormTop
-
-## Aliases
- 
- - createAccountTop
-
-
-
-## Information
-
-{{% notice tip %}}
-**Block above the form for create an account:** 
-
-This hook is displayed above the customer's account creation form
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [controllers/front/RegistrationController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/RegistrationController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

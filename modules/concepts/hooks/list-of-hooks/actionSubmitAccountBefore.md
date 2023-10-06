@@ -2,33 +2,25 @@
 menuTitle: actionSubmitAccountBefore
 Title: actionSubmitAccountBefore
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - controllers/front/RegistrationController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/RegistrationController.php'
+        file: controllers/front/RegistrationController.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - actionBeforeSubmitAccount
+    - actionBeforeSubmitAccount
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionSubmitAccountBefore
-
-## Aliases
- 
- - actionBeforeSubmitAccount
-
-
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/front/RegistrationController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/RegistrationController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

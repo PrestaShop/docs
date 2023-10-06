@@ -2,32 +2,24 @@
 menuTitle: actionAdminControllerInitAfter
 Title: actionAdminControllerInitAfter
 hidden: true
-hookTitle: Perform actions after admin controller initialization
+hookTitle: 'Perform actions after admin controller initialization'
 files:
-  - classes/controller/AdminController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is launched after the initialization of all admin controllers'
+
 ---
 
-# Hook actionAdminControllerInitAfter
-
-## Information
-
-{{% notice tip %}}
-**Perform actions after admin controller initialization:** 
-
-This hook is launched after the initialization of all admin controllers
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [classes/controller/AdminController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

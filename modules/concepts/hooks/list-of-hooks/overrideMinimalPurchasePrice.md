@@ -2,24 +2,24 @@
 menuTitle: overrideMinimalPurchasePrice
 Title: overrideMinimalPurchasePrice
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Adapter/Presenter/Cart/CartPresenter.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Cart/CartPresenter.php'
+        file: src/Adapter/Presenter/Cart/CartPresenter.php
 locations:
-  - front office
-type: 
-hookAliases:
+    - 'front office'
+type: null
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook overrideMinimalPurchasePrice
-
-## Information
-
-Hook locations: 
-  - front office
-
-Located in: 
-  - [src/Adapter/Presenter/Cart/CartPresenter.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Cart/CartPresenter.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

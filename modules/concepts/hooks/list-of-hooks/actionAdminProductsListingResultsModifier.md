@@ -2,26 +2,24 @@
 menuTitle: actionAdminProductsListingResultsModifier
 Title: actionAdminProductsListingResultsModifier
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Adapter/Product/AdminProductDataProvider.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataProvider.php'
+        file: src/Adapter/Product/AdminProductDataProvider.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAdminProductsListingResultsModifier
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Product/AdminProductDataProvider.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataProvider.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

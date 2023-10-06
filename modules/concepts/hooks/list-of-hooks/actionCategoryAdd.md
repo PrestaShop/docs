@@ -2,39 +2,25 @@
 menuTitle: actionCategoryAdd
 Title: actionCategoryAdd
 hidden: true
-hookTitle: Category creation
+hookTitle: 'Category creation'
 files:
-  - classes/Category.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php'
+        file: classes/Category.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - categoryAddition
+    - categoryAddition
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed when a category is created'
+
 ---
 
-# Hook actionCategoryAdd
-
-## Aliases
- 
- - categoryAddition
-
-
-
-## Information
-
-{{% notice tip %}}
-**Category creation:** 
-
-This hook is displayed when a category is created
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Category.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

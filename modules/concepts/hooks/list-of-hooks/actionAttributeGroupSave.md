@@ -2,39 +2,25 @@
 menuTitle: actionAttributeGroupSave
 Title: actionAttributeGroupSave
 hidden: true
-hookTitle: Saving an attribute group
+hookTitle: 'Saving an attribute group'
 files:
-  - classes/AttributeGroup.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/AttributeGroup.php'
+        file: classes/AttributeGroup.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - afterSaveAttributeGroup
+    - afterSaveAttributeGroup
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called while saving an attributes group'
+
 ---
 
-# Hook actionAttributeGroupSave
-
-## Aliases
- 
- - afterSaveAttributeGroup
-
-
-
-## Information
-
-{{% notice tip %}}
-**Saving an attribute group:** 
-
-This hook is called while saving an attributes group
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/AttributeGroup.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/AttributeGroup.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

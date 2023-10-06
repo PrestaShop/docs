@@ -2,34 +2,23 @@
 menuTitle: displayFooterCategory
 Title: displayFooterCategory
 hidden: true
-hookTitle: This hook adds new blocks under the products listing in a category/search
+hookTitle: 'This hook adds new blocks under the products listing in a category/search'
 files:
-  - Classic Theme: templates/catalog/listing/product-list.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/2.0.x/templates/catalog/listing/product-list.tpl'
+        file: 'Classic Theme: templates/catalog/listing/product-list.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook adds new blocks under the products listing in a category/search'
+
 ---
 
-# Hook displayFooterCategory
-
-## Information
-
-{{% notice tip %}}
-**Category / search footer:** 
-
-This hook adds new blocks under the products listing in a category/search
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/catalog/listing/product-list.tpl](https://github.com/PrestaShop/classic-theme/blob/2.0.x/templates/catalog/listing/product-list.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

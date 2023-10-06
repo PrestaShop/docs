@@ -2,39 +2,25 @@
 menuTitle: actionOrderStatusUpdate
 Title: actionOrderStatusUpdate
 hidden: true
-hookTitle: Order status update - Event
+hookTitle: 'Order status update - Event'
 files:
-  - classes/order/OrderHistory.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php'
+        file: classes/order/OrderHistory.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - updateOrderStatus
+    - updateOrderStatus
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook launches modules when the status of an order changes'
+
 ---
 
-# Hook actionOrderStatusUpdate
-
-## Aliases
- 
- - updateOrderStatus
-
-
-
-## Information
-
-{{% notice tip %}}
-**Order status update - Event:** 
-
-This hook launches modules when the status of an order changes
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/order/OrderHistory.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

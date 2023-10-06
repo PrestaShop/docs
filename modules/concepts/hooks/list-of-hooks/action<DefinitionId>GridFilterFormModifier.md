@@ -2,28 +2,25 @@
 menuTitle: action<DefinitionId>GridFilterFormModifier
 Title: action<DefinitionId>GridFilterFormModifier
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Core/Grid/Filter/GridFilterFormFactory.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Filter/GridFilterFormFactory.php'
+        file: src/Core/Grid/Filter/GridFilterFormFactory.php
 locations:
-  - front office
-  - back office
+    - 'front office'
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook action&lt;DefinitionId>GridFilterFormModifier
-
-## Information
-
-Hook locations: 
-  - front office
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/Core/Grid/Filter/GridFilterFormFactory.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Filter/GridFilterFormFactory.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

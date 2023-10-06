@@ -2,32 +2,24 @@
 menuTitle: actionPresentProductListing
 Title: actionPresentProductListing
 hidden: true
-hookTitle: Product Listing Presenter
+hookTitle: 'Product Listing Presenter'
 files:
-  - src/Adapter/Presenter/Product/ProductListingPresenter.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Product/ProductListingPresenter.php'
+        file: src/Adapter/Presenter/Product/ProductListingPresenter.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called before a product listing is presented'
+
 ---
 
-# Hook actionPresentProductListing
-
-## Information
-
-{{% notice tip %}}
-**Product Listing Presenter:** 
-
-This hook is called before a product listing is presented
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Presenter/Product/ProductListingPresenter.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Product/ProductListingPresenter.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

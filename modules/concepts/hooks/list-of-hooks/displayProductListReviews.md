@@ -2,29 +2,24 @@
 menuTitle: displayProductListReviews
 Title: displayProductListReviews
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - Classic Theme: templates/catalog/_partials/miniatures/product.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl'
+        file: 'Classic Theme: templates/catalog/_partials/miniatures/product.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayProductListReviews
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/catalog/_partials/miniatures/product.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

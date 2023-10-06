@@ -2,40 +2,25 @@
 menuTitle: actionProductOutOfStock
 Title: actionProductOutOfStock
 hidden: true
-hookTitle: Out-of-stock product
+hookTitle: 'Out-of-stock product'
 files:
-  - Classic Theme: templates/catalog/_partials/product-details.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-details.tpl'
+        file: 'Classic Theme: templates/catalog/_partials/product-details.tpl'
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - productOutOfStock
+    - productOutOfStock
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook displays new action buttons if a product is out of stock'
+
 ---
 
-# Hook actionProductOutOfStock
-
-## Aliases
- 
- - productOutOfStock
-
-## Information
-
-{{% notice tip %}}
-**Out-of-stock product:** 
-
-This hook displays new action buttons if a product is out of stock
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/catalog/_partials/product-details.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-details.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

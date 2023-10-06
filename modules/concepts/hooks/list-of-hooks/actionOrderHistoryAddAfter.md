@@ -2,26 +2,24 @@
 menuTitle: actionOrderHistoryAddAfter
 Title: actionOrderHistoryAddAfter
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/order/OrderHistory.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php'
+        file: classes/order/OrderHistory.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionOrderHistoryAddAfter
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/order/OrderHistory.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

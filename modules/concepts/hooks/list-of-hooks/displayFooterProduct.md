@@ -2,40 +2,25 @@
 menuTitle: displayFooterProduct
 Title: displayFooterProduct
 hidden: true
-hookTitle: Product footer
+hookTitle: 'Product footer'
 files:
-  - Classic Theme: templates/catalog/product.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl'
+        file: 'Classic Theme: templates/catalog/product.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - productfooter
+    - productfooter
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: "This hook adds new blocks under the product's description"
+
 ---
 
-# Hook displayFooterProduct
-
-## Aliases
- 
- - productfooter
-
-## Information
-
-{{% notice tip %}}
-**Product footer:** 
-
-This hook adds new blocks under the product's description
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/catalog/product.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

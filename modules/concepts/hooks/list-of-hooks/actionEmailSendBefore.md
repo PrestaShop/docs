@@ -2,34 +2,24 @@
 menuTitle: actionEmailSendBefore
 Title: actionEmailSendBefore
 hidden: true
-hookTitle: Before sending an email
+hookTitle: 'Before sending an email'
 files:
-  - classes/Mail.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php'
+        file: classes/Mail.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: true
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is used to filter the content or the metadata of an email before sending it or even prevent its sending'
+
 ---
 
-# Hook actionEmailSendBefore
-
-## Information
-
-{{% notice tip %}}
-**Before sending an email:** 
-
-This hook is used to filter the content or the metadata of an email before sending it or even prevent its sending
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Mail.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php)
-
-This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

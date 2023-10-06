@@ -2,39 +2,25 @@
 menuTitle: actionCarrierUpdate
 Title: actionCarrierUpdate
 hidden: true
-hookTitle: Carrier Update
+hookTitle: 'Carrier Update'
 files:
-  - controllers/admin/AdminCarriersController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminCarriersController.php'
+        file: controllers/admin/AdminCarriersController.php
 locations:
-  - back office
+    - 'back office'
 type: action
 hookAliases:
- - updateCarrier
+    - updateCarrier
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when a carrier is updated'
+
 ---
 
-# Hook actionCarrierUpdate
-
-## Aliases
- 
- - updateCarrier
-
-
-
-## Information
-
-{{% notice tip %}}
-**Carrier Update:** 
-
-This hook is called when a carrier is updated
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [controllers/admin/AdminCarriersController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminCarriersController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

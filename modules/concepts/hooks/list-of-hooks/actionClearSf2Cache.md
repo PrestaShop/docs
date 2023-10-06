@@ -2,32 +2,24 @@
 menuTitle: actionClearSf2Cache
 Title: actionClearSf2Cache
 hidden: true
-hookTitle: Clear Sf2 cache
+hookTitle: 'Clear Sf2 cache'
 files:
-  - src/Adapter/Cache/Clearer/SymfonyCacheClearer.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Cache/Clearer/SymfonyCacheClearer.php'
+        file: src/Adapter/Cache/Clearer/SymfonyCacheClearer.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when the Symfony cache is cleared'
+
 ---
 
-# Hook actionClearSf2Cache
-
-## Information
-
-{{% notice tip %}}
-**Clear Sf2 cache:** 
-
-This hook is called when the Symfony cache is cleared
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Cache/Clearer/SymfonyCacheClearer.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Cache/Clearer/SymfonyCacheClearer.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

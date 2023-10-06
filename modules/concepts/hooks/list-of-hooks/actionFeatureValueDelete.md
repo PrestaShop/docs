@@ -2,39 +2,25 @@
 menuTitle: actionFeatureValueDelete
 Title: actionFeatureValueDelete
 hidden: true
-hookTitle: Deleting attributes' features' values
+hookTitle: "Deleting attributes' features' values"
 files:
-  - classes/FeatureValue.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/FeatureValue.php'
+        file: classes/FeatureValue.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - afterDeleteFeatureValue
+    - afterDeleteFeatureValue
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called while deleting an attributes features value'
+
 ---
 
-# Hook actionFeatureValueDelete
-
-## Aliases
- 
- - afterDeleteFeatureValue
-
-
-
-## Information
-
-{{% notice tip %}}
-**Deleting attributes' features' values:** 
-
-This hook is called while deleting an attributes features value
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/FeatureValue.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/FeatureValue.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

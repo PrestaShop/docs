@@ -2,33 +2,25 @@
 menuTitle: actionAuthenticationBefore
 Title: actionAuthenticationBefore
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/form/CustomerLoginForm.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php'
+        file: classes/form/CustomerLoginForm.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - actionBeforeAuthentication
+    - actionBeforeAuthentication
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAuthenticationBefore
-
-## Aliases
- 
- - actionBeforeAuthentication
-
-
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/form/CustomerLoginForm.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -2,32 +2,24 @@
 menuTitle: actionValidateCustomerAddressForm
 Title: actionValidateCustomerAddressForm
 hidden: true
-hookTitle: Customer address form validation
+hookTitle: 'Customer address form validation'
 files:
-  - classes/form/CustomerAddressForm.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressForm.php'
+        file: classes/form/CustomerAddressForm.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when a customer submit its address form'
+
 ---
 
-# Hook actionValidateCustomerAddressForm
-
-## Information
-
-{{% notice tip %}}
-**Customer address form validation:** 
-
-This hook is called when a customer submit its address form
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/form/CustomerAddressForm.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressForm.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

@@ -2,29 +2,24 @@
 menuTitle: actionNewsletterRegistrationAfter
 Title: actionNewsletterRegistrationAfter
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - modules/ps_emailsubscription/ps_emailsubscription.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailsubscription/ps_emailsubscription.php'
+        file: modules/ps_emailsubscription/ps_emailsubscription.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
 origin: module
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook actionNewsletterRegistrationAfter
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Hook origin: module
-
-Located in: 
-  - [modules/ps_emailsubscription/ps_emailsubscription.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailsubscription/ps_emailsubscription.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

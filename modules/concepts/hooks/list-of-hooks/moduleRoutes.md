@@ -2,36 +2,25 @@
 menuTitle: moduleRoutes
 Title: moduleRoutes
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/Dispatcher.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php'
+        file: classes/Dispatcher.php
 locations:
-  - front office
-type: 
-hookAliases:
+    - 'front office'
+type: null
+hookAliases: null
 hasExample: true
+array_return: true
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook allows your module to extend default PrestaShop routes with custom ones and map them to your module front controllers.'
+
 ---
 
-# Hook moduleRoutes
-
-## Information
-
-{{% notice tip %}}
-**Adds route to the PrestaShop router** 
-
-This hook allows your module to extend default PrestaShop routes with custom ones and map them to your module front controllers.
-{{% /notice %}}
-
-
-Hook locations: 
-  - front office
-
-Located in: 
-  - [classes/Dispatcher.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php)
-
-This hook has an `$array_return` parameter set to `true` (module output will be set by name in an array, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
-
-This hook has a `$check_exception` parameter set to `false` (check permission exception, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 
@@ -190,3 +179,4 @@ class MyModuleAddingRoutes extends Module
 ```
 
 The complete implementation example is available in our [example modules repository](https://github.com/PrestaShop/example-modules/tree/master/demomoduleroutes).
+

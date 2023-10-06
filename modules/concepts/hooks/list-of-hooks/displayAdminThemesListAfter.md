@@ -2,32 +2,24 @@
 menuTitle: displayAdminThemesListAfter
 Title: displayAdminThemesListAfter
 hidden: true
-hookTitle: BO themes list extra content
+hookTitle: 'BO themes list extra content'
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook displays content after the themes list in the back office'
+
 ---
 
-# Hook displayAdminThemesListAfter
-
-## Information
-
-{{% notice tip %}}
-**BO themes list extra content:** 
-
-This hook displays content after the themes list in the back office
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

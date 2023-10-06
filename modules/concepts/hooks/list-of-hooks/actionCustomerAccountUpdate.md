@@ -2,32 +2,24 @@
 menuTitle: actionCustomerAccountUpdate
 Title: actionCustomerAccountUpdate
 hidden: true
-hookTitle: Successful customer account update
+hookTitle: 'Successful customer account update'
 files:
-  - classes/form/CustomerPersister.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php'
+        file: classes/form/CustomerPersister.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when a customer updates its account successfully'
+
 ---
 
-# Hook actionCustomerAccountUpdate
-
-## Information
-
-{{% notice tip %}}
-**Successful customer account update:** 
-
-This hook is called when a customer updates its account successfully
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/form/CustomerPersister.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

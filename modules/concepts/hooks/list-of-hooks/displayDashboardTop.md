@@ -2,32 +2,24 @@
 menuTitle: displayDashboardTop
 Title: displayDashboardTop
 hidden: true
-hookTitle: Dashboard Top
+hookTitle: 'Dashboard Top'
 files:
-  - admin-dev/themes/new-theme/template/page_header_toolbar.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/page_header_toolbar.tpl'
+        file: admin-dev/themes/new-theme/template/page_header_toolbar.tpl
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "Displays the content in the dashboard's top area"
+
 ---
 
-# Hook displayDashboardTop
-
-## Information
-
-{{% notice tip %}}
-**Dashboard Top:** 
-
-Displays the content in the dashboard's top area
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [admin-dev/themes/new-theme/template/page_header_toolbar.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/page_header_toolbar.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

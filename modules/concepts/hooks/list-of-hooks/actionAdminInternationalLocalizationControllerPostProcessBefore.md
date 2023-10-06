@@ -2,32 +2,24 @@
 menuTitle: actionAdminInternationalLocalizationControllerPostProcessBefore
 Title: actionAdminInternationalLocalizationControllerPostProcessBefore
 hidden: true
-hookTitle: On post-process in Admin Improve International Localization Controller
+hookTitle: 'On post-process in Admin Improve International Localization Controller'
 files:
-  - src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php'
+        file: src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called on Admin Improve International Localization post-process before processing any form'
+
 ---
 
-# Hook actionAdminInternationalLocalizationControllerPostProcessBefore
-
-## Information
-
-{{% notice tip %}}
-**On post-process in Admin Improve International Localization Controller:** 
-
-This hook is called on Admin Improve International Localization post-process before processing any form
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

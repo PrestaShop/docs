@@ -2,40 +2,25 @@
 menuTitle: displayPaymentTop
 Title: displayPaymentTop
 hidden: true
-hookTitle: Top of payment page
+hookTitle: 'Top of payment page'
 files:
-  - Classic Theme: templates/checkout/_partials/steps/payment.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/steps/payment.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - paymentTop
+    - paymentTop
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook is displayed at the top of the payment page'
+
 ---
 
-# Hook displayPaymentTop
-
-## Aliases
- 
- - paymentTop
-
-## Information
-
-{{% notice tip %}}
-**Top of payment page:** 
-
-This hook is displayed at the top of the payment page
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/checkout/_partials/steps/payment.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -2,39 +2,25 @@
 menuTitle: displayFeatureForm
 Title: displayFeatureForm
 hidden: true
-hookTitle: Add fields to the form 'feature'
+hookTitle: "Add fields to the form 'feature'"
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
 hookAliases:
- - featureForm
+    - featureForm
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook adds fields to the form 'feature'"
+
 ---
 
-# Hook displayFeatureForm
-
-## Aliases
- 
- - featureForm
-
-
-
-## Information
-
-{{% notice tip %}}
-**Add fields to the form 'feature':** 
-
-This hook adds fields to the form 'feature'
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

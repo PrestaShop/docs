@@ -2,27 +2,22 @@
 menuTitle: actionListModules
 Title: actionListModules
 hidden: true
-hookTitle: Allows you to add your own modules from a remote source in the modules list in the back office.
-files:
- - src/Core/Module/ModuleRepository.php
+hookTitle: 'Allows you to add your own modules from a remote source in the modules list in the back office.'
+files: {  }
 locations:
- - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionListModules {{< minver v="8.0" >}}
-
-## Information
-
-Hook locations:
-- back office
-
-Hook type: action
-
-Located in:
-- [src/Core/Module/ModuleRepository.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Module/ModuleRepository.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

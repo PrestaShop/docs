@@ -2,24 +2,24 @@
 menuTitle: legacyblockkpi
 Title: legacyblockkpi
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig
 locations:
-  - back office
-type: 
-hookAliases:
+    - 'back office'
+type: null
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook legacyblockkpi
-
-## Information
-
-Hook locations: 
-  - back office
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

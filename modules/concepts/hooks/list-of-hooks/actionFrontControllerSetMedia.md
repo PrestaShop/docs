@@ -2,26 +2,24 @@
 menuTitle: actionFrontControllerSetMedia
 Title: actionFrontControllerSetMedia
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/controller/FrontController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        file: classes/controller/FrontController.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionFrontControllerSetMedia
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/controller/FrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

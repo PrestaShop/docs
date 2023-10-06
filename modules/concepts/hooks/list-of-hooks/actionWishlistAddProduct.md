@@ -2,29 +2,24 @@
 menuTitle: actionWishlistAddProduct
 Title: actionWishlistAddProduct
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - modules/blockwishlist/controllers/front/action.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/action.php'
+        file: modules/blockwishlist/controllers/front/action.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
 origin: module
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook actionWishlistAddProduct
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Hook origin: module
-
-Located in: 
-  - [modules/blockwishlist/controllers/front/action.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/action.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

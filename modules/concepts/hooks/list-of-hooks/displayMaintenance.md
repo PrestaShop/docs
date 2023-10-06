@@ -2,32 +2,24 @@
 menuTitle: displayMaintenance
 Title: displayMaintenance
 hidden: true
-hookTitle: Maintenance Page
+hookTitle: 'Maintenance Page'
 files:
-  - classes/controller/FrontController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        file: classes/controller/FrontController.php
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook displays new elements on the maintenance page'
+
 ---
 
-# Hook displayMaintenance
-
-## Information
-
-{{% notice tip %}}
-**Maintenance Page:** 
-
-This hook displays new elements on the maintenance page
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [classes/controller/FrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

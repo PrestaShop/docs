@@ -2,29 +2,24 @@
 menuTitle: displayExpressCheckout
 Title: displayExpressCheckout
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - Classic Theme: templates/checkout/_partials/cart-detailed-actions.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-detailed-actions.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/cart-detailed-actions.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayExpressCheckout
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/checkout/_partials/cart-detailed-actions.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-detailed-actions.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

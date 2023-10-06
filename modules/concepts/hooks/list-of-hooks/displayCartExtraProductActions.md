@@ -2,35 +2,24 @@
 menuTitle: displayCartExtraProductActions
 Title: displayCartExtraProductActions
 hidden: true
-hookTitle: Extra buttons in shopping cart
+hookTitle: 'Extra buttons in shopping cart'
 files:
-  - Classic Theme: templates/checkout/_partials/cart-detailed-product-line.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/cart-detailed-product-line.tpl'
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook adds extra buttons to the product lines, in the shopping cart'
+
 ---
 
-# Hook displayCartExtraProductActions
-
-## Information
-
-{{% notice tip %}}
-**Extra buttons in shopping cart:** 
-
-This hook adds extra buttons to the product lines, in the shopping cart
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/checkout/_partials/cart-detailed-product-line.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

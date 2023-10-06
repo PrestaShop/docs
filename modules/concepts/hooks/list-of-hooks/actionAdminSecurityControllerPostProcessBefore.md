@@ -2,32 +2,24 @@
 menuTitle: actionAdminSecurityControllerPostProcessBefore
 Title: actionAdminSecurityControllerPostProcessBefore
 hidden: true
-hookTitle: On post-process in Admin Security Controller
+hookTitle: 'On post-process in Admin Security Controller'
 files:
-  - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php'
+        file: src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called on Admin Security Controller post-process before processing any form'
+
 ---
 
-# Hook actionAdminSecurityControllerPostProcessBefore
-
-## Information
-
-{{% notice tip %}}
-**On post-process in Admin Security Controller:** 
-
-This hook is called on Admin Security Controller post-process before processing any form
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/SecurityController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

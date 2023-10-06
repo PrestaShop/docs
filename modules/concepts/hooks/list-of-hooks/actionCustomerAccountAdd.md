@@ -2,39 +2,25 @@
 menuTitle: actionCustomerAccountAdd
 Title: actionCustomerAccountAdd
 hidden: true
-hookTitle: Successful customer account creation
+hookTitle: 'Successful customer account creation'
 files:
-  - classes/form/CustomerPersister.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php'
+        file: classes/form/CustomerPersister.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - createAccount
+    - createAccount
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when a new customer creates an account successfully'
+
 ---
 
-# Hook actionCustomerAccountAdd
-
-## Aliases
- 
- - createAccount
-
-
-
-## Information
-
-{{% notice tip %}}
-**Successful customer account creation:** 
-
-This hook is called when a new customer creates an account successfully
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/form/CustomerPersister.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

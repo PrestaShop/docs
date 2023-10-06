@@ -2,32 +2,24 @@
 menuTitle: actionOverrideEmployeeImage
 Title: actionOverrideEmployeeImage
 hidden: true
-hookTitle: Get Employee Image
+hookTitle: 'Get Employee Image'
 files:
-  - classes/Employee.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Employee.php'
+        file: classes/Employee.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is used to get the employee image'
+
 ---
 
-# Hook actionOverrideEmployeeImage
-
-## Information
-
-{{% notice tip %}}
-**Get Employee Image:** 
-
-This hook is used to get the employee image
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Employee.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Employee.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

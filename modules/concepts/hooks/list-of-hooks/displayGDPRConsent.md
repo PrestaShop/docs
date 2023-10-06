@@ -2,29 +2,24 @@
 menuTitle: displayGDPRConsent
 Title: displayGDPRConsent
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - Classic Theme: modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl'
+        file: 'Classic Theme: modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayGDPRConsent
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

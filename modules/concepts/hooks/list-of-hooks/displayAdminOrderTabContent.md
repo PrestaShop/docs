@@ -2,31 +2,25 @@
 menuTitle: displayAdminOrderTabContent
 Title: displayAdminOrderTabContent
 hidden: true
-hookTitle: Display new elements in the Back Office, tab contents on order
+hookTitle: 'Display new elements in the Back Office, tab contents on order'
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayAdminOrderTabContent
-
-## Information
-
-{{% notice tip %}}
-**Display new elements in the Back Office, tab contents on order** 
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/Blocks/View/details.html.twig)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

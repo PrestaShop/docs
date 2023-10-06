@@ -2,31 +2,24 @@
 menuTitle: displayOverrideTemplate
 Title: displayOverrideTemplate
 hidden: true
-hookTitle: Change the default template of current controller
+hookTitle: 'Change the default template of current controller'
 files:
-  - classes/controller/FrontController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        file: classes/controller/FrontController.php
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayOverrideTemplate
-
-## Information
-
-{{% notice tip %}}
-**Change the default template of current controller:** 
-
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [classes/controller/FrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

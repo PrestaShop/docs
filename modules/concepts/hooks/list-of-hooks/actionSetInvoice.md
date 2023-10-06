@@ -2,26 +2,24 @@
 menuTitle: actionSetInvoice
 Title: actionSetInvoice
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/order/Order.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/Order.php'
+        file: classes/order/Order.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionSetInvoice
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/order/Order.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/Order.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

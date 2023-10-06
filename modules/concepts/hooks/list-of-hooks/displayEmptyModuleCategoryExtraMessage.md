@@ -2,32 +2,24 @@
 menuTitle: displayEmptyModuleCategoryExtraMessage
 Title: displayEmptyModuleCategoryExtraMessage
 hidden: true
-hookTitle: Extra message to display for an empty modules category
+hookTitle: 'Extra message to display for an empty modules category'
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook allows to add an extra message to display in the Module manager page when a category doesn't have any module"
+
 ---
 
-# Hook displayEmptyModuleCategoryExtraMessage
-
-## Information
-
-{{% notice tip %}}
-**Extra message to display for an empty modules category:** 
-
-This hook allows to add an extra message to display in the Module manager page when a category doesn't have any module
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

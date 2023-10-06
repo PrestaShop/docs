@@ -2,29 +2,24 @@
 menuTitle: displayCrossSellingShoppingCart
 Title: displayCrossSellingShoppingCart
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - Classic Theme: templates/checkout/cart.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl'
+        file: 'Classic Theme: templates/checkout/cart.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayCrossSellingShoppingCart
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/checkout/cart.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

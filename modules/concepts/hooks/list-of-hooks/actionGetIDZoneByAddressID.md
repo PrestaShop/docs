@@ -2,26 +2,24 @@
 menuTitle: actionGetIDZoneByAddressID
 Title: actionGetIDZoneByAddressID
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/Address.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Address.php'
+        file: classes/Address.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionGetIDZoneByAddressID
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Address.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Address.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

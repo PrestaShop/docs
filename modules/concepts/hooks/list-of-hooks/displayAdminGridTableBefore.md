@@ -2,39 +2,25 @@
 menuTitle: displayAdminGridTableBefore
 Title: displayAdminGridTableBefore
 hidden: true
-hookTitle: Display before Grid table
+hookTitle: 'Display before Grid table'
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
 hookAliases:
- - displayAdminListBefore
+    - displayAdminListBefore
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook adds new blocks before Grid component table'
+
 ---
 
-# Hook displayAdminGridTableBefore
-
-## Aliases
- 
- - displayAdminListBefore
-
-
-
-## Information
-
-{{% notice tip %}}
-**Display before Grid table:** 
-
-This hook adds new blocks before Grid component table
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

@@ -2,26 +2,24 @@
 menuTitle: actionInvoiceNumberFormatted
 Title: actionInvoiceNumberFormatted
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/order/OrderInvoice.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderInvoice.php'
+        file: classes/order/OrderInvoice.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionInvoiceNumberFormatted
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/order/OrderInvoice.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderInvoice.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

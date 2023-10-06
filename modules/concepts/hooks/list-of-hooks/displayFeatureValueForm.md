@@ -2,38 +2,25 @@
 menuTitle: displayFeatureValueForm
 Title: displayFeatureValueForm
 hidden: true
-hookTitle: Add fields to the form 'feature value'
+hookTitle: "Add fields to the form 'feature value'"
 files:
-  - admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl'
+        file: admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl
 locations:
-  - back office
+    - 'back office'
 type: display
 hookAliases:
- - featureValueForm
+    - featureValueForm
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook adds fields to the form 'feature value'"
+
 ---
 
-# Hook displayFeatureValueForm
-
-## Aliases
- 
- - featureValueForm
-
-
-## Information
-
-{{% notice tip %}}
-**Add fields to the form 'feature value':** 
-
-This hook adds fields to the form 'feature value'
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

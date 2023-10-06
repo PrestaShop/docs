@@ -2,32 +2,24 @@
 menuTitle: actionGetProductPropertiesAfterUnitPrice
 Title: actionGetProductPropertiesAfterUnitPrice
 hidden: true
-hookTitle: Product Properties
+hookTitle: 'Product Properties'
 files:
-  - classes/Product.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        file: classes/Product.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called after defining the properties of a product'
+
 ---
 
-# Hook actionGetProductPropertiesAfterUnitPrice
-
-## Information
-
-{{% notice tip %}}
-**Product Properties:** 
-
-This hook is called after defining the properties of a product
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Product.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

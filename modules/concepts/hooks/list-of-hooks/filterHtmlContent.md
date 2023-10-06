@@ -2,32 +2,24 @@
 menuTitle: filterHtmlContent
 Title: filterHtmlContent
 hidden: true
-hookTitle: Filter HTML field before rending a page
+hookTitle: 'Filter HTML field before rending a page'
 files:
-  - src/Adapter/Presenter/Object/ObjectPresenter.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Object/ObjectPresenter.php'
+        file: src/Adapter/Presenter/Object/ObjectPresenter.php
 locations:
-  - front office
-type: 
-hookAliases:
+    - 'front office'
+type: null
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: true
+origin: core
+description: 'This hook is called just before fetching a page on HTML field'
+
 ---
 
-# Hook filterHtmlContent
-
-## Information
-
-{{% notice tip %}}
-**Filter HTML field before rending a page:** 
-
-This hook is called just before fetching a page on HTML field
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Located in: 
-  - [src/Adapter/Presenter/Object/ObjectPresenter.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Object/ObjectPresenter.php)
-
-This hook has a `$chain` parameter set to `true` (hook will chain the return of hook module, [see explaination here]({{< relref "/8/development/components/hook/dispatching-hook">}})).
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

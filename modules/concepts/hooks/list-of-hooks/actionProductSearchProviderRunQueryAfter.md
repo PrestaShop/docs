@@ -2,32 +2,24 @@
 menuTitle: actionProductSearchProviderRunQueryAfter
 Title: actionProductSearchProviderRunQueryAfter
 hidden: true
-hookTitle: Runs an action after ProductSearchProviderInterface::RunQuery()
+hookTitle: 'Runs an action after ProductSearchProviderInterface::RunQuery()'
 files:
-  - classes/controller/ProductListingFrontController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/ProductListingFrontController.php'
+        file: classes/controller/ProductListingFrontController.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'Required to return a previous state of an SQL query or/and to change a result of the SQL query after executing it'
+
 ---
 
-# Hook actionProductSearchProviderRunQueryAfter
-
-## Information
-
-{{% notice tip %}}
-**Runs an action after ProductSearchProviderInterface::RunQuery():** 
-
-Required to return a previous state of an SQL query or/and to change a result of the SQL query after executing it
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/controller/ProductListingFrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/ProductListingFrontController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

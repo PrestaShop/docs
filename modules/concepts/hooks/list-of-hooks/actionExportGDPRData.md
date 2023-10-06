@@ -2,29 +2,25 @@
 menuTitle: actionExportGDPRData
 Title: actionExportGDPRData
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - modules/psgdpr/psgdpr.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php'
+        file: modules/psgdpr/psgdpr.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
-Hook origin: module
+hookAliases: null
+'Hook origin': module
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionExportGDPRData
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Hook origin: module
-
-Located in: 
-  - [modules/psgdpr/psgdpr.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -2,26 +2,24 @@
 menuTitle: displayOrderPreview
 Title: displayOrderPreview
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayOrderPreview
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

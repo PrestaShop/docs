@@ -4,37 +4,23 @@ Title: actionWatermark
 hidden: true
 hookTitle: Watermark
 files:
-  - src/Adapter/Product/Image/Uploader/ProductImageUploader.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Image/Uploader/ProductImageUploader.php'
+        file: src/Adapter/Product/Image/Uploader/ProductImageUploader.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - watermark
+    - watermark
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionWatermark
-
-## Aliases
- 
- - watermark
-
-
-
-## Information
-
-{{% notice tip %}}
-**Watermark:** 
-
-
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Product/Image/Uploader/ProductImageUploader.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Image/Uploader/ProductImageUploader.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

@@ -2,31 +2,25 @@
 menuTitle: displayAttributeForm
 Title: displayAttributeForm
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - admin-dev/themes/default/template/controllers/attributes/helpers/form/form.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/controllers/attributes/helpers/form/form.tpl'
+        file: admin-dev/themes/default/template/controllers/attributes/helpers/form/form.tpl
 locations:
-  - back office
-type: display 
+    - 'back office'
+type: display
 hookAliases:
-  - attributeForm
+    - attributeForm
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook adds fields to the form 'attribute value'"
+
 ---
 
-# Hook displayAttributeForm
-
-## Information
-
-{{% notice tip %}}
-**Add fields to the form 'attribute value'**
-
-This hook adds fields to the form 'attribute value'
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Located in: 
-  - [admin-dev/themes/default/template/controllers/attributes/helpers/form/form.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/controllers/attributes/helpers/form/form.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

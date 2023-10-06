@@ -2,26 +2,24 @@
 menuTitle: actionShopDataDuplication
 Title: actionShopDataDuplication
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - classes/shop/Shop.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/shop/Shop.php'
+        file: classes/shop/Shop.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionShopDataDuplication
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/shop/Shop.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/shop/Shop.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

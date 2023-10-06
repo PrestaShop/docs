@@ -1,37 +1,27 @@
 ---
-menuTitle: action&lt;FormName>FormBuilderModifier
+menuTitle: 'action&lt;FormName>FormBuilderModifier'
 Title: action<FormName>FormBuilderModifier
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Builder/FormBuilder.php'
+        file: src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
 locations:
-  - front office
-  - back office
+    - 'front office'
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook allows to modify an identifiable object forms content by modifying form builder data or FormBuilder itself.\nReplace FormBuilderName by the identitiable object type."
+
 ---
 
-# Hook action&lt;Object>FormBuilderModifier
-
-## Information
-
-{{% notice tip %}}
-**Modify an identifiable object form content:**
-
-This hook allows to modify an identifiable object forms content by modifying form builder data or FormBuilder itself.
-Replace FormBuilderName by the identitiable object type.
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Core/Form/IdentifiableObject/Builder/FormBuilder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Builder/FormBuilder.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

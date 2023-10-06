@@ -2,33 +2,25 @@
 menuTitle: actionGetAdminOrderButtons
 Title: actionGetAdminOrderButtons
 hidden: true
-hookTitle: Admin Order Buttons
+hookTitle: 'Admin Order Buttons'
 files:
-  - src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php'
+        file: src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is used to generate the buttons collection on the order view page (see ActionsBarButtonsCollection)'
+
 ---
 
-# Hook actionGetAdminOrderButtons
-
-## Information
-
-{{% notice tip %}}
-**Admin Order Buttons:** 
-
-This hook is used to generate the buttons collection on the order view page (see ActionsBarButtonsCollection)
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

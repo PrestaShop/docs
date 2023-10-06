@@ -2,33 +2,25 @@
 menuTitle: actionModifyFrontendSitemap
 Title: actionModifyFrontendSitemap
 hidden: true
-hookTitle: Allows modules to add own urls (even whole new groups) to frontend sitemap.
+hookTitle: 'Allows modules to add own urls (even whole new groups) to frontend sitemap.'
 files:
-  - controllers/front/SitemapController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.1.x/controllers/front/SitemapController.php'
+        file: controllers/front/SitemapController.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'For example landing pages, blog posts and others.'
+
 ---
 
-# Hook actionModifyFrontendSitemap {{< minver v="8.1" >}}
-
-## Information
-
-{{% notice tip %}}
-**Allows modules to add own urls (even whole new groups) to frontend sitemap:** 
-
-For example landing pages, blog posts and others.
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/front/SitemapController.php](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/controllers/front/SitemapController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 
@@ -62,3 +54,4 @@ public function hookActionModifyFrontendSitemap($params)
     unset($params['urls']['categories']); // hide categories
 }
 ```
+

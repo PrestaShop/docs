@@ -2,26 +2,24 @@
 menuTitle: actionBeforeUpdate<FormName>FormHandler
 Title: actionBeforeUpdate<FormName>FormHandler
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Core/Form/IdentifiableObject/Handler/FormHandler.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Handler/FormHandler.php'
+        file: src/Core/Form/IdentifiableObject/Handler/FormHandler.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionBeforeUpdate&lt;FormName>FormHandler
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Core/Form/IdentifiableObject/Handler/FormHandler.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Handler/FormHandler.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

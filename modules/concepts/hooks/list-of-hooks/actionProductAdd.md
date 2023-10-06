@@ -2,39 +2,25 @@
 menuTitle: actionProductAdd
 Title: actionProductAdd
 hidden: true
-hookTitle: Product creation
+hookTitle: 'Product creation'
 files:
-  - src/Adapter/Product/ProductDuplicator.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/ProductDuplicator.php'
+        file: src/Adapter/Product/ProductDuplicator.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - addproduct
+    - addproduct
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed after a product is created'
+
 ---
 
-# Hook actionProductAdd
-
-## Aliases
- 
- - addproduct
-
-
-
-## Information
-
-{{% notice tip %}}
-**Product creation:** 
-
-This hook is displayed after a product is created
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Product/ProductDuplicator.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/ProductDuplicator.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

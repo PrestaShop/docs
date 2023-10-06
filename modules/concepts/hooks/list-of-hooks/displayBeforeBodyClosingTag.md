@@ -2,35 +2,24 @@
 menuTitle: displayBeforeBodyClosingTag
 Title: displayBeforeBodyClosingTag
 hidden: true
-hookTitle: Very bottom of pages
+hookTitle: 'Very bottom of pages'
 files:
-  - Classic Theme: templates/layouts/layout-both-columns.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl'
+        file: 'Classic Theme: templates/layouts/layout-both-columns.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'Use this hook for your modals or any content you want to load at the very end'
+
 ---
 
-# Hook displayBeforeBodyClosingTag
-
-## Information
-
-{{% notice tip %}}
-**Very bottom of pages:** 
-
-Use this hook for your modals or any content you want to load at the very end
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/layouts/layout-both-columns.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

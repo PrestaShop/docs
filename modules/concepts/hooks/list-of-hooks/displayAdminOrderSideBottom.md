@@ -2,27 +2,25 @@
 menuTitle: displayAdminOrderSideBottom
 Title: displayAdminOrderSideBottom
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayAdminOrderSideBottom
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

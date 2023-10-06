@@ -2,26 +2,24 @@
 menuTitle: actionPDFInvoiceRender
 Title: actionPDFInvoiceRender
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Adapter/PDF/OrderInvoicePdfGenerator.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/PDF/OrderInvoicePdfGenerator.php'
+        file: src/Adapter/PDF/OrderInvoicePdfGenerator.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionPDFInvoiceRender
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/PDF/OrderInvoicePdfGenerator.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/PDF/OrderInvoicePdfGenerator.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

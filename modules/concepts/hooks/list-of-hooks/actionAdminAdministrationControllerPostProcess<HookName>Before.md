@@ -2,26 +2,24 @@
 menuTitle: actionAdminAdministrationControllerPostProcess<HookName>Before
 Title: actionAdminAdministrationControllerPostProcess<HookName>Before
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php'
+        file: src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAdminAdministrationControllerPostProcess&lt;HookName>Before
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/AdministrationController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

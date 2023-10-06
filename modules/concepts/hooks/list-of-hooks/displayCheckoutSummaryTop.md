@@ -2,35 +2,24 @@
 menuTitle: displayCheckoutSummaryTop
 Title: displayCheckoutSummaryTop
 hidden: true
-hookTitle: Cart summary top
+hookTitle: 'Cart summary top'
 files:
-  - Classic Theme: templates/checkout/_partials/cart-summary-top.tpl
+    -
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-summary-top.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/cart-summary-top.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: null
 origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook allows you to display new elements in top of cart summary'
+
 ---
 
-# Hook displayCheckoutSummaryTop
-
-## Information
-
-{{% notice tip %}}
-**Cart summary top:** 
-
-This hook allows you to display new elements in top of cart summary
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Hook origin: theme
-
-Located in: 
-  - [Classic Theme: templates/checkout/_partials/cart-summary-top.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-summary-top.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

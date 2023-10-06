@@ -2,32 +2,24 @@
 menuTitle: actionOrderEdited
 Title: actionOrderEdited
 hidden: true
-hookTitle: Order edited
+hookTitle: 'Order edited'
 files:
-  - src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php'
+        file: src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when an order is edited'
+
 ---
 
-# Hook actionOrderEdited
-
-## Information
-
-{{% notice tip %}}
-**Order edited:** 
-
-This hook is called when an order is edited
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

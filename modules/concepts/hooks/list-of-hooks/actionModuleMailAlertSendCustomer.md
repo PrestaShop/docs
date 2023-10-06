@@ -2,29 +2,24 @@
 menuTitle: actionModuleMailAlertSendCustomer
 Title: actionModuleMailAlertSendCustomer
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - modules/ps_emailalerts/MailAlert.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailalerts/MailAlert.php'
+        file: modules/ps_emailalerts/MailAlert.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
 origin: module
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook actionModuleMailAlertSendCustomer
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Hook origin: module
-
-Located in: 
-  - [modules/ps_emailalerts/MailAlert.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailalerts/MailAlert.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -2,33 +2,25 @@
 menuTitle: actionFilterDeliveryOptionList
 Title: actionFilterDeliveryOptionList
 hidden: true
-hookTitle: Modify delivery option list result
+hookTitle: 'Modify delivery option list result'
 files:
-  - classes/Cart.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Cart.php'
+        file: classes/Cart.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook allows you to modify delivery option list'
+
 ---
 
-# Hook actionFilterDeliveryOptionList
-
-## Information
-
-{{% notice tip %}}
-**Modify delivery option list result:** 
-
-This hook allows you to modify delivery option list
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Cart.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Cart.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

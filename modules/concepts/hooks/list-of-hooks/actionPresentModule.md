@@ -2,26 +2,24 @@
 menuTitle: actionPresentModule
 Title: actionPresentModule
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - src/Adapter/Presenter/Module/ModulePresenter.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Module/ModulePresenter.php'
+        file: src/Adapter/Presenter/Module/ModulePresenter.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionPresentModule
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Presenter/Module/ModulePresenter.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Module/ModulePresenter.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

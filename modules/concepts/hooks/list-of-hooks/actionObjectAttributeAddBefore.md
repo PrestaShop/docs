@@ -2,28 +2,25 @@
 menuTitle: actionObjectAttributeAddBefore
 Title: actionObjectAttributeAddBefore
 hidden: true
-hookTitle: 
+hookTitle: null
 files:
-  - controllers/admin/AdminAttributesGroupsController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminAttributesGroupsController.php'
+        file: controllers/admin/AdminAttributesGroupsController.php
 locations:
-  - back office
-  - front office
+    - 'back office'
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: null
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionObjectAttributeAddBefore
-
-## Information
-
-Hook locations: 
-  - back office
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/admin/AdminAttributesGroupsController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminAttributesGroupsController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 
