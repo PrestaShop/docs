@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCMSPrintButton
 Title: displayCMSPrintButton
 hidden: true
 hookTitle: 

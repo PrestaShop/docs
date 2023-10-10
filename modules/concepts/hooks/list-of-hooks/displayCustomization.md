@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCustomization
 Title: displayCustomization
 hidden: true
 hookTitle: 

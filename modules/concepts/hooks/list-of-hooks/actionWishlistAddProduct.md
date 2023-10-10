@@ -1,5 +1,4 @@
 ---
-menuTitle: actionWishlistAddProduct
 Title: actionWishlistAddProduct
 hidden: true
 hookTitle: 

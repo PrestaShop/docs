@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminLoginControllerForgotAfter
 Title: actionAdminLoginControllerForgotAfter
 hidden: true
 hookTitle: 'Perform actions after admin login controller forgot action initialization'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminAdminWebserviceControllerPostProcessBefore
 Title: actionAdminAdminWebserviceControllerPostProcessBefore
 hidden: true
 hookTitle: 

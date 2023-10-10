@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCategoryDelete
 Title: actionCategoryDelete
 hidden: true
 hookTitle: 'Category deletion'

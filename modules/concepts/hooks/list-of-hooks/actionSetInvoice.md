@@ -1,5 +1,4 @@
 ---
-menuTitle: actionSetInvoice
 Title: actionSetInvoice
 hidden: true
 hookTitle: 

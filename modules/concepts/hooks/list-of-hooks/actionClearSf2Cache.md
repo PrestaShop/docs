@@ -1,5 +1,4 @@
 ---
-menuTitle: actionClearSf2Cache
 Title: actionClearSf2Cache
 hidden: true
 hookTitle: 'Clear Sf2 cache'

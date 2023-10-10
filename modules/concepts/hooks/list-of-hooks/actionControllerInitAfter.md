@@ -1,5 +1,4 @@
 ---
-menuTitle: actionControllerInitAfter
 Title: actionControllerInitAfter
 hidden: true
 hookTitle: 'Perform actions after controller initialization'

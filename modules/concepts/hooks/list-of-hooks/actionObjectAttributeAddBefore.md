@@ -1,5 +1,4 @@
 ---
-menuTitle: actionObjectAttributeAddBefore
 Title: actionObjectAttributeAddBefore
 hidden: true
 hookTitle: 

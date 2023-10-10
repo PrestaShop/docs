@@ -1,5 +1,4 @@
 ---
-menuTitle: filterHtmlContent
 Title: filterHtmlContent
 hidden: true
 hookTitle: 'Filter HTML field before rending a page'

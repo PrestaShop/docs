@@ -1,5 +1,4 @@
 ---
-menuTitle: actionModuleMailAlertSendCustomer
 Title: actionModuleMailAlertSendCustomer
 hidden: true
 hookTitle: 

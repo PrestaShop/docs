@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCustomerAccountFormTop
 Title: displayCustomerAccountFormTop
 hidden: true
 hookTitle: 'Block above the form for create an account'

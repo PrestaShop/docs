@@ -1,5 +1,4 @@
 ---
-menuTitle: displayNav1
 Title: displayNav1
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionBuildMailLayoutVariables
 Title: actionBuildMailLayoutVariables
 hidden: true
 hookTitle: 'Build the variables used in email layout rendering'

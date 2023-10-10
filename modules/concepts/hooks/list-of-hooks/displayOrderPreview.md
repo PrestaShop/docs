@@ -1,5 +1,4 @@
 ---
-menuTitle: displayOrderPreview
 Title: displayOrderPreview
 hidden: true
 hookTitle: 

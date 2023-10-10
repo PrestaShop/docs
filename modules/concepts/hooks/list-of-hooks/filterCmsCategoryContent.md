@@ -1,5 +1,4 @@
 ---
-menuTitle: filterCmsCategoryContent
 Title: filterCmsCategoryContent
 hidden: true
 hookTitle: 'Filter the content page category'

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayPaymentTop
 Title: displayPaymentTop
 hidden: true
 hookTitle: 'Top of payment page'

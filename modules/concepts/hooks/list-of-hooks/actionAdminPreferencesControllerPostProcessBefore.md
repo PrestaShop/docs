@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminPreferencesControllerPostProcessBefore
 Title: actionAdminPreferencesControllerPostProcessBefore
 hidden: true
 hookTitle: 

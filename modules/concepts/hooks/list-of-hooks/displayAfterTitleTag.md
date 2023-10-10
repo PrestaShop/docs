@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAfterTitleTag
 Title: displayAfterTitleTag
 hidden: true
 hookTitle: 'After title tag'

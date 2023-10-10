@@ -1,5 +1,4 @@
 ---
-menuTitle: actionUpdateLangAfter
 Title: actionUpdateLangAfter
 hidden: true
 hookTitle: 'Update "lang" tables'

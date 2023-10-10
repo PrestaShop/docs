@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminShopParametersOrderPreferencesControllerPostProcessBefore
 Title: actionAdminShopParametersOrderPreferencesControllerPostProcessBefore
 hidden: true
 hookTitle: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'

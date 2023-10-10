@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminOrderSideBottom
 Title: displayAdminOrderSideBottom
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductCancel
 Title: actionProductCancel
 hidden: true
 hookTitle: 'Product cancelled'

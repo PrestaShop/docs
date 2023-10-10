@@ -1,5 +1,4 @@
 ---
-menuTitle: actionLoggerLogMessage
 Title: actionLoggerLogMessage
 hidden: true
 hookTitle: 'Allows to make extra action while a log is triggered'

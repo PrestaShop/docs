@@ -1,5 +1,4 @@
 ---
-menuTitle: filterCategoryContent
 Title: filterCategoryContent
 hidden: true
 hookTitle: 'Filter the content page category'

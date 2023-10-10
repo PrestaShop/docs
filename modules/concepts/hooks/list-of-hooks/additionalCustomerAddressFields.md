@@ -1,5 +1,4 @@
 ---
-menuTitle: additionalCustomerAddressFields
 Title: additionalCustomerAddressFields
 hidden: true
 hookTitle: 'Add fields to the Customer address form'

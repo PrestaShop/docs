@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminOrderTabContent
 Title: displayAdminOrderTabContent
 hidden: true
 hookTitle: 'Display new elements in the Back Office, tab contents on order'

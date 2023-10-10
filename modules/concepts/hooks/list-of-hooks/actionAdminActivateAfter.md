@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminActivateAfter
 Title: actionAdminActivateAfter
 hidden: true
 hookTitle: 

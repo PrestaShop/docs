@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetProductPropertiesAfterUnitPrice
 Title: actionGetProductPropertiesAfterUnitPrice
 hidden: true
 hookTitle: 'Product Properties'

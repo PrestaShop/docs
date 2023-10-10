@@ -1,5 +1,4 @@
 ---
-menuTitle: actionInvoiceNumberFormatted
 Title: actionInvoiceNumberFormatted
 hidden: true
 hookTitle: 

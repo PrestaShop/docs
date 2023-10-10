@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCategoryAdd
 Title: actionCategoryAdd
 hidden: true
 hookTitle: 'Category creation'

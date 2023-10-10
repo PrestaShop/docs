@@ -1,5 +1,4 @@
 ---
-menuTitle: action<ClassName><Action>After
 Title: action<ClassName><Action>After
 hidden: true
 hookTitle: 

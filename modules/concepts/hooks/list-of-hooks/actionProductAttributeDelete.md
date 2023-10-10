@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductAttributeDelete
 Title: actionProductAttributeDelete
 hidden: true
 hookTitle: 'Product attribute deletion'

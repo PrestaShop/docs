@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminOrder
 Title: displayAdminOrder
 hidden: true
 hookTitle: 'Display new elements in the Back Office, tab AdminOrder'

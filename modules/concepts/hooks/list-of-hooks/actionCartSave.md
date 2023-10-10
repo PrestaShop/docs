@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCartSave
 Title: actionCartSave
 hidden: true
 hookTitle: 'Cart creation and update'

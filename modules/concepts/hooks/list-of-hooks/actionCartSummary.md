@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCartSummary
 Title: actionCartSummary
 hidden: true
 hookTitle: 

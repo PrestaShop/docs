@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCartModalFooter
 Title: displayCartModalFooter
 hidden: true
 hookTitle: 'Bottom of Add-to-cart modal'

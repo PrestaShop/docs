@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminInternationalLocalizationControllerPostProcess<HookName>Before
 Title: actionAdminInternationalLocalizationControllerPostProcess<HookName>Before
 hidden: true
 hookTitle: 

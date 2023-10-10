@@ -1,5 +1,4 @@
 ---
-menuTitle: sendMailAlterTemplateVars
 Title: sendMailAlterTemplateVars
 hidden: true
 hookTitle: 'Alter template vars on the fly'

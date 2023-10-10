@@ -1,5 +1,4 @@
 ---
-menuTitle: displayDashboardToolbarTopMenu
 Title: displayDashboardToolbarTopMenu
 hidden: true
 hookTitle: 'Display new elements in back office page with a dashboard, on top Menu'

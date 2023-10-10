@@ -1,5 +1,4 @@
 ---
-menuTitle: filterSupplierContent
 Title: filterSupplierContent
 hidden: true
 hookTitle: 'Filter the content page supplier'

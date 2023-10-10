@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAttributeGroupDelete
 Title: actionAttributeGroupDelete
 hidden: true
 hookTitle: 'Deleting attribute group'

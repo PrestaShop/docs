@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAttributeGroupSave
 Title: actionAttributeGroupSave
 hidden: true
 hookTitle: 'Saving an attribute group'

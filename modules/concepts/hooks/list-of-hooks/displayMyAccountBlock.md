@@ -1,5 +1,4 @@
 ---
-menuTitle: displayMyAccountBlock
 Title: displayMyAccountBlock
 hidden: true
 hookTitle: 'My account block'

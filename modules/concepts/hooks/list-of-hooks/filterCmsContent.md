@@ -1,5 +1,4 @@
 ---
-menuTitle: filterCmsContent
 Title: filterCmsContent
 hidden: true
 hookTitle: 'Filter the content page'

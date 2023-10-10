@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCustomerLogoutAfter
 Title: actionCustomerLogoutAfter
 hidden: true
 hookTitle: 'After customer logout'

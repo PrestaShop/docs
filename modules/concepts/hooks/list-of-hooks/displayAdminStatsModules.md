@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminStatsModules
 Title: displayAdminStatsModules
 hidden: true
 hookTitle: 'Stats - Modules'

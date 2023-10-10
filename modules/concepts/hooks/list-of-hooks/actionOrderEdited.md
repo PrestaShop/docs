@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOrderEdited
 Title: actionOrderEdited
 hidden: true
 hookTitle: 'Order edited'

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayOrderDetail
 Title: displayOrderDetail
 hidden: true
 hookTitle: 'Order detail'

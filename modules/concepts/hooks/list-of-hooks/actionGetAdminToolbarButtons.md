@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetAdminToolbarButtons
 Title: actionGetAdminToolbarButtons
 hidden: true
 hookTitle: 'Allows to add buttons in any toolbar in the back office'

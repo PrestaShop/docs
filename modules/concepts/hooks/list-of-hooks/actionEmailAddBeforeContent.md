@@ -1,5 +1,4 @@
 ---
-menuTitle: actionEmailAddBeforeContent
 Title: actionEmailAddBeforeContent
 hidden: true
 hookTitle: 'Add extra content before mail content'

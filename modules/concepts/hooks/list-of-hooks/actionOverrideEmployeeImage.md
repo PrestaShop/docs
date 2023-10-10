@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOverrideEmployeeImage
 Title: actionOverrideEmployeeImage
 hidden: true
 hookTitle: 'Get Employee Image'

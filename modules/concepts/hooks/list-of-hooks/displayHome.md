@@ -1,5 +1,4 @@
 ---
-menuTitle: displayHome
 Title: displayHome
 hidden: true
 hookTitle: 'Homepage content'

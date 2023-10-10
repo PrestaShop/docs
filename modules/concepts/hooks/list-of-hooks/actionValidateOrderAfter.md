@@ -1,5 +1,4 @@
 ---
-menuTitle: actionValidateOrderAfter
 Title: actionValidateOrderAfter
 hidden: true
 hookTitle: 'After validating an order'

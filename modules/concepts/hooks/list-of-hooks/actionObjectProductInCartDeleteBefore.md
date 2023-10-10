@@ -1,5 +1,4 @@
 ---
-menuTitle: actionObjectProductInCartDeleteBefore
 Title: actionObjectProductInCartDeleteBefore
 hidden: true
 hookTitle: 'Cart product removal'

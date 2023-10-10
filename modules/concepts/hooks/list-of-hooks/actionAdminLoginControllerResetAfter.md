@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminLoginControllerResetAfter
 Title: actionAdminLoginControllerResetAfter
 hidden: true
 hookTitle: 'Perform actions after admin login controller reset action initialization'

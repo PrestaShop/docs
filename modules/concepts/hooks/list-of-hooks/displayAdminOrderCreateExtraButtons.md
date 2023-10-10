@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminOrderCreateExtraButtons
 Title: displayAdminOrderCreateExtraButtons
 hidden: true
 hookTitle: 'Add buttons on the create order page dropdown'

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayOrderConfirmation2
 Title: displayOrderConfirmation2
 hidden: true
 hookTitle: 

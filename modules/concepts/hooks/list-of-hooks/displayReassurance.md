@@ -1,5 +1,4 @@
 ---
-menuTitle: displayReassurance
 Title: displayReassurance
 hidden: true
 hookTitle: 

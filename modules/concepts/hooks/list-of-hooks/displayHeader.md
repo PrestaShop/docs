@@ -1,5 +1,4 @@
 ---
-menuTitle: displayHeader
 Title: displayHeader
 hidden: true
 hookTitle: 'Pages html head section'

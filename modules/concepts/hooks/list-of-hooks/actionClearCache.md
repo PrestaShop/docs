@@ -1,5 +1,4 @@
 ---
-menuTitle: actionClearCache
 Title: actionClearCache
 hidden: true
 hookTitle: 'Clear smarty cache'

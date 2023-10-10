@@ -1,5 +1,4 @@
 ---
-menuTitle: actionListMailThemes
 Title: actionListMailThemes
 hidden: true
 hookTitle: 'List the available email themes and layouts'

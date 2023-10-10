@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminOrdersTrackingNumberUpdate
 Title: actionAdminOrdersTrackingNumberUpdate
 hidden: true
 hookTitle: 'After setting the tracking number for the order'

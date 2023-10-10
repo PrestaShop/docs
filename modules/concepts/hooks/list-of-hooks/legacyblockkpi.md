@@ -1,5 +1,4 @@
 ---
-menuTitle: legacyblockkpi
 Title: legacyblockkpi
 hidden: true
 hookTitle: 

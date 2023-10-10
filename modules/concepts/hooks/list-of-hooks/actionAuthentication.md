@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAuthentication
 Title: actionAuthentication
 hidden: true
 hookTitle: 'Successful customer authentication'

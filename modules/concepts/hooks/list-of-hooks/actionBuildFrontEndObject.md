@@ -1,5 +1,4 @@
 ---
-menuTitle: actionBuildFrontEndObject
 Title: actionBuildFrontEndObject
 hidden: true
 hookTitle: 'Manage elements added to the "prestashop" javascript object'

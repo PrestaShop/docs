@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPaymentConfirmation
 Title: actionPaymentConfirmation
 hidden: true
 hookTitle: 'Payment confirmation'

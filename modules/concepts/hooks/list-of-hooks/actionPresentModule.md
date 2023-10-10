@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPresentModule
 Title: actionPresentModule
 hidden: true
 hookTitle: 

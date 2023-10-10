@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminProductsControllerDeleteAfter
 Title: actionAdminProductsControllerDeleteAfter
 hidden: true
 hookTitle: 

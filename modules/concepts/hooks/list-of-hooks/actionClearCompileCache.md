@@ -1,5 +1,4 @@
 ---
-menuTitle: actionClearCompileCache
 Title: actionClearCompileCache
 hidden: true
 hookTitle: 'Clear smarty compile cache'

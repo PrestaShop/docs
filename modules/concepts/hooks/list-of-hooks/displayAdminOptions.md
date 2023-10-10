@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminOptions
 Title: displayAdminOptions
 hidden: true
 hookTitle: 

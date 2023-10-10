@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductSearchAfter
 Title: actionProductSearchAfter
 hidden: true
 hookTitle: 'Event triggered after search product completed'

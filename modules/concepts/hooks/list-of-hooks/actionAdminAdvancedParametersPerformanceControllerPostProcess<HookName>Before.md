@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminAdvancedParametersPerformanceControllerPostProcess<HookName>Before
 Title: actionAdminAdvancedParametersPerformanceControllerPostProcess<HookName>Before
 hidden: true
 hookTitle: 

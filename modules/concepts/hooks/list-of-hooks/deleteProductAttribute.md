@@ -1,5 +1,4 @@
 ---
-menuTitle: deleteProductAttribute
 Title: deleteProductAttribute
 hidden: true
 hookTitle: 

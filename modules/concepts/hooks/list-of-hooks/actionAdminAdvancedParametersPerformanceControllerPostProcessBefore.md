@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminAdvancedParametersPerformanceControllerPostProcessBefore
 Title: actionAdminAdvancedParametersPerformanceControllerPostProcessBefore
 hidden: true
 hookTitle: 'On post-process in Admin Configure Advanced Parameters Performance Controller'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminSecurityControllerPostProcessBefore
 Title: actionAdminSecurityControllerPostProcessBefore
 hidden: true
 hookTitle: 'On post-process in Admin Security Controller'

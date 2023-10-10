@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminOrderTop
 Title: displayAdminOrderTop
 hidden: true
 hookTitle: 'Display new elements in the Back Office, top of Order page'

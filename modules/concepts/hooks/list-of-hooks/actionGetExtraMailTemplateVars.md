@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetExtraMailTemplateVars
 Title: actionGetExtraMailTemplateVars
 hidden: true
 hookTitle: 

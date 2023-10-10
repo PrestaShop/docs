@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOutputHTMLBefore
 Title: actionOutputHTMLBefore
 hidden: true
 hookTitle: 'Before HTML output'

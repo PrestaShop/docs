@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminDuplicateBefore
 Title: actionAdminDuplicateBefore
 hidden: true
 hookTitle: 

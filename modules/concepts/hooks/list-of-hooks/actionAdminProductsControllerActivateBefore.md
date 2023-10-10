@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminProductsControllerActivateBefore
 Title: actionAdminProductsControllerActivateBefore
 hidden: true
 hookTitle: 

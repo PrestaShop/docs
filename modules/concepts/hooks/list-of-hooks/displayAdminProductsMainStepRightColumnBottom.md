@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminProductsMainStepRightColumnBottom
 Title: displayAdminProductsMainStepRightColumnBottom
 hidden: true
 hookTitle: 'Display new elements in back office product page, right column of the Basic settings tab'

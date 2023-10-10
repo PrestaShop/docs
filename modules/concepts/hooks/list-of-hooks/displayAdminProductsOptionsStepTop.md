@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminProductsOptionsStepTop
 Title: displayAdminProductsOptionsStepTop
 hidden: true
 hookTitle: 'Display new elements in back office product page, Options tab'

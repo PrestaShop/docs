@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCustomerAccountAdd
 Title: actionCustomerAccountAdd
 hidden: true
 hookTitle: 'Successful customer account creation'

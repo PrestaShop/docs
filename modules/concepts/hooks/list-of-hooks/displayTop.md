@@ -1,5 +1,4 @@
 ---
-menuTitle: displayTop
 Title: displayTop
 hidden: true
 hookTitle: 'Top of pages'

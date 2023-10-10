@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdditionalCustomerAddressFields
 Title: displayAdditionalCustomerAddressFields
 hidden: true
 hookTitle: 'Display additional customer address fields'

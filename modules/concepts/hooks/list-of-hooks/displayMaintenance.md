@@ -1,5 +1,4 @@
 ---
-menuTitle: displayMaintenance
 Title: displayMaintenance
 hidden: true
 hookTitle: 'Maintenance Page'

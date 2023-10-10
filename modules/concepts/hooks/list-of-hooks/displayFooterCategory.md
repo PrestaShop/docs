@@ -1,5 +1,4 @@
 ---
-menuTitle: displayFooterCategory
 Title: displayFooterCategory
 hidden: true
 hookTitle: 'This hook adds new blocks under the products listing in a category/search'

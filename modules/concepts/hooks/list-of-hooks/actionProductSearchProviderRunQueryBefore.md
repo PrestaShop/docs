@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductSearchProviderRunQueryBefore
 Title: actionProductSearchProviderRunQueryBefore
 hidden: true
 hookTitle: 'Runs an action before ProductSearchProviderInterface::RunQuery()'

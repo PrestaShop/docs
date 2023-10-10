@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductUpdate
 Title: actionProductUpdate
 hidden: true
 hookTitle: 'Product update'

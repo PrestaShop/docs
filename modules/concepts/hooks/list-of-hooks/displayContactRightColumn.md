@@ -1,5 +1,4 @@
 ---
-menuTitle: displayContactRightColumn
 Title: displayContactRightColumn
 hidden: true
 hookTitle: 'Right column blocks of the contact page'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductActivation
 Title: actionProductActivation
 hidden: true
 hookTitle: 

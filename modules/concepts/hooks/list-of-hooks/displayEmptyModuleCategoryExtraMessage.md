@@ -1,5 +1,4 @@
 ---
-menuTitle: displayEmptyModuleCategoryExtraMessage
 Title: displayEmptyModuleCategoryExtraMessage
 hidden: true
 hookTitle: 'Extra message to display for an empty modules category'

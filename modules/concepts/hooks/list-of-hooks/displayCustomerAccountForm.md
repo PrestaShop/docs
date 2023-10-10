@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCustomerAccountForm
 Title: displayCustomerAccountForm
 hidden: true
 hookTitle: 'Customer account creation form'

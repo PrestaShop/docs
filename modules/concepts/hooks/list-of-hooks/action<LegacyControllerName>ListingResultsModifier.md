@@ -1,5 +1,4 @@
 ---
-menuTitle: action<LegacyControllerName>ListingResultsModifier
 Title: action<LegacyControllerName>ListingResultsModifier
 hidden: true
 hookTitle: 

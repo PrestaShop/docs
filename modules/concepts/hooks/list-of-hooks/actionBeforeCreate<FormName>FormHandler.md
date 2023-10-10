@@ -1,5 +1,4 @@
 ---
-menuTitle: actionBeforeCreate<FormName>FormHandler
 Title: actionBeforeCreate<FormName>FormHandler
 hidden: true
 hookTitle: 

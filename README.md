@@ -23,3 +23,58 @@ The deployment pipeline is documented on the [sources repository for DevDocs](ht
 ## License
 
 Content from this documentation is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+
+## Maintaining Hook list referential
+
+A complete referential of hook and informations on each hook is located in `modules/concepts/hooks/list-of-hooks/`. 
+
+This referential can be generated with a script, crawling all: 
+
+- Prestashop (core) codebase
+- all native modules
+- all native themes
+
+In the documentation, a hook is described with in yaml format, with this format: 
+
+```yaml
+---
+menuTitle: string #name of the hook
+Title: string #name of the hook
+hidden: boolean[true] #must be true
+hookTitle: string #title for the description
+description: string #description sentence
+origin: string #core, module or theme
+files:
+    -
+        theme: string #theme name only if origin=theme
+        module: string #module name only if origin=module
+        url: string #url of the file on github
+        file: string #path of the file
+locations:
+    - string #back office, front office or both
+type: string #action or display
+hookAliases:
+    - string #old hook name or alias
+array_return: boolean #true or false if the hook has an `$array_return` parameter set to `true`
+check_exceptions: boolean #true or false if the hook has a `$check_exceptions` parameter set to `false`
+chain: boolean #true or false if the hook has a `$chain` parameter set to `true` 
+---
+```
+
+This `yaml` structure allows the shortcode `hookDescriptor` to render a digest html page for the documentation, and allows the search script to search in this metadata. 
+
+Next, add the shortcode in the page's content: 
+
+```
+{{% hookDescriptor %}}
+```
+
+Finally, if available, add a section with a code example, and parameters details: 
+
+```
+## Parameters details
+[...]
+
+## Call of the Hook in the origin file
+[...]
+```

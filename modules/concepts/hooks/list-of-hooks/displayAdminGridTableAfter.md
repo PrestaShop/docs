@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminGridTableAfter
 Title: displayAdminGridTableAfter
 hidden: true
 hookTitle: 'Display after Grid table'

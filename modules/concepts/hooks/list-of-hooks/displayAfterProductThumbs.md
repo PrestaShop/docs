@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAfterProductThumbs
 Title: displayAfterProductThumbs
 hidden: true
 hookTitle: 'Display extra content below product thumbs'

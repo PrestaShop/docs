@@ -1,5 +1,4 @@
 ---
-menuTitle: productSearchProvider
 Title: productSearchProvider
 hidden: true
 hookTitle: 

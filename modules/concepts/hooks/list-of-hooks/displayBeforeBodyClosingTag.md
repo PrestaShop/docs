@@ -1,5 +1,4 @@
 ---
-menuTitle: displayBeforeBodyClosingTag
 Title: displayBeforeBodyClosingTag
 hidden: true
 hookTitle: 'Very bottom of pages'

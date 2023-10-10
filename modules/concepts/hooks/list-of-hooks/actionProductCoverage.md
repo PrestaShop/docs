@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductCoverage
 Title: actionProductCoverage
 hidden: true
 hookTitle: 

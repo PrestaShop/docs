@@ -1,5 +1,4 @@
 ---
-menuTitle: filterManufacturerContent
 Title: filterManufacturerContent
 hidden: true
 hookTitle: 'Filter the content page manufacturer'

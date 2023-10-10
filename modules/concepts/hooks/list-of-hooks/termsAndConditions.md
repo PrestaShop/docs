@@ -1,5 +1,4 @@
 ---
-menuTitle: termsAndConditions
 Title: termsAndConditions
 hidden: true
 hookTitle: 

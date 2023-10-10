@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOrderReturn
 Title: actionOrderReturn
 hidden: true
 hookTitle: 'Returned product'

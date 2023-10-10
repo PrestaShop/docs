@@ -1,5 +1,4 @@
 ---
-menuTitle: displayFeaturePostProcess
 Title: displayFeaturePostProcess
 hidden: true
 hookTitle: 'On post-process in admin feature'

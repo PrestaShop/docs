@@ -1,5 +1,4 @@
 ---
-menuTitle: displayRightColumn
 Title: displayRightColumn
 hidden: true
 hookTitle: 'New elements on a page (right column)'

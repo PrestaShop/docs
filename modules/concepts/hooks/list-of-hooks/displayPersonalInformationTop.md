@@ -1,5 +1,4 @@
 ---
-menuTitle: displayPersonalInformationTop
 Title: displayPersonalInformationTop
 hidden: true
 hookTitle: 'Content in the checkout funnel, on top of the personal information panel'

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayModuleConfigureExtraButons
 Title: displayModuleConfigureExtraButons
 hidden: true
 hookTitle: 'Module configuration - After toolbar buttons'

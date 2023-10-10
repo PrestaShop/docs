@@ -1,5 +1,4 @@
 ---
-menuTitle: displayBeforeCarrier
 Title: displayBeforeCarrier
 hidden: true
 hookTitle: 'Before carriers list'

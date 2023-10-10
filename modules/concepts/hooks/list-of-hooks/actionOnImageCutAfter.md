@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOnImageCutAfter
 Title: actionOnImageCutAfter
 hidden: true
 hookTitle: 

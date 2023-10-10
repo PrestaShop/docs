@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAttributeForm
 Title: displayAttributeForm
 hidden: true
 hookTitle: 

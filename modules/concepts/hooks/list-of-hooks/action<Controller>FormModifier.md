@@ -1,5 +1,4 @@
 ---
-menuTitle: action<Controller>FormModifier
 Title: action<Controller>FormModifier
 hidden: true
 hookTitle: 

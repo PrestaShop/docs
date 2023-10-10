@@ -1,5 +1,4 @@
 ---
-menuTitle: moduleRoutes
 Title: moduleRoutes
 hidden: true
 hookTitle: 

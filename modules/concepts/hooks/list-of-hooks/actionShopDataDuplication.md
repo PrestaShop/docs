@@ -1,5 +1,4 @@
 ---
-menuTitle: actionShopDataDuplication
 Title: actionShopDataDuplication
 hidden: true
 hookTitle: 

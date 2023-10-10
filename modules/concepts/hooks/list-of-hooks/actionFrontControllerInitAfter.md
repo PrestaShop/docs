@@ -1,5 +1,4 @@
 ---
-menuTitle: actionFrontControllerInitAfter
 Title: actionFrontControllerInitAfter
 hidden: true
 hookTitle: 'Perform actions after front office controller initialization'

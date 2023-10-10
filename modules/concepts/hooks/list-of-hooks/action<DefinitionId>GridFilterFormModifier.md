@@ -1,5 +1,4 @@
 ---
-menuTitle: action<DefinitionId>GridFilterFormModifier
 Title: action<DefinitionId>GridFilterFormModifier
 hidden: true
 hookTitle: 

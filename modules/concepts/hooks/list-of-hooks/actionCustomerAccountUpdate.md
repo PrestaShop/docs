@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCustomerAccountUpdate
 Title: actionCustomerAccountUpdate
 hidden: true
 hookTitle: 'Successful customer account update'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionModuleRegisterHookBefore
 Title: actionModuleRegisterHookBefore
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionDeleteGDPRCustomer
 Title: actionDeleteGDPRCustomer
 hidden: true
 hookTitle: 

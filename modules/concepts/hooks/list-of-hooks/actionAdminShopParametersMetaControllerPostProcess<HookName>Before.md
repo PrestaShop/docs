@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminShopParametersMetaControllerPostProcess<HookName>Before
 Title: actionAdminShopParametersMetaControllerPostProcess<HookName>Before
 hidden: true
 hookTitle: 

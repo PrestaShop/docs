@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductOutOfStock
 Title: actionProductOutOfStock
 hidden: true
 hookTitle: 'Out-of-stock product'

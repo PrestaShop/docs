@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCheckoutSummaryTop
 Title: displayCheckoutSummaryTop
 hidden: true
 hookTitle: 'Cart summary top'

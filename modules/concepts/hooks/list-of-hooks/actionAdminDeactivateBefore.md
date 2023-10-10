@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminDeactivateBefore
 Title: actionAdminDeactivateBefore
 hidden: true
 hookTitle: 

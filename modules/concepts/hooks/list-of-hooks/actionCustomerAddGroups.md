@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCustomerAddGroups
 Title: actionCustomerAddGroups
 hidden: true
 hookTitle: 

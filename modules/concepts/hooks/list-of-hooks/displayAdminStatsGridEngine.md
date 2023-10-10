@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminStatsGridEngine
 Title: displayAdminStatsGridEngine
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayLeftColumnProduct
 Title: displayLeftColumnProduct
 hidden: true
 hookTitle: 'New elements on the product page (left column)'

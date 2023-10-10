@@ -1,5 +1,4 @@
 ---
-menuTitle: overrideLayoutTemplate
 Title: overrideLayoutTemplate
 hidden: true
 hookTitle: 

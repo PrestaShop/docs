@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPresentProduct
 Title: actionPresentProduct
 hidden: true
 hookTitle: 'Product Presenter'

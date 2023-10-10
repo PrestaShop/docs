@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAjaxDie<Controller><Method>Before
 Title: actionAjaxDie<Controller><Method>Before
 hidden: true
 hookTitle: 

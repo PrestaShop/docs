@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminProductsExtra
 Title: displayAdminProductsExtra
 hidden: true
 hookTitle: 'Display new elements in back office product page, Extra tab'

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayGDPRConsent
 Title: displayGDPRConsent
 hidden: true
 hookTitle: 

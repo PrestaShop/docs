@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOnImageResizeAfter
 Title: actionOnImageResizeAfter
 hidden: true
 hookTitle: 

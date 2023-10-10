@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminControllerInitAfter
 Title: actionAdminControllerInitAfter
 hidden: true
 hookTitle: 'Perform actions after admin controller initialization'

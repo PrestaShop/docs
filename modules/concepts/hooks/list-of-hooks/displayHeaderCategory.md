@@ -1,5 +1,4 @@
 ---
-menuTitle: displayHeaderCategory
 Title: displayHeaderCategory
 hidden: true
 hookTitle: 'Footer above of the product list'

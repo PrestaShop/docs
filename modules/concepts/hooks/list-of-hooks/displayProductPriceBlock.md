@@ -1,5 +1,4 @@
 ---
-menuTitle: displayProductPriceBlock
 Title: displayProductPriceBlock
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductPriceCalculation
 Title: actionProductPriceCalculation
 hidden: true
 hookTitle: 'Product Price Calculation'

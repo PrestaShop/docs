@@ -1,5 +1,4 @@
 ---
-menuTitle: displayContactContent
 Title: displayContactContent
 hidden: true
 hookTitle: 'Content wrapper section of the contact page'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionObjectProductCommentValidateAfter
 Title: actionObjectProductCommentValidateAfter
 hidden: true
 hookTitle: 

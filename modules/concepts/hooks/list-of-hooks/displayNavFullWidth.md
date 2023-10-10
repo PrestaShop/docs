@@ -1,5 +1,4 @@
 ---
-menuTitle: displayNavFullWidth
 Title: displayNavFullWidth
 hidden: true
 hookTitle: Navigation

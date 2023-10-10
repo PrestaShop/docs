@@ -1,5 +1,4 @@
 ---
-menuTitle: action<DefinitionId>GridQueryBuilderModifier
 Title: action<DefinitionId>GridQueryBuilderModifier
 hidden: true
 hookTitle: 

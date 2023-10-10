@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCustomerLoginFormAfter
 Title: displayCustomerLoginFormAfter
 hidden: true
 hookTitle: 'Display elements after login form'

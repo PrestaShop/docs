@@ -1,5 +1,4 @@
 ---
-menuTitle: actionSubmitAccountBefore
 Title: actionSubmitAccountBefore
 hidden: true
 hookTitle: 

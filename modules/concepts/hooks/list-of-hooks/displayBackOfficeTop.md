@@ -1,5 +1,4 @@
 ---
-menuTitle: displaybackOfficeTop
 Title: displaybackOfficeTop
 hidden: true
 hookTitle: 'Administration panel hover the tabs'

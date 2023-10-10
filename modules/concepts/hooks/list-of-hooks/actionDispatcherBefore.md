@@ -1,5 +1,4 @@
 ---
-menuTitle: actionDispatcherBefore
 Title: actionDispatcherBefore
 hidden: true
 hookTitle: 'Before dispatch'

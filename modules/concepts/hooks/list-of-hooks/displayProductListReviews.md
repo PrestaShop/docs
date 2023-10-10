@@ -1,5 +1,4 @@
 ---
-menuTitle: displayProductListReviews
 Title: displayProductListReviews
 hidden: true
 hookTitle: 

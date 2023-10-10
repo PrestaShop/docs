@@ -1,5 +1,4 @@
 ---
-menuTitle: actionDownloadAttachment
 Title: actionDownloadAttachment
 hidden: true
 hookTitle: 

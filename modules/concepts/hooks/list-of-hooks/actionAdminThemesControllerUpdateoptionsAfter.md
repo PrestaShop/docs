@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminThemesControllerUpdateoptionsAfter
 Title: actionAdminThemesControllerUpdateoptionsAfter
 hidden: true
 hookTitle: 

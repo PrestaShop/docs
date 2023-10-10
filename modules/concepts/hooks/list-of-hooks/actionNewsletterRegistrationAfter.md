@@ -1,5 +1,4 @@
 ---
-menuTitle: actionNewsletterRegistrationAfter
 Title: actionNewsletterRegistrationAfter
 hidden: true
 hookTitle: 

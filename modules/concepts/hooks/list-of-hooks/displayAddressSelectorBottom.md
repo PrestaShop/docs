@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAddressSelectorBottom
 Title: displayAddressSelectorBottom
 hidden: true
 hookTitle: 

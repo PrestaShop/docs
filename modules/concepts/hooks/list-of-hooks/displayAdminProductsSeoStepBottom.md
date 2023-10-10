@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminProductsSeoStepBottom
 Title: displayAdminProductsSeoStepBottom
 hidden: true
 hookTitle: 'Display new elements in back office product page, SEO tab'

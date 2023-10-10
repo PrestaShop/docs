@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminShippingPreferencesControllerPostProcessHandlingBefore
 Title: actionAdminShippingPreferencesControllerPostProcessHandlingBefore
 hidden: true
 hookTitle: 'On post-process in Admin Improve Shipping Preferences Controller'

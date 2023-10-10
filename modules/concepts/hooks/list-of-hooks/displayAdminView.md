@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminView
 Title: displayAdminView
 hidden: true
 hookTitle: 

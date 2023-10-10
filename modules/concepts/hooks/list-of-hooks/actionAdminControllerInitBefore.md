@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminControllerInitBefore
 Title: actionAdminControllerInitBefore
 hidden: true
 hookTitle: 'Perform actions before admin controller initialization'

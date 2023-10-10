@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAttributeCombinationDelete
 Title: actionAttributeCombinationDelete
 hidden: true
 hookTitle: 

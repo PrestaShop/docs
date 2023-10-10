@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminEndContent
 Title: displayAdminEndContent
 hidden: true
 hookTitle: 'Administration end of content'

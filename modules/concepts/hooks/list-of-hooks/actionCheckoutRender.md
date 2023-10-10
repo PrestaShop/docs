@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCheckoutRender
 Title: actionCheckoutRender
 hidden: true
 hookTitle: 'Modify checkout process'

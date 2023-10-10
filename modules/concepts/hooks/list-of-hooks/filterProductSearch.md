@@ -1,5 +1,4 @@
 ---
-menuTitle: filterProductSearch
 Title: filterProductSearch
 hidden: true
 hookTitle: 'Filter search products result'

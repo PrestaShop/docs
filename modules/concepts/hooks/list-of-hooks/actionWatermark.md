@@ -1,5 +1,4 @@
 ---
-menuTitle: actionWatermark
 Title: actionWatermark
 hidden: true
 hookTitle: Watermark

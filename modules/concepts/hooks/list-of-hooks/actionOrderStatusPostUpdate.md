@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOrderStatusPostUpdate
 Title: actionOrderStatusPostUpdate
 hidden: true
 hookTitle: 'Post update of order status'

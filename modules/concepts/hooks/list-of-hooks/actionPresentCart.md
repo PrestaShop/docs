@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPresentCart
 Title: actionPresentCart
 hidden: true
 hookTitle: 'Cart Presenter'

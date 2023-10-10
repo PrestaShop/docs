@@ -1,5 +1,4 @@
 ---
-menuTitle: displayPaymentReturn
 Title: displayPaymentReturn
 hidden: true
 hookTitle: 'Payment return'

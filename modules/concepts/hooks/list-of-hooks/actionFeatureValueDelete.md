@@ -1,5 +1,4 @@
 ---
-menuTitle: actionFeatureValueDelete
 Title: actionFeatureValueDelete
 hidden: true
 hookTitle: "Deleting attributes' features' values"

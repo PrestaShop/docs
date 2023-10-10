@@ -1,5 +1,4 @@
 ---
-menuTitle: action<FormName>FormDataProviderData
 Title: action<FormName>FormDataProviderData
 hidden: true
 hookTitle: 

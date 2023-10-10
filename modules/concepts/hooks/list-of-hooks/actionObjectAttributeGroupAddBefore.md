@@ -1,5 +1,4 @@
 ---
-menuTitle: actionObjectAttributeGroupAddBefore
 Title: actionObjectAttributeGroupAddBefore
 hidden: true
 hookTitle: 

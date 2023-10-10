@@ -1,5 +1,4 @@
 ---
-menuTitle: dashboardZoneThree
 Title: dashboardZoneThree
 hidden: true
 hookTitle: 'Dashboard column three'

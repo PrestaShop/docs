@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminShopParametersProductPreferencesControllerPostProcessBefore
 Title: actionAdminShopParametersProductPreferencesControllerPostProcessBefore
 hidden: true
 hookTitle: 

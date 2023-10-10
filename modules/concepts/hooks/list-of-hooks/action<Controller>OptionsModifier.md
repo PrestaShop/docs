@@ -1,5 +1,4 @@
 ---
-menuTitle: action<Controller>OptionsModifier
 Title: action<Controller>OptionsModifier
 hidden: true
 hookTitle: 

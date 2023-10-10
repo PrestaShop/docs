@@ -1,5 +1,4 @@
 ---
-menuTitle: actionDeliveryPriceByWeight
 Title: actionDeliveryPriceByWeight
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionObjectDeleteBefore
 Title: actionObjectDeleteBefore
 hidden: true
 hookTitle: 

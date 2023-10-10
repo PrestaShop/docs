@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPresentPaymentOptions
 Title: actionPresentPaymentOptions
 hidden: true
 hookTitle: 'Payment options Presenter'

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayBanner
 Title: displayBanner
 hidden: true
 hookTitle: 'Very top of pages'

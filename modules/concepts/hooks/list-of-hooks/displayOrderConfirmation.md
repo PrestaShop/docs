@@ -1,5 +1,4 @@
 ---
-menuTitle: displayOrderConfirmation
 Title: displayOrderConfirmation
 hidden: true
 hookTitle: 'Order confirmation page'

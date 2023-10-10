@@ -1,5 +1,4 @@
 ---
-menuTitle: actionDeliveryPriceByPrice
 Title: actionDeliveryPriceByPrice
 hidden: true
 hookTitle: 

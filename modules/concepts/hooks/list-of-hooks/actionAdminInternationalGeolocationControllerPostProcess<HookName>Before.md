@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminInternationalGeolocationControllerPostProcess<HookName>Before
 Title: actionAdminInternationalGeolocationControllerPostProcess<HookName>Before
 hidden: true
 hookTitle: 

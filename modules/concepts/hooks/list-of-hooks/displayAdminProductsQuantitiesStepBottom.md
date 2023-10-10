@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminProductsQuantitiesStepBottom
 Title: displayAdminProductsQuantitiesStepBottom
 hidden: true
 hookTitle: 'Display new elements in back office product page, Quantities/Combinations tab'

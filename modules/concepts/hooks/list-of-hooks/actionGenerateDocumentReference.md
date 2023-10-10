@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGenerateDocumentReference
 Title: actionGenerateDocumentReference
 hidden: true
 hookTitle: 'Modify document reference for Order'

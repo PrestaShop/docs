@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminProductsControllerSortAfter
 Title: actionAdminProductsControllerSortAfter
 hidden: true
 hookTitle: 

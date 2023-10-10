@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminForm
 Title: displayAdminForm
 hidden: true
 hookTitle: 

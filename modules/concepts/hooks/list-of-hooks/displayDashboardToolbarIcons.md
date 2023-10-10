@@ -1,5 +1,4 @@
 ---
-menuTitle: displayDashboardToolbarIcons
 Title: displayDashboardToolbarIcons
 hidden: true
 hookTitle: 'Display new elements in back office page with dashboard, on icons list'

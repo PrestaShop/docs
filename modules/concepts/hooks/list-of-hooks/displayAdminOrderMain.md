@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminOrderMain
 Title: displayAdminOrderMain
 hidden: true
 hookTitle: 'Admin Order Main Column'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductAdd
 Title: actionProductAdd
 hidden: true
 hookTitle: 'Product creation'

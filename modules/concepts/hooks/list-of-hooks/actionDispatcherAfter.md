@@ -1,5 +1,4 @@
 ---
-menuTitle: actionDispatcherAfter
 Title: actionDispatcherAfter
 hidden: true
 hookTitle: 'After dispatch'

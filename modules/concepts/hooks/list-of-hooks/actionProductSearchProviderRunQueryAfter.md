@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductSearchProviderRunQueryAfter
 Title: actionProductSearchProviderRunQueryAfter
 hidden: true
 hookTitle: 'Runs an action after ProductSearchProviderInterface::RunQuery()'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionModifyFrontendSitemap
 Title: actionModifyFrontendSitemap
 hidden: true
 hookTitle: 'Allows modules to add own urls (even whole new groups) to frontend sitemap.'

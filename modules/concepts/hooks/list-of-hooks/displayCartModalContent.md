@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCartModalContent
 Title: displayCartModalContent
 hidden: true
 hookTitle: 'Content of Add-to-cart modal'

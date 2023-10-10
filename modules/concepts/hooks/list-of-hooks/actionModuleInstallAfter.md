@@ -1,5 +1,4 @@
 ---
-menuTitle: actionModuleInstallAfter
 Title: actionModuleInstallAfter
 hidden: true
 hookTitle: actionModuleInstallAfter

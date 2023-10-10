@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminProductsPriceStepBottom
 Title: displayAdminProductsPriceStepBottom
 hidden: true
 hookTitle: 'Display new elements in back office product page, Price tab'

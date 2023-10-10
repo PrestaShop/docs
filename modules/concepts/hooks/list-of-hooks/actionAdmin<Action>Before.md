@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdmin<Action>Before
 Title: actionAdmin<Action>Before
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminMetaSave
 Title: actionAdminMetaSave
 hidden: true
 hookTitle: 'After saving the configuration in AdminMeta'

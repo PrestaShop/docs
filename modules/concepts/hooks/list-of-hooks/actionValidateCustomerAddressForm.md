@@ -1,5 +1,4 @@
 ---
-menuTitle: actionValidateCustomerAddressForm
 Title: actionValidateCustomerAddressForm
 hidden: true
 hookTitle: 'Customer address form validation'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionValidateOrder
 Title: actionValidateOrder
 hidden: true
 hookTitle: 'New orders'

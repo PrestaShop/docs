@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminGridTableBefore
 Title: displayAdminGridTableBefore
 hidden: true
 hookTitle: 'Display before Grid table'

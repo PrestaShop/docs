@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAuthenticationBefore
 Title: actionAuthenticationBefore
 hidden: true
 hookTitle: 

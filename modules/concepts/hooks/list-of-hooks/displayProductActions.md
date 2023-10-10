@@ -1,5 +1,4 @@
 ---
-menuTitle: displayProductActions
 Title: displayProductActions
 hidden: true
 hookTitle: 'Display additional action button on the product page'

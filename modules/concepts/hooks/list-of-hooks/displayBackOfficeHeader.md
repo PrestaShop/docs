@@ -1,5 +1,4 @@
 ---
-menuTitle: displaybackOfficeHeader
 Title: displaybackOfficeHeader
 hidden: true
 hookTitle: 'Administration panel header'

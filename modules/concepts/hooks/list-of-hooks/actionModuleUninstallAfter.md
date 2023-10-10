@@ -1,5 +1,4 @@
 ---
-menuTitle: actionModuleUninstallAfter
 Title: actionModuleUninstallAfter
 hidden: true
 hookTitle: actionModuleUninstallAfter

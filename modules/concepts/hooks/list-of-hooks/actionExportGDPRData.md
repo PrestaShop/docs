@@ -1,5 +1,4 @@
 ---
-menuTitle: actionExportGDPRData
 Title: actionExportGDPRData
 hidden: true
 hookTitle: 

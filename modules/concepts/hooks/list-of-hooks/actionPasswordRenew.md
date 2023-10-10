@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPasswordRenew
 Title: actionPasswordRenew
 hidden: true
 hookTitle: 

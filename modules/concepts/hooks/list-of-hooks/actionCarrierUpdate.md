@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCarrierUpdate
 Title: actionCarrierUpdate
 hidden: true
 hookTitle: 'Carrier Update'

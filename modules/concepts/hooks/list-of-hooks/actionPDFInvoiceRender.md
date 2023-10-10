@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPDFInvoiceRender
 Title: actionPDFInvoiceRender
 hidden: true
 hookTitle: 

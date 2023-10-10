@@ -1,5 +1,4 @@
 ---
-menuTitle: displayNewsletterRegistration
 Title: displayNewsletterRegistration
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOrderStatusUpdate
 Title: actionOrderStatusUpdate
 hidden: true
 hookTitle: 'Order status update - Event'

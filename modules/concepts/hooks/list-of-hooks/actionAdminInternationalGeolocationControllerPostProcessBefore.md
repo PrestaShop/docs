@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminInternationalGeolocationControllerPostProcessBefore
 Title: actionAdminInternationalGeolocationControllerPostProcessBefore
 hidden: true
 hookTitle: 'On post-process in Admin Improve International Geolocation Controller'

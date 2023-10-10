@@ -1,5 +1,4 @@
 ---
-menuTitle: displayExpressCheckout
 Title: displayExpressCheckout
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAjaxDieBefore
 Title: actionAjaxDieBefore
 hidden: true
 hookTitle: 

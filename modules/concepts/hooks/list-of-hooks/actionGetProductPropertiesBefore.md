@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetProductPropertiesBefore
 Title: actionGetProductPropertiesBefore
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayProductAdditionalInfo
 Title: displayProductAdditionalInfo
 hidden: true
 hookTitle: 'Product page additional info'

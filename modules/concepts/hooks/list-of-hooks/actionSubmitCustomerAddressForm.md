@@ -1,5 +1,4 @@
 ---
-menuTitle: actionSubmitCustomerAddressForm
 Title: actionSubmitCustomerAddressForm
 hidden: true
 hookTitle: 

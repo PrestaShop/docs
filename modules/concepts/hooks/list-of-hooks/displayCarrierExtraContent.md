@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCarrierExtraContent
 Title: displayCarrierExtraContent
 hidden: true
 hookTitle: 'Display additional content for a carrier (e.g pickup points)'

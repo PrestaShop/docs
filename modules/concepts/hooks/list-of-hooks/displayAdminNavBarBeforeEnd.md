@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminNavBarBeforeEnd
 Title: displayAdminNavBarBeforeEnd
 hidden: true
 hookTitle: 

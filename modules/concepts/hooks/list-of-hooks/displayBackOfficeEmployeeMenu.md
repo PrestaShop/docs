@@ -1,5 +1,4 @@
 ---
-menuTitle: displaybackOfficeEmployeeMenu
 Title: displaybackOfficeEmployeeMenu
 hidden: true
 hookTitle: 'Administration Employee menu'

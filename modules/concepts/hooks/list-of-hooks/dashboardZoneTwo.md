@@ -1,5 +1,4 @@
 ---
-menuTitle: dashboardZoneTwo
 Title: dashboardZoneTwo
 hidden: true
 hookTitle: 

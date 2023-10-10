@@ -1,5 +1,4 @@
 ---
-menuTitle: actionFrontControllerSetMedia
 Title: actionFrontControllerSetMedia
 hidden: true
 hookTitle: 

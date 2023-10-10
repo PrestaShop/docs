@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminThemesListAfter
 Title: displayAdminThemesListAfter
 hidden: true
 hookTitle: 'BO themes list extra content'

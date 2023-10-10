@@ -1,5 +1,4 @@
 ---
-menuTitle: actionObject<ClassName>DeleteAfter
 Title: actionObject<ClassName>DeleteAfter
 hidden: true
 hookTitle: 

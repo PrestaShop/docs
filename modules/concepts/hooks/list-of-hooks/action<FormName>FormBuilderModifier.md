@@ -1,5 +1,4 @@
 ---
-menuTitle: 'action&lt;FormName>FormBuilderModifier'
 Title: action<FormName>FormBuilderModifier
 hidden: true
 hookTitle: 

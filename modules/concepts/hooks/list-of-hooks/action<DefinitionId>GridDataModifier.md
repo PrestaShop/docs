@@ -1,5 +1,4 @@
 ---
-menuTitle: action<DefinitionId>GridDataModifier
 Title: action<DefinitionId>GridDataModifier
 hidden: true
 hookTitle: 

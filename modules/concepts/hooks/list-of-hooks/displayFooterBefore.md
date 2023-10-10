@@ -1,5 +1,4 @@
 ---
-menuTitle: displayFooterBefore
 Title: displayFooterBefore
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCrossSellingShoppingCart
 Title: displayCrossSellingShoppingCart
 hidden: true
 hookTitle: 

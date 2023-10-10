@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminInternationalLocalizationControllerPostProcessBefore
 Title: actionAdminInternationalLocalizationControllerPostProcessBefore
 hidden: true
 hookTitle: 'On post-process in Admin Improve International Localization Controller'

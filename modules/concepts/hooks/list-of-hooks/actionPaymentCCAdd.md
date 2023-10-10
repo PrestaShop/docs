@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPaymentCCAdd
 Title: actionPaymentCCAdd
 hidden: true
 hookTitle: 'Payment CC added'

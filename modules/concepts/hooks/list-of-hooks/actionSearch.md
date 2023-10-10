@@ -1,5 +1,4 @@
 ---
-menuTitle: actionSearch
 Title: actionSearch
 hidden: true
 hookTitle: 

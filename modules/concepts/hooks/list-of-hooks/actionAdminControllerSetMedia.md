@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminControllerSetMedia
 Title: actionAdminControllerSetMedia
 hidden: true
 hookTitle: 

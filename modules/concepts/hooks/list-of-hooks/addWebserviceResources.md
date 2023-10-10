@@ -1,5 +1,4 @@
 ---
-menuTitle: addWebserviceResources
 Title: addWebserviceResources
 hidden: true
 hookTitle: 'Add extra webservice resource'

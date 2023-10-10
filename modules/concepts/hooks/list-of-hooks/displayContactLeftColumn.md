@@ -1,5 +1,4 @@
 ---
-menuTitle: displayContactLeftColumn
 Title: displayContactLeftColumn
 hidden: true
 hookTitle: 'Left column blocks on the contact page'

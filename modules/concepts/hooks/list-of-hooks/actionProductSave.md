@@ -1,5 +1,4 @@
 ---
-menuTitle: actionProductSave
 Title: actionProductSave
 hidden: true
 hookTitle: 'Saving products'

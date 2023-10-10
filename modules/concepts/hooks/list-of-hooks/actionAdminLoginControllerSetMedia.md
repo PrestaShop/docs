@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminLoginControllerSetMedia
 Title: actionAdminLoginControllerSetMedia
 hidden: true
 hookTitle: 'Set media on admin login page header'

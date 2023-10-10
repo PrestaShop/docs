@@ -1,5 +1,4 @@
 ---
-menuTitle: gSitemapAppendUrls
 Title: gSitemapAppendUrls
 hidden: true
 hookTitle: 

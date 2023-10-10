@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCustomerBeforeUpdateGroup
 Title: actionCustomerBeforeUpdateGroup
 hidden: true
 hookTitle: 

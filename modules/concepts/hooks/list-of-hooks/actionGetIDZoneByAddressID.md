@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetIDZoneByAddressID
 Title: actionGetIDZoneByAddressID
 hidden: true
 hookTitle: 

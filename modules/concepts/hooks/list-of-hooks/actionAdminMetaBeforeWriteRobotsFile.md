@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminMetaBeforeWriteRobotsFile
 Title: actionAdminMetaBeforeWriteRobotsFile
 hidden: true
 hookTitle: 

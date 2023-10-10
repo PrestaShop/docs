@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCheckoutBeforeConfirmation
 Title: displayCheckoutBeforeConfirmation
 hidden: true
 hookTitle: 'Show custom content before checkout confirmation'

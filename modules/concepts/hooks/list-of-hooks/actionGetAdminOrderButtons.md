@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetAdminOrderButtons
 Title: actionGetAdminOrderButtons
 hidden: true
 hookTitle: 'Admin Order Buttons'

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCartUpdateQuantityBefore
 Title: actionCartUpdateQuantityBefore
 hidden: true
 hookTitle: 

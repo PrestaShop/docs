@@ -1,5 +1,4 @@
 ---
-menuTitle: displaybackOfficeCategory
 Title: displaybackOfficeCategory
 hidden: true
 hookTitle: 'Display new elements in the Back Office, tab AdminCategories'

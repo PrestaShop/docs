@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminListBefore
 Title: displayAdminListBefore
 hidden: true
 hookTitle: 

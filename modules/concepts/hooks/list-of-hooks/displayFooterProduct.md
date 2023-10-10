@@ -1,5 +1,4 @@
 ---
-menuTitle: displayFooterProduct
 Title: displayFooterProduct
 hidden: true
 hookTitle: 'Product footer'

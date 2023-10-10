@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminProductsControllerDuplicateAfter
 Title: actionAdminProductsControllerDuplicateAfter
 hidden: true
 hookTitle: 

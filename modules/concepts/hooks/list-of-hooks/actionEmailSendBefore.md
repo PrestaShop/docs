@@ -1,5 +1,4 @@
 ---
-menuTitle: actionEmailSendBefore
 Title: actionEmailSendBefore
 hidden: true
 hookTitle: 'Before sending an email'

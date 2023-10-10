@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCategoryUpdate
 Title: actionCategoryUpdate
 hidden: true
 hookTitle: 'Category modification'

@@ -1,5 +1,4 @@
 ---
-menuTitle: validateCustomerFormFields
 Title: validateCustomerFormFields
 hidden: true
 hookTitle: 'Customer registration form validation'

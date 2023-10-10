@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOrderSlipAdd
 Title: actionOrderSlipAdd
 hidden: true
 hookTitle: 'Order slip creation'

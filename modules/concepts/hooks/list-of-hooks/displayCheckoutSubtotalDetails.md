@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCheckoutSubtotalDetails
 Title: displayCheckoutSubtotalDetails
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionUpdateQuantity
 Title: actionUpdateQuantity
 hidden: true
 hookTitle: 'Quantity update'

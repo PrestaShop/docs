@@ -1,5 +1,4 @@
 ---
-menuTitle: displayNotFound
 Title: displayNotFound
 hidden: true
 hookTitle: 

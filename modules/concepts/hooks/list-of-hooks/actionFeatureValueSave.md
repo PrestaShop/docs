@@ -1,5 +1,4 @@
 ---
-menuTitle: actionFeatureValueSave
 Title: actionFeatureValueSave
 hidden: true
 hookTitle: 'Saving an attributes features value'

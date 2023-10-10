@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCMSDisputeInformation
 Title: displayCMSDisputeInformation
 hidden: true
 hookTitle: 

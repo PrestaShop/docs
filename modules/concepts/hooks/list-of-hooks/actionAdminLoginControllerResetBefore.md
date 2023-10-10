@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminLoginControllerResetBefore
 Title: actionAdminLoginControllerResetBefore
 hidden: true
 hookTitle: 'Perform actions before admin login controller reset action initialization'

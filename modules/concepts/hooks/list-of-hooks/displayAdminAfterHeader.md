@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminAfterHeader
 Title: displayAdminAfterHeader
 hidden: true
 hookTitle: 

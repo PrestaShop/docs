@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAfterBodyOpeningTag
 Title: displayAfterBodyOpeningTag
 hidden: true
 hookTitle: 'Very top of pages'

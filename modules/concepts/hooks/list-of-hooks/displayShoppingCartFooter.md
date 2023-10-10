@@ -1,5 +1,4 @@
 ---
-menuTitle: displayShoppingCartFooter
 Title: displayShoppingCartFooter
 hidden: true
 hookTitle: 'Shopping cart footer'

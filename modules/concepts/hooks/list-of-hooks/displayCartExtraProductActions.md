@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCartExtraProductActions
 Title: displayCartExtraProductActions
 hidden: true
 hookTitle: 'Extra buttons in shopping cart'

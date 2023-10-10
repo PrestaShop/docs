@@ -1,5 +1,4 @@
 ---
-menuTitle: displayOverrideTemplate
 Title: displayOverrideTemplate
 hidden: true
 hookTitle: 'Change the default template of current controller'

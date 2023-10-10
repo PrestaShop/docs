@@ -1,5 +1,4 @@
 ---
-menuTitle: actionOrderHistoryAddAfter
 Title: actionOrderHistoryAddAfter
 hidden: true
 hookTitle: 

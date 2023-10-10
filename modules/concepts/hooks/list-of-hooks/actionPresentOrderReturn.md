@@ -1,5 +1,4 @@
 ---
-menuTitle: actionPresentOrderReturn
 Title: actionPresentOrderReturn
 hidden: true
 hookTitle: 'Order Return Presenter'

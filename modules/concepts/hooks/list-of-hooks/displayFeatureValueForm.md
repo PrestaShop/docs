@@ -1,5 +1,4 @@
 ---
-menuTitle: displayFeatureValueForm
 Title: displayFeatureValueForm
 hidden: true
 hookTitle: "Add fields to the form 'feature value'"

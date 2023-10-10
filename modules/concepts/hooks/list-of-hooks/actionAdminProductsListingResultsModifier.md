@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminProductsListingResultsModifier
 Title: actionAdminProductsListingResultsModifier
 hidden: true
 hookTitle: 

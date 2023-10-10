@@ -1,5 +1,4 @@
 ---
-menuTitle: filterProductContent
 Title: filterProductContent
 hidden: true
 hookTitle: 'Filter the content page product'

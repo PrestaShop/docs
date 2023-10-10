@@ -1,5 +1,4 @@
 ---
-menuTitle: actionCarrierProcess
 Title: actionCarrierProcess
 hidden: true
 hookTitle: 'Carrier process'

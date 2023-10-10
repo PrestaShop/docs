@@ -1,5 +1,4 @@
 ---
-menuTitle: additionalCustomerFormFields
 Title: additionalCustomerFormFields
 hidden: true
 hookTitle: 'Add fields to the Customer form'

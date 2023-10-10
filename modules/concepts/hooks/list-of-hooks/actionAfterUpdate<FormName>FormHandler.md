@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAfterUpdate<FormName>FormHandler
 Title: actionAfterUpdate<FormName>FormHandler
 hidden: true
 hookTitle: 

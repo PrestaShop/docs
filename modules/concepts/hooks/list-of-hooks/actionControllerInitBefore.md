@@ -1,5 +1,4 @@
 ---
-menuTitle: actionControllerInitBefore
 Title: actionControllerInitBefore
 hidden: true
 hookTitle: 'Perform actions before controller initialization'

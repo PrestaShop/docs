@@ -1,5 +1,4 @@
 ---
-menuTitle: actionMailAlterMessageBeforeSend
 Title: actionMailAlterMessageBeforeSend
 hidden: true
 hookTitle: 

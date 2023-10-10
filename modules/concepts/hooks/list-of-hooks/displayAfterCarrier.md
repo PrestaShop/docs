@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAfterCarrier
 Title: displayAfterCarrier
 hidden: true
 hookTitle: 'After carriers list'

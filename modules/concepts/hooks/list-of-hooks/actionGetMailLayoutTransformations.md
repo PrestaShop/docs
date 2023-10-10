@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetMailLayoutTransformations
 Title: actionGetMailLayoutTransformations
 hidden: true
 hookTitle: 'Define the transformation to apply on layout'

@@ -1,5 +1,4 @@
 ---
-menuTitle: action<DefinitionId>GridPresenterModifier
 Title: action<DefinitionId>GridPresenterModifier
 hidden: true
 hookTitle: 

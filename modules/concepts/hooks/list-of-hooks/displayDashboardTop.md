@@ -1,5 +1,4 @@
 ---
-menuTitle: displayDashboardTop
 Title: displayDashboardTop
 hidden: true
 hookTitle: 'Dashboard Top'

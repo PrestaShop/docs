@@ -1,5 +1,4 @@
 ---
-menuTitle: action<Controller>ListingFieldsModifier
 Title: action<Controller>ListingFieldsModifier
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminSortBefore
 Title: actionAdminSortBefore
 hidden: true
 hookTitle: 

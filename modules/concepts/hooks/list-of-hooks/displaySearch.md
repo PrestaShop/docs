@@ -1,5 +1,4 @@
 ---
-menuTitle: displaySearch
 Title: displaySearch
 hidden: true
 hookTitle: 

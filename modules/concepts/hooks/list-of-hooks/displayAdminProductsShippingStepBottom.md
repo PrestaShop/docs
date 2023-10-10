@@ -1,5 +1,4 @@
 ---
-menuTitle: displayAdminProductsShippingStepBottom
 Title: displayAdminProductsShippingStepBottom
 hidden: true
 hookTitle: 'Display new elements in back office product page, Shipping tab'

@@ -1,5 +1,4 @@
 ---
-menuTitle: overrideMinimalPurchasePrice
 Title: overrideMinimalPurchasePrice
 hidden: true
 hookTitle: 

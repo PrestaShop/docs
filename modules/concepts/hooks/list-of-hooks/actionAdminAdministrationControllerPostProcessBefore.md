@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminAdministrationControllerPostProcessBefore
 Title: actionAdminAdministrationControllerPostProcessBefore
 hidden: true
 hookTitle: 'On post-process in Admin Configure Advanced Parameters Administration Controller'

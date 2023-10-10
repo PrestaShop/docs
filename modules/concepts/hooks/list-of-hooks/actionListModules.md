@@ -1,5 +1,4 @@
 ---
-menuTitle: actionListModules
 Title: actionListModules
 hidden: true
 hookTitle: 'Allows you to add your own modules from a remote source in the modules list in the back office.'

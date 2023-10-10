@@ -1,5 +1,4 @@
 ---
-menuTitle: displayCustomerAccount
 Title: displayCustomerAccount
 hidden: true
 hookTitle: 'Customer account displayed in Front Office'

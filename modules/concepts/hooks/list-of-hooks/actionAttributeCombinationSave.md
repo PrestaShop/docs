@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAttributeCombinationSave
 Title: actionAttributeCombinationSave
 hidden: true
 hookTitle: 

@@ -1,5 +1,4 @@
 ---
-menuTitle: actionFilterDeliveryOptionList
 Title: actionFilterDeliveryOptionList
 hidden: true
 hookTitle: 'Modify delivery option list result'

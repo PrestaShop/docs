@@ -1,5 +1,4 @@
 ---
-menuTitle: actionHtaccessCreate
 Title: actionHtaccessCreate
 hidden: true
 hookTitle: 'After htaccess creation'

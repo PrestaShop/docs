@@ -1,5 +1,4 @@
 ---
-menuTitle: actionValidateStepComplete
 Title: actionValidateStepComplete
 hidden: true
 hookTitle: 

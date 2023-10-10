@@ -1,5 +1,4 @@
 ---
-menuTitle: actionGetAlternativeSearchPanels
 Title: actionGetAlternativeSearchPanels
 hidden: true
 hookTitle: 'Additional search panel'

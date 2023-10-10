@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminMaintenanceControllerPostProcessBefore
 Title: actionAdminMaintenanceControllerPostProcessBefore
 hidden: true
 hookTitle: 

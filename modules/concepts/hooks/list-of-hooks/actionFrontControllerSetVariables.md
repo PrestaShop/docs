@@ -1,5 +1,4 @@
 ---
-menuTitle: actionFrontControllerSetVariables
 Title: actionFrontControllerSetVariables
 hidden: true
 hookTitle: 'Add variables in JavaScript object and Smarty templates'

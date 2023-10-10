@@ -1,5 +1,4 @@
 ---
-menuTitle: actionAdminAdminShopParametersMetaControllerPostProcessBefore
 Title: actionAdminAdminShopParametersMetaControllerPostProcessBefore
 hidden: true
 hookTitle: 'On post-process in Admin Configure Shop Parameters Meta Controller'

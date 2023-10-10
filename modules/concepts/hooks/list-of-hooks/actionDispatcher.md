@@ -1,5 +1,4 @@
 ---
-menuTitle: actionDispatcher
 Title: actionDispatcher
 hidden: true
 hookTitle: 

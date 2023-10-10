@@ -1,5 +1,4 @@
 ---
-menuTitle: dashboardData
 Title: dashboardData
 hidden: true
 hookTitle: 

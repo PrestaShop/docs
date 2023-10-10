@@ -1,5 +1,4 @@
 ---
-menuTitle: displayShoppingCart
 Title: displayShoppingCart
 hidden: true
 hookTitle: 'Shopping cart - Additional button'

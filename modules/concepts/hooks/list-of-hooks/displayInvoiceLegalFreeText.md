@@ -1,5 +1,4 @@
 ---
-menuTitle: displayInvoiceLegalFreeText
 Title: displayInvoiceLegalFreeText
 hidden: true
 hookTitle: 'PDF Invoice - Legal Free Text'
