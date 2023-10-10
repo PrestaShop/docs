@@ -5,8 +5,9 @@ hidden: true
 hookTitle: null
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailsubscription/ps_emailsubscription.php'
-        file: modules/ps_emailsubscription/ps_emailsubscription.php
+        module: ps_emailsubscription
+        url: 'https://github.com/PrestaShop/ps_emailsubscription/blob/master/ps_emailsubscription.php'
+        file: ps_emailsubscription.php
 locations:
     - 'front office'
 type: action

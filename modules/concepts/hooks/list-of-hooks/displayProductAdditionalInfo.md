@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Product page additional info'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/quickview.tpl'
         file: 'Classic Theme: templates/catalog/_partials/quickview.tpl'
 locations:

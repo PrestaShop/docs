@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Bottom of Add-to-cart modal'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_shoppingcart/modal.tpl'
         file: 'Classic Theme: modules/ps_shoppingcart/modal.tpl'
 locations:

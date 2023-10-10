@@ -5,8 +5,9 @@ hidden: true
 hookTitle: null
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/productcomments/ProductComment.php'
-        file: modules/productcomments/ProductComment.php
+        module: productcomments
+        url: 'https://github.com/PrestaShop/productcomments/blob/master/ProductComment.php'
+        file: ProductComment.php
 locations:
     - 'back office'
     - 'front office'

@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Footer above of the product list'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/2.0.x/templates/catalog/listing/product-list.tpl'
         file: 'Classic Theme: templates/catalog/listing/product-list.tpl'
 locations:

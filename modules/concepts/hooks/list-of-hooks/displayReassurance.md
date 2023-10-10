@@ -5,6 +5,7 @@ hidden: true
 hookTitle: null
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/checkout.tpl'
         file: 'Classic Theme: templates/checkout/checkout.tpl'
 locations:

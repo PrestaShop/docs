@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'New elements on the product page (left column)'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl'
         file: 'Classic Theme: templates/layouts/layout-both-columns.tpl'
 locations:

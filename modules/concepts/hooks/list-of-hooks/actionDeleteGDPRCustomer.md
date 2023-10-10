@@ -5,8 +5,9 @@ hidden: true
 hookTitle: null
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php'
-        file: modules/psgdpr/psgdpr.php
+        module: psgdpr
+        url: 'https://github.com/PrestaShop/psgdpr/blob/master/src/Service/CustomerService.php'
+        file: modules/psgdpr/src/Service/CustomerService.php
 locations:
     - 'front office'
 type: action

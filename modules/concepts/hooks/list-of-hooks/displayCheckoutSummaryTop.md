@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Cart summary top'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-summary-top.tpl'
         file: 'Classic Theme: templates/checkout/_partials/cart-summary-top.tpl'
 locations:

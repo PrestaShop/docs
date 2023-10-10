@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Very bottom of pages'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl'
         file: 'Classic Theme: templates/layouts/layout-both-columns.tpl'
 locations:

@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Display additional customer address fields'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/_partials/block-address.tpl'
         file: 'Classic Theme: templates/customer/_partials/block-address.tpl'
 locations:

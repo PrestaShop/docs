@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Display elements after login form'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/authentication.tpl'
         file: 'Classic Theme: templates/customer/authentication.tpl'
 locations:

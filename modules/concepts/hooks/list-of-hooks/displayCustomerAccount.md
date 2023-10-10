@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Customer account displayed in Front Office'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/my-account.tpl'
         file: 'Classic Theme: templates/customer/my-account.tpl'
 locations:

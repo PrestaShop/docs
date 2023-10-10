@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Extra buttons in shopping cart'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl'
         file: 'Classic Theme: templates/checkout/_partials/cart-detailed-product-line.tpl'
 locations:

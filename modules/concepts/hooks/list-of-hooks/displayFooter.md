@@ -5,6 +5,7 @@ hidden: true
 hookTitle: Footer
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/footer.tpl'
         file: 'Classic Theme: templates/_partials/footer.tpl'
 locations:

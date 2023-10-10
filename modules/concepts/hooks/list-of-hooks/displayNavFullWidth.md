@@ -5,6 +5,7 @@ hidden: true
 hookTitle: Navigation
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl'
         file: 'Classic Theme: templates/checkout/_partials/header.tpl'
 locations:

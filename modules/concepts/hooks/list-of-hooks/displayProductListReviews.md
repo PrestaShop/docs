@@ -5,6 +5,7 @@ hidden: true
 hookTitle: null
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl'
         file: 'Classic Theme: templates/catalog/_partials/miniatures/product.tpl'
 locations:

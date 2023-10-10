@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Display extra content below product thumbs'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-cover-thumbnails.tpl'
         file: 'Classic Theme: templates/catalog/_partials/product-cover-thumbnails.tpl'
 locations:

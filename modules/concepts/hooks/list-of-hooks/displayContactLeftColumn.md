@@ -5,9 +5,11 @@ hidden: true
 hookTitle: 'Left column blocks on the contact page'
 files:
     -
+        theme: Hummingbird
         url: 'https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl'
         file: 'Hummingbird Theme: templates/contact.tpl'
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl'
         file: 'Classic Theme: templates/contact.tpl'
 locations:

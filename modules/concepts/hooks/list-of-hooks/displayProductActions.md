@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Display additional action button on the product page'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl'
         file: 'Classic Theme: templates/catalog/_partials/product-add-to-cart.tpl'
 locations:

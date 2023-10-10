@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Show custom content before checkout confirmation'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl'
         file: 'Classic Theme: templates/checkout/_partials/steps/payment.tpl'
 locations:

@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Content in the checkout funnel, on top of the personal information panel'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/personal-information.tpl'
         file: 'Classic Theme: templates/checkout/_partials/steps/personal-information.tpl'
 locations:

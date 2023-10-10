@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'After title tag'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/head.tpl'
         file: 'Classic Theme: templates/_partials/head.tpl'
 locations:

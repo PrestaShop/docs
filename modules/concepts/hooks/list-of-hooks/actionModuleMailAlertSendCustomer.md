@@ -5,8 +5,9 @@ hidden: true
 hookTitle: null
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/ps_emailalerts/MailAlert.php'
-        file: modules/ps_emailalerts/MailAlert.php
+        module: ps_emailalerts
+        url: 'https://github.com/PrestaShop/ps_emailalerts/blob/dev/MailAlert.php'
+        file: MailAlert.php
 locations:
     - 'front office'
 type: action

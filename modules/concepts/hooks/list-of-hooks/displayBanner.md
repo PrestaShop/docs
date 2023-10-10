@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Very top of pages'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl'
         file: 'Classic Theme: templates/_partials/header.tpl'
 locations:

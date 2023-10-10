@@ -5,6 +5,7 @@ hidden: true
 hookTitle: null
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl'
         file: 'Classic Theme: modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl'
 locations:
