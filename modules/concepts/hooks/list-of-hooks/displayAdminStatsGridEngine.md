@@ -2,7 +2,7 @@
 menuTitle: displayAdminStatsGridEngine
 Title: displayAdminStatsGridEngine
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/module/ModuleGridEngine.php'

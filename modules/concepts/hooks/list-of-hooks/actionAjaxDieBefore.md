@@ -2,7 +2,7 @@
 menuTitle: actionAjaxDieBefore
 Title: actionAjaxDieBefore
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/Controller.php'

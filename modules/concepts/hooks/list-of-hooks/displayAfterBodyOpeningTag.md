@@ -12,7 +12,7 @@ locations:
     - 'front office'
 type: display
 origin: theme
-hookAliases: null
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false

@@ -2,7 +2,7 @@
 menuTitle: actionCartUpdateQuantityBefore
 Title: actionCartUpdateQuantityBefore
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Cart.php'

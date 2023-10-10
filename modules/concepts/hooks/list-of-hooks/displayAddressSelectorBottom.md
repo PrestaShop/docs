@@ -2,7 +2,7 @@
 menuTitle: displayAddressSelectorBottom
 Title: displayAddressSelectorBottom
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         theme: Classic
@@ -11,7 +11,7 @@ files:
 locations:
     - 'front office'
 type: display
-hookAliases: null
+hookAliases: 
 since: 8.1.0
 origin: theme
 array_return: false

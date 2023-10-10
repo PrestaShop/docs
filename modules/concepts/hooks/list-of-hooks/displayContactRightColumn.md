@@ -15,7 +15,7 @@ files:
 locations:
     - 'front office'
 type: display
-hookAliases: null
+hookAliases: 
 origin: theme
 array_return: false
 check_exceptions: false

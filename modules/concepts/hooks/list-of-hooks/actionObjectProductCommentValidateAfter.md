@@ -2,7 +2,7 @@
 menuTitle: actionObjectProductCommentValidateAfter
 Title: actionObjectProductCommentValidateAfter
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         module: productcomments
@@ -12,7 +12,7 @@ locations:
     - 'back office'
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 origin: module
 array_return: false
 check_exceptions: false

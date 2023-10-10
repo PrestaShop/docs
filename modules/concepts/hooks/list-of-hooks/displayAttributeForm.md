@@ -2,7 +2,7 @@
 menuTitle: displayAttributeForm
 Title: displayAttributeForm
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/controllers/attributes/helpers/form/form.tpl'

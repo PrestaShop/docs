@@ -2,7 +2,7 @@
 menuTitle: moduleRoutes
 Title: moduleRoutes
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'front office'
 type: null
-hookAliases: null
+hookAliases: 
 hasExample: true
 array_return: true
 check_exceptions: false

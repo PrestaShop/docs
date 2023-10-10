@@ -2,7 +2,7 @@
 menuTitle: actionWishlistAddProduct
 Title: actionWishlistAddProduct
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         module: blockwishlist
@@ -11,7 +11,7 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 origin: module
 array_return: false
 check_exceptions: false

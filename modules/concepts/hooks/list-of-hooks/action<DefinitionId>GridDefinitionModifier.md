@@ -2,7 +2,7 @@
 menuTitle: action<DefinitionId>GridDefinitionModifier
 Title: action<DefinitionId>GridDefinitionModifier
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php'
@@ -11,7 +11,7 @@ locations:
     - 'front office'
     - 'back office'
 type: action
-hookAliases: null
+hookAliases: 
 hasExample: true
 array_return: false
 check_exceptions: false

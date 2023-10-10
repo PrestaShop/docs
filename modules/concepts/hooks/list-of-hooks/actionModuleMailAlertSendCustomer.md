@@ -2,7 +2,7 @@
 menuTitle: actionModuleMailAlertSendCustomer
 Title: actionModuleMailAlertSendCustomer
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         module: ps_emailalerts
@@ -11,7 +11,7 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 origin: module
 array_return: false
 check_exceptions: false

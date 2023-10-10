@@ -2,7 +2,7 @@
 menuTitle: action<DefinitionId>GridPresenterModifier
 Title: action<DefinitionId>GridPresenterModifier
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Presenter/GridPresenter.php'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false

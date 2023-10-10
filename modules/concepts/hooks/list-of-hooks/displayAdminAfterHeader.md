@@ -2,7 +2,7 @@
 menuTitle: displayAdminAfterHeader
 Title: displayAdminAfterHeader
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/light_display_layout.tpl'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'back office'
 type: display
-hookAliases: null
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false

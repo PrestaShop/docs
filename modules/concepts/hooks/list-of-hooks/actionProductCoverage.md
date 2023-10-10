@@ -2,7 +2,7 @@
 menuTitle: actionProductCoverage
 Title: actionProductCoverage
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockManager.php'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false

@@ -2,7 +2,7 @@
 menuTitle: actionNewsletterRegistrationBefore
 Title: actionNewsletterRegistrationBefore
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/ps_emailsubscription/blob/master/ps_emailsubscription.php'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 origin: module
 array_return: false
 check_exceptions: false

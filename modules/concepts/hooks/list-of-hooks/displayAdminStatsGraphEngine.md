@@ -2,7 +2,7 @@
 menuTitle: displayAdminStatsGraphEngine
 Title: displayAdminStatsGraphEngine
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/module/ModuleGraph.php'

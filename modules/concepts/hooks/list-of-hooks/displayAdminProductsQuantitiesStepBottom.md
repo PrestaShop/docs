@@ -10,7 +10,7 @@ files:
 locations:
     - 'back office'
 type: display
-hookAliases: null
+hookAliases: 
 hasExample: true
 array_return: false
 check_exceptions: false

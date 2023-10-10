@@ -2,7 +2,7 @@
 menuTitle: displayAdminListAfter
 Title: displayAdminListAfter
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/list/list_footer.tpl'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'back office'
 type: display
-hookAliases: null
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false

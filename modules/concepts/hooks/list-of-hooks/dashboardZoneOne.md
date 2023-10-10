@@ -2,7 +2,7 @@
 menuTitle: dashboardZoneOne
 Title: dashboardZoneOne
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'back office'
 type: null
-hookAliases: null
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false

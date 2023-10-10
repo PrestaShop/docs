@@ -2,7 +2,7 @@
 menuTitle: actionAuthenticationBefore
 Title: actionAuthenticationBefore
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php'

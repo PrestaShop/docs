@@ -2,7 +2,7 @@
 menuTitle: actionSubmitAccountBefore
 Title: actionSubmitAccountBefore
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/RegistrationController.php'

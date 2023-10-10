@@ -2,7 +2,7 @@
 menuTitle: displayAdminOrderSideBottom
 Title: displayAdminOrderSideBottom
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'back office'
 type: display
-hookAliases: null
+hookAliases: 
 hasExample: true
 array_return: false
 check_exceptions: false

@@ -2,7 +2,7 @@
 menuTitle: actionAfterCreate<FormName>FormHandler
 Title: actionAfterCreate<FormName>FormHandler
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Handler/FormHandler.php'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 hasExample: true
 array_return: false
 check_exceptions: false

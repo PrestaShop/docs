@@ -5,6 +5,7 @@ hidden: true
 hookTitle: 'Out-of-stock product'
 files:
     -
+        theme: Classic
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-details.tpl'
         file: 'Classic Theme: templates/catalog/_partials/product-details.tpl'
 locations:

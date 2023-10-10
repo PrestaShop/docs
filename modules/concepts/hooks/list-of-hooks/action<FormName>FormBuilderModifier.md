@@ -2,7 +2,7 @@
 menuTitle: 'action&lt;FormName>FormBuilderModifier'
 Title: action<FormName>FormBuilderModifier
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Builder/FormBuilder.php'
@@ -11,7 +11,7 @@ locations:
     - 'front office'
     - 'back office'
 type: action
-hookAliases: null
+hookAliases: 
 hasExample: true
 array_return: false
 check_exceptions: false

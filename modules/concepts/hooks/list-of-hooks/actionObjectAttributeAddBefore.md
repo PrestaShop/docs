@@ -2,7 +2,7 @@
 menuTitle: actionObjectAttributeAddBefore
 Title: actionObjectAttributeAddBefore
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminAttributesGroupsController.php'
@@ -11,7 +11,7 @@ locations:
     - 'back office'
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false

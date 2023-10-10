@@ -10,7 +10,7 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: null
+hookAliases: 
 array_return: true
 check_exceptions: false
 chain: false

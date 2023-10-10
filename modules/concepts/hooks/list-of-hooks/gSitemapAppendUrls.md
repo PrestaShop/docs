@@ -2,7 +2,7 @@
 menuTitle: gSitemapAppendUrls
 Title: gSitemapAppendUrls
 hidden: true
-hookTitle: null
+hookTitle: 
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/gsitemap/gsitemap.php'
@@ -10,7 +10,7 @@ files:
 locations:
     - 'front office'
 type: null
-hookAliases: null
+hookAliases: 
 array_return: true
 check_exceptions: false
 chain: false
