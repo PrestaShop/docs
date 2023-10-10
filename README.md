@@ -38,7 +38,6 @@ In the documentation, a hook is described with in yaml format, with this format:
 
 ```yaml
 ---
-menuTitle: string #name of the hook
 Title: string #name of the hook
 hidden: boolean[true] #must be true
 hookTitle: string #title for the description
