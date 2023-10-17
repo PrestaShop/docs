@@ -1,27 +1,24 @@
 ---
-menuTitle: actionPasswordRenew
 Title: actionPasswordRenew
 hidden: true
 hookTitle: 
 files:
-  - controllers/front/PasswordController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/PasswordController.php'
+        file: controllers/front/PasswordController.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionPasswordRenew
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/front/PasswordController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/PasswordController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

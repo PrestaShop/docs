@@ -1,34 +1,25 @@
 ---
-menuTitle: actionGetMailLayoutTransformations
 Title: actionGetMailLayoutTransformations
 hidden: true
-hookTitle: Define the transformation to apply on layout
+hookTitle: 'Define the transformation to apply on layout'
 files:
-  - src/Adapter/MailTemplate/MailTemplateTwigRenderer.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/MailTemplate/MailTemplateTwigRenderer.php'
+        file: src/Adapter/MailTemplate/MailTemplateTwigRenderer.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook allows to add/remove TransformationInterface used to generate an email layout'
+
 ---
 
-# Hook actionGetMailLayoutTransformations
-
-## Information
-
-{{% notice tip %}}
-**Define the transformation to apply on layout:** 
-
-This hook allows to add/remove TransformationInterface used to generate an email layout
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/MailTemplate/MailTemplateTwigRenderer.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/MailTemplate/MailTemplateTwigRenderer.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

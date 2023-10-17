@@ -1,34 +1,25 @@
 ---
-menuTitle: actionBuildMailLayoutVariables
 Title: actionBuildMailLayoutVariables
 hidden: true
-hookTitle: Build the variables used in email layout rendering
+hookTitle: 'Build the variables used in email layout rendering'
 files:
-  - src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php'
+        file: src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook allows to change the variables used when an email layout is rendered'
+
 ---
 
-# Hook actionBuildMailLayoutVariables
-
-## Information
-
-{{% notice tip %}}
-**Build the variables used in email layout rendering:** 
-
-This hook allows to change the variables used when an email layout is rendered
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

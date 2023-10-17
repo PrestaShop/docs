@@ -1,28 +1,25 @@
 ---
-menuTitle: actionAdminControllerSetMedia
 Title: actionAdminControllerSetMedia
 hidden: true
 hookTitle: 
 files:
-  - src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php'
+        file: src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: 
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAdminControllerSetMedia
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

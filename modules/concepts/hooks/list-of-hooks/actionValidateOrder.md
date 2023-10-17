@@ -1,42 +1,26 @@
 ---
-menuTitle: actionValidateOrder
 Title: actionValidateOrder
 hidden: true
-hookTitle: New orders
+hookTitle: 'New orders'
 files:
-  - classes/PaymentModule.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/PaymentModule.php'
+        file: classes/PaymentModule.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - newOrder
-aliases:
- - /8/modules/sample-modules/example-hooks/actionValidateOrder
+    - newOrder
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionValidateOrder
-
-Aliases: 
- - newOrder
-
-
-
-## Information
-
-{{% notice tip %}}
-**New orders:** 
-
-
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/PaymentModule.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/PaymentModule.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

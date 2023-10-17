@@ -1,39 +1,25 @@
 ---
-menuTitle: actionOrderSlipAdd
 Title: actionOrderSlipAdd
 hidden: true
-hookTitle: Order slip creation
+hookTitle: 'Order slip creation'
 files:
-  - src/Adapter/Order/Refund/OrderSlipCreator.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/Refund/OrderSlipCreator.php'
+        file: src/Adapter/Order/Refund/OrderSlipCreator.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - orderSlip
+    - orderSlip
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when a new credit slip is added regarding client order'
+
 ---
 
-# Hook actionOrderSlipAdd
-
-Aliases: 
- - orderSlip
-
-
-
-## Information
-
-{{% notice tip %}}
-**Order slip creation:** 
-
-This hook is called when a new credit slip is added regarding client order
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Order/Refund/OrderSlipCreator.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/Refund/OrderSlipCreator.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

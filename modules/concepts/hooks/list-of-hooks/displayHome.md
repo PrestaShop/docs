@@ -1,39 +1,25 @@
 ---
-menuTitle: displayHome
 Title: displayHome
 hidden: true
-hookTitle: Homepage content
+hookTitle: 'Homepage content'
 files:
-  - controllers/front/IndexController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/IndexController.php'
+        file: controllers/front/IndexController.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - home
+    - home
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook displays new elements on the homepage'
+
 ---
 
-# Hook displayHome
-
-Aliases: 
- - home
-
-
-
-## Information
-
-{{% notice tip %}}
-**Homepage content:** 
-
-This hook displays new elements on the homepage
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [controllers/front/IndexController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/IndexController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

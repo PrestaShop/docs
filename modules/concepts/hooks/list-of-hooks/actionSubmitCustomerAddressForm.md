@@ -1,27 +1,24 @@
 ---
-menuTitle: actionSubmitCustomerAddressForm
 Title: actionSubmitCustomerAddressForm
 hidden: true
 hookTitle: 
 files:
-  - classes/form/CustomerAddressForm.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressForm.php'
+        file: classes/form/CustomerAddressForm.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionSubmitCustomerAddressForm
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/form/CustomerAddressForm.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressForm.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

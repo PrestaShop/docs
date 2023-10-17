@@ -1,39 +1,25 @@
 ---
-menuTitle: displayBeforeCarrier
 Title: displayBeforeCarrier
 hidden: true
-hookTitle: Before carriers list
+hookTitle: 'Before carriers list'
 files:
-  - classes/checkout/CheckoutDeliveryStep.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php'
+        file: classes/checkout/CheckoutDeliveryStep.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - beforeCarrier
+    - beforeCarrier
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed before the carrier list in Front Office'
+
 ---
 
-# Hook displayBeforeCarrier
-
-Aliases: 
- - beforeCarrier
-
-
-
-## Information
-
-{{% notice tip %}}
-**Before carriers list:** 
-
-This hook is displayed before the carrier list in Front Office
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [classes/checkout/CheckoutDeliveryStep.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

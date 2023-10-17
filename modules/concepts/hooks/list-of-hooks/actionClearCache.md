@@ -1,33 +1,24 @@
 ---
-menuTitle: actionClearCache
 Title: actionClearCache
 hidden: true
-hookTitle: Clear smarty cache
+hookTitle: 'Clear smarty cache'
 files:
-  - classes/Tools.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php'
+        file: classes/Tools.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook is called when smarty's cache is cleared"
+
 ---
 
-# Hook actionClearCache
-
-## Information
-
-{{% notice tip %}}
-**Clear smarty cache:** 
-
-This hook is called when smarty's cache is cleared
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Tools.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

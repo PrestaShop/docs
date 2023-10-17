@@ -1,31 +1,24 @@
 ---
-menuTitle: sendMailAlterTemplateVars
 Title: sendMailAlterTemplateVars
 hidden: true
-hookTitle: Alter template vars on the fly
+hookTitle: 'Alter template vars on the fly'
 files:
-  - classes/Mail.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php'
+        file: classes/Mail.php
 locations:
-  - front office
-type: 
-hookAliases:
+    - 'front office'
+type: null
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when Mail::send() is called'
+
 ---
 
-# Hook sendMailAlterTemplateVars
-
-## Information
-
-{{% notice tip %}}
-**Alter template vars on the fly:** 
-
-This hook is called when Mail::send() is called
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Located in: 
-  - [classes/Mail.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

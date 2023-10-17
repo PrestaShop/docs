@@ -1,39 +1,22 @@
 ---
-menuTitle: displayMyAccountBlock
 Title: displayMyAccountBlock
 hidden: true
-hookTitle: My account block
-files:
-  - Classic Theme: modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl
+hookTitle: 'My account block'
+files: {  }
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - myAccountBlock
+    - myAccountBlock
+origin: theme
+description: ''
+array_return: false
+check_exceptions: false
+chain: false
+
 ---
 
-# Hook displayMyAccountBlock
-
-Aliases: 
- - myAccountBlock
-
-
-
-## Information
-
-{{% notice tip %}}
-**My account block:** 
-
-This hook displays extra information within the 'my account' block"
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_customeraccountlinks/ps_customeraccountlinks.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

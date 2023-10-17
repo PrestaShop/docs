@@ -1,33 +1,25 @@
 ---
-menuTitle: displayNavFullWidth
 Title: displayNavFullWidth
 hidden: true
 hookTitle: Navigation
 files:
-  - Classic Theme: templates/checkout/_partials/header.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/header.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook displays full width navigation menu at the top of your pages'
+
 ---
 
-# Hook displayNavFullWidth
-
-## Information
-
-{{% notice tip %}}
-**Navigation:** 
-
-This hook displays full width navigation menu at the top of your pages
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: templates/checkout/_partials/header.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -1,33 +1,25 @@
 ---
-menuTitle: displayCartModalContent
 Title: displayCartModalContent
 hidden: true
-hookTitle: Content of Add-to-cart modal
+hookTitle: 'Content of Add-to-cart modal'
 files:
-  - Classic Theme: modules/ps_shoppingcart/modal.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_shoppingcart/modal.tpl'
+        file: 'Classic Theme: modules/ps_shoppingcart/modal.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook displays content in the middle of the window that appears after adding product to cart'
+
 ---
 
-# Hook displayCartModalContent
-
-## Information
-
-{{% notice tip %}}
-**Content of Add-to-cart modal:** 
-
-This hook displays content in the middle of the window that appears after adding product to cart
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: modules/ps_shoppingcart/modal.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_shoppingcart/modal.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

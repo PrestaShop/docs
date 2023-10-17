@@ -1,27 +1,24 @@
 ---
-menuTitle: actionAttributeCombinationSave
 Title: actionAttributeCombinationSave
 hidden: true
 hookTitle: 
 files:
-  - classes/Combination.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Combination.php'
+        file: classes/Combination.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAttributeCombinationSave
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Combination.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Combination.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

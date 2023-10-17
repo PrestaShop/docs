@@ -1,27 +1,24 @@
 ---
-menuTitle: actionAdminThemesControllerUpdateoptionsAfter
 Title: actionAdminThemesControllerUpdateoptionsAfter
 hidden: true
 hookTitle: 
 files:
-  - src/Adapter/Shop/CommandHandler/UploadLogosHandler.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Shop/CommandHandler/UploadLogosHandler.php'
+        file: src/Adapter/Shop/CommandHandler/UploadLogosHandler.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAdminThemesControllerUpdateoptionsAfter
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Shop/CommandHandler/UploadLogosHandler.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Shop/CommandHandler/UploadLogosHandler.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -1,29 +1,25 @@
 ---
-menuTitle: actionObjectAddAfter
 Title: actionObjectAddAfter
 hidden: true
 hookTitle: 
 files:
-  - classes/ObjectModel.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php'
+        file: classes/ObjectModel.php
 locations:
-  - back office
-  - front office
+    - 'back office'
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionObjectAddAfter
-
-## Information
-
-Hook locations: 
-  - back office
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/ObjectModel.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

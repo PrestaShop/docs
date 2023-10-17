@@ -1,39 +1,25 @@
 ---
-menuTitle: actionUpdateQuantity
 Title: actionUpdateQuantity
 hidden: true
-hookTitle: Quantity update
+hookTitle: 'Quantity update'
 files:
-  - classes/stock/StockAvailable.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockAvailable.php'
+        file: classes/stock/StockAvailable.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - updateQuantity
+    - updateQuantity
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'Quantity is updated only when a customer effectively places their order'
+
 ---
 
-# Hook actionUpdateQuantity
-
-Aliases: 
- - updateQuantity
-
-
-
-## Information
-
-{{% notice tip %}}
-**Quantity update:** 
-
-Quantity is updated only when a customer effectively places their order
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/stock/StockAvailable.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockAvailable.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

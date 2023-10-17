@@ -1,27 +1,24 @@
 ---
-menuTitle: actionAdminMetaBeforeWriteRobotsFile
 Title: actionAdminMetaBeforeWriteRobotsFile
 hidden: true
 hookTitle: 
 files:
-  - classes/Tools.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php'
+        file: classes/Tools.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAdminMetaBeforeWriteRobotsFile
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [classes/Tools.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

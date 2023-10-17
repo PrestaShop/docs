@@ -1,33 +1,24 @@
 ---
-menuTitle: actionCheckoutRender
 Title: actionCheckoutRender
 hidden: true
-hookTitle: Modify checkout process
+hookTitle: 'Modify checkout process'
 files:
-  - controllers/front/OrderController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderController.php'
+        file: controllers/front/OrderController.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when constructing the checkout process'
+
 ---
 
-# Hook actionCheckoutRender
-
-## Information
-
-{{% notice tip %}}
-**Modify checkout process:** 
-
-This hook is called when constructing the checkout process
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/front/OrderController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

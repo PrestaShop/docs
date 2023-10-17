@@ -1,39 +1,26 @@
 ---
-menuTitle: displayShoppingCartFooter
 Title: displayShoppingCartFooter
 hidden: true
-hookTitle: Shopping cart footer
+hookTitle: 'Shopping cart footer'
 files:
-  - Classic Theme: templates/checkout/cart.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl'
+        file: 'Classic Theme: templates/checkout/cart.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - shoppingCart
+    - shoppingCart
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: "This hook displays some specific information on the shopping cart's page"
+
 ---
 
-# Hook displayShoppingCartFooter
-
-Aliases: 
- - shoppingCart
-
-
-
-## Information
-
-{{% notice tip %}}
-**Shopping cart footer:** 
-
-This hook displays some specific information on the shopping cart's page
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: templates/checkout/cart.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

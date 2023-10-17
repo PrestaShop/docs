@@ -1,27 +1,24 @@
 ---
-menuTitle: displayAdminView
 Title: displayAdminView
 hidden: true
 hookTitle: 
 files:
-  - admin-dev/themes/default/template/helpers/view/view.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/view/view.tpl'
+        file: admin-dev/themes/default/template/helpers/view/view.tpl
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayAdminView
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [admin-dev/themes/default/template/helpers/view/view.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/view/view.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -1,39 +1,25 @@
 ---
-menuTitle: actionFeatureValueSave
 Title: actionFeatureValueSave
 hidden: true
-hookTitle: Saving an attributes features value
+hookTitle: 'Saving an attributes features value'
 files:
-  - classes/FeatureValue.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/FeatureValue.php'
+        file: classes/FeatureValue.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - afterSaveFeatureValue
+    - afterSaveFeatureValue
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called while saving an attributes features value'
+
 ---
 
-# Hook actionFeatureValueSave
-
-Aliases: 
- - afterSaveFeatureValue
-
-
-
-## Information
-
-{{% notice tip %}}
-**Saving an attributes features value:** 
-
-This hook is called while saving an attributes features value
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/FeatureValue.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/FeatureValue.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

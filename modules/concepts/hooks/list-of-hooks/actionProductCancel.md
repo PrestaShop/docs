@@ -1,39 +1,25 @@
 ---
-menuTitle: actionProductCancel
 Title: actionProductCancel
 hidden: true
-hookTitle: Product cancelled
+hookTitle: 'Product cancelled'
 files:
-  - src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php'
+        file: src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - cancelProduct
+    - cancelProduct
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called when you cancel a product in an order'
+
 ---
 
-# Hook actionProductCancel
-
-Aliases: 
- - cancelProduct
-
-
-
-## Information
-
-{{% notice tip %}}
-**Product cancelled:** 
-
-This hook is called when you cancel a product in an order
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

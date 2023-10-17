@@ -1,33 +1,25 @@
 ---
-menuTitle: displayBanner
 Title: displayBanner
 hidden: true
-hookTitle: Very top of pages
+hookTitle: 'Very top of pages'
 files:
-  - Classic Theme: templates/_partials/header.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl'
+        file: 'Classic Theme: templates/_partials/header.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'Use this hook for banners on top of every pages'
+
 ---
 
-# Hook displayBanner
-
-## Information
-
-{{% notice tip %}}
-**Very top of pages:** 
-
-Use this hook for banners on top of every pages
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: templates/_partials/header.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

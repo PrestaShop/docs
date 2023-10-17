@@ -1,33 +1,24 @@
 ---
-menuTitle: actionUpdateLangAfter
 Title: actionUpdateLangAfter
 hidden: true
-hookTitle: Update "lang" tables
+hookTitle: 'Update "lang" tables'
 files:
-  - classes/Language.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Language.php'
+        file: classes/Language.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'Update "lang" tables after adding or updating a language'
+
 ---
 
-# Hook actionUpdateLangAfter
-
-## Information
-
-{{% notice tip %}}
-**Update "lang" tables:** 
-
-Update "lang" tables after adding or updating a language
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Language.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Language.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 
