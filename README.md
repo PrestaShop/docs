@@ -30,11 +30,11 @@ A complete referential of hook and informations on each hook is located in `modu
 
 This referential can be generated with a script, crawling all: 
 
-- Prestashop (core) codebase
+- PrestaShop (core) codebase
 - all native modules
 - all native themes
 
-In the documentation, a hook is described with in yaml format, with this format: 
+In the documentation, a hook is described in yaml format: 
 
 ```yaml
 ---
@@ -60,7 +60,7 @@ chain: boolean #true or false if the hook has a `$chain` parameter set to `true`
 ---
 ```
 
-This `yaml` structure allows the shortcode `hookDescriptor` to render a digest html page for the documentation, and allows the search script to search in this metadata. 
+This YAML structure enables the shortcode `hookDescriptor` to generate an HTML page with condensed information for documentation, and allows the search script to search within this metadata.
 
 Next, add the shortcode in the page's content: 
 
@@ -68,7 +68,7 @@ Next, add the shortcode in the page's content:
 {{% hookDescriptor %}}
 ```
 
-Finally, if available, add a section with a code example, and parameters details: 
+Finally, if available, add a section with a code example and parameters details: 
 
 ```
 ## Parameters details
