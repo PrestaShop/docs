@@ -18,7 +18,7 @@ The first call to this method initializes the link to the database, and return t
 In some cases, you might encounter this alternative:
 
 ```php
-$db = Db::getInstance(_PS_USE_SQL_SLAVE_);
+$db = \Db::getInstance(_PS_USE_SQL_SLAVE_);
 ```
 
 If PrestaShop's database user allows the use of MySQL slave servers in its architecture, then this last instance's connection can be done on the slave servers.
@@ -56,7 +56,7 @@ It should only be used for read only queries: SELECT, SHOW, etc.
 Using getRow() method will retrieve the first row of your query:
 
 ```php
-$request = "SELECT `id_table` FROM `' . _DB_PREFIX_ . 'some_table` ...";
+$request = 'SELECT `id_table` FROM `' . _DB_PREFIX_ . 'some_table` ...';
 
 /** @var array $result */
 $result = $db->getRow($request);
@@ -70,7 +70,7 @@ This function automatically adds "LIMIT 1" to the query.
 #### Retrieving only a single value
 
 ```php
-$request = "SELECT `count('sales')` FROM `' . _DB_PREFIX_ . 'some_table` ...";
+$request = 'SELECT `count('sales')` FROM `' . _DB_PREFIX_ . 'some_table` ...';
 
 /** @var string|false $salesCount */
 $salesCount = $db->getValue($request);
@@ -103,7 +103,7 @@ Returns the number of rows impacted by the latest `INSERT`, `UPDATE`, `REPLACE` 
 ### Execute a raw SQL request (UPDATE, INSERT...)
 
 ```php
-$request = "INSERT INTO `' . _DB_PREFIX_ . 'some_table` (`id_table`) VALUES (10)";
+$request = 'INSERT INTO `' . _DB_PREFIX_ . 'some_table` (`id_table`) VALUES (10)';
 
 /** @var bool $result */
 $result = $db->execute($request);
