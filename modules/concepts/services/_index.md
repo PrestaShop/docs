@@ -396,6 +396,12 @@ files in sub folders:
 - `config/admin/services.yml` will define the services accessible in the back office (in legacy environment AND Symfony environment)
 - `config/front/services.yml` will define the services accessible in the front office
 
+{{% notice warning %}}
+**Do not use named arguments for front services definition**
+
+For more information read the dedicated section in [Naming Conventions]({{< ref "8/development/naming-conventions/#named-arguments" >}}).
+{{% /notice %}}
+
 ### Accessing your services
 
 You can then access your services from any legacy controllers (in which the container is automatically injected):
