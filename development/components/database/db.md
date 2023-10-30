@@ -141,7 +141,7 @@ The result is a boolean whose state indicates if the request was properly execut
 : If false, PrestaShop's cache management is disabled during this query. Do not change this parameter unless you knew exactly what you are doing.
 
 `$type`
-: If you wish to change the insertion, this parameter can take the following constants: `Db::INSERT`, `Db::INSERT_IGNORE` or `Db::REPLACE`.
+: If you wish to change the insertion, this parameter can take the following constants: `Db::INSERT`, `Db::INSERT_IGNORE`, `Db::REPLACE` or `Db::ON_DUPLICATE_KEY`.
 
 `$add_prefix`
 : If false, table prefix will not be automatically added to the table name.
