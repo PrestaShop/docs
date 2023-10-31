@@ -6,4 +6,4 @@ chapter: true
 
 # Templates
 
-{{% children %}}
+{{% children /%}}

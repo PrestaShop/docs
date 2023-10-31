@@ -16,4 +16,4 @@ This section aim is to become the source of truth for the PrestaShop community t
 
 If someone asks you similar questions and you know answers, please do not hesitate - create a pull request and help to fill this section up! 
 
-{{% children %}}
+{{% children /%}}

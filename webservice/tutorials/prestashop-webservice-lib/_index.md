@@ -7,4 +7,4 @@ weight: 4
 
 # Using the PrestaShop Webservice lib
 
-{{% children list="ol" %}}
+{{% children list="ol" /%}}

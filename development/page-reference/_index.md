@@ -6,4 +6,4 @@ chapter: true
 
 # Page Reference
 
-{{% children %}}
+{{% children /%}}

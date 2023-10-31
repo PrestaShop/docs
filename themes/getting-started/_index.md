@@ -8,4 +8,4 @@ showOnHomepage: true
 
 # Getting started
 
-{{% children %}}
+{{% children /%}}

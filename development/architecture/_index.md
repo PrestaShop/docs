@@ -13,5 +13,5 @@ PrestaShop has been built as a monolith following traditional object-oriented PH
 
 ## Topics
 
-{{% children description="true" %}}
+{{% children description="true" /%}}
 

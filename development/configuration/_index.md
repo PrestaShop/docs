@@ -8,4 +8,4 @@ showOnHomepage: true
 
 # PrestaShop configuration reference
 
-{{% children %}}
+{{% children /%}}

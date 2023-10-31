@@ -9,4 +9,4 @@ summary: "This section describes components from the Modern architecture."
 
 This section describes components from the Modern architecture.
 
-{{% children %}}
+{{% children /%}}
