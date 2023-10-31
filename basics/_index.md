@@ -13,4 +13,4 @@ icon: fa-play
 
 Discover what PrestaShop is all about and the core concepts behind it.
 
-{{% children %}}
+{{% children /%}}

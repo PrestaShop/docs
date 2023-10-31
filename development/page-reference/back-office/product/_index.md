@@ -7,4 +7,4 @@ chapter: true
 
 # Product Page
 
-{{% children %}}
+{{% children /%}}

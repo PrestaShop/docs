@@ -9,7 +9,7 @@ showOnHomepage: true
 
 In this section you can find important changes in the core that may impact your modules.
 
-{{% children %}}
+{{% children /%}}
 
 For changes introduced in versions 1.7, please [visit this page][1-7-core-changes].
 

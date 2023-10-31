@@ -5,4 +5,4 @@ menuTitle: Export
 
 # Export Components
 
-{{% children %}}
+{{% children /%}}

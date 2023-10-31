@@ -126,7 +126,6 @@ So, there are basically three steps:
 Every form in modern controllers must be handled this way, and the controller code should be kept minimalist and easy to read and understand.
 {{% /notice %}}
 
-{{% callout %}}
 ##### Summary with a schema
 
 The following schemas sums up how Form Handlers, Form Builders, Controllers and Data Providers are wired together.

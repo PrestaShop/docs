@@ -7,4 +7,4 @@ showOnHomepage: true
 
 # Extension concepts
 
-{{% children %}}
+{{% children /%}}

@@ -5,4 +5,4 @@ menuTitle: Resources
 
 # Resources
 
-{{% children %}}
+{{% children /%}}

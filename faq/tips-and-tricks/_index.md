@@ -8,4 +8,4 @@ showOnHomepage: true
 
 # Tips & tricks
 
-{{% children %}}
+{{% children /%}}

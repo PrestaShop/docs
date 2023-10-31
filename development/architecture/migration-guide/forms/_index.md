@@ -71,5 +71,5 @@ Forms are created and declared [as services](https://symfony.com/doc/4.4/form/fo
 
 ## Learn more
 
-{{% children %}}
+{{% children /%}}
 

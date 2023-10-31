@@ -6,4 +6,4 @@ chapter: true
 
 # Back Office Pages
 
-{{% children %}}
+{{% children /%}}

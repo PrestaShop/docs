@@ -6,4 +6,4 @@ chapter: true
 
 # Advanced topics on PrestaShop Installation
 
-{{% children %}}
+{{% children /%}}

@@ -7,4 +7,4 @@ chapter: true
 
 # Order Detail Page
 
-{{% children %}}
+{{% children /%}}
