@@ -11,4 +11,4 @@ Creating tests is an important part of a module life. They allow us to spend les
 
 In PrestaShop, we plan to cover our modules features with a bundle of unit and functional tests. We let you chose what frameworks suits you the best, but we provide some tools that you can reuse on your projects.
 
-{{% children %}}
+{{% children /%}}

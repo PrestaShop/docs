@@ -35,4 +35,4 @@ This is the list of items that usually need to be done in order to complete the 
 
 ## Contents of this guide
 
-{{% children %}}
+{{% children /%}}

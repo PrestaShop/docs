@@ -6,4 +6,4 @@ chapter: true
 
 # Extension concepts
 
-{{% children %}}
+{{% children /%}}

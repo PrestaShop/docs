@@ -10,4 +10,4 @@ aliases:
 
 In this section you can find important changes in the core that may impact your modules.
 
-{{% children %}}
+{{% children /%}}

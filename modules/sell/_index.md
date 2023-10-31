@@ -12,4 +12,4 @@ Learn all about it in the Addons site: [How to sell on the PrestaShop Addons](ht
 
 Contributor modules need to pass a technical validation before being sold on the Marketplace.
 
-{{% children %}}
+{{% children /%}}

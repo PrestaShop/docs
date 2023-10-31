@@ -7,4 +7,4 @@ chapter: true
 
 # Tips & tricks
 
-{{% children %}}
+{{% children /%}}

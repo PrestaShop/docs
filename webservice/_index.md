@@ -14,4 +14,4 @@ aliases:
 
 PrestaShop enables merchants to give third-party tools access to their shop's database through a CRUD API, otherwise called a web service.
 
-{{% children %}}
+{{% children /%}}

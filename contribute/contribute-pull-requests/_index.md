@@ -38,4 +38,4 @@ If you wish to start contributing smoothly, have a look at [issues labelled "goo
 
 We explain two ways to run PrestaShop from the sources: using docker or localhost
 
-{{% children %}}
+{{% children /%}}

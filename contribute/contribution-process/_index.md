@@ -12,4 +12,4 @@ aliases:
 
 The PrestaShop project receives a great number of new issues and Pull Requests every week. Each new submission goes through a process where PrestaShop maintainers analyze, qualify and prioritize them.
 
-{{% children %}}
+{{% children /%}}

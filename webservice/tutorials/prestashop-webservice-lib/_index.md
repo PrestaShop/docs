@@ -9,4 +9,4 @@ aliases:
 
 # Using the PrestaShop Webservice lib
 
-{{% children list="ol" %}}
+{{% children list="ol" /%}}

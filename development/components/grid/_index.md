@@ -419,4 +419,4 @@ You can update this schema using the [source XML file](/1.7/schemas/grid_workflo
 
 ## Learn more
 
-{{% children %}}
+{{% children /%}}
