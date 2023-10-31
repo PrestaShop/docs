@@ -69,6 +69,6 @@ Forms are created and declared [as services](https://symfony.com/doc/3.4/form/fo
 
 ## Learn more
 
-{{% children %}}
+{{% children /%}}
 
 [controllers-and-routing]: {{< relref "../controller-routing" >}}

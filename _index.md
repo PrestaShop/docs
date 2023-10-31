@@ -9,4 +9,4 @@ chapter: true
 
 # PrestaShop 1.7 Documentation
 
-{{% children %}}
+{{% children /%}}

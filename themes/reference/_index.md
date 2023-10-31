@@ -6,4 +6,4 @@ weight: 30
 
 # Theme development reference
 
-{{% children %}}
+{{% children /%}}

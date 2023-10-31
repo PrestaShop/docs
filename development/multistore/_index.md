@@ -16,4 +16,4 @@ Moreover the Back Office interface is modified to allow Back Office users to man
 
 ## Topics
 
-{{% children %}}
+{{% children /%}}

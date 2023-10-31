@@ -18,4 +18,4 @@ One of the main features at the heart of this design is _Command-Query Responsib
 
 ## Read more
 
-{{% children %}}
+{{% children /%}}

@@ -11,5 +11,5 @@ chapter: true
 
 This section describes how PrestaShop Core is covered by automatic tests.
 
-{{% children %}}
+{{% children /%}}
 

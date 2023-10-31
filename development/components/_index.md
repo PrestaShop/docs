@@ -7,4 +7,4 @@ weight: 50
 
 # Components
 
-{{% children %}}
+{{% children /%}}

@@ -94,5 +94,5 @@ A migration consists in:
 
 ## Read more
 
-{{% children %}}
+{{% children /%}}
 

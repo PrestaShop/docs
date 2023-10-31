@@ -24,4 +24,4 @@ Any change in the behavior of the `CategoryController` or a template renaming re
 {{< figure src="img/facetedsearch.png" title="Faceted search screenshot" >}}
 
 
-{{% children %}}
+{{% children /%}}

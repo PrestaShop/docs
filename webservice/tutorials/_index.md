@@ -8,4 +8,4 @@ aliases:
 
 # Tutorials
 
-{{% children list="ol" %}}
+{{% children list="ol" /%}}

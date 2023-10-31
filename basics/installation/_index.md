@@ -5,4 +5,4 @@ weight: 15
 
 # Installation
 
-{{% children %}}
+{{% children /%}}

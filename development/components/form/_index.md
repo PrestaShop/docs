@@ -5,4 +5,4 @@ menuTitle: Form
 
 # The Form component
 
-{{% children %}}
+{{% children /%}}

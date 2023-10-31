@@ -15,4 +15,4 @@ programs that make use of PrestaShop's functionalities and changes them
 or add to them in order to make PrestaShop easier to use or more
 tailored to the merchant's needs.
 
-{{% children %}}
+{{% children /%}}
