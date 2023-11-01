@@ -29,10 +29,10 @@ This page integrates Figma iframes, it may require heavy resources and cause per
 | `displayNav2` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayNav2">}}) |
 | `displayTop` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayTop">}}) |
 | `displayNavFullWidth` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayNavFullWidth">}}) |
-| `displayWrapperTop` | |
-| `displayContentWrapperTop` | |
-| `displayContentWrapperBottom` |  |
-| `displayWrapperBottom` |  |
+| `displayWrapperTop` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayWrapperTop">}}) |
+| `displayContentWrapperTop` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayContentWrapperTop">}}) |
+| `displayContentWrapperBottom` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayContentWrapperBottom">}}) |
+| `displayWrapperBottom` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayWrapperBottom">}}) |
 | `displayFooterBefore` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayFooterBefore">}}) |
 | `displayFooter` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayFooter">}}) |
 | `displayMyAccountBlock` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayMyAccountBlock">}}) |
