@@ -1,39 +1,26 @@
 ---
-menuTitle: displayShoppingCart
 Title: displayShoppingCart
 hidden: true
-hookTitle: Shopping cart - Additional button
+hookTitle: 'Shopping cart - Additional button'
 files:
-  - themes/classic/templates/checkout/cart.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl'
+        file: 'Classic Theme: templates/checkout/cart.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - shoppingCartExtra
+    - shoppingCartExtra
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook displays new action buttons within the shopping cart'
+
 ---
 
-# Hook displayShoppingCart
-
-Aliases: 
- - shoppingCartExtra
-
-
-
-## Information
-
-{{% notice tip %}}
-**Shopping cart - Additional button:** 
-
-This hook displays new action buttons within the shopping cart
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [themes/classic/templates/checkout/cart.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/cart.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

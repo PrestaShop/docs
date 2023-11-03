@@ -1,39 +1,25 @@
 ---
-menuTitle: displayPaymentReturn
 Title: displayPaymentReturn
 hidden: true
-hookTitle: Payment return
+hookTitle: 'Payment return'
 files:
-  - controllers/front/OrderConfirmationController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderConfirmationController.php'
+        file: controllers/front/OrderConfirmationController.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - paymentReturn
+    - paymentReturn
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayPaymentReturn
-
-Aliases: 
- - paymentReturn
-
-
-
-## Information
-
-{{% notice tip %}}
-**Payment return:** 
-
-
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [controllers/front/OrderConfirmationController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderConfirmationController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

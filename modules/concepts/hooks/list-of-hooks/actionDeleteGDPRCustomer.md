@@ -1,27 +1,25 @@
 ---
-menuTitle: actionDeleteGDPRCustomer
 Title: actionDeleteGDPRCustomer
 hidden: true
 hookTitle: 
 files:
-  - modules/psgdpr/psgdpr.php
+    -
+        module: psgdpr
+        url: 'https://github.com/PrestaShop/psgdpr/blob/master/src/Service/CustomerService.php'
+        file: modules/psgdpr/src/Service/CustomerService.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+origin: module
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook actionDeleteGDPRCustomer
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [modules/psgdpr/psgdpr.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

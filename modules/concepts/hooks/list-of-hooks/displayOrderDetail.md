@@ -1,39 +1,25 @@
 ---
-menuTitle: displayOrderDetail
 Title: displayOrderDetail
 hidden: true
-hookTitle: Order detail
+hookTitle: 'Order detail'
 files:
-  - controllers/front/OrderDetailController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderDetailController.php'
+        file: controllers/front/OrderDetailController.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - orderDetailDisplayed
+    - orderDetailDisplayed
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook is displayed within the order's details in Front Office"
+
 ---
 
-# Hook displayOrderDetail
-
-Aliases: 
- - orderDetailDisplayed
-
-
-
-## Information
-
-{{% notice tip %}}
-**Order detail:** 
-
-This hook is displayed within the order's details in Front Office
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [controllers/front/OrderDetailController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderDetailController.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

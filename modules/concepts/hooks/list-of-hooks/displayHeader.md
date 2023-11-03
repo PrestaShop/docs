@@ -1,39 +1,25 @@
 ---
-menuTitle: displayHeader
 Title: displayHeader
 hidden: true
-hookTitle: Pages html head section
+hookTitle: 'Pages html head section'
 files:
-  - classes/controller/FrontController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        file: classes/controller/FrontController.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - Header
+    - Header
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook adds additional elements in the head section of your pages (head section of html)'
+
 ---
 
-# Hook displayHeader
-
-Aliases: 
- - Header
-
-
-
-## Information
-
-{{% notice tip %}}
-**Pages html head section:** 
-
-This hook adds additional elements in the head section of your pages (head section of html)
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [classes/controller/FrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

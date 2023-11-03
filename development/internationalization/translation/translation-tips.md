@@ -7,28 +7,52 @@ weight: 50
 
 ## Adding new wordings
 
-Wordings for the Core and Native modules can only be translated if they are declared in PrestaShop's default translation catalogue. Therefore, whenever a new wording is added to the core or to a native module, it must be added to the default catalogue as well. 
+For a wording to become translatable through the Back office interface, it has to be made available to it. PrestaShop behaves differently according to whether the wordings belong to the Core or to 3rd party modules & themes.
 
-Normally you would have to manually add each wording the appropriate default catalogue files (located in the `./translations/default` folder). Thankfully, this task has been automated by the Core team!
- 
-Before every minor release, the whole source code for PrestaShop and Native Modules is analyzed using [TranslationToolsBundle](https://github.com/PrestaShop/TranslationToolsBundle), and all newly discovered wordings are automatically added to the default catalogue.
+### Module and theme wordings
 
-{{% notice note %}}
-Incidentally, the same technique is also used to detect wordings used by third-party modules and make them translatable through the Back Office interface.
-{{% /notice %}}
+Wordings from modules and themes (except Native modules and the _Classic_ theme) are automatically scanned from source code at runtime, so you can just use them in the code and they will magically appear in the translation interface — as long as you follow the coding and domain name conventions.
 
-### Making wordings discoverable for automated addition to the catalogue
+### Core wordings
 
-TranslationToolsBundle uses static analysis to extract wordings from source code. Therefore, this means that you can simply use new wordings in the code, and they will be magically added to the catalogue later.
+Wordings from the Core (used in Back office, Front office, the _Classic_ theme, Native modules, and built-in Emails) need to be present in the "default" translation catalogue files, located in the `./translations/default` folder. This means that any new Core wording that is used in the code needs to be added there too.
 
-However, due to limitations of this technique, the following guidelines must be followed when declaring new wordings:
+If your new wordings will be included in a release (i.e. if you're contributing to the project), you don't need to manually extract and add them to the default catalogue. They will be added by the release manager later, during the preparation for the next minor or major release.
 
-1. This tool only detects wordings used through the `trans()` function, the `{l}` Smarty tag, and the `trans` Twig filter. Therefore, they must be declared in a PHP, TPL, or TWIG file. They will be detected regardless of whether that code is actually used in runtime or not.
+If you are modifying PrestaShop for your own project, you must manually add your new wordings to the default catalogue:
 
-2. **Always use literal values, not variables, with the `trans()` function, the `{l}` Smarty tag, and `trans` Twig filter.** Although variables are interpolated at runtime, they won't be understood by the code analyzer, which only supports literals. Passing variables as arguments to these functions will prevent those wordings from being added to the catalogue.
+1. Find the translation file for the domain you are using (eg. `translations/default/ShopFormsErrors.xlf`) or create one from scratch if it doesn't exist.
+
+2. Add a `trans-unit` block for every new wording:
+
+   ```xml
+   <trans-unit id="cf8092a0be7b972d6cee3db90bfaf923">
+       <source>You cannot access this store from your country. We apologize for the inconvenience.</source>
+       <target>You cannot access this store from your country. We apologize for the inconvenience.</target>
+       <note></note>
+   </trans-unit>
+   ```
+
+   * The `id` property has no effect on PrestaShop but by convention must be unique. We use an MD5 checksum of the wording itself.
+   * The content of `<source>` and `<target>` must be the same.
+   * You can add your new `<trans-unit>` elements within the body of an existing `<file>` element, or create a new one — it has no effect.
+     
+## Making wordings detectable
+
+PrestaShop's [TranslationToolsBundle](https://github.com/PrestaShop/TranslationToolsBundle) leverages static analysis to detect any new wording in the source code automatically, either at runtime (for modules and themes), or when preparing a release (for core wordings).
+
+To ensure your wordings are detected, make sure to follow these guidelines when using translation in your code:
+
+1. Only wordings used through the `trans()` function, the `{l}` Smarty tag, and the `trans` Twig filter can be detected automatically. Therefore, only wordings present in `.php`, `.tpl`, and `.twig` files will be detected.
+
+2. **Always pass wordings as string literals, not variables**, with the `trans()` function, the `{l}` Smarty tag, and `trans` Twig filter. Although variables would be interpreted at runtime, the code analyzer won't be able to figure out the link between the symbol and its assigned value. Passing variables as arguments to these functions will prevent those wordings from being detected.
 
 {{% notice warning %}}
-Failure to comply with these guidelines will result in the wording not being added to the catalogue and not being translatable!
+Failure to comply with these guidelines will result in the wording not being detected, and not appearing in the translation interface!
+{{% /notice %}}
+
+{{% notice note %}}
+**Be aware:**  Wordings will be detected regardless of whether the file is actually imported or its code is reachable during runtime.
 {{% /notice %}}
 
 Examples:
@@ -65,7 +89,10 @@ In Twig files, you can use `trans_default_domain` to set up your default domain.
 
 #### Form ChoiceTypes
 
-When declaring Symfony form types, you declare choices for `ChoiceType` fields as literal (untranslated) strings:
+When creating Symfony `ChoiceType` form fields:
+
+1. Declare the `choices` field as literal (untranslated) strings.
+2. Set `choice_translation_domain` as the translation domain for all the choices.
 
 ```php
 <?php
@@ -81,13 +108,13 @@ class SomeFormType extends TranslatorAwareType
     {
         $builder
             ->add('a_select_box', ChoiceType::class, [
+                'required' => false,
+                'label' => $this->trans('This is a select box', 'Admin.Catalog.Feature'),
                 'choices' => [
                     'First option' => 0,
                     'Second option' => 1,
                     'Third option' => 2,
                 ],
-                'required' => false,
-                'label' => $this->trans('This is a select box', 'Admin.Catalog.Feature'),
                 'choice_translation_domain' => 'Admin.Some.Domain',
             ]);
     }
@@ -96,12 +123,10 @@ class SomeFormType extends TranslatorAwareType
 
 The form above declares a Choice field (select box), with three different options. 
 
-Notice the declaration of `choice_translation_domain`. This explicit translation domain will be used to translate choices from this field.
+{{% notice note %}}
+**Be aware:** the analyzer expects the `ChoiceType` declaration to be inside a call to the `add()` method, using `ChoiceType::class` and not a FQCN. If in doubt, have a look at [ChoiceExtractor](https://github.com/PrestaShop/TranslationToolsBundle/blob/master/Translation/Extractor/Visitor/Translation/FormType/ChoiceExtractor.php).
+{{% /notice %}}
 
-**Note:** you must be careful when using this pattern: The analyzer expects the `ChoiceType` declaration to be inside a call to the `add()` method, using `ChoiceType::class` and not a FQCN.
-
-{{% notice tip %}}
-If in doubt, have a look at [ChoiceExtractor](https://github.com/PrestaShop/TranslationToolsBundle/blob/master/Translation/Extractor/Visitor/Translation/FormType/ChoiceExtractor.php) {{% /notice %}}
 
 #### Array literals
 
@@ -116,8 +141,3 @@ You can declare wordings as arrays as well. This obviously won't translate the w
 ];
 ```
 
-## Translate core wordings
-
-You can translate core wordings (mainly present in PHP files) via Classic theme translation interface.
-
-{{% notice note %}}This tip also works if you don't use the Classic theme on your shop.{{% /notice %}}

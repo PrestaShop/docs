@@ -1,27 +1,25 @@
 ---
-menuTitle: displayNav2
 Title: displayNav2
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/checkout/_partials/header.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl'
+        file: 'Classic Theme: templates/checkout/_partials/header.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayNav2
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [themes/classic/templates/checkout/_partials/header.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/_partials/header.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

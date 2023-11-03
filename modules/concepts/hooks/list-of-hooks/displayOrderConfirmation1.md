@@ -1,27 +1,25 @@
 ---
-menuTitle: displayOrderConfirmation1
 Title: displayOrderConfirmation1
 hidden: true
 hookTitle: 
 files:
-  - themes/classic/templates/checkout/order-confirmation.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/order-confirmation.tpl'
+        file: 'Classic Theme: templates/checkout/order-confirmation.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayOrderConfirmation1
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [themes/classic/templates/checkout/order-confirmation.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/checkout/order-confirmation.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

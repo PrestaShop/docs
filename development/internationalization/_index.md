@@ -22,4 +22,4 @@ In this section you'll learn more about how to work with PrestaShop's internatio
 
 #### In this section
 
-{{% children %}}
+{{% children /%}}

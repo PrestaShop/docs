@@ -18,7 +18,11 @@ The `TextWithLengthCounterType` represents text input with value length counter.
     
 | Component                                                                 | Description                           |
 | ------------------------------------------------------------------------- | ------------------------------------- |
-| admin-dev/themes/new-theme/js/components/form/text-with-length-counter.js | Calculates remaining length for input |
+| TextWithLengthCounter | Calculates remaining length for input |
+
+{{% notice note %}}
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 

@@ -1,34 +1,25 @@
 ---
-menuTitle: displayAdminOrderMain
 Title: displayAdminOrderMain
 hidden: true
-hookTitle: Admin Order Main Column
+hookTitle: 'Admin Order Main Column'
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: 
 hasExample: true
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook displays content in the order view page in the main column under the details view'
+
 ---
 
-# Hook displayAdminOrderMain
-
-## Information
-
-{{% notice tip %}}
-**Admin Order Main Column:** 
-
-This hook displays content in the order view page in the main column under the details view
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

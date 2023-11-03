@@ -5,4 +5,4 @@ weight: 60
 
 # List of available Commands and Queries
 
-{{% children %}}
+{{% children /%}}

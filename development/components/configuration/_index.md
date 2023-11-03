@@ -147,3 +147,4 @@ $configuration->set(
 {{% notice note %}}
 Check the [config console command]({{< relref "/8/development/components/console/prestashop-config" >}}) for setting values from CLI
 
+{{% /notice %}}

@@ -1,33 +1,24 @@
 ---
-menuTitle: actionProductPriceCalculation
 Title: actionProductPriceCalculation
 hidden: true
-hookTitle: Product Price Calculation
+hookTitle: 'Product Price Calculation'
 files:
-  - controllers/admin/AdminLoginController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Product.php'
+        file: classes/Product.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called into the priceCalculation method to be able to override the price calculatio'
+
 ---
 
-# Hook actionProductPriceCalculation {{< minver v="8.1" >}}
-
-## Information
-
-{{% notice tip %}}
-**Product Price Calculation:** 
-
-This hook is called into the priceCalculation method to be able to override the price calculation{{% /notice %}}
-
-Hook locations: 
-  - back office
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Product.php](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Product.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

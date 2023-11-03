@@ -1,27 +1,24 @@
 ---
-menuTitle: actionModuleRegisterHookAfter
 Title: actionModuleRegisterHookAfter
 hidden: true
 hookTitle: 
 files:
-  - classes/Hook.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Hook.php'
+        file: classes/Hook.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionModuleRegisterHookAfter
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Hook.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Hook.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

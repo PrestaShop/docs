@@ -192,8 +192,7 @@ services:
 
 ### Named arguments
 
-**Do NOT** use "named argument" syntax in service declaration:
-
+**Do NOT** use "named argument" syntax in your front services declaration:
 
 ```yaml
 services:
@@ -206,8 +205,12 @@ services:
   wrong_foo_bar:
       class: 'Foo\Bar'
       arguments:
-        - $baz: 'baz'
+        $baz: 'baz'
 ```
+
+If you do try to use named arguments in your front services definition you will end up with the following error:
+
+> Fatal error: Uncaught Symfony\Component\DependencyInjection\Exception\RuntimeException: Invalid service "wrong_foo_bar": class "Foo\Bar" does not exist.
 
 ## Grid
 

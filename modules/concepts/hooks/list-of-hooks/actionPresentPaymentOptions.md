@@ -1,33 +1,24 @@
 ---
-menuTitle: actionPresentPaymentOptions
 Title: actionPresentPaymentOptions
 hidden: true
-hookTitle: Payment options Presenter
+hookTitle: 'Payment options Presenter'
 files:
-  - classes/checkout/PaymentOptionsFinder.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/PaymentOptionsFinder.php'
+        file: classes/checkout/PaymentOptionsFinder.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called before payment options are presented'
+
 ---
 
-# Hook actionPresentPaymentOptions
-
-## Information
-
-{{% notice tip %}}
-**Payment options Presenter:** 
-
-This hook is called before payment options are presented
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/checkout/PaymentOptionsFinder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/PaymentOptionsFinder.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

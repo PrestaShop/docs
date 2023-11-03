@@ -10,4 +10,4 @@ you have created.
 
 You **must** add a [smoke test]({{< relref "/8/development/architecture/migration-guide/testing/unit#smoke-testing" >}}) (also called "survival") for every new page you migrate.
 
-{{% children %}}
+{{% children /%}}

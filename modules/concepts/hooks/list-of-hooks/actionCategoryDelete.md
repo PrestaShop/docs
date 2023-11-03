@@ -1,39 +1,25 @@
 ---
-menuTitle: actionCategoryDelete
 Title: actionCategoryDelete
 hidden: true
-hookTitle: Category deletion
+hookTitle: 'Category deletion'
 files:
-  - classes/Category.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php'
+        file: classes/Category.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - categoryDeletion
+    - categoryDeletion
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed when a category is deleted'
+
 ---
 
-# Hook actionCategoryDelete
-
-Aliases: 
- - categoryDeletion
-
-
-
-## Information
-
-{{% notice tip %}}
-**Category deletion:** 
-
-This hook is displayed when a category is deleted
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Category.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

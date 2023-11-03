@@ -1,9 +1,17 @@
 ---
-title: Adding a configuration page
+title: Adding a configuration page (Legacy architecture)
 weight: 4
 ---
 
 # Adding a configuration page
+
+{{% notice note %}}
+Learn [how to create a configuration page with Symfony forms]({{<relref "/8/modules/creation/adding-configuration-page-modern">}}).
+{{% /notice %}}
+
+{{% notice info %}}
+This guide is about the legacy way of creating configuration pages for modules using `HelperForm`.
+{{% /notice %}}
 
 Modules usually provide a dedicated configuration page, accessible through a "Configure" button in the Module Manager list, that allows the shop's administrator to set up any options provided by the module. 
 

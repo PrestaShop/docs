@@ -1,29 +1,26 @@
 ---
-menuTitle: actionObjectProductCommentValidateAfter
 Title: actionObjectProductCommentValidateAfter
 hidden: true
 hookTitle: 
 files:
-  - modules/productcomments/ProductComment.php
+    -
+        module: productcomments
+        url: 'https://github.com/PrestaShop/productcomments/blob/master/ProductComment.php'
+        file: ProductComment.php
 locations:
-  - back office
-  - front office
+    - 'back office'
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+origin: module
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook actionObjectProductCommentValidateAfter
-
-## Information
-
-Hook locations: 
-  - back office
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [modules/productcomments/ProductComment.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/productcomments/ProductComment.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

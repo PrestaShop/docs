@@ -14,18 +14,14 @@ Enables TinyMCE text editor on TextareaType.
 | limit    | int  | 21844         | Limit of characters in text field. By default value equals to max size of UTF-8 content available in MySQL text column |
 
 ## Required Javascript components
-    
-In order to use TinyMCE editor in the PrestaShop UI Kit, you need to initialize its javascript component once the page is loaded:
-```js
-document.addEventListener('DOMContentLoaded', function () {
-    window.prestashop.component.initComponents(
-        [
-            "TinyMCEEditor"
-        ],
-    );
-});
-```
+ 
+| Component                                                             | Description                         |
+|:----------------------------------------------------------------------|:------------------------------------|
+| TinyMCEEditor | Rich text editor |
 
+{{% notice note %}}
+Learn more about [Javascript components and how to use them]({{<relref "/8/development/components/global-components">}})
+{{% /notice %}}
 
 ## Code example
 

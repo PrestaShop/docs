@@ -1,27 +1,24 @@
 ---
-menuTitle: action<LegacyControllerName>ListingFieldsModifier
 Title: action<LegacyControllerName>ListingFieldsModifier
 hidden: true
 hookTitle: 
 files:
-  - src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php'
+        file: src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook action&lt;LegacyControllerName>ListingFieldsModifier
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

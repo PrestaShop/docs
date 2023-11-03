@@ -10,4 +10,4 @@ hookListUrl: "/8/modules/concepts/hooks/list-of-hooks"  # this allows for dynami
 
 # PrestaShop 8 Documentation
 
-{{% children %}}
+{{% children /%}}

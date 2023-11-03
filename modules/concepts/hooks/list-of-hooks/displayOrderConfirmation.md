@@ -1,39 +1,25 @@
 ---
-menuTitle: displayOrderConfirmation
 Title: displayOrderConfirmation
 hidden: true
-hookTitle: Order confirmation page
+hookTitle: 'Order confirmation page'
 files:
-  - controllers/front/OrderConfirmationController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderConfirmationController.php'
+        file: controllers/front/OrderConfirmationController.php
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - orderConfirmation
+    - orderConfirmation
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook is called within an order's confirmation page"
+
 ---
 
-# Hook displayOrderConfirmation
-
-Aliases: 
- - orderConfirmation
-
-
-
-## Information
-
-{{% notice tip %}}
-**Order confirmation page:** 
-
-This hook is called within an order's confirmation page
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [controllers/front/OrderConfirmationController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderConfirmationController.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

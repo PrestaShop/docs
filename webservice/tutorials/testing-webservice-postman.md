@@ -1,6 +1,6 @@
 ---
 title: Testing the Webservice with Postman
-menuTitle: 3 - Testing with Postman
+menuTitle: Testing with Postman
 weight: 3
 ---
 
@@ -58,6 +58,10 @@ This collection shows all CRUD actions on the Product resource:
 - Create Product (`POST`)
 - Update Product (`PUT` and `PATCH`)
 - Delete Product (`DELETE`)
+
+## Create a product from start to finish with Webservices (demo_product_creation_AZ.json)
+
+This collection illustrates how to create a product from A to Z with all of its relations (to Brand, Category, Manufacturer, Images, etc.)
 
 ## Article resource examples (demo_custom_resource_collection.json)
 

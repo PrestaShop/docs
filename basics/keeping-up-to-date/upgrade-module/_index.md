@@ -11,7 +11,7 @@ Also known as the "Autoupgrade module" or the "1-click upgrade module", PrestaSh
 
 Details on how to use the web interface are documented in [Keep up-to-date: Upgrade Assistant page]({{< ref "/8/basics/keeping-up-to-date/use-autoupgrade-module.md" >}}).
 
-{{% children %}}
+{{% children /%}}
 
 ## How to download it
 

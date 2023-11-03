@@ -1,33 +1,25 @@
 ---
-menuTitle: displayAfterProductThumbs
 Title: displayAfterProductThumbs
 hidden: true
-hookTitle: Display extra content below product thumbs
+hookTitle: 'Display extra content below product thumbs'
 files:
-  - themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-cover-thumbnails.tpl'
+        file: 'Classic Theme: templates/catalog/_partials/product-cover-thumbnails.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook displays new elements below product images ex. additional media'
+
 ---
 
-# Hook displayAfterProductThumbs
-
-## Information
-
-{{% notice tip %}}
-**Display extra content below product thumbs:** 
-
-This hook displays new elements below product images ex. additional media
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/themes/classic/templates/catalog/_partials/product-cover-thumbnails.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

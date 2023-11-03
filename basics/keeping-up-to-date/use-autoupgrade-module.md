@@ -15,8 +15,8 @@ The same note as above, in order to have this module working you must have set i
 {{% /notice %}}
 
 {{% notice note %}}
-The latest version (v4.15+) of this module allow updates from PS 1.7.x to PS 8.0.x versions only. 
-If you upgrade from a version older than 1.7, please use a previous version of this module (v4.14.1 and less) and refer to [previous major version upgrade guide]({{< ref "/1.7/basics/keeping-up-to-date/_index.md" >}}).
+Since version 4.15, only upgrades from PS 1.7.x to PS 8.y versions are supported by the module. 
+If you upgrade from a version older than 1.7, please use a previous version of this module (v4.14.3 and less) and refer to [previous major version upgrade guide]({{< ref "/1.7/basics/keeping-up-to-date/_index.md" >}}).
 {{% /notice %}}
 
 ## Download / Installation

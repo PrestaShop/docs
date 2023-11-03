@@ -9,4 +9,4 @@ PrestaShop 1.7.6 introduced [Mail themes]({{< ref "1.7/development/components/ma
  
 ## Tutorials
 
-{{% children %}}
+{{% children /%}}

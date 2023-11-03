@@ -58,4 +58,4 @@ These hooks are visualized in the picture below:
 
 This tutorial has these sections:
 
-{{% children %}} 
+{{% children /%}} 

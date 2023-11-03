@@ -7,4 +7,4 @@ showOnHomepage: true
 
 # Tutorials
 
-{{% children list="ol" %}}
+{{% children list="ol" /%}}

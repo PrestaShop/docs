@@ -1,6 +1,6 @@
 ---
 title: Advanced use
-menuTitle: 5 - Advanced use
+menuTitle: Advanced use
 chapter: true
 weight: 5
 ---
@@ -9,4 +9,4 @@ weight: 5
 
 These tutorials are related to more advanced and specific uses of the Webservice API
 
-{{% children %}}
+{{% children /%}}
