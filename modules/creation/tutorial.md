@@ -144,7 +144,7 @@ This will trigger a lot of actions from PrestaShop that you do not need to know 
 
 This method call must be placed after the definition of `$this->name` variable and before any use of translation.
 
-The next section deals with text strings, which are encapsulated in PrestaShop's translation method, `l()`:
+The next section deals with text strings, which are encapsulated in PrestaShop's translation method, `trans()`:
 
 ```php
 $this->displayName = $this->trans('My module', 'Modules.MyModule.Admin');
