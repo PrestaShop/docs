@@ -89,13 +89,13 @@ class MyModule extends Module
 
         parent::__construct();
 
-        $this->displayName = $this->l('My module');
-        $this->description = $this->l('Description of my module.');
+        $this->displayName = $this->trans('My module', 'Modules.MyModule.Admin');
+        $this->description = $this->trans('Description of my module.', 'Modules.MyModule.Admin');
 
-        $this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
+        $this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', 'Modules.MyModule.Admin');
 
         if (!Configuration::get('MYMODULE_NAME')) {
-            $this->warning = $this->l('No name provided');
+            $this->warning = $this->trans('No name provided', 'Modules.MyModule.Admin');
         }
     }
 }
@@ -147,13 +147,13 @@ This method call must be placed after the definition of `$this->name` variable a
 The next section deals with text strings, which are encapsulated in PrestaShop's translation method, `l()`:
 
 ```php
-$this->displayName = $this->l('My module');
-$this->description = $this->l('Description of my module.');
+$this->displayName = $this->trans('My module', 'Modules.MyModule.Admin');
+$this->description = $this->trans('Description of my module.', 'Modules.MyModule.Admin');
 
-$this->confirmUninstall = $this->l('Are you sure you want to uninstall?');
+$this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', 'Modules.MyModule.Admin');
 
 if (!Configuration::get('MYMODULE_NAME')) {
-    $this->warning = $this->l('No name provided.');
+    $this->warning = $this->trans('No name provided.', 'Modules.MyModule.Admin');
 }
 ```
 
