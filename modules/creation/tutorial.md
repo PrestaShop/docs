@@ -92,7 +92,7 @@ class MyModule extends Module
         $this->displayName = $this->trans('My module', 'Modules.MyModule.Admin');
         $this->description = $this->trans('Description of my module.', 'Modules.MyModule.Admin');
 
-        $this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', 'Modules.MyModule.Admin');
+        $this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', [], 'Modules.MyModule.Admin');
 
         if (!Configuration::get('MYMODULE_NAME')) {
             $this->warning = $this->trans('No name provided', 'Modules.MyModule.Admin');
