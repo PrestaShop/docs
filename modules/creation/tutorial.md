@@ -153,7 +153,7 @@ $this->description = $this->trans('Description of my module.', [], 'Modules.Mymo
 $this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', [], 'Modules.Mymodule.Admin');
 
 if (!Configuration::get('MYMODULE_NAME')) {
-    $this->warning = $this->trans('No name provided.', 'Modules.Mymodule.Admin');
+    $this->warning = $this->trans('No name provided.', [], 'Modules.Mymodule.Admin');
 }
 ```
 
