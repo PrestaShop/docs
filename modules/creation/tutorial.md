@@ -150,7 +150,7 @@ The next section deals with text strings, which are encapsulated in PrestaShop's
 $this->displayName = $this->trans('My module', [], 'Modules.Mymodule.Admin');
 $this->description = $this->trans('Description of my module.', [], 'Modules.Mymodule.Admin');
 
-$this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', 'Modules.Mymodule.Admin');
+$this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', [], 'Modules.Mymodule.Admin');
 
 if (!Configuration::get('MYMODULE_NAME')) {
     $this->warning = $this->trans('No name provided.', 'Modules.Mymodule.Admin');
