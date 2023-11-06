@@ -147,7 +147,7 @@ This method call must be placed after the definition of `$this->name` variable a
 The next section deals with text strings, which are encapsulated in PrestaShop's translation method, `trans()`:
 
 ```php
-$this->displayName = $this->trans('My module', 'Modules.Mymodule.Admin');
+$this->displayName = $this->trans('My module', [], 'Modules.Mymodule.Admin');
 $this->description = $this->trans('Description of my module.', 'Modules.Mymodule.Admin');
 
 $this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', 'Modules.Mymodule.Admin');
