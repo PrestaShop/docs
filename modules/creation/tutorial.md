@@ -148,7 +148,7 @@ The next section deals with text strings, which are encapsulated in PrestaShop's
 
 ```php
 $this->displayName = $this->trans('My module', [], 'Modules.Mymodule.Admin');
-$this->description = $this->trans('Description of my module.', 'Modules.Mymodule.Admin');
+$this->description = $this->trans('Description of my module.', [], 'Modules.Mymodule.Admin');
 
 $this->confirmUninstall = $this->trans('Are you sure you want to uninstall?', 'Modules.Mymodule.Admin');
 
