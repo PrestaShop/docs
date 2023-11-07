@@ -1,27 +1,24 @@
 ---
-menuTitle: displayAdminForm
 Title: displayAdminForm
 hidden: true
 hookTitle: 
 files:
-  - admin-dev/themes/default/template/helpers/form/form.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/form/form.tpl'
+        file: admin-dev/themes/default/template/helpers/form/form.tpl
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayAdminForm
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [admin-dev/themes/default/template/helpers/form/form.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/form/form.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

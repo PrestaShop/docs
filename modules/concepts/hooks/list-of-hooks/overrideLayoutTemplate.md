@@ -1,25 +1,24 @@
 ---
-menuTitle: overrideLayoutTemplate
 Title: overrideLayoutTemplate
 hidden: true
 hookTitle: 
 files:
-  - classes/controller/FrontController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        file: classes/controller/FrontController.php
 locations:
-  - front office
-type: 
-hookAliases:
+    - 'front office'
+type: null
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook overrideLayoutTemplate
-
-## Information
-
-Hook locations: 
-  - front office
-
-Located in: 
-  - [classes/controller/FrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

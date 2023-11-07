@@ -1,27 +1,24 @@
 ---
-menuTitle: displayAdminOptions
 Title: displayAdminOptions
 hidden: true
 hookTitle: 
 files:
-  - admin-dev/themes/default/template/helpers/options/options.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/options/options.tpl'
+        file: admin-dev/themes/default/template/helpers/options/options.tpl
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayAdminOptions
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [admin-dev/themes/default/template/helpers/options/options.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/options/options.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

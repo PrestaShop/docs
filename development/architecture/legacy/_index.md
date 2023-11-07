@@ -9,4 +9,4 @@ summary: "This section describes components from the Legacy architecture."
 
 This section describes components from the Legacy architecture.
 
-{{% children %}}
+{{% children /%}}

@@ -1,35 +1,25 @@
 ---
-menuTitle: actionObjectProductInCartDeleteAfter
 Title: actionObjectProductInCartDeleteAfter
 hidden: true
-hookTitle: Cart product removal
+hookTitle: 'Cart product removal'
 files:
-  - controllers/front/CartController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php'
+        file: controllers/front/CartController.php
 locations:
-  - back office
-  - front office
+    - 'back office'
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called after a product is removed from a cart'
+
 ---
 
-# Hook actionObjectProductInCartDeleteAfter
-
-## Information
-
-{{% notice tip %}}
-**Cart product removal:** 
-
-This hook is called after a product is removed from a cart
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/front/CartController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

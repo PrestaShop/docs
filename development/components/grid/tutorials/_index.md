@@ -6,4 +6,4 @@ chapter: true
 
 # Grid tutorials
 
-{{% children %}}
+{{% children /%}}

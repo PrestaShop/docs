@@ -1,41 +1,26 @@
 ---
-menuTitle: displayLeftColumn
 Title: displayLeftColumn
 hidden: true
-hookTitle: New elements on a page (left column)
+hookTitle: 'New elements on a page (left column)'
 files:
-  - Classic Theme: templates/layouts/layout-both-columns.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl'
+        file: 'Classic Theme: templates/layouts/layout-both-columns.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
 hookAliases:
- - extraLeft
+    - extraLeft
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'This hook displays new elements in the left-hand column of a page'
+
 ---
 
-# Hook displayLeftColumn
-
-Aliases: 
- - extraLeft
-
-## Information
-
-{{% notice tip %}}
-**New elements on a page (left column):** 
-
-This hook displays new elements in the left-hand column of a page
-{{% /notice %}}
-
-{{% notice note %}}
-When located on a product page, the hook is [`displayLeftColumnProduct`]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayLeftColumnProduct">}})
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: templates/layouts/layout-both-columns.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -15,4 +15,4 @@ The default PrestaShop installation offers the neutral "Classic theme", enabling
 
 Several marketplaces are available to get PrestaShop themes. As a graphic designer/front developer, you can put your themes up for sale on this marketplaces.
 
-{{% children %}}
+{{% children /%}}

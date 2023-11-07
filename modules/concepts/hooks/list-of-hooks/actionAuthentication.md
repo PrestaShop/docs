@@ -1,39 +1,25 @@
 ---
-menuTitle: actionAuthentication
 Title: actionAuthentication
 hidden: true
-hookTitle: Successful customer authentication
+hookTitle: 'Successful customer authentication'
 files:
-  - classes/form/CustomerLoginForm.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php'
+        file: classes/form/CustomerLoginForm.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - authentication
+    - authentication
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed after a customer successfully signs in'
+
 ---
 
-# Hook actionAuthentication
-
-Aliases: 
- - authentication
-
-
-
-## Information
-
-{{% notice tip %}}
-**Successful customer authentication:** 
-
-This hook is displayed after a customer successfully signs in
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/form/CustomerLoginForm.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerLoginForm.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -1,27 +1,25 @@
 ---
-menuTitle: displayNotFound
 Title: displayNotFound
 hidden: true
 hookTitle: 
 files:
-  - Classic Theme: templates/errors/not-found.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/errors/not-found.tpl'
+        file: 'Classic Theme: templates/errors/not-found.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayNotFound
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: templates/errors/not-found.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/errors/not-found.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

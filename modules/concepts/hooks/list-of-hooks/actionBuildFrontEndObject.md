@@ -1,33 +1,24 @@
 ---
-menuTitle: actionBuildFrontEndObject
 Title: actionBuildFrontEndObject
 hidden: true
-hookTitle: Manage elements added to the "prestashop" javascript object
+hookTitle: 'Manage elements added to the "prestashop" javascript object'
 files:
-  - classes/controller/FrontController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        file: classes/controller/FrontController.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook allows you to customize the "prestashop" javascript object that is included in all front office pages'
+
 ---
 
-# Hook actionBuildFrontEndObject
-
-## Information
-
-{{% notice tip %}}
-**Manage elements added to the "prestashop" javascript object:** 
-
-This hook allows you to customize the "prestashop" javascript object that is included in all front office pages
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/controller/FrontController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

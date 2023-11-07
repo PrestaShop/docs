@@ -1,39 +1,25 @@
 ---
-menuTitle: actionPaymentCCAdd
 Title: actionPaymentCCAdd
 hidden: true
-hookTitle: Payment CC added
+hookTitle: 'Payment CC added'
 files:
-  - classes/order/OrderPayment.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderPayment.php'
+        file: classes/order/OrderPayment.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - paymentCCAdded
+    - paymentCCAdded
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionPaymentCCAdd
-
-Aliases: 
- - paymentCCAdded
-
-
-
-## Information
-
-{{% notice tip %}}
-**Payment CC added:** 
-
-
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/order/OrderPayment.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderPayment.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

@@ -6,4 +6,4 @@ showOnHomepage: true
 
 # Deployment
 
-{{% children %}}
+{{% children /%}}

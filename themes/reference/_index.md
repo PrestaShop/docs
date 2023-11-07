@@ -7,4 +7,4 @@ showOnHomepage: true
 
 # Theme development reference
 
-{{% children %}}
+{{% children /%}}

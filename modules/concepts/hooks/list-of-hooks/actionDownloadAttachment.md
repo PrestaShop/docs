@@ -1,27 +1,24 @@
 ---
-menuTitle: actionDownloadAttachment
 Title: actionDownloadAttachment
 hidden: true
 hookTitle: 
 files:
-  - controllers/front/AttachmentController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/AttachmentController.php'
+        file: controllers/front/AttachmentController.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionDownloadAttachment
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/front/AttachmentController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/AttachmentController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -1,39 +1,25 @@
 ---
-menuTitle: actionOrderReturn
 Title: actionOrderReturn
 hidden: true
-hookTitle: Returned product
+hookTitle: 'Returned product'
 files:
-  - controllers/front/OrderFollowController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderFollowController.php'
+        file: controllers/front/OrderFollowController.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - orderReturn
+    - orderReturn
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed when a customer returns a product '
+
 ---
 
-# Hook actionOrderReturn
-
-Aliases: 
- - orderReturn
-
-
-
-## Information
-
-{{% notice tip %}}
-**Returned product:** 
-
-This hook is displayed when a customer returns a product 
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [controllers/front/OrderFollowController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderFollowController.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

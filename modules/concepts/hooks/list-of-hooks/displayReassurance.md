@@ -1,27 +1,25 @@
 ---
-menuTitle: displayReassurance
 Title: displayReassurance
 hidden: true
 hookTitle: 
 files:
-  - Classic Theme: templates/checkout/checkout.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/checkout.tpl'
+        file: 'Classic Theme: templates/checkout/checkout.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayReassurance
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: templates/checkout/checkout.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/checkout.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

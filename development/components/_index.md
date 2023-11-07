@@ -8,4 +8,4 @@ showOnHomepage: true
 
 # Components
 
-{{% children %}}
+{{% children /%}}

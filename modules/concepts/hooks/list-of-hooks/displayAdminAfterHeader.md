@@ -1,27 +1,24 @@
 ---
-menuTitle: displayAdminAfterHeader
 Title: displayAdminAfterHeader
 hidden: true
 hookTitle: 
 files:
-  - admin-dev/themes/new-theme/template/light_display_layout.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/light_display_layout.tpl'
+        file: admin-dev/themes/new-theme/template/light_display_layout.tpl
 locations:
-  - back office
+    - 'back office'
 type: display
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook displayAdminAfterHeader
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [admin-dev/themes/new-theme/template/light_display_layout.tpl](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/light_display_layout.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

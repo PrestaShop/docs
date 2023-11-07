@@ -1,39 +1,25 @@
 ---
-menuTitle: actionHtaccessCreate
 Title: actionHtaccessCreate
 hidden: true
-hookTitle: After htaccess creation
+hookTitle: 'After htaccess creation'
 files:
-  - classes/Tools.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php'
+        file: classes/Tools.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - afterCreateHtaccess
+    - afterCreateHtaccess
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed after the htaccess creation'
+
 ---
 
-# Hook actionHtaccessCreate
-
-Aliases: 
- - afterCreateHtaccess
-
-
-
-## Information
-
-{{% notice tip %}}
-**After htaccess creation:** 
-
-This hook is displayed after the htaccess creation
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Tools.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

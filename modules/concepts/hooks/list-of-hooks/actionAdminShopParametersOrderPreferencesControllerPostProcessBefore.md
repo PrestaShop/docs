@@ -1,33 +1,24 @@
 ---
-menuTitle: actionAdminShopParametersOrderPreferencesControllerPostProcessBefore
 Title: actionAdminShopParametersOrderPreferencesControllerPostProcessBefore
 hidden: true
-hookTitle: On post-process in Admin Configure Shop Parameters Order Preferences Controller
+hookTitle: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
 files:
-  - src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php'
+        file: src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing any form'
+
 ---
 
-# Hook actionAdminShopParametersOrderPreferencesControllerPostProcessBefore
-
-## Information
-
-{{% notice tip %}}
-**On post-process in Admin Configure Shop Parameters Order Preferences Controller:** 
-
-This hook is called on Admin Configure Shop Parameters Order Preferences post-process before processing any form
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

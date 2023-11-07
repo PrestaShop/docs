@@ -15,4 +15,4 @@ PrestaShop is a community project, made by hundreds of people collaborating arou
 
 - [How to get involved in the project](https://www.prestashop-project.org/get-involved/)
 
-{{% children %}}
+{{% children /%}}

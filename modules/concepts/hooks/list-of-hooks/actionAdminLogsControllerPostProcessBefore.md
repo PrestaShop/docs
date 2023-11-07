@@ -1,27 +1,24 @@
 ---
-menuTitle: actionAdminLogsControllerPostProcessBefore
 Title: actionAdminLogsControllerPostProcessBefore
 hidden: true
 hookTitle: 
 files:
-  - src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php'
+        file: src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAdminLogsControllerPostProcessBefore
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

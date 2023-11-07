@@ -1,27 +1,24 @@
 ---
-menuTitle: actionValidateStepComplete
 Title: actionValidateStepComplete
 hidden: true
 hookTitle: 
 files:
-  - classes/checkout/CheckoutDeliveryStep.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php'
+        file: classes/checkout/CheckoutDeliveryStep.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionValidateStepComplete
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/checkout/CheckoutDeliveryStep.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

@@ -11,4 +11,4 @@ will walk you through creating a ZIP archive that you can provide to users that 
 
 But first, you need to test your theme!
 
-{{% children %}}
+{{% children /%}}

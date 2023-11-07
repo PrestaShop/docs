@@ -1,27 +1,24 @@
 ---
-menuTitle: actionSearch
 Title: actionSearch
 hidden: true
 hookTitle: 
 files:
-  - src/Adapter/Search/SearchProductSearchProvider.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Search/SearchProductSearchProvider.php'
+        file: src/Adapter/Search/SearchProductSearchProvider.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionSearch
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [src/Adapter/Search/SearchProductSearchProvider.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Search/SearchProductSearchProvider.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

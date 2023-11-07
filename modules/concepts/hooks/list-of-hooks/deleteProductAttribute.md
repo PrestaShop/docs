@@ -1,27 +1,24 @@
 ---
-menuTitle: deleteProductAttribute
 Title: deleteProductAttribute
 hidden: true
 hookTitle: 
 files:
-  - classes/Product.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        file: classes/Product.php
 locations:
-  - front office
-type: 
-hookAliases:
+    - 'front office'
+type: null
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook deleteProductAttribute
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: 
-
-Located in: 
-  - [classes/Product.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

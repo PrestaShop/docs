@@ -1,33 +1,25 @@
 ---
-menuTitle: displayAfterTitleTag
 Title: displayAfterTitleTag
 hidden: true
-hookTitle: After title tag
+hookTitle: 'After title tag'
 files:
-  - Classic Theme: templates/_partials/head.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/head.tpl'
+        file: 'Classic Theme: templates/_partials/head.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: 'Use this hook to add content after title tag'
+
 ---
 
-# Hook displayAfterTitleTag
-
-## Information
-
-{{% notice tip %}}
-**After title tag:** 
-
-Use this hook to add content after title tag
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: templates/_partials/head.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/head.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

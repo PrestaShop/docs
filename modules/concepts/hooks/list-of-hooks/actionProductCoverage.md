@@ -1,27 +1,24 @@
 ---
-menuTitle: actionProductCoverage
 Title: actionProductCoverage
 hidden: true
 hookTitle: 
 files:
-  - classes/stock/StockManager.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockManager.php'
+        file: classes/stock/StockManager.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionProductCoverage
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/stock/StockManager.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockManager.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

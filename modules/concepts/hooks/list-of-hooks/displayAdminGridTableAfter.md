@@ -1,39 +1,25 @@
 ---
-menuTitle: displayAdminGridTableAfter
 Title: displayAdminGridTableAfter
 hidden: true
-hookTitle: Display after Grid table
+hookTitle: 'Display after Grid table'
 files:
-  - src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
 locations:
-  - back office
+    - 'back office'
 type: display
 hookAliases:
- - displayAdminListAfter
+    - displayAdminListAfter
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook adds new blocks after Grid component table'
+
 ---
 
-# Hook displayAdminGridTableAfter
-
-Aliases: 
- - displayAdminListAfter
-
-
-
-## Information
-
-{{% notice tip %}}
-**Display after Grid table:** 
-
-This hook adds new blocks after Grid component table
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: display
-
-Located in: 
-  - [src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

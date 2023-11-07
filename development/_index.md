@@ -14,4 +14,4 @@ icon: fa-book
 
 This section describes technical aspects of the PrestaShop Core.
 
-{{% children %}}
+{{% children /%}}

@@ -17,4 +17,4 @@ We use the following stack:
 
 ## Execute & Create tests
 
-{{% children %}}
+{{% children /%}}

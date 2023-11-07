@@ -1,31 +1,24 @@
 ---
-menuTitle: filterProductSearch
 Title: filterProductSearch
 hidden: true
-hookTitle: Filter search products result
+hookTitle: 'Filter search products result'
 files:
-  - modules/blockwishlist/controllers/front/view.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/view.php'
+        file: modules/blockwishlist/controllers/front/view.php
 locations:
-  - front office
-type: 
-hookAliases:
+    - 'front office'
+type: null
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is called in order to allow to modify search product result'
+
 ---
 
-# Hook filterProductSearch
-
-## Information
-
-{{% notice tip %}}
-**Filter search products result:** 
-
-This hook is called in order to allow to modify search product result
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Located in: 
-  - [modules/blockwishlist/controllers/front/view.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/view.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

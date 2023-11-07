@@ -16,7 +16,7 @@ For complex interfaces, with state management for instance, other frontend optio
 [Vue.js](https://vuejs.org/) is a JavaScript Framework that will be helpful in this case.
 This chapter covers its integration on a module.
 
-{{% children %}}
+{{% children /%}}
 
 ## 1- Creation of a Vue.js application in the module directories
 

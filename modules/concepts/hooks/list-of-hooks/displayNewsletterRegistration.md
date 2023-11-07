@@ -1,27 +1,25 @@
 ---
-menuTitle: displayNewsletterRegistration
 Title: displayNewsletterRegistration
 hidden: true
 hookTitle: 
 files:
-  - Classic Theme: modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
+    -
+        theme: Classic
+        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl'
+        file: 'Classic Theme: modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl'
 locations:
-  - front office
+    - 'front office'
 type: display
-hookAliases:
+hookAliases: 
+origin: theme
+array_return: false
+check_exceptions: false
+chain: false
+description: ''
+
 ---
 
-# Hook displayNewsletterRegistration
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: display
-
-Located in: 
-  - [Classic Theme: modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl](https://github.com/PrestaShop/classic-theme/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

@@ -414,4 +414,4 @@ You can update this schema using the [source XML file](/8/schemas/grid_workflow_
 
 ## Learn more
 
-{{% children %}}
+{{% children /%}}

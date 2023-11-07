@@ -1,33 +1,24 @@
 ---
-menuTitle: dashboardZoneThree
 Title: dashboardZoneThree
 hidden: true
-hookTitle: Dashboard column three
+hookTitle: 'Dashboard column three'
 files:
-  - controllers/admin/AdminDashboardController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php'
+        file: controllers/admin/AdminDashboardController.php
 locations:
-  - back office
-type: 
-hookAliases:
+    - 'back office'
+type: null
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: 'This hook is displayed in the third column of the dashboard'
+
 ---
 
-# Hook dashboardZoneThree
-
-## Information
-
-{{% notice tip %}}
-**Dashboard column three:** 
-
-This hook is displayed in the third column of the dashboard
-{{% /notice %}}
-
-Hook locations: 
-  - back office
-
-Hook type: 
-
-Located in: 
-  - [controllers/admin/AdminDashboardController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php)
+{{% hookDescriptor %}}
 
 ## Parameters details
 

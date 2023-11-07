@@ -1,27 +1,24 @@
 ---
-menuTitle: actionCustomerAddGroups
 Title: actionCustomerAddGroups
 hidden: true
 hookTitle: 
 files:
-  - classes/Customer.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Customer.php'
+        file: classes/Customer.php
 locations:
-  - front office
+    - 'front office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionCustomerAddGroups
-
-## Information
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Customer.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Customer.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

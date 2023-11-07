@@ -1,27 +1,24 @@
 ---
-menuTitle: dashboardZoneOne
 Title: dashboardZoneOne
 hidden: true
 hookTitle: 
 files:
-  - controllers/admin/AdminDashboardController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php'
+        file: controllers/admin/AdminDashboardController.php
 locations:
-  - back office
-type: 
-hookAliases:
+    - 'back office'
+type: null
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook dashboardZoneOne
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: 
-
-Located in: 
-  - [controllers/admin/AdminDashboardController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

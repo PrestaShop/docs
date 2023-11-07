@@ -1,27 +1,24 @@
 ---
-menuTitle: actionAdmin<Action>After
 Title: actionAdmin<Action>After
 hidden: true
 hookTitle: 
 files:
-  - classes/controller/AdminController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
 locations:
-  - back office
+    - 'back office'
 type: action
-hookAliases:
+hookAliases: 
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: ''
+
 ---
 
-# Hook actionAdmin&lt;Action>After
-
-## Information
-
-Hook locations: 
-  - back office
-
-Hook type: action
-
-Located in: 
-  - [classes/controller/AdminController.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 

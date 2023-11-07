@@ -1,39 +1,25 @@
 ---
-menuTitle: actionProductAttributeDelete
 Title: actionProductAttributeDelete
 hidden: true
-hookTitle: Product attribute deletion
+hookTitle: 'Product attribute deletion'
 files:
-  - classes/Product.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        file: classes/Product.php
 locations:
-  - front office
+    - 'front office'
 type: action
 hookAliases:
- - deleteProductAttribute
+    - deleteProductAttribute
+array_return: false
+check_exceptions: false
+chain: false
+origin: core
+description: "This hook is displayed when a product's attribute is deleted"
+
 ---
 
-# Hook actionProductAttributeDelete
-
-Aliases: 
- - deleteProductAttribute
-
-
-
-## Information
-
-{{% notice tip %}}
-**Product attribute deletion:** 
-
-This hook is displayed when a product's attribute is deleted
-{{% /notice %}}
-
-Hook locations: 
-  - front office
-
-Hook type: action
-
-Located in: 
-  - [classes/Product.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php)
+{{% hookDescriptor %}}
 
 ## Call of the Hook in the origin file
 
