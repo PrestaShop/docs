@@ -8,7 +8,7 @@ useMermaid: true
 
 ## Introduction
 
-With Symfony, `Forms` are built, rendered and handled in separate layers. Several concepts are involved, such as form building, providing data to forms, validating data, persisting data submited by forms, rendering forms, ...
+Symfony's `Forms` system separates the construction, rendering, and processing of forms. This involves multiple key concepts, including form creation, data provision, validation, data persistence from submitted forms, and form rendering.
 
 - [`Controllers`](#controllers) - Handles all logic for the `Form`
 - [`FormBuilder`](#form-builder) - Builds the `Form`, and provide data to the `Form`
@@ -49,20 +49,20 @@ graph
 
 ### Controllers
 
-`Controllers` in the back office receives http requests, and when handling requests for creating or editing an entity, they instanciate and uses several concepts.
+`Controllers` in the back office receive HTTP requests. When handling requests for creating or editing an entity, they instantiate and utilize several concepts.
 
 ### FormBuilder
 
-In most situations, the first component instanciated by the `Controller` is the `FormBuilder`. 
+In most scenarios, the Controller initially instantiates the FormBuilder. This component constructs the necessary Form, incorporating all Form Types. It also retrieves data from the FormDataProvider, ensuring that the form is populated with the appropriate data.
 The `FormBuilder` will build the required `Form` with all `Form Types`, and retrieve data from the `FormDataProvider`. 
 
 ### FormDataProvider
 
-The `FormDataProvider` is in charge of retrieving data from the `Database` to fill the form (when editing), and provide default data (when creating and editing). 
+The FormDataProvider is responsible for retrieving data from the Database. This data is used to populate the form when editing an existing entity. Additionally, it provides default values for the form fields, both when creating a new entity and when editing an existing one.
 
 ### Form Types
 
-Developers can already use a large list of field types ([see Symfony types](https://symfony.com/doc/4.4/reference/forms/types.html)) that comes from the Symfony framework. In addition to that, PrestaShop adds more reusable field types that developers can use.
+Developers have access to a wide range of field types ([see Symfony types](https://symfony.com/doc/4.4/reference/forms/types.html)) that come from the Symfony framework. Additionally, PrestaShop enhances this selection with its own reusable field types.
 
 A complete reference of PrestaShop form types can be found [here]({{< relref "/8/development/components/form/types-reference">}}). 
 
@@ -77,27 +77,27 @@ The `FormHandler` is responsible of:
 
 ### FormDataHandler
 
-The `FormDataHandler` is responsible of persisting the data to `Database`, by sending a `CQRS command` to the `command bus`. 
+The `FormDataHandler` is tasked with persisting data to the Database. It accomplishes this by dispatching a CQRS command to the command bus, ensuring efficient and effective data handling.
 
 {{% notice note %}}
-This page is about Migrated `Forms` with `Symfony` and `CQRS pattern`. 
+This page focuses on migrated Forms utilizing Symfony and the CQRS pattern.
 
-There are several ways to persist data, such as using [Doctrine entities]({{<relref "/8/modules/concepts/doctrine/#using-doctrine">}}), using [ObjectModel entities]({{<relref "/8/development/components/database/objectmodel">}}), or using [CQRS concepts]({{<relref "/8/development/architecture/domain/cqrs">}}) or not.
+It's important to note that data can be persisted in several ways, including: [Doctrine entities]({{<relref "/8/modules/concepts/doctrine/#using-doctrine">}}), using [ObjectModel entities]({{<relref "/8/development/components/database/objectmodel">}}), or using [CQRS concepts]({{<relref "/8/development/architecture/domain/cqrs">}}).
 {{% /notice %}}
 
 ### Form Theme
 
-To render forms in a clean and user friendly way, PrestaShop extended Symfony's [Bootstrap 4 Form Theme][sf-bootstrap4-form-theme] to create **PrestaShop UI Kit Form theme**. Learn more on [Symfony Form theme for PrestaShop]({{< relref "/8/development/components/form/form-theme/form-theme">}})
+To render forms in a clean and user-friendly way, PrestaShop extended Symfony's [Bootstrap 4 Form Theme][sf-bootstrap4-form-theme] to create **PrestaShop UI Kit Form theme**. Learn more on [Symfony Form theme for PrestaShop]({{< relref "/8/development/components/form/form-theme/form-theme">}})
 
 ## Customize forms by modules
 
 ### Concepts 
 
-- `FormModifier` - Allows to modify the `Form`, mostly for modules
-- `FormModifier` hook_ - Allows to connect the `FormModifier` to the Form
-- `FormDataProviderData` hook - Allows to provide data to the form
-- `FormDataProviderDefaultData` hook - Allows to provide default data to the form
-- `FormHandler hook` - Allows to handle the form and its data with modules
+- `FormModifier`: This component is used to modify the Form, primarily for module integration.
+- `FormModifier` hook_: Connects the FormModifier to the form, enabling modifications.
+- `FormDataProviderData` hook: Facilitates the provision of specific data to the form.
+- `FormDataProviderDefaultData` hook: Used for supplying default data to the form.
+- `FormHandler hook`: Allows the module to handle the form and its data effectively.
 
 <div class='mermaid'>
 graph
@@ -137,9 +137,9 @@ graph
 
 ### FormModifier
 
-A `FormModifier` (or `FormBuilderModifier`) allows you to modify the content of a `Form`, in a module for example, to add, modify or remove an element. 
+A `FormModifier` (also known as `FormBuilderModifier`) allows you to alter the contents of a Form. It is particularly useful within modules, allowing developers to add, modify, or remove elements from the form as required.
 
-It as been implemented in an example module: [DemoProductForm2](https://github.com/PrestaShop/example-modules/blob/master/demoproductform2/src/Form/Modifier/ProductFormModifier.php). 
+It's been implemented in an example module: [DemoProductForm2](https://github.com/PrestaShop/example-modules/blob/master/demoproductform2/src/Form/Modifier/ProductFormModifier.php). 
 
 ```php
 namespace PrestaShop\Module\DemoProductForm\Form\Modifier;
@@ -172,7 +172,7 @@ services:
 
 #### FormModifier hook
 
-The `FormModifier`, without being hooked to a `Form` will have no effect. The `FormModifier` must be hooked by implementing [action&lt;Object&gt;FormBuilderModifier]({{<relref "/8/modules/concepts/hooks/list-of-hooks/action<FormName>FormBuilderModifier">}}).
+A `FormModifier` by itself will not affect a `Form` unless it is properly hooked. To ensure functionality, the `FormModifier` must be linked by implementing the [action<Object>FormBuilderModifier]({{<relref "/8/modules/concepts/hooks/list-of-hooks/action<FormName>FormBuilderModifier">}}).
 
 In the module, register the hook and implement the method, for example, for the `Customer` entity: 
 
@@ -208,7 +208,7 @@ public function hookActionProductFormDataProviderDefaultData(array $params): voi
 }
 ```
 
-This hook has been implemented as an example in our [modules examples repository - demoformdataproviders](https://github.com/PrestaShop/example-modules/tree/master/demoformdataproviders).
+This hook has been implemented as an example in our [example-modules repository](https://github.com/PrestaShop/example-modules/tree/master/demoformdataproviders).
 
 ### FormDataProviderData Hook
 
@@ -226,13 +226,13 @@ public function hookActionProductFormDataProviderData(array $params): void
 }
 ```
 
-This hook has been implemented as an example in our [modules examples repository - demoformdataproviders](https://github.com/PrestaShop/example-modules/tree/master/demoformdataproviders).
+This hook has been implemented as an example in our [example-modules repository - demoformdataproviders](https://github.com/PrestaShop/example-modules/tree/master/demoformdataproviders).
 
 ### FormHandler hook
 
-The `FormHandler` hooks allows to receive the `Form` data, and make operations with this data to persist it.
+The `FormHandler` hook is designed to intercept `Form` data, enabling the execution of various operations with this data. Its primary function is to facilitate the persistence of form data, ensuring that the data captured by the form can be effectively processed and stored later.
 
-4 hooks are available to achieve this: 
+There are 4 hooks available to work with the `Form` data:
 
 | Hook | Description |
 | --- | --- |
@@ -265,12 +265,12 @@ public function hookActionAfterUpdateCombinationFormFormHandler(array $params): 
 
 ## Examples
 
-You can find some examples about how to use forms in your modules to extend PrestaShop capacities: 
+You can find some examples of how to use forms in your modules to extend PrestaShop capabilities: 
 
 | Subject | Link |
 | --- | --- |
-| Extend a Symfony form in a module with upload image field | [Tutorial]({{<relref "/8/modules/sample-modules/extending-sf-form-with-upload-image-field" >}}) |
-| Extending the new product page form | [Tutorial]({{<relref "/8/modules/sample-modules/extend-product-page" >}}) |
-| Add action in grid to modify customers | [Tutorial]({{<relref "/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage" >}}) |
+| Extend a Symfony form in a module with an upload field for image | [Tutorial]({{<relref "/8/modules/sample-modules/extending-sf-form-with-upload-image-field" >}}) |
+| How to extend the new product page form | [Tutorial]({{<relref "/8/modules/sample-modules/extend-product-page" >}}) |
+| How to modify Customers grid | [Tutorial]({{<relref "/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage" >}}) |
 
 [sf-bootstrap4-form-theme]: https://symfony.com/doc/4.4/form/bootstrap4.html
