@@ -174,7 +174,7 @@ services:
 
 A `FormModifier` by itself will not affect a `Form` unless it is properly hooked. To ensure functionality, the `FormModifier` must be linked by implementing the [action<Object>FormBuilderModifier]({{<relref "/8/modules/concepts/hooks/list-of-hooks/action<FormName>FormBuilderModifier">}}).
 
-In the module, register the hook and implement the method, for example, for the `Customer` entity: 
+In the module, register the hook and implement the method, for example, for the `Product` entity: 
 
 ```php
 public function install()
