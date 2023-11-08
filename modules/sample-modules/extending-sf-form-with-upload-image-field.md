@@ -6,7 +6,6 @@ weight: 3
 # Extending Symfony form with upload image field
 {{< minver v="1.7.7" title="true" >}}
 
-
 ## Introduction
 
 In this tutorial we are going to build a module which extends `Suppliers` form 
@@ -79,7 +78,6 @@ Let's create Installer class responsible for hooks registration and database man
 declare(strict_types=1);
 
 namespace PrestaShop\Module\DemoExtendSymfonyForm\Install;
-
 
 use Db;
 use Module;
@@ -196,6 +194,10 @@ below to `DemoExtendSymfonyForm2` class.
 
 ```php
 <?php
+
+use PrestaShop\Module\DemoExtendSymfonyForm\Install\Installer;
+[...]
+
     /**
      * @return bool
      */
@@ -221,9 +223,7 @@ below to `DemoExtendSymfonyForm2` class.
     }
 ```
 
-Let's create `SupplierExtraImage` entity class. We use [Doctrine]
- ({{< relref "/8/modules/concepts/doctrine/" >}}) 
- which is available for PrestaShop modules since version 1.7.6.
+Let's create `SupplierExtraImage` entity class. We use [Doctrine]({{< relref "/8/modules/concepts/doctrine/" >}}) which is available for PrestaShop modules since version 1.7.6.
 
 ```php
 <?php
@@ -362,10 +362,8 @@ class SupplierExtraImageRepository extends EntityRepository
 }
 ```
 
-Let's create hook `hookActionSupplierFormBuilderModifier` 
-function inside Main module class. This is a hook available for [CRUD forms]
-({{< relref "/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage" >}}) in
-PrestaShop Symfony pages.
+Let's create hook `hookActionSupplierFormBuilderModifier` function inside Main module class. 
+This is a hook available for [CRUD forms]({{< relref "/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage" >}}) in PrestaShop Symfony pages.
 
 ```php
 <?php
