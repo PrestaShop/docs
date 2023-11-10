@@ -56,7 +56,7 @@ The following parameters are mandatory:
 Example:
 
 ```
-$ php cli-rollback.php --dir=admin-dev --backup=V1.7.5.1_20190502-191341-22e883bd
+$ php modules/autoupgrade/cli-rollback.php --dir=admin-dev --backup=V1.7.5.1_20190502-191341-22e883bd
 ```
 
 ## Full example
