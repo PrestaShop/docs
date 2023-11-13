@@ -15,7 +15,6 @@ This page integrates Figma iframes, it may require heavy resources and cause per
 
 {{< toc >}}
 
-
 ## Home page
 
 <iframe style="border: 1px solid rgba(0, 0, 0, 0);" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FHKGzVBx5p2JaFrFocGe6p0%2FHook-Cartography%3Ftype%3Ddesign%26node-id%3D128%253A15442%26mode%3Ddesign%26t%3DIcCnIO2KXW3WErLh-1" allowfullscreen></iframe>
@@ -57,7 +56,6 @@ This page integrates Figma iframes, it may require heavy resources and cause per
 | --- | --- |
 | `displayProductActions` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayProductActions">}}) |
 | `displayProductAdditionalInfo` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayProductAdditionalInfo">}}) |
-| `displayProductButtons` |  |
 | `displayAfterProductThumbs` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayAfterProductThumbs">}}) |
 | `displayReassurance` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayReassurance">}}) |
 | `displayLeftColumnProduct` | [Documentation]({{< relref "/8/modules/concepts/hooks/list-of-hooks/displayLeftColumnProduct">}}) |
