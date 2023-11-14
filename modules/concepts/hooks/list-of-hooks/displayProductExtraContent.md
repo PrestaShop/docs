@@ -36,13 +36,11 @@ protected $expectedInstanceClasses = ['PrestaShop\PrestaShop\Core\Product\Produc
 
 ## Example implementation
 
-This hook has been implemented as an example in our [modules examples repository - demoproductextracontent](https://github.com/PrestaShop/example-modules/tree/master/demoproductextracontent).
+This hook has been implemented as an example in our [example-modules repository - demoproductextracontent](https://github.com/PrestaShop/example-modules/tree/master/demoproductextracontent).
 
 ## Hook explained
 
-This hook is a little more complicated than other ones. 
-
-It starts by a render of extra contents, from the theme: 
+This hook is a little more complicated than the other ones. It renders the provided content on the theme level. By default, it uses Bootstrap tabs to display it:
 
 ```php
 {foreach from=$product.extraContent item=extra key=extraKey}
@@ -52,7 +50,7 @@ It starts by a render of extra contents, from the theme:
 {/foreach}
 ```
 
-Then, the `product` entity uses a `ProductExtraContentFinder` to fetch all extra content. 
+In the front office, `ProductController` fetches all extra content using a `ProductExtraContentFinder`. 
 
 ```php
 class ProductExtraContentFinder extends HookFinder
@@ -61,7 +59,7 @@ class ProductExtraContentFinder extends HookFinder
     protected $expectedInstanceClasses = ['PrestaShop\PrestaShop\Core\Product\ProductExtraContent'];
 ```
 
-The `ProductExtraContentFinder` will look for modules implementing `displayProductExtraContent` methods, and will expect `ProductExtraContent` entities to be returned. 
+The `ProductExtraContentFinder` will look for modules hooked into `displayProductExtraContent`  with the corresponding existing method, and will expect `ProductExtraContent` to be returned. 
 
 ```php
 return (new PrestaShop\PrestaShop\Core\Product\ProductExtraContent())
