@@ -193,7 +193,7 @@ On PrestaShop >= 1.7, this page can be found in the Improve &gt;&gt; Modules pag
 
 ## Support service
 
-Doing an upgrade by yourself can be risky. If you feel uncomfortable with doing it on your own, you can leave it to our support team who will handle the backup and the upgrade to the last **minor** version for you (8.0 → 8.1).
+Doing an upgrade by yourself can be risky. If you feel uncomfortable with doing it on your own, you can find support on [prestashop-project.org](https://www.prestashop-project.org/support/).
 
 Basically, the process and the result will be the same. The existing data on the shop will be kept, as well as your module and your current theme.
 
