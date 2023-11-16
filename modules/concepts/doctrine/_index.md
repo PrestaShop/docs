@@ -311,8 +311,6 @@ class YourModuleListCommentsModuleFrontController extends ModuleFrontController
         $entityManager = $this->container->get('doctrine.orm.entity_manager');
         $productCommentRepository = $entityManager->getRepository(ProductComment::class);
 
-        //The repository has automatic methods available, it is able to creating query conditions
-        //based on the name of the function you used
         /*
         ** The repository has automatic methods available, it is able to creating query conditions
         ** based on the name of the function you used. An equivalent way to make this call could be:
