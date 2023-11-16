@@ -341,7 +341,7 @@ In the example above, we are declaring a specific service for this form handler,
 PrestaShop\PrestaShop\Core\Form\IdentifiableObject\Handler\FormHandler
 ```
 
-...wich is instantiated using the base factory:
+...which is instantiated using the base factory:
 
 ```text
 prestashop.core.form.identifiable_object.handler.form_handler_factory:create
