@@ -409,12 +409,12 @@ classDiagram
 
 #### Enable multi language + multi shop for your entity
 
-To do so, you must declare the `multishop_lang` setting of your model definition to `true`:
+To do so, you must declare the `multilang_shop` setting of your model definition to `true`:
 
 ```php
 public static $definition = [
     ...
-    'multishop_lang' => true,
+    'multilang_shop' => true,
     ...
 ```
 
@@ -432,7 +432,7 @@ And then, you must declare which fields are available for translations:
 )
 ```
 
-#### Loading or saving a multishop_lang object
+#### Loading or saving a multilang_shop object
 
 While languages are [accessible with accessors]({{< ref "#multiple-language-accessors" >}}), if you need to programmatically retrieve an ObjectModel related to a particular shop (not the selected / current shop from Context), you need to change the method used to load an object:
 
