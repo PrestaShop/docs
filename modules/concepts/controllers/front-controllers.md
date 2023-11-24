@@ -238,7 +238,7 @@ class ExampleModuleCronModuleFrontController extends ModuleFrontController
     {
         $this->ajax = 1;
 
-        if (php_sapi_name() !== 'cli') {
+        if (!Tools::isPHPCLI()) {
             $this->ajaxRender('Forbidden call.');
         }
 
