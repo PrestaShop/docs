@@ -1,3 +1,5 @@
+ONLY AVAILABLE FROM PS 1.7.7.X ->
+
 ---
 title: NumberMinMaxFilterType
 ---
