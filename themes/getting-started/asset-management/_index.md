@@ -279,7 +279,7 @@ public function setMedia()
             'modules/'.$this->module->name.'/js/lib/simple-lib.js',
             [
               'priority' => 200,
-              'attribute' => 'async',
+              'attributes' => 'async',
               'version' => 'release-2021-11'
             ]
         );
@@ -311,7 +311,7 @@ public function hookActionFrontControllerSetMedia($params)
             'modules/'.$this->name.'/js/lib/simple-lib.js',
             [
               'priority' => 200,
-              'attribute' => 'async',
+              'attributes' => 'async',
             ]
         );
     }
