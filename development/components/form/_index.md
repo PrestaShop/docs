@@ -60,6 +60,8 @@ The `FormBuilder` will build the required `Form` with all `Form Types`, and retr
 
 The FormDataProvider is responsible for retrieving data from the Database. This data is used to populate the form when editing an existing entity. Additionally, it provides default values for the form fields, both when creating a new entity and when editing an existing one.
 
+[Learn more about CRUD forms and FormDataProviders]({{<relref "/8/development/architecture/migration-guide/forms/CRUD-forms#creating-a-form-data-provider">}}).
+
 ### Form Types
 
 Developers have access to a wide range of field types ([see Symfony types](https://symfony.com/doc/4.4/reference/forms/types.html)) that come from the Symfony framework. Additionally, PrestaShop enhances this selection with its own reusable field types.
