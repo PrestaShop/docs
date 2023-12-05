@@ -16,11 +16,11 @@ This form type is used as a container of sub forms, each sub form will be render
 
 ## Usage and description
 
-This form type [was introduced in {{< minver v="8.1.0">}}](https://github.com/PrestaShop/PrestaShop/pull/28752) in the product form. 
+This form type [was introduced in {{< minver v="8.1.0">}}](https://github.com/PrestaShop/PrestaShop/pull/28752) in the new product page. 
 
-The new Product page uses this form type as the base form type. 
+The new product page is based on this form type.
 
-Its example usage has been documented in an example module: [`demoproductform`](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
+Its usage has been documented in an example module: [`demoproductform`](https://github.com/PrestaShop/example-modules/tree/master/demoproductform).
 
 The module hooks to `actionProductFormBuilderModifier` to modify the `FormBuilder` for the Product page. 
 The `ProductFormModifier` adds a new `CustomTabType` (created by the module) to the `FormBuilder` (which is a `NavigationTabType`).
@@ -61,6 +61,6 @@ public function buildForm(FormBuilderInterface $builder, array $options)
 }
 ```
 
-It is rendered this way in the BO Product page: 
+Preview of how it looks in the back office:
 
 {{< figure src="../img/navigation-tab-type.png" title="NavigationTabType" >}}
