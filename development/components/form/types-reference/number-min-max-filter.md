@@ -2,7 +2,7 @@
 title: NumberMinMaxFilterType
 ---
 
-# NumberMinMaxFilterType
+# NumberMinMaxFilterType {{< minver v="1.7.7.x" title="true" >}}
 
 <h1>Available from PS 1.7.7.x and UP</h1>
 The `NumberMinMaxFilterType` represents two `NumberType` fields - one holds minimum value of float number type and other holds maximum value.
