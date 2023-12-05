@@ -2,7 +2,7 @@
 title: NumberMinMaxFilterType
 ---
 
-# NumberMinMaxFilterType
+# NumberMinMaxFilterType {{< minver v="1.7.7.x" title="true" >}}
 
 The `NumberMinMaxFilterType` represents two `NumberType` fields - one holds minimum value of float number type and other holds maximum value.
 `NumberType` is one of the native symfony types.
