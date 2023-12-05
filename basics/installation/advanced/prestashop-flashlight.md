@@ -29,10 +29,10 @@ timeline
 </div>
 
 {{% notice warning %}}
-This installation method is not for production and should not be exposed to public traffic over internet,
+This installation method is not for production and should not be exposed to public traffic over the internet,
 please use it locally only, or at your own risks.
 
-Looking for production grade images ? 
+Are you looking for production-grade images? 
 {{<cta relref="/8/basics/installation/environments/docker" type="primary">}}
   Install PrestaShop with Docker
 {{</cta>}}
@@ -44,7 +44,7 @@ Looking for production grade images ?
 Follow this guide: [Install PrestaShop with Docker]({{<relref "/8/basics/installation/environments/docker">}}) at steps: 
 
 - Install Docker
-- Install docker Compose
+- Install Docker Compose
 
 ## Run PrestaShop with Docker + PrestaShop Flashlight
 
