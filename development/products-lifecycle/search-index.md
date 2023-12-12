@@ -10,7 +10,15 @@ In PrestaShop, products are natively indexed for search in database, by keywords
 
 When a query is made in a search bar, it is sanitized, splitted in words, and queries are made against `ps_search_word`. 
 
-Then, hits are retrieved from `ps_search_index`, to retrieve matching product ids, and then a sort is made to return relevant products. 
+Then, hits are retrieved from `ps_search_index`, to retrieve matching product ids, and then a weighting and a sort is made to return relevant products. 
+
+<div class="mermaid">
+flowchart TB
+    id1[Search Query] --> id2[Sanitize,\nremove unwanted words,\nsplit by words]
+    id2 --> id3[Retrieve `id_word` from `ps_search_word`]
+    id3 --> id4[Retrieve `id_product` and `weight` from `ps_search_index`]
+    id4 --> id5[Weight results to return most relevant products]
+</div>
 
 ## Search index structure
 
@@ -35,7 +43,7 @@ classDiagram
 
 ## Search index lifecycle
 
-Several actions can trigger a reindex of a Product in the database: 
+Several actions can trigger a reindex of a Product or of the complete catalog in the database: 
 
 | Location | action | indexation type |
 | --- | --- | --- |
@@ -57,34 +65,34 @@ Several actions can trigger a reindex of a Product in the database:
 
 Almost every field / information in the product is weighted to fine tune result relevance.
 
-The weight of fields is adjustable from the Back Office (Shop Parameters > Search) with the configuration keys below: 
+The weight of fields is adjustable from the `Back Office > Shop Parameters > Search` with the configuration keys below: 
 
 | Field | Configuration key | Default weight | Description |
 | --- | --- | --- | --- |
-| pname | PS_SEARCH_WEIGHT_PNAME | 6 | Product name |
-| reference | PS_SEARCH_WEIGHT_REF | 10 | Product reference |
-| pa_reference | PS_SEARCH_WEIGHT_REF | 10 | Combination reference |
-| supplier_reference | PS_SEARCH_WEIGHT_REF | 10 | Supplier reference
-| pa_supplier_reference | PS_SEARCH_WEIGHT_REF | 10 | Combination supplier reference |
-| ean13 | PS_SEARCH_WEIGHT_REF | 10 | Product EAN13 |
-| pa_ean13 | PS_SEARCH_WEIGHT_REF | 10 | Combination EAN13 |
-| isbn | PS_SEARCH_WEIGHT_REF | 10 | Product ISBN |
-| pa_isbn | PS_SEARCH_WEIGHT_REF | 10 | Combination ISBN |
-| upc | PS_SEARCH_WEIGHT_REF | 10 | Product UPC |
-| pa_upc | PS_SEARCH_WEIGHT_REF | 10 | Combination UPC |
-| mpn | PS_SEARCH_WEIGHT_REF | 10 | Product MPN |
-| pa_mpn | PS_SEARCH_WEIGHT_REF | 10 | Combination MPN |
-| description_short | PS_SEARCH_WEIGHT_SHORTDESC | 1 | Product short description |
-| description | PS_SEARCH_WEIGHT_DESC | 1 | Product description |
-| cname | PS_SEARCH_WEIGHT_CNAME | 3 | Category name |
-| mname | PS_SEARCH_WEIGHT_MNAME | 3 | Manufacturer name |
-| tags | PS_SEARCH_WEIGHT_TAG | 4 | Product tags |
-| attributes | PS_SEARCH_WEIGHT_ATTRIBUTE | 2 | Combinations |
-| features | PS_SEARCH_WEIGHT_FEATURE | 2 | Product features |
+| pname | `PS_SEARCH_WEIGHT_PNAME` | 6 | Product name |
+| reference | `PS_SEARCH_WEIGHT_REF` | 10 | Product reference |
+| pa_reference | `PS_SEARCH_WEIGHT_REF` | 10 | Combination reference |
+| supplier_reference | `PS_SEARCH_WEIGHT_REF` | 10 | Supplier reference
+| pa_supplier_reference | `PS_SEARCH_WEIGHT_REF` | 10 | Combination supplier reference |
+| ean13 | `PS_SEARCH_WEIGHT_REF` | 10 | Product EAN13 |
+| pa_ean13 | `PS_SEARCH_WEIGHT_REF` | 10 | Combination EAN13 |
+| isbn | `PS_SEARCH_WEIGHT_REF` | 10 | Product ISBN |
+| pa_isbn | `PS_SEARCH_WEIGHT_REF` | 10 | Combination ISBN |
+| upc | `PS_SEARCH_WEIGHT_REF` | 10 | Product UPC |
+| pa_upc | `PS_SEARCH_WEIGHT_REF` | 10 | Combination UPC |
+| mpn | `PS_SEARCH_WEIGHT_REF` | 10 | Product MPN |
+| pa_mpn | `PS_SEARCH_WEIGHT_REF` | 10 | Combination MPN |
+| description_short | `PS_SEARCH_WEIGHT_SHORTDESC` | 1 | Product short description |
+| description | `PS_SEARCH_WEIGHT_DESC` | 1 | Product description |
+| cname | `PS_SEARCH_WEIGHT_CNAME` | 3 | Category name |
+| mname | `PS_SEARCH_WEIGHT_MNAME` | 3 | Manufacturer name |
+| tags | `PS_SEARCH_WEIGHT_TAG` | 4 | Product tags |
+| attributes | `PS_SEARCH_WEIGHT_ATTRIBUTE` | 2 | Combinations |
+| features | `PS_SEARCH_WEIGHT_FEATURE` | 2 | Product features |
 
 ## Trigger a Search Index refresh by cron
 
-To trigger a Search Index refresh by cron, craft a GET url to the Back Office to be called with `curl` (or `wget`, or whatever http request tool), to the Admin controller **AdminSearch**. 
+To trigger a Search Index refresh by cron, craft an url to be called with GET method, to the Back Office, to the Admin controller **AdminSearch**. 
 
 | Param | Value | Description |
 | --- | --- | --- |
@@ -109,4 +117,16 @@ If correctly crafted, your URL should look like:
 
 ```
 https://domain.tld/admin-xxx/index.php?controller=AdminSearch&action=searchCron&ajax=1&full=1&token=xxxxxxxx
+```
+
+{{% notice note %}}
+You can also find this URL already generated in `Back Office > Shop Parameters > Search > Indexing`
+{{% /notice %}}
+
+Then, your URL can be used by cURL in a cron: 
+
+``` bash
+# crontab
+# triggers a reindex everyday at 6:00AM
+0 6 * * * curl https://domain.tld/admin-xxx/index.php?controller=AdminSearch&action=searchCron&ajax=1&full=1&token=xxxxxxxx
 ```
