@@ -6,11 +6,7 @@ useMermaid: true
 
 # Products search index
 
-In PrestaShop, products are natively indexed for search in database, by keywords. 
-
-When a query is made in a search bar, it is sanitized, splitted in words, and queries are made against `ps_search_word`. 
-
-Then, hits are retrieved from `ps_search_index`, to retrieve matching product ids, and then a weighting and a sort is made to return relevant products. 
+In PrestaShop, product search functionality relies on keyword-based indexing. Each search query entered in the search bar undergoes sanitization and is split into individual words. These words are then matched against the `ps_search_word` table. Matching product IDs are retrieved from the `ps_search_index`, followed by the process of weighting and sorting to deliver the most relevant product results.
 
 <div class="mermaid">
 flowchart TB
@@ -43,7 +39,7 @@ classDiagram
 
 ## Search index lifecycle
 
-Several actions can trigger a reindex of a Product or of the complete catalog in the database: 
+There are several actions that can trigger a reindex of a product or the complete catalog in the database:
 
 | Location | action | indexation type |
 | --- | --- | --- |
@@ -92,38 +88,21 @@ The weight of fields is adjustable from the `Back Office > Shop Parameters > Sea
 
 ## Trigger a Search Index refresh by cron
 
-To trigger a Search Index refresh by cron, craft an url to be called with GET method, to the Back Office, to the Admin controller **AdminSearch**. 
+To trigger a search index refresh via cron, create a GET request URL to the Back Office Admin controller, **AdminSearch**.
 
 | Param | Value | Description |
 | --- | --- | --- |
 | action | searchCron | |
 | ajax | 1 | |
-| full | 1 | If 1, it will rebuild the full index. If 0 or omitted, it will build only missing products |
+| full | 1 | If 1, it will rebuild the full index. If 0 or omitted, it will index only missing products |
 | token | **tokenValue** | |
 
-To create the **tokenValue**, you need to retrieve the `_COOKIE_KEY_` constant from the Configuration. 
-
-Then, your token is created by extracting a substring from this constant. 
-
-```php
-$tokenValue = substr(
-    _COOKIE_KEY_,
-    AdminSearchController::TOKEN_CHECK_START_POS,
-    AdminSearchController::TOKEN_CHECK_LENGTH
-);
-```
-
-If correctly crafted, your URL should look like: 
-
-```
-https://domain.tld/admin-xxx/index.php?controller=AdminSearch&action=searchCron&ajax=1&full=1&token=xxxxxxxx
-```
 
 {{% notice note %}}
-You can also find this URL already generated in `Back Office > Shop Parameters > Search > Indexing`
+You can find indexation URL in `Back Office > Shop Parameters > Search > Indexing`
 {{% /notice %}}
 
-Then, your URL can be used by cURL in a cron: 
+Instead of manually running the script, you can use an indexation URL with cURL in a crontab.
 
 ``` bash
 # crontab
