@@ -37,11 +37,11 @@ class DemoSymfonyFormSimple extends Module
         $this->bootstrap = true;
         parent::__construct();
 
-        $this->displayName = $this->trans('Demo of the Symfony-based configuration form', [], 'Modules.DemoSymfonyFormSimple.Admin');
+        $this->displayName = $this->trans('Demo of the Symfony-based configuration form', [], 'Modules.Demosymfonyformsimple.Admin');
         $this->description = $this->trans(
             'Module demonstrates a simple module\'s configuration page made with Symfony.',
             [],
-            'Modules.DemoSymfonyFormSimple.Admin'
+            'Modules.Demosymfonyformsimple.Admin'
         );
 
         $this->ps_versions_compliancy = ['min' => '8.0.0', 'max' => '8.99.99'];
@@ -102,8 +102,8 @@ class DemoConfigurationFormType extends TranslatorAwareType
     {
         $builder
             ->add('config_text', TextType::class, [
-                'label' => $this->trans('Configuration text', 'Modules.DemoSymfonyFormSimple.Admin'),
-                'help' => $this->trans('Maximum 32 characters', 'Modules.DemoSymfonyFormSimple.Admin'),
+                'label' => $this->trans('Configuration text', 'Modules.Demosymfonyformsimple.Admin'),
+                'help' => $this->trans('Maximum 32 characters', 'Modules.Demosymfonyformsimple.Admin'),
             ]);
     }
 }
@@ -301,7 +301,7 @@ Create a `form.html.twig` file in `views/templates/admin`.
   {{ form_start(demoConfigurationForm) }}
   <div class="card">
     <h3 class="card-header">
-      <i class="material-icons">settings</i> {{ 'Text form types'|trans({}, 'Modules.DemoSymfonyFormSimple.Admin') }}
+      <i class="material-icons">settings</i> {{ 'Text form types'|trans({}, 'Modules.Demosymfonyformsimple.Admin') }}
     </h3>
     <div class="card-body">
       <div class="form-wrapper">
