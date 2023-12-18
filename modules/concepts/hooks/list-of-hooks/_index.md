@@ -18,7 +18,7 @@ A regex based search has been implemented, and generic hooks should be matched. 
 {{% /notice %}}
 
 {{% notice tip %}}
-Looking for available hooks in the front office? [Check out our hook mapping project]({{<relref "/8/themes/hummingbird/hooks-hummingbird-theme">}}), which provides a visual representation of hook availability in the Hummingbird theme.
+Looking for available hooks in the front office? Check out our [Hook mapping project]({{<relref "/8/themes/hummingbird/hooks-hummingbird-theme">}}), which provides a visual representation of hook availability in the Hummingbird theme.
 {{% /notice %}}
 
 ## Search for a hook

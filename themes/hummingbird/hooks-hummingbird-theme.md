@@ -7,10 +7,10 @@ weight: 3
 
 Hummingbird theme introduced a brand new UI for the PrestaShop front office. 
 
-A visual map of hook locations was created by the Design team at PrestaShop. 
+A visual map of hook locations was created by the Product Design team at PrestaShop. 
 
 {{% notice note %}}
-This page integrates Figma iframes, it may require heavy resources and cause performance issues on slower machines.
+This page embeds Figma views in an iframe, which may slow down your device. To avoid this, please click on the links in the article to open the designs in a new tab.
 {{% /notice %}}
 
 {{< toc >}}
