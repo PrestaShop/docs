@@ -54,12 +54,17 @@ Follow this guide: [Install PrestaShop with Docker]({{<relref "/8/basics/install
 git clone git@github.com:PrestaShop/prestashop-flashlight.git
 ```
 
-2. Setup the env file
+2. Follow an example from the list provided in the repository: [Examples](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples)
 
-```bash
-cp .env.dist .env
-# edit your .env file with your settings if required
-```
+| Example | Description |
+| --- | --- |
+| [auto-install-modules](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples/auto-install-modules) | This example demonstates how to automatically install modules at startup |
+| [basic-example](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples/basic-example) | This example runs the latest available image of PrestaShop Flashlight |
+| [develop-a-module](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples/develop-a-module) | This example demonstrates how to develop modules and mount them on your PrestaShop Flashlight instance |
+| [develop-prestashop](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples/develop-prestashop) | This example runs a development of PrestaShop that can help to contribute to the project |
+| [ngrok-tunnel](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples/ngrok-tunnel) | This example runs an ngrok tunnel to expose a local environment to the Web |
+| [with-init-scripts](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples/with-init-scripts) | This example runs custom init scripts before initialization of PrestaShop |
+| [with-post-scripts](https://github.com/PrestaShop/prestashop-flashlight/tree/main/examples/with-post-scripts) | This example runs custom scripts after initialization of PrestaShop |
 
 3. Start the stack
 
