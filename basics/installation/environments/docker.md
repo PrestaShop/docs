@@ -29,6 +29,13 @@ timeline
     : You are ready to go
 </div>
 
+{{% notice note %}}
+Looking for a quicker way to test and develop on PrestaShop?
+
+{{<cta relref="/8/basics/installation/advanced/prestashop-flashlight" type="primary">}}
+  Install PrestaShop locally with Docker and PrestaShop Flashlight
+{{</cta>}}
+{{% /notice %}}
 ## Install Docker
 
 Docker is available on each major operating system. [You will need to install Docker](https://docs.docker.com/get-docker/).
@@ -44,10 +51,14 @@ Docker Compose is a tool that simplifies the management of multi-container Docke
 
 Docker Compose is included in versions of Docker Desktop (Windows, Mac). If you are using Docker on Linux, [you must install docker compose](https://docs.docker.com/compose/install/). 
 
-
 ## Use Docker Compose to manage your stack
 
 Docker Compose will help start and stop your PrestaShop stack, persist your database with a volume, persist your installation, and will allow you to mount local modules and/or themes in PrestaShop. 
+
+PrestaShop provides two options when it comes to running it with Docker:
+
+- Production ready images with minimal tooling.
+- Development and testing friendly images with tooling: PrestaShop Flashlight.
 
 ### Create the docker-compose.yml manifest
 
