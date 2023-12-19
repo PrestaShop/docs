@@ -17,6 +17,10 @@ For example, `actionAdminCustomersFormModifier` is documented as `action<AdminCo
 A regex based search has been implemented, and generic hooks should be matched. However, when you see a controller name or action in the hook name and you can't find it, try searching for a part of the hook name, like `FormModifier`.
 {{% /notice %}}
 
+{{% notice tip %}}
+Looking for available hooks in the front office? Check out our [Hook mapping project]({{<relref "/8/themes/hummingbird/hooks">}}), which provides a visual representation of hook availability in the Hummingbird theme.
+{{% /notice %}}
+
 ## Search for a hook
 
 <div id="hookFilter" class="quickfilter">
