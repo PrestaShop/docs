@@ -5,7 +5,7 @@ weight: 6
 pre: "<b>6. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-plug
+icon: 'images/icons/webservice.svg'
 ---
 
 ### Chapter 6

@@ -4,7 +4,7 @@ weight: 8
 pre: "<b>8. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-rocket
+icon: 'images/icons/scale.svg'
 ---
 
 ### Chapter 8

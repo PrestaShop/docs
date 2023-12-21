@@ -4,7 +4,7 @@ weight: 7
 pre: "<b>7. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-github
+icon: 'images/icons/contribute.svg'
 ---
 
 ### Chapter 7

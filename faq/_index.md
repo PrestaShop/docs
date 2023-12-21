@@ -5,7 +5,7 @@ weight: 10
 pre: "<b>10. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-question-circle
+icon: 'images/icons/faq.svg'
 ---
 
 ### Chapter 10
