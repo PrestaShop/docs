@@ -5,7 +5,7 @@ weight: 2
 pre: "<b>2. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-book
+icon: 'images/icons/core-reference.svg'
 ---
 
 ### Chapter 2

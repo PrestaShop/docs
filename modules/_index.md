@@ -5,7 +5,7 @@ weight: 4
 pre: "<b>4. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-puzzle-piece
+icon: 'images/icons/modules.svg'
 ---
 
 ### Chapter 4

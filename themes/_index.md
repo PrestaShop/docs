@@ -4,7 +4,7 @@ weight: 5
 pre: "<b>5. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-paint-brush
+icon: 'images/icons/themes.svg'
 ---
 
 ### Chapter 5

@@ -4,7 +4,7 @@ weight: 1
 pre: "<b>1. </b>"
 chapter: true
 showOnHomepage: true
-icon: fa-play
+icon: 'images/icons/basic.svg'
 ---
 
 ### Chapter 1
