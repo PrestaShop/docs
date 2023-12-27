@@ -13,7 +13,7 @@ files:
       file: themes/classic/modules/ps_shoppingcart/modal.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/modules/ps_shoppingcart/modal.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/modules/ps_shoppingcart/modal.tpl
       file: themes/hummingbird/modules/ps_shoppingcart/modal.tpl
 
 locations:

@@ -13,7 +13,7 @@ files:
       file: themes/classic/templates/checkout/_partials/header.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/_partials/header.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/header.tpl
       file: themes/hummingbird/templates/_partials/header.tpl
 
 locations:

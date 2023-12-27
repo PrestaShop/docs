@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/customer/authentication.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/customer/authentication.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/customer/authentication.tpl
       file: themes/hummingbird/templates/customer/authentication.tpl
 
 locations:

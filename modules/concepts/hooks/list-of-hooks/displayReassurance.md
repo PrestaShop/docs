@@ -17,15 +17,15 @@ files:
       file: themes/classic/templates/checkout/checkout.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/product.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/product.tpl
       file: themes/hummingbird/templates/catalog/product.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/cart.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/cart.tpl
       file: themes/hummingbird/templates/checkout/cart.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/checkout.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/checkout.tpl
       file: themes/hummingbird/templates/checkout/checkout.tpl
 
 locations:

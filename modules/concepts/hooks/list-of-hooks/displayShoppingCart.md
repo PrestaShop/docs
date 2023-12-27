@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/checkout/cart.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/cart.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/cart.tpl
       file: themes/hummingbird/templates/checkout/cart.tpl
 
 locations:

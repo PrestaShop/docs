@@ -13,11 +13,11 @@ files:
       file: themes/classic/templates/catalog/_partials/quickview.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-additional-info.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-additional-info.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-additional-info.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/quickview.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/quickview.tpl
       file: themes/hummingbird/templates/catalog/_partials/quickview.tpl
 
 locations:

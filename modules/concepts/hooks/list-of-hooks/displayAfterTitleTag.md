@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/_partials/head.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/_partials/head.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/head.tpl
       file: themes/hummingbird/templates/_partials/head.tpl
 
 locations:

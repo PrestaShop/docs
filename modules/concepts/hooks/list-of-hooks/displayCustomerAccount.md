@@ -9,11 +9,11 @@ files:
       file: themes/classic/templates/customer/my-account.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/components/account-menu.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/components/account-menu.tpl
       file: themes/hummingbird/templates/components/account-menu.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/customer/my-account.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/customer/my-account.tpl
       file: themes/hummingbird/templates/customer/my-account.tpl
 
 locations:

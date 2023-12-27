@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/contact.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/contact.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl
       file: themes/hummingbird/templates/contact.tpl
 
 locations:

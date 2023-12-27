@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/catalog/_partials/product-add-to-cart.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-add-to-cart.tpl
 
 locations:

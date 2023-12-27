@@ -67,59 +67,59 @@ files:
       file: themes/classic/templates/checkout/_partials/order-confirmation-table.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/modules/ps_shoppingcart/modal.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/modules/ps_shoppingcart/modal.tpl
       file: themes/hummingbird/modules/ps_shoppingcart/modal.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-prices.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-prices.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-prices.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-prices.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-prices.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-prices.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-prices.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-prices.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-prices.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-prices.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-prices.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-prices.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-prices.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-prices.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-prices.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/miniatures/product.tpl
       file: themes/hummingbird/templates/catalog/_partials/miniatures/product.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/miniatures/product.tpl
       file: themes/hummingbird/templates/catalog/_partials/miniatures/product.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/miniatures/product.tpl
       file: themes/hummingbird/templates/catalog/_partials/miniatures/product.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/miniatures/product.tpl
       file: themes/hummingbird/templates/catalog/_partials/miniatures/product.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/miniatures/product.tpl
       file: themes/hummingbird/templates/catalog/_partials/miniatures/product.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl
       file: themes/hummingbird/templates/checkout/_partials/cart-detailed-product-line.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/_partials/cart-summary-product-line.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/cart-summary-product-line.tpl
       file: themes/hummingbird/templates/checkout/_partials/cart-summary-product-line.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/_partials/order-confirmation-table.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/order-confirmation-table.tpl
       file: themes/hummingbird/templates/checkout/_partials/order-confirmation-table.tpl
 
 locations:

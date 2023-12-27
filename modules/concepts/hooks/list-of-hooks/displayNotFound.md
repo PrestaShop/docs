@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/errors/not-found.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/errors/not-found.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/errors/not-found.tpl
       file: themes/hummingbird/templates/errors/not-found.tpl
 
 locations:
