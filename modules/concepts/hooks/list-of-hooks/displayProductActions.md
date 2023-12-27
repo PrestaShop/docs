@@ -1,21 +1,26 @@
 ---
 Title: displayProductActions
 hidden: true
-hookTitle: 'Display additional action button on the product page'
+hookTitle: Display additional action button on the product page
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl'
-        file: 'Classic Theme: templates/catalog/_partials/product-add-to-cart.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl
+      file: themes/classic/templates/catalog/_partials/product-add-to-cart.tpl
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl
+      file: themes/hummingbird/templates/catalog/_partials/product-add-to-cart.tpl
+
 locations:
-    - 'front office'
+    - front office
 type: action
 hookAliases: 
 origin: theme
 array_return: false
 check_exceptions: false
 chain: false
-description: 'This hook allow additional actions to be triggered, near the add to cart button.'
+description: This hook allow additional actions to be triggered, near the add to cart button.
 
 ---
 

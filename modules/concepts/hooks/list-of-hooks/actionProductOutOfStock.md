@@ -1,22 +1,27 @@
 ---
 Title: actionProductOutOfStock
 hidden: true
-hookTitle: 'Out-of-stock product'
+hookTitle: Out-of-stock product
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-details.tpl'
-        file: 'Classic Theme: templates/catalog/_partials/product-details.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-details.tpl
+      file: themes/classic/templates/catalog/_partials/product-details.tpl
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/product.tpl
+      file: themes/hummingbird/templates/catalog/product.tpl
+
 locations:
-    - 'front office'
+    - front office
 type: action
 hookAliases:
-    - productOutOfStock
+    - productOutOfStock 
 origin: theme
 array_return: false
 check_exceptions: false
 chain: false
-description: 'This hook displays new action buttons if a product is out of stock'
+description: This hook displays new action buttons if a product is out of stock
 
 ---
 

@@ -1,22 +1,31 @@
 ---
 Title: displayTop
 hidden: true
-hookTitle: 'Top of pages'
+hookTitle: Top of pages
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl'
-        file: 'Classic Theme: templates/checkout/_partials/header.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl
+      file: themes/classic/templates/_partials/header.tpl
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl
+      file: themes/classic/templates/checkout/_partials/header.tpl
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/_partials/header.tpl
+      file: themes/hummingbird/templates/_partials/header.tpl
+
 locations:
-    - 'front office'
+    - front office
 type: display
 hookAliases:
-    - top
+    - top 
 origin: theme
 array_return: false
 check_exceptions: false
 chain: false
-description: 'This hook displays additional elements at the top of your pages'
+description: This hook displays additional elements at the top of your pages
 
 ---
 

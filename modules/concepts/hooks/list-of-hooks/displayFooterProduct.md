@@ -1,22 +1,27 @@
 ---
 Title: displayFooterProduct
 hidden: true
-hookTitle: 'Product footer'
+hookTitle: Product footer
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl'
-        file: 'Classic Theme: templates/catalog/product.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl
+      file: themes/classic/templates/catalog/product.tpl
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/product.tpl
+      file: themes/hummingbird/templates/catalog/product.tpl
+
 locations:
-    - 'front office'
+    - front office
 type: display
 hookAliases:
-    - productfooter
+    - productfooter 
 origin: theme
 array_return: false
 check_exceptions: false
 chain: false
-description: "This hook adds new blocks under the product's description"
+description: This hook adds new blocks under the product's description
 
 ---
 

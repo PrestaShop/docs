@@ -1,21 +1,26 @@
 ---
 Title: displayCMSDisputeInformation
 hidden: true
-hookTitle: 
+hookTitle: displayCMSDisputeInformation
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/cms/page.tpl'
-        file: 'Classic Theme: templates/cms/page.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/cms/page.tpl
+      file: themes/classic/templates/cms/page.tpl
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/cms/page.tpl
+      file: themes/hummingbird/templates/cms/page.tpl
+
 locations:
-    - 'front office'
+    - front office
 type: display
 hookAliases: 
 origin: theme
 array_return: false
 check_exceptions: false
 chain: false
-description: ''
+description: 
 
 ---
 
