@@ -4,8 +4,11 @@
  * This Script is a tool to extract hooks from a PrestaShop release zip, 
  * to help maintaining PrestaShop's devdocs website
  * 
- * usage: 
+ * usage for .zip release archive: 
  * php hookExtraction.php --source=prestashop-release.zip --versionCode=8.1.2 --outputFolder=/path/to/local/devdocs/src/content/8/modules/concepts/hooks/list-of-hooks
+ * 
+ * usage for directory (cloned repository): 
+ * php hookExtraction.php --sourceFolder=ps8.1.2-with-hummingbird --versionCode=8.1.2 --outputFolder=/Users/thomas/dev/prestashop/devdocs-site/src/content/8/modules/concepts/hooks/list-of-hooks
  * 
  * it will: 
  *  - unzip the release
@@ -17,11 +20,30 @@
 $options = getOpt('', [
     'source:', 
     'versionCode:',
-    'outputFolder:'
+    'outputFolder:',
+    'sourceFolder:'
 ]);
 
-$codebasePath = (new ReleaseExtractor($options['source']))->getCodebasePath();
+if($options['sourceFolder'] !== false){
+    $codebasePath = $options['sourceFolder'];
+} else {
+    $codebasePath = (new ReleaseExtractor($options['source']))->getCodebasePath();
+}
+
 $hookList = (new HookFinder($codebasePath))->getHookList();
+
+// Example: Optional
+// update only hummingbird hooks
+$hookList = array_filter($hookList, function($array){
+    foreach($array as $a){
+        if(strpos($a["file"], "themes/hummingbird") !== false){
+            return true;
+        }
+    }
+    return false;
+});
+// end example
+
 $errors = (new HookFinderHandler($options['outputFolder'], $options['versionCode'], $hookList))->handle();
 
 echo "Errors on:\n"; 
@@ -45,7 +67,7 @@ class ReleaseExtractor
         $zip->open($this->releasePath);
         $zip->extractTo($this->temporaryFolderPath);
         $zip->close();
-    
+
     }
 
     private function extractCodebase()
@@ -68,7 +90,7 @@ class HookFinder
     private $skipDirs = ['var/cache', 'vendor'];
     private $regexList = [
         'legacy' => [
-            // bug on this one
+            // bug on this one, when matching: legacy, with arguments, mono or multiline
             '/Hook\:\:exec\((.*?)\'(.*?)\'\,(.*?)\[(.*?)\](\,\ (.*))?\)(\;|\,)/is', // legacy, with arguments, mono or multiline
             '/Hook\:\:exec\(\'(.*?)\'(.*?)?\)(\;|\,)/i', // legacy, no arguments, monoline,
             '/Hook\:\:exec\s*(\(([^(),]*)(?:(?:[^(),]+|,)|(?-2))*\))/is'
@@ -98,6 +120,7 @@ class HookFinder
         $count = 0;
 
         foreach($files as $file){
+
             $hooksInFile = [];
             $skipFile = false;
 
@@ -116,7 +139,14 @@ class HookFinder
                 foreach($this->regexList as $patternType => $patterns){
                     foreach($patterns as $pattern){                
                         $hooksInFile = $this->findHooksInFileRegex($file, $patternType, $pattern, $count);
-                        $hookList = array_merge($hookList, $hooksInFile);
+
+                        foreach($hooksInFile as $hook){
+                            $hookName = $hook["name"];
+                            if(!isset($hookList[$hookName])){
+                                $hookList[$hookName] = [];
+                            }
+                            $hookList[$hookName][] = $hook;
+                        }
                     }
                 }
             }
@@ -128,36 +158,36 @@ class HookFinder
     private function listAllFiles($dir) 
     {
         $array = array_diff(scandir($dir), array('.', '..'));
-       
+
         foreach ($array as &$item) {
             $item = $dir . $item;
         }
         unset($item);
-    
+
         foreach ($array as $item) {
             if (is_dir($item)) {
                 $array = array_merge($array, $this->listAllFiles($item . DIRECTORY_SEPARATOR));
             }
         }
-        
+
         return $array;
     }
 
     private function findHooksInFileRegex($file, $patternType, $pattern, &$count)
     {
         $content = file_get_contents($file);
-    
+
         preg_match_all(
             $pattern, 
             $content, 
             $result, 
             PREG_PATTERN_ORDER
         );
-        
+
         $hooksInFile = [];
-    
+
         $fileName = str_replace($this->codebasePath, '', $file);
-    
+
         if(!empty($result[0])){ 
             for($i = 0; $i < sizeof($result[0]); $i++){
                 if(isset($result[2][$i]) && ($patternType == 'legacy' || $patternType == 'symfony')){
@@ -167,7 +197,7 @@ class HookFinder
                 }
                 $fullCall = $result[0][$i];
                 $count++;
-                $hooksInFile[$hookName][] = [
+                $hooksInFile[] = [
                     'name' => $hookName, 
                     'file' => $fileName, 
                     'fullCall' => $fullCall,
@@ -212,8 +242,8 @@ class HookFinder
             'actionAfterCreate--Containercamelize',
             'actionBeforeAjaxDie--controller--method',
             'actionAjaxDie--controller--method--Before',
-            'action--this-camelize',
-            'action--Containercamelize'
+            'action--this-camelize', // issue on this one, must fix regex
+            'action--Containercamelize' // issue on this one, must fix regex
         ], [
             '<ClassName><Action>',
             '<ClassName>',
@@ -240,9 +270,9 @@ class HookFinder
             'actionAjaxDie<Controller><Method>Before',
             'action<FormName>FormDataProviderDefaultData',
             'action<DefinitionId>GridPresenterModifier'
-    
+
         ], $hookName);
-    
+
         return $hookName;
     }
 
@@ -309,7 +339,7 @@ class HookFinderHandler
     public function handle()
     {
         foreach($this->hookList as $hookSlug => $hookArray){
-    
+
             $hookName = $hookArray[0]['name'];
 
             if(in_array($hookName, $this->skipHooks)){
@@ -333,7 +363,7 @@ class HookFinderHandler
 
                 if($firstFolder == 'themes'){
                     $origin = 'theme';
-                    
+
                     $fileOutput = [
                         'theme' => $themeOrModuleName,
                         'url' => 'https://github.com/PrestaShop/' . $themeOrModuleName . '-theme/blob/develop/' . $trailingParts,
@@ -341,7 +371,7 @@ class HookFinderHandler
                     ];
                 } else if($firstFolder == 'modules'){
                     $origin = 'module';
- 
+
                     $fileOutput = [
                         'module' => $themeOrModuleName,
                         'url' => 'https://github.com/PrestaShop/' . $themeOrModuleName . '/blob/dev/' . $trailingParts,
@@ -354,9 +384,9 @@ class HookFinderHandler
                     ];
                 }
 
-                $fileStr .= "\t-\n";
+                $fileStr .= "    -\n";
                 foreach($fileOutput as $k => $v){
-                    $fileStr .= "\t\t" . $k . ': ' . $v . "\n";
+                    $fileStr .= "      " . $k . ': ' . $v . "\n";
                 }
             }
 
@@ -367,13 +397,13 @@ class HookFinderHandler
                 )
             );
 
-            $typeStr = "\n  - " . $this->guessType($hookName);
+            $typeStr = $this->guessType($hookName);
 
-            $locationsStr = "\n  - " . implode("\n  - ", $this->guessLocations($hookName, $locatedIn));
+            $locationsStr = "\n    - " . implode("\n    - ", $this->guessLocations($hookName, $locatedIn));
 
             $aliasesStr = '';
             if(array_key_exists($hookName, $this->hookAliases)){
-                $aliasesStr = "\n - " . implode("\n - ", $this->hookAliases[$hookName]);
+                $aliasesStr = "\n    - " . implode("\n    - ", $this->hookAliases[$hookName]);
             }
 
             $referenceTitle = isset($this->hookDescriptions[$hookName]) ? $this->hookDescriptions[$hookName]['title'] : $hookName;
@@ -384,15 +414,16 @@ class HookFinderHandler
 Title: {$hookName}
 hidden: true
 hookTitle: {$referenceTitle}
-description: {$description}
-origin: {$origin}
-files: {$fileStr}
-locations: {$locationsStr}
+files:{$fileStr}
+locations:{$locationsStr}
 type: {$typeStr}
-hookAliases: {$aliasesStr} 
-array_return: 
-check_exceptions: 
-chain: 
+hookAliases:{$aliasesStr} 
+origin: {$origin}
+array_return: false
+check_exceptions: false
+chain: false
+description: {$description}
+
 ---
 EOF;
 
@@ -411,15 +442,11 @@ EOF;
                     $fullCall = $hookArray[0]['fullCall'];
                     $content = <<<EOF
 $content
-
 {{% hookDescriptor %}}
-
 ## Call of the Hook in the origin file
-
 ```php
 {$fullCall}
 ```
-
 EOF;
                     file_put_contents($this->outputFolder . '/' . $hookSlug . '.md', $content);
                 }
@@ -432,39 +459,39 @@ EOF;
     private function guessLocations($hookName, $locatedIn)
     {
         $types = [];
-        
+
         if(false !== strpos($hookName, "Admin")){
-            $types[] = "backoffice";
+            $types[] = "back office";
         }
-    
+
         if(false !== strpos($hookName, "actionObject")){
-            $types[] = "backoffice";
-            $types[] = "frontoffice";
+            $types[] = "back office";
+            $types[] = "front office";
         }
-    
+
         foreach($locatedIn as $file){
             if(false !== strpos($file, "Admin")){
-                $types[] = "backoffice";
+                $types[] = "back office";
             }
         }
-    
+
         if(empty($types)){
-            $types[] = "frontoffice";
+            $types[] = "front office";
         }
-    
+
         return array_unique($types);
     }
-    
+
     private function guessType($hookName)
     {
         if(false !== strpos($hookName, "ction")){
             return "action";
         }
-    
+
         if(false !== strpos($hookName, "isplay")){
             return "display";
         }
-    
+
         return "";
     }
 }
