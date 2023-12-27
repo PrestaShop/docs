@@ -21,11 +21,11 @@ files:
       file: themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription-column.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription-column.tpl
       file: themes/hummingbird/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription-column.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
       file: themes/hummingbird/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl
 
 locations:

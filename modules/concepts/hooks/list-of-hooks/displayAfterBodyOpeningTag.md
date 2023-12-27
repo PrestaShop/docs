@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/layouts/layout-both-columns.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/layouts/layout-both-columns.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/layouts/layout-both-columns.tpl
       file: themes/hummingbird/templates/layouts/layout-both-columns.tpl
 
 locations:

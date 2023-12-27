@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/customer/_partials/block-address.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/customer/_partials/block-address.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/customer/_partials/block-address.tpl
       file: themes/hummingbird/templates/customer/_partials/block-address.tpl
 
 locations:

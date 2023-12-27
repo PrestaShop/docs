@@ -9,7 +9,7 @@ files:
       file: themes/classic/templates/checkout/_partials/steps/payment.tpl
     -
       theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/steps/payment.tpl
       file: themes/hummingbird/templates/checkout/_partials/steps/payment.tpl
 
 locations:
