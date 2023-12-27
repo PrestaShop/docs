@@ -1,21 +1,26 @@
 ---
 Title: displayProductListReviews
 hidden: true
-hookTitle: 
+hookTitle: displayProductListReviews
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl'
-        file: 'Classic Theme: templates/catalog/_partials/miniatures/product.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      file: themes/classic/templates/catalog/_partials/miniatures/product.tpl
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      file: themes/hummingbird/templates/catalog/_partials/miniatures/product.tpl
+
 locations:
-    - 'front office'
+    - front office
 type: display
 hookAliases: 
 origin: theme
 array_return: false
 check_exceptions: false
 chain: false
-description: ''
+description: 
 
 ---
 

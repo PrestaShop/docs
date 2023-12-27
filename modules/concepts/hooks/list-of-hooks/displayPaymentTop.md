@@ -1,22 +1,27 @@
 ---
 Title: displayPaymentTop
 hidden: true
-hookTitle: 'Top of payment page'
+hookTitle: Top of payment page
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl'
-        file: 'Classic Theme: templates/checkout/_partials/steps/payment.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl
+      file: themes/classic/templates/checkout/_partials/steps/payment.tpl
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird-theme/blob/develop/templates/checkout/_partials/steps/payment.tpl
+      file: themes/hummingbird/templates/checkout/_partials/steps/payment.tpl
+
 locations:
-    - 'front office'
+    - front office
 type: display
 hookAliases:
-    - paymentTop
+    - paymentTop 
 origin: theme
 array_return: false
 check_exceptions: false
 chain: false
-description: 'This hook is displayed at the top of the payment page'
+description: This hook is displayed at the top of the payment page
 
 ---
 
