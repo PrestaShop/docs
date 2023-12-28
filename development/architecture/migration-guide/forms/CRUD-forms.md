@@ -5,6 +5,18 @@ weight: 20
 
 # CRUD Forms
 
+{{% notice tip %}}
+If you are looking to customize an identifiable object with a module, please have a look at [Grid and identifiable object form hooks usage example]({{<relref "/8/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage">}}).
+{{% /notice %}}
+
+{{% notice tip %}}
+If you are looking for the Form component documentation, please have a look at [Forms with Symfony]({{<relref "/8/development/components/form">}}).
+{{% /notice %}}
+
+{{% notice tip %}}
+This guide is intended for core developers and contributors who want to understand how PrestaShop handles forms in the core.
+{{% /notice %}}
+
 ## Introduction
 
 In computer programming, _CRUD_ is an acronym for the four basic functions of persistent storage: **create, read, update, and delete**.
