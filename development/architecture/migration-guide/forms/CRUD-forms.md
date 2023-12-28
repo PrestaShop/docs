@@ -14,7 +14,7 @@ If you are looking for the Form component documentation, please have a look at [
 {{% /notice %}}
 
 {{% notice tip %}}
-This guide is intented for core developers looking to understand how PrestaShop now handles Forms in the core.
+This guide is intended for core developers and contributors who want to understand how PrestaShop handles forms in the core.
 {{% /notice %}}
 
 ## Introduction
