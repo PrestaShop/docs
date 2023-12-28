@@ -26,7 +26,9 @@ server {
     server_name example.com www.example.com;
 
     # [EDIT] Path to your domain Nginx logs.
+    # more details: https://docs.nginx.com/nginx/admin-guide/monitoring/logging/#setting-up-the-access-log
     access_log /var/log/nginx/example.com-access.log combined;
+    # more details: https://nginx.org/en/docs/ngx_core_module.html?#error_log
     error_log /var/log/nginx/example.com-error.log info;
 
     # [EDIT] Path to your SSL certificates (take a look at Certbot https://certbot.eff.org).
