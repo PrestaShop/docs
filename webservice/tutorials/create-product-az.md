@@ -438,7 +438,7 @@ When creating or updating a `Product`, fill the `associations > product_features
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
     <product>
         [...]
-	    <associations>
+	<associations>
             <product_features>
                 <product_feature>
                     <id><![CDATA[{{id_feature}}]]></id>
