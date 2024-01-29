@@ -201,7 +201,7 @@ public $ssl = true;
   * **__construct()**: Sets all the controller’s member variables.
   * **init()**: Initializes the controller.
   * **setMedia()** or **setMobileMedia()**: Adds all JavaScript and CSS specifics to the page so that they can be combined, compressed and cached (see PrestaShop’s CCC tool, in the back office “Performance” page, under # the “Advanced preferences” menu).
-  * **postProcess()**: Process input, handles ajaxProcess.
+  * **postProcess()**: Processes input (e.g. handles ajaxProcess).
   * **initHeader()**: Called before initContent().
   * **initContent()**: Initializes the content.
   * **initFooter()**: Called after initContent().
