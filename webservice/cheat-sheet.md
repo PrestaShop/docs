@@ -29,7 +29,7 @@ All these options can be added to your queries as query parameters (either `GET`
 |-------------------|---------------------------------------|----------------------------------------------------------------------------------------|
 | `display`         |                                       |                                                                                        |
 | **display**       | `[field1,field2 …]`                   | Only display fields in brackets                                                        |
-| **display**       | `full`                                | Display all fields                                                                     |
+| **display**       | `full`                                | Display all fields Aryan                                                                    |
 | `filter`          |                                       |                                                                                        |
 | **filter[field]** | {{< code >}}[1|5]{{< /code >}}        | `OR` operator: list of possible values                                                 |
 | **filter[field]** | `[1,10]`                              | `Interval` operator: define interval of possible values                                |
