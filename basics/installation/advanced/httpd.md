@@ -30,7 +30,7 @@ It may be incomplete, and remember you must adapt it for your own server's needs
     <Directory /path/to/prestashop>
         # enable the .htaccess rewrites
         AllowOverride All
-        Options +Indexes
+        Options -Indexes
         Require all granted
         
         # Disable back office token
