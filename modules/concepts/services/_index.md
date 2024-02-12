@@ -255,7 +255,7 @@ If however no interface was used here, you probably need to `extend` the previou
 
 As you can see, interfaces lay the ground for easy extension and customization, that is why we use them more and more in the Core codebase and we recommend you use them as well !
 
-#### Advanced services parameters (_instanceof or interface binding, manual tags) {{< minver v=8.1 >}}
+#### Advanced services parameters (_instanceof or interface binding, manual tags)
 
 Since {{< minver v=8.1 >}}, [modules autoloaders and service configurations loading are now registered before compiler passes](https://github.com/PrestaShop/PrestaShop/pull/30588). That means that you can now use native Symfony service configuration features in your modules. 
 
