@@ -66,7 +66,7 @@ class MyModuleRewardCustomerWhenOrder extends Module
     {
         $orderObject = $params['order'];
         $customerObject = $params['customer'];
-        $hasValidParams = Validate::isLoadedObject($orderObject) && Validate::isLoadedObject($orderObject);
+        $hasValidParams = Validate::isLoadedObject($orderObject) && Validate::isLoadedObject($customerObject);
         if ($hasValidParams && !$this->customerAlreadyRewarded((int) $customerObject->id)) {
             $hasConfiguredState = in_array((int) $orderObject->getCurrentState(), $this->getConfuredOrdersStatesIds());
             $hasCustomerRequiredNbrOfTheOrderToReward = $this->getCustomerValidOrdersNbr((int) $customerObject->id) == $this->getRequiredNbrOfTheOrderToReward();
