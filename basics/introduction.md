@@ -35,7 +35,7 @@ You can learn PHP here:
 You can learn Object-Oriented programming here:
 
 * [Object-oriented programming on Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming)
-* [Object oriented php for beginners](https://net.tutsplus.com/tutorials/php/object-oriented-php-for-beginners/)
+* [Object oriented php for beginners on Tuts+](https://net.tutsplus.com/tutorials/php/object-oriented-php-for-beginners/)
 
 A module is an extension to PrestaShop that enables any developer to add the following:
 
