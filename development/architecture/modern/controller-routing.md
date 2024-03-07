@@ -191,7 +191,7 @@ Routes are responsible for mapping a controller action to an url, you can read m
 PrestaShop uses YAML files for service declaration and routing (NOT ANNOTATIONS).
 {{% /notice %}}
 
-Routes are declared in `src/PrestaShopBundle/Resources/config/routing/admin` folder, following the menu organization.
+Routes are declared in `src/PrestaShopBundle/Resources/config/routing` folder, following the menu organization.
 
 The routing is organized as follows:
 
