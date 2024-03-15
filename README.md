@@ -34,6 +34,10 @@ This referential can be generated with a script, crawling all:
 - all native modules
 - all native themes
 
+An example of such a script can be found in this repository, in: `hookExtractionScript.php`.
+
+Usage of this script: `php hookExtraction.php --source=prestashop-release.zip --versionCode=8.1.2 --outputFolder=modules/concepts/hooks/list-of-hooks`
+
 In the documentation, a hook is described in yaml format: 
 
 ```yaml
