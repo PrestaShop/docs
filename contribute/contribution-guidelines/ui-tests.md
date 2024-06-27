@@ -18,7 +18,8 @@ These UI tests simulate the behavior of a real user.
 
 Anyone can run the UI tests against a PR made on the Core repository using [this tool](https://github.com/PrestaShop/ga.tests.ui.pr/).
 
-As explained in the README of the tool, you need to first fork it then launch a test campaign by inputing the needed informations (PR number, target branch ...).
+As explained in the README of the tool, you need to first fork it then launch test campaigns by inputing the needed informations (PR number, target branch ...).  
+As we support MySQL and MariaDB in our UI tests, you have to launch 2 campaigns: the first one by selecting "mysql" in the database field, the second one by selecting "mariadb".
 
 The UI tests do evolve in time as new tests are added and existing tests are refactored and updated: please regularly update your forks or you might be running an outdated version of the tests against a PR.
 
