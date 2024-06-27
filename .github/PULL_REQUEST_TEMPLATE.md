@@ -9,7 +9,7 @@ https://devdocs.prestashop-project.org/8/contribute/documentation/how/
 
 | Questions     | Answers
 | ------------- | -------------------------------------------------------
-| Branch?       | 1.7.x / 8.x
+| Branch?       | 1.7.x / 8.x / 9.x
 | Description?  | Please be specific when describing the PR. What did you add, why did you submit it?
 | Fixed ticket? | Fixes #{issue number here} if there is a related issue
 
