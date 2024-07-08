@@ -55,7 +55,7 @@ This directory is named `admin-dev` when using PrestaShop from source code, and 
 
 It contains the following subdirectories:
 
-- `/autoupgrade`: scratch directory for the 1-click upgrade module
+- `/autoupgrade`: scratch directory for the Update assistant module
 - `/backups`: contains database backups generated from the Back office
 - `/export`: contains data export files
 - `/filemanager`: sources for the Back office file manager 

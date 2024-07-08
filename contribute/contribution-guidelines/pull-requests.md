@@ -132,7 +132,7 @@ If no issue is linked to your Pull Request, maintainers might ask you to create 
 
 This field should contain links to related PRs in other repositories.
 
-If your Pull Request modifies database structure or adds new configuration fields, you should also provide a PR for [autoupgrade module](https://github.com/PrestaShop/autoupgrade).
+If your Pull Request modifies database structure or adds new configuration fields, you should also provide a PR for [Update assistant module](https://github.com/PrestaShop/autoupgrade).
 
 If your Pull Request needs a theme change to work, you should provide [hummingbird](https://github.com/PrestaShop/hummingbird) and [classic-theme](https://github.com/PrestaShop/classic-theme) PR.
 
