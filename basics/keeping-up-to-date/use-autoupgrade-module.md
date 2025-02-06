@@ -1,12 +1,12 @@
 ---
 menuTitle: Use the Upgrade Assistant
-title: How to use the Upgrade Assistant
+title: How to use the Update Assistant
 weight: 40
 ---
 
-# How to upgrade PrestaShop using the Upgrade Assistant
+# How to upgrade PrestaShop using the Update Assistant
 
-Also known as the "Autoupgrade module" or the "1-click upgrade module", PrestaShop upgrade assistant aims to automatize the upgrade process.
+Also known as the "Autoupgrade module" or the "1-click upgrade module", PrestaShop Update assistant aims to automatize the upgrade process.
 
 It is available from your shop administration panel. It executes the [upgrade process]({{< ref "/1.7/basics/keeping-up-to-date/upgrade.md" >}}) automatically, and is available for almost all versions of PrestaShop.
 

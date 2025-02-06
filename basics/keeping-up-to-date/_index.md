@@ -10,89 +10,101 @@ aliases:
 
 ## Introduction
 
-The purpose of this chapter is to provide the best practices and tips for keeping your PrestaShop up-to-date. Its compatibility range should cover at least shops running on versions 1.6 & 1.7 of PrestaShop.
+This section provides best practices and tips for maintaining your PrestaShop store with the latest updates. Here, we explore various methods to keep your store current and secure.
 
-Keeping a shop updated to the latest available version ensures you have the latest changes brought by the core team and the developer community.
-Depending on the version you upgrade to, you can get new features, security or performance improvements, or simply bug fixes.
+## Why keeping your PrestaShop store up-to-date ?
 
-Furthermore, the support of PrestaShop 1.6 [is now ended](https://www.prestashop.com/en/blog/maintenance-extension-prestashop-1-6). We advise you to use the 1.7 versions to get support, along with core and modules upgrades.
+Regularly updating your store to the latest available version ensures that you benefit from the newest features and improvements from the core team and the developer community. Depending on the version you choose, updates bring a variety of advantages:
 
-## Upgrade and migration, two different processes
+- **New Features:** Access the latest features and enhancements for an improved experience.
+- **Design & UX Improvements:** Enjoy updated themes and modernized user interfaces.
+- **Security Enhancements:** Protect your store with the latest security patches and performance updates.
+- **Technical Compatibility:** Ensure compatibility with the latest technologies and updates.
+- **Ecosystem Growth:** Take advantage of new modules, themes, and their ongoing updates.
+- **Stability & Reliability:** Benefit from bug fixes and patches that enhance the stability of your store.
+- **Official Support:** Stay within the scope of officially supported PrestaShop versions and services.
 
-Keeping PrestaShop up-to-date can be done via different methods. Choose the best update method depending on your needs.
+## Update vs Migration: two distinct processes
 
-### In-place Upgrade
+Keeping PrestaShop up-to-date can be achieved through different methods. Choose the most suitable update process based on your specific needs.
+
+### Updating PrestaShop
 
 ![Upgrade schema](img/upgrade-schema.png)
 
-Upgrading a shop is the recommended method when you want to get your shop up-to-date without switching to the next major version.
-
-It does not require any additional tools to run if you follow the manual process, the most recent release package will be enough.
+Updating your store is the recommended approach when you want to stay up to date without switching to the next major version.
 
 #### Impact on existing data
 
-As long as you stay on the same major version (ex. 1.6.0 >> 1.6.1 or 1.7.1 >> 1.7.2 upgrade), we make sure that the available features remain the same.
-This means that your current theme and all your modules should continue to work as before, and no functionality or data will be lost during the upgrade, even if the database structure may change.
+As long as you remain within the same major version (e.g., 8.0 → 8.1, 9.0 → 9.1), PrestaShop ensures that all existing features remain intact. This means:
 
-This can be explained by the [semantic versioning](https://semver.org/) we follow, that forbids any compatibility-breaking change in the core, such as removing a feature or modifying our APIs.
+- Your current theme and modules will continue to function as expected.
+- No data or functionalities will be lost, even if database structures are modified.
 
-Note that once an upgrade has started, there is no way to rollback the changes. The only solution you have is restoring the backup you made before.
+This stability is guaranteed by the <a href="https://semver.org/" target="_blank">semantic versioning</a> system we follow, which prevents any compatibility-breaking changes in minor and patch updates. Core features, APIs, and functionality remain unchanged outside of major releases.
 
-#### Process summary
+#### Update process overview
 
-- Prepare your upgrade by getting the latest release zip file, unpacking it and removing its demo content.
-- Apply the new files by copy-pasting them in the production folder.
-- Run the database upgrade.
-This could be enough for completing an upgrade, but additional tasks like cleanup and modules upgrade will bring you stability and security.
+1. **Download** the Update Assistant module, designed specifically for PrestaShop updates.
+2. **Run the update** via the module’s web interface or using the Command-Line Interface (CLI).
+3. **Enjoy your updated store** with the latest improvements and fixes.
+
+For a detailed step-by-step guide, refer to the official documentation for the [Update Assistant module][1].
 
 
-### Migration
+### Migrating PrestaShop
 
 ![Migration schema](img/migration-schema.png)
 
-Upgrading is not the only way to update your shop to the latest version of PrestaShop. In some cases, migrating your data is a better option.
+Updating isn’t the only way to bring your store to the latest version of PrestaShop. In some cases, migrating your data is a better option.
 
-This option is recommended when you switch on a new major version. As it brings a lot of changes in the core with many potential incompatibilities with the current theme and modules, starting fresh is less risky for stability.
+Migration is recommended when switching to a new major version. Since major updates introduce significant core changes and potential incompatibilities with your current theme and modules, starting fresh ensures greater stability and reduces risks.
 
-_“Migrating” means moving your current shop to a new shop which is already running on the latest version in parallel._
+> Migration means transferring your existing store’s data to a newly installed store running the latest version.
 
-It implies creating a new shop and transferring your existing data (like products, customers, orders...) into it, and disable your old shop afterwards.
+This process involves:
 
-The main advantage of this option is it does not require the shop in production to be in maintenance mode. As long as you feel your new shop is not ready, you can keep the previous one running for your customers.
+- Setting up a new store.
+- Transferring essential data (products, customers, orders, etc.).
+- Deactivating the old store once the migration is complete.
 
-#### Impact on existing data
+#### Impact of migration on existing data
 
-The impact on the existing data is very different from an upgrade, as it depends on what you transfer to the new shop.
+Unlike an update, migration does not retain all data automatically. Some elements may need to be manually recreated or adapted:
 
-When switching to another major version (i.e 1.6.x >> 1.7.x), this will imply that some resources will be lost:
+- **Permissions**
 
-* **Permissions**
+PrestaShop’s permission system has been redesigned with Symfony. Instead of migrating user roles, it is recommended to manually recreate employee accounts, access groups, and permissions in the new store.
 
-On PrestaShop, the whole permissions system has been reworked to fit with Symfony. We recommend to recreate your employees, access groups and their permissions instead of migrating them.
+- **Theme**
 
-* **Theme**
+If you are updating from PrestaShop 1.6, your theme will not be compatible with 1.7 and later versions. The theme system, controllers, and data structures have changed significantly. You will need to install a compatible theme for the new version.
 
-The theme system has been overhauled in 1.7, so 1.6 themes won't work anymore.
-The controllers have changed, and the data shared between them and the views has also evolved.
+- **Modules Compatibility**
 
-* Modules not compatible with the new version
+While some modules are resilient to PrestaShop updates, others may be incompatible when switching to a new major version.
 
-Modules can be more resilient to PrestaShop new releases, but some incompatibilities may occur when using another major version.
-For modules downloaded from the marketplace, you can check their compatibility range.
-For home-made modules, contact your developer to check its compatibility, but as a general rule consider them incompatible until proven otherwise.
+-&nbsp;For marketplace modules, check the compatibility range before reinstalling them.
 
-Each module reinstalled on the new shop will need to be reconfigured.
+-&nbsp;For custom-built modules, consult your developer to verify compatibility. As a rule of thumb, assume modules are incompatible until proven otherwise.
 
-### Process details
+All reinstalled modules must be manually reconfigured on the new store.
 
-A migration consists in:
+#### Migration process overview
 
-1. Setting up a new shop running on the latest version
-2. Getting the production content from old shop
-3. Modifying the content for compatibility requirements, necessary data update
-4. Importing the data in the new shop
+A successful migration follows these steps:
+
+1. **Set up** a new store running the latest PrestaShop version.
+2. **Extract** production data from the old store.
+3. **Adapt** the data to meet compatibility requirements.
+4. **Import** the data into the new store.
+
+For a detailed step-by-step guide, refer to the Migration Documentation (link to migration page).
 
 ## Read more
 
-{{% children /%}}
+- {{< page-link "1.7/basics/keeping-up-to-date/upgrade" >}}
+- {{< page-link "1.7/basics/keeping-up-to-date/backup" >}}
+- {{< page-link "1.7/basics/keeping-up-to-date/migration" >}}
 
+[1]: {{< relref "/1.7/basics/keeping-up-to-date/upgrade" >}}
