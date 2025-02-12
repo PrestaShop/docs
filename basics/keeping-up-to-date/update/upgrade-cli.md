@@ -2,7 +2,7 @@
 title: Upgrade CLI
 weight: 40
 aliases:
-  - /1.7/development/upgrade-module/upgrade-cli
+  - /1.7/development/update/upgrade-cli
 ---
 
 # Module CLI
