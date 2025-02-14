@@ -51,7 +51,6 @@ This stability is guaranteed by the <a href="https://semver.org/" target="_blank
 
 For a detailed step-by-step guide, refer to the official documentation for the [Update Assistant module][1].
 
-
 ### Migrating PrestaShop
 
 ![Migration schema](img/migration-schema.png)
@@ -99,12 +98,13 @@ A successful migration follows these steps:
 3. **Adapt** the data to meet compatibility requirements.
 4. **Import** the data into the new store.
 
-For a detailed step-by-step guide, refer to the Migration Documentation (link to migration page).
+For a detailed step-by-step guide, refer to the [Migration Documentation][2].
 
 ## Read more
 
-- {{< page-link "1.7/basics/keeping-up-to-date/upgrade" >}}
+- {{< page-link "1.7/basics/keeping-up-to-date/update" >}}
 - {{< page-link "1.7/basics/keeping-up-to-date/backup" >}}
 - {{< page-link "1.7/basics/keeping-up-to-date/migration" >}}
 
-[1]: {{< relref "/1.7/basics/keeping-up-to-date/upgrade" >}}
+[1]: {{< relref "/1.7/basics/keeping-up-to-date/update" >}}
+[2]: {{< relref "/1.7/basics/keeping-up-to-date/migration" >}}
