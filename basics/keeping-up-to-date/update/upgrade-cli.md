@@ -1,115 +1,421 @@
 ---
-title: Upgrade CLI
+title: Update from the CLI
 weight: 40
 aliases:
   - /1.7/development/update/upgrade-cli
 ---
 
-# Module CLI
+# Update from the Command-Line
 
-The Autoupgrade module is accessible via `cli`. Its advantages is to be used in conjunction with a CI/CD pipeline to automate your upgrade process. 
-It can be aswell used manually via regular `cli` to avoid regular configuration limits on Apache or Nginx (`php-cgi`, `php-fpm` limitations such as `memory_limit`, `max_execution_time`, ...). 
+The Update Assistant module is available through the Command-Line Interface (CLI). Its main advantage is its ability to
+integrate seamlessly with a CI/CD pipeline, enabling the automation of update, backup, and restore processes.
+Additionally, it can be executed manually through the CLI to bypass common configuration constraints on Apache or Nginx,
+such as `php-cgi` and `php-fpm` limitations (e.g., `memory_limit`, `max_execution_time`, etc.).
 
-## Upgrade CLI
+## Introduction to the Update Assistant CLI
 
-Upgrade module can be used as a Command Line Interface.
+The CLI interface is a unified tool that provides a consistent interface for interacting with all Update Assistant
+module services.
 
-### Command line parameters
+To use this CLI, the Update Assistant module must be present in the `/modules` folder on your PrestaShop store server.
+It is not necessary to have installed the module in order to use the associated CLI.
 
-Entry point is *cli-upgrade.php* from the module's directory.
-The following parameters are mandatory:
+The CLI of the Update Assistant module is based on the Symfony console, and therefore follows the main principles of
+this technology.
 
-* **--dir**: Specify the admin directory name
+Below you'll find the Update Assistant CLI user guide, with descriptions, syntax and examples of use.
 
-You can also use these parameters:
+## Generic commands
 
-* **--channel**: Specify the channel to use
-* **--action**: Specify the step you want to start from
+The `bin/console` file acts as the entry point to the Update Assistant Command-Line interface. When run without any
+parameters, it displays the available commands and associated general options.
 
-If you use default `action` parameter, it will run the full upgrade process.
+Example of `bin/console` command execution:
 
-Example:
+```shell
+$ php bin/console 
 
+Usage:
+	command [options] [arguments]
+	
+Options:
+	-h, --help                            Display this help message
+	-q, --quiet                           Do not output any message
+	-V, --version                         Display this application version
+			--ansi                            Force ANSI output
+			--no-ansi                         Disable ANSI output
+	-n, --no-interaction                  Do not ask any interactive question
+	-v|vv|vvv, --verbose                  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+	help                                  Displays help for a command
+	list                                  List commands
+backup
+	backup:create                         Create backup.
+	backup:list                           List existing backups.
+	backup:restore                        Restore your store.
+	backup:delete                         Remove a backup not anymore needed.
+update
+	update:check-new-version              Display the version the shop can update to.
+	update:check-requirements             Check all prerequisites for an update.
+	update:start                          Update your store.
 ```
-$ php modules/autoupgrade/cli-upgrade.php --dir=admin-dev --channel=major
+
+### List command
+
+This command lists the Update Assistant CLI commands.
+
+Example of list command execution:
+
+```shell
+$ php bin/console list
+
+Available commands:
+	help                                  Displays help for a command
+	list                                  List commands
+backup
+	backup:create                         Create backup.
+	backup:list                           List existing backups.
+	backup:restore                        Restore your store.
+	backup:delete                         Remove a backup not anymore needed.
+update
+	update:check-new-version              Display the version the shop can update to.
+	update:check-requirements             Check all prerequisites for an update.
+	update:start                          Update your store.
 ```
 
-## Rollback CLI
+### Help command
 
-{{% notice warning %}}
-**Important**
+This command allows you to access the documentation for a particular option. The help command is one of the Symfony
+Console component's built-in global options, and is therefore available for all the Update Assistant CLI commands.
 
-It is not recommended to use this option. It's always better to manager your backup manually.
-{{% /notice %}} 
+Example of help command execution:
 
-If an error occurs during the upgrade process, the rollback will be suggested.
-In case you lost the page from your backoffice, note it can be triggered via CLI.
-
-### Command line parameters
-
-Entry point is *cli-rollback.php*.
-The following parameters are mandatory:
-
-* **--dir**: Specify the admin directory name
-* **--backup**: Specify the backup name to restore (this can be found in your folder `<admin directory>/autoupgrade/backup/`)
-
-Example:
-
-```
-$ php modules/autoupgrade/cli-rollback.php --dir=admin-dev --backup=V1.7.5.1_20190502-191341-22e883bd
+```shell
+$ php bin/console backup:list help [command]
 ```
 
-## Full example
+### Command-Line logs download
 
-To upgrade your PrestaShop store to the latest version using the command line interface, follow the steps outlined below. Make sure to execute all commands from the root directory of your PrestaShop installation and replace `admin-dev` with the name of your back office directory.
+You can download backup, update and restore logs to keep track of any changes you made. These logs in
+`yyyy-dd-mm-hhmmss-process.txt` format are available in the following folder on your PrestaShop store server:
+`/your-admin-directory/autoupgrade/logs`. These CLI logs contain the date and time that correspond to the time zone
+configured on your store server.
 
-### Step 1: Uninstall and remove the old autoupgrade module
+## Backup and Restore commands
 
-1. Uninstall the old AutoUpgrade module:
+The Update Assistant CLI includes 4 commands dedicated to backup management:
 
-`php bin/console prestashop:module uninstall autoupgrade`
+- `backup:create`
+- `backup:list`
+- `backup:restore`
+- `backup:delete`
 
-2. Remove the old module's directory:
+### backup:create command
 
-`rm -rf modules/autoupgrade`
+The `backup:create` command is used to create a backup of your PrestaShop store. These backup files are stored in the
+`/your-admin-directory/autoupgrade/backup` folder on your server.
 
-### Step 2: Install the new autoupgrade module
+```shell
+$ php bin/console backup:create help
 
-1. Download the latest version of the autoupgrade module and place it in the /modules directory:
+backup:create: create a PrestaShop store backup
 
-`curl -L  https://github.com/PrestaShop/autoupgrade/releases/latest/download/autoupgrade.zip -o modules/autoupgrade.zip && cd modules && unzip autoupgrade.zip && cd -`
+Usage: backup:create [ADMIN_DIR] 
+with [ADMIN_DIR] the PrestaShop admin directory
+--from-config-file=[config-path]: the update config file path
+--include-images=[1|0]: include, or not, images in the store backup (1 for yes, 0 for no)
+--verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
+--quiet: disables output and interaction
+--no-interaction: disables interaction
+--version: displays the application version
+--help: displays the command help
+--ansi|--no-ansi: whether to force of disable coloring the output
+```
 
-2. Install the new version of the autoupgrade module:
+The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
 
-`php bin/console prestashop:module install autoupgrade`
+The optional `--include-images=[1|0]` option allows you to include, or not, the image backup during the backup process.
+By
+default, if the option is not set, images are included in the backup.
 
-### Step 3: Download the latest PrestaShop files
+The optional `--from-config-file=[config-path]` option allows you to use the backup options specified in the
+configuration
+file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
 
-1. Download the latest version of PrestaShop (.zip and .xml files):
+Example of `backup:create` command execution:
 
-`curl -L https://github.com/PrestaShop/PrestaShop/releases/download/8.0.2/prestashop_8.0.2.zip -o admin-dev/autoupgrade/download/prestashop.zip`
-`curl -L https://github.com/PrestaShop/PrestaShop/releases/download/8.0.2/prestashop_8.0.2.xml -o admin-dev/autoupgrade/download/prestashop.xml`
+```shell
+$ php bin/console backup:create admin123 --include-images=1
+Your files, database, and images will be backed up.
+Starting backup...
+```
 
-### Step 4: Configure the autoupgrade module
+### backup:list command
 
-1. Create a configuration file for the AutoUpgrade module to use the local archive. Adjust the settings as needed:
+The `backup:list` command lists the backups available for your PrestaShop store.
 
-`echo "{\"channel\":\"archive\",\"archive_prestashop\":\"prestashop.zip\",\"archive_num\":\"8.0.2\", \"archive_xml\":\"prestashop.xml\", \"PS_AUTOUP_CHANGE_DEFAULT_THEME\":0, \"skip_backup\": 1}" > modules/autoupgrade/config.json`
+```shell
+$ php bin/console backup:list help
 
+backup:list: list all available backups for the store
 
-2. Apply the configuration to the `autoupgrade` module:
+Usage: backup:list [ADMIN_DIR] 
+with [ADMIN_DIR] the PrestaShop admin directory
+--verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
+--quiet: disables output and interaction
+--no-interaction: disables interaction
+--version: displays the application version
+--help: displays the command help
+--ansi|--no-ansi: whether to force of disable coloring the output
+```
 
-`php modules/autoupgrade/cli-updateconfig.php --from=modules/autoupgrade/config.json --dir=admin-dev`
+The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
 
-### Step 5: Start the Upgrade Process
+Example of the `backup:list` command execution:
 
+```shell
+$ php bin/console backup:list admin123
+------------------+---------------+-----------------------------------------+
+| Date            | Version       | File name                               |
++-----------------+---------------+-----------------------------------------+
+| 15/07/2024 8:00 | 8.1.6         | autoupgrade_save_8.1.6_15/07/2024_8:00  |
+| 14/07/2024 8:00 | 8.1.5         | autoupgrade_save_8.1.5_14/07/2024_8:00  |
+```
 
-1. Initiate the upgrade process:
+### backup:restore command
 
-`php modules/autoupgrade/cli-upgrade.php --dir=admin-dev`
+The `backup:restore` command is used to restore your PrestaShop store from backup files in the
+`/your-admin-directory/autoupgrade/backup` folder on your server.
 
-The upgrade process is divided into multiple parts by default. To automate the entire process, use the `testCliProcess.php` script, which runs all the steps automatically:
+```shell
+$ php bin/console backup:restore help
 
-`php modules/autoupgrade/tests/testCliProcess.php modules/autoupgrade/cli-upgrade.php --dir=admin-dev`
+backup:restore: restore the store to a previous state from a backup file
 
-By following these steps, your PrestaShop store should be successfully upgraded to the latest version.
+Usage: backup:restore [ADMIN_DIR][BACKUP_NAME]
+with [ADMIN_DIR][BACKUP_NAME] the PrestaShop admin directory and the name of the backup file you want to restore
+--verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
+--quiet: disables output and interaction
+--no-interaction: disables interaction
+--version: displays the application version
+--help: displays the command help
+--ansi|--no-ansi: whether to force of disable coloring the output
+```
+
+The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+
+The `[BACKUP_NAME]` argument is intended to target the backup file (file_name) to be used for the store restore.
+
+Example of `backup:restore` command execution:
+
+```shell
+$ php bin/console backup:restore admin123 autoupgrade_save_8.1.6_15/07/2024_8:00
+The restoration of your store is complete
+```
+
+This command also supports the “interactive mode”, which provides you with a contextual action, such as:
+
+```shell
+$ php bin/console backup:restore admin123
+Please select your backup:
+	[0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
+	[1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
+	[2] Exit the process
+```
+
+### backup:delete command
+
+The `backup:delete` command is used to delete a backup file from your PrestaShop store.
+
+```shell
+$ php bin/console backup:delete help
+
+backup:delete: delete a store backup file
+
+Usage: backup:delete [ADMIN_DIR] [BACKUP_NAME]
+with [ADMIN_DIR] [BACKUP_NAME] the PrestaShop admin directory and the name of the backup file you want to delete
+--verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
+--quiet: disables output and interaction
+--no-interaction: disables interaction
+--version: displays the application version
+--help: displays the command help
+--ansi|--no-ansi: whether to force of disable coloring the output
+```
+
+The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+
+The `[BACKUP_NAME]` argument is intended to target the backup file (file_name) to be deleted.
+
+Example of `backup:delete` command execution:
+
+```shell
+$ php bin/console backup:delete admin123 autoupgrade_save_8.1.6_15/07/2024_8:00
+The backup file has been successfully deleted
+```
+
+This command also supports the “interactive mode”, which provides you with a contextual action, such as:
+
+```shell
+$ php bin/console backup:delete admin123
+Please select your backup:
+	[0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
+	[1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
+	[2] Exit the process
+```
+
+## Update commands
+
+The Update Assistant CLI includes 3 commands dedicated to updates:
+
+- `update:check-new-version`
+- `update:check-requirements`
+- `update:start`
+
+### update:check-new-version command
+
+The `update:check-new-version` command is used to check whether new updates are available for your store.
+
+```shell
+$ php bin/console update:check-new-version help
+
+update:check-new-version: list PrestaShop updates available for the store
+
+Usage: update:check-new-version [ADMIN_DIR]
+with [ADMIN_DIR] the PrestaShop admin directory
+--verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
+--quiet: disables output and interaction
+--no-interaction: disables interaction
+--version: displays the application version
+--help: displays the command help
+--ansi|--no-ansi: whether to force of disable coloring the output
+```
+
+The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+
+Example of the `update:check-new-version` command execution:
+
+```shell
+$ php bin/console update:check-new-version admin123
+-----------+----------+-------+---------------------------------------------------------------------------+
+| Version  | Channel  | Type  | Information                                                               |
++----------+----------+-------+---------------------------------------------------------------------------+
+| 8.2.0    | online   | minor | https://build.prestashop-project.org/news/2024/prestashop-8-2-0-available/|
+| 9.0.0    | local    | major | Zip: 2024-10-17-develop-prestashop_9_0_0.zip                              |
+|          |          |       | Xml: prestashop_9.0.0.xml                                                 |
+| 8.1.0    | local    | patch | Zip: 8_1_0.zip                                                            |
+|          |          |       | Xml: 8.1.0-2.xml, 8.1.0.xml                                               |
+```
+
+- The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update
+  corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
+- The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download`
+  folder on your server.
+
+### update:check-requirements command
+
+The `update:check-requirements` command is used to check that your store meets the technical requirements before
+updating.
+
+```shell
+$ php bin/console update:check-requirements help
+
+update:check-requirements: check if the store is compatible with the update requirements.
+
+Usage: update:check-requirements [ADMIN_DIR]
+with [ADMIN_DIR] the PrestaShop admin directory
+--from-config-file=[config-path]: the update config file path
+--zip=[name]: sets the archive zip file for a local update
+--xml=[name]: sets the  archive xml file for a local update
+--verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
+--quiet: disables output and interaction
+--no-interaction: disables interaction
+--version: displays the application version
+--help: displays the command help
+--ansi|--no-ansi: whether to force of disable coloring the output
+```
+
+The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+
+The `--from-config-file=[config-path]` option is used to check prerequisites based on information provided in the
+configuration file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]`
+file.
+
+The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used to check
+prerequisites from the “local” source. The “local” update, which displays customized updates detected in your
+`/your-admin-directory/autoupgrade/download` folder on your server.
+
+By default, if no option is set, the prerequisites will be checked from the “online” source. The official “online”
+update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most
+recent version of PrestaShop compatible with the PHP version of your server.
+
+Example of execution of the `update:check-requirements` command, if all prerequisites have been successfully met:
+
+```shell
+$ php bin/console update:check-requirements admin123
+Checking requirements...
+✓ The requirements check is complete, you can update your store to this version of PrestaShop.
+```
+
+Example of execution of the `update:check-requirements` command, if some prerequisites are not met:
+
+```shell
+$ php bin/console update:check-requirements admin123
+Checking requirements...
+X PHP\'s "Safe mode" needs to be disabled.
+X Maintenance mode needs to be enabled. Enable maintenance mode and add your maintenance IP in Shop parameters > General > Maintenance.
+⚠ Your current version of the module is out of date. Update now Modules > Module Manager > Updates
+```
+
+### update:start command
+
+The `update:start` command is used to update your PrestaShop store.
+
+```shell
+$ php bin/console update:start help
+
+update:start: launch a store update.
+
+Usage: update:start [ADMIN_DIR]
+with [ADMIN_DIR] the PrestaShop admin directory
+--from-config-file=[config-path]: the update config file path
+--zip=[name] : sets the archive zip file for a local update
+--xml=[name] : sets the archive xml file for a local update
+--disable-non-native-modules=[1|0]: disable all modules installed after the store creation  (1 for yes, 0 for no)
+--regenerate-email-templates=[1|0]: regenerate email templates. If you've customized email templates, your changes will be lost if you activate this option  (1 for yes, 0 for no)
+--disable-all-overrides=[1|0]: overriding is a way to replace business behaviors (class files and controller files) to target only one method or as many as you need. This option disables all classes & controllers overrides, allowing you to avoid conflicts during and after updates  (1 for yes, 0 for no)
+--verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
+--quiet: disables output and interaction
+--no-interaction: disables interaction
+--version: displays the application version
+--help: displays the command help
+--ansi|--no-ansi: whether to force of disable coloring the output
+--action:[step]: Specify the step you want to start from (Default: UpgradeNow)
+--chain: Enables to sequence update steps
+--no-chain: Prevents chaining of update steps to keep the control
+```
+
+The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+
+The `--from-config-file=[config-path]` option is used to update from the information provided in the configuration file.
+You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
+
+The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used for a “local”
+update. The “local” update, which displays customized updates detected in your
+`/your-admin-directory/autoupgrade/download` folder on your server.
+
+By default, if no option is set, the update will be performed from the “online” source. The official “online” update for
+your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent
+version of PrestaShop compatible with the PHP version of your server.
+
+Example of `update:start` command execution:
+
+```shell
+$ php bin/console update:start admin123
+Starting update...
+Destination version: 9.0.0
+Downloading step has been skipped, upgrade process will now unzip the local archive.
+Store deactivated. Extracting files...
+...
+Store updated to 9.0.0. Congratulations! You can now reactivate your store.
+```
