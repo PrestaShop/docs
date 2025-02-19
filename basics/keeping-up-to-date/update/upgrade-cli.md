@@ -36,29 +36,29 @@ Example of `bin/console` command execution:
 $ php bin/console 
 
 Usage:
-	command [options] [arguments]
-	
+  command [options] [arguments]
+
 Options:
-	-h, --help                            Display this help message
-	-q, --quiet                           Do not output any message
-	-V, --version                         Display this application version
-			--ansi                            Force ANSI output
-			--no-ansi                         Disable ANSI output
-	-n, --no-interaction                  Do not ask any interactive question
-	-v|vv|vvv, --verbose                  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+  -h, --help                            Display this help message
+  -q, --quiet                           Do not output any message
+  -V, --version                         Display this application version
+      --ansi                            Force ANSI output
+      --no-ansi                         Disable ANSI output
+  -n, --no-interaction                  Do not ask any interactive question
+  -v|vv|vvv, --verbose                  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
 Available commands:
-	help                                  Displays help for a command
-	list                                  List commands
+  help                                  Displays help for a command
+  list                                  List commands
 backup
-	backup:create                         Create backup.
-	backup:list                           List existing backups.
-	backup:restore                        Restore your store.
-	backup:delete                         Remove a backup not anymore needed.
+  backup:create                         Create backup.
+  backup:list                           List existing backups.
+  backup:restore                        Restore your store.
+  backup:delete                         Remove a backup not anymore needed.
 update
-	update:check-new-version              Display the version the shop can update to.
-	update:check-requirements             Check all prerequisites for an update.
-	update:start                          Update your store.
+  update:check-new-version              Display the version the shop can update to.
+  update:check-requirements             Check all prerequisites for an update.
+  update:start                          Update your store.
 ```
 
 ### List command
@@ -71,17 +71,17 @@ Example of list command execution:
 $ php bin/console list
 
 Available commands:
-	help                                  Displays help for a command
-	list                                  List commands
+  help                                  Displays help for a command
+  list                                  List commands
 backup
-	backup:create                         Create backup.
-	backup:list                           List existing backups.
-	backup:restore                        Restore your store.
-	backup:delete                         Remove a backup not anymore needed.
+  backup:create                         Create backup.
+  backup:list                           List existing backups.
+  backup:restore                        Restore your store.
+  backup:delete                         Remove a backup not anymore needed.
 update
-	update:check-new-version              Display the version the shop can update to.
-	update:check-requirements             Check all prerequisites for an update.
-	update:start                          Update your store.
+  update:check-new-version              Display the version the shop can update to.
+  update:check-requirements             Check all prerequisites for an update.
+  update:start                          Update your store.
 ```
 
 ### Help command
@@ -219,9 +219,9 @@ This command also supports the “interactive mode”, which provides you with a
 ```shell
 $ php bin/console backup:restore admin123
 Please select your backup:
-	[0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
-	[1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
-	[2] Exit the process
+  [0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
+  [1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
+  [2] Exit the process
 ```
 
 ### backup:delete command
@@ -259,9 +259,9 @@ This command also supports the “interactive mode”, which provides you with a
 ```shell
 $ php bin/console backup:delete admin123
 Please select your backup:
-	[0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
-	[1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
-	[2] Exit the process
+  [0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
+  [1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
+  [2] Exit the process
 ```
 
 ## Update commands
