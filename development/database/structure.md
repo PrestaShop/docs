@@ -46,8 +46,7 @@ file will be stored in the folder `/install/upgrade/sql/`.
 
 Its name is the PS version on which the change will be applied.
 
-For instance, here is the file *[1.7.8.0.sql](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/install-dev/upgrade/sql/1.7.8.0.sql)*,
-used by shops updating to 1.7.8.0 or later:
+For instance, here is the file *[1.7.8.0.sql](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/install-dev/upgrade/sql/1.7.8.0.sql)*, used by stores updating to 1.7.8.0 or later:
 
 ```sql
 [...]
