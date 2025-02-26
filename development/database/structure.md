@@ -33,7 +33,7 @@ These files are used during the PrestaShop installation as well.
 
 Another file is being used to load data during the install process: `install/data/db_data.sql`. Some versions of PrestaShop do not use it so you might not always find it in the ZIP archive.
 
-## Structure and content upgrades
+## Structure and content updates
 
 ### Defining changes
 
@@ -41,13 +41,12 @@ Once PrestaShop is installed, the default structure and content files we saw
 are not used anymore.
 
 If a new release of PrestaShop must bring changes to the existing database, an
-upgrade file must be created along the `db_structure.sql` update. This SQL
+update file must be created along the `db_structure.sql` update. This SQL
 file will be stored in the folder `/install/upgrade/sql/`.
 
 Its name is the PS version on which the change will be applied.
 
-For instance, here is the file *[1.7.8.0.sql](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/install-dev/upgrade/sql/1.7.8.0.sql)*,
-used by shops upgrading to 1.7.8.0 or later:
+For instance, here is the file *[1.7.8.0.sql](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/install-dev/upgrade/sql/1.7.8.0.sql)*, used by stores updating to 1.7.8.0 or later:
 
 ```sql
 [...]
@@ -56,14 +55,14 @@ UPDATE `PREFIX_product` SET `product_type` = "virtual" WHERE `is_virtual` = 1;
 /* PHP:ps_1780_add_feature_flag_tab(); */;
 ```
 
-In there we can read the SQL queries to execute when upgrading to 1.7.8.0.
+In there we can read the SQL queries to execute when updating to 1.7.8.0.
 Each of them alters the structure and/or modify the existing data.
 In case you have complex algorithms to run, you can call PHP code with the
 `PHP:` keyword.
 
 To make the code callable, a dedicated file has to be created in
 `/install/upgrade/php/` with a function in it. This file and function must have
-the same name as we saw in the SQL upgrade file.
+the same name as we saw in the SQL update file.
 
 If we reuse the previous example, we will find the corresponding file *[/install/upgrade/php/ps_1780_add_feature_flag_tab.php](https://github.com/PrestaShop/PrestaShop/blob/1.7.8.0/install-dev/upgrade/php/ps_1780_add_feature_flag_tab.php)*:
 
@@ -81,23 +80,4 @@ consider it was run without failure.
 
 ### Applying changes
 
-Applying the changes on your database can be done:
-
-* by reinstalling the shop
-* from a previous version of PrestaShop, by copying the new files and calling
-the PHP script `install/upgrade/upgrade.php`
-
-PrestaShop lists the upgrade files waiting to be applied, by selecting the names
-fitting between the configuration property `PS_VERSION_DB` and the constant
-`_PS_INSTALL_VERSION_` defined in `install/install_version.php`.
-
-In the top of this page, we talked about entities being managed only by
-Doctrine. Applying the changes on the database is done with the following command:
-
-```
-php bin/console prestashop:schema:update-without-foreign
-```
-
-{{% notice note %}}
-Use `php app/console` instead of `php bin/console` for versions prior to {{< minver v="1.7.4" >}}
-{{% /notice %}}
+Applying the changes is covered in [the update page]({{< ref "/1.7/basics/keeping-up-to-date/update" >}}).
