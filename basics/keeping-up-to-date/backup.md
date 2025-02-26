@@ -120,4 +120,4 @@ There are a lot of ways to connect to a MySQL server. Many different softwares a
 For your information, you can also automate your backup using the Update Assistant module. This module guides you through the configuration and execution of your backup before performing your update. You have two options: perform the backup directly from the [module interface in your Back-Office][1], or from the [associated Command-Line (CLI)][2].
 
 [1]: {{< relref "/1.7/basics/keeping-up-to-date/use-autoupgrade-module" >}}
-[2]: {{< relref "/1.7/basics/keeping-up-to-date/upgrade-module/upgrade-cli" >}}
+[2]: {{< relref "/1.7/basics/keeping-up-to-date/update/update-from-the-cli" >}}
