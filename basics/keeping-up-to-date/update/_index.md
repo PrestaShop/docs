@@ -5,6 +5,8 @@ description: Everything you need to know to update your PrestaShop to the latest
 weight: 30
 aliases:
   - /1.7/basics/keeping_up-to-date/update
+  - /1.7/basics/keeping-up-to-date/upgrade
+  - /1.7/basics/keeping-up-to-date/upgrade-module
 ---
 
 # How to update PrestaShop
@@ -219,6 +221,10 @@ Basically, the process and the result will be the same. The existing data on the
 Many agencies and freelancers in your area may also provide this kind of service.
 
 More information about support: <a href="https://www.prestashop-project.org/support/" target="_blank">PrestaShop project support page</a>
+
+## Read more
+
+{{% children /%}}
 
 [1]: {{< relref "/1.7/basics/keeping-up-to-date/update/update-from-the-back-office" >}}
 [2]: {{< relref "/1.7/basics/keeping-up-to-date/update/update-from-the-cli" >}}
