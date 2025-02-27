@@ -24,4 +24,4 @@ The following steps will be executed during the upgrade:
 - If something’s wrong, you can restore a backup with this module. Your backup is available at {admin}/autoupgrade/backup and can be restored either manually or via the [command line interface][1]
 - If you can't access your back office, try enabling the debug mode manually in config/defines.inc.php by setting _PS_MODE_DEV_ to true
 
-[1]: {{< relref "/1.7/basics/keeping-up-to-date/update/upgrade-cli" >}}
+[1]: {{< relref "/1.7/basics/keeping-up-to-date/update/update-from-the-cli" >}}
