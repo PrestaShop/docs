@@ -57,7 +57,7 @@ backup
 	backup:restore                        Restore your store.
 	backup:delete                         Remove a backup not anymore needed.
 update
-	update:check-new-version              Display the version the shop can update to.
+	update:check-new-version              Display the version the store can update to.
 	update:check-requirements             Check all prerequisites for an update.
 	update:start                          Update your store.
 ```
@@ -80,7 +80,7 @@ backup
 	backup:restore                        Restore your store.
 	backup:delete                         Remove a backup not anymore needed.
 update
-	update:check-new-version              Display the version the shop can update to.
+	update:check-new-version              Display the version the store can update to.
 	update:check-requirements             Check all prerequisites for an update.
 	update:start                          Update your store.
 ```
