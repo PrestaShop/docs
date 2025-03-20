@@ -137,12 +137,10 @@ with [ADMIN_DIR] the PrestaShop admin directory
 The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
 
 The optional `--include-images=[1|0]` option allows you to include, or not, the image backup during the backup process.
-By
-default, if the option is not set, images are included in the backup.
+By default, if the option is not set, images are included in the backup.
 
-The optional `--from-config-file=[config-path]` option allows you to use the backup options specified in the
-configuration
-file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
+The optional `--from-config-file=[config-path]` option allows you to use the backup options specified in the configuration file.
+You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
 
 Example of `backup:create` command execution:
 
@@ -186,8 +184,7 @@ $ php bin/console backup:list admin123
 
 ### backup:restore command
 
-The `backup:restore` command is used to restore your PrestaShop store from backup files in the
-`/your-admin-directory/autoupgrade/backup` folder on your server.
+The `backup:restore` command is used to restore your PrestaShop store from backup files in the `/your-admin-directory/autoupgrade/backup` folder on your server.
 
 ```text
 $ php bin/console backup:restore help
@@ -308,15 +305,12 @@ $ php bin/console update:check-new-version admin123
 |          |          |       | Xml: 8.1.0-2.xml, 8.1.0.xml                                               |
 ```
 
-- The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update
-  corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
-- The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download`
-  folder on your server.
+- The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
+- The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
 
 ### update:check-requirements command
 
-The `update:check-requirements` command is used to check that your store meets the technical requirements before
-updating.
+The `update:check-requirements` command is used to check that your store meets the technical requirements before updating.
 
 ```text
 $ php bin/console update:check-requirements help
@@ -342,13 +336,9 @@ The `--from-config-file=[config-path]` option is used to check prerequisites bas
 configuration file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]`
 file.
 
-The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used to check
-prerequisites from the “local” source. The “local” update, which displays customized updates detected in your
-`/your-admin-directory/autoupgrade/download` folder on your server.
+The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used to check prerequisites from the “local” source. The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
 
-By default, if no option is set, the prerequisites will be checked from the “online” source. The official “online”
-update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most
-recent version of PrestaShop compatible with the PHP version of your server.
+By default, if no option is set, the prerequisites will be checked from the “online” source. The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
 
 Example of execution of the `update:check-requirements` command, if all prerequisites have been successfully met:
 
@@ -401,14 +391,11 @@ The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resour
 The `--from-config-file=[config-path]` option is used to update from the information provided in the configuration file.
 You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
 
-The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used for a “local”
-update. The “local” update, which displays customized updates detected in your
-`/your-admin-directory/autoupgrade/download` folder on your server.
+The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used for a “local” update. 
+The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
 
-By default, if no option is set, the update will be performed from the “online” source. The official “online” update for
-your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent
-version of PrestaShop compatible with the PHP version of your server.
-
+By default, if no option is set, the update will be performed from the “online” source. The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions).
+This update corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
 Example of `update:start` command execution:
 
 ```text

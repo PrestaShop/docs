@@ -10,19 +10,19 @@ aliases:
 
 ## Introduction
 
-This section provides best practices and tips for maintaining your PrestaShop store with the latest updates. Here, we explore various methods to keep your store current and secure.
+This section provides best practices and tips for maintaining your PrestaShop store with the latest updates. We'll explore various ways to keep your store up-to-date and secure.
 
 ## Why keeping your PrestaShop store up-to-date ?
 
-Regularly updating your store to the latest available version ensures that you benefit from the newest features and improvements from the core team and the developer community. Depending on the version you choose, updates bring a variety of advantages:
+Regularly updating your store to the latest version ensures you benefit from the latest features, security enhancements, and performance improvements developed by the core team and the community. The advantages of updating depend on the version you choose:
 
-- **New Features:** Access the latest features and enhancements for an improved experience.
-- **Design & UX Improvements:** Enjoy updated themes and modernized user interfaces.
-- **Security Enhancements:** Protect your store with the latest security patches and performance updates.
-- **Technical Compatibility:** Ensure compatibility with the latest technologies and updates.
-- **Ecosystem Growth:** Take advantage of new modules, themes, and their ongoing updates.
-- **Stability & Reliability:** Benefit from bug fixes and patches that enhance the stability of your store.
-- **Official Support:** Stay within the scope of officially supported PrestaShop versions and services.
+- **New features:** Access the latest features and enhancements for an improved experience.
+- **Design & UX improvements:** Enjoy updated themes and modernized user interfaces.
+- **Security and performance enhancements:** Protect your store with the latest security patches and performance updates.
+- **Technical compatibility:** Ensure compatibility with the latest technologies and updates.
+- **Ecosystem growth:** Take advantage of new modules, themes, and their ongoing updates.
+- **Stability & reliability:** Benefit from bug fixes and patches that enhance the stability of your store.
+- **Official support:** Stay within the scope of officially supported PrestaShop versions and services.
 
 ## Update vs Migration: two distinct processes
 
@@ -32,7 +32,7 @@ Keeping PrestaShop up-to-date can be achieved through different methods. Choose 
 
 ![Upgrade schema](img/upgrade-schema.png)
 
-Updating your store is the recommended approach when you want to stay up to date without switching to the next major version.
+Updating your store is the recommended approach when you want to stay up-to-date without switching to the next major version.
 
 #### Impact on existing data
 
@@ -41,7 +41,7 @@ As long as you remain within the same major version (e.g., 8.0 → 8.1, 9.0 → 
 - Your current theme and modules will continue to function as expected.
 - No data or functionalities will be lost, even if database structures are modified.
 
-This stability is guaranteed by the <a href="https://semver.org/" target="_blank">semantic versioning</a> system we follow, which prevents any compatibility-breaking changes in minor and patch updates. Core features, APIs, and functionality remain unchanged outside of major releases.
+This stability is guided by the <a href="https://semver.org/" target="_blank">semantic versioning</a> system we follow, which aims to prevent compatibility-breaking changes in minor and patch updates. However, in rare cases, critical bug fixes or security patches may require adjustments that could affect compatibility. Outside of major releases, core features, APIs, and functionality generally remain stable.
 
 #### Update process overview
 
@@ -55,7 +55,7 @@ For a detailed step-by-step guide, refer to the official documentation for the [
 
 ![Migration schema](img/migration-schema.png)
 
-Updating isn’t the only way to bring your store to the latest version of PrestaShop. In some cases, migrating your data is a better option.
+Updating isn’t the only way to bring your store to the latest version of PrestaShop. In some cases, migrating your data could be a better option.
 
 Migration is recommended when switching to a new major version. Since major updates introduce significant core changes and potential incompatibilities with your current theme and modules, starting fresh ensures greater stability and reduces risks.
 

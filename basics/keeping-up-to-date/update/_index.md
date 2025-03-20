@@ -13,7 +13,7 @@ aliases:
 
 This chapter describes several ways to complete an update of PrestaShop.
 
-## Update Assistant module - Update from the Back-Office interface
+## Update Assistant module - Update from the back office interface
 You can use provided `Update Assistant` module to update your store to the newest version using web interface. You can read more about the module and how to use it [here][1].
 
 ## Update Assistant module - Update from the Command-Line (CLI)
@@ -214,13 +214,9 @@ Modules page, under the tab “Notifications”:
 
 ## Support service
 
-Doing an update by yourself can be risky. If you feel uncomfortable with doing it on your own, you can find support on <a href="https://www.prestashop-project.org/support/" target="_blank">prestashop-project.org </a>.
+Updating your store yourself can be risky. If you're unsure about handling it on your own, you can seek professional help from agencies, freelancers, or the <a href="https://www.prestashop-project.org/support/" target="_blank">PrestaShop support network</a>.
 
-Basically, the process and the result will be the same. The existing data on the store will be kept, as well as your module and your current theme.
-
-Many agencies and freelancers in your area may also provide this kind of service.
-
-More information about support: <a href="https://www.prestashop-project.org/support/" target="_blank">PrestaShop project support page</a>
+Regardless of how you proceed, the update process ensures that your existing store data, modules, and theme are preserved.
 
 ## Read more
 
