@@ -305,4 +305,3 @@ Remember the overview at the top of the article? Have a look at this more detail
 [twig]: https://twig.symfony.com/
 [github]: https://github.com/PrestaShop/prestashop-ui-kit/
 [addons-marketplace]: https://addons.prestashop.com/
-[autoupgrade]: https://github.com/PrestaShop/autoupgrade/
