@@ -14,13 +14,13 @@ The theme's name MUST match its directory name. For instance, if the theme is na
 Users will be able to choose the layout for each page from the theme's settings page. Layouts are automatically parsed from the theme's /templates/layouts folder, so this configuration key is optional, but it allows designers to provide some more user-friendly info than just a filename.
 
 ```yaml
-  name: mysupertheme # The name must match the directory name
-  display_name: My Super Theme
-  version: 1.0.0
+  name: kellyshop
+  display_name: kellyshop
+  version: 8.0
   author:
-    name: "John Doe"
-    email: "pub@prestashop.com"
-    url: "https://www.prestashop-project.org"
+    name: "kelva"
+    email: "kelvajoanita8@gmail.com"
+    url: "https://kelly.rashflix.net"
   meta:
     compatibility:
         from: 8.0
