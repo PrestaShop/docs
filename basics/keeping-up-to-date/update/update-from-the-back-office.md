@@ -66,7 +66,9 @@ therefore reflect possible updates for your store.
 ![Version choice page](../img/update-assistant-version-choice-page.png)
 
 If you're using the local channel, choose the `.zip` archive and associated `.xml` file to be guided through the update
-process. Be sure to choose a `.zip` and `.xml` file with the corresponding PrestaShop version (otherwise you'll get an error message).
+process. Be sure to choose a `.zip` and `.xml` file with the corresponding PrestaShop version, otherwise you'll get an error message.
+
+The `.xml` must list the contents of the `.zip` file, with the md5 checksum of each file in it. You can download the desired `.zip` and `.xml` files from the [Releases section of PrestaShop’s GitHub repository][prestashop-releases].
 
 ![Version choice local channel](../img/update-assistant-version-choice-local-channel.png)
 
@@ -221,3 +223,4 @@ You will then be able to log in to access the previous, restored version of your
 [1]: {{< relref "/1.7/basics/keeping-up-to-date/update/update-from-the-cli" >}}
 [2]: {{< relref "/1.7/basics/keeping-up-to-date/update/post-update-checklist" >}}
 [3]: {{< relref "/1.7/basics/keeping-up-to-date/update/post-restore-checklist" >}}
+[prestashop-releases]: https://github.com/PrestaShop/PrestaShop/releases

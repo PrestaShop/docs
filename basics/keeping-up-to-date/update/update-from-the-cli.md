@@ -336,7 +336,8 @@ The `--from-config-file=[config-path]` option is used to check prerequisites bas
 configuration file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]`
 file.
 
-The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used to check prerequisites from the “local” source. The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
+The `--zip=[name]` and `--xml=[name]` options allow you to specify a `.zip` file and an `.xml` file to be used to check prerequisites from the “local” source. The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
+You can download the desired `.zip` and `.xml` files from the [Releases section of PrestaShop’s GitHub repository][prestashop-releases].
 
 By default, if no option is set, the prerequisites will be checked from the “online” source. The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
 
@@ -407,3 +408,5 @@ Store deactivated. Extracting files...
 ...
 Store updated to 9.0.0. Congratulations! You can now reactivate your store.
 ```
+
+[prestashop-releases]: https://github.com/PrestaShop/PrestaShop/releases
