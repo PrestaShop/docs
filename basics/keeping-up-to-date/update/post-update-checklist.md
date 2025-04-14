@@ -17,6 +17,7 @@ The following steps will be executed during the upgrade:
 - **Re-enable and check your modules** one by one.
 - **Make sure your store’s front office is working properly:** try to create an account, place an order, to add a product, etc.
 - **Disable the maintenance** mode in General settings > Maintenance.
+- **Check the Module Manager** to discover and install the modules extracted on your server during the update process.
 
 ## Troubleshooting
 
