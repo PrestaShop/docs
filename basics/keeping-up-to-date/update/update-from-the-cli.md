@@ -24,7 +24,7 @@ It is not necessary to have installed the module in order to use the associated 
 The CLI of the Update Assistant module is based on the Symfony console, and therefore follows the main principles of
 this technology.
 
-Below you'll find the Update Assistant CLI user guide, with descriptions, syntax and examples of use.
+Below you'll find the Update Assistant CLI user guide, with descriptions, syntax and examples of use. All the commands are run from the module in the folder `modules/autoupgrade` of your store and must not be mistaken with the `bin/console` of PrestaShop.
 
 ## Generic commands
 
