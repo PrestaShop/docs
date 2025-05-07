@@ -7,9 +7,11 @@ title: DatePickerType
 DatePickerType creates a field with a date picker. It uses Javascript,
 but doesn't require any specific components, as it's already enabled globally.
 
-## Custom options
+## Type options
 
-None.
+| Option  | Type  | Default value                    | Description                                                                                         |    |
+|:--------|:------|:---------------------------------|:----------------------------------------------------------------------------------------------------|:---|
+| date_format | string | YYYY-MM-DD| Date format. Must be provided in javascript supported type. |    |
 
 ## Required Javascript components
 
