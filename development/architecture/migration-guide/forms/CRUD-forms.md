@@ -251,7 +251,7 @@ final class ContactFormDataHandler implements FormDataHandlerInterface
      */
     public function update($id, array $data)
     {
-        $contactObjectModel = new Contact(id);
+        $contactObjectModel = new Contact($id);
         // update data to object model
         // ...
         $contactObjectModel->update();
