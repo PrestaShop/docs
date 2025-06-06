@@ -63,7 +63,6 @@ PrestaShop provides two options when it comes to running it with Docker:
 ### Create the docker-compose.yml manifest
 
 ```yaml
-version: '3'
 services:
   mysql:
     container_name: some-mysql
@@ -117,7 +116,6 @@ Then run `docker compose up` in your terminal, wait a few minutes, and you will 
 Complete docker-compose.yml manifest for reference:
 
 ```yaml
-version: '3'
 services:
   mysql:
     container_name: some-mysql
@@ -282,7 +280,6 @@ And that's it: your theme is available on the `prestashop` Docker container, and
 ### Complete docker-compose.yml for reference
 
 ```yaml
-version: '3'
 services:
   mysql:
     container_name: some-mysql
@@ -332,7 +329,6 @@ volumes:
 In the docker-compose.yml, add the following service declaration:
 
 ```yml
-version: '3'
 services:
 ...
     phpmyadmin:
