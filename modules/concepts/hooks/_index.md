@@ -106,6 +106,12 @@ Call of a hook for a specific module:
 {hook h='hookName' mod='modulename'}
 ```
 
+Call of a hook excluding specific modules:
+```
+{hook h='hookName' excl='mymodule_one,mymodule_two'}
+```
+
+
 ### In a theme, with Twig
 
 It is easy to call a hook from within a twig template file (`.html.twig`): you simply have to use its name with the renderHook twig function. You can add params as a second argument.
