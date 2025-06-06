@@ -120,7 +120,7 @@ class MyEmailThemeModule extends Module
             // Add a layout to each theme (don't forget to specify the module name)
             $theme->getLayouts()->add(new Layout(
                 'custom_template',
-                __DIR__ . '/mails/layouts/custom_' . $theme->getName() . '_layout.html.twig',
+                '@Modules/' . $this->name . '/mails/layouts/custom_' . $theme->getName() . '_layout.html.twig',
                 '',
                 $this->name
             ));
