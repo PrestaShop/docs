@@ -110,7 +110,7 @@ class DemoConfigurationFormType extends TranslatorAwareType
 
 ```
 
-This form has only one setting : `config_test`, of type `Symfony\Component\Form\Extension\Core\Type\TextType`. 
+This form has only one setting : `config_text`, of type `Symfony\Component\Form\Extension\Core\Type\TextType`. 
 
 ### Register your newly created form type
 
