@@ -184,4 +184,4 @@ In order to generate the valid URI of a controller you created from inside the m
 
 ## Secure your controller
 
-It is safer to define permissions required to use your controller, this can be configured using the `#[AdminSecurity]` attribute and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/9/development/architecture/migration-guide/controller-routing.md#security" >}}).
+It is safer to define permissions required to use your controller, this can be configured using the `@AdminSecurity` annotation and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/9/development/architecture/modern/controller-routing/#security" >}}).
