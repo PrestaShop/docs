@@ -8,11 +8,9 @@ title: prestashop:module
 
 * Path: `src/PrestaShopBundle/Command/ModuleCommand.php`
 * Arguments:
-  * `action`: Action to execute, must be one of: install, uninstall, enable, disable, enableMobile, disableMobile, reset, upgrade, configure, registerHook, unregisterHook
+  * `action`: Action to execute, must be one of: install, uninstall, enable, disable, enableMobile, disableMobile, reset, upgrade, configure
   * `module name`: Module on which the action will be executed
   * `file path`: YML file path for configuration __(optional)__
-* Options:
-  * `hook`: Hook name to use with the registerHook|unregisterHook action __(array|optional)__
 
 ## Description
 
