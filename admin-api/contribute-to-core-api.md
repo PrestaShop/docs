@@ -302,7 +302,7 @@ use PrestaShopBundle\ApiPlatform\Metadata\CQRSDelete;
         ),
         new CQRSDelete(
             uriTemplate: '/attributes/group/{attributeGroupId}',
-            CQRSCommand: DeleteAttributeGroupCommand::class,
+            CQRSQuery: DeleteAttributeGroupCommand::class,
             scopes: [
                 'attribute_group_write',
             ],
