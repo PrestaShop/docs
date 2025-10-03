@@ -27,3 +27,12 @@ Hook::exec('actionPresentProduct',
             ['presentedProduct' => &$productLazyArray]
         )
 ```
+
+## Example on how to change values
+```php
+public function hookActionPresentProduct(array $hookParams)
+{
+    /* Change show price to 0 to hide the product price */
+    $params['presentedProduct']->offsetSet('show_price', 0, true);
+}
+```
