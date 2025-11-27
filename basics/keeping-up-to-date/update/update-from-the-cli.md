@@ -298,12 +298,12 @@ $ php bin/console update:check-new-version admin123
 +---------+--------------------+-------+--------------------------------------------------------------------------------------+
 | Version | Channel            | Type  | Information                                                                          |
 +---------+--------------------+-------+--------------------------------------------------------------------------------------+
-| 8.2.3   | online_recommended | patch | https://build.prestashop-project.org/news/2025/prestashop-8-2-3-security-release/    |
+| 8.2.3   | online_recommended | minor | https://build.prestashop-project.org/news/2025/prestashop-8-2-3-security-release/    |
 | 9.0.1   | online             | major | https://build.prestashop-project.org/news/2025/prestashop-9-0-1-maintenance-release/ |
 | 9.0.0   | local              | major | Zip: 2024-10-17-develop-prestashop_9_0_0.zip                                         |
 |         |                    |       | Xml: prestashop_9.0.0.xml                                                            |
-| 8.1.0   | local              | patch | Zip: 8_1_0.zip                                                                       |
-|         |                    |       | Xml: 8.1.0-2.xml, 8.1.0.xml                                                          |
+| 8.1.1   | local              | patch | Zip: 8_1_1.zip                                                                       |
+|         |                    |       | Xml: 8.1.1-2.xml, 8.1.1.xml                                                          |
 +---------+--------------------+-------+--------------------------------------------------------------------------------------+
 ```
 
