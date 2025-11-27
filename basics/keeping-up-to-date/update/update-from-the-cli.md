@@ -295,18 +295,32 @@ Example of the `update:check-new-version` command execution:
 
 ```text
 $ php bin/console update:check-new-version admin123
------------+----------+-------+---------------------------------------------------------------------------+
-| Version  | Channel  | Type  | Information                                                               |
-+----------+----------+-------+---------------------------------------------------------------------------+
-| 8.2.0    | online   | minor | https://build.prestashop-project.org/news/2024/prestashop-8-2-0-available/|
-| 9.0.0    | local    | major | Zip: 2024-10-17-develop-prestashop_9_0_0.zip                              |
-|          |          |       | Xml: prestashop_9.0.0.xml                                                 |
-| 8.1.0    | local    | patch | Zip: 8_1_0.zip                                                            |
-|          |          |       | Xml: 8.1.0-2.xml, 8.1.0.xml                                               |
++---------+--------------------+-------+--------------------------------------------------------------------------------------+
+| Version | Channel            | Type  | Information                                                                          |
++---------+--------------------+-------+--------------------------------------------------------------------------------------+
+| 8.2.3   | online_recommended | patch | https://build.prestashop-project.org/news/2025/prestashop-8-2-3-security-release/    |
+| 9.0.1   | online             | major | https://build.prestashop-project.org/news/2025/prestashop-9-0-1-maintenance-release/ |
+| 9.0.0   | local              | major | Zip: 2024-10-17-develop-prestashop_9_0_0.zip                                         |
+|         |                    |       | Xml: prestashop_9.0.0.xml                                                            |
++---------+--------------------+-------+--------------------------------------------------------------------------------------+
 ```
 
-- The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
-- The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
+#### Understanding the Channel column
+
+The **Channel** column indicates the source and type of the available update:
+
+- **`online_recommended`**: The recommended update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most stable and well-tested version of PrestaShop compatible with the PHP version of your server. The recommended version represents the safest upgrade path for your store.
+- **`online`**: The latest update available for your store, which corresponds to the most recent version of PrestaShop compatible with the PHP version of your server. This version may differ from the recommended version.
+- **`local`**: Customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
+
+#### Update scenarios
+
+Depending on the current state of PrestaShop releases, the command output may show:
+
+- Both a **recommended version** (`online_recommended`) and a **latest version** (`online`) when they differ.
+- Only one online version with the `online_recommended` channel when the recommended version is also the latest.
+- Only the latest version with the `online` channel when no specific version is marked as recommended.
+- Local versions (`local` channel) in addition to online versions, if custom update files are detected on your server.
 
 ### update:check-requirements command
 
