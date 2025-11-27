@@ -319,10 +319,10 @@ The **Channel** column indicates the source and type of the available update:
 
 Depending on the current state of PrestaShop releases, the command output may show:
 
-- Both a **recommended version** (`online_recommended`) and a **latest version** (`online`) when they differ.
-- Only one online version with the `online_recommended` channel when the recommended version is also the latest.
-- Only the latest version with the `online` channel when no specific version is marked as recommended.
-- Local versions (`local` channel) in addition to online versions, if custom update files are detected on your server.
+- Both a **recommended version** (channel `online_recommended`) and a **latest version** (channel `online`) when they differ.
+- Only one online version (channel `online_recommended`) when the recommended version is also the latest.
+- Only the latest version (channel `online`) when no specific version is marked as recommended.
+- Local versions (channel `local`) in addition to online versions, if custom update files are detected on your server.
 
 ### update:check-requirements command
 
