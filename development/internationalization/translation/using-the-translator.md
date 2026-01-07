@@ -25,22 +25,26 @@ The `trans()` method takes three arguments:
 2. `$parameters` – An array of replacements, if any. ([Learn more about translation placeholders](https://symfony.com/doc/4.4/components/translation/usage.html#component-translation-placeholders)).
 3. `$domain` – The [translation domain][translation-domains] for that wording.
 
-{{% notice warning %}}
-Be aware that in Symfony-based Admin controllers, the second and third arguments have been swapped in order to allow `$replacements` to be optional. For more, see [FrameworkBundleAdminController](https://github.com/PrestaShop/PrestaShop/blob/8.0.0/src/PrestaShopBundle/Controller/Admin/FrameworkBundleAdminController.php#L299).
-{{% /notice %}}
-
 ### Inside controllers
 
 Controllers include a helper method named `trans()` that calls the translator internally:
 
 ```php
 <?php
-// legacy controllers
+// Legacy controllers and PrestaShopAdminController (PrestaShop 9.0+)
+// Standard Symfony signature: trans($id, $parameters, $domain)
 $this->trans('This product is no longer available.', [], 'Shop.Notifications.Error');
+```
 
-// Symfony-based controllers (FrameworkBundleAdminController)
+{{% notice warning %}}
+**PrestaShop 8.x and earlier:** The deprecated `FrameworkBundleAdminController` used a non-standard parameter order where the second and third arguments were swapped: `trans($id, $domain, $parameters)`. This was changed in PrestaShop 9.0 with the introduction of `PrestaShopAdminController`, which follows the standard Symfony signature.
+
+```php
+<?php
+// DEPRECATED: FrameworkBundleAdminController (PrestaShop 8.x and earlier)
 $this->trans('This product is no longer available.', 'Shop.Notifications.Error', []);
 ```
+{{% /notice %}}
 
 ### Outside controllers
 

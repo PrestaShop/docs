@@ -155,22 +155,30 @@ class MyModuleSomethingModuleFrontController extends ModuleFrontController
 
 Symfony controllers work exactly the same as the Core's. Just use `$this->trans()` method.
 
-{{% notice warning %}}
-Be aware that in Symfony controllers, the second and third arguments have been swapped to make `$parameters` optional.
-{{% /notice %}}
+**PrestaShop 9.0+** uses `PrestaShopAdminController` which follows the standard Symfony translator signature:
 
 ```php
 <?php
 namespace PrestaShop\Module\MyModule;
 
-class SomeAdminController extends FrameworkBundleAdminController
+use PrestaShopBundle\Controller\Admin\PrestaShopAdminController;
+
+class SomeAdminController extends PrestaShopAdminController
 {
     public function someAction()
     {
-        $this->text = $this->trans('Some text being translated', 'Modules.Mymodule.Admin', []);
+        // Standard Symfony signature: trans($id, $parameters, $domain)
+        $this->text = $this->trans('Some text being translated', [], 'Modules.Mymodule.Admin');
+
+        // With parameters
+        $this->text = $this->trans('Hello %name%!', ['%name%' => 'World'], 'Modules.Mymodule.Admin');
     }
 }
 ```
+
+{{% notice info %}}
+**PrestaShop 8.x and earlier:** If you need to support older versions using the deprecated `FrameworkBundleAdminController`, note that it uses a different parameter order: `trans($id, $domain, $parameters)` where the domain and parameters are swapped.
+{{% /notice %}}
 
 #### Other classes
 
