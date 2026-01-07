@@ -141,7 +141,7 @@ graph
 
 A `FormModifier` (also known as `FormBuilderModifier`) allows you to alter the contents of a Form. It is particularly useful within modules, allowing developers to add, modify, or remove elements from the form as required.
 
-It's been implemented in an example module: [DemoProductForm2](https://github.com/PrestaShop/example-modules/blob/master/demoproductform2/src/Form/Modifier/ProductFormModifier.php).
+It's been implemented in an example module: [DemoProductForm](https://github.com/PrestaShop/example-modules/blob/master/demoproductform/src/Form/Modifier/ProductFormModifier.php).
 
 ```php
 namespace PrestaShop\Module\DemoProductForm\Form\Modifier;
