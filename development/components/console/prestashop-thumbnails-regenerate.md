@@ -1,5 +1,8 @@
 ---
 title: prestashop:thumbnails:regenerate
+category: Assets & Media
+description: Regenerate product and category image thumbnails
+weight: 10
 ---
 
 # `prestashop:thumbnails:regenerate`

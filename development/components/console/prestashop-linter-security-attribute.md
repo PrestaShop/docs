@@ -1,5 +1,8 @@
 ---
 title: prestashop:linter:security-attribute
+category: Code Quality & Linting
+description: Check security attribute annotations
+weight: 30
 ---
 
 # `prestashop:linter:security-attribute`

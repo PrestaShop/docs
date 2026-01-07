@@ -1,5 +1,8 @@
 ---
 title: prestashop:taxes:update-eu-tax-rule-groups
+category: Tax Management
+description: Update EU tax rule groups automatically
+weight: 10
 ---
 
 # `prestashop:taxes:update-eu-tax-rule-groups`

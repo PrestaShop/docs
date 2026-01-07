@@ -1,5 +1,8 @@
 ---
 title: prestashop:update:configuration-file-hooks-listing
+category: Internal/Advanced
+description: Update hooks listing in configuration files
+weight: 10
 ---
 
 # `prestashop:update:configuration-file-hooks-listing`

@@ -1,5 +1,8 @@
 ---
 title: prestashop:module
+category: Module Management
+description: Install, uninstall, enable, disable, and manage modules
+weight: 10
 ---
 
 # `prestashop:module`
@@ -8,11 +11,9 @@ title: prestashop:module
 
 * Path: `src/PrestaShopBundle/Command/ModuleCommand.php`
 * Arguments:
-  * `action`: Action to execute, must be one of: install, uninstall, enable, disable, reset, upgrade, configure
+  * `action`: Action to execute, must be one of: install, uninstall, enable, disable, reset, upgrade, configure, delete
   * `module name`: Module on which the action will be executed
-  * `file path`: YML file path for configuration __(optional)__
-* Options:
-  * `hook`: Hook name to use with the registerHook|unregisterHook action __(array|optional)__
+  * `file path`: YML file path for configuration __(optional, only used with configure action)__
 
 ## Description
 

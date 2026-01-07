@@ -1,5 +1,8 @@
 ---
 title: prestashop:list:commands-and-queries
+category: Development & Debugging
+description: List CQRS commands and queries
+weight: 40
 ---
 
 # `prestashop:list:commands-and-queries`

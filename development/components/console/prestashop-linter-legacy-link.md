@@ -1,5 +1,8 @@
 ---
 title: prestashop:linter:legacy-link
+category: Code Quality & Linting
+description: Check for legacy link usage
+weight: 20
 ---
 
 # `prestashop:linter:legacy-link`

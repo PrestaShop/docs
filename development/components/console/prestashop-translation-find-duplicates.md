@@ -1,5 +1,8 @@
 ---
 title: prestashop:translation:find-duplicates
+category: Translations
+description: Find duplicate translations in the system
+weight: 20
 ---
 
 # `prestashop:translation:find-duplicates`
