@@ -54,12 +54,24 @@ main steps: Version choice > Update options > Backup > Update > Post-update.
 
 ### Version choice
 
-The step “Version choice”, shows you the updates available for your store. Two update channels are listed at this stage:
+The step "Version choice", shows you the updates available for your store. Up to three update channels can be listed at this stage:
 
-- The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update
-  corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
-- The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download`
+- The official **"recommended"** update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update
+  corresponds to the most stable and well-tested version of PrestaShop compatible with the PHP version of your server. The recommended
+  version is identified by a "Recommended" badge displayed next to the version type badge (major, minor, or patch).
+- The **"latest"** update available for your store, which corresponds to the most recent version of PrestaShop compatible with the
+  PHP version of your server. This version may be shown separately from the recommended version when they differ.
+- The **"local"** update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download`
   folder on your server.
+
+#### Understanding recommended versions
+
+The recommended version is the version that has been thoroughly tested and validated for stability. It may not always be the latest
+release, but it represents the safest upgrade path for your store. Depending on the current state of PrestaShop releases, you may see:
+
+- Both a **recommended version** and a **latest version** displayed as separate options (when they differ).
+- Only one version displayed with a "Recommended" badge (when the recommended version is also the latest).
+- Only the latest version without a "Recommended" badge (when no specific version is marked as recommended).
 
 These views are thus adapted to the version of PrestaShop used in your store, to the PHP version of your server, and
 therefore reflect possible updates for your store.
