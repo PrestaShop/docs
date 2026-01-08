@@ -56,7 +56,7 @@ menuTitle: Good practices
 
 - Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read [Best Practices of the Db Class](https://docs.prestashop-project.org/1-6-documentation/developer-guide/developer-tutorials/best-practices-of-the-db-class)). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result, you are required to use a token!
 
-- The use of overrides is permitted, however if we decide that too many (2 / 3 max) have been used and/or the modifications are too dangerous, we will refuse your module. If you're unsure, don't hesitate to get in touch.
+- The use of overrides is permitted, however if we decide that too many (2 / 3 max) have been used and/or the modifications are too dangerous.
 
 - If you need to load a .js or .tpl (containing JavaScript) to the backoffice, put restrictions in place on your hooks (hookbackofficeheader/top/footer)! Specific examples: if your JS only applies to your module's configuration page, use:  
   
