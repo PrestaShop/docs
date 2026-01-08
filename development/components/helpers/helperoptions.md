@@ -36,7 +36,7 @@ $this->fields_options = [
         'autoload_rte' => 'true'                                 // Display a TinyMCE editor for textarea field only
         'suffix' => 'kg',                                        // Display after the field (ie. currency).
                                                                  // For text fields or password fields only.
-        'identifier' => 'id_carrier',                            // The unique ID for the form.
+        'identifier' => 'id_carrier',                            // The column name of the id in list rows.
         'list' => [list do display as options],             // For select field only.
         'empty_message' => $this->module->l('Display if list is empty'), // For select field only
         'cols' => 40,                                            // For textarea fields only.
