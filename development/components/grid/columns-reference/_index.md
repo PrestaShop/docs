@@ -12,6 +12,7 @@ The most important part of a Grid definition is defining columns. PrestaShop alr
 
 ### Basic columns
 
+* [ChoiceColumn][choice-column-reference]
 * [ColorColumn][color-column-reference]
 * [DataColumn][data-column-reference]
 * [DateTimeColumn][datetime-column-reference]
@@ -34,6 +35,7 @@ The most important part of a Grid definition is defining columns. PrestaShop alr
 
 * [SeverityLevelColumn][severity-column-reference]
 
+[choice-column-reference]: {{< ref "/9/development/components/grid/columns-reference/choice" >}}
 [color-column-reference]: {{< ref "/9/development/components/grid/columns-reference/color" >}}
 [data-column-reference]: {{< ref "/9/development/components/grid/columns-reference/data" >}}
 [datetime-column-reference]: {{< ref "/9/development/components/grid/columns-reference/datetime" >}}

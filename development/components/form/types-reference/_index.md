@@ -29,11 +29,14 @@ Developers can already use a large list of field types (see [Symfony types](http
 | [`EntitySearchInputType`](entity-search-input-type) | PrestaShopBundle\Form\Admin\Type | This form type is used for a OneToMany (or ManyToMany) association, it allows to search a list of entities (based on a remote url) and associate it. It is based on the CollectionType form type which provides prototype features to display a custom template for each associated items. |
 | [`FormattedTextareaType`](formatted-textarea) | PrestaShopBundle\Form\Admin\Type | Class enabling TinyMCE on a Textarea field |
 | [`GeneratableTextType`](generatable-text) | PrestaShopBundle\Form\Admin\Type | It is extension of TextType that adds additonal button which allows generating value for input |
+| [`GenderType`](gender-type) | PrestaShopBundle\Form\Admin\Sell\Customer | ChoiceType for selecting social titles (genders) from PrestaShop database. |
 | [`GeoCoordinatesType`](geo-coordinates) | PrestaShopBundle\Form\Admin\Type | This form class is responsible to create a geolocation latitude/longitude coordinates field. |
+| [`GroupType`](group-type) | PrestaShopBundle\Form\Admin\Sell\Customer | ChoiceType for selecting customer groups from PrestaShop database. |
 | [`IconButtonType`](icon-button-type) | PrestaShopBundle\Form\Admin\Type | A form button with material icon. |
 | [`ImagePreviewType`](image-preview-type) | PrestaShopBundle\Form\Admin\Type | This form type is used to display an image value without providing an interactive input to edit it. It is based on a hidden input so it could be changed programmatically, or be used just to display an image in a form. |
 | [`IntegerMinMaxFilterType`](integer-min-max-filter) | PrestaShopBundle\Form\Admin\Type | Defines the integer type two inputs of min and max value - designed to fit grid in grid filter. |
 | [`IpAddressType`](ip-address) | PrestaShopBundle\Form\Admin\Type | Extended input type for IP addresses. Displays a bouton to add the user's one to the list. |
+| [`LocaleChoiceType`](locale-choice-type) | PrestaShopBundle\Form\Admin\Type | ChoiceType for selecting available languages/locales from the shop configuration. |
 | [`LogSeverityChoiceType`](log-severity-choice-type) | PrestaShopBundle\Form\Admin\Type | `ChoiceType` of `PrestaShopLogger` Log levels |
 | [`MoneyWithSuffixType`](money-with-suffix) | PrestaShopBundle\Form\Admin\Type | Class `MoneyWithSuffixType` is a Symfony `MoneyType`, which also has a suffix string right after the currency sign. |
 | [`NavigationTabType`](navigation-tab-type) | PrestaShopBundle\Form\Admin\Type | This form type is used as a container of sub forms, each sub form will be rendered as a part of navigation tab component. Each first level child is used as a different tab, its label is used for the tab name and it's widget as the tab content. |
