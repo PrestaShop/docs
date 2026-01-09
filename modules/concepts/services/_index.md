@@ -467,11 +467,13 @@ in admin or front. Be careful and always keep in mind in which context/environme
 
 Here is a quick summary so that you know where you should define your services:
 
-| Definition file           | Symfony Container         | Front Legacy Container           | Admin Legacy Container | Available services                                                         |
-| ------------------------- |:------------------------- |:-------------------------------- |:---------------------- |:-------------------------------------------------------------------------- |
-| config/services.yml       | Yes                       | No                               | No                     | All symfony components and PrestaShopBundle services                       |
-| config/admin/services.yml | Yes                       | No                               | Yes                    | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/admin` folder |
-| config/front/services.yml | Yes                       | Yes                              | No                     | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/front` folder |
+| Definition file             | Symfony Container | Front Legacy Container | Admin Legacy Container | Webservice Container | Available services                                                         |
+| --------------------------- | :---------------: | :--------------------: | :--------------------: | :------------------: | -------------------------------------------------------------------------- |
+| `config/services.yml`       |        Yes        |           No           |           No           |          No          | All Symfony components and `PrestaShopBundle` services                     |
+| `config/admin/services.yml` |        Yes        |           No           |           Yes          |          No          | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/admin` folder |
+| `config/front/services.yml` |        Yes        |           Yes          |           No           |          No         | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/front` folder |
+| `config/websrvice/services.yml` |        Yes        |           Yes          |           No           |          No         | Doctrine, services defined in `<PS_ROOT_DIR>/config/webservice/front` folder |
+
 
 ### Define a service on both front and admin
 
@@ -512,6 +514,12 @@ imports:
 
 ```yaml
 # yourmodule/config/front/services.yml
+imports:
+    - { resource: ../common.yml }
+```
+
+```yaml
+# yourmodule/config/webservice/services.yml
 imports:
     - { resource: ../common.yml }
 ```
