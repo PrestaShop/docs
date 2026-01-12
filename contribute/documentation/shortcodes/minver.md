@@ -23,6 +23,8 @@ To align a pill with a title, use the parameter `title="true"`:
 {{</* minver v="1.7.4" title="true"*/>}}
 ```
 
+Important, if using with title, please make sure the shortcode is on a new line after the title, with the `title="true"` parameter.
+
 Which is rendered like this:
 
 {{% callout %}}
