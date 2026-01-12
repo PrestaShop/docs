@@ -22,13 +22,15 @@ description: ''
 
 ## Call of the Hook in the origin file
 
-### Before {{< minver v="8.1" >}}
+### Before
+{{< minver v="8.1" title="true" >}}
 
 ```php
 Hook::exec('actionAjaxDie' . $controller . $method . 'Before', ['value' => $value])
 ```
 
-### From {{< minver v="8.1" >}}
+### From
+{{< minver v="8.1" title="true" >}}
 
 ```php
 Hook::exec('actionAjaxDie' . $controller . $method . 'Before', ['value' => &$value])

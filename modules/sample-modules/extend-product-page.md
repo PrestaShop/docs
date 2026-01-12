@@ -3,7 +3,8 @@ title: Extending the new product page form
 weight: 3
 ---
 
-# Extending the new product page form {{< minver v="8.1.0" >}}
+# Extending the new product page form
+{{< minver v="8.1.0" title="true" >}}
 
 The new Back Office product page introduced in {{< minver v="8.1.0" >}} removed several hooks which were previously available on the page. Complete list of removed hooks:
 
@@ -30,7 +31,8 @@ In this guide, we will discover how to extend the product page by adding custom 
 
 Finally, we will discover how to add a new tab to the product page, which is possible for a new product page from PrestaShop 8.1. 
 
-## Add a custom field, before {{< minver v="8.1.0" >}}
+## Add a custom field, before
+{{< minver v="8.1.0" title="true" >}}
 
 A custom field, before {{< minver v="8.1.0" >}}, was added by hooking to one of the `displayAdminProducts<Location>` hooks. 
 
@@ -92,7 +94,8 @@ Before {{< minver v="8.1.0" >}}, that would produce:
 
 From {{< minver v="8.1.0" >}}, this field won't be displayed as a hook (`displayAdminProductsSeoStepBottom`) is no longer available.
 
-## Add a custom field, from {{< minver v="8.1.0" >}}
+## Add a custom field, from
+{{< minver v="8.1.0" title="true" >}}
 
 To do exactly the same, from {{< minver v="8.1.0" >}}, we will implement `actionProductFormBuilderModifier` hook and modify product's FormBuilder.
 
