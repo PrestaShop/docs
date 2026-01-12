@@ -1,5 +1,8 @@
 ---
 title: prestashop:licenses:update
+category: License & Legal
+description: Update license headers in source files
+weight: 10
 ---
 
 # `prestashop:licenses:update`

@@ -1,5 +1,8 @@
 ---
 title: prestashop:update:sql-upgrade-file-hooks-listing
+category: Internal/Advanced
+description: Update hooks in SQL upgrade files
+weight: 20
 ---
 
 # `prestashop:update:sql-upgrade-file-hooks-listing`

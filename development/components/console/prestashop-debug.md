@@ -1,5 +1,8 @@
 ---
 title: prestashop:debug
+category: Development & Debugging
+description: Debug mode utilities and helpers
+weight: 30
 ---
 
 # `prestashop:debug`

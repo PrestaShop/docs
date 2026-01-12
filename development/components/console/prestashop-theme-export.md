@@ -1,5 +1,8 @@
 ---
 title: prestashop:theme:export
+category: Theme Management
+description: Export a theme package
+weight: 20
 ---
 
 # `prestashop:theme:export`

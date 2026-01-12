@@ -1,5 +1,8 @@
 ---
 title: prestashop:linter:naming-convention
+category: Code Quality & Linting
+description: Check naming conventions compliance
+weight: 10
 ---
 
 # `prestashop:linter:naming-convention`

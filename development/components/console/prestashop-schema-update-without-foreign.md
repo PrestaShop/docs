@@ -1,5 +1,8 @@
 ---
 title: prestashop:schema:update-without-foreign
+category: Database & Schema
+description: Update database schema without foreign keys
+weight: 10
 ---
 
 # `prestashop:schema:update-without-foreign`

@@ -1,5 +1,8 @@
 ---
 title: prestashop:config
+category: Development & Debugging
+description: Display and manage configuration values
+weight: 20
 ---
 
 # `prestashop:config`

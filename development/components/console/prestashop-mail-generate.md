@@ -1,5 +1,8 @@
 ---
 title: prestashop:mail:generate
+category: Assets & Media
+description: Generate email templates from layouts
+weight: 20
 ---
 
 # `prestashop:mail:generate`

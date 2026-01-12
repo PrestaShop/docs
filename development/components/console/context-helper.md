@@ -1,5 +1,8 @@
 ---
 title: Context helper
+category: Utilities
+description: Context helper utilities for development
+weight: 10
 ---
 
 # CLI Context helper

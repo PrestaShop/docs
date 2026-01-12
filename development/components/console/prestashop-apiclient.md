@@ -1,6 +1,8 @@
-
 ---
 title: prestashop:api-client
+category: API & Documentation
+description: Manage API client credentials
+weight: 10
 ---
 
 # `prestashop:api-client`

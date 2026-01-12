@@ -1,5 +1,8 @@
 ---
 title: prestashop:theme:enable
+category: Theme Management
+description: Enable a theme for a shop
+weight: 10
 ---
 
 # `prestashop:theme:enable`
