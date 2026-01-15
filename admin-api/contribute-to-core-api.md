@@ -17,6 +17,18 @@ For the new Admin API, although the whole architecture is inside the core of Pre
 This documentation is based on the most recent modifications and bugfixes done for PrestaShop `9.0.2`, so to contribute new core endpoints please make sure you use at least this version, or the `9.0.x` branch which should be even more up-to-date.
 {{% /notice %}}
 
+{{% notice info %}}
+**Automated CI Checks**
+
+Your contribution will be automatically validated by CI to ensure code quality and consistency. To help your PR get approved quickly, please follow these important guidelines:
+- **No custom normalizers** in the module (use mapping instead)
+- **No custom processors** in the module (core processors are sufficient)
+- **No Value Objects (VOs)** in API Resources (only scalar types allowed)
+- Integration tests must use **full data assertions** (not field-by-field checks)
+
+If any issues are detected, the CI will provide helpful comments to guide you on how to fix them. If you believe your use case requires core improvements (e.g., a new generic normalizer or mapping capability), please reach out to the team - we're here to help!
+{{% /notice %}}
+
 ## 📋 Prerequisites
 
 - Basic knowledge of PHP and OOP
@@ -88,11 +100,13 @@ For entities with multilang values:
 
 All API resource class fields must follow these strict rules:
 - **All fields must be strictly typed** (e.g., `public string $name;`, not `public $name;`)
+- **Only scalar types and arrays are allowed** - NO Value Objects (VOs) in API Resources (enforced by CI/Rector)
 - **Localized properties do NOT start with "localized"** (e.g., `public array $names;`, not `public array $localizedNames;`)
   - Use the `#[LocalizedValue]` attribute for automatic locale conversion
 - **Boolean fields should NOT start with "is"** (e.g., `public bool $ready;`, not `public bool $isReady;`)
 - **Status field must use "enabled"** to homogenize naming (e.g., `public bool $enabled;`, not `$active`, `$enable`, etc.)
 - **Use internal mapping attributes**: `CQRSQueryMapping`, `CQRSCommandMapping`, `ApiResourceMapping` instead of `SerializedName`
+- **Document array fields properly** for OpenAPI schema generation (use `#[ApiProperty(openapiContext: ...)]` for nested structures)
 
 #### Scope Naming Convention
 
@@ -114,6 +128,53 @@ All API resource class fields must follow these strict rules:
 
 {{% notice tip %}}
 For complete details, always refer to the [CQRS API guidelines ADR](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md).
+{{% /notice %}}
+
+## 🚫 What NOT to do
+
+The following practices are **forbidden** and will be automatically blocked by CI:
+
+#### NO Custom Normalizers
+
+{{% notice info %}}
+**Custom normalizers are NOT allowed in the `ps_apiresources` module.**
+
+- Normalization should be handled by the core's generic normalization system
+- Use **mapping** (`CQRSQueryMapping`, `CQRSCommandMapping`, `ApiResourceMapping`) instead of normalizers
+- If a command/query has a specific structure that can't be normalized with current tools, the **core must be improved** with a generic solution
+- This ensures reusability and avoids code duplication
+
+**CI Check**: A whitelist system exists for exceptional cases, but exceptions are only granted when no generic approach is possible. The CI will block PRs with normalizers and provide guidance.
+
+**Need Help?** If you encounter a situation where mapping isn't sufficient and believe a new generic normalizer is needed in the core, please reach out to the team. We can work together to add the functionality to the core in a reusable way.
+{{% /notice %}}
+
+#### NO Custom Processors
+
+{{% notice info %}}
+**Custom processors are NOT allowed in the `ps_apiresources` module.**
+
+- The core already contains generic processors that handle all common cases
+- Core processors combined with proper normalization and mapping are sufficient
+- Adding custom processors creates maintenance overhead and inconsistency
+
+**CI Check**: PRs containing custom processors will be automatically blocked.
+
+**Need Help?** If you encounter a situation where existing core processors don't cover your use case, please reach out to the team. We can evaluate whether a new generic processor should be added to the core.
+{{% /notice %}}
+
+#### NO Value Objects in API Resources
+
+{{% notice info %}}
+**Value Objects (VOs) are forbidden in API Resources.**
+
+- Only **scalar types** (`string`, `int`, `float`, `bool`) and **arrays** are allowed in API Resource properties
+- This ensures proper serialization and OpenAPI documentation generation
+- Complex structures should be represented as arrays with proper documentation
+
+**CI Check**: A Rector rule enforces this and will block PRs with VOs in API Resources.
+
+**Need Help?** If you have a complex data structure that's difficult to represent with scalars and arrays, please reach out to the team. We can discuss alternative approaches or potential core enhancements.
 {{% /notice %}}
 
 ## 📝 Implementation Steps
@@ -693,6 +754,22 @@ This API returns a paginated list which base format is consistent with all other
 
 ## 🧪 PHPUnit Testing Strategy
 
+{{% notice warning %}}
+**Critical Testing Requirements** (enforced by CI):
+
+1. **Full Data Assertions**: Tests MUST assert the complete response data, not individual fields
+   - ✅ Good: `$this->assertEquals(['id' => 1, 'name' => 'Test', 'enabled' => true], $response);`
+   - ❌ Bad: `$this->assertEquals(1, $response['id']); $this->assertEquals('Test', $response['name']);`
+
+2. **Skip Null Values**: Always use `'skip_null_values' => false` in test assertions
+   - This will be enforced globally via core configuration (no need to add everywhere)
+   - Ensures all fields are returned and tested, even when null
+
+3. **Integration Tests Are Sufficient**: With accurate full-data assertions, manual QA can often be avoided
+   - Tests must cover all CRUD operations
+   - Tests must verify complete API contract
+{{% /notice %}}
+
 ### Test Configuration and Setup
 
 To run the tests locally you can clone the module repository, and you can run the tests from its root folder
@@ -891,7 +968,8 @@ class AttributeGroupEndpointTest extends ApiTestCase
         $this->assertArrayHasKey('attributeGroupId', $attributeGroup);
         $attributeGroupId = $attributeGroup['attributeGroupId'];
 
-        // We assert the returned data matches what was posted (plus the ID)
+        // IMPORTANT: Assert the FULL response data, not individual fields (CI requirement)
+        // This ensures the complete API contract is tested
         $this->assertEquals(
             ['attributeGroupId' => $attributeGroupId] + $postData,
             $attributeGroup
@@ -1263,9 +1341,23 @@ class AttributeGroupEndpointTest extends ApiTestCase
 
 ### API Resource Properties (per ADR)
 - **All fields must be strictly typed**
+- **Only scalar types and arrays allowed** - NO Value Objects (VOs)
 - **Localized properties**: Use `$names` (not `$localizedNames`) with `#[LocalizedValue]` attribute
 - **Boolean fields**: Use `$ready` (not `$isReady`)
 - **Status field**: Always use `$enabled` (not `$active`, `$enable`, etc.)
+- **Document array fields** with `#[ApiProperty(openapiContext: ...)]`
+
+### Forbidden Practices (CI-Enforced)
+- ❌ **NO custom normalizers** - use mapping instead
+- ❌ **NO custom processors** - core processors are sufficient
+- ❌ **NO Value Objects in API Resources** - only scalars and arrays
+- ❌ **NO field-by-field assertions** - test full response data
+
+### Testing Requirements (CI-Enforced)
+- ✅ **Assert complete response data** in one call
+- ✅ **Test all CRUD operations** comprehensively
+- ✅ **Use `skip_null_values => false`** for accurate validation
+- ✅ **Integration tests should eliminate need for manual QA**
 
 ## 📚 Useful Resources
 
@@ -1281,10 +1373,19 @@ class AttributeGroupEndpointTest extends ApiTestCase
 
 Following this guide will help you create a comprehensive PR for adding API endpoints to PrestaShop with proper test coverage. Remember to:
 
-1. Follow PrestaShop coding standards
-2. Write comprehensive tests (integration)
-3. Achieve good test coverage
-4. Document your changes properly
-5. Follow the team's review process
+1. **Follow the [CQRS API Guidelines ADR](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md)** - this is mandatory
+2. **Follow PrestaShop coding standards** and API Resource property rules
+3. **Write comprehensive tests** with full data assertions
+4. **Avoid forbidden practices**:
+   - No custom normalizers (use mapping)
+   - No custom processors (core handles this)
+   - No Value Objects in API Resources (only scalars and arrays)
+5. **Ensure CI checks pass** - automated checks will block PRs that violate these rules
+6. **Document your changes properly** (especially array fields for OpenAPI)
+7. **Follow the team's review process**
+
+{{% notice tip %}}
+With proper full-data integration tests, your contribution should require minimal to no manual QA, accelerating the review process!
+{{% /notice %}}
 
 Good luck with your contribution! 🚀
