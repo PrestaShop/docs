@@ -231,7 +231,7 @@ We will now add two endpoints (for `POST` and `GET` methods) that will allow:
 
 {{% notice note %}}
 **URI Convention**: Following the ADR, we use:
-- Plural form: `/attributes/group` (not `/attribute/group`)
+- Plural form: `/attributes/groups` (not `/attribute/group`)
 - Domain name + "Id" suffix for identifier: `attributeGroupId` (not `id` or `attribute_group_id`)
 - Scope naming: `attribute_group_read` and `attribute_group_write` (singular, snake_case)
 {{% /notice %}}
