@@ -14,7 +14,7 @@ For the new Admin API, although the whole architecture is inside the core of Pre
 {{% /notice %}}
 
 {{% notice warning %}}
-This documentation is based on the most recent modifications and bugfixes done for PrestaShop `9.0.1`, so to contribute new core endpoints please make sure you use at least this version, or the `9.0.x` branch which should be even more up-to-date.
+This documentation is based on the most recent modifications and bugfixes done for PrestaShop `9.0.2`, so to contribute new core endpoints please make sure you use at least this version, or the `9.0.x` branch which should be even more up-to-date.
 {{% /notice %}}
 
 ## 📋 Prerequisites
@@ -28,7 +28,7 @@ This documentation is based on the most recent modifications and bugfixes done f
 - Understanding of [OAuth2]({{< relref "/9/admin-api/oauth">}})
 - Understanding of how our [CQRS architecture integrates with API Platform]({{< relref "/9/admin-api/resource_server/api-platform">}})
 - Understanding of [API Resources and our customer operations]({{< relref "/9/admin-api/resource_server/api-resources">}})
-- Understanding the convention defined in our [CQRS API guidelines](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md)
+- Understanding the conventions defined in our [CQRS API guidelines ADR](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md) (Architecture Decision Record)
 
 ## 🎯 Objective
 
@@ -45,12 +45,76 @@ ps_apiresources/
 │               ├── AttributeGroup.php          # Resource for single operations
 │               ├── AttributeGroupList.php      # Resource for listing
 │               └── BulkAttributeGroups.php     # Resource for bulk operation
+                └── BulkAttribute.php           # Resource for bulk operation on Attribute Values
 ├── tests/
 │   └── Integration/
 │       └── ApiPlatform/
 │           └── Resources/
 │               └── AttributeGroupEndpointTest.php
 ```
+
+## 🎨 API Design Principles
+
+Before implementing endpoints, you must follow the conventions defined in the [CQRS API guidelines ADR](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md). Here are the fundamental rules:
+
+#### URI Path Conventions
+
+- **Base on the CQRS domain name** from `PrestaShop/PrestaShop/Core/Domain` (matches ObjectModel entity name)
+- **Use plural form** for URIs (e.g., `/hooks`, `/products`, `/attribute-groups`)
+- **Use domain name + "Id" suffix** for identifiers (e.g., `hookId`, `productId`, `attributeGroupId`)
+- **Use kebab-case** for compound names and actions (e.g., `/assign-to-category`, `/bulk-delete`)
+- **Sub-parts follow the parent path** (e.g., `/products/{productId}/combinations`, `/hooks/{hookId}/status`)
+
+#### HTTP Methods and Custom Operations
+
+- **GET**: Read operations → use `CQRSGet` or `CQRSGetCollection`
+- **POST**: Creation and duplication → use `CQRSCreate`
+- **PUT**: Full update → use `CQRSUpdate`
+- **PATCH**: Partial update → use `CQRSPartialUpdate`
+- **DELETE**: Delete operations → use `CQRSDelete`
+- **PaginatedList**: For paginated collections
+
+#### Multilang Field Conventions
+
+For entities with multilang values:
+- **Single entity endpoints**: Return ALL languages as an associative array indexed by locale, for example:
+```json
+{"names": {"en-US": "english name", "fr-FR": "nom français"}}
+```
+
+- **List endpoints**: Return only one language as strings (default shop language, or specify `langId` query parameter)
+
+#### API Resource Properties Rules
+
+All API resource class fields must follow these strict rules:
+- **All fields must be strictly typed** (e.g., `public string $name;`, not `public $name;`)
+- **Localized properties do NOT start with "localized"** (e.g., `public array $names;`, not `public array $localizedNames;`)
+  - Use the `#[LocalizedValue]` attribute for automatic locale conversion
+- **Boolean fields should NOT start with "is"** (e.g., `public bool $ready;`, not `public bool $isReady;`)
+- **Status field must use "enabled"** to homogenize naming (e.g., `public bool $enabled;`, not `$active`, `$enable`, etc.)
+- **Use internal mapping attributes**: `CQRSQueryMapping`, `CQRSCommandMapping`, `ApiResourceMapping` instead of `SerializedName`
+
+#### Scope Naming Convention
+
+- Use **singular form** of the entity domain name
+- **snake_case** format
+- Append the action: `{entity}_read` or `{entity}_write`
+- Examples: `order_read`, `order_write`, `product_read`, `product_write`
+- Detailed sub-scopes may be defined later (e.g., `order_update_address`, `order_create_invoice`)
+
+#### Bulk Operations Convention
+
+- Always use `bulk-` prefix for the action (e.g., `/products/bulk-delete`, `/products/bulk-update-status`)
+- Use plural form of domain + "Ids" for parameter names (e.g., `productIds`, `attributeGroupIds`)
+- Default to POST method if no HTTP method consensus exists
+- Examples:
+  - `DELETE /products/bulk-delete` with `productIds` in body
+  - `POST /products/bulk-duplicate` with `productIds` in body
+  - `PUT /products/bulk-update-status` with `productIds` in body
+
+{{% notice tip %}}
+For complete details, always refer to the [CQRS API guidelines ADR](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md).
+{{% /notice %}}
 
 ## 📝 Implementation Steps
 
@@ -65,6 +129,14 @@ The new admin API is based on APIPlatform, we use some API Resources which are c
 #### Create the API Resource object that defines our expected format
 
 Create the file `src/ApiPlatform/Resources/Attribute/AttributeGroup.php`, here is the simple DTO with the naming we are expecting:
+
+{{% notice warning %}}
+**IMPORTANT**: Follow the [API Resource Properties Rules](#api-resource-properties-rules) from the ADR:
+- All fields must be strictly typed
+- Localized properties do NOT start with "localized" (use `$names`, not `$localizedNames`)
+- Boolean fields should NOT start with "is" (use `$ready`, not `$isReady`)
+- Status field must use "enabled" (not `$active`, `$enable`, etc.)
+{{% /notice %}}
 
 ```php
 <?php
@@ -95,6 +167,13 @@ We will now add two endpoints (for `POST` and `GET` methods) that will allow:
 - creating the AttributeGroup, we will use the `AddAttributeGroupCommand` mapped with a `CQRSCreate` operation, it requires a scope `attribute_group_write` to be used
   - by default the command will only return the created ID if you want to return the full object you need to define the `CQRSQuery` option on the operation, this way the full object is read and returned in the response
 - fetching the AttributeGroup, we will use the `GetAttributeGroupForEditing` mapped with a `CQRSGet` operation, it requires a scope `attribute_group_read` to be used
+
+{{% notice note %}}
+**URI Convention**: Following the ADR, we use:
+- Plural form: `/attributes/group` (not `/attribute/group`)
+- Domain name + "Id" suffix for identifier: `attributeGroupId` (not `id` or `attribute_group_id`)
+- Scope naming: `attribute_group_read` and `attribute_group_write` (singular, snake_case)
+{{% /notice %}}
 
 ```php
 <?php
@@ -150,6 +229,10 @@ Now we face a problem, the name of the fields in our API resource are not identi
 - the query result `EditableAttributeGroup` (returned by our query) uses `name` and `publicName`
 
 So we have to explain to our core architecture how to map these data if we want to keep the target naming on our API resource. This is done using mapping (you can read more about [custom mapping]({{< relref "/9/admin-api/resource_server/api-resources#custom-mapping">}})), here is the API resource adapted with the proper mapping, we use class protected const to reuse the mapping in several operations more easily:
+
+{{% notice tip %}}
+**ADR Requirement**: Use the internal mapping attributes (`CQRSQueryMapping`, `CQRSCommandMapping`, `ApiResourceMapping`) instead of the `SerializedName` attribute, as it is not applied everywhere appropriately for the documentation.
+{{% /notice %}}
 
 ```php
 #[ApiResource(
@@ -230,6 +313,13 @@ It is much more convenient if the localized values are index by locale value lik
 
 That's why we introduced a customer PHP attribute `PrestaShopBundle\ApiPlatform\Metadata\LocalizedValue` that you can simply add on the field that must be handled specifically, and internally the core will handle the automatic convertion of `locale-to-id` and `id-to-locale` for both read and write operations:
 
+{{% notice note %}}
+**ADR Convention**: Following the [Multilang Field Conventions](#multilang-field-conventions):
+- Single entity endpoints return ALL languages indexed by locale
+- List endpoints return only one language as a string (default shop language or `langId` parameter)
+- Localized property names do NOT start with "localized" (use `$names`, not `$localizedNames`)
+{{% /notice %}}
+
 ```php
 ...
 use PrestaShopBundle\ApiPlatform\Metadata\LocalizedValue;
@@ -281,6 +371,13 @@ For update and delete endpoints the principle is similar, we are creating a `DEL
   - to know which HTTP method you should use you will need to check the implementation of the CQRS commands to see if it allows optional values
 - to delete the AttributeGroup, we will use the `DeleteAttributeGroupCommand` mapped with a `CQRSDelete` operation, it requires a scope `attribute_group_write` to be used
 
+{{% notice info %}}
+**HTTP Methods per ADR**:
+- `PATCH` for partial updates → use `CQRSPartialUpdate`
+- `PUT` for full updates → use `CQRSUpdate`
+- `DELETE` for deletions → use `CQRSDelete`
+{{% /notice %}}
+
 ```php
 ...
 use PrestaShopBundle\ApiPlatform\Metadata\CQRSPartialUpdate;
@@ -319,6 +416,13 @@ class AttributeGroup
 
 For bulk action we create a new dedicated resource with only one array field `$attributeGroupIds`, create the file `src/ApiPlatform/Resources/Attribute/BulkAttributeGroups.php`:
 
+{{% notice warning %}}
+**ADR Bulk Operations Convention**:
+- Use `bulk-` prefix for the action in the URI (e.g., `/attributes/groups/delete`, not `/attributes/groups/bulk-delete`)
+- Use plural domain name + "Ids" for parameter names (e.g., `attributeGroupIds`)
+- The example uses `PUT` method, but you could also use `DELETE` method depending on the operation
+{{% /notice %}}
+
 ```php
 <?php
 declare(strict_types=1);
@@ -329,20 +433,19 @@ use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
 use PrestaShop\PrestaShop\Core\Domain\AttributeGroup\Command\BulkDeleteAttributeGroupCommand;
 use PrestaShop\PrestaShop\Core\Domain\AttributeGroup\Exception\AttributeGroupNotFoundException;
-use PrestaShopBundle\ApiPlatform\Metadata\CQRSUpdate;
+use PrestaShopBundle\ApiPlatform\Metadata\CQRSDelete;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ApiResource(
     operations: [
-        new CQRSUpdate(
-            uriTemplate: '/attributes/groups/delete',
-            // No output 204 code
-            output: false,
+        new CQRSDelete(
+            uriTemplate: '/attributes/groups/bulk-delete',
             CQRSCommand: BulkDeleteAttributeGroupCommand::class,
             scopes: [
                 'attribute_group_write',
             ],
+            allowEmptyBody: false,
         ),
     ],
     exceptionToStatus: [
@@ -1129,36 +1232,50 @@ class AttributeGroupEndpointTest extends ApiTestCase
 
 ### Naming Conventions
 - **CamelCase** for API Resource properties
-- **snake_case** for database mapping
+- **snake_case** for database mapping and scope names
 - **PascalCase** for class names
+- **kebab-case** for compound URI actions (e.g., `/assign-to-category`)
 
 ### Data Mapping
 - `ApiResourceMapping`: transforms DB data to API format
 - `filtersMapping`: transforms API filters to grid format
 - `CQRSQueryMapping`: for CQRS queries
 - `CQRSCommandMapping`: for CQRS commands
+- **Use internal mapping attributes** (NOT `SerializedName`)
 
-### Security Scopes
-- `_read`: for read operations (GET)
-- `_write`: for write operations (POST, PUT, PATCH, DELETE)
+### Security Scopes (per ADR)
+- Use **singular** entity name + action: `{entity}_read` or `{entity}_write`
+- Examples: `attribute_group_read`, `attribute_group_write`, `order_read`, `order_write`
+- Format: **snake_case**
 
-### URI Templates
-- Use consistent and descriptive names
+### URI Templates (per ADR)
+- Use **plural form** for base URIs (e.g., `/hooks`, `/products`)
+- Use domain name + "Id" suffix for identifiers (e.g., `hookId`, `productId`)
 - Follow REST conventions:
-    - `GET /resource/{id}`: retrieve single item
+    - `GET /resources/{resourceId}`: retrieve single item
     - `GET /resources`: list items
-    - `POST /resource`: create item
-    - `PUT/PATCH /resource/{id}`: update item
-    - `DELETE /resource/{id}`: delete item
+    - `POST /resources`: create item
+    - `PUT /resources/{resourceId}`: full update
+    - `PATCH /resources/{resourceId}`: partial update
+    - `DELETE /resources/{resourceId}`: delete item
+    - `POST /resources/{resourceId}/duplicate`: duplicate item
+    - `DELETE /resources/bulk-delete`: bulk operations (with `resourceIds` in body)
+
+### API Resource Properties (per ADR)
+- **All fields must be strictly typed**
+- **Localized properties**: Use `$names` (not `$localizedNames`) with `#[LocalizedValue]` attribute
+- **Boolean fields**: Use `$ready` (not `$isReady`)
+- **Status field**: Always use `$enabled` (not `$active`, `$enable`, etc.)
 
 ## 📚 Useful Resources
 
+- **[CQRS API Guidelines ADR](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md)** ⭐ **Required reading** - Architecture Decision Record defining all API conventions
 - [PrestaShop API Resources Documentation]({{< relref "/9/admin-api/resource_server/api-resources">}})
 - [API Platform Documentation](https://api-platform.com/docs/)
 - [PHPUnit Documentation](https://phpunit.de/documentation.html)
 - [CQRS Pattern](https://martinfowler.com/bliki/CQRS.html)
 - [PrestaShop Contributing Guidelines]({{< relref "/9/contribute">}})
-- [Symfony Testing Best Practices](https://symfony.com/doc/current/testing.html)
+- [Symfony Testing Best Practices](https://symfony.com/doc/6.4/testing.html)
 
 ## 🎉 Conclusion
 
