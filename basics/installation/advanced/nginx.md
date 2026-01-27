@@ -152,7 +152,7 @@ server {
 		# fastcgi_param HTTPS $https_redirect;
 		# fastcgi_param HTTP_SCHEME https;
 
-        # Pass Cloudflare headers to PHP
+        # Pass HTTPS headers to PHP
         # Uncomment these for Cloudflare Tunnel and SSL-enabled reverse proxy
 		# fastcgi_param HTTP_X_FORWARDED_PROTO $http_x_forwarded_proto;
 		# fastcgi_param HTTP_X_FORWARDED_FOR $proxy_add_x_forwarded_for;
