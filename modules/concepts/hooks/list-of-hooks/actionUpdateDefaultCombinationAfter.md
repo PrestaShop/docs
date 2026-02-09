@@ -30,9 +30,10 @@ It is dispatched when a merchant sets a new default combination in the product p
 The hook receives an array of parameters:
 
 | Parameter            | Type | Description |
-|---------------------|------|-------------|
-| id_product          | int  | The product ID. |
-| id_product_attribute| int  | The ID of the new default combination (product attribute ID). |
+|--------------------- |------|-------------|
+| id_product           | int  | The product ID. |
+| id_product_attribute | int  | The ID of the new default combination (product attribute ID). |
+| id_shop              | int  | The shop ID (current shop context). |
 
 ## Example usage
 
@@ -41,6 +42,7 @@ public function hookActionUpdateDefaultCombinationAfter(array $params): void
 {
     $productId = (int) ($params['id_product'] ?? 0);
     $productAttributeId = (int) ($params['id_product_attribute'] ?? 0);
+    $shopId = (int) ($params['id_shop'] ?? 0);
 
     if ($productId <= 0 || $productAttributeId <= 0) {
         return;
@@ -58,6 +60,7 @@ $this->hookDispatcher->dispatchWithParameters(
     [
         'id_product' => (int) $newDefaultCombination->id_product,
         'id_product_attribute' => (int) $defaultCombinationId->getValue(),
+        'id_shop' => $shopConstraint->getShopId()->getValue(),
     ]
 );
 ```
