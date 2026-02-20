@@ -7,7 +7,7 @@ title: PriceReductionType
 Responsible for creating form for price reduction
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [PriceReductionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/PriceReductionType.php)
+- Reference: [PriceReductionType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/PriceReductionType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ Responsible for creating form for price reduction
 
 ## Code example
 
-- [CatalogPriceRuleType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/CatalogPriceRule/CatalogPriceRuleType.php#L190-L205)
+- [CatalogPriceRuleType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Sell/CatalogPriceRule/CatalogPriceRuleType.php#L190-L205)
 
 ```php
 $builder->add('reduction', PriceReductionType::class, [

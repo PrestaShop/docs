@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Form/IdentifiableObject/Builder/FormBuilder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Core/Form/IdentifiableObject/Builder/FormBuilder.php'
         file: src/Core/Form/IdentifiableObject/Builder/FormBuilder.php
 locations:
     - 'front office'

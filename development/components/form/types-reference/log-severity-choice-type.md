@@ -7,7 +7,7 @@ title: LogSeverityChoiceType
 ChoiceType of PrestaShopLogger Log levels
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [LogSeverityChoiceType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/LogSeverityChoiceType.php)
+- Reference: [LogSeverityChoiceType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/LogSeverityChoiceType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ ChoiceType of PrestaShopLogger Log levels
 
 ## Code example
 
-- [LogsByEmailType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/AdvancedParameters/Logs/LogsByEmailType.php#L46-L59)
+- [LogsByEmailType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Configure/AdvancedParameters/Logs/LogsByEmailType.php#L46-L59)
 
 ```php
 $builder->add('logs_by_email', LogSeverityChoiceType::class, [

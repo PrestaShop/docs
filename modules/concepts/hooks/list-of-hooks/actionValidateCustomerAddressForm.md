@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Customer address form validation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressForm.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/form/CustomerAddressForm.php'
         file: classes/form/CustomerAddressForm.php
 locations:
     - 'front office'

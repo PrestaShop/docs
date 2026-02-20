@@ -7,7 +7,7 @@ title: AmountCurrencyType
 Amount with currency: combination of a `NumberType` input and a `ChoiceType` input (for currency selection).
 
 - Namespace: `PrestaShopBundle\Form\Admin\Type`
-- Reference: [AmountCurrencyType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/AmountCurrencyType.php)
+- Reference: [AmountCurrencyType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/AmountCurrencyType.php)
 
 ## Type options
 
@@ -20,7 +20,7 @@ Amount with currency: combination of a `NumberType` input and a `ChoiceType` inp
 
 ## Code example
 
-- [OrderPaymentType.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Order/OrderPaymentType.php#L113-L122)
+- [OrderPaymentType.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Sell/Order/OrderPaymentType.php#L113-L122)
 
 ```php
 $builder

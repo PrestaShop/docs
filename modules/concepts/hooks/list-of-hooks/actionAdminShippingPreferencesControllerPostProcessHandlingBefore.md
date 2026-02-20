@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'On post-process in Admin Improve Shipping Preferences Controller'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php'
         file: src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php
 locations:
     - 'back office'

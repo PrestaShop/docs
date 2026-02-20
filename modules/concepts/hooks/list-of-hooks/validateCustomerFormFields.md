@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Customer registration form validation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerForm.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/form/CustomerForm.php'
         file: classes/form/CustomerForm.php
 locations:
     - 'front office'

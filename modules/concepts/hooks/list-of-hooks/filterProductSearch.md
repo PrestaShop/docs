@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Filter search products result'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/blockwishlist/controllers/front/view.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/modules/blockwishlist/controllers/front/view.php'
         file: modules/blockwishlist/controllers/front/view.php
 locations:
     - 'front office'

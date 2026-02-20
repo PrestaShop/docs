@@ -20,7 +20,7 @@ The Cart is created in database once first Product is being added into it.
 
 {{% notice note %}}
 When a Customer signs-in, has an empty Cart in its Cookie (or does not have a Cart) and has a previous non ordered Cart in its profile, the default behaviour of PrestaShop is to reload its most recent non ordered Cart. That behaviour can be adjusted in `Configure -> Shop parameters -> Customer settings`, the related setting is `PS_CART_FOLLOWING` : `Re-display cart at login`.
-This setting is implemented in: [Context.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Context.php#L365).
+This setting is implemented in: [Context.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Context.php#L365).
 {{% /notice %}}
 
 <div class='mermaid'>
@@ -113,9 +113,9 @@ click `More actions -> Send pre-filled Order to the Customer by email` in summar
 {{% notice note %}}
 **Dive more in PrestaShop's Checkout process:**
 Learn how it works under the hood by looking at:
-- [classes/checkout/CheckoutSession.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutSession.php)
-- [classes/checkout/CheckoutProcess.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutProcess.php)
-- [classes/checkout/CheckoutStepInterface.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutStepInterface.php)
+- [classes/checkout/CheckoutSession.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/checkout/CheckoutSession.php)
+- [classes/checkout/CheckoutProcess.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/checkout/CheckoutProcess.php)
+- [classes/checkout/CheckoutStepInterface.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/checkout/CheckoutStepInterface.php)
 
 {{% /notice %}}
 

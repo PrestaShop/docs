@@ -134,7 +134,7 @@ This will only work for **one route/one controller** the association by action d
 
 #### Javascript routes
 
-In order to generate a symfony route in javascript, you can use the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/js/components/router.ts).
+In order to generate a symfony route in javascript, you can use the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/admin-dev/themes/new-theme/js/components/router.ts).
 
 You can use it like this:
 

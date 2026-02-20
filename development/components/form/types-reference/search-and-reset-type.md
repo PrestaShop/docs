@@ -7,7 +7,7 @@ title: SearchAndResetType
 FormType used in rendering of "Search and Reset" action in Grids.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [SearchAndResetType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/SearchAndResetType.php)
+- Reference: [SearchAndResetType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/SearchAndResetType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ FormType used in rendering of "Search and Reset" action in Grids.
 
 ## Code example
 
-- [AddressGridDefinitionFactory](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/AddressGridDefinitionFactory.php#L238-L248)
+- [AddressGridDefinitionFactory](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Core/Grid/Definition/Factory/AddressGridDefinitionFactory.php#L238-L248)
 
 ```php
 ->add(

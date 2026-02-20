@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Carrier Update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminCarriersController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/admin/AdminCarriersController.php'
         file: controllers/admin/AdminCarriersController.php
 locations:
     - 'back office'

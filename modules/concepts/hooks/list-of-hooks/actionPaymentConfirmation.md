@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Payment confirmation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/order/OrderHistory.php'
         file: classes/order/OrderHistory.php
 locations:
     - 'front office'

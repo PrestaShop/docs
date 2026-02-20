@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Module configuration - After toolbar buttons'
 files:
     -
-        url: 'https://github.com/PrestaShop/Prestashop/blob/8.0.x/admin-dev/themes/default/template/controllers/modules/configure.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/admin-dev/themes/default/template/controllers/modules/configure.tpl'
         file: admin-dev/themes/default/template/controllers/modules/configure.tpl
 locations:
     - 'back office'

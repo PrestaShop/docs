@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Product cancelled'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php'
         file: src/Adapter/Order/CommandHandler/IssueStandardRefundHandler.php
 locations:
     - 'front office'

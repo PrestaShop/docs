@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Runs an action after ProductSearchProviderInterface::RunQuery()'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/ProductListingFrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/controller/ProductListingFrontController.php'
         file: classes/controller/ProductListingFrontController.php
 locations:
     - 'front office'

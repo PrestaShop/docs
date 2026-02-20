@@ -7,7 +7,7 @@ title: SubmittableDeltaQuantityType
 Wraps SubmittableInput and DeltaQuantity components to work together.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [SubmittableDeltaQuantityType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/SubmittableDeltaQuantityType.php)
+- Reference: [SubmittableDeltaQuantityType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/SubmittableDeltaQuantityType.php)
 
 ## Required Javascript components
 

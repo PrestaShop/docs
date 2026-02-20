@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/module/ModuleGraph.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/module/ModuleGraph.php'
         file: classes/module/ModuleGraph.php
 locations:
     - 'back office'

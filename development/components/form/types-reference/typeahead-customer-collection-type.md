@@ -7,7 +7,7 @@ title: TypeaheadCustomerCollectionType
 This form class is responsible for selecting a customer.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [TypeaheadCustomerCollectionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/TypeaheadCustomerCollectionType.php)
+- Reference: [TypeaheadCustomerCollectionType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/TypeaheadCustomerCollectionType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ This form class is responsible for selecting a customer.
 
 ## Code example
 
-- [ProductSpecificPrice](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Product/ProductSpecificPrice.php#L209-L224)
+- [ProductSpecificPrice](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Product/ProductSpecificPrice.php#L209-L224)
 
 ```php
 $builder->add(

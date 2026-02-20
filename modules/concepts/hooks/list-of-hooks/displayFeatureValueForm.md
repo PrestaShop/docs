@@ -4,7 +4,7 @@ hidden: true
 hookTitle: "Add fields to the form 'feature value'"
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl'
         file: admin-dev/themes/default/template/controllers/feature_value/helpers/form/form.tpl
 locations:
     - 'back office'

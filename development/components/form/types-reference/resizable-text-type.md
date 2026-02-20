@@ -7,7 +7,7 @@ title: ResizableTextType
 ResizableTextType adds new sizing options to TextType.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [ResizableTextType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ResizableTextType.php)
+- Reference: [ResizableTextType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/ResizableTextType.php)
 
 ## Type options
 

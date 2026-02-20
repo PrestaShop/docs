@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Payment return'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderConfirmationController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/OrderConfirmationController.php'
         file: controllers/front/OrderConfirmationController.php
 locations:
     - 'front office'

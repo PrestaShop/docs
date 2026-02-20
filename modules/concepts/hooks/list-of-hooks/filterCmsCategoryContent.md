@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Filter the content page category'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CmsController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/CmsController.php'
         file: controllers/front/CmsController.php
 locations:
     - 'front office'

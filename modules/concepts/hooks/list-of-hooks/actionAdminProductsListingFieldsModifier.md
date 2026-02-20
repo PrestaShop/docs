@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataProvider.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Product/AdminProductDataProvider.php'
         file: src/Adapter/Product/AdminProductDataProvider.php
 locations:
     - 'back office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'On post-process in Admin Improve International Localization Controller'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php'
         file: src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php
 locations:
     - 'back office'

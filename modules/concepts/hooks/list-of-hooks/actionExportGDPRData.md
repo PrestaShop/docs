@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/modules/psgdpr/psgdpr.php'
         file: modules/psgdpr/psgdpr.php
 locations:
     - 'front office'

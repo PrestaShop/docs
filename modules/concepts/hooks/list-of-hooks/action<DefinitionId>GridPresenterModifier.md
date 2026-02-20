@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Presenter/GridPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Core/Grid/Presenter/GridPresenter.php'
         file: src/Core/Grid/Presenter/GridPresenter.php
 locations:
     - 'front office'

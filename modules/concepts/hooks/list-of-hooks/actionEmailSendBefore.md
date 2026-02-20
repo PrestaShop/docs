@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Before sending an email'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Mail.php'
         file: classes/Mail.php
 locations:
     - 'front office'

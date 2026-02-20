@@ -166,7 +166,7 @@ Field type is an important setting, it determines how ObjectModel will format yo
 #### Validation rules reference
 
 Several validation rules are available for your ObjectModel fields.
-[Please refer to the Validate class of PrestaShop](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Validate.php) for a complete list.
+[Please refer to the Validate class of PrestaShop](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Validate.php) for a complete list.
 
 ### Add timestamps to your entity (date_add and date_upd)
 
@@ -208,7 +208,7 @@ $cms->save();
 
 In this example, we create an entity from scratch. Then, we set its `position` attribute, and we call the `save()` method. The `save()` method will trigger the `add()` method since its `id` attribute is not yet known (because the entity is not created in database).
 
-If the insert is successful, the ObjectModel class will set the entity's id (retrieved from the database). [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L572-L658).
+If the insert is successful, the ObjectModel class will set the entity's id (retrieved from the database). [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/ObjectModel.php#L572-L658).
 
 
 ### Load and save an object
@@ -221,7 +221,7 @@ $cms->position = 3;
 $cms->save();
 ```
 
-In this example, we retrieve an entity from the database with its id. Then, we change its `position` attribute and call the same `save()` method. The `save()` method will trigger the `update()` method and not the `add()` method since its `id` attribute is known. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php#L750-L868).
+In this example, we retrieve an entity from the database with its id. Then, we change its `position` attribute and call the same `save()` method. The `save()` method will trigger the `update()` method and not the `add()` method since its `id` attribute is known. [Complete reference here](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/ObjectModel.php#L750-L868).
 
 ### Hard or soft delete an object
 
@@ -572,7 +572,7 @@ public function hookActionObjectProductDeleteAfter(Product $product)
 
 Here is the reference of the methods described on this page. Many other methods that we don't described here are available.
 
-See complete implementation here : [ObjectModel.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php)
+See complete implementation here : [ObjectModel.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/ObjectModel.php)
 
 ```php
 /**

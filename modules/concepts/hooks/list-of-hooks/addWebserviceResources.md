@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add extra webservice resource'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/webservice/WebserviceRequest.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/webservice/WebserviceRequest.php'
         file: classes/webservice/WebserviceRequest.php
 locations:
     - 'front office'

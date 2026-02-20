@@ -11,4 +11,4 @@ This form type is a [Form Type Extension](https://symfony.com/doc/current/form/c
 {{% /notice %}}
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [CustomMoneyType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/CustomMoneyType.php)
+- Reference: [CustomMoneyType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/CustomMoneyType.php)

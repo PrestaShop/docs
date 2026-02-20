@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/ConditionsToApproveFinder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/checkout/ConditionsToApproveFinder.php'
         file: classes/checkout/ConditionsToApproveFinder.php
 locations:
     - 'front office'

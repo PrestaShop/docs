@@ -4,7 +4,7 @@ hidden: true
 hookTitle: Watermark
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/Image/Uploader/ProductImageUploader.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Product/Image/Uploader/ProductImageUploader.php'
         file: src/Adapter/Product/Image/Uploader/ProductImageUploader.php
 locations:
     - 'front office'

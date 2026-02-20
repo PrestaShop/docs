@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Product update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductWrapper.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Product/AdminProductWrapper.php'
         file: src/Adapter/Product/AdminProductWrapper.php
 locations:
     - 'back office'

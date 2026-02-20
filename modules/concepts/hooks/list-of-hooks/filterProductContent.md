@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Filter the content page product'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/ProductController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/ProductController.php'
         file: controllers/front/ProductController.php
 locations:
     - 'front office'

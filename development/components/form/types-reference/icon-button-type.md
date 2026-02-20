@@ -7,7 +7,7 @@ title: IconButtonType
 A form button with material icon.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [IconButtonType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/IconButtonType.php)
+- Reference: [IconButtonType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/IconButtonType.php)
 
 ## Type options
 
@@ -18,7 +18,7 @@ A form button with material icon.
 
 ## Code example
 
-- [FooterType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/FooterType.php#L99-L107)
+- [FooterType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/FooterType.php#L99-L107)
 
 ```php
 $builder->add('catalog', IconButtonType::class, [

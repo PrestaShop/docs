@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display new elements in back office product page, left column of the Basic settings tab'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/essentials.html.twig
 locations:
     - 'back office'

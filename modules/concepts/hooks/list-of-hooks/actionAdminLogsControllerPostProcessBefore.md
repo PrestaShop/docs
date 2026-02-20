@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php'
         file: src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/LogsController.php
 locations:
     - 'back office'

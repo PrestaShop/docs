@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/AttachmentController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/AttachmentController.php'
         file: controllers/front/AttachmentController.php
 locations:
     - 'front office'

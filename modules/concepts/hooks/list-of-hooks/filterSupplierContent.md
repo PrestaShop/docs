@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Filter the content page supplier'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/listing/SupplierController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/listing/SupplierController.php'
         file: controllers/front/listing/SupplierController.php
 locations:
     - 'front office'

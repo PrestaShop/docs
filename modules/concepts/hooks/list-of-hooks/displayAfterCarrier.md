@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'After carriers list'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/checkout/CheckoutDeliveryStep.php'
         file: classes/checkout/CheckoutDeliveryStep.php
 locations:
     - 'front office'

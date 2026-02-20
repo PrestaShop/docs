@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Clear smarty compile cache'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Tools.php'
         file: classes/Tools.php
 locations:
     - 'front office'

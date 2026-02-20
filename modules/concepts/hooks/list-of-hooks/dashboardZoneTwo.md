@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/admin/AdminDashboardController.php'
         file: controllers/admin/AdminDashboardController.php
 locations:
     - 'back office'

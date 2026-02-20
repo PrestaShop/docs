@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Administration Employee menu'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php'
         file: src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
 locations:
     - 'back office'

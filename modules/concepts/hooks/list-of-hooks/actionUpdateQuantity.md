@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Quantity update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/stock/StockAvailable.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/stock/StockAvailable.php'
         file: classes/stock/StockAvailable.php
 locations:
     - 'front office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Tax Manager Factory'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/tax/TaxManagerFactory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/tax/TaxManagerFactory.php'
         file: classes/tax/TaxManagerFactory.php
 locations:
     - 'front office'

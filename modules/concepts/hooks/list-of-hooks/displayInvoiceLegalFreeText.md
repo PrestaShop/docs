@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'PDF Invoice - Legal Free Text'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/pdf/HTMLTemplateInvoice.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/pdf/HTMLTemplateInvoice.php'
         file: classes/pdf/HTMLTemplateInvoice.php
 locations:
     - 'front office'

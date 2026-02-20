@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'After setting the tracking number for the order'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php'
         file: src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php
 locations:
     - 'back office'

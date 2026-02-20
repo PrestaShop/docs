@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Cart product removal'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/CartController.php'
         file: controllers/front/CartController.php
 locations:
     - 'back office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add fields to the Customer address form'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressFormatter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/form/CustomerAddressFormatter.php'
         file: classes/form/CustomerAddressFormatter.php
 locations:
     - 'front office'

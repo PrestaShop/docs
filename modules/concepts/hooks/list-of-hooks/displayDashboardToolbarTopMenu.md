@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display new elements in back office page with a dashboard, on top Menu'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/page_header_toolbar.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/admin-dev/themes/new-theme/template/page_header_toolbar.tpl'
         file: admin-dev/themes/new-theme/template/page_header_toolbar.tpl
 locations:
     - 'back office'

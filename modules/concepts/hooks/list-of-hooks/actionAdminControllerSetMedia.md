@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php'
         file: src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php
 locations:
     - 'back office'

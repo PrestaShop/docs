@@ -7,7 +7,7 @@ title: RadioWithChoiceChildrenType
 Combination of a RadioType and a ChoiceType fields
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [RadioWithChoiceChildrenType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/RadioWithChoiceChildrenType.php)
+- Reference: [RadioWithChoiceChildrenType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/RadioWithChoiceChildrenType.php)
 
 ## Type options
 
@@ -19,7 +19,7 @@ Combination of a RadioType and a ChoiceType fields
 
 ## Code example
 
-- [ExportCataloguesType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Improve/International/Translations/ExportCataloguesType.php#L106-L118)
+- [ExportCataloguesType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Improve/International/Translations/ExportCataloguesType.php#L106-L118)
 
 ```php
 $builder->add('themes_selectors', RadioWithChoiceChildrenType::class, [

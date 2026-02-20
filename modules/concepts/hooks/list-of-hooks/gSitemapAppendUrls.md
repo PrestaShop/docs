@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/gsitemap/gsitemap.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/modules/gsitemap/gsitemap.php'
         file: modules/gsitemap/gsitemap.php
 locations:
     - 'front office'

@@ -109,5 +109,5 @@ If your MySQL server is configured on a different port than `3306`, please speci
 
 [iso-639-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [tz-database]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[activities]: https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/General/PreferencesType.php#L211-L230
+[activities]: https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/General/PreferencesType.php#L211-L230
 [iso-3166]: https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes

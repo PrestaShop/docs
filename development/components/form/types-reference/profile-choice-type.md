@@ -7,7 +7,7 @@ title: ProfileChoiceType
 Class ProfileChoiceType is choice type for selecting employee's profile.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type\Common\Team
-- Reference: [ProfileChoiceType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/Common/Team/ProfileChoiceType.php)
+- Reference: [ProfileChoiceType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/Common/Team/ProfileChoiceType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ Class ProfileChoiceType is choice type for selecting employee's profile.
 
 ## Code example
 
-- [EmployeeGridDefinitionFactory](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/EmployeeGridDefinitionFactory.php#L203-L209)
+- [EmployeeGridDefinitionFactory](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Core/Grid/Definition/Factory/EmployeeGridDefinitionFactory.php#L203-L209)
 
 ```php
 ->add(

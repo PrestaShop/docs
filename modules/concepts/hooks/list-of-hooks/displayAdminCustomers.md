@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display new elements in the Back Office, tab AdminCustomers'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/view.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/view.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Sell/Customer/view.html.twig
 locations:
     - 'back office'

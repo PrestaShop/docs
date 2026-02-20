@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Admin Order Buttons'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php'
         file: src/PrestaShopBundle/Controller/Admin/Sell/Order/OrderController.php
 locations:
     - 'back office'

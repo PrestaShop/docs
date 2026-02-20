@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'BO themes list extra content'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Improve/Design/Theme/index.html.twig
 locations:
     - 'back office'

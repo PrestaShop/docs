@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Payment options Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/PaymentOptionsFinder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/checkout/PaymentOptionsFinder.php'
         file: classes/checkout/PaymentOptionsFinder.php
 locations:
     - 'front office'

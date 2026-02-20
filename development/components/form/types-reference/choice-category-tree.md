@@ -7,7 +7,7 @@ title: ChoiceCategoriesTreeType
 This form class is responsible for creating a category selector using a tree view
 
 - Namespace: `PrestaShopBundle\Form\Admin\Type`
-- Reference: [ChoiceCategoriesTreeType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ChoiceCategoriesTreeType.php)
+- Reference: [ChoiceCategoriesTreeType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/ChoiceCategoriesTreeType.php)
 
 ## Type options
 
@@ -27,7 +27,7 @@ This form class is responsible for creating a category selector using a tree vie
 
 ## Code example
 
-- [ProductInformation.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Product/ProductInformation.php#L320-L325)
+- [ProductInformation.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Product/ProductInformation.php#L320-L325)
 
 ```php
 $builder->add('categories', ChoiceCategoriesTreeType::class, [

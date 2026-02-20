@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Product creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/ProductDuplicator.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Product/ProductDuplicator.php'
         file: src/Adapter/Product/ProductDuplicator.php
 locations:
     - 'front office'

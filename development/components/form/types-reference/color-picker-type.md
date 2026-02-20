@@ -7,7 +7,7 @@ title: ColorPickerType
 This form class is responsible for creating a color picker field
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [ColorPickerType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ColorPickerType.php)
+- Reference: [ColorPickerType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/ColorPickerType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ This form class is responsible for creating a color picker field
 
 ## Code example
 
-- [OrderStateType.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/OrderStates/OrderStateType.php#L132-L134)
+- [OrderStateType.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/OrderStates/OrderStateType.php#L132-L134)
 
 ```php
 $builder->add('color', ColorPickerType::class, [

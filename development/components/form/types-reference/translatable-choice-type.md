@@ -7,7 +7,7 @@ title: TranslatableChoiceType
 Class TranslatableChoiceType adds translatable choice types with custom inner type to forms. Language selection uses a dropdown.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [TranslatableChoiceType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/TranslatableChoiceType.php)
+- Reference: [TranslatableChoiceType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/TranslatableChoiceType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ Class TranslatableChoiceType adds translatable choice types with custom inner ty
 
 ## Code example
 
-- [OrderStateType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/OrderStates/OrderStateType.php#L198-L207)
+- [OrderStateType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/OrderStates/OrderStateType.php#L198-L207)
 
 ```php
 $builder->add('template', TranslatableChoiceType::class, [

@@ -7,7 +7,7 @@ title: ButtonCollectionType
 `ButtonCollectionType` is a form type used to group buttons in a common form group, which is useful for forms that have multiple submit buttons.
 
 - Namespace: `PrestaShopBundle\Form\Admin\Type`
-- Reference: [ButtonCollectionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ButtonCollectionType.php)
+- Reference: [ButtonCollectionType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/ButtonCollectionType.php)
 
 ## Type options
 
@@ -20,7 +20,7 @@ title: ButtonCollectionType
 
 ## Code example
 
-- [CombinationItemType.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/Combination/CombinationItemType.php#L150-L183)
+- [CombinationItemType.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/Combination/CombinationItemType.php#L150-L183)
 
 ```php
 $builder->add('actions', ButtonCollectionType::class, [

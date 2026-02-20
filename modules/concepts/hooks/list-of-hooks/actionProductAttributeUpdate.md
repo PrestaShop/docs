@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Product attribute update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Product.php'
         file: classes/Product.php
 locations:
     - 'front office'

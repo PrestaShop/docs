@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Successful customer account creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/form/CustomerPersister.php'
         file: classes/form/CustomerPersister.php
 locations:
     - 'front office'

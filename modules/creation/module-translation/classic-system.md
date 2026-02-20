@@ -414,5 +414,5 @@ In the meantime, refer to this list for the equivalences between language codes 
 
 [iso-619-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [ietf-language-tags]: https://en.wikipedia.org/wiki/IETF_language_tag
-[legacy-to-standard]: https://github.com/PrestaShop/PrestaShop/blob/8.0.x/app/Resources/legacy-to-standard-locales.json
+[legacy-to-standard]: https://github.com/PrestaShop/PrestaShop/blob/9.0.x/app/Resources/legacy-to-standard-locales.json
 [new-translation-system]: {{< ref "new-system" >}}

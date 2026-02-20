@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Build the variables used in email layout rendering'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php'
         file: src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php
 locations:
     - 'front office'

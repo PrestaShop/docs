@@ -7,7 +7,7 @@ title: CustomContentType
 Type is used to add any content at any position of the form, rather than the actual field.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [CustomContentType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/CustomContentType.php)
+- Reference: [CustomContentType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/CustomContentType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ Type is used to add any content at any position of the form, rather than the act
 
 ## Code example
 
-- [CmsPageType.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Improve/Design/Pages/CmsPageType.php#L142-L149)
+- [CmsPageType.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Improve/Design/Pages/CmsPageType.php#L142-L149)
 
 ```php
 $builder->add('seo_preview', CustomContentType::class, [

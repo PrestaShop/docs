@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'List the available email themes and layouts'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/MailTemplate/FolderThemeCatalog.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Core/MailTemplate/FolderThemeCatalog.php'
         file: src/Core/MailTemplate/FolderThemeCatalog.php
 locations:
     - 'front office'

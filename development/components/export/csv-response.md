@@ -134,7 +134,7 @@ When looping over your `callback function`, the `CsvResponse` is retrieving `$li
 ```
 
 {{% notice note %}}
-A good example implementation of `CsvResponse::MODE_OFFSET` can be seen in [ProductCsvExporter.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Product/ProductCsvExporter.php#L56-L97)
+A good example implementation of `CsvResponse::MODE_OFFSET` can be seen in [ProductCsvExporter.php](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Core/Product/ProductCsvExporter.php#L56-L97)
 {{% /notice %}}
 
 #### Manually setting $start parameter

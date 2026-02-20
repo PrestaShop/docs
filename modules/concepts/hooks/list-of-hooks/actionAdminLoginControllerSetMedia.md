@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Set media on admin login page header'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminLoginController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/admin/AdminLoginController.php'
         file: controllers/admin/AdminLoginController.php
 locations:
     - 'back office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/shop/Shop.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/shop/Shop.php'
         file: classes/shop/Shop.php
 locations:
     - 'front office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Additional search panel'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminSearchController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/admin/AdminSearchController.php'
         file: controllers/admin/AdminSearchController.php
 locations:
     - 'back office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display after Grid table'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Common/Grid/Blocks/table.html.twig
 locations:
     - 'back office'

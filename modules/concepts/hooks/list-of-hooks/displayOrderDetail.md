@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Order detail'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderDetailController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/OrderDetailController.php'
         file: controllers/front/OrderDetailController.php
 locations:
     - 'front office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/options/options.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/admin-dev/themes/default/template/helpers/options/options.tpl'
         file: admin-dev/themes/default/template/helpers/options/options.tpl
 locations:
     - 'back office'

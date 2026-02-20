@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ObjectModel.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/ObjectModel.php'
         file: classes/ObjectModel.php
 locations:
     - 'back office'

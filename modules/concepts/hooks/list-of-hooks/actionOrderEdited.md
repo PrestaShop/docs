@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Order edited'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php'
         file: src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php
 locations:
     - 'front office'

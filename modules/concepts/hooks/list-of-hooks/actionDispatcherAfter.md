@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'After dispatch'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php'
         file: src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php
 locations:
     - 'front office'

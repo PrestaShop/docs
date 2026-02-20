@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Stats - Modules'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminStatsTabController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/admin/AdminStatsTabController.php'
         file: controllers/admin/AdminStatsTabController.php
 locations:
     - 'back office'

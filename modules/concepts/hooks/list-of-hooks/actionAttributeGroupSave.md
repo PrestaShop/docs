@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Saving an attribute group'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/AttributeGroup.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/AttributeGroup.php'
         file: classes/AttributeGroup.php
 locations:
     - 'front office'

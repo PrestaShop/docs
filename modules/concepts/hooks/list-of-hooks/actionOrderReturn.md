@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Returned product'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderFollowController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/controllers/front/OrderFollowController.php'
         file: controllers/front/OrderFollowController.php
 locations:
     - 'front office'

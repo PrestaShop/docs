@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Payment CC added'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderPayment.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/order/OrderPayment.php'
         file: classes/order/OrderPayment.php
 locations:
     - 'front office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Order slip creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/Refund/OrderSlipCreator.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Order/Refund/OrderSlipCreator.php'
         file: src/Adapter/Order/Refund/OrderSlipCreator.php
 locations:
     - 'front office'
