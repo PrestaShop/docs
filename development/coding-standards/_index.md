@@ -105,7 +105,7 @@ namespace PrestaShop\Awesome\Path;
 
 @trigger_error(
     sprintf(
-        '%s is deprecated since version 8.0 and will be removed in the next major version.',
+        '%s is deprecated since version 9.0 and will be removed in the next major version.',
         MyClass::class
     ),
     E_USER_DEPRECATED
@@ -123,7 +123,7 @@ class MyClass
     {
         @trigger_error(
             sprintf(
-                '%s is deprecated since version 8.0. Use %s instead.',
+                '%s is deprecated since version 9.0. Use %s instead.',
                 __METHOD__,
                 AnotherClass::class . '::someNewMethod()'
             ),
