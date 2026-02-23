@@ -32,4 +32,4 @@ If you changed something in your Back Office theme and you want your change to b
 
 {{< figure src="../img/rtl-edit-language.png" title="Toggling RTL for a language" >}}
 
-[rtl-support]: {{< ref "/9/themes/reference/rtl" >}}
+[rtl-support]: {{< ref "/9/themes/concepts/rtl" >}}

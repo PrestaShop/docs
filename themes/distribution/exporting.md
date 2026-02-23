@@ -1,31 +1,63 @@
 ---
 title: Exporting your theme
+menuTitle: Exporting
+weight: 20
 ---
 
 # Exporting your theme
 
-## Creating a valid ZIP file
+## How themes become available
 
-A theme is installed as soon as it is on the disk.
+A theme becomes visible in the Back Office as soon as it is placed on disk in the `/themes/` directory with a `config/theme.yml` file. To be selectable as the active theme, it must pass [validation]({{< relref "/9/themes/distribution/validation" >}}).
 
-If you want the theme to appears in the backoffice, it only needs to contain a `config/theme.yml` file.
-This will only display it, if you want to select it as your active theme, it has to be valid. Read ["What
-makes a valid theme"]({{< relref "/9/themes/distribution/testing" >}}).
+## Exporting from the Back Office
 
+In _Design > Theme & Logo_, click **Export current theme** in the top right. The ZIP downloads directly in your browser.
 
-![Export current theme](../img/export-current-theme.png)
+![Export current theme](../../img/export-current-theme.png)
 
-Once it is active you can export your theme using the _"Export current theme"_ button or use the command
-from your terminal.
+## Exporting from the command line
 
 ```bash
-php bin/console prestashop:theme:export THEME_DIRECTORY_NAME
+php bin/console prestashop:theme:export theme_name
 ```
 
-### What is exported
+The command prints the path of the generated ZIP on success.
 
-Exporting your theme using the button or the command line will export the following data:
+## What gets exported
 
-* All theme files in directory
-* Dependencies specified in `theme.yml` ([See theme.yml doc]({{< relref "/9/themes/getting-started/theme-yml" >}}))
-* Theme translations
+Both methods produce a ZIP file containing:
+
+| Content | Source |
+|---------|--------|
+| All files in the theme directory | `/themes/theme_name/` |
+| Module dependencies | Modules listed under `dependencies.modules` in `theme.yml` |
+| Theme translations | Files in the theme's `translations/` folder |
+
+See [Theme structure]({{< relref "/9/themes/concepts/theme-structure" >}}) for the `dependencies` and `translations` configuration.
+
+## What to exclude before exporting
+
+The export includes **everything** in the theme directory. Clean up before exporting:
+
+| Exclude | Why |
+|---------|-----|
+| `node_modules/` | Build dependency, large, not needed at runtime |
+| `.git/` | Version control history, not relevant for distribution |
+| Source files (e.g. `src/scss/`, `src/js/`) | Only compiled assets in `assets/` are needed at runtime |
+| IDE and OS files (`.idea/`, `.vscode/`, `.DS_Store`) | Development artifacts |
+| Docker and CI files (`docker/`, `.github/`) | Development infrastructure |
+| AI context files (`.claude/`, `.cursor/`, `CLAUDE.md`) | Development tooling, not relevant for distribution |
+
+{{% notice tip %}}
+Add a `.gitignore` and keep your working directory clean. The export command packages the directory as-is — there is no built-in exclude mechanism.
+{{% /notice %}}
+
+## Preparing for distribution
+
+Before distributing your theme:
+
+1. Compile production-ready assets — for Hummingbird run `npm run build`; adapt to your own build pipeline if using a custom theme
+2. Verify the theme passes [validation]({{< relref "/9/themes/distribution/validation" >}})
+3. Test activation on a clean PrestaShop installation
+4. Ensure `preview.png` is present and up to date — required dimensions are 500×746px
