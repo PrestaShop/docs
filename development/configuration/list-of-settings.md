@@ -8,18 +8,23 @@ The following settings are set up in `ps_configuration`  by default when install
 
 ## Core
 
-| Configuration name                         |  Type  | Default  | Description                                                              
+| Configuration name                         |  Type  | Default  | Description
 |--------------------------------------------|:------:|:--------:|--------------------------------------------------------------------------
-| ADDONS_API_MODULE_CHANNEL                  | string | "stable" | (Deprecated since 8.0) Addons marketplace stability channel              
+| ADDONS_API_MODULE_CHANNEL                  | string | "stable" | (Deprecated since 8.0) Addons marketplace stability channel
+| BLOCKCONTACT_EMAIL                         |        |          |
+| BLOCKCONTACT_TELNUMBER                     |        |          |
+| BLOCKCONTACTINFOS_ADDRESS                  |        |          |
+| BLOCKCONTACTINFOS_COMPANY                  |        |          |
+| BLOCKCONTACTINFOS_EMAIL                    |        |          |
+| BLOCKCONTACTINFOS_PHONE                    |        |          |
 | CONF_AVERAGE_PRODUCT_MARGIN                | int    | 40       | Average gross margin percentage per sale, used to calculate profits on the Dashboard
-| PRESTASTORE_LIVE                           |        |          |
-| PS_ADVANCED_STOCK_MANAGEMENT               |        |          |
+| PS_ADMIN_API_FORCE_DEBUG_SECURED           |        |          |
 | PS_ALIAS_FEATURE_ACTIVE                    |        |          |
 | PS_ALLOWED_COUNTRIES                       |        |          |
-| PS_ALLOW_MOBILE_DEVICE                     |        |          |
 | PS_ATTACHMENT_MAXIMUM_SIZE                 |        |          |
 | PS_ATTRIBUTE_ANCHOR_SEPARATOR              |        |          |
 | PS_ATTRIBUTE_CATEGORY_DISPLAY              |        |          |
+| PS_AVIF_QUALITY                            |        |          |
 | PS_BACKUP_ALL                              |        |          |
 | PS_BACKUP_DROP_TABLE                       |        |          |
 | PS_BASE_DISTANCE_UNIT                      |        |          |
@@ -28,7 +33,7 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_BLOCK_NEWPRODUCTS_DISPLAY               |        |          |
 | PS_BLOCK_SPECIALS_DISPLAY                  |        |          |
 | PS_CANONICAL_REDIRECT                      |        |          |
-| PS_CARRIER_DEFAULT                         |  int   |    1     | Default carrier Id                                     
+| PS_CARRIER_DEFAULT                         |  int   |    1     | Default carrier Id
 | PS_CARRIER_DEFAULT_ORDER                   |        |          |
 | PS_CARRIER_DEFAULT_SORT                    |        |          |
 | PS_CART_RULE_FEATURE_ACTIVE                |        |          |
@@ -43,8 +48,9 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_COOKIE_LIFETIME_BO                      |        |          |
 | PS_COOKIE_LIFETIME_FO                      |        |          |
 | PS_COOKIE_SAMESITE                         |        |          |
-| PS_COUNTRY_DEFAULT                         |  int   |    8     | Shop's default country Id (chosen during install)      
-| PS_CURRENCY_DEFAULT                        |  int   |    1     | Default currency Id                                    
+| PS_COUNTRY_DEFAULT                         |  int   |    8     | Shop's default country Id (chosen during install)
+| PS_CSS_THEME_CACHE                         |        |          |
+| PS_CURRENCY_DEFAULT                        |  int   |    1     | Default currency Id
 | PS_CUSTOMER_BIRTHDATE                      |        |          |
 | PS_CUSTOMER_CREATION_EMAIL                 |        |          |
 | PS_CUSTOMER_GROUP                          |        |          |
@@ -53,6 +59,9 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_CUSTOMER_SERVICE_SIGNATURE              |        |          |
 | PS_CUSTOMIZATION_FEATURE_ACTIVE            |        |          |
 | PS_DASHBOARD_SIMULATION                    |        |          |
+| PS_DEBUG_COOKIE_NAME                       |        |          |
+| PS_DEBUG_COOKIE_VALUE                      |        |          |
+| PS_DEFAULT_LANGUAGE_URL_PREFIX             |        |          |
 | PS_DELIVERY_NUMBER                         |        |          |
 | PS_DELIVERY_PREFIX                         |        |          |
 | PS_DETECT_COUNTRY                          |        |          |
@@ -66,17 +75,22 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_DISPLAY_SUPPLIERS                       |        |          |
 | PS_DISP_UNAVAILABLE_ATTR                   |        |          |
 | PS_DISTANCE_UNIT                           |        |          |
+| PS_ENABLE_ADMIN_API                        |        |          |
+| PS_ENABLE_BACKORDER_STATUS                 |        |          |
 | PS_FAVICON                                 |        |          |
 | PS_FEATURE_FEATURE_ACTIVE                  |        |          |
+| PS_FEATURE_VALUES_ORDER                    |        |          |
 | PS_GEOLOCATION_BEHAVIOR                    |        |          |
 | PS_GEOLOCATION_ENABLED                     |        |          |
 | PS_GEOLOCATION_WHITELIST                   |        |          |
 | PS_GIFT_WRAPPING                           |        |          |
 | PS_GIFT_WRAPPING_PRICE                     |        |          |
-| PS_GROUP_FEATURE_ACTIVE                    |  bit   |    1     | Enable/disable customer groups                         
+| PS_GROUP_FEATURE_ACTIVE                    |  bit   |    1     | Enable/disable customer groups
 | PS_GUEST_CHECKOUT_ENABLED                  |        |          |
 | PS_GUEST_GROUP                             |        |          |
 | PS_HOME_CATEGORY                           |        |          |
+| PS_HTACCESS_CACHE_CONTROL                  |        |          |
+| PS_IMAGE_FORMAT                            |        |          |
 | PS_IMAGE_QUALITY                           |        |          |
 | PS_IMG_UPDATE_TIME                         |        |          |
 | PS_INVCE_DELIVERY_ADDR_RULES               |        |          |
@@ -85,11 +99,11 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_INVOICE_MODEL                           |        |          |
 | PS_INVOICE_PREFIX                          |        |          |
 | PS_JPEG_QUALITY                            |        |          |
+| PS_JS_THEME_CACHE                          |        |          |
 | PS_LABEL_IN_STOCK_PRODUCTS                 |        |          |
 | PS_LABEL_OOS_PRODUCTS_BOA                  |        |          |
 | PS_LABEL_OOS_PRODUCTS_BOD                  |        |          |
 | PS_LAST_QTIES                              |        |          |
-| PS_LEGACY_IMAGES                           |        |          |
 | PS_LIMIT_UPLOAD_FILE_VALUE                 |        |          |
 | PS_LIMIT_UPLOAD_IMAGE_VALUE                |        |          |
 | PS_LOCALE_COUNTRY                          |        |          |
@@ -109,10 +123,13 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_MAIL_SERVER                             |        |          |
 | PS_MAIL_SMTP_ENCRYPTION                    |        |          |
 | PS_MAIL_SMTP_PORT                          |        |          |
+| PS_MAIL_SUBJECT_PREFIX                     |        |          |
 | PS_MAIL_THEME                              |        |          |
 | PS_MAIL_TYPE                               |        |          |
 | PS_MAIL_USER                               |        |          |
+| PS_MAINTENANCE_ALLOW_ADMINS                |        |          |
 | PS_MAINTENANCE_TEXT                        |        |          |
+| PS_MIN_LOGGER_LEVEL_IN_DB                  |        |          |
 | PS_NAVIGATION_PIPE                         |        |          |
 | PS_NB_DAYS_NEW_PRODUCT                     |        |          |
 | PS_ORDER_OUT_OF_STOCK                      |        |          |
@@ -142,23 +159,27 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_PAYMENT_LOGO_CMS_ID                     |        |          |
 | PS_PNG_QUALITY                             |        |          |
 | PS_PRICE_ROUND_MODE                        |        |          |
-| PS_PRODUCTS_ORDER_BY                       |        |          |
-| PS_PRODUCTS_ORDER_WAY                      |        |          |
-| PS_PRODUCTS_PER_PAGE                       |        |          |
+| PS_PRODUCT_BREADCRUMB_CATEGORY             |        |          |
 | PS_PRODUCT_PICTURE_HEIGHT                  |        |          |
 | PS_PRODUCT_PICTURE_MAX_SIZE                |        |          |
 | PS_PRODUCT_PICTURE_WIDTH                   |        |          |
+| PS_PRODUCT_REDIRECTION_DEFAULT             |        |          |
 | PS_PRODUCT_SHORT_DESC_LIMIT                |        |          |
 | PS_PRODUCT_WEIGHT_PRECISION                |        |          |
+| PS_PRODUCTS_ORDER_BY                       |        |          |
+| PS_PRODUCTS_ORDER_WAY                      |        |          |
+| PS_PRODUCTS_PER_PAGE                       |        |          |
 | PS_PURCHASE_MINIMUM                        |        |          |
 | PS_RECYCLABLE_PACK                         |        |          |
 | PS_RESTRICT_DELIVERED_COUNTRIES            |        |          |
 | PS_RETURN_PREFIX                           |        |          |
+| PS_REWRITING_SETTINGS                      |        |          |
 | PS_ROOT_CATEGORY                           |        |          |
 | PS_ROUND_TYPE                              |        |          |
 | PS_SEARCH_AJAX                             |        |          |
 | PS_SEARCH_BLACKLIST                        |        |          |
 | PS_SEARCH_FUZZY                            |        |          |
+| PS_SEARCH_FUZZY_MAX_DIFFERENCE             |        |          |
 | PS_SEARCH_FUZZY_MAX_LOOP                   |        |          |
 | PS_SEARCH_INDEXATION                       |        |          |
 | PS_SEARCH_MAX_WORD_LENGTH                  |        |          |
@@ -176,11 +197,11 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_SECURITY_PASSWORD_POLICY_MINIMUM_LENGTH |        |          |
 | PS_SECURITY_PASSWORD_POLICY_MINIMUM_SCORE  |        |          |
 | PS_SECURITY_TOKEN                          |        |          |
+| PS_SEPARATOR_FILE_MANAGER_SQL              |        |          |
 | PS_SHIPPING_FREE_PRICE                     |        |          |
 | PS_SHIPPING_FREE_WEIGHT                    |        |          |
 | PS_SHIPPING_HANDLING                       |        |          |
 | PS_SHIPPING_METHOD                         |        |          |
-| PS_SHOP_ACTIVITY                           |        |          |
 | PS_SHOP_DEFAULT                            |        |          |
 | PS_SHOP_DOMAIN                             |        |          |
 | PS_SHOP_DOMAIN_SSL                         |        |          |
@@ -212,13 +233,7 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_STOCK_CUSTOMER_RETURN_REASON            |        |          |
 | PS_STOCK_MANAGEMENT                        |        |          |
 | PS_STOCK_MVT_DEC_EMPLOYEE_EDITION          |        |          |
-| PS_STOCK_MVT_DEC_REASON_DEFAULT            |        |          |
 | PS_STOCK_MVT_INC_EMPLOYEE_EDITION          |        |          |
-| PS_STOCK_MVT_INC_REASON_DEFAULT            |        |          |
-| PS_STOCK_MVT_REASON_DEFAULT                |        |          |
-| PS_STOCK_MVT_SUPPLY_ORDER                  |        |          |
-| PS_STOCK_MVT_TRANSFER_FROM                 |        |          |
-| PS_STOCK_MVT_TRANSFER_TO                   |        |          |
 | PS_STORES_DISPLAY_CMS                      |        |          |
 | PS_STORES_ICON                             |        |          |
 | PS_TAX                                     |        |          |
@@ -229,6 +244,7 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_TIN_ACTIVE                              |        |          |
 | PS_TOKEN_ENABLE                            |        |          |
 | PS_UNIDENTIFIED_GROUP                      |        |          |
+| PS_USE_COMBINATION_IMAGE_IN_LISTING        |        |          |
 | PS_USE_ECOTAX                              |        |          |
 | PS_USE_HTMLPURIFIER                        |        |          |
 | PS_VIRTUAL_PROD_FEATURE_ACTIVE             |        |          |
@@ -237,29 +253,22 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_WEIGHT_UNIT                             |        |          |
 | SHOP_LOGO_HEIGHT                           |        |          |
 | SHOP_LOGO_WIDTH                            |        |          |
-| blockcontact_email                         |        |          |
-| blockcontact_telnumber                     |        |          |
-| blockcontactinfos_address                  |        |          |
-| blockcontactinfos_company                  |        |          |
-| blockcontactinfos_email                    |        |          |
-| blockcontactinfos_phone                    |        |          |
 
 ## Modules
 
-| Configuration name                         |   Type   |  Default   | Module                       
+| Configuration name                         |   Type   |  Default   | Module
 |--------------------------------------------|:--------:|:----------:|------------------------------
-| BLOCK_CATEG_MAX_DEPTH                      |   int    |     4      | ps_categorytree              
-| BLOCK_CATEG_ROOT_CATEGORY                  |   int    |     1      | ps_categorytree              
+| BLOCK_CATEG_MAX_DEPTH                      |   int    |     4      | ps_categorytree
 | BLOCK_CATEG_NBR_COLUMN_FOOTER              |          |            |
-| CHECKUP_DESCRIPTIONS_GT                    |          |            | statscheckup                 
-| CHECKUP_DESCRIPTIONS_LT                    |          |            | statscheckup                 
-| CHECKUP_IMAGES_GT                          |          |            | statscheckup                 
-| CHECKUP_IMAGES_LT                          |          |            | statscheckup                 
-| CHECKUP_SALES_GT                           |          |            | statscheckup                 
-| CHECKUP_SALES_LT                           |          |            | statscheckup                 
-| CHECKUP_STOCK_GT                           |          |            | statscheckup                 
-| CHECKUP_STOCK_LT                           |          |            | statscheckup                 
-| HOME_FEATURED_NBR                          |          |            | ps_featuredproducts 
+| CHECKUP_DESCRIPTIONS_GT                    |          |            | statscheckup
+| CHECKUP_DESCRIPTIONS_LT                    |          |            | statscheckup
+| CHECKUP_IMAGES_GT                          |          |            | statscheckup
+| CHECKUP_IMAGES_LT                          |          |            | statscheckup
+| CHECKUP_SALES_GT                           |          |            | statscheckup
+| CHECKUP_SALES_LT                           |          |            | statscheckup
+| CHECKUP_STOCK_GT                           |          |            | statscheckup
+| CHECKUP_STOCK_LT                           |          |            | statscheckup
+| HOME_FEATURED_NBR                          |          |            | ps_featuredproducts
 | MOD_BLOCKTOPMENU_ITEMS                     |          |            | ps_mainmenu
 | MOD_BLOCKTOPMENU_SEARCH                    |          |            | ps_mainmenu
 | NEW_PRODUCTS_NBR                           |          |            | ps_newproducts
@@ -274,42 +283,54 @@ The following settings are set up in `ps_configuration`  by default when install
 
 ## Obsolete
 
-| Configuration name                         
+| Configuration name
 |--------------------------------------------
-| BANK_WIRE_CURRENCIES                       
-| BLOCKADVERT_IMG_EXT                        
-| BLOCKADVERT_LINK                           
-| BLOCKREINSURANCE_NBBLOCKS                  
-| BLOCKSTORE_IMG                             
-| BLOCKTAGS_NBR                              
-| BLOCK_CATEG_DHTML                          
-| CHEQUE_CURRENCIES                          
-| EDITORIAL_IMAGE_HEIGHT                     
-| EDITORIAL_IMAGE_WIDTH                      
-| FOOTER_BLOCK_ACTIVATION                    
-| FOOTER_CMS                                 
-| FOOTER_POWEREDBY                           
-| HOMESLIDER_LOOP                            
-| HOMESLIDER_PAUSE                           
-| HOMESLIDER_SPEED                           
-| HOMESLIDER_WIDTH                           
-| MANUFACTURER_DISPLAY_FORM                  
-| MANUFACTURER_DISPLAY_TEXT                  
-| MANUFACTURER_DISPLAY_TEXT_NB               
-| MB_CANCEL_URL                              
-| MB_DISPLAY_MODE                            
-| MB_HIDE_LOGIN                              
-| MB_ID_LOGO                                 
-| MB_ID_LOGO_WALLET                          
-| MB_INTER_METHODS                           
-| MB_LOCAL_METHODS                           
-| MB_PARAMETERS                              
-| MB_PARAMETERS_2                            
-| MB_PAY_TO_EMAIL                            
-| MB_SECRET_WORD                             
-| PS_1_3_2_UPDATE_DATE                       
-| PS_1_3_UPDATE_DATE                         
-| SEK_FILTER_KW                              
-| SEK_MIN_OCCURENCES                         
-| UPGRADER_BACKUPDB_FILENAME                 
+| BANK_WIRE_CURRENCIES
+| BLOCKADVERT_IMG_EXT
+| BLOCKADVERT_LINK
+| BLOCK_CATEG_DHTML
+| BLOCK_CATEG_ROOT_CATEGORY
+| BLOCKREINSURANCE_NBBLOCKS
+| BLOCKSTORE_IMG
+| BLOCKTAGS_NBR
+| CHEQUE_CURRENCIES
+| EDITORIAL_IMAGE_HEIGHT
+| EDITORIAL_IMAGE_WIDTH
+| FOOTER_BLOCK_ACTIVATION
+| FOOTER_CMS
+| FOOTER_POWEREDBY
+| HOMESLIDER_LOOP
+| HOMESLIDER_PAUSE
+| HOMESLIDER_SPEED
+| HOMESLIDER_WIDTH
+| MANUFACTURER_DISPLAY_FORM
+| MANUFACTURER_DISPLAY_TEXT
+| MANUFACTURER_DISPLAY_TEXT_NB
+| MB_CANCEL_URL
+| MB_DISPLAY_MODE
+| MB_HIDE_LOGIN
+| MB_ID_LOGO
+| MB_ID_LOGO_WALLET
+| MB_INTER_METHODS
+| MB_LOCAL_METHODS
+| MB_PARAMETERS
+| MB_PARAMETERS_2
+| MB_PAY_TO_EMAIL
+| MB_SECRET_WORD
+| PRESTASTORE_LIVE
+| PS_1_3_2_UPDATE_DATE
+| PS_1_3_UPDATE_DATE
+| PS_ADVANCED_STOCK_MANAGEMENT
+| PS_ALLOW_MOBILE_DEVICE
+| PS_LEGACY_IMAGES
+| PS_SHOP_ACTIVITY
+| PS_STOCK_MVT_DEC_REASON_DEFAULT
+| PS_STOCK_MVT_INC_REASON_DEFAULT
+| PS_STOCK_MVT_REASON_DEFAULT
+| PS_STOCK_MVT_SUPPLY_ORDER
+| PS_STOCK_MVT_TRANSFER_FROM
+| PS_STOCK_MVT_TRANSFER_TO
+| SEK_FILTER_KW
+| SEK_MIN_OCCURENCES
+| UPGRADER_BACKUPDB_FILENAME
 | UPGRADER_BACKUPFILES_FILENAME
