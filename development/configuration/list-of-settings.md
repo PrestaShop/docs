@@ -180,7 +180,6 @@ The following settings are set up in `ps_configuration`  by default when install
 | PS_SHIPPING_FREE_WEIGHT                    |        |          |
 | PS_SHIPPING_HANDLING                       |        |          |
 | PS_SHIPPING_METHOD                         |        |          |
-| PS_SHOP_ACTIVITY                           |        |          |
 | PS_SHOP_DEFAULT                            |        |          |
 | PS_SHOP_DOMAIN                             |        |          |
 | PS_SHOP_DOMAIN_SSL                         |        |          |
