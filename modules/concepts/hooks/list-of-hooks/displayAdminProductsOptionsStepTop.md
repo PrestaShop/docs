@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display new elements in back office product page, Options tab'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/options.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.0/src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/options.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Product/ProductPage/Panels/options.html.twig
 locations:
     - 'back office'
