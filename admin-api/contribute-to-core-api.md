@@ -1309,7 +1309,7 @@ class AttributeGroupEndpointTest extends ApiTestCase
 ## 🔍 Key Points to Remember
 
 ### Naming Conventions
-- **CamelCase** for API Resource properties
+- **camelCase** for API Resource properties
 - **snake_case** for database mapping and scope names
 - **PascalCase** for class names
 - **kebab-case** for compound URI actions (e.g., `/assign-to-category`)
