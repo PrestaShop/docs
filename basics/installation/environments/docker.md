@@ -351,6 +351,8 @@ services:
       restart: unless-stopped
       ports:
         - 8081:80
+      networks:
+        - prestashop_network
 ```
 
 And access `http://localhost:8081` to access `phpMyAdmin`.
