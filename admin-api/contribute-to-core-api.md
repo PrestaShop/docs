@@ -42,6 +42,12 @@ If any issues are detected, the CI will provide helpful comments to guide you on
 - Understanding of [API Resources and our customer operations]({{< relref "/9/admin-api/resource_server/api-resources">}})
 - Understanding the conventions defined in our [CQRS API guidelines ADR](https://github.com/PrestaShop/ADR/blob/master/0023-cqrs-api-guidelines.md) (Architecture Decision Record)
 
+{{% notice note %}}
+**Setup development environment**
+
+To setup an environment where you can easily add new endpoints you can [follow this guide]({{< relref "/9/admin-api/setup-development-environment">}}).
+{{% /notice %}}
+
 ## 🎯 Objective
 
 Create REST API endpoints to manage attribute groups (AttributeGroup) with complete CRUD operations and comprehensive PHPUnit integration test coverage.
