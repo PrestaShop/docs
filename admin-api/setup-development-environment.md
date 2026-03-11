@@ -53,7 +53,7 @@ rm -fR ps_apiresources
 git clone git@github.com:PrestaShop/ps_apiresources.git
 cd ps_apiresources
 # You need to fork the repository so you can add your custom fork remote, you will push your branch on it to create the PR
-git remote add fork git clone git@github.com:{myfork}/ps_apiresources.git
+git remote add fork git@github.com:{myfork}/ps_apiresources.git
 git fetch fork
 
 # Go back to the root and clear the cache
