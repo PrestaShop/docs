@@ -253,7 +253,7 @@ use PrestaShopBundle\ApiPlatform\Metadata\CQRSGet;
     operations: [
         // GET /attributes/group/{attributeGroupId}
         new CQRSGet(
-            uriTemplate: '/attributes/group/{attributeGroupId}',
+            uriTemplate: '/attributes/groups/{attributeGroupId}',
             requirements: ['attributeGroupId' => '\d+'],
             CQRSQuery: GetAttributeGroupForEditing::class,
             scopes: ['attribute_group_read']
