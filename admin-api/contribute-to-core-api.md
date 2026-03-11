@@ -479,7 +479,7 @@ For bulk action we create a new dedicated resource with only one array field `$a
 
 {{% notice warning %}}
 **ADR Bulk Operations Convention**:
-- Use `bulk-` prefix for the action in the URI (e.g., `/attributes/groups/delete`, not `/attributes/groups/bulk-delete`)
+- Use `bulk-` prefix for the action in the URI (e.g., `/attributes/groups/bulk-delete`, not `/attributes/groups/delete`)
 - Use plural domain name + "Ids" for parameter names (e.g., `attributeGroupIds`)
 - The example uses `PUT` method, but you could also use `DELETE` method depending on the operation
 {{% /notice %}}
