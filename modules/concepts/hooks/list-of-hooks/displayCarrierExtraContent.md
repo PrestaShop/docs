@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display additional content for a carrier (e.g pickup points)'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/DeliveryOptionsFinder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.0/classes/checkout/DeliveryOptionsFinder.php'
         file: classes/checkout/DeliveryOptionsFinder.php
 locations:
     - 'front office'
