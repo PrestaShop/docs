@@ -62,13 +62,13 @@ services:
 
 ## Building your PositionUpdate
 
-The good news is that you now made the hardest part, all other computing and database queries will be managed by our component.
-The only thing you have to do now is provide the updates you want to apply to your list positions. We provide a default `PositionUpdateFactory`
-to help you build your update, it is defined as a Symfony service accessible via `prestashop.core.grid.position.position_update_factory`.
+The good news is that you have now completed the hardest part: all the remaining computation and database queries are handled by this component.
+The only thing left to do is provide the updates you want to apply to your list positions. We provide a default `PositionUpdateFactory`
+to help you build your update. In PrestaShop 9, it can be retrieved via `PositionUpdateFactoryInterface::class`.
 
 ```php
 <?php
-use PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdateFactory;
+use PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdateFactoryInterface;
 use PrestaShop\PrestaShop\Core\Grid\Position\PositionDefinition;
 use PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdate;
 use PrestaShop\PrestaShop\Core\Grid\Position\Exception\PositionDataException;
@@ -92,8 +92,8 @@ $positionsData = [
 /** @var PositionDefinition $positionDefinition */
 $positionDefinition = $this->get('prestashop.product.grid.position_definition');
 
-/** @var PositionUpdateFactory $positionUpdateFactory */
-$positionUpdateFactory = $this->get('prestashop.core.grid.position.position_update_factory');
+/** @var PositionUpdateFactoryInterface $positionUpdateFactory */
+$positionUpdateFactory = $this->get(PositionUpdateFactoryInterface::class);
 
 try {
     /** @var PositionUpdate $positionUpdate */
@@ -112,8 +112,8 @@ The format of the input data is not random nor fixed, it actually matches the de
   # In src/PrestaShopBundle/Resources/config/services/core/grid.yml
   ...
   # Grid position updater
-  prestashop.core.grid.position.position_update_factory:
-    class: 'PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdateFactory'
+  PrestaShop\PrestaShop\Core\Grid\Position\PositionUpdateFactory:
+    public: true
     arguments:
       - 'positions'
       - 'rowId'
@@ -141,7 +141,7 @@ use PrestaShop\PrestaShop\Core\Grid\Position\Exception\PositionUpdateException;
 $positionUpdate = buildPositionUpdate();
 
 /** @var GridPositionUpdaterInterface $updater */
-$updater = $this->get('prestashop.core.grid.position.doctrine_grid_position_updater');
+$updater = $this->get(GridPositionUpdaterInterface::class);
 try {
     $updater->update($positionUpdate);
     $this->clearModuleCache();
@@ -190,47 +190,28 @@ use Symfony\Component\HttpFoundation\Response;
  *
  * @ModuleActivated(moduleName="ps_linklist", redirectRoute="admin_module_manage")
  */
-class LinkBlockController extends FrameworkBundleAdminController {
-    /**
-     * @AdminSecurity("is_granted('update', request.get('_legacy_controller'))", message="Access denied.")
-     *
-     * @param Request $request
-     * @param int $hookId
-     *
-     * @throws \Exception
-     *
-     * @return RedirectResponse
-     */
-    public function updatePositionsAction(Request $request, $hookId)
-    {
+class LinkBlockController extends FrameworkBundleAdminController
+{
+    #[AdminSecurity("is_granted('update', request.get('_legacy_controller'))", redirectRoute: 'admin_homepage')]
+    public function updatePositionsAction(
+        Request $request,
+        int $hookId,
+        LegacyLinkBlockCache $linkBlockCache,
+        LinkBlockRepository $linkBlockRepository,
+        ShopContext $shopContext,
+    ): RedirectResponse {
         $positionsData = [
-            'positions' => $request->request->get('positions', null),
+            'positions' => $request->request->all()['positions'],
             'parentId' => $hookId,
         ];
 
-        /** @var PositionDefinition $positionDefinition */
-        $positionDefinition = $this->get('prestashop.module.link_block.grid.position_definition');
-        /** @var PositionUpdateFactory $positionUpdateFactory */
-        $positionUpdateFactory = $this->get('prestashop.core.grid.position.position_update_factory');
         try {
-            /** @var PositionUpdate $positionUpdate */
-            $positionUpdate = $positionUpdateFactory->buildPositionUpdate($positionsData, $positionDefinition);
-        } catch (PositionDataException $e) {
-            $errors = [$e->toArray()];
-            $this->flashErrors($errors);
-
-            return $this->redirectToRoute('admin_link_block_list');
-        }
-
-        /** @var GridPositionUpdaterInterface $updater */
-        $updater = $this->get('prestashop.core.grid.position.doctrine_grid_position_updater');
-        try {
-            $updater->update($positionUpdate);
-            $this->clearModuleCache();
-            $this->addFlash('success', $this->trans('Successful update.', 'Admin.Notifications.Success'));
-        } catch (PositionUpdateException $e) {
-            $errors = [$e->toArray()];
-            $this->flashErrors($errors);
+            $linkBlockRepository->updatePositions($shopContext->getId(), $positionsData);
+            $linkBlockCache->clearModuleCache();
+            $this->addFlash('success', $this->trans('Successful update.', [], 'Admin.Notifications.Success'));
+        } catch (DatabaseException $e) {
+            $errors = [$e->getMessage()];
+            $this->addFlashErrors($errors);
         }
 
         return $this->redirectToRoute('admin_link_block_list');
