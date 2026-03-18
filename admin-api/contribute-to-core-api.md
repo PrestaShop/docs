@@ -494,7 +494,7 @@ For bulk action we create a new dedicated resource with only one array field `$a
 <?php
 declare(strict_types=1);
 
-namespace PrestaShop\Module\APIResources\ApiPlatform\Resources\Attribute;
+namespace PrestaShop\Module\APIResources\ApiPlatform\Resources\AttributeGroup;
 
 use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
@@ -679,7 +679,7 @@ Now you can create the file `src/ApiPlatform/Resources/Attribute/AttributeGroupL
 <?php
 declare(strict_types=1);
 
-namespace PrestaShop\Module\APIResources\ApiPlatform\Resources\Attribute;
+namespace PrestaShop\Module\APIResources\ApiPlatform\Resources\AttributeGroup;
 
 use ApiPlatform\Metadata\ApiProperty;
 use ApiPlatform\Metadata\ApiResource;
