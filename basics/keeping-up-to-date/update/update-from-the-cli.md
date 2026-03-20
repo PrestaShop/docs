@@ -433,6 +433,78 @@ X Maintenance mode needs to be enabled. Enable maintenance mode and add your mai
 ⚠ Your current version of the module is out of date. Update now Modules > Module Manager > Updates
 ```
 
+### update:check-modules command
+
+The `update:check-modules` command is used to check that the modules installed on the store are compatible with the new version of PrestaShop. The command `update:check-requirements` will invite you to run it when it finds a module that requires attention.
+
+```text
+$ bin/console update:check-modules admin-dev --help
+
+Description:
+  Check module compatibility and updates.
+
+Usage:
+  update:check-modules [options] [--] <admin-dir>
+
+Arguments:
+  admin-dir                                Name of the admin directory.
+
+Options:
+      --config-file-path=CONFIG-FILE-PATH  Configuration file location for update.
+      --channel=CHANNEL                    Select which update channel to use ('local' / 'online_recommended' / 'online')
+      --zip=ZIP                            Sets the archive zip file for a local channel.
+      --xml=XML                            Sets the archive xml file for a local update.
+  -h, --help                               Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                              Do not output any message
+  -V, --version                            Display this application version
+      --ansi|--no-ansi                     Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction                     Do not ask any interactive question
+  -v|vv|vvv, --verbose                     Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command checks the installed modules for compatibility with the target PrestaShop version and lists available updates.
+```
+
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
+
+The `--from-config-file=CONFIG-FILE-PATH` option is used to check prerequisites based on information provided in the configuration file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `CONFIG-FILE-PATH` file.
+
+The `--zip=ZIP` and `--xml=XML` options allow you to specify a `.zip` file and an `.xml` file to be used to check prerequisites from the “local” source. The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
+You can download the desired `.zip` and `.xml` files from the [Releases section of PrestaShop’s GitHub repository][prestashop-releases].
+
+By default, if no option is set, the prerequisites will be checked from the “online_recommended” source. The official “online_recommended” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent and stable version of PrestaShop compatible with the current store installation.
+
+Example of execution of the `update:check-modules` command, if all modules are compatible:
+
+```text
+$ php bin/console update:check-modules admin-dev
+Prestashop version: 8.2.4
+ Retrieving modules informations, please wait...
+ Retrieving modules informations: Done.
+
+✔ There is no action needed on the installed modules for this update.
+```
+
+Example of execution of the `update:check-modules` command, if some modules require attention:
+
+```text
+$ php bin/console update:check-modules admin-dev
+Prestashop version: 8.2.4
+ Retrieving modules informations, please wait...
+ Retrieving modules informations: Done.
+
+	✘ 5 incompatible modules
+	  These modules are known to be incompatible with PrestaShop 8.2.4. They will be uninstalled before updating the store:
+		contactform
+		psgdpr
+		ps_edition_basic
+		ps_themecusto
+		statsdata
+	⚠ 1 uncertain modules
+	  The compatibility of the following modules with the destination version of PrestaShop cannot be checked. It could be because they are homemade or have been unlisted from the Marketplace. Please review them via the Module Manager:
+		gamification
+```
+
 ### update:start command
 
 The `update:start` command is used to update your PrestaShop store.
