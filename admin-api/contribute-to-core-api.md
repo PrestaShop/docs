@@ -251,7 +251,7 @@ use PrestaShopBundle\ApiPlatform\Metadata\CQRSGet;
 
 #[ApiResource(
     operations: [
-        // GET /attributes/group/{attributeGroupId}
+        // GET /attributes/groups/{attributeGroupId}
         new CQRSGet(
             uriTemplate: '/attributes/groups/{attributeGroupId}',
             requirements: ['attributeGroupId' => '\d+'],
