@@ -277,6 +277,6 @@ Things you might look for in these modules
 
 *For example some modules do rely on Smarty cache, but Smarty cache badly configured can result in hundred of template files being scattered on the server, producing way too much I/O.
 
-### 10) Using MySQl replica
+### 10) Using MySQL replica
 
 A simple setup for MySQL replication strategy is a single instance for WRITE requests and multiple instances for READ requests. Because the Front Office actually does not perform a lot of write requests this can boost your Front office performances.
