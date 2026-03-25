@@ -14,10 +14,10 @@ Below is a list of actions that should be done following a PrestaShop update.
 The following steps will be executed during the upgrade:
 
 - **Refresh the page.** You’ll need to sign in to your back office again.
-- **Re-enable and check your modules** one by one.
+- **Check the Module Manager** and re-enable the modules that have been disabled to prevent any compatibility issue..
 - **Make sure your store’s front office is working properly:** try to create an account, place an order, to add a product, etc.
 - **Disable the maintenance** mode in General settings > Maintenance.
-- **Check the Module Manager** to discover and install the modules extracted on your server during the update process.
+- **Review the state of your modules:** compatible modules have been updated automatically, while incompatible ones with PrestaShop %version% have been uninstalled.
 
 ## Troubleshooting
 
