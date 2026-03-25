@@ -35,31 +35,33 @@ Example of `bin/console` command execution:
 
 ```text
 $ php bin/console 
+Update Assistant 7.x.x
 
 Usage:
 	command [options] [arguments]
-	
+
 Options:
-	-h, --help                            Display this help message
-	-q, --quiet                           Do not output any message
-	-V, --version                         Display this application version
-	--ansi                                Force ANSI output
-	--no-ansi                             Disable ANSI output
-	-n, --no-interaction                  Do not ask any interactive question
-	-v|vv|vvv, --verbose                  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+	-h, --help            Display help for the given command. When no command is given display help for the list command
+	-q, --quiet           Do not output any message
+	-V, --version         Display this application version
+		--ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+	-n, --no-interaction  Do not ask any interactive question
+	-v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
 
 Available commands:
-	help                                  Displays help for a command
-	list                                  List commands
+	completion                 Dump the shell completion script
+	help                       Display help for a command
+	list                       List commands
 backup
-	backup:create                         Create backup.
-	backup:list                           List existing backups.
-	backup:restore                        Restore your store.
-	backup:delete                         Remove a backup not anymore needed.
+	backup:create              Create backup.
+	backup:delete              Delete a store backup file.
+	backup:list                List all available backups.
+	backup:restore             Restore the store to a previous state from a backup file.
 update
-	update:check-new-version              Display the version the store can update to.
-	update:check-requirements             Check all prerequisites for an update.
-	update:start                          Update your store.
+	update:check-modules       Check module compatibility and updates.
+	update:check-new-version   List Prestashop updates available for the store.
+	update:check-requirements  Check all prerequisites for an update.
+	update:start               Update your store.
 ```
 
 ### List command
@@ -72,17 +74,19 @@ Example of list command execution:
 $ php bin/console list
 
 Available commands:
-	help                                  Displays help for a command
-	list                                  List commands
+	completion                 Dump the shell completion script
+	help                       Display help for a command
+	list                       List commands
 backup
-	backup:create                         Create backup.
-	backup:list                           List existing backups.
-	backup:restore                        Restore your store.
-	backup:delete                         Remove a backup not anymore needed.
+	backup:create              Create backup.
+	backup:delete              Delete a store backup file.
+	backup:list                List all available backups.
+	backup:restore             Restore the store to a previous state from a backup file.
 update
-	update:check-new-version              Display the version the store can update to.
-	update:check-requirements             Check all prerequisites for an update.
-	update:start                          Update your store.
+	update:check-modules       Check module compatibility and updates.
+	update:check-new-version   List Prestashop updates available for the store.
+	update:check-requirements  Check all prerequisites for an update.
+	update:start               Update your store.
 ```
 
 ### Help command
@@ -93,7 +97,7 @@ Console component's built-in global options, and is therefore available for all 
 Example of help command execution:
 
 ```text
-$ php bin/console backup:list help [command]
+$ php bin/console backup:list --help [command]
 ```
 
 ### Command-Line logs download
@@ -118,29 +122,38 @@ The `backup:create` command is used to create a backup of your PrestaShop store.
 `/your-admin-directory/autoupgrade/backup` folder on your server.
 
 ```text
-$ php bin/console backup:create help
+$ php bin/console backup:create --help
 
-backup:create: create a PrestaShop store backup
+Description:
+  Create backup.
 
-Usage: backup:create [ADMIN_DIR] 
-with [ADMIN_DIR] the PrestaShop admin directory
---from-config-file=[config-path]: the update config file path
---include-images=[1|0]: include, or not, images in the store backup (1 for yes, 0 for no)
---verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
---quiet: disables output and interaction
---no-interaction: disables interaction
---version: displays the application version
---help: displays the command help
---ansi|--no-ansi: whether to force of disable coloring the output
+Usage:
+  backup:create [options] [--] <admin-dir>
+
+Arguments:
+  admin-dir                                The admin directory name.
+
+Options:
+      --config-file-path=CONFIG-FILE-PATH  Configuration file location.
+      --include-images=INCLUDE-IMAGES      Include, or not, images in the store backup.
+  -h, --help                               Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                              Do not output any message
+  -V, --version                            Display this application version
+      --ansi|--no-ansi                     Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction                     Do not ask any interactive question
+  -v|vv|vvv, --verbose                     Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command triggers the creation of the files and database backup.
 ```
 
-The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
 
 The optional `--include-images=[1|0]` option allows you to include, or not, the image backup during the backup process.
 By default, if the option is not set, images are included in the backup.
 
-The optional `--from-config-file=[config-path]` option allows you to use the backup options specified in the configuration file.
-You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
+The optional `--from-config-file=CONFIG-FILE-PATH` option allows you to use the backup options specified in the configuration file.
+You must specify the location (`--from-config-file=.../folder1/configfile`) of this `CONFIG-FILE-PATH` file.
 
 Example of `backup:create` command execution:
 
@@ -155,21 +168,30 @@ Starting backup...
 The `backup:list` command lists the backups available for your PrestaShop store.
 
 ```text
-$ php bin/console backup:list help
+$ php bin/console backup:list --help
 
-backup:list: list all available backups for the store
+Description:
+  List all available backups.
 
-Usage: backup:list [ADMIN_DIR] 
-with [ADMIN_DIR] the PrestaShop admin directory
---verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
---quiet: disables output and interaction
---no-interaction: disables interaction
---version: displays the application version
---help: displays the command help
---ansi|--no-ansi: whether to force of disable coloring the output
+Usage:
+  backup:list <admin-dir>
+
+Arguments:
+  admin-dir             The admin directory name.
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command list all available backups for the store.
 ```
 
-The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
 
 Example of the `backup:list` command execution:
 
@@ -187,23 +209,33 @@ $ php bin/console backup:list admin123
 The `backup:restore` command is used to restore your PrestaShop store from backup files in the `/your-admin-directory/autoupgrade/backup` folder on your server.
 
 ```text
-$ php bin/console backup:restore help
+$ php bin/console backup:restore --help
 
-backup:restore: restore the store to a previous state from a backup file
+Description:
+  Restore the store to a previous state from a backup file.
 
-Usage: backup:restore [ADMIN_DIR][BACKUP_NAME]
-with [ADMIN_DIR][BACKUP_NAME] the PrestaShop admin directory and the name of the backup file you want to restore
---verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
---quiet: disables output and interaction
---no-interaction: disables interaction
---version: displays the application version
---help: displays the command help
---ansi|--no-ansi: whether to force of disable coloring the output
+Usage:
+  backup:restore [options] [--] <admin-dir>
+
+Arguments:
+  admin-dir             The admin directory name.
+
+Options:
+      --backup=BACKUP   Specify the backup name to restore (this can be found in your folder <admin directory>/autoupgrade/backup/)
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command allows you to restore the store to a previous state from a backup file.See https://devdocs.prestashop-project.org/8/basics/keeping-up-to-date/upgrade-module/upgrade-cli/#rollback-cli for more details
 ```
 
-The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
 
-The `[BACKUP_NAME]` argument is intended to target the backup file (file_name) to be used for the store restore.
+The `[BACKUP]` argument is intended to target the backup file (file_name) to be used for the store restore.
 
 Example of `backup:restore` command execution:
 
@@ -227,23 +259,33 @@ Please select your backup:
 The `backup:delete` command is used to delete a backup file from your PrestaShop store.
 
 ```text
-$ php bin/console backup:delete help
+$ php bin/console backup:delete --help
 
-backup:delete: delete a store backup file
+Description:
+  Delete a store backup file.
 
-Usage: backup:delete [ADMIN_DIR] [BACKUP_NAME]
-with [ADMIN_DIR] [BACKUP_NAME] the PrestaShop admin directory and the name of the backup file you want to delete
---verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
---quiet: disables output and interaction
---no-interaction: disables interaction
---version: displays the application version
---help: displays the command help
---ansi|--no-ansi: whether to force of disable coloring the output
+Usage:
+  backup:delete [options] [--] <admin-dir>
+
+Arguments:
+  admin-dir             The admin directory name.
+
+Options:
+      --backup=BACKUP   Specify the backup name to delete. The allowed values can be found with backup:list command)
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command allows you to delete a store backup file.
 ```
 
-The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
 
-The `[BACKUP_NAME]` argument is intended to target the backup file (file_name) to be deleted.
+The `[BACKUP]` argument is intended to target the backup file (file_name) to be deleted.
 
 Example of `backup:delete` command execution:
 
@@ -264,10 +306,11 @@ Please select your backup:
 
 ## Update commands
 
-The Update Assistant CLI includes 3 commands dedicated to updates:
+The Update Assistant CLI includes 4 commands dedicated to updates:
 
 - `update:check-new-version`
 - `update:check-requirements`
+- `update:check-modules`
 - `update:start`
 
 ### update:check-new-version command
@@ -275,21 +318,30 @@ The Update Assistant CLI includes 3 commands dedicated to updates:
 The `update:check-new-version` command is used to check whether new updates are available for your store.
 
 ```text
-$ php bin/console update:check-new-version help
+$ php bin/console update:check-new-version --help
 
-update:check-new-version: list PrestaShop updates available for the store
+Description:
+  List Prestashop updates available for the store.
 
-Usage: update:check-new-version [ADMIN_DIR]
-with [ADMIN_DIR] the PrestaShop admin directory
---verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
---quiet: disables output and interaction
---no-interaction: disables interaction
---version: displays the application version
---help: displays the command help
---ansi|--no-ansi: whether to force of disable coloring the output
+Usage:
+  update:check-new-version <admin-dir>
+
+Arguments:
+  admin-dir             The admin directory name.
+
+Options:
+  -h, --help            Display help for the given command. When no command is given display help for the list command
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi|--no-ansi  Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command allows you to list Prestashop updates available for the store.
 ```
 
-The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
 
 Example of the `update:check-new-version` command execution:
 
@@ -329,31 +381,41 @@ Depending on the current state of PrestaShop releases, the command output may sh
 The `update:check-requirements` command is used to check that your store meets the technical requirements before updating.
 
 ```text
-$ php bin/console update:check-requirements help
+$ php bin/console update:check-requirements --help
 
-update:check-requirements: check if the store is compatible with the update requirements.
+Description:
+  Check all prerequisites for an update.
 
-Usage: update:check-requirements [ADMIN_DIR]
-with [ADMIN_DIR] the PrestaShop admin directory
---from-config-file=[config-path]: the update config file path
---zip=[name]: sets the archive zip file for a local update
---xml=[name]: sets the  archive xml file for a local update
---verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
---quiet: disables output and interaction
---no-interaction: disables interaction
---version: displays the application version
---help: displays the command help
---ansi|--no-ansi: whether to force of disable coloring the output
+Usage:
+  update:check-requirements [options] [--] <admin-dir>
+
+Arguments:
+  admin-dir                                The admin directory name.
+
+Options:
+      --config-file-path=CONFIG-FILE-PATH  Configuration file location for update.
+      --channel=CHANNEL                    Selects what update to run ('local' / 'online_recommended' / 'online')
+      --zip=ZIP                            Sets the archive zip file for a local update.
+      --xml=XML                            Sets the archive xml file for a local update.
+  -h, --help                               Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                              Do not output any message
+  -V, --version                            Display this application version
+      --ansi|--no-ansi                     Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction                     Do not ask any interactive question
+  -v|vv|vvv, --verbose                     Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command allows you to check the prerequisites necessary for the proper functioning of an update.
 ```
 
-The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
 
-The `--from-config-file=[config-path]` option is used to check prerequisites based on information provided in the configuration file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
+The `--from-config-file=CONFIG-FILE-PATH` option is used to check prerequisites based on information provided in the configuration file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `CONFIG-FILE-PATH` file.
 
-The `--zip=[name]` and `--xml=[name]` options allow you to specify a `.zip` file and an `.xml` file to be used to check prerequisites from the “local” source. The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
+The `--zip=ZIP` and `--xml=XML` options allow you to specify a `.zip` file and an `.xml` file to be used to check prerequisites from the “local” source. The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
 You can download the desired `.zip` and `.xml` files from the [Releases section of PrestaShop’s GitHub repository][prestashop-releases].
 
-By default, if no option is set, the prerequisites will be checked from the “online” source. The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
+By default, if no option is set, the prerequisites will be checked from the “online_recommended” source. The official “online_recommended” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent and stable version of PrestaShop compatible with the current store installation.
 
 Example of execution of the `update:check-requirements` command, if all prerequisites have been successfully met:
 
@@ -373,44 +435,125 @@ X Maintenance mode needs to be enabled. Enable maintenance mode and add your mai
 ⚠ Your current version of the module is out of date. Update now Modules > Module Manager > Updates
 ```
 
+### update:check-modules command
+
+The `update:check-modules` command is used to check that the modules installed on the store are compatible with the new version of PrestaShop. The command `update:check-requirements` will invite you to run it when it finds a module that requires attention.
+
+```text
+$ bin/console update:check-modules admin-dev --help
+
+Description:
+  Check module compatibility and updates.
+
+Usage:
+  update:check-modules [options] [--] <admin-dir>
+
+Arguments:
+  admin-dir                                Name of the admin directory.
+
+Options:
+      --config-file-path=CONFIG-FILE-PATH  Configuration file location for update.
+      --channel=CHANNEL                    Select which update channel to use ('local' / 'online_recommended' / 'online')
+      --zip=ZIP                            Sets the archive zip file for a local channel.
+      --xml=XML                            Sets the archive xml file for a local update.
+  -h, --help                               Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                              Do not output any message
+  -V, --version                            Display this application version
+      --ansi|--no-ansi                     Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction                     Do not ask any interactive question
+  -v|vv|vvv, --verbose                     Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command checks the installed modules for compatibility with the target PrestaShop version and lists available updates.
+```
+
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
+
+The `--from-config-file=CONFIG-FILE-PATH` option is used to check prerequisites based on information provided in the configuration file. You must specify the location (`--from-config-file=.../folder1/configfile`) of this `CONFIG-FILE-PATH` file.
+
+The `--zip=ZIP` and `--xml=XML` options allow you to specify a `.zip` file and an `.xml` file to be used to check prerequisites from the “local” source. The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
+You can download the desired `.zip` and `.xml` files from the [Releases section of PrestaShop’s GitHub repository][prestashop-releases].
+
+By default, if no option is set, the prerequisites will be checked from the “online_recommended” source. The official “online_recommended” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent and stable version of PrestaShop compatible with the current store installation.
+
+Example of execution of the `update:check-modules` command, if all modules are compatible:
+
+```text
+$ php bin/console update:check-modules admin-dev
+Prestashop version: 8.2.4
+ Retrieving modules informations, please wait...
+ Retrieving modules informations: Done.
+
+✔ There is no action needed on the installed modules for this update.
+```
+
+Example of execution of the `update:check-modules` command, if some modules require attention:
+
+```text
+$ php bin/console update:check-modules admin-dev
+Prestashop version: 8.2.4
+ Retrieving modules informations, please wait...
+ Retrieving modules informations: Done.
+
+	✘ 5 incompatible modules
+	  These modules are known to be incompatible with PrestaShop 8.2.4. They will be uninstalled before updating the store:
+		contactform
+		psgdpr
+		ps_edition_basic
+		ps_themecusto
+		statsdata
+	⚠ 1 uncertain modules
+	  The compatibility of the following modules with the destination version of PrestaShop cannot be checked. It could be because they are homemade or have been unlisted from the Marketplace. Please review them via the Module Manager:
+		gamification
+```
+
 ### update:start command
 
 The `update:start` command is used to update your PrestaShop store.
 
 ```text
-$ php bin/console update:start help
+$ php bin/console update:start --help
 
-update:start: launch a store update.
+Description:
+  Update your store.
 
-Usage: update:start [ADMIN_DIR]
-with [ADMIN_DIR] the PrestaShop admin directory
---from-config-file=[config-path]: the update config file path
---zip=[name] : sets the archive zip file for a local update
---xml=[name] : sets the archive xml file for a local update
---disable-non-native-modules=[1|0]: disable all modules installed after the store creation  (1 for yes, 0 for no)
---regenerate-email-templates=[1|0]: regenerate email templates. If you've customized email templates, your changes will be lost if you activate this option  (1 for yes, 0 for no)
---disable-all-overrides=[1|0]: overriding is a way to replace business behaviors (class files and controller files) to target only one method or as many as you need. This option disables all classes & controllers overrides, allowing you to avoid conflicts during and after updates  (1 for yes, 0 for no)
---verbose: sets the verbosity level (e.g. 1 the default, 2 and 3, or you can use respective shortcuts -v, -vv and -vvv)
---quiet: disables output and interaction
---no-interaction: disables interaction
---version: displays the application version
---help: displays the command help
---ansi|--no-ansi: whether to force of disable coloring the output
---action:[step]: Specify the step you want to start from (Default: UpgradeNow)
---chain: Enables to sequence update steps
---no-chain: Prevents chaining of update steps to keep the control
+Usage:
+  update:start [options] [--] <admin-dir>
+
+Arguments:
+  admin-dir                                                    The admin directory name.
+
+Options:
+      --chain                                                  True by default. Allows you to chain update commands automatically. The command will continue executing subsequent tasks without requiring manual intervention to restart the process.
+      --no-chain                                               Prevents chaining of update commands. The command will execute a task and then stop, logging the next command that needs to be run. You will need to manually restart the process to continue with the next step.
+      --channel=CHANNEL                                        Selects what update to run ('local' / 'online_recommended' / 'online')
+      --zip=ZIP                                                Sets the archive zip file for a local update
+      --xml=XML                                                Sets the archive xml file for a local update
+      --disable-non-native-modules=DISABLE-NON-NATIVE-MODULES  Disable all modules installed after the store creation (1 for yes, 0 for no). Ignored for PrestaShop v9 and above.
+      --regenerate-email-templates=REGENERATE-EMAIL-TEMPLATES  Regenerate email templates. If you've customized email templates, your changes will be lost if you activate this option (1 for yes, 0 for no)
+      --disable-all-overrides=DISABLE-ALL-OVERRIDES            Overriding is a way to replace business behaviors (class files and controller files) to target only one method or as many as you need. This option disables all classes & controllers overrides, allowing you to avoid conflicts during and after updates (1 for yes, 0 for no)
+      --config-file-path=CONFIG-FILE-PATH                      Configuration file location for update.
+      --action=ACTION                                          Advanced users only. Sets the step you want to start from. Only the "UpdateInitialization" task updates the configuration. (Default: UpdateInitialization, see https://devdocs.prestashop-project.org/8/basics/keeping-up-to-date/update/update-from-the-cli for other values available)
+  -h, --help                                                   Display help for the given command. When no command is given display help for the list command
+  -q, --quiet                                                  Do not output any message
+  -V, --version                                                Display this application version
+      --ansi|--no-ansi                                         Force (or disable --no-ansi) ANSI output
+  -n, --no-interaction                                         Do not ask any interactive question
+  -v|vv|vvv, --verbose                                         Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Help:
+  This command allows you to start the update process. Advanced users can refer to the https://devdocs.prestashop-project.org/8/basics/keeping-up-to-date/update/update-from-the-cli for further details on available actions
 ```
 
-The `[ADMIN_DIR]` argument is mandatory and is used to target the correct resource.
+The `<admin-dir>` argument is mandatory and is used to target the correct resource.
 
-The `--from-config-file=[config-path]` option is used to update from the information provided in the configuration file.
-You must specify the location (`--from-config-file=.../folder1/configfile`) of this `[config-path]` file.
+The `--from-config-file=CONFIG-FILE-PATH` option is used to update from the information provided in the configuration file.
+You must specify the location (`--from-config-file=.../folder1/configfile`) of this `CONFIG-FILE-PATH` file.
 
-The `--zip=[name]` and `--xml=[name]` options allow you to specify a .zip file and an .xml file to be used for a “local” update. 
+The `--zip=ZIP` and `--xml=XML` options allow you to specify a .zip file and an .xml file to be used for a “local” update. 
 The “local” update, which displays customized updates detected in your `/your-admin-directory/autoupgrade/download` folder on your server.
 
-By default, if no option is set, the update will be performed from the “online” source. The official “online” update for your store, detected by PrestaShop APIs (major, minor or patch versions).
-This update corresponds to the most recent version of PrestaShop compatible with the PHP version of your server.
+By default, if no option is set, the prerequisites will be checked from the “online_recommended” source. The official “online_recommended” update for your store, detected by PrestaShop APIs (major, minor or patch versions). This update corresponds to the most recent and stable version of PrestaShop compatible with the current store installation.
 
 Example of `update:start` command execution:
 
