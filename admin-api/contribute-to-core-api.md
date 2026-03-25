@@ -919,7 +919,7 @@ class AttributeGroupEndpointTest extends ApiTestCase
         ]);
     }
 
-    public function getProtectedEndpoints(): iterable
+    public static function getProtectedEndpoints(): iterable
     {
         yield 'get endpoint' => [
             'GET',
