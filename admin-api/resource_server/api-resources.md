@@ -285,6 +285,85 @@ class ApiClient
 }
 ```
 
+### CQRSPaginate
+
+| HTTP Method | Action                      |
+|-------------|-----------------------------|
+| GET         | Read a paginated collection |
+
+`CQRSPaginate` is the CQRS-based equivalent of `PaginatedList` for endpoints backed by a CQRS query instead of a `GridDataFactory`. Use it when you have a CQRS query that handles pagination internally and returns a result object containing both an items list and a total count. Use `PaginatedList` instead when you need to reuse an existing grid data factory.
+
+```php
+<?php
+declare(strict_types=1);
+
+namespace PrestaShop\Module\APIResources\ApiPlatform\Resources\Product;
+
+use ApiPlatform\Metadata\ApiProperty;
+use ApiPlatform\Metadata\ApiResource;
+use PrestaShop\PrestaShop\Core\Domain\Product\Combination\Query\GetEditableCombinationsList;
+use PrestaShop\PrestaShop\Core\Domain\Product\Exception\ProductNotFoundException;
+use PrestaShop\PrestaShop\Core\Search\Filters\ProductCombinationFilters;
+use PrestaShopBundle\ApiPlatform\Metadata\CQRSPaginate;
+use Symfony\Component\HttpFoundation\Response;
+
+#[ApiResource(
+    operations: [
+        new CQRSPaginate(
+            uriTemplate: '/products/{productId}/combinations',
+            CQRSQuery: GetEditableCombinationsList::class,
+            scopes: [
+                'product_read',
+            ],
+            CQRSQueryMapping: [
+                '[_context][langId]' => '[languageId]',
+                '[_context][shopConstraint]' => '[shopConstraint]',
+            ],
+            ApiResourceMapping: [
+                '[combinationName]' => '[name]',
+                '[attributesInformation]' => '[attributes]',
+                '[impactOnPrice]' => '[impactOnPriceTaxExcluded]',
+            ],
+            filtersClass: ProductCombinationFilters::class,
+            filtersMapping: [
+                '[_context][shopId]' => '[shopId]',
+            ],
+            itemsField: 'combinations',
+            countField: 'totalCombinationsCount',
+        ),
+    ],
+    exceptionToStatus: [
+        ProductNotFoundException::class => Response::HTTP_NOT_FOUND,
+    ],
+)]
+class CombinationList
+{
+    public int $productId;
+    public int $combinationId;
+    public string $name;
+    public bool $default;
+    public string $reference;
+    public array $attributes;
+}
+```
+
+The provider (`QueryListProvider`) builds a `Filters` object from the request query parameters (`offset`, `limit`, `orderBy`, `sortOrder`, `filters`), executes the CQRS query, and returns a `PaginationElements` object with pagination metadata alongside the items. The default page size is 50 items.
+
+The CQRS query receives pagination parameters plus URI variables and context parameters automatically. The normalized query result must expose the items array and total count as top-level fields, identified by `itemsField` and `countField`.
+
+#### Custom parameters
+
+| Parameter | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `CQRSQuery` | `string` | Yes | — | Fully qualified class name of the CQRS query to execute. The query must handle pagination internally. |
+| `scopes` | `string[]` | No | `[]` | OAuth scopes required to access the endpoint. |
+| `CQRSQueryMapping` | `array` | No | `null` | Field mapping applied when denormalizing the query object and normalizing the query result. See [Custom Mapping](#custom-mapping). |
+| `ApiResourceMapping` | `array` | No | `null` | Field mapping applied when denormalizing each item from the query result into the API resource DTO. See [Custom Mapping](#custom-mapping). |
+| `filtersClass` | `string` | No | `Filters::class` | Fully qualified class name of the `Filters` subclass to use. Specify a custom class to enforce default ordering or filtering constraints. |
+| `filtersMapping` | `array` | No | `null` | Maps API field names to the internal names used by the `Filters` class. Applied to `filters` and `orderBy` query parameters. See [Custom Mapping](#custom-mapping). |
+| `itemsField` | `string` | No | `'items'` | Name of the field in the normalized CQRS query result that holds the list of items. |
+| `countField` | `string` | No | `'count'` | Name of the field in the normalized CQRS query result that holds the total item count. |
+
 ## PaginatedList
 
 For listing operations we provided a custom operation based on the core grid system based on two settings:
