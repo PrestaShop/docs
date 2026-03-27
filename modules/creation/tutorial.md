@@ -83,7 +83,7 @@ class MyModule extends Module
         $this->need_instance = 0;
         $this->ps_versions_compliancy = [
             'min' => '8.0.0',
-            'max' => '9.99.99,
+            'max' => '9.99.99',
         ];
         $this->bootstrap = true;
 
