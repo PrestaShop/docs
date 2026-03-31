@@ -52,10 +52,10 @@ This command, by default, will display the various available options:
 | `password`      | Admin user password                        | Correct Horse Battery Staple | _string_                                                                                              |
 | `email`         | Admin user email                           | pub@prestashop.com           | _string_                                                                                              |
 | `license`       | Show PrestaShop license after installation | 0                            | 0, 1                                                                                                  |
-| `theme`         | Theme name to install                      | "" (classic)                 | Theme name (located in `/themes`)                                                                     |
+| `theme`         | Theme name to install                      | "" (classic, hummingbird since 9.1.0)    | Theme name (located in `/themes`)                                                         |
 | `ssl`           | Enable SSL (from PS 1.7.4)                 | 0                            | 0, 1                                                                                                  |
 | `rewrite`       | Enable rewrite engine                      | 1                            | 0, 1                                                                                                  |
-| `fixtures`      | Install fixtures. Equivalent of "*Installation of demo products*" in the GUI. | 1                            | 0, 1                                                                                                  |
+| `fixtures`      | Install fixtures. Equivalent of "*Installation of demo products*" in the GUI. | 1                            | 0, 1                                                               |
 | `modules`       | Modules to install, separated by comma     | [] (all)                     | _array_ of module names (located in `/modules`)                                                       |
 
 - All the options from the regular in-browser installer are available, with their default values listed above.
