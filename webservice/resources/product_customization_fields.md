@@ -4,7 +4,7 @@ title: Product customization fields
 
 # Resources for Product customization fields
 
-### Customization_field
+### Product_customization_field
 
 |      Name      |    Format    | Required | Max size | Description |
 | :------------- | :----------- | :------: | -------: | :---------- |
@@ -20,7 +20,7 @@ title: Product customization fields
 
 ```xml
 <prestashop xmlns:xlink="http://www.w3.org/1999/xlink">
-  <customization_field>
+  <product_customization_field>
     <id><![CDATA[]]></id>
     <id_product><![CDATA[]]></id_product>
     <type><![CDATA[]]></type>
@@ -31,7 +31,7 @@ title: Product customization fields
       <language id="1"><![CDATA[]]></language>
       <language id="2"><![CDATA[]]></language>
     </name>
-  </customization_field>
+  </product_customization_field>
 </prestashop>
 ```
 
