@@ -1,6 +1,8 @@
 ---
 title: Notifications
 weight: 5
+aliases:
+  - /9/themes/reference/templates/notifications
 ---
 
 # Notifications

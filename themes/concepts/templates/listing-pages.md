@@ -1,6 +1,8 @@
 ---
 title: Listing pages
 weight: 3
+aliases:
+  - /9/themes/reference/templates/listing
 ---
 
 # Listing pages

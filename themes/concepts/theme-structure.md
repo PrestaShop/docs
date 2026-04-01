@@ -1,6 +1,9 @@
 ---
 title: Theme structure
 weight: 1
+aliases:
+  - /9/themes/getting-started/theme-organization
+  - /9/themes/getting-started/theme-yml
 ---
 
 # Theme structure

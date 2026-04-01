@@ -1,6 +1,9 @@
 ---
 title: Overrides
 weight: 5
+aliases:
+  - /9/themes/reference/overriding-modules
+  - /9/themes/reference/overriding-selectors
 ---
 
 # Overrides

@@ -2,6 +2,8 @@
 title: Creating a child theme
 menuTitle: Child theme
 weight: 3
+aliases:
+  - /9/themes/reference/template-inheritance/parent-child-feature
 ---
 
 # Creating a child theme

@@ -3,6 +3,8 @@ title: Templates
 weight: 2
 useMermaid: true
 disableToc: true
+aliases:
+  - /9/themes/reference/templates
 ---
 
 # Templates

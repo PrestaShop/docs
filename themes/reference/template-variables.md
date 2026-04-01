@@ -1,6 +1,8 @@
 ---
 title: Template variables
 weight: 1
+aliases:
+  - /9/themes/reference/templates/variables
 ---
 
 # Template variables

@@ -1,6 +1,8 @@
 ---
 title: Requirements
 weight: 1
+aliases:
+  - /9/themes/getting-started/tools-for-theme-designers
 ---
 
 # Requirements

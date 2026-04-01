@@ -1,6 +1,8 @@
 ---
 title: Translation
 weight: 6
+aliases:
+  - /9/themes/reference/theme-translation
 ---
 
 # Theme translation

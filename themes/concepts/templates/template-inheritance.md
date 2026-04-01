@@ -1,6 +1,8 @@
 ---
 title: Template inheritance
 weight: 2
+aliases:
+  - /9/themes/reference/template-inheritance
 ---
 
 # Template inheritance

@@ -1,6 +1,8 @@
 ---
 title: Head
 weight: 4
+aliases:
+  - /9/themes/reference/templates/head
 ---
 
 # Head

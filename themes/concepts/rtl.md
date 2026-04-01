@@ -1,6 +1,8 @@
 ---
 title: RTL support
 weight: 7
+aliases:
+  - /9/themes/reference/rtl
 ---
 
 # RTL support

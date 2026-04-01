@@ -1,6 +1,8 @@
 ---
 title: Bootstrap compatibility
 weight: 5
+aliases:
+  - /9/themes/reference/bootstrap-compatibility
 ---
 
 # Bootstrap compatibility

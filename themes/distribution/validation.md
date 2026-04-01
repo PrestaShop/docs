@@ -1,6 +1,8 @@
 ---
 title: Validation
 weight: 10
+aliases:
+  - /9/themes/distribution/testing
 ---
 
 # Validation

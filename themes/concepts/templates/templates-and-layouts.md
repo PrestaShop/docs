@@ -2,6 +2,9 @@
 title: Templates and layouts
 weight: 1
 useMermaid: true
+aliases:
+  - /9/themes/concepts/templates-and-layouts
+  - /9/themes/reference/templates/templates-layouts
 ---
 
 # Templates and layouts

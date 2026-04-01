@@ -2,6 +2,8 @@
 title: Hook mapping
 menuTitle: Hooks
 weight: 10
+aliases:
+  - /9/themes/reference/hooks
 ---
 
 # Hook mapping

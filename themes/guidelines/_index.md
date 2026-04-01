@@ -3,6 +3,8 @@ title: Guidelines
 weight: 25
 chapter: true
 showOnHomepage: true
+aliases:
+  - /9/themes/getting-started/guidelines
 ---
 
 # Guidelines

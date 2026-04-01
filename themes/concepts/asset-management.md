@@ -1,6 +1,9 @@
 ---
 title: Asset management
 weight: 3
+aliases:
+  - /9/themes/getting-started/asset-management
+  - /9/themes/getting-started/asset-management/webpack
 ---
 
 # Asset management
