@@ -72,7 +72,7 @@ The key to access all the elements:
 
 The key to access a single element:
 ```php
-'objectNodeName' => 'articles'
+'objectNodeName' => 'article'
 ```
 
 The parameter to set which fields to expose through the webservice and settings for each of them:
