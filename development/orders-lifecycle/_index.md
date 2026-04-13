@@ -20,7 +20,7 @@ The Cart is created in database once first Product is being added into it.
 
 {{% notice note %}}
 When a Customer signs-in, has an empty Cart in its Cookie (or does not have a Cart) and has a previous non ordered Cart in its profile, the default behaviour of PrestaShop is to reload its most recent non ordered Cart. That behaviour can be adjusted in `Configure -> Shop parameters -> Customer settings`, the related setting is `PS_CART_FOLLOWING` : `Re-display cart at login`.
-This setting is implemented in: [Context.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Context.php#L365).
+This setting is implemented in: [Context.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/classes/Context.php#L304).
 {{% /notice %}}
 
 <div class='mermaid'>
@@ -74,7 +74,7 @@ Please note that if a Cart contains only Virtual Products, there is no `checkout
 3. **Select a shipping method** (checkout-delivery-step): after this step is complete, you will need to select one of the available Carriers
    (Carriers are searched by delivery address, sometimes the total weight of the Products, their prices, and information about the Customer (a group to which the Customer belongs) and can be modified by Shop Employees on Improve -> Shipping -> Carriers page).
    Note that the Carrier will not be available if a selected country or zone is disabled (in Back Office International -> Locations) or Carrier shipping and locations settings are not configured.
-3. **Select payment method** (checkout-payment-step): choose how to pay for the Order. Shop Employees can configure payment methods in
+4. **Select payment method** (checkout-payment-step): choose how to pay for the Order. Shop Employees can configure payment methods in
    Back Office `Payment -> Payment methods`.
    All payments are handled by payment modules. PrestaShop comes with 3 [payment modules]({{< relref "/9/modules/payment" >}}) by default:
 
@@ -86,7 +86,7 @@ Please note that if a Cart contains only Virtual Products, there is no `checkout
 You can restrict the availability of the payment methods in Front Office by currencies, countries, and groups and map them to Carriers (ship2pay). You can do that in Back Office `Improve -> Payment -> Preferences`.
    {{% /notice %}}
 
-4. **Submit Order**: Once the Order is submitted, a unique Order reference is generated, and certain records from a Cart and related
+5.  **Submit Order**: Once the Order is submitted, a unique Order reference is generated, and certain records from a Cart and related
    entities are added into following database tables:
     * `Orders`
     * `Order_history`
@@ -99,7 +99,7 @@ You can restrict the availability of the payment methods in Front Office by curr
 At this step, some important data is duplicated (in `Order_detail`) to ensure Product data will remain available in the Order even if the Product is deleted or modified afterward. Information about the prices is also duplicated to ensure the Order amount will remain immutable.
 {{% /notice %}}
 
-5. After Order is successfully created, an email with the Order information is sent to the Customer.
+6. After Order is successfully created, an email with the Order information is sent to the Customer.
 
 {{% notice note %}}
 Email sending settings can be found in Back Office `Configure -> Advanced parameters -> E-mail`. Email translations and templates
@@ -113,9 +113,9 @@ click `More actions -> Send pre-filled Order to the Customer by email` in summar
 {{% notice note %}}
 **Dive more in PrestaShop's Checkout process:**
 Learn how it works under the hood by looking at:
-- [classes/checkout/CheckoutSession.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutSession.php)
-- [classes/checkout/CheckoutProcess.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutProcess.php)
-- [classes/checkout/CheckoutStepInterface.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutStepInterface.php)
+- [classes/checkout/CheckoutSession.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/CheckoutSession.php)
+- [classes/checkout/CheckoutProcess.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/CheckoutProcess.php)
+- [classes/checkout/CheckoutStepInterface.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/CheckoutStepInterface.php)
 
 {{% /notice %}}
 

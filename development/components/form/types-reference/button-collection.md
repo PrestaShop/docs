@@ -7,7 +7,7 @@ title: ButtonCollectionType
 `ButtonCollectionType` is a form type used to group buttons in a common form group, which is useful for forms that have multiple submit buttons.
 
 - Namespace: `PrestaShopBundle\Form\Admin\Type`
-- Reference: [ButtonCollectionType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ButtonCollectionType.php)
+- Reference: [ButtonCollectionType](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Type/ButtonCollectionType.php)
 
 ## Type options
 
@@ -20,7 +20,7 @@ title: ButtonCollectionType
 
 ## Code example
 
-- [CombinationItemType.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/Combination/CombinationItemType.php#L150-L183)
+- [CombinationItemType.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/PrestaShopBundle/Form/Admin/Sell/Product/Combination/CombinationItemType.php#L128-L222)
 
 ```php
 $builder->add('actions', ButtonCollectionType::class, [
@@ -28,6 +28,7 @@ $builder->add('actions', ButtonCollectionType::class, [
         'edit' => [
             'type' => IconButtonType::class,
             'options' => [
+                'label' => $this->trans('Edit', 'Admin.Actions'),
                 'icon' => 'mode_edit',
                 'attr' => [
                     'class' => 'edit-combination-item tooltip-link',
@@ -39,6 +40,7 @@ $builder->add('actions', ButtonCollectionType::class, [
         'delete' => [
             'type' => IconButtonType::class,
             'options' => [
+                'label' => $this->trans('Delete', 'Admin.Actions'),
                 'icon' => 'delete',
                 'attr' => [
                     'class' => 'delete-combination-item tooltip-link',
@@ -48,6 +50,7 @@ $builder->add('actions', ButtonCollectionType::class, [
                     'data-modal-cancel' => $this->trans('Cancel', 'Admin.Actions'),
                     'data-toggle' => 'pstooltip',
                     'data-original-title' => $this->trans('Delete', 'Admin.Actions'),
+                    'data-shop-id' => $this->contextShopId,
                 ],
             ],
         ],
@@ -56,6 +59,8 @@ $builder->add('actions', ButtonCollectionType::class, [
     'attr' => [
         'class' => 'combination-row-actions',
     ],
+    'inline_buttons_limit' => self::INLINE_ACTIONS_LIMIT,
+    'use_inline_labels' => false,
 ])
 ```
 

@@ -7,7 +7,7 @@ title: ZoneChoiceType
 Class is responsible for providing configurable zone choices with -- symbol in front of array
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [ZoneChoiceType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ZoneChoiceType.php)
+- Reference: [ZoneChoiceType](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Type/ZoneChoiceType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ Class is responsible for providing configurable zone choices with -- symbol in f
 
 ## Code example
 
-- [StateGridDefinitionFactory](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/StateGridDefinitionFactory.php#L203-L209)
+- [StateGridDefinitionFactory](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/Core/Grid/Definition/Factory/StateGridDefinitionFactory.php#L184-L190)
 
 ```php
 return (new FilterCollection())

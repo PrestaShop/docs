@@ -7,7 +7,7 @@ title: TranslatableChoiceType
 Class TranslatableChoiceType adds translatable choice types with custom inner type to forms. Language selection uses a dropdown.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [TranslatableChoiceType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/TranslatableChoiceType.php)
+- Reference: [TranslatableChoiceType](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Type/TranslatableChoiceType.php)
 
 ## Type options
 
@@ -16,17 +16,22 @@ Class TranslatableChoiceType adds translatable choice types with custom inner ty
 
 ## Code example
 
-- [OrderStateType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/OrderStates/OrderStateType.php#L198-L207)
+- [OrderStateType](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/PrestaShopBundle/Form/Admin/Configure/ShopParameters/OrderStates/OrderStateType.php#L219-L233)
 
 ```php
 $builder->add('template', TranslatableChoiceType::class, [
-    'hint' => sprintf(
-        '%s<br>%s',
-        $this->trans('Only letters, numbers and underscores ("_") are allowed.', 'Admin.Shopparameters.Help'),
-        $this->trans('Email template for both .html and .txt.', 'Admin.Shopparameters.Help')
-    ),
+    'label' => $this->trans('Template', 'Admin.Shopparameters.Feature'),
+    'hint' => $this->trans('Select an email template that will be sent after setting this status.', 'Admin.Shopparameters.Help'),
     'required' => false,
     'choices' => $this->templates,
-    'row_attr' => $this->templateAttributes,
+    'row_attr' => $this->templateAttributes + [
+        'class' => 'order_state_template_select',
+    ],
+    'button' => [
+        'label' => $this->trans('Preview', 'Admin.Actions'),
+        'icon' => 'visibility',
+        'class' => 'btn btn-primary',
+        'id' => 'order_state_template_preview',
+    ],
 ])
 ```
