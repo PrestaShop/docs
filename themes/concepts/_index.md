@@ -15,7 +15,7 @@ This section explains how the PrestaShop theme system works. These concepts appl
 | [Theme structure]({{< relref "/9/themes/concepts/theme-structure" >}}) | Directory layout, `theme.yml` reference, core assets |
 | [Templates]({{< relref "/9/themes/concepts/templates" >}}) | Layouts, inheritance, listing pages, head, notifications |
 | [Asset management]({{< relref "/9/themes/concepts/asset-management" >}}) | CSS/JS registration API, per-page assets, module integration |
-| [Hooks]({{< relref "/9/themes/concepts/hooks" >}}) | Extension points for modules in the front office |
+| [Theme hooks]({{< relref "/9/themes/concepts/hooks" >}}) | Extension points for modules in the front office |
 | [Overrides]({{< relref "/9/themes/concepts/overrides" >}}) | Module template/asset overrides and JS selector overrides |
 | [Translation]({{< relref "/9/themes/concepts/translation" >}}) | Internationalization for theme wordings |
 | [RTL support]({{< relref "/9/themes/concepts/rtl" >}}) | Right-to-left language stylesheet handling |
