@@ -13,7 +13,7 @@ The tools listed below are **recommended** for theme development. A PrestaShop t
 
 | Tool | Status | Purpose |
 |------|--------|---------|
-| **Node.js 20.x + npm 8+** | Recommended | Asset compilation, dev workflow, linting |
+| **Node.js 20.x + npm 8+** | Recommended | Dependency management, asset compilation, task running, and linting |
 | **Git** | Recommended | Version control, cloning Hummingbird |
 | **Docker + Docker Compose** | Optional | Run a full PrestaShop environment without a local PHP/MySQL stack |
 
