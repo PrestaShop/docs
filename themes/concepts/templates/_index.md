@@ -11,7 +11,7 @@ aliases:
 
 This section covers how PrestaShop uses Smarty templates to render front-office pages — from directory structure and layouts to inheritance, listing pages, and the notification system.
 
-PrestaShop uses the [Smarty 4 template engine](https://smarty-php.github.io/smarty/). Templates define page content; layouts define page structure.
+PrestaShop uses the [Smarty 4 template engine](https://smarty-php.github.io/smarty/4.x/). Templates define page content; layouts define page structure.
 
 | Page | Description |
 |------|-------------|
