@@ -23,7 +23,7 @@ The tools listed below are **recommended** for theme development. A PrestaShop t
 
 ### Node.js
 
-Install from [nodejs.org](https://nodejs.org/). To manage multiple Node.js versions, use [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm).
+Install from [nodejs.org](https://nodejs.org/). To manage multiple Node.js versions, use [nvm](https://github.com/nvm-sh/nvm), [fnm](https://github.com/Schniz/fnm) or [mise](https://github.com/jdx/mise).
 
 {{% notice tip %}}
 Hummingbird includes a **.nvmrc** file. If you use nvm, run `nvm use` in the theme directory to automatically switch to the correct Node.js version.
