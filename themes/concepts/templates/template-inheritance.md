@@ -9,7 +9,7 @@ aliases:
 
 Template inheritance allows you to extend a parent template and only redefine the blocks you need. A parent template defines named `{block}` regions; a child template extends it with `{extends}` and overrides only the blocks it wants to change. Everything else is inherited as-is.
 
-The illustration below shows an illustrative example: `page.tpl` defines the global page structure, `product.tpl` extends it with product-specific content, and `product-pack.tpl` extends the product page to only override the description part — everything else is inherited.
+The illustration below shows how this works in practice: `page.tpl` defines the global structure and declares named `{block}` regions. `product.tpl` uses `{extends}` to inherit from it and overrides only the product-specific blocks. `product-pack.tpl` in turn extends `product.tpl` and overrides only the description block, all other blocks are inherited as-is.
 
 ![Template inheritance schema](../../../img/inheritance-schema.png)
 
