@@ -173,7 +173,7 @@ You could then write your own `batch.sh` to run multiple gatling benchmarks.
 
 ### Gatling installation
 
-Download Gatling from **[here](https://gatling.io/download/)**, and in the same way have a look at **[the Gatling quickstart page](https://gatling.io/docs/current/quickstart/)**.
+Download Gatling from **[here](https://gatling.io/download-gatling-community-edition)**, and in the same way have a look at **[the Gatling quickstart page](https://docs.gatling.io/tutorials/)**.
 
 Once unzipping the folder it will look like as shown below:
 

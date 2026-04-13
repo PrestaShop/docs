@@ -16,7 +16,7 @@ how to:
 - extend modern grids. [Grid component]({{< relref "/9/development/components/grid/" >}}) 
 - extend identifiable object form. [identifiable object form]({{< relref "/9/development/architecture/migration-guide/forms/CRUD-forms" >}}) 
 
-The module created within this tutorial can be found [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module)
+The module created within this tutorial can be found [here](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform3)
 
 ## Prerequisites
 
@@ -138,7 +138,7 @@ class CustomerReviewController extends FrameworkBundleAdminController
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to toggle the reviewer state. [More about it here]({{< relref "/9/development/architecture/domain/cqrs" >}}).
+You can find full implementation [here](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform3) which uses CQRS pattern to toggle the reviewer state. [More about it here]({{< relref "/9/development/architecture/domain/cqrs" >}}).
 {{% /notice %}}
 
 ```php
@@ -251,7 +251,7 @@ about it can be found [here]({{< relref "/9/development/components/form/types-re
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to get reviewer state. [More about it here]({{< relref "/9/development/architecture/domain/cqrs" >}}).
+You can find full implementation [here](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform3) which uses CQRS pattern to get reviewer state. [More about it here]({{< relref "/9/development/architecture/domain/cqrs" >}}).
 {{% /notice %}}
 
 ```php
@@ -310,7 +310,7 @@ dedicated to handle this topic - lets do that!
 {{% notice note %}}
 **This example has been simplified for practical reasons.** 
 
-You can find full implementation [here](https://github.com/PrestaShop/demo-cqrs-hooks-usage-module) which uses CQRS pattern to create or update reviewer state. [More about it here]({{< relref "/9/development/architecture/domain/cqrs" >}}).
+You can find full implementation [here](https://github.com/PrestaShop/example-modules/tree/master/demoextendsymfonyform3) which uses CQRS pattern to create or update reviewer state. [More about it here]({{< relref "/9/development/architecture/domain/cqrs" >}}).
 {{% /notice %}}
 
 ```php
