@@ -16,7 +16,7 @@ From a configuration file, the command is able to do some configuration on a spe
 - copy files
 - execute `php` scripts
 
-Complete reference of Self Configurator: [ModuleSelfConfigurator.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Module/Configuration/ModuleSelfConfigurator.php)
+Complete reference of Self Configurator: [ModuleSelfConfigurator.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Module/Configuration/ModuleSelfConfigurator.php)
 
 ## How to use it
 
@@ -112,7 +112,7 @@ Please note that if you use paths, your paths should be relative to the configur
 
 For complex actions, you can execute `php` code from your configuration file. 
 
-Your file must contain a class implementing the interface `PrestaShop\PrestaShop\Adapter\Module\Configuration\ModuleComplexConfigurationInterface`: [see reference here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Module/Configuration/ModuleComplexConfigurationInterface.php).
+Your file must contain a class implementing the interface `PrestaShop\PrestaShop\Adapter\Module\Configuration\ModuleComplexConfigurationInterface`: [see reference here](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Module/Configuration/ModuleComplexConfigurationInterface.php).
 
 **The class name needs to match the file name.**
 
@@ -188,7 +188,7 @@ sql:
 files:
     - source: "../source/file.txt"
       dest: "docs/file.txt"
-      
+
     - source: "https://www.prestashop.com"
       dest: "webpage.html"
 

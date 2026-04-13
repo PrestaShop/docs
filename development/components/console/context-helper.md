@@ -37,4 +37,4 @@ MyCustomCommand extends ContainerAwareCommand
 });
 ```
 
-You can load a generic context thanks to `loadGenericContext()` or choose which data you want to initialize using the method of [LegacyContextLoader](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/LegacyContextLoader.php).
+You can load a generic context thanks to `loadGenericContext()` or choose which data you want to initialize using the method of [LegacyContextLoader](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/LegacyContextLoader.php).

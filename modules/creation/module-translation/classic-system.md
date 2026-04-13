@@ -137,7 +137,7 @@ In our sample module, the `mymodule.tpl` file...
   <h4>Welcome!</h4>
   <div class="block_content">
     <p>Hello,
-       {if isset($my_module_name) && $my_module_name}
+       {if isset($my_module_name) && $my_module_name} 
            {$my_module_name}
        {else}
            World
@@ -171,7 +171,7 @@ In our sample module, the `mymodule.tpl` file...
        !
     </p>
     <ul>
-      <li><a href="{$my_module_link}"  title="{l s='Click this link' mod='mymodule'}">{l s='Click me!' mod='mymodule'}</a></li>
+      <li><a href="{$my_module_link}" title="{l s='Click this link' mod='mymodule'}">{l s='Click me!' mod='mymodule'}</a></li>
     </ul>
   </div>
 </div>
@@ -362,7 +362,7 @@ As you can see, there are three parameters:
 3. `$md5` – MD5 hash of the original wording you intend to translate.
 
 {{% notice tip %}}
-If you are manually building a translation file to use with the [New translation system]({{< ref "new-system" >}}), keep in mind the [Backward compatibility constraints]({{< ref "new-system/#backwards-compatibility" >}}).
+If you are manually building a translation file to use with the [New translation system]({{< ref "new-system" >}}), keep in mind the [Backward compatibility constraints]({{< ref "/9/modules/creation/module-translation/new-system.md#backward-compatibility" >}}).
 {{% /notice %}}
 
 ## Limitations and caveats
@@ -414,5 +414,6 @@ In the meantime, refer to this list for the equivalences between language codes 
 
 [iso-619-1]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 [ietf-language-tags]: https://en.wikipedia.org/wiki/IETF_language_tag
-[legacy-to-standard]: https://github.com/PrestaShop/PrestaShop/blob/8.0.x/app/Resources/legacy-to-standard-locales.json
+[legacy-to-standard]: https://github.com/PrestaShop/PrestaShop/blob/9.1.x/app/Resources/legacy-to-standard-locales.json
+
 [new-translation-system]: {{< ref "new-system" >}}

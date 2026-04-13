@@ -6,7 +6,7 @@ weight: 50
 # Global variables for templates
 PrestaShop offers preset global variables for the front office Smarty templates.
 
-The variables are set in [`classes/FrontController.php`](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/controller/FrontController.php):
+The variables are set in [`classes/FrontController.php`](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php):
 
 ```php
 $templateVars = [

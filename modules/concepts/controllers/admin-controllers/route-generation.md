@@ -110,7 +110,7 @@ You should be **extra careful** about these misused code and replace it accordin
 
 - If the controller has already been migrated in your minimum supported version, use the `Router` service directly with the appropriate route name and parameters.
 - If the controller hasn't been migrated as of your minimum supported version:
-    - **For >= 1.7.5**, use `getAdminLink` method with the parameters **fully injected** in the function.
+    - **For >= 1.7.5**, use `getAdminLink` method with the parameters **fully injected** in the function. 
     - **For < 1.7.5**, consider creating your own Link class adapter to switch to the appropriate routing mode for each PrestaShop version ([see example](https://github.com/PrestaShopCorp/ps_checkout/blob/v1.5.2/classes/Adapter/LinkAdapter.php)).
 {{% /notice %}}
 
@@ -134,7 +134,7 @@ This will only work for **one route/one controller** the association by action d
 
 #### Javascript routes
 
-In order to generate a symfony route in javascript, you can use the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/js/components/router.ts).
+In order to generate a symfony route in javascript, you can use the [`Router` component](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/new-theme/js/components/router.ts).
 
 You can use it like this:
 
