@@ -149,6 +149,8 @@ graph TD;
     E-->F(catalog/listing/product-list.tpl);
 </div>
 
-This fallback chain applies to all listing pages (new products, best sellers, search results, etc.) — they all ultimately fall back to `product-list.tpl`.
+This fallback chain applies to all listing pages (new products, best sellers, search results, etc.) they all ultimately fall back to `product-list.tpl`.
 
+{{% notice tip %}}
 See [Listing pages]({{< relref "/9/themes/concepts/templates/listing-pages" >}}) for how listing templates work, including AJAX updates.
+{{% /notice %}}
