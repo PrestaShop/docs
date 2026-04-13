@@ -49,7 +49,7 @@ The `$layout` variable is set by the front controller based on the layout assign
 
 ![Choose layouts](../../../img/choose-layouts.png)
 
-### A typical layout
+### An example layout
 
 Here is a simplified version of a full-width layout, showing the main blocks that page templates can override:
 
