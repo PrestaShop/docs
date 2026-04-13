@@ -293,7 +293,6 @@ This problem may arise in case-insensitive file systems like MacOS due to a misc
 
 [getting-started-guide]: https://docs.prestashop-project.org/v.8-documentation/v/english/getting-started
 [system-requirements]: {{< relref "/9/basics/installation/system-requirements" >}}
-[clone-the-repository]: {{< relref "/9/themes/getting-started/environment-setup" >}}
 [compile-assets]: {{< relref "/9/development/compile-assets" >}}
 [webpack]: https://webpack.js.org/
 [composer]: https://getcomposer.org/download/
