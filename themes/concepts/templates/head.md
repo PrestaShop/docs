@@ -13,8 +13,8 @@ This page covers how PrestaShop themes handle asset loading and SEO meta tags in
 
 Two partial templates handle asset loading:
 
-- `_partials/stylesheets.tpl` — loops over registered stylesheets
-- `_partials/javascript.tpl` — loops over registered scripts, supports async loading
+- `_partials/stylesheets.tpl`: loops over registered stylesheets
+- `_partials/javascript.tpl`: loops over registered scripts, supports async loading
 
 ```smarty
 {block name='stylesheets'}
@@ -37,6 +37,10 @@ Two partial templates handle asset loading:
 The `$stylesheets` and `$javascript` variables are populated automatically by PrestaShop from all assets registered by the theme and modules. See [Asset management]({{< relref "/9/themes/concepts/asset-management" >}}) for the registration API.
 
 The `$js_custom_vars` variable is a key/value array of PHP variables exposed to JavaScript before any scripts run. It allows controllers and modules to pass server-side values (IDs, URLs, translated strings) into the front-end without inline `<script>` blocks in templates.
+
+{{% notice warning %}}
+Every value in `$js_custom_vars` is rendered in the page source and visible to anyone. Never expose sensitive data such as API keys, authentication tokens, passwords, or private user information through this variable.
+{{% /notice %}}
 
 ## SEO
 
