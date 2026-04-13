@@ -14,14 +14,14 @@ This page covers how PrestaShop registers, loads, and unregisters CSS and JavaSc
 
 PrestaShop automatically loads these files on every front-office page:
 
-| File | ID | Priority | Description |
-|------|----|----------|-------------|
-| `theme.css` | `theme-main` | 50 | Main theme stylesheet |
-| `rtl.css` | `theme-rtl` | 900 | Loaded only for RTL languages |
-| `custom.css` | `theme-custom` | 1000 | Empty override file, loaded last |
-| `core.js` | `corejs` | 0 | Event system, `prestashop` object, jQuery (for module compat) |
-| `theme.js` | `theme-main` | 50 | Main theme JavaScript |
-| `custom.js` | `theme-custom` | 1000 | Empty override file, loaded last |
+| File | Source | ID | Priority | Description |
+|------|--------|----|----------|-------------|
+| `theme.css` | Theme | `theme-main` | 50 | Main theme stylesheet |
+| `rtl.css` | Theme | `theme-rtl` | 900 | Loaded only for RTL languages |
+| `custom.css` | Theme | `theme-custom` | 1000 | Empty override file, loaded last |
+| `core.js` | PrestaShop core | `corejs` | 0 | Event system, `prestashop` object, jQuery (for module compat) |
+| `theme.js` | Theme | `theme-main` | 50 | Main theme JavaScript |
+| `custom.js` | Theme | `theme-custom` | 1000 | Empty override file, loaded last |
 
 {{% notice tip %}}
 `custom.css` and `custom.js` are loaded last (priority 1000). Use them for quick overrides without modifying compiled theme files.
