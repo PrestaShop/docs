@@ -1,10 +1,10 @@
 ---
 Title: actionGetProductPropertiesAfter
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
 locations:
     - 'front office'
@@ -27,5 +27,5 @@ Hook::exec('actionGetProductPropertiesAfter', [
             'id_lang' => $id_lang,
             'product' => &$row,
             'context' => $context,
-        ])
+        ]);
 ```

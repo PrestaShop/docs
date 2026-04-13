@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'After htaccess creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Tools.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Tools.php'
         file: classes/Tools.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - afterCreateHtaccess
+hookAliases: actionHtaccessCreate
 array_return: false
 check_exceptions: false
 chain: false

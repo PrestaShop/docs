@@ -8,9 +8,8 @@ files:
         file: classes/checkout/CheckoutDeliveryStep.php
 locations:
     - 'front office'
-type: display
-hookAliases:
-    - beforeCarrier
+type: action
+hookAliases: displayBeforeCarrier
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,5 +23,5 @@ description: 'This hook is displayed before the carrier list in Front Office'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayBeforeCarrier', ['cart' => $this->getCheckoutSession()->getCart()])
+Hook::exec('displayBeforeCarrier', ['cart' => $this->getCheckoutSession()->getCart()]);
 ```

@@ -1,7 +1,7 @@
 ---
 Title: displayExpressCheckout
 hidden: true
-hookTitle: displayExpressCheckout
+hookTitle: ''
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayExpressCheckout'}
+{hook h='displayExpressCheckout'};
 ```

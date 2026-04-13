@@ -1,11 +1,11 @@
 ---
 Title: actionAdminControllerSetMedia
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php'
-        file: src/PrestaShopBundle/Bridge/AdminController/LegacyControllerBridge.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Twig/Component/HeadTag.php'
+        file: src/PrestaShopBundle/Twig/Component/HeadTag.php
 locations:
     - 'back office'
 type: action
@@ -24,9 +24,15 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchWithParameters('actionAdminControllerSetMedia')
+$this->hookDispatcher->dispatchWithParameters('actionAdminControllerSetMedia');
 ```
 
 ## Example implementation
+This hook has been implemented as an example in our 
+[modules examples repository - demoextendgrid](https://github.com/PrestaShop/example-modules/tree/master/demoextendgrid).
 
-This hook has been implemented as an example in our [modules examples repository - demoextendgrid](https://github.com/PrestaShop/example-modules/tree/master/demoextendgrid).
+{{% callout type="warning" %}}
+In PrestaShop 9, this hook is dispatched from a Twig component. 
+The methods `addJqueryPlugin()` and `addJqueryUI()` may not be available 
+on migrated Symfony pages. Use `addJS()` and `addCSS()` instead.
+{{% /callout %}}

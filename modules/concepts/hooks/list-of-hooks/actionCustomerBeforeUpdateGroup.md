@@ -1,10 +1,10 @@
 ---
 Title: actionCustomerBeforeUpdateGroup
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Customer.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Customer.php'
         file: classes/Customer.php
 locations:
     - 'front office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCustomerBeforeUpdateGroup', ['id_customer' => $this->id, 'groups' => $list])
+Hook::exec('actionCustomerBeforeUpdateGroup', ['id_customer' => $this->id, 'groups' => $list]);
 ```

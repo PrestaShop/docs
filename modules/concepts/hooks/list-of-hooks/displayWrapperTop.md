@@ -28,5 +28,5 @@ description: 'This hook displays new elements in the top of the main wrapper'
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayWrapperTop'}
+{hook h='displayWrapperTop'};
 ```

@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Saving products'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - afterSaveProduct
+hookAliases: actionProductSave
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,5 +23,5 @@ description: 'This hook is called while saving products'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductSave', ['id_product' => (int) $this->id, 'product' => $this])
+Hook::exec('actionProductSave', ['id_product' => (int) $this->id, 'product' => $this]);
 ```

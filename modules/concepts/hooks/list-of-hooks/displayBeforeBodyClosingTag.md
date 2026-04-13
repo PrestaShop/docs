@@ -1,7 +1,7 @@
 ---
 Title: displayBeforeBodyClosingTag
 hidden: true
-hookTitle: Very bottom of pages
+hookTitle: 'Very bottom of pages'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: Use this hook for your modals or any content you want to load at th
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayBeforeBodyClosingTag'}
+{hook h='displayBeforeBodyClosingTag'};
 ```

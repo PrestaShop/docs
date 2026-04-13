@@ -1,16 +1,15 @@
 ---
-Title: displaybackOfficeHeader
+Title: displayBackOfficeHeader
 hidden: true
 hookTitle: 'Administration panel header'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
         file: classes/controller/AdminController.php
 locations:
     - 'back office'
-type: display
-hookAliases:
-    - backOfficeHeader
+type: action
+hookAliases: displayBackOfficeHeader
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,6 +23,5 @@ description: 'This hook is displayed in the header of the admin panel'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displaybackOfficeHeader')
+Hook::exec('displayBackOfficeHeader');
 ```
-

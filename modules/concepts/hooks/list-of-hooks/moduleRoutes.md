@@ -1,14 +1,14 @@
 ---
 Title: moduleRoutes
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Dispatcher.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Dispatcher.php'
         file: classes/Dispatcher.php
 locations:
     - 'front office'
-type: null
+type: action
 hookAliases: 
 hasExample: true
 array_return: true
@@ -24,7 +24,7 @@ description: 'This hook allows your module to extend default PrestaShop routes w
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('moduleRoutes', ['id_shop' => $id_shop], null, true, false)
+Hook::exec('moduleRoutes', ['id_shop' => $id_shop], null, true, false);
 ```
 
 ## Example implementation
@@ -178,4 +178,3 @@ class MyModuleAddingRoutes extends Module
 ```
 
 The complete implementation example is available in our [example modules repository](https://github.com/PrestaShop/example-modules/tree/master/demomoduleroutes).
-

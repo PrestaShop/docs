@@ -1,7 +1,7 @@
 ---
 Title: displayNavFullWidth
 hidden: true
-hookTitle: Navigation
+hookTitle: 'Navigation'
 files:
     -
       theme: classic
@@ -33,5 +33,5 @@ description: This hook displays full width navigation menu at the top of your pa
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayNavFullWidth'}
+{hook h='displayNavFullWidth'};
 ```

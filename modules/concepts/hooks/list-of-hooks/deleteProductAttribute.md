@@ -1,15 +1,15 @@
 ---
 Title: deleteProductAttribute
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
 locations:
     - 'front office'
-type: null
-hookAliases: 
+type: action
+hookAliases: deleteProductAttribute
 array_return: false
 check_exceptions: false
 chain: false
@@ -30,5 +30,5 @@ Hook::exec(
                 'id_product' => $this->id,
                 'deleteAllAttributes' => false,
             ]
-        )
+        );
 ```

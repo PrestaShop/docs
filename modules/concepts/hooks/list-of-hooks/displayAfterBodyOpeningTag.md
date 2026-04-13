@@ -1,7 +1,7 @@
 ---
 Title: displayAfterBodyOpeningTag
 hidden: true
-hookTitle: Very top of pages
+hookTitle: 'Very top of pages'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: Use this hook for advertisement or modals you want to load first
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAfterBodyOpeningTag'}
+{hook h='displayAfterBodyOpeningTag'};
 ```

@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Administration panel footer'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Resources/views/Admin/Component/Layout/footer.html.twig'
-        file: src/PrestaShopBundle/Resources/views/Admin/Component/Layout/footer.html.twig
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Layout/legacy_layout.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Layout/legacy_layout.html.twig
 locations:
     - 'back office'
 type: display
@@ -23,5 +23,5 @@ description: 'This hook is displayed within the admin panel''s footer'
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayBackOfficeFooter') }};
+{{ renderhook('displayBackOfficeFooter', {}) }};
 ```

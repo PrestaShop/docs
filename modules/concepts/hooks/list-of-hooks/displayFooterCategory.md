@@ -23,5 +23,5 @@ description: 'This hook adds new blocks under the products listing in a category
 ## Call of the Hook in the origin file
 
 ```php
-{hook h="displayFooterCategory"}
+{hook h='displayFooterCategory'};
 ```

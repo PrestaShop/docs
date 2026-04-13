@@ -1,7 +1,7 @@
 ---
 Title: actionNewsletterRegistrationAfter
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
         module: ps_emailsubscription

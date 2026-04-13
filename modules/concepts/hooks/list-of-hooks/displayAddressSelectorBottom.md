@@ -1,7 +1,7 @@
 ---
 Title: displayAddressSelectorBottom
 hidden: true
-hookTitle: 
+hookTitle: 'After address selection on checkout page'
 files:
     -
         theme: Classic
@@ -25,5 +25,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAddressSelectorBottom'}
+{hook h='displayAddressSelectorBottom'};
 ```

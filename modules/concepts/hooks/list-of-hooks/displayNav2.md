@@ -33,5 +33,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayNav2'}
+{hook h='displayNav2'};
 ```

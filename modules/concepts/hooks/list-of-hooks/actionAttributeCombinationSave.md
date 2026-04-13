@@ -1,11 +1,11 @@
 ---
 Title: actionAttributeCombinationSave
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Combination.php'
-        file: classes/Combination.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Product/Combination/Create/CombinationCreator.php'
+        file: src/Adapter/Product/Combination/Create/CombinationCreator.php
 locations:
     - 'front office'
 type: action
@@ -23,5 +23,8 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAttributeCombinationSave', ['id_product_attribute' => (int) $this->id, 'id_attributes' => $idsAttribute])
+$this->hookDispatcher->dispatchWithParameters(
+                'actionAttributeCombinationSave',
+                ['id_product_attribute' => (int) $combination->id, 'id_attributes' => $generatedCombination]
+            );
 ```

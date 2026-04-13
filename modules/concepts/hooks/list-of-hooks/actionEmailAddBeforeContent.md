@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add extra content before mail content'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Mail.php'
         file: classes/Mail.php
 locations:
     - 'front office'
@@ -33,5 +33,5 @@ Hook::exec(
                 ],
                 null,
                 true
-            )
+            );
 ```

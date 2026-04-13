@@ -1,7 +1,7 @@
 ---
 Title: displayCMSPrintButton
 hidden: true
-hookTitle: displayCMSPrintButton
+hookTitle: ''
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCMSPrintButton'}
+{hook h='displayCMSPrintButton'};
 ```

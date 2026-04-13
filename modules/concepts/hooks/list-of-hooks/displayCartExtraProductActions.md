@@ -1,7 +1,7 @@
 ---
 Title: displayCartExtraProductActions
 hidden: true
-hookTitle: Extra buttons in shopping cart
+hookTitle: 'Extra buttons in shopping cart'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook adds extra buttons to the product lines, in the shopping 
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCartExtraProductActions' product=$product}
+{hook h='displayCartExtraProductActions' product=$product};
 ```

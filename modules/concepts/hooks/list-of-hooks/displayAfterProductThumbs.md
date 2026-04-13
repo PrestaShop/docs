@@ -1,7 +1,7 @@
 ---
 Title: displayAfterProductThumbs
 hidden: true
-hookTitle: Display extra content below product thumbs
+hookTitle: 'Display extra content below product thumbs'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook displays new elements below product images ex. additional
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAfterProductThumbs' product=$product}
+{hook h='displayAfterProductThumbs' product=$product};
 ```

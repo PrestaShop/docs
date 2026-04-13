@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Carrier Update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminCarriersController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/admin/AdminCarriersController.php'
         file: controllers/admin/AdminCarriersController.php
 locations:
     - 'back office'
 type: action
-hookAliases:
-    - updateCarrier
+hookAliases: actionCarrierUpdate
 array_return: false
 check_exceptions: false
 chain: false
@@ -27,5 +26,5 @@ description: 'This hook is called when a carrier is updated'
 Hook::exec('actionCarrierUpdate', [
                                     'id_carrier' => (int) $current_carrier->id,
                                     'carrier' => $new_carrier,
-                                ])
+                                ]);
 ```

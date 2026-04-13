@@ -4,15 +4,14 @@ hidden: true
 hookTitle: 'Order status update - Event'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/order/OrderHistory.php'
         file: classes/order/OrderHistory.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - updateOrderStatus
+hookAliases: actionOrderStatusUpdate
 array_return: false
-check_exceptions: false
+check_exceptions: true
 chain: false
 origin: core
 description: 'This hook launches modules when the status of an order changes'
@@ -39,5 +38,5 @@ Hook::exec('actionOrderStatusUpdate', [
             'newOrderStatus' => $new_os,
             'oldOrderStatus' => $old_os,
             'id_order' => (int) $order->id,
-        ], null, false, true, false, $order->id_shop)
+        ], null, false, true, false, $order->id_shop);
 ```

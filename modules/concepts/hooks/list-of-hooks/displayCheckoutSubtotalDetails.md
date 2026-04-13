@@ -1,7 +1,7 @@
 ---
 Title: displayCheckoutSubtotalDetails
 hidden: true
-hookTitle: displayCheckoutSubtotalDetails
+hookTitle: ''
 files:
     -
       theme: classic
@@ -37,5 +37,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}
+{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal};
 ```

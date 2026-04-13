@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Returned product'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderFollowController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/OrderFollowController.php'
         file: controllers/front/OrderFollowController.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - orderReturn
+hookAliases: actionOrderReturn
 array_return: false
 check_exceptions: false
 chain: false
@@ -33,5 +32,5 @@ description: 'This hook is displayed when a customer returns a product '
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOrderReturn', ['orderReturn' => $orderReturn])
+Hook::exec('actionOrderReturn', ['orderReturn' => $orderReturn]);
 ```

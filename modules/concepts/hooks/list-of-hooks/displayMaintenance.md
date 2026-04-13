@@ -4,11 +4,11 @@ hidden: true
 hookTitle: 'Maintenance Page'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
-type: display
+type: action
 hookAliases: 
 array_return: false
 check_exceptions: false
@@ -23,5 +23,5 @@ description: 'This hook displays new elements on the maintenance page'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayMaintenance', [])
+Hook::exec('displayMaintenance');
 ```

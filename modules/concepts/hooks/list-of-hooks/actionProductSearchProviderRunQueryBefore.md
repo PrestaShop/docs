@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Runs an action before ProductSearchProviderInterface::RunQuery()'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/ProductListingFrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/ProductListingFrontController.php'
         file: classes/controller/ProductListingFrontController.php
 locations:
     - 'front office'
@@ -25,5 +25,5 @@ description: 'Required to modify an SQL query before executing it'
 ```php
 Hook::exec('actionProductSearchProviderRunQueryBefore', [
             'query' => $query,
-        ])
+        ]);
 ```

@@ -1,7 +1,7 @@
 ---
 Title: displayPersonalInformationTop
 hidden: true
-hookTitle: Content in the checkout funnel, on top of the personal information panel
+hookTitle: 'Content in the checkout funnel, on top of the personal information panel'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: Display actions or additional content in the personal details tab o
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayPersonalInformationTop' customer=$customer}
+{hook h='displayPersonalInformationTop' customer=$customer};
 ```

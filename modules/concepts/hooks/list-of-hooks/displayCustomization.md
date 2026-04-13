@@ -1,14 +1,14 @@
 ---
 Title: displayCustomization
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
 locations:
     - 'front office'
-type: display
+type: action
 hookAliases: 
 array_return: false
 check_exceptions: false
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayCustomization', ['customization' => $row], (int) $row['id_module'])
+Hook::exec('displayCustomization', ['customization' => $row], (int) $row['id_module']);
 ```

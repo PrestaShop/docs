@@ -1,7 +1,7 @@
 ---
 Title: displayFooterAfter
 hidden: true
-hookTitle: displayFooterAfter
+hookTitle: ''
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayFooterAfter'}
+{hook h='displayFooterAfter'};
 ```

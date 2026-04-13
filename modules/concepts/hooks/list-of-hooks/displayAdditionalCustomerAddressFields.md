@@ -1,7 +1,7 @@
 ---
 Title: displayAdditionalCustomerAddressFields
 hidden: true
-hookTitle: Display additional customer address fields
+hookTitle: 'Display additional customer address fields'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook allows to display extra field values added in an address 
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAdditionalCustomerAddressFields' address=$address}
+{hook h='displayAdditionalCustomerAddressFields' address=$address};
 ```

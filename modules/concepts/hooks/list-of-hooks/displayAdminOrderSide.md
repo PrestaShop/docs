@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Admin Order Side Column'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 locations:
     - 'back office'
@@ -33,5 +33,5 @@ description: 'This hook displays content in the order view page in the side colu
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayAdminOrderSide', {'id_order': orderForViewing.id}) }}
+{{ renderhook('displayAdminOrderSide', {id_order: orderForViewing.id}) }};
 ```

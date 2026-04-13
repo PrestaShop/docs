@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Category creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Category.php'
         file: classes/Category.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - categoryAddition
+hookAliases: actionCategoryAdd
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,5 +23,5 @@ description: 'This hook is displayed when a category is created'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCategoryAdd', ['category' => $this])
+Hook::exec('actionCategoryAdd', ['category' => $this]);
 ```

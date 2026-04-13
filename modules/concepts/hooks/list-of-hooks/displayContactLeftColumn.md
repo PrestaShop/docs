@@ -1,7 +1,7 @@
 ---
 Title: displayContactLeftColumn
 hidden: true
-hookTitle: Left column blocks on the contact page
+hookTitle: 'Left column blocks on the contact page'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook displays new elements in the left-hand column of the cont
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayContactLeftColumn'}
+{hook h='displayContactLeftColumn'};
 ```

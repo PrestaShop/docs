@@ -4,11 +4,11 @@ hidden: true
 hookTitle: 'Customer registration form validation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerForm.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/form/CustomerForm.php'
         file: classes/form/CustomerForm.php
 locations:
     - 'front office'
-type: null
+type: action
 hookAliases: 
 array_return: true
 check_exceptions: false
@@ -23,5 +23,5 @@ description: 'This hook is called to a module when it has sent additional fields
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('validateCustomerFormFields', ['fields' => $formFields], $moduleId, true)
+Hook::exec('validateCustomerFormFields', ['fields' => $formFields], $moduleId, true);
 ```

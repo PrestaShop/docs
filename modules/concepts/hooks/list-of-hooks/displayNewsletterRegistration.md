@@ -45,5 +45,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayNewsletterRegistration'}
+{hook h='displayNewsletterRegistration'};
 ```

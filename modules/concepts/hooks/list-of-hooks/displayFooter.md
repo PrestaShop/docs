@@ -1,7 +1,7 @@
 ---
 Title: displayFooter
 hidden: true
-hookTitle: Footer
+hookTitle: 'Footer'
 files:
     -
       theme: classic
@@ -30,5 +30,5 @@ description: This hook displays new blocks in the footer
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayFooter'}
+{hook h='displayFooter'};
 ```

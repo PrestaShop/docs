@@ -4,14 +4,14 @@ hidden: true
 hookTitle: 'After setting the tracking number for the order'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php'
         file: src/Adapter/Order/CommandHandler/UpdateOrderShippingDetailsHandler.php
 locations:
     - 'back office'
 type: action
 hookAliases: 
 array_return: false
-check_exceptions: false
+check_exceptions: true
 chain: false
 origin: core
 description: 'This hook allows you to execute code after the unique tracking number for the order was added'
@@ -38,5 +38,5 @@ Hook::exec('actionAdminOrdersTrackingNumberUpdate', [
                     'order' => $order,
                     'customer' => $customer,
                     'carrier' => $carrier,
-                ], null, false, true, false, $order->id_shop)
+                ], null, false, true, false, $order->id_shop);
 ```

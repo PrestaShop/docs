@@ -4,11 +4,11 @@ hidden: true
 hookTitle: 'Alter template vars on the fly'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Mail.php'
         file: classes/Mail.php
 locations:
     - 'front office'
-type: null
+type: action
 hookAliases: 
 array_return: false
 check_exceptions: false
@@ -29,5 +29,5 @@ Hook::exec(
                 'template' => $template,
                 'template_vars' => &$templateVars,
             ]
-        )
+        );
 ```

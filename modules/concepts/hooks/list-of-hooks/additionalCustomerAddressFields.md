@@ -4,11 +4,11 @@ hidden: true
 hookTitle: 'Add fields to the Customer address form'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressFormatter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/form/CustomerAddressFormatter.php'
         file: classes/form/CustomerAddressFormatter.php
 locations:
     - 'front office'
-type: null
+type: action
 hookAliases: 
 array_return: true
 check_exceptions: false
@@ -23,5 +23,5 @@ description: 'This hook returns an array of FormFields to add them to the custom
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('additionalCustomerAddressFields', ['fields' => &$format], null, true)
+Hook::exec('additionalCustomerAddressFields', ['fields' => &$format], null, true);
 ```

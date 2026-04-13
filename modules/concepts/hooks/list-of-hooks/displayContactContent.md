@@ -1,7 +1,7 @@
 ---
 Title: displayContactContent
 hidden: true
-hookTitle: Content wrapper section of the contact page
+hookTitle: 'Content wrapper section of the contact page'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook displays new elements in the content wrapper of the conta
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayContactContent'}
+{hook h='displayContactContent'};
 ```

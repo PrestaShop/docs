@@ -40,5 +40,5 @@ description: 'This hook displays new elements in the bottom of the content wrapp
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayContentWrapperBottom'}
+{hook h='displayContentWrapperBottom'};
 ```

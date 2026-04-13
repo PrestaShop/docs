@@ -1,10 +1,10 @@
 ---
 Title: actionAdminDuplicateAfter
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Product/Update/ProductDuplicator.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Product/Update/ProductDuplicator.php'
         file: src/Adapter/Product/Update/ProductDuplicator.php
 locations:
     - 'back office'
@@ -24,7 +24,7 @@ description: ''
 
 ```php
 $this->hookDispatcher->dispatchWithParameters(
-    'actionAdminDuplicateAfter',
-    ['id_product' => $oldProductId, 'id_product_new' => $newProductId]
-);
+            'actionAdminDuplicateAfter',
+            ['id_product' => $oldProductId, 'id_product_new' => $newProductId]
+        );
 ```

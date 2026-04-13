@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Homepage content'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/IndexController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/IndexController.php'
         file: controllers/front/IndexController.php
 locations:
     - 'front office'
-type: display
-hookAliases:
-    - home
+type: action
+hookAliases: displayHome
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,5 +23,5 @@ description: 'This hook displays new elements on the homepage'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayHome')
+Hook::exec('displayHome');
 ```

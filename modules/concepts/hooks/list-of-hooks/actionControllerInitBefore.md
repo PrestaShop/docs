@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Perform actions before controller initialization'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/Controller.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/Controller.php'
         file: classes/controller/Controller.php
 locations:
     - 'front office'
@@ -28,5 +28,5 @@ Hook::exec(
             [
                 'controller' => $this,
             ]
-        )
+        );
 ```

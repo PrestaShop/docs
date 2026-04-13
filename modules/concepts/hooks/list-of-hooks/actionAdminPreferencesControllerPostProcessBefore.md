@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/PreferencesController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/PreferencesController.php'
         file: src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/PreferencesController.php
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHook('actionAdminPreferencesControllerPostProcessBefore', ['controller' => $this])
+dispatchHookWithParameters('actionAdminPreferencesControllerPostProcessBefore', ['controller' => $this])
 ```

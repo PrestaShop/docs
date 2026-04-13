@@ -1,10 +1,10 @@
 ---
 Title: actionPDFInvoiceRender
 hidden: true
-hookTitle: 
+hookTitle: 'PDF Invoice - Render'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/PDF/OrderInvoicePdfGenerator.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/PDF/OrderInvoicePdfGenerator.php'
         file: src/Adapter/PDF/OrderInvoicePdfGenerator.php
 locations:
     - 'front office'
@@ -14,7 +14,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: ''
+description: 'This hook is called when a PDF invoice is rendered from the Front Office and the Back Office'
 
 ---
 
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPDFInvoiceRender', ['order_invoice_list' => $order_invoice_list])
+Hook::exec('actionPDFInvoiceRender', ['order_invoice_list' => $order_invoice_list]);
 ```

@@ -1,11 +1,11 @@
 ---
 Title: displayAdminNavBarBeforeEnd
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/components/layout/nav_bar.tpl'
-        file: admin-dev/themes/new-theme/template/components/layout/nav_bar.tpl
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Component/LegacyLayout/nav_bar.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Component/LegacyLayout/nav_bar.html.twig
 locations:
     - 'back office'
 type: display
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAdminNavBarBeforeEnd'}
+{{ renderhook('displayAdminNavBarBeforeEnd') }};
 ```

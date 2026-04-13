@@ -1,10 +1,10 @@
 ---
 Title: displayAdminView
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/view/view.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/helpers/view/view.tpl'
         file: admin-dev/themes/default/template/helpers/view/view.tpl
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAdminView'}
+{hook h='displayAdminView'};
 ```

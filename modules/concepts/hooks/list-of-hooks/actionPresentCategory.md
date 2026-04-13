@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Category Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Presenter/Category/CategoryPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Category/CategoryPresenter.php'
         file: src/Adapter/Presenter/Category/CategoryPresenter.php
 locations:
     - 'front office'

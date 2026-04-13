@@ -1,10 +1,10 @@
 ---
 Title: actionGenerateDocumentReference
 hidden: true
-hookTitle: 'Modify document reference for Order'
+hookTitle: 'Modify document reference'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/order/Order.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/order/Order.php'
         file: classes/order/Order.php
 locations:
     - 'front office'
@@ -14,7 +14,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: 'This hook allows modules to return custom document references for order'
+description: 'This hook allows modules to return custom document references'
 
 ---
 
@@ -23,7 +23,7 @@ description: 'This hook allows modules to return custom document references for 
 ## Call of the Hook in the origin file
 
 ```php
-$reference = Hook::exec('actionGenerateDocumentReference', [
-    'type' => 'order',
-]);
+Hook::exec('actionGenerateDocumentReference', [
+            'type' => 'order',
+        ]);
 ```

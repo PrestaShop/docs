@@ -29,5 +29,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayOrderConfirmation2'}
+{hook h='displayOrderConfirmation2'};
 ```

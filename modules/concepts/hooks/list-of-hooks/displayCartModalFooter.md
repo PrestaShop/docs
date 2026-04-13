@@ -1,7 +1,7 @@
 ---
 Title: displayCartModalFooter
 hidden: true
-hookTitle: Bottom of Add-to-cart modal
+hookTitle: 'Bottom of Add-to-cart modal'
 files:
     -
       module: ps_shoppingcart
@@ -33,5 +33,5 @@ description: This hook displays content in the bottom of window that appears aft
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCartModalFooter' product=$product}
+{hook h='displayCartModalFooter' product=$product};
 ```

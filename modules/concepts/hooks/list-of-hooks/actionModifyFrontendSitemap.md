@@ -1,10 +1,10 @@
 ---
 Title: actionModifyFrontendSitemap
 hidden: true
-hookTitle: 'Allows modules to add own urls (even whole new groups) to frontend sitemap.'
+hookTitle: 'Add or remove links on sitemap page'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.1.x/controllers/front/SitemapController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/SitemapController.php'
         file: controllers/front/SitemapController.php
 locations:
     - 'front office'
@@ -15,7 +15,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: 'For example landing pages, blog posts and others.'
+description: 'This hook allows to modify links on sitemap page of your shop. Useful to improve indexation of your modules.'
 
 ---
 
@@ -53,4 +53,3 @@ public function hookActionModifyFrontendSitemap($params)
     unset($params['urls']['categories']); // hide categories
 }
 ```
-

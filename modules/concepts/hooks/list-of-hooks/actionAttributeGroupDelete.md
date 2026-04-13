@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Deleting attribute group'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/AttributeGroup.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/AttributeGroup.php'
         file: classes/AttributeGroup.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - afterDeleteAttributeGroup
+hookAliases: actionAttributeGroupDelete
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,5 +23,5 @@ description: 'This hook is called while deleting an attributes  group'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAttributeGroupDelete', ['id_attribute_group' => $this->id])
+Hook::exec('actionAttributeGroupDelete', ['id_attribute_group' => $this->id]);
 ```

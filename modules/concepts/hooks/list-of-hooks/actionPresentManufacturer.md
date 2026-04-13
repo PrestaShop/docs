@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Manufacturer Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Presenter/Manufacturer/ManufacturerPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Manufacturer/ManufacturerPresenter.php'
         file: src/Adapter/Presenter/Manufacturer/ManufacturerPresenter.php
 locations:
     - 'front office'

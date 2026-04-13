@@ -1,7 +1,7 @@
 ---
 Title: displayRightColumnProduct
 hidden: true
-hookTitle: New elements on the product page (right column)
+hookTitle: 'New elements on the product page (right column)'
 files:
     -
       theme: classic
@@ -34,5 +34,5 @@ description: This hook displays new elements in the right-hand column of the pro
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayRightColumnProduct'}
+{hook h='displayRightColumnProduct'};
 ```

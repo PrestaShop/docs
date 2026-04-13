@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Get Employee Image'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Employee.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Employee.php'
         file: classes/Employee.php
 locations:
     - 'front office'
@@ -29,5 +29,5 @@ Hook::exec(
                 'employee' => $this,
                 'imageUrl' => &$imageUrl,
             ]
-        )
+        );
 ```

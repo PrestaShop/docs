@@ -4,18 +4,17 @@ hidden: true
 hookTitle: 'Product attribute deletion'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - deleteProductAttribute
+hookAliases: actionProductAttributeDelete
 array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: "This hook is displayed when a product's attribute is deleted"
+description: 'This hook is displayed when a product''s attribute is deleted'
 
 ---
 
@@ -24,5 +23,5 @@ description: "This hook is displayed when a product's attribute is deleted"
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductAttributeDelete', ['id_product_attribute' => 0, 'id_product' => (int) $this->id, 'deleteAllAttributes' => true])
+Hook::exec('actionProductAttributeDelete', ['id_product_attribute' => 0, 'id_product' => (int) $this->id, 'deleteAllAttributes' => true]);
 ```

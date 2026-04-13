@@ -1,7 +1,7 @@
 ---
 Title: displayContactRightColumn
 hidden: true
-hookTitle: Right column blocks of the contact page
+hookTitle: 'Right column blocks of the contact page'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook displays new elements in the right-hand column of the con
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayContactRightColumn'}
+{hook h='displayContactRightColumn'};
 ```

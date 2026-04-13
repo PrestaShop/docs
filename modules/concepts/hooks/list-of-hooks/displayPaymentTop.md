@@ -1,7 +1,7 @@
 ---
 Title: displayPaymentTop
 hidden: true
-hookTitle: Top of payment page
+hookTitle: 'Top of payment page'
 files:
     -
       theme: classic
@@ -30,5 +30,5 @@ description: This hook is displayed at the top of the payment page
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayPaymentTop'}
+{hook h='displayPaymentTop'};
 ```

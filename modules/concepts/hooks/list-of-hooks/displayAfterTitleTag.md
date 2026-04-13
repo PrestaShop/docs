@@ -1,7 +1,7 @@
 ---
 Title: displayAfterTitleTag
 hidden: true
-hookTitle: After title tag
+hookTitle: 'After title tag'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: Use this hook to add content after title tag
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAfterTitleTag'}
+{hook h='displayAfterTitleTag'};
 ```

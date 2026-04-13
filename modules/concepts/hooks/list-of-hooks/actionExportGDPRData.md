@@ -1,10 +1,10 @@
 ---
 Title: actionExportGDPRData
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/psgdpr/psgdpr.php'
+        url: 'https://github.com/PrestaShop/psgdpr/blob/master/psgdpr.php'
         file: modules/psgdpr/psgdpr.php
 locations:
     - 'front office'
@@ -24,5 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionExportGDPRData', $customer, $module['id_module'])
+Hook::exec('actionExportGDPRData', (array) $customer, $module['id_module'])
 ```

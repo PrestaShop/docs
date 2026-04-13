@@ -1,10 +1,10 @@
 ---
 Title: displayAdminForm
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/form/form.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/helpers/form/form.tpl'
         file: admin-dev/themes/default/template/helpers/form/form.tpl
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAdminForm' fieldset=$f}
+{hook h='displayAdminForm' fieldset=$f};
 ```

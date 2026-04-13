@@ -24,5 +24,5 @@ description: 'This hook is called after the product search. Parameters are alrea
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductSearchAfter', $searchVariables)
+Hook::exec('actionProductSearchAfter', $searchVariables);
 ```

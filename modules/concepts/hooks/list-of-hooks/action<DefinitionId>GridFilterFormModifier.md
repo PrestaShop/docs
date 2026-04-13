@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Filter/GridFilterFormFactory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Grid/Filter/GridFilterFormFactory.php'
         file: src/Core/Grid/Filter/GridFilterFormFactory.php
 locations:
     - 'front office'

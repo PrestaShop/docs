@@ -1,7 +1,7 @@
 ---
 Title: displayCustomerAccount
 hidden: true
-hookTitle: Customer account displayed in Front Office
+hookTitle: 'Customer account displayed in Front Office'
 files:
     -
       theme: classic
@@ -34,5 +34,5 @@ description: This hook displays new elements on the customer account page
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCustomerAccount'}
+{hook h='displayCustomerAccount'};
 ```

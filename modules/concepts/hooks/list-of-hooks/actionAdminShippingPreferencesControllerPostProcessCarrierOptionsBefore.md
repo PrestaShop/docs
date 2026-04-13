@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'On post-process in Admin Improve Shipping Preferences Controller'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php'
         file: src/PrestaShopBundle/Controller/Admin/Improve/Shipping/PreferencesController.php
 locations:
     - 'back office'
@@ -23,8 +23,8 @@ description: 'This hook is called on Admin Improve Shipping Preferences post-pro
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHook(
+dispatchHookWithParameters(
             'actionAdminShippingPreferencesControllerPostProcessCarrierOptionsBefore',
-                ['controller' => $this]
+            ['controller' => $this]
         )
 ```

@@ -1,7 +1,7 @@
 ---
 Title: displayCustomerLoginFormAfter
 hidden: true
-hookTitle: Display elements after login form
+hookTitle: 'Display elements after login form'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook displays new elements after the login form
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCustomerLoginFormAfter'}
+{hook h='displayCustomerLoginFormAfter'};
 ```

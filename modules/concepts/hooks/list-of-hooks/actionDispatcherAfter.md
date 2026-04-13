@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'After dispatch'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php'
-        file: src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Dispatcher.php'
+        file: classes/Dispatcher.php
 locations:
     - 'front office'
 type: action
@@ -23,9 +23,5 @@ description: 'This hook is called at the end of the dispatch method of the Dispa
 ## Call of the Hook in the origin file
 
 ```php
-dispatchWithParameters(self::DISPATCHER_AFTER_ACTION, [
-                'controller_type' => $requestAttributes->get('controller_type'),
-                'controller_class' => $requestAttributes->get('controller_name'),
-                'is_module' => 0,
-            ])
+Hook::exec('actionDispatcherAfter', $params_hook_action_dispatcher);
 ```

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Cart product removal'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/CartController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/CartController.php'
         file: controllers/front/CartController.php
 locations:
     - 'back office'
@@ -24,5 +24,5 @@ description: 'This hook is called after a product is removed from a cart'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionObjectProductInCartDeleteAfter', $data)
+Hook::exec('actionObjectProductInCartDeleteAfter', $data);
 ```

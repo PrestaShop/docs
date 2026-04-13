@@ -1,14 +1,14 @@
 ---
 Title: dashboardZoneOne
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminDashboardController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/admin/AdminDashboardController.php'
         file: controllers/admin/AdminDashboardController.php
 locations:
     - 'back office'
-type: null
+type: action
 hookAliases: 
 array_return: false
 check_exceptions: false
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('dashboardZoneOne', $params)
+Hook::exec('dashboardZoneOne', $params);
 ```

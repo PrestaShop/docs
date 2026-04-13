@@ -1,7 +1,7 @@
 ---
 Title: actionDeleteGDPRCustomer
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
         module: psgdpr
@@ -24,5 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionDeleteGDPRCustomer', $customer, $module['id_module'])
+Hook::exec('actionDeleteGDPRCustomer', $customer, $module['id_module']);
 ```

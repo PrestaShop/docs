@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Clear smarty compile cache'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Tools.php'
         file: classes/Tools.php
 locations:
     - 'front office'
@@ -14,7 +14,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: "This hook is called when smarty's compile cache is cleared"
+description: 'This hook is called when smarty''s compile cache is cleared'
 
 ---
 
@@ -23,5 +23,5 @@ description: "This hook is called when smarty's compile cache is cleared"
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionClearCompileCache')
+Hook::exec('actionClearCompileCache');
 ```

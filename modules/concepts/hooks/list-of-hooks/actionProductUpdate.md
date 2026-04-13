@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Product update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductWrapper.php'
-        file: src/Adapter/Product/AdminProductWrapper.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
+        file: classes/Product.php
 locations:
     - 'back office'
 type: action
-hookAliases:
-    - updateproduct
+hookAliases: actionProductUpdate
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,5 +23,5 @@ description: 'This hook is displayed after a product has been updated'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductUpdate', ['id_product' => (int) $product->id, 'product' => $product])
+Hook::exec('actionProductUpdate', ['id_product' => (int) $product->id, 'product' => $product]);
 ```

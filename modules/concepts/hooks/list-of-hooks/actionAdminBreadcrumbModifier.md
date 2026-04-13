@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modify back office breadcrumb'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Twig/Component/Toolbar.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Twig/Component/Toolbar.php'
         file: src/PrestaShopBundle/Twig/Component/Toolbar.php
 locations:
     - 'back office'

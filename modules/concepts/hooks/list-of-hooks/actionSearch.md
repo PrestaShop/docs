@@ -1,10 +1,10 @@
 ---
 Title: actionSearch
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Search/SearchProductSearchProvider.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Search/SearchProductSearchProvider.php'
         file: src/Adapter/Search/SearchProductSearchProvider.php
 locations:
     - 'front office'
@@ -39,5 +39,5 @@ Hook::exec('actionSearch', [
 
                 // deprecated since 1.7.x
                 'expr' => $queryString,
-            ])
+            ]);
 ```

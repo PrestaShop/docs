@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Payment CC added'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderPayment.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/order/OrderPayment.php'
         file: classes/order/OrderPayment.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - paymentCCAdded
+hookAliases: actionPaymentCCAdd
 array_return: false
 check_exceptions: false
 chain: false
@@ -33,5 +32,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPaymentCCAdd', ['paymentCC' => $this])
+Hook::exec('actionPaymentCCAdd', ['paymentCC' => $this]);
 ```

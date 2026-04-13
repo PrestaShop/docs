@@ -1,7 +1,7 @@
 ---
 Title: displayFooterProduct
 hidden: true
-hookTitle: Product footer
+hookTitle: 'Product footer'
 files:
     -
       theme: classic
@@ -30,5 +30,5 @@ description: This hook adds new blocks under the product's description
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayFooterProduct' product=$product category=$category}
+{hook h='displayFooterProduct' product=$product category=$category};
 ```

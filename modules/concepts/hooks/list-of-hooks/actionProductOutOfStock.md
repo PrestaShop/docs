@@ -1,7 +1,7 @@
 ---
 Title: actionProductOutOfStock
 hidden: true
-hookTitle: Out-of-stock product
+hookTitle: 'Out-of-stock product'
 files:
     -
       theme: classic
@@ -16,7 +16,7 @@ locations:
     - front office
 type: action
 hookAliases:
-    - productOutOfStock 
+    - actionProductOutOfStock 
 origin: theme
 array_return: false
 check_exceptions: false
@@ -30,5 +30,5 @@ description: This hook displays new action buttons if a product is out of stock
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='actionProductOutOfStock' product=$product}
+{hook h='actionProductOutOfStock' product=$product};
 ```

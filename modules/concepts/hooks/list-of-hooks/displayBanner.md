@@ -1,7 +1,7 @@
 ---
 Title: displayBanner
 hidden: true
-hookTitle: Very top of pages
+hookTitle: 'Very top of pages'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: Use this hook for banners on top of every pages
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayBanner'}
+{hook h='displayBanner'};
 ```

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Supplier Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Presenter/Supplier/SupplierPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Supplier/SupplierPresenter.php'
         file: src/Adapter/Presenter/Supplier/SupplierPresenter.php
 locations:
     - 'front office'

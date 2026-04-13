@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'After customer logout'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Customer.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Customer.php'
         file: classes/Customer.php
 locations:
     - 'front office'
@@ -23,5 +23,5 @@ description: 'This hook allows you to execute code after customer logout'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCustomerLogoutAfter', ['customer' => $this])
+Hook::exec('actionCustomerLogoutAfter', ['customer' => $this]);
 ```

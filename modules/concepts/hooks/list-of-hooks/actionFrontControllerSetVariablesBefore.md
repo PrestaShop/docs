@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add general purpose variables in JavaScript object and Smarty templates before assignation.'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'

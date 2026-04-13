@@ -1,7 +1,7 @@
 ---
 Title: displayCheckoutBeforeConfirmation
 hidden: true
-hookTitle: Show custom content before checkout confirmation
+hookTitle: 'Show custom content before checkout confirmation'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook allows you to display custom content at the end of checko
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCheckoutBeforeConfirmation'}
+{hook h='displayCheckoutBeforeConfirmation'};
 ```

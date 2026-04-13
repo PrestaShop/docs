@@ -1,7 +1,7 @@
 ---
 Title: displayCheckoutSummaryTop
 hidden: true
-hookTitle: Cart summary top
+hookTitle: 'Cart summary top'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook allows you to display new elements in top of cart summary
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCheckoutSummaryTop'}
+{hook h='displayCheckoutSummaryTop'};
 ```

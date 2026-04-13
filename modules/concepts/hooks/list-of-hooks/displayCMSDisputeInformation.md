@@ -1,7 +1,7 @@
 ---
 Title: displayCMSDisputeInformation
 hidden: true
-hookTitle: displayCMSDisputeInformation
+hookTitle: ''
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCMSDisputeInformation'}
+{hook h='displayCMSDisputeInformation'};
 ```

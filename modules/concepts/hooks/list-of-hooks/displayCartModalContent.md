@@ -1,7 +1,7 @@
 ---
 Title: displayCartModalContent
 hidden: true
-hookTitle: Content of Add-to-cart modal
+hookTitle: 'Content of Add-to-cart modal'
 files:
     -
       module: ps_shoppingcart
@@ -33,5 +33,5 @@ description: This hook displays content in the middle of the window that appears
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCartModalContent' product=$product}
+{hook h='displayCartModalContent' product=$product};
 ```

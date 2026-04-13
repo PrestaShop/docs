@@ -8,10 +8,10 @@ files:
         url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl#L216'
         file: 'templates/catalog/product.tml'
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Product/ProductExtraContent.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Product/ProductExtraContent.php'
         file: 'src/Core/Product/ProductExtraContent.php'
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Product/ProductExtraContentFinder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Product/ProductExtraContentFinder.php'
         file: 'src/Core/Product/ProductExtraContentFinder.php'
 locations:
     - 'front office'
@@ -59,7 +59,7 @@ class ProductExtraContentFinder extends HookFinder
     protected $expectedInstanceClasses = ['PrestaShop\PrestaShop\Core\Product\ProductExtraContent'];
 ```
 
-The `ProductExtraContentFinder` will look for modules hooked into `displayProductExtraContent`  with the corresponding existing method, and will expect `ProductExtraContent` to be returned. 
+The `ProductExtraContentFinder` will look for modules hooked into `displayProductExtraContent` with the corresponding existing method, and will expect `ProductExtraContent` to be returned.
 
 ```php
 return (new PrestaShop\PrestaShop\Core\Product\ProductExtraContent())

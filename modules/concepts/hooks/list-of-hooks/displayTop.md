@@ -1,7 +1,7 @@
 ---
 Title: displayTop
 hidden: true
-hookTitle: Top of pages
+hookTitle: 'Top of pages'
 files:
     -
       theme: classic
@@ -34,5 +34,5 @@ description: This hook displays additional elements at the top of your pages
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayTop'}
+{hook h='displayTop'};
 ```

@@ -4,11 +4,11 @@ hidden: true
 hookTitle: 'After carriers list'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/CheckoutDeliveryStep.php'
         file: classes/checkout/CheckoutDeliveryStep.php
 locations:
     - 'front office'
-type: display
+type: action
 hookAliases: 
 array_return: false
 check_exceptions: false
@@ -23,5 +23,5 @@ description: 'This hook is displayed after the carrier list in Front Office'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayAfterCarrier', ['cart' => $this->getCheckoutSession()->getCart()])
+Hook::exec('displayAfterCarrier', ['cart' => $this->getCheckoutSession()->getCart()]);
 ```

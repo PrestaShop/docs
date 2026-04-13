@@ -1,10 +1,10 @@
 ---
 Title: actionModuleRegisterHookBefore
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Hook.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Hook.php'
         file: classes/Hook.php
 locations:
     - 'front office'
@@ -23,11 +23,8 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-                'actionModuleRegisterHookBefore',
-                [
-                    'object' => $module_instance,
-                    'hook_name' => $hook_name,
-                ]
-            )
+Hook::exec('actionModuleRegisterHookBefore', [
+                'object' => $module_instance,
+                'hook_name' => $hook_name,
+            ]);
 ```

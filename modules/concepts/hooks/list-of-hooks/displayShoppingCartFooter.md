@@ -1,7 +1,7 @@
 ---
 Title: displayShoppingCartFooter
 hidden: true
-hookTitle: Shopping cart footer
+hookTitle: 'Shopping cart footer'
 files:
     -
       theme: classic
@@ -30,5 +30,5 @@ description: This hook displays some specific information on the shopping cart's
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayShoppingCartFooter'}
+{hook h='displayShoppingCartFooter'};
 ```

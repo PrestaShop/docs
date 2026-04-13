@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Administration Employee menu'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php'
-        file: src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Twig/Component/EmployeeDropdown.php'
+        file: src/PrestaShopBundle/Twig/Component/EmployeeDropdown.php
 locations:
     - 'back office'
 type: display
@@ -32,11 +32,10 @@ description: 'This hook is displayed in the employee menu'
 ## Call of the Hook in the origin file
 
 ```php
-dispatchWithParameters(
-            'displaybackOfficeEmployeeMenu',
-            [
-                'links' => $menuLinksCollections,
-            ]
-        )
+$this->hookDispatcher->dispatchWithParameters(
+                'displayBackOfficeEmployeeMenu',
+                [
+                    'links' => $menuLinksCollections,
+                ]
+            );
 ```
-

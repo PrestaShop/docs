@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Order edited'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php'
-        file: src/Adapter/Order/CommandHandler/UpdateProductInOrderHandler.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Order/CommandHandler/DeleteProductFromOrderHandler.php'
+        file: src/Adapter/Order/CommandHandler/DeleteProductFromOrderHandler.php
 locations:
     - 'front office'
 type: action
@@ -31,5 +31,5 @@ description: 'This hook is called when an order is edited'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOrderEdited', ['order' => $order])
+Hook::exec('actionOrderEdited', ['order' => $order]);
 ```

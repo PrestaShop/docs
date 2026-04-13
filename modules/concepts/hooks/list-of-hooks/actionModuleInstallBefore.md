@@ -1,10 +1,10 @@
 ---
 Title: actionModuleInstallBefore
 hidden: true
-hookTitle: actionModuleInstallBefore
+hookTitle: 'actionModuleInstallBefore'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/module/Module.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/module/Module.php'
         file: classes/module/Module.php
 locations:
     - 'front office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionModuleInstallBefore', ['object' => $this])
+Hook::exec('actionModuleInstallBefore', ['object' => $this]);
 ```

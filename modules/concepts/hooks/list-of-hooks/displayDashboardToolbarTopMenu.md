@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Display new elements in back office page with a dashboard, on top Menu'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/new-theme/template/page_header_toolbar.tpl'
-        file: admin-dev/themes/new-theme/template/page_header_toolbar.tpl
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Component/LegacyLayout/toolbar.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Component/LegacyLayout/toolbar.html.twig
 locations:
     - 'back office'
 type: display
@@ -23,5 +23,5 @@ description: 'This hook launches modules when a page with a dashboard is display
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayDashboardToolbarTopMenu'}
+{{ renderhook('displayDashboardToolbarTopMenu') }};
 ```

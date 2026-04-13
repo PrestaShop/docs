@@ -1,7 +1,7 @@
 ---
 Title: displayProductAdditionalInfo
 hidden: true
-hookTitle: Product page additional info
+hookTitle: 'Product page additional info'
 files:
     -
       theme: classic
@@ -39,5 +39,5 @@ description: This hook adds additional information on the product page
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayProductAdditionalInfo' product=$product}
+{hook h='displayProductAdditionalInfo' product=$product};
 ```

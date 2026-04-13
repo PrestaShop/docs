@@ -1,14 +1,14 @@
 ---
 Title: productSearchProvider
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/ProductListingFrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/ProductListingFrontController.php'
         file: classes/controller/ProductListingFrontController.php
 locations:
     - 'front office'
-type: null
+type: action
 hookAliases: 
 array_return: true
 check_exceptions: false
@@ -28,5 +28,5 @@ Hook::exec(
             ['query' => $query],
             null,
             true
-        )
+        );
 ```

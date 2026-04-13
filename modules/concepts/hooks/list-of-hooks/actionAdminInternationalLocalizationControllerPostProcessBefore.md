@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'On post-process in Admin Improve International Localization Controller'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php'
         file: src/PrestaShopBundle/Controller/Admin/Improve/International/LocalizationController.php
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: 'This hook is called on Admin Improve International Localization po
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHook('actionAdminInternationalLocalizationControllerPostProcessBefore', ['controller' => $this])
+dispatchHookWithParameters('actionAdminInternationalLocalizationControllerPostProcessBefore', ['controller' => $this])
 ```

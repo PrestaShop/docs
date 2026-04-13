@@ -4,15 +4,14 @@ hidden: true
 hookTitle: 'Payment confirmation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/order/OrderHistory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/order/OrderHistory.php'
         file: classes/order/OrderHistory.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - paymentConfirm
+hookAliases: actionPaymentConfirmation
 array_return: false
-check_exceptions: false
+check_exceptions: true
 chain: false
 origin: core
 description: 'This hook displays new elements after the payment is validated'
@@ -33,5 +32,5 @@ description: 'This hook displays new elements after the payment is validated'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPaymentConfirmation', ['id_order' => (int) $order->id], null, false, true, false, $order->id_shop)
+Hook::exec('actionPaymentConfirmation', ['id_order' => (int) $order->id], null, false, true, false, $order->id_shop);
 ```

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'On post-process in Admin Configure Shop Parameters Order Preferences Controller'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php'
         file: src/PrestaShopBundle/Controller/Admin/Configure/ShopParameters/OrderPreferencesController.php
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: 'This hook is called on Admin Configure Shop Parameters Order Prefe
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHook('actionAdminShopParametersOrderPreferencesControllerPostProcessBefore', ['controller' => $this])
+->dispatchHookWithParameters('actionAdminShopParametersOrderPreferencesControllerPostProcessBefore', ['controller' => $this])
 ```

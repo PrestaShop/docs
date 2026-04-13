@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Extra message to display for an empty modules category'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Module/Includes/grid_manage_empty.html.twig
 locations:
     - 'back office'

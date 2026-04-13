@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Payment options Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/PaymentOptionsFinder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/PaymentOptionsFinder.php'
         file: classes/checkout/PaymentOptionsFinder.php
 locations:
     - 'front office'
@@ -34,5 +34,5 @@ description: 'This hook is called before payment options are presented'
 ```php
 Hook::exec('actionPresentPaymentOptions',
             ['paymentOptions' => &$paymentOptions]
-        )
+        );
 ```

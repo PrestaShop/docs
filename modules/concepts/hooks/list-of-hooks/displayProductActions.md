@@ -1,7 +1,7 @@
 ---
 Title: displayProductActions
 hidden: true
-hookTitle: Display additional action button on the product page
+hookTitle: 'Display additional action button on the product page'
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description: This hook allow additional actions to be triggered, near the add to
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayProductActions' product=$product}
+{hook h='displayProductActions' product=$product};
 ```

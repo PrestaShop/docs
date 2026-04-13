@@ -139,5 +139,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayProductPriceBlock' product=$product type="unit_price"}
+{hook h='displayProductPriceBlock' product=$product type="unit_price"};
 ```

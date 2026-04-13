@@ -1,7 +1,7 @@
 ---
 Title: displayCrossSellingShoppingCart
 hidden: true
-hookTitle: displayCrossSellingShoppingCart
+hookTitle: ''
 files:
     -
       theme: classic
@@ -29,5 +29,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCrossSellingShoppingCart'}
+{hook h='displayCrossSellingShoppingCart'};
 ```

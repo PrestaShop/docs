@@ -4,15 +4,14 @@ hidden: true
 hookTitle: 'Order slip creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Order/Refund/OrderSlipCreator.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Order/Refund/OrderSlipCreator.php'
         file: src/Adapter/Order/Refund/OrderSlipCreator.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - orderSlip
+hookAliases: actionOrderSlipAdd
 array_return: false
-check_exceptions: false
+check_exceptions: true
 chain: false
 origin: core
 description: 'This hook is called when a new credit slip is added regarding client order'
@@ -50,5 +49,6 @@ Hook::exec('actionOrderSlipAdd', [
                 'order' => $order,
                 'productList' => $orderRefundSummary->getProductRefunds(),
                 'qtyList' => $fullQuantityList,
-            ], null, false, true, false, $order->id_shop)
+                'orderSlipCreated' => $this->orderSlipCreated,
+            ], null, false, true, false, $order->id_shop);
 ```

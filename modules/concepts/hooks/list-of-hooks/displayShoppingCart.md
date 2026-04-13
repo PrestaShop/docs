@@ -1,7 +1,7 @@
 ---
 Title: displayShoppingCart
 hidden: true
-hookTitle: Shopping cart - Additional button
+hookTitle: 'Shopping cart - Additional button'
 files:
     -
       theme: classic
@@ -30,5 +30,5 @@ description: This hook displays new action buttons within the shopping cart
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayShoppingCart'}
+{hook h='displayShoppingCart'};
 ```

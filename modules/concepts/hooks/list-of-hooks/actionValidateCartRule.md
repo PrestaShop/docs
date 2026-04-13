@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Alter cart rule validation process'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/CartRule.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/CartRule.php'
         file: classes/CartRule.php
 locations:
     - 'front office'

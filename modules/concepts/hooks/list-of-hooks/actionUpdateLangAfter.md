@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Update "lang" tables'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Language.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Language.php'
         file: classes/Language.php
 locations:
     - 'front office'
@@ -23,5 +23,5 @@ description: 'Update "lang" tables after adding or updating a language'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionUpdateLangAfter', ['lang' => $language])
+Hook::exec('actionUpdateLangAfter', ['lang' => $language]);
 ```

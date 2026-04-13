@@ -4,13 +4,12 @@ hidden: true
 hookTitle: 'Saving an attributes features value'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ProductAttribute.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/ProductAttribute.php'
         file: classes/ProductAttribute.php
 locations:
     - 'front office'
 type: action
-hookAliases:
-    - afterSaveAttribute
+hookAliases: actionAttributeSave
 array_return: false
 check_exceptions: false
 chain: false
@@ -24,5 +23,5 @@ description: 'This hook is called while saving an attributes features value'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAttributeSave', ['id_attribute' => $this->id])
+Hook::exec('actionAttributeSave', ['id_attribute' => $this->id]);
 ```

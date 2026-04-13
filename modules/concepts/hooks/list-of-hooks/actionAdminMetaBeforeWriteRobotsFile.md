@@ -1,10 +1,10 @@
 ---
 Title: actionAdminMetaBeforeWriteRobotsFile
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Tools.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Tools.php'
         file: classes/Tools.php
 locations:
     - 'back office'
@@ -34,5 +34,5 @@ description: ''
 ```php
 Hook::exec('actionAdminMetaBeforeWriteRobotsFile', [
                 'rb_data' => &$robots_content,
-            ])
+            ]);
 ```

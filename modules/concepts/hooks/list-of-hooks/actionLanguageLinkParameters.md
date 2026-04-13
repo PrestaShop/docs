@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add parameters to language link'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Link.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Link.php'
         file: classes/Link.php
 locations:
     - 'front office'
