@@ -38,10 +38,6 @@ mytheme/
 
 Most themes also include `assets/img/` for images and `assets/fonts/` for custom fonts. Source directories for pre-compilation (`src/`, `_dev/`, etc.) and build configuration are implementation details of the specific theme.
 
-{{% notice tip %}}
-For the Hummingbird directory layout specifically, see [Hummingbird architecture]({{< relref "/9/themes/hummingbird" >}}).
-{{% /notice %}}
-
 ## Theme configuration (theme.yml)
 
 The `config/theme.yml` file is required for PrestaShop to recognize and configure your theme. It defines identity, compatibility, layouts, hooks, modules, image types, and more.
