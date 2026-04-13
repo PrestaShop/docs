@@ -56,11 +56,13 @@ npm run build
 
 ## Activate the theme
 
-1. Place your theme folder in the `/themes/` directory of your PrestaShop installation.
-2. In the Back Office, go to _Design > Theme & Logo_.
-3. Select your theme and click _Use this theme_.
+The recommended method to install your theme is through the Back Office to ensure all installation processes are handled correctly:
 
-Alternatively, you can upload your theme as a `.zip` file directly from the _Design > Theme & Logo_ page in the Back Office.
+1. In the Back Office, go to **_Design > Theme & Logo_**.
+2. Click on **_Add new theme_** and upload your theme as a `.zip` file.
+3. Once uploaded, select your theme and click **_Use this theme_**.
+
+Alternatively, you can manually place your extracted theme folder in the `/themes/` directory of your PrestaShop installation and then activate it from the Back Office. However, the `.zip` upload method is preferred for future-proofing.
 
 {{% notice tip %}}
 See [Exporting your theme]({{< relref "/9/themes/distribution/exporting" >}}) for how to create a distributable ZIP file.
