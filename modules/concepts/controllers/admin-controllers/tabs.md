@@ -211,7 +211,7 @@ When you create a new `Tab` it automatically creates the appropriate roles in `T
 - `ROLE_MOD_TAB_ADMINLINKWIDGET_READ`
 - `ROLE_MOD_TAB_ADMINLINKWIDGET_UPDATE`
 
-These roles will allow you to manage detailed permission in your controllers, you can read this documentation if you need more details about [Controller Security]({{< ref "/9/development/architecture/migration-guide/controller-routing.md#security" >}}).
+These roles will allow you to manage detailed permission in your controllers, you can read this documentation if you need more details about [Controller Security]({{< ref "/9/development/architecture/modern/controller-routing.md#security" >}}).
 They are automatically added to the `SUPER_ADMIN` group, and the group of the Employee installing the module, but you can then edit privileges for other Employee groups.
 
 {{% notice note %}}

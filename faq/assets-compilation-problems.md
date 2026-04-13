@@ -9,4 +9,4 @@ If you encounter the error message `Template "@AdminNewTheme/public/preload.html
 
 To resolve this issue please make sure to compile the assets correctly, you can see the [assets compilation documentation][assets-compilation] for more information.
 
-[assets-compilation]: {{< relref "9/development/compile-assets" >}}
+[assets-compilation]: {{< relref "/9/development/compile-assets" >}}

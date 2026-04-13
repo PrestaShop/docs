@@ -141,7 +141,7 @@ composer require --dev phpunit/phpunit
 While newer versions of PHPUnit exist, the version chosen in your project must match the PHP compatibility range of the project, otherwise composer will refuse to install it. The version provided in the example above is the last one compatible with PHP 5.6.
 
 Creating your unit tests can be done the same way as the core, so more details can be found in 
-the chapter [Testing of the core]({{< ref "1.7/testing/how-to-create-your-own-unit-tests" >}}).
+the chapter [Testing of the core]({{< ref "/9/testing/how-to-create-your-own-unit-tests/" >}}).
 
 Supposing it was installed via Composer, the command to run it is:
 

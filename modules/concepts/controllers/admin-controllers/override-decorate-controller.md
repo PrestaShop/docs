@@ -52,7 +52,7 @@ In the above example, the `path` has not been changed, but you can change it to 
 {{% /notice %}}
 
 {{% notice warning %}}
-Keep the item `_legacy_controller` if your controller relies on it to configure a [AdminSecurity annotation]({{< relref "8/development/architecture/migration-guide/controller-routing#access-rules-convention" >}}) such as `@AdminSecurity("is_granted('read', request.get('_legacy_controller'))")`
+Keep the item `_legacy_controller` if your controller relies on it to configure a [AdminSecurity annotation]({{< relref "/9/development/architecture/modern/controller-routing.md#access-rules-convention" >}}) such as `@AdminSecurity("is_granted('read', request.get('_legacy_controller'))")`
 
 Keep the items `_legacy_controller` and `_legacy_link` if you want to reroute internal links and legacy URLs like `index.php?controller=AdminOrders` as well.
 {{% /notice %}}
@@ -79,8 +79,8 @@ With the following configuration item, we can override this configuration to mak
 # modules/your-module/config/services.yml
   'PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController':
     class: MyModule\Controller\DemoController
-
 ```
+
 
 Thanks to this, whenever Symfony forwards a request to the Core controller `PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController` it will be forwarded to `DemoController` instead.
 
@@ -109,7 +109,7 @@ With the following configuration item, we can decorate it with a custom controll
   custom_controller:
     class: MyModule\Controller\DemoController
     decorates: PrestaShopBundle\Controller\Admin\Improve\Design\CmsPageController
-    arguments: ['@custom_controller.inner']
+    arguments: ["@custom_controller.inner"]
 ```
 
 or if you are using [autowiring](https://symfony.com/doc/4.4/service_container/autowiring.html):

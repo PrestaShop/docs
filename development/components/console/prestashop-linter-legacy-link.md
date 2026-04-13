@@ -13,4 +13,4 @@ weight: 20
 
 ## Description
 
-This command aims to check if [_legacy_link]({{< relref "/9/development/architecture/migration-guide/controller-routing#routing-in-prestashop" >}}) is configured in BackOffice routes.
+This command aims to check if [_legacy_link]({{< relref "/9/development/architecture/migration-guide/controller-routing.md" >}}) is configured in BackOffice routes.
