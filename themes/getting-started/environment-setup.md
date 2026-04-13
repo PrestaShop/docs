@@ -15,8 +15,8 @@ Two images are available:
 
 | Image | Startup | Use case |
 |-------|---------|----------|
-| **[PrestaShop](https://github.com/PrestaShop/docker)** (`prestashop/prestashop`) | ~2–5 min | Full installation wizard, closest to production |
-| **[Flashlight](https://github.com/PrestaShop/prestashop-flashlight)** (`prestashop/prestashop-flashlight`) | ~10 sec | Pre-installed dump, ideal for fast iteration and testing |
+| **[PrestaShop](https://hub.docker.com/r/prestashop/prestashop/)** (`prestashop/prestashop`) | ~2–5 min | Full installation wizard, closest to production |
+| **[Flashlight](https://hub.docker.com/r/prestashop/prestashop-flashlight)** (`prestashop/prestashop-flashlight`) | ~10 sec | Pre-installed dump, ideal for fast iteration and testing |
 
 ### Setup
 
