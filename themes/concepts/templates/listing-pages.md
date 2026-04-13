@@ -9,9 +9,9 @@ aliases:
 
 This page covers how PrestaShop handles product listing pages and how the product list updates dynamically via AJAX.
 
-Any page that displays a list of products — category, search results, new products, best sellers, etc. — uses the same listing system. They all share the same base template (`catalog/listing/product-list.tpl`) and receive the same `$listing` variable from their controller. Specific pages extend the base template and override only what differs.
+Any page that displays a list of products, category, search results, new products, best sellers, etc. uses the same listing system. They all share the same base template (`catalog/listing/product-list.tpl`) and receive the same `$listing` variable from their controller. Specific pages extend the base template and override only what differs.
 
-See [Template inheritance]({{< relref "/9/themes/concepts/templates/template-inheritance" >}}) for a real-world example.
+See [Template inheritance]({{< relref "/9/themes/concepts/templates/template-inheritance#real-world-example-product-listing-pages" >}}) for a real-world example.
 
 ## The `$listing` variable
 
@@ -42,7 +42,7 @@ This separation exists because of how AJAX updates work (see below).
 
 When customers change sort order or paginate, PrestaShop updates the product list **without a full page reload**. Filter modules (like `ps_facetedsearch`) also use this same system to refresh results dynamically.
 
-A key design decision: PrestaShop renders the updated HTML **server-side** and sends it back to the theme. The theme's JavaScript only needs to replace DOM placeholders — it does not need to parse JSON and reconstruct markup. This ensures no presentation logic is duplicated between Smarty and JavaScript.
+A key design decision: PrestaShop renders the updated HTML **server-side** and sends it back to the theme. The theme's JavaScript only needs to replace DOM placeholders, it does not need to parse JSON and reconstruct markup. This ensures no presentation logic is duplicated between Smarty and JavaScript.
 
 ### How it works
 
@@ -68,7 +68,9 @@ function updateProductListDOM(data) {
 }
 ```
 
-| `data` property | Contains |
+#### `data` properties
+
+| key | Contains |
 |-----------------|----------|
 | `rendered_products_top` | Sort bar and result count HTML |
 | `rendered_products` | Product grid/list HTML |
