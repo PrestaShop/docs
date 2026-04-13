@@ -11,13 +11,13 @@ icon: 'images/icons/themes.svg'
 
 # Themes
 
-PrestaShop themes control the entire front-office experience: layout, templates, styles, and client-side behavior.
-
-Starting from PrestaShop 9.1, **[Hummingbird]({{< relref "/9/themes/hummingbird" >}})** is the default theme. It is built on Bootstrap 5.3, follows BEM conventions, and provides an accessibility-first, jQuery-free architecture.
-
 {{% notice warning %}}
 The **Classic theme is deprecated** for new development starting from PrestaShop 9.1. It remains available for backward compatibility but will not receive new features. For Classic-specific documentation, refer to the [v8 theme docs]({{< relref "/8/themes" >}}).
 {{% /notice %}}
+
+PrestaShop themes control the entire front-office experience: layout, templates, styles, and client-side behavior.
+
+Starting from PrestaShop 9.1, **[Hummingbird]({{< relref "/9/themes/hummingbird" >}})** is the default theme. It is built on Bootstrap 5.3, follows BEM conventions, and provides an accessibility-first, jQuery-free architecture.
 
 ## Documentation structure
 
