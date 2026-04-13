@@ -69,7 +69,7 @@ See the [Hummingbird Docker setup](https://github.com/PrestaShop/hummingbird#-ru
 
 If you prefer a traditional setup (XAMPP, MAMP, Laragon, or native PHP), install PrestaShop manually. Check the [system requirements]({{< relref "/9/basics/installation/system-requirements" >}}) for the PHP, MySQL, and web server versions needed, then follow the [installation guide]({{< relref "/9/basics/installation" >}}).
 
-Once installed, copy your theme folder into the `/themes/` directory of your PrestaShop installation, or upload it as a `.zip` from the Back Office under _Design > Theme & Logo_.
+Once installed, copy your theme folder into the `/themes/` directory of your PrestaShop installation, then activate it from the Back Office under _Design > Theme & Logo_.
 
 ## Configure for development
 
