@@ -8,7 +8,7 @@ weight: 2
 Create your own custom theme in 5 minutes by cloning [Hummingbird]({{< relref "/9/themes/hummingbird" >}}), the default PrestaShop theme, and using it as a starting point.
 
 {{% notice info %}}
-Hummingbird requires **PrestaShop 9.1 or later**.
+Hummingbird's compatibility is strictly tied to specific PrestaShop releases. To find the correct theme version for your store, please refer to the compatibility matrix on the [Hummingbird repository](https://github.com/PrestaShop/hummingbird).
 {{% /notice %}}
 
 ## Clone Hummingbird as a base
