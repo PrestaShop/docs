@@ -43,7 +43,7 @@ See [Template inheritance]({{< relref "/9/themes/concepts/templates/template-inh
 
 ## Layouts
 
-A layout is the top of the inheritance tree — it holds the `<html>`, `<head>`, and `<body>` tags. Users can choose a layout per page from the Back Office.
+A layout is the top of the inheritance tree. It holds the `<html>`, `<head>`, and `<body>` tags. Users can choose a layout per page from the Back Office.
 
 The `$layout` variable is set by the front controller based on the layout assigned to the current page. Default assignments are defined in `theme.yml`, but can be overridden per page via _Design > Theme & Logo > Choose layouts_ in the Back Office.
 
