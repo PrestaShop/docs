@@ -58,7 +58,7 @@ const elementId = $("#form_prefix_field_name");
 
 let searchInput = new window.prestashop.component.EntitySearchInput(elementId, {
     onRemovedContent: () => {
-      console.log("Event on product deletion");
+      console.log('Event on product deletion');
     },
     onSelectedContent: () => {
       console.log("Event on product selection");
