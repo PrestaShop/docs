@@ -10,7 +10,7 @@ One of the most common tasks for the PrestaShop developers is to alter the data 
 {{% notice info %}}
 **This system only works with pages from the "Configure" section of your back office.**
 
-If you want to customize an entity form, you're looking for [Grid]({{<relref "9/development/components/grid/" >}}) and [Identifiable Objects]({{<relref "/9/development/architecture/migration-guide/forms/crud-forms">}}).
+If you want to customize an entity form, you're looking for [Grid]({{<relref "/9/development/components/grid/" >}}) and [Identifiable Objects]({{<relref "/9/development/architecture/migration-guide/forms/crud-forms">}}).
 
 Learn how to achieve this with the [Grid and identifiable object form hooks usage example]({{<relref "/9/modules/sample-modules/grid-and-identifiable-object-form-hooks-usage">}}).
 {{% /notice %}}
@@ -66,7 +66,7 @@ Of course, you can override every template to improve again the rendering of the
             <div class="card-block">
                 <div class="card-text">
                     <div class="form-group">
-                        {{ ps.label_with_help(('Maximum size for attached files'|trans), ('Set the maximum size allowed for attachment files (in megabytes). This value has to be lower or equal to the maximum file upload allotted by your server (currently: %size% MB).'|trans({'%size%': 'PS_ATTACHMENT_MAXIMUM_SIZE'|configuration}, 'Admin.Advparameters.Help'))) }}
+                        {{ ps.label_with_help(('Maximum size for attached files'|trans), ('Set the maximum size allowed for attachment files (in megabytes). This value has to be lower or equal to the maximum file upload allotted by your server (currently: %size% MB).'|trans({'%size%': 'PS_ATTACHMENT_MAXIMUM_SIZE'|configuration}, 'Admin.Advparameters.Help'))) }} 
                         {{ form_errors(uploadQuotaForm.max_size_attached_files) }}
                         {{ form_widget(uploadQuotaForm.max_size_attached_files) }}
                     </div>

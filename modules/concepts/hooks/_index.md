@@ -40,7 +40,7 @@ public function install()
 }
 ```
 
-If you do not know where you can register, [a list of available hooks]({{< ref "8/modules/concepts/hooks/list-of-hooks" >}}) is available.
+If you do not know where you can register, [a list of available hooks]({{< ref "/9/modules/concepts/hooks/list-of-hooks" >}}) is available.
 
 ### Execution
 

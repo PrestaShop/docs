@@ -367,4 +367,4 @@ If you choose to export wordings from the database, you can easily extract your 
 
 [contextualization]: {{< ref "new-system.md#contextualization" >}}
 [native-module-conventions]: {{< ref "/9/development/internationalization/translation/translation-domains.md#modules" >}}
-[core-translation-domains]: {{< ref "/9/development/internationalization/translation/translation-domains.md#understanding-the-domains-structure" >}}
+[core-translation-domains]: {{< ref "/9/development/internationalization/translation/translation-domains.md#understanding-the-structure-of-domains" >}}

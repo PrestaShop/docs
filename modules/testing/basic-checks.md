@@ -48,7 +48,7 @@ If some errors are reported by this tool, this gives you the opportunity :
 
 ## Coding standards
 
-Modules follows the same rules as the core. The [coding standards chapter]({{< ref "8/development/coding-standards" >}}) of this project provides more details about it.
+Modules follows the same rules as the core. The [coding standards chapter]({{< ref "/9/development/coding-standards" >}}) of this project provides more details about it.
 
 Following the same rules as the core requires the configuration file to be available in your project. These rules are distributed and maintained on a repository 
 `prestashop/php-dev-tools` available on [Packagist](https://packagist.org/packages/prestashop/php-dev-tools) which can be required via composer.

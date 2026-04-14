@@ -18,7 +18,7 @@ Several options are available, such as:
 
 ## Use Docker to run PrestaShop on MacOS
 
-Another good option when it comes to run PrestaShop on MacOS, is to use `Docker`: [More informations on this dedicated page]({{< relref "8/basics/installation/environments/docker">}}).
+Another good option when it comes to run PrestaShop on MacOS, is to use `Docker`: [More informations on this dedicated page]({{< relref "/9/basics/installation/environments/docker">}}).
 
 {{<cta relref="/9/basics/installation" type="primary">}}
   Back to installation guide

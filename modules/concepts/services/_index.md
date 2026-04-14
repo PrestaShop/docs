@@ -17,7 +17,7 @@ You have the ability to modify the Symfony container configuration from a module
 
 First we strongly advise you to use
 [**namespaces**](https://www.php.net/manual/en/language.namespaces.php) & autoloading in your module, which can be done thanks to composer.
-[A dedicated chapter]({{< ref "8/modules/concepts/composer" >}}) is available to learn more about Composer and to set it up.
+[A dedicated chapter]({{< ref "/9/modules/concepts/composer.md" >}}) is available to learn more about Composer and to set it up.
 
 #### Define your service
 
@@ -126,7 +126,7 @@ When adding resources with a wildcard to your module namespace, make sure to exc
     resource: '../src/*'
     exclude:
       - '../src/index.php'
-      - '../src/*/index.php' 
+      - '../src/*/index.php'
 ```
 
 ### Override an existing Symfony service
@@ -372,7 +372,7 @@ services:
     public: true
     bind:
       $elements: !tagged test_module.instance_of.manually_tagged
-  
+
   TestModule\InstanceofConditionals\Collection\Element:
     class: TestModule\InstanceofConditionals\Collection\Element
     tags: [ test_module.instance_of.manually_tagged ]
@@ -399,7 +399,7 @@ files in sub folders:
 {{% notice warning %}}
 **Do not use named arguments for front services definition**
 
-For more information read the dedicated section in [Naming Conventions]({{< ref "8/development/naming-conventions/#named-arguments" >}}).
+For more information read the dedicated section in [Naming Conventions]({{< ref "/9/development/naming-conventions/_index.md#named-arguments" >}}).
 {{% /notice %}}
 
 ### Accessing your services

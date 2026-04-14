@@ -175,4 +175,4 @@ server {
 }
 ```
 
-[nginx-scale]: {{< ref "8/scale/webservers/nginx" >}}
+[nginx-scale]: {{< ref "/9/scale/webservers/nginx" >}}
