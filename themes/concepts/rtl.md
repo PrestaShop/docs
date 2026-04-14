@@ -44,7 +44,7 @@ PrestaShop will not overwrite existing `_rtl.css` files. Delete them first to re
 
 ## Fine-tuning with .rtlfix files
 
-The automatic RTL generation isn't always perfect — some CSS rules may not convert correctly. To fix these issues, **don't edit the generated `_rtl.css` files** because they will be overwritten next time you regenerate.
+The automatic RTL generation isn't always perfect, some CSS rules may not convert correctly. To fix these issues, **don't edit the generated `_rtl.css` files** because they will be overwritten next time you regenerate.
 
 Instead, create a `.rtlfix` file with the same name as your original stylesheet. PrestaShop will append its contents to the generated RTL file automatically.
 
@@ -54,9 +54,7 @@ Instead, create a `.rtlfix` file with the same name as your original stylesheet.
 2. Delete `assets/css/theme_rtl.css`.
 3. Regenerate from the Back Office.
 
-PrestaShop will generate a fresh `theme_rtl.css` from `theme.css`, then append the contents of `theme.rtlfix` at the end — your fixes are preserved across regenerations.
-
-## Best practices
+PrestaShop will generate a fresh `theme_rtl.css` from `theme.css`, then append the contents of `theme.rtlfix` at the end. Your fixes are preserved across regenerations.
 
 {{% notice tip %}}
 Use CSS logical properties (`margin-inline-start`, `padding-inline-end`, `inset-inline-start`, etc.) instead of physical ones (`margin-left`, `padding-right`, `left`). Logical properties automatically adapt to text direction, reducing the need for RTL-specific overrides.

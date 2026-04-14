@@ -45,7 +45,7 @@ PrestaShop uses dot-separated domains to organize translations:
 | `Shop.Theme.Actions` | Action labels like "Add to cart" (core) |
 | `Shop.Theme.CustomerAccount` | Account page wordings (core) |
 
-Use `Shop.Mytheme` for your own wordings. Core domains (`Shop.Theme.*`) are already translated in PrestaShop's language packs — reuse them when possible to get translations for free:
+Use `Shop.Mytheme` for your own wordings. Core domains (`Shop.Theme.*`) are already translated in PrestaShop's language packs. Reuse them when possible to get translations for free:
 
 ```smarty
 {* Uses existing PrestaShop translations — no need to translate yourself *}
@@ -82,7 +82,7 @@ Under **"Modify translations"**:
 
 1. Select **"Front office Translations"** as the type.
 2. Choose your theme and the target language.
-3. Click **"Modify"** — a form appears listing all wordings found in your `.tpl` files.
+3. Click **"Modify"**, a form appears listing all wordings found in your `.tpl` files.
 4. Navigate to **"Shop" > "Your theme name"** in the left column to find your custom domain.
 5. Fill in translations and save.
 
