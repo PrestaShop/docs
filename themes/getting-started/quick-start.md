@@ -26,13 +26,13 @@ rm -rf .git && git init   # Remove Hummingbird's history and start your own
 Edit `config/theme.yml`:
 
 ```yaml
-name: mytheme # The name must match the directory name
+name: mytheme          # Must match the directory name
 display_name: My Theme
 version: 1.0.0
 author:
   name: "Your Name"
-  email: "you@example.com"
-  url: "https://example.com"
+  email: "you@example.com"   # Optional
+  url: "https://example.com" # Optional
 
 meta:
   compatibility:
@@ -40,10 +40,6 @@ meta:
     to: ~9.1.0
     framework: bootstrap-v5.3.3  # Informational, not parsed by PrestaShop
 ```
-
-{{% notice info %}}
-The `name` field must match the theme's directory name exactly.
-{{% /notice %}}
 
 ## Install dependencies and build
 

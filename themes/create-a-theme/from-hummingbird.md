@@ -8,9 +8,9 @@ weight: 2
 
 The recommended way to create a new PrestaShop 9 theme is to start from [Hummingbird]({{< relref "/9/themes/hummingbird" >}}). This gives you a complete, production-ready foundation with modern architecture, accessibility compliance, and a structured codebase.
 
-## Clone and configure
+## Clone Hummingbird as a base
 
-Run the following from your PrestaShop `/themes/` directory:
+This workflow assumes you have a local PrestaShop development instance running. Run the following from the `/themes/` directory of that installation:
 
 ```bash
 git clone https://github.com/PrestaShop/hummingbird.git mytheme
@@ -23,6 +23,8 @@ git add -A && git commit -m "Initial commit from Hummingbird"
 `rm -rf .git` permanently discards the full Hummingbird commit history. This is the right choice when you want a clean project history. If you want to keep the ability to pull future Hummingbird changes (e.g., bug fixes), set a new remote instead: `git remote set-url origin <your-repo-url>`.
 {{% /notice %}}
 
+## Configure your theme
+
 Edit `config/theme.yml`:
 
 ```yaml
@@ -31,16 +33,17 @@ display_name: My Theme
 version: 1.0.0
 author:
   name: "Your Name"
-  email: "you@example.com"  # Optional
-  url: "https://example.com"  # Optional
+  email: "you@example.com"   # Optional
+  url: "https://example.com" # Optional
 
 meta:
   compatibility:
-    from: 9.1
-    to: ~9.1     # Supports all 9.1.x patch releases; update when you've tested against a new minor version
+    from: 9.1.0
+    to: ~9.1.0
+    framework: bootstrap-v5.3.3  # Informational, not parsed by PrestaShop
 ```
 
-## Build and activate
+## Build
 
 See [Requirements]({{< relref "/9/themes/getting-started/requirements" >}}) for the required Node and npm versions.
 
@@ -49,17 +52,15 @@ npm ci           # Installs exact versions from the lockfile — use this instea
 npm run build
 ```
 
-Then in the Back Office: _Design > Theme & Logo_ → select your theme → _Use this theme_.
+During development, use `npm run watch` instead to recompile automatically on every file save.
+
+## Activate
+
+Since the theme is already inside your PrestaShop `/themes/` directory, go to _Design > Theme & Logo_ in the Back Office, select your theme, and click _Use this theme_.
 
 {{% notice tip %}}
 Replace `preview.png` with a 500×746 PNG screenshot of your theme before activating. The cloned Hummingbird image will otherwise appear in the Back Office theme selector.
 {{% /notice %}}
-
-For development with live recompilation:
-
-```bash
-npm run watch
-```
 
 ## Customization approach
 
