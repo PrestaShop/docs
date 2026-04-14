@@ -46,36 +46,31 @@ themes/mytheme/
                     └── ps_featuredproducts.tpl
 ```
 
-PrestaShop looks for overrides in this order:
+If a file exists in `/themes/THEME_NAME/modules/MODULE_NAME/`, PrestaShop uses it and ignores the module's own file. If no theme override is present, it falls back to `/modules/MODULE_NAME/`.
 
-1. `/themes/THEME_NAME/modules/MODULE_NAME/...`
-2. `/modules/MODULE_NAME/...`
-
-{{% notice note %}}
-An empty override file tells PrestaShop to load nothing — neither the module's original nor the override. This is useful for removing a module's default styles when you handle them in your theme's compiled CSS.
+{{% notice warning %}}
+An empty override file tells PrestaShop to render nothing, the module's original file is bypassed and nothing is rendered in its place. Prefer fixing the module directly. Use an empty override only as a last resort when modifying the module is not an option.
 {{% /notice %}}
 
 ### Template includes
 
-Module templates often include sub-templates (partials). How those includes are written determines whether your theme overrides apply to them.
+Module templates often include sub-templates (partials). Whether your theme override of a partial is applied depends on how the module references it with a relative path or with the `module:` prefix.
 
-**The problem with relative paths:**
-
-If a module uses a relative path:
+**When a module uses a relative path:**
 
 ```smarty
 {include file='./_partials/product-card.tpl'}
 ```
 
-Smarty resolves this relative to the **original module directory**, not your theme's override directory. Even if you override the main template, the partial still loads from the module — your override of the partial is ignored.
+Smarty resolves this relative to the original module directory. Even if you override the main template, the partial still loads from the module, your theme override of that partial is ignored.
 
-**The solution: `module:` resource prefix:**
+**When a module uses the `module:` resource prefix instead:**
 
 ```smarty
 {include file='module:ps_featuredproducts/views/templates/front/_partials/product-card.tpl'}
 ```
 
-The `module:` prefix tells PrestaShop to resolve the path through its override chain. It checks your theme's `modules/` directory first, then falls back to the original module path. This means theme overrides work for both the parent template and any included partials.
+PrestaShop resolves the path through its override chain, checking your theme's `modules/` directory first before falling back to the module. Theme overrides work for both the main template and its included partials.
 
 {{% notice warning %}}
 If a module you need to override uses relative includes, you must override **every** included file alongside the main template. Contact the module developer to suggest switching to the `module:` prefix for better theme compatibility.
