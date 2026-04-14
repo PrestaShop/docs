@@ -54,7 +54,7 @@ global_settings:
         description: Add a widget area above the footer
 ```
 
-Modules can also register hooks from PHP using `Hook::register('MyCustomHook')`.
+Modules can also register hooks from PHP using `Hook::register('MyCustomHook')`. See [Hooks]({{< relref "/9/modules/concepts/hooks" >}}) in the module documentation for the full module-side API.
 
 ## Unhooking and hooking modules
 
