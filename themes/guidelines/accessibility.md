@@ -6,9 +6,9 @@ weight: 3
 
 # Accessibility requirements
 
-Accessibility is a hard requirement for new PrestaShop themes, not an optional enhancement. The [European Accessibility Act (EAA)](https://ec.europa.eu/social/main.jsp?catId=1202) makes digital accessibility legally mandatory for e-commerce in EU member states from June 2025. These guidelines are aligned with **WCAG 2.2 AA** — the standard referenced by the EAA — and apply to all new themes and contributions to the ecosystem.
+Accessibility is a hard requirement for new PrestaShop themes, not an optional enhancement. The [European Accessibility Act (EAA)](https://ec.europa.eu/social/main.jsp?catId=1202) makes digital accessibility legally mandatory for e-commerce in EU member states from June 2025. These guidelines are aligned with [**WCAG 2.2 AA**](https://www.w3.org/TR/WCAG22/), the standard referenced by the EAA, and apply to all new themes and contributions to the ecosystem.
 
-This page covers the key requirements. Each project has its own specifics — use this as a baseline and adapt as needed.
+This page covers the key requirements. Each project has its own specifics. Use this as a baseline and adapt as needed.
 
 {{% notice tip %}}
 For Hummingbird's concrete implementation (focus management helpers, theme state), see [Hummingbird accessibility]({{< relref "/9/themes/hummingbird/accessibility" >}}).
@@ -18,12 +18,12 @@ For Hummingbird's concrete implementation (focus management helpers, theme state
 
 Correct HTML semantics are the foundation of accessibility. See [Coding standards]({{< relref "/9/themes/guidelines/coding-standards#html" >}}) for the full HTML rules. Accessibility-specific additions:
 
-- `<h1>`–`<h6>` in order, no skipping levels — headings define the document outline for screen reader users
+- `<h1>`–`<h6>` in order, no skipping levels headings define the document outline for screen reader users
 - Provide text alternatives for all non-text content: `alt` on images, captions on video and audio
 
 ## ARIA
 
-Use ARIA to fill gaps where semantic HTML alone is not sufficient — but prefer native HTML elements first:
+Use ARIA to fill gaps where semantic HTML alone is not sufficient, but prefer native HTML elements first:
 
 - Accessible names and descriptions: `aria-label`, `aria-describedby`
 - State attributes for dynamic content: `aria-expanded`, `aria-controls`, `aria-hidden`, `aria-live`
@@ -41,7 +41,7 @@ All interactive elements must be reachable and operable without a mouse:
 
 ## Focus management
 
-When content updates without a full page reload — AJAX cart updates, filter results, modal opening — focus must be managed explicitly:
+When content updates without a full page reload, AJAX cart updates, filter results, modal opening and focus must be managed explicitly:
 
 - After opening a modal or overlay: move focus inside it and trap it there; support `Escape` to close and return focus to the trigger
 - After an AJAX update: restore focus to the element the user was interacting with, or to a logical fallback in the updated region
@@ -65,11 +65,11 @@ When content updates without a full page reload — AJAX cart updates, filter re
 | Normal text (below 18px regular or 14px bold) | 4.5:1 minimum contrast ratio |
 | Large text (18px+ regular or 14px+ bold) | 3:1 minimum contrast ratio |
 
-Never rely on color alone to convey information — always pair it with text or a universally recognizable visual element (icon, pattern, label).
+Never rely on color alone to convey information, always pair it with text or a universally recognizable visual element (icon, pattern, label).
 
 Additional requirements:
-- Minimum body text size: 14px — prefer `rem`/`em` units
-- Touch targets: minimum 24×24px (WCAG 2.2 AA) — aim for 32px or above for comfortable usability
+- Minimum body text size: 14px, prefer `rem`/`em` units
+- Touch targets: minimum 24×24px (WCAG 2.2 AA) aim for 32px or above for comfortable usability
 
 ## Validation
 
@@ -81,7 +81,7 @@ No single tool catches everything. Use a combination:
 | [axe DevTools](https://www.deque.com/axe/devtools/) | Automated | More comprehensive than Lighthouse |
 | [Accessibility Insights](https://accessibilityinsights.io/) | Semi-automated | Guided manual checks for full WCAG coverage |
 | Keyboard navigation | Manual | Tab order, focus trapping, custom widget behavior |
-| Screen reader | Manual | Announcements, live regions, label quality |
+| Screen reader ([VoiceOver](https://www.apple.com/accessibility/vision/), [NVDA](https://www.nvaccess.org/), [JAWS](https://www.freedomscientific.com/products/software/jaws/)) | Manual | Announcements, live regions, label quality |
 
 ## Further reading
 
