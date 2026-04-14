@@ -10,7 +10,7 @@ This page walks through creating a minimal, valid PrestaShop 9 theme from scratc
 
 ## Scaffold the directory
 
-Run the following from your PrestaShop `/themes/` directory to create all required files. The commands use bash brace expansion, run them in bash, not sh.
+This workflow assumes you have a local PrestaShop development instance running. Run the following from the `/themes/` directory of that installation. The commands use bash brace expansion, run them in bash, not sh.
 
 ```bash
 cd /path/to/prestashop/themes
@@ -89,10 +89,8 @@ minimal-theme/
 Template files can be empty, but they must exist for PrestaShop to consider the theme valid.
 {{% /notice %}}
 
-`preview.png` is displayed in the Back Office theme selector. Use a 500×746 PNG screenshot of your theme.
-
-{{% notice warning %}}
-`touch` creates an empty file. An empty `preview.png` will break the theme thumbnail in the Back Office. Replace it with a real PNG before sharing or distributing the theme. The theme will still activate with an empty file, but the selector will show a broken image.
+{{% notice tip %}}
+Replace `preview.png` with a 500×746 PNG screenshot of your theme before activating. It is displayed in the Back Office theme selector.
 {{% /notice %}}
 
 ## Minimal theme.yml

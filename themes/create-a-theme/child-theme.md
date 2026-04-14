@@ -14,11 +14,9 @@ A child theme inherits all templates, styles, and assets from a parent theme. Yo
 For deep markup changes, [start from Hummingbird]({{< relref "/9/themes/create-a-theme/from-hummingbird" >}}) directly instead.
 {{% /notice %}}
 
-**Prerequisite:** The parent theme must be present in your PrestaShop `/themes/` directory before the child theme can be activated. Install the parent first.
-
 ## Scaffold the directory
 
-A child theme requires only two files. Run the following from your PrestaShop `/themes/` directory:
+A child theme requires only two files. This workflow assumes you have a local PrestaShop development instance running. Run the following from the `/themes/` directory of that installation:
 
 ```bash
 cd /path/to/prestashop/themes
@@ -38,7 +36,9 @@ my-child-theme/
 └── preview.png
 ```
 
-`preview.png` is displayed in the Back Office theme selector. Use a 500×746 PNG screenshot of your theme.
+{{% notice tip %}}
+Replace `preview.png` with a 500×746 PNG screenshot of your theme before activating. It is displayed in the Back Office theme selector.
+{{% /notice %}}
 
 ## Minimal theme.yml
 
@@ -54,18 +54,22 @@ assets:
 
 When `use_parent_assets` is `true`, the parent's CSS and JS files are loaded first, then any assets registered by your child theme are appended. Set it to `false` if you want to take full control of assets and provide your own stylesheet from scratch. See [Theme structure]({{< relref "/9/themes/concepts/theme-structure#parentchild-settings" >}}) for the full reference.
 
-## Overriding CSS
+{{% notice note %}}
+`theme.css` and `theme.js` are auto-loaded by PrestaShop from whichever theme is active, no explicit registration needed. With `use_parent_assets: false`, PrestaShop serves them from the child theme's own `assets/` directory automatically. Only additional assets beyond these two files need to be declared in `theme.yml`.
+{{% /notice %}}
 
-To add or override styles, create a stylesheet in your child theme and register it via your theme's asset configuration. With `use_parent_assets: true`, your stylesheet is loaded after the parent's, so any rules you define will take precedence through standard CSS cascade:
+## Overriding assets
+
+To add or override styles and scripts, create the files in your child theme and register them in `config/theme.yml` under `global_settings`:
 
 ```
 my-child-theme/
 └── assets/
-    └── css/
-        └── custom.css
+    ├── css/
+    │   └── custom.css
+    └── js/
+        └── custom.js
 ```
-
-Register it in `config/theme.yml` under `global_settings`:
 
 ```yaml
 global_settings:
@@ -74,9 +78,13 @@ global_settings:
       custom:
         path: assets/css/custom.css
         media: all
+    js:
+      custom:
+        path: assets/js/custom.js
+        position: bottom
 ```
 
-See [Asset management]({{< relref "/9/themes/concepts/asset-management" >}}) for the full registration syntax.
+With `use_parent_assets: true`, the parent's CSS and JS load first and yours are appended after. See [Asset management]({{< relref "/9/themes/concepts/asset-management" >}}) for the full registration syntax.
 
 ## Overriding templates
 
@@ -124,18 +132,6 @@ If you only need to change one or two blocks within `category.tpl`, extend the p
 
 ## Activate the theme
 
-**Option A — Upload a zip**
+The parent theme must be present in your PrestaShop `/themes/` directory before the child theme can be activated. Install the parent first.
 
-Zip your theme directory and upload it directly in the Back Office under _Design > Theme & Logo > Add new theme_:
-
-```bash
-# Run from the /themes/ directory — produces my-child-theme.zip containing the my-child-theme/ folder
-cd /path/to/prestashop/themes
-zip -r my-child-theme.zip my-child-theme/
-```
-
-**Option B — Copy manually**
-
-Copy your theme directory into `/themes/` inside your PrestaShop installation, then go to _Design > Theme & Logo_.
-
-In both cases, select the child theme and click _Use this theme_.
+See [Activate the theme]({{< relref "/9/themes/getting-started/quick-start#activate-the-theme" >}}) in the quick start guide for activation instructions.

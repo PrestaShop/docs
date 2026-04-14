@@ -43,7 +43,7 @@ meta:
     framework: bootstrap-v5.3.3  # Informational, not parsed by PrestaShop
 ```
 
-## Build
+## Build the theme
 
 See [Requirements]({{< relref "/9/themes/getting-started/requirements" >}}) for the required Node and npm versions.
 
@@ -54,9 +54,9 @@ npm run build
 
 During development, use `npm run watch` instead to recompile automatically on every file save.
 
-## Activate
+## Activate the theme
 
-Since the theme is already inside your PrestaShop `/themes/` directory, go to _Design > Theme & Logo_ in the Back Office, select your theme, and click _Use this theme_.
+See [Activate the theme]({{< relref "/9/themes/getting-started/quick-start#activate-the-theme" >}}) in the quick start guide for activation instructions. Since the theme is already inside your PrestaShop `/themes/` directory, you can skip the zip upload step and activate directly from the Back Office.
 
 {{% notice tip %}}
 Replace `preview.png` with a 500×746 PNG screenshot of your theme before activating. The cloned Hummingbird image will otherwise appear in the Back Office theme selector.
