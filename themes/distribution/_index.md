@@ -11,5 +11,5 @@ Before a theme can be activated in the Back Office, it must pass validation. Onc
 
 | Page | Description |
 |------|-------------|
-| [Validation]({{< relref "/9/themes/distribution/validation" >}}) | Required files and configuration keys — a theme that does not pass validation cannot be activated |
+| [Validation]({{< relref "/9/themes/distribution/validation" >}}) | Required files and configuration keys. A theme that does not pass validation cannot be activated |
 | [Exporting]({{< relref "/9/themes/distribution/exporting" >}}) | Creating a ZIP, what gets exported, and how to prepare for distribution |

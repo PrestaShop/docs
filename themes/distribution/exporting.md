@@ -57,7 +57,7 @@ Add a `.gitignore` and keep your working directory clean. The export command pac
 
 Before distributing your theme:
 
-1. Compile production-ready assets — for Hummingbird run `npm run build`; adapt to your own build pipeline if using a custom theme
+1. Compile production-ready assets, for Hummingbird run `npm run build`; adapt to your own build pipeline if using a custom theme
 2. Verify the theme passes [validation]({{< relref "/9/themes/distribution/validation" >}})
 3. Test activation on a clean PrestaShop installation
-4. Ensure `preview.png` is present and up to date — required dimensions are 500×746px
+4. Ensure `preview.png` is present and up to date. Required dimensions are 500×746px
