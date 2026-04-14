@@ -11,7 +11,7 @@ PrestaShop provides custom Smarty functions and modifiers for use in front-offic
 
 | Function | Purpose | Example |
 |----------|---------|---------|
-| `{l}` | Translate a string — see [Translation]({{< relref "/9/themes/concepts/translation" >}}) for domain naming rules and placeholders | `{l s='Add to cart' d='Shop.Theme.Actions'}` |
+| `{l}` | Translate a string, see [Translation]({{< relref "/9/themes/concepts/translation" >}}) for domain naming rules and placeholders | `{l s='Add to cart' d='Shop.Theme.Actions'}` |
 | `{url}` | Generate a URL for any entity | `{url entity='product' id=$product.id}` |
 | `{hook}` | Invoke a hook and display its output | `{hook h='displayFooterBefore'}` |
 | `{render}` | Render a template file with variables | `{render file='customer/_partials/login-form.tpl' ui=$login_form}` |
@@ -42,6 +42,6 @@ The `{url}` function generates URLs for any front-office entity. Pass the entity
 | `cms` | `id` | `{url entity='cms' id=$cms.id}` |
 | `module` | `name`, `controller` | `{url entity='module' name='ps_cart' controller='cart'}` |
 | `language` | `id` | `{url entity='language' id=$lang.id}` |
-| `sf` | `route` | `{url entity='sf' route='my_route'}` — generates a URL from a Symfony route name; only available in Symfony context |
-| *(any page name)* | — | `{url entity='contact'}` — falls back to `Link::getPageLink()` |
+| `sf` | `route` | `{url entity='sf' route='my_route'}` generates a URL from a Symfony route name; only available in Symfony context |
+| *(any page name)* | — | `{url entity='contact'}` falls back to `Link::getPageLink()` |
 
