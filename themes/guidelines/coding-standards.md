@@ -58,18 +58,18 @@ Rules:
 - Place new files in the appropriate `src/scss/` subdirectory
 
 {{% notice tip %}}
-See [CSS architecture]({{< relref "/9/themes/hummingbird/css-architecture" >}}) for the full `src/scss/` directory structure, `@layer` order, and guidance on where to add custom styles.
+See [CSS conventions]({{< relref "/9/themes/hummingbird/css-conventions" >}}) for the full `src/scss/` directory structure, `@layer` order, and guidance on where to add custom styles.
 {{% /notice %}}
 
 ## JavaScript
 
 - Write **vanilla JavaScript** — do not use jQuery in new theme code (jQuery is loaded by `core.js` for module backward compatibility only)
 - Use modern ECMAScript syntax: `const`/`let`, arrow functions, template literals, `async`/`await`, native `import`/`export`
-- Use [`data-ps-*` attributes]({{< relref "/9/themes/hummingbird/javascript#semantic-data-ps--attributes" >}}) to target DOM elements from JavaScript — not CSS classes
+- Use [`data-ps-*` attributes]({{< relref "/9/themes/hummingbird/javascript-conventions#semantic-data-ps--attributes" >}}) to target DOM elements from JavaScript — not CSS classes
 - Use the `prestashop` event system for cross-component communication
 
 {{% notice tip %}}
-See [JavaScript conventions]({{< relref "/9/themes/hummingbird/javascript" >}}) for the full `data-ps-*` attribute reference, the events map, and the selectors map.
+See [JavaScript conventions]({{< relref "/9/themes/hummingbird/javascript-conventions" >}}) for the full `data-ps-*` attribute reference, the events map, and the selectors map.
 {{% /notice %}}
 
 ## File naming

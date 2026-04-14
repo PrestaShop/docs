@@ -1,9 +1,9 @@
 ---
-title: CSS architecture
+title: CSS conventions
 weight: 1
 ---
 
-# CSS architecture
+# CSS conventions
 
 Hummingbird's CSS is built on Bootstrap 5.3, organized in modular SCSS with CSS `@layer` for cascade control and [BEM](https://getbem.com/naming/) naming for custom components.
 
