@@ -6,11 +6,11 @@ weight: 1
 
 # Creating a theme from scratch
 
-This page walks through creating a minimal, valid PrestaShop 9 theme from scratch — no base theme required.
+This page walks through creating a minimal, valid PrestaShop 9 theme from scratch, no base theme required.
 
 ## Scaffold the directory
 
-Run the following from your PrestaShop `/themes/` directory to create all required files. The commands use bash brace expansion — run them in bash, not sh.
+Run the following from your PrestaShop `/themes/` directory to create all required files. The commands use bash brace expansion, run them in bash, not sh.
 
 ```bash
 cd /path/to/prestashop/themes
@@ -152,26 +152,12 @@ theme_settings:
 
 ## Activate the theme
 
-**Option A — Upload a zip**
-
-Zip your theme directory and upload it directly in the Back Office under _Design > Theme & Logo > Add new theme_:
-
-```bash
-# Run from the /themes/ directory — produces minimal-theme.zip containing the minimal-theme/ folder
-cd /path/to/prestashop/themes
-zip -r minimal-theme.zip minimal-theme/
-```
-
-**Option B — Copy manually**
-
-Copy your theme directory into `/themes/` inside your PrestaShop installation, then go to _Design > Theme & Logo_.
-
-In both cases, select your theme and click _Use this theme_.
+See [Activate the theme]({{< relref "/9/themes/getting-started/quick-start#activate-the-theme" >}}) in the quick start guide for activation instructions.
 
 {{% notice warning %}}
 Activating a theme replaces all image types with the ones declared in your `theme.yml`. Make sure your image type configuration is complete before activating.
 {{% /notice %}}
 
-Since all template files are empty, every page will render blank. This is expected — you now have a valid skeleton to build on.
+Since all template files are empty, every page will render blank. This is expected, you now have a valid skeleton to build on.
 
 From here, read [Templates and layouts]({{< relref "/9/themes/concepts/templates/templates-and-layouts" >}}) to understand how PrestaShop renders pages, and [Asset management]({{< relref "/9/themes/concepts/asset-management" >}}) to learn how to register CSS and JavaScript files.
