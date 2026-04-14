@@ -56,7 +56,7 @@ Multiple aliases are supported as a list. Use the full path from root including 
 
 **Do not remove aliases once added** — external sites and search engines may link to old URLs.
 
-## Writing Style
+## Writing Style & Typography
 
 - Present tense, active voice, second person ("you").
 - "must" for requirements, "should" for recommendations, "can" for options.
