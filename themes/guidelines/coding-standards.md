@@ -7,7 +7,7 @@ weight: 1
 
 These standards apply to new themes and contributions targeting PrestaShop 9. They reflect the patterns used in [Hummingbird]({{< relref "/9/themes/hummingbird" >}}) and define what is expected in the ecosystem going forward.
 
-## HTML
+## HTML / Smarty
 
 Use correct, semantic HTML5 — the right element for the right purpose:
 
@@ -61,11 +61,12 @@ Rules:
 See [CSS conventions]({{< relref "/9/themes/hummingbird/css-conventions" >}}) for the full `src/scss/` directory structure, `@layer` order, and guidance on where to add custom styles.
 {{% /notice %}}
 
-## JavaScript
+## JavaScript / TypeScript
 
-- Write **vanilla JavaScript** — do not use jQuery in new theme code (jQuery is loaded by `core.js` for module backward compatibility only)
+- Write new theme code in **TypeScript**, compiled to JavaScript via the build pipeline
+- Do not use **jQuery** in new theme code. jQuery is loaded by `core.js` for module backward compatibility only and must not be used for new development
 - Use modern ECMAScript syntax: `const`/`let`, arrow functions, template literals, `async`/`await`, native `import`/`export`
-- Use [`data-ps-*` attributes]({{< relref "/9/themes/hummingbird/javascript-conventions#semantic-data-ps--attributes" >}}) to target DOM elements from JavaScript — not CSS classes
+- Use [`data-ps-*` attributes]({{< relref "/9/themes/hummingbird/javascript-conventions#semantic-data-ps--attributes" >}}) to target DOM elements, not CSS classes
 - Use the `prestashop` event system for cross-component communication
 
 {{% notice tip %}}
@@ -85,5 +86,5 @@ See [JavaScript conventions]({{< relref "/9/themes/hummingbird/javascript-conven
 
 - **2 spaces** for indentation in all front-end files (HTML, CSS, SCSS, JS, Smarty templates)
 - End every file with a newline; no trailing whitespace
-- Configure your editor with [EditorConfig](https://editorconfig.org/) — Hummingbird ships with an `.editorconfig` file
+- Configure your editor with [EditorConfig](https://editorconfig.org/), Hummingbird ships with an `.editorconfig` file
 - When working within Hummingbird or a fork of it, use the bundled linters and formatters: **ESLint**, **Stylelint**, and **Prettier**

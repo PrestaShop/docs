@@ -15,7 +15,7 @@ Accessibility is treated as a first-class requirement, not an afterthought. The 
 
 | Page | What it covers |
 |------|----------------|
-| **[Coding standards]({{< relref "/9/themes/guidelines/coding-standards" >}})** | HTML semantics, BEM naming, vanilla JavaScript, `data-ps-*` attributes, file naming, and formatting rules |
+| **[Coding standards]({{< relref "/9/themes/guidelines/coding-standards" >}})** | HTML semantics, Smarty, BEM naming, vanilla JavaScript, `data-ps-*` attributes, file naming, and formatting rules |
 | **[Browser compatibility]({{< relref "/9/themes/guidelines/browser-compatibility" >}})** | Evergreen browser targets, Web Platform Baseline, no IE, progressive enhancement with `@supports` |
 | **[Accessibility]({{< relref "/9/themes/guidelines/accessibility" >}})** | EAA-aligned requirements (WCAG 2.2 AA), semantic HTML, ARIA, keyboard navigation, focus management, contrast ratios, and validation tools |
 
