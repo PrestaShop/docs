@@ -5,16 +5,7 @@ weight: 2
 
 # Browser compatibility
 
-PrestaShop 9 themes target **evergreen browsers** — browsers that update automatically and stay current. This means modern versions, not a specific pinned release. The minimum floor is set by [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/browsers-devices/), which the entire theme stack is built on.
-
-## Supported browsers
-
-| Browser | Desktop | Mobile |
-|---------|---------|--------|
-| **Chrome** | Modern versions | Android |
-| **Firefox** | Modern versions | Android |
-| **Safari** | Modern versions | iOS |
-| **Edge** | Modern versions | — |
+PrestaShop 9 themes target **evergreen browsers**, browsers that update automatically and stay current. This means modern versions, not a specific pinned release. The minimum floor is set by [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/browsers-devices/), which the entire theme stack is built on.
 
 {{% notice warning %}}
 Internet Explorer and other legacy browsers are **not supported**. This is consistent with the [Bootstrap 5.3 browser support policy](https://getbootstrap.com/docs/5.3/getting-started/browsers-devices/) and will not change.
@@ -28,8 +19,8 @@ Baseline divides features into three tiers:
 
 | Tier | Definition | Usage |
 |------|------------|-------|
-| **Widely Available** | Supported in all major browsers for 30+ months | Use freely — no fallback needed |
-| **Newly Available** | Just reached cross-browser support | Use with care — consider your audience's browser update frequency |
+| **Widely Available** | Supported in all major browsers for 30+ months | Use freely, no fallback needed |
+| **Newly Available** | Just reached cross-browser support | Use with care, consider your audience's browser update frequency |
 | **Limited availability** | Not yet supported in all major browsers | Avoid, or use only with a `@supports` fallback |
 
 You can check any feature's Baseline status on [MDN](https://developer.mozilla.org/) (shown in the browser compatibility table) or [caniuse.com](https://caniuse.com/).
