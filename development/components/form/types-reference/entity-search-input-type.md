@@ -61,7 +61,7 @@ let searchInput = new window.prestashop.component.EntitySearchInput(elementId, {
       console.log('Event on product deletion');
     },
     onSelectedContent: () => {
-      console.log("Event on product selection");
+      console.log('Event on product selection');
     },
 });
 ```
