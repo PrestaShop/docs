@@ -9,7 +9,7 @@ weight: 4
 You need **Node.js 20.x** and **npm** to build Hummingbird. For the full list of tools, see [Requirements]({{< relref "/9/themes/getting-started/requirements" >}}). For setting up a local PrestaShop instance, see [Environment setup]({{< relref "/9/themes/getting-started/environment-setup" >}}).
 {{% /notice %}}
 
-## Build commands
+## Script commands
 
 | Command | Purpose |
 |---------|---------|
@@ -30,7 +30,7 @@ Hummingbird includes a `.nvmrc` file. If you use nvm, run `nvm use` in the theme
 
 Hummingbird includes Docker Compose configurations that mount your theme directory automatically. See [Environment setup]({{< relref "/9/themes/getting-started/environment-setup" >}}) for setup instructions and available images.
 
-For the full Docker configuration details, see the [Hummingbird README](https://github.com/PrestaShop/hummingbird).
+For the full Docker configuration details, see the [Hummingbird README](https://github.com/PrestaShop/hummingbird?tab=readme-ov-file#-run-hummingbird-with-docker).
 
 ## Storybook
 
