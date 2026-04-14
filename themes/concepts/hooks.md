@@ -58,6 +58,10 @@ Modules can also register hooks from PHP using `Hook::register('MyCustomHook')`.
 
 ## Unhooking and hooking modules
 
+{{% notice info %}}
+`modules_to_unhook` and `modules_to_hook` are only applied when the theme is activated. Changes to these keys have no effect on a theme that is already active.
+{{% /notice %}}
+
 Remove modules from hooks using `modules_to_unhook`:
 
 ```yaml
