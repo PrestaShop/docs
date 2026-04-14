@@ -41,6 +41,7 @@ $builder
         'label' => false,
         'remote_url' => $this->router->generate('admin_categories_get_ajax_categories', ['query' => '__QUERY__']),
         'placeholder' => $this->trans('To which category should the page redirect?', 'Admin.Catalog.Help'),
+        'help' => $this->trans('By default, the closest active parent category will be used if no category is selected.', 'Admin.Catalog.Help'),
         'filtered_identities' => [$options['id_category'], $this->homeCategoryId],
     ]);
 ```

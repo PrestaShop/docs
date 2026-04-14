@@ -21,23 +21,23 @@ A form button with material icon.
 - [FooterType](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/PrestaShopBundle/Form/Admin/Sell/Product/FooterType.php#L102-L116)
 
 ```php
-        $builder
-            ->add('actions', ButtonCollectionType::class, [
-                'buttons' => [
-                    'catalog' => [
-                        'type' => IconButtonType::class,
-                        'options' => [
-                            'label' => $this->trans('Go to catalog', 'Admin.Catalog.Feature'),
-                            'type' => 'link',
-                            'icon' => 'arrow_back_ios',
-                            'attr' => [
-                                'class' => 'btn-outline-secondary go-to-catalog-button',
-                                'href' => $this->router->generate('admin_products_index', ['offset' => 'last', 'limit' => 'last']),
-                            ],
-                        ],
+$builder
+    ->add('actions', ButtonCollectionType::class, [
+        'buttons' => [
+            'catalog' => [
+                'type' => IconButtonType::class,
+                'options' => [
+                    'label' => $this->trans('Go to catalog', 'Admin.Catalog.Feature'),
+                    'type' => 'link',
+                    'icon' => 'arrow_back_ios',
+                    'attr' => [
+                        'class' => 'btn-outline-secondary go-to-catalog-button',
+                        'href' => $this->router->generate('admin_products_index', ['offset' => 'last', 'limit' => 'last']),
                     ],
                 ],
-            ])
+            ],
+        ],
+    ])
 ```
 
 ## Preview example

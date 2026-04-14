@@ -20,15 +20,15 @@ Symfony native EmailType extended with IDNConverter (InternationalizedDomainName
 
 ```php
 $builder->add('email', EmailType::class, [
-                'label' => $this->trans('Email address', [], 'Admin.Global'),
-                'constraints' => [
-                    $this->getNotBlankConstraint(),
-                    $this->getLengthConstraint(EmployeeEmail::MAX_LENGTH),
-                    new Email([
-                        'message' => $this->trans('This field is invalid', [], 'Admin.Notifications.Error'),
-                    ]),
-                ],
-            ])
+    'label' => $this->trans('Email address', [], 'Admin.Global'),
+    'constraints' => [
+        $this->getNotBlankConstraint(),
+        $this->getLengthConstraint(EmployeeEmail::MAX_LENGTH),
+        new Email([
+            'message' => $this->trans('This field is invalid', [], 'Admin.Notifications.Error'),
+        ]),
+    ],
+])
 ```
 
 ## Preview example
