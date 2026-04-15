@@ -7,7 +7,7 @@ title: ConfigurableCountryChoiceType
 Class responsible for providing configurable countries list
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [ConfigurableCountryChoiceType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/ConfigurableCountryChoiceType.php)
+- Reference: [ConfigurableCountryChoiceType](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Type/ConfigurableCountryChoiceType.php)
 
 ## Type options
 
@@ -16,7 +16,7 @@ Class responsible for providing configurable countries list
 
 ## Code example
 
-- [StateGridDefinitionFactory.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Grid/Definition/Factory/StateGridDefinitionFactory.php#L210-L218)
+- [StateGridDefinitionFactory.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/Core/Grid/Definition/Factory/StateGridDefinitionFactory.php#L191-L199)
 
 ```php
 $builder->add(

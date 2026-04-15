@@ -73,7 +73,7 @@ When searching for a template, PrestaShop will check many location to determine
 which file should be used. It make it very easy to have different template for a
 given locale or a specific entity id.
 
-More details in [TemplateFinder.php](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Smarty/TemplateFinder.php#L71-L117).
+More details in [TemplateFinder.php](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/classes/Smarty/TemplateFinder.php#L48-L94).
 
 #### Product page example
 

@@ -227,7 +227,7 @@ The `classname` data modifier will ensure that your string is a valid class name
 It will:
 
 1. Put it in lowercase.
-2. Replace any non-ASCII characters (such as accented characters) [with their ASCII equivalent with Transliterator](https://github.com/PrestaShop/PrestaShop/blob/8.0.0/classes/Tools.php#L1431-L1440). 
+2. Replace any non-ASCII characters (such as accented characters) [with their ASCII equivalent with Transliterator](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/classes/Tools.php#L1275-L1278).
 3. Replace all non-alphanumerical characters with a single dash.
 4. Ensure only one consecutive dash is used.
 

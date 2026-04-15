@@ -7,7 +7,7 @@ title: IconButtonType
 A form button with material icon.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [IconButtonType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/IconButtonType.php)
+- Reference: [IconButtonType](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Type/IconButtonType.php)
 
 ## Type options
 
@@ -18,18 +18,26 @@ A form button with material icon.
 
 ## Code example
 
-- [FooterType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Product/FooterType.php#L99-L107)
+- [FooterType](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/PrestaShopBundle/Form/Admin/Sell/Product/FooterType.php#L102-L116)
 
 ```php
-$builder->add('catalog', IconButtonType::class, [
-    'label' => $this->trans('Go to catalog', 'Admin.Catalog.Feature'),
-    'type' => 'link',
-    'icon' => 'arrow_back_ios',
-    'attr' => [
-        'class' => 'btn-outline-secondary border-white go-to-catalog-button',
-        'href' => $this->router->generate('admin_products_v2_index', ['offset' => 'last', 'limit' => 'last']),
-    ],
-])
+$builder
+    ->add('actions', ButtonCollectionType::class, [
+        'buttons' => [
+            'catalog' => [
+                'type' => IconButtonType::class,
+                'options' => [
+                    'label' => $this->trans('Go to catalog', 'Admin.Catalog.Feature'),
+                    'type' => 'link',
+                    'icon' => 'arrow_back_ios',
+                    'attr' => [
+                        'class' => 'btn-outline-secondary go-to-catalog-button',
+                        'href' => $this->router->generate('admin_products_index', ['offset' => 'last', 'limit' => 'last']),
+                    ],
+                ],
+            ],
+        ],
+    ])
 ```
 
 ## Preview example

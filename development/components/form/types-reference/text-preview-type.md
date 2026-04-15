@@ -7,7 +7,7 @@ title: TextPreviewType
 This form type displays a text value without providing an interactive input to edit it. It is based on a hidden input so it could be changed programmatically, or used just to display data in a form.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [TextPreviewType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Type/TextPreviewType.php)
+- Reference: [TextPreviewType](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Type/TextPreviewType.php)
 
 ## Type options
 
@@ -20,7 +20,7 @@ This form type displays a text value without providing an interactive input to e
 
 ## Code example
 
-- [SearchedCustomerType](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Form/Admin/Sell/Customer/SearchedCustomerType.php#L50-L53)
+- [SearchedCustomerType](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/PrestaShopBundle/Form/Admin/Sell/Customer/SearchedCustomerType.php#L26-L28)
 
 ```php
 $builder->add('fullname_and_email', TextPreviewType::class, [

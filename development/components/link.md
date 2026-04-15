@@ -20,7 +20,7 @@ The `Link` component generates URLs for various PrestaShop routes. It provides a
 - `getModuleLink()`
 - `getPageLink()`
 
-and many more. To discover all available methods, you can explore the [Link class](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php).
+and many more. To discover all available methods, you can explore the [Link class](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Link.php).
 
 {{% notice info %}}
 While possible, it is discouraged to instantiate the `Link` class by yourself. Please use the `Link` provided by a `Context`.
@@ -44,7 +44,7 @@ $product = new Product(123);
 $link = $context->link->getProductLink($product);
 ```
 
-More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L122-L141).
+More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/classes/Link.php#L103-L122).
 
 ### Use the Link component to get the URL of a Category with getCategoryLink() method
 
@@ -58,7 +58,7 @@ $category = new Category(123);
 $link = $context->link->getCategoryLink($category);
 ```
 
-More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L411-L422).
+More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/classes/Link.php#L405-L416).
 
 ### Use the Link component to get the URL of a Module front controller with getModuleLink() method
 
@@ -79,7 +79,7 @@ $params = [
 $link = $context->link->getModuleLink('mymodulename', 'controllerName', $params);
 ```
 
-More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L670-L684).
+More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/classes/Link.php#L661-L673).
 
 ### Use the Link component to get the URL of a page with getPageLink() method
 
@@ -102,7 +102,7 @@ $params = [
 $link = $context->link->getPageLink('cart', true, null, $params,false);
 ```
 
-More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Link.php#L1109-L1121).
+More parameters are available for this method, please refer to the [method definition for details](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/classes/Link.php#L1099-L1113).
 
 ### Generate URLs to admin routes using Link
 

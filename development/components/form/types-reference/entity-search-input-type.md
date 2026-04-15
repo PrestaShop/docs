@@ -7,7 +7,7 @@ title: EntitySearchInputType
 This form type is used for an OneToMany (or ManyToMany) association, it allows to search a list of entities (based on a remote URL) and associate it. It is based on the CollectionType form type which provides prototype features to display a custom template for each associated item.
 
 - Namespace: PrestaShopBundle\Form\Admin\Type
-- Reference: [EntitySearchInputType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Type/EntitySearchInputType.php)
+- Reference: [EntitySearchInputType](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Type/EntitySearchInputType.php)
 
 ## Type options
 
@@ -30,7 +30,7 @@ Learn more about [JavaScript components and how to use them]({{<relref "/9/devel
 
 ## Code example
 
-- [RedirectOptionType](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/PrestaShopBundle/Form/Admin/Sell/Category/SEO/RedirectOptionType.php#L86-L96)
+- [RedirectOptionType](https://github.com/PrestaShop/PrestaShop/blob/9.1.0/src/PrestaShopBundle/Form/Admin/Sell/Category/SEO/RedirectOptionType.php#L66-L76)
 
 ```php
 $builder
@@ -63,7 +63,7 @@ let searchInput = new window.prestashop.component.EntitySearchInput(elementId, {
     },
     onSelectedContent: () => {
       console.log('Event on product selection');
-    }
+    },
 });
 ```
 
