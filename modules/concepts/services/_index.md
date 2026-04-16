@@ -472,7 +472,7 @@ Here is a quick summary so that you know where you should define your services:
 | `config/services.yml`       |        Yes        |           No           |           No           |          No          | All Symfony components and `PrestaShopBundle` services                     |
 | `config/admin/services.yml` |        Yes        |           No           |           Yes          |          No          | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/admin` folder |
 | `config/front/services.yml` |        Yes        |           Yes          |           No           |          No         | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/front` folder |
-| `config/websrvice/services.yml` |        Yes        |           Yes          |           No           |          No         | Doctrine, services defined in `<PS_ROOT_DIR>/config/webservice/front` folder |
+| `config/webservice/services.yml` |        Yes        |           No          |           No           |          Yes         | Doctrine, services defined in `<PS_ROOT_DIR>/config/webservice/front` folder |
 
 
 ### Define a service on both front and admin
