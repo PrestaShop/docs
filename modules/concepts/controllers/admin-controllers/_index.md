@@ -111,7 +111,7 @@ The `PrestaShopAdminController` provides helper methods to access common PrestaS
 - `$this->dispatchHookWithParameters()` - Dispatch hooks
 - `$this->presentGrid()` - Present grid data
 
-See the complete list in the [PrestaShopAdminController source code](https://github.com/PrestaShop/PrestaShop/blob/9.0.0/src/PrestaShopBundle/Controller/Admin/PrestaShopAdminController.php).
+See the complete list in the [PrestaShopAdminController source code](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/PrestaShopAdminController.php).
 {{% /notice %}}
 
 {{% notice warning %}}
@@ -188,9 +188,9 @@ You must enable the autoloading for this Controller. For example using a `compos
     ```php
     <?php
     // modules/your-module/src/Controller/DemoController.php
-    
+
     namespace MyModule\Controller;
-    
+
     use PrestaShopBundle\Controller\Admin\PrestaShopAdminController;
     ```
 
@@ -315,7 +315,7 @@ The new base controller provides convenient helper methods for commonly used ser
 - `$this->getRouter()` - Access router service
 - `$this->getFlashBag()` - Access flash messages
 
-See the [full list of helper methods](https://github.com/PrestaShop/PrestaShop/blob/9.0.0/src/PrestaShopBundle/Controller/Admin/PrestaShopAdminController.php) in the class.
+See the [full list of helper methods](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/PrestaShopAdminController.php) in the class.
 
 {{% notice info %}}
 **Learn more about Symfony controllers:**
@@ -326,7 +326,7 @@ See the [full list of helper methods](https://github.com/PrestaShop/PrestaShop/b
 
 ## Secure your controller
 
-It is safer to define permissions required to use your controller, this can be configured using the `#[AdminSecurity]` attribute and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/9/development/architecture/migration-guide/controller-routing.md#security" >}}).
+It is safer to define permissions required to use your controller, this can be configured using the `#[AdminSecurity]` attribute and some configuration in your routing file. You can read this documentation if you need more details about [Controller Security]({{< ref "/9/development/architecture/modern/controller-routing.md#security" >}}).
 
 {{% notice note %}}
 **PrestaShop 9.0+**: The `@AdminSecurity` annotation has been replaced with the `#[AdminSecurity]` attribute following PHP 8 standards.

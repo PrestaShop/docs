@@ -52,7 +52,7 @@ menuTitle: Good practices
 
 - When your module has forms, you should:
   - show a confirmation message if everything went fine or an error message if it did not.
-  - make sure information entered by customers are correct. If you ask a sum, it has to be only numbers. More information about the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Validate.php).
+  - make sure information entered by customers are correct. If you ask a sum, it has to be only numbers. More information about the Validate class of PrestaShop [here](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Validate.php).
 
 - Consider carefully casting your variables and use pSQL/bqSQL in the SQL requests to avoid any injections (read [Best Practices of the Db Class](https://docs.prestashop-project.org/1-6-documentation/developer-guide/developer-tutorials/best-practices-of-the-db-class)). Make sure your files are properly protected (especially if your module uses a cron for example) to avoid anyone being able to execute them. As a result, you are required to use a token!
 
@@ -70,7 +70,7 @@ menuTitle: Good practices
 - A merchant is likely to have a shop running on a different shop than yours. In case a module is using PHP extensions not installed by default by PHP,
 add a preliminary check before using them (I.e with `extension_loaded`). This prevents fatal errors to be thrown on shops on which these extensions aren’t enabled.
 
-- If you need to store static files: we recommend putting temporary or cache files in prestashop's `/var/cache/<env>/modules/YOUR_MODULE/` directory, and static or shared files in prestashop's  `/var/modules/YOUR_MODULE/` directory. Writing in the `/modules` directory is not recommended, because doing so will make it harder to use your module in distributed environments. In addition, by storing files outside your module's directory, they are kept even if the module is uninstalled.
+- If you need to store static files: we recommend putting temporary or cache files in prestashop's `/var/cache/<env>/modules/YOUR_MODULE/` directory, and static or shared files in prestashop's `/var/modules/YOUR_MODULE/` directory. Writing in the `/modules` directory is not recommended, because doing so will make it harder to use your module in distributed environments. In addition, by storing files outside your module's directory, they are kept even if the module is uninstalled.
 
 ## A few recommendations for your themes
 
@@ -80,7 +80,7 @@ add a preliminary check before using them (I.e with `extension_loaded`). This pr
   - modules
   - image standards
 - You should not have HTML in your PHP code; use Smarty or helper classes for views.
-- We do not accept themes using the PrestaShop base theme to which only color, font and image changes etc. have been made. You should create a unique theme!  :-)
+- We do not accept themes using the PrestaShop base theme to which only color, font and image changes etc. have been made. You should create a unique theme! :-)
 - You should keep the store logo by default in your theme's zip, in the header and footer of your theme.
 
 **A few recommendations for your email templates**
@@ -89,6 +89,6 @@ add a preliminary check before using them (I.e with `extension_loaded`). This pr
 - Make sure to submit on Addons a valid zip, built with the SDK.
 - Test your emails with the [official module](https://github.com/PrestaShopCorp/email-templates-sdk).
 
-[coding-standards]: {{< ref "8/development/coding-standards" >}}
-[display-content-front-office]: {{< ref "8/modules/creation/displaying-content-in-front-office" >}}
-[adding-configuration-page]: {{< ref "8/modules/creation/adding-configuration-page" >}}
+[coding-standards]: {{< ref "/9/development/coding-standards" >}}
+[display-content-front-office]: {{< ref "/9/modules/creation/displaying-content-in-front-office" >}}
+[adding-configuration-page]: {{< ref "/9/modules/creation/adding-configuration-page" >}}

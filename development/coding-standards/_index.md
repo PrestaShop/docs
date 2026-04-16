@@ -47,7 +47,7 @@ You can run it using the following command:
 php ./vendor/bin/php-cs-fixer fix
 ```
 
-The prestashop specific configuration file [can be found here](https://github.com/PrestaShop/PrestaShop/blob/9.0.x/.php-cs-fixer.dist.php). Also, you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/9.0.x/.github/contrib) sample in order to make sure you never forget to make your code compliant!
+The prestashop specific configuration file [can be found here](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/.php-cs-fixer.dist.php). Also, you can also use the provided [git pre-commit](https://github.com/PrestaShop/PrestaShop/tree/9.1.x/.github/contrib) sample in order to make sure you never forget to make your code compliant!
 
 ### Documenting types
 

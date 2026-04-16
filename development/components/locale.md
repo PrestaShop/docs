@@ -16,9 +16,9 @@ It provides useful methods such as `formatNumber()` and `formatPrice()`.
 The `Locale` is initialized with :
 
 - a `code` in [IETF tag](https://en.wikipedia.org/wiki/IETF_language_tag) format (`en-US`, `fr-FR`, ...),
-- a `PrestaShop\PrestaShop\Core\Localization\Specification\Number` [`NumberSpecification`](https://github.com/PrestaShop/PrestaShop/blob/8.0.0/src/Core/Localization/Specification/Number.php)
-- a `PrestaShop\PrestaShop\Core\Localization\Specification\NumberCollection` [`PriceSpecificationMap`](https://github.com/PrestaShop/PrestaShop/blob/8.0.0/src/Core/Localization/Specification/NumberCollection.php)
-- a `PrestaShop\PrestaShop\Core\Localization\Number\Formatter` [`Number formatter`](https://github.com/PrestaShop/PrestaShop/blob/8.0.0/src/Core/Localization/Number/Formatter.php)
+- a `PrestaShop\PrestaShop\Core\Localization\Specification\Number` [`NumberSpecification`](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Localization/Specification/Number.php)
+- a `PrestaShop\PrestaShop\Core\Localization\Specification\NumberCollection` [`PriceSpecificationMap`](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Localization/Specification/NumberCollection.php)
+- a `PrestaShop\PrestaShop\Core\Localization\Number\Formatter` [`Number formatter`](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Localization/Number/Formatter.php)
 
 ## formatNumber() method
 
@@ -42,7 +42,7 @@ string(8) "1,234.56"
 
 ## formatPrice() method
 
-This method receives two parameters, the first one `$number` as  `int`, `float` or `string`, and the second one `$currencyCode` as `string`. It returns a formatted price, as a `string`, taking the matching `PriceSpecification` identified by the `$currencyCode`.
+This method receives two parameters, the first one `$number` as `int`, `float` or `string`, and the second one `$currencyCode` as `string`. It returns a formatted price, as a `string`, taking the matching `PriceSpecification` identified by the `$currencyCode`.
 
 ### example of use
 

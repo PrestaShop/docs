@@ -211,7 +211,7 @@ final class ProductFormModifier
 }
 ```
 
-This module uses a Form Builder Modifier (`FormBuilderModifier`), and adds a `TextType` field to the `SEO` tab form,  after the existing `tags` form element. 
+This module uses a Form Builder Modifier (`FormBuilderModifier`), and adds a `TextType` field to the `SEO` tab form, after the existing `tags` form element.
 
 `FormBuilderModifier` is hooked to the `actionProductFormBuilderModifier`. 
 
@@ -242,7 +242,7 @@ This new way of adding custom fields to the product page allows you for more pre
 | `displayAdminProductsOptionsStepBottom` | Bottom of Options tab | `options` | after `product_suppliers` |
 | `displayAdminProductsPriceStepBottom` | Bottom of Pricing tab | `pricing` | after `priority_management` |
 
-Form Type details: [`EditProductFormType`](https://github.com/PrestaShop/PrestaShop/blob/8.1.0-beta.1/src/PrestaShopBundle/Form/Admin/Sell/Product/EditProductFormType.php)
+Form Type details: [`EditProductFormType`](https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Form/Admin/Sell/Product/EditProductFormType.php)
 
 ## Extend a subform
 
