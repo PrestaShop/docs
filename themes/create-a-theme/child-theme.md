@@ -14,20 +14,9 @@ A child theme inherits all templates, styles, and assets from a parent theme. Yo
 For deep markup changes, [start from Hummingbird]({{< relref "/9/themes/create-a-theme/from-hummingbird" >}}) directly instead.
 {{% /notice %}}
 
-## Scaffold the directory
+## Minimal structure
 
-A child theme requires only two files. This workflow assumes you have a local PrestaShop development instance running. Run the following from the `/themes/` directory of that installation:
-
-```bash
-cd /path/to/prestashop/themes
-
-mkdir -p my-child-theme/config
-
-touch my-child-theme/config/theme.yml \
-      my-child-theme/preview.png
-```
-
-This gives you the minimum structure PrestaShop requires:
+A child theme requires only two files. Create a `my-child-theme/` directory inside your PrestaShop `/themes/` directory with the following structure:
 
 ```
 my-child-theme/
@@ -35,10 +24,6 @@ my-child-theme/
 │   └── theme.yml
 └── preview.png
 ```
-
-{{% notice tip %}}
-Replace `preview.png` with a 500×746 PNG screenshot of your theme before activating. It is displayed in the Back Office theme selector.
-{{% /notice %}}
 
 ## Minimal theme.yml
 

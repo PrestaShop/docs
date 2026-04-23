@@ -16,5 +16,5 @@ Choose your starting point based on how much you need to change and how much you
 | **[Child theme]({{< relref "/9/themes/create-a-theme/child-theme" >}})** | Light customizations | Inherited templates and styles with selective overrides |
 
 {{% notice tip %}}
-Starting from Hummingbird is the recommended approach for most projects running PrestaShop 9.1 or later. On PrestaShop 9.0, start from scratch instead.
+Starting from Hummingbird is the recommended approach for most projects running PrestaShop 9.1 or later.
 {{% /notice %}}

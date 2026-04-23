@@ -58,10 +58,6 @@ During development, use `npm run watch` instead to recompile automatically on ev
 
 See [Activate the theme]({{< relref "/9/themes/getting-started/quick-start#activate-the-theme" >}}) in the quick start guide for activation instructions. Since the theme is already inside your PrestaShop `/themes/` directory, you can skip the zip upload step and activate directly from the Back Office.
 
-{{% notice tip %}}
-Replace `preview.png` with a 500×746 PNG screenshot of your theme before activating. The cloned Hummingbird image will otherwise appear in the Back Office theme selector.
-{{% /notice %}}
-
 ## Customization approach
 
 Before customizing, take time to assess what your design actually requires. Many changes can be achieved by overriding Bootstrap variables or restyling existing components — no new code needed. Custom components should only come when the existing system genuinely cannot cover your need. See [CSS conventions]({{< relref "/9/themes/hummingbird/css-conventions" >}}) for the full structure.

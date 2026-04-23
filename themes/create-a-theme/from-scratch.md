@@ -6,34 +6,11 @@ weight: 1
 
 # Creating a theme from scratch
 
-This page walks through creating a minimal, valid PrestaShop 9 theme from scratch, no base theme required.
+This page covers creating a minimal, valid PrestaShop 9 theme from scratch. It is the recommended starting point for PrestaShop 9.0, and a useful reference for understanding the required file structure on any 9.x version.
 
-## Scaffold the directory
+## Minimal structure
 
-This workflow assumes you have a local PrestaShop development instance running. Run the following from the `/themes/` directory of that installation. The commands use bash brace expansion, run them in bash, not sh.
-
-```bash
-cd /path/to/prestashop/themes
-
-mkdir -p minimal-theme/{config,assets/{css,js},templates/{_partials,catalog/listing,checkout,cms,customer,errors,layouts}}
-
-touch minimal-theme/config/theme.yml \
-      minimal-theme/assets/css/theme.css \
-      minimal-theme/assets/js/theme.js \
-      minimal-theme/preview.png \
-      minimal-theme/templates/_partials/form-fields.tpl \
-      minimal-theme/templates/catalog/product.tpl \
-      minimal-theme/templates/catalog/listing/product-list.tpl \
-      minimal-theme/templates/checkout/{cart,cart-empty,checkout,order-confirmation}.tpl \
-      minimal-theme/templates/cms/{category,page,sitemap,stores}.tpl \
-      minimal-theme/templates/contact.tpl \
-      minimal-theme/templates/customer/{address,addresses,authentication,guest-login,guest-tracking,history,identity,my-account,order-detail,order-follow,order-return,order-slip,registration}.tpl \
-      minimal-theme/templates/errors/{404,forbidden}.tpl \
-      minimal-theme/templates/layouts/layout-custom.tpl \
-      minimal-theme/templates/index.tpl
-```
-
-This gives you the minimum structure PrestaShop requires:
+Clone or download the [minimal-theme](https://github.com/PrestaShop/minimal-theme) repository into your PrestaShop `/themes/` directory. It provides the minimum file structure PrestaShop requires:
 
 ```
 minimal-theme/
