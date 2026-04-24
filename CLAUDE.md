@@ -64,6 +64,7 @@ Multiple aliases are supported as a list. Use the full path from root including 
 - Lead with the most important information (inverted pyramid).
 - One concept per page when possible.
 - Audience: theme developers and module developers. Not merchants.
+- No em dashes (`—`). Use `:` to introduce an explanation or list, `,` for a mid-sentence aside, and `.` to start a new sentence. Exception: table cells used as empty-value placeholders.
 
 ## No Duplicate Content
 
