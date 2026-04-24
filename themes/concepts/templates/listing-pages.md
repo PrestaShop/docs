@@ -79,7 +79,7 @@ function updateProductListDOM(data) {
 | `rendered_active_filters` | Active filter tags HTML (when a filter module is active) |
 
 {{% notice warning %}}
-If you change the container IDs (`#js-product-list`, `#js-product-list-top`, `#js-product-list-bottom`) in your templates, make sure your JavaScript targets the new IDs — otherwise AJAX updates will silently fail.
+If you change the container IDs (`#js-product-list`, `#js-product-list-top`, `#js-product-list-bottom`) in your templates, make sure your JavaScript targets the new IDs. Otherwise AJAX updates will silently fail.
 {{% /notice %}}
 
 See [JavaScript events]({{< relref "/9/themes/reference/javascript-events" >}}) for the full list of core events.

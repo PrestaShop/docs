@@ -16,10 +16,10 @@ jQuery is loaded by `core.js` for backward compatibility with existing modules. 
 Hummingbird decouples styling from behavior by introducing semantic `data-ps-*` attributes instead of CSS classes as JavaScript hooks:
 
 ```html
-<!-- Styling class as JS hook — fragile, breaks on CSS refactors -->
+<!-- Styling class as JS hook: fragile, breaks on CSS refactors -->
 <button class="js-add-to-cart btn">Add to cart</button>
 
-<!-- Semantic behavior attribute — decoupled from styling -->
+<!-- Semantic behavior attribute: decoupled from styling -->
 <button class="btn" data-ps-action="add-to-cart">Add to cart</button>
 ```
 
@@ -39,7 +39,7 @@ Hummingbird decouples styling from behavior by introducing semantic `data-ps-*` 
 By separating styling from behavior, CSS refactors don't break JavaScript, behavioral intent is readable directly in the markup, and modules know exactly which attributes to target.
 
 {{% notice info %}}
-This convention is starting to be introduced in different places across Hummingbird. The codebase currently uses both `data-ps-*` attributes and legacy `.js-` prefixed class selectors. New code should use `data-ps-*`; legacy selectors will be migrated over time. The convention itself is still open for discussion — feedback and real-world testing are welcome on the [JavaScript conventions discussion](https://github.com/PrestaShop/hummingbird/discussions/934) and in the [detailed specification (PDF)](https://github.com/user-attachments/files/25360286/JavaScript_Framework_for_Themes.pdf).
+This convention is starting to be introduced in different places across Hummingbird. The codebase currently uses both `data-ps-*` attributes and legacy `.js-` prefixed class selectors. New code should use `data-ps-*`; legacy selectors will be migrated over time. The convention itself is still open for discussion. Feedback and real-world testing are welcome on the [JavaScript conventions discussion](https://github.com/PrestaShop/hummingbird/discussions/934) and in the [detailed specification (PDF)](https://github.com/user-attachments/files/25360286/JavaScript_Framework_for_Themes.pdf).
 {{% /notice %}}
 
 ## Event system
@@ -76,7 +76,7 @@ prestashop.on(events.updatedProduct, () => {
 });
 ```
 
-Key constants available in `Theme.events` (subset — see the [JavaScript events reference]({{< relref "/9/themes/reference/javascript-events" >}}) for the full list):
+Key constants available in `Theme.events` (subset: see the [JavaScript events reference]({{< relref "/9/themes/reference/javascript-events" >}}) for the full list):
 
 | Constant | Event string | Description |
 |----------|-------------|-------------|

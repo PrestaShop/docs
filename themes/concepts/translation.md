@@ -48,7 +48,7 @@ PrestaShop uses dot-separated domains to organize translations:
 Use `Shop.Mytheme` for your own wordings. Core domains (`Shop.Theme.*`) are already translated in PrestaShop's language packs. Reuse them when possible to get translations for free:
 
 ```smarty
-{* Uses existing PrestaShop translations — no need to translate yourself *}
+{* Uses existing PrestaShop translations, no need to translate yourself *}
 {l s='Add to cart' d='Shop.Theme.Actions'}
 {l s='No products available yet' d='Shop.Theme.Catalog'}
 ```

@@ -32,4 +32,4 @@ Each type is an array of message strings. If the array is empty, no notification
 
 ## Pushing notifications from PHP
 
-On the PHP side, front controllers can add messages to four arrays: `$this->success`, `$this->errors`, `$this->warning`, and `$this->info`. To display them after a redirect, use `$this->redirectWithNotifications()` which stores the messages in the session and clears them once they have been displayed — they are shown once and gone.
+On the PHP side, front controllers can add messages to four arrays: `$this->success`, `$this->errors`, `$this->warning`, and `$this->info`. To display them after a redirect, use `$this->redirectWithNotifications()` which stores the messages in the session and clears them once they have been displayed, they are shown once and gone.

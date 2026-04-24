@@ -24,7 +24,7 @@ As the [official Smarty documentation](https://www.smarty.net/inheritance) puts 
 Many pages display a list of products: categories, new products, search results, best sellers. They all extend `catalog/listing/product-list.tpl`:
 
 ```smarty
-{* catalog/listing/product-list.tpl — shared base for all listing pages *}
+{* catalog/listing/product-list.tpl: shared base for all listing pages *}
 {extends file=$layout}
 
 {block name='content'}
@@ -61,7 +61,7 @@ Many pages display a list of products: categories, new products, search results,
 The base template handles the title, filters, product grid, pagination, and an empty state. For the category page, only the header and footer blocks are overridden to add category-specific content:
 
 ```smarty
-{* catalog/listing/category.tpl — only overrides what differs *}
+{* catalog/listing/category.tpl: only overrides what differs *}
 {extends file='catalog/listing/product-list.tpl'}
 
 {block name='product_list_header'}
@@ -73,7 +73,7 @@ The base template handles the title, filters, product grid, pagination, and an e
 {/block}
 ```
 
-Everything else — the product grid, pagination, filters, empty state — is inherited from the base template.
+Everything else, the product grid, pagination, filters, empty state, is inherited from the base template.
 
 ## Block strategies
 
@@ -96,7 +96,7 @@ Smarty provides three ways to override a block in a child template:
 
 For more control than prepend/append, Smarty provides two special variables:
 
-`{$smarty.block.parent}` — used in a **child** template to insert the parent's block content at a specific position:
+`{$smarty.block.parent}`: used in a **child** template to insert the parent's block content at a specific position:
 
 ```smarty
 {block name='product_list_header'}
@@ -106,7 +106,7 @@ For more control than prepend/append, Smarty provides two special variables:
 {/block}
 ```
 
-`{$smarty.block.child}` — used in a **parent** template to reference what the child will inject, useful for wrapping child content:
+`{$smarty.block.child}`: used in a **parent** template to reference what the child will inject, useful for wrapping child content:
 
 ```smarty
 {block name='page_title'}

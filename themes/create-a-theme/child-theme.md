@@ -89,7 +89,7 @@ PrestaShop will use your file instead of the parent's. There are two ways to wri
 
 ### Replace a template completely
 
-You take full ownership of the template — but you don't have to start from zero. You can still extend a lower-level base template to keep shared logic and only redefine what you need to change. Here `category.tpl` extends `product-list.tpl` to reuse the shared listing logic while overriding only the header and footer blocks:
+You take full ownership of the template, but you don't have to start from zero. You can still extend a lower-level base template to keep shared logic and only redefine what you need to change. Here `category.tpl` extends `product-list.tpl` to reuse the shared listing logic while overriding only the header and footer blocks:
 
 ```smarty
 {extends file='catalog/listing/product-list.tpl'}

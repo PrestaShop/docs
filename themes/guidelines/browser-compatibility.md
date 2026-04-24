@@ -30,13 +30,13 @@ You can check any feature's Baseline status on [MDN](https://developer.mozilla.o
 For features that are Newly Available or where you want to gracefully degrade, use `@supports`:
 
 ```css
-/* Base layout — works everywhere */
+/* Base layout: works everywhere */
 .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
-/* Container queries — Newly Available, @supports guards older browsers */
+/* Container queries: Newly Available, @supports guards older browsers */
 @supports (container-type: inline-size) {
   .product-list {
     container-type: inline-size;

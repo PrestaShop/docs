@@ -17,11 +17,11 @@ All template files live in the theme's `templates/` folder:
 
 | Directory | Content |
 |-----------|---------|
-| `_partials/` | Shared fragments — header, footer, breadcrumb, notifications |
+| `_partials/` | Shared fragments: header, footer, breadcrumb, notifications |
 | `catalog/` | Product pages, listing pages, search results |
 | `checkout/` | Cart, checkout flow, order confirmation |
 | `cms/` | Static pages, sitemap, stores |
-| `components/` | Reusable UI components — introduced by [Hummingbird]({{< relref "/9/themes/hummingbird" >}}) |
+| `components/` | Reusable UI components, introduced by [Hummingbird]({{< relref "/9/themes/hummingbird" >}}) |
 | `customer/` | Account pages, order history, addresses |
 | `errors/` | 404, forbidden, server error pages |
 | `layouts/` | Page layouts (full-width, columns, etc.) |
@@ -33,9 +33,9 @@ All template files live in the theme's `templates/` folder:
 
 To illustrate, here is how the product page is built:
 
-1. `layout-both-columns.tpl` — the root layout, renders the HTML shell with header, footer, and sidebars
-2. `layout-full-width.tpl` — extends it and removes the sidebars
-3. `catalog/product.tpl` — the page template, extends the layout and fills in the product content
+1. `layout-both-columns.tpl`: the root layout, renders the HTML shell with header, footer, and sidebars
+2. `layout-full-width.tpl`: extends it and removes the sidebars
+3. `catalog/product.tpl`: the page template, extends the layout and fills in the product content
 
 Some pages add an extra step: `page.tpl` is a generic page wrapper (title, content area, footer) that also extends `$layout`. Simple pages like CMS or contact extend `page.tpl` instead of the layout directly, inheriting its common structure.
 
@@ -107,7 +107,7 @@ Here is a simplified version of a full-width layout, showing the main blocks tha
 
 ## Template resolution order
 
-PrestaShop resolves templates dynamically based on the **locale** and **entity ID**. This lets you create per-product, per-category, or per-locale templates without modifying the defaults — useful for stores with multiple languages or pages that need a unique layout.
+PrestaShop resolves templates dynamically based on the **locale** and **entity ID**. This lets you create per-product, per-category, or per-locale templates without modifying the defaults, useful for stores with multiple languages or pages that need a unique layout.
 
 PrestaShop checks multiple locations and uses the **first match found**, from most specific to least specific.
 
@@ -115,10 +115,10 @@ PrestaShop checks multiple locations and uses the **first match found**, from mo
 
 For a product with ID 3 and locale `en-US`, PrestaShop looks for:
 
-1. `en-US/catalog/product-3.tpl` — locale + entity ID
-2. `catalog/product-3.tpl` — entity ID only
-3. `en-US/catalog/product.tpl` — locale only
-4. `catalog/product.tpl` — default
+1. `en-US/catalog/product-3.tpl`: locale + entity ID
+2. `catalog/product-3.tpl`: entity ID only
+3. `en-US/catalog/product.tpl`: locale only
+4. `catalog/product.tpl`: default
 
 <div class="mermaid">
 graph TD;
@@ -137,7 +137,7 @@ Listing pages have an additional fallback: if no category-specific template is f
 3. `en-US/catalog/listing/category.tpl`
 4. `catalog/listing/category.tpl`
 5. `en-US/catalog/listing/product-list.tpl`
-6. `catalog/listing/product-list.tpl` — final fallback
+6. `catalog/listing/product-list.tpl`: final fallback
 
 <div class="mermaid">
 graph TD;

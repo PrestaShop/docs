@@ -92,7 +92,7 @@ meta:
 global_settings:
   # Image types are registered when the theme is activated and replace any existing ones in the shop.
   # Each entry defines an image preset: its pixel dimensions and which entity types (scope) it applies to.
-  # Declare every preset your templates reference — missing types will cause broken images.
+  # Declare every preset your templates reference. Missing types will cause broken images.
   image_types:
     cart_default:
       width: 125

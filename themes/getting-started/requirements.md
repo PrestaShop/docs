@@ -7,7 +7,7 @@ aliases:
 
 # Requirements
 
-The tools listed below are **recommended** for theme development. A PrestaShop theme is ultimately a set of template, CSS, and JavaScript files — you can create one with just a text editor. However, working with Hummingbird's source code and modern tooling requires the following.
+The tools listed below are **recommended** for theme development. A PrestaShop theme is ultimately a set of template, CSS, and JavaScript files. You can create one with just a text editor. However, working with Hummingbird's source code and modern tooling requires the following.
 
 ## Tools
 

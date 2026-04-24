@@ -62,4 +62,4 @@ For more development mode settings, see [Configure for development]({{< relref "
 If `npm run watch` is running but compiled files are not updating:
 
 - Verify the watch process has no errors in its terminal output
-- Check that you are editing files inside `src/` — files in `assets/` are the compiled output and should not be edited directly
+- Check that you are editing files inside `src/`. Files in `assets/` are the compiled output and should not be edited directly

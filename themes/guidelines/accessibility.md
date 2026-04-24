@@ -77,7 +77,7 @@ No single tool catches everything. Use a combination:
 
 | Tool | Type | What it catches |
 |------|------|-----------------|
-| [Lighthouse](https://developer.chrome.com/docs/lighthouse/) | Automated | ~30% of WCAG issues — good first pass |
+| [Lighthouse](https://developer.chrome.com/docs/lighthouse/) | Automated | ~30% of WCAG issues: good first pass |
 | [axe DevTools](https://www.deque.com/axe/devtools/) | Automated | More comprehensive than Lighthouse |
 | [Accessibility Insights](https://accessibilityinsights.io/) | Semi-automated | Guided manual checks for full WCAG coverage |
 | Keyboard navigation | Manual | Tab order, focus trapping, custom widget behavior |
@@ -85,6 +85,6 @@ No single tool catches everything. Use a combination:
 
 ## Further reading
 
-- [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/) — W3C Web Content Accessibility Guidelines
-- [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/) — W3C patterns and examples for accessible widgets
-- [European Accessibility Act — official page](https://ec.europa.eu/social/main.jsp?catId=1202)
+- [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/): W3C Web Content Accessibility Guidelines
+- [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/): W3C patterns and examples for accessible widgets
+- [European Accessibility Act: official page](https://ec.europa.eu/social/main.jsp?catId=1202)

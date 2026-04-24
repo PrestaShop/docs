@@ -9,7 +9,7 @@ These standards apply to new themes and contributions targeting PrestaShop 9. Th
 
 ## HTML / Smarty
 
-Use correct, semantic HTML5 — the right element for the right purpose:
+Use correct, semantic HTML5, the right element for the right purpose:
 
 - Landmark elements for page structure: `<nav>`, `<main>`, `<header>`, `<footer>`, `<section>`, `<article>`, `<aside>`
 - `<button>` for actions, `<a>` for navigation
@@ -30,30 +30,30 @@ Use correct, semantic HTML5 — the right element for the right purpose:
 
 ### BEM naming convention
 
-All custom CSS classes follow the [BEM](https://getbem.com/naming/) convention — Block, Element, Modifier:
+All custom CSS classes follow the [BEM](https://getbem.com/naming/) convention, Block, Element, Modifier:
 
 ```css
-/* Block — standalone component */
+/* Block: standalone component */
 .product-card { }
 
-/* Element — part of the block (double underscore) */
+/* Element: part of the block (double underscore) */
 .product-card__title { }
 .product-card__image { }
 
-/* Modifier — variant of a block or element (double hyphen) */
+/* Modifier: variant of a block or element (double hyphen) */
 .product-card--featured { }
 .product-card__title--small { }
 ```
 
 Rules:
 - Block names: lowercase with hyphens
-- Select by class only — no tag selectors, no IDs
+- Select by class only: no tag selectors, no IDs
 - Never nest BEM selectors (`.product-card .product-card__title` is wrong)
 
 ### SCSS
 
 - Write styles in SCSS, compiled to CSS via the build pipeline
-- Organize files modularly by component — one partial per component
+- Organize files modularly by component: one partial per component
 - Use SCSS variables and mixins for shared values; prefer Bootstrap variables before introducing new ones
 - Place new files in the appropriate `src/scss/` subdirectory
 

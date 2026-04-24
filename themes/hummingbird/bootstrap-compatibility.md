@@ -13,7 +13,7 @@ Hummingbird uses [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-start
 
 ## The Bootstrap Compatibility Layer
 
-The [Bootstrap Compatibility Layer](https://www.npmjs.com/package/bootstrap-compatibility-layer) is a standalone library — it is **not part of Hummingbird**. It is a lightweight runtime shim that covers the three main breaking changes between BS4 and BS5: `data-bs-*` attribute namespacing, renamed utility classes (`.ml-*` → `.ms-*`, `.sr-only` → `.visually-hidden`, etc.), and jQuery plugin bridging (`.modal()`, `.tooltip()`, …). Module developers who need it must include it in their own modules.
+The [Bootstrap Compatibility Layer](https://www.npmjs.com/package/bootstrap-compatibility-layer) is a standalone library, it is **not part of Hummingbird**. It is a lightweight runtime shim that covers the three main breaking changes between BS4 and BS5: `data-bs-*` attribute namespacing, renamed utility classes (`.ml-*` → `.ms-*`, `.sr-only` → `.visually-hidden`, etc.), and jQuery plugin bridging (`.modal()`, `.tooltip()`, …). Module developers who need it must include it in their own modules.
 
 {{% notice warning %}}
 The compatibility layer is a **temporary patch**, not a long-term solution. Migrating your module's markup to Bootstrap 5.3 is always the better approach. It removes a runtime dependency, reduces page weight, and avoids subtle rendering differences. Use the layer only as a stopgap while you plan a proper migration.
@@ -41,4 +41,4 @@ public function hookActionFrontControllerSetMedia()
 }
 ```
 
-`addCss()` and `addJs()` deduplicate by URL — if multiple modules include the same asset it loads only once.
+`addCss()` and `addJs()` deduplicate by URL, if multiple modules include the same asset it loads only once.

@@ -8,7 +8,7 @@ showOnHomepage: true
 
 # Theme concepts
 
-This section explains how the PrestaShop theme system works. These concepts apply to **any** PrestaShop theme — they are not specific to Hummingbird or any other theme implementation.
+This section explains how the PrestaShop theme system works. These concepts apply to **any** PrestaShop theme. They are not specific to Hummingbird or any other theme implementation.
 
 | Page | Description |
 |------|-------------|

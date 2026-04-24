@@ -21,7 +21,7 @@ On the order-confirmation page, `{$cart}` is an empty unsaved cart. The cart coo
 |----------|-------------|
 | `{$cart.products}` | Products in the cart with quantities, attributes, and prices |
 | `{$cart.products_count}` | Total number of product items |
-| `{$cart.totals}` | Total amounts — includes `total` and `total_excluding_tax` keys, each a formatted amount array |
+| `{$cart.totals}` | Total amounts: includes `total` and `total_excluding_tax` keys, each a formatted amount array |
 | `{$cart.subtotals}` | Breakdown by line: products, discounts, shipping, wrapping, taxes |
 | `{$cart.vouchers}` | Applied cart rules and reductions |
 | `{$cart.discounts}` | Additional cart discounts |
@@ -179,7 +179,7 @@ All values are absolute URLs.
 | `{$urls.pic_url}` | Customer-uploaded files (`/upload/`) |
 | `{$urls.no_picture_image}` | Placeholder image, `array` with `bySize` (named sizes), `small`, `medium`, and `large` keys, each with `url`, `width`, and `height` |
 | `{$urls.actions.logout}` | Logout action URL |
-| `{$urls.alternative_langs}` | Equivalent page URLs keyed by language code (e.g., `fr-fr`) — empty array on single-language shops |
+| `{$urls.alternative_langs}` | Equivalent page URLs keyed by language code (e.g., `fr-fr`). Empty array on single-language shops |
 
 ### Page URLs
 

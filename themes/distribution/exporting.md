@@ -50,7 +50,7 @@ The export includes **everything** in the theme directory. Clean up before expor
 | AI context files (`.claude/`, `.cursor/`, `CLAUDE.md`) | Development tooling, not relevant for distribution |
 
 {{% notice tip %}}
-Add a `.gitignore` and keep your working directory clean. The export command packages the directory as-is — there is no built-in exclude mechanism.
+Add a `.gitignore` and keep your working directory clean. The export command packages the directory as-is, there is no built-in exclude mechanism.
 {{% /notice %}}
 
 ## Preparing for distribution

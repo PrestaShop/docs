@@ -48,7 +48,7 @@ meta:
 See [Requirements]({{< relref "/9/themes/getting-started/requirements" >}}) for the required Node and npm versions.
 
 ```bash
-npm ci           # Installs exact versions from the lockfile — use this instead of npm install for reproducible builds
+npm ci           # Installs exact versions from the lockfile. Use this instead of npm install for reproducible builds
 npm run build
 ```
 
@@ -60,9 +60,9 @@ See [Activate the theme]({{< relref "/9/themes/getting-started/quick-start#activ
 
 ## Customization approach
 
-Before customizing, take time to assess what your design actually requires. Many changes can be achieved by overriding Bootstrap variables or restyling existing components — no new code needed. Custom components should only come when the existing system genuinely cannot cover your need. See [CSS conventions]({{< relref "/9/themes/hummingbird/css-conventions" >}}) for the full structure.
+Before customizing, take time to assess what your design actually requires. Many changes can be achieved by overriding Bootstrap variables or restyling existing components, no new code needed. Custom components should only come when the existing system genuinely cannot cover your need. See [CSS conventions]({{< relref "/9/themes/hummingbird/css-conventions" >}}) for the full structure.
 
-- **Templates:** Override Smarty templates using [template inheritance]({{< relref "/9/themes/concepts/templates/template-inheritance" >}}) — extend and redefine blocks rather than copying entire files.
+- **Templates:** Override Smarty templates using [template inheritance]({{< relref "/9/themes/concepts/templates/template-inheritance" >}}): extend and redefine blocks rather than copying entire files.
 - **JavaScript:** Use `data-ps-*` attributes for behavior hooks. Listen to [PrestaShop events]({{< relref "/9/themes/reference/javascript-events" >}}) for dynamic updates. See [JavaScript conventions]({{< relref "/9/themes/hummingbird/javascript-conventions" >}}).
 - **Module overrides:** Place template and asset overrides in `modules/`. See [Overrides]({{< relref "/9/themes/concepts/overrides" >}}).
 

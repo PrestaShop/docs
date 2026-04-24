@@ -31,11 +31,11 @@ PrestaShop automatically loads these files on every front-office page:
 
 PrestaShop's `FrontController` provides `registerStylesheet()` and `registerJavascript()`. Both take three arguments:
 
-1. **ID** — Unique identifier. Registering an asset with an existing ID **replaces** the previous one (same array key). Prefix with your theme/module name to avoid collisions.
-2. **Relative path** — From the theme or PrestaShop root:
+1. **ID**: Unique identifier. Registering an asset with an existing ID **replaces** the previous one (same array key). Prefix with your theme/module name to avoid collisions.
+2. **Relative path**: From the theme or PrestaShop root:
    - `assets/css/product.css` for theme assets
    - `modules/modulename/css/example.css` for module assets
-3. **Options** — Configuration array (see tables below).
+3. **Options**: Configuration array (see tables below).
 
 ### Stylesheet options
 
@@ -156,7 +156,7 @@ themes/mytheme/modules/modulename/views/js/file.js      # Empty file
 ```
 
 {{% notice note %}}
-This only works for assets registered with a local relative path. Remote assets or inline scripts cannot be overridden this way — use `unregisterJavascript()` / `unregisterStylesheet()` instead.
+This only works for assets registered with a local relative path. Remote assets or inline scripts cannot be overridden this way. Use `unregisterJavascript()` / `unregisterStylesheet()` instead.
 {{% /notice %}}
 
 ### In modules

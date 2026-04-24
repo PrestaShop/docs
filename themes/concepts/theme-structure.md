@@ -176,7 +176,7 @@ modules_to_hook:
 Themes must declare their image types.
 
 {{% notice warning %}}
-Activating a theme **removes all existing image types** and replaces them with the theme's declaration. This is a destructive operation — make sure your image types are complete before activation.
+Activating a theme **removes all existing image types** and replaces them with the theme's declaration. This is a destructive operation. Make sure your image types are complete before activation.
 {{% /notice %}}
 
 ```yaml
@@ -236,7 +236,7 @@ theme_settings:
 ```
 
 {{% notice warning %}}
-Disabling `core.js` removes the `prestashop` event system and jQuery. Most modules depend on these — only disable if you provide a full replacement.
+Disabling `core.js` removes the `prestashop` event system and jQuery. Most modules depend on these. Only disable if you provide a full replacement.
 {{% /notice %}}
 
 ### Dependencies

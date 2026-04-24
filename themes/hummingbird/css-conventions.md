@@ -12,7 +12,7 @@ Hummingbird's CSS is built on Bootstrap 5.3, organized in modular SCSS with CSS 
 Hummingbird is built on [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/). Use Bootstrap utilities and components when they fit; extend with custom BEM-named components when they don't. Illustrative example:
 
 ```html
-<!-- Bootstrap utilities: layout, spacing — no custom class needed -->
+<!-- Bootstrap utilities: layout, spacing, no custom class needed -->
 <div class="d-flex justify-content-between p-3">...</div>
 
 <!-- Custom BEM: theme-specific structure that Bootstrap doesn't cover -->
@@ -100,7 +100,7 @@ For more context on the architecture decisions, see [Hummingbird v2: Architectur
 
 ## Adding custom styles
 
-Prefer configuration over overrides — adjust existing variables and use utility classes before writing custom CSS. When custom styles are needed, place them in the appropriate location:
+Prefer configuration over overrides, adjust existing variables and use utility classes before writing custom CSS. When custom styles are needed, place them in the appropriate location:
 
 | What | Where |
 |------|-------|

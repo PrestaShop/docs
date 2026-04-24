@@ -84,7 +84,7 @@ Additionally, disable caching and file merging so your changes appear immediatel
 - **CCC (Combine, Compress, Cache):** disable all options to prevent PrestaShop from merging and minifying your CSS and JavaScript files.
 
 {{% notice tip %}}
-In Developer Mode, HTML comments show the source path of each rendered template — useful to confirm which file is actually being loaded. For example:
+In Developer Mode, HTML comments show the source path of each rendered template, useful to confirm which file is actually being loaded. For example:
 {{% /notice %}}
 
 ```html

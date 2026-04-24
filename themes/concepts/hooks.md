@@ -7,8 +7,8 @@ weight: 4
 
 Hooks are extension points that allow modules to inject content or execute logic at specific locations in the front office. There are two types:
 
-- **Display hooks** — render HTML content in templates (e.g., `displayFooter`, `displayProductActions`)
-- **Action hooks** — trigger PHP logic without producing output (e.g., `actionFrontControllerSetMedia`, `actionProductOutOfStock`)
+- **Display hooks**: render HTML content in templates (e.g., `displayFooter`, `displayProductActions`)
+- **Action hooks**: trigger PHP logic without producing output (e.g., `actionFrontControllerSetMedia`, `actionProductOutOfStock`)
 
 As a theme developer, you mainly work with display hooks. For the full hook system, see [Hooks]({{< relref "/9/development/components/hook" >}}).
 
@@ -26,7 +26,7 @@ The `{hook}` Smarty function calls a hook and outputs the concatenated HTML retu
 |-----------|-------------|
 | `h` | Hook name (required) |
 | `mod` | Restrict output to a single module by name |
-| `excl` | Exclude specific modules (comma-separated). Not recommended — prefer `modules_to_unhook` in `theme.yml` |
+| `excl` | Exclude specific modules (comma-separated). Not recommended: prefer `modules_to_unhook` in `theme.yml` |
 
 Any additional parameters are passed through to the modules:
 
