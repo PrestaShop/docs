@@ -76,4 +76,4 @@ Each concept must live in exactly one place. If two pages need to cover the same
 
 ## Themes Section
 
-When working inside `themes/`, additional context applies. See `themes/CLAUDE.md` for the themes section map, technology stack rules (Bootstrap 5.3, BEM, Smarty 4, no jQuery, `data-ps-*` attributes), and what not to document.
+When working inside `themes/`, additional context applies. See `themes/CONTEXT.md` for the themes section map, technology stack rules (Bootstrap 5.3, BEM, Smarty 4, no jQuery, `data-ps-*` attributes), and what not to document.
