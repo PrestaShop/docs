@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'New orders'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/PaymentModule.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/PaymentModule.php'
         file: classes/PaymentModule.php
 locations:
     - 'front office'
