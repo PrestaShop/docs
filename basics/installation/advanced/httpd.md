@@ -32,6 +32,7 @@ It may be incomplete, and remember you must adapt it for your own server's needs
         AllowOverride All
         Options -Indexes
         Require all granted
+        DirectoryIndex index.php index.html 
         
         # Disable back office token
         # SetEnv _TOKEN_ disabled
@@ -104,6 +105,7 @@ Don't forget to edit this configuration to make it works.
         AllowOverride All
         Options +Indexes
         Require all granted
+        DirectoryIndex index.php index.html 
         
         # Disable back office token
         # SetEnv _TOKEN_ disabled
