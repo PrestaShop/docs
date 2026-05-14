@@ -258,11 +258,11 @@ Subforms can be extended as well, for example, to add a new input on each combin
  */
 public function hookActionCombinationFormFormBuilderModifier(array $params): void
 {
-    /** @var CombinationFormModifier $productFormModifier */
-    $productFormModifier = $this->get(CombinationFormModifier::class);
+    /** @var CombinationFormModifier $combinationFormModifier */
+    $combinationFormModifier = $this->get(CombinationFormModifier::class);
     $combinationId = isset($params['id']) ? new CombinationId((int) $params['id']) : null;
 
-    $productFormModifier->modify($combinationId, $params['form_builder']);
+    $combinationFormModifier->modify($combinationId, $params['form_builder']);
 }
 ```
 
