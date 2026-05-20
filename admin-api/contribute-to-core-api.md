@@ -106,7 +106,9 @@ For entities with multilang values:
 
 All API resource class fields must follow these strict rules:
 - **All fields must be strictly typed** (e.g., `public string $name;`, not `public $name;`)
-- **Only scalar types and arrays are allowed** - NO Value Objects (VOs) in API Resources (enforced by CI/Rector)
+- **Only scalar types and arrays are allowed** - NO Value Objects (VOs) in API Resources (enforced by CI via the `ApiResourcePropertyTypeRule` PHPStan rule). Two exceptions are allowed: `PrestaShop\Decimal\DecimalNumber` and `DateTimeImmutable` (see below).
+- **Decimal and monetary values must use `DecimalNumber`** instead of `float` (e.g. `public DecimalNumber $price;`, not `public float $price;`). Floats are CI-blocked because they lose precision on serialization.
+- **Date / datetime values can be exposed as `DateTimeImmutable`** properties (e.g. `public DateTimeImmutable $dateAdd;`). This is the second exception to the "scalars and arrays only" rule.
 - **Localized properties do NOT start with "localized"** (e.g., `public array $names;`, not `public array $localizedNames;`)
   - Use the `#[LocalizedValue]` attribute for automatic locale conversion
 - **Boolean fields should NOT start with "is"** (e.g., `public bool $ready;`, not `public bool $isReady;`)
@@ -174,11 +176,14 @@ The following practices are **forbidden** and will be automatically blocked by C
 {{% notice info %}}
 **Value Objects (VOs) are forbidden in API Resources.**
 
-- Only **scalar types** (`string`, `int`, `float`, `bool`) and **arrays** are allowed in API Resource properties
+- Only **scalar types** (`string`, `int`, `bool`) and **arrays** are allowed in API Resource properties
 - This ensures proper serialization and OpenAPI documentation generation
 - Complex structures should be represented as arrays with proper documentation
+- **Two allowed exceptions**:
+  - `PrestaShop\Decimal\DecimalNumber` — used for decimal/monetary values. **`float` is forbidden** because it loses precision on serialization; use `DecimalNumber` instead.
+  - `DateTimeImmutable` — used for date / datetime values exposed by the API.
 
-**CI Check**: A Rector rule enforces this and will block PRs with VOs in API Resources.
+**CI Check**: The `ApiResourcePropertyTypeRule` PHPStan rule enforces this and will block PRs with disallowed types in API Resources (including PRs that use `float` instead of `DecimalNumber`).
 
 **Need Help?** If you have a complex data structure that's difficult to represent with scalars and arrays, please reach out to the team. We can discuss alternative approaches or potential core enhancements.
 {{% /notice %}}
@@ -190,6 +195,19 @@ The new admin API is based on APIPlatform, we use some API Resources which are c
 - a READ operation on a single entity is linked to a CQRS query
 - a WRITE operation on a single entity (or multiple) is linked to a CQRS command
 - a LIST operation is linked to a [Grid data factory]({{< relref "/9/development/components/grid/#grid-data">}}) service
+
+{{% notice info %}}
+**Where to find CQRS classes in the PrestaShop core**
+
+The CQRS classes you'll be wrapping live under `src/Core/Domain/{Entity}/` in the PrestaShop core repository, following a standard layout:
+
+- `Command/Add{Entity}Command.php`, `Edit{Entity}Command.php`, `Delete{Entity}Command.php`, `BulkDelete{Entity}Command.php`
+- `Query/Get{Entity}ForEditing.php` — single-entity fetch (may not exist for entities that only have listings)
+- `QueryResult/{Entity}ForEditing.php` — **read this class to discover the exact field names returned by the query**. Its constructor arguments and getters are the ground truth for `CQRSQueryMapping`
+- `Exception/{Entity}NotFoundException.php` and `Exception/{Entity}ConstraintException.php`
+
+If a CQRS class doesn't exist for the operation you want to expose (e.g. no `Add` command), only declare the operations whose backing class exists — don't try to implement the CQRS side from the module.
+{{% /notice %}}
 
 ### 1. Create and fetch a single resource
 
@@ -233,6 +251,7 @@ class AttributeGroup
 We will now add two endpoints (for `POST` and `GET` methods) that will allow:
 - creating the AttributeGroup, we will use the `AddAttributeGroupCommand` mapped with a `CQRSCreate` operation, it requires a scope `attribute_group_write` to be used
   - by default the command will only return the created ID if you want to return the full object you need to define the `CQRSQuery` option on the operation, this way the full object is read and returned in the response
+  - if the `Add*Command` handler returns an `EntityId` value object (instead of a raw integer), the created ID isn't directly usable in the API response — you **must** declare a `CQRSQuery` so the full object is re-fetched and returned. This is a common quirk on Core commands written before the API existed.
 - fetching the AttributeGroup, we will use the `GetAttributeGroupForEditing` mapped with a `CQRSGet` operation, it requires a scope `attribute_group_read` to be used
 
 {{% notice note %}}
@@ -301,6 +320,17 @@ So we have to explain to our core architecture how to map these data if we want 
 **ADR Requirement**: Use the internal mapping attributes (`CQRSQueryMapping`, `CQRSCommandMapping`, `ApiResourceMapping`) instead of the `SerializedName` attribute, as it is not applied everywhere appropriately for the documentation.
 {{% /notice %}}
 
+{{% notice tip %}}
+**Finding the correct source field names**
+
+The single biggest source of mapping bugs is inverting the direction of a mapping entry. To avoid this:
+
+- For `CQRSQueryMapping`: open the **QueryResult class** returned by the query (e.g. `EditableAttributeGroup` for `GetAttributeGroupForEditing`). Its constructor arguments and getters reveal the exact field names returned. Those names are the **left-hand keys** of the mapping; the API field names are the values.
+- For `CQRSCommandMapping`: open the **command constructor** to find the parameter names it expects. Those names are the **right-hand values**; the API field names are the keys.
+
+Read the classes — never guess the field names from the entity model or the database column names.
+{{% /notice %}}
+
 ```php
 #[ApiResource(
     operations: [
@@ -352,6 +382,10 @@ class AttributeGroup
     ];
 }
 ```
+
+{{% notice note %}}
+**One `COMMAND_MAPPING` or two?** When `AddXCommand` and `EditXCommand` have the same constructor parameter names (a common case), a single `COMMAND_MAPPING` constant can be reused on both `CQRSCreate` and `CQRSPartialUpdate` operations — that's what the example above does. When the commands have diverging signatures, declare two separate constants (`CREATE_COMMAND_MAPPING` and `UPDATE_COMMAND_MAPPING`) and reference each from the corresponding operation.
+{{% /notice %}}
 
 #### Handle localized values
 
@@ -428,6 +462,56 @@ You now have two endpoints that allow you to create and fetch an AttributeGroup,
   ]
 }
 ```
+
+#### Handle multi-shop association
+
+{{% notice warning %}}
+Multistore support in the Admin API is gated behind the experimental `admin_api_multistore` feature flag (Advanced Parameters → New & Experimental Features). The conventions below still apply when writing endpoints, but they only take effect at runtime once the flag is enabled.
+{{% /notice %}}
+
+If your entity can be associated with one or more shops (most administrable entities can), expose that association on the API resource so callers can read and modify it.
+
+The convention is a `$shopIds` array property on the DTO. The CQRS layer in the Core usually exposes the association under a different field name (often `associatedShopIds`, `associatedShops`, or `shopAssociation`), so you'll need a mapping entry in each direction:
+
+```php
+class AttributeGroup
+{
+    ...
+    public array $shopIds;
+
+    public const QUERY_MAPPING = [
+        ...
+        '[associatedShopIds]' => '[shopIds]',   // read: Core query result → API field
+    ];
+
+    public const COMMAND_MAPPING = [
+        ...
+        '[shopIds]' => '[associatedShopIds]',   // write: API field → Core command parameter
+    ];
+}
+```
+
+{{% notice note %}}
+If the entity has no concept of shop association at all, the `shopIds` property must be omitted from the DTO entirely — don't expose an empty array.
+{{% /notice %}}
+
+##### Passing the current shop context to a CQRS command or query
+
+Some CQRS commands and queries need to know which shop(s) the current request targets — for example to filter list results or to scope an update. The shop context the caller passed (`shopId`, `shopGroupId`, `shopIds`, or `allShops` — see the [Multi-shop page]({{< relref "/9/admin-api/multi-shop" >}}) for the consumer side) is exposed inside mappings via the special `[_context]` prefix:
+
+```php
+// In a CQRSCommandMapping or CQRSQueryMapping
+'[_context][shopId]'         => '[shopId]',         // single shop ID (int)
+'[_context][shopIds]'        => '[shopIds]',        // multiple shop IDs (array)
+'[_context][shopConstraint]' => '[shopConstraint]', // full ShopConstraint value object
+```
+
+Pick the entry that matches the signature of the CQRS class:
+
+- Use `[_context][shopConstraint]` when the command or query accepts a `ShopConstraint` directly (common for `Product`-related commands and queries).
+- Use `[_context][shopId]` or `[_context][shopIds]` when the command expects raw integer IDs.
+
+For complete working examples, see `Product.php`, `Combination.php`, `CombinationList.php`, and `CustomerGroup.php` in [ps_apiresources](https://github.com/PrestaShop/ps_apiresources).
 
 ### 2. Update and delete a single resource
 
@@ -530,6 +614,11 @@ class BulkAttributeGroups
 }
 ```
 
+The two attributes on the `$attributeGroupIds` property are both required and serve different roles:
+
+- `#[ApiProperty(openapiContext: ['type' => 'array', 'items' => ['type' => 'integer']])]` documents the array shape in the generated OpenAPI schema — without it, the Swagger UI shows an untyped array.
+- `#[Assert\NotBlank]` rejects empty payloads at validation time so the bulk handler never runs against an empty ID list.
+
 ### 4. Errors and validation
 
 #### Exception returned
@@ -539,6 +628,12 @@ The CQRS layer include some internal check and validation that ensures the consi
 To adapt such cases API Platform allows defining a mapping between an exception and an HTTP code, CQRS handlers usually follow a naming convention so you should be able to find the proper exception easily, for example:
 - `{Domain}NotFoundException` is triggered when we try to access or modify an entity that doesn't exist in the database, it should match a 404 Not Found code
 - `{Domain}ConstraintException` is triggered when the data used for creation or udpate is not valid with the domain rules and constraints, it should match with a 422 Unprocessable Entity code
+
+{{% notice warning %}}
+**Never map a constraint violation to `HTTP_BAD_REQUEST` (400).** Constraint violations must always use `HTTP_UNPROCESSABLE_ENTITY` (422). The 400 status is reserved for malformed requests at the protocol level (invalid JSON, missing required URI parameters, etc.) — API Platform returns it automatically when relevant, you don't need to map domain exceptions to it.
+{{% /notice %}}
+
+For sub-resource endpoints that reference a parent entity in the URI (e.g. `/products/{productId}/combinations`), remember to map **both** the parent and child `NotFoundException` to 404. Otherwise, calling the endpoint with a non-existent parent ID will return a 500 server error instead of a clean 404.
 
 The mapping can be defined on the API resource with the `exceptionToStatus`:
 
@@ -651,6 +746,12 @@ class AttributeGroup
 When you need to know which constraint apply on your entity you can search for its associated form type which usually already contain some for form inline errors, and you can adapt them on your API resource. In our `AttributeGroup` example this [form type](https://github.com/PrestaShop/PrestaShop/blob/2b035743b75e04a8ca1ea7a9c7212a93f5ed6892/src/PrestaShopBundle/Form/Admin/Sell/Catalog/AttributeGroupType.php) was used for reference.
 {{% /notice %}}
 
+{{% notice warning %}}
+**`#[DefaultLanguage]` requires an explicit `fieldName` argument when used on an API Resource.** The constraint's auto-detection fallback only works in Symfony Form contexts — on `ApiResource` attributes it has no way to figure out which field it's attached to, so without `fieldName` the validation error message points at an empty property path.
+
+Always set `fieldName` to the **API field name** (the property name as it appears in the JSON), not the underlying CQRS parameter name. For example, on `public array $names`, use `fieldName: 'names'`, not `'localizedNames'`. On partial updates, also pass `allowNull: true` so the field stays optional.
+{{% /notice %}}
+
 ### 5. Create the List API Resource (AttributeGroupList.php)
 
 For the listing API we use the Grid component that is used on Symfony migrated pages, so any migrated page should already have the appropriate Grid data factory.
@@ -669,6 +770,20 @@ To find the service name you need to look into the Symfony controller related to
 - From the factory [service definition](https://github.com/PrestaShop/PrestaShop/blob/653e2a8a86f6df52e33f7b126f777d7400974872/src/PrestaShopBundle/Resources/config/services/core/grid/grid_factory.yml#L318) you can also deduce [Grid definition service](https://github.com/PrestaShop/PrestaShop/blob/29af08841c8bb66bc552b1339c8d594c1d9b7ef8/src/Core/Grid/Definition/Factory/AttributeGroupGridDefinitionFactory.php#L50) which can help you understand which [filters](https://github.com/PrestaShop/PrestaShop/blob/29af08841c8bb66bc552b1339c8d594c1d9b7ef8/src/Core/Grid/Definition/Factory/AttributeGroupGridDefinitionFactory.php#L181) are usable on this endpoint.
 - In this special case, for AttributeGroup, the factory decorates another one [`prestashop.core.grid.data.factory.attribute_group`](https://github.com/PrestaShop/PrestaShop/blob/653e2a8a86f6df52e33f7b126f777d7400974872/src/PrestaShopBundle/Resources/config/services/core/grid/grid_data_factory.yml#L400), if you check its definition you will see that is uses the `prestashop.core.grid.query_builder.attribute_group`
 - From there you can find the `prestashop.core.grid.query_builder.attribute_group` service which is the [Query builder](https://github.com/PrestaShop/PrestaShop/blob/6b28c32d9355a2e99f42f50ee302a95ca2cb32ea/src/Core/Grid/Query/AttributeGroupQueryBuilder.php#L37) that builds the SQL query
+
+#### Verifying DTO ↔ query field alignment
+
+A `PaginatedList` endpoint silently returns `null` for any DTO property whose name doesn't match a field returned by the grid's data source. To avoid shipping orphan fields, walk through this check before opening the PR:
+
+1. Trace the `gridDataFactory` service to its underlying **query builder class** (the one implementing `DoctrineQueryBuilderInterface` or similar).
+2. Read the SQL `SELECT` clause — each selected column is a field the grid can return.
+3. Make sure every selected field has a matching property on your List DTO. If a field is intentionally omitted, document why; an oversight here is a silent bug.
+4. When the SQL column name differs from the DTO property name (e.g. `id_attribute_group` vs `attributeGroupId`, `firstname` vs `firstName`), add the rename to `ApiResourceMapping`. The mapping direction is **source field → DTO field**.
+5. A DTO property with no matching query field will always be `null` at runtime — that's almost certainly a bug. Either remove the property or fix the source name.
+
+The same checklist applies to `CQRSPaginate` endpoints, comparing the CQRS query's result DTO fields against the API Resource properties instead of the SQL columns.
+
+Likewise, every filterable / orderable parameter whose API name differs from the grid filter name must have an entry in `filtersMapping` (API field → grid filter field), otherwise the filter silently does nothing.
 
 #### Create the AttributeGroupList API resource
 
@@ -856,6 +971,36 @@ When you need to run one test class specifically (convenient while developing) y
 php -d date.timezone=UTC ./vendor/phpunit/phpunit/phpunit -c modules/ps_apiresources/tests/Integration/phpunit-ci.xml --filter=AttributeGroupEndpointTest
 ```
 
+### Default test environment and fixtures
+
+`ApiTestCase::setUpBeforeClass()` already prepares the environment so your test class only has to set up data specific to its entity. Out of the box it:
+
+- forces `PS_ADMIN_API_FORCE_DEBUG_SECURED = 0` so tests don't need HTTPS,
+- resets API clients and languages between test classes,
+- **installs `fr-FR` as a second language** so every endpoint runs against a multi-language environment by default.
+
+Because `fr-FR` is always installed, test fixtures for localized fields should include both `en-US` and `fr-FR` values — otherwise the test won't exercise the multi-language behavior the module is expected to handle.
+
+A few static helpers are available on `ApiTestCase` for setup needs that go beyond defaults (call them from your own `setUpBeforeClass`):
+
+| Helper                                                        | Purpose                                                                                                                  |
+|---------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| `addLanguageByLocale(string $locale)`                         | Install an additional language beyond the default `en-US` + `fr-FR`.                                                     |
+| `addShopGroup(string $name, ?string $color = null)`           | Create a shop group fixture for multistore tests.                                                                        |
+| `addShop(string $name, int $groupId, ?string $color = null)`  | Create a shop fixture inside the given group.                                                                            |
+| `updateConfiguration(string $key, $value, ?ShopConstraint $shopConstraint = null)` | Override a configuration value for the duration of the test, optionally scoped to a shop or shop group.                  |
+| `createApiClient(array $scopes)`                              | Pre-create an API client with the given scopes. Not required — `getBearerToken` creates one on the fly per scope set — but useful when you want to avoid recreating clients in every test method. |
+
+### Local tooling
+
+Beyond the test runners, the module ships a few `composer` scripts to keep contributions clean:
+
+| Script                       | Purpose                                                                                                       |
+|------------------------------|---------------------------------------------------------------------------------------------------------------|
+| `composer header-stamp-fix`  | Add the AFL 3.0 license header on top of any file that's missing it. Run this after creating new files.       |
+| `composer phpstan`           | Run static analysis. Requires the `_PS_ROOT_DIR_` and `_PS_BRANCH_` environment variables to point at a checked-out PrestaShop core, otherwise PHPStan can't resolve Core symbols. |
+| `composer rector`            | Apply automated refactor / upgrade rules. Some of the CI checks (no Value Objects, `float` → `DecimalNumber`, etc.) are enforced via Rector and can be auto-fixed by this command. |
+
 ### Integration Tests
 
 Integration tests **must** test the actual API endpoints and their behavior with the PrestaShop system. To help build them we created a base class `PsApiResourcesTest\Integration\ApiPlatform\ApiTestCase` the provides some helper methods:
@@ -869,6 +1014,8 @@ Integration tests **must** test the actual API endpoints and their behavior with
 | `deleteItem`        | Performs a `DELETE` request, by default check that a 204 code is returned and response is empty   | `string $endpointUrl`: URL of the API endpoint<br>`array $scopes = []`: List of scopes to use in the token<br>`?int $expectedHttpCode = null` HTTP code expected after request, default value is deducted automatically<br>`?array $requestOptions = null` Additional options for the request (special headers, extra parameters)                                                     |
 | `listItems`         | Performs a `GET` request to list entities, parse the JSON response and check the paginated format | `string $listUrl`: URL of the API endpoint<br>`array $scopes = []`: List of scopes to use in the token<br>`array $filters = []` List of filters                                                                                                                                                                                                                                       |
 | `countItems`        | Performs a `GET` request to list entities, but only returns the count                             | `string $listUrl`: URL of the API endpoint<br>`array $scopes = []`: List of scopes to use in the token<br>`array $filters = []` List of filters                                                                                                                                                                                                                                       |
+| `bulkDeleteItems`   | Performs a bulk-delete `DELETE` request with a JSON body containing the IDs to delete             | `string $endpointUrl`: URL of the bulk endpoint<br>`array $data`: Payload (typically `['xxxIds' => [1, 2, 3]]`)<br>`array $scopes = []`: List of scopes to use in the token<br>`?int $expectedHttpCode = null` HTTP code expected after request                                                                                                                                       |
+| `requestApi`        | Last-resort low-level helper for cases the other methods don't cover (custom methods, non-standard responses) | `string $method`, `string $endpointUrl`, `array $scopes`, plus framework-style options. Prefer the dedicated helpers above — only reach for `requestApi` when the request shape genuinely doesn't fit. |
 
 These helper methods make testing easier because they handle internally the creation of an `APIClient` with the required scopes, then they request an access token with the scopes and automatically include it in the header of the request, they also perform basic check and decode the JSON response.
 
@@ -1364,6 +1511,23 @@ class AttributeGroupEndpointTest extends ApiTestCase
 - ✅ **Test all CRUD operations** comprehensively
 - ✅ **Use `skip_null_values => false`** for accurate validation
 - ✅ **Integration tests should eliminate need for manual QA**
+
+### Common pitfalls checklist
+
+Quick self-review before opening a PR — these are the most frequent mistakes flagged in review:
+
+- ❌ `CQRSQueryMapping` keys inverted (API field used as key instead of the QueryResult field name)
+- ❌ Missing `CQRSQuery` on `CQRSCreate` / `CQRSPartialUpdate` when the full object should be returned, especially when the command handler returns an `EntityId` value object
+- ❌ `Response::HTTP_BAD_REQUEST` (400) used for constraint violations instead of `HTTP_UNPROCESSABLE_ENTITY` (422)
+- ❌ Identifier property named `$id` instead of `${entity}Id`, or missing `#[ApiProperty(identifier: true)]`
+- ❌ Boolean properties prefixed with `is` (`$isEnabled`, `$isActive`) instead of `$enabled` / `$ready`
+- ❌ Localized properties prefixed with `localized` (`$localizedNames`) instead of `$names` with `#[LocalizedValue]`
+- ❌ `float` used for decimal/monetary fields instead of `PrestaShop\Decimal\DecimalNumber`
+- ❌ Custom normalizer or custom processor added in the module (hard CI blocker)
+- ❌ `#[DefaultLanguage]` without an explicit `fieldName` argument
+- ❌ Sub-resource endpoints missing the parent `NotFoundException` → 404 mapping
+- ❌ List DTO with properties that don't match any field returned by the grid query (silent `null` in responses)
+- ❌ Tests asserting only the identifier instead of the full response payload
 
 ## 📚 Useful Resources
 
