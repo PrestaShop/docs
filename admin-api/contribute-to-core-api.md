@@ -429,6 +429,56 @@ You now have two endpoints that allow you to create and fetch an AttributeGroup,
 }
 ```
 
+#### Handle multi-shop association
+
+{{% notice warning %}}
+Multistore support in the Admin API is gated behind the experimental `admin_api_multistore` feature flag (Advanced Parameters → New & Experimental Features). The conventions below still apply when writing endpoints, but they only take effect at runtime once the flag is enabled.
+{{% /notice %}}
+
+If your entity can be associated with one or more shops (most administrable entities can), expose that association on the API resource so callers can read and modify it.
+
+The convention is a `$shopIds` array property on the DTO. The CQRS layer in the Core usually exposes the association under a different field name (often `associatedShopIds`, `associatedShops`, or `shopAssociation`), so you'll need a mapping entry in each direction:
+
+```php
+class AttributeGroup
+{
+    ...
+    public array $shopIds;
+
+    public const QUERY_MAPPING = [
+        ...
+        '[associatedShopIds]' => '[shopIds]',   // read: Core query result → API field
+    ];
+
+    public const COMMAND_MAPPING = [
+        ...
+        '[shopIds]' => '[associatedShopIds]',   // write: API field → Core command parameter
+    ];
+}
+```
+
+{{% notice note %}}
+If the entity has no concept of shop association at all, the `shopIds` property must be omitted from the DTO entirely — don't expose an empty array.
+{{% /notice %}}
+
+##### Passing the current shop context to a CQRS command or query
+
+Some CQRS commands and queries need to know which shop(s) the current request targets — for example to filter list results or to scope an update. The shop context the caller passed (`shopId`, `shopGroupId`, `shopIds`, or `allShops` — see the [Multi-shop page]({{< relref "/9/admin-api/multi-shop" >}}) for the consumer side) is exposed inside mappings via the special `[_context]` prefix:
+
+```php
+// In a CQRSCommandMapping or CQRSQueryMapping
+'[_context][shopId]'         => '[shopId]',         // single shop ID (int)
+'[_context][shopIds]'        => '[shopIds]',        // multiple shop IDs (array)
+'[_context][shopConstraint]' => '[shopConstraint]', // full ShopConstraint value object
+```
+
+Pick the entry that matches the signature of the CQRS class:
+
+- Use `[_context][shopConstraint]` when the command or query accepts a `ShopConstraint` directly (common for `Product`-related commands and queries).
+- Use `[_context][shopId]` or `[_context][shopIds]` when the command expects raw integer IDs.
+
+For complete working examples, see `Product.php`, `Combination.php`, `CombinationList.php`, and `CustomerGroup.php` in [ps_apiresources](https://github.com/PrestaShop/ps_apiresources).
+
 ### 2. Update and delete a single resource
 
 For update and delete endpoints the principle is similar, we are creating a `DELETE` and `PATCH` endpoint:
