@@ -285,6 +285,53 @@ class ApiClient
 }
 ```
 
+### CQRSGetCollection
+
+| HTTP Method | Action                                |
+|-------------|---------------------------------------|
+| GET         | Read a non-paginated collection       |
+
+`CQRSGetCollection` wraps a CQRS query that returns a full list of items in a single response — without pagination, filters, or sorting. Use it for short, bounded collections (e.g. enums, lookup tables, all rules for a given parent) where pagination would add complexity without value. For anything that can grow large, prefer `CQRSPaginate` or `PaginatedList` instead.
+
+```php
+<?php
+declare(strict_types=1);
+
+namespace PrestaShop\Module\APIResources\ApiPlatform\Resources\TaxRule;
+
+use ApiPlatform\Metadata\ApiResource;
+use PrestaShop\PrestaShop\Core\Domain\TaxRulesGroup\Exception\TaxRulesGroupNotFoundException;
+use PrestaShop\PrestaShop\Core\Domain\TaxRulesGroup\Query\GetTaxRulesList;
+use PrestaShopBundle\ApiPlatform\Metadata\CQRSGetCollection;
+use Symfony\Component\HttpFoundation\Response;
+
+#[ApiResource(
+    operations: [
+        new CQRSGetCollection(
+            uriTemplate: '/tax-rules-groups/{taxRulesGroupId}/tax-rules',
+            CQRSQuery: GetTaxRulesList::class,
+            scopes: ['tax_rules_group_read'],
+        ),
+    ],
+    exceptionToStatus: [
+        TaxRulesGroupNotFoundException::class => Response::HTTP_NOT_FOUND,
+    ],
+)]
+class TaxRuleList
+{
+    public int $taxRuleId;
+    public int $taxRulesGroupId;
+    public int $countryId;
+    public int $stateId;
+    public string $zipCode;
+    public int $taxId;
+    public string $behavior;
+    public string $description;
+}
+```
+
+The CQRS query is called once, its result is normalized to a flat list of API resources, and the whole list is returned in a single JSON array. No `itemsField` / `countField` configuration is needed because there is no envelope.
+
 ### CQRSPaginate
 
 | HTTP Method | Action                      |
@@ -429,6 +476,18 @@ class ApiClientList
     public int $lifetime;
 }
 ```
+
+#### Custom parameters
+
+| Parameter | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `gridDataFactory` | `string` | Yes | — | Service ID of a class implementing `GridDataFactoryInterface`. This is the same service the migrated back-office listing page uses. |
+| `scopes` | `string[]` | No | `[]` | OAuth scopes required to access the endpoint. |
+| `filtersClass` | `string` | No | `Filters::class` | Fully qualified class name of the `Filters` subclass to use. Specify a custom class to enforce default ordering or filtering constraints. |
+| `filtersMapping` | `array` | No | `null` | Maps API field names to the internal names used by the `Filters` class. Applied to `filters` and `orderBy` query parameters. See [Custom Mapping](#custom-mapping). |
+| `ApiResourceMapping` | `array` | No | `null` | Field mapping applied when denormalizing each row from the grid into the API resource DTO. See [Custom Mapping](#custom-mapping). |
+
+Like `CQRSPaginate`, `PaginatedList` builds the `Filters` object from the request query parameters (`offset`, `limit`, `orderBy`, `sortOrder`, `filters`), invokes the grid data factory, and returns the standard paginated envelope (`totalItems`, `sortOrder`, `limit`, `filters`, `items`). The default page size is 50 items.
 
 ## Custom Mapping
 
