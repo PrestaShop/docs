@@ -6,7 +6,7 @@ weight: 1
 
 # Creating a theme from scratch
 
-This page covers creating a minimal, valid PrestaShop 9 theme from scratch. It is the recommended starting point for PrestaShop 9.0, and a useful reference for understanding the required file structure on any 9.x version.
+This page covers creating a minimal, valid PrestaShop 9 theme from scratch. While [Hummingbird]({{< relref "/9/themes/create-a-theme/from-hummingbird" >}}) is the recommended starting point for most PrestaShop 9 themes, this is a useful reference for understanding the required file structure on any 9.x version.
 
 ## Minimal structure
 

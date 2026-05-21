@@ -28,8 +28,23 @@ The theme name in the domain must start with a capital letter and contain no oth
 Use the `sprintf` parameter to insert dynamic values:
 
 ```smarty
-{l s='%count% items in your cart' d='Shop.Mytheme' sprintf=['%count%' => $cart.products_count]}
-{l s='Welcome, %firstname% %lastname%!' d='Shop.Mytheme' sprintf=['%firstname%' => $customer.firstname, '%lastname%' => $customer.lastname]}
+{l 
+  s='%count% items in your cart' 
+  d='Shop.Mytheme' 
+  sprintf=['%count%' => $cart.products_count]
+}
+
+{l 
+  s='Welcome, %firstname% %lastname%!' 
+  d='Shop.Mytheme' 
+  sprintf=['%firstname%' => $customer.firstname, '%lastname%' => $customer.lastname]
+}
+
+{l 
+  s='We noticed a problem with your order. If you think this is an error, feel free to contact our [1]expert customer support team[/1].'
+  d='Modules.Wirepayment.Shop'
+  sprintf=['[1]' => "<a class='alert-link' href='{$contact_url}'>", '[/1]' => '</a>']
+}
 ```
 
 ### Translation domains
