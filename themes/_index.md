@@ -11,12 +11,22 @@ icon: 'images/icons/themes.svg'
 
 # Themes
 
-The default PrestaShop installation offers the neutral "Classic theme", enabling merchants to quickly start their activity, whatever their business line.
-
-Several marketplaces are available to get PrestaShop themes. As a graphic designer/front developer, you can put your themes up for sale on this marketplaces.
-
-{{% notice note %}}
-A new theme, Hummingbird, is being developed by the maintainer team. While under develoment, [you can start to discover it here]({{<relref "/9/themes/hummingbird">}}).
+{{% notice warning %}}
+The **Classic theme is deprecated** for new development starting from PrestaShop 9.1. It remains available for backward compatibility but will not receive new features. For Classic-specific documentation, refer to the [v8 theme docs]({{< relref "/8/themes" >}}).
 {{% /notice %}}
 
-{{% children /%}}
+PrestaShop themes control the entire front-office experience: layout, templates, styles, and client-side behavior.
+
+Starting from PrestaShop 9.1, **[Hummingbird]({{< relref "/9/themes/hummingbird" >}})** is the default theme. It is built on Bootstrap 5.3, follows BEM conventions, and provides an accessibility-first, jQuery-free architecture.
+
+## Documentation structure
+
+| Section | What you'll find |
+|---------|-----------------|
+| **[Getting started]({{< relref "/9/themes/getting-started" >}})** | Requirements, quick start, environment setup |
+| **[Concepts]({{< relref "/9/themes/concepts" >}})** | How the PrestaShop theme system works, structure, templates, assets, hooks, overrides |
+| **[Hummingbird]({{< relref "/9/themes/hummingbird" >}})** | The reference theme, CSS architecture, JavaScript conventions, accessibility, workflow |
+| **[Create a theme]({{< relref "/9/themes/create-a-theme" >}})** | Step-by-step guides to build your own theme |
+| **[Guidelines]({{< relref "/9/themes/guidelines" >}})** | Coding standards, browser compatibility, accessibility requirements |
+| **[Reference]({{< relref "/9/themes/reference" >}})** | Lookup tables, template variables, JavaScript events, Smarty helpers |
+| **[Distribution]({{< relref "/9/themes/distribution" >}})** | Validation, testing, and exporting your theme |

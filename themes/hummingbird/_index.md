@@ -1,20 +1,25 @@
 ---
-title: Hummingbird Theme
-weight: 5
+title: Hummingbird
+weight: 15
+chapter: true
+showOnHomepage: true
 ---
 
-# Hummingbird Theme
+# Hummingbird
 
-Hummingbird is a PrestaShop theme that aims to replace Classic as a new default theme for the PrestaShop. 
+Hummingbird is the default theme for PrestaShop 9.1+ and the reference implementation for modern theme development. It replaces the Classic theme, which is deprecated for new development in PrestaShop 9.
 
-Read more about Hummingbird [in the announcement of the new theme for PrestaShop](https://build.prestashop-project.org/news/2022/new-theme-announce/).
+- **Repository:** [github.com/PrestaShop/hummingbird](https://github.com/PrestaShop/hummingbird)
 
-Want to test it? Want to contribute to the project and share the feedback with the team? See [Hummingbird Github repository](https://github.com/PrestaShop/hummingbird).
+| Page | Description |
+|------|-------------|
+| [CSS conventions]({{< relref "/9/themes/hummingbird/css-conventions" >}}) | [Bootstrap 5.3](https://getbootstrap.com/docs/5.3/getting-started/introduction/), [BEM](https://getbem.com/naming/), SCSS, `@layer`, dark mode via color modes |
+| [JavaScript conventions]({{< relref "/9/themes/hummingbird/javascript-conventions" >}}) | jQuery-free theme code, semantic `data-ps-*` attributes, event system |
+| [Accessibility]({{< relref "/9/themes/hummingbird/accessibility" >}}) | EAA compliance, ARIA, keyboard navigation |
+| [Development Workflow]({{< relref "/9/themes/hummingbird/development-workflow" >}}) | Troubleshooting, dev environment tips |
+| [Bootstrap Compatibility]({{< relref "/9/themes/hummingbird/bootstrap-compatibility" >}}) | BS4 → BS5 migration guide for modules |
+| [Hook mapping]({{< relref "/9/themes/hummingbird/hooks" >}}) | Visual map of front-office hooks per page |
 
-{{% notice info %}}
-Please note that the Hummingbird theme is still under development and is not considered production-ready.
+{{% notice note %}}
+Want to contribute to Hummingbird? See [CONTRIBUTING.md](https://github.com/PrestaShop/hummingbird/blob/develop/CONTRIBUTING.md) in the repository.
 {{% /notice %}}
-
-## Hook mapping project for the Hummingbird theme
-
-A visual map of hooks for the Hummingbird theme has been created, [find more information about the project here]({{<relref "/9/themes/hummingbird/hooks">}}).

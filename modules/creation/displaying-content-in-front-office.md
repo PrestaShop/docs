@@ -416,7 +416,7 @@ name, or even your own name or initials, such as:
 
 ## List of Smarty variables
 
-You can find [a complete list of variables available in Smarty Templates on this page]({{< relref "/9/themes/reference/templates/variables" >}}).
+You can find [a complete list of variables available in Smarty Templates on this page]({{< relref "/9/themes/reference/template-variables" >}}).
 
 There are many other contextual hooks. If you need to display all of the
 current page's Smarty variables, add the following call:

@@ -1,0 +1,122 @@
+---
+title: Creating a child theme
+menuTitle: Child theme
+weight: 3
+aliases:
+  - /9/themes/reference/template-inheritance/parent-child-feature
+---
+
+# Creating a child theme
+
+A child theme inherits all templates, styles, and assets from a parent theme. You only override what you need to change, keeping the ability to update the parent independently.
+
+{{% notice note %}}
+For deep markup changes, [start from Hummingbird]({{< relref "/9/themes/create-a-theme/from-hummingbird" >}}) directly instead.
+{{% /notice %}}
+
+## Minimal structure
+
+A child theme requires only two files. Create a `my-child-theme/` directory inside your PrestaShop `/themes/` directory with the following structure:
+
+```
+my-child-theme/
+├── config/
+│   └── theme.yml
+└── preview.png
+```
+
+## Minimal theme.yml
+
+```yaml
+parent: my-parent-theme-name
+name: my-child-theme          # Must match the directory name
+display_name: My Child Theme
+version: 1.0.0
+
+assets:
+  use_parent_assets: true     # Load the parent's registered CSS and JS in addition to your own
+```
+
+When `use_parent_assets` is `true`, the parent's CSS and JS files are loaded first, then any assets registered by your child theme are appended. Set it to `false` if you want to take full control of assets and provide your own stylesheet from scratch. See [Theme structure]({{< relref "/9/themes/concepts/theme-structure#parentchild-settings" >}}) for the full reference.
+
+{{% notice note %}}
+`theme.css` and `theme.js` are auto-loaded by PrestaShop from whichever theme is active, no explicit registration needed. With `use_parent_assets: false`, PrestaShop serves them from the child theme's own `assets/` directory automatically. Only additional assets beyond these two files need to be declared in `theme.yml`.
+{{% /notice %}}
+
+## Overriding assets
+
+To add or override styles and scripts, create the files in your child theme and register them in `config/theme.yml` under `global_settings`:
+
+```
+my-child-theme/
+└── assets/
+    ├── css/
+    │   └── custom.css
+    └── js/
+        └── custom.js
+```
+
+```yaml
+global_settings:
+  assets:
+    css:
+      custom:
+        path: assets/css/custom.css
+        media: all
+    js:
+      custom:
+        path: assets/js/custom.js
+        position: bottom
+```
+
+With `use_parent_assets: true`, the parent's CSS and JS load first and yours are appended after. See [Asset management]({{< relref "/9/themes/concepts/asset-management" >}}) for the full registration syntax.
+
+## Overriding templates
+
+Without any template files, the child theme renders everything from the parent. See [Template inheritance]({{< relref "/9/themes/concepts/templates/template-inheritance" >}}) for the full reference.
+
+To override a template, create it at the same path in your child theme:
+
+```
+my-child-theme/
+└── templates/
+    └── catalog/
+        └── listing/
+            └── category.tpl
+```
+
+PrestaShop will use your file instead of the parent's. There are two ways to write it:
+
+### Replace a template completely
+
+You take full ownership of the template, but you don't have to start from zero. You can still extend a lower-level base template to keep shared logic and only redefine what you need to change. Here `category.tpl` extends `product-list.tpl` to reuse the shared listing logic while overriding only the header and footer blocks:
+
+```smarty
+{extends file='catalog/listing/product-list.tpl'}
+
+{block name='product_list_header'}
+  {include file='catalog/_partials/category-header.tpl' listing=$listing category=$category}
+{/block}
+
+{block name='product_list_footer'}
+  {include file='catalog/_partials/category-footer.tpl' listing=$listing category=$category}
+{/block}
+```
+
+### Override specific blocks using the `parent:` prefix
+
+If you only need to change one or two blocks within `category.tpl`, extend the parent theme's version of the same template directly using the `parent:` prefix. Without it, `{extends file='catalog/listing/category.tpl'}` would point back to itself and cause an infinite loop:
+
+```smarty
+{extends file='parent:catalog/listing/category.tpl'}
+
+{block name='product_list_header'}
+  {include file='catalog/_partials/category-header.tpl' listing=$listing category=$category}
+{/block}
+```
+
+## Activate the theme
+
+The parent theme must be present in your PrestaShop `/themes/` directory before the child theme can be activated. Install the parent first.
+
+See [Activate the theme]({{< relref "/9/themes/getting-started/quick-start#activate-the-theme" >}}) in the quick start guide for activation instructions.

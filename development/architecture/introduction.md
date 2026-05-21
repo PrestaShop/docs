@@ -295,8 +295,8 @@ Remember the overview at the top of the article? Have a look at this more detail
 [MVC]: https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
 [smarty]: https://www.smarty.net/
 [bootstrap]: https://getbootstrap.com/
-[child-theme]: {{< ref "/9/themes/reference/template-inheritance/parent-child-feature" >}}
-[theme-module-override]: {{< ref "/9/themes/reference/overriding-modules" >}}
+[child-theme]: {{< ref "/9/themes/create-a-theme/child-theme" >}}
+[theme-module-override]: {{< ref "/9/themes/concepts/overrides" >}}
 [twig]: https://twig.symfony.com/
 [github]: https://github.com/PrestaShop/prestashop-ui-kit/
 [autoupgrade]: https://github.com/PrestaShop/autoupgrade/
