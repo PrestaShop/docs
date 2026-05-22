@@ -1,7 +1,7 @@
 ---
 Title: displayOrderPreview
 hidden: true
-hookTitle: files:
+hookTitle: ''
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig'

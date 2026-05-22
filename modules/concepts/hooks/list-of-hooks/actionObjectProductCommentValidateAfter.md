@@ -1,7 +1,7 @@
 ---
 Title: actionObjectProductCommentValidateAfter
 hidden: true
-hookTitle: files:
+hookTitle: ''
 files:
     -
         module: productcomments

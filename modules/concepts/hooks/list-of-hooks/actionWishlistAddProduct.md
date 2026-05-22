@@ -1,7 +1,7 @@
 ---
 Title: actionWishlistAddProduct
 hidden: true
-hookTitle: files:
+hookTitle: ''
 files:
     -
         module: blockwishlist

@@ -1,7 +1,7 @@
 ---
 Title: actionAttributeCombinationSave
 hidden: true
-hookTitle: files:
+hookTitle: ''
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Combination.php'

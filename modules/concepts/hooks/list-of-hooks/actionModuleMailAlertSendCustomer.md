@@ -1,7 +1,7 @@
 ---
 Title: actionModuleMailAlertSendCustomer
 hidden: true
-hookTitle: files:
+hookTitle: ''
 files:
     -
         module: ps_emailalerts

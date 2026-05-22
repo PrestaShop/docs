@@ -1,7 +1,7 @@
 ---
 Title: actionDeleteGDPRCustomer
 hidden: true
-hookTitle: files:
+hookTitle: ''
 files:
     -
         module: psgdpr

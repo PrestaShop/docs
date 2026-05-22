@@ -1,7 +1,7 @@
 ---
 Title: displayAdminOptions
 hidden: true
-hookTitle: files:
+hookTitle: ''
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/helpers/options/options.tpl'
