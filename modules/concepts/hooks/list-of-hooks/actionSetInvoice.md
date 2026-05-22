@@ -1,7 +1,7 @@
 ---
 Title: actionSetInvoice
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/order/Order.php'
@@ -34,9 +34,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionSetInvoice', [
-                    get_class($this) => $this,
-                    get_class($order_invoice) => $order_invoice,
-                    'use_existing_payment' => (bool) $use_existing_payment,
-                ]);
+$invoice_number = Hook::exec('actionSetInvoice', [ get_class($this) => $this, get_class($order_invoice) => $order_invoice, 'use_existing_payment' => (bool) $use_existing_payment, ])
 ```

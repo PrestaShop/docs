@@ -8,7 +8,7 @@ files:
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
-type: action
+type: display
 hookAliases: 
 array_return: false
 check_exceptions: false
@@ -23,5 +23,5 @@ description: 'This hook displays new elements on the maintenance page'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayMaintenance');
+'HOOK_MAINTENANCE' => Hook::exec('displayMaintenance'), 'maintenance_text' => Configuration::get('PS_MAINTENANCE_TEXT', (int) $this->context->language->id), 'stylesheets' => $this->getStylesheets(), ])
 ```

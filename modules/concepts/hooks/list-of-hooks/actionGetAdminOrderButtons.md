@@ -35,14 +35,12 @@ description: 'This hook is used to generate the buttons collection on the order 
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters(
-                'actionGetAdminOrderButtons',
+'actionGetAdminOrderButtons',
                 [
                     'controller' => $this,
                     'id_order' => $orderId,
                     'actions_bar_buttons_collection' => $backOfficeOrderButtons,
                 ]
-            )
 ```
 
 ## Example implementation

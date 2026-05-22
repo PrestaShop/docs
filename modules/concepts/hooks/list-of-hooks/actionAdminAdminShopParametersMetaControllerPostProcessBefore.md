@@ -23,5 +23,10 @@ description: 'This hook is called on Admin Configure Shop Parameters Meta post-p
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters('actionAdminAdminShopParametersMetaControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminAdminShopParametersMetaControllerPostProcessBefore', ['controller' => $this]);
+
+        $form = $formHandler->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
 ```

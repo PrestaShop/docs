@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Display new elements in back office page with dashboard, on icons list'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.2.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig'
-        file: src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/Blocks/tools.html.twig
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/admin/AdminDashboardController.php'
+        file: controllers/admin/AdminDashboardController.php
 locations:
     - 'back office'
 type: display
@@ -23,5 +23,10 @@ description: 'This hook launches modules when the back office with dashboard is 
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayDashboardToolbarIcons', {}) }}
+private const DASHBOARD_ALLOWED_HOOKS = ['dashboardData', 'dashboardZoneOne', 'dashboardZoneTwo', 'displayDashboardToolbarIcons', 'displayDashboardToolbarTopMenu', 'displayDashboardTop'];
+
+    public function __construct()
+    {
+        $this->bootstrap = true;
+        $this->display = 'view';
 ```

@@ -23,14 +23,10 @@ description: 'This hook is called just before fetching content page category'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-                'filterCmsCategoryContent',
+'filterCmsCategoryContent',
                 ['object' => $cmsCategoryVar],
                 null,
                 false,
                 true,
                 false,
-                null,
-                true
-            );
 ```

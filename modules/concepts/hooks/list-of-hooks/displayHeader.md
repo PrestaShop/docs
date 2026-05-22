@@ -4,12 +4,16 @@ hidden: true
 hookTitle: 'Pages html head section'
 files:
     -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Hook.php'
+        file: classes/Hook.php
+    -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
-type: action
-hookAliases: displayHeader
+type: display
+hookAliases:
+    - Header
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +27,10 @@ description: 'This hook adds additional elements in the head section of your pag
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayHeader');
+return 'displayHeader';
+        }
+
+        $hookNamesByAlias = Hook::getCanonicalHookNames();
+
+        return $hookNamesByAlias[$loweredName] ?? $hookName;
 ```

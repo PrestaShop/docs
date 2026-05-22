@@ -23,5 +23,5 @@ description: 'This hook is called when smarty''s compile cache is cleared'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionClearCompileCache');
+Hook::exec('actionClearCompileCache')
 ```

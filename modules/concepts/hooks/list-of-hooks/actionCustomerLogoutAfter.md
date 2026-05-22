@@ -23,5 +23,5 @@ description: 'This hook allows you to execute code after customer logout'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCustomerLogoutAfter', ['customer' => $this]);
+Hook::exec('actionCustomerLogoutAfter', ['customer' => $this])
 ```

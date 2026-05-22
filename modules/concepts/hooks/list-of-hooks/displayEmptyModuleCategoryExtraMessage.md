@@ -31,5 +31,10 @@ description: "This hook allows to add an extra message to display in the Module 
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayEmptyModuleCategoryExtraMessage', {'category_name': category.name}) }}
+{% set hookData = renderhook('displayEmptyModuleCategoryExtraMessage', {category_name: category.name}) %}
+  {% if hookData is not empty %}
+    <div class="module-short-list">
+      <span id="{{ category.refMenu }}_modules" class="module-search-result-title">{{ category.name|trans({}, 'Admin.Modules.Feature') }}</span>
+      <div class="modules-list module-list-empty" data-name="{{ category.refMenu }}">
+        {{ hookData|raw }}
 ```

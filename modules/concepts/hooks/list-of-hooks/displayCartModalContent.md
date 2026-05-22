@@ -33,5 +33,5 @@ description: This hook displays content in the middle of the window that appears
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCartModalContent' product=$product};
+{hook h='displayCartModalContent' product=$product}
 ```

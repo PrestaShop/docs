@@ -23,14 +23,10 @@ description: 'This hook is called just before fetching content page product'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'filterProductContent',
+'filterProductContent',
             ['object' => $product_for_template],
             null,
             false,
             true,
             false,
-            null,
-            true
-        );
 ```

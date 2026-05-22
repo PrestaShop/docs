@@ -23,5 +23,5 @@ description: 'This hook is called when webservice resources list in webservice c
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('addWebserviceResources', ['resources' => $resources], null, true, false);
+$extra_resources = Hook::exec('addWebserviceResources', ['resources' => $resources], null, true, false)
 ```

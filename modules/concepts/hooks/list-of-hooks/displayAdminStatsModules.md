@@ -8,8 +8,9 @@ files:
         file: controllers/admin/AdminStatsTabController.php
 locations:
     - 'back office'
-type: action
-hookAliases: displayAdminStatsModules
+type: display
+hookAliases:
+    - AdminStatsModules
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayAdminStatsModules', [], $module_instance->id);
+$moduleList = Hook::getHookModuleExecList('displayAdminStatsModules');
+        if (true === is_array($moduleList)) {
+            return array_map(
+                function ($moduleArray) {
+                    return ['name' => $moduleArray['module']];
+                },
 ```

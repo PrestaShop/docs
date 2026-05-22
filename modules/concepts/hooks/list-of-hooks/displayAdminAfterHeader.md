@@ -1,8 +1,20 @@
 ---
 Title: displayAdminAfterHeader
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/header.tpl'
+        file: admin-dev/themes/default/template/header.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/new-theme/template/layout.tpl'
+        file: admin-dev/themes/new-theme/template/layout.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/new-theme/template/light_display_layout.tpl'
+        file: admin-dev/themes/new-theme/template/light_display_layout.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Layout/default_layout.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Layout/default_layout.html.twig
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Layout/light_layout.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Layout/light_layout.html.twig
@@ -23,5 +35,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayAdminAfterHeader', {}) }};
+{hook h='displayAdminAfterHeader'}
 ```

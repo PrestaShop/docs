@@ -23,5 +23,5 @@ description: 'Allows modules to override the free shipping weight and return the
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOverrideShippingFreeWeight', ['shippingFreeWeight' => &$shippingFreeWeight, 'id_zone' => $id_zone, 'id_currency' => $this->id_currency]);
+Hook::exec('actionOverrideShippingFreeWeight', ['shippingFreeWeight' => &$shippingFreeWeight, 'id_zone' => $id_zone, 'id_currency' => $this->id_currency])
 ```

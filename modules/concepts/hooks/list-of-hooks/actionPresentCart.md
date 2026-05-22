@@ -23,7 +23,5 @@ description: 'This hook is called before a cart is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentCart',
-            ['presentedCart' => &$cartLazyArray]
-        );
+Hook::exec('actionPresentCart', ['presentedCart' => &$cartLazyArray] )
 ```

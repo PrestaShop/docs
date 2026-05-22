@@ -33,5 +33,5 @@ description: 'This hook is displayed in the third column of the dashboard'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('dashboardZoneThree', $params);
+'hookDashboardZoneThree' => Hook::exec('dashboardZoneThree', $params), 'action' => '#', 'warning' => $this->getWarningDomainName(), 'calendar' => $calendar_helper->generate(), 'PS_DASHBOARD_SIMULATION' => Configuration::get('PS_DASHBOARD_SIMULATION'), 'datepickerFrom' => Tools::getValue('datepickerFrom', $this->context->employee->stats_date_from),
 ```

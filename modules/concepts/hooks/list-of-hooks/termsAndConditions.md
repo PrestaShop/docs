@@ -1,7 +1,7 @@
 ---
 Title: termsAndConditions
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/ConditionsToApproveFinder.php'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('termsAndConditions', [], null, true);
+$hookedConditions = Hook::exec('termsAndConditions', [], null, true)
 ```

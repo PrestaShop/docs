@@ -4,9 +4,9 @@ hidden: true
 hookTitle: 
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/errors/not-found.tpl'
-        file: 'Classic Theme: templates/errors/not-found.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/errors/not-found.tpl
+      file: themes/classic/templates/errors/not-found.tpl
 locations:
     - 'front office'
 type: display
@@ -24,5 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displaySearch'};
+{hook h='displaySearch'}
 ```

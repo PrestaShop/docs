@@ -23,10 +23,10 @@ description: 'This hook is called after adding media to admin login page header'
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters(
-            'actionAdminLoginControllerSetMedia',
+'actionAdminLoginControllerSetMedia',
             [
                 'controller' => $this->legacyControllerContext,
             ]
         );
+    }
 ```

@@ -23,27 +23,10 @@ description: 'This hook is used to filter the content or the metadata of an emai
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionEmailSendBefore',
+'actionEmailSendBefore',
             [
                 'idLang' => &$idLang,
                 'template' => &$template,
                 'subject' => &$subject,
                 'templateVars' => &$templateVars,
-                'to' => &$to,
-                'toName' => &$toName,
-                'from' => &$from,
-                'fromName' => &$fromName,
-                'fileAttachment' => &$fileAttachment,
-                'mode_smtp' => &$mode_smtp,
-                'templatePath' => &$templatePath,
-                'die' => &$die,
-                'idShop' => &$idShop,
-                'bcc' => &$bcc,
-                'replyTo' => &$replyTo,
-                'replyToName' => &$replyToName,
-            ],
-            null,
-            true
-        );
 ```

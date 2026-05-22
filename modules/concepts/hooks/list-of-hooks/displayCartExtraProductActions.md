@@ -11,10 +11,9 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl
       file: themes/hummingbird/templates/checkout/_partials/cart-detailed-product-line.tpl
-
 locations:
     - front office
-type: action
+type: display
 hookAliases: 
 origin: theme
 array_return: false
@@ -29,5 +28,5 @@ description: This hook adds extra buttons to the product lines, in the shopping 
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCartExtraProductActions' product=$product};
+{hook h='displayCartExtraProductActions' product=$product}
 ```

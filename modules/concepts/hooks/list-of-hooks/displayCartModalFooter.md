@@ -33,5 +33,5 @@ description: This hook displays content in the bottom of window that appears aft
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCartModalFooter' product=$product};
+{hook h='displayCartModalFooter' product=$product}
 ```

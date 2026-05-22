@@ -1,7 +1,7 @@
 ---
 Title: actionPasswordRenew
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/PasswordController.php'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPasswordRenew', ['customer' => $customer, 'password' => $password]);
+Hook::exec('actionPasswordRenew', ['customer' => $customer, 'password' => $password])
 ```

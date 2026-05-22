@@ -8,8 +8,9 @@ files:
         file: controllers/front/OrderConfirmationController.php
 locations:
     - 'front office'
-type: action
-hookAliases: displayOrderConfirmation
+type: display
+hookAliases:
+    - orderConfirmation
 array_return: false
 check_exceptions: false
 chain: false
@@ -32,5 +33,5 @@ description: 'This hook is called within an order''s confirmation page'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayOrderConfirmation', ['order' => $order]);
+return Hook::exec('displayOrderConfirmation', ['order' => $order])
 ```

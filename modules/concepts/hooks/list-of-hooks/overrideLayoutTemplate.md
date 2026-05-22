@@ -1,7 +1,7 @@
 ---
 Title: overrideLayoutTemplate
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
@@ -23,14 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'overrideLayoutTemplate',
+'overrideLayoutTemplate',
             [
                 'default_layout' => $layout,
                 'entity' => $entity,
                 'locale' => $this->context->language->locale,
                 'controller' => $this,
-                'content_only' => $content_only,
-            ]
-        );
 ```

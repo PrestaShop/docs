@@ -23,8 +23,10 @@ description: 'Allows modules to provide proper parameters for links in other lan
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-                    'actionLanguageLinkParameters',
+'actionLanguageLinkParameters',
                     ['linkParams' => &$params, 'linkIdLang' => (int) $idLang]
                 );
+                unset($params['fc'], $params['module']);
+
+                return $this->getModuleLink($module, $controller, $params, null, (int) $idLang);
 ```

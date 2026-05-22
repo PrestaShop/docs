@@ -23,5 +23,5 @@ description: 'Allows modules to override the free shipping price and return thei
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOverrideShippingFreePrice', ['shippingFreePrice' => &$shippingFreePrice, 'id_zone' => $id_zone, 'id_currency' => $this->id_currency]);
+Hook::exec('actionOverrideShippingFreePrice', ['shippingFreePrice' => &$shippingFreePrice, 'id_zone' => $id_zone, 'id_currency' => $this->id_currency])
 ```

@@ -23,7 +23,5 @@ description: 'This hook is called before a category is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentCategory',
-            ['presentedCategory' => &$categoryLazyArray]
-        );
+Hook::exec('actionPresentCategory', ['presentedCategory' => &$categoryLazyArray] )
 ```

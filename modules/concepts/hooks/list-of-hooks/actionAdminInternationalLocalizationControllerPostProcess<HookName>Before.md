@@ -23,7 +23,7 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters(
+dispatchHook(
             'actionAdminInternationalLocalizationControllerPostProcess' . $hookName . 'Before',
             ['controller' => $this]
         )

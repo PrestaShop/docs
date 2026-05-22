@@ -23,18 +23,10 @@ description: 'This hook is called just before fetching a page on HTML field'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-                'filterHtmlContent',
+'filterHtmlContent',
                 [
                     'type' => $type,
                     'htmlFields' => $htmlFields,
                     'object' => $presentedObject,
                 ],
-                null,
-                false,
-                true,
-                false,
-                null,
-                true
-            );
 ```

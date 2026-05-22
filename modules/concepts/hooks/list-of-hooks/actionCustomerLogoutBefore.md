@@ -23,5 +23,5 @@ description: 'This hook allows you to execute code before customer logout'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCustomerLogoutBefore', ['customer' => $this]);
+Hook::exec('actionCustomerLogoutBefore', ['customer' => $this])
 ```

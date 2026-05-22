@@ -4,7 +4,7 @@ hidden: true
 hookTitle: "Add fields to the form 'feature'"
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.2.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Sell/Catalog/Features/Blocks/form.html.twig
 locations:
     - 'back office'

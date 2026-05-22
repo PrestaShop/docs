@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionAuthentication
+hookAliases:
+    - authentication
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed after a customer successfully signs in'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAuthentication', ['customer' => $this->context->customer]);
+Hook::exec('actionAuthentication', ['customer' => $this->context->customer])
 ```

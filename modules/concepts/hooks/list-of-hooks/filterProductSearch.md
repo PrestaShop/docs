@@ -23,5 +23,5 @@ description: 'This hook is called in order to allow to modify search product res
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('filterProductSearch', ['searchVariables' => &$searchVariables]);
+Hook::exec('filterProductSearch', ['searchVariables' => &$searchVariables])
 ```

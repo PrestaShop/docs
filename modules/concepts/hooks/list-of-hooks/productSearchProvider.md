@@ -1,7 +1,7 @@
 ---
 Title: productSearchProvider
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/ProductListingFrontController.php'
@@ -23,8 +23,7 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'productSearchProvider',
+'productSearchProvider',
             ['query' => $query],
             null,
             true

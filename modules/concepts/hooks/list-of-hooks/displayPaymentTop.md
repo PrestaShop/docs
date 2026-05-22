@@ -11,7 +11,6 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/steps/payment.tpl
       file: themes/hummingbird/templates/checkout/_partials/steps/payment.tpl
-
 locations:
     - front office
 type: display
@@ -30,5 +29,5 @@ description: This hook is displayed at the top of the payment page
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayPaymentTop'};
+{hook h='displayPaymentTop'}
 ```

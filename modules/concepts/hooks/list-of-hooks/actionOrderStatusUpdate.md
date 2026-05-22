@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionOrderStatusUpdate
+hookAliases:
+    - updateOrderStatus
 array_return: false
 check_exceptions: true
 chain: false
@@ -34,9 +35,5 @@ description: 'This hook launches modules when the status of an order changes'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOrderStatusUpdate', [
-            'newOrderStatus' => $new_os,
-            'oldOrderStatus' => $old_os,
-            'id_order' => (int) $order->id,
-        ], null, false, true, false, $order->id_shop);
+Hook::exec('actionOrderStatusUpdate', [ 'newOrderStatus' => $new_os, 'oldOrderStatus' => $old_os, 'id_order' => (int) $order->id, ], null, false, true, false, $order->id_shop)
 ```

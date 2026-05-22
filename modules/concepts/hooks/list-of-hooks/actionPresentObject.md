@@ -23,5 +23,5 @@ description: 'This hook is called before an object is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentObject', ['presentedObject' => &$presentedObject, 'table' => $object::$definition['table']]);
+Hook::exec('actionPresentObject', ['presentedObject' => &$presentedObject, 'table' => $object::$definition['table']])
 ```

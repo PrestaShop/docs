@@ -4,14 +4,13 @@ hidden: true
 hookTitle: 'Product footer'
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl
-      file: themes/classic/templates/catalog/product.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/product.tpl
       file: themes/hummingbird/templates/catalog/product.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl
+      file: themes/classic/templates/catalog/product.tpl
 locations:
     - front office
 type: display
@@ -30,5 +29,5 @@ description: This hook adds new blocks under the product's description
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayFooterProduct' product=$product category=$category};
+{hook h='displayFooterProduct' product=$product category=$category}
 ```

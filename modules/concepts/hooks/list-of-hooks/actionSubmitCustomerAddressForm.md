@@ -1,7 +1,7 @@
 ---
 Title: actionSubmitCustomerAddressForm
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/form/CustomerAddressForm.php'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionSubmitCustomerAddressForm', ['address' => &$address]);
+Hook::exec('actionSubmitCustomerAddressForm', ['address' => &$address])
 ```

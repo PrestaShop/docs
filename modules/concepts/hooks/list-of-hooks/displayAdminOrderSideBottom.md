@@ -1,7 +1,7 @@
 ---
 Title: displayAdminOrderSideBottom
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
@@ -33,7 +33,12 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayAdminOrderSideBottom', {id_order: orderForViewing.id}) }};
+{{ renderhook('displayAdminOrderSideBottom', {id_order: orderForViewing.id}) }}
+      </div>
+
+      <div class="col-md-8 d-print-block right-column">
+        <div id="orderProductsOriginalPosition">
+          {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/products.html.twig') }}
 ```
 
 ## Example implementation

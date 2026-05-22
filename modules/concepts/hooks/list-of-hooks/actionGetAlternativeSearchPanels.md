@@ -33,13 +33,10 @@ description: 'This hook allows to add an additional search panel for external pr
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionGetAlternativeSearchPanels',
+'actionGetAlternativeSearchPanels',
             [
                 'previous_search_panels' => $searchPanels,
                 'bo_query' => $searchedExpression,
             ],
             null,
-            true
-        );
 ```

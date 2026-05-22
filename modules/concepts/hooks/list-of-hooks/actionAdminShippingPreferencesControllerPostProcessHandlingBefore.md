@@ -23,8 +23,10 @@ description: 'This hook is called on Admin Improve Shipping Preferences post-pro
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters(
-            'actionAdminShippingPreferencesControllerPostProcessHandlingBefore',
+'actionAdminShippingPreferencesControllerPostProcessHandlingBefore',
             ['controller' => $this]
-        )
+        );
+
+        $this->dispatchHookWithParameters(
+            'actionAdminShippingPreferencesControllerPostProcessBefore',
 ```

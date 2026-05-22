@@ -23,7 +23,5 @@ description: 'This hook is called before an order is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentOrder',
-            ['presentedOrder' => &$orderLazyArray]
-        );
+Hook::exec('actionPresentOrder', ['presentedOrder' => &$orderLazyArray] )
 ```

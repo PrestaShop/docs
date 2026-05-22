@@ -32,7 +32,5 @@ description: 'This hook is called before payment options are presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentPaymentOptions',
-            ['paymentOptions' => &$paymentOptions]
-        );
+Hook::exec('actionPresentPaymentOptions', ['paymentOptions' => &$paymentOptions] )
 ```

@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionPaymentConfirmation
+hookAliases:
+    - paymentConfirm
 array_return: false
 check_exceptions: true
 chain: false
@@ -32,5 +33,5 @@ description: 'This hook displays new elements after the payment is validated'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPaymentConfirmation', ['id_order' => (int) $order->id], null, false, true, false, $order->id_shop);
+Hook::exec('actionPaymentConfirmation', ['id_order' => (int) $order->id], null, false, true, false, $order->id_shop)
 ```

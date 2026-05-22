@@ -11,10 +11,9 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-add-to-cart.tpl
-
 locations:
     - front office
-type: action
+type: display
 hookAliases: 
 origin: theme
 array_return: false
@@ -29,5 +28,5 @@ description: This hook allow additional actions to be triggered, near the add to
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayProductActions' product=$product};
+{hook h='displayProductActions' product=$product}
 ```

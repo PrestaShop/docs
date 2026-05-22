@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.2.x/src/Adapter/Product/AdminProductDataProvider.php'
-        file: src/Adapter/Product/AdminProductDataProvider.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
 locations:
     - 'back office'
 type: action
@@ -37,13 +37,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAdminProductsListingFieldsModifier', [
-            '_ps_version' => AppKernel::VERSION,
-            'sql_select' => &$sqlSelect,
-            'sql_table' => &$sqlTable,
-            'sql_where' => &$sqlWhere,
-            'sql_group_by' => &$sqlGroupBy,
-            'sql_order' => &$sqlOrder,
-            'sql_limit' => &$sqlLimit,
-        ])
+Hook::exec('action' . $this->controller_name . 'ListingFieldsModifier', [ 'fields' => &$this->fields_list, ])
 ```

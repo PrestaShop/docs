@@ -1,8 +1,11 @@
 ---
 Title: actionAdminControllerSetMedia
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Twig/Component/HeadTag.php'
         file: src/PrestaShopBundle/Twig/Component/HeadTag.php
@@ -24,7 +27,7 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters('actionAdminControllerSetMedia');
+Hook::exec('actionAdminControllerSetMedia')
 ```
 
 ## Example implementation

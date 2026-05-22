@@ -23,8 +23,7 @@ description: 'Allows modules to modify the context currency after it has been in
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionFrontControllerInitContextCurrencyAfter',
+'actionFrontControllerInitContextCurrencyAfter',
             [
                 'controller' => $this,
             ]

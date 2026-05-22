@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionCartUpdateQuantityBefore
+hookAliases:
+    - actionBeforeCartUpdateQty
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'Allows responding to add to cart events.'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCartUpdateQuantityBefore', $data);
+Hook::exec('actionCartUpdateQuantityBefore', $data)
 ```

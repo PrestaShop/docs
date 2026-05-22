@@ -23,5 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters('actionAdminLogsControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminLogsControllerPostProcessBefore', ['controller' => $this]);
+
+        return $this->buildSearchResponse(
+            $definitionFactory,
+            $request,
+            LogGridDefinitionFactory::GRID_ID,
 ```

@@ -23,7 +23,5 @@ description: 'This hook is called before a store is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentStore',
-            ['presentedStore' => &$storeLazyArray]
-        );
+Hook::exec('actionPresentStore', ['presentedStore' => &$storeLazyArray] )
 ```

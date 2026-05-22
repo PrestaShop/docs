@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionOrderStatusPostUpdate
+hookAliases:
+    - postUpdateOrderStatus
 array_return: false
 check_exceptions: true
 chain: false
@@ -34,9 +35,5 @@ description: 'Allows to be notified after order status is changed.'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOrderStatusPostUpdate', [
-            'newOrderStatus' => $new_os,
-            'oldOrderStatus' => $old_os,
-            'id_order' => (int) $order->id,
-        ], null, false, true, false, $order->id_shop);
+Hook::exec('actionOrderStatusPostUpdate', [ 'newOrderStatus' => $new_os, 'oldOrderStatus' => $old_os, 'id_order' => (int) $order->id, ], null, false, true, false, $order->id_shop)
 ```

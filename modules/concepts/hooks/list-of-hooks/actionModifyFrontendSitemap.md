@@ -24,16 +24,12 @@ description: 'This hook allows to modify links on sitemap page of your shop. Use
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-    'actionModifyFrontendSitemap',
-    ['urls' => &$sitemapUrls],
-    null,
-    false,
-    true,
-    false,
-    null,
-    true
-);
+'actionModifyFrontendSitemap',
+            ['urls' => &$sitemapUrls]
+        );
+
+        /*
+         * Backward compatibility with older themes.
 ```
 
 ## Example implementation

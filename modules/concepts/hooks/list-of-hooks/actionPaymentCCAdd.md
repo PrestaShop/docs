@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionPaymentCCAdd
+hookAliases:
+    - paymentCCAdded
 array_return: false
 check_exceptions: false
 chain: false
@@ -32,5 +33,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPaymentCCAdd', ['paymentCC' => $this]);
+Hook::exec('actionPaymentCCAdd', ['paymentCC' => $this])
 ```

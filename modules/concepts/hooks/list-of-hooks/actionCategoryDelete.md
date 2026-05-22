@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionCategoryDelete
+hookAliases:
+    - categoryDeletion
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed when a category is deleted'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCategoryDelete', ['category' => $this, 'deleted_children' => $deletedChildren]);
+Hook::exec('actionCategoryDelete', ['category' => $this, 'deleted_children' => $deletedChildren])
 ```

@@ -23,7 +23,5 @@ description: 'Required to modify an SQL query before executing it'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductSearchProviderRunQueryBefore', [
-            'query' => $query,
-        ]);
+Hook::exec('actionProductSearchProviderRunQueryBefore', [ 'query' => $query, ])
 ```

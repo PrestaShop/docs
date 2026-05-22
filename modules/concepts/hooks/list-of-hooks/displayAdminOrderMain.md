@@ -33,7 +33,11 @@ description: 'This hook displays content in the order view page in the main colu
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayAdminOrderMain', {id_order: orderForViewing.id}) }};
+{{ renderhook('displayAdminOrderMain', {id_order: orderForViewing.id}) }}
+        {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/payments.html.twig') }}
+        {{ renderhook('displayAdminOrderMainBottom', {id_order: orderForViewing.id}) }}
+      </div>
+    </div>
 ```
 
 ## Example implementation

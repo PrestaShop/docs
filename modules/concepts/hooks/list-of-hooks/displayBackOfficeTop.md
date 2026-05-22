@@ -4,12 +4,19 @@ hidden: true
 hookTitle: 'Administration panel hover the tabs'
 files:
     -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Layout/default_layout.html.twig'
+        file: src/PrestaShopBundle/Resources/views/Admin/Layout/default_layout.html.twig
+    -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Layout/legacy_layout.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Layout/legacy_layout.html.twig
 locations:
     - 'back office'
 type: display
-hookAliases: displayBackOfficeTop
+hookAliases:
+    - backOfficeTop
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +30,5 @@ description: 'This hook is displayed on the roll hover of the tabs within the ad
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayBackOfficeTop') }};
+'displayBackOfficeTop' => Hook::exec('displayBackOfficeTop'), 'displayBackOfficeEmployeeMenu' => $menuLinksCollections, 'submit_form_ajax' => (int) Tools::getValue('submitFormAjax'), ])
 ```

@@ -23,5 +23,5 @@ description: 'This hook returns an array of FormFields to add them to the custom
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('additionalCustomerFormFields', ['fields' => &$format], null, true);
+$additionalCustomerFormFields = Hook::exec('additionalCustomerFormFields', ['fields' => &$format], null, true)
 ```

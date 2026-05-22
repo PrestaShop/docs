@@ -1,11 +1,14 @@
 ---
 Title: actionShopDataDuplication
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/shop/Shop.php'
         file: classes/shop/Shop.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/admin/AdminShopController.php'
+        file: controllers/admin/AdminShopController.php
 locations:
     - 'front office'
 type: action
@@ -33,8 +36,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionShopDataDuplication', [
-                        'old_id_shop' => (int) $old_id,
-                        'new_id_shop' => (int) $this->id,
-                    ], $m['id_module']);
+$modules_list = Hook::getHookModuleExecList('actionShopDataDuplication')
 ```

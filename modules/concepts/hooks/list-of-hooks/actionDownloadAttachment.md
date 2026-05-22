@@ -1,7 +1,7 @@
 ---
 Title: actionDownloadAttachment
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/AttachmentController.php'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionDownloadAttachment', ['attachment' => &$attachment]);
+Hook::exec('actionDownloadAttachment', ['attachment' => &$attachment])
 ```

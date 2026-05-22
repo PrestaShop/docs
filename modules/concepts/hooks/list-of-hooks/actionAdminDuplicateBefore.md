@@ -1,7 +1,7 @@
 ---
 Title: actionAdminDuplicateBefore
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Product/Update/ProductDuplicator.php'
@@ -23,8 +23,9 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters(
-            'actionAdminDuplicateBefore',
+'actionAdminDuplicateBefore',
             ['id_product' => $oldProductId]
         );
+        $newProduct = $this->duplicateProduct($productId, $shopConstraint);
+        $newProductId = (int) $newProduct->id;
 ```

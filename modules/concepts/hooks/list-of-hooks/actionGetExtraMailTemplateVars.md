@@ -1,7 +1,7 @@
 ---
 Title: actionGetExtraMailTemplateVars
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Mail.php'
@@ -23,15 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-                'actionGetExtraMailTemplateVars',
+'actionGetExtraMailTemplateVars',
                 [
                     'template' => $template,
                     'template_vars' => $templateVars,
                     'extra_template_vars' => &$extraTemplateVars,
                     'id_lang' => (int) $idLang,
-                ],
-                null,
-                true
-            );
 ```

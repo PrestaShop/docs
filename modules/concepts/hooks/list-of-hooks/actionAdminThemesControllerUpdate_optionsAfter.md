@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters('actionAdminThemesControllerUpdate_optionsAfter');
+$this->hookDispatcher->dispatchWithParameters('actionAdminThemesControllerUpdate_optionsAfter')
 ```

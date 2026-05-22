@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionModuleUninstallBefore', ['object' => $this]);
+Hook::exec('actionModuleUninstallBefore', ['object' => $this])
 ```

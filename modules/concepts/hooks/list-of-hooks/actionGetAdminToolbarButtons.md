@@ -33,8 +33,5 @@ description: 'This hook allows you to define descriptions of buttons to add in a
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionGetAdminToolbarButtons', [
-                'controller' => $this,
-                'toolbar_extra_buttons_collection' => &$toolbarButtonsCollection,
-            ]);
+Hook::exec('actionGetAdminToolbarButtons', [ 'controller' => $this, 'toolbar_extra_buttons_collection' => &$toolbarButtonsCollection, ])
 ```

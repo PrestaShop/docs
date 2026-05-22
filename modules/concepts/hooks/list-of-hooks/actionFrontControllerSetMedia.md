@@ -1,7 +1,7 @@
 ---
 Title: actionFrontControllerSetMedia
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionFrontControllerSetMedia');
+Hook::exec('actionFrontControllerSetMedia')
 ```

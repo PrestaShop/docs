@@ -1,7 +1,7 @@
 ---
 Title: actionInvoiceNumberFormatted
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/order/OrderInvoice.php'
@@ -23,10 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionInvoiceNumberFormatted', [
-            get_class($this) => $this,
-            'id_lang' => (int) $id_lang,
-            'id_shop' => (int) $id_shop,
-            'number' => (int) $this->number,
-        ]);
+$invoice_formatted_number = Hook::exec('actionInvoiceNumberFormatted', [ get_class($this) => $this, 'id_lang' => (int) $id_lang, 'id_shop' => (int) $id_shop, 'number' => (int) $this->number, ])
 ```

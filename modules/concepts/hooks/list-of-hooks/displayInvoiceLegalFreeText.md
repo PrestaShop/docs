@@ -23,5 +23,5 @@ description: 'This hook allows you to modify the legal free text on PDF invoices
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayInvoiceLegalFreeText', ['order' => $this->order]);
+$legal_free_text = Hook::exec('displayInvoiceLegalFreeText', ['order' => $this->order])
 ```

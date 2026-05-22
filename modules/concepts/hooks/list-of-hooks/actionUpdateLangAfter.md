@@ -23,5 +23,5 @@ description: 'Update "lang" tables after adding or updating a language'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionUpdateLangAfter', ['lang' => $language]);
+Hook::exec('actionUpdateLangAfter', ['lang' => $language])
 ```

@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionProductAttributeDelete
+hookAliases:
+    - deleteProductAttribute
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed when a product''s attribute is deleted'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductAttributeDelete', ['id_product_attribute' => 0, 'id_product' => (int) $this->id, 'deleteAllAttributes' => true]);
+Hook::exec('actionProductAttributeDelete', ['id_product_attribute' => 0, 'id_product' => (int) $this->id, 'deleteAllAttributes' => true])
 ```

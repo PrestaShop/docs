@@ -9,7 +9,8 @@ files:
 locations:
     - 'back office'
 type: action
-hookAliases: actionAdminMetaSave
+hookAliases:
+    - afterSaveAdminMeta
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed after saving the configuration in AdminMeta
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters('actionAdminMetaSave');
+$this->hookDispatcher->dispatchWithParameters('actionAdminMetaSave')
 ```

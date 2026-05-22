@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionAttributeGroupDelete
+hookAliases:
+    - afterDeleteAttributeGroup
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is called while deleting an attributes  group'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAttributeGroupDelete', ['id_attribute_group' => $this->id]);
+Hook::exec('actionAttributeGroupDelete', ['id_attribute_group' => $this->id])
 ```

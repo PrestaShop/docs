@@ -23,7 +23,5 @@ description: 'This hook is called before a manufacturer is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentManufacturer',
-            ['presentedManufacturer' => &$manufacturerLazyArray]
-        );
+Hook::exec('actionPresentManufacturer', ['presentedManufacturer' => &$manufacturerLazyArray] )
 ```

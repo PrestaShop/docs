@@ -1,7 +1,7 @@
 ---
 Title: actionWishlistAddProduct
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         module: blockwishlist
@@ -29,5 +29,5 @@ Hook::exec('actionWishlistAddProduct', [
             'customerId' => $this->context->customer->id,
             'idProduct' => $id_product,
             'idProductAttribute' => $id_product_attribute,
-        ]);
+        ])
 ```

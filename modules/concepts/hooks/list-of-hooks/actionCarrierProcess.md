@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionCarrierProcess
+hookAliases:
+    - processCarrier
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCarrierProcess', ['cart' => $this->getCheckoutSession()->getCart()]);
+Hook::exec('actionCarrierProcess', ['cart' => $this->getCheckoutSession()->getCart()])
 ```

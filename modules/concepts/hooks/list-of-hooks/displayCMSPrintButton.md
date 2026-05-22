@@ -1,17 +1,16 @@
 ---
 Title: displayCMSPrintButton
 hidden: true
-hookTitle: ''
+hookTitle: displayCMSPrintButton
 files:
-    -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/cms/page.tpl
-      file: themes/classic/templates/cms/page.tpl
     -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/cms/page.tpl
       file: themes/hummingbird/templates/cms/page.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/cms/page.tpl
+      file: themes/classic/templates/cms/page.tpl
 locations:
     - front office
 type: display
@@ -29,5 +28,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCMSPrintButton'};
+{hook h='displayCMSPrintButton'}
 ```

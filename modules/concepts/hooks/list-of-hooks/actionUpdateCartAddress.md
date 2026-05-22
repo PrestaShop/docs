@@ -23,5 +23,5 @@ description: 'This hook is called after address is changed on the cart'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionUpdateCartAddress', ['cart' => $this, 'oldAddressId' => $currentAddressId, 'newAddressId' => $newAddressId]);
+Hook::exec('actionUpdateCartAddress', ['cart' => $this, 'oldAddressId' => (int) $id_address, 'newAddressId' => (int) $id_address_new])
 ```

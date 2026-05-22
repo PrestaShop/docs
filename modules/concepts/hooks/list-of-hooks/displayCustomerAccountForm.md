@@ -8,8 +8,9 @@ files:
         file: classes/form/CustomerForm.php
 locations:
     - 'front office'
-type: action
-hookAliases: displayCustomerAccountForm
+type: display
+hookAliases:
+    - createAccountForm
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook displays some information on the form to create a custom
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayCustomerAccountForm');
+'hook_create_account_form' => Hook::exec('displayCustomerAccountForm'), 'formFields' => array_map( function (FormField $field) { return $field->toArray()
 ```

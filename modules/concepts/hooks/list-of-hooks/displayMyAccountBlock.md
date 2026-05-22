@@ -2,7 +2,10 @@
 Title: displayMyAccountBlock
 hidden: true
 hookTitle: 'My account block'
-files: {  }
+files:
+    -
+        url: ''
+        file: ''
 locations:
     - 'front office'
 type: display
@@ -21,5 +24,5 @@ chain: false
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayMyAccountBlock'};
+{hook h='displayMyAccountBlock'}
 ```

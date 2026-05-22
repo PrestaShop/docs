@@ -1,8 +1,11 @@
 ---
 Title: actionGetProductPropertiesAfter
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Hook.php'
+        file: classes/Hook.php
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
@@ -23,9 +26,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionGetProductPropertiesAfter', [
-            'id_lang' => $id_lang,
-            'product' => &$row,
-            'context' => $context,
-        ]);
+'actionGetProductPropertiesAfter' => ['from' => '1.7.8.0'],
+    ];
+
+    public const MODULE_LIST_BY_HOOK_KEY = 'hook_module_exec_list_';
+
+    public function add($autodate = true, $null_values = false)
 ```

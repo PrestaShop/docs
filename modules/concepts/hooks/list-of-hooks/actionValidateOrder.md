@@ -38,13 +38,7 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionValidateOrder', [
-                'cart' => $this->context->cart,
-                'order' => $order,
-                'customer' => $this->context->customer,
-                'currency' => $this->context->currency,
-                'orderStatus' => $order_status,
-            ]);
+Hook::exec('actionValidateOrder', [ 'cart' => $this->context->cart, 'order' => $order, 'customer' => $this->context->customer, 'currency' => $this->context->currency, 'orderStatus' => $order_status,
 ```
 
 ## Example implementation

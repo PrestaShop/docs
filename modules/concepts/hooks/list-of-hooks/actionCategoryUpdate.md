@@ -9,7 +9,8 @@ files:
 locations:
     - 'back office'
 type: action
-hookAliases: actionCategoryUpdate
+hookAliases:
+    - categoryUpdate
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed when a category is modified'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCategoryUpdate', ['category' => new Category($movedCategory['id_category'])]);
+Hook::exec('actionCategoryUpdate', ['category' => $this])
 ```

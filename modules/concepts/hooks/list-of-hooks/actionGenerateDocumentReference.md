@@ -23,7 +23,5 @@ description: 'This hook allows modules to return custom document references'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionGenerateDocumentReference', [
-            'type' => 'order',
-        ]);
+$reference = Hook::exec('actionGenerateDocumentReference', [ 'type' => 'order', ])
 ```

@@ -4,6 +4,12 @@ hidden: true
 hookTitle: 'Before dispatch'
 files:
     -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Dispatcher.php'
+        file: classes/Dispatcher.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php'
+        file: src/PrestaShopBundle/EventListener/ActionDispatcherLegacyHooksSubscriber.php
+    -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Routing/LegacyRouterChecker.php'
         file: src/PrestaShopBundle/Routing/LegacyRouterChecker.php
 locations:
@@ -23,5 +29,5 @@ description: 'This hook is called at the beginning of the dispatch method of the
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters('actionDispatcherBefore', ['controller_type' => Dispatcher::FC_ADMIN]);
+Hook::exec('actionDispatcherBefore', ['controller_type' => $this->front_controller])
 ```

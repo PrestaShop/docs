@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionProductAttributeUpdate
+hookAliases:
+    - updateProductAttribute
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed when a product''s attribute is updated'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductAttributeUpdate', ['id_product_attribute' => (int) $id_product_attribute]);
+Hook::exec('actionProductAttributeUpdate', ['id_product_attribute' => (int) $id_product_attribute])
 ```

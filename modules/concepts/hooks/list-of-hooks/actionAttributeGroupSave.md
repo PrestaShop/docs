@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionAttributeGroupSave
+hookAliases:
+    - afterSaveAttributeGroup
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is called while saving an attributes group'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAttributeGroupSave', ['id_attribute_group' => $this->id]);
+Hook::exec('actionAttributeGroupSave', ['id_attribute_group' => $this->id])
 ```

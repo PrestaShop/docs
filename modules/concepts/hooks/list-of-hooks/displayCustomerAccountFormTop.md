@@ -8,8 +8,9 @@ files:
         file: controllers/front/RegistrationController.php
 locations:
     - 'front office'
-type: action
-hookAliases: displayCustomerAccountFormTop
+type: display
+hookAliases:
+    - createAccountTop
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed above the customer''s account creation form
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayCustomerAccountFormTop');
+'hook_create_account_top' => Hook::exec('displayCustomerAccountFormTop'), ])
 ```

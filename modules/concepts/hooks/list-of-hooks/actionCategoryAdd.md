@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionCategoryAdd
+hookAliases:
+    - categoryAddition
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed when a category is created'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCategoryAdd', ['category' => $this]);
+Hook::exec('actionCategoryAdd', ['category' => $this])
 ```

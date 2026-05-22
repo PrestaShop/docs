@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionProductDelete
+hookAliases:
+    - deleteproduct
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is called when a product is deleted'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionProductDelete', ['id_product' => (int) $this->id, 'product' => $this]);
+Hook::exec('actionProductDelete', ['id_product' => (int) $this->id, 'product' => $this])
 ```

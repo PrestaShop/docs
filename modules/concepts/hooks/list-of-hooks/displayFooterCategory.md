@@ -4,9 +4,13 @@ hidden: true
 hookTitle: 'This hook adds new blocks under the products listing in a category/search'
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/2.0.x/templates/catalog/listing/product-list.tpl'
-        file: 'Classic Theme: templates/catalog/listing/product-list.tpl'
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/listing/product-list.tpl
+      file: themes/hummingbird/templates/catalog/listing/product-list.tpl
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/listing/product-list.tpl
+      file: themes/classic/templates/catalog/listing/product-list.tpl
 locations:
     - 'front office'
 type: display
@@ -23,5 +27,5 @@ description: 'This hook adds new blocks under the products listing in a category
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayFooterCategory'};
+{hook h='displayFooterCategory'}
 ```

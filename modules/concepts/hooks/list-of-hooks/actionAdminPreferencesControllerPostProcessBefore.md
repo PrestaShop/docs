@@ -23,5 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters('actionAdminPreferencesControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminPreferencesControllerPostProcessBefore', ['controller' => $this]);
+
+        $form = $preferencesFormHandler->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
 ```

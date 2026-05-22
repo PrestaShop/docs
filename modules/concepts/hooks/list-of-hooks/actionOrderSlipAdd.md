@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionOrderSlipAdd
+hookAliases:
+    - orderSlip
 array_return: false
 check_exceptions: true
 chain: false
@@ -45,10 +46,5 @@ description: 'This hook is called when a new credit slip is added regarding clie
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOrderSlipAdd', [
-                'order' => $order,
-                'productList' => $orderRefundSummary->getProductRefunds(),
-                'qtyList' => $fullQuantityList,
-                'orderSlipCreated' => $this->orderSlipCreated,
-            ], null, false, true, false, $order->id_shop);
+Hook::exec('actionOrderSlipAdd', [ 'order' => $order, 'productList' => $orderRefundSummary->getProductRefunds(), 'qtyList' => $fullQuantityList, 'orderSlipCreated' => $this->orderSlipCreated, ], null, false, true, false, $order->id_shop)
 ```

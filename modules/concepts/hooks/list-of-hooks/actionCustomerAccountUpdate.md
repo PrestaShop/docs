@@ -23,7 +23,5 @@ description: 'This hook is called when a customer updates its account successful
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCustomerAccountUpdate', [
-                'customer' => $customer,
-            ]);
+Hook::exec('actionCustomerAccountUpdate', [ 'customer' => $customer, ])
 ```

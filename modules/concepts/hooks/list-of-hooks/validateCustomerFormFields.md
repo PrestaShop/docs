@@ -23,5 +23,5 @@ description: 'This hook is called to a module when it has sent additional fields
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('validateCustomerFormFields', ['fields' => $formFields], $moduleId, true);
+$validatedCustomerFormFields = Hook::exec('validateCustomerFormFields', ['fields' => $formFields], $moduleId, true)
 ```

@@ -23,5 +23,5 @@ description: 'This hook is called when constructing the checkout process'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCheckoutRender', ['checkoutProcess' => &$this->checkoutProcess]);
+Hook::exec('actionCheckoutRender', ['checkoutProcess' => &$this->checkoutProcess])
 ```

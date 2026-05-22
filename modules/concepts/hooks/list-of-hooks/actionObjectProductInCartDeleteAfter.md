@@ -24,5 +24,5 @@ description: 'This hook is called after a product is removed from a cart'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionObjectProductInCartDeleteAfter', $data);
+Hook::exec('actionObjectProductInCartDeleteAfter', $data)
 ```

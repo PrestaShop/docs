@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionHtaccessCreate
+hookAliases:
+    - afterCreateHtaccess
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is displayed after the htaccess creation'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionHtaccessCreate', ['path' => $path]);
+Hook::exec('actionHtaccessCreate', ['path' => $path])
 ```

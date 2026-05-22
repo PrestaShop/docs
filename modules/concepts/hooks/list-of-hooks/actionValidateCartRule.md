@@ -23,17 +23,10 @@ description: 'Allow modules to implement their own rules to validate a cart rule
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionValidateCartRule',
+'actionValidateCartRule',
             [
                 'cart_rule' => $this,
                 'cart' => $cart,
                 'alreadyInCart' => $alreadyInCart,
                 'display_error' => $display_error,
-                'check_carrier' => $check_carrier,
-                'useOrderPrices' => $useOrderPrices,
-                'isValidatedByModules' => &$isValidatedByModules,
-                'isValidatedByModulesError' => &$isValidatedByModulesError,
-            ]
-        );
 ```

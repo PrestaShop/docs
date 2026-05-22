@@ -4,14 +4,13 @@ hidden: true
 hookTitle: 'Very bottom of pages'
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl
-      file: themes/classic/templates/layouts/layout-both-columns.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/layouts/layout-both-columns.tpl
       file: themes/hummingbird/templates/layouts/layout-both-columns.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl
+      file: themes/classic/templates/layouts/layout-both-columns.tpl
 locations:
     - front office
 type: display
@@ -29,5 +28,5 @@ description: Use this hook for your modals or any content you want to load at th
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayBeforeBodyClosingTag'};
+{hook h='displayBeforeBodyClosingTag'}
 ```

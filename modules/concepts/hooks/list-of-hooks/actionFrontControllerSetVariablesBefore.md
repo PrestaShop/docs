@@ -23,8 +23,7 @@ description: 'Allows defining variables for the JavaScript object before the cor
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionFrontControllerSetVariablesBefore',
+'actionFrontControllerSetVariablesBefore',
             [
                 'templateVars' => &$templateVars,
                 'cart' => $cart,

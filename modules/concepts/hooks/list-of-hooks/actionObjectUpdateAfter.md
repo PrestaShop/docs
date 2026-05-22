@@ -1,7 +1,7 @@
 ---
 Title: actionObjectUpdateAfter
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/ObjectModel.php'
@@ -24,5 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionObjectUpdateAfter', ['object' => $this]);
+Hook::exec('actionObjectUpdateAfter', ['object' => $this])
 ```

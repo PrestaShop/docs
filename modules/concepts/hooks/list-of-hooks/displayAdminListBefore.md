@@ -1,15 +1,18 @@
 ---
 Title: displayAdminListBefore
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/controllers/tax_rules/helpers/list/list_header.tpl'
+        file: admin-dev/themes/default/template/controllers/tax_rules/helpers/list/list_header.tpl
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/helpers/list/list_header.tpl'
         file: admin-dev/themes/default/template/helpers/list/list_header.tpl
 locations:
     - 'back office'
 type: display
-hookAliases: displayAdminListBefore
+hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +26,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAdminListBefore'};
+{hook h='displayAdminListBefore'}
 ```

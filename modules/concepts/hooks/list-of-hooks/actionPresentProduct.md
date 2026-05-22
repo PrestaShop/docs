@@ -23,9 +23,7 @@ description: 'This hook is called before a product is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentProduct',
-            ['presentedProduct' => &$productLazyArray]
-        );
+Hook::exec('actionPresentProduct', ['presentedProduct' => &$productLazyArray] )
 ```
 
 ## Example on how to change values

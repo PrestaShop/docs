@@ -1,7 +1,7 @@
 ---
 Title: actionProductCoverage
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/stock/StockManager.php'
@@ -23,12 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-                'actionProductCoverage',
+'actionProductCoverage',
                 [
                     'id_product' => $id_product,
                     'id_product_attribute' => $id_product_attribute,
                     'warehouse' => $warehouse,
                 ]
-            );
 ```

@@ -33,8 +33,7 @@ description: 'This hook allows you to modify delivery option list'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionFilterDeliveryOptionList',
+'actionFilterDeliveryOptionList',
             [
                 'delivery_option_list' => &$delivery_option_list,
                 'cart' => $this,

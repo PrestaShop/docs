@@ -1,7 +1,7 @@
 ---
 Title: actionAdminDuplicateAfter
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Product/Update/ProductDuplicator.php'
@@ -23,8 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters(
-            'actionAdminDuplicateAfter',
+'actionAdminDuplicateAfter',
             ['id_product' => $oldProductId, 'id_product_new' => $newProductId]
         );
+
+        // @todo: after ##21740 (transactions PR) is resolved.
+        //  Based on if its accepted or not, we need to implement roll back if something went wrong.
 ```

@@ -23,7 +23,7 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters(
+dispatchHook(
             'actionAdminShopParametersProductPreferencesControllerPostProcess' . $hookName . 'Before',
             ['controller' => $this]
         )

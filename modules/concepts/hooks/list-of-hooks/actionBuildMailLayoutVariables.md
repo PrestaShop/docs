@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 'Build the variables used in email layout rendering'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php'
-        file: src/Core/MailTemplate/Layout/LayoutVariablesBuilder.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/MailTemplate/Layout/LayoutVariablesBuilderInterface.php'
+        file: src/Core/MailTemplate/Layout/LayoutVariablesBuilderInterface.php
 locations:
     - 'front office'
 type: action
@@ -24,13 +24,12 @@ description: 'This hook allows to change the variables used when an email layout
 ## Call of the Hook in the origin file
 
 ```php
-dispatchWithParameters(
-            LayoutVariablesBuilderInterface::BUILD_MAIL_LAYOUT_VARIABLES_HOOK,
-            [
-                'mailLayout' => $mailLayout,
-                'mailLayoutVariables' => &$mailLayoutVariables,
-            ]
-        )
+public const BUILD_MAIL_LAYOUT_VARIABLES_HOOK = 'actionBuildMailLayoutVariables';
+
+    /**
+     * @param LayoutInterface $layout
+     * @param LanguageInterface $language
+     *
 ```
 
 ## Example implementation

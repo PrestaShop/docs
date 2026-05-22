@@ -1,7 +1,7 @@
 ---
 Title: displayOrderPreview
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/preview.html.twig'
@@ -32,5 +32,6 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayOrderPreview', {order_id: orderId}) }};
+{{ renderhook('displayOrderPreview', {order_id: orderId}) }}
+{% endblock %}
 ```

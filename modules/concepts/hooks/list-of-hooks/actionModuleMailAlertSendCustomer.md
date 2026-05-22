@@ -1,7 +1,7 @@
 ---
 Title: actionModuleMailAlertSendCustomer
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         module: ps_emailalerts
@@ -25,12 +25,12 @@ description: ''
 
 ```php
 Hook::exec(
-                'actionModuleMailAlertSendCustomer',
-                [
-                    'product' => $product_name,
-                    'link' => $product_link,
-                    'customer' => $customer,
-                    'product_obj' => $product,
-                ]
-            );
+    'actionModuleMailAlertSendCustomer',
+    [
+        'product' => $product_name,
+        'link' => $product_link,
+        'customer' => $customer,
+        'product_obj' => $product,
+    ]
+)
 ```

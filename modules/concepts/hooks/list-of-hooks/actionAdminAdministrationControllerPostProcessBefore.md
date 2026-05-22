@@ -23,5 +23,10 @@ description: 'This hook is called on Admin Configure Advanced Parameters Adminis
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters('actionAdminAdministrationControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminAdministrationControllerPostProcessBefore', ['controller' => $this]);
+
+        $form = $formHandler->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted()) {
 ```

@@ -4,14 +4,13 @@ hidden: true
 hookTitle: 'Display elements after login form'
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/authentication.tpl
-      file: themes/classic/templates/customer/authentication.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/customer/authentication.tpl
       file: themes/hummingbird/templates/customer/authentication.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/authentication.tpl
+      file: themes/classic/templates/customer/authentication.tpl
 locations:
     - front office
 type: display
@@ -29,5 +28,5 @@ description: This hook displays new elements after the login form
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayCustomerLoginFormAfter'};
+{hook h='displayCustomerLoginFormAfter'}
 ```

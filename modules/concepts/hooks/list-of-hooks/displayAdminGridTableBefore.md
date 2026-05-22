@@ -38,7 +38,7 @@ description: 'This hook adds new blocks before Grid component table'
 {{ renderhook('displayAdminGridTableBefore', {
     grid: grid,
     legacy_controller: app.request.attributes.get('_legacy_controller'),
-    controller: app.request.attributes.get('_controller')
+    controller: app.request.attributes.get('_controller'),
   })
-}};
+}}
 ```

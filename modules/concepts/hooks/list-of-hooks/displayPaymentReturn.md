@@ -8,8 +8,9 @@ files:
         file: controllers/front/OrderConfirmationController.php
 locations:
     - 'front office'
-type: action
-hookAliases: displayPaymentReturn
+type: display
+hookAliases:
+    - paymentReturn
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayPaymentReturn', ['order' => $order], $this->id_module);
+return Hook::exec('displayPaymentReturn', ['order' => $order], $this->id_module)
 ```

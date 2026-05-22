@@ -23,5 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters('actionAdminMaintenanceControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminMaintenanceControllerPostProcessBefore', ['controller' => $this]);
+        $form = $maintenanceFormHandler->getForm();
+        $form->handleRequest($request);
+
+        if (!$form->isSubmitted()) {
+            return $redirectResponse;
 ```

@@ -73,5 +73,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayGDPRConsent' id_module=$id_module};
+{hook h='displayGDPRConsent' id_module=$id_module}
 ```

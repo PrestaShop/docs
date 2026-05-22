@@ -23,5 +23,10 @@ description: 'This hook is called on Admin Security Controller post-process befo
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters('actionAdminSecurityControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminSecurityControllerPostProcessBefore', ['controller' => $this]);
+
+        $form = $formHandler->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted()) {
 ```

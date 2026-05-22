@@ -23,8 +23,7 @@ description: 'This hook is used to get the employee image'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionOverrideEmployeeImage',
+'actionOverrideEmployeeImage',
             [
                 'employee' => $this,
                 'imageUrl' => &$imageUrl,

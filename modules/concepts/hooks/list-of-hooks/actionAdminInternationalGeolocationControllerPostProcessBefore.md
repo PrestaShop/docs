@@ -23,5 +23,10 @@ description: 'This hook is called on Admin Improve International Geolocation pos
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHookWithParameters('actionAdminInternationalGeolocationControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminInternationalGeolocationControllerPostProcessBefore', ['controller' => $this]);
+
+        $form = $formHandler->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted()) {
 ```

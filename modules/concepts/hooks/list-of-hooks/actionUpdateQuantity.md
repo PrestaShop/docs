@@ -4,12 +4,22 @@ hidden: true
 hookTitle: 'Quantity update'
 files:
     -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/stock/StockAvailable.php'
+        file: classes/stock/StockAvailable.php
+    -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Product/Combination/Update/CombinationStockUpdater.php'
         file: src/Adapter/Product/Combination/Update/CombinationStockUpdater.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Product/Stock/Update/ProductStockUpdater.php'
+        file: src/Adapter/Product/Stock/Update/ProductStockUpdater.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Stock/StockManager.php'
+        file: src/Core/Stock/StockManager.php
 locations:
     - 'front office'
 type: action
-hookAliases: actionUpdateQuantity
+hookAliases:
+    - updateQuantity
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,12 +33,10 @@ description: 'Quantity is updated only when a customer effectively places their 
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters('actionUpdateQuantity',
+'actionUpdateQuantity',
             [
-                'id_product' => $stockAvailable->id_product,
-                'id_product_attribute' => $stockAvailable->id_product_attribute,
-                'quantity' => $stockAvailable->quantity,
-                'delta_quantity' => $deltaQuantity,
-                'id_shop' => $stockAvailable->id_shop,
-            ]);
+                'id_product' => $id_product,
+                'id_product_attribute' => $id_product_attribute,
+                'quantity' => $stock_available->quantity,
+                'delta_quantity' => $deltaQuantity ?? null,
 ```

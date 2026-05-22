@@ -10,7 +10,7 @@ locations:
     - 'back office'
 type: display
 hookAliases:
-    - displayBackofficeOrderActions
+    - displayBackOfficeOrderActions 
 array_return: false
 check_exceptions: false
 chain: false
@@ -33,5 +33,10 @@ description: 'This hook displays content in the order view page in the side colu
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayAdminOrderSide', {id_order: orderForViewing.id}) }};
+{{ renderhook('displayAdminOrderSide', {id_order: orderForViewing.id}) }}
+        {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/messages.html.twig') }}
+        {{ renderhook('displayAdminOrderSideBottom', {id_order: orderForViewing.id}) }}
+      </div>
+
+      <div class="col-md-8 d-print-block right-column">
 ```

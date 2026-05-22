@@ -23,7 +23,5 @@ description: 'This hook allows you to customize the "prestashop" javascript obje
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionBuildFrontEndObject', [
-            'obj' => &$object,
-        ]);
+Hook::exec('actionBuildFrontEndObject', [ 'obj' => &$object, ])
 ```

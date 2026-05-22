@@ -23,5 +23,5 @@ description: 'This hook is used to filter the whole HTML page before it is rende
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOutputHTMLBefore', ['html' => &$html]);
+Hook::exec('actionOutputHTMLBefore', ['html' => &$html])
 ```

@@ -4,17 +4,17 @@ hidden: true
 hookTitle: 'Main wrapper section (top)'
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl'
-        file: 'Classic Theme: templates/layouts/layout-both-columns.tpl'
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/layouts/layout-both-columns.tpl
+      file: themes/hummingbird/templates/layouts/layout-both-columns.tpl
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/checkout.tpl'
-        file: 'Classic Theme: templates/checkout/checkout.tpl'
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl
+      file: themes/classic/templates/layouts/layout-both-columns.tpl
 locations:
     - 'front office'
 type: display
-hookAliases:
+hookAliases: 
 origin: theme
 array_return: false
 check_exceptions: false
@@ -28,5 +28,5 @@ description: 'This hook displays new elements in the top of the main wrapper'
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayWrapperTop'};
+{hook h='displayWrapperTop'}
 ```

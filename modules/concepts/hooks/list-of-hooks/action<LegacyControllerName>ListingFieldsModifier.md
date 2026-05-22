@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.2.x/src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php'
         file: src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php
 locations:
     - 'front office'

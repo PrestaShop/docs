@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionFeatureValueDelete
+hookAliases:
+    - afterDeleteFeatureValue
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is called while deleting an attributes features value'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionFeatureValueDelete', ['id_feature_value' => $this->id]);
+Hook::exec('actionFeatureValueDelete', ['id_feature_value' => $this->id])
 ```

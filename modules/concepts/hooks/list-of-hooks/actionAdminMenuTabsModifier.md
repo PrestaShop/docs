@@ -23,5 +23,5 @@ description: 'This hook allows modifying back office menu tabs'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAdminMenuTabsModifier', ['tabs' => &$tabs], null, true);
+Hook::exec('actionAdminMenuTabsModifier', ['tabs' => &$tabs], null, true)
 ```

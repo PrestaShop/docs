@@ -1,7 +1,7 @@
 ---
 Title: actionModuleUnRegisterHookAfter
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Hook.php'
@@ -23,8 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionModuleUnRegisterHookAfter', [
-                'object' => $module_instance,
-                'hook_name' => $hook_name,
-            ]);
+Hook::exec('actionModuleUnRegisterHookAfter', [ 'object' => $module_instance, 'hook_name' => $hook_name, ])
 ```

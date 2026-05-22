@@ -11,12 +11,11 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/product.tpl
       file: themes/hummingbird/templates/catalog/product.tpl
-
 locations:
     - front office
 type: action
 hookAliases:
-    - actionProductOutOfStock 
+    - productOutOfStock 
 origin: theme
 array_return: false
 check_exceptions: false
@@ -30,5 +29,5 @@ description: This hook displays new action buttons if a product is out of stock
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='actionProductOutOfStock' product=$product};
+{hook h='actionProductOutOfStock' product=$product}
 ```

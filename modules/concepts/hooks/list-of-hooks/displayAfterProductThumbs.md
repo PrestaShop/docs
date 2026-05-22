@@ -11,7 +11,6 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-cover-thumbnails.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-cover-thumbnails.tpl
-
 locations:
     - front office
 type: display
@@ -29,5 +28,5 @@ description: This hook displays new elements below product images ex. additional
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAfterProductThumbs' product=$product};
+{hook h='displayAfterProductThumbs' product=$product}
 ```

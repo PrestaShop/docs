@@ -1,7 +1,7 @@
 ---
 Title: actionCartSummary
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Cart.php'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCartSummary', $summary, null, true);
+$hook = Hook::exec('actionCartSummary', $summary, null, true)
 ```

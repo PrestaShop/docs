@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionAuthenticationBefore
+hookAliases:
+    - actionBeforeAuthentication
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'Triggers after successful validation of login form, before the log
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAuthenticationBefore');
+Hook::exec('actionAuthenticationBefore')
 ```

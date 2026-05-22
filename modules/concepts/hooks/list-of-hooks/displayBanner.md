@@ -4,14 +4,13 @@ hidden: true
 hookTitle: 'Very top of pages'
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl
-      file: themes/classic/templates/_partials/header.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/header.tpl
       file: themes/hummingbird/templates/_partials/header.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl
+      file: themes/classic/templates/_partials/header.tpl
 locations:
     - front office
 type: display
@@ -29,5 +28,5 @@ description: Use this hook for banners on top of every pages
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayBanner'};
+{capture name="header_banner"}{hook h='displayBanner'}{/capture}
 ```

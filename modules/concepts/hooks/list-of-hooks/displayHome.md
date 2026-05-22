@@ -8,8 +8,9 @@ files:
         file: controllers/front/IndexController.php
 locations:
     - 'front office'
-type: action
-hookAliases: displayHome
+type: display
+hookAliases:
+    - home
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook displays new elements on the homepage'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayHome');
+'HOOK_HOME' => Hook::exec('displayHome'), ])
 ```

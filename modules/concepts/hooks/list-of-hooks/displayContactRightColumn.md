@@ -4,14 +4,13 @@ hidden: true
 hookTitle: 'Right column blocks of the contact page'
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl
-      file: themes/classic/templates/contact.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl
       file: themes/hummingbird/templates/contact.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl
+      file: themes/classic/templates/contact.tpl
 locations:
     - front office
 type: display
@@ -29,5 +28,5 @@ description: This hook displays new elements in the right-hand column of the con
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayContactRightColumn'};
+{hook h='displayContactRightColumn'}
 ```

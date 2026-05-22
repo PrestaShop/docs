@@ -4,6 +4,9 @@ hidden: true
 hookTitle: 'Clear Sf2 cache'
 files:
     -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Tools.php'
+        file: classes/Tools.php
+    -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Cache/Clearer/SymfonyCacheClearer.php'
         file: src/Adapter/Cache/Clearer/SymfonyCacheClearer.php
 locations:
@@ -23,5 +26,5 @@ description: 'This hook is called when the Symfony cache is cleared'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionClearSf2Cache');
+Hook::exec('actionClearSf2Cache')
 ```

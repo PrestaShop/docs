@@ -33,5 +33,10 @@ description: 'This hook launches modules when the AdminCustomers tab is displaye
 ## Call of the Hook in the origin file
 
 ```php
-{{ renderhook('displayAdminCustomers', {id_customer: customerInformation.customerId.value}) }};
+{{ renderhook('displayAdminCustomers', {id_customer: customerInformation.customerId.value}) }}
+  </div>
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
 ```

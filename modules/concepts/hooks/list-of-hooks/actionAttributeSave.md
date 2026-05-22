@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionAttributeSave
+hookAliases:
+    - afterSaveAttribute
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,5 +24,5 @@ description: 'This hook is called while saving an attributes features value'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAttributeSave', ['id_attribute' => $this->id]);
+Hook::exec('actionAttributeSave', ['id_attribute' => $this->id])
 ```

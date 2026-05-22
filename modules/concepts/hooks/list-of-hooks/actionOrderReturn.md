@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionOrderReturn
+hookAliases:
+    - orderReturn
 array_return: false
 check_exceptions: false
 chain: false
@@ -32,5 +33,5 @@ description: 'This hook is displayed when a customer returns a product '
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionOrderReturn', ['orderReturn' => $orderReturn]);
+Hook::exec('actionOrderReturn', ['orderReturn' => $orderReturn])
 ```

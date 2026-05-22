@@ -9,7 +9,8 @@ files:
 locations:
     - 'front office'
 type: action
-hookAliases: actionProductAdd
+hookAliases:
+    - addproduct
 array_return: false
 check_exceptions: false
 chain: false
@@ -23,8 +24,5 @@ description: 'This hook is displayed after a product is created'
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters(
-            'actionProductAdd',
-            ['id_product_old' => $oldProductId, 'id_product' => $newProductId, 'product' => $newProduct]
-        );
+'actionProductAdd', ['id_product_old' => $oldProductId, 'id_product' => $newProductId, 'product' => $newProduct] )
 ```

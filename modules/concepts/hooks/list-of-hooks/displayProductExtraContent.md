@@ -3,20 +3,16 @@ Title: displayProductExtraContent
 hidden: true
 hookTitle: 'Add content to the product page'
 files:
-    - 
-        theme: classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl#L216'
-        file: 'templates/catalog/product.tml'
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Product/ProductExtraContent.php'
-        file: 'src/Core/Product/ProductExtraContent.php'
+        file: src/Core/Product/ProductExtraContent.php
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Product/ProductExtraContentFinder.php'
-        file: 'src/Core/Product/ProductExtraContentFinder.php'
+        file: src/Core/Product/ProductExtraContentFinder.php
 locations:
     - 'front office'
 type: display
-hookAliases:
+hookAliases: 
 origin: core
 array_return: false
 check_exceptions: false
@@ -30,8 +26,11 @@ has_example: true
 ## Call of the Hook in the origin file
 
 ```php
-protected $hookName = 'displayProductExtraContent';
-protected $expectedInstanceClasses = ['PrestaShop\PrestaShop\Core\Product\ProductExtraContent'];
+<?php
+/**
+ * For the full copyright and license information, please view the
+ * docs/licenses/LICENSE.txt file that was distributed with this source code.
+ */
 ```
 
 ## Example implementation

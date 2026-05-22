@@ -1,8 +1,11 @@
 ---
 Title: overrideMinimalPurchasePrice
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/ModuleFrontController.php'
+        file: classes/controller/ModuleFrontController.php
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Cart/CartLazyArray.php'
         file: src/Adapter/Presenter/Cart/CartLazyArray.php
@@ -23,7 +26,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('overrideMinimalPurchasePrice', [
-            'minimalPurchase' => &$minimalPurchase,
-        ]);
+Hook::exec('overrideMinimalPurchasePrice', [ 'minimalPurchase' => &$minimalPurchase, ])
 ```

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.2.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig
 locations:
     - 'back office'

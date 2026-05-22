@@ -34,9 +34,5 @@ description: 'This hook allows you to execute code after the unique tracking num
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAdminOrdersTrackingNumberUpdate', [
-                    'order' => $order,
-                    'customer' => $customer,
-                    'carrier' => $carrier,
-                ], null, false, true, false, $order->id_shop);
+Hook::exec('actionAdminOrdersTrackingNumberUpdate', [ 'order' => $order, 'customer' => $customer, 'carrier' => $carrier, ], null, false, true, false, $order->id_shop)
 ```

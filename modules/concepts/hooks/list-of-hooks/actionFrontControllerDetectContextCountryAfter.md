@@ -23,8 +23,7 @@ description: 'Allows modules to modify the context country after it has been det
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionFrontControllerDetectContextCountryAfter',
+'actionFrontControllerDetectContextCountryAfter',
             [
                 'controller' => $this,
             ]

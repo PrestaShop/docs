@@ -11,7 +11,6 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/steps/personal-information.tpl
       file: themes/hummingbird/templates/checkout/_partials/steps/personal-information.tpl
-
 locations:
     - front office
 type: display
@@ -29,5 +28,5 @@ description: Display actions or additional content in the personal details tab o
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayPersonalInformationTop' customer=$customer};
+{hook h='displayPersonalInformationTop' customer=$customer}
 ```

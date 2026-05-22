@@ -1,7 +1,7 @@
 ---
 Title: actionAdminMetaAfterWriteRobotsFile
 hidden: true
-hookTitle: ''
+hookTitle: files:
 files:
     -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Tools.php'
@@ -33,8 +33,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAdminMetaAfterWriteRobotsFile', [
-                'rb_data' => $robots_content,
-                'write_fd' => &$write_fd,
-            ]);
+Hook::exec('actionAdminMetaAfterWriteRobotsFile', [ 'rb_data' => $robots_content, 'write_fd' => &$write_fd, ])
 ```
