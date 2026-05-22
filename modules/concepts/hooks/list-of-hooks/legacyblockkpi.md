@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig'
-        file: src/PrestaShopBundle/Resources/views/Admin/Product/CatalogPage/catalog.html.twig
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Admin/LegacyBlockHelperSubscriber.php'
+        file: src/Adapter/Admin/LegacyBlockHelperSubscriber.php
 locations:
     - 'back office'
 type: null

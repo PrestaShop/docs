@@ -2,10 +2,7 @@
 Title: displayMyAccountBlock
 hidden: true
 hookTitle: 'My account block'
-files:
-    -
-        url: ''
-        file: ''
+files: {  }
 locations:
     - 'front office'
 type: display

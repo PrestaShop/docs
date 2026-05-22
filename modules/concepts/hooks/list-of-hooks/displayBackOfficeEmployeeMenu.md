@@ -1,11 +1,14 @@
 ---
-Title: displaybackOfficeEmployeeMenu
+Title: displayBackOfficeEmployeeMenu
 hidden: true
 hookTitle: 'Administration Employee menu'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php'
-        file: src/PrestaShopBundle/Bridge/Smarty/HeaderConfigurator.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Twig/Component/EmployeeDropdown.php'
+        file: src/PrestaShopBundle/Twig/Component/EmployeeDropdown.php
 locations:
     - 'back office'
 type: display

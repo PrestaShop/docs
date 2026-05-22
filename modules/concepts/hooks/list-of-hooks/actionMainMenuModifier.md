@@ -4,8 +4,9 @@ hidden: true
 hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/modules/ps_mainmenu/ps_mainmenu.php'
-        file: modules/ps_mainmenu/ps_mainmenu.php
+        module: ps_mainmenu
+        url: 'https://github.com/PrestaShop/ps_mainmenu/blob/dev/ps_mainmenu.php'
+        file: ps_mainmenu.php
 locations:
     - 'front office'
 type: action
@@ -13,7 +14,7 @@ hookAliases:
 array_return: false
 check_exceptions: false
 chain: false
-origin: core
+origin: module
 description: ''
 
 ---

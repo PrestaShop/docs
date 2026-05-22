@@ -4,10 +4,10 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php'
-        file: src/PrestaShopBundle/Bridge/Helper/Listing/HelperBridge/HelperListBridge.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
 locations:
-    - 'front office'
+    - 'back office'
 type: action
 hookAliases: 
 array_return: false
@@ -23,8 +23,8 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-dispatchWithParameters('action' . $helperListConfiguration->legacyControllerName . 'ListingResultsModifier', [
-            'list' => &$helperListConfiguration->list,
-            'list_total' => &$helperListConfiguration->listTotal,
+Hook::exec('action' . $this->controller_name . 'ListingResultsModifier', [
+            'list' => &$this->_list,
+            'list_total' => &$this->_listTotal,
         ])
 ```

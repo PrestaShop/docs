@@ -2,10 +2,7 @@
 Title: displayFeaturePostProcess
 hidden: true
 hookTitle: 'On post-process in admin feature'
-files:
-    -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/admin/AdminFeaturesController.php'
-        file: controllers/admin/AdminFeaturesController.php
+files: {  }
 locations:
     - 'back office'
 type: display
