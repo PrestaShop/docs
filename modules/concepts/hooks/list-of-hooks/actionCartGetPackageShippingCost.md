@@ -23,10 +23,17 @@ description: 'This hook is called in order to allow to modify package shipping c
 ## Call of the Hook in the origin file
 
 ```php
-'actionCartGetPackageShippingCost',
-            [
-                'cart' => $this,
-                'id_carrier' => $id_carrier,
-                'use_tax' => $use_tax,
-                'default_country' => $default_country,
+Hook::exec(
+    'actionCartGetPackageShippingCost',
+    [
+        'cart' => $this,
+        'id_carrier' => $id_carrier,
+        'use_tax' => $use_tax,
+        'default_country' => $default_country,
+        'product_list' => $product_list,
+        'id_zone' => $id_zone,
+        'keepOrderPrices' => $keepOrderPrices,
+        'shippingCost' => &$shippingCost,
+    ]
+);
 ```
