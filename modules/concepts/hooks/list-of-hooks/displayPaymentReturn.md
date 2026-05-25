@@ -24,5 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-return Hook::exec('displayPaymentReturn', ['order' => $order], $this->id_module)
+Hook::exec('displayPaymentReturn', ['order' => $order], $this->id_module)
 ```
