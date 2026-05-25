@@ -23,10 +23,11 @@ description: 'This hook is called when Mail::send() is called'
 ## Call of the Hook in the origin file
 
 ```php
-'sendMailAlterTemplateVars',
-            [
-                'template' => $template,
-                'template_vars' => &$templateVars,
-            ]
-        );
+Hook::exec(
+    'sendMailAlterTemplateVars',
+    [
+        'template' => $template,
+        'template_vars' => &$templateVars,
+    ]
+);
 ```
