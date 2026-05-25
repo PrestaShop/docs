@@ -24,10 +24,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$moduleList = Hook::getHookModuleExecList('displayAdminStatsModules');
-        if (true === is_array($moduleList)) {
-            return array_map(
-                function ($moduleArray) {
-                    return ['name' => $moduleArray['module']];
-                },
+Hook::getHookModuleExecList('displayAdminStatsModules');
 ```
