@@ -4,8 +4,8 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Product/AdminProductDataProvider.php'
-        file: src/Adapter/Product/AdminProductDataProvider.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
+        file: classes/controller/AdminController.php
 locations:
     - 'back office'
 type: action
@@ -20,30 +20,16 @@ description: ''
 
 {{% hookDescriptor %}}
 
-## Parameters details
-
-```php
-    <?php
-    array(
-      '_ps_version' => (string) PrestaShop version,
-      'sql_select' => &(array),
-      'sql_table' => &(array),
-      'sql_where' => &(array),
-      'sql_order' => &(array),
-      'sql_limit' => &(string),
-    );
-```
-
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionAdminProductsListingFieldsModifier', [
-            '_ps_version' => AppKernel::VERSION,
-            'sql_select' => &$sqlSelect,
-            'sql_table' => &$sqlTable,
-            'sql_where' => &$sqlWhere,
-            'sql_group_by' => &$sqlGroupBy,
-            'sql_order' => &$sqlOrder,
-            'sql_limit' => &$sqlLimit,
-        ])
+Hook::exec('action' . $this->controller_name . 'ListingFieldsModifier', [
+    'select' => &$this->_select,
+    'join' => &$this->_join,
+    'where' => &$this->_where,
+    'group_by' => &$this->_group,
+    'order_by' => &$this->_orderBy,
+    'order_way' => &$this->_orderWay,
+    'fields' => &$this->fields_list,
+]);
 ```

@@ -4,9 +4,8 @@ hidden: true
 hookTitle: 'Event triggered after search product completed'
 files:
     -
-        module: blockwishlist
-        url: 'https://github.com/PrestaShop/blockwishlist/blob/master/controllers/front/view.php'
-        file: controllers/front/view.php
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/ProductListingFrontController.php'
+        file: classes/controller/ProductListingFrontController.php
 locations:
     - 'front office'
 type: action

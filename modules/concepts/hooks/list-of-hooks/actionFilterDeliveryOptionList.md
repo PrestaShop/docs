@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modify delivery option list result'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Cart.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Cart.php'
         file: classes/Cart.php
 locations:
     - 'front office'
@@ -37,8 +37,9 @@ Hook::exec(
     'actionFilterDeliveryOptionList',
     [
         'delivery_option_list' => &$delivery_option_list,
+        'cart' => $this,
     ]
-)
+);
 ```
 
 ## Example implementation

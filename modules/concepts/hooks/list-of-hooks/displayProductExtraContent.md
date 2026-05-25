@@ -3,20 +3,16 @@ Title: displayProductExtraContent
 hidden: true
 hookTitle: 'Add content to the product page'
 files:
-    - 
-        theme: classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/product.tpl#L216'
-        file: 'templates/catalog/product.tml'
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Product/ProductExtraContent.php'
-        file: 'src/Core/Product/ProductExtraContent.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Product/ProductExtraContent.php'
+        file: src/Core/Product/ProductExtraContent.php
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Core/Product/ProductExtraContentFinder.php'
-        file: 'src/Core/Product/ProductExtraContentFinder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Product/ProductExtraContentFinder.php'
+        file: src/Core/Product/ProductExtraContentFinder.php
 locations:
     - 'front office'
 type: display
-hookAliases:
+hookAliases: 
 origin: core
 array_return: false
 check_exceptions: false
@@ -30,8 +26,8 @@ has_example: true
 ## Call of the Hook in the origin file
 
 ```php
-protected $hookName = 'displayProductExtraContent';
-protected $expectedInstanceClasses = ['PrestaShop\PrestaShop\Core\Product\ProductExtraContent'];
+<?php
+$product['extraContent'] = (new ProductExtraContentFinder())->addParams(['product' => $this->product])->present();
 ```
 
 ## Example implementation
@@ -59,7 +55,7 @@ class ProductExtraContentFinder extends HookFinder
     protected $expectedInstanceClasses = ['PrestaShop\PrestaShop\Core\Product\ProductExtraContent'];
 ```
 
-The `ProductExtraContentFinder` will look for modules hooked into `displayProductExtraContent`  with the corresponding existing method, and will expect `ProductExtraContent` to be returned. 
+The `ProductExtraContentFinder` will look for modules hooked into `displayProductExtraContent` with the corresponding existing method, and will expect `ProductExtraContent` to be returned.
 
 ```php
 return (new PrestaShop\PrestaShop\Core\Product\ProductExtraContent())

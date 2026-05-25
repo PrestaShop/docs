@@ -1,17 +1,16 @@
 ---
 Title: displayContactRightColumn
 hidden: true
-hookTitle: Right column blocks of the contact page
+hookTitle: 'Right column blocks of the contact page'
 files:
-    -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl
-      file: themes/classic/templates/contact.tpl
     -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/contact.tpl
       file: themes/hummingbird/templates/contact.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/contact.tpl
+      file: themes/classic/templates/contact.tpl
 locations:
     - front office
 type: display

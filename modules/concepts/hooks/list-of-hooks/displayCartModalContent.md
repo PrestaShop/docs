@@ -1,7 +1,7 @@
 ---
 Title: displayCartModalContent
 hidden: true
-hookTitle: Content of Add-to-cart modal
+hookTitle: 'Content of Add-to-cart modal'
 files:
     -
       module: ps_shoppingcart

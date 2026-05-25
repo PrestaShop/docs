@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Cart creation and update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Cart.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Cart.php'
         file: classes/Cart.php
 locations:
     - 'front office'
@@ -15,7 +15,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: "This hook is displayed when a product is added to the cart or if the cart's content is modified"
+description: 'This hook is displayed when a product is added to the cart or if the cart''s content is modified'
 
 ---
 

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Successful customer account update'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/form/CustomerPersister.php'
         file: classes/form/CustomerPersister.php
 locations:
     - 'front office'
@@ -23,7 +23,5 @@ description: 'This hook is called when a customer updates its account successful
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCustomerAccountUpdate', [
-                'customer' => $customer,
-            ])
+Hook::exec('actionCustomerAccountUpdate', [ 'customer' => $customer, ])
 ```

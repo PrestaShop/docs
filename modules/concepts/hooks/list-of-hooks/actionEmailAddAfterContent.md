@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add extra content after mail content'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Mail.php'
         file: classes/Mail.php
 locations:
     - 'front office'
@@ -24,14 +24,14 @@ description: 'This hook is called just after fetching mail template'
 
 ```php
 Hook::exec(
-                'actionEmailAddAfterContent',
-                [
-                    'template' => $template,
-                    'template_html' => &$templateHtml,
-                    'template_txt' => &$templateTxt,
-                    'id_lang' => (int) $idLang,
-                ],
-                null,
-                true
-            )
+    'actionEmailAddAfterContent',
+    [
+        'template' => $template,
+        'template_html' => &$templateHtml,
+        'template_txt' => &$templateTxt,
+        'id_lang' => (int) $idLang,
+    ],
+    null,
+    true
+);
 ```

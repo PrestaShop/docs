@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Cart Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Cart/CartPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Cart/CartPresenter.php'
         file: src/Adapter/Presenter/Cart/CartPresenter.php
 locations:
     - 'front office'
@@ -23,7 +23,5 @@ description: 'This hook is called before a cart is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentCart',
-            ['presentedCart' => &$result]
-        )
+Hook::exec('actionPresentCart', ['presentedCart' => &$cartLazyArray] )
 ```

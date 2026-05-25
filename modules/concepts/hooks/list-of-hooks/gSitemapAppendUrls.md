@@ -4,8 +4,9 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/modules/gsitemap/gsitemap.php'
-        file: modules/gsitemap/gsitemap.php
+        module: gsitemap
+        url: 'https://github.com/PrestaShop/gsitemap/blob/dev/gsitemap.php'
+        file: gsitemap.php
 locations:
     - 'front office'
 type: null
@@ -13,7 +14,7 @@ hookAliases:
 array_return: true
 check_exceptions: false
 chain: false
-origin: core
+origin: module
 description: ''
 
 ---

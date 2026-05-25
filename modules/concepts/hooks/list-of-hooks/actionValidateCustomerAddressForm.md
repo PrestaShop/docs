@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Customer address form validation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerAddressForm.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/form/CustomerAddressForm.php'
         file: classes/form/CustomerAddressForm.php
 locations:
     - 'front office'
@@ -32,5 +32,5 @@ description: 'This hook is called when a customer submit its address form'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionValidateCustomerAddressForm', ['form' => $this])
+Hook::exec('actionValidateCustomerAddressForm', ['form' => $this]);
 ```

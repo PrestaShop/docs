@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Before HTML output'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'

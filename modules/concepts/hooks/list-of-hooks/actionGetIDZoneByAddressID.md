@@ -1,10 +1,10 @@
 ---
 Title: actionGetIDZoneByAddressID
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Address.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Address.php'
         file: classes/Address.php
 locations:
     - 'front office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionGetIDZoneByAddressID', ['id_address' => $id_address])
+$id_zone = Hook::exec('actionGetIDZoneByAddressID', ['id_address' => $id_address])
 ```

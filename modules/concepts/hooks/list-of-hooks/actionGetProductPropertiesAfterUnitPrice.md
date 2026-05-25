@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Product Properties'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
 locations:
     - 'front office'
@@ -23,9 +23,5 @@ description: 'This hook is called after defining the properties of a product'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionGetProductPropertiesAfterUnitPrice', [
-            'id_lang' => $id_lang,
-            'product' => &$row,
-            'context' => $context,
-        ])
+Hook::exec('actionGetProductPropertiesAfterUnitPrice', [ 'id_lang' => $id_lang, 'product' => &$row, 'context' => $context, ])
 ```

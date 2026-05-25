@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Action after initializing context currency'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
@@ -24,9 +24,9 @@ description: 'Allows modules to modify the context currency after it has been in
 
 ```php
 Hook::exec(
-            'actionFrontControllerInitContextCurrencyAfter',
-            [
-                'controller' => $this,
-            ]
-        );
+    'actionFrontControllerInitContextCurrencyAfter',
+    [
+        'controller' => $this,
+    ]
+);
 ```

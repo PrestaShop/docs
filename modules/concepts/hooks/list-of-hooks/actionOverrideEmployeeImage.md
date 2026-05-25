@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Get Employee Image'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Employee.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Employee.php'
         file: classes/Employee.php
 locations:
     - 'front office'
@@ -24,10 +24,10 @@ description: 'This hook is used to get the employee image'
 
 ```php
 Hook::exec(
-            'actionOverrideEmployeeImage',
-            [
-                'employee' => $this,
-                'imageUrl' => &$imageUrl,
-            ]
-        )
+    'actionOverrideEmployeeImage',
+    [
+        'employee' => $this,
+        'imageUrl' => &$imageUrl,
+    ]
+);
 ```

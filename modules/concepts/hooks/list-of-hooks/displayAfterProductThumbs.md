@@ -1,7 +1,7 @@
 ---
 Title: displayAfterProductThumbs
 hidden: true
-hookTitle: Display extra content below product thumbs
+hookTitle: 'Display extra content below product thumbs'
 files:
     -
       theme: classic
@@ -11,7 +11,6 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-cover-thumbnails.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-cover-thumbnails.tpl
-
 locations:
     - front office
 type: display

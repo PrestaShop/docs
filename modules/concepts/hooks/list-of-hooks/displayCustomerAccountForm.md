@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Customer account creation form'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerForm.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/form/CustomerForm.php'
         file: classes/form/CustomerForm.php
 locations:
     - 'front office'
@@ -24,5 +24,5 @@ description: 'This hook displays some information on the form to create a custom
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayCustomerAccountForm')
+Hook::exec('displayCustomerAccountForm');
 ```

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Category modification'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Category.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Category.php'
         file: classes/Category.php
 locations:
     - 'back office'
@@ -24,5 +24,5 @@ description: 'This hook is displayed when a category is modified'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCategoryUpdate', ['category' => $category])
+Hook::exec('actionCategoryUpdate', ['category' => $this])
 ```

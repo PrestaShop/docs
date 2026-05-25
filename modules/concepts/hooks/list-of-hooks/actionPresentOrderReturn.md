@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Order Return Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Order/OrderReturnPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Order/OrderReturnPresenter.php'
         file: src/Adapter/Presenter/Order/OrderReturnPresenter.php
 locations:
     - 'front office'
@@ -23,7 +23,5 @@ description: 'This hook is called before an order return is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentOrderReturn',
-            ['presentedOrderReturn' => &$orderReturnLazyArray]
-        )
+Hook::exec('actionPresentOrderReturn', ['presentedOrderReturn' => &$orderReturnLazyArray] )
 ```

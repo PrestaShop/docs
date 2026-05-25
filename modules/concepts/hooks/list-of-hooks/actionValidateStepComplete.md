@@ -1,10 +1,10 @@
 ---
 Title: actionValidateStepComplete
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/checkout/CheckoutDeliveryStep.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/CheckoutDeliveryStep.php'
         file: classes/checkout/CheckoutDeliveryStep.php
 locations:
     - 'front office'
@@ -35,12 +35,12 @@ description: ''
 
 ```php
 Hook::exec(
-            'actionValidateStepComplete',
-            [
-                'step_name' => 'delivery',
-                'request_params' => $requestParams,
-                'completed' => &$isComplete,
-            ],
-            Module::getModuleIdByName($currentDeliveryOption['external_module_name'])
-        )
+    'actionValidateStepComplete',
+    [
+        'step_name' => 'delivery',
+        'request_params' => $requestParams,
+        'completed' => &$isComplete,
+    ],
+    Module::getModuleIdByName($currentDeliveryOption['external_module_name'])
+);
 ```

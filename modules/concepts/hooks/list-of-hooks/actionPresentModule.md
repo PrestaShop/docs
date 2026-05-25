@@ -1,10 +1,10 @@
 ---
 Title: actionPresentModule
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Presenter/Module/ModulePresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Module/ModulePresenter.php'
         file: src/Adapter/Presenter/Module/ModulePresenter.php
 locations:
     - 'front office'
@@ -23,7 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentModule',
-            ['presentedModule' => &$result]
-        )
+Hook::exec('actionPresentModule', ['presentedModule' => &$result] )
 ```

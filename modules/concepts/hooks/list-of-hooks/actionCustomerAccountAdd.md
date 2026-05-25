@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Successful customer account creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/form/CustomerPersister.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/form/CustomerPersister.php'
         file: classes/form/CustomerPersister.php
 locations:
     - 'front office'
@@ -33,7 +33,5 @@ description: 'This hook is called when a new customer creates an account success
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionCustomerAccountAdd', [
-                'newCustomer' => $customer,
-            ])
+Hook::exec('actionCustomerAccountAdd', [ 'newCustomer' => $customer, ])
 ```

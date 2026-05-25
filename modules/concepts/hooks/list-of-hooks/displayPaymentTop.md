@@ -1,7 +1,7 @@
 ---
 Title: displayPaymentTop
 hidden: true
-hookTitle: Top of payment page
+hookTitle: 'Top of payment page'
 files:
     -
       theme: classic
@@ -11,7 +11,6 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/steps/payment.tpl
       file: themes/hummingbird/templates/checkout/_partials/steps/payment.tpl
-
 locations:
     - front office
 type: display

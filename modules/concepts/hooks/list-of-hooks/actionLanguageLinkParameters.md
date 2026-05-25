@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add parameters to language link'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Link.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Link.php'
         file: classes/Link.php
 locations:
     - 'front office'
@@ -24,7 +24,7 @@ description: 'Allows modules to provide proper parameters for links in other lan
 
 ```php
 Hook::exec(
-                    'actionLanguageLinkParameters',
-                    ['linkParams' => &$params, 'linkIdLang' => (int) $idLang]
-                );
+    'actionLanguageLinkParameters',
+    ['linkParams' => &$params, 'linkIdLang' => (int) $idLang]
+);
 ```

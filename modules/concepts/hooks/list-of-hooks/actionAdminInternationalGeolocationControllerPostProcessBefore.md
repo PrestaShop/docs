@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'On post-process in Admin Improve International Geolocation Controller'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Improve/International/GeolocationController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/Improve/International/GeolocationController.php'
         file: src/PrestaShopBundle/Controller/Admin/Improve/International/GeolocationController.php
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: 'This hook is called on Admin Improve International Geolocation pos
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHook('actionAdminInternationalGeolocationControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminInternationalGeolocationControllerPostProcessBefore', ['controller' => $this]);
 ```

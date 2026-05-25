@@ -4,8 +4,11 @@ hidden: true
 hookTitle: 'Display additional content for a carrier (e.g pickup points)'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/checkout/DeliveryOptionsFinder.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/checkout/DeliveryOptionsFinder.php'
         file: classes/checkout/DeliveryOptionsFinder.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Shipment/DeliveryOptionsProvider.php'
+        file: src/Adapter/Shipment/DeliveryOptionsProvider.php
 locations:
     - 'front office'
 type: display
@@ -23,5 +26,5 @@ description: 'This hook calls only the module related to the carrier, in order t
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('displayCarrierExtraContent', ['carrier' => $carrier], $moduleId)
+$carrier['extraContent'] = Hook::exec('displayCarrierExtraContent', ['carrier' => $carrier], $moduleId)
 ```

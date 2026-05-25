@@ -1,10 +1,10 @@
 ---
 Title: actionAfterLoadRoutes
 hidden: true
-hookTitle: 
+hookTitle: 'Triggers after loading routes'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Dispatcher.php#L708'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Dispatcher.php'
         file: classes/Dispatcher.php
 locations:
     - 'front office'
@@ -15,7 +15,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: ''
+description: 'Allow modules to modify routes in any way or add their own multilanguage routes.'
 
 ---
 

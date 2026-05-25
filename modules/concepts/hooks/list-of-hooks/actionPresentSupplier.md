@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Supplier Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Presenter/Supplier/SupplierPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Supplier/SupplierPresenter.php'
         file: src/Adapter/Presenter/Supplier/SupplierPresenter.php
 locations:
     - 'front office'
@@ -23,7 +23,5 @@ description: 'This hook is called before a supplier is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentSupplier',
-            ['presentedSupplier' => &$supplierLazyArray]
-        );
+Hook::exec('actionPresentSupplier', ['presentedSupplier' => &$supplierLazyArray] )
 ```

@@ -4,14 +4,14 @@ hidden: true
 hookTitle: 'Add extra webservice resource'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/webservice/WebserviceRequest.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/webservice/WebserviceRequest.php'
         file: classes/webservice/WebserviceRequest.php
 locations:
     - 'front office'
-type: null
+type: action
 hookAliases: 
 array_return: true
-check_exceptions: true
+check_exceptions: false
 chain: false
 origin: core
 description: 'This hook is called when webservice resources list in webservice controller'
@@ -23,5 +23,5 @@ description: 'This hook is called when webservice resources list in webservice c
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('addWebserviceResources', ['resources' => $resources], null, true, false)
+$extra_resources = Hook::exec('addWebserviceResources', ['resources' => $resources], null, true, false)
 ```

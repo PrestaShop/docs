@@ -4,14 +4,14 @@ hidden: true
 hookTitle: 'Display new elements in the Back Office, tab AdminOrder'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Sell/Order/Order/view.html.twig
 locations:
     - 'back office'
 type: display
+hasExample: true
 hookAliases:
     - adminOrder
-hasExample: true
 array_return: false
 check_exceptions: false
 chain: false
@@ -33,8 +33,8 @@ description: 'This hook launches modules when the AdminOrder tab is displayed in
 
 ## Call of the Hook in the origin file
 
-```php
-{{ renderhook('displayAdminOrder', {'id_order': orderForViewing.id}) }}
+```twig
+{{ renderhook('displayAdminOrder', {id_order: orderForViewing.id}) }}
 ```
 
 ## Example implementation

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Shop/CommandHandler/UploadLogosHandler.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Shop/CommandHandler/UploadLogosHandler.php'
         file: src/Adapter/Shop/CommandHandler/UploadLogosHandler.php
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$this->hookDispatcher->dispatchWithParameters('actionAdminThemesControllerUpdate_optionsAfter');
+$this->hookDispatcher->dispatchWithParameters('actionAdminThemesControllerUpdate_optionsAfter')
 ```

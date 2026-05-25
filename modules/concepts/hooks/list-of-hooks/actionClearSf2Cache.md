@@ -4,7 +4,10 @@ hidden: true
 hookTitle: 'Clear Sf2 cache'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/Adapter/Cache/Clearer/SymfonyCacheClearer.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Tools.php'
+        file: classes/Tools.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Cache/Clearer/SymfonyCacheClearer.php'
         file: src/Adapter/Cache/Clearer/SymfonyCacheClearer.php
 locations:
     - 'front office'

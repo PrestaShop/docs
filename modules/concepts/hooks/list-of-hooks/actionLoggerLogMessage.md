@@ -2,7 +2,10 @@
 Title: actionLoggerLogMessage
 hidden: true
 hookTitle: 'Allows to make extra action while a log is triggered'
-files: {  }
+files:
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/log/AbstractLogger.php'
+        file: classes/log/AbstractLogger.php
 locations:
     - 'back office'
     - 'front office'
@@ -12,7 +15,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: ''
+description: 'This hook allows to make an extra action while an exception is thrown and the logger logs it'
 
 ---
 
@@ -30,4 +33,3 @@ Hook::exec(
     ]
 );
 ```
-

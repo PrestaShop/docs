@@ -1,7 +1,7 @@
 ---
 Title: displayProductActions
 hidden: true
-hookTitle: Display additional action button on the product page
+hookTitle: 'Display additional action button on the product page'
 files:
     -
       theme: classic
@@ -11,10 +11,9 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-add-to-cart.tpl
       file: themes/hummingbird/templates/catalog/_partials/product-add-to-cart.tpl
-
 locations:
     - front office
-type: action
+type: display
 hookAliases: 
 origin: theme
 array_return: false

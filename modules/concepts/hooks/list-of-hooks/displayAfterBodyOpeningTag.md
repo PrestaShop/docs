@@ -1,17 +1,16 @@
 ---
 Title: displayAfterBodyOpeningTag
 hidden: true
-hookTitle: Very top of pages
+hookTitle: 'Very top of pages'
 files:
-    -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl
-      file: themes/classic/templates/layouts/layout-both-columns.tpl
     -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/layouts/layout-both-columns.tpl
       file: themes/hummingbird/templates/layouts/layout-both-columns.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/layouts/layout-both-columns.tpl
+      file: themes/classic/templates/layouts/layout-both-columns.tpl
 locations:
     - front office
 type: display

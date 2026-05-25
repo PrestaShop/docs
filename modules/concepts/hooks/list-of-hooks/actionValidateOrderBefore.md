@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Before validating an order'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/PaymentModule.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/PaymentModule.php'
         file: classes/PaymentModule.php
 locations:
     - 'front office'
@@ -24,10 +24,10 @@ description: 'This hook is called before validating an order by core'
 
 ```php
 Hook::exec('actionValidateOrderBefore', [
-            'cart' => $this->context->cart,
-            'customer' => $this->context->customer,
-            'currency' => $this->context->currency,
-            'id_order_state' => &$id_order_state,
-            'payment_method' => $payment_method,
-        ]);
+    'cart' => $this->context->cart,
+    'customer' => $this->context->customer,
+    'currency' => $this->context->currency,
+    'id_order_state' => &$id_order_state,
+    'payment_method' => $payment_method,
+]);
 ```

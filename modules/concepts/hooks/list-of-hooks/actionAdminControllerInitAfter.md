@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Perform actions after admin controller initialization'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/AdminController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/AdminController.php'
         file: classes/controller/AdminController.php
 locations:
     - 'back office'
@@ -24,9 +24,9 @@ description: 'This hook is launched after the initialization of all admin contro
 
 ```php
 Hook::exec(
-            'actionAdminControllerInitAfter',
-            [
-                'controller' => $this,
-            ]
-        )
+    'actionAdminControllerInitAfter',
+    [
+        'controller' => $this,
+    ]
+);
 ```

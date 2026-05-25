@@ -1,7 +1,7 @@
 ---
 Title: displayPersonalInformationTop
 hidden: true
-hookTitle: Content in the checkout funnel, on top of the personal information panel
+hookTitle: 'Content in the checkout funnel, on top of the personal information panel'
 files:
     -
       theme: classic
@@ -11,7 +11,6 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/steps/personal-information.tpl
       file: themes/hummingbird/templates/checkout/_partials/steps/personal-information.tpl
-
 locations:
     - front office
 type: display

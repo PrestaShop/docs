@@ -1,10 +1,10 @@
 ---
 Title: displayAdminForm
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/form/form.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/helpers/form/form.tpl'
         file: admin-dev/themes/default/template/helpers/form/form.tpl
 locations:
     - 'back office'

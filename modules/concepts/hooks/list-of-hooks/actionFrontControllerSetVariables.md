@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Add variables in JavaScript object and Smarty templates'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
@@ -40,12 +40,12 @@ description: 'Add variables to javascript object that is available in Front Offi
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionFrontControllerSetVariables',
-            [
-                'templateVars' => &$templateVars,
-            ],
-            null,
-            true
-        )
+ $modulesVariables = Hook::exec(
+    'actionFrontControllerSetVariables',
+    [
+        'templateVars' => &$templateVars,
+    ],
+    null,
+    true
+);
 ```

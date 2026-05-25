@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Before customer logout'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Customer.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Customer.php'
         file: classes/Customer.php
 locations:
     - 'front office'

@@ -1,7 +1,7 @@
 ---
 Title: displayCartExtraProductActions
 hidden: true
-hookTitle: Extra buttons in shopping cart
+hookTitle: 'Extra buttons in shopping cart'
 files:
     -
       theme: classic
@@ -11,10 +11,9 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/cart-detailed-product-line.tpl
       file: themes/hummingbird/templates/checkout/_partials/cart-detailed-product-line.tpl
-
 locations:
     - front office
-type: action
+type: display
 hookAliases: 
 origin: theme
 array_return: false

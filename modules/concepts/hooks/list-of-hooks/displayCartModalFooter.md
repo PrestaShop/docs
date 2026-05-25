@@ -1,7 +1,7 @@
 ---
 Title: displayCartModalFooter
 hidden: true
-hookTitle: Bottom of Add-to-cart modal
+hookTitle: 'Bottom of Add-to-cart modal'
 files:
     -
       module: ps_shoppingcart

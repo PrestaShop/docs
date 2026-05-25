@@ -1,12 +1,12 @@
 ---
 Title: actionWishlistAddProduct
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
         module: blockwishlist
         url: 'https://github.com/PrestaShop/blockwishlist/blob/master/controllers/front/action.php'
-        file: modules/blockwishlist/controllers/front/action.php
+        file: controllers/front/action.php
 locations:
     - 'front office'
 type: action

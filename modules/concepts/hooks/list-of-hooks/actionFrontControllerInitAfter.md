@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Perform actions after front office controller initialization'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
@@ -25,9 +25,9 @@ description: 'This hook is launched after the initialization of all front office
 
 ```php
 Hook::exec(
-            'actionFrontControllerInitAfter',
-            [
-                'controller' => $this,
-            ]
-        )
+    'actionFrontControllerInitAfter',
+    [
+        'controller' => $this,
+    ]
+);
 ```

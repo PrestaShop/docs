@@ -4,17 +4,17 @@ hidden: true
 hookTitle: 'Product Price Calculation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.1.x/classes/Product.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Product.php'
         file: classes/Product.php
 locations:
-    - 'back office'
+    - 'front office'
 type: action
 hookAliases: 
 array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: 'This hook is called into the priceCalculation method to be able to override the price calculatio'
+description: 'This hook is called into the priceCalculation method to be able to override the price calculation'
 
 ---
 

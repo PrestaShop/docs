@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'After htaccess creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/Tools.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Tools.php'
         file: classes/Tools.php
 locations:
     - 'front office'
@@ -24,5 +24,5 @@ description: 'This hook is displayed after the htaccess creation'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionHtaccessCreate', ['path' => $path]);
+Hook::exec('actionHtaccessCreate', ['path' => $path])
 ```

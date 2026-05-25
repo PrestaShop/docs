@@ -1,10 +1,13 @@
 ---
 Title: displayAdminListBefore
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/admin-dev/themes/default/template/helpers/list/list_header.tpl'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/controllers/tax_rules/helpers/list/list_header.tpl'
+        file: admin-dev/themes/default/template/controllers/tax_rules/helpers/list/list_header.tpl
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/admin-dev/themes/default/template/helpers/list/list_header.tpl'
         file: admin-dev/themes/default/template/helpers/list/list_header.tpl
 locations:
     - 'back office'

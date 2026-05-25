@@ -1,11 +1,14 @@
 ---
 Title: actionAttributeCombinationSave
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Combination.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Combination.php'
         file: classes/Combination.php
+    -
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Product/Combination/Create/CombinationCreator.php'
+        file: src/Adapter/Product/Combination/Create/CombinationCreator.php
 locations:
     - 'front office'
 type: action

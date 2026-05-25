@@ -1,7 +1,7 @@
 ---
 Title: actionProductOutOfStock
 hidden: true
-hookTitle: Out-of-stock product
+hookTitle: 'Out-of-stock product'
 files:
     -
       theme: classic
@@ -11,7 +11,6 @@ files:
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/product.tpl
       file: themes/hummingbird/templates/catalog/product.tpl
-
 locations:
     - front office
 type: action

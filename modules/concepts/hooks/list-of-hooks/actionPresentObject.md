@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Object Presenter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/src/Adapter/Presenter/Object/ObjectPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Adapter/Presenter/Object/ObjectPresenter.php'
         file: src/Adapter/Presenter/Object/ObjectPresenter.php
 locations:
     - 'front office'
@@ -23,5 +23,5 @@ description: 'This hook is called before an object is presented'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionPresentObject', ['presentedObject' => &$presentedObject, 'table' => $object::$definition['table']]);
+Hook::exec('actionPresentObject', ['presentedObject' => &$presentedObject, 'table' => $object::$definition['table']])
 ```

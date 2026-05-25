@@ -1,17 +1,16 @@
 ---
 Title: displayCustomerLoginFormAfter
 hidden: true
-hookTitle: Display elements after login form
+hookTitle: 'Display elements after login form'
 files:
-    -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/authentication.tpl
-      file: themes/classic/templates/customer/authentication.tpl
     -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/customer/authentication.tpl
       file: themes/hummingbird/templates/customer/authentication.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/customer/authentication.tpl
+      file: themes/classic/templates/customer/authentication.tpl
 locations:
     - front office
 type: display

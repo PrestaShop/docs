@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Saving an attributes features value'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ProductAttribute.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/ProductAttribute.php'
         file: classes/ProductAttribute.php
 locations:
     - 'front office'

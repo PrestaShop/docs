@@ -4,14 +4,13 @@ hidden: true
 hookTitle: displayFooterBefore
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/footer.tpl
-      file: themes/classic/templates/_partials/footer.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/footer.tpl
       file: themes/hummingbird/templates/_partials/footer.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/footer.tpl
+      file: themes/classic/templates/_partials/footer.tpl
 locations:
     - front office
 type: display
@@ -29,7 +28,7 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayFooterBefore'}
+{capture name="footer_before"}{hook h='displayFooterBefore'}{/capture}
 ```
 
 ## Example implementation

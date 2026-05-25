@@ -4,14 +4,13 @@ hidden: true
 hookTitle: displayOrderConfirmation2
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/order-confirmation.tpl
-      file: themes/classic/templates/checkout/order-confirmation.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/order-confirmation.tpl
       file: themes/hummingbird/templates/checkout/order-confirmation.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/order-confirmation.tpl
+      file: themes/classic/templates/checkout/order-confirmation.tpl
 locations:
     - front office
 type: display

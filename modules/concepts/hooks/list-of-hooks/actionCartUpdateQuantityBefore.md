@@ -1,10 +1,10 @@
 ---
 Title: actionCartUpdateQuantityBefore
 hidden: true
-hookTitle: 
+hookTitle: 'Triggers before product is added to cart'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Cart.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Cart.php'
         file: classes/Cart.php
 locations:
     - 'front office'
@@ -15,7 +15,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: ''
+description: 'Allows responding to add to cart events.'
 
 ---
 

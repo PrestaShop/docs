@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Manage elements added to the "prestashop" javascript object'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
@@ -23,7 +23,5 @@ description: 'This hook allows you to customize the "prestashop" javascript obje
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionBuildFrontEndObject', [
-            'obj' => &$object,
-        ])
+Hook::exec('actionBuildFrontEndObject', [ 'obj' => &$object, ])
 ```

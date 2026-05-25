@@ -1,8 +1,12 @@
 ---
 Title: displayTop
 hidden: true
-hookTitle: Top of pages
+hookTitle: 'Top of pages'
 files:
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/header.tpl
+      file: themes/hummingbird/templates/_partials/header.tpl
     -
       theme: classic
       url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl
@@ -11,11 +15,6 @@ files:
       theme: classic
       url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl
       file: themes/classic/templates/checkout/_partials/header.tpl
-    -
-      theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/header.tpl
-      file: themes/hummingbird/templates/_partials/header.tpl
-
 locations:
     - front office
 type: display

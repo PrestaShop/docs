@@ -1,10 +1,10 @@
 ---
 Title: actionDeliveryPriceByWeight
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Carrier.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Carrier.php'
         file: classes/Carrier.php
 locations:
     - 'front office'
@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionDeliveryPriceByWeight', ['id_carrier' => $id_carrier, 'total_weight' => $total_weight, 'id_zone' => $id_zone])
+$price_by_weight = Hook::exec('actionDeliveryPriceByWeight', ['id_carrier' => $id_carrier, 'total_weight' => $total_weight, 'id_zone' => $id_zone])
 ```

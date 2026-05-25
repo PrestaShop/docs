@@ -1,12 +1,16 @@
 ---
 Title: displayAddressSelectorBottom
 hidden: true
-hookTitle: 
+hookTitle: 'After address selection on checkout page'
 files:
     -
-        theme: Classic
-        url: 'https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/addresses.tpl'
-        file: 'Classic Theme: templates/checkout/_partials/steps/addresses.tpl'
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/_partials/steps/addresses.tpl
+      file: themes/hummingbird/templates/checkout/_partials/steps/addresses.tpl
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/steps/addresses.tpl
+      file: themes/classic/templates/checkout/_partials/steps/addresses.tpl
 locations:
     - 'front office'
 type: display
@@ -25,5 +29,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayAddressSelectorBottom'}
+{capture name="address_selector_bottom"}{hook h='displayAddressSelectorBottom'}{/capture}
 ```

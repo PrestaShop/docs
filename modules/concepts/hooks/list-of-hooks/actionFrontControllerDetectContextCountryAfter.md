@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Action after detecting context country'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.0.x/classes/controller/FrontController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/controller/FrontController.php'
         file: classes/controller/FrontController.php
 locations:
     - 'front office'
@@ -24,9 +24,9 @@ description: 'Allows modules to modify the context country after it has been det
 
 ```php
 Hook::exec(
-            'actionFrontControllerDetectContextCountryAfter',
-            [
-                'controller' => $this,
-            ]
-        );
+    'actionFrontControllerDetectContextCountryAfter',
+    [
+        'controller' => $this,
+    ]
+);
 ```

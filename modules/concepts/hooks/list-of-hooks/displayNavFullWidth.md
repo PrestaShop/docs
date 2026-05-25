@@ -1,8 +1,12 @@
 ---
 Title: displayNavFullWidth
 hidden: true
-hookTitle: Navigation
+hookTitle: 'Navigation'
 files:
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/header.tpl
+      file: themes/hummingbird/templates/_partials/header.tpl
     -
       theme: classic
       url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/_partials/header.tpl
@@ -11,11 +15,6 @@ files:
       theme: classic
       url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/_partials/header.tpl
       file: themes/classic/templates/checkout/_partials/header.tpl
-    -
-      theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/_partials/header.tpl
-      file: themes/hummingbird/templates/_partials/header.tpl
-
 locations:
     - front office
 type: display
@@ -33,5 +32,5 @@ description: This hook displays full width navigation menu at the top of your pa
 ## Call of the Hook in the origin file
 
 ```php
-{hook h='displayNavFullWidth'}
+{capture name="nav_full_width"}{hook h='displayNavFullWidth'}{/capture}
 ```

@@ -1,7 +1,7 @@
 ---
 Title: actionNewsletterRegistrationBefore
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
         url: 'https://github.com/PrestaShop/ps_emailsubscription/blob/master/ps_emailsubscription.php'

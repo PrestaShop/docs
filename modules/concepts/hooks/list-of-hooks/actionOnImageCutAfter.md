@@ -1,10 +1,10 @@
 ---
 Title: actionOnImageCutAfter
 hidden: true
-hookTitle: 
+hookTitle: ''
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/ImageManager.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/ImageManager.php'
         file: classes/ImageManager.php
 locations:
     - 'front office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Homepage content'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/IndexController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/IndexController.php'
         file: controllers/front/IndexController.php
 locations:
     - 'front office'

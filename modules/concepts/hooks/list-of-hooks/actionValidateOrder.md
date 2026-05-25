@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'New orders'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/PaymentModule.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/PaymentModule.php'
         file: classes/PaymentModule.php
 locations:
     - 'front office'
@@ -39,12 +39,12 @@ description: ''
 
 ```php
 Hook::exec('actionValidateOrder', [
-                'cart' => $this->context->cart,
-                'order' => $order,
-                'customer' => $this->context->customer,
-                'currency' => $this->context->currency,
-                'orderStatus' => $order_status,
-            ])
+    'cart' => $this->context->cart,
+    'order' => $order,
+    'customer' => $this->context->customer,
+    'currency' => $this->context->currency,
+    'orderStatus' => $order_status,
+]);
 ```
 
 ## Example implementation

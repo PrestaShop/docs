@@ -4,14 +4,13 @@ hidden: true
 hookTitle: displayProductListReviews
 files:
     -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
-      file: themes/classic/templates/catalog/_partials/miniatures/product.tpl
-    -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/miniatures/product.tpl
       file: themes/hummingbird/templates/catalog/_partials/miniatures/product.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/miniatures/product.tpl
+      file: themes/classic/templates/catalog/_partials/miniatures/product.tpl
 locations:
     - front office
 type: display

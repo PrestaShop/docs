@@ -1,10 +1,10 @@
 ---
 Title: actionModuleInstallAfter
 hidden: true
-hookTitle: actionModuleInstallAfter
+hookTitle: 'actionModuleInstallAfter'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/module/Module.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/module/Module.php'
         file: classes/module/Module.php
 locations:
     - 'front office'

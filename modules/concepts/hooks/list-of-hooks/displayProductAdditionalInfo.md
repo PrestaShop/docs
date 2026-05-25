@@ -1,8 +1,12 @@
 ---
 Title: displayProductAdditionalInfo
 hidden: true
-hookTitle: Product page additional info
+hookTitle: 'Product page additional info'
 files:
+    -
+      theme: hummingbird
+      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-additional-info.tpl
+      file: themes/hummingbird/templates/catalog/_partials/product-additional-info.tpl
     -
       theme: classic
       url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/product-additional-info.tpl
@@ -11,15 +15,6 @@ files:
       theme: classic
       url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/catalog/_partials/quickview.tpl
       file: themes/classic/templates/catalog/_partials/quickview.tpl
-    -
-      theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/product-additional-info.tpl
-      file: themes/hummingbird/templates/catalog/_partials/product-additional-info.tpl
-    -
-      theme: hummingbird
-      url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/catalog/_partials/quickview.tpl
-      file: themes/hummingbird/templates/catalog/_partials/quickview.tpl
-
 locations:
     - front office
 type: display

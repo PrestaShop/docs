@@ -1,10 +1,10 @@
 ---
 Title: actionFeatureSave
 hidden: true
-hookTitle: "Saving attributes' features"
+hookTitle: 'Saving attributes'' features'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Feature.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Feature.php'
         file: classes/Feature.php
 locations:
     - 'front office'

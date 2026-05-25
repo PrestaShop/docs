@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Category creation'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Category.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Category.php'
         file: classes/Category.php
 locations:
     - 'front office'

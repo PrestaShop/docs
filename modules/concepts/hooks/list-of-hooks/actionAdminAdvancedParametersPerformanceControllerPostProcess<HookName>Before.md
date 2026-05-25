@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php'
         file: src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php
 locations:
     - 'back office'

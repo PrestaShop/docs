@@ -1,10 +1,10 @@
 ---
 Title: actionMailAlterMessageBeforeSend
 hidden: true
-hookTitle: 
+hookTitle: 'Modify Swift Message before sending'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/Mail.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/Mail.php'
         file: classes/Mail.php
 locations:
     - 'front office'
@@ -14,7 +14,7 @@ array_return: false
 check_exceptions: false
 chain: false
 origin: core
-description: ''
+description: 'This hook is called before the Swift Message is sent in Mail.php'
 
 ---
 
@@ -23,7 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionMailAlterMessageBeforeSend', [
-                'message' => &$message,
-            ])
+Hook::exec('actionMailAlterMessageBeforeSend', [ 'message' => &$email, ])
 ```

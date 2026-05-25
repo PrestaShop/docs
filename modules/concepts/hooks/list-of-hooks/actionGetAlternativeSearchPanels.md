@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Additional search panel'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/admin/AdminSearchController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/admin/AdminSearchController.php'
         file: controllers/admin/AdminSearchController.php
 locations:
     - 'back office'
@@ -33,13 +33,13 @@ description: 'This hook allows to add an additional search panel for external pr
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec(
-            'actionGetAlternativeSearchPanels',
-            [
-                'previous_search_panels' => $searchPanels,
-                'bo_query' => $searchedExpression,
-            ],
-            null,
-            true
-        )
+$alternativeSearchPanelsFromModules = Hook::exec(
+    'actionGetAlternativeSearchPanels',
+    [
+        'previous_search_panels' => $searchPanels,
+        'bo_query' => $searchedExpression,
+    ],
+    null,
+    true
+);
 ```

@@ -1,17 +1,16 @@
 ---
 Title: displayShoppingCart
 hidden: true
-hookTitle: Shopping cart - Additional button
+hookTitle: 'Shopping cart - Additional button'
 files:
-    -
-      theme: classic
-      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl
-      file: themes/classic/templates/checkout/cart.tpl
     -
       theme: hummingbird
       url: https://github.com/PrestaShop/hummingbird/blob/develop/templates/checkout/cart.tpl
       file: themes/hummingbird/templates/checkout/cart.tpl
-
+    -
+      theme: classic
+      url: https://github.com/PrestaShop/classic-theme/blob/develop/templates/checkout/cart.tpl
+      file: themes/classic/templates/checkout/cart.tpl
 locations:
     - front office
 type: display

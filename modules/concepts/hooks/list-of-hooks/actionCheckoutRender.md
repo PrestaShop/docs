@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modify checkout process'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/controllers/front/OrderController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/controllers/front/OrderController.php'
         file: controllers/front/OrderController.php
 locations:
     - 'front office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'On post-process in Admin Configure Advanced Parameters Performance Controller'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php'
         file: src/PrestaShopBundle/Controller/Admin/Configure/AdvancedParameters/PerformanceController.php
 locations:
     - 'back office'
@@ -23,5 +23,5 @@ description: 'This hook is called on Admin Configure Advanced Parameters Perform
 ## Call of the Hook in the origin file
 
 ```php
-dispatchHook('actionAdminAdvancedParametersPerformanceControllerPostProcessBefore', ['controller' => $this])
+$this->dispatchHookWithParameters('actionAdminAdvancedParametersPerformanceControllerPostProcessBefore', ['controller' => $this]);
 ```

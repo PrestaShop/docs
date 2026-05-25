@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'After validating an order'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/8.0.x/classes/PaymentModule.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/classes/PaymentModule.php'
         file: classes/PaymentModule.php
 locations:
     - 'front office'
@@ -38,14 +38,14 @@ description: 'This hook is called after validating an order by core'
 
 ```php
 Hook::exec(
-            'actionValidateOrderAfter',
-            [
-                'cart' => $this->context->cart,
-                'order' => $order ?? null,
-                'orders' => $order_list,
-                'customer' => $this->context->customer,
-                'currency' => $this->context->currency,
-                'orderStatus' => new OrderState(isset($order) ? $order->current_state : null),
-            ]
-        )
+    'actionValidateOrderAfter',
+    [
+        'cart' => $this->context->cart,
+        'order' => $order ?? null,
+        'orders' => $order_list,
+        'customer' => $this->context->customer,
+        'currency' => $this->context->currency,
+        'orderStatus' => new OrderState(isset($order) ? $order->current_state : null),
+    ]
+);
 ```
