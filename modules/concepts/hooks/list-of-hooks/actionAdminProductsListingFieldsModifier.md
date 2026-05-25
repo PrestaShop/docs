@@ -20,22 +20,16 @@ description: ''
 
 {{% hookDescriptor %}}
 
-## Parameters details
-
-```php
-    <?php
-    array(
-      '_ps_version' => (string) PrestaShop version,
-      'sql_select' => &(array),
-      'sql_table' => &(array),
-      'sql_where' => &(array),
-      'sql_order' => &(array),
-      'sql_limit' => &(string),
-    );
-```
-
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('action' . $this->controller_name . 'ListingFieldsModifier', [ 'fields' => &$this->fields_list, ])
+Hook::exec('action' . $this->controller_name . 'ListingFieldsModifier', [
+    'select' => &$this->_select,
+    'join' => &$this->_join,
+    'where' => &$this->_where,
+    'group_by' => &$this->_group,
+    'order_by' => &$this->_orderBy,
+    'order_way' => &$this->_orderWay,
+    'fields' => &$this->fields_list,
+]);
 ```
