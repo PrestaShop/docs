@@ -23,10 +23,8 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'actionAdminDuplicateAfter',
-            ['id_product' => $oldProductId, 'id_product_new' => $newProductId]
-        );
-
-        // @todo: after ##21740 (transactions PR) is resolved.
-        //  Based on if its accepted or not, we need to implement roll back if something went wrong.
+$this->hookDispatcher->dispatchWithParameters(
+    'actionAdminDuplicateAfter',
+    ['id_product' => $oldProductId, 'id_product_new' => $newProductId]
+);
 ```
