@@ -24,9 +24,4 @@ description: 'This hook is called on Admin Configure Advanced Parameters Perform
 
 ```php
 $this->dispatchHookWithParameters('actionAdminAdvancedParametersPerformanceControllerPostProcessBefore', ['controller' => $this]);
-
-        $form = $formHandler->getForm();
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted()) {
 ```
