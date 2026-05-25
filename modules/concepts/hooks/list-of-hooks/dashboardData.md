@@ -23,10 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-private const DASHBOARD_ALLOWED_HOOKS = ['dashboardData', 'dashboardZoneOne', 'dashboardZoneTwo', 'displayDashboardToolbarIcons', 'displayDashboardToolbarTopMenu', 'displayDashboardTop'];
-
-    public function __construct()
-    {
-        $this->bootstrap = true;
-        $this->display = 'view';
+die(json_encode(Hook::exec('dashboardData', $params, $id_module, true)));
 ```
