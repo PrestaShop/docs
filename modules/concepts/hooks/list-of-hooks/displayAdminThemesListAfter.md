@@ -31,10 +31,6 @@ description: 'This hook displays content after the themes list in the back offic
 
 ## Call of the Hook in the origin file
 
-```php
+```twig
 {{ renderhook('displayAdminThemesListAfter', {current_theme_name: currentlyUsedTheme.get('name')}) }}
-
-        {{ include('@PrestaShop/Admin/Improve/Design/Theme/Blocks/layouts_configuration.html.twig') }}
-      </div>
-    </div>
 ```
