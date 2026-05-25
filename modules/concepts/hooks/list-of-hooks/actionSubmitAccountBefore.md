@@ -27,5 +27,11 @@ description: 'This hook is called before a customer account creation'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionSubmitAccountBefore', [], null, true), function ($carry, $item) { return $carry && $item; }, true )
+$hookResult = array_reduce(
+    Hook::exec('actionSubmitAccountBefore', [], null, true),
+    function ($carry, $item) {
+        return $carry && $item;
+    },
+    true
+);
 ```
