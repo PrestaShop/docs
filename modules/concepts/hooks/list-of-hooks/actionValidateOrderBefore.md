@@ -23,5 +23,11 @@ description: 'This hook is called before validating an order by core'
 ## Call of the Hook in the origin file
 
 ```php
-Hook::exec('actionValidateOrderBefore', [ 'cart' => $this->context->cart, 'customer' => $this->context->customer, 'currency' => $this->context->currency, 'id_order_state' => &$id_order_state, 'payment_method' => $payment_method,
+Hook::exec('actionValidateOrderBefore', [
+    'cart' => $this->context->cart,
+    'customer' => $this->context->customer,
+    'currency' => $this->context->currency,
+    'id_order_state' => &$id_order_state,
+    'payment_method' => $payment_method,
+]);
 ```
