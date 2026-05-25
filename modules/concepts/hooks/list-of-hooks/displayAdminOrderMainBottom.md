@@ -31,11 +31,6 @@ description: 'This hook displays content in the order view page at the bottom of
 
 ## Call of the Hook in the origin file
 
-```php
+```twig
 {{ renderhook('displayAdminOrderMainBottom', {id_order: orderForViewing.id}) }}
-      </div>
-    </div>
-
-    {% if orderForViewing.sources.sources is not empty %}
-      <div class="product-row">
 ```
