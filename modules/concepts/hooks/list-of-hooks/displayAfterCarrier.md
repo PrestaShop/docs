@@ -23,5 +23,5 @@ description: 'This hook is displayed after the carrier list in Front Office'
 ## Call of the Hook in the origin file
 
 ```php
-'hookDisplayAfterCarrier' => Hook::exec('displayAfterCarrier', ['cart' => $this->getCheckoutSession()->getCart()]), 'id_address' => $this->getCheckoutSession()->getIdAddressDelivery(), 'delivery_options' => $this->getCheckoutSession()->getDeliveryOptions(), 'delivery_option' => $this->getCheckoutSession()->getSelectedDeliveryOption(), 'recyclable' => $this->getCheckoutSession()->isRecyclable(), 'recyclablePackAllowed' => $this->isRecyclablePackAllowed(),
+Hook::exec('displayAfterCarrier', ['cart' => $this->getCheckoutSession()->getCart()])
 ```
