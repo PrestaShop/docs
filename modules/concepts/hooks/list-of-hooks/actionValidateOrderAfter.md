@@ -37,10 +37,15 @@ description: 'This hook is called after validating an order by core'
 ## Call of the Hook in the origin file
 
 ```php
-'actionValidateOrderAfter',
-            [
-                'cart' => $this->context->cart,
-                'order' => $order ?? null,
-                'orders' => $order_list,
-                'customer' => $this->context->customer,
+Hook::exec(
+    'actionValidateOrderAfter',
+    [
+        'cart' => $this->context->cart,
+        'order' => $order ?? null,
+        'orders' => $order_list,
+        'customer' => $this->context->customer,
+        'currency' => $this->context->currency,
+        'orderStatus' => new OrderState(isset($order) ? $order->current_state : null),
+    ]
+);
 ```
