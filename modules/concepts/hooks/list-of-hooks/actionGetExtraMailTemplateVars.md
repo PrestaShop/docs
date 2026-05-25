@@ -23,10 +23,15 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'actionGetExtraMailTemplateVars',
-                [
-                    'template' => $template,
-                    'template_vars' => $templateVars,
-                    'extra_template_vars' => &$extraTemplateVars,
-                    'id_lang' => (int) $idLang,
+Hook::exec(
+    'actionGetExtraMailTemplateVars',
+    [
+        'template' => $template,
+        'template_vars' => $templateVars,
+        'extra_template_vars' => &$extraTemplateVars,
+        'id_lang' => (int) $idLang,
+    ],
+    null,
+    true
+);
 ```
