@@ -28,5 +28,5 @@ description:
 ## Call of the Hook in the origin file
 
 ```php
-<small class="cart-summary__value-inner">{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}</small>
+{hook h='displayCheckoutSubtotalDetails' subtotal=$subtotal}
 ```
