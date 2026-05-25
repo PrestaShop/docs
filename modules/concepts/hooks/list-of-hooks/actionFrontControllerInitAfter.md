@@ -24,5 +24,10 @@ description: 'This hook is launched after the initialization of all front office
 ## Call of the Hook in the origin file
 
 ```php
-'actionFrontControllerInitAfter', [ 'controller' => $this, ] )
+Hook::exec(
+    'actionFrontControllerInitAfter',
+    [
+        'controller' => $this,
+    ]
+);
 ```
