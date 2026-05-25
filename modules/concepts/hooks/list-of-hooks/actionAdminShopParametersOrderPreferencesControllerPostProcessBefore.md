@@ -24,9 +24,4 @@ description: 'This hook is called on Admin Configure Shop Parameters Order Prefe
 
 ```php
 $this->dispatchHookWithParameters('actionAdminShopParametersOrderPreferencesControllerPostProcessBefore', ['controller' => $this]);
-
-        $form = $formHandler->getForm();
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted()) {
 ```
