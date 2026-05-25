@@ -40,5 +40,5 @@ description: "This hook is displayed within the order's details in Front Office"
 ## Call of the Hook in the origin file
 
 ```php
-'HOOK_DISPLAYORDERDETAIL' => Hook::exec('displayOrderDetail', ['order' => $this->order]), ])
+Hook::exec('displayOrderDetail', ['order' => $this->order])
 ```
