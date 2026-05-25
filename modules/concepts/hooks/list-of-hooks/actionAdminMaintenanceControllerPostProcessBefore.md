@@ -24,9 +24,4 @@ description: ''
 
 ```php
 $this->dispatchHookWithParameters('actionAdminMaintenanceControllerPostProcessBefore', ['controller' => $this]);
-        $form = $maintenanceFormHandler->getForm();
-        $form->handleRequest($request);
-
-        if (!$form->isSubmitted()) {
-            return $redirectResponse;
 ```
