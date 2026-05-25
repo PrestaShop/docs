@@ -21,6 +21,6 @@ description: ''
 
 ## Call of the Hook in the origin file
 
-```twig
+```php
 {{ renderhook('displayAdminLogin') }}
 ```
