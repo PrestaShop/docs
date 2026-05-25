@@ -23,5 +23,5 @@ description: 'This hook displays new elements on the maintenance page'
 ## Call of the Hook in the origin file
 
 ```php
-'HOOK_MAINTENANCE' => Hook::exec('displayMaintenance'), 'maintenance_text' => Configuration::get('PS_MAINTENANCE_TEXT', (int) $this->context->language->id), 'stylesheets' => $this->getStylesheets(), ])
+Hook::exec('displayMaintenance')
 ```
