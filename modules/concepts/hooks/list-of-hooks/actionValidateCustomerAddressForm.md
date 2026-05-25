@@ -32,5 +32,5 @@ description: 'This hook is called when a customer submit its address form'
 ## Call of the Hook in the origin file
 
 ```php
-if ($is_valid && Hook::exec('actionValidateCustomerAddressForm', ['form' => $this]) === false) { $is_valid = false; }  return $is_valid && parent::validate()
+Hook::exec('actionValidateCustomerAddressForm', ['form' => $this]);
 ```
