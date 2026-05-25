@@ -23,10 +23,14 @@ description: 'This hook is called just before fetching content page supplier'
 ## Call of the Hook in the origin file
 
 ```php
-'filterSupplierContent',
-            ['object' => $supplierVar],
-            null,
-            false,
-            true,
-            false,
+$filteredSupplier = Hook::exec(
+    'filterSupplierContent',
+    ['object' => $supplierVar],
+    null,
+    false,
+    true,
+    false,
+    null,
+    true
+);
 ```
