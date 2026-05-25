@@ -24,5 +24,5 @@ description: 'This hook displays some information on the form to create a custom
 ## Call of the Hook in the origin file
 
 ```php
-'hook_create_account_form' => Hook::exec('displayCustomerAccountForm'), 'formFields' => array_map( function (FormField $field) { return $field->toArray()
+Hook::exec('displayCustomerAccountForm');
 ```
