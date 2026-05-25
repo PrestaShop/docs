@@ -23,10 +23,14 @@ description: 'This hook is called just before fetching content page manufacturer
 ## Call of the Hook in the origin file
 
 ```php
-'filterManufacturerContent',
-            ['object' => $manufacturerVar],
-            $id_module = null,
-            $array_return = false,
-            $check_exceptions = true,
-            $use_push = false,
+$filteredManufacturer = Hook::exec(
+    'filterManufacturerContent',
+    ['object' => $manufacturer],
+    $id_module = null,
+    $array_return = false,
+    $check_exceptions = true,
+    $use_push = false,
+    $id_shop = null,
+    $chain = true
+);
 ```
