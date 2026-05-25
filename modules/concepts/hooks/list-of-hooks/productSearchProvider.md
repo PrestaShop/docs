@@ -23,9 +23,10 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'productSearchProvider',
-            ['query' => $query],
-            null,
-            true
-        );
+$providers = Hook::exec(
+    'productSearchProvider',
+    ['query' => $query],
+    null,
+    true
+);
 ```
