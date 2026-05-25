@@ -30,5 +30,5 @@ description: 'This hook is displayed on the roll hover of the tabs within the ad
 ## Call of the Hook in the origin file
 
 ```php
-'displayBackOfficeTop' => Hook::exec('displayBackOfficeTop'), 'displayBackOfficeEmployeeMenu' => $menuLinksCollections, 'submit_form_ajax' => (int) Tools::getValue('submitFormAjax'), ])
+Hook::exec('displayBackOfficeTop')
 ```
