@@ -23,5 +23,10 @@ description: 'This hook is launched before the initialization of all front offic
 ## Call of the Hook in the origin file
 
 ```php
-'actionFrontControllerInitBefore', [ 'controller' => $this, ] )
+Hook::exec(
+    'actionFrontControllerInitBefore',
+    [
+        'controller' => $this,
+    ]
+);
 ```
