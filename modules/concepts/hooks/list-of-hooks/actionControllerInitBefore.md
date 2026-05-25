@@ -23,9 +23,10 @@ description: 'This hook is launched before the initialization of all controllers
 ## Call of the Hook in the origin file
 
 ```php
-'actionControllerInitBefore',
-            [
-                'controller' => $this,
-            ]
-        );
+Hook::exec(
+    'actionControllerInitBefore',
+    [
+        'controller' => $this,
+    ]
+);
 ```
