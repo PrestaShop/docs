@@ -24,9 +24,4 @@ description: 'This hook is called on Admin Improve International Localization po
 
 ```php
 $this->dispatchHookWithParameters('actionAdminInternationalLocalizationControllerPostProcessBefore', ['controller' => $this]);
-
-        $form = $formHandler->getForm();
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted()) {
 ```
