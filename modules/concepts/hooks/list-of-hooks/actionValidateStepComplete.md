@@ -34,10 +34,13 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'actionValidateStepComplete',
-            [
-                'step_name' => 'delivery',
-                'request_params' => $requestParams,
-                'completed' => &$isComplete,
-            ],
+Hook::exec(
+    'actionValidateStepComplete',
+    [
+        'step_name' => 'delivery',
+        'request_params' => $requestParams,
+        'completed' => &$isComplete,
+    ],
+    Module::getModuleIdByName($currentDeliveryOption['external_module_name'])
+);
 ```
