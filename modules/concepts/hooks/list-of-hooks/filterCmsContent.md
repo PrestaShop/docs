@@ -23,10 +23,14 @@ description: 'This hook is called just before fetching content page'
 ## Call of the Hook in the origin file
 
 ```php
-'filterCmsContent',
-                ['object' => $cmsVar],
-                null,
-                false,
-                true,
-                false,
+$filteredCmsContent = Hook::exec(
+    'filterCmsContent',
+    ['object' => $cmsVar],
+    null,
+    false,
+    true,
+    false,
+    null,
+    true
+);
 ```
