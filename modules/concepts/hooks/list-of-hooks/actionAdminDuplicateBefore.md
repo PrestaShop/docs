@@ -23,9 +23,8 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'actionAdminDuplicateBefore',
-            ['id_product' => $oldProductId]
-        );
-        $newProduct = $this->duplicateProduct($productId, $shopConstraint);
-        $newProductId = (int) $newProduct->id;
+$this->hookDispatcher->dispatchWithParameters(
+    'actionAdminDuplicateBefore',
+    ['id_product' => $oldProductId]
+);
 ```
