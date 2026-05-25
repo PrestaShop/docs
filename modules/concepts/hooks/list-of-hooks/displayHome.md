@@ -24,5 +24,5 @@ description: 'This hook displays new elements on the homepage'
 ## Call of the Hook in the origin file
 
 ```php
-'HOOK_HOME' => Hook::exec('displayHome'), ])
+Hook::exec('displayHome')
 ```
