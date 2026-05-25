@@ -23,5 +23,5 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$row['value'] = Hook::exec('displayCustomization', ['customization' => $row], (int) $row['id_module'])
+Hook::exec('displayCustomization', ['customization' => $row], (int) $row['id_module'])
 ```
