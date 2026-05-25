@@ -24,5 +24,5 @@ description: 'This hook is displayed above the customer''s account creation form
 ## Call of the Hook in the origin file
 
 ```php
-'hook_create_account_top' => Hook::exec('displayCustomerAccountFormTop'), ])
+Hook::exec('displayCustomerAccountFormTop')
 ```
