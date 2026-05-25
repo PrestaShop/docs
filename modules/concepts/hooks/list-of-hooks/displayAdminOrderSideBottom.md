@@ -32,13 +32,8 @@ description: ''
 
 ## Call of the Hook in the origin file
 
-```php
+```twig
 {{ renderhook('displayAdminOrderSideBottom', {id_order: orderForViewing.id}) }}
-      </div>
-
-      <div class="col-md-8 d-print-block right-column">
-        <div id="orderProductsOriginalPosition">
-          {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/products.html.twig') }}
 ```
 
 ## Example implementation
