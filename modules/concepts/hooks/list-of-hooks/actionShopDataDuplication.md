@@ -36,5 +36,8 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-$modules_list = Hook::getHookModuleExecList('actionShopDataDuplication')
+Hook::exec('actionShopDataDuplication', [
+    'old_id_shop' => (int) $old_id,
+    'new_id_shop' => (int) $this->id,
+], $m['id_module']);
 ```
