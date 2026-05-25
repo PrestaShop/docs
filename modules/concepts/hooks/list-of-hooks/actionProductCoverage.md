@@ -23,10 +23,12 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'actionProductCoverage',
-                [
-                    'id_product' => $id_product,
-                    'id_product_attribute' => $id_product_attribute,
-                    'warehouse' => $warehouse,
-                ]
+Hook::exec(
+    'actionProductCoverage',
+    [
+        'id_product' => $id_product,
+        'id_product_attribute' => $id_product_attribute,
+        'warehouse' => $warehouse,
+    ]
+);
 ```
