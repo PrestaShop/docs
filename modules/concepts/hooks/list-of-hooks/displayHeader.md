@@ -27,10 +27,5 @@ description: 'This hook adds additional elements in the head section of your pag
 ## Call of the Hook in the origin file
 
 ```php
-return 'displayHeader';
-        }
-
-        $hookNamesByAlias = Hook::getCanonicalHookNames();
-
-        return $hookNamesByAlias[$loweredName] ?? $hookName;
+Hook::exec('displayHeader')
 ```
