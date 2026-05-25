@@ -33,5 +33,5 @@ description: 'This hook is called within an order''s confirmation page'
 ## Call of the Hook in the origin file
 
 ```php
-return Hook::exec('displayOrderConfirmation', ['order' => $order])
+Hook::exec('displayOrderConfirmation', ['order' => $order])
 ```
