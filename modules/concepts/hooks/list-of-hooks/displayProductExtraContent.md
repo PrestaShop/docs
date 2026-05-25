@@ -27,10 +27,7 @@ has_example: true
 
 ```php
 <?php
-/**
- * For the full copyright and license information, please view the
- * docs/licenses/LICENSE.txt file that was distributed with this source code.
- */
+$product['extraContent'] = (new ProductExtraContentFinder())->addParams(['product' => $this->product])->present();
 ```
 
 ## Example implementation
