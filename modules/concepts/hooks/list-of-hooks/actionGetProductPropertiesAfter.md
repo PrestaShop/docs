@@ -26,10 +26,9 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'actionGetProductPropertiesAfter' => ['from' => '1.7.8.0'],
-    ];
-
-    public const MODULE_LIST_BY_HOOK_KEY = 'hook_module_exec_list_';
-
-    public function add($autodate = true, $null_values = false)
+Hook::exec('actionGetProductPropertiesAfter', [
+    'id_lang' => $id_lang,
+    'product' => &$row,
+    'context' => $context,
+]);
 ```
