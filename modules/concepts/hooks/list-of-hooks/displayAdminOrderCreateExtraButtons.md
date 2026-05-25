@@ -22,11 +22,6 @@ description: 'Add buttons on the create order page dropdown'
 
 ## Call of the Hook in the origin file
 
-```php
+```twig
 {{ renderhook('displayAdminOrderCreateExtraButtons') }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 ```
