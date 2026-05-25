@@ -23,10 +23,16 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'overrideLayoutTemplate',
-            [
-                'default_layout' => $layout,
-                'entity' => $entity,
-                'locale' => $this->context->language->locale,
-                'controller' => $this,
+if ($overridden_layout = Hook::exec(
+    'overrideLayoutTemplate',
+    [
+        'default_layout' => $layout,
+        'entity' => $entity,
+        'locale' => $this->context->language->locale,
+        'controller' => $this,
+        'content_only' => $content_only,
+    ]
+)) {
+    return $overridden_layout;
+}
 ```
