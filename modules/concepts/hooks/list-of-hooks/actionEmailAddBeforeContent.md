@@ -23,10 +23,15 @@ description: 'This hook is called just before fetching mail template'
 ## Call of the Hook in the origin file
 
 ```php
-'actionEmailAddBeforeContent',
-                [
-                    'template' => $template,
-                    'template_html' => &$templateHtml,
-                    'template_txt' => &$templateTxt,
-                    'id_lang' => (int) $idLang,
+Hook::exec(
+    'actionEmailAddBeforeContent',
+    [
+        'template' => $template,
+        'template_html' => &$templateHtml,
+        'template_txt' => &$templateTxt,
+        'id_lang' => (int) $idLang,
+    ],
+    null,
+    true
+);
 ```
