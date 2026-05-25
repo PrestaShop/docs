@@ -33,10 +33,14 @@ description: 'Quantity is updated only when a customer effectively places their 
 ## Call of the Hook in the origin file
 
 ```php
-'actionUpdateQuantity',
-            [
-                'id_product' => $id_product,
-                'id_product_attribute' => $id_product_attribute,
-                'quantity' => $stock_available->quantity,
-                'delta_quantity' => $deltaQuantity ?? null,
+Hook::exec(
+    'actionUpdateQuantity',
+    [
+        'id_product' => $id_product,
+        'id_product_attribute' => $id_product_attribute,
+        'quantity' => $stock_available->quantity,
+        'delta_quantity' => $deltaQuantity ?? null,
+        'id_shop' => $id_shop,
+    ]
+);
 ```
