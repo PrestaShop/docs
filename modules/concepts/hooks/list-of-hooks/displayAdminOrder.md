@@ -33,13 +33,8 @@ description: 'This hook launches modules when the AdminOrder tab is displayed in
 
 ## Call of the Hook in the origin file
 
-```php
+```twig
 {{ renderhook('displayAdminOrder', {id_order: orderForViewing.id}) }}
-
-    {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/Modal/add_order_discount_modal.html.twig') }}
-    {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/Modal/update_shipping_modal.html.twig') }}
-    {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/Modal/split_shipment_modal.html.twig') }}
-    {{ include('@PrestaShop/Admin/Sell/Order/Order/Blocks/View/Modal/edit_shipping_modal.html.twig') }}
 ```
 
 ## Example implementation
