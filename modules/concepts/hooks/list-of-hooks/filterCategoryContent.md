@@ -32,10 +32,14 @@ description: 'This hook is called just before fetching content page category'
 ## Call of the Hook in the origin file
 
 ```php
-'filterCategoryContent',
-            ['object' => $categoryVar],
-            $id_module = null,
-            $array_return = false,
-            $check_exceptions = true,
-            $use_push = false,
+$filteredCategory = Hook::exec(
+    'filterCategoryContent',
+    ['object' => $categoryVar],
+    $id_module = null,
+    $array_return = false,
+    $check_exceptions = true,
+    $use_push = false,
+    $id_shop = null,
+    $chain = true
+);
 ```
