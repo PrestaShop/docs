@@ -24,12 +24,13 @@ description: 'This hook allows to change the variables used when an email layout
 ## Call of the Hook in the origin file
 
 ```php
-public const BUILD_MAIL_LAYOUT_VARIABLES_HOOK = 'actionBuildMailLayoutVariables';
-
-    /**
-     * @param LayoutInterface $layout
-     * @param LanguageInterface $language
-     *
+$this->hookDispatcher->dispatchWithParameters(
+    LayoutVariablesBuilderInterface::BUILD_MAIL_LAYOUT_VARIABLES_HOOK,
+    [
+        'mailLayout' => $mailLayout,
+        'mailLayoutVariables' => &$mailLayoutVariables,
+    ]
+);
 ```
 
 ## Example implementation
