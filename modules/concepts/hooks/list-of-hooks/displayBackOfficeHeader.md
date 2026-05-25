@@ -33,10 +33,5 @@ description: 'This hook is displayed in the header of the admin panel'
 ## Call of the Hook in the origin file
 
 ```php
-'displayBackOfficeHeader',
-            'displayAdminLogin',
-        ]);
-
-        if ($useCache && Cache::isStored($cache_id)) {
-            return Cache::retrieve($cache_id);
+Hook::exec('displaybackOfficeHeader')
 ```
