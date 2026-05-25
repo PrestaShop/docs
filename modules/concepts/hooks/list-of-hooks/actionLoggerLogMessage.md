@@ -24,10 +24,12 @@ description: 'This hook allows to make an extra action while an exception is thr
 ## Call of the Hook in the origin file
 
 ```php
-'actionLoggerLogMessage',
-            [
-                'message' => $message,
-                'level' => $level,
-                'isLogged' => $level >= $this->level,
-            ]
+Hook::exec(
+    'actionLoggerLogMessage',
+    [
+        'message' => $message,
+        'level' => $level,
+        'isLogged' => $level >= $this->level,
+    ]
+);
 ```
