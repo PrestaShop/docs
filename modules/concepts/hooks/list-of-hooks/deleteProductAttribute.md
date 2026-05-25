@@ -23,10 +23,12 @@ description: ''
 ## Call of the Hook in the origin file
 
 ```php
-'deleteProductAttribute',
-            [
-                'id_product_attribute' => $id_product_attribute,
-                'id_product' => $this->id,
-                'deleteAllAttributes' => false,
-            ]
+Hook::exec(
+    'deleteProductAttribute',
+    [
+        'id_product_attribute' => $id_product_attribute,
+        'id_product' => $this->id,
+        'deleteAllAttributes' => false,
+    ]
+);
 ```
