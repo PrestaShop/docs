@@ -24,9 +24,4 @@ description: ''
 
 ```php
 $this->dispatchHookWithParameters('actionAdminPreferencesControllerPostProcessBefore', ['controller' => $this]);
-
-        $form = $preferencesFormHandler->getForm();
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
 ```
