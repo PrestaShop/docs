@@ -23,10 +23,10 @@ description: 'This hook is launched before the initialization of all admin contr
 ## Call of the Hook in the origin file
 
 ```php
-'actionAdminControllerInitBefore',
-            [
-                'controller' => $this,
-            ]
-        );
-        parent::init();
+Hook::exec(
+    'actionAdminControllerInitBefore',
+    [
+        'controller' => $this,
+    ]
+);
 ```
