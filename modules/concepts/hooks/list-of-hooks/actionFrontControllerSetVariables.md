@@ -40,10 +40,11 @@ description: 'Add variables to javascript object that is available in Front Offi
 ## Call of the Hook in the origin file
 
 ```php
-'actionFrontControllerSetVariables',
-            [
-                'templateVars' => &$templateVars,
-            ],
-            null,
-            true
+Hook::exec(
+    'actionFrontControllerSetVariablesBefore',
+    [
+        'templateVars' => &$templateVars,
+        'cart' => $cart,
+    ]
+);
 ```
