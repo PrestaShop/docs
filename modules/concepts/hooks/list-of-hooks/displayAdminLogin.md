@@ -3,6 +3,7 @@ Title: displayAdminLogin
 hidden: true
 hookTitle: ''
 files:
+    -
         url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/PrestaShopBundle/Resources/views/Admin/Layout/login_layout.html.twig'
         file: src/PrestaShopBundle/Resources/views/Admin/Layout/login_layout.html.twig
 locations:
