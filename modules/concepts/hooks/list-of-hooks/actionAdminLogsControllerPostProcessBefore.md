@@ -24,9 +24,4 @@ description: ''
 
 ```php
 $this->dispatchHookWithParameters('actionAdminLogsControllerPostProcessBefore', ['controller' => $this]);
-
-        return $this->buildSearchResponse(
-            $definitionFactory,
-            $request,
-            LogGridDefinitionFactory::GRID_ID,
 ```
