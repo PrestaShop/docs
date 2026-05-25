@@ -33,5 +33,4 @@ description: ''
 
 ```php
 {{ renderhook('displayOrderPreview', {order_id: orderId}) }}
-{% endblock %}
 ```
