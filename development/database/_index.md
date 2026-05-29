@@ -12,7 +12,7 @@ Before PrestaShop 9 and by default, PrestaShop’s database tables start with th
 
 Since PrestaShop 9, prefix is randomized by default.
 
-All table names are in lowercase, and words are separated with an underscore character (“_”):
+All table and column names use snake case: lowercase letters only, with words separated by underscores (“_”). For example: 
 
 * ps_employee
 * ps_manufacturer
