@@ -39,9 +39,9 @@ You need to execute these commands at the root of your copy/fork.
 {{% /notice %}}
 
 ```
-git remote add ps https://github.com/PrestaShop/PrestaShop.git
-git fetch ps
-git rebase -i ps/develop
+git remote add upstream https://github.com/PrestaShop/PrestaShop.git
+git fetch upstream
+git rebase -i upstream/develop
 git push -f origin develop
 ```
 
