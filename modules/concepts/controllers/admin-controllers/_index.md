@@ -136,6 +136,8 @@ public function __construct(
 
 In PrestaShop 9.0, controllers must be defined as services. You have two main approaches to configure your controller service:
 
+The following examples use YAML, but other service configuration files are supported. See [Services]({{< relref "/9/modules/concepts/services/" >}}) for more details.
+
 ### Option 1: Explicit service configuration with tags
 
 ```yaml

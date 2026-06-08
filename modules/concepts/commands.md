@@ -66,6 +66,8 @@ class ExportCommand extends Command
 
 Now, in order to make this really simple command available in the console, we register it in the services.yml file:
 
+This example uses YAML, but other service configuration files are supported. See [Services]({{< relref "/9/modules/concepts/services/" >}}) for more details.
+
 ```yaml
 # your-module/config/services.yml
 services:
