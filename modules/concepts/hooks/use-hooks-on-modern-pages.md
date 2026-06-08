@@ -152,7 +152,9 @@ services:
 Note: Since Symfony 4.4, services that are not dependency injected and that are not declared as “public” are removed from the container.
 {{% /notice %}}
 
-Prestashop automatically checks if modules have a `config/services.yml` file and will autoload it for you. In order to force Prestashop to parse the file, you need to clear the cache:
+PrestaShop automatically checks module service configuration files and will autoload them for you. This example uses YAML, but other service configuration files are supported. See [Services]({{< relref "/9/modules/concepts/services/" >}}) for more details.
+
+In order to force PrestaShop to parse the file, you need to clear the cache:
 
 ```
 ./bin/console cache:clear --no-warmup
@@ -289,4 +291,3 @@ We have used a key for translation, making our own translations available in bac
 And "voila!", the module could be of course improved with so many features, adding filters on export for instance, using the `request` hook parameter and updating the Product repository.
 
 [setup-composer]: {{< ref "/9/modules/concepts/composer.md" >}}
-

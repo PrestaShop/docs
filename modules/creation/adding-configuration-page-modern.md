@@ -114,7 +114,7 @@ This form has only one setting : `config_text`, of type `Symfony\Component\Form\
 
 ### Register your newly created form type
 
-Create a `services.yml` file in `config/`. 
+Create a `services.yml` file in `config/`. This example uses YAML, but other service configuration files are supported. See [Services]({{< relref "/9/modules/concepts/services/" >}}) for more details.
 
 ```yml
 services:
