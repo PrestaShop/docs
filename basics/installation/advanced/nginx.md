@@ -73,18 +73,20 @@ server {
     # see: https://github.com/PrestaShop/PrestaShop/issues/14921#issuecomment-948932833
 
     # Images.
-    rewrite ^/(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$1$2.jpg last;
-    rewrite ^/(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$1$2$3.jpg last;
-    rewrite ^/(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$1$2$3$4.jpg last;
-    rewrite ^/(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$1$2$3$4$5.jpg last;
-    rewrite ^/(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6.jpg last;
-    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7.jpg last;
-    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8.jpg last;
-    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.jpg$ /img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9.jpg last;
-    rewrite ^/c/([\w.-]+)/.+\.jpg$ /img/c/$1.jpg last;
+    rewrite ^/(\d)(-[\w-]+)?/.+\.(jpe?g|png|webp|avif)$ /img/p/$1/$1$2.$3 last;
+    rewrite ^/(\d)(\d)(-[\w-]+)?/.+\.(jpe?g|png|webp|avif)$ /img/p/$1/$2/$1$2$3.$4 last;
+    rewrite ^/(\d)(\d)(\d)(-[\w-]+)?/.+\.(jpe?g|png|webp|avif)$ /img/p/$1/$2/$3/$1$2$3$4.$5 last;
+    rewrite ^/(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.(jpe?g|png|webp|avif)$ /img/p/$1/$2/$3/$4/$1$2$3$4$5.$6 last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.(jpe?g|png|webp|avif)$ /img/p/$1/$2/$3/$4/$5/$1$2$3$4$5$6.$7 last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.(jpe?g|png|webp|avif)$ /img/p/$1/$2/$3/$4/$5/$6/$1$2$3$4$5$6$7.$8 last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.(jpe?g|png|webp|avif)$ /img/p/$1/$2/$3/$4/$5/$6/$7/$1$2$3$4$5$6$7$8.$9 last;
+    rewrite ^/(\d)(\d)(\d)(\d)(\d)(\d)(\d)(\d)(-[\w-]+)?/.+\.(?<ext>jpe?g|png|webp|avif)$ /img/p/$1/$2/$3/$4/$5/$6/$7/$8/$1$2$3$4$5$6$7$8$9.$ext last;
+
+    # Categories
+    rewrite ^/c/([\w.-]+)/.+\.(jpe?g|png|webp|avif)$ /img/c/$1.$2 last;
 
     # AlphaImageLoader for IE and FancyBox.
-    rewrite ^images_ie/?([^/]+)\.(gif|jpe?g|png)$ js/jquery/plugins/fancybox/images/$1.$2 last;
+    rewrite ^images_ie/?([^/]+)\.(gif|jpe?g|png|webp|avif)$ js/jquery/plugins/fancybox/images/$1.$2 last;
 
     # Web service API.
     rewrite ^/api/?(.*)$ /webservice/dispatcher.php?url=$1 last;
