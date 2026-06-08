@@ -6,7 +6,7 @@ weight: 2
 # Module file structure
 
 A module is made of a lot of files, all stored in a folder that bears the same name as the module, that folder being in turn stored in the
-`/modules` folder at the root of the main PrestaShop folder: `/modules/<modulename>/`. 
+`/modules` folder at the root of the main PrestaShop folder: `/modules/<modulename>/`.
 
 {{% notice tip %}}
 Your module can be called anything, as long as it only contains lowercase letters and numbers (`/[a-z0-9]/`).
@@ -17,15 +17,24 @@ A module distributed in a zip archive file must also be placed in a subfolder wi
 
 ## Main files and directories
 
-Here are an example of files and folders for a PrestaShop 1.7 module:
+Here is an example of files and folders for a PrestaShop 9.2 module:
 
 ```
 mymodule
 ├── config
 │   ├── admin
-│   │    └── services.yml
-│   ├── front
+│   │   ├── services.php
+│   │   ├── services-9.2.yml
+│   │   ├── services-9.yml
 │   │   └── services.yml
+│   ├── front
+│   │   ├── services.php
+│   │   ├── services-9.2.yml
+│   │   ├── services-9.yml
+│   │   └── services.yml
+│   ├── services.php
+│   ├── services-9.2.yml
+│   ├── services-9.yml
 │   └── services.yml
 ├── controllers
 ├── override
@@ -52,6 +61,10 @@ Let's go through each one of the above.
 
 The `config` folder is the place where configuration files are stored. In particular, [Routes][sf-routes] and [Services][sf-services].
 
+Starting from PrestaShop 9.2, module service configuration files can use several names and formats, as shown in the
+example above. Only one service configuration file is loaded per folder. See [Services][sf-services] for more details
+about service configuration files and their loading priority.
+
 ### `controllers/` folder
 
 The `controllers` folder contains the legacy-style Controller files.
@@ -69,7 +82,7 @@ Symfony-based controllers go in the ["`src`" folder](#src-folder), described bel
 
 ### `override/` folder
 
-PHP files placed in the `override` folder will replace the ones from the Core. 
+PHP files placed in the `override` folder will replace the ones from the Core.
 
 {{% notice warning %}}
 Overrides is a powerful, yet risky feature. Avoid using it if you can.
@@ -149,7 +162,7 @@ This icon file will be displayed in module listings if present. It needs to be a
 
 ### `mymodule.php` file (main file)
 
-The module's main PHP file should be named the same as the module’s root folder. 
+The module's main PHP file should be named the same as the module’s root folder.
 
 Example for the BlockCMS module:
 
