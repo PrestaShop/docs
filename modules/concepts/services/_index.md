@@ -57,7 +57,7 @@ class YourService {
 }
 ```
 
-Now that your namespace is setup, you can define your services in the `config/services.yml` file of your module.
+Now that your namespace is setup, you can define your services in a service configuration file of your module, for example `config/services.yml`.
 
 ```yml
 # yourmodule/config/services.yml
@@ -72,23 +72,74 @@ services:
       - "My custom message"
 ```
 
-{{% notice tip %}} It is possible to load PHP / XML files for modules services{{% /notice %}}
+#### Service configuration files
+{{< minver v="9.2.0" title="true" >}}
 
-```yml
-# yourmodule/config/services.yml
-imports:
-    - { resource: services.php }
-```
+Starting from PrestaShop 9.2, modules can use several service configuration files. PrestaShop loads the first existing
+file in this order:
+
+1. `services.php`
+2. `services-{major}.{minor}.yml`, for example `services-9.2.yml`
+3. `services-{major}.yml`, for example `services-9.yml`
+4. `services.yml`
+
+The same priority applies to the supported module service configuration folders, such as `config/`, `config/admin/`,
+`config/front/` and `config/webservice/`.
+
+This means you can use PHP service configuration in PrestaShop 9.2 and newer:
 
 ```php
 <?php
 // yourmodule/config/services.php
 namespace Symfony\Component\DependencyInjection\Loader\Configurator;
 
-return function(ContainerConfigurator $configurator) {
+return static function (ContainerConfigurator $container): void {
+    $services = $container->services();
 
+    $services
+        ->defaults()
+        ->public();
+
+    $services
+        ->set('your_company.your_module.your_service', \YourCompany\YourModule\YourService::class)
+        ->args([
+            service('translator'),
+            'My custom message',
+        ]);
 };
 ```
+
+You can use `services.php` as an entry point to load different service definitions depending on the PrestaShop version:
+
+```php
+<?php
+// yourmodule/config/services.php
+namespace Symfony\Component\DependencyInjection\Loader\Configurator;
+
+return static function (ContainerConfigurator $container): void {
+    if (version_compare(_PS_VERSION_, '9.2.0', '>=')) {
+        $container->import('services/services-ps-9.2.php');
+
+        return;
+    }
+
+    $container->import('services/services-ps-9.php');
+};
+```
+
+You can also keep YAML files as fallbacks for compatibility with older PrestaShop versions:
+
+```text
+yourmodule/
+`-- config/
+    |-- services.php
+    |-- services-9.2.yml
+    |-- services-9.yml
+    `-- services.yml
+```
+
+When `services.php` exists, it has priority. Otherwise PrestaShop falls back to the most specific YAML file matching
+the current PrestaShop version, then to `services.yml`.
 
 This will then allow you to get your service from the Symfony container, like in your modern controllers:
 
@@ -114,7 +165,7 @@ class DemoController extends FrameworkBundleAdminController
 
 {{% notice tip %}}
 If you need more details about dependency injection and how services work in the Symfony environment we recommend you to read
-their documentation about the [Service Container](https://symfony.com/doc/4.4/service_container.html).
+their documentation about the [Service Container](https://symfony.com/doc/6.4/service_container.html).
 {{% /notice %}}
 
 ##### Exclude index.php files when adding wildcard resource
@@ -135,13 +186,13 @@ The container definition can be modified by a module, which enables you to overr
 
 This is a mechanism similar to PrestaShop standard overrides, but the main benefit is that the php code stays unmodified. This prevents issues linked to code definition or autoloading failures.
 
-As you can read it from the [Symfony documentation](https://symfony.com/doc/current/service_container/service_decoration.html), there are 2 ways to modify an existing service:
+As you can read it from the [Symfony documentation](https://symfony.com/doc/6.4/service_container/service_decoration.html), there are 2 ways to modify an existing service:
 
 #### Override the service
 
 When you choose to override a service, this means that you _replace the service by another one_. The previous service is not usable anymore. Every other part of the code where this service is used will use the new version.
 
-To do it: you declare your new service using the old service name. So if you want to override the service `prestashop.core.b2b.b2b_feature` with your own implementation, you write in `config/services.yml` :
+To do it: you declare your new service using the old service name. So if you want to override the service `prestashop.core.b2b.b2b_feature` with your own implementation, you can write for example in `config/services.yml`:
 
 ```yml
   prestashop.core.b2b.b2b_feature:
@@ -154,7 +205,7 @@ That's done. The service registered under the name `prestashop.core.b2b.b2b_feat
 
 When you choose to decorate a service, this means that you _make everybody use your service but you keep the old service available_. The previous service has been given a new name and can still be used. Every other part of the code where this service was used will use the new version.
 
-To do it: you declare your new service using the 'decorates' keyword. So if you want to decorates the service `prestashop.core.b2b.b2b_feature` with my own implementation, you write in `config/services.yml` :
+To do it: you declare your new service using the 'decorates' keyword. So if you want to decorates the service `prestashop.core.b2b.b2b_feature` with my own implementation, you can write for example in `config/services.yml`:
 
 ```yml
  mymodule.my_own_b2b_feature_service:
@@ -167,7 +218,7 @@ That's done. The service registered under the name `mymodule.my_own_b2b_feature_
 This means that in your container you can access 3 services now:
 
 - `mymodule.my_own_b2b_feature_service` your service
-- `prestashop.core.b2b.b2b_feature` is now an alias for `mymodule.my_own_b2b_feature_service` (see [service aliases](https://symfony.com/doc/current/service_container/alias_private.html)) so the other services which rely on it now use your implementation
+- `prestashop.core.b2b.b2b_feature` is now an alias for `mymodule.my_own_b2b_feature_service` (see [service aliases](https://symfony.com/doc/6.4/service_container/alias_private.html)) so the other services which rely on it now use your implementation
 - `mymodule.my_own_b2b_feature_service.inner` is the previous implementation, still available
 
 The decoration strategy can be very useful if:
@@ -257,7 +308,7 @@ As you can see, interfaces lay the ground for easy extension and customization, 
 
 #### Advanced services parameters (_instanceof or interface binding, manual tags)
 
-Since {{< minver v=8.1 >}}, [modules autoloaders and service configurations loading are now registered before compiler passes](https://github.com/PrestaShop/PrestaShop/pull/30588). That means that you can now use native Symfony service configuration features in your modules. 
+Since {{< minver v=8.1 >}}, [modules autoloaders and service configurations loading are now registered before compiler passes](https://github.com/PrestaShop/PrestaShop/pull/30588). That means that you can now use native Symfony service configuration features in your modules.
 
 Those features are:
 
@@ -266,7 +317,7 @@ Those features are:
 - [an option to skip the class attribute](https://symfony.com/blog/new-in-symfony-3-3-optional-class-for-named-services)
 - [automatically registering classes found in the specified directories as services](https://symfony.com/blog/new-in-symfony-3-3-psr-4-based-service-discovery)
 
-As an example, let's consider a module with the following structure: 
+As an example, let's consider a module with the following structure:
 
 ```
 config/
@@ -278,9 +329,9 @@ src/
         ElementInterface.php
 ```
 
-And this content: 
+And this content:
 
-File: `src/Collection/Collection.php` 
+File: `src/Collection/Collection.php`
 
 ```php
 <?php
@@ -339,7 +390,7 @@ services:
       tags: [ test_module.instance_of.instance_of_tagged ]
 ```
 
-This example will tag all classes _instances of_ `TestModule\InstanceofConditionals\Collection\ElementInterface` (`TestModule\InstanceofConditionals\Collection\Element` in our example) with the tag `test_module.instance_of.instance_of_tagged`. 
+This example will tag all classes _instances of_ `TestModule\InstanceofConditionals\Collection\ElementInterface` (`TestModule\InstanceofConditionals\Collection\Element` in our example) with the tag `test_module.instance_of.instance_of_tagged`.
 
 Then, it will bind all services with a `$element` variable in its constructor with a `test_module.instance_of.instance_of_tagged` service.
 
@@ -363,7 +414,7 @@ This example will tag the class `TestModule\InstanceofConditionals\Collection\El
 
 Then, it will bind all services with a `$element` variable in its constructor with a `test_module.instance_of.manually_tagged` service.
 
-If we wanted to bind only parameter `$element` of class `TestModule\InstanceofConditionals\Collection\Collection` with a `test_module.instance_of.manually_tagged` tag, we would had configured it this way: 
+If we wanted to bind only parameter `$element` of class `TestModule\InstanceofConditionals\Collection\Collection` with a `test_module.instance_of.manually_tagged` tag, we would had configured it this way:
 
 ```yaml
 services:
@@ -378,7 +429,7 @@ services:
     tags: [ test_module.instance_of.manually_tagged ]
 ```
 
-Explore more configuration features in [the official Symfony documentation](https://symfony.com/doc/4.4/service_container.html#creating-configuring-services-in-the-container).
+Explore more configuration features in [the official Symfony documentation](https://symfony.com/doc/6.4/service_container.html#creating-configuring-services-in-the-container).
 
 ## Services in Legacy environment
 {{< minver v="1.7.6" title="true" >}}
@@ -393,8 +444,10 @@ container for this environment (`PrestaShop\PrestaShop\Adapter\ContainerBuilder`
 To define your services you need to follow the same principle as Symfony services, but this time you need to place your definition
 files in sub folders:
 
-- `config/admin/services.yml` will define the services accessible in the back office (in legacy environment AND Symfony environment)
-- `config/front/services.yml` will define the services accessible in the front office
+- `config/admin/` service configuration files will define the services accessible in the back office (in legacy environment AND Symfony environment)
+- `config/front/` service configuration files will define the services accessible in the front office
+
+The service file priority described above also applies in these folders.
 
 {{% notice warning %}}
 **Do not use named arguments for front services definition**
@@ -467,12 +520,12 @@ in admin or front. Be careful and always keep in mind in which context/environme
 
 Here is a quick summary so that you know where you should define your services:
 
-| Definition file             | Symfony Container | Front Legacy Container | Admin Legacy Container | Webservice Container | Available services                                                         |
-| --------------------------- | :---------------: | :--------------------: | :--------------------: | :------------------: | -------------------------------------------------------------------------- |
-| `config/services.yml`       |        Yes        |           No           |           No           |          No          | All Symfony components and `PrestaShopBundle` services                     |
-| `config/admin/services.yml` |        Yes        |           No           |           Yes          |          No          | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/admin` folder |
-| `config/front/services.yml` |        Yes        |           Yes          |           No           |          No         | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/front` folder |
-| `config/webservice/services.yml` |        Yes        |           No          |           No           |          Yes         | Doctrine, services defined in `<PS_ROOT_DIR>/config/webservice/front` folder |
+| Definition folder       | Symfony Container | Front Legacy Container | Admin Legacy Container | Webservice Container | Available services                                                         |
+| ----------------------- | :---------------: | :--------------------: | :--------------------: | :------------------: | -------------------------------------------------------------------------- |
+| `config/`               |        Yes        |           No           |           No           |          No          | All Symfony components and `PrestaShopBundle` services                     |
+| `config/admin/`         |        Yes        |           No           |           Yes          |          No          | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/admin` folder |
+| `config/front/`         |        Yes        |           Yes          |           No           |          No          | Doctrine, services defined in `<PS_ROOT_DIR>/config/services/front` folder |
+| `config/webservice/`    |        Yes        |           No           |           No           |          Yes         | Doctrine, services defined in `<PS_ROOT_DIR>/config/webservice/front` folder |
 
 
 ### Define a service on both front and admin
