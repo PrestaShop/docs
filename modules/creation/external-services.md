@@ -86,7 +86,7 @@ class SymfonyDocs
     ) {
     }
 
-    public function fetchGitHubInformation(): array
+    public function fetchGitHubInformation()
     {
         $response = $this->client->request(
             'GET',
