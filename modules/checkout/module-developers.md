@@ -17,6 +17,11 @@ stores using One Page Checkout. It covers the checkout architecture, the
 available extension points, and the changes that may affect payment, carrier,
 checkout customization, and other modules interacting with the checkout flow.
 
+{{% notice tip %}} The guidance on this page applies to any module that interacts
+with the checkout, not only payment modules. If you build payment or carrier
+modules, jump straight to [Payment modules compatibility](#payment-modules-compatibility)
+or [Carrier modules compatibility](#carrier-modules-compatibility). {{% /notice %}}
+
 ## What is ps_onepagecheckout?
 
 `ps_onepagecheckout` is the native One Page Checkout module introduced in
@@ -293,6 +298,22 @@ On install, the module registers the hook (and sets its
 configuration. The provider it returns reports `isEnabled()` based on that same
 configuration key, so disabling OPC transparently restores native checkout.
 
+## Reacting to checkout updates
+
+One Page Checkout dynamically updates parts of the checkout page as the customer
+interacts with it. Depending on the action performed, sections such as carriers,
+payment methods, addresses, or the cart summary may be refreshed over AJAX without
+a full page reload.
+
+This affects **any** module that injects JavaScript widgets, buttons, hosted
+fields, iframes, or custom event listeners into those sections: make sure your
+code can be re-initialized after an update, not only on the initial page load.
+
+All updates are announced through the PrestaShop JavaScript event bus, so you
+react to them with `prestashop.on(...)`. The complete list of events is defined in
+`views/js/events.js` (`OPC_EVENTS`). The payment and carrier sections below show
+the events most relevant to each.
+
 ## Payment modules compatibility
 
 Payment modules integrate with OPC through the standard Core `paymentOptions`
@@ -357,19 +378,12 @@ try {
 }
 ```
 
-## Reacting to checkout updates
+### Re-initializing after a payment refresh
 
-One Page Checkout dynamically updates parts of the checkout page as the customer
-interacts with it. Depending on the action performed, sections such as carriers,
-payment methods, addresses, or the cart summary may be refreshed without a full
-page reload.
-
-If your module injects JavaScript widgets, buttons, hosted fields, iframes, or
-custom event listeners into any of these sections, make sure they can be
-re-initialized after an update.
-
-For example, payment modules should listen to `opcPaymentMethodsUpdated` and
-re-mount their components whenever the payment methods section is refreshed:
+OPC re-renders the payment methods section over AJAX, for example after a carrier
+or address change. If your payment option mounts widgets, hosted fields, or smart
+buttons, re-mount them whenever the section is refreshed by listening to
+`opcPaymentMethodsUpdated`:
 
 ```js
 prestashop.on('opcPaymentMethodsUpdated', () => {
@@ -377,19 +391,34 @@ prestashop.on('opcPaymentMethodsUpdated', () => {
 });
 ```
 
-Similarly, carrier modules may find the following events useful:
+## Carrier modules compatibility
 
-- `opcCarrierSelected`
-- `opcCarriersUpdated`
-- `opcCarriersLoading`
-- `opcCarriersFailed`
+Carrier modules integrate with OPC through the standard Core carrier mechanism:
+there is nothing OPC-specific you need to do for your carrier to appear in the
+delivery options. See the [Carrier modules]({{< relref "/9/modules/carrier" >}})
+documentation for how to build a carrier module.
 
-Other checkout-related events are available for address updates, cart summary
-refreshes, payment selection, form validation, and checkout submission.
+OPC loads and refreshes the carrier list over AJAX (via its `carriers` controller)
+when the selected delivery address changes, without a full page reload. If your
+carrier module injects UI into the delivery section, such as extra fields, pickup
+point pickers, or maps, re-initialize it after each refresh.
 
-All events are emitted through the PrestaShop JavaScript event bus and can be
-consumed using `prestashop.on(...)`. The complete list of available events is
-defined in `views/js/events.js` (`OPC_EVENTS`).
+The most relevant carrier events are:
+
+- `opcCarriersLoading`: the carrier list is being fetched.
+- `opcCarriersUpdated`: the carrier list has been re-rendered (the server response
+  includes the rendered HTML, updated cart totals, and the delivery address ID).
+- `opcCarrierSelected`: the customer selected a carrier (the event carries the
+  selected delivery option key).
+- `opcCarriersFailed`: the carrier list failed to load.
+
+For example, re-mount your carrier UI whenever the list is refreshed:
+
+```js
+prestashop.on('opcCarriersUpdated', () => {
+  remountMyCarrierWidgets();
+});
+```
 
 ## JavaScript event: `opcFinalSubmitStarted`
 
