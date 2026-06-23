@@ -10,6 +10,7 @@ showOnHomepage: true
 Hummingbird is the default theme for PrestaShop 9.1+ and the reference implementation for modern theme development. It replaces the Classic theme, which is deprecated for new development in PrestaShop 9.
 
 - **Repository:** [github.com/PrestaShop/hummingbird](https://github.com/PrestaShop/hummingbird)
+- **Design file:** [Hummingbird v2 on Figma](https://www.figma.com/design/ZlLqiOjTVXVlVu49sSsD8P/HUMMINGBIRD--new-)
 
 | Page | Description |
 |------|-------------|
