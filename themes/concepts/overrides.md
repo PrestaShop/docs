@@ -76,6 +76,8 @@ PrestaShop resolves the path through its override chain, checking your theme's `
 If a module you need to override uses relative includes, you must override **every** included file alongside the main template. Contact the module developer to suggest switching to the `module:` prefix for better theme compatibility.
 {{% /notice %}}
 
+{{% notice tip %}} For a worked example of overriding a module's checkout templates while preserving its required DOM structure and JavaScript selectors, see [One Page Checkout for theme developers]({{< relref "/9/modules/checkout/theme-developers" >}}) ({{< minver v="9.2" >}}). {{% /notice %}}
+
 ### Debugging overrides
 
 With Developer Mode enabled (`_PS_MODE_DEV_` set to `true` or activated in **"Advanced Parameters" > "Performance"**), HTML comments show the source path of each rendered template:
