@@ -17,12 +17,9 @@ weight: 32
 
 ## Description
 
-This command regenerates the `.htaccess` file directly from the command line,
-without accessing the Back Office. This provides a faster and more consistent way
-to regenerate `.htaccess`, for example in deployment workflows.
+This command regenerates the `.htaccess` file directly from the command line, without accessing the Back Office. This provides a faster and more consistent way to regenerate `.htaccess`, for example in deployment workflows.
 
-If the `.htaccess` file already exists, the command warns and stops unless
-`--force` is passed. With `--force`, the existing file is overwritten.
+If the `.htaccess` file already exists, the command warns and stops unless `--force` is passed. With `--force`, the existing file is overwritten.
 
 ## Examples
 

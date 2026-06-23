@@ -19,16 +19,11 @@ weight: 31
 
 ## Description
 
-This command resets the password of an existing back-office employee from the
-command line. By default it is interactive and prompts for the email and the new
-password (entered twice). Passing the email argument and the `--password` option
-runs it non-interactively.
+This command resets the password of an existing back-office employee from the command line. By default it is interactive and prompts for the email and the new password (entered twice). Passing the email argument and the `--password` option runs it non-interactively.
 
-On success, the employee receives the "Your new password" email, the same
-template used by the Back Office forgot-password flow.
+On success, the employee receives the "Your new password" email, the same template used by the Back Office forgot-password flow.
 
-To provision a new SuperAdmin instead, use
-[`prestashop:employee:create-admin`]({{< relref "prestashop-employee-create-admin" >}}).
+To provision a new SuperAdmin instead, use [`prestashop:employee:create-admin`]({{< relref "prestashop-employee-create-admin" >}}).
 
 ## Examples
 

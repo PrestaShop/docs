@@ -21,17 +21,11 @@ weight: 20
 
 ## Description
 
-This command lists shop modules from the command line. By default it prints a
-table of installed modules with their name, version, and status (`Enabled` or
-`Disabled`), sorted alphabetically.
+This command lists shop modules from the command line. By default it prints a table of installed modules with their name, version, and status (`Enabled` or `Disabled`), sorted alphabetically.
 
-The scope options `--active`, `--disabled`, `--not-installed`, and `--all` are
-mutually exclusive: passing more than one returns an error and a non-zero exit
-code. The `--simple` flag is orthogonal and composes with any scope filter, which
-makes it convenient for `grep`, `awk`, or `xargs` pipelines.
+The scope options `--active`, `--disabled`, `--not-installed`, and `--all` are mutually exclusive: passing more than one returns an error and a non-zero exit code. The `--simple` flag is orthogonal and composes with any scope filter, which makes it convenient for `grep`, `awk`, or `xargs` pipelines.
 
-The existing [`prestashop:module`]({{< relref "prestashop-module" >}}) command is
-left unchanged.
+The existing [`prestashop:module`]({{< relref "prestashop-module" >}}) command is left unchanged.
 
 ## Examples
 
