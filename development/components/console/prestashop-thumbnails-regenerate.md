@@ -7,6 +7,8 @@ weight: 10
 
 # `prestashop:thumbnails:regenerate`
 
+{{< minver v="9.1" title="true" >}}
+
 ## Informations
 
 * Path: `src/PrestaShopBundle/Command/RegenerateThumbnailsCommand.php`
@@ -17,8 +19,6 @@ weight: 10
   * `--delete`: Erase previous images before regenerating __(optional)__
 
 ## Description
-
-Since {{< minver v="9.1.x" >}}.
 
 This command aims to regenerate thumbnails via command line.
 
