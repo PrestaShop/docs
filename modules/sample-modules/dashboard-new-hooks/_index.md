@@ -26,6 +26,7 @@ A complete, minimal example is provided by the [`dashexample`](https://github.co
 | [`displayAdminDashboardZoneTwo`]({{< relref "/9/modules/concepts/hooks/list-of-hooks/displayAdminDashboardZoneTwo" >}}) | display | `date_from`, `date_to` | `dashboardZoneTwo` |
 | [`displayAdminDashboardZoneThree`]({{< relref "/9/modules/concepts/hooks/list-of-hooks/displayAdminDashboardZoneThree" >}}) | display | `date_from`, `date_to` | `dashboardZoneThree` |
 | [`displayAdminDashboardTop`]({{< relref "/9/modules/concepts/hooks/list-of-hooks/displayAdminDashboardTop" >}}) | display | `date_from`, `date_to` | `displayDashboardTop` |
+| [`displayAdminDashboardBottom`]({{< relref "/9/modules/concepts/hooks/list-of-hooks/displayAdminDashboardBottom" >}}) | display | `date_from`, `date_to` | — (new full-width zone) |
 | [`displayAdminDashboardToolbar`]({{< relref "/9/modules/concepts/hooks/list-of-hooks/displayAdminDashboardToolbar" >}}) | display | — | `displayDashboardToolbarTopMenu` |
 
 The `date_from` / `date_to` parameters carry the employee's selected stats date range (format `Y-m-d`).
