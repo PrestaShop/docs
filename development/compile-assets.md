@@ -75,6 +75,14 @@ You can rebuild all the assets at once by executing this command from the projec
 make assets
 ```
 
+#### Windows (PowerShell)
+{{< minver v="9.3.0" title="true">}}
+
+On Windows, you can use the native PowerShell equivalent from the project root:
+```bash
+.\tools\assets\build.ps1
+```
+
 ### Watching for changes
 
 You can also make webpack listen for changes and compile only what's needed as you work on your files:
