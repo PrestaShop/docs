@@ -294,6 +294,40 @@ admin_emails:
             - AdminEmails:list
 ```
 
+#### Tab resolution for tab-less routes
+
+Some routes have no `Tab` of their own. The create, edit, and view actions of an entity are usually reached only from the entity's listing page and don't need a separate menu entry. Without a `Tab`, the sidebar has nothing to highlight, and the breadcrumb and toolbar have nothing to resolve against.
+
+Use the `_parent` attribute to declare which other route's `Tab` these actions should borrow:
+
+```yaml
+admin_foo_index:
+    path: /foo
+    methods: [GET]
+    defaults:
+        _controller: 'PrestaShopBundle\Controller\Path\To\FooController::indexAction'
+
+admin_foo_create:
+    path: /foo/create
+    methods: [GET, POST]
+    defaults:
+        _controller: 'PrestaShopBundle\Controller\Path\To\FooController::createAction'
+        _parent: admin_foo_index
+
+admin_foo_edit:
+    path: /foo/{fooId}/edit
+    methods: [GET, POST]
+    defaults:
+        _controller: 'PrestaShopBundle\Controller\Path\To\FooController::editAction'
+        _parent: admin_foo_index
+```
+
+`_parent` names another route, typically the listing route of the same entity. When the current route has no related `Tab` in the database, the sidebar, breadcrumb, and toolbar fall back to the `Tab` of the route named in `_parent`.
+
+{{% notice warning %}}
+Do not add `_legacy_controller` to a route only to make the sidebar or breadcrumb work. `_legacy_controller` is reserved for controllers actually migrated from a legacy `AdminXController`: it also drives permission checks and `Link::getAdminLink()` resolution. Removing it from a migrated page breaks both. A route counts as native, whether it's declared by the core or by a module, as soon as it has no legacy `AdminXController` behind it. For a native route, use `_parent` instead. It has no effect on permissions or link generation: it's purely used for Back Office navigation rendering.
+{{% /notice %}}
+
 #### Automatic redirection
 
 Finally some urls might have been generated manually or hard coded. To avoid losing these legacy urls a Symfony listener
