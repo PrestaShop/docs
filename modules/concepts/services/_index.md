@@ -8,6 +8,20 @@ weight: 8
 
 ## Symfony Services
 
+{{% notice warning %}}
+**`$this->get()` resolves against the container of the context you are in, which is not always the full Symfony container.**
+
+In the back office, and in pages already migrated to Symfony, you get the full container: `router`, `translator`
+and anything you declared in `config/services.yml` are available. A front office page still runs a legacy
+controller, and there `$this->get()` resolves against the light front container instead. It holds Doctrine and
+the services declared in `<PS_ROOT_DIR>/config/services/front/`, and nothing else: asking it for `router` or
+`translator` raises a `ServiceNotFoundException`, `$this->getTwig()` returns `null`, and
+`SymfonyContainer::getInstance()` is `null` there too.
+
+A service you want to call from a front office hook has to be declared in your module's `config/front/` folder.
+See [Services in Legacy environment](#services-in-legacy-environment) below.
+{{% /notice %}}
+
 You have the ability to modify the Symfony container configuration from a module. This means that
 
 - You have the possibility to define your own Symfony services from your modules.
