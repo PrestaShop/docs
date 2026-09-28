@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display content in subcategory list'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.2.x/themes/hummingbird/templates/catalog/_partials/subcategories.tpl'
+        url: 'https://github.com/PrestaShop/hummingbird/blob/2.x/templates/catalog/_partials/subcategories.tpl'
         file: themes/hummingbird/templates/catalog/_partials/subcategories.tpl
 locations:
     - 'front office'

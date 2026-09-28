@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modify customer grid data'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Grid/GridFactory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.2.x/src/Core/Grid/GridFactory.php'
         file: src/Core/Grid/GridFactory.php
 locations:
     - 'back office'

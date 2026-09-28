@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modify manufacturer address grid template data'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Grid/Presenter/GridPresenter.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.2.x/src/Core/Grid/Presenter/GridPresenter.php'
         file: src/Core/Grid/Presenter/GridPresenter.php
 locations:
     - 'back office'

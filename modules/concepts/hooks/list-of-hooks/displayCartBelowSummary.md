@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Display content below summary on cart page'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.2.x/themes/hummingbird/templates/checkout/cart.tpl'
+        url: 'https://github.com/PrestaShop/hummingbird/blob/2.x/templates/checkout/cart.tpl'
         file: themes/hummingbird/templates/checkout/cart.tpl
 locations:
     - 'front office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modify no qty product with combination grid filters'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Grid/Filter/GridFilterFormFactory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.2.x/src/Core/Grid/Filter/GridFilterFormFactory.php'
         file: src/Core/Grid/Filter/GridFilterFormFactory.php
 locations:
     - 'back office'
