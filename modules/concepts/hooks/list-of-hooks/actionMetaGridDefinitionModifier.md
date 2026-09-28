@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modifying SEO and URLs grid definition'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.2.x/src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php'
         file: src/Core/Grid/Definition/Factory/AbstractGridDefinitionFactory.php
 locations:
     - 'back office'

@@ -4,7 +4,7 @@ hidden: true
 hookTitle: 'Modify security session employee grid query builder'
 files:
     -
-        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.1.x/src/Core/Grid/Data/Factory/DoctrineGridDataFactory.php'
+        url: 'https://github.com/PrestaShop/PrestaShop/blob/9.2.x/src/Core/Grid/Data/Factory/DoctrineGridDataFactory.php'
         file: src/Core/Grid/Data/Factory/DoctrineGridDataFactory.php
 locations:
     - 'back office'
