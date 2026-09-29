@@ -69,10 +69,10 @@ The module name is filled in automatically from `$this->name`. The property name
 | `enumValues` | `?list<string>` | `null` | Allowed values of a `CHOICE` property, stored as an SQL `ENUM`. |
 | `defaultValue` | `int\|float\|string\|bool\|null` | `null` | Default value, checked against the type. See [Default values]({{< relref "/9/development/components/extra-properties#default-values" >}}). |
 | `nullable` | `bool` | `true` | `NULL` or `NOT NULL` column. |
-| `required` | `bool` | `false` | Marks the field as required in Back Office forms and in the Admin API schema. Does not add a server-side check: use a `NotBlank` constraint. |
+| `required` | `bool` | `false` | Marks the field as required in Back Office forms and in the Admin API schema. See [Validation]({{< relref "/9/development/components/extra-properties#validation" >}}). |
 | `size` | `?int` | `null` | `VARCHAR` length of a `STRING` property. 255 when `null`. |
 | `sqlIndex` | `ExtraPropertySqlIndex` | `NONE` | Index on the storage column: `NONE`, `KEY` or `UNIQUE`. |
-| `displayFront` | `bool` | `false` | Exposes the value on the Front Office (presenters and `ObjectModel` bags in front controllers). |
+| `displayFront` | `bool` | `false` | Exposes the value on the Front Office (presenters and `ObjectModel` bags). Every entry point other than the Back Office, the Admin API and the CLI counts as Front Office, including the legacy webservice. |
 | `associatedForms` | `?list<string>` | `null` | Back Office form placements, `formId[:path[:before\|after]]`. See [Back Office forms]({{< relref "/9/development/components/extra-properties#back-office-forms" >}}). |
 | `associatedGrids` | `?list<string>` | `null` | Back Office grid placements, `gridId[:columnId[:before\|after]]`. See [Back Office grids]({{< relref "/9/development/components/extra-properties#back-office-grids" >}}). |
 | `associatedApis` | `?list<string>` | `null` | Admin API operations, `uriTemplate[:METHOD[,METHOD...]]`. See [Admin API]({{< relref "/9/development/components/extra-properties#admin-api" >}}). |
@@ -157,11 +157,12 @@ Labels, placements, `displayFront`, `required`, form type and options, constrain
 | Accepted | Refused with `DESTRUCTIVE_SCHEMA_CHANGE` |
 |----------|------------------------------------------|
 | Default value change | Type change |
-| `STRING` size increase | Scope change |
-| `NOT NULL` to `NULL` | Physical table change |
-| New `CHOICE` values | `STRING` size decrease |
-| | `NULL` to `NOT NULL` |
+| `STRING` size increase | Physical table change |
+| `NOT NULL` to `NULL` | `STRING` size decrease |
+| New `CHOICE` values | `NULL` to `NOT NULL` |
 | | Removed `CHOICE` value, or switch between choice values and no choice values |
+
+A scope change is refused earlier, with `SCOPE_CONFLICT`.
 
 To apply a refused change, unregister the property with `$dropData = true`, then register it again. The stored values are lost: migrate them yourself if you need them.
 

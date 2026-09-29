@@ -97,18 +97,22 @@ $product->update();
 
 For `lang` properties, an object loaded without a language returns an array keyed by language ID, and an object loaded with a language returns a single value for that language.
 
-On the Front Office, the bag only contains properties with `displayFront` enabled. In the Back Office, the Admin API and the CLI, it contains all properties.
+On the Front Office, the bag only contains properties with `displayFront` enabled. In the Back Office, the Admin API and the CLI, it contains all properties. Any other entry point counts as Front Office: the legacy webservice, and crons or module scripts run over HTTP, only see `displayFront` properties.
 
 ### Front Office templates
 
-The presenters of the following entities expose an `extra_properties` key, filtered by `displayFront`: Product, Category, Manufacturer, Supplier, Store, Order, Order detail, Order return and Cart.
+Templates read the same bag as PHP, with the same `displayFront` filtering. Only the first level of the Smarty syntax depends on the variable:
+
+- **A presented array** uses the dot syntax: `{$product.extra_properties.demoextraproperty.video_link}`. The key is added by the presenters of Product, Category, Manufacturer, Supplier, Store, Order (also on the order detail page), Order return and Cart, and by `ObjectPresenter`, which presents for example the `$customer` global, CMS pages and categories, carriers and order addresses.
+- **A raw `ObjectModel`** assigned to Smarty uses the object syntax for the first level: `{$customerObjectModel->extra_properties.demoextraproperty.credit_limit}`. Any entity works this way, presented or not.
 
 ```smarty
 {$product.extra_properties.demoextraproperty.video_link|escape:'htmlall':'UTF-8'}
 {$cart.extra_properties.demoextraproperty.delivery_note|escape:'htmlall':'UTF-8'}
+{$customer.extra_properties.demoextraproperty.credit_limit|escape:'htmlall':'UTF-8'}
 ```
 
-On a raw `ObjectModel` assigned to Smarty, use the object syntax for the first level: `{$customer->extra_properties.demoextraproperty.credit_limit}`. `lang` values are already resolved to the current language.
+A variable built by hand as an array, without a presenter, has no `extra_properties` key: load the `ObjectModel` instead. `lang` values are already resolved to the current language.
 
 {{% notice note %}}
 The key is `extra_properties` (snake_case) in PHP and Smarty. The camelCase `extraProperties` spelling is only used in Admin API payloads.
@@ -186,7 +190,7 @@ On a list, each item carries the value inline, at its root, under the field name
 
 Values are validated on every write path: ObjectModel save, Back Office forms and Admin API. Validation has two layers:
 
-- **Type compatibility** is always enforced, even without declared constraints: an `INT` must be numeric, a `DATE` must be `Y-m-d` or `Y-m-d H:i:s`, a `CHOICE` must be one of the choice values, a `JSON` must be valid JSON. Values are never silently coerced.
+- **Type compatibility** is always enforced, even without declared constraints: an `INT` must be an integer (`"1.5"` is refused), a `DATE` must be `Y-m-d` or `Y-m-d H:i:s`, a `CHOICE` must be one of the choice values, a `JSON` must be valid JSON. Values are never silently coerced.
 - **Constraints** are Symfony validation constraints declared on the definition, run before the type check.
 
 Modules pass constraint objects. The registry stores them, and the Back Office and Admin API exchange them, as a text DSL with one constraint per line (or comma-separated):
@@ -252,9 +256,9 @@ The restriction only applies when multistore is used (feature enabled and more t
 
 ## Supported entities and naming
 
-Any entity whose `ObjectModel` table exists can receive extra properties. `lang` requires a `{entity}_lang` table and `shop` requires a `{entity}_shop` table. Registration fails otherwise.
+Any entity whose table exists can receive extra properties, with or without an `ObjectModel`. `lang` requires a `{entity}_lang` table and `shop` requires a `{entity}_shop` table. Registration fails otherwise.
 
-The entity name is normalized to snake_case, and PrestaShop resolves the physical table from the `ObjectModel` definition. Some entities have a logical name that differs from their table:
+The entity name is normalized to snake_case, and PrestaShop resolves the physical table from the `ObjectModel` definition, or uses the entity name when there is none. Some entities have a logical name that differs from their table:
 
 | Entity name to use | Also accepted | Physical table |
 |--------------------|---------------|----------------|

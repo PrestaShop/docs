@@ -63,7 +63,7 @@ Click **Add new extra property**. The form is split into five cards.
 | Field | Description |
 |-------|-------------|
 | Display in front-office | Exposes the value on the Front Office (`displayFront`). |
-| Required | Marks the field as required in Back Office forms and in the Admin API schema. It does not add a server-side check: add a `NotBlank` constraint in the Validation card. |
+| Required | Marks the field as required in Back Office forms and in the Admin API schema. See [Validation]({{< relref "/9/development/components/extra-properties#validation" >}}). |
 | Store association | Only displayed when multistore is used. Stores the definition is restricted to. Leave empty to make it available in all stores. See [Multistore]({{< relref "/9/development/components/extra-properties#multistore" >}}). |
 
 ### Labels and descriptions
