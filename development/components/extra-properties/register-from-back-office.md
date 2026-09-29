@@ -109,7 +109,7 @@ Size, nullable and choice values can be edited, but only in a direction that kee
 
 The **View** action displays the definition of a module-owned property with all its fields disabled.
 
-<!-- TODO screenshot: View page of a module-owned definition (install demoextraproperty in a multistore shop), showing the disabled cards and the editable Store association field -->
+![View page of a module-owned property in a multistore shop](../img/extra-properties-view-module-owned.png)
 
 In a multistore shop, the page also has a **Store association** field, the only setting a merchant can change on a module-owned definition. Leave it empty to follow the stores where the module is enabled. A module re-registering its property on upgrade does not overwrite this choice (see [Restrict a property to some stores]({{< relref "/9/development/components/extra-properties/register-from-module#restrict-a-property-to-some-stores" >}})).
 
