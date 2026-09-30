@@ -4,15 +4,15 @@ title: MaterialChoiceTableType
 
 # MaterialChoiceTableType
 
-MaterialChoiceTableType renders checkbox choices using table layout. It requires Javascript component to work as expected.
+MaterialChoiceTableType renders multiple checkbox choices using a table layout. It requires Javascript component to work as expected.
 
 ## Type options
 
 | Option   | Type | Default value | Description                                            |
 |:---------|:-----|:--------------|:-------------------------------------------------------|
 | expanded | bool | true          | Whether the table should be expanded by default or not |
-| multiple | bool | true          | Whether to enable multiple checkboxes selection or not  |
-| display_total_items | bool | true | Whether to display the total number of items or not |
+| multiple | bool | true          | Multiple selection is always enabled and cannot be disabled  |
+| display_total_items | bool | false | Whether to display the total number of items or not |
 
 ## Required Javascript components
 
