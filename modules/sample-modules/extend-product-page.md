@@ -163,7 +163,7 @@ final class ProductFormModifier
     /**
      * @var FormBuilderModifier
      */
-    private $formBuilderModifier;
+    private FormBuilderModifier $formBuilderModifier;
 
     /**
      * @param FormBuilderModifier $formBuilderModifier
@@ -182,7 +182,6 @@ final class ProductFormModifier
         int $productId,
         FormBuilderInterface $productFormBuilder
     ): void {
-     
         $seoTabFormBuilder = $productFormBuilder->get('seo');
         $this->formBuilderModifier->addAfter(
             $seoTabFormBuilder, // the tab
@@ -515,7 +514,7 @@ Finally, add this `CustomTabType` to the `$productFormBuilder` variable in your 
 
 ```php
 /**
- * @param int|null $productId
+ * @param int $productId
  * @param FormBuilderInterface $productFormBuilder
  */
 public function modify(
