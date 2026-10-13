@@ -24,7 +24,7 @@ It is not necessary to have installed the module in order to use the associated 
 The CLI of the Update Assistant module is based on the Symfony console, and therefore follows the main principles of
 this technology.
 
-Below you'll find the Update Assistant CLI user guide, with descriptions, syntax and examples of use. All the commands are run from the module in the folder `modules/autoupgrade` of your store and must not be mistaken with the `bin/console` of PrestaShop.
+Below you'll find the Update Assistant CLI user guide, with descriptions, syntax and examples of use. All the commands are run from the module in the folder with `bin/console` or from the root folder of PrestaShop with `modules/autoupgrade/bin/console`.
 
 ## Generic commands
 
@@ -34,7 +34,7 @@ parameters, it displays the available commands and associated general options.
 Example of `bin/console` command execution:
 
 ```text
-$ php bin/console 
+$ php modules/autoupgrade/bin/console 
 Update Assistant 7.x.x
 
 Usage:
@@ -71,7 +71,7 @@ This command lists the Update Assistant CLI commands.
 Example of list command execution:
 
 ```text
-$ php bin/console list
+$ php modules/autoupgrade/bin/console list
 
 Available commands:
 	completion                 Dump the shell completion script
@@ -97,7 +97,7 @@ Console component's built-in global options, and is therefore available for all 
 Example of help command execution:
 
 ```text
-$ php bin/console backup:list --help [command]
+$ php modules/autoupgrade/bin/console backup:list --help [command]
 ```
 
 ### Command-Line logs download
@@ -122,7 +122,7 @@ The `backup:create` command is used to create a backup of your PrestaShop store.
 `/your-admin-directory/autoupgrade/backup` folder on your server.
 
 ```text
-$ php bin/console backup:create --help
+$ php modules/autoupgrade/bin/console backup:create --help
 
 Description:
   Create backup.
@@ -158,7 +158,7 @@ You must specify the location (`--from-config-file=.../folder1/configfile`) of t
 Example of `backup:create` command execution:
 
 ```text
-$ php bin/console backup:create admin123 --include-images=1
+$ php modules/autoupgrade/bin/console backup:create admin123 --include-images=1
 Your files, database, and images will be backed up.
 Starting backup...
 ```
@@ -168,7 +168,7 @@ Starting backup...
 The `backup:list` command lists the backups available for your PrestaShop store.
 
 ```text
-$ php bin/console backup:list --help
+$ php modules/autoupgrade/bin/console backup:list --help
 
 Description:
   List all available backups.
@@ -196,7 +196,7 @@ The `<admin-dir>` argument is mandatory and is used to target the correct resour
 Example of the `backup:list` command execution:
 
 ```text
-$ php bin/console backup:list admin123
+$ php modules/autoupgrade/bin/console backup:list admin123
 ------------------+---------------+-----------------------------------------+
 | Date            | Version       | File name                               |
 +-----------------+---------------+-----------------------------------------+
@@ -209,7 +209,7 @@ $ php bin/console backup:list admin123
 The `backup:restore` command is used to restore your PrestaShop store from backup files in the `/your-admin-directory/autoupgrade/backup` folder on your server.
 
 ```text
-$ php bin/console backup:restore --help
+$ php modules/autoupgrade/bin/console backup:restore --help
 
 Description:
   Restore the store to a previous state from a backup file.
@@ -240,14 +240,14 @@ The `[BACKUP]` argument is intended to target the backup file (file_name) to be 
 Example of `backup:restore` command execution:
 
 ```text
-$ php bin/console backup:restore admin123 autoupgrade_save_8.1.6_15/07/2024_8:00
+$ php modules/autoupgrade/bin/console backup:restore admin123 autoupgrade_save_8.1.6_15/07/2024_8:00
 The restoration of your store is complete
 ```
 
 This command also supports the “interactive mode”, which provides you with a contextual action, such as:
 
 ```text
-$ php bin/console backup:restore admin123
+$ php modules/autoupgrade/bin/console backup:restore admin123
 Please select your backup:
 	[0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
 	[1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
@@ -259,7 +259,7 @@ Please select your backup:
 The `backup:delete` command is used to delete a backup file from your PrestaShop store.
 
 ```text
-$ php bin/console backup:delete --help
+$ php modules/autoupgrade/bin/console backup:delete --help
 
 Description:
   Delete a store backup file.
@@ -290,14 +290,14 @@ The `[BACKUP]` argument is intended to target the backup file (file_name) to be 
 Example of `backup:delete` command execution:
 
 ```text
-$ php bin/console backup:delete admin123 autoupgrade_save_8.1.6_15/07/2024_8:00
+$ php modules/autoupgrade/bin/console backup:delete admin123 autoupgrade_save_8.1.6_15/07/2024_8:00
 The backup file has been successfully deleted
 ```
 
 This command also supports the “interactive mode”, which provides you with a contextual action, such as:
 
 ```text
-$ php bin/console backup:delete admin123
+$ php modules/autoupgrade/bin/console backup:delete admin123
 Please select your backup:
 	[0] Date: 12/19/24 10:48:43, Version: 8.1.5, File name: V8.1.5_20241219-104843-XXX
 	[1] Date: 12/19/24 09:44:50, Version: 8.1.5, File name: V8.1.5_20241219-094450-XXX
@@ -318,7 +318,7 @@ The Update Assistant CLI includes 4 commands dedicated to updates:
 The `update:check-new-version` command is used to check whether new updates are available for your store.
 
 ```text
-$ php bin/console update:check-new-version --help
+$ php modules/autoupgrade/bin/console update:check-new-version --help
 
 Description:
   List Prestashop updates available for the store.
@@ -346,7 +346,7 @@ The `<admin-dir>` argument is mandatory and is used to target the correct resour
 Example of the `update:check-new-version` command execution:
 
 ```text
-$ php bin/console update:check-new-version admin123
+$ php modules/autoupgrade/bin/console update:check-new-version admin123
 +---------+--------------------+-------+--------------------------------------------------------------------------------------+
 | Version | Channel            | Type  | Information                                                                          |
 +---------+--------------------+-------+--------------------------------------------------------------------------------------+
@@ -381,7 +381,7 @@ Depending on the current state of PrestaShop releases, the command output may sh
 The `update:check-requirements` command is used to check that your store meets the technical requirements before updating.
 
 ```text
-$ php bin/console update:check-requirements --help
+$ php modules/autoupgrade/bin/console update:check-requirements --help
 
 Description:
   Check all prerequisites for an update.
@@ -420,7 +420,7 @@ By default, if no option is set, the prerequisites will be checked from the “o
 Example of execution of the `update:check-requirements` command, if all prerequisites have been successfully met:
 
 ```text
-$ php bin/console update:check-requirements admin123
+$ php modules/autoupgrade/bin/console update:check-requirements admin123
 Checking requirements...
 ✓ The requirements check is complete, you can update your store to this version of PrestaShop.
 ```
@@ -428,7 +428,7 @@ Checking requirements...
 Example of execution of the `update:check-requirements` command, if some prerequisites are not met:
 
 ```text
-$ php bin/console update:check-requirements admin123
+$ php modules/autoupgrade/bin/console update:check-requirements admin123
 Checking requirements...
 X PHP's "Safe mode" needs to be disabled.
 X Maintenance mode needs to be enabled. Enable maintenance mode and add your maintenance IP in Shop parameters > General > Maintenance.
@@ -479,7 +479,7 @@ By default, if no option is set, the prerequisites will be checked from the “o
 Example of execution of the `update:check-modules` command, if all modules are compatible:
 
 ```text
-$ php bin/console update:check-modules admin-dev
+$ php modules/autoupgrade/bin/console update:check-modules admin-dev
 Prestashop version: 8.2.4
  Retrieving modules informations, please wait...
  Retrieving modules informations: Done.
@@ -490,7 +490,7 @@ Prestashop version: 8.2.4
 Example of execution of the `update:check-modules` command, if some modules require attention:
 
 ```text
-$ php bin/console update:check-modules admin-dev
+$ php modules/autoupgrade/bin/console update:check-modules admin-dev
 Prestashop version: 8.2.4
  Retrieving modules informations, please wait...
  Retrieving modules informations: Done.
@@ -512,7 +512,7 @@ Prestashop version: 8.2.4
 The `update:start` command is used to update your PrestaShop store.
 
 ```text
-$ php bin/console update:start --help
+$ php modules/autoupgrade/bin/console update:start --help
 
 Description:
   Update your store.
@@ -558,7 +558,7 @@ By default, if no option is set, the prerequisites will be checked from the “o
 Example of `update:start` command execution:
 
 ```text
-$ php bin/console update:start admin123
+$ php modules/autoupgrade/bin/console update:start admin123
 Starting update...
 Destination version: 9.0.0
 Downloading step has been skipped, upgrade process will now unzip the local archive.
