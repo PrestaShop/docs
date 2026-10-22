@@ -1,11 +1,11 @@
 ---
 menuTitle: Migration
-title: How to migrate to PrestaShop 8
-description: Learn how to migrate your current shop (1.7.x) to PrestaShop 8.0
+title: How to migrate to PrestaShop 9
+description: Learn how to migrate your current shop (1.7.x+) to PrestaShop 9.0
 weight: 20
 ---
 
-# How to migrate to PrestaShop 8
+# How to migrate to PrestaShop 9
 
 ## Manual migration - Process details
 
