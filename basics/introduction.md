@@ -31,6 +31,7 @@ You can learn PHP here:
 
 * [Getting started on PHP documentation](https://www.php.net/manual/en/getting-started.php)
 * [Learning PHP on CodeCademy](https://www.codecademy.com/catalog/language/php)
+* [Learning PHP on Coddy](https://coddy.tech/landing/php)
 
 You can learn Object-Oriented programming here:
 
