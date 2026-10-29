@@ -340,7 +340,7 @@ version: '3'
 services:
 ...
     phpmyadmin:
-      image: phpmyadmin/phpmyadmin
+      image: phpmyadmin
       container_name: phpmyadmin
       links:
         - some-mysql
