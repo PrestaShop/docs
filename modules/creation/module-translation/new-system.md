@@ -184,15 +184,19 @@ class SomeAdminController extends PrestaShopAdminController
 
 Other classes will need to retrieve the module's translator instance somehow. We recommend passing it as a parameter in the constructor and storing it for later use.
 
+Type the parameter as `PrestaShopBundle\Translation\TranslatorInterface`, not as any of the concrete translator classes: the container decides which implementation the module receives and the debug environment decorates it, so naming a concrete class makes the module work in one environment and fail in the other.
+
 ```php
 <?php
+use PrestaShopBundle\Translation\TranslatorInterface;
+
 class CustomModuleClass 
 {
     private $translator;
     
-    public function __construct(Translator $translator)
+    public function __construct(TranslatorInterface $translator)
     {
-        $this->translator = $translator
+        $this->translator = $translator;
     }
     
     public function foo()
