@@ -71,6 +71,8 @@ For some Pull Requests, some more people of PrestaShop might be involved in the 
 
 Once the Pull Request has been validated by all of the relevant people, it is finally verified by the QA team. The QA team will then make sure that the behavior of the proposed change is correct and that it does not produce any regressions (new errors).
 
+QA verification can also be performed by members of the community. In that case, the Pull Request is labelled "Waiting for QA by Community", and "QA ✔️ by Community" once it has been tested. This validation is accepted as a QA validation only when it was performed by a [Committer](https://www.prestashop-project.org/project-organization/people-and-roles/#committers); otherwise the Pull Request is still verified by the QA team.
+
 After the Pull Request has finally passed the QA validation, it is merged in the project and the author becomes (if they weren't already) a contributor to this great open source project !
 
 ### Graphical summary
