@@ -72,7 +72,7 @@ You'll get a web page detailing requirements and recommendations, and how your s
     <td class="support-no"><span class="sr-only">No</span></td>
   </tr>
   <tr>
-    <td>9.1</td>
+    <td>9.1~9.2</td>
     <td class="support-no"><span class="sr-only">No</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
     <td class="support-yes"><span class="sr-only">Yes</span></td>
